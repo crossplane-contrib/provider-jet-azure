@@ -49,3 +49,8 @@ func (tr *BackupProtectedFileShare) GetParameters() ([]byte, error) {
 func (tr *BackupProtectedFileShare) SetParameters(data []byte) error {
 	return conversion.TFParser.Unmarshal(data, &tr.Spec.ForProvider)
 }
+
+// GetForProvider of this BackupProtectedFileShare
+func (tr *BackupProtectedFileShare) GetForProvider() interface{} {
+	return &tr.Spec.ForProvider
+}

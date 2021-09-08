@@ -49,3 +49,8 @@ func (tr *BlueprintAssignment) GetParameters() ([]byte, error) {
 func (tr *BlueprintAssignment) SetParameters(data []byte) error {
 	return conversion.TFParser.Unmarshal(data, &tr.Spec.ForProvider)
 }
+
+// GetForProvider of this BlueprintAssignment
+func (tr *BlueprintAssignment) GetForProvider() interface{} {
+	return &tr.Spec.ForProvider
+}

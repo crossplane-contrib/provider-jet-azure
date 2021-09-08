@@ -49,3 +49,8 @@ func (tr *SynapseManagedPrivateEndpoint) GetParameters() ([]byte, error) {
 func (tr *SynapseManagedPrivateEndpoint) SetParameters(data []byte) error {
 	return conversion.TFParser.Unmarshal(data, &tr.Spec.ForProvider)
 }
+
+// GetForProvider of this SynapseManagedPrivateEndpoint
+func (tr *SynapseManagedPrivateEndpoint) GetForProvider() interface{} {
+	return &tr.Spec.ForProvider
+}

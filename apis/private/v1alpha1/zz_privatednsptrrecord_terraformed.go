@@ -49,3 +49,8 @@ func (tr *PrivateDnsPtrRecord) GetParameters() ([]byte, error) {
 func (tr *PrivateDnsPtrRecord) SetParameters(data []byte) error {
 	return conversion.TFParser.Unmarshal(data, &tr.Spec.ForProvider)
 }
+
+// GetForProvider of this PrivateDnsPtrRecord
+func (tr *PrivateDnsPtrRecord) GetForProvider() interface{} {
+	return &tr.Spec.ForProvider
+}

@@ -49,3 +49,8 @@ func (tr *MonitorAutoscaleSetting) GetParameters() ([]byte, error) {
 func (tr *MonitorAutoscaleSetting) SetParameters(data []byte) error {
 	return conversion.TFParser.Unmarshal(data, &tr.Spec.ForProvider)
 }
+
+// GetForProvider of this MonitorAutoscaleSetting
+func (tr *MonitorAutoscaleSetting) GetForProvider() interface{} {
+	return &tr.Spec.ForProvider
+}

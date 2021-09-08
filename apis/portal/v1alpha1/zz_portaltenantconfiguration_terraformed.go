@@ -49,3 +49,8 @@ func (tr *PortalTenantConfiguration) GetParameters() ([]byte, error) {
 func (tr *PortalTenantConfiguration) SetParameters(data []byte) error {
 	return conversion.TFParser.Unmarshal(data, &tr.Spec.ForProvider)
 }
+
+// GetForProvider of this PortalTenantConfiguration
+func (tr *PortalTenantConfiguration) GetForProvider() interface{} {
+	return &tr.Spec.ForProvider
+}

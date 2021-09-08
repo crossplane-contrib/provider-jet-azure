@@ -49,3 +49,8 @@ func (tr *MssqlDatabaseExtendedAuditingPolicy) GetParameters() ([]byte, error) {
 func (tr *MssqlDatabaseExtendedAuditingPolicy) SetParameters(data []byte) error {
 	return conversion.TFParser.Unmarshal(data, &tr.Spec.ForProvider)
 }
+
+// GetForProvider of this MssqlDatabaseExtendedAuditingPolicy
+func (tr *MssqlDatabaseExtendedAuditingPolicy) GetForProvider() interface{} {
+	return &tr.Spec.ForProvider
+}

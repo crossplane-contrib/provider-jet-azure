@@ -49,3 +49,8 @@ func (tr *RedisEnterpriseDatabase) GetParameters() ([]byte, error) {
 func (tr *RedisEnterpriseDatabase) SetParameters(data []byte) error {
 	return conversion.TFParser.Unmarshal(data, &tr.Spec.ForProvider)
 }
+
+// GetForProvider of this RedisEnterpriseDatabase
+func (tr *RedisEnterpriseDatabase) GetForProvider() interface{} {
+	return &tr.Spec.ForProvider
+}

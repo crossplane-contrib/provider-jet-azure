@@ -49,3 +49,8 @@ func (tr *SpringCloudAppMysqlAssociation) GetParameters() ([]byte, error) {
 func (tr *SpringCloudAppMysqlAssociation) SetParameters(data []byte) error {
 	return conversion.TFParser.Unmarshal(data, &tr.Spec.ForProvider)
 }
+
+// GetForProvider of this SpringCloudAppMysqlAssociation
+func (tr *SpringCloudAppMysqlAssociation) GetForProvider() interface{} {
+	return &tr.Spec.ForProvider
+}

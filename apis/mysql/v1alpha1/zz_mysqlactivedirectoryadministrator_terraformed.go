@@ -49,3 +49,8 @@ func (tr *MysqlActiveDirectoryAdministrator) GetParameters() ([]byte, error) {
 func (tr *MysqlActiveDirectoryAdministrator) SetParameters(data []byte) error {
 	return conversion.TFParser.Unmarshal(data, &tr.Spec.ForProvider)
 }
+
+// GetForProvider of this MysqlActiveDirectoryAdministrator
+func (tr *MysqlActiveDirectoryAdministrator) GetForProvider() interface{} {
+	return &tr.Spec.ForProvider
+}

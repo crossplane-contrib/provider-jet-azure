@@ -49,3 +49,8 @@ func (tr *ApplicationInsightsWebTest) GetParameters() ([]byte, error) {
 func (tr *ApplicationInsightsWebTest) SetParameters(data []byte) error {
 	return conversion.TFParser.Unmarshal(data, &tr.Spec.ForProvider)
 }
+
+// GetForProvider of this ApplicationInsightsWebTest
+func (tr *ApplicationInsightsWebTest) GetForProvider() interface{} {
+	return &tr.Spec.ForProvider
+}

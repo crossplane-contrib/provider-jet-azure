@@ -49,3 +49,8 @@ func (tr *MariadbVirtualNetworkRule) GetParameters() ([]byte, error) {
 func (tr *MariadbVirtualNetworkRule) SetParameters(data []byte) error {
 	return conversion.TFParser.Unmarshal(data, &tr.Spec.ForProvider)
 }
+
+// GetForProvider of this MariadbVirtualNetworkRule
+func (tr *MariadbVirtualNetworkRule) GetForProvider() interface{} {
+	return &tr.Spec.ForProvider
+}

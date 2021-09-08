@@ -49,3 +49,8 @@ func (tr *Dashboard) GetParameters() ([]byte, error) {
 func (tr *Dashboard) SetParameters(data []byte) error {
 	return conversion.TFParser.Unmarshal(data, &tr.Spec.ForProvider)
 }
+
+// GetForProvider of this Dashboard
+func (tr *Dashboard) GetForProvider() interface{} {
+	return &tr.Spec.ForProvider
+}

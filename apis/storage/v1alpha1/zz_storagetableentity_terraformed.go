@@ -49,3 +49,8 @@ func (tr *StorageTableEntity) GetParameters() ([]byte, error) {
 func (tr *StorageTableEntity) SetParameters(data []byte) error {
 	return conversion.TFParser.Unmarshal(data, &tr.Spec.ForProvider)
 }
+
+// GetForProvider of this StorageTableEntity
+func (tr *StorageTableEntity) GetForProvider() interface{} {
+	return &tr.Spec.ForProvider
+}

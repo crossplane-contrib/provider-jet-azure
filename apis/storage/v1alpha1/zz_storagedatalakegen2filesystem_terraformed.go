@@ -49,3 +49,8 @@ func (tr *StorageDataLakeGen2Filesystem) GetParameters() ([]byte, error) {
 func (tr *StorageDataLakeGen2Filesystem) SetParameters(data []byte) error {
 	return conversion.TFParser.Unmarshal(data, &tr.Spec.ForProvider)
 }
+
+// GetForProvider of this StorageDataLakeGen2Filesystem
+func (tr *StorageDataLakeGen2Filesystem) GetForProvider() interface{} {
+	return &tr.Spec.ForProvider
+}

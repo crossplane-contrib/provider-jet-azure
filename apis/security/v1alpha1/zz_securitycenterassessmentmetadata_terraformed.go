@@ -49,3 +49,8 @@ func (tr *SecurityCenterAssessmentMetadata) GetParameters() ([]byte, error) {
 func (tr *SecurityCenterAssessmentMetadata) SetParameters(data []byte) error {
 	return conversion.TFParser.Unmarshal(data, &tr.Spec.ForProvider)
 }
+
+// GetForProvider of this SecurityCenterAssessmentMetadata
+func (tr *SecurityCenterAssessmentMetadata) GetForProvider() interface{} {
+	return &tr.Spec.ForProvider
+}

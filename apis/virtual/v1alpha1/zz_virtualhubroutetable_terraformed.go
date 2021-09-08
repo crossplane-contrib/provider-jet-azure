@@ -49,3 +49,8 @@ func (tr *VirtualHubRouteTable) GetParameters() ([]byte, error) {
 func (tr *VirtualHubRouteTable) SetParameters(data []byte) error {
 	return conversion.TFParser.Unmarshal(data, &tr.Spec.ForProvider)
 }
+
+// GetForProvider of this VirtualHubRouteTable
+func (tr *VirtualHubRouteTable) GetForProvider() interface{} {
+	return &tr.Spec.ForProvider
+}

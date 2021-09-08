@@ -49,3 +49,8 @@ func (tr *StreamAnalyticsJob) GetParameters() ([]byte, error) {
 func (tr *StreamAnalyticsJob) SetParameters(data []byte) error {
 	return conversion.TFParser.Unmarshal(data, &tr.Spec.ForProvider)
 }
+
+// GetForProvider of this StreamAnalyticsJob
+func (tr *StreamAnalyticsJob) GetForProvider() interface{} {
+	return &tr.Spec.ForProvider
+}

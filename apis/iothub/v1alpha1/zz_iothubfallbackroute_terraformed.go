@@ -49,3 +49,8 @@ func (tr *IothubFallbackRoute) GetParameters() ([]byte, error) {
 func (tr *IothubFallbackRoute) SetParameters(data []byte) error {
 	return conversion.TFParser.Unmarshal(data, &tr.Spec.ForProvider)
 }
+
+// GetForProvider of this IothubFallbackRoute
+func (tr *IothubFallbackRoute) GetForProvider() interface{} {
+	return &tr.Spec.ForProvider
+}

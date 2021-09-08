@@ -49,3 +49,8 @@ func (tr *SignalrServiceNetworkAcl) GetParameters() ([]byte, error) {
 func (tr *SignalrServiceNetworkAcl) SetParameters(data []byte) error {
 	return conversion.TFParser.Unmarshal(data, &tr.Spec.ForProvider)
 }
+
+// GetForProvider of this SignalrServiceNetworkAcl
+func (tr *SignalrServiceNetworkAcl) GetForProvider() interface{} {
+	return &tr.Spec.ForProvider
+}

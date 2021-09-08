@@ -49,3 +49,8 @@ func (tr *EventhubNamespace) GetParameters() ([]byte, error) {
 func (tr *EventhubNamespace) SetParameters(data []byte) error {
 	return conversion.TFParser.Unmarshal(data, &tr.Spec.ForProvider)
 }
+
+// GetForProvider of this EventhubNamespace
+func (tr *EventhubNamespace) GetForProvider() interface{} {
+	return &tr.Spec.ForProvider
+}

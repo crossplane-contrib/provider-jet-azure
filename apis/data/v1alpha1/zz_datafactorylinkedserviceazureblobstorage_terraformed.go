@@ -49,3 +49,8 @@ func (tr *DataFactoryLinkedServiceAzureBlobStorage) GetParameters() ([]byte, err
 func (tr *DataFactoryLinkedServiceAzureBlobStorage) SetParameters(data []byte) error {
 	return conversion.TFParser.Unmarshal(data, &tr.Spec.ForProvider)
 }
+
+// GetForProvider of this DataFactoryLinkedServiceAzureBlobStorage
+func (tr *DataFactoryLinkedServiceAzureBlobStorage) GetForProvider() interface{} {
+	return &tr.Spec.ForProvider
+}

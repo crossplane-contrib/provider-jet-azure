@@ -49,3 +49,8 @@ func (tr *DataFactoryDatasetSqlServerTable) GetParameters() ([]byte, error) {
 func (tr *DataFactoryDatasetSqlServerTable) SetParameters(data []byte) error {
 	return conversion.TFParser.Unmarshal(data, &tr.Spec.ForProvider)
 }
+
+// GetForProvider of this DataFactoryDatasetSqlServerTable
+func (tr *DataFactoryDatasetSqlServerTable) GetForProvider() interface{} {
+	return &tr.Spec.ForProvider
+}

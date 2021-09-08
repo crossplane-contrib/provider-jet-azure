@@ -49,3 +49,8 @@ func (tr *AppServiceSlotVirtualNetworkSwiftConnection) GetParameters() ([]byte, 
 func (tr *AppServiceSlotVirtualNetworkSwiftConnection) SetParameters(data []byte) error {
 	return conversion.TFParser.Unmarshal(data, &tr.Spec.ForProvider)
 }
+
+// GetForProvider of this AppServiceSlotVirtualNetworkSwiftConnection
+func (tr *AppServiceSlotVirtualNetworkSwiftConnection) GetForProvider() interface{} {
+	return &tr.Spec.ForProvider
+}

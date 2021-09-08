@@ -49,3 +49,8 @@ func (tr *DataFactoryLinkedServiceCosmosdb) GetParameters() ([]byte, error) {
 func (tr *DataFactoryLinkedServiceCosmosdb) SetParameters(data []byte) error {
 	return conversion.TFParser.Unmarshal(data, &tr.Spec.ForProvider)
 }
+
+// GetForProvider of this DataFactoryLinkedServiceCosmosdb
+func (tr *DataFactoryLinkedServiceCosmosdb) GetForProvider() interface{} {
+	return &tr.Spec.ForProvider
+}

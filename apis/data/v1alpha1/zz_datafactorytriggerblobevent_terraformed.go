@@ -49,3 +49,8 @@ func (tr *DataFactoryTriggerBlobEvent) GetParameters() ([]byte, error) {
 func (tr *DataFactoryTriggerBlobEvent) SetParameters(data []byte) error {
 	return conversion.TFParser.Unmarshal(data, &tr.Spec.ForProvider)
 }
+
+// GetForProvider of this DataFactoryTriggerBlobEvent
+func (tr *DataFactoryTriggerBlobEvent) GetForProvider() interface{} {
+	return &tr.Spec.ForProvider
+}

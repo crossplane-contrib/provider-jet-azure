@@ -49,3 +49,8 @@ func (tr *Snapshot) GetParameters() ([]byte, error) {
 func (tr *Snapshot) SetParameters(data []byte) error {
 	return conversion.TFParser.Unmarshal(data, &tr.Spec.ForProvider)
 }
+
+// GetForProvider of this Snapshot
+func (tr *Snapshot) GetForProvider() interface{} {
+	return &tr.Spec.ForProvider
+}

@@ -49,3 +49,8 @@ func (tr *LogicAppActionHttp) GetParameters() ([]byte, error) {
 func (tr *LogicAppActionHttp) SetParameters(data []byte) error {
 	return conversion.TFParser.Unmarshal(data, &tr.Spec.ForProvider)
 }
+
+// GetForProvider of this LogicAppActionHttp
+func (tr *LogicAppActionHttp) GetForProvider() interface{} {
+	return &tr.Spec.ForProvider
+}

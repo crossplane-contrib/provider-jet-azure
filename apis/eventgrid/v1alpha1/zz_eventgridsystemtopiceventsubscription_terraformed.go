@@ -49,3 +49,8 @@ func (tr *EventgridSystemTopicEventSubscription) GetParameters() ([]byte, error)
 func (tr *EventgridSystemTopicEventSubscription) SetParameters(data []byte) error {
 	return conversion.TFParser.Unmarshal(data, &tr.Spec.ForProvider)
 }
+
+// GetForProvider of this EventgridSystemTopicEventSubscription
+func (tr *EventgridSystemTopicEventSubscription) GetForProvider() interface{} {
+	return &tr.Spec.ForProvider
+}

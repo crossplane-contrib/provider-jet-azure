@@ -49,3 +49,8 @@ func (tr *MediaAsset) GetParameters() ([]byte, error) {
 func (tr *MediaAsset) SetParameters(data []byte) error {
 	return conversion.TFParser.Unmarshal(data, &tr.Spec.ForProvider)
 }
+
+// GetForProvider of this MediaAsset
+func (tr *MediaAsset) GetForProvider() interface{} {
+	return &tr.Spec.ForProvider
+}

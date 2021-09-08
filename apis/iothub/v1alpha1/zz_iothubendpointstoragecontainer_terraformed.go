@@ -49,3 +49,8 @@ func (tr *IothubEndpointStorageContainer) GetParameters() ([]byte, error) {
 func (tr *IothubEndpointStorageContainer) SetParameters(data []byte) error {
 	return conversion.TFParser.Unmarshal(data, &tr.Spec.ForProvider)
 }
+
+// GetForProvider of this IothubEndpointStorageContainer
+func (tr *IothubEndpointStorageContainer) GetForProvider() interface{} {
+	return &tr.Spec.ForProvider
+}

@@ -49,3 +49,8 @@ func (tr *VirtualNetworkGateway) GetParameters() ([]byte, error) {
 func (tr *VirtualNetworkGateway) SetParameters(data []byte) error {
 	return conversion.TFParser.Unmarshal(data, &tr.Spec.ForProvider)
 }
+
+// GetForProvider of this VirtualNetworkGateway
+func (tr *VirtualNetworkGateway) GetForProvider() interface{} {
+	return &tr.Spec.ForProvider
+}

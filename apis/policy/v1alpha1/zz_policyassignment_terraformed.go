@@ -49,3 +49,8 @@ func (tr *PolicyAssignment) GetParameters() ([]byte, error) {
 func (tr *PolicyAssignment) SetParameters(data []byte) error {
 	return conversion.TFParser.Unmarshal(data, &tr.Spec.ForProvider)
 }
+
+// GetForProvider of this PolicyAssignment
+func (tr *PolicyAssignment) GetForProvider() interface{} {
+	return &tr.Spec.ForProvider
+}

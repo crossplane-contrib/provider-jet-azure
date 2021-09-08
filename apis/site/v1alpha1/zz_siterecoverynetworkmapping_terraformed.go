@@ -49,3 +49,8 @@ func (tr *SiteRecoveryNetworkMapping) GetParameters() ([]byte, error) {
 func (tr *SiteRecoveryNetworkMapping) SetParameters(data []byte) error {
 	return conversion.TFParser.Unmarshal(data, &tr.Spec.ForProvider)
 }
+
+// GetForProvider of this SiteRecoveryNetworkMapping
+func (tr *SiteRecoveryNetworkMapping) GetForProvider() interface{} {
+	return &tr.Spec.ForProvider
+}

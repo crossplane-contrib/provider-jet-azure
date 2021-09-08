@@ -49,3 +49,8 @@ func (tr *DevTestGlobalVmShutdownSchedule) GetParameters() ([]byte, error) {
 func (tr *DevTestGlobalVmShutdownSchedule) SetParameters(data []byte) error {
 	return conversion.TFParser.Unmarshal(data, &tr.Spec.ForProvider)
 }
+
+// GetForProvider of this DevTestGlobalVmShutdownSchedule
+func (tr *DevTestGlobalVmShutdownSchedule) GetForProvider() interface{} {
+	return &tr.Spec.ForProvider
+}

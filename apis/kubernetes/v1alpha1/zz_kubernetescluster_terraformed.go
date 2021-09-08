@@ -49,3 +49,8 @@ func (tr *KubernetesCluster) GetParameters() ([]byte, error) {
 func (tr *KubernetesCluster) SetParameters(data []byte) error {
 	return conversion.TFParser.Unmarshal(data, &tr.Spec.ForProvider)
 }
+
+// GetForProvider of this KubernetesCluster
+func (tr *KubernetesCluster) GetForProvider() interface{} {
+	return &tr.Spec.ForProvider
+}

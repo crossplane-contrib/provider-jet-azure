@@ -49,3 +49,8 @@ func (tr *CosmosdbSqlStoredProcedure) GetParameters() ([]byte, error) {
 func (tr *CosmosdbSqlStoredProcedure) SetParameters(data []byte) error {
 	return conversion.TFParser.Unmarshal(data, &tr.Spec.ForProvider)
 }
+
+// GetForProvider of this CosmosdbSqlStoredProcedure
+func (tr *CosmosdbSqlStoredProcedure) GetForProvider() interface{} {
+	return &tr.Spec.ForProvider
+}

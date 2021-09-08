@@ -49,3 +49,8 @@ func (tr *ManagedApplicationDefinition) GetParameters() ([]byte, error) {
 func (tr *ManagedApplicationDefinition) SetParameters(data []byte) error {
 	return conversion.TFParser.Unmarshal(data, &tr.Spec.ForProvider)
 }
+
+// GetForProvider of this ManagedApplicationDefinition
+func (tr *ManagedApplicationDefinition) GetForProvider() interface{} {
+	return &tr.Spec.ForProvider
+}

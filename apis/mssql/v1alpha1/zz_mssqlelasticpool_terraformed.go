@@ -49,3 +49,8 @@ func (tr *MssqlElasticpool) GetParameters() ([]byte, error) {
 func (tr *MssqlElasticpool) SetParameters(data []byte) error {
 	return conversion.TFParser.Unmarshal(data, &tr.Spec.ForProvider)
 }
+
+// GetForProvider of this MssqlElasticpool
+func (tr *MssqlElasticpool) GetForProvider() interface{} {
+	return &tr.Spec.ForProvider
+}

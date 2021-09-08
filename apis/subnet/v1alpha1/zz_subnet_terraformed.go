@@ -49,3 +49,8 @@ func (tr *Subnet) GetParameters() ([]byte, error) {
 func (tr *Subnet) SetParameters(data []byte) error {
 	return conversion.TFParser.Unmarshal(data, &tr.Spec.ForProvider)
 }
+
+// GetForProvider of this Subnet
+func (tr *Subnet) GetForProvider() interface{} {
+	return &tr.Spec.ForProvider
+}

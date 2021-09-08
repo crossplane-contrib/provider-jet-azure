@@ -49,3 +49,8 @@ func (tr *ApiManagementAuthorizationServer) GetParameters() ([]byte, error) {
 func (tr *ApiManagementAuthorizationServer) SetParameters(data []byte) error {
 	return conversion.TFParser.Unmarshal(data, &tr.Spec.ForProvider)
 }
+
+// GetForProvider of this ApiManagementAuthorizationServer
+func (tr *ApiManagementAuthorizationServer) GetForProvider() interface{} {
+	return &tr.Spec.ForProvider
+}

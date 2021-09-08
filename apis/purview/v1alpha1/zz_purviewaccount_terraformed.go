@@ -49,3 +49,8 @@ func (tr *PurviewAccount) GetParameters() ([]byte, error) {
 func (tr *PurviewAccount) SetParameters(data []byte) error {
 	return conversion.TFParser.Unmarshal(data, &tr.Spec.ForProvider)
 }
+
+// GetForProvider of this PurviewAccount
+func (tr *PurviewAccount) GetForProvider() interface{} {
+	return &tr.Spec.ForProvider
+}

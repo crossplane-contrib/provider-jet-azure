@@ -49,3 +49,8 @@ func (tr *CosmosdbCassandraTable) GetParameters() ([]byte, error) {
 func (tr *CosmosdbCassandraTable) SetParameters(data []byte) error {
 	return conversion.TFParser.Unmarshal(data, &tr.Spec.ForProvider)
 }
+
+// GetForProvider of this CosmosdbCassandraTable
+func (tr *CosmosdbCassandraTable) GetForProvider() interface{} {
+	return &tr.Spec.ForProvider
+}

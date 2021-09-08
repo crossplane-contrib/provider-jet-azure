@@ -49,3 +49,8 @@ func (tr *IothubDpsCertificate) GetParameters() ([]byte, error) {
 func (tr *IothubDpsCertificate) SetParameters(data []byte) error {
 	return conversion.TFParser.Unmarshal(data, &tr.Spec.ForProvider)
 }
+
+// GetForProvider of this IothubDpsCertificate
+func (tr *IothubDpsCertificate) GetForProvider() interface{} {
+	return &tr.Spec.ForProvider
+}

@@ -49,3 +49,8 @@ func (tr *CosmosdbGremlinGraph) GetParameters() ([]byte, error) {
 func (tr *CosmosdbGremlinGraph) SetParameters(data []byte) error {
 	return conversion.TFParser.Unmarshal(data, &tr.Spec.ForProvider)
 }
+
+// GetForProvider of this CosmosdbGremlinGraph
+func (tr *CosmosdbGremlinGraph) GetForProvider() interface{} {
+	return &tr.Spec.ForProvider
+}

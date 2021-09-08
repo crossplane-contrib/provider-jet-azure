@@ -49,3 +49,8 @@ func (tr *ServicebusTopicAuthorizationRule) GetParameters() ([]byte, error) {
 func (tr *ServicebusTopicAuthorizationRule) SetParameters(data []byte) error {
 	return conversion.TFParser.Unmarshal(data, &tr.Spec.ForProvider)
 }
+
+// GetForProvider of this ServicebusTopicAuthorizationRule
+func (tr *ServicebusTopicAuthorizationRule) GetForProvider() interface{} {
+	return &tr.Spec.ForProvider
+}

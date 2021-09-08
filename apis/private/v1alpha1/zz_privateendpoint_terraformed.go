@@ -49,3 +49,8 @@ func (tr *PrivateEndpoint) GetParameters() ([]byte, error) {
 func (tr *PrivateEndpoint) SetParameters(data []byte) error {
 	return conversion.TFParser.Unmarshal(data, &tr.Spec.ForProvider)
 }
+
+// GetForProvider of this PrivateEndpoint
+func (tr *PrivateEndpoint) GetForProvider() interface{} {
+	return &tr.Spec.ForProvider
+}

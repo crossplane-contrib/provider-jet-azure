@@ -49,3 +49,8 @@ func (tr *ServiceFabricCluster) GetParameters() ([]byte, error) {
 func (tr *ServiceFabricCluster) SetParameters(data []byte) error {
 	return conversion.TFParser.Unmarshal(data, &tr.Spec.ForProvider)
 }
+
+// GetForProvider of this ServiceFabricCluster
+func (tr *ServiceFabricCluster) GetForProvider() interface{} {
+	return &tr.Spec.ForProvider
+}

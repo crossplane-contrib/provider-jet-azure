@@ -49,3 +49,8 @@ func (tr *BatchApplication) GetParameters() ([]byte, error) {
 func (tr *BatchApplication) SetParameters(data []byte) error {
 	return conversion.TFParser.Unmarshal(data, &tr.Spec.ForProvider)
 }
+
+// GetForProvider of this BatchApplication
+func (tr *BatchApplication) GetForProvider() interface{} {
+	return &tr.Spec.ForProvider
+}

@@ -49,3 +49,8 @@ func (tr *SpringCloudApp) GetParameters() ([]byte, error) {
 func (tr *SpringCloudApp) SetParameters(data []byte) error {
 	return conversion.TFParser.Unmarshal(data, &tr.Spec.ForProvider)
 }
+
+// GetForProvider of this SpringCloudApp
+func (tr *SpringCloudApp) GetForProvider() interface{} {
+	return &tr.Spec.ForProvider
+}

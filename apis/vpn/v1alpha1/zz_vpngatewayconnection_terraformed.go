@@ -49,3 +49,8 @@ func (tr *VpnGatewayConnection) GetParameters() ([]byte, error) {
 func (tr *VpnGatewayConnection) SetParameters(data []byte) error {
 	return conversion.TFParser.Unmarshal(data, &tr.Spec.ForProvider)
 }
+
+// GetForProvider of this VpnGatewayConnection
+func (tr *VpnGatewayConnection) GetForProvider() interface{} {
+	return &tr.Spec.ForProvider
+}

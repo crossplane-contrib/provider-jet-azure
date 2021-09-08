@@ -49,3 +49,8 @@ func (tr *NetworkWatcherFlowLog) GetParameters() ([]byte, error) {
 func (tr *NetworkWatcherFlowLog) SetParameters(data []byte) error {
 	return conversion.TFParser.Unmarshal(data, &tr.Spec.ForProvider)
 }
+
+// GetForProvider of this NetworkWatcherFlowLog
+func (tr *NetworkWatcherFlowLog) GetForProvider() interface{} {
+	return &tr.Spec.ForProvider
+}

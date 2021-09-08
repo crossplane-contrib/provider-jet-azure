@@ -49,3 +49,8 @@ func (tr *StorageSyncCloudEndpoint) GetParameters() ([]byte, error) {
 func (tr *StorageSyncCloudEndpoint) SetParameters(data []byte) error {
 	return conversion.TFParser.Unmarshal(data, &tr.Spec.ForProvider)
 }
+
+// GetForProvider of this StorageSyncCloudEndpoint
+func (tr *StorageSyncCloudEndpoint) GetForProvider() interface{} {
+	return &tr.Spec.ForProvider
+}

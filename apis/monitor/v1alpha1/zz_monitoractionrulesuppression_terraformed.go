@@ -49,3 +49,8 @@ func (tr *MonitorActionRuleSuppression) GetParameters() ([]byte, error) {
 func (tr *MonitorActionRuleSuppression) SetParameters(data []byte) error {
 	return conversion.TFParser.Unmarshal(data, &tr.Spec.ForProvider)
 }
+
+// GetForProvider of this MonitorActionRuleSuppression
+func (tr *MonitorActionRuleSuppression) GetForProvider() interface{} {
+	return &tr.Spec.ForProvider
+}

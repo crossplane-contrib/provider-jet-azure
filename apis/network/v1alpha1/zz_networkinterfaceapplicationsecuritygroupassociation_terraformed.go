@@ -49,3 +49,8 @@ func (tr *NetworkInterfaceApplicationSecurityGroupAssociation) GetParameters() (
 func (tr *NetworkInterfaceApplicationSecurityGroupAssociation) SetParameters(data []byte) error {
 	return conversion.TFParser.Unmarshal(data, &tr.Spec.ForProvider)
 }
+
+// GetForProvider of this NetworkInterfaceApplicationSecurityGroupAssociation
+func (tr *NetworkInterfaceApplicationSecurityGroupAssociation) GetForProvider() interface{} {
+	return &tr.Spec.ForProvider
+}

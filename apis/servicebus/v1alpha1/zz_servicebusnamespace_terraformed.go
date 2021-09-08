@@ -49,3 +49,8 @@ func (tr *ServicebusNamespace) GetParameters() ([]byte, error) {
 func (tr *ServicebusNamespace) SetParameters(data []byte) error {
 	return conversion.TFParser.Unmarshal(data, &tr.Spec.ForProvider)
 }
+
+// GetForProvider of this ServicebusNamespace
+func (tr *ServicebusNamespace) GetForProvider() interface{} {
+	return &tr.Spec.ForProvider
+}

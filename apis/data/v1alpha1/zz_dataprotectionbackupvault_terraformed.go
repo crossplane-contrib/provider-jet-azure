@@ -49,3 +49,8 @@ func (tr *DataProtectionBackupVault) GetParameters() ([]byte, error) {
 func (tr *DataProtectionBackupVault) SetParameters(data []byte) error {
 	return conversion.TFParser.Unmarshal(data, &tr.Spec.ForProvider)
 }
+
+// GetForProvider of this DataProtectionBackupVault
+func (tr *DataProtectionBackupVault) GetForProvider() interface{} {
+	return &tr.Spec.ForProvider
+}

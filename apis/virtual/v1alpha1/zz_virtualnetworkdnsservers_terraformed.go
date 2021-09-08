@@ -49,3 +49,8 @@ func (tr *VirtualNetworkDnsServers) GetParameters() ([]byte, error) {
 func (tr *VirtualNetworkDnsServers) SetParameters(data []byte) error {
 	return conversion.TFParser.Unmarshal(data, &tr.Spec.ForProvider)
 }
+
+// GetForProvider of this VirtualNetworkDnsServers
+func (tr *VirtualNetworkDnsServers) GetForProvider() interface{} {
+	return &tr.Spec.ForProvider
+}

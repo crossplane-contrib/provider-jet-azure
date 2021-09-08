@@ -49,3 +49,8 @@ func (tr *KeyVault) GetParameters() ([]byte, error) {
 func (tr *KeyVault) SetParameters(data []byte) error {
 	return conversion.TFParser.Unmarshal(data, &tr.Spec.ForProvider)
 }
+
+// GetForProvider of this KeyVault
+func (tr *KeyVault) GetForProvider() interface{} {
+	return &tr.Spec.ForProvider
+}

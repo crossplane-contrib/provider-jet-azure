@@ -49,3 +49,8 @@ func (tr *SiteRecoveryFabric) GetParameters() ([]byte, error) {
 func (tr *SiteRecoveryFabric) SetParameters(data []byte) error {
 	return conversion.TFParser.Unmarshal(data, &tr.Spec.ForProvider)
 }
+
+// GetForProvider of this SiteRecoveryFabric
+func (tr *SiteRecoveryFabric) GetForProvider() interface{} {
+	return &tr.Spec.ForProvider
+}

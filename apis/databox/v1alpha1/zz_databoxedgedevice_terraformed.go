@@ -49,3 +49,8 @@ func (tr *DataboxEdgeDevice) GetParameters() ([]byte, error) {
 func (tr *DataboxEdgeDevice) SetParameters(data []byte) error {
 	return conversion.TFParser.Unmarshal(data, &tr.Spec.ForProvider)
 }
+
+// GetForProvider of this DataboxEdgeDevice
+func (tr *DataboxEdgeDevice) GetForProvider() interface{} {
+	return &tr.Spec.ForProvider
+}

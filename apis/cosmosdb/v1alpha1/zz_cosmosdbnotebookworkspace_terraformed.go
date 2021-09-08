@@ -49,3 +49,8 @@ func (tr *CosmosdbNotebookWorkspace) GetParameters() ([]byte, error) {
 func (tr *CosmosdbNotebookWorkspace) SetParameters(data []byte) error {
 	return conversion.TFParser.Unmarshal(data, &tr.Spec.ForProvider)
 }
+
+// GetForProvider of this CosmosdbNotebookWorkspace
+func (tr *CosmosdbNotebookWorkspace) GetForProvider() interface{} {
+	return &tr.Spec.ForProvider
+}

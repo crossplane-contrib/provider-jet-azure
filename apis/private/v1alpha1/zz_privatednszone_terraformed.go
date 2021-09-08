@@ -49,3 +49,8 @@ func (tr *PrivateDnsZone) GetParameters() ([]byte, error) {
 func (tr *PrivateDnsZone) SetParameters(data []byte) error {
 	return conversion.TFParser.Unmarshal(data, &tr.Spec.ForProvider)
 }
+
+// GetForProvider of this PrivateDnsZone
+func (tr *PrivateDnsZone) GetForProvider() interface{} {
+	return &tr.Spec.ForProvider
+}

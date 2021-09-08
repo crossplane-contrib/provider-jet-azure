@@ -49,3 +49,8 @@ func (tr *ApplicationSecurityGroup) GetParameters() ([]byte, error) {
 func (tr *ApplicationSecurityGroup) SetParameters(data []byte) error {
 	return conversion.TFParser.Unmarshal(data, &tr.Spec.ForProvider)
 }
+
+// GetForProvider of this ApplicationSecurityGroup
+func (tr *ApplicationSecurityGroup) GetForProvider() interface{} {
+	return &tr.Spec.ForProvider
+}

@@ -49,3 +49,8 @@ func (tr *ResourceGroupTemplateDeployment) GetParameters() ([]byte, error) {
 func (tr *ResourceGroupTemplateDeployment) SetParameters(data []byte) error {
 	return conversion.TFParser.Unmarshal(data, &tr.Spec.ForProvider)
 }
+
+// GetForProvider of this ResourceGroupTemplateDeployment
+func (tr *ResourceGroupTemplateDeployment) GetForProvider() interface{} {
+	return &tr.Spec.ForProvider
+}

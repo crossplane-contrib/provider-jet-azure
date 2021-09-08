@@ -49,3 +49,8 @@ func (tr *RelayHybridConnection) GetParameters() ([]byte, error) {
 func (tr *RelayHybridConnection) SetParameters(data []byte) error {
 	return conversion.TFParser.Unmarshal(data, &tr.Spec.ForProvider)
 }
+
+// GetForProvider of this RelayHybridConnection
+func (tr *RelayHybridConnection) GetForProvider() interface{} {
+	return &tr.Spec.ForProvider
+}

@@ -49,3 +49,8 @@ func (tr *ResourceGroupPolicyAssignment) GetParameters() ([]byte, error) {
 func (tr *ResourceGroupPolicyAssignment) SetParameters(data []byte) error {
 	return conversion.TFParser.Unmarshal(data, &tr.Spec.ForProvider)
 }
+
+// GetForProvider of this ResourceGroupPolicyAssignment
+func (tr *ResourceGroupPolicyAssignment) GetForProvider() interface{} {
+	return &tr.Spec.ForProvider
+}

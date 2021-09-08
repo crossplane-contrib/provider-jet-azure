@@ -49,3 +49,8 @@ func (tr *DatabricksWorkspace) GetParameters() ([]byte, error) {
 func (tr *DatabricksWorkspace) SetParameters(data []byte) error {
 	return conversion.TFParser.Unmarshal(data, &tr.Spec.ForProvider)
 }
+
+// GetForProvider of this DatabricksWorkspace
+func (tr *DatabricksWorkspace) GetForProvider() interface{} {
+	return &tr.Spec.ForProvider
+}

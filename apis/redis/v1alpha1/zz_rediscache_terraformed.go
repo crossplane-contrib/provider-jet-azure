@@ -49,3 +49,8 @@ func (tr *RedisCache) GetParameters() ([]byte, error) {
 func (tr *RedisCache) SetParameters(data []byte) error {
 	return conversion.TFParser.Unmarshal(data, &tr.Spec.ForProvider)
 }
+
+// GetForProvider of this RedisCache
+func (tr *RedisCache) GetForProvider() interface{} {
+	return &tr.Spec.ForProvider
+}

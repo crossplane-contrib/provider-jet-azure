@@ -49,3 +49,8 @@ func (tr *DataLakeStoreFirewallRule) GetParameters() ([]byte, error) {
 func (tr *DataLakeStoreFirewallRule) SetParameters(data []byte) error {
 	return conversion.TFParser.Unmarshal(data, &tr.Spec.ForProvider)
 }
+
+// GetForProvider of this DataLakeStoreFirewallRule
+func (tr *DataLakeStoreFirewallRule) GetForProvider() interface{} {
+	return &tr.Spec.ForProvider
+}

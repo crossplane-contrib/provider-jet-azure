@@ -49,3 +49,8 @@ func (tr *DatabricksWorkspaceCustomerManagedKey) GetParameters() ([]byte, error)
 func (tr *DatabricksWorkspaceCustomerManagedKey) SetParameters(data []byte) error {
 	return conversion.TFParser.Unmarshal(data, &tr.Spec.ForProvider)
 }
+
+// GetForProvider of this DatabricksWorkspaceCustomerManagedKey
+func (tr *DatabricksWorkspaceCustomerManagedKey) GetForProvider() interface{} {
+	return &tr.Spec.ForProvider
+}

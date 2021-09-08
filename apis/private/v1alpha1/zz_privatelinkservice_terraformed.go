@@ -49,3 +49,8 @@ func (tr *PrivateLinkService) GetParameters() ([]byte, error) {
 func (tr *PrivateLinkService) SetParameters(data []byte) error {
 	return conversion.TFParser.Unmarshal(data, &tr.Spec.ForProvider)
 }
+
+// GetForProvider of this PrivateLinkService
+func (tr *PrivateLinkService) GetForProvider() interface{} {
+	return &tr.Spec.ForProvider
+}

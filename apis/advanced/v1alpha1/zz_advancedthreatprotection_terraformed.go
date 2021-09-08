@@ -49,3 +49,8 @@ func (tr *AdvancedThreatProtection) GetParameters() ([]byte, error) {
 func (tr *AdvancedThreatProtection) SetParameters(data []byte) error {
 	return conversion.TFParser.Unmarshal(data, &tr.Spec.ForProvider)
 }
+
+// GetForProvider of this AdvancedThreatProtection
+func (tr *AdvancedThreatProtection) GetForProvider() interface{} {
+	return &tr.Spec.ForProvider
+}

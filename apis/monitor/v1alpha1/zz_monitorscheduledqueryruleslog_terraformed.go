@@ -49,3 +49,8 @@ func (tr *MonitorScheduledQueryRulesLog) GetParameters() ([]byte, error) {
 func (tr *MonitorScheduledQueryRulesLog) SetParameters(data []byte) error {
 	return conversion.TFParser.Unmarshal(data, &tr.Spec.ForProvider)
 }
+
+// GetForProvider of this MonitorScheduledQueryRulesLog
+func (tr *MonitorScheduledQueryRulesLog) GetForProvider() interface{} {
+	return &tr.Spec.ForProvider
+}

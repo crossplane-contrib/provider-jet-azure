@@ -49,3 +49,8 @@ func (tr *MssqlServerTransparentDataEncryption) GetParameters() ([]byte, error) 
 func (tr *MssqlServerTransparentDataEncryption) SetParameters(data []byte) error {
 	return conversion.TFParser.Unmarshal(data, &tr.Spec.ForProvider)
 }
+
+// GetForProvider of this MssqlServerTransparentDataEncryption
+func (tr *MssqlServerTransparentDataEncryption) GetForProvider() interface{} {
+	return &tr.Spec.ForProvider
+}

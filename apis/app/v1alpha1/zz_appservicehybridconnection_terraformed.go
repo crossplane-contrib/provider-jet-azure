@@ -49,3 +49,8 @@ func (tr *AppServiceHybridConnection) GetParameters() ([]byte, error) {
 func (tr *AppServiceHybridConnection) SetParameters(data []byte) error {
 	return conversion.TFParser.Unmarshal(data, &tr.Spec.ForProvider)
 }
+
+// GetForProvider of this AppServiceHybridConnection
+func (tr *AppServiceHybridConnection) GetForProvider() interface{} {
+	return &tr.Spec.ForProvider
+}

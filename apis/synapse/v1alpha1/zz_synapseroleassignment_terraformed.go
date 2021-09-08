@@ -49,3 +49,8 @@ func (tr *SynapseRoleAssignment) GetParameters() ([]byte, error) {
 func (tr *SynapseRoleAssignment) SetParameters(data []byte) error {
 	return conversion.TFParser.Unmarshal(data, &tr.Spec.ForProvider)
 }
+
+// GetForProvider of this SynapseRoleAssignment
+func (tr *SynapseRoleAssignment) GetForProvider() interface{} {
+	return &tr.Spec.ForProvider
+}

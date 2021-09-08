@@ -49,3 +49,8 @@ func (tr *StorageTable) GetParameters() ([]byte, error) {
 func (tr *StorageTable) SetParameters(data []byte) error {
 	return conversion.TFParser.Unmarshal(data, &tr.Spec.ForProvider)
 }
+
+// GetForProvider of this StorageTable
+func (tr *StorageTable) GetForProvider() interface{} {
+	return &tr.Spec.ForProvider
+}

@@ -49,3 +49,8 @@ func (tr *LogicAppWorkflow) GetParameters() ([]byte, error) {
 func (tr *LogicAppWorkflow) SetParameters(data []byte) error {
 	return conversion.TFParser.Unmarshal(data, &tr.Spec.ForProvider)
 }
+
+// GetForProvider of this LogicAppWorkflow
+func (tr *LogicAppWorkflow) GetForProvider() interface{} {
+	return &tr.Spec.ForProvider
+}

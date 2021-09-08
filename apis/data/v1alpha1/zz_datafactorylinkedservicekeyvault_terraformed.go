@@ -49,3 +49,8 @@ func (tr *DataFactoryLinkedServiceKeyVault) GetParameters() ([]byte, error) {
 func (tr *DataFactoryLinkedServiceKeyVault) SetParameters(data []byte) error {
 	return conversion.TFParser.Unmarshal(data, &tr.Spec.ForProvider)
 }
+
+// GetForProvider of this DataFactoryLinkedServiceKeyVault
+func (tr *DataFactoryLinkedServiceKeyVault) GetForProvider() interface{} {
+	return &tr.Spec.ForProvider
+}

@@ -49,3 +49,8 @@ func (tr *DataFactoryDatasetBinary) GetParameters() ([]byte, error) {
 func (tr *DataFactoryDatasetBinary) SetParameters(data []byte) error {
 	return conversion.TFParser.Unmarshal(data, &tr.Spec.ForProvider)
 }
+
+// GetForProvider of this DataFactoryDatasetBinary
+func (tr *DataFactoryDatasetBinary) GetForProvider() interface{} {
+	return &tr.Spec.ForProvider
+}

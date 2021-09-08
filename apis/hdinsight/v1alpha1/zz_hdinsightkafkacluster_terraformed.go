@@ -49,3 +49,8 @@ func (tr *HdinsightKafkaCluster) GetParameters() ([]byte, error) {
 func (tr *HdinsightKafkaCluster) SetParameters(data []byte) error {
 	return conversion.TFParser.Unmarshal(data, &tr.Spec.ForProvider)
 }
+
+// GetForProvider of this HdinsightKafkaCluster
+func (tr *HdinsightKafkaCluster) GetForProvider() interface{} {
+	return &tr.Spec.ForProvider
+}

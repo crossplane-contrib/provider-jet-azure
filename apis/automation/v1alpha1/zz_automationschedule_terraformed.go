@@ -49,3 +49,8 @@ func (tr *AutomationSchedule) GetParameters() ([]byte, error) {
 func (tr *AutomationSchedule) SetParameters(data []byte) error {
 	return conversion.TFParser.Unmarshal(data, &tr.Spec.ForProvider)
 }
+
+// GetForProvider of this AutomationSchedule
+func (tr *AutomationSchedule) GetForProvider() interface{} {
+	return &tr.Spec.ForProvider
+}

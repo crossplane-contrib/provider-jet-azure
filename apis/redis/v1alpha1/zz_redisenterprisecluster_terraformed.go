@@ -49,3 +49,8 @@ func (tr *RedisEnterpriseCluster) GetParameters() ([]byte, error) {
 func (tr *RedisEnterpriseCluster) SetParameters(data []byte) error {
 	return conversion.TFParser.Unmarshal(data, &tr.Spec.ForProvider)
 }
+
+// GetForProvider of this RedisEnterpriseCluster
+func (tr *RedisEnterpriseCluster) GetForProvider() interface{} {
+	return &tr.Spec.ForProvider
+}

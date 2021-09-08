@@ -49,3 +49,8 @@ func (tr *SpringCloudCertificate) GetParameters() ([]byte, error) {
 func (tr *SpringCloudCertificate) SetParameters(data []byte) error {
 	return conversion.TFParser.Unmarshal(data, &tr.Spec.ForProvider)
 }
+
+// GetForProvider of this SpringCloudCertificate
+func (tr *SpringCloudCertificate) GetForProvider() interface{} {
+	return &tr.Spec.ForProvider
+}

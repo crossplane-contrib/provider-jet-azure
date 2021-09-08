@@ -49,3 +49,8 @@ func (tr *ServicebusQueue) GetParameters() ([]byte, error) {
 func (tr *ServicebusQueue) SetParameters(data []byte) error {
 	return conversion.TFParser.Unmarshal(data, &tr.Spec.ForProvider)
 }
+
+// GetForProvider of this ServicebusQueue
+func (tr *ServicebusQueue) GetForProvider() interface{} {
+	return &tr.Spec.ForProvider
+}

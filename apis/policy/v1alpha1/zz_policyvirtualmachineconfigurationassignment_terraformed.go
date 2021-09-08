@@ -49,3 +49,8 @@ func (tr *PolicyVirtualMachineConfigurationAssignment) GetParameters() ([]byte, 
 func (tr *PolicyVirtualMachineConfigurationAssignment) SetParameters(data []byte) error {
 	return conversion.TFParser.Unmarshal(data, &tr.Spec.ForProvider)
 }
+
+// GetForProvider of this PolicyVirtualMachineConfigurationAssignment
+func (tr *PolicyVirtualMachineConfigurationAssignment) GetForProvider() interface{} {
+	return &tr.Spec.ForProvider
+}

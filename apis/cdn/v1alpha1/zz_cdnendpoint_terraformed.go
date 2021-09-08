@@ -49,3 +49,8 @@ func (tr *CdnEndpoint) GetParameters() ([]byte, error) {
 func (tr *CdnEndpoint) SetParameters(data []byte) error {
 	return conversion.TFParser.Unmarshal(data, &tr.Spec.ForProvider)
 }
+
+// GetForProvider of this CdnEndpoint
+func (tr *CdnEndpoint) GetForProvider() interface{} {
+	return &tr.Spec.ForProvider
+}

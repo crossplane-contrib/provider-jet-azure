@@ -49,3 +49,8 @@ func (tr *KustoDatabase) GetParameters() ([]byte, error) {
 func (tr *KustoDatabase) SetParameters(data []byte) error {
 	return conversion.TFParser.Unmarshal(data, &tr.Spec.ForProvider)
 }
+
+// GetForProvider of this KustoDatabase
+func (tr *KustoDatabase) GetForProvider() interface{} {
+	return &tr.Spec.ForProvider
+}

@@ -49,3 +49,8 @@ func (tr *KeyVaultCertificate) GetParameters() ([]byte, error) {
 func (tr *KeyVaultCertificate) SetParameters(data []byte) error {
 	return conversion.TFParser.Unmarshal(data, &tr.Spec.ForProvider)
 }
+
+// GetForProvider of this KeyVaultCertificate
+func (tr *KeyVaultCertificate) GetForProvider() interface{} {
+	return &tr.Spec.ForProvider
+}

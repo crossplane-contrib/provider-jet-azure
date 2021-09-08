@@ -49,3 +49,8 @@ func (tr *DataFactoryLinkedServiceAzureDatabricks) GetParameters() ([]byte, erro
 func (tr *DataFactoryLinkedServiceAzureDatabricks) SetParameters(data []byte) error {
 	return conversion.TFParser.Unmarshal(data, &tr.Spec.ForProvider)
 }
+
+// GetForProvider of this DataFactoryLinkedServiceAzureDatabricks
+func (tr *DataFactoryLinkedServiceAzureDatabricks) GetForProvider() interface{} {
+	return &tr.Spec.ForProvider
+}

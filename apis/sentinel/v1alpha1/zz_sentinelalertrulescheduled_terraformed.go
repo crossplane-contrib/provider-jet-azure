@@ -49,3 +49,8 @@ func (tr *SentinelAlertRuleScheduled) GetParameters() ([]byte, error) {
 func (tr *SentinelAlertRuleScheduled) SetParameters(data []byte) error {
 	return conversion.TFParser.Unmarshal(data, &tr.Spec.ForProvider)
 }
+
+// GetForProvider of this SentinelAlertRuleScheduled
+func (tr *SentinelAlertRuleScheduled) GetForProvider() interface{} {
+	return &tr.Spec.ForProvider
+}

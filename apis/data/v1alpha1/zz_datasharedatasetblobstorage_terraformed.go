@@ -49,3 +49,8 @@ func (tr *DataShareDatasetBlobStorage) GetParameters() ([]byte, error) {
 func (tr *DataShareDatasetBlobStorage) SetParameters(data []byte) error {
 	return conversion.TFParser.Unmarshal(data, &tr.Spec.ForProvider)
 }
+
+// GetForProvider of this DataShareDatasetBlobStorage
+func (tr *DataShareDatasetBlobStorage) GetForProvider() interface{} {
+	return &tr.Spec.ForProvider
+}

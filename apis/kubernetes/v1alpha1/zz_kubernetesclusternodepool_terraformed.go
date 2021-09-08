@@ -49,3 +49,8 @@ func (tr *KubernetesClusterNodePool) GetParameters() ([]byte, error) {
 func (tr *KubernetesClusterNodePool) SetParameters(data []byte) error {
 	return conversion.TFParser.Unmarshal(data, &tr.Spec.ForProvider)
 }
+
+// GetForProvider of this KubernetesClusterNodePool
+func (tr *KubernetesClusterNodePool) GetForProvider() interface{} {
+	return &tr.Spec.ForProvider
+}

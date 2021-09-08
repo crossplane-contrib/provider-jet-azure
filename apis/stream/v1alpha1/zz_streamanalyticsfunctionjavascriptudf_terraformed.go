@@ -49,3 +49,8 @@ func (tr *StreamAnalyticsFunctionJavascriptUdf) GetParameters() ([]byte, error) 
 func (tr *StreamAnalyticsFunctionJavascriptUdf) SetParameters(data []byte) error {
 	return conversion.TFParser.Unmarshal(data, &tr.Spec.ForProvider)
 }
+
+// GetForProvider of this StreamAnalyticsFunctionJavascriptUdf
+func (tr *StreamAnalyticsFunctionJavascriptUdf) GetForProvider() interface{} {
+	return &tr.Spec.ForProvider
+}

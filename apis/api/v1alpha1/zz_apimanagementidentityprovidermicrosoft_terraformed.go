@@ -49,3 +49,8 @@ func (tr *ApiManagementIdentityProviderMicrosoft) GetParameters() ([]byte, error
 func (tr *ApiManagementIdentityProviderMicrosoft) SetParameters(data []byte) error {
 	return conversion.TFParser.Unmarshal(data, &tr.Spec.ForProvider)
 }
+
+// GetForProvider of this ApiManagementIdentityProviderMicrosoft
+func (tr *ApiManagementIdentityProviderMicrosoft) GetForProvider() interface{} {
+	return &tr.Spec.ForProvider
+}

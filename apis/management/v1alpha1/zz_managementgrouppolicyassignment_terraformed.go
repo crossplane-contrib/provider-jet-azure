@@ -49,3 +49,8 @@ func (tr *ManagementGroupPolicyAssignment) GetParameters() ([]byte, error) {
 func (tr *ManagementGroupPolicyAssignment) SetParameters(data []byte) error {
 	return conversion.TFParser.Unmarshal(data, &tr.Spec.ForProvider)
 }
+
+// GetForProvider of this ManagementGroupPolicyAssignment
+func (tr *ManagementGroupPolicyAssignment) GetForProvider() interface{} {
+	return &tr.Spec.ForProvider
+}

@@ -49,3 +49,8 @@ func (tr *Image) GetParameters() ([]byte, error) {
 func (tr *Image) SetParameters(data []byte) error {
 	return conversion.TFParser.Unmarshal(data, &tr.Spec.ForProvider)
 }
+
+// GetForProvider of this Image
+func (tr *Image) GetForProvider() interface{} {
+	return &tr.Spec.ForProvider
+}

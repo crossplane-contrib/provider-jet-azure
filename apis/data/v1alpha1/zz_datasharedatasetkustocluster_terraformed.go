@@ -49,3 +49,8 @@ func (tr *DataShareDatasetKustoCluster) GetParameters() ([]byte, error) {
 func (tr *DataShareDatasetKustoCluster) SetParameters(data []byte) error {
 	return conversion.TFParser.Unmarshal(data, &tr.Spec.ForProvider)
 }
+
+// GetForProvider of this DataShareDatasetKustoCluster
+func (tr *DataShareDatasetKustoCluster) GetForProvider() interface{} {
+	return &tr.Spec.ForProvider
+}

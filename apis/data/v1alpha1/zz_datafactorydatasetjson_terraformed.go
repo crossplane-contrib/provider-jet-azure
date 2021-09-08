@@ -49,3 +49,8 @@ func (tr *DataFactoryDatasetJson) GetParameters() ([]byte, error) {
 func (tr *DataFactoryDatasetJson) SetParameters(data []byte) error {
 	return conversion.TFParser.Unmarshal(data, &tr.Spec.ForProvider)
 }
+
+// GetForProvider of this DataFactoryDatasetJson
+func (tr *DataFactoryDatasetJson) GetForProvider() interface{} {
+	return &tr.Spec.ForProvider
+}

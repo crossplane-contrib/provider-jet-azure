@@ -49,3 +49,8 @@ func (tr *VirtualHub) GetParameters() ([]byte, error) {
 func (tr *VirtualHub) SetParameters(data []byte) error {
 	return conversion.TFParser.Unmarshal(data, &tr.Spec.ForProvider)
 }
+
+// GetForProvider of this VirtualHub
+func (tr *VirtualHub) GetForProvider() interface{} {
+	return &tr.Spec.ForProvider
+}

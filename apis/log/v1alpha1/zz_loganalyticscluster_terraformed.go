@@ -49,3 +49,8 @@ func (tr *LogAnalyticsCluster) GetParameters() ([]byte, error) {
 func (tr *LogAnalyticsCluster) SetParameters(data []byte) error {
 	return conversion.TFParser.Unmarshal(data, &tr.Spec.ForProvider)
 }
+
+// GetForProvider of this LogAnalyticsCluster
+func (tr *LogAnalyticsCluster) GetForProvider() interface{} {
+	return &tr.Spec.ForProvider
+}

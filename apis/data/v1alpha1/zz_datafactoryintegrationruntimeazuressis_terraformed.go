@@ -49,3 +49,8 @@ func (tr *DataFactoryIntegrationRuntimeAzureSsis) GetParameters() ([]byte, error
 func (tr *DataFactoryIntegrationRuntimeAzureSsis) SetParameters(data []byte) error {
 	return conversion.TFParser.Unmarshal(data, &tr.Spec.ForProvider)
 }
+
+// GetForProvider of this DataFactoryIntegrationRuntimeAzureSsis
+func (tr *DataFactoryIntegrationRuntimeAzureSsis) GetForProvider() interface{} {
+	return &tr.Spec.ForProvider
+}

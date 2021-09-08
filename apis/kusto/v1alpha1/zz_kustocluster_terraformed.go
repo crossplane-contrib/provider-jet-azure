@@ -49,3 +49,8 @@ func (tr *KustoCluster) GetParameters() ([]byte, error) {
 func (tr *KustoCluster) SetParameters(data []byte) error {
 	return conversion.TFParser.Unmarshal(data, &tr.Spec.ForProvider)
 }
+
+// GetForProvider of this KustoCluster
+func (tr *KustoCluster) GetForProvider() interface{} {
+	return &tr.Spec.ForProvider
+}

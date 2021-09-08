@@ -49,3 +49,8 @@ func (tr *LogAnalyticsDataExportRule) GetParameters() ([]byte, error) {
 func (tr *LogAnalyticsDataExportRule) SetParameters(data []byte) error {
 	return conversion.TFParser.Unmarshal(data, &tr.Spec.ForProvider)
 }
+
+// GetForProvider of this LogAnalyticsDataExportRule
+func (tr *LogAnalyticsDataExportRule) GetForProvider() interface{} {
+	return &tr.Spec.ForProvider
+}

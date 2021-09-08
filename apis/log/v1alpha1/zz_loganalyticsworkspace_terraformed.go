@@ -49,3 +49,8 @@ func (tr *LogAnalyticsWorkspace) GetParameters() ([]byte, error) {
 func (tr *LogAnalyticsWorkspace) SetParameters(data []byte) error {
 	return conversion.TFParser.Unmarshal(data, &tr.Spec.ForProvider)
 }
+
+// GetForProvider of this LogAnalyticsWorkspace
+func (tr *LogAnalyticsWorkspace) GetForProvider() interface{} {
+	return &tr.Spec.ForProvider
+}

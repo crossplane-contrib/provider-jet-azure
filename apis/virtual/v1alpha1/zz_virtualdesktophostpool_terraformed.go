@@ -49,3 +49,8 @@ func (tr *VirtualDesktopHostPool) GetParameters() ([]byte, error) {
 func (tr *VirtualDesktopHostPool) SetParameters(data []byte) error {
 	return conversion.TFParser.Unmarshal(data, &tr.Spec.ForProvider)
 }
+
+// GetForProvider of this VirtualDesktopHostPool
+func (tr *VirtualDesktopHostPool) GetForProvider() interface{} {
+	return &tr.Spec.ForProvider
+}

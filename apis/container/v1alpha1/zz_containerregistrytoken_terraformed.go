@@ -49,3 +49,8 @@ func (tr *ContainerRegistryToken) GetParameters() ([]byte, error) {
 func (tr *ContainerRegistryToken) SetParameters(data []byte) error {
 	return conversion.TFParser.Unmarshal(data, &tr.Spec.ForProvider)
 }
+
+// GetForProvider of this ContainerRegistryToken
+func (tr *ContainerRegistryToken) GetForProvider() interface{} {
+	return &tr.Spec.ForProvider
+}

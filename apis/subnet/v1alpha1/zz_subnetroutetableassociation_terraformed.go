@@ -49,3 +49,8 @@ func (tr *SubnetRouteTableAssociation) GetParameters() ([]byte, error) {
 func (tr *SubnetRouteTableAssociation) SetParameters(data []byte) error {
 	return conversion.TFParser.Unmarshal(data, &tr.Spec.ForProvider)
 }
+
+// GetForProvider of this SubnetRouteTableAssociation
+func (tr *SubnetRouteTableAssociation) GetForProvider() interface{} {
+	return &tr.Spec.ForProvider
+}

@@ -49,3 +49,8 @@ func (tr *NetworkProfile) GetParameters() ([]byte, error) {
 func (tr *NetworkProfile) SetParameters(data []byte) error {
 	return conversion.TFParser.Unmarshal(data, &tr.Spec.ForProvider)
 }
+
+// GetForProvider of this NetworkProfile
+func (tr *NetworkProfile) GetForProvider() interface{} {
+	return &tr.Spec.ForProvider
+}

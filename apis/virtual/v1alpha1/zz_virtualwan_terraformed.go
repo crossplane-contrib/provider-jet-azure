@@ -49,3 +49,8 @@ func (tr *VirtualWan) GetParameters() ([]byte, error) {
 func (tr *VirtualWan) SetParameters(data []byte) error {
 	return conversion.TFParser.Unmarshal(data, &tr.Spec.ForProvider)
 }
+
+// GetForProvider of this VirtualWan
+func (tr *VirtualWan) GetForProvider() interface{} {
+	return &tr.Spec.ForProvider
+}

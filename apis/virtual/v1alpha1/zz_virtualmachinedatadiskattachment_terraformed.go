@@ -49,3 +49,8 @@ func (tr *VirtualMachineDataDiskAttachment) GetParameters() ([]byte, error) {
 func (tr *VirtualMachineDataDiskAttachment) SetParameters(data []byte) error {
 	return conversion.TFParser.Unmarshal(data, &tr.Spec.ForProvider)
 }
+
+// GetForProvider of this VirtualMachineDataDiskAttachment
+func (tr *VirtualMachineDataDiskAttachment) GetForProvider() interface{} {
+	return &tr.Spec.ForProvider
+}

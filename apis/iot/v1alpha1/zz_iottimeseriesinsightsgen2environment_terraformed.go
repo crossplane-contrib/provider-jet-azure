@@ -49,3 +49,8 @@ func (tr *IotTimeSeriesInsightsGen2Environment) GetParameters() ([]byte, error) 
 func (tr *IotTimeSeriesInsightsGen2Environment) SetParameters(data []byte) error {
 	return conversion.TFParser.Unmarshal(data, &tr.Spec.ForProvider)
 }
+
+// GetForProvider of this IotTimeSeriesInsightsGen2Environment
+func (tr *IotTimeSeriesInsightsGen2Environment) GetForProvider() interface{} {
+	return &tr.Spec.ForProvider
+}

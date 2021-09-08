@@ -49,3 +49,8 @@ func (tr *SecurityCenterAutoProvisioning) GetParameters() ([]byte, error) {
 func (tr *SecurityCenterAutoProvisioning) SetParameters(data []byte) error {
 	return conversion.TFParser.Unmarshal(data, &tr.Spec.ForProvider)
 }
+
+// GetForProvider of this SecurityCenterAutoProvisioning
+func (tr *SecurityCenterAutoProvisioning) GetForProvider() interface{} {
+	return &tr.Spec.ForProvider
+}

@@ -49,3 +49,8 @@ func (tr *MonitorActionGroup) GetParameters() ([]byte, error) {
 func (tr *MonitorActionGroup) SetParameters(data []byte) error {
 	return conversion.TFParser.Unmarshal(data, &tr.Spec.ForProvider)
 }
+
+// GetForProvider of this MonitorActionGroup
+func (tr *MonitorActionGroup) GetForProvider() interface{} {
+	return &tr.Spec.ForProvider
+}

@@ -49,3 +49,8 @@ func (tr *CosmosdbSqlTrigger) GetParameters() ([]byte, error) {
 func (tr *CosmosdbSqlTrigger) SetParameters(data []byte) error {
 	return conversion.TFParser.Unmarshal(data, &tr.Spec.ForProvider)
 }
+
+// GetForProvider of this CosmosdbSqlTrigger
+func (tr *CosmosdbSqlTrigger) GetForProvider() interface{} {
+	return &tr.Spec.ForProvider
+}

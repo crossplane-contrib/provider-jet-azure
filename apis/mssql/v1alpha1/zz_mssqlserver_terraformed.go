@@ -49,3 +49,8 @@ func (tr *MssqlServer) GetParameters() ([]byte, error) {
 func (tr *MssqlServer) SetParameters(data []byte) error {
 	return conversion.TFParser.Unmarshal(data, &tr.Spec.ForProvider)
 }
+
+// GetForProvider of this MssqlServer
+func (tr *MssqlServer) GetForProvider() interface{} {
+	return &tr.Spec.ForProvider
+}

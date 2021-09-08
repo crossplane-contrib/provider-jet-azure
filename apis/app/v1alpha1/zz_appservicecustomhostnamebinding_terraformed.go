@@ -49,3 +49,8 @@ func (tr *AppServiceCustomHostnameBinding) GetParameters() ([]byte, error) {
 func (tr *AppServiceCustomHostnameBinding) SetParameters(data []byte) error {
 	return conversion.TFParser.Unmarshal(data, &tr.Spec.ForProvider)
 }
+
+// GetForProvider of this AppServiceCustomHostnameBinding
+func (tr *AppServiceCustomHostnameBinding) GetForProvider() interface{} {
+	return &tr.Spec.ForProvider
+}

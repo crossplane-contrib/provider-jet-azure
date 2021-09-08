@@ -49,3 +49,8 @@ func (tr *StreamAnalyticsStreamInputBlob) GetParameters() ([]byte, error) {
 func (tr *StreamAnalyticsStreamInputBlob) SetParameters(data []byte) error {
 	return conversion.TFParser.Unmarshal(data, &tr.Spec.ForProvider)
 }
+
+// GetForProvider of this StreamAnalyticsStreamInputBlob
+func (tr *StreamAnalyticsStreamInputBlob) GetForProvider() interface{} {
+	return &tr.Spec.ForProvider
+}

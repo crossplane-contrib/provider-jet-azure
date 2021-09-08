@@ -49,3 +49,8 @@ func (tr *MarketplaceAgreement) GetParameters() ([]byte, error) {
 func (tr *MarketplaceAgreement) SetParameters(data []byte) error {
 	return conversion.TFParser.Unmarshal(data, &tr.Spec.ForProvider)
 }
+
+// GetForProvider of this MarketplaceAgreement
+func (tr *MarketplaceAgreement) GetForProvider() interface{} {
+	return &tr.Spec.ForProvider
+}

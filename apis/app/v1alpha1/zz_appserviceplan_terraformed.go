@@ -49,3 +49,8 @@ func (tr *AppServicePlan) GetParameters() ([]byte, error) {
 func (tr *AppServicePlan) SetParameters(data []byte) error {
 	return conversion.TFParser.Unmarshal(data, &tr.Spec.ForProvider)
 }
+
+// GetForProvider of this AppServicePlan
+func (tr *AppServicePlan) GetForProvider() interface{} {
+	return &tr.Spec.ForProvider
+}

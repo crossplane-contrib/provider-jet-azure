@@ -49,3 +49,8 @@ func (tr *MonitorLogProfile) GetParameters() ([]byte, error) {
 func (tr *MonitorLogProfile) SetParameters(data []byte) error {
 	return conversion.TFParser.Unmarshal(data, &tr.Spec.ForProvider)
 }
+
+// GetForProvider of this MonitorLogProfile
+func (tr *MonitorLogProfile) GetForProvider() interface{} {
+	return &tr.Spec.ForProvider
+}

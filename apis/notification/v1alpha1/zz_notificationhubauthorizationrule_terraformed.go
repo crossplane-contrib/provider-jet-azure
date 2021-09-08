@@ -49,3 +49,8 @@ func (tr *NotificationHubAuthorizationRule) GetParameters() ([]byte, error) {
 func (tr *NotificationHubAuthorizationRule) SetParameters(data []byte) error {
 	return conversion.TFParser.Unmarshal(data, &tr.Spec.ForProvider)
 }
+
+// GetForProvider of this NotificationHubAuthorizationRule
+func (tr *NotificationHubAuthorizationRule) GetForProvider() interface{} {
+	return &tr.Spec.ForProvider
+}

@@ -49,3 +49,8 @@ func (tr *StreamAnalyticsStreamInputIothub) GetParameters() ([]byte, error) {
 func (tr *StreamAnalyticsStreamInputIothub) SetParameters(data []byte) error {
 	return conversion.TFParser.Unmarshal(data, &tr.Spec.ForProvider)
 }
+
+// GetForProvider of this StreamAnalyticsStreamInputIothub
+func (tr *StreamAnalyticsStreamInputIothub) GetForProvider() interface{} {
+	return &tr.Spec.ForProvider
+}

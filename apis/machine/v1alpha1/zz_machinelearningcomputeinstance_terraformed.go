@@ -49,3 +49,8 @@ func (tr *MachineLearningComputeInstance) GetParameters() ([]byte, error) {
 func (tr *MachineLearningComputeInstance) SetParameters(data []byte) error {
 	return conversion.TFParser.Unmarshal(data, &tr.Spec.ForProvider)
 }
+
+// GetForProvider of this MachineLearningComputeInstance
+func (tr *MachineLearningComputeInstance) GetForProvider() interface{} {
+	return &tr.Spec.ForProvider
+}

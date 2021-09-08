@@ -49,3 +49,8 @@ func (tr *StorageQueue) GetParameters() ([]byte, error) {
 func (tr *StorageQueue) SetParameters(data []byte) error {
 	return conversion.TFParser.Unmarshal(data, &tr.Spec.ForProvider)
 }
+
+// GetForProvider of this StorageQueue
+func (tr *StorageQueue) GetForProvider() interface{} {
+	return &tr.Spec.ForProvider
+}

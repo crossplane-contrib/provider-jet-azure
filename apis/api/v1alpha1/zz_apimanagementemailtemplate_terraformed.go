@@ -49,3 +49,8 @@ func (tr *ApiManagementEmailTemplate) GetParameters() ([]byte, error) {
 func (tr *ApiManagementEmailTemplate) SetParameters(data []byte) error {
 	return conversion.TFParser.Unmarshal(data, &tr.Spec.ForProvider)
 }
+
+// GetForProvider of this ApiManagementEmailTemplate
+func (tr *ApiManagementEmailTemplate) GetForProvider() interface{} {
+	return &tr.Spec.ForProvider
+}

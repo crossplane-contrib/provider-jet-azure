@@ -49,3 +49,8 @@ func (tr *BatchCertificate) GetParameters() ([]byte, error) {
 func (tr *BatchCertificate) SetParameters(data []byte) error {
 	return conversion.TFParser.Unmarshal(data, &tr.Spec.ForProvider)
 }
+
+// GetForProvider of this BatchCertificate
+func (tr *BatchCertificate) GetForProvider() interface{} {
+	return &tr.Spec.ForProvider
+}

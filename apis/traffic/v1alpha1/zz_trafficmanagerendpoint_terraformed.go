@@ -49,3 +49,8 @@ func (tr *TrafficManagerEndpoint) GetParameters() ([]byte, error) {
 func (tr *TrafficManagerEndpoint) SetParameters(data []byte) error {
 	return conversion.TFParser.Unmarshal(data, &tr.Spec.ForProvider)
 }
+
+// GetForProvider of this TrafficManagerEndpoint
+func (tr *TrafficManagerEndpoint) GetForProvider() interface{} {
+	return &tr.Spec.ForProvider
+}

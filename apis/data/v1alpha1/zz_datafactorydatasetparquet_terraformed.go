@@ -49,3 +49,8 @@ func (tr *DataFactoryDatasetParquet) GetParameters() ([]byte, error) {
 func (tr *DataFactoryDatasetParquet) SetParameters(data []byte) error {
 	return conversion.TFParser.Unmarshal(data, &tr.Spec.ForProvider)
 }
+
+// GetForProvider of this DataFactoryDatasetParquet
+func (tr *DataFactoryDatasetParquet) GetForProvider() interface{} {
+	return &tr.Spec.ForProvider
+}

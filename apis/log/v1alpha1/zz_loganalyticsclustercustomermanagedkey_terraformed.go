@@ -49,3 +49,8 @@ func (tr *LogAnalyticsClusterCustomerManagedKey) GetParameters() ([]byte, error)
 func (tr *LogAnalyticsClusterCustomerManagedKey) SetParameters(data []byte) error {
 	return conversion.TFParser.Unmarshal(data, &tr.Spec.ForProvider)
 }
+
+// GetForProvider of this LogAnalyticsClusterCustomerManagedKey
+func (tr *LogAnalyticsClusterCustomerManagedKey) GetForProvider() interface{} {
+	return &tr.Spec.ForProvider
+}

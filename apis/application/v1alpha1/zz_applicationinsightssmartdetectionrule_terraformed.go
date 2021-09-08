@@ -49,3 +49,8 @@ func (tr *ApplicationInsightsSmartDetectionRule) GetParameters() ([]byte, error)
 func (tr *ApplicationInsightsSmartDetectionRule) SetParameters(data []byte) error {
 	return conversion.TFParser.Unmarshal(data, &tr.Spec.ForProvider)
 }
+
+// GetForProvider of this ApplicationInsightsSmartDetectionRule
+func (tr *ApplicationInsightsSmartDetectionRule) GetForProvider() interface{} {
+	return &tr.Spec.ForProvider
+}

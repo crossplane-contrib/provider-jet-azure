@@ -49,3 +49,8 @@ func (tr *AutomationCredential) GetParameters() ([]byte, error) {
 func (tr *AutomationCredential) SetParameters(data []byte) error {
 	return conversion.TFParser.Unmarshal(data, &tr.Spec.ForProvider)
 }
+
+// GetForProvider of this AutomationCredential
+func (tr *AutomationCredential) GetForProvider() interface{} {
+	return &tr.Spec.ForProvider
+}

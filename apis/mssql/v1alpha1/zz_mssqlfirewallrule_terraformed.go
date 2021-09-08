@@ -49,3 +49,8 @@ func (tr *MssqlFirewallRule) GetParameters() ([]byte, error) {
 func (tr *MssqlFirewallRule) SetParameters(data []byte) error {
 	return conversion.TFParser.Unmarshal(data, &tr.Spec.ForProvider)
 }
+
+// GetForProvider of this MssqlFirewallRule
+func (tr *MssqlFirewallRule) GetForProvider() interface{} {
+	return &tr.Spec.ForProvider
+}

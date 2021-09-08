@@ -49,3 +49,8 @@ func (tr *StorageAccountCustomerManagedKey) GetParameters() ([]byte, error) {
 func (tr *StorageAccountCustomerManagedKey) SetParameters(data []byte) error {
 	return conversion.TFParser.Unmarshal(data, &tr.Spec.ForProvider)
 }
+
+// GetForProvider of this StorageAccountCustomerManagedKey
+func (tr *StorageAccountCustomerManagedKey) GetForProvider() interface{} {
+	return &tr.Spec.ForProvider
+}

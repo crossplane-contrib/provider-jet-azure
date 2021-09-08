@@ -49,3 +49,8 @@ func (tr *DevTestSchedule) GetParameters() ([]byte, error) {
 func (tr *DevTestSchedule) SetParameters(data []byte) error {
 	return conversion.TFParser.Unmarshal(data, &tr.Spec.ForProvider)
 }
+
+// GetForProvider of this DevTestSchedule
+func (tr *DevTestSchedule) GetForProvider() interface{} {
+	return &tr.Spec.ForProvider
+}

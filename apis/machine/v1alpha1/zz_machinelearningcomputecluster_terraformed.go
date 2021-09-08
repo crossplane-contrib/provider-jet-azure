@@ -49,3 +49,8 @@ func (tr *MachineLearningComputeCluster) GetParameters() ([]byte, error) {
 func (tr *MachineLearningComputeCluster) SetParameters(data []byte) error {
 	return conversion.TFParser.Unmarshal(data, &tr.Spec.ForProvider)
 }
+
+// GetForProvider of this MachineLearningComputeCluster
+func (tr *MachineLearningComputeCluster) GetForProvider() interface{} {
+	return &tr.Spec.ForProvider
+}

@@ -49,3 +49,8 @@ func (tr *SpatialAnchorsAccount) GetParameters() ([]byte, error) {
 func (tr *SpatialAnchorsAccount) SetParameters(data []byte) error {
 	return conversion.TFParser.Unmarshal(data, &tr.Spec.ForProvider)
 }
+
+// GetForProvider of this SpatialAnchorsAccount
+func (tr *SpatialAnchorsAccount) GetForProvider() interface{} {
+	return &tr.Spec.ForProvider
+}

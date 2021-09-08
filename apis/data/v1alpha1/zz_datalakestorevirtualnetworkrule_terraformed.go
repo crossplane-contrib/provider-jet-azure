@@ -49,3 +49,8 @@ func (tr *DataLakeStoreVirtualNetworkRule) GetParameters() ([]byte, error) {
 func (tr *DataLakeStoreVirtualNetworkRule) SetParameters(data []byte) error {
 	return conversion.TFParser.Unmarshal(data, &tr.Spec.ForProvider)
 }
+
+// GetForProvider of this DataLakeStoreVirtualNetworkRule
+func (tr *DataLakeStoreVirtualNetworkRule) GetForProvider() interface{} {
+	return &tr.Spec.ForProvider
+}

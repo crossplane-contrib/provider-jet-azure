@@ -49,3 +49,8 @@ func (tr *NatGatewayPublicIpPrefixAssociation) GetParameters() ([]byte, error) {
 func (tr *NatGatewayPublicIpPrefixAssociation) SetParameters(data []byte) error {
 	return conversion.TFParser.Unmarshal(data, &tr.Spec.ForProvider)
 }
+
+// GetForProvider of this NatGatewayPublicIpPrefixAssociation
+func (tr *NatGatewayPublicIpPrefixAssociation) GetForProvider() interface{} {
+	return &tr.Spec.ForProvider
+}

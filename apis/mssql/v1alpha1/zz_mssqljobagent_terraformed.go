@@ -49,3 +49,8 @@ func (tr *MssqlJobAgent) GetParameters() ([]byte, error) {
 func (tr *MssqlJobAgent) SetParameters(data []byte) error {
 	return conversion.TFParser.Unmarshal(data, &tr.Spec.ForProvider)
 }
+
+// GetForProvider of this MssqlJobAgent
+func (tr *MssqlJobAgent) GetForProvider() interface{} {
+	return &tr.Spec.ForProvider
+}

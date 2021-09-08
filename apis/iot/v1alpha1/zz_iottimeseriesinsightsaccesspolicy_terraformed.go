@@ -49,3 +49,8 @@ func (tr *IotTimeSeriesInsightsAccessPolicy) GetParameters() ([]byte, error) {
 func (tr *IotTimeSeriesInsightsAccessPolicy) SetParameters(data []byte) error {
 	return conversion.TFParser.Unmarshal(data, &tr.Spec.ForProvider)
 }
+
+// GetForProvider of this IotTimeSeriesInsightsAccessPolicy
+func (tr *IotTimeSeriesInsightsAccessPolicy) GetForProvider() interface{} {
+	return &tr.Spec.ForProvider
+}

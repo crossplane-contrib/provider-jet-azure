@@ -49,3 +49,8 @@ func (tr *SynapseFirewallRule) GetParameters() ([]byte, error) {
 func (tr *SynapseFirewallRule) SetParameters(data []byte) error {
 	return conversion.TFParser.Unmarshal(data, &tr.Spec.ForProvider)
 }
+
+// GetForProvider of this SynapseFirewallRule
+func (tr *SynapseFirewallRule) GetForProvider() interface{} {
+	return &tr.Spec.ForProvider
+}

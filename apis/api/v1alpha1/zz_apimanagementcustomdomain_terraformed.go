@@ -49,3 +49,8 @@ func (tr *ApiManagementCustomDomain) GetParameters() ([]byte, error) {
 func (tr *ApiManagementCustomDomain) SetParameters(data []byte) error {
 	return conversion.TFParser.Unmarshal(data, &tr.Spec.ForProvider)
 }
+
+// GetForProvider of this ApiManagementCustomDomain
+func (tr *ApiManagementCustomDomain) GetForProvider() interface{} {
+	return &tr.Spec.ForProvider
+}

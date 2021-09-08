@@ -49,3 +49,8 @@ func (tr *ServicebusQueueAuthorizationRule) GetParameters() ([]byte, error) {
 func (tr *ServicebusQueueAuthorizationRule) SetParameters(data []byte) error {
 	return conversion.TFParser.Unmarshal(data, &tr.Spec.ForProvider)
 }
+
+// GetForProvider of this ServicebusQueueAuthorizationRule
+func (tr *ServicebusQueueAuthorizationRule) GetForProvider() interface{} {
+	return &tr.Spec.ForProvider
+}

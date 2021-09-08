@@ -49,3 +49,8 @@ func (tr *StorageBlobInventoryPolicy) GetParameters() ([]byte, error) {
 func (tr *StorageBlobInventoryPolicy) SetParameters(data []byte) error {
 	return conversion.TFParser.Unmarshal(data, &tr.Spec.ForProvider)
 }
+
+// GetForProvider of this StorageBlobInventoryPolicy
+func (tr *StorageBlobInventoryPolicy) GetForProvider() interface{} {
+	return &tr.Spec.ForProvider
+}

@@ -49,3 +49,8 @@ func (tr *RecoveryServicesVault) GetParameters() ([]byte, error) {
 func (tr *RecoveryServicesVault) SetParameters(data []byte) error {
 	return conversion.TFParser.Unmarshal(data, &tr.Spec.ForProvider)
 }
+
+// GetForProvider of this RecoveryServicesVault
+func (tr *RecoveryServicesVault) GetForProvider() interface{} {
+	return &tr.Spec.ForProvider
+}

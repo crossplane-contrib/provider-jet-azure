@@ -49,3 +49,8 @@ func (tr *CommunicationService) GetParameters() ([]byte, error) {
 func (tr *CommunicationService) SetParameters(data []byte) error {
 	return conversion.TFParser.Unmarshal(data, &tr.Spec.ForProvider)
 }
+
+// GetForProvider of this CommunicationService
+func (tr *CommunicationService) GetForProvider() interface{} {
+	return &tr.Spec.ForProvider
+}

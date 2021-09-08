@@ -49,3 +49,8 @@ func (tr *PostgresqlServerKey) GetParameters() ([]byte, error) {
 func (tr *PostgresqlServerKey) SetParameters(data []byte) error {
 	return conversion.TFParser.Unmarshal(data, &tr.Spec.ForProvider)
 }
+
+// GetForProvider of this PostgresqlServerKey
+func (tr *PostgresqlServerKey) GetForProvider() interface{} {
+	return &tr.Spec.ForProvider
+}

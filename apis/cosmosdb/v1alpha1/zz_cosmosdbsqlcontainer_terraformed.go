@@ -49,3 +49,8 @@ func (tr *CosmosdbSqlContainer) GetParameters() ([]byte, error) {
 func (tr *CosmosdbSqlContainer) SetParameters(data []byte) error {
 	return conversion.TFParser.Unmarshal(data, &tr.Spec.ForProvider)
 }
+
+// GetForProvider of this CosmosdbSqlContainer
+func (tr *CosmosdbSqlContainer) GetForProvider() interface{} {
+	return &tr.Spec.ForProvider
+}

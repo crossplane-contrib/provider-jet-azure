@@ -49,3 +49,8 @@ func (tr *DataProtectionBackupPolicyPostgresql) GetParameters() ([]byte, error) 
 func (tr *DataProtectionBackupPolicyPostgresql) SetParameters(data []byte) error {
 	return conversion.TFParser.Unmarshal(data, &tr.Spec.ForProvider)
 }
+
+// GetForProvider of this DataProtectionBackupPolicyPostgresql
+func (tr *DataProtectionBackupPolicyPostgresql) GetForProvider() interface{} {
+	return &tr.Spec.ForProvider
+}

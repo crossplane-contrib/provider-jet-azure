@@ -49,3 +49,8 @@ func (tr *DataFactoryLinkedServiceSnowflake) GetParameters() ([]byte, error) {
 func (tr *DataFactoryLinkedServiceSnowflake) SetParameters(data []byte) error {
 	return conversion.TFParser.Unmarshal(data, &tr.Spec.ForProvider)
 }
+
+// GetForProvider of this DataFactoryLinkedServiceSnowflake
+func (tr *DataFactoryLinkedServiceSnowflake) GetForProvider() interface{} {
+	return &tr.Spec.ForProvider
+}

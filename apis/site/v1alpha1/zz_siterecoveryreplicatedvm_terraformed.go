@@ -49,3 +49,8 @@ func (tr *SiteRecoveryReplicatedVm) GetParameters() ([]byte, error) {
 func (tr *SiteRecoveryReplicatedVm) SetParameters(data []byte) error {
 	return conversion.TFParser.Unmarshal(data, &tr.Spec.ForProvider)
 }
+
+// GetForProvider of this SiteRecoveryReplicatedVm
+func (tr *SiteRecoveryReplicatedVm) GetForProvider() interface{} {
+	return &tr.Spec.ForProvider
+}

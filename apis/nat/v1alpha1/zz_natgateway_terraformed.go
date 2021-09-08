@@ -49,3 +49,8 @@ func (tr *NatGateway) GetParameters() ([]byte, error) {
 func (tr *NatGateway) SetParameters(data []byte) error {
 	return conversion.TFParser.Unmarshal(data, &tr.Spec.ForProvider)
 }
+
+// GetForProvider of this NatGateway
+func (tr *NatGateway) GetForProvider() interface{} {
+	return &tr.Spec.ForProvider
+}

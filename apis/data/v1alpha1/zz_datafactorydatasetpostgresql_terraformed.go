@@ -49,3 +49,8 @@ func (tr *DataFactoryDatasetPostgresql) GetParameters() ([]byte, error) {
 func (tr *DataFactoryDatasetPostgresql) SetParameters(data []byte) error {
 	return conversion.TFParser.Unmarshal(data, &tr.Spec.ForProvider)
 }
+
+// GetForProvider of this DataFactoryDatasetPostgresql
+func (tr *DataFactoryDatasetPostgresql) GetForProvider() interface{} {
+	return &tr.Spec.ForProvider
+}

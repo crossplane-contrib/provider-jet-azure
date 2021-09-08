@@ -49,3 +49,8 @@ func (tr *DataFactoryLinkedServiceSynapse) GetParameters() ([]byte, error) {
 func (tr *DataFactoryLinkedServiceSynapse) SetParameters(data []byte) error {
 	return conversion.TFParser.Unmarshal(data, &tr.Spec.ForProvider)
 }
+
+// GetForProvider of this DataFactoryLinkedServiceSynapse
+func (tr *DataFactoryLinkedServiceSynapse) GetForProvider() interface{} {
+	return &tr.Spec.ForProvider
+}

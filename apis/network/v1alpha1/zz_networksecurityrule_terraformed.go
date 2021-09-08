@@ -49,3 +49,8 @@ func (tr *NetworkSecurityRule) GetParameters() ([]byte, error) {
 func (tr *NetworkSecurityRule) SetParameters(data []byte) error {
 	return conversion.TFParser.Unmarshal(data, &tr.Spec.ForProvider)
 }
+
+// GetForProvider of this NetworkSecurityRule
+func (tr *NetworkSecurityRule) GetForProvider() interface{} {
+	return &tr.Spec.ForProvider
+}

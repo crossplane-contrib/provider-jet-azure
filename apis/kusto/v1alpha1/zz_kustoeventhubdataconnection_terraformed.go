@@ -49,3 +49,8 @@ func (tr *KustoEventhubDataConnection) GetParameters() ([]byte, error) {
 func (tr *KustoEventhubDataConnection) SetParameters(data []byte) error {
 	return conversion.TFParser.Unmarshal(data, &tr.Spec.ForProvider)
 }
+
+// GetForProvider of this KustoEventhubDataConnection
+func (tr *KustoEventhubDataConnection) GetForProvider() interface{} {
+	return &tr.Spec.ForProvider
+}

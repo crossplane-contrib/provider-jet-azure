@@ -49,3 +49,8 @@ func (tr *HdinsightSparkCluster) GetParameters() ([]byte, error) {
 func (tr *HdinsightSparkCluster) SetParameters(data []byte) error {
 	return conversion.TFParser.Unmarshal(data, &tr.Spec.ForProvider)
 }
+
+// GetForProvider of this HdinsightSparkCluster
+func (tr *HdinsightSparkCluster) GetForProvider() interface{} {
+	return &tr.Spec.ForProvider
+}

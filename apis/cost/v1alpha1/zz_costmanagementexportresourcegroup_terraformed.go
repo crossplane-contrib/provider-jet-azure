@@ -49,3 +49,8 @@ func (tr *CostManagementExportResourceGroup) GetParameters() ([]byte, error) {
 func (tr *CostManagementExportResourceGroup) SetParameters(data []byte) error {
 	return conversion.TFParser.Unmarshal(data, &tr.Spec.ForProvider)
 }
+
+// GetForProvider of this CostManagementExportResourceGroup
+func (tr *CostManagementExportResourceGroup) GetForProvider() interface{} {
+	return &tr.Spec.ForProvider
+}

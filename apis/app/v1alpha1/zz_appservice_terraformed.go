@@ -49,3 +49,8 @@ func (tr *AppService) GetParameters() ([]byte, error) {
 func (tr *AppService) SetParameters(data []byte) error {
 	return conversion.TFParser.Unmarshal(data, &tr.Spec.ForProvider)
 }
+
+// GetForProvider of this AppService
+func (tr *AppService) GetForProvider() interface{} {
+	return &tr.Spec.ForProvider
+}

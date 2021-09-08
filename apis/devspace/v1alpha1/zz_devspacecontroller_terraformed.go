@@ -49,3 +49,8 @@ func (tr *DevspaceController) GetParameters() ([]byte, error) {
 func (tr *DevspaceController) SetParameters(data []byte) error {
 	return conversion.TFParser.Unmarshal(data, &tr.Spec.ForProvider)
 }
+
+// GetForProvider of this DevspaceController
+func (tr *DevspaceController) GetForProvider() interface{} {
+	return &tr.Spec.ForProvider
+}

@@ -49,3 +49,8 @@ func (tr *LogAnalyticsSavedSearch) GetParameters() ([]byte, error) {
 func (tr *LogAnalyticsSavedSearch) SetParameters(data []byte) error {
 	return conversion.TFParser.Unmarshal(data, &tr.Spec.ForProvider)
 }
+
+// GetForProvider of this LogAnalyticsSavedSearch
+func (tr *LogAnalyticsSavedSearch) GetForProvider() interface{} {
+	return &tr.Spec.ForProvider
+}

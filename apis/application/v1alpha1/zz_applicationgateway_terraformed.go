@@ -49,3 +49,8 @@ func (tr *ApplicationGateway) GetParameters() ([]byte, error) {
 func (tr *ApplicationGateway) SetParameters(data []byte) error {
 	return conversion.TFParser.Unmarshal(data, &tr.Spec.ForProvider)
 }
+
+// GetForProvider of this ApplicationGateway
+func (tr *ApplicationGateway) GetForProvider() interface{} {
+	return &tr.Spec.ForProvider
+}

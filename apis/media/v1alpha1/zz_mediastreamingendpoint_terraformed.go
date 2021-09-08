@@ -49,3 +49,8 @@ func (tr *MediaStreamingEndpoint) GetParameters() ([]byte, error) {
 func (tr *MediaStreamingEndpoint) SetParameters(data []byte) error {
 	return conversion.TFParser.Unmarshal(data, &tr.Spec.ForProvider)
 }
+
+// GetForProvider of this MediaStreamingEndpoint
+func (tr *MediaStreamingEndpoint) GetForProvider() interface{} {
+	return &tr.Spec.ForProvider
+}

@@ -49,3 +49,8 @@ func (tr *DataFactoryLinkedServiceMysql) GetParameters() ([]byte, error) {
 func (tr *DataFactoryLinkedServiceMysql) SetParameters(data []byte) error {
 	return conversion.TFParser.Unmarshal(data, &tr.Spec.ForProvider)
 }
+
+// GetForProvider of this DataFactoryLinkedServiceMysql
+func (tr *DataFactoryLinkedServiceMysql) GetForProvider() interface{} {
+	return &tr.Spec.ForProvider
+}

@@ -49,3 +49,8 @@ func (tr *BackupPolicyVm) GetParameters() ([]byte, error) {
 func (tr *BackupPolicyVm) SetParameters(data []byte) error {
 	return conversion.TFParser.Unmarshal(data, &tr.Spec.ForProvider)
 }
+
+// GetForProvider of this BackupPolicyVm
+func (tr *BackupPolicyVm) GetForProvider() interface{} {
+	return &tr.Spec.ForProvider
+}

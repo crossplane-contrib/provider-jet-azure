@@ -49,3 +49,8 @@ func (tr *ServiceFabricMeshSecretValue) GetParameters() ([]byte, error) {
 func (tr *ServiceFabricMeshSecretValue) SetParameters(data []byte) error {
 	return conversion.TFParser.Unmarshal(data, &tr.Spec.ForProvider)
 }
+
+// GetForProvider of this ServiceFabricMeshSecretValue
+func (tr *ServiceFabricMeshSecretValue) GetForProvider() interface{} {
+	return &tr.Spec.ForProvider
+}

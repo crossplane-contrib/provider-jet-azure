@@ -49,3 +49,8 @@ func (tr *SqlActiveDirectoryAdministrator) GetParameters() ([]byte, error) {
 func (tr *SqlActiveDirectoryAdministrator) SetParameters(data []byte) error {
 	return conversion.TFParser.Unmarshal(data, &tr.Spec.ForProvider)
 }
+
+// GetForProvider of this SqlActiveDirectoryAdministrator
+func (tr *SqlActiveDirectoryAdministrator) GetForProvider() interface{} {
+	return &tr.Spec.ForProvider
+}

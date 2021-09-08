@@ -49,3 +49,8 @@ func (tr *EventhubAuthorizationRule) GetParameters() ([]byte, error) {
 func (tr *EventhubAuthorizationRule) SetParameters(data []byte) error {
 	return conversion.TFParser.Unmarshal(data, &tr.Spec.ForProvider)
 }
+
+// GetForProvider of this EventhubAuthorizationRule
+func (tr *EventhubAuthorizationRule) GetForProvider() interface{} {
+	return &tr.Spec.ForProvider
+}

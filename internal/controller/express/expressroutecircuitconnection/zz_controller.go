@@ -23,13 +23,29 @@ import (
 	ctrl "sigs.k8s.io/controller-runtime"
 
 	"github.com/crossplane-contrib/terrajet/pkg/terraform"
+	"github.com/crossplane/crossplane-runtime/pkg/event"
 	"github.com/crossplane/crossplane-runtime/pkg/logging"
+	"github.com/crossplane/crossplane-runtime/pkg/reconciler/managed"
+	xpresource "github.com/crossplane/crossplane-runtime/pkg/resource"
+	"sigs.k8s.io/controller-runtime/pkg/controller"
 
 	v1alpha1 "github.com/ulucinar/provider-tf-azure/apis/express/v1alpha1"
 	clients "github.com/ulucinar/provider-tf-azure/internal/clients"
 )
 
 // Setup adds a controller that reconciles ExpressRouteCircuitConnection managed resources.
-func Setup(mgr ctrl.Manager, l logging.Logger, _ workqueue.RateLimiter) error {
-	return terraform.SetupController(mgr, l, &v1alpha1.ExpressRouteCircuitConnection{}, v1alpha1.ExpressRouteCircuitConnectionGroupVersionKind, clients.ProviderConfigBuilder)
+func Setup(mgr ctrl.Manager, l logging.Logger, rl workqueue.RateLimiter) error {
+	name := managed.ControllerName(v1alpha1.ExpressRouteCircuitConnectionGroupVersionKind.String())
+	r := managed.NewReconciler(mgr,
+		xpresource.ManagedKind(v1alpha1.ExpressRouteCircuitConnectionGroupVersionKind),
+		managed.WithInitializers(),
+		managed.WithExternalConnecter(terraform.NewConnector(mgr.GetClient(), l, clients.ProviderConfigBuilder)),
+		managed.WithLogger(l.WithValues("controller", name)),
+		managed.WithRecorder(event.NewAPIRecorder(mgr.GetEventRecorderFor(name))))
+
+	return ctrl.NewControllerManagedBy(mgr).
+		Named(name).
+		WithOptions(controller.Options{RateLimiter: rl}).
+		For(&v1alpha1.ExpressRouteCircuitConnection{}).
+		Complete(r)
 }

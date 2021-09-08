@@ -49,3 +49,8 @@ func (tr *VirtualDesktopWorkspaceApplicationGroupAssociation) GetParameters() ([
 func (tr *VirtualDesktopWorkspaceApplicationGroupAssociation) SetParameters(data []byte) error {
 	return conversion.TFParser.Unmarshal(data, &tr.Spec.ForProvider)
 }
+
+// GetForProvider of this VirtualDesktopWorkspaceApplicationGroupAssociation
+func (tr *VirtualDesktopWorkspaceApplicationGroupAssociation) GetForProvider() interface{} {
+	return &tr.Spec.ForProvider
+}

@@ -49,3 +49,8 @@ func (tr *ApplicationInsightsApiKey) GetParameters() ([]byte, error) {
 func (tr *ApplicationInsightsApiKey) SetParameters(data []byte) error {
 	return conversion.TFParser.Unmarshal(data, &tr.Spec.ForProvider)
 }
+
+// GetForProvider of this ApplicationInsightsApiKey
+func (tr *ApplicationInsightsApiKey) GetForProvider() interface{} {
+	return &tr.Spec.ForProvider
+}

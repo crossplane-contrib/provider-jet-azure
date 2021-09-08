@@ -49,3 +49,8 @@ func (tr *DigitalTwinsInstance) GetParameters() ([]byte, error) {
 func (tr *DigitalTwinsInstance) SetParameters(data []byte) error {
 	return conversion.TFParser.Unmarshal(data, &tr.Spec.ForProvider)
 }
+
+// GetForProvider of this DigitalTwinsInstance
+func (tr *DigitalTwinsInstance) GetForProvider() interface{} {
+	return &tr.Spec.ForProvider
+}

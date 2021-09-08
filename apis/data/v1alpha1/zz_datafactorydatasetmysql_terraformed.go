@@ -49,3 +49,8 @@ func (tr *DataFactoryDatasetMysql) GetParameters() ([]byte, error) {
 func (tr *DataFactoryDatasetMysql) SetParameters(data []byte) error {
 	return conversion.TFParser.Unmarshal(data, &tr.Spec.ForProvider)
 }
+
+// GetForProvider of this DataFactoryDatasetMysql
+func (tr *DataFactoryDatasetMysql) GetForProvider() interface{} {
+	return &tr.Spec.ForProvider
+}

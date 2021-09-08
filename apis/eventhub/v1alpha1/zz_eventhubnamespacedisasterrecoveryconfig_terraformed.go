@@ -49,3 +49,8 @@ func (tr *EventhubNamespaceDisasterRecoveryConfig) GetParameters() ([]byte, erro
 func (tr *EventhubNamespaceDisasterRecoveryConfig) SetParameters(data []byte) error {
 	return conversion.TFParser.Unmarshal(data, &tr.Spec.ForProvider)
 }
+
+// GetForProvider of this EventhubNamespaceDisasterRecoveryConfig
+func (tr *EventhubNamespaceDisasterRecoveryConfig) GetForProvider() interface{} {
+	return &tr.Spec.ForProvider
+}

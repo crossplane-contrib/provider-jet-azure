@@ -49,3 +49,8 @@ func (tr *DiskAccess) GetParameters() ([]byte, error) {
 func (tr *DiskAccess) SetParameters(data []byte) error {
 	return conversion.TFParser.Unmarshal(data, &tr.Spec.ForProvider)
 }
+
+// GetForProvider of this DiskAccess
+func (tr *DiskAccess) GetForProvider() interface{} {
+	return &tr.Spec.ForProvider
+}

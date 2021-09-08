@@ -49,3 +49,8 @@ func (tr *StorageAccount) GetParameters() ([]byte, error) {
 func (tr *StorageAccount) SetParameters(data []byte) error {
 	return conversion.TFParser.Unmarshal(data, &tr.Spec.ForProvider)
 }
+
+// GetForProvider of this StorageAccount
+func (tr *StorageAccount) GetForProvider() interface{} {
+	return &tr.Spec.ForProvider
+}

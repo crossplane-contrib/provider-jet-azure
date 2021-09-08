@@ -49,3 +49,8 @@ func (tr *ProximityPlacementGroup) GetParameters() ([]byte, error) {
 func (tr *ProximityPlacementGroup) SetParameters(data []byte) error {
 	return conversion.TFParser.Unmarshal(data, &tr.Spec.ForProvider)
 }
+
+// GetForProvider of this ProximityPlacementGroup
+func (tr *ProximityPlacementGroup) GetForProvider() interface{} {
+	return &tr.Spec.ForProvider
+}

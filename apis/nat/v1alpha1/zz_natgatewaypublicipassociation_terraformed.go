@@ -49,3 +49,8 @@ func (tr *NatGatewayPublicIpAssociation) GetParameters() ([]byte, error) {
 func (tr *NatGatewayPublicIpAssociation) SetParameters(data []byte) error {
 	return conversion.TFParser.Unmarshal(data, &tr.Spec.ForProvider)
 }
+
+// GetForProvider of this NatGatewayPublicIpAssociation
+func (tr *NatGatewayPublicIpAssociation) GetForProvider() interface{} {
+	return &tr.Spec.ForProvider
+}

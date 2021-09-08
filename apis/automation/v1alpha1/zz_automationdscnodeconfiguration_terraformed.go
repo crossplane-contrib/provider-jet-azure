@@ -49,3 +49,8 @@ func (tr *AutomationDscNodeconfiguration) GetParameters() ([]byte, error) {
 func (tr *AutomationDscNodeconfiguration) SetParameters(data []byte) error {
 	return conversion.TFParser.Unmarshal(data, &tr.Spec.ForProvider)
 }
+
+// GetForProvider of this AutomationDscNodeconfiguration
+func (tr *AutomationDscNodeconfiguration) GetForProvider() interface{} {
+	return &tr.Spec.ForProvider
+}

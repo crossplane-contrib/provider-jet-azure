@@ -49,3 +49,8 @@ func (tr *MonitorActivityLogAlert) GetParameters() ([]byte, error) {
 func (tr *MonitorActivityLogAlert) SetParameters(data []byte) error {
 	return conversion.TFParser.Unmarshal(data, &tr.Spec.ForProvider)
 }
+
+// GetForProvider of this MonitorActivityLogAlert
+func (tr *MonitorActivityLogAlert) GetForProvider() interface{} {
+	return &tr.Spec.ForProvider
+}

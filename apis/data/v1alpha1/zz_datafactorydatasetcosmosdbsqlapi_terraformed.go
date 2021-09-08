@@ -49,3 +49,8 @@ func (tr *DataFactoryDatasetCosmosdbSqlapi) GetParameters() ([]byte, error) {
 func (tr *DataFactoryDatasetCosmosdbSqlapi) SetParameters(data []byte) error {
 	return conversion.TFParser.Unmarshal(data, &tr.Spec.ForProvider)
 }
+
+// GetForProvider of this DataFactoryDatasetCosmosdbSqlapi
+func (tr *DataFactoryDatasetCosmosdbSqlapi) GetForProvider() interface{} {
+	return &tr.Spec.ForProvider
+}

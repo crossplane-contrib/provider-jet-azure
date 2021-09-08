@@ -49,3 +49,8 @@ func (tr *KustoIothubDataConnection) GetParameters() ([]byte, error) {
 func (tr *KustoIothubDataConnection) SetParameters(data []byte) error {
 	return conversion.TFParser.Unmarshal(data, &tr.Spec.ForProvider)
 }
+
+// GetForProvider of this KustoIothubDataConnection
+func (tr *KustoIothubDataConnection) GetForProvider() interface{} {
+	return &tr.Spec.ForProvider
+}

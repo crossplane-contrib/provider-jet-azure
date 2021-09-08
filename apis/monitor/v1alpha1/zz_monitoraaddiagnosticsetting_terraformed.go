@@ -49,3 +49,8 @@ func (tr *MonitorAadDiagnosticSetting) GetParameters() ([]byte, error) {
 func (tr *MonitorAadDiagnosticSetting) SetParameters(data []byte) error {
 	return conversion.TFParser.Unmarshal(data, &tr.Spec.ForProvider)
 }
+
+// GetForProvider of this MonitorAadDiagnosticSetting
+func (tr *MonitorAadDiagnosticSetting) GetForProvider() interface{} {
+	return &tr.Spec.ForProvider
+}

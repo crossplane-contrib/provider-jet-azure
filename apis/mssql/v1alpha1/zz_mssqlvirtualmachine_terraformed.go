@@ -49,3 +49,8 @@ func (tr *MssqlVirtualMachine) GetParameters() ([]byte, error) {
 func (tr *MssqlVirtualMachine) SetParameters(data []byte) error {
 	return conversion.TFParser.Unmarshal(data, &tr.Spec.ForProvider)
 }
+
+// GetForProvider of this MssqlVirtualMachine
+func (tr *MssqlVirtualMachine) GetForProvider() interface{} {
+	return &tr.Spec.ForProvider
+}

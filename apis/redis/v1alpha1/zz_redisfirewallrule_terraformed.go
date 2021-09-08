@@ -49,3 +49,8 @@ func (tr *RedisFirewallRule) GetParameters() ([]byte, error) {
 func (tr *RedisFirewallRule) SetParameters(data []byte) error {
 	return conversion.TFParser.Unmarshal(data, &tr.Spec.ForProvider)
 }
+
+// GetForProvider of this RedisFirewallRule
+func (tr *RedisFirewallRule) GetForProvider() interface{} {
+	return &tr.Spec.ForProvider
+}

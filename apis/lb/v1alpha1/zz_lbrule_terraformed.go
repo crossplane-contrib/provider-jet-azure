@@ -49,3 +49,8 @@ func (tr *LbRule) GetParameters() ([]byte, error) {
 func (tr *LbRule) SetParameters(data []byte) error {
 	return conversion.TFParser.Unmarshal(data, &tr.Spec.ForProvider)
 }
+
+// GetForProvider of this LbRule
+func (tr *LbRule) GetForProvider() interface{} {
+	return &tr.Spec.ForProvider
+}

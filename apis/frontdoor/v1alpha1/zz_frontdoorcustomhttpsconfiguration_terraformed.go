@@ -49,3 +49,8 @@ func (tr *FrontdoorCustomHttpsConfiguration) GetParameters() ([]byte, error) {
 func (tr *FrontdoorCustomHttpsConfiguration) SetParameters(data []byte) error {
 	return conversion.TFParser.Unmarshal(data, &tr.Spec.ForProvider)
 }
+
+// GetForProvider of this FrontdoorCustomHttpsConfiguration
+func (tr *FrontdoorCustomHttpsConfiguration) GetForProvider() interface{} {
+	return &tr.Spec.ForProvider
+}

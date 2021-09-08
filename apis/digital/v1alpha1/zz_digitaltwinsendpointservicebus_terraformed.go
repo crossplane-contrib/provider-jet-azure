@@ -49,3 +49,8 @@ func (tr *DigitalTwinsEndpointServicebus) GetParameters() ([]byte, error) {
 func (tr *DigitalTwinsEndpointServicebus) SetParameters(data []byte) error {
 	return conversion.TFParser.Unmarshal(data, &tr.Spec.ForProvider)
 }
+
+// GetForProvider of this DigitalTwinsEndpointServicebus
+func (tr *DigitalTwinsEndpointServicebus) GetForProvider() interface{} {
+	return &tr.Spec.ForProvider
+}

@@ -49,3 +49,8 @@ func (tr *Frontdoor) GetParameters() ([]byte, error) {
 func (tr *Frontdoor) SetParameters(data []byte) error {
 	return conversion.TFParser.Unmarshal(data, &tr.Spec.ForProvider)
 }
+
+// GetForProvider of this Frontdoor
+func (tr *Frontdoor) GetForProvider() interface{} {
+	return &tr.Spec.ForProvider
+}

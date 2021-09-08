@@ -49,3 +49,8 @@ func (tr *DigitalTwinsEndpointEventhub) GetParameters() ([]byte, error) {
 func (tr *DigitalTwinsEndpointEventhub) SetParameters(data []byte) error {
 	return conversion.TFParser.Unmarshal(data, &tr.Spec.ForProvider)
 }
+
+// GetForProvider of this DigitalTwinsEndpointEventhub
+func (tr *DigitalTwinsEndpointEventhub) GetForProvider() interface{} {
+	return &tr.Spec.ForProvider
+}

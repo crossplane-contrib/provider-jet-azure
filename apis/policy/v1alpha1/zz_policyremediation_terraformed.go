@@ -49,3 +49,8 @@ func (tr *PolicyRemediation) GetParameters() ([]byte, error) {
 func (tr *PolicyRemediation) SetParameters(data []byte) error {
 	return conversion.TFParser.Unmarshal(data, &tr.Spec.ForProvider)
 }
+
+// GetForProvider of this PolicyRemediation
+func (tr *PolicyRemediation) GetForProvider() interface{} {
+	return &tr.Spec.ForProvider
+}

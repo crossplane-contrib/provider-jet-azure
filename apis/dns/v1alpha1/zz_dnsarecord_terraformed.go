@@ -49,3 +49,8 @@ func (tr *DnsARecord) GetParameters() ([]byte, error) {
 func (tr *DnsARecord) SetParameters(data []byte) error {
 	return conversion.TFParser.Unmarshal(data, &tr.Spec.ForProvider)
 }
+
+// GetForProvider of this DnsARecord
+func (tr *DnsARecord) GetForProvider() interface{} {
+	return &tr.Spec.ForProvider
+}

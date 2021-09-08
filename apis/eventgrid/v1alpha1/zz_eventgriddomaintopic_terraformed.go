@@ -49,3 +49,8 @@ func (tr *EventgridDomainTopic) GetParameters() ([]byte, error) {
 func (tr *EventgridDomainTopic) SetParameters(data []byte) error {
 	return conversion.TFParser.Unmarshal(data, &tr.Spec.ForProvider)
 }
+
+// GetForProvider of this EventgridDomainTopic
+func (tr *EventgridDomainTopic) GetForProvider() interface{} {
+	return &tr.Spec.ForProvider
+}

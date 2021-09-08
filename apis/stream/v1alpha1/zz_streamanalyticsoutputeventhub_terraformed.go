@@ -49,3 +49,8 @@ func (tr *StreamAnalyticsOutputEventhub) GetParameters() ([]byte, error) {
 func (tr *StreamAnalyticsOutputEventhub) SetParameters(data []byte) error {
 	return conversion.TFParser.Unmarshal(data, &tr.Spec.ForProvider)
 }
+
+// GetForProvider of this StreamAnalyticsOutputEventhub
+func (tr *StreamAnalyticsOutputEventhub) GetForProvider() interface{} {
+	return &tr.Spec.ForProvider
+}

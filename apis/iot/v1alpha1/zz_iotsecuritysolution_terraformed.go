@@ -49,3 +49,8 @@ func (tr *IotSecuritySolution) GetParameters() ([]byte, error) {
 func (tr *IotSecuritySolution) SetParameters(data []byte) error {
 	return conversion.TFParser.Unmarshal(data, &tr.Spec.ForProvider)
 }
+
+// GetForProvider of this IotSecuritySolution
+func (tr *IotSecuritySolution) GetForProvider() interface{} {
+	return &tr.Spec.ForProvider
+}

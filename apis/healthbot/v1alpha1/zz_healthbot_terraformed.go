@@ -49,3 +49,8 @@ func (tr *Healthbot) GetParameters() ([]byte, error) {
 func (tr *Healthbot) SetParameters(data []byte) error {
 	return conversion.TFParser.Unmarshal(data, &tr.Spec.ForProvider)
 }
+
+// GetForProvider of this Healthbot
+func (tr *Healthbot) GetForProvider() interface{} {
+	return &tr.Spec.ForProvider
+}

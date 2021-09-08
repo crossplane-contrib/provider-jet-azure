@@ -49,3 +49,8 @@ func (tr *AvailabilitySet) GetParameters() ([]byte, error) {
 func (tr *AvailabilitySet) SetParameters(data []byte) error {
 	return conversion.TFParser.Unmarshal(data, &tr.Spec.ForProvider)
 }
+
+// GetForProvider of this AvailabilitySet
+func (tr *AvailabilitySet) GetForProvider() interface{} {
+	return &tr.Spec.ForProvider
+}

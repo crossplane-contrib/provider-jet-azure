@@ -49,3 +49,8 @@ func (tr *ApplicationInsightsAnalyticsItem) GetParameters() ([]byte, error) {
 func (tr *ApplicationInsightsAnalyticsItem) SetParameters(data []byte) error {
 	return conversion.TFParser.Unmarshal(data, &tr.Spec.ForProvider)
 }
+
+// GetForProvider of this ApplicationInsightsAnalyticsItem
+func (tr *ApplicationInsightsAnalyticsItem) GetForProvider() interface{} {
+	return &tr.Spec.ForProvider
+}

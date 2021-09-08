@@ -49,3 +49,8 @@ func (tr *HdinsightMlServicesCluster) GetParameters() ([]byte, error) {
 func (tr *HdinsightMlServicesCluster) SetParameters(data []byte) error {
 	return conversion.TFParser.Unmarshal(data, &tr.Spec.ForProvider)
 }
+
+// GetForProvider of this HdinsightMlServicesCluster
+func (tr *HdinsightMlServicesCluster) GetForProvider() interface{} {
+	return &tr.Spec.ForProvider
+}

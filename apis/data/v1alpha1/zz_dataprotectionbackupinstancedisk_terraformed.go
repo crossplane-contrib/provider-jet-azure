@@ -49,3 +49,8 @@ func (tr *DataProtectionBackupInstanceDisk) GetParameters() ([]byte, error) {
 func (tr *DataProtectionBackupInstanceDisk) SetParameters(data []byte) error {
 	return conversion.TFParser.Unmarshal(data, &tr.Spec.ForProvider)
 }
+
+// GetForProvider of this DataProtectionBackupInstanceDisk
+func (tr *DataProtectionBackupInstanceDisk) GetForProvider() interface{} {
+	return &tr.Spec.ForProvider
+}

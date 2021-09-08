@@ -49,3 +49,8 @@ func (tr *EventhubConsumerGroup) GetParameters() ([]byte, error) {
 func (tr *EventhubConsumerGroup) SetParameters(data []byte) error {
 	return conversion.TFParser.Unmarshal(data, &tr.Spec.ForProvider)
 }
+
+// GetForProvider of this EventhubConsumerGroup
+func (tr *EventhubConsumerGroup) GetForProvider() interface{} {
+	return &tr.Spec.ForProvider
+}

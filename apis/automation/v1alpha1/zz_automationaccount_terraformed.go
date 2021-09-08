@@ -49,3 +49,8 @@ func (tr *AutomationAccount) GetParameters() ([]byte, error) {
 func (tr *AutomationAccount) SetParameters(data []byte) error {
 	return conversion.TFParser.Unmarshal(data, &tr.Spec.ForProvider)
 }
+
+// GetForProvider of this AutomationAccount
+func (tr *AutomationAccount) GetForProvider() interface{} {
+	return &tr.Spec.ForProvider
+}

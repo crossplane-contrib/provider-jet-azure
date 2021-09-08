@@ -49,3 +49,8 @@ func (tr *IothubDpsSharedAccessPolicy) GetParameters() ([]byte, error) {
 func (tr *IothubDpsSharedAccessPolicy) SetParameters(data []byte) error {
 	return conversion.TFParser.Unmarshal(data, &tr.Spec.ForProvider)
 }
+
+// GetForProvider of this IothubDpsSharedAccessPolicy
+func (tr *IothubDpsSharedAccessPolicy) GetForProvider() interface{} {
+	return &tr.Spec.ForProvider
+}

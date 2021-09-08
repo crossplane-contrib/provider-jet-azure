@@ -49,3 +49,8 @@ func (tr *LighthouseDefinition) GetParameters() ([]byte, error) {
 func (tr *LighthouseDefinition) SetParameters(data []byte) error {
 	return conversion.TFParser.Unmarshal(data, &tr.Spec.ForProvider)
 }
+
+// GetForProvider of this LighthouseDefinition
+func (tr *LighthouseDefinition) GetForProvider() interface{} {
+	return &tr.Spec.ForProvider
+}

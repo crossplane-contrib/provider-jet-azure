@@ -49,3 +49,8 @@ func (tr *LogicAppIntegrationAccountSchema) GetParameters() ([]byte, error) {
 func (tr *LogicAppIntegrationAccountSchema) SetParameters(data []byte) error {
 	return conversion.TFParser.Unmarshal(data, &tr.Spec.ForProvider)
 }
+
+// GetForProvider of this LogicAppIntegrationAccountSchema
+func (tr *LogicAppIntegrationAccountSchema) GetForProvider() interface{} {
+	return &tr.Spec.ForProvider
+}

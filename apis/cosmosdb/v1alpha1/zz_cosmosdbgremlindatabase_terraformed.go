@@ -49,3 +49,8 @@ func (tr *CosmosdbGremlinDatabase) GetParameters() ([]byte, error) {
 func (tr *CosmosdbGremlinDatabase) SetParameters(data []byte) error {
 	return conversion.TFParser.Unmarshal(data, &tr.Spec.ForProvider)
 }
+
+// GetForProvider of this CosmosdbGremlinDatabase
+func (tr *CosmosdbGremlinDatabase) GetForProvider() interface{} {
+	return &tr.Spec.ForProvider
+}

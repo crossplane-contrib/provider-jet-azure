@@ -49,3 +49,8 @@ func (tr *ManagementLock) GetParameters() ([]byte, error) {
 func (tr *ManagementLock) SetParameters(data []byte) error {
 	return conversion.TFParser.Unmarshal(data, &tr.Spec.ForProvider)
 }
+
+// GetForProvider of this ManagementLock
+func (tr *ManagementLock) GetForProvider() interface{} {
+	return &tr.Spec.ForProvider
+}

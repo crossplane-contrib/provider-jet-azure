@@ -49,3 +49,8 @@ func (tr *ServicebusSubscription) GetParameters() ([]byte, error) {
 func (tr *ServicebusSubscription) SetParameters(data []byte) error {
 	return conversion.TFParser.Unmarshal(data, &tr.Spec.ForProvider)
 }
+
+// GetForProvider of this ServicebusSubscription
+func (tr *ServicebusSubscription) GetForProvider() interface{} {
+	return &tr.Spec.ForProvider
+}

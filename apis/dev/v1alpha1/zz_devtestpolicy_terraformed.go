@@ -49,3 +49,8 @@ func (tr *DevTestPolicy) GetParameters() ([]byte, error) {
 func (tr *DevTestPolicy) SetParameters(data []byte) error {
 	return conversion.TFParser.Unmarshal(data, &tr.Spec.ForProvider)
 }
+
+// GetForProvider of this DevTestPolicy
+func (tr *DevTestPolicy) GetForProvider() interface{} {
+	return &tr.Spec.ForProvider
+}

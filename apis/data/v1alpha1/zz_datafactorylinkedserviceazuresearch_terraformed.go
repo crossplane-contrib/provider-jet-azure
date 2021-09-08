@@ -49,3 +49,8 @@ func (tr *DataFactoryLinkedServiceAzureSearch) GetParameters() ([]byte, error) {
 func (tr *DataFactoryLinkedServiceAzureSearch) SetParameters(data []byte) error {
 	return conversion.TFParser.Unmarshal(data, &tr.Spec.ForProvider)
 }
+
+// GetForProvider of this DataFactoryLinkedServiceAzureSearch
+func (tr *DataFactoryLinkedServiceAzureSearch) GetForProvider() interface{} {
+	return &tr.Spec.ForProvider
+}

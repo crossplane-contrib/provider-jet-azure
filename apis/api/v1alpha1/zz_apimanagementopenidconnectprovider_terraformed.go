@@ -49,3 +49,8 @@ func (tr *ApiManagementOpenidConnectProvider) GetParameters() ([]byte, error) {
 func (tr *ApiManagementOpenidConnectProvider) SetParameters(data []byte) error {
 	return conversion.TFParser.Unmarshal(data, &tr.Spec.ForProvider)
 }
+
+// GetForProvider of this ApiManagementOpenidConnectProvider
+func (tr *ApiManagementOpenidConnectProvider) GetForProvider() interface{} {
+	return &tr.Spec.ForProvider
+}

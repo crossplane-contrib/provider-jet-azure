@@ -49,3 +49,8 @@ func (tr *LogAnalyticsLinkedService) GetParameters() ([]byte, error) {
 func (tr *LogAnalyticsLinkedService) SetParameters(data []byte) error {
 	return conversion.TFParser.Unmarshal(data, &tr.Spec.ForProvider)
 }
+
+// GetForProvider of this LogAnalyticsLinkedService
+func (tr *LogAnalyticsLinkedService) GetForProvider() interface{} {
+	return &tr.Spec.ForProvider
+}

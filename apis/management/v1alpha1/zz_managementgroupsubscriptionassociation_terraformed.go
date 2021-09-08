@@ -49,3 +49,8 @@ func (tr *ManagementGroupSubscriptionAssociation) GetParameters() ([]byte, error
 func (tr *ManagementGroupSubscriptionAssociation) SetParameters(data []byte) error {
 	return conversion.TFParser.Unmarshal(data, &tr.Spec.ForProvider)
 }
+
+// GetForProvider of this ManagementGroupSubscriptionAssociation
+func (tr *ManagementGroupSubscriptionAssociation) GetForProvider() interface{} {
+	return &tr.Spec.ForProvider
+}

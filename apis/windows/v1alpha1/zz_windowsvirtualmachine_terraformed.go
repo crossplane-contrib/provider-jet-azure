@@ -49,3 +49,8 @@ func (tr *WindowsVirtualMachine) GetParameters() ([]byte, error) {
 func (tr *WindowsVirtualMachine) SetParameters(data []byte) error {
 	return conversion.TFParser.Unmarshal(data, &tr.Spec.ForProvider)
 }
+
+// GetForProvider of this WindowsVirtualMachine
+func (tr *WindowsVirtualMachine) GetForProvider() interface{} {
+	return &tr.Spec.ForProvider
+}

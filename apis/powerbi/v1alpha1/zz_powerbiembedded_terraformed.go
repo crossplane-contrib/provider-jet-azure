@@ -49,3 +49,8 @@ func (tr *PowerbiEmbedded) GetParameters() ([]byte, error) {
 func (tr *PowerbiEmbedded) SetParameters(data []byte) error {
 	return conversion.TFParser.Unmarshal(data, &tr.Spec.ForProvider)
 }
+
+// GetForProvider of this PowerbiEmbedded
+func (tr *PowerbiEmbedded) GetForProvider() interface{} {
+	return &tr.Spec.ForProvider
+}

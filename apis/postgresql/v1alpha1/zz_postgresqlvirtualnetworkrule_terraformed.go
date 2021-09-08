@@ -49,3 +49,8 @@ func (tr *PostgresqlVirtualNetworkRule) GetParameters() ([]byte, error) {
 func (tr *PostgresqlVirtualNetworkRule) SetParameters(data []byte) error {
 	return conversion.TFParser.Unmarshal(data, &tr.Spec.ForProvider)
 }
+
+// GetForProvider of this PostgresqlVirtualNetworkRule
+func (tr *PostgresqlVirtualNetworkRule) GetForProvider() interface{} {
+	return &tr.Spec.ForProvider
+}

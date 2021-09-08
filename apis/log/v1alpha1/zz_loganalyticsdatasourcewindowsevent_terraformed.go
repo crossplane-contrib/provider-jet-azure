@@ -49,3 +49,8 @@ func (tr *LogAnalyticsDatasourceWindowsEvent) GetParameters() ([]byte, error) {
 func (tr *LogAnalyticsDatasourceWindowsEvent) SetParameters(data []byte) error {
 	return conversion.TFParser.Unmarshal(data, &tr.Spec.ForProvider)
 }
+
+// GetForProvider of this LogAnalyticsDatasourceWindowsEvent
+func (tr *LogAnalyticsDatasourceWindowsEvent) GetForProvider() interface{} {
+	return &tr.Spec.ForProvider
+}

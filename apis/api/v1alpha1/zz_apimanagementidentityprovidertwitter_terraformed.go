@@ -49,3 +49,8 @@ func (tr *ApiManagementIdentityProviderTwitter) GetParameters() ([]byte, error) 
 func (tr *ApiManagementIdentityProviderTwitter) SetParameters(data []byte) error {
 	return conversion.TFParser.Unmarshal(data, &tr.Spec.ForProvider)
 }
+
+// GetForProvider of this ApiManagementIdentityProviderTwitter
+func (tr *ApiManagementIdentityProviderTwitter) GetForProvider() interface{} {
+	return &tr.Spec.ForProvider
+}

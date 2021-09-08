@@ -49,3 +49,8 @@ func (tr *NetworkWatcher) GetParameters() ([]byte, error) {
 func (tr *NetworkWatcher) SetParameters(data []byte) error {
 	return conversion.TFParser.Unmarshal(data, &tr.Spec.ForProvider)
 }
+
+// GetForProvider of this NetworkWatcher
+func (tr *NetworkWatcher) GetForProvider() interface{} {
+	return &tr.Spec.ForProvider
+}

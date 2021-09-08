@@ -49,3 +49,8 @@ func (tr *SynapseSqlPool) GetParameters() ([]byte, error) {
 func (tr *SynapseSqlPool) SetParameters(data []byte) error {
 	return conversion.TFParser.Unmarshal(data, &tr.Spec.ForProvider)
 }
+
+// GetForProvider of this SynapseSqlPool
+func (tr *SynapseSqlPool) GetForProvider() interface{} {
+	return &tr.Spec.ForProvider
+}

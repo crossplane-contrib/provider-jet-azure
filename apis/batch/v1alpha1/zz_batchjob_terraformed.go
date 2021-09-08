@@ -49,3 +49,8 @@ func (tr *BatchJob) GetParameters() ([]byte, error) {
 func (tr *BatchJob) SetParameters(data []byte) error {
 	return conversion.TFParser.Unmarshal(data, &tr.Spec.ForProvider)
 }
+
+// GetForProvider of this BatchJob
+func (tr *BatchJob) GetForProvider() interface{} {
+	return &tr.Spec.ForProvider
+}

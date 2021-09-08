@@ -49,3 +49,8 @@ func (tr *WebApplicationFirewallPolicy) GetParameters() ([]byte, error) {
 func (tr *WebApplicationFirewallPolicy) SetParameters(data []byte) error {
 	return conversion.TFParser.Unmarshal(data, &tr.Spec.ForProvider)
 }
+
+// GetForProvider of this WebApplicationFirewallPolicy
+func (tr *WebApplicationFirewallPolicy) GetForProvider() interface{} {
+	return &tr.Spec.ForProvider
+}

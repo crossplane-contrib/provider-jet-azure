@@ -49,3 +49,8 @@ func (tr *VmwarePrivateCloud) GetParameters() ([]byte, error) {
 func (tr *VmwarePrivateCloud) SetParameters(data []byte) error {
 	return conversion.TFParser.Unmarshal(data, &tr.Spec.ForProvider)
 }
+
+// GetForProvider of this VmwarePrivateCloud
+func (tr *VmwarePrivateCloud) GetForProvider() interface{} {
+	return &tr.Spec.ForProvider
+}

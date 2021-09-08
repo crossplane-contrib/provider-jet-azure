@@ -49,3 +49,8 @@ func (tr *RelayNamespace) GetParameters() ([]byte, error) {
 func (tr *RelayNamespace) SetParameters(data []byte) error {
 	return conversion.TFParser.Unmarshal(data, &tr.Spec.ForProvider)
 }
+
+// GetForProvider of this RelayNamespace
+func (tr *RelayNamespace) GetForProvider() interface{} {
+	return &tr.Spec.ForProvider
+}

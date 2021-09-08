@@ -49,3 +49,8 @@ func (tr *AttestationProvider) GetParameters() ([]byte, error) {
 func (tr *AttestationProvider) SetParameters(data []byte) error {
 	return conversion.TFParser.Unmarshal(data, &tr.Spec.ForProvider)
 }
+
+// GetForProvider of this AttestationProvider
+func (tr *AttestationProvider) GetForProvider() interface{} {
+	return &tr.Spec.ForProvider
+}

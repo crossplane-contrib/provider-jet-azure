@@ -49,3 +49,8 @@ func (tr *DataLakeStore) GetParameters() ([]byte, error) {
 func (tr *DataLakeStore) SetParameters(data []byte) error {
 	return conversion.TFParser.Unmarshal(data, &tr.Spec.ForProvider)
 }
+
+// GetForProvider of this DataLakeStore
+func (tr *DataLakeStore) GetForProvider() interface{} {
+	return &tr.Spec.ForProvider
+}

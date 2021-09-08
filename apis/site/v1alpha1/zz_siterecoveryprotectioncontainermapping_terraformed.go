@@ -49,3 +49,8 @@ func (tr *SiteRecoveryProtectionContainerMapping) GetParameters() ([]byte, error
 func (tr *SiteRecoveryProtectionContainerMapping) SetParameters(data []byte) error {
 	return conversion.TFParser.Unmarshal(data, &tr.Spec.ForProvider)
 }
+
+// GetForProvider of this SiteRecoveryProtectionContainerMapping
+func (tr *SiteRecoveryProtectionContainerMapping) GetForProvider() interface{} {
+	return &tr.Spec.ForProvider
+}

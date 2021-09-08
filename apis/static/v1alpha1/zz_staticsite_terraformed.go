@@ -49,3 +49,8 @@ func (tr *StaticSite) GetParameters() ([]byte, error) {
 func (tr *StaticSite) SetParameters(data []byte) error {
 	return conversion.TFParser.Unmarshal(data, &tr.Spec.ForProvider)
 }
+
+// GetForProvider of this StaticSite
+func (tr *StaticSite) GetForProvider() interface{} {
+	return &tr.Spec.ForProvider
+}

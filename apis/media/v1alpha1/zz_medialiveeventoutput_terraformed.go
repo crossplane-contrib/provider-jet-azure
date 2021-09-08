@@ -49,3 +49,8 @@ func (tr *MediaLiveEventOutput) GetParameters() ([]byte, error) {
 func (tr *MediaLiveEventOutput) SetParameters(data []byte) error {
 	return conversion.TFParser.Unmarshal(data, &tr.Spec.ForProvider)
 }
+
+// GetForProvider of this MediaLiveEventOutput
+func (tr *MediaLiveEventOutput) GetForProvider() interface{} {
+	return &tr.Spec.ForProvider
+}

@@ -49,3 +49,8 @@ func (tr *MediaJob) GetParameters() ([]byte, error) {
 func (tr *MediaJob) SetParameters(data []byte) error {
 	return conversion.TFParser.Unmarshal(data, &tr.Spec.ForProvider)
 }
+
+// GetForProvider of this MediaJob
+func (tr *MediaJob) GetForProvider() interface{} {
+	return &tr.Spec.ForProvider
+}

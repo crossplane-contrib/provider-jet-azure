@@ -49,3 +49,8 @@ func (tr *NotificationHub) GetParameters() ([]byte, error) {
 func (tr *NotificationHub) SetParameters(data []byte) error {
 	return conversion.TFParser.Unmarshal(data, &tr.Spec.ForProvider)
 }
+
+// GetForProvider of this NotificationHub
+func (tr *NotificationHub) GetForProvider() interface{} {
+	return &tr.Spec.ForProvider
+}

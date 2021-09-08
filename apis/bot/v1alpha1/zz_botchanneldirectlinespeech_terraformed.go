@@ -49,3 +49,8 @@ func (tr *BotChannelDirectLineSpeech) GetParameters() ([]byte, error) {
 func (tr *BotChannelDirectLineSpeech) SetParameters(data []byte) error {
 	return conversion.TFParser.Unmarshal(data, &tr.Spec.ForProvider)
 }
+
+// GetForProvider of this BotChannelDirectLineSpeech
+func (tr *BotChannelDirectLineSpeech) GetForProvider() interface{} {
+	return &tr.Spec.ForProvider
+}

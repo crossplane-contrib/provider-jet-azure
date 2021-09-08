@@ -49,3 +49,8 @@ func (tr *IpGroup) GetParameters() ([]byte, error) {
 func (tr *IpGroup) SetParameters(data []byte) error {
 	return conversion.TFParser.Unmarshal(data, &tr.Spec.ForProvider)
 }
+
+// GetForProvider of this IpGroup
+func (tr *IpGroup) GetForProvider() interface{} {
+	return &tr.Spec.ForProvider
+}

@@ -49,3 +49,8 @@ func (tr *StorageShareDirectory) GetParameters() ([]byte, error) {
 func (tr *StorageShareDirectory) SetParameters(data []byte) error {
 	return conversion.TFParser.Unmarshal(data, &tr.Spec.ForProvider)
 }
+
+// GetForProvider of this StorageShareDirectory
+func (tr *StorageShareDirectory) GetForProvider() interface{} {
+	return &tr.Spec.ForProvider
+}

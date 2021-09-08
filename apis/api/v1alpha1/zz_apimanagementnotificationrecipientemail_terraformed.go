@@ -49,3 +49,8 @@ func (tr *ApiManagementNotificationRecipientEmail) GetParameters() ([]byte, erro
 func (tr *ApiManagementNotificationRecipientEmail) SetParameters(data []byte) error {
 	return conversion.TFParser.Unmarshal(data, &tr.Spec.ForProvider)
 }
+
+// GetForProvider of this ApiManagementNotificationRecipientEmail
+func (tr *ApiManagementNotificationRecipientEmail) GetForProvider() interface{} {
+	return &tr.Spec.ForProvider
+}

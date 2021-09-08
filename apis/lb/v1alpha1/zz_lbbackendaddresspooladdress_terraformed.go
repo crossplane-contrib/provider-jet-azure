@@ -49,3 +49,8 @@ func (tr *LbBackendAddressPoolAddress) GetParameters() ([]byte, error) {
 func (tr *LbBackendAddressPoolAddress) SetParameters(data []byte) error {
 	return conversion.TFParser.Unmarshal(data, &tr.Spec.ForProvider)
 }
+
+// GetForProvider of this LbBackendAddressPoolAddress
+func (tr *LbBackendAddressPoolAddress) GetForProvider() interface{} {
+	return &tr.Spec.ForProvider
+}

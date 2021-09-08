@@ -49,3 +49,8 @@ func (tr *LocalNetworkGateway) GetParameters() ([]byte, error) {
 func (tr *LocalNetworkGateway) SetParameters(data []byte) error {
 	return conversion.TFParser.Unmarshal(data, &tr.Spec.ForProvider)
 }
+
+// GetForProvider of this LocalNetworkGateway
+func (tr *LocalNetworkGateway) GetForProvider() interface{} {
+	return &tr.Spec.ForProvider
+}

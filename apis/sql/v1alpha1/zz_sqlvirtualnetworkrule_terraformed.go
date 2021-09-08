@@ -49,3 +49,8 @@ func (tr *SqlVirtualNetworkRule) GetParameters() ([]byte, error) {
 func (tr *SqlVirtualNetworkRule) SetParameters(data []byte) error {
 	return conversion.TFParser.Unmarshal(data, &tr.Spec.ForProvider)
 }
+
+// GetForProvider of this SqlVirtualNetworkRule
+func (tr *SqlVirtualNetworkRule) GetForProvider() interface{} {
+	return &tr.Spec.ForProvider
+}

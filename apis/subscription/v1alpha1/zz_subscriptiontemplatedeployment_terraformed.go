@@ -49,3 +49,8 @@ func (tr *SubscriptionTemplateDeployment) GetParameters() ([]byte, error) {
 func (tr *SubscriptionTemplateDeployment) SetParameters(data []byte) error {
 	return conversion.TFParser.Unmarshal(data, &tr.Spec.ForProvider)
 }
+
+// GetForProvider of this SubscriptionTemplateDeployment
+func (tr *SubscriptionTemplateDeployment) GetForProvider() interface{} {
+	return &tr.Spec.ForProvider
+}

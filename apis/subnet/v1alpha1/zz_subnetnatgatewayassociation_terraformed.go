@@ -49,3 +49,8 @@ func (tr *SubnetNatGatewayAssociation) GetParameters() ([]byte, error) {
 func (tr *SubnetNatGatewayAssociation) SetParameters(data []byte) error {
 	return conversion.TFParser.Unmarshal(data, &tr.Spec.ForProvider)
 }
+
+// GetForProvider of this SubnetNatGatewayAssociation
+func (tr *SubnetNatGatewayAssociation) GetForProvider() interface{} {
+	return &tr.Spec.ForProvider
+}

@@ -49,3 +49,8 @@ func (tr *SpringCloudAppRedisAssociation) GetParameters() ([]byte, error) {
 func (tr *SpringCloudAppRedisAssociation) SetParameters(data []byte) error {
 	return conversion.TFParser.Unmarshal(data, &tr.Spec.ForProvider)
 }
+
+// GetForProvider of this SpringCloudAppRedisAssociation
+func (tr *SpringCloudAppRedisAssociation) GetForProvider() interface{} {
+	return &tr.Spec.ForProvider
+}

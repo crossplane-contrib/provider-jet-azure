@@ -49,3 +49,8 @@ func (tr *FrontdoorFirewallPolicy) GetParameters() ([]byte, error) {
 func (tr *FrontdoorFirewallPolicy) SetParameters(data []byte) error {
 	return conversion.TFParser.Unmarshal(data, &tr.Spec.ForProvider)
 }
+
+// GetForProvider of this FrontdoorFirewallPolicy
+func (tr *FrontdoorFirewallPolicy) GetForProvider() interface{} {
+	return &tr.Spec.ForProvider
+}

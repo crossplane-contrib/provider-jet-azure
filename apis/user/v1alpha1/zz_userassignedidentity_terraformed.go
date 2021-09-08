@@ -49,3 +49,8 @@ func (tr *UserAssignedIdentity) GetParameters() ([]byte, error) {
 func (tr *UserAssignedIdentity) SetParameters(data []byte) error {
 	return conversion.TFParser.Unmarshal(data, &tr.Spec.ForProvider)
 }
+
+// GetForProvider of this UserAssignedIdentity
+func (tr *UserAssignedIdentity) GetForProvider() interface{} {
+	return &tr.Spec.ForProvider
+}

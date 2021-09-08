@@ -49,3 +49,8 @@ func (tr *MachineLearningSynapseSpark) GetParameters() ([]byte, error) {
 func (tr *MachineLearningSynapseSpark) SetParameters(data []byte) error {
 	return conversion.TFParser.Unmarshal(data, &tr.Spec.ForProvider)
 }
+
+// GetForProvider of this MachineLearningSynapseSpark
+func (tr *MachineLearningSynapseSpark) GetForProvider() interface{} {
+	return &tr.Spec.ForProvider
+}

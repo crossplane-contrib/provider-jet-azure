@@ -49,3 +49,8 @@ func (tr *SecurityCenterSubscriptionPricing) GetParameters() ([]byte, error) {
 func (tr *SecurityCenterSubscriptionPricing) SetParameters(data []byte) error {
 	return conversion.TFParser.Unmarshal(data, &tr.Spec.ForProvider)
 }
+
+// GetForProvider of this SecurityCenterSubscriptionPricing
+func (tr *SecurityCenterSubscriptionPricing) GetForProvider() interface{} {
+	return &tr.Spec.ForProvider
+}

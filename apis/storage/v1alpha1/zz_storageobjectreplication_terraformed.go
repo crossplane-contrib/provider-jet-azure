@@ -49,3 +49,8 @@ func (tr *StorageObjectReplication) GetParameters() ([]byte, error) {
 func (tr *StorageObjectReplication) SetParameters(data []byte) error {
 	return conversion.TFParser.Unmarshal(data, &tr.Spec.ForProvider)
 }
+
+// GetForProvider of this StorageObjectReplication
+func (tr *StorageObjectReplication) GetForProvider() interface{} {
+	return &tr.Spec.ForProvider
+}

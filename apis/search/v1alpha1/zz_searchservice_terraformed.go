@@ -49,3 +49,8 @@ func (tr *SearchService) GetParameters() ([]byte, error) {
 func (tr *SearchService) SetParameters(data []byte) error {
 	return conversion.TFParser.Unmarshal(data, &tr.Spec.ForProvider)
 }
+
+// GetForProvider of this SearchService
+func (tr *SearchService) GetForProvider() interface{} {
+	return &tr.Spec.ForProvider
+}

@@ -49,3 +49,8 @@ func (tr *CustomProvider) GetParameters() ([]byte, error) {
 func (tr *CustomProvider) SetParameters(data []byte) error {
 	return conversion.TFParser.Unmarshal(data, &tr.Spec.ForProvider)
 }
+
+// GetForProvider of this CustomProvider
+func (tr *CustomProvider) GetForProvider() interface{} {
+	return &tr.Spec.ForProvider
+}

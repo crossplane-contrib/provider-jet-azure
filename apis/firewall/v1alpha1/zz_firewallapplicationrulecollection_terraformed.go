@@ -49,3 +49,8 @@ func (tr *FirewallApplicationRuleCollection) GetParameters() ([]byte, error) {
 func (tr *FirewallApplicationRuleCollection) SetParameters(data []byte) error {
 	return conversion.TFParser.Unmarshal(data, &tr.Spec.ForProvider)
 }
+
+// GetForProvider of this FirewallApplicationRuleCollection
+func (tr *FirewallApplicationRuleCollection) GetForProvider() interface{} {
+	return &tr.Spec.ForProvider
+}

@@ -49,3 +49,8 @@ func (tr *PublicIpPrefix) GetParameters() ([]byte, error) {
 func (tr *PublicIpPrefix) SetParameters(data []byte) error {
 	return conversion.TFParser.Unmarshal(data, &tr.Spec.ForProvider)
 }
+
+// GetForProvider of this PublicIpPrefix
+func (tr *PublicIpPrefix) GetForProvider() interface{} {
+	return &tr.Spec.ForProvider
+}

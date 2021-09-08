@@ -49,3 +49,8 @@ func (tr *MediaContentKeyPolicy) GetParameters() ([]byte, error) {
 func (tr *MediaContentKeyPolicy) SetParameters(data []byte) error {
 	return conversion.TFParser.Unmarshal(data, &tr.Spec.ForProvider)
 }
+
+// GetForProvider of this MediaContentKeyPolicy
+func (tr *MediaContentKeyPolicy) GetForProvider() interface{} {
+	return &tr.Spec.ForProvider
+}

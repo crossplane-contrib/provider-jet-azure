@@ -49,3 +49,8 @@ func (tr *DataFactoryDatasetSnowflake) GetParameters() ([]byte, error) {
 func (tr *DataFactoryDatasetSnowflake) SetParameters(data []byte) error {
 	return conversion.TFParser.Unmarshal(data, &tr.Spec.ForProvider)
 }
+
+// GetForProvider of this DataFactoryDatasetSnowflake
+func (tr *DataFactoryDatasetSnowflake) GetForProvider() interface{} {
+	return &tr.Spec.ForProvider
+}

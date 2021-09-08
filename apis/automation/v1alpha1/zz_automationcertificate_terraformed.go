@@ -49,3 +49,8 @@ func (tr *AutomationCertificate) GetParameters() ([]byte, error) {
 func (tr *AutomationCertificate) SetParameters(data []byte) error {
 	return conversion.TFParser.Unmarshal(data, &tr.Spec.ForProvider)
 }
+
+// GetForProvider of this AutomationCertificate
+func (tr *AutomationCertificate) GetForProvider() interface{} {
+	return &tr.Spec.ForProvider
+}

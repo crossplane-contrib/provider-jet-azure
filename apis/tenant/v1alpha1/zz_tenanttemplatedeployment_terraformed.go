@@ -49,3 +49,8 @@ func (tr *TenantTemplateDeployment) GetParameters() ([]byte, error) {
 func (tr *TenantTemplateDeployment) SetParameters(data []byte) error {
 	return conversion.TFParser.Unmarshal(data, &tr.Spec.ForProvider)
 }
+
+// GetForProvider of this TenantTemplateDeployment
+func (tr *TenantTemplateDeployment) GetForProvider() interface{} {
+	return &tr.Spec.ForProvider
+}

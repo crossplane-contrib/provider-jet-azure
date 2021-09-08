@@ -49,3 +49,8 @@ func (tr *SentinelDataConnectorOffice365) GetParameters() ([]byte, error) {
 func (tr *SentinelDataConnectorOffice365) SetParameters(data []byte) error {
 	return conversion.TFParser.Unmarshal(data, &tr.Spec.ForProvider)
 }
+
+// GetForProvider of this SentinelDataConnectorOffice365
+func (tr *SentinelDataConnectorOffice365) GetForProvider() interface{} {
+	return &tr.Spec.ForProvider
+}

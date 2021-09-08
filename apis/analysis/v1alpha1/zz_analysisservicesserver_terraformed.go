@@ -49,3 +49,8 @@ func (tr *AnalysisServicesServer) GetParameters() ([]byte, error) {
 func (tr *AnalysisServicesServer) SetParameters(data []byte) error {
 	return conversion.TFParser.Unmarshal(data, &tr.Spec.ForProvider)
 }
+
+// GetForProvider of this AnalysisServicesServer
+func (tr *AnalysisServicesServer) GetForProvider() interface{} {
+	return &tr.Spec.ForProvider
+}

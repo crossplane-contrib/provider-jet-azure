@@ -49,3 +49,8 @@ func (tr *VirtualMachineScaleSet) GetParameters() ([]byte, error) {
 func (tr *VirtualMachineScaleSet) SetParameters(data []byte) error {
 	return conversion.TFParser.Unmarshal(data, &tr.Spec.ForProvider)
 }
+
+// GetForProvider of this VirtualMachineScaleSet
+func (tr *VirtualMachineScaleSet) GetForProvider() interface{} {
+	return &tr.Spec.ForProvider
+}

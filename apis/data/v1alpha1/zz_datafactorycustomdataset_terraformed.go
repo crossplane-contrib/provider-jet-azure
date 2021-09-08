@@ -49,3 +49,8 @@ func (tr *DataFactoryCustomDataset) GetParameters() ([]byte, error) {
 func (tr *DataFactoryCustomDataset) SetParameters(data []byte) error {
 	return conversion.TFParser.Unmarshal(data, &tr.Spec.ForProvider)
 }
+
+// GetForProvider of this DataFactoryCustomDataset
+func (tr *DataFactoryCustomDataset) GetForProvider() interface{} {
+	return &tr.Spec.ForProvider
+}

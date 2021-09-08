@@ -49,3 +49,8 @@ func (tr *ApiManagementApiDiagnostic) GetParameters() ([]byte, error) {
 func (tr *ApiManagementApiDiagnostic) SetParameters(data []byte) error {
 	return conversion.TFParser.Unmarshal(data, &tr.Spec.ForProvider)
 }
+
+// GetForProvider of this ApiManagementApiDiagnostic
+func (tr *ApiManagementApiDiagnostic) GetForProvider() interface{} {
+	return &tr.Spec.ForProvider
+}

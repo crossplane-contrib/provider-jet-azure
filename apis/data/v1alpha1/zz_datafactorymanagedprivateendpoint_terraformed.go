@@ -49,3 +49,8 @@ func (tr *DataFactoryManagedPrivateEndpoint) GetParameters() ([]byte, error) {
 func (tr *DataFactoryManagedPrivateEndpoint) SetParameters(data []byte) error {
 	return conversion.TFParser.Unmarshal(data, &tr.Spec.ForProvider)
 }
+
+// GetForProvider of this DataFactoryManagedPrivateEndpoint
+func (tr *DataFactoryManagedPrivateEndpoint) GetForProvider() interface{} {
+	return &tr.Spec.ForProvider
+}

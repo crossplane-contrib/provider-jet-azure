@@ -49,3 +49,8 @@ func (tr *Iothub) GetParameters() ([]byte, error) {
 func (tr *Iothub) SetParameters(data []byte) error {
 	return conversion.TFParser.Unmarshal(data, &tr.Spec.ForProvider)
 }
+
+// GetForProvider of this Iothub
+func (tr *Iothub) GetForProvider() interface{} {
+	return &tr.Spec.ForProvider
+}

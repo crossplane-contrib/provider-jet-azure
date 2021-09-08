@@ -49,3 +49,8 @@ func (tr *DataFactoryLinkedServicePostgresql) GetParameters() ([]byte, error) {
 func (tr *DataFactoryLinkedServicePostgresql) SetParameters(data []byte) error {
 	return conversion.TFParser.Unmarshal(data, &tr.Spec.ForProvider)
 }
+
+// GetForProvider of this DataFactoryLinkedServicePostgresql
+func (tr *DataFactoryLinkedServicePostgresql) GetForProvider() interface{} {
+	return &tr.Spec.ForProvider
+}

@@ -49,3 +49,8 @@ func (tr *IothubEndpointServicebusTopic) GetParameters() ([]byte, error) {
 func (tr *IothubEndpointServicebusTopic) SetParameters(data []byte) error {
 	return conversion.TFParser.Unmarshal(data, &tr.Spec.ForProvider)
 }
+
+// GetForProvider of this IothubEndpointServicebusTopic
+func (tr *IothubEndpointServicebusTopic) GetForProvider() interface{} {
+	return &tr.Spec.ForProvider
+}

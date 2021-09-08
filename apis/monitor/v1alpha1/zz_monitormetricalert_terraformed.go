@@ -49,3 +49,8 @@ func (tr *MonitorMetricAlert) GetParameters() ([]byte, error) {
 func (tr *MonitorMetricAlert) SetParameters(data []byte) error {
 	return conversion.TFParser.Unmarshal(data, &tr.Spec.ForProvider)
 }
+
+// GetForProvider of this MonitorMetricAlert
+func (tr *MonitorMetricAlert) GetForProvider() interface{} {
+	return &tr.Spec.ForProvider
+}

@@ -49,3 +49,8 @@ func (tr *DnsSrvRecord) GetParameters() ([]byte, error) {
 func (tr *DnsSrvRecord) SetParameters(data []byte) error {
 	return conversion.TFParser.Unmarshal(data, &tr.Spec.ForProvider)
 }
+
+// GetForProvider of this DnsSrvRecord
+func (tr *DnsSrvRecord) GetForProvider() interface{} {
+	return &tr.Spec.ForProvider
+}

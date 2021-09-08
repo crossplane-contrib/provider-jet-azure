@@ -49,3 +49,8 @@ func (tr *PostgresqlActiveDirectoryAdministrator) GetParameters() ([]byte, error
 func (tr *PostgresqlActiveDirectoryAdministrator) SetParameters(data []byte) error {
 	return conversion.TFParser.Unmarshal(data, &tr.Spec.ForProvider)
 }
+
+// GetForProvider of this PostgresqlActiveDirectoryAdministrator
+func (tr *PostgresqlActiveDirectoryAdministrator) GetForProvider() interface{} {
+	return &tr.Spec.ForProvider
+}

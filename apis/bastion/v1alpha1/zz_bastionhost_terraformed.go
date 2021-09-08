@@ -49,3 +49,8 @@ func (tr *BastionHost) GetParameters() ([]byte, error) {
 func (tr *BastionHost) SetParameters(data []byte) error {
 	return conversion.TFParser.Unmarshal(data, &tr.Spec.ForProvider)
 }
+
+// GetForProvider of this BastionHost
+func (tr *BastionHost) GetForProvider() interface{} {
+	return &tr.Spec.ForProvider
+}

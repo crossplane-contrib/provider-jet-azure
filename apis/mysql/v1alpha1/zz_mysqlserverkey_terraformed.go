@@ -49,3 +49,8 @@ func (tr *MysqlServerKey) GetParameters() ([]byte, error) {
 func (tr *MysqlServerKey) SetParameters(data []byte) error {
 	return conversion.TFParser.Unmarshal(data, &tr.Spec.ForProvider)
 }
+
+// GetForProvider of this MysqlServerKey
+func (tr *MysqlServerKey) GetForProvider() interface{} {
+	return &tr.Spec.ForProvider
+}

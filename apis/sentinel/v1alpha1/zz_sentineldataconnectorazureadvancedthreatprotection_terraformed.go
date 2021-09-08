@@ -49,3 +49,8 @@ func (tr *SentinelDataConnectorAzureAdvancedThreatProtection) GetParameters() ([
 func (tr *SentinelDataConnectorAzureAdvancedThreatProtection) SetParameters(data []byte) error {
 	return conversion.TFParser.Unmarshal(data, &tr.Spec.ForProvider)
 }
+
+// GetForProvider of this SentinelDataConnectorAzureAdvancedThreatProtection
+func (tr *SentinelDataConnectorAzureAdvancedThreatProtection) GetForProvider() interface{} {
+	return &tr.Spec.ForProvider
+}

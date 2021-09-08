@@ -49,3 +49,8 @@ func (tr *DataShareDatasetDataLakeGen2) GetParameters() ([]byte, error) {
 func (tr *DataShareDatasetDataLakeGen2) SetParameters(data []byte) error {
 	return conversion.TFParser.Unmarshal(data, &tr.Spec.ForProvider)
 }
+
+// GetForProvider of this DataShareDatasetDataLakeGen2
+func (tr *DataShareDatasetDataLakeGen2) GetForProvider() interface{} {
+	return &tr.Spec.ForProvider
+}

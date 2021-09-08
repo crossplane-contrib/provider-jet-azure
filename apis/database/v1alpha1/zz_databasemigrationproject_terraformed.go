@@ -49,3 +49,8 @@ func (tr *DatabaseMigrationProject) GetParameters() ([]byte, error) {
 func (tr *DatabaseMigrationProject) SetParameters(data []byte) error {
 	return conversion.TFParser.Unmarshal(data, &tr.Spec.ForProvider)
 }
+
+// GetForProvider of this DatabaseMigrationProject
+func (tr *DatabaseMigrationProject) GetForProvider() interface{} {
+	return &tr.Spec.ForProvider
+}

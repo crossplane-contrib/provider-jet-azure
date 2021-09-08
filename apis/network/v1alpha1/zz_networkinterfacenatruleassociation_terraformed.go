@@ -49,3 +49,8 @@ func (tr *NetworkInterfaceNatRuleAssociation) GetParameters() ([]byte, error) {
 func (tr *NetworkInterfaceNatRuleAssociation) SetParameters(data []byte) error {
 	return conversion.TFParser.Unmarshal(data, &tr.Spec.ForProvider)
 }
+
+// GetForProvider of this NetworkInterfaceNatRuleAssociation
+func (tr *NetworkInterfaceNatRuleAssociation) GetForProvider() interface{} {
+	return &tr.Spec.ForProvider
+}

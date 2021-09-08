@@ -49,3 +49,8 @@ func (tr *EventhubNamespaceCustomerManagedKey) GetParameters() ([]byte, error) {
 func (tr *EventhubNamespaceCustomerManagedKey) SetParameters(data []byte) error {
 	return conversion.TFParser.Unmarshal(data, &tr.Spec.ForProvider)
 }
+
+// GetForProvider of this EventhubNamespaceCustomerManagedKey
+func (tr *EventhubNamespaceCustomerManagedKey) GetForProvider() interface{} {
+	return &tr.Spec.ForProvider
+}

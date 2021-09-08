@@ -49,3 +49,8 @@ func (tr *DnsZone) GetParameters() ([]byte, error) {
 func (tr *DnsZone) SetParameters(data []byte) error {
 	return conversion.TFParser.Unmarshal(data, &tr.Spec.ForProvider)
 }
+
+// GetForProvider of this DnsZone
+func (tr *DnsZone) GetForProvider() interface{} {
+	return &tr.Spec.ForProvider
+}

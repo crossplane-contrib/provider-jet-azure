@@ -49,3 +49,8 @@ func (tr *IntegrationServiceEnvironment) GetParameters() ([]byte, error) {
 func (tr *IntegrationServiceEnvironment) SetParameters(data []byte) error {
 	return conversion.TFParser.Unmarshal(data, &tr.Spec.ForProvider)
 }
+
+// GetForProvider of this IntegrationServiceEnvironment
+func (tr *IntegrationServiceEnvironment) GetForProvider() interface{} {
+	return &tr.Spec.ForProvider
+}

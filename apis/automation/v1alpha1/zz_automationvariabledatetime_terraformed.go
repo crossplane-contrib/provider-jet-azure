@@ -49,3 +49,8 @@ func (tr *AutomationVariableDatetime) GetParameters() ([]byte, error) {
 func (tr *AutomationVariableDatetime) SetParameters(data []byte) error {
 	return conversion.TFParser.Unmarshal(data, &tr.Spec.ForProvider)
 }
+
+// GetForProvider of this AutomationVariableDatetime
+func (tr *AutomationVariableDatetime) GetForProvider() interface{} {
+	return &tr.Spec.ForProvider
+}

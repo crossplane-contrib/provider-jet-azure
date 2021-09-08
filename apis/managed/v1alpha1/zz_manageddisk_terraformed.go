@@ -49,3 +49,8 @@ func (tr *ManagedDisk) GetParameters() ([]byte, error) {
 func (tr *ManagedDisk) SetParameters(data []byte) error {
 	return conversion.TFParser.Unmarshal(data, &tr.Spec.ForProvider)
 }
+
+// GetForProvider of this ManagedDisk
+func (tr *ManagedDisk) GetForProvider() interface{} {
+	return &tr.Spec.ForProvider
+}

@@ -49,3 +49,8 @@ func (tr *DataFactoryLinkedServiceOdata) GetParameters() ([]byte, error) {
 func (tr *DataFactoryLinkedServiceOdata) SetParameters(data []byte) error {
 	return conversion.TFParser.Unmarshal(data, &tr.Spec.ForProvider)
 }
+
+// GetForProvider of this DataFactoryLinkedServiceOdata
+func (tr *DataFactoryLinkedServiceOdata) GetForProvider() interface{} {
+	return &tr.Spec.ForProvider
+}

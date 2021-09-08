@@ -49,3 +49,8 @@ func (tr *DataFactoryIntegrationRuntimeManaged) GetParameters() ([]byte, error) 
 func (tr *DataFactoryIntegrationRuntimeManaged) SetParameters(data []byte) error {
 	return conversion.TFParser.Unmarshal(data, &tr.Spec.ForProvider)
 }
+
+// GetForProvider of this DataFactoryIntegrationRuntimeManaged
+func (tr *DataFactoryIntegrationRuntimeManaged) GetForProvider() interface{} {
+	return &tr.Spec.ForProvider
+}

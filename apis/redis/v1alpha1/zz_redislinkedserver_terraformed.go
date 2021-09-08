@@ -49,3 +49,8 @@ func (tr *RedisLinkedServer) GetParameters() ([]byte, error) {
 func (tr *RedisLinkedServer) SetParameters(data []byte) error {
 	return conversion.TFParser.Unmarshal(data, &tr.Spec.ForProvider)
 }
+
+// GetForProvider of this RedisLinkedServer
+func (tr *RedisLinkedServer) GetForProvider() interface{} {
+	return &tr.Spec.ForProvider
+}

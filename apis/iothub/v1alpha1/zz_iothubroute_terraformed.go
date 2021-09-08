@@ -49,3 +49,8 @@ func (tr *IothubRoute) GetParameters() ([]byte, error) {
 func (tr *IothubRoute) SetParameters(data []byte) error {
 	return conversion.TFParser.Unmarshal(data, &tr.Spec.ForProvider)
 }
+
+// GetForProvider of this IothubRoute
+func (tr *IothubRoute) GetForProvider() interface{} {
+	return &tr.Spec.ForProvider
+}

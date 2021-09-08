@@ -49,3 +49,8 @@ func (tr *AutomationConnectionServicePrincipal) GetParameters() ([]byte, error) 
 func (tr *AutomationConnectionServicePrincipal) SetParameters(data []byte) error {
 	return conversion.TFParser.Unmarshal(data, &tr.Spec.ForProvider)
 }
+
+// GetForProvider of this AutomationConnectionServicePrincipal
+func (tr *AutomationConnectionServicePrincipal) GetForProvider() interface{} {
+	return &tr.Spec.ForProvider
+}

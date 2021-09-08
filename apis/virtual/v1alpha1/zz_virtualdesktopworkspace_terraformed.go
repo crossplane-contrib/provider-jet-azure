@@ -49,3 +49,8 @@ func (tr *VirtualDesktopWorkspace) GetParameters() ([]byte, error) {
 func (tr *VirtualDesktopWorkspace) SetParameters(data []byte) error {
 	return conversion.TFParser.Unmarshal(data, &tr.Spec.ForProvider)
 }
+
+// GetForProvider of this VirtualDesktopWorkspace
+func (tr *VirtualDesktopWorkspace) GetForProvider() interface{} {
+	return &tr.Spec.ForProvider
+}

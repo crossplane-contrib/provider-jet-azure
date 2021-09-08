@@ -49,3 +49,8 @@ func (tr *ContainerRegistryWebhook) GetParameters() ([]byte, error) {
 func (tr *ContainerRegistryWebhook) SetParameters(data []byte) error {
 	return conversion.TFParser.Unmarshal(data, &tr.Spec.ForProvider)
 }
+
+// GetForProvider of this ContainerRegistryWebhook
+func (tr *ContainerRegistryWebhook) GetForProvider() interface{} {
+	return &tr.Spec.ForProvider
+}

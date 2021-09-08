@@ -49,3 +49,8 @@ func (tr *BotChannelsRegistration) GetParameters() ([]byte, error) {
 func (tr *BotChannelsRegistration) SetParameters(data []byte) error {
 	return conversion.TFParser.Unmarshal(data, &tr.Spec.ForProvider)
 }
+
+// GetForProvider of this BotChannelsRegistration
+func (tr *BotChannelsRegistration) GetForProvider() interface{} {
+	return &tr.Spec.ForProvider
+}

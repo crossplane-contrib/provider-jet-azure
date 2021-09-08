@@ -49,3 +49,8 @@ func (tr *ContainerGroup) GetParameters() ([]byte, error) {
 func (tr *ContainerGroup) SetParameters(data []byte) error {
 	return conversion.TFParser.Unmarshal(data, &tr.Spec.ForProvider)
 }
+
+// GetForProvider of this ContainerGroup
+func (tr *ContainerGroup) GetForProvider() interface{} {
+	return &tr.Spec.ForProvider
+}

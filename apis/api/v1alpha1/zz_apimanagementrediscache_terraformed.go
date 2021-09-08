@@ -49,3 +49,8 @@ func (tr *ApiManagementRedisCache) GetParameters() ([]byte, error) {
 func (tr *ApiManagementRedisCache) SetParameters(data []byte) error {
 	return conversion.TFParser.Unmarshal(data, &tr.Spec.ForProvider)
 }
+
+// GetForProvider of this ApiManagementRedisCache
+func (tr *ApiManagementRedisCache) GetForProvider() interface{} {
+	return &tr.Spec.ForProvider
+}

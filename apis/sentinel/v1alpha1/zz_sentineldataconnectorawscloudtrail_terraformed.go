@@ -49,3 +49,8 @@ func (tr *SentinelDataConnectorAwsCloudTrail) GetParameters() ([]byte, error) {
 func (tr *SentinelDataConnectorAwsCloudTrail) SetParameters(data []byte) error {
 	return conversion.TFParser.Unmarshal(data, &tr.Spec.ForProvider)
 }
+
+// GetForProvider of this SentinelDataConnectorAwsCloudTrail
+func (tr *SentinelDataConnectorAwsCloudTrail) GetForProvider() interface{} {
+	return &tr.Spec.ForProvider
+}

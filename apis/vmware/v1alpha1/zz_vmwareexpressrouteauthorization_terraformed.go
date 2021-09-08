@@ -49,3 +49,8 @@ func (tr *VmwareExpressRouteAuthorization) GetParameters() ([]byte, error) {
 func (tr *VmwareExpressRouteAuthorization) SetParameters(data []byte) error {
 	return conversion.TFParser.Unmarshal(data, &tr.Spec.ForProvider)
 }
+
+// GetForProvider of this VmwareExpressRouteAuthorization
+func (tr *VmwareExpressRouteAuthorization) GetForProvider() interface{} {
+	return &tr.Spec.ForProvider
+}

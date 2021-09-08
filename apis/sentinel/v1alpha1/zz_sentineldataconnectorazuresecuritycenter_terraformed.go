@@ -49,3 +49,8 @@ func (tr *SentinelDataConnectorAzureSecurityCenter) GetParameters() ([]byte, err
 func (tr *SentinelDataConnectorAzureSecurityCenter) SetParameters(data []byte) error {
 	return conversion.TFParser.Unmarshal(data, &tr.Spec.ForProvider)
 }
+
+// GetForProvider of this SentinelDataConnectorAzureSecurityCenter
+func (tr *SentinelDataConnectorAzureSecurityCenter) GetForProvider() interface{} {
+	return &tr.Spec.ForProvider
+}

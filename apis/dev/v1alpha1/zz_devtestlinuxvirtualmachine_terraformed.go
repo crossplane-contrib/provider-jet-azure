@@ -49,3 +49,8 @@ func (tr *DevTestLinuxVirtualMachine) GetParameters() ([]byte, error) {
 func (tr *DevTestLinuxVirtualMachine) SetParameters(data []byte) error {
 	return conversion.TFParser.Unmarshal(data, &tr.Spec.ForProvider)
 }
+
+// GetForProvider of this DevTestLinuxVirtualMachine
+func (tr *DevTestLinuxVirtualMachine) GetForProvider() interface{} {
+	return &tr.Spec.ForProvider
+}

@@ -49,3 +49,8 @@ func (tr *ServicebusNamespaceDisasterRecoveryConfig) GetParameters() ([]byte, er
 func (tr *ServicebusNamespaceDisasterRecoveryConfig) SetParameters(data []byte) error {
 	return conversion.TFParser.Unmarshal(data, &tr.Spec.ForProvider)
 }
+
+// GetForProvider of this ServicebusNamespaceDisasterRecoveryConfig
+func (tr *ServicebusNamespaceDisasterRecoveryConfig) GetForProvider() interface{} {
+	return &tr.Spec.ForProvider
+}

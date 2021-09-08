@@ -49,3 +49,8 @@ func (tr *DataFactoryDatasetAzureBlob) GetParameters() ([]byte, error) {
 func (tr *DataFactoryDatasetAzureBlob) SetParameters(data []byte) error {
 	return conversion.TFParser.Unmarshal(data, &tr.Spec.ForProvider)
 }
+
+// GetForProvider of this DataFactoryDatasetAzureBlob
+func (tr *DataFactoryDatasetAzureBlob) GetForProvider() interface{} {
+	return &tr.Spec.ForProvider
+}

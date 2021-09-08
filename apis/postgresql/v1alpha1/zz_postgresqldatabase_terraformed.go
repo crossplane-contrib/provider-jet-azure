@@ -49,3 +49,8 @@ func (tr *PostgresqlDatabase) GetParameters() ([]byte, error) {
 func (tr *PostgresqlDatabase) SetParameters(data []byte) error {
 	return conversion.TFParser.Unmarshal(data, &tr.Spec.ForProvider)
 }
+
+// GetForProvider of this PostgresqlDatabase
+func (tr *PostgresqlDatabase) GetForProvider() interface{} {
+	return &tr.Spec.ForProvider
+}

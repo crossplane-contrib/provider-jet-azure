@@ -49,3 +49,8 @@ func (tr *DevTestVirtualNetwork) GetParameters() ([]byte, error) {
 func (tr *DevTestVirtualNetwork) SetParameters(data []byte) error {
 	return conversion.TFParser.Unmarshal(data, &tr.Spec.ForProvider)
 }
+
+// GetForProvider of this DevTestVirtualNetwork
+func (tr *DevTestVirtualNetwork) GetForProvider() interface{} {
+	return &tr.Spec.ForProvider
+}

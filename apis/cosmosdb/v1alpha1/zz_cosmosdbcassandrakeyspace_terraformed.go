@@ -49,3 +49,8 @@ func (tr *CosmosdbCassandraKeyspace) GetParameters() ([]byte, error) {
 func (tr *CosmosdbCassandraKeyspace) SetParameters(data []byte) error {
 	return conversion.TFParser.Unmarshal(data, &tr.Spec.ForProvider)
 }
+
+// GetForProvider of this CosmosdbCassandraKeyspace
+func (tr *CosmosdbCassandraKeyspace) GetForProvider() interface{} {
+	return &tr.Spec.ForProvider
+}

@@ -49,3 +49,8 @@ func (tr *SentinelAlertRuleFusion) GetParameters() ([]byte, error) {
 func (tr *SentinelAlertRuleFusion) SetParameters(data []byte) error {
 	return conversion.TFParser.Unmarshal(data, &tr.Spec.ForProvider)
 }
+
+// GetForProvider of this SentinelAlertRuleFusion
+func (tr *SentinelAlertRuleFusion) GetForProvider() interface{} {
+	return &tr.Spec.ForProvider
+}

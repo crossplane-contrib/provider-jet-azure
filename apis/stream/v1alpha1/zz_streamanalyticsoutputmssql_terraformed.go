@@ -49,3 +49,8 @@ func (tr *StreamAnalyticsOutputMssql) GetParameters() ([]byte, error) {
 func (tr *StreamAnalyticsOutputMssql) SetParameters(data []byte) error {
 	return conversion.TFParser.Unmarshal(data, &tr.Spec.ForProvider)
 }
+
+// GetForProvider of this StreamAnalyticsOutputMssql
+func (tr *StreamAnalyticsOutputMssql) GetForProvider() interface{} {
+	return &tr.Spec.ForProvider
+}

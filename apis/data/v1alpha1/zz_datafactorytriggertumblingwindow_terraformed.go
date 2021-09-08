@@ -49,3 +49,8 @@ func (tr *DataFactoryTriggerTumblingWindow) GetParameters() ([]byte, error) {
 func (tr *DataFactoryTriggerTumblingWindow) SetParameters(data []byte) error {
 	return conversion.TFParser.Unmarshal(data, &tr.Spec.ForProvider)
 }
+
+// GetForProvider of this DataFactoryTriggerTumblingWindow
+func (tr *DataFactoryTriggerTumblingWindow) GetForProvider() interface{} {
+	return &tr.Spec.ForProvider
+}

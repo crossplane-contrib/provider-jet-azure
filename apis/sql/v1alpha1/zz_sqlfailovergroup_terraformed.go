@@ -49,3 +49,8 @@ func (tr *SqlFailoverGroup) GetParameters() ([]byte, error) {
 func (tr *SqlFailoverGroup) SetParameters(data []byte) error {
 	return conversion.TFParser.Unmarshal(data, &tr.Spec.ForProvider)
 }
+
+// GetForProvider of this SqlFailoverGroup
+func (tr *SqlFailoverGroup) GetForProvider() interface{} {
+	return &tr.Spec.ForProvider
+}

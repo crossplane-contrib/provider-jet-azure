@@ -49,3 +49,8 @@ func (tr *LogicAppIntegrationAccountCertificate) GetParameters() ([]byte, error)
 func (tr *LogicAppIntegrationAccountCertificate) SetParameters(data []byte) error {
 	return conversion.TFParser.Unmarshal(data, &tr.Spec.ForProvider)
 }
+
+// GetForProvider of this LogicAppIntegrationAccountCertificate
+func (tr *LogicAppIntegrationAccountCertificate) GetForProvider() interface{} {
+	return &tr.Spec.ForProvider
+}

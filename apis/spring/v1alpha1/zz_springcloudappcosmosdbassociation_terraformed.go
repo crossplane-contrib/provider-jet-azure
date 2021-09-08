@@ -49,3 +49,8 @@ func (tr *SpringCloudAppCosmosdbAssociation) GetParameters() ([]byte, error) {
 func (tr *SpringCloudAppCosmosdbAssociation) SetParameters(data []byte) error {
 	return conversion.TFParser.Unmarshal(data, &tr.Spec.ForProvider)
 }
+
+// GetForProvider of this SpringCloudAppCosmosdbAssociation
+func (tr *SpringCloudAppCosmosdbAssociation) GetForProvider() interface{} {
+	return &tr.Spec.ForProvider
+}

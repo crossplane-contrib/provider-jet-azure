@@ -49,3 +49,8 @@ func (tr *SpringCloudActiveDeployment) GetParameters() ([]byte, error) {
 func (tr *SpringCloudActiveDeployment) SetParameters(data []byte) error {
 	return conversion.TFParser.Unmarshal(data, &tr.Spec.ForProvider)
 }
+
+// GetForProvider of this SpringCloudActiveDeployment
+func (tr *SpringCloudActiveDeployment) GetForProvider() interface{} {
+	return &tr.Spec.ForProvider
+}

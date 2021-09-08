@@ -49,3 +49,8 @@ func (tr *HpcCacheAccessPolicy) GetParameters() ([]byte, error) {
 func (tr *HpcCacheAccessPolicy) SetParameters(data []byte) error {
 	return conversion.TFParser.Unmarshal(data, &tr.Spec.ForProvider)
 }
+
+// GetForProvider of this HpcCacheAccessPolicy
+func (tr *HpcCacheAccessPolicy) GetForProvider() interface{} {
+	return &tr.Spec.ForProvider
+}

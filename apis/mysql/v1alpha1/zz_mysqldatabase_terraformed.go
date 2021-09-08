@@ -49,3 +49,8 @@ func (tr *MysqlDatabase) GetParameters() ([]byte, error) {
 func (tr *MysqlDatabase) SetParameters(data []byte) error {
 	return conversion.TFParser.Unmarshal(data, &tr.Spec.ForProvider)
 }
+
+// GetForProvider of this MysqlDatabase
+func (tr *MysqlDatabase) GetForProvider() interface{} {
+	return &tr.Spec.ForProvider
+}

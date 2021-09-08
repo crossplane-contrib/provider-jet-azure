@@ -49,3 +49,8 @@ func (tr *SentinelAlertRuleMachineLearningBehaviorAnalytics) GetParameters() ([]
 func (tr *SentinelAlertRuleMachineLearningBehaviorAnalytics) SetParameters(data []byte) error {
 	return conversion.TFParser.Unmarshal(data, &tr.Spec.ForProvider)
 }
+
+// GetForProvider of this SentinelAlertRuleMachineLearningBehaviorAnalytics
+func (tr *SentinelAlertRuleMachineLearningBehaviorAnalytics) GetForProvider() interface{} {
+	return &tr.Spec.ForProvider
+}

@@ -49,3 +49,8 @@ func (tr *BatchPool) GetParameters() ([]byte, error) {
 func (tr *BatchPool) SetParameters(data []byte) error {
 	return conversion.TFParser.Unmarshal(data, &tr.Spec.ForProvider)
 }
+
+// GetForProvider of this BatchPool
+func (tr *BatchPool) GetForProvider() interface{} {
+	return &tr.Spec.ForProvider
+}

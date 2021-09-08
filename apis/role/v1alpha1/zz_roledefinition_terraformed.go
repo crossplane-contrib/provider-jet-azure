@@ -49,3 +49,8 @@ func (tr *RoleDefinition) GetParameters() ([]byte, error) {
 func (tr *RoleDefinition) SetParameters(data []byte) error {
 	return conversion.TFParser.Unmarshal(data, &tr.Spec.ForProvider)
 }
+
+// GetForProvider of this RoleDefinition
+func (tr *RoleDefinition) GetForProvider() interface{} {
+	return &tr.Spec.ForProvider
+}

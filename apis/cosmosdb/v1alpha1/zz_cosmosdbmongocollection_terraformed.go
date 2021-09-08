@@ -49,3 +49,8 @@ func (tr *CosmosdbMongoCollection) GetParameters() ([]byte, error) {
 func (tr *CosmosdbMongoCollection) SetParameters(data []byte) error {
 	return conversion.TFParser.Unmarshal(data, &tr.Spec.ForProvider)
 }
+
+// GetForProvider of this CosmosdbMongoCollection
+func (tr *CosmosdbMongoCollection) GetForProvider() interface{} {
+	return &tr.Spec.ForProvider
+}

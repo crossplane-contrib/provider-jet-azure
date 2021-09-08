@@ -49,3 +49,8 @@ func (tr *SentinelAlertRuleMsSecurityIncident) GetParameters() ([]byte, error) {
 func (tr *SentinelAlertRuleMsSecurityIncident) SetParameters(data []byte) error {
 	return conversion.TFParser.Unmarshal(data, &tr.Spec.ForProvider)
 }
+
+// GetForProvider of this SentinelAlertRuleMsSecurityIncident
+func (tr *SentinelAlertRuleMsSecurityIncident) GetForProvider() interface{} {
+	return &tr.Spec.ForProvider
+}

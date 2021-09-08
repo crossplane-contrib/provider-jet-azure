@@ -49,3 +49,8 @@ func (tr *DevTestLab) GetParameters() ([]byte, error) {
 func (tr *DevTestLab) SetParameters(data []byte) error {
 	return conversion.TFParser.Unmarshal(data, &tr.Spec.ForProvider)
 }
+
+// GetForProvider of this DevTestLab
+func (tr *DevTestLab) GetForProvider() interface{} {
+	return &tr.Spec.ForProvider
+}

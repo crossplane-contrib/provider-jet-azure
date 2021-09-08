@@ -49,3 +49,8 @@ func (tr *SentinelDataConnectorAzureActiveDirectory) GetParameters() ([]byte, er
 func (tr *SentinelDataConnectorAzureActiveDirectory) SetParameters(data []byte) error {
 	return conversion.TFParser.Unmarshal(data, &tr.Spec.ForProvider)
 }
+
+// GetForProvider of this SentinelDataConnectorAzureActiveDirectory
+func (tr *SentinelDataConnectorAzureActiveDirectory) GetForProvider() interface{} {
+	return &tr.Spec.ForProvider
+}

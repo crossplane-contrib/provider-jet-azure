@@ -49,3 +49,8 @@ func (tr *PostgresqlFlexibleServer) GetParameters() ([]byte, error) {
 func (tr *PostgresqlFlexibleServer) SetParameters(data []byte) error {
 	return conversion.TFParser.Unmarshal(data, &tr.Spec.ForProvider)
 }
+
+// GetForProvider of this PostgresqlFlexibleServer
+func (tr *PostgresqlFlexibleServer) GetForProvider() interface{} {
+	return &tr.Spec.ForProvider
+}

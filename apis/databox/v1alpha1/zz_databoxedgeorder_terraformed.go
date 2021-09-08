@@ -49,3 +49,8 @@ func (tr *DataboxEdgeOrder) GetParameters() ([]byte, error) {
 func (tr *DataboxEdgeOrder) SetParameters(data []byte) error {
 	return conversion.TFParser.Unmarshal(data, &tr.Spec.ForProvider)
 }
+
+// GetForProvider of this DataboxEdgeOrder
+func (tr *DataboxEdgeOrder) GetForProvider() interface{} {
+	return &tr.Spec.ForProvider
+}

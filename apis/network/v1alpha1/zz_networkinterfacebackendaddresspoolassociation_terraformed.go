@@ -49,3 +49,8 @@ func (tr *NetworkInterfaceBackendAddressPoolAssociation) GetParameters() ([]byte
 func (tr *NetworkInterfaceBackendAddressPoolAssociation) SetParameters(data []byte) error {
 	return conversion.TFParser.Unmarshal(data, &tr.Spec.ForProvider)
 }
+
+// GetForProvider of this NetworkInterfaceBackendAddressPoolAssociation
+func (tr *NetworkInterfaceBackendAddressPoolAssociation) GetForProvider() interface{} {
+	return &tr.Spec.ForProvider
+}

@@ -49,3 +49,8 @@ func (tr *DataFactoryLinkedServiceSftp) GetParameters() ([]byte, error) {
 func (tr *DataFactoryLinkedServiceSftp) SetParameters(data []byte) error {
 	return conversion.TFParser.Unmarshal(data, &tr.Spec.ForProvider)
 }
+
+// GetForProvider of this DataFactoryLinkedServiceSftp
+func (tr *DataFactoryLinkedServiceSftp) GetForProvider() interface{} {
+	return &tr.Spec.ForProvider
+}

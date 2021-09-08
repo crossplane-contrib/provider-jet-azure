@@ -49,3 +49,8 @@ func (tr *SecurityCenterSetting) GetParameters() ([]byte, error) {
 func (tr *SecurityCenterSetting) SetParameters(data []byte) error {
 	return conversion.TFParser.Unmarshal(data, &tr.Spec.ForProvider)
 }
+
+// GetForProvider of this SecurityCenterSetting
+func (tr *SecurityCenterSetting) GetForProvider() interface{} {
+	return &tr.Spec.ForProvider
+}

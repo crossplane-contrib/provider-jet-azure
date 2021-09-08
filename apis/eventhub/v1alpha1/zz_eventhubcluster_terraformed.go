@@ -49,3 +49,8 @@ func (tr *EventhubCluster) GetParameters() ([]byte, error) {
 func (tr *EventhubCluster) SetParameters(data []byte) error {
 	return conversion.TFParser.Unmarshal(data, &tr.Spec.ForProvider)
 }
+
+// GetForProvider of this EventhubCluster
+func (tr *EventhubCluster) GetForProvider() interface{} {
+	return &tr.Spec.ForProvider
+}

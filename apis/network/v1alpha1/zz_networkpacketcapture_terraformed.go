@@ -49,3 +49,8 @@ func (tr *NetworkPacketCapture) GetParameters() ([]byte, error) {
 func (tr *NetworkPacketCapture) SetParameters(data []byte) error {
 	return conversion.TFParser.Unmarshal(data, &tr.Spec.ForProvider)
 }
+
+// GetForProvider of this NetworkPacketCapture
+func (tr *NetworkPacketCapture) GetForProvider() interface{} {
+	return &tr.Spec.ForProvider
+}

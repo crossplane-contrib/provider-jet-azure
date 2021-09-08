@@ -49,3 +49,8 @@ func (tr *ResourceGroup) GetParameters() ([]byte, error) {
 func (tr *ResourceGroup) SetParameters(data []byte) error {
 	return conversion.TFParser.Unmarshal(data, &tr.Spec.ForProvider)
 }
+
+// GetForProvider of this ResourceGroup
+func (tr *ResourceGroup) GetForProvider() interface{} {
+	return &tr.Spec.ForProvider
+}

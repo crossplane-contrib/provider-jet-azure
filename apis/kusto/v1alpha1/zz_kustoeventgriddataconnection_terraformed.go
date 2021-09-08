@@ -49,3 +49,8 @@ func (tr *KustoEventgridDataConnection) GetParameters() ([]byte, error) {
 func (tr *KustoEventgridDataConnection) SetParameters(data []byte) error {
 	return conversion.TFParser.Unmarshal(data, &tr.Spec.ForProvider)
 }
+
+// GetForProvider of this KustoEventgridDataConnection
+func (tr *KustoEventgridDataConnection) GetForProvider() interface{} {
+	return &tr.Spec.ForProvider
+}

@@ -49,3 +49,8 @@ func (tr *DataShareAccount) GetParameters() ([]byte, error) {
 func (tr *DataShareAccount) SetParameters(data []byte) error {
 	return conversion.TFParser.Unmarshal(data, &tr.Spec.ForProvider)
 }
+
+// GetForProvider of this DataShareAccount
+func (tr *DataShareAccount) GetForProvider() interface{} {
+	return &tr.Spec.ForProvider
+}

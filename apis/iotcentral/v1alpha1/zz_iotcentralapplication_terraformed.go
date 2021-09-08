@@ -49,3 +49,8 @@ func (tr *IotcentralApplication) GetParameters() ([]byte, error) {
 func (tr *IotcentralApplication) SetParameters(data []byte) error {
 	return conversion.TFParser.Unmarshal(data, &tr.Spec.ForProvider)
 }
+
+// GetForProvider of this IotcentralApplication
+func (tr *IotcentralApplication) GetForProvider() interface{} {
+	return &tr.Spec.ForProvider
+}

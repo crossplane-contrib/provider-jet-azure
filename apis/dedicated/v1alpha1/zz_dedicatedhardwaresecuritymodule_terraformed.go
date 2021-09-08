@@ -49,3 +49,8 @@ func (tr *DedicatedHardwareSecurityModule) GetParameters() ([]byte, error) {
 func (tr *DedicatedHardwareSecurityModule) SetParameters(data []byte) error {
 	return conversion.TFParser.Unmarshal(data, &tr.Spec.ForProvider)
 }
+
+// GetForProvider of this DedicatedHardwareSecurityModule
+func (tr *DedicatedHardwareSecurityModule) GetForProvider() interface{} {
+	return &tr.Spec.ForProvider
+}

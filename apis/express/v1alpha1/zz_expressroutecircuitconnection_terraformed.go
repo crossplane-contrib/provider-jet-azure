@@ -49,3 +49,8 @@ func (tr *ExpressRouteCircuitConnection) GetParameters() ([]byte, error) {
 func (tr *ExpressRouteCircuitConnection) SetParameters(data []byte) error {
 	return conversion.TFParser.Unmarshal(data, &tr.Spec.ForProvider)
 }
+
+// GetForProvider of this ExpressRouteCircuitConnection
+func (tr *ExpressRouteCircuitConnection) GetForProvider() interface{} {
+	return &tr.Spec.ForProvider
+}

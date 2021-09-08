@@ -49,3 +49,8 @@ func (tr *HdinsightHadoopCluster) GetParameters() ([]byte, error) {
 func (tr *HdinsightHadoopCluster) SetParameters(data []byte) error {
 	return conversion.TFParser.Unmarshal(data, &tr.Spec.ForProvider)
 }
+
+// GetForProvider of this HdinsightHadoopCluster
+func (tr *HdinsightHadoopCluster) GetForProvider() interface{} {
+	return &tr.Spec.ForProvider
+}

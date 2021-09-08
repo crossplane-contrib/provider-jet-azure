@@ -49,3 +49,8 @@ func (tr *VirtualNetworkPeering) GetParameters() ([]byte, error) {
 func (tr *VirtualNetworkPeering) SetParameters(data []byte) error {
 	return conversion.TFParser.Unmarshal(data, &tr.Spec.ForProvider)
 }
+
+// GetForProvider of this VirtualNetworkPeering
+func (tr *VirtualNetworkPeering) GetForProvider() interface{} {
+	return &tr.Spec.ForProvider
+}

@@ -49,3 +49,8 @@ func (tr *LogicAppTriggerCustom) GetParameters() ([]byte, error) {
 func (tr *LogicAppTriggerCustom) SetParameters(data []byte) error {
 	return conversion.TFParser.Unmarshal(data, &tr.Spec.ForProvider)
 }
+
+// GetForProvider of this LogicAppTriggerCustom
+func (tr *LogicAppTriggerCustom) GetForProvider() interface{} {
+	return &tr.Spec.ForProvider
+}

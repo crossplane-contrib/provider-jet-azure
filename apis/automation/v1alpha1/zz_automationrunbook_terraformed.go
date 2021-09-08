@@ -49,3 +49,8 @@ func (tr *AutomationRunbook) GetParameters() ([]byte, error) {
 func (tr *AutomationRunbook) SetParameters(data []byte) error {
 	return conversion.TFParser.Unmarshal(data, &tr.Spec.ForProvider)
 }
+
+// GetForProvider of this AutomationRunbook
+func (tr *AutomationRunbook) GetForProvider() interface{} {
+	return &tr.Spec.ForProvider
+}

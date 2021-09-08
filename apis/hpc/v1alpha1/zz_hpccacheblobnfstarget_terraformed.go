@@ -49,3 +49,8 @@ func (tr *HpcCacheBlobNfsTarget) GetParameters() ([]byte, error) {
 func (tr *HpcCacheBlobNfsTarget) SetParameters(data []byte) error {
 	return conversion.TFParser.Unmarshal(data, &tr.Spec.ForProvider)
 }
+
+// GetForProvider of this HpcCacheBlobNfsTarget
+func (tr *HpcCacheBlobNfsTarget) GetForProvider() interface{} {
+	return &tr.Spec.ForProvider
+}

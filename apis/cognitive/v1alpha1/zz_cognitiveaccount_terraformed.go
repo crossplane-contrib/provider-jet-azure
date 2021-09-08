@@ -49,3 +49,8 @@ func (tr *CognitiveAccount) GetParameters() ([]byte, error) {
 func (tr *CognitiveAccount) SetParameters(data []byte) error {
 	return conversion.TFParser.Unmarshal(data, &tr.Spec.ForProvider)
 }
+
+// GetForProvider of this CognitiveAccount
+func (tr *CognitiveAccount) GetForProvider() interface{} {
+	return &tr.Spec.ForProvider
+}

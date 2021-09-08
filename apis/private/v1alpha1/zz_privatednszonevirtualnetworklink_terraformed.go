@@ -49,3 +49,8 @@ func (tr *PrivateDnsZoneVirtualNetworkLink) GetParameters() ([]byte, error) {
 func (tr *PrivateDnsZoneVirtualNetworkLink) SetParameters(data []byte) error {
 	return conversion.TFParser.Unmarshal(data, &tr.Spec.ForProvider)
 }
+
+// GetForProvider of this PrivateDnsZoneVirtualNetworkLink
+func (tr *PrivateDnsZoneVirtualNetworkLink) GetForProvider() interface{} {
+	return &tr.Spec.ForProvider
+}

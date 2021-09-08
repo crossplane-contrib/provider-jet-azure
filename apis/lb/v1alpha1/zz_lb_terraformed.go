@@ -49,3 +49,8 @@ func (tr *Lb) GetParameters() ([]byte, error) {
 func (tr *Lb) SetParameters(data []byte) error {
 	return conversion.TFParser.Unmarshal(data, &tr.Spec.ForProvider)
 }
+
+// GetForProvider of this Lb
+func (tr *Lb) GetForProvider() interface{} {
+	return &tr.Spec.ForProvider
+}

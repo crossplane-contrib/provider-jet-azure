@@ -49,3 +49,8 @@ func (tr *DataFactoryLinkedServiceWeb) GetParameters() ([]byte, error) {
 func (tr *DataFactoryLinkedServiceWeb) SetParameters(data []byte) error {
 	return conversion.TFParser.Unmarshal(data, &tr.Spec.ForProvider)
 }
+
+// GetForProvider of this DataFactoryLinkedServiceWeb
+func (tr *DataFactoryLinkedServiceWeb) GetForProvider() interface{} {
+	return &tr.Spec.ForProvider
+}

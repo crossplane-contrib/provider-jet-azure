@@ -49,3 +49,8 @@ func (tr *ActiveDirectoryDomainService) GetParameters() ([]byte, error) {
 func (tr *ActiveDirectoryDomainService) SetParameters(data []byte) error {
 	return conversion.TFParser.Unmarshal(data, &tr.Spec.ForProvider)
 }
+
+// GetForProvider of this ActiveDirectoryDomainService
+func (tr *ActiveDirectoryDomainService) GetForProvider() interface{} {
+	return &tr.Spec.ForProvider
+}

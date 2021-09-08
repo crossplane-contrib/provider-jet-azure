@@ -49,3 +49,8 @@ func (tr *DataLakeAnalyticsAccount) GetParameters() ([]byte, error) {
 func (tr *DataLakeAnalyticsAccount) SetParameters(data []byte) error {
 	return conversion.TFParser.Unmarshal(data, &tr.Spec.ForProvider)
 }
+
+// GetForProvider of this DataLakeAnalyticsAccount
+func (tr *DataLakeAnalyticsAccount) GetForProvider() interface{} {
+	return &tr.Spec.ForProvider
+}

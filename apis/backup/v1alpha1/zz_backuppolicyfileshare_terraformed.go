@@ -49,3 +49,8 @@ func (tr *BackupPolicyFileShare) GetParameters() ([]byte, error) {
 func (tr *BackupPolicyFileShare) SetParameters(data []byte) error {
 	return conversion.TFParser.Unmarshal(data, &tr.Spec.ForProvider)
 }
+
+// GetForProvider of this BackupPolicyFileShare
+func (tr *BackupPolicyFileShare) GetForProvider() interface{} {
+	return &tr.Spec.ForProvider
+}

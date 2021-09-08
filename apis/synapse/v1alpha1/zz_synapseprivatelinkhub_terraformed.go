@@ -49,3 +49,8 @@ func (tr *SynapsePrivateLinkHub) GetParameters() ([]byte, error) {
 func (tr *SynapsePrivateLinkHub) SetParameters(data []byte) error {
 	return conversion.TFParser.Unmarshal(data, &tr.Spec.ForProvider)
 }
+
+// GetForProvider of this SynapsePrivateLinkHub
+func (tr *SynapsePrivateLinkHub) GetForProvider() interface{} {
+	return &tr.Spec.ForProvider
+}

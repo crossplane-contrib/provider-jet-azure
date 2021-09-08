@@ -49,3 +49,8 @@ func (tr *ServicebusNamespaceAuthorizationRule) GetParameters() ([]byte, error) 
 func (tr *ServicebusNamespaceAuthorizationRule) SetParameters(data []byte) error {
 	return conversion.TFParser.Unmarshal(data, &tr.Spec.ForProvider)
 }
+
+// GetForProvider of this ServicebusNamespaceAuthorizationRule
+func (tr *ServicebusNamespaceAuthorizationRule) GetForProvider() interface{} {
+	return &tr.Spec.ForProvider
+}

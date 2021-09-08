@@ -49,3 +49,8 @@ func (tr *VideoAnalyzer) GetParameters() ([]byte, error) {
 func (tr *VideoAnalyzer) SetParameters(data []byte) error {
 	return conversion.TFParser.Unmarshal(data, &tr.Spec.ForProvider)
 }
+
+// GetForProvider of this VideoAnalyzer
+func (tr *VideoAnalyzer) GetForProvider() interface{} {
+	return &tr.Spec.ForProvider
+}

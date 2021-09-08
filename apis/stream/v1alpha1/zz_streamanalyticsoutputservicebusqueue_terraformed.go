@@ -49,3 +49,8 @@ func (tr *StreamAnalyticsOutputServicebusQueue) GetParameters() ([]byte, error) 
 func (tr *StreamAnalyticsOutputServicebusQueue) SetParameters(data []byte) error {
 	return conversion.TFParser.Unmarshal(data, &tr.Spec.ForProvider)
 }
+
+// GetForProvider of this StreamAnalyticsOutputServicebusQueue
+func (tr *StreamAnalyticsOutputServicebusQueue) GetForProvider() interface{} {
+	return &tr.Spec.ForProvider
+}

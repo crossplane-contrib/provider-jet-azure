@@ -49,3 +49,8 @@ func (tr *AppServiceCertificate) GetParameters() ([]byte, error) {
 func (tr *AppServiceCertificate) SetParameters(data []byte) error {
 	return conversion.TFParser.Unmarshal(data, &tr.Spec.ForProvider)
 }
+
+// GetForProvider of this AppServiceCertificate
+func (tr *AppServiceCertificate) GetForProvider() interface{} {
+	return &tr.Spec.ForProvider
+}

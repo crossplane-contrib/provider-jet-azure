@@ -49,3 +49,8 @@ func (tr *StorageManagementPolicy) GetParameters() ([]byte, error) {
 func (tr *StorageManagementPolicy) SetParameters(data []byte) error {
 	return conversion.TFParser.Unmarshal(data, &tr.Spec.ForProvider)
 }
+
+// GetForProvider of this StorageManagementPolicy
+func (tr *StorageManagementPolicy) GetForProvider() interface{} {
+	return &tr.Spec.ForProvider
+}

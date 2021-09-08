@@ -49,3 +49,8 @@ func (tr *MssqlServerSecurityAlertPolicy) GetParameters() ([]byte, error) {
 func (tr *MssqlServerSecurityAlertPolicy) SetParameters(data []byte) error {
 	return conversion.TFParser.Unmarshal(data, &tr.Spec.ForProvider)
 }
+
+// GetForProvider of this MssqlServerSecurityAlertPolicy
+func (tr *MssqlServerSecurityAlertPolicy) GetForProvider() interface{} {
+	return &tr.Spec.ForProvider
+}

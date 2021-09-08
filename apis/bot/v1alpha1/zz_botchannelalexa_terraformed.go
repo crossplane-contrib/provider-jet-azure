@@ -49,3 +49,8 @@ func (tr *BotChannelAlexa) GetParameters() ([]byte, error) {
 func (tr *BotChannelAlexa) SetParameters(data []byte) error {
 	return conversion.TFParser.Unmarshal(data, &tr.Spec.ForProvider)
 }
+
+// GetForProvider of this BotChannelAlexa
+func (tr *BotChannelAlexa) GetForProvider() interface{} {
+	return &tr.Spec.ForProvider
+}

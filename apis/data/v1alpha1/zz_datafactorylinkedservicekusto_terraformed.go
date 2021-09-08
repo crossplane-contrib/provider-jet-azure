@@ -49,3 +49,8 @@ func (tr *DataFactoryLinkedServiceKusto) GetParameters() ([]byte, error) {
 func (tr *DataFactoryLinkedServiceKusto) SetParameters(data []byte) error {
 	return conversion.TFParser.Unmarshal(data, &tr.Spec.ForProvider)
 }
+
+// GetForProvider of this DataFactoryLinkedServiceKusto
+func (tr *DataFactoryLinkedServiceKusto) GetForProvider() interface{} {
+	return &tr.Spec.ForProvider
+}

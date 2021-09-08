@@ -49,3 +49,8 @@ func (tr *DataFactoryLinkedServiceDataLakeStorageGen2) GetParameters() ([]byte, 
 func (tr *DataFactoryLinkedServiceDataLakeStorageGen2) SetParameters(data []byte) error {
 	return conversion.TFParser.Unmarshal(data, &tr.Spec.ForProvider)
 }
+
+// GetForProvider of this DataFactoryLinkedServiceDataLakeStorageGen2
+func (tr *DataFactoryLinkedServiceDataLakeStorageGen2) GetForProvider() interface{} {
+	return &tr.Spec.ForProvider
+}

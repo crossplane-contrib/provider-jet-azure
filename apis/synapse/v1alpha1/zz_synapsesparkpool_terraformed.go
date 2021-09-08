@@ -49,3 +49,8 @@ func (tr *SynapseSparkPool) GetParameters() ([]byte, error) {
 func (tr *SynapseSparkPool) SetParameters(data []byte) error {
 	return conversion.TFParser.Unmarshal(data, &tr.Spec.ForProvider)
 }
+
+// GetForProvider of this SynapseSparkPool
+func (tr *SynapseSparkPool) GetForProvider() interface{} {
+	return &tr.Spec.ForProvider
+}

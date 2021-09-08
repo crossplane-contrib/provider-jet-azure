@@ -49,3 +49,8 @@ func (tr *NetappVolume) GetParameters() ([]byte, error) {
 func (tr *NetappVolume) SetParameters(data []byte) error {
 	return conversion.TFParser.Unmarshal(data, &tr.Spec.ForProvider)
 }
+
+// GetForProvider of this NetappVolume
+func (tr *NetappVolume) GetForProvider() interface{} {
+	return &tr.Spec.ForProvider
+}

@@ -49,3 +49,8 @@ func (tr *MaintenanceAssignmentDedicatedHost) GetParameters() ([]byte, error) {
 func (tr *MaintenanceAssignmentDedicatedHost) SetParameters(data []byte) error {
 	return conversion.TFParser.Unmarshal(data, &tr.Spec.ForProvider)
 }
+
+// GetForProvider of this MaintenanceAssignmentDedicatedHost
+func (tr *MaintenanceAssignmentDedicatedHost) GetForProvider() interface{} {
+	return &tr.Spec.ForProvider
+}

@@ -49,3 +49,8 @@ func (tr *DataFactoryDatasetDelimitedText) GetParameters() ([]byte, error) {
 func (tr *DataFactoryDatasetDelimitedText) SetParameters(data []byte) error {
 	return conversion.TFParser.Unmarshal(data, &tr.Spec.ForProvider)
 }
+
+// GetForProvider of this DataFactoryDatasetDelimitedText
+func (tr *DataFactoryDatasetDelimitedText) GetForProvider() interface{} {
+	return &tr.Spec.ForProvider
+}

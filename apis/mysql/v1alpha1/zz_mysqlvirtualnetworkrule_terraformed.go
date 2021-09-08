@@ -49,3 +49,8 @@ func (tr *MysqlVirtualNetworkRule) GetParameters() ([]byte, error) {
 func (tr *MysqlVirtualNetworkRule) SetParameters(data []byte) error {
 	return conversion.TFParser.Unmarshal(data, &tr.Spec.ForProvider)
 }
+
+// GetForProvider of this MysqlVirtualNetworkRule
+func (tr *MysqlVirtualNetworkRule) GetForProvider() interface{} {
+	return &tr.Spec.ForProvider
+}

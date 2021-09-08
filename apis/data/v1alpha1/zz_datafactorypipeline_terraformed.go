@@ -49,3 +49,8 @@ func (tr *DataFactoryPipeline) GetParameters() ([]byte, error) {
 func (tr *DataFactoryPipeline) SetParameters(data []byte) error {
 	return conversion.TFParser.Unmarshal(data, &tr.Spec.ForProvider)
 }
+
+// GetForProvider of this DataFactoryPipeline
+func (tr *DataFactoryPipeline) GetForProvider() interface{} {
+	return &tr.Spec.ForProvider
+}

@@ -49,3 +49,8 @@ func (tr *StackHciCluster) GetParameters() ([]byte, error) {
 func (tr *StackHciCluster) SetParameters(data []byte) error {
 	return conversion.TFParser.Unmarshal(data, &tr.Spec.ForProvider)
 }
+
+// GetForProvider of this StackHciCluster
+func (tr *StackHciCluster) GetForProvider() interface{} {
+	return &tr.Spec.ForProvider
+}

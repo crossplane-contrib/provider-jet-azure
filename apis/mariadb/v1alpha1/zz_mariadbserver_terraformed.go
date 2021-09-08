@@ -49,3 +49,8 @@ func (tr *MariadbServer) GetParameters() ([]byte, error) {
 func (tr *MariadbServer) SetParameters(data []byte) error {
 	return conversion.TFParser.Unmarshal(data, &tr.Spec.ForProvider)
 }
+
+// GetForProvider of this MariadbServer
+func (tr *MariadbServer) GetForProvider() interface{} {
+	return &tr.Spec.ForProvider
+}

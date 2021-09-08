@@ -49,3 +49,8 @@ func (tr *SentinelDataConnectorMicrosoftCloudAppSecurity) GetParameters() ([]byt
 func (tr *SentinelDataConnectorMicrosoftCloudAppSecurity) SetParameters(data []byte) error {
 	return conversion.TFParser.Unmarshal(data, &tr.Spec.ForProvider)
 }
+
+// GetForProvider of this SentinelDataConnectorMicrosoftCloudAppSecurity
+func (tr *SentinelDataConnectorMicrosoftCloudAppSecurity) GetForProvider() interface{} {
+	return &tr.Spec.ForProvider
+}

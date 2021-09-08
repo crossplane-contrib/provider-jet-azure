@@ -49,3 +49,8 @@ func (tr *CdnProfile) GetParameters() ([]byte, error) {
 func (tr *CdnProfile) SetParameters(data []byte) error {
 	return conversion.TFParser.Unmarshal(data, &tr.Spec.ForProvider)
 }
+
+// GetForProvider of this CdnProfile
+func (tr *CdnProfile) GetForProvider() interface{} {
+	return &tr.Spec.ForProvider
+}

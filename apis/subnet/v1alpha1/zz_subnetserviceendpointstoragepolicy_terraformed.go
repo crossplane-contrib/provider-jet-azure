@@ -49,3 +49,8 @@ func (tr *SubnetServiceEndpointStoragePolicy) GetParameters() ([]byte, error) {
 func (tr *SubnetServiceEndpointStoragePolicy) SetParameters(data []byte) error {
 	return conversion.TFParser.Unmarshal(data, &tr.Spec.ForProvider)
 }
+
+// GetForProvider of this SubnetServiceEndpointStoragePolicy
+func (tr *SubnetServiceEndpointStoragePolicy) GetForProvider() interface{} {
+	return &tr.Spec.ForProvider
+}

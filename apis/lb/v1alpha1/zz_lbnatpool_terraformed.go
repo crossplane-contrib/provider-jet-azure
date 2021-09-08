@@ -49,3 +49,8 @@ func (tr *LbNatPool) GetParameters() ([]byte, error) {
 func (tr *LbNatPool) SetParameters(data []byte) error {
 	return conversion.TFParser.Unmarshal(data, &tr.Spec.ForProvider)
 }
+
+// GetForProvider of this LbNatPool
+func (tr *LbNatPool) GetForProvider() interface{} {
+	return &tr.Spec.ForProvider
+}

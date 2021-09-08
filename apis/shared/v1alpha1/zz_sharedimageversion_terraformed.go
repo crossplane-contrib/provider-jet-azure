@@ -49,3 +49,8 @@ func (tr *SharedImageVersion) GetParameters() ([]byte, error) {
 func (tr *SharedImageVersion) SetParameters(data []byte) error {
 	return conversion.TFParser.Unmarshal(data, &tr.Spec.ForProvider)
 }
+
+// GetForProvider of this SharedImageVersion
+func (tr *SharedImageVersion) GetForProvider() interface{} {
+	return &tr.Spec.ForProvider
+}

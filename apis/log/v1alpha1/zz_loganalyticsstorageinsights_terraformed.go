@@ -49,3 +49,8 @@ func (tr *LogAnalyticsStorageInsights) GetParameters() ([]byte, error) {
 func (tr *LogAnalyticsStorageInsights) SetParameters(data []byte) error {
 	return conversion.TFParser.Unmarshal(data, &tr.Spec.ForProvider)
 }
+
+// GetForProvider of this LogAnalyticsStorageInsights
+func (tr *LogAnalyticsStorageInsights) GetForProvider() interface{} {
+	return &tr.Spec.ForProvider
+}
