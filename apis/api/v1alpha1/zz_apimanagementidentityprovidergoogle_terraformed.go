@@ -18,7 +18,12 @@ limitations under the License.
 
 package v1alpha1
 
-import "github.com/crossplane-contrib/terrajet/pkg/conversion"
+import (
+	"github.com/pkg/errors"
+
+	"github.com/crossplane-contrib/terrajet/pkg/conversion"
+	"github.com/crossplane-contrib/terrajet/pkg/conversion/lateinit"
+)
 
 // GetTerraformResourceType returns Terraform resource type for this ApiManagementIdentityProviderGoogle
 func (mg *ApiManagementIdentityProviderGoogle) GetTerraformResourceType() string {
@@ -50,7 +55,14 @@ func (tr *ApiManagementIdentityProviderGoogle) SetParameters(data []byte) error 
 	return conversion.TFParser.Unmarshal(data, &tr.Spec.ForProvider)
 }
 
-// GetForProvider of this ApiManagementIdentityProviderGoogle
-func (tr *ApiManagementIdentityProviderGoogle) GetForProvider() interface{} {
-	return &tr.Spec.ForProvider
+// LateInitialize this ApiManagementIdentityProviderGoogle using its observed tfState.
+// returns True if there are any spec changes for the resource.
+func (tr *ApiManagementIdentityProviderGoogle) LateInitialize(tfState []byte) (bool, error) {
+	stateObject := &ApiManagementIdentityProviderGoogleParameters{}
+	if err := conversion.TFParser.Unmarshal(tfState, stateObject); err != nil {
+		return false, errors.Wrap(err, "failed to unmarshal Terraform state for late initialization")
+	}
+
+	return lateinit.LateInitializeFromResponse("", &tr.Spec.ForProvider, stateObject,
+		lateinit.ZeroValueJSONOmitEmptyFilter(lateinit.CNameWildcard), lateinit.ZeroElemPtrFilter(lateinit.CNameWildcard))
 }

@@ -18,7 +18,12 @@ limitations under the License.
 
 package v1alpha1
 
-import "github.com/crossplane-contrib/terrajet/pkg/conversion"
+import (
+	"github.com/pkg/errors"
+
+	"github.com/crossplane-contrib/terrajet/pkg/conversion"
+	"github.com/crossplane-contrib/terrajet/pkg/conversion/lateinit"
+)
 
 // GetTerraformResourceType returns Terraform resource type for this ApiManagementProperty
 func (mg *ApiManagementProperty) GetTerraformResourceType() string {
@@ -50,7 +55,14 @@ func (tr *ApiManagementProperty) SetParameters(data []byte) error {
 	return conversion.TFParser.Unmarshal(data, &tr.Spec.ForProvider)
 }
 
-// GetForProvider of this ApiManagementProperty
-func (tr *ApiManagementProperty) GetForProvider() interface{} {
-	return &tr.Spec.ForProvider
+// LateInitialize this ApiManagementProperty using its observed tfState.
+// returns True if there are any spec changes for the resource.
+func (tr *ApiManagementProperty) LateInitialize(tfState []byte) (bool, error) {
+	stateObject := &ApiManagementPropertyParameters{}
+	if err := conversion.TFParser.Unmarshal(tfState, stateObject); err != nil {
+		return false, errors.Wrap(err, "failed to unmarshal Terraform state for late initialization")
+	}
+
+	return lateinit.LateInitializeFromResponse("", &tr.Spec.ForProvider, stateObject,
+		lateinit.ZeroValueJSONOmitEmptyFilter(lateinit.CNameWildcard), lateinit.ZeroElemPtrFilter(lateinit.CNameWildcard))
 }

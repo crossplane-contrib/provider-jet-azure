@@ -18,7 +18,12 @@ limitations under the License.
 
 package v1alpha1
 
-import "github.com/crossplane-contrib/terrajet/pkg/conversion"
+import (
+	"github.com/pkg/errors"
+
+	"github.com/crossplane-contrib/terrajet/pkg/conversion"
+	"github.com/crossplane-contrib/terrajet/pkg/conversion/lateinit"
+)
 
 // GetTerraformResourceType returns Terraform resource type for this DataShare
 func (mg *DataShare) GetTerraformResourceType() string {
@@ -50,7 +55,14 @@ func (tr *DataShare) SetParameters(data []byte) error {
 	return conversion.TFParser.Unmarshal(data, &tr.Spec.ForProvider)
 }
 
-// GetForProvider of this DataShare
-func (tr *DataShare) GetForProvider() interface{} {
-	return &tr.Spec.ForProvider
+// LateInitialize this DataShare using its observed tfState.
+// returns True if there are any spec changes for the resource.
+func (tr *DataShare) LateInitialize(tfState []byte) (bool, error) {
+	stateObject := &DataShareParameters{}
+	if err := conversion.TFParser.Unmarshal(tfState, stateObject); err != nil {
+		return false, errors.Wrap(err, "failed to unmarshal Terraform state for late initialization")
+	}
+
+	return lateinit.LateInitializeFromResponse("", &tr.Spec.ForProvider, stateObject,
+		lateinit.ZeroValueJSONOmitEmptyFilter(lateinit.CNameWildcard), lateinit.ZeroElemPtrFilter(lateinit.CNameWildcard))
 }

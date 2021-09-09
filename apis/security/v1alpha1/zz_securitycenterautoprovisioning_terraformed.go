@@ -18,7 +18,12 @@ limitations under the License.
 
 package v1alpha1
 
-import "github.com/crossplane-contrib/terrajet/pkg/conversion"
+import (
+	"github.com/pkg/errors"
+
+	"github.com/crossplane-contrib/terrajet/pkg/conversion"
+	"github.com/crossplane-contrib/terrajet/pkg/conversion/lateinit"
+)
 
 // GetTerraformResourceType returns Terraform resource type for this SecurityCenterAutoProvisioning
 func (mg *SecurityCenterAutoProvisioning) GetTerraformResourceType() string {
@@ -50,7 +55,14 @@ func (tr *SecurityCenterAutoProvisioning) SetParameters(data []byte) error {
 	return conversion.TFParser.Unmarshal(data, &tr.Spec.ForProvider)
 }
 
-// GetForProvider of this SecurityCenterAutoProvisioning
-func (tr *SecurityCenterAutoProvisioning) GetForProvider() interface{} {
-	return &tr.Spec.ForProvider
+// LateInitialize this SecurityCenterAutoProvisioning using its observed tfState.
+// returns True if there are any spec changes for the resource.
+func (tr *SecurityCenterAutoProvisioning) LateInitialize(tfState []byte) (bool, error) {
+	stateObject := &SecurityCenterAutoProvisioningParameters{}
+	if err := conversion.TFParser.Unmarshal(tfState, stateObject); err != nil {
+		return false, errors.Wrap(err, "failed to unmarshal Terraform state for late initialization")
+	}
+
+	return lateinit.LateInitializeFromResponse("", &tr.Spec.ForProvider, stateObject,
+		lateinit.ZeroValueJSONOmitEmptyFilter(lateinit.CNameWildcard), lateinit.ZeroElemPtrFilter(lateinit.CNameWildcard))
 }

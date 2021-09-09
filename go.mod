@@ -1,4 +1,4 @@
-module github.com/ulucinar/provider-tf-azure
+module github.com/crossplane-contrib/provider-tf-azure
 
 go 1.16
 

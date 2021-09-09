@@ -10,7 +10,7 @@ import (
 
 	xpresource "github.com/crossplane/crossplane-runtime/pkg/resource"
 
-	"github.com/ulucinar/provider-tf-azure/apis/v1alpha1"
+	"github.com/crossplane-contrib/provider-tf-azure/apis/v1alpha1"
 )
 
 const (

@@ -18,7 +18,12 @@ limitations under the License.
 
 package v1alpha1
 
-import "github.com/crossplane-contrib/terrajet/pkg/conversion"
+import (
+	"github.com/pkg/errors"
+
+	"github.com/crossplane-contrib/terrajet/pkg/conversion"
+	"github.com/crossplane-contrib/terrajet/pkg/conversion/lateinit"
+)
 
 // GetTerraformResourceType returns Terraform resource type for this LogAnalyticsDatasourceWindowsPerformanceCounter
 func (mg *LogAnalyticsDatasourceWindowsPerformanceCounter) GetTerraformResourceType() string {
@@ -50,7 +55,14 @@ func (tr *LogAnalyticsDatasourceWindowsPerformanceCounter) SetParameters(data []
 	return conversion.TFParser.Unmarshal(data, &tr.Spec.ForProvider)
 }
 
-// GetForProvider of this LogAnalyticsDatasourceWindowsPerformanceCounter
-func (tr *LogAnalyticsDatasourceWindowsPerformanceCounter) GetForProvider() interface{} {
-	return &tr.Spec.ForProvider
+// LateInitialize this LogAnalyticsDatasourceWindowsPerformanceCounter using its observed tfState.
+// returns True if there are any spec changes for the resource.
+func (tr *LogAnalyticsDatasourceWindowsPerformanceCounter) LateInitialize(tfState []byte) (bool, error) {
+	stateObject := &LogAnalyticsDatasourceWindowsPerformanceCounterParameters{}
+	if err := conversion.TFParser.Unmarshal(tfState, stateObject); err != nil {
+		return false, errors.Wrap(err, "failed to unmarshal Terraform state for late initialization")
+	}
+
+	return lateinit.LateInitializeFromResponse("", &tr.Spec.ForProvider, stateObject,
+		lateinit.ZeroValueJSONOmitEmptyFilter(lateinit.CNameWildcard), lateinit.ZeroElemPtrFilter(lateinit.CNameWildcard))
 }

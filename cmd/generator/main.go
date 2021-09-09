@@ -34,7 +34,7 @@ import (
 
 // Constants to use in generated artifacts.
 const (
-	modulePath  = "github.com/ulucinar/provider-tf-azure"
+	modulePath  = "github.com/crossplane-contrib/provider-tf-azure"
 	groupSuffix = ".azure.tf.crossplane.io"
 )
 
@@ -83,10 +83,10 @@ func main() {
 	}
 	count := 0
 	versionPkgList := []string{
-		"github.com/ulucinar/provider-tf-azure/apis/v1alpha1",
+		"github.com/crossplane-contrib/provider-tf-azure/apis/v1alpha1",
 	}
 	controllerPkgList := []string{
-		"github.com/ulucinar/provider-tf-azure/internal/controller/config",
+		"github.com/crossplane-contrib/provider-tf-azure/internal/controller/config",
 	}
 	for group, resources := range groups {
 		version := "v1alpha1"

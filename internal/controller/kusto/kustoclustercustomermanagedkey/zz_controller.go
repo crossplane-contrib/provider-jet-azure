@@ -29,8 +29,8 @@ import (
 	xpresource "github.com/crossplane/crossplane-runtime/pkg/resource"
 	"sigs.k8s.io/controller-runtime/pkg/controller"
 
-	v1alpha1 "github.com/ulucinar/provider-tf-azure/apis/kusto/v1alpha1"
-	clients "github.com/ulucinar/provider-tf-azure/internal/clients"
+	v1alpha1 "github.com/crossplane-contrib/provider-tf-azure/apis/kusto/v1alpha1"
+	clients "github.com/crossplane-contrib/provider-tf-azure/internal/clients"
 )
 
 // Setup adds a controller that reconciles KustoClusterCustomerManagedKey managed resources.
