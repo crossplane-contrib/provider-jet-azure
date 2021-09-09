@@ -47,17 +47,20 @@ var (
 var skipList = map[string]struct{}{
 	"azurerm_mssql_server_extended_auditing_policy": {},
 	// group prefix collision
-	"azurerm_api_management_group": {},
-	"azurerm_api_management_product_group": {},
-	"azurerm_dedicated_host_group": {},
-	"azurerm_storage_sync_group": {},
+	"azurerm_api_management_group":              {},
+	"azurerm_api_management_product_group":      {},
+	"azurerm_dedicated_host_group":              {},
+	"azurerm_storage_sync_group":                {},
 	"azurerm_virtual_desktop_application_group": {},
 	// generated name too long
 	"azurerm_network_interface_application_gateway_backend_address_pool_association": {},
-	"azurerm_sentinel_data_connector_microsoft_defender_advanced_threat_protection": {},
+	"azurerm_sentinel_data_connector_microsoft_defender_advanced_threat_protection":  {},
 }
 
-func main() {
+func main() { // nolint:gocyclo
+	// Cyclomatic complexity of this function is above our goal of 10,
+	// and it establishes a Terrajet code generation pipeline that's very similar
+	// to other Terrajet based providers.
 	wd, err := os.Getwd()
 	if err != nil {
 		panic(errors.Wrap(err, "cannot get working directory"))

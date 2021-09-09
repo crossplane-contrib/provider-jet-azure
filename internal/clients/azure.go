@@ -15,23 +15,23 @@ import (
 
 const (
 	// error messages
-	errNoProviderConfig = "no providerConfigRef provided"
-	errGetProviderConfig = "cannot get referenced ProviderConfig"
-	errTrackUsage = "cannot track ProviderConfig usage"
-	errExtractCredentials = "cannot extract credentials"
+	errNoProviderConfig     = "no providerConfigRef provided"
+	errGetProviderConfig    = "cannot get referenced ProviderConfig"
+	errTrackUsage           = "cannot track ProviderConfig usage"
+	errExtractCredentials   = "cannot extract credentials"
 	errUnmarshalCredentials = "cannot unmarshal Azure credentials as JSON"
 	errMarshalProviderBlock = "cannot marshal Terraform Azurerm provider block as JSON"
 	// Azure service principal credentials file JSON keys
 	keyAzureSubscriptionID = "subscriptionId"
-	keyAzureClientID = "clientId"
-	keyAzureClientSecret = "clientSecret"
-	keyAzureTenantID = "tenantId"
+	keyAzureClientID       = "clientId"
+	keyAzureClientSecret   = "clientSecret"
+	keyAzureTenantID       = "tenantId"
 	// Terraform Provider configuration keys
 	keyTerraformSubscriptionID = "subscription_id"
-	keyTerraformClientID = "client_id"
-	keyTerraformClientSecret = "client_secret"
-	keyTerraformTenantID = "tenant_id"
-	keyTerraformFeatures = "features"
+	keyTerraformClientID       = "client_id"
+	keyTerraformClientSecret   = "client_secret"
+	keyTerraformTenantID       = "tenant_id"
+	keyTerraformFeatures       = "features"
 )
 
 // ProviderConfigBuilder returns provider specific configuration like provider
@@ -66,7 +66,7 @@ func ProviderConfigBuilder(ctx context.Context, client client.Client, mg xpresou
 	tfProviderBlock[keyTerraformTenantID] = azureCreds[keyAzureTenantID]
 	tfProviderBlock[keyTerraformClientID] = azureCreds[keyAzureClientID]
 	tfProviderBlock[keyTerraformClientSecret] = azureCreds[keyAzureClientSecret]
-	tfProviderBlock[keyTerraformFeatures] = struct {}{}
+	tfProviderBlock[keyTerraformFeatures] = struct{}{}
 	result, err := json.Marshal(tfProviderBlock)
 	return result, errors.Wrap(err, errMarshalProviderBlock)
 }

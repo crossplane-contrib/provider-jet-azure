@@ -33,6 +33,7 @@ GO_STATIC_PACKAGES = $(GO_PROJECT)/cmd/provider $(GO_PROJECT)/cmd/generator
 GO_LDFLAGS += -X $(GO_PROJECT)/internal/version.Version=$(VERSION)
 GO_SUBDIRS += cmd internal apis
 GO111MODULE = on
+GO_LINT_ARGS ?= --skip-files internal/controller/zz_setup.go
 -include build/makelib/golang.mk
 
 # ====================================================================================
@@ -44,7 +45,6 @@ GO111MODULE = on
 # Setup Images
 
 DOCKER_REGISTRY := crossplane
-IMAGES = provider-tf-azure provider-tf-azure-controller
 IMAGES = provider-tf-azure provider-tf-azure-controller
 -include build/makelib/image.mk
 
