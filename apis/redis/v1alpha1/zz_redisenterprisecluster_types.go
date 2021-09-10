@@ -33,7 +33,7 @@ type RedisEnterpriseClusterObservation struct {
 type RedisEnterpriseClusterParameters struct {
 	Location string `json:"location" tf:"location"`
 
-	MinimumTlsVersion *string `json:"minimumTlsVersion,omitempty" tf:"minimum_tls_version"`
+	MinimumTLSVersion *string `json:"minimumTlsVersion,omitempty" tf:"minimum_tls_version"`
 
 	Name string `json:"name" tf:"name"`
 

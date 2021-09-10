@@ -27,7 +27,7 @@ import (
 type PublicIpObservation struct {
 	Fqdn string `json:"fqdn" tf:"fqdn"`
 
-	IpAddress string `json:"ipAddress" tf:"ip_address"`
+	IPAddress string `json:"ipAddress" tf:"ip_address"`
 }
 
 type PublicIpParameters struct {
@@ -37,17 +37,17 @@ type PublicIpParameters struct {
 
 	DomainNameLabel *string `json:"domainNameLabel,omitempty" tf:"domain_name_label"`
 
+	IPTags map[string]string `json:"ipTags,omitempty" tf:"ip_tags"`
+
+	IPVersion *string `json:"ipVersion,omitempty" tf:"ip_version"`
+
 	IdleTimeoutInMinutes *int64 `json:"idleTimeoutInMinutes,omitempty" tf:"idle_timeout_in_minutes"`
-
-	IpTags map[string]string `json:"ipTags,omitempty" tf:"ip_tags"`
-
-	IpVersion *string `json:"ipVersion,omitempty" tf:"ip_version"`
 
 	Location string `json:"location" tf:"location"`
 
 	Name string `json:"name" tf:"name"`
 
-	PublicIpPrefixId *string `json:"publicIpPrefixId,omitempty" tf:"public_ip_prefix_id"`
+	PublicIPPrefixID *string `json:"publicIpPrefixId,omitempty" tf:"public_ip_prefix_id"`
 
 	ResourceGroupName string `json:"resourceGroupName" tf:"resource_group_name"`
 

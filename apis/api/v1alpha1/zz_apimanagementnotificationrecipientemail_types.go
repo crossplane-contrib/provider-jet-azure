@@ -28,7 +28,7 @@ type ApiManagementNotificationRecipientEmailObservation struct {
 }
 
 type ApiManagementNotificationRecipientEmailParameters struct {
-	ApiManagementId string `json:"apiManagementId" tf:"api_management_id"`
+	APIManagementID string `json:"apiManagementId" tf:"api_management_id"`
 
 	Email string `json:"email" tf:"email"`
 

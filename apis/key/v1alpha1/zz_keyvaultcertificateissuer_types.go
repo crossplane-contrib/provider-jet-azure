@@ -41,15 +41,15 @@ type KeyVaultCertificateIssuerObservation struct {
 }
 
 type KeyVaultCertificateIssuerParameters struct {
-	AccountId *string `json:"accountId,omitempty" tf:"account_id"`
+	AccountID *string `json:"accountId,omitempty" tf:"account_id"`
 
 	Admin []AdminParameters `json:"admin,omitempty" tf:"admin"`
 
-	KeyVaultId string `json:"keyVaultId" tf:"key_vault_id"`
+	KeyVaultID string `json:"keyVaultId" tf:"key_vault_id"`
 
 	Name string `json:"name" tf:"name"`
 
-	OrgId *string `json:"orgId,omitempty" tf:"org_id"`
+	OrgID *string `json:"orgId,omitempty" tf:"org_id"`
 
 	Password *string `json:"password,omitempty" tf:"password"`
 

@@ -28,11 +28,11 @@ type NetworkInterfaceNatRuleAssociationObservation struct {
 }
 
 type NetworkInterfaceNatRuleAssociationParameters struct {
-	IpConfigurationName string `json:"ipConfigurationName" tf:"ip_configuration_name"`
+	IPConfigurationName string `json:"ipConfigurationName" tf:"ip_configuration_name"`
 
-	NatRuleId string `json:"natRuleId" tf:"nat_rule_id"`
+	NatRuleID string `json:"natRuleId" tf:"nat_rule_id"`
 
-	NetworkInterfaceId string `json:"networkInterfaceId" tf:"network_interface_id"`
+	NetworkInterfaceID string `json:"networkInterfaceId" tf:"network_interface_id"`
 }
 
 // NetworkInterfaceNatRuleAssociationSpec defines the desired state of NetworkInterfaceNatRuleAssociation

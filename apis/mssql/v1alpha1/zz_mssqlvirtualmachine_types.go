@@ -67,7 +67,7 @@ type KeyVaultCredentialObservation struct {
 }
 
 type KeyVaultCredentialParameters struct {
-	KeyVaultUrl string `json:"keyVaultUrl" tf:"key_vault_url"`
+	KeyVaultURL string `json:"keyVaultUrl" tf:"key_vault_url"`
 
 	Name string `json:"name" tf:"name"`
 
@@ -110,21 +110,21 @@ type MssqlVirtualMachineParameters struct {
 
 	RServicesEnabled *bool `json:"rServicesEnabled,omitempty" tf:"r_services_enabled"`
 
-	SqlConnectivityPort *int64 `json:"sqlConnectivityPort,omitempty" tf:"sql_connectivity_port"`
+	SQLConnectivityPort *int64 `json:"sqlConnectivityPort,omitempty" tf:"sql_connectivity_port"`
 
-	SqlConnectivityType *string `json:"sqlConnectivityType,omitempty" tf:"sql_connectivity_type"`
+	SQLConnectivityType *string `json:"sqlConnectivityType,omitempty" tf:"sql_connectivity_type"`
 
-	SqlConnectivityUpdatePassword *string `json:"sqlConnectivityUpdatePassword,omitempty" tf:"sql_connectivity_update_password"`
+	SQLConnectivityUpdatePassword *string `json:"sqlConnectivityUpdatePassword,omitempty" tf:"sql_connectivity_update_password"`
 
-	SqlConnectivityUpdateUsername *string `json:"sqlConnectivityUpdateUsername,omitempty" tf:"sql_connectivity_update_username"`
+	SQLConnectivityUpdateUsername *string `json:"sqlConnectivityUpdateUsername,omitempty" tf:"sql_connectivity_update_username"`
 
-	SqlLicenseType string `json:"sqlLicenseType" tf:"sql_license_type"`
+	SQLLicenseType string `json:"sqlLicenseType" tf:"sql_license_type"`
 
 	StorageConfiguration []StorageConfigurationParameters `json:"storageConfiguration,omitempty" tf:"storage_configuration"`
 
 	Tags map[string]string `json:"tags,omitempty" tf:"tags"`
 
-	VirtualMachineId string `json:"virtualMachineId" tf:"virtual_machine_id"`
+	VirtualMachineID string `json:"virtualMachineId" tf:"virtual_machine_id"`
 }
 
 type StorageConfigurationObservation struct {
@@ -139,13 +139,13 @@ type StorageConfigurationParameters struct {
 
 	StorageWorkloadType string `json:"storageWorkloadType" tf:"storage_workload_type"`
 
-	TempDbSettings []TempDbSettingsParameters `json:"tempDbSettings,omitempty" tf:"temp_db_settings"`
+	TempDBSettings []TempDBSettingsParameters `json:"tempDbSettings,omitempty" tf:"temp_db_settings"`
 }
 
-type TempDbSettingsObservation struct {
+type TempDBSettingsObservation struct {
 }
 
-type TempDbSettingsParameters struct {
+type TempDBSettingsParameters struct {
 	DefaultFilePath string `json:"defaultFilePath" tf:"default_file_path"`
 
 	Luns []int64 `json:"luns" tf:"luns"`

@@ -30,7 +30,7 @@ type BotChannelFacebookObservation struct {
 type BotChannelFacebookParameters struct {
 	BotName string `json:"botName" tf:"bot_name"`
 
-	FacebookApplicationId string `json:"facebookApplicationId" tf:"facebook_application_id"`
+	FacebookApplicationID string `json:"facebookApplicationId" tf:"facebook_application_id"`
 
 	FacebookApplicationSecret string `json:"facebookApplicationSecret" tf:"facebook_application_secret"`
 
@@ -47,7 +47,7 @@ type PageObservation struct {
 type PageParameters struct {
 	AccessToken string `json:"accessToken" tf:"access_token"`
 
-	Id string `json:"id" tf:"id"`
+	ID string `json:"id" tf:"id"`
 }
 
 // BotChannelFacebookSpec defines the desired state of BotChannelFacebook

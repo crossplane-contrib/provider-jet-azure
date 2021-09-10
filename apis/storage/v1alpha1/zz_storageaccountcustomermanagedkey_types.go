@@ -30,13 +30,13 @@ type StorageAccountCustomerManagedKeyObservation struct {
 type StorageAccountCustomerManagedKeyParameters struct {
 	KeyName string `json:"keyName" tf:"key_name"`
 
-	KeyVaultId string `json:"keyVaultId" tf:"key_vault_id"`
+	KeyVaultID string `json:"keyVaultId" tf:"key_vault_id"`
 
 	KeyVersion *string `json:"keyVersion,omitempty" tf:"key_version"`
 
-	StorageAccountId string `json:"storageAccountId" tf:"storage_account_id"`
+	StorageAccountID string `json:"storageAccountId" tf:"storage_account_id"`
 
-	UserAssignedIdentityId *string `json:"userAssignedIdentityId,omitempty" tf:"user_assigned_identity_id"`
+	UserAssignedIdentityID *string `json:"userAssignedIdentityId,omitempty" tf:"user_assigned_identity_id"`
 }
 
 // StorageAccountCustomerManagedKeySpec defines the desired state of StorageAccountCustomerManagedKey

@@ -36,7 +36,7 @@ type ContainerRegistryTokenParameters struct {
 
 	ResourceGroupName string `json:"resourceGroupName" tf:"resource_group_name"`
 
-	ScopeMapId string `json:"scopeMapId" tf:"scope_map_id"`
+	ScopeMapID string `json:"scopeMapId" tf:"scope_map_id"`
 }
 
 // ContainerRegistryTokenSpec defines the desired state of ContainerRegistryToken

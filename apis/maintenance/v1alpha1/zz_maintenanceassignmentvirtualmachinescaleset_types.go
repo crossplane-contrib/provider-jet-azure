@@ -30,9 +30,9 @@ type MaintenanceAssignmentVirtualMachineScaleSetObservation struct {
 type MaintenanceAssignmentVirtualMachineScaleSetParameters struct {
 	Location string `json:"location" tf:"location"`
 
-	MaintenanceConfigurationId string `json:"maintenanceConfigurationId" tf:"maintenance_configuration_id"`
+	MaintenanceConfigurationID string `json:"maintenanceConfigurationId" tf:"maintenance_configuration_id"`
 
-	VirtualMachineScaleSetId string `json:"virtualMachineScaleSetId" tf:"virtual_machine_scale_set_id"`
+	VirtualMachineScaleSetID string `json:"virtualMachineScaleSetId" tf:"virtual_machine_scale_set_id"`
 }
 
 // MaintenanceAssignmentVirtualMachineScaleSetSpec defines the desired state of MaintenanceAssignmentVirtualMachineScaleSet

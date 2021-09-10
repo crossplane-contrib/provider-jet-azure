@@ -28,11 +28,11 @@ type KustoClusterCustomerManagedKeyObservation struct {
 }
 
 type KustoClusterCustomerManagedKeyParameters struct {
-	ClusterId string `json:"clusterId" tf:"cluster_id"`
+	ClusterID string `json:"clusterId" tf:"cluster_id"`
 
 	KeyName string `json:"keyName" tf:"key_name"`
 
-	KeyVaultId string `json:"keyVaultId" tf:"key_vault_id"`
+	KeyVaultID string `json:"keyVaultId" tf:"key_vault_id"`
 
 	KeyVersion string `json:"keyVersion" tf:"key_version"`
 

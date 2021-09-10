@@ -32,9 +32,9 @@ type SynapseManagedPrivateEndpointParameters struct {
 
 	SubresourceName string `json:"subresourceName" tf:"subresource_name"`
 
-	SynapseWorkspaceId string `json:"synapseWorkspaceId" tf:"synapse_workspace_id"`
+	SynapseWorkspaceID string `json:"synapseWorkspaceId" tf:"synapse_workspace_id"`
 
-	TargetResourceId string `json:"targetResourceId" tf:"target_resource_id"`
+	TargetResourceID string `json:"targetResourceId" tf:"target_resource_id"`
 }
 
 // SynapseManagedPrivateEndpointSpec defines the desired state of SynapseManagedPrivateEndpoint

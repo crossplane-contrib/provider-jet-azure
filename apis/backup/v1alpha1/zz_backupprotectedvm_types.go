@@ -28,13 +28,13 @@ type BackupProtectedVmObservation struct {
 }
 
 type BackupProtectedVmParameters struct {
-	BackupPolicyId string `json:"backupPolicyId" tf:"backup_policy_id"`
+	BackupPolicyID string `json:"backupPolicyId" tf:"backup_policy_id"`
 
 	RecoveryVaultName string `json:"recoveryVaultName" tf:"recovery_vault_name"`
 
 	ResourceGroupName string `json:"resourceGroupName" tf:"resource_group_name"`
 
-	SourceVmId string `json:"sourceVmId" tf:"source_vm_id"`
+	SourceVMID string `json:"sourceVmId" tf:"source_vm_id"`
 
 	Tags map[string]string `json:"tags,omitempty" tf:"tags"`
 }

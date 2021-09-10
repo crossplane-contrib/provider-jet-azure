@@ -75,7 +75,7 @@ type ConsumptionBudgetSubscriptionParameters struct {
 
 	Notification []ConsumptionBudgetSubscriptionNotificationParameters `json:"notification" tf:"notification"`
 
-	SubscriptionId string `json:"subscriptionId" tf:"subscription_id"`
+	SubscriptionID string `json:"subscriptionId" tf:"subscription_id"`
 
 	TimeGrain *string `json:"timeGrain,omitempty" tf:"time_grain"`
 

@@ -25,9 +25,9 @@ import (
 )
 
 type IdentityObservation struct {
-	PrincipalId string `json:"principalId" tf:"principal_id"`
+	PrincipalID string `json:"principalId" tf:"principal_id"`
 
-	TenantId string `json:"tenantId" tf:"tenant_id"`
+	TenantID string `json:"tenantId" tf:"tenant_id"`
 
 	Type string `json:"type" tf:"type"`
 }

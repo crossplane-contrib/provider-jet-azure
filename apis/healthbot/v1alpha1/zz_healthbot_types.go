@@ -25,7 +25,7 @@ import (
 )
 
 type HealthbotObservation struct {
-	BotManagementPortalUrl string `json:"botManagementPortalUrl" tf:"bot_management_portal_url"`
+	BotManagementPortalURL string `json:"botManagementPortalUrl" tf:"bot_management_portal_url"`
 }
 
 type HealthbotParameters struct {

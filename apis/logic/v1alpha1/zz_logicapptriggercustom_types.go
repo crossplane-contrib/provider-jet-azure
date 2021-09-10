@@ -30,7 +30,7 @@ type LogicAppTriggerCustomObservation struct {
 type LogicAppTriggerCustomParameters struct {
 	Body string `json:"body" tf:"body"`
 
-	LogicAppId string `json:"logicAppId" tf:"logic_app_id"`
+	LogicAppID string `json:"logicAppId" tf:"logic_app_id"`
 
 	Name string `json:"name" tf:"name"`
 }

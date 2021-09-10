@@ -28,9 +28,9 @@ type NatGatewayPublicIpPrefixAssociationObservation struct {
 }
 
 type NatGatewayPublicIpPrefixAssociationParameters struct {
-	NatGatewayId string `json:"natGatewayId" tf:"nat_gateway_id"`
+	NatGatewayID string `json:"natGatewayId" tf:"nat_gateway_id"`
 
-	PublicIpPrefixId string `json:"publicIpPrefixId" tf:"public_ip_prefix_id"`
+	PublicIPPrefixID string `json:"publicIpPrefixId" tf:"public_ip_prefix_id"`
 }
 
 // NatGatewayPublicIpPrefixAssociationSpec defines the desired state of NatGatewayPublicIpPrefixAssociation

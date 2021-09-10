@@ -28,9 +28,9 @@ type VirtualNetworkDnsServersObservation struct {
 }
 
 type VirtualNetworkDnsServersParameters struct {
-	DnsServers []string `json:"dnsServers,omitempty" tf:"dns_servers"`
+	DNSServers []string `json:"dnsServers,omitempty" tf:"dns_servers"`
 
-	VirtualNetworkId string `json:"virtualNetworkId" tf:"virtual_network_id"`
+	VirtualNetworkID string `json:"virtualNetworkId" tf:"virtual_network_id"`
 }
 
 // VirtualNetworkDnsServersSpec defines the desired state of VirtualNetworkDnsServers

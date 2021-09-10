@@ -25,15 +25,15 @@ import (
 )
 
 type DevTestLabObservation struct {
-	ArtifactsStorageAccountId string `json:"artifactsStorageAccountId" tf:"artifacts_storage_account_id"`
+	ArtifactsStorageAccountID string `json:"artifactsStorageAccountId" tf:"artifacts_storage_account_id"`
 
-	DefaultPremiumStorageAccountId string `json:"defaultPremiumStorageAccountId" tf:"default_premium_storage_account_id"`
+	DefaultPremiumStorageAccountID string `json:"defaultPremiumStorageAccountId" tf:"default_premium_storage_account_id"`
 
-	DefaultStorageAccountId string `json:"defaultStorageAccountId" tf:"default_storage_account_id"`
+	DefaultStorageAccountID string `json:"defaultStorageAccountId" tf:"default_storage_account_id"`
 
-	KeyVaultId string `json:"keyVaultId" tf:"key_vault_id"`
+	KeyVaultID string `json:"keyVaultId" tf:"key_vault_id"`
 
-	PremiumDataDiskStorageAccountId string `json:"premiumDataDiskStorageAccountId" tf:"premium_data_disk_storage_account_id"`
+	PremiumDataDiskStorageAccountID string `json:"premiumDataDiskStorageAccountId" tf:"premium_data_disk_storage_account_id"`
 
 	UniqueIdentifier string `json:"uniqueIdentifier" tf:"unique_identifier"`
 }

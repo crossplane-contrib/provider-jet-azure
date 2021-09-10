@@ -39,7 +39,7 @@ type LimitsObservation struct {
 }
 
 type LimitsParameters struct {
-	Cpu float64 `json:"cpu" tf:"cpu"`
+	CPU float64 `json:"cpu" tf:"cpu"`
 
 	Memory float64 `json:"memory" tf:"memory"`
 }
@@ -48,7 +48,7 @@ type RequestsObservation struct {
 }
 
 type RequestsParameters struct {
-	Cpu float64 `json:"cpu" tf:"cpu"`
+	CPU float64 `json:"cpu" tf:"cpu"`
 
 	Memory float64 `json:"memory" tf:"memory"`
 }

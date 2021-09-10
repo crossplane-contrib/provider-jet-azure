@@ -28,7 +28,7 @@ type ActionObservation struct {
 }
 
 type ActionParameters struct {
-	ActionGroupId string `json:"actionGroupId" tf:"action_group_id"`
+	ActionGroupID string `json:"actionGroupId" tf:"action_group_id"`
 
 	WebhookProperties map[string]string `json:"webhookProperties,omitempty" tf:"webhook_properties"`
 }
@@ -53,7 +53,7 @@ type CriteriaParameters struct {
 
 	ResourceGroup *string `json:"resourceGroup,omitempty" tf:"resource_group"`
 
-	ResourceId *string `json:"resourceId,omitempty" tf:"resource_id"`
+	ResourceID *string `json:"resourceId,omitempty" tf:"resource_id"`
 
 	ResourceProvider *string `json:"resourceProvider,omitempty" tf:"resource_provider"`
 

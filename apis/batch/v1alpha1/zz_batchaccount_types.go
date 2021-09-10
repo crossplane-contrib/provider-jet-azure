@@ -45,7 +45,7 @@ type BatchAccountParameters struct {
 
 	ResourceGroupName string `json:"resourceGroupName" tf:"resource_group_name"`
 
-	StorageAccountId *string `json:"storageAccountId,omitempty" tf:"storage_account_id"`
+	StorageAccountID *string `json:"storageAccountId,omitempty" tf:"storage_account_id"`
 
 	Tags map[string]string `json:"tags,omitempty" tf:"tags"`
 }
@@ -54,9 +54,9 @@ type KeyVaultReferenceObservation struct {
 }
 
 type KeyVaultReferenceParameters struct {
-	Id string `json:"id" tf:"id"`
+	ID string `json:"id" tf:"id"`
 
-	Url string `json:"url" tf:"url"`
+	URL string `json:"url" tf:"url"`
 }
 
 // BatchAccountSpec defines the desired state of BatchAccount

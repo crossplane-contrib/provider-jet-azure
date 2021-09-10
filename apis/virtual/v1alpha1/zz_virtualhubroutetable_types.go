@@ -34,7 +34,7 @@ type VirtualHubRouteTableParameters struct {
 
 	Route []VirtualHubRouteTableRouteParameters `json:"route,omitempty" tf:"route"`
 
-	VirtualHubId string `json:"virtualHubId" tf:"virtual_hub_id"`
+	VirtualHubID string `json:"virtualHubId" tf:"virtual_hub_id"`
 }
 
 type VirtualHubRouteTableRouteObservation struct {

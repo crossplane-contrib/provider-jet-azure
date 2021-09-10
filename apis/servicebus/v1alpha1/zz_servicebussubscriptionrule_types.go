@@ -30,19 +30,19 @@ type CorrelationFilterObservation struct {
 type CorrelationFilterParameters struct {
 	ContentType *string `json:"contentType,omitempty" tf:"content_type"`
 
-	CorrelationId *string `json:"correlationId,omitempty" tf:"correlation_id"`
+	CorrelationID *string `json:"correlationId,omitempty" tf:"correlation_id"`
 
 	Label *string `json:"label,omitempty" tf:"label"`
 
-	MessageId *string `json:"messageId,omitempty" tf:"message_id"`
+	MessageID *string `json:"messageId,omitempty" tf:"message_id"`
 
 	Properties map[string]string `json:"properties,omitempty" tf:"properties"`
 
 	ReplyTo *string `json:"replyTo,omitempty" tf:"reply_to"`
 
-	ReplyToSessionId *string `json:"replyToSessionId,omitempty" tf:"reply_to_session_id"`
+	ReplyToSessionID *string `json:"replyToSessionId,omitempty" tf:"reply_to_session_id"`
 
-	SessionId *string `json:"sessionId,omitempty" tf:"session_id"`
+	SessionID *string `json:"sessionId,omitempty" tf:"session_id"`
 
 	To *string `json:"to,omitempty" tf:"to"`
 }
@@ -63,7 +63,7 @@ type ServicebusSubscriptionRuleParameters struct {
 
 	ResourceGroupName string `json:"resourceGroupName" tf:"resource_group_name"`
 
-	SqlFilter *string `json:"sqlFilter,omitempty" tf:"sql_filter"`
+	SQLFilter *string `json:"sqlFilter,omitempty" tf:"sql_filter"`
 
 	SubscriptionName string `json:"subscriptionName" tf:"subscription_name"`
 

@@ -36,7 +36,7 @@ type LogAnalyticsSavedSearchParameters struct {
 
 	FunctionParameters []string `json:"functionParameters,omitempty" tf:"function_parameters"`
 
-	LogAnalyticsWorkspaceId string `json:"logAnalyticsWorkspaceId" tf:"log_analytics_workspace_id"`
+	LogAnalyticsWorkspaceID string `json:"logAnalyticsWorkspaceId" tf:"log_analytics_workspace_id"`
 
 	Name string `json:"name" tf:"name"`
 

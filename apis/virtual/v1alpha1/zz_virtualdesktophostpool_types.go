@@ -60,7 +60,7 @@ type VirtualDesktopHostPoolParameters struct {
 
 	ResourceGroupName string `json:"resourceGroupName" tf:"resource_group_name"`
 
-	StartVmOnConnect *bool `json:"startVmOnConnect,omitempty" tf:"start_vm_on_connect"`
+	StartVMOnConnect *bool `json:"startVmOnConnect,omitempty" tf:"start_vm_on_connect"`
 
 	Tags map[string]string `json:"tags,omitempty" tf:"tags"`
 

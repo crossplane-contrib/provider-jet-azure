@@ -54,7 +54,7 @@ type PolicyVirtualMachineConfigurationAssignmentParameters struct {
 
 	Name string `json:"name" tf:"name"`
 
-	VirtualMachineId string `json:"virtualMachineId" tf:"virtual_machine_id"`
+	VirtualMachineID string `json:"virtualMachineId" tf:"virtual_machine_id"`
 }
 
 // PolicyVirtualMachineConfigurationAssignmentSpec defines the desired state of PolicyVirtualMachineConfigurationAssignment

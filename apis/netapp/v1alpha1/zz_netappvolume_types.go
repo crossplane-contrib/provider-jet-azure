@@ -32,7 +32,7 @@ type DataProtectionReplicationParameters struct {
 
 	RemoteVolumeLocation string `json:"remoteVolumeLocation" tf:"remote_volume_location"`
 
-	RemoteVolumeResourceId string `json:"remoteVolumeResourceId" tf:"remote_volume_resource_id"`
+	RemoteVolumeResourceID string `json:"remoteVolumeResourceId" tf:"remote_volume_resource_id"`
 
 	ReplicationFrequency string `json:"replicationFrequency" tf:"replication_frequency"`
 }
@@ -61,13 +61,13 @@ type ExportPolicyRuleParameters struct {
 }
 
 type NetappVolumeObservation struct {
-	MountIpAddresses []string `json:"mountIpAddresses" tf:"mount_ip_addresses"`
+	MountIPAddresses []string `json:"mountIpAddresses" tf:"mount_ip_addresses"`
 }
 
 type NetappVolumeParameters struct {
 	AccountName string `json:"accountName" tf:"account_name"`
 
-	CreateFromSnapshotResourceId *string `json:"createFromSnapshotResourceId,omitempty" tf:"create_from_snapshot_resource_id"`
+	CreateFromSnapshotResourceID *string `json:"createFromSnapshotResourceId,omitempty" tf:"create_from_snapshot_resource_id"`
 
 	DataProtectionReplication []DataProtectionReplicationParameters `json:"dataProtectionReplication,omitempty" tf:"data_protection_replication"`
 
@@ -91,7 +91,7 @@ type NetappVolumeParameters struct {
 
 	StorageQuotaInGb int64 `json:"storageQuotaInGb" tf:"storage_quota_in_gb"`
 
-	SubnetId string `json:"subnetId" tf:"subnet_id"`
+	SubnetID string `json:"subnetId" tf:"subnet_id"`
 
 	Tags map[string]string `json:"tags,omitempty" tf:"tags"`
 

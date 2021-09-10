@@ -25,7 +25,7 @@ import (
 )
 
 type PublicIpPrefixObservation struct {
-	IpPrefix string `json:"ipPrefix" tf:"ip_prefix"`
+	IPPrefix string `json:"ipPrefix" tf:"ip_prefix"`
 }
 
 type PublicIpPrefixParameters struct {

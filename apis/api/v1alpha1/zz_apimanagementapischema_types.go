@@ -28,15 +28,15 @@ type ApiManagementApiSchemaObservation struct {
 }
 
 type ApiManagementApiSchemaParameters struct {
-	ApiManagementName string `json:"apiManagementName" tf:"api_management_name"`
+	APIManagementName string `json:"apiManagementName" tf:"api_management_name"`
 
-	ApiName string `json:"apiName" tf:"api_name"`
+	APIName string `json:"apiName" tf:"api_name"`
 
 	ContentType string `json:"contentType" tf:"content_type"`
 
 	ResourceGroupName string `json:"resourceGroupName" tf:"resource_group_name"`
 
-	SchemaId string `json:"schemaId" tf:"schema_id"`
+	SchemaID string `json:"schemaId" tf:"schema_id"`
 
 	Value string `json:"value" tf:"value"`
 }

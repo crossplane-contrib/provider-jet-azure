@@ -25,9 +25,9 @@ import (
 )
 
 type IdentityObservation struct {
-	PrincipalId string `json:"principalId" tf:"principal_id"`
+	PrincipalID string `json:"principalId" tf:"principal_id"`
 
-	TenantId string `json:"tenantId" tf:"tenant_id"`
+	TenantID string `json:"tenantId" tf:"tenant_id"`
 }
 
 type IdentityParameters struct {
@@ -37,9 +37,9 @@ type IdentityParameters struct {
 }
 
 type KustoClusterObservation struct {
-	DataIngestionUri string `json:"dataIngestionUri" tf:"data_ingestion_uri"`
+	DataIngestionURI string `json:"dataIngestionUri" tf:"data_ingestion_uri"`
 
-	Uri string `json:"uri" tf:"uri"`
+	URI string `json:"uri" tf:"uri"`
 }
 
 type KustoClusterParameters struct {
@@ -98,11 +98,11 @@ type VirtualNetworkConfigurationObservation struct {
 }
 
 type VirtualNetworkConfigurationParameters struct {
-	DataManagementPublicIpId string `json:"dataManagementPublicIpId" tf:"data_management_public_ip_id"`
+	DataManagementPublicIPID string `json:"dataManagementPublicIpId" tf:"data_management_public_ip_id"`
 
-	EnginePublicIpId string `json:"enginePublicIpId" tf:"engine_public_ip_id"`
+	EnginePublicIPID string `json:"enginePublicIpId" tf:"engine_public_ip_id"`
 
-	SubnetId string `json:"subnetId" tf:"subnet_id"`
+	SubnetID string `json:"subnetId" tf:"subnet_id"`
 }
 
 // KustoClusterSpec defines the desired state of KustoCluster

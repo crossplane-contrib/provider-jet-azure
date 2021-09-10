@@ -33,15 +33,15 @@ type RoleAssignmentParameters struct {
 
 	ConditionVersion *string `json:"conditionVersion,omitempty" tf:"condition_version"`
 
-	DelegatedManagedIdentityResourceId *string `json:"delegatedManagedIdentityResourceId,omitempty" tf:"delegated_managed_identity_resource_id"`
+	DelegatedManagedIdentityResourceID *string `json:"delegatedManagedIdentityResourceId,omitempty" tf:"delegated_managed_identity_resource_id"`
 
 	Description *string `json:"description,omitempty" tf:"description"`
 
 	Name *string `json:"name,omitempty" tf:"name"`
 
-	PrincipalId string `json:"principalId" tf:"principal_id"`
+	PrincipalID string `json:"principalId" tf:"principal_id"`
 
-	RoleDefinitionId *string `json:"roleDefinitionId,omitempty" tf:"role_definition_id"`
+	RoleDefinitionID *string `json:"roleDefinitionId,omitempty" tf:"role_definition_id"`
 
 	RoleDefinitionName *string `json:"roleDefinitionName,omitempty" tf:"role_definition_name"`
 

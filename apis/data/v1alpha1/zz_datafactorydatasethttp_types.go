@@ -44,7 +44,7 @@ type DataFactoryDatasetHttpParameters struct {
 
 	Parameters map[string]string `json:"parameters,omitempty" tf:"parameters"`
 
-	RelativeUrl *string `json:"relativeUrl,omitempty" tf:"relative_url"`
+	RelativeURL *string `json:"relativeUrl,omitempty" tf:"relative_url"`
 
 	RequestBody *string `json:"requestBody,omitempty" tf:"request_body"`
 

@@ -51,7 +51,7 @@ type ApplicationRuleCollectionRuleParameters struct {
 
 	SourceAddresses []string `json:"sourceAddresses,omitempty" tf:"source_addresses"`
 
-	SourceIpGroups []string `json:"sourceIpGroups,omitempty" tf:"source_ip_groups"`
+	SourceIPGroups []string `json:"sourceIpGroups,omitempty" tf:"source_ip_groups"`
 }
 
 type FirewallPolicyRuleCollectionGroupObservation struct {
@@ -60,7 +60,7 @@ type FirewallPolicyRuleCollectionGroupObservation struct {
 type FirewallPolicyRuleCollectionGroupParameters struct {
 	ApplicationRuleCollection []ApplicationRuleCollectionParameters `json:"applicationRuleCollection,omitempty" tf:"application_rule_collection"`
 
-	FirewallPolicyId string `json:"firewallPolicyId" tf:"firewall_policy_id"`
+	FirewallPolicyID string `json:"firewallPolicyId" tf:"firewall_policy_id"`
 
 	Name string `json:"name" tf:"name"`
 
@@ -98,7 +98,7 @@ type NatRuleCollectionRuleParameters struct {
 
 	SourceAddresses []string `json:"sourceAddresses,omitempty" tf:"source_addresses"`
 
-	SourceIpGroups []string `json:"sourceIpGroups,omitempty" tf:"source_ip_groups"`
+	SourceIPGroups []string `json:"sourceIpGroups,omitempty" tf:"source_ip_groups"`
 
 	TranslatedAddress string `json:"translatedAddress" tf:"translated_address"`
 
@@ -126,7 +126,7 @@ type NetworkRuleCollectionRuleParameters struct {
 
 	DestinationFqdns []string `json:"destinationFqdns,omitempty" tf:"destination_fqdns"`
 
-	DestinationIpGroups []string `json:"destinationIpGroups,omitempty" tf:"destination_ip_groups"`
+	DestinationIPGroups []string `json:"destinationIpGroups,omitempty" tf:"destination_ip_groups"`
 
 	DestinationPorts []string `json:"destinationPorts" tf:"destination_ports"`
 
@@ -136,7 +136,7 @@ type NetworkRuleCollectionRuleParameters struct {
 
 	SourceAddresses []string `json:"sourceAddresses,omitempty" tf:"source_addresses"`
 
-	SourceIpGroups []string `json:"sourceIpGroups,omitempty" tf:"source_ip_groups"`
+	SourceIPGroups []string `json:"sourceIpGroups,omitempty" tf:"source_ip_groups"`
 }
 
 type ProtocolsObservation struct {

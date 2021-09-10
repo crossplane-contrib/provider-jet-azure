@@ -28,11 +28,11 @@ type ApiManagementPolicyObservation struct {
 }
 
 type ApiManagementPolicyParameters struct {
-	ApiManagementId string `json:"apiManagementId" tf:"api_management_id"`
+	APIManagementID string `json:"apiManagementId" tf:"api_management_id"`
 
-	XmlContent *string `json:"xmlContent,omitempty" tf:"xml_content"`
+	XMLContent *string `json:"xmlContent,omitempty" tf:"xml_content"`
 
-	XmlLink *string `json:"xmlLink,omitempty" tf:"xml_link"`
+	XMLLink *string `json:"xmlLink,omitempty" tf:"xml_link"`
 }
 
 // ApiManagementPolicySpec defines the desired state of ApiManagementPolicy

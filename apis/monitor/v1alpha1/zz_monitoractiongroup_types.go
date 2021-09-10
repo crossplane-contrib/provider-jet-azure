@@ -28,11 +28,11 @@ type AadAuthObservation struct {
 }
 
 type AadAuthParameters struct {
-	IdentifierUri *string `json:"identifierUri,omitempty" tf:"identifier_uri"`
+	IdentifierURI *string `json:"identifierUri,omitempty" tf:"identifier_uri"`
 
-	ObjectId string `json:"objectId" tf:"object_id"`
+	ObjectID string `json:"objectId" tf:"object_id"`
 
-	TenantId *string `json:"tenantId,omitempty" tf:"tenant_id"`
+	TenantID *string `json:"tenantId,omitempty" tf:"tenant_id"`
 }
 
 type ArmRoleReceiverObservation struct {
@@ -41,7 +41,7 @@ type ArmRoleReceiverObservation struct {
 type ArmRoleReceiverParameters struct {
 	Name string `json:"name" tf:"name"`
 
-	RoleId string `json:"roleId" tf:"role_id"`
+	RoleID string `json:"roleId" tf:"role_id"`
 
 	UseCommonAlertSchema *bool `json:"useCommonAlertSchema,omitempty" tf:"use_common_alert_schema"`
 }
@@ -50,7 +50,7 @@ type AutomationRunbookReceiverObservation struct {
 }
 
 type AutomationRunbookReceiverParameters struct {
-	AutomationAccountId string `json:"automationAccountId" tf:"automation_account_id"`
+	AutomationAccountID string `json:"automationAccountId" tf:"automation_account_id"`
 
 	IsGlobalRunbook bool `json:"isGlobalRunbook" tf:"is_global_runbook"`
 
@@ -58,11 +58,11 @@ type AutomationRunbookReceiverParameters struct {
 
 	RunbookName string `json:"runbookName" tf:"runbook_name"`
 
-	ServiceUri string `json:"serviceUri" tf:"service_uri"`
+	ServiceURI string `json:"serviceUri" tf:"service_uri"`
 
 	UseCommonAlertSchema *bool `json:"useCommonAlertSchema,omitempty" tf:"use_common_alert_schema"`
 
-	WebhookResourceId string `json:"webhookResourceId" tf:"webhook_resource_id"`
+	WebhookResourceID string `json:"webhookResourceId" tf:"webhook_resource_id"`
 }
 
 type AzureAppPushReceiverObservation struct {
@@ -78,11 +78,11 @@ type AzureFunctionReceiverObservation struct {
 }
 
 type AzureFunctionReceiverParameters struct {
-	FunctionAppResourceId string `json:"functionAppResourceId" tf:"function_app_resource_id"`
+	FunctionAppResourceID string `json:"functionAppResourceId" tf:"function_app_resource_id"`
 
 	FunctionName string `json:"functionName" tf:"function_name"`
 
-	HttpTriggerUrl string `json:"httpTriggerUrl" tf:"http_trigger_url"`
+	HTTPTriggerURL string `json:"httpTriggerUrl" tf:"http_trigger_url"`
 
 	Name string `json:"name" tf:"name"`
 
@@ -104,7 +104,7 @@ type ItsmReceiverObservation struct {
 }
 
 type ItsmReceiverParameters struct {
-	ConnectionId string `json:"connectionId" tf:"connection_id"`
+	ConnectionID string `json:"connectionId" tf:"connection_id"`
 
 	Name string `json:"name" tf:"name"`
 
@@ -112,18 +112,18 @@ type ItsmReceiverParameters struct {
 
 	TicketConfiguration string `json:"ticketConfiguration" tf:"ticket_configuration"`
 
-	WorkspaceId string `json:"workspaceId" tf:"workspace_id"`
+	WorkspaceID string `json:"workspaceId" tf:"workspace_id"`
 }
 
 type LogicAppReceiverObservation struct {
 }
 
 type LogicAppReceiverParameters struct {
-	CallbackUrl string `json:"callbackUrl" tf:"callback_url"`
+	CallbackURL string `json:"callbackUrl" tf:"callback_url"`
 
 	Name string `json:"name" tf:"name"`
 
-	ResourceId string `json:"resourceId" tf:"resource_id"`
+	ResourceID string `json:"resourceId" tf:"resource_id"`
 
 	UseCommonAlertSchema *bool `json:"useCommonAlertSchema,omitempty" tf:"use_common_alert_schema"`
 }
@@ -193,7 +193,7 @@ type WebhookReceiverParameters struct {
 
 	Name string `json:"name" tf:"name"`
 
-	ServiceUri string `json:"serviceUri" tf:"service_uri"`
+	ServiceURI string `json:"serviceUri" tf:"service_uri"`
 
 	UseCommonAlertSchema *bool `json:"useCommonAlertSchema,omitempty" tf:"use_common_alert_schema"`
 }

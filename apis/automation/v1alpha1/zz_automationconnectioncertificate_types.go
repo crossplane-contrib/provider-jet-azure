@@ -38,7 +38,7 @@ type AutomationConnectionCertificateParameters struct {
 
 	ResourceGroupName string `json:"resourceGroupName" tf:"resource_group_name"`
 
-	SubscriptionId string `json:"subscriptionId" tf:"subscription_id"`
+	SubscriptionID string `json:"subscriptionId" tf:"subscription_id"`
 }
 
 // AutomationConnectionCertificateSpec defines the desired state of AutomationConnectionCertificate

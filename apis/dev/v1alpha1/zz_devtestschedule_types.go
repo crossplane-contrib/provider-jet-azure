@@ -39,7 +39,7 @@ type DevTestScheduleNotificationSettingsParameters struct {
 
 	TimeInMinutes *int64 `json:"timeInMinutes,omitempty" tf:"time_in_minutes"`
 
-	WebhookUrl *string `json:"webhookUrl,omitempty" tf:"webhook_url"`
+	WebhookURL *string `json:"webhookUrl,omitempty" tf:"webhook_url"`
 }
 
 type DevTestScheduleObservation struct {
@@ -66,7 +66,7 @@ type DevTestScheduleParameters struct {
 
 	TaskType string `json:"taskType" tf:"task_type"`
 
-	TimeZoneId string `json:"timeZoneId" tf:"time_zone_id"`
+	TimeZoneID string `json:"timeZoneId" tf:"time_zone_id"`
 
 	WeeklyRecurrence []WeeklyRecurrenceParameters `json:"weeklyRecurrence,omitempty" tf:"weekly_recurrence"`
 }

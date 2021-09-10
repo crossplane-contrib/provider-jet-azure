@@ -783,13 +783,13 @@ func (in *LogAnalyticsLinkedServiceParameters) DeepCopyInto(out *LogAnalyticsLin
 		*out = new(string)
 		**out = **in
 	}
-	if in.ReadAccessId != nil {
-		in, out := &in.ReadAccessId, &out.ReadAccessId
+	if in.ReadAccessID != nil {
+		in, out := &in.ReadAccessID, &out.ReadAccessID
 		*out = new(string)
 		**out = **in
 	}
-	if in.ResourceId != nil {
-		in, out := &in.ResourceId, &out.ResourceId
+	if in.ResourceID != nil {
+		in, out := &in.ResourceID, &out.ResourceID
 		*out = new(string)
 		**out = **in
 	}
@@ -800,8 +800,8 @@ func (in *LogAnalyticsLinkedServiceParameters) DeepCopyInto(out *LogAnalyticsLin
 			(*out)[key] = val
 		}
 	}
-	if in.WorkspaceId != nil {
-		in, out := &in.WorkspaceId, &out.WorkspaceId
+	if in.WorkspaceID != nil {
+		in, out := &in.WorkspaceID, &out.WorkspaceID
 		*out = new(string)
 		**out = **in
 	}
@@ -810,8 +810,8 @@ func (in *LogAnalyticsLinkedServiceParameters) DeepCopyInto(out *LogAnalyticsLin
 		*out = new(string)
 		**out = **in
 	}
-	if in.WriteAccessId != nil {
-		in, out := &in.WriteAccessId, &out.WriteAccessId
+	if in.WriteAccessID != nil {
+		in, out := &in.WriteAccessID, &out.WriteAccessID
 		*out = new(string)
 		**out = **in
 	}

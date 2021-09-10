@@ -32,9 +32,9 @@ type MssqlVirtualNetworkRuleParameters struct {
 
 	Name string `json:"name" tf:"name"`
 
-	ServerId string `json:"serverId" tf:"server_id"`
+	ServerID string `json:"serverId" tf:"server_id"`
 
-	SubnetId string `json:"subnetId" tf:"subnet_id"`
+	SubnetID string `json:"subnetId" tf:"subnet_id"`
 }
 
 // MssqlVirtualNetworkRuleSpec defines the desired state of MssqlVirtualNetworkRule

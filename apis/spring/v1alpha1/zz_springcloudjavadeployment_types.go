@@ -28,7 +28,7 @@ type SpringCloudJavaDeploymentObservation struct {
 }
 
 type SpringCloudJavaDeploymentParameters struct {
-	Cpu *int64 `json:"cpu,omitempty" tf:"cpu"`
+	CPU *int64 `json:"cpu,omitempty" tf:"cpu"`
 
 	EnvironmentVariables map[string]string `json:"environmentVariables,omitempty" tf:"environment_variables"`
 
@@ -42,7 +42,7 @@ type SpringCloudJavaDeploymentParameters struct {
 
 	RuntimeVersion *string `json:"runtimeVersion,omitempty" tf:"runtime_version"`
 
-	SpringCloudAppId string `json:"springCloudAppId" tf:"spring_cloud_app_id"`
+	SpringCloudAppID string `json:"springCloudAppId" tf:"spring_cloud_app_id"`
 }
 
 // SpringCloudJavaDeploymentSpec defines the desired state of SpringCloudJavaDeployment

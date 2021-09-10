@@ -34,7 +34,7 @@ type EventhubNamespaceDisasterRecoveryConfigParameters struct {
 
 	NamespaceName string `json:"namespaceName" tf:"namespace_name"`
 
-	PartnerNamespaceId string `json:"partnerNamespaceId" tf:"partner_namespace_id"`
+	PartnerNamespaceID string `json:"partnerNamespaceId" tf:"partner_namespace_id"`
 
 	ResourceGroupName string `json:"resourceGroupName" tf:"resource_group_name"`
 }

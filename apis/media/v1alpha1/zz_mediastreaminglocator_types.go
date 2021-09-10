@@ -28,7 +28,7 @@ type ContentKeyObservation struct {
 }
 
 type ContentKeyParameters struct {
-	ContentKeyId *string `json:"contentKeyId,omitempty" tf:"content_key_id"`
+	ContentKeyID *string `json:"contentKeyId,omitempty" tf:"content_key_id"`
 
 	LabelReferenceInStreamingPolicy *string `json:"labelReferenceInStreamingPolicy,omitempty" tf:"label_reference_in_streaming_policy"`
 
@@ -43,7 +43,7 @@ type MediaStreamingLocatorObservation struct {
 }
 
 type MediaStreamingLocatorParameters struct {
-	AlternativeMediaId *string `json:"alternativeMediaId,omitempty" tf:"alternative_media_id"`
+	AlternativeMediaID *string `json:"alternativeMediaId,omitempty" tf:"alternative_media_id"`
 
 	AssetName string `json:"assetName" tf:"asset_name"`
 
@@ -61,7 +61,7 @@ type MediaStreamingLocatorParameters struct {
 
 	StartTime *string `json:"startTime,omitempty" tf:"start_time"`
 
-	StreamingLocatorId *string `json:"streamingLocatorId,omitempty" tf:"streaming_locator_id"`
+	StreamingLocatorID *string `json:"streamingLocatorId,omitempty" tf:"streaming_locator_id"`
 
 	StreamingPolicyName string `json:"streamingPolicyName" tf:"streaming_policy_name"`
 }

@@ -51,7 +51,7 @@ type FirewallNetworkRuleCollectionRuleParameters struct {
 
 	DestinationFqdns []string `json:"destinationFqdns,omitempty" tf:"destination_fqdns"`
 
-	DestinationIpGroups []string `json:"destinationIpGroups,omitempty" tf:"destination_ip_groups"`
+	DestinationIPGroups []string `json:"destinationIpGroups,omitempty" tf:"destination_ip_groups"`
 
 	DestinationPorts []string `json:"destinationPorts" tf:"destination_ports"`
 
@@ -61,7 +61,7 @@ type FirewallNetworkRuleCollectionRuleParameters struct {
 
 	SourceAddresses []string `json:"sourceAddresses,omitempty" tf:"source_addresses"`
 
-	SourceIpGroups []string `json:"sourceIpGroups,omitempty" tf:"source_ip_groups"`
+	SourceIPGroups []string `json:"sourceIpGroups,omitempty" tf:"source_ip_groups"`
 }
 
 // FirewallNetworkRuleCollectionSpec defines the desired state of FirewallNetworkRuleCollection

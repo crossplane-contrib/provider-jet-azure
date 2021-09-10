@@ -64,7 +64,7 @@ type RuleParameters struct {
 
 	SourceAddresses []string `json:"sourceAddresses,omitempty" tf:"source_addresses"`
 
-	SourceIpGroups []string `json:"sourceIpGroups,omitempty" tf:"source_ip_groups"`
+	SourceIPGroups []string `json:"sourceIpGroups,omitempty" tf:"source_ip_groups"`
 
 	TargetFqdns []string `json:"targetFqdns,omitempty" tf:"target_fqdns"`
 }

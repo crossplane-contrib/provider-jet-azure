@@ -25,19 +25,19 @@ import (
 )
 
 type ActiveDirectoryDomainServiceReplicaSetObservation struct {
-	DomainControllerIpAddresses []string `json:"domainControllerIpAddresses" tf:"domain_controller_ip_addresses"`
+	DomainControllerIPAddresses []string `json:"domainControllerIpAddresses" tf:"domain_controller_ip_addresses"`
 
-	ExternalAccessIpAddress string `json:"externalAccessIpAddress" tf:"external_access_ip_address"`
+	ExternalAccessIPAddress string `json:"externalAccessIpAddress" tf:"external_access_ip_address"`
 
 	ServiceStatus string `json:"serviceStatus" tf:"service_status"`
 }
 
 type ActiveDirectoryDomainServiceReplicaSetParameters struct {
-	DomainServiceId string `json:"domainServiceId" tf:"domain_service_id"`
+	DomainServiceID string `json:"domainServiceId" tf:"domain_service_id"`
 
 	Location string `json:"location" tf:"location"`
 
-	SubnetId string `json:"subnetId" tf:"subnet_id"`
+	SubnetID string `json:"subnetId" tf:"subnet_id"`
 }
 
 // ActiveDirectoryDomainServiceReplicaSetSpec defines the desired state of ActiveDirectoryDomainServiceReplicaSet

@@ -41,9 +41,9 @@ type AppServiceCertificateObservation struct {
 }
 
 type AppServiceCertificateParameters struct {
-	HostingEnvironmentProfileId *string `json:"hostingEnvironmentProfileId,omitempty" tf:"hosting_environment_profile_id"`
+	HostingEnvironmentProfileID *string `json:"hostingEnvironmentProfileId,omitempty" tf:"hosting_environment_profile_id"`
 
-	KeyVaultSecretId *string `json:"keyVaultSecretId,omitempty" tf:"key_vault_secret_id"`
+	KeyVaultSecretID *string `json:"keyVaultSecretId,omitempty" tf:"key_vault_secret_id"`
 
 	Location string `json:"location" tf:"location"`
 

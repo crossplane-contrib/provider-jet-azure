@@ -108,8 +108,8 @@ func (in *StackHciClusterParameters) DeepCopyInto(out *StackHciClusterParameters
 			(*out)[key] = val
 		}
 	}
-	if in.TenantId != nil {
-		in, out := &in.TenantId, &out.TenantId
+	if in.TenantID != nil {
+		in, out := &in.TenantID, &out.TenantID
 		*out = new(string)
 		**out = **in
 	}

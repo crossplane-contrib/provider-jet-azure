@@ -28,17 +28,17 @@ type ApiManagementSubscriptionObservation struct {
 }
 
 type ApiManagementSubscriptionParameters struct {
+	APIID *string `json:"apiId,omitempty" tf:"api_id"`
+
+	APIManagementName string `json:"apiManagementName" tf:"api_management_name"`
+
 	AllowTracing *bool `json:"allowTracing,omitempty" tf:"allow_tracing"`
-
-	ApiId *string `json:"apiId,omitempty" tf:"api_id"`
-
-	ApiManagementName string `json:"apiManagementName" tf:"api_management_name"`
 
 	DisplayName string `json:"displayName" tf:"display_name"`
 
 	PrimaryKey *string `json:"primaryKey,omitempty" tf:"primary_key"`
 
-	ProductId *string `json:"productId,omitempty" tf:"product_id"`
+	ProductID *string `json:"productId,omitempty" tf:"product_id"`
 
 	ResourceGroupName string `json:"resourceGroupName" tf:"resource_group_name"`
 
@@ -46,9 +46,9 @@ type ApiManagementSubscriptionParameters struct {
 
 	State *string `json:"state,omitempty" tf:"state"`
 
-	SubscriptionId *string `json:"subscriptionId,omitempty" tf:"subscription_id"`
+	SubscriptionID *string `json:"subscriptionId,omitempty" tf:"subscription_id"`
 
-	UserId *string `json:"userId,omitempty" tf:"user_id"`
+	UserID *string `json:"userId,omitempty" tf:"user_id"`
 }
 
 // ApiManagementSubscriptionSpec defines the desired state of ApiManagementSubscription

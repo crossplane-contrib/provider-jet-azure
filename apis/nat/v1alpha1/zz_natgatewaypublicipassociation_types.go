@@ -28,9 +28,9 @@ type NatGatewayPublicIpAssociationObservation struct {
 }
 
 type NatGatewayPublicIpAssociationParameters struct {
-	NatGatewayId string `json:"natGatewayId" tf:"nat_gateway_id"`
+	NatGatewayID string `json:"natGatewayId" tf:"nat_gateway_id"`
 
-	PublicIpAddressId string `json:"publicIpAddressId" tf:"public_ip_address_id"`
+	PublicIPAddressID string `json:"publicIpAddressId" tf:"public_ip_address_id"`
 }
 
 // NatGatewayPublicIpAssociationSpec defines the desired state of NatGatewayPublicIpAssociation

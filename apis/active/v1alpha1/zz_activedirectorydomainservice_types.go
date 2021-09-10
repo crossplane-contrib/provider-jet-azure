@@ -25,13 +25,13 @@ import (
 )
 
 type ActiveDirectoryDomainServiceObservation struct {
-	DeploymentId string `json:"deploymentId" tf:"deployment_id"`
+	DeploymentID string `json:"deploymentId" tf:"deployment_id"`
 
-	ResourceId string `json:"resourceId" tf:"resource_id"`
+	ResourceID string `json:"resourceId" tf:"resource_id"`
 
 	SyncOwner string `json:"syncOwner" tf:"sync_owner"`
 
-	TenantId string `json:"tenantId" tf:"tenant_id"`
+	TenantID string `json:"tenantId" tf:"tenant_id"`
 
 	Version int64 `json:"version" tf:"version"`
 }
@@ -61,11 +61,11 @@ type ActiveDirectoryDomainServiceParameters struct {
 }
 
 type InitialReplicaSetObservation struct {
-	DomainControllerIpAddresses []string `json:"domainControllerIpAddresses" tf:"domain_controller_ip_addresses"`
+	DomainControllerIPAddresses []string `json:"domainControllerIpAddresses" tf:"domain_controller_ip_addresses"`
 
-	ExternalAccessIpAddress string `json:"externalAccessIpAddress" tf:"external_access_ip_address"`
+	ExternalAccessIPAddress string `json:"externalAccessIpAddress" tf:"external_access_ip_address"`
 
-	Id string `json:"id" tf:"id"`
+	ID string `json:"id" tf:"id"`
 
 	Location string `json:"location" tf:"location"`
 
@@ -73,7 +73,7 @@ type InitialReplicaSetObservation struct {
 }
 
 type InitialReplicaSetParameters struct {
-	SubnetId string `json:"subnetId" tf:"subnet_id"`
+	SubnetID string `json:"subnetId" tf:"subnet_id"`
 }
 
 type NotificationsObservation struct {
@@ -117,7 +117,7 @@ type SecurityParameters struct {
 
 	SyncOnPremPasswords *bool `json:"syncOnPremPasswords,omitempty" tf:"sync_on_prem_passwords"`
 
-	TlsV1Enabled *bool `json:"tlsV1Enabled,omitempty" tf:"tls_v1_enabled"`
+	TLSV1Enabled *bool `json:"tlsV1Enabled,omitempty" tf:"tls_v1_enabled"`
 }
 
 // ActiveDirectoryDomainServiceSpec defines the desired state of ActiveDirectoryDomainService

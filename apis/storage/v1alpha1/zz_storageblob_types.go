@@ -25,7 +25,7 @@ import (
 )
 
 type StorageBlobObservation struct {
-	Url string `json:"url" tf:"url"`
+	URL string `json:"url" tf:"url"`
 }
 
 type StorageBlobParameters struct {
@@ -47,7 +47,7 @@ type StorageBlobParameters struct {
 
 	SourceContent *string `json:"sourceContent,omitempty" tf:"source_content"`
 
-	SourceUri *string `json:"sourceUri,omitempty" tf:"source_uri"`
+	SourceURI *string `json:"sourceUri,omitempty" tf:"source_uri"`
 
 	StorageAccountName string `json:"storageAccountName" tf:"storage_account_name"`
 

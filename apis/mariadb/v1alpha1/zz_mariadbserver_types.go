@@ -39,7 +39,7 @@ type MariadbServerParameters struct {
 
 	CreateMode *string `json:"createMode,omitempty" tf:"create_mode"`
 
-	CreationSourceServerId *string `json:"creationSourceServerId,omitempty" tf:"creation_source_server_id"`
+	CreationSourceServerID *string `json:"creationSourceServerId,omitempty" tf:"creation_source_server_id"`
 
 	GeoRedundantBackupEnabled *bool `json:"geoRedundantBackupEnabled,omitempty" tf:"geo_redundant_backup_enabled"`
 

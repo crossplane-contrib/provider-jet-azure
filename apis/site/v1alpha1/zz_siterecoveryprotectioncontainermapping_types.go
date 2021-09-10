@@ -32,11 +32,11 @@ type SiteRecoveryProtectionContainerMappingParameters struct {
 
 	RecoveryFabricName string `json:"recoveryFabricName" tf:"recovery_fabric_name"`
 
-	RecoveryReplicationPolicyId string `json:"recoveryReplicationPolicyId" tf:"recovery_replication_policy_id"`
+	RecoveryReplicationPolicyID string `json:"recoveryReplicationPolicyId" tf:"recovery_replication_policy_id"`
 
 	RecoverySourceProtectionContainerName string `json:"recoverySourceProtectionContainerName" tf:"recovery_source_protection_container_name"`
 
-	RecoveryTargetProtectionContainerId string `json:"recoveryTargetProtectionContainerId" tf:"recovery_target_protection_container_id"`
+	RecoveryTargetProtectionContainerID string `json:"recoveryTargetProtectionContainerId" tf:"recovery_target_protection_container_id"`
 
 	RecoveryVaultName string `json:"recoveryVaultName" tf:"recovery_vault_name"`
 

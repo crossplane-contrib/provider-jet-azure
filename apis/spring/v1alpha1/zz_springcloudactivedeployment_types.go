@@ -30,7 +30,7 @@ type SpringCloudActiveDeploymentObservation struct {
 type SpringCloudActiveDeploymentParameters struct {
 	DeploymentName string `json:"deploymentName" tf:"deployment_name"`
 
-	SpringCloudAppId string `json:"springCloudAppId" tf:"spring_cloud_app_id"`
+	SpringCloudAppID string `json:"springCloudAppId" tf:"spring_cloud_app_id"`
 }
 
 // SpringCloudActiveDeploymentSpec defines the desired state of SpringCloudActiveDeployment

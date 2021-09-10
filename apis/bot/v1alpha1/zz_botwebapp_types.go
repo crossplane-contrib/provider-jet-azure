@@ -28,9 +28,9 @@ type BotWebAppObservation struct {
 }
 
 type BotWebAppParameters struct {
-	DeveloperAppInsightsApiKey *string `json:"developerAppInsightsApiKey,omitempty" tf:"developer_app_insights_api_key"`
+	DeveloperAppInsightsAPIKey *string `json:"developerAppInsightsApiKey,omitempty" tf:"developer_app_insights_api_key"`
 
-	DeveloperAppInsightsApplicationId *string `json:"developerAppInsightsApplicationId,omitempty" tf:"developer_app_insights_application_id"`
+	DeveloperAppInsightsApplicationID *string `json:"developerAppInsightsApplicationId,omitempty" tf:"developer_app_insights_application_id"`
 
 	DeveloperAppInsightsKey *string `json:"developerAppInsightsKey,omitempty" tf:"developer_app_insights_key"`
 
@@ -44,7 +44,7 @@ type BotWebAppParameters struct {
 
 	LuisKey *string `json:"luisKey,omitempty" tf:"luis_key"`
 
-	MicrosoftAppId string `json:"microsoftAppId" tf:"microsoft_app_id"`
+	MicrosoftAppID string `json:"microsoftAppId" tf:"microsoft_app_id"`
 
 	Name string `json:"name" tf:"name"`
 

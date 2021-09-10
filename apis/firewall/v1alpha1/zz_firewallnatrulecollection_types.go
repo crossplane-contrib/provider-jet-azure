@@ -57,7 +57,7 @@ type FirewallNatRuleCollectionRuleParameters struct {
 
 	SourceAddresses []string `json:"sourceAddresses,omitempty" tf:"source_addresses"`
 
-	SourceIpGroups []string `json:"sourceIpGroups,omitempty" tf:"source_ip_groups"`
+	SourceIPGroups []string `json:"sourceIpGroups,omitempty" tf:"source_ip_groups"`
 
 	TranslatedAddress string `json:"translatedAddress" tf:"translated_address"`
 

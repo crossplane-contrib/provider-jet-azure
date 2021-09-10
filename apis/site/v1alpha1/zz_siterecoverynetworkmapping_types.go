@@ -34,11 +34,11 @@ type SiteRecoveryNetworkMappingParameters struct {
 
 	ResourceGroupName string `json:"resourceGroupName" tf:"resource_group_name"`
 
-	SourceNetworkId string `json:"sourceNetworkId" tf:"source_network_id"`
+	SourceNetworkID string `json:"sourceNetworkId" tf:"source_network_id"`
 
 	SourceRecoveryFabricName string `json:"sourceRecoveryFabricName" tf:"source_recovery_fabric_name"`
 
-	TargetNetworkId string `json:"targetNetworkId" tf:"target_network_id"`
+	TargetNetworkID string `json:"targetNetworkId" tf:"target_network_id"`
 
 	TargetRecoveryFabricName string `json:"targetRecoveryFabricName" tf:"target_recovery_fabric_name"`
 }

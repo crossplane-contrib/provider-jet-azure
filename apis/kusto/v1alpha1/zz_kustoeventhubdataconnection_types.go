@@ -40,7 +40,7 @@ type KustoEventhubDataConnectionParameters struct {
 
 	EventSystemProperties []string `json:"eventSystemProperties,omitempty" tf:"event_system_properties"`
 
-	EventhubId string `json:"eventhubId" tf:"eventhub_id"`
+	EventhubID string `json:"eventhubId" tf:"eventhub_id"`
 
 	Location string `json:"location" tf:"location"`
 

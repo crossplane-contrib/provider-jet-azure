@@ -62,9 +62,9 @@ type MssqlDatabaseParameters struct {
 
 	CreateMode *string `json:"createMode,omitempty" tf:"create_mode"`
 
-	CreationSourceDatabaseId *string `json:"creationSourceDatabaseId,omitempty" tf:"creation_source_database_id"`
+	CreationSourceDatabaseID *string `json:"creationSourceDatabaseId,omitempty" tf:"creation_source_database_id"`
 
-	ElasticPoolId *string `json:"elasticPoolId,omitempty" tf:"elastic_pool_id"`
+	ElasticPoolID *string `json:"elasticPoolId,omitempty" tf:"elastic_pool_id"`
 
 	ExtendedAuditingPolicy []ExtendedAuditingPolicyParameters `json:"extendedAuditingPolicy,omitempty" tf:"extended_auditing_policy"`
 
@@ -84,15 +84,15 @@ type MssqlDatabaseParameters struct {
 
 	ReadScale *bool `json:"readScale,omitempty" tf:"read_scale"`
 
-	RecoverDatabaseId *string `json:"recoverDatabaseId,omitempty" tf:"recover_database_id"`
+	RecoverDatabaseID *string `json:"recoverDatabaseId,omitempty" tf:"recover_database_id"`
 
-	RestoreDroppedDatabaseId *string `json:"restoreDroppedDatabaseId,omitempty" tf:"restore_dropped_database_id"`
+	RestoreDroppedDatabaseID *string `json:"restoreDroppedDatabaseId,omitempty" tf:"restore_dropped_database_id"`
 
 	RestorePointInTime *string `json:"restorePointInTime,omitempty" tf:"restore_point_in_time"`
 
 	SampleName *string `json:"sampleName,omitempty" tf:"sample_name"`
 
-	ServerId string `json:"serverId" tf:"server_id"`
+	ServerID string `json:"serverId" tf:"server_id"`
 
 	ShortTermRetentionPolicy []ShortTermRetentionPolicyParameters `json:"shortTermRetentionPolicy,omitempty" tf:"short_term_retention_policy"`
 

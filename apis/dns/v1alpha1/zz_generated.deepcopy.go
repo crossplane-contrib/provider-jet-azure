@@ -113,8 +113,8 @@ func (in *DnsARecordParameters) DeepCopyInto(out *DnsARecordParameters) {
 			(*out)[key] = val
 		}
 	}
-	if in.TargetResourceId != nil {
-		in, out := &in.TargetResourceId, &out.TargetResourceId
+	if in.TargetResourceID != nil {
+		in, out := &in.TargetResourceID, &out.TargetResourceID
 		*out = new(string)
 		**out = **in
 	}
@@ -253,8 +253,8 @@ func (in *DnsAaaaRecordParameters) DeepCopyInto(out *DnsAaaaRecordParameters) {
 			(*out)[key] = val
 		}
 	}
-	if in.TargetResourceId != nil {
-		in, out := &in.TargetResourceId, &out.TargetResourceId
+	if in.TargetResourceID != nil {
+		in, out := &in.TargetResourceID, &out.TargetResourceID
 		*out = new(string)
 		**out = **in
 	}
@@ -528,8 +528,8 @@ func (in *DnsCnameRecordParameters) DeepCopyInto(out *DnsCnameRecordParameters) 
 			(*out)[key] = val
 		}
 	}
-	if in.TargetResourceId != nil {
-		in, out := &in.TargetResourceId, &out.TargetResourceId
+	if in.TargetResourceID != nil {
+		in, out := &in.TargetResourceID, &out.TargetResourceID
 		*out = new(string)
 		**out = **in
 	}
@@ -1544,8 +1544,8 @@ func (in *SoaRecordParameters) DeepCopyInto(out *SoaRecordParameters) {
 		*out = new(int64)
 		**out = **in
 	}
-	if in.MinimumTtl != nil {
-		in, out := &in.MinimumTtl, &out.MinimumTtl
+	if in.MinimumTTL != nil {
+		in, out := &in.MinimumTTL, &out.MinimumTTL
 		*out = new(int64)
 		**out = **in
 	}
@@ -1564,17 +1564,17 @@ func (in *SoaRecordParameters) DeepCopyInto(out *SoaRecordParameters) {
 		*out = new(int64)
 		**out = **in
 	}
+	if in.TTL != nil {
+		in, out := &in.TTL, &out.TTL
+		*out = new(int64)
+		**out = **in
+	}
 	if in.Tags != nil {
 		in, out := &in.Tags, &out.Tags
 		*out = make(map[string]string, len(*in))
 		for key, val := range *in {
 			(*out)[key] = val
 		}
-	}
-	if in.Ttl != nil {
-		in, out := &in.Ttl, &out.Ttl
-		*out = new(int64)
-		**out = **in
 	}
 }
 

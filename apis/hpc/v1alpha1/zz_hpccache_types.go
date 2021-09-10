@@ -30,9 +30,9 @@ type AccessRuleObservation struct {
 type AccessRuleParameters struct {
 	Access string `json:"access" tf:"access"`
 
-	AnonymousGid *int64 `json:"anonymousGid,omitempty" tf:"anonymous_gid"`
+	AnonymousGID *int64 `json:"anonymousGid,omitempty" tf:"anonymous_gid"`
 
-	AnonymousUid *int64 `json:"anonymousUid,omitempty" tf:"anonymous_uid"`
+	AnonymousUID *int64 `json:"anonymousUid,omitempty" tf:"anonymous_uid"`
 
 	Filter *string `json:"filter,omitempty" tf:"filter"`
 
@@ -54,6 +54,15 @@ type BindParameters struct {
 	Password string `json:"password" tf:"password"`
 }
 
+type DNSObservation struct {
+}
+
+type DNSParameters struct {
+	SearchDomain *string `json:"searchDomain,omitempty" tf:"search_domain"`
+
+	Servers []string `json:"servers" tf:"servers"`
+}
+
 type DefaultAccessPolicyObservation struct {
 }
 
@@ -67,9 +76,9 @@ type DirectoryActiveDirectoryObservation struct {
 type DirectoryActiveDirectoryParameters struct {
 	CacheNetbiosName string `json:"cacheNetbiosName" tf:"cache_netbios_name"`
 
-	DnsPrimaryIp string `json:"dnsPrimaryIp" tf:"dns_primary_ip"`
+	DNSPrimaryIP string `json:"dnsPrimaryIp" tf:"dns_primary_ip"`
 
-	DnsSecondaryIp *string `json:"dnsSecondaryIp,omitempty" tf:"dns_secondary_ip"`
+	DNSSecondaryIP *string `json:"dnsSecondaryIp,omitempty" tf:"dns_secondary_ip"`
 
 	DomainName string `json:"domainName" tf:"domain_name"`
 
@@ -84,9 +93,9 @@ type DirectoryFlatFileObservation struct {
 }
 
 type DirectoryFlatFileParameters struct {
-	GroupFileUri string `json:"groupFileUri" tf:"group_file_uri"`
+	GroupFileURI string `json:"groupFileUri" tf:"group_file_uri"`
 
-	PasswordFileUri string `json:"passwordFileUri" tf:"password_file_uri"`
+	PasswordFileURI string `json:"passwordFileUri" tf:"password_file_uri"`
 }
 
 type DirectoryLdapObservation struct {
@@ -97,22 +106,13 @@ type DirectoryLdapParameters struct {
 
 	Bind []BindParameters `json:"bind,omitempty" tf:"bind"`
 
-	CertificateValidationUri *string `json:"certificateValidationUri,omitempty" tf:"certificate_validation_uri"`
+	CertificateValidationURI *string `json:"certificateValidationUri,omitempty" tf:"certificate_validation_uri"`
 
 	DownloadCertificateAutomatically *bool `json:"downloadCertificateAutomatically,omitempty" tf:"download_certificate_automatically"`
 
 	Encrypted *bool `json:"encrypted,omitempty" tf:"encrypted"`
 
 	Server string `json:"server" tf:"server"`
-}
-
-type DnsObservation struct {
-}
-
-type DnsParameters struct {
-	SearchDomain *string `json:"searchDomain,omitempty" tf:"search_domain"`
-
-	Servers []string `json:"servers" tf:"servers"`
 }
 
 type HpcCacheObservation struct {
@@ -122,6 +122,8 @@ type HpcCacheObservation struct {
 type HpcCacheParameters struct {
 	CacheSizeInGb int64 `json:"cacheSizeInGb" tf:"cache_size_in_gb"`
 
+	DNS []DNSParameters `json:"dns,omitempty" tf:"dns"`
+
 	DefaultAccessPolicy []DefaultAccessPolicyParameters `json:"defaultAccessPolicy,omitempty" tf:"default_access_policy"`
 
 	DirectoryActiveDirectory []DirectoryActiveDirectoryParameters `json:"directoryActiveDirectory,omitempty" tf:"directory_active_directory"`
@@ -129,8 +131,6 @@ type HpcCacheParameters struct {
 	DirectoryFlatFile []DirectoryFlatFileParameters `json:"directoryFlatFile,omitempty" tf:"directory_flat_file"`
 
 	DirectoryLdap []DirectoryLdapParameters `json:"directoryLdap,omitempty" tf:"directory_ldap"`
-
-	Dns []DnsParameters `json:"dns,omitempty" tf:"dns"`
 
 	Location string `json:"location" tf:"location"`
 
@@ -146,7 +146,7 @@ type HpcCacheParameters struct {
 
 	SkuName string `json:"skuName" tf:"sku_name"`
 
-	SubnetId string `json:"subnetId" tf:"subnet_id"`
+	SubnetID string `json:"subnetId" tf:"subnet_id"`
 
 	Tags map[string]string `json:"tags,omitempty" tf:"tags"`
 }

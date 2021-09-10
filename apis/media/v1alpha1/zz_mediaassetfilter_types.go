@@ -39,7 +39,7 @@ type MediaAssetFilterObservation struct {
 }
 
 type MediaAssetFilterParameters struct {
-	AssetId string `json:"assetId" tf:"asset_id"`
+	AssetID string `json:"assetId" tf:"asset_id"`
 
 	FirstQualityBitrate *int64 `json:"firstQualityBitrate,omitempty" tf:"first_quality_bitrate"`
 

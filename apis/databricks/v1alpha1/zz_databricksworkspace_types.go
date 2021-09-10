@@ -28,39 +28,39 @@ type CustomParametersObservation struct {
 }
 
 type CustomParametersParameters struct {
-	MachineLearningWorkspaceId *string `json:"machineLearningWorkspaceId,omitempty" tf:"machine_learning_workspace_id"`
+	MachineLearningWorkspaceID *string `json:"machineLearningWorkspaceId,omitempty" tf:"machine_learning_workspace_id"`
 
 	NatGatewayName *string `json:"natGatewayName,omitempty" tf:"nat_gateway_name"`
 
-	NoPublicIp *bool `json:"noPublicIp,omitempty" tf:"no_public_ip"`
+	NoPublicIP *bool `json:"noPublicIp,omitempty" tf:"no_public_ip"`
 
 	PrivateSubnetName *string `json:"privateSubnetName,omitempty" tf:"private_subnet_name"`
 
-	PrivateSubnetNetworkSecurityGroupAssociationId *string `json:"privateSubnetNetworkSecurityGroupAssociationId,omitempty" tf:"private_subnet_network_security_group_association_id"`
+	PrivateSubnetNetworkSecurityGroupAssociationID *string `json:"privateSubnetNetworkSecurityGroupAssociationId,omitempty" tf:"private_subnet_network_security_group_association_id"`
 
-	PublicIpName *string `json:"publicIpName,omitempty" tf:"public_ip_name"`
+	PublicIPName *string `json:"publicIpName,omitempty" tf:"public_ip_name"`
 
 	PublicSubnetName *string `json:"publicSubnetName,omitempty" tf:"public_subnet_name"`
 
-	PublicSubnetNetworkSecurityGroupAssociationId *string `json:"publicSubnetNetworkSecurityGroupAssociationId,omitempty" tf:"public_subnet_network_security_group_association_id"`
+	PublicSubnetNetworkSecurityGroupAssociationID *string `json:"publicSubnetNetworkSecurityGroupAssociationId,omitempty" tf:"public_subnet_network_security_group_association_id"`
 
 	StorageAccountName *string `json:"storageAccountName,omitempty" tf:"storage_account_name"`
 
 	StorageAccountSkuName *string `json:"storageAccountSkuName,omitempty" tf:"storage_account_sku_name"`
 
-	VirtualNetworkId *string `json:"virtualNetworkId,omitempty" tf:"virtual_network_id"`
+	VirtualNetworkID *string `json:"virtualNetworkId,omitempty" tf:"virtual_network_id"`
 
 	VnetAddressPrefix *string `json:"vnetAddressPrefix,omitempty" tf:"vnet_address_prefix"`
 }
 
 type DatabricksWorkspaceObservation struct {
-	ManagedResourceGroupId string `json:"managedResourceGroupId" tf:"managed_resource_group_id"`
+	ManagedResourceGroupID string `json:"managedResourceGroupId" tf:"managed_resource_group_id"`
 
 	StorageAccountIdentity []StorageAccountIdentityObservation `json:"storageAccountIdentity" tf:"storage_account_identity"`
 
-	WorkspaceId string `json:"workspaceId" tf:"workspace_id"`
+	WorkspaceID string `json:"workspaceId" tf:"workspace_id"`
 
-	WorkspaceUrl string `json:"workspaceUrl" tf:"workspace_url"`
+	WorkspaceURL string `json:"workspaceUrl" tf:"workspace_url"`
 }
 
 type DatabricksWorkspaceParameters struct {
@@ -70,13 +70,13 @@ type DatabricksWorkspaceParameters struct {
 
 	InfrastructureEncryptionEnabled *bool `json:"infrastructureEncryptionEnabled,omitempty" tf:"infrastructure_encryption_enabled"`
 
-	LoadBalancerBackendAddressPoolId *string `json:"loadBalancerBackendAddressPoolId,omitempty" tf:"load_balancer_backend_address_pool_id"`
+	LoadBalancerBackendAddressPoolID *string `json:"loadBalancerBackendAddressPoolId,omitempty" tf:"load_balancer_backend_address_pool_id"`
 
 	Location string `json:"location" tf:"location"`
 
 	ManagedResourceGroupName *string `json:"managedResourceGroupName,omitempty" tf:"managed_resource_group_name"`
 
-	ManagedServicesCmkKeyVaultKeyId *string `json:"managedServicesCmkKeyVaultKeyId,omitempty" tf:"managed_services_cmk_key_vault_key_id"`
+	ManagedServicesCmkKeyVaultKeyID *string `json:"managedServicesCmkKeyVaultKeyId,omitempty" tf:"managed_services_cmk_key_vault_key_id"`
 
 	Name string `json:"name" tf:"name"`
 
@@ -92,9 +92,9 @@ type DatabricksWorkspaceParameters struct {
 }
 
 type StorageAccountIdentityObservation struct {
-	PrincipalId string `json:"principalId" tf:"principal_id"`
+	PrincipalID string `json:"principalId" tf:"principal_id"`
 
-	TenantId string `json:"tenantId" tf:"tenant_id"`
+	TenantID string `json:"tenantId" tf:"tenant_id"`
 
 	Type string `json:"type" tf:"type"`
 }

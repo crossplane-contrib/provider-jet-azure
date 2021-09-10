@@ -35,7 +35,7 @@ type KustoClusterPrincipalAssignmentParameters struct {
 
 	Name string `json:"name" tf:"name"`
 
-	PrincipalId string `json:"principalId" tf:"principal_id"`
+	PrincipalID string `json:"principalId" tf:"principal_id"`
 
 	PrincipalType string `json:"principalType" tf:"principal_type"`
 
@@ -43,7 +43,7 @@ type KustoClusterPrincipalAssignmentParameters struct {
 
 	Role string `json:"role" tf:"role"`
 
-	TenantId string `json:"tenantId" tf:"tenant_id"`
+	TenantID string `json:"tenantId" tf:"tenant_id"`
 }
 
 // KustoClusterPrincipalAssignmentSpec defines the desired state of KustoClusterPrincipalAssignment

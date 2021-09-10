@@ -31,7 +31,7 @@ type PartnerServersObservation struct {
 }
 
 type PartnerServersParameters struct {
-	Id string `json:"id" tf:"id"`
+	ID string `json:"id" tf:"id"`
 }
 
 type ReadWriteEndpointFailoverPolicyObservation struct {

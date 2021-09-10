@@ -36,11 +36,11 @@ type SharedImageVersionParameters struct {
 
 	Location string `json:"location" tf:"location"`
 
-	ManagedImageId *string `json:"managedImageId,omitempty" tf:"managed_image_id"`
+	ManagedImageID *string `json:"managedImageId,omitempty" tf:"managed_image_id"`
 
 	Name string `json:"name" tf:"name"`
 
-	OsDiskSnapshotId *string `json:"osDiskSnapshotId,omitempty" tf:"os_disk_snapshot_id"`
+	OsDiskSnapshotID *string `json:"osDiskSnapshotId,omitempty" tf:"os_disk_snapshot_id"`
 
 	ResourceGroupName string `json:"resourceGroupName" tf:"resource_group_name"`
 

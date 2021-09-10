@@ -32,7 +32,7 @@ type SpringCloudCustomDomainParameters struct {
 
 	Name string `json:"name" tf:"name"`
 
-	SpringCloudAppId string `json:"springCloudAppId" tf:"spring_cloud_app_id"`
+	SpringCloudAppID string `json:"springCloudAppId" tf:"spring_cloud_app_id"`
 
 	Thumbprint *string `json:"thumbprint,omitempty" tf:"thumbprint"`
 }

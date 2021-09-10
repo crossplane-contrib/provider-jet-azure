@@ -32,7 +32,7 @@ type BackupContainerStorageAccountParameters struct {
 
 	ResourceGroupName string `json:"resourceGroupName" tf:"resource_group_name"`
 
-	StorageAccountId string `json:"storageAccountId" tf:"storage_account_id"`
+	StorageAccountID string `json:"storageAccountId" tf:"storage_account_id"`
 }
 
 // BackupContainerStorageAccountSpec defines the desired state of BackupContainerStorageAccount

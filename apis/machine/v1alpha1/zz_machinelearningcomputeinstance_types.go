@@ -28,15 +28,15 @@ type AssignToUserObservation struct {
 }
 
 type AssignToUserParameters struct {
-	ObjectId *string `json:"objectId,omitempty" tf:"object_id"`
+	ObjectID *string `json:"objectId,omitempty" tf:"object_id"`
 
-	TenantId *string `json:"tenantId,omitempty" tf:"tenant_id"`
+	TenantID *string `json:"tenantId,omitempty" tf:"tenant_id"`
 }
 
 type MachineLearningComputeInstanceIdentityObservation struct {
-	PrincipalId string `json:"principalId" tf:"principal_id"`
+	PrincipalID string `json:"principalId" tf:"principal_id"`
 
-	TenantId string `json:"tenantId" tf:"tenant_id"`
+	TenantID string `json:"tenantId" tf:"tenant_id"`
 }
 
 type MachineLearningComputeInstanceIdentityParameters struct {
@@ -59,26 +59,26 @@ type MachineLearningComputeInstanceParameters struct {
 
 	Location string `json:"location" tf:"location"`
 
-	MachineLearningWorkspaceId string `json:"machineLearningWorkspaceId" tf:"machine_learning_workspace_id"`
+	MachineLearningWorkspaceID string `json:"machineLearningWorkspaceId" tf:"machine_learning_workspace_id"`
 
 	Name string `json:"name" tf:"name"`
 
-	Ssh []SshParameters `json:"ssh,omitempty" tf:"ssh"`
+	SSH []SSHParameters `json:"ssh,omitempty" tf:"ssh"`
 
-	SubnetResourceId *string `json:"subnetResourceId,omitempty" tf:"subnet_resource_id"`
+	SubnetResourceID *string `json:"subnetResourceId,omitempty" tf:"subnet_resource_id"`
 
 	Tags map[string]string `json:"tags,omitempty" tf:"tags"`
 
 	VirtualMachineSize string `json:"virtualMachineSize" tf:"virtual_machine_size"`
 }
 
-type SshObservation struct {
+type SSHObservation struct {
 	Port int64 `json:"port" tf:"port"`
 
 	Username string `json:"username" tf:"username"`
 }
 
-type SshParameters struct {
+type SSHParameters struct {
 	PublicKey string `json:"publicKey" tf:"public_key"`
 }
 

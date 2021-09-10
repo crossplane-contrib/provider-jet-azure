@@ -30,15 +30,15 @@ type AzureadAdministratorObservation struct {
 type AzureadAdministratorParameters struct {
 	LoginUsername string `json:"loginUsername" tf:"login_username"`
 
-	ObjectId string `json:"objectId" tf:"object_id"`
+	ObjectID string `json:"objectId" tf:"object_id"`
 
-	TenantId *string `json:"tenantId,omitempty" tf:"tenant_id"`
+	TenantID *string `json:"tenantId,omitempty" tf:"tenant_id"`
 }
 
 type IdentityObservation struct {
-	PrincipalId string `json:"principalId" tf:"principal_id"`
+	PrincipalID string `json:"principalId" tf:"principal_id"`
 
-	TenantId string `json:"tenantId" tf:"tenant_id"`
+	TenantID string `json:"tenantId" tf:"tenant_id"`
 }
 
 type IdentityParameters struct {
@@ -81,7 +81,7 @@ type MssqlServerParameters struct {
 
 	Location string `json:"location" tf:"location"`
 
-	MinimumTlsVersion *string `json:"minimumTlsVersion,omitempty" tf:"minimum_tls_version"`
+	MinimumTLSVersion *string `json:"minimumTlsVersion,omitempty" tf:"minimum_tls_version"`
 
 	Name string `json:"name" tf:"name"`
 

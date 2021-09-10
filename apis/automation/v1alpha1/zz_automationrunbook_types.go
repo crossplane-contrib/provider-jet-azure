@@ -54,7 +54,7 @@ type AutomationRunbookParameters struct {
 }
 
 type JobScheduleObservation struct {
-	JobScheduleId string `json:"jobScheduleId" tf:"job_schedule_id"`
+	JobScheduleID string `json:"jobScheduleId" tf:"job_schedule_id"`
 }
 
 type JobScheduleParameters struct {
@@ -80,7 +80,7 @@ type PublishContentLinkObservation struct {
 type PublishContentLinkParameters struct {
 	Hash []PublishContentLinkHashParameters `json:"hash,omitempty" tf:"hash"`
 
-	Uri string `json:"uri" tf:"uri"`
+	URI string `json:"uri" tf:"uri"`
 
 	Version *string `json:"version,omitempty" tf:"version"`
 }

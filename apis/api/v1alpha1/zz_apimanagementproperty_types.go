@@ -28,7 +28,7 @@ type ApiManagementPropertyObservation struct {
 }
 
 type ApiManagementPropertyParameters struct {
-	ApiManagementName string `json:"apiManagementName" tf:"api_management_name"`
+	APIManagementName string `json:"apiManagementName" tf:"api_management_name"`
 
 	DisplayName string `json:"displayName" tf:"display_name"`
 

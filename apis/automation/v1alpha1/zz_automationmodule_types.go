@@ -52,7 +52,7 @@ type ModuleLinkObservation struct {
 type ModuleLinkParameters struct {
 	Hash []HashParameters `json:"hash,omitempty" tf:"hash"`
 
-	Uri string `json:"uri" tf:"uri"`
+	URI string `json:"uri" tf:"uri"`
 }
 
 // AutomationModuleSpec defines the desired state of AutomationModule

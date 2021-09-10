@@ -25,19 +25,19 @@ import (
 )
 
 type LbNatPoolObservation struct {
-	FrontendIpConfigurationId string `json:"frontendIpConfigurationId" tf:"frontend_ip_configuration_id"`
+	FrontendIPConfigurationID string `json:"frontendIpConfigurationId" tf:"frontend_ip_configuration_id"`
 }
 
 type LbNatPoolParameters struct {
 	BackendPort int64 `json:"backendPort" tf:"backend_port"`
 
-	FrontendIpConfigurationName string `json:"frontendIpConfigurationName" tf:"frontend_ip_configuration_name"`
+	FrontendIPConfigurationName string `json:"frontendIpConfigurationName" tf:"frontend_ip_configuration_name"`
 
 	FrontendPortEnd int64 `json:"frontendPortEnd" tf:"frontend_port_end"`
 
 	FrontendPortStart int64 `json:"frontendPortStart" tf:"frontend_port_start"`
 
-	LoadbalancerId string `json:"loadbalancerId" tf:"loadbalancer_id"`
+	LoadbalancerID string `json:"loadbalancerId" tf:"loadbalancer_id"`
 
 	Name string `json:"name" tf:"name"`
 

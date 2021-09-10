@@ -28,7 +28,7 @@ type DataFactoryPipelineObservation struct {
 }
 
 type DataFactoryPipelineParameters struct {
-	ActivitiesJson *string `json:"activitiesJson,omitempty" tf:"activities_json"`
+	ActivitiesJSON *string `json:"activitiesJson,omitempty" tf:"activities_json"`
 
 	Annotations []string `json:"annotations,omitempty" tf:"annotations"`
 

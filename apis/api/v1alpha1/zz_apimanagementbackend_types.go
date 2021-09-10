@@ -28,7 +28,7 @@ type ApiManagementBackendObservation struct {
 }
 
 type ApiManagementBackendParameters struct {
-	ApiManagementName string `json:"apiManagementName" tf:"api_management_name"`
+	APIManagementName string `json:"apiManagementName" tf:"api_management_name"`
 
 	Credentials []CredentialsParameters `json:"credentials,omitempty" tf:"credentials"`
 
@@ -42,15 +42,15 @@ type ApiManagementBackendParameters struct {
 
 	ResourceGroupName string `json:"resourceGroupName" tf:"resource_group_name"`
 
-	ResourceId *string `json:"resourceId,omitempty" tf:"resource_id"`
+	ResourceID *string `json:"resourceId,omitempty" tf:"resource_id"`
 
 	ServiceFabricCluster []ServiceFabricClusterParameters `json:"serviceFabricCluster,omitempty" tf:"service_fabric_cluster"`
 
+	TLS []TLSParameters `json:"tls,omitempty" tf:"tls"`
+
 	Title *string `json:"title,omitempty" tf:"title"`
 
-	Tls []TlsParameters `json:"tls,omitempty" tf:"tls"`
-
-	Url string `json:"url" tf:"url"`
+	URL string `json:"url" tf:"url"`
 }
 
 type ApiManagementBackendProxyObservation struct {
@@ -59,7 +59,7 @@ type ApiManagementBackendProxyObservation struct {
 type ApiManagementBackendProxyParameters struct {
 	Password *string `json:"password,omitempty" tf:"password"`
 
-	Url string `json:"url" tf:"url"`
+	URL string `json:"url" tf:"url"`
 
 	Username string `json:"username" tf:"username"`
 }
@@ -99,7 +99,7 @@ type ServiceFabricClusterObservation struct {
 }
 
 type ServiceFabricClusterParameters struct {
-	ClientCertificateId *string `json:"clientCertificateId,omitempty" tf:"client_certificate_id"`
+	ClientCertificateID *string `json:"clientCertificateId,omitempty" tf:"client_certificate_id"`
 
 	ClientCertificateThumbprint *string `json:"clientCertificateThumbprint,omitempty" tf:"client_certificate_thumbprint"`
 
@@ -112,10 +112,10 @@ type ServiceFabricClusterParameters struct {
 	ServerX509Name []ServerX509NameParameters `json:"serverX509Name,omitempty" tf:"server_x509_name"`
 }
 
-type TlsObservation struct {
+type TLSObservation struct {
 }
 
-type TlsParameters struct {
+type TLSParameters struct {
 	ValidateCertificateChain *bool `json:"validateCertificateChain,omitempty" tf:"validate_certificate_chain"`
 
 	ValidateCertificateName *bool `json:"validateCertificateName,omitempty" tf:"validate_certificate_name"`

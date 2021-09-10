@@ -32,7 +32,7 @@ type LogicAppActionHttpParameters struct {
 
 	Headers map[string]string `json:"headers,omitempty" tf:"headers"`
 
-	LogicAppId string `json:"logicAppId" tf:"logic_app_id"`
+	LogicAppID string `json:"logicAppId" tf:"logic_app_id"`
 
 	Method string `json:"method" tf:"method"`
 
@@ -40,7 +40,7 @@ type LogicAppActionHttpParameters struct {
 
 	RunAfter []RunAfterParameters `json:"runAfter,omitempty" tf:"run_after"`
 
-	Uri string `json:"uri" tf:"uri"`
+	URI string `json:"uri" tf:"uri"`
 }
 
 type RunAfterObservation struct {

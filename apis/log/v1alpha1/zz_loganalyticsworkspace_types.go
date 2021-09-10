@@ -25,13 +25,13 @@ import (
 )
 
 type LogAnalyticsWorkspaceObservation struct {
-	PortalUrl string `json:"portalUrl" tf:"portal_url"`
+	PortalURL string `json:"portalUrl" tf:"portal_url"`
 
 	PrimarySharedKey string `json:"primarySharedKey" tf:"primary_shared_key"`
 
 	SecondarySharedKey string `json:"secondarySharedKey" tf:"secondary_shared_key"`
 
-	WorkspaceId string `json:"workspaceId" tf:"workspace_id"`
+	WorkspaceID string `json:"workspaceId" tf:"workspace_id"`
 }
 
 type LogAnalyticsWorkspaceParameters struct {

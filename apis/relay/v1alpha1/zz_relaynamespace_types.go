@@ -25,7 +25,7 @@ import (
 )
 
 type RelayNamespaceObservation struct {
-	MetricId string `json:"metricId" tf:"metric_id"`
+	MetricID string `json:"metricId" tf:"metric_id"`
 
 	PrimaryConnectionString string `json:"primaryConnectionString" tf:"primary_connection_string"`
 

@@ -32,7 +32,7 @@ type PrivateEndpointParameters struct {
 
 	DeniedRequestTypes []string `json:"deniedRequestTypes,omitempty" tf:"denied_request_types"`
 
-	Id string `json:"id" tf:"id"`
+	ID string `json:"id" tf:"id"`
 }
 
 type PublicNetworkObservation struct {
@@ -54,7 +54,7 @@ type SignalrServiceNetworkAclParameters struct {
 
 	PublicNetwork []PublicNetworkParameters `json:"publicNetwork" tf:"public_network"`
 
-	SignalrServiceId string `json:"signalrServiceId" tf:"signalr_service_id"`
+	SignalrServiceID string `json:"signalrServiceId" tf:"signalr_service_id"`
 }
 
 // SignalrServiceNetworkAclSpec defines the desired state of SignalrServiceNetworkAcl

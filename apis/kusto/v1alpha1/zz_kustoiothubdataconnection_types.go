@@ -38,7 +38,7 @@ type KustoIothubDataConnectionParameters struct {
 
 	EventSystemProperties []string `json:"eventSystemProperties,omitempty" tf:"event_system_properties"`
 
-	IothubId string `json:"iothubId" tf:"iothub_id"`
+	IothubID string `json:"iothubId" tf:"iothub_id"`
 
 	Location string `json:"location" tf:"location"`
 

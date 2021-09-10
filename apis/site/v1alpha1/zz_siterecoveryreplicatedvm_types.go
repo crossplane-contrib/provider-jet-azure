@@ -28,28 +28,28 @@ type ManagedDiskObservation struct {
 }
 
 type ManagedDiskParameters struct {
-	DiskId string `json:"diskId" tf:"disk_id"`
+	DiskID string `json:"diskId" tf:"disk_id"`
 
-	StagingStorageAccountId string `json:"stagingStorageAccountId" tf:"staging_storage_account_id"`
+	StagingStorageAccountID string `json:"stagingStorageAccountId" tf:"staging_storage_account_id"`
 
-	TargetDiskEncryptionSetId *string `json:"targetDiskEncryptionSetId,omitempty" tf:"target_disk_encryption_set_id"`
+	TargetDiskEncryptionSetID *string `json:"targetDiskEncryptionSetId,omitempty" tf:"target_disk_encryption_set_id"`
 
 	TargetDiskType string `json:"targetDiskType" tf:"target_disk_type"`
 
 	TargetReplicaDiskType string `json:"targetReplicaDiskType" tf:"target_replica_disk_type"`
 
-	TargetResourceGroupId string `json:"targetResourceGroupId" tf:"target_resource_group_id"`
+	TargetResourceGroupID string `json:"targetResourceGroupId" tf:"target_resource_group_id"`
 }
 
 type NetworkInterfaceObservation struct {
 }
 
 type NetworkInterfaceParameters struct {
-	RecoveryPublicIpAddressId *string `json:"recoveryPublicIpAddressId,omitempty" tf:"recovery_public_ip_address_id"`
+	RecoveryPublicIPAddressID *string `json:"recoveryPublicIpAddressId,omitempty" tf:"recovery_public_ip_address_id"`
 
-	SourceNetworkInterfaceId *string `json:"sourceNetworkInterfaceId,omitempty" tf:"source_network_interface_id"`
+	SourceNetworkInterfaceID *string `json:"sourceNetworkInterfaceId,omitempty" tf:"source_network_interface_id"`
 
-	TargetStaticIp *string `json:"targetStaticIp,omitempty" tf:"target_static_ip"`
+	TargetStaticIP *string `json:"targetStaticIp,omitempty" tf:"target_static_ip"`
 
 	TargetSubnetName *string `json:"targetSubnetName,omitempty" tf:"target_subnet_name"`
 }
@@ -64,7 +64,7 @@ type SiteRecoveryReplicatedVmParameters struct {
 
 	NetworkInterface []NetworkInterfaceParameters `json:"networkInterface,omitempty" tf:"network_interface"`
 
-	RecoveryReplicationPolicyId string `json:"recoveryReplicationPolicyId" tf:"recovery_replication_policy_id"`
+	RecoveryReplicationPolicyID string `json:"recoveryReplicationPolicyId" tf:"recovery_replication_policy_id"`
 
 	RecoveryVaultName string `json:"recoveryVaultName" tf:"recovery_vault_name"`
 
@@ -74,17 +74,17 @@ type SiteRecoveryReplicatedVmParameters struct {
 
 	SourceRecoveryProtectionContainerName string `json:"sourceRecoveryProtectionContainerName" tf:"source_recovery_protection_container_name"`
 
-	SourceVmId string `json:"sourceVmId" tf:"source_vm_id"`
+	SourceVMID string `json:"sourceVmId" tf:"source_vm_id"`
 
-	TargetAvailabilitySetId *string `json:"targetAvailabilitySetId,omitempty" tf:"target_availability_set_id"`
+	TargetAvailabilitySetID *string `json:"targetAvailabilitySetId,omitempty" tf:"target_availability_set_id"`
 
-	TargetNetworkId *string `json:"targetNetworkId,omitempty" tf:"target_network_id"`
+	TargetNetworkID *string `json:"targetNetworkId,omitempty" tf:"target_network_id"`
 
-	TargetRecoveryFabricId string `json:"targetRecoveryFabricId" tf:"target_recovery_fabric_id"`
+	TargetRecoveryFabricID string `json:"targetRecoveryFabricId" tf:"target_recovery_fabric_id"`
 
-	TargetRecoveryProtectionContainerId string `json:"targetRecoveryProtectionContainerId" tf:"target_recovery_protection_container_id"`
+	TargetRecoveryProtectionContainerID string `json:"targetRecoveryProtectionContainerId" tf:"target_recovery_protection_container_id"`
 
-	TargetResourceGroupId string `json:"targetResourceGroupId" tf:"target_resource_group_id"`
+	TargetResourceGroupID string `json:"targetResourceGroupId" tf:"target_resource_group_id"`
 }
 
 // SiteRecoveryReplicatedVmSpec defines the desired state of SiteRecoveryReplicatedVm

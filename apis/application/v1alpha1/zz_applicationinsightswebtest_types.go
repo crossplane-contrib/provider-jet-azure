@@ -25,11 +25,11 @@ import (
 )
 
 type ApplicationInsightsWebTestObservation struct {
-	SyntheticMonitorId string `json:"syntheticMonitorId" tf:"synthetic_monitor_id"`
+	SyntheticMonitorID string `json:"syntheticMonitorId" tf:"synthetic_monitor_id"`
 }
 
 type ApplicationInsightsWebTestParameters struct {
-	ApplicationInsightsId string `json:"applicationInsightsId" tf:"application_insights_id"`
+	ApplicationInsightsID string `json:"applicationInsightsId" tf:"application_insights_id"`
 
 	Configuration string `json:"configuration" tf:"configuration"`
 

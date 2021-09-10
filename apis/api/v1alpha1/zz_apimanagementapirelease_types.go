@@ -28,7 +28,7 @@ type ApiManagementApiReleaseObservation struct {
 }
 
 type ApiManagementApiReleaseParameters struct {
-	ApiId string `json:"apiId" tf:"api_id"`
+	APIID string `json:"apiId" tf:"api_id"`
 
 	Name string `json:"name" tf:"name"`
 

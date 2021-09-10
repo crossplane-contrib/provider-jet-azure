@@ -30,15 +30,15 @@ type ActiveDirectoryObservation struct {
 type ActiveDirectoryParameters struct {
 	AllowedAudiences []string `json:"allowedAudiences,omitempty" tf:"allowed_audiences"`
 
-	ClientId string `json:"clientId" tf:"client_id"`
+	ClientID string `json:"clientId" tf:"client_id"`
 
 	ClientSecret *string `json:"clientSecret,omitempty" tf:"client_secret"`
 }
 
 type AppServiceIdentityObservation struct {
-	PrincipalId string `json:"principalId" tf:"principal_id"`
+	PrincipalID string `json:"principalId" tf:"principal_id"`
 
-	TenantId string `json:"tenantId" tf:"tenant_id"`
+	TenantID string `json:"tenantId" tf:"tenant_id"`
 }
 
 type AppServiceIdentityParameters struct {
@@ -48,23 +48,23 @@ type AppServiceIdentityParameters struct {
 }
 
 type AppServiceObservation struct {
-	CustomDomainVerificationId string `json:"customDomainVerificationId" tf:"custom_domain_verification_id"`
+	CustomDomainVerificationID string `json:"customDomainVerificationId" tf:"custom_domain_verification_id"`
 
 	DefaultSiteHostname string `json:"defaultSiteHostname" tf:"default_site_hostname"`
 
-	OutboundIpAddressList []string `json:"outboundIpAddressList" tf:"outbound_ip_address_list"`
+	OutboundIPAddressList []string `json:"outboundIpAddressList" tf:"outbound_ip_address_list"`
 
-	OutboundIpAddresses string `json:"outboundIpAddresses" tf:"outbound_ip_addresses"`
+	OutboundIPAddresses string `json:"outboundIpAddresses" tf:"outbound_ip_addresses"`
 
-	PossibleOutboundIpAddressList []string `json:"possibleOutboundIpAddressList" tf:"possible_outbound_ip_address_list"`
+	PossibleOutboundIPAddressList []string `json:"possibleOutboundIpAddressList" tf:"possible_outbound_ip_address_list"`
 
-	PossibleOutboundIpAddresses string `json:"possibleOutboundIpAddresses" tf:"possible_outbound_ip_addresses"`
+	PossibleOutboundIPAddresses string `json:"possibleOutboundIpAddresses" tf:"possible_outbound_ip_addresses"`
 
 	SiteCredential []SiteCredentialObservation `json:"siteCredential" tf:"site_credential"`
 }
 
 type AppServiceParameters struct {
-	AppServicePlanId string `json:"appServicePlanId" tf:"app_service_plan_id"`
+	AppServicePlanID string `json:"appServicePlanId" tf:"app_service_plan_id"`
 
 	AppSettings map[string]string `json:"appSettings,omitempty" tf:"app_settings"`
 
@@ -80,7 +80,7 @@ type AppServiceParameters struct {
 
 	Enabled *bool `json:"enabled,omitempty" tf:"enabled"`
 
-	HttpsOnly *bool `json:"httpsOnly,omitempty" tf:"https_only"`
+	HTTPSOnly *bool `json:"httpsOnly,omitempty" tf:"https_only"`
 
 	Identity []AppServiceIdentityParameters `json:"identity,omitempty" tf:"identity"`
 
@@ -151,7 +151,7 @@ type AzureBlobStorageParameters struct {
 
 	RetentionInDays int64 `json:"retentionInDays" tf:"retention_in_days"`
 
-	SasUrl string `json:"sasUrl" tf:"sas_url"`
+	SasURL string `json:"sasUrl" tf:"sas_url"`
 }
 
 type BackupObservation struct {
@@ -164,7 +164,7 @@ type BackupParameters struct {
 
 	Schedule []ScheduleParameters `json:"schedule" tf:"schedule"`
 
-	StorageAccountUrl string `json:"storageAccountUrl" tf:"storage_account_url"`
+	StorageAccountURL string `json:"storageAccountUrl" tf:"storage_account_url"`
 }
 
 type ConnectionStringObservation struct {
@@ -191,7 +191,7 @@ type FacebookObservation struct {
 }
 
 type FacebookParameters struct {
-	AppId string `json:"appId" tf:"app_id"`
+	AppID string `json:"appId" tf:"app_id"`
 
 	AppSecret string `json:"appSecret" tf:"app_secret"`
 
@@ -211,11 +211,29 @@ type GoogleObservation struct {
 }
 
 type GoogleParameters struct {
-	ClientId string `json:"clientId" tf:"client_id"`
+	ClientID string `json:"clientId" tf:"client_id"`
 
 	ClientSecret string `json:"clientSecret" tf:"client_secret"`
 
 	OauthScopes []string `json:"oauthScopes,omitempty" tf:"oauth_scopes"`
+}
+
+type HTTPLogsAzureBlobStorageObservation struct {
+}
+
+type HTTPLogsAzureBlobStorageParameters struct {
+	RetentionInDays int64 `json:"retentionInDays" tf:"retention_in_days"`
+
+	SasURL string `json:"sasUrl" tf:"sas_url"`
+}
+
+type HTTPLogsObservation struct {
+}
+
+type HTTPLogsParameters struct {
+	AzureBlobStorage []HTTPLogsAzureBlobStorageParameters `json:"azureBlobStorage,omitempty" tf:"azure_blob_storage"`
+
+	FileSystem []FileSystemParameters `json:"fileSystem,omitempty" tf:"file_system"`
 }
 
 type HeadersObservation struct {
@@ -231,33 +249,15 @@ type HeadersParameters struct {
 	XForwardedHost []string `json:"xForwardedHost,omitempty" tf:"x_forwarded_host"`
 }
 
-type HttpLogsAzureBlobStorageObservation struct {
+type IPRestrictionObservation struct {
 }
 
-type HttpLogsAzureBlobStorageParameters struct {
-	RetentionInDays int64 `json:"retentionInDays" tf:"retention_in_days"`
-
-	SasUrl string `json:"sasUrl" tf:"sas_url"`
-}
-
-type HttpLogsObservation struct {
-}
-
-type HttpLogsParameters struct {
-	AzureBlobStorage []HttpLogsAzureBlobStorageParameters `json:"azureBlobStorage,omitempty" tf:"azure_blob_storage"`
-
-	FileSystem []FileSystemParameters `json:"fileSystem,omitempty" tf:"file_system"`
-}
-
-type IpRestrictionObservation struct {
-}
-
-type IpRestrictionParameters struct {
+type IPRestrictionParameters struct {
 	Action *string `json:"action,omitempty" tf:"action"`
 
 	Headers []HeadersParameters `json:"headers,omitempty" tf:"headers"`
 
-	IpAddress *string `json:"ipAddress,omitempty" tf:"ip_address"`
+	IPAddress *string `json:"ipAddress,omitempty" tf:"ip_address"`
 
 	Name *string `json:"name,omitempty" tf:"name"`
 
@@ -265,7 +265,7 @@ type IpRestrictionParameters struct {
 
 	ServiceTag *string `json:"serviceTag,omitempty" tf:"service_tag"`
 
-	VirtualNetworkSubnetId *string `json:"virtualNetworkSubnetId,omitempty" tf:"virtual_network_subnet_id"`
+	VirtualNetworkSubnetID *string `json:"virtualNetworkSubnetId,omitempty" tf:"virtual_network_subnet_id"`
 }
 
 type LogsObservation struct {
@@ -278,14 +278,14 @@ type LogsParameters struct {
 
 	FailedRequestTracingEnabled *bool `json:"failedRequestTracingEnabled,omitempty" tf:"failed_request_tracing_enabled"`
 
-	HttpLogs []HttpLogsParameters `json:"httpLogs,omitempty" tf:"http_logs"`
+	HTTPLogs []HTTPLogsParameters `json:"httpLogs,omitempty" tf:"http_logs"`
 }
 
 type MicrosoftObservation struct {
 }
 
 type MicrosoftParameters struct {
-	ClientId string `json:"clientId" tf:"client_id"`
+	ClientID string `json:"clientId" tf:"client_id"`
 
 	ClientSecret string `json:"clientSecret" tf:"client_secret"`
 
@@ -307,10 +307,10 @@ type ScheduleParameters struct {
 	StartTime *string `json:"startTime,omitempty" tf:"start_time"`
 }
 
-type ScmIpRestrictionHeadersObservation struct {
+type ScmIPRestrictionHeadersObservation struct {
 }
 
-type ScmIpRestrictionHeadersParameters struct {
+type ScmIPRestrictionHeadersParameters struct {
 	XAzureFdid []string `json:"xAzureFdid,omitempty" tf:"x_azure_fdid"`
 
 	XFdHealthProbe []string `json:"xFdHealthProbe,omitempty" tf:"x_fd_health_probe"`
@@ -320,15 +320,15 @@ type ScmIpRestrictionHeadersParameters struct {
 	XForwardedHost []string `json:"xForwardedHost,omitempty" tf:"x_forwarded_host"`
 }
 
-type ScmIpRestrictionObservation struct {
+type ScmIPRestrictionObservation struct {
 }
 
-type ScmIpRestrictionParameters struct {
+type ScmIPRestrictionParameters struct {
 	Action *string `json:"action,omitempty" tf:"action"`
 
-	Headers []ScmIpRestrictionHeadersParameters `json:"headers,omitempty" tf:"headers"`
+	Headers []ScmIPRestrictionHeadersParameters `json:"headers,omitempty" tf:"headers"`
 
-	IpAddress *string `json:"ipAddress,omitempty" tf:"ip_address"`
+	IPAddress *string `json:"ipAddress,omitempty" tf:"ip_address"`
 
 	Name *string `json:"name,omitempty" tf:"name"`
 
@@ -336,7 +336,7 @@ type ScmIpRestrictionParameters struct {
 
 	ServiceTag *string `json:"serviceTag,omitempty" tf:"service_tag"`
 
-	VirtualNetworkSubnetId *string `json:"virtualNetworkSubnetId,omitempty" tf:"virtual_network_subnet_id"`
+	VirtualNetworkSubnetID *string `json:"virtualNetworkSubnetId,omitempty" tf:"virtual_network_subnet_id"`
 }
 
 type SiteConfigObservation struct {
@@ -345,7 +345,7 @@ type SiteConfigObservation struct {
 type SiteConfigParameters struct {
 	AcrUseManagedIdentityCredentials *bool `json:"acrUseManagedIdentityCredentials,omitempty" tf:"acr_use_managed_identity_credentials"`
 
-	AcrUserManagedIdentityClientId *string `json:"acrUserManagedIdentityClientId,omitempty" tf:"acr_user_managed_identity_client_id"`
+	AcrUserManagedIdentityClientID *string `json:"acrUserManagedIdentityClientId,omitempty" tf:"acr_user_managed_identity_client_id"`
 
 	AlwaysOn *bool `json:"alwaysOn,omitempty" tf:"always_on"`
 
@@ -365,7 +365,7 @@ type SiteConfigParameters struct {
 
 	Http2Enabled *bool `json:"http2Enabled,omitempty" tf:"http2_enabled"`
 
-	IpRestriction []IpRestrictionParameters `json:"ipRestriction,omitempty" tf:"ip_restriction"`
+	IPRestriction []IPRestrictionParameters `json:"ipRestriction,omitempty" tf:"ip_restriction"`
 
 	JavaContainer *string `json:"javaContainer,omitempty" tf:"java_container"`
 
@@ -379,7 +379,7 @@ type SiteConfigParameters struct {
 
 	ManagedPipelineMode *string `json:"managedPipelineMode,omitempty" tf:"managed_pipeline_mode"`
 
-	MinTlsVersion *string `json:"minTlsVersion,omitempty" tf:"min_tls_version"`
+	MinTLSVersion *string `json:"minTlsVersion,omitempty" tf:"min_tls_version"`
 
 	NumberOfWorkers *int64 `json:"numberOfWorkers,omitempty" tf:"number_of_workers"`
 
@@ -391,11 +391,11 @@ type SiteConfigParameters struct {
 
 	RemoteDebuggingVersion *string `json:"remoteDebuggingVersion,omitempty" tf:"remote_debugging_version"`
 
-	ScmIpRestriction []ScmIpRestrictionParameters `json:"scmIpRestriction,omitempty" tf:"scm_ip_restriction"`
+	ScmIPRestriction []ScmIPRestrictionParameters `json:"scmIpRestriction,omitempty" tf:"scm_ip_restriction"`
 
 	ScmType *string `json:"scmType,omitempty" tf:"scm_type"`
 
-	ScmUseMainIpRestriction *bool `json:"scmUseMainIpRestriction,omitempty" tf:"scm_use_main_ip_restriction"`
+	ScmUseMainIPRestriction *bool `json:"scmUseMainIpRestriction,omitempty" tf:"scm_use_main_ip_restriction"`
 
 	Use32BitWorkerProcess *bool `json:"use32BitWorkerProcess,omitempty" tf:"use_32_bit_worker_process"`
 
@@ -423,7 +423,7 @@ type SourceControlParameters struct {
 
 	ManualIntegration *bool `json:"manualIntegration,omitempty" tf:"manual_integration"`
 
-	RepoUrl *string `json:"repoUrl,omitempty" tf:"repo_url"`
+	RepoURL *string `json:"repoUrl,omitempty" tf:"repo_url"`
 
 	RollbackEnabled *bool `json:"rollbackEnabled,omitempty" tf:"rollback_enabled"`
 

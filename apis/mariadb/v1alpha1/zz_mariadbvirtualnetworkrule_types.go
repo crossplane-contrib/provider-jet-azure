@@ -34,7 +34,7 @@ type MariadbVirtualNetworkRuleParameters struct {
 
 	ServerName string `json:"serverName" tf:"server_name"`
 
-	SubnetId string `json:"subnetId" tf:"subnet_id"`
+	SubnetID string `json:"subnetId" tf:"subnet_id"`
 }
 
 // MariadbVirtualNetworkRuleSpec defines the desired state of MariadbVirtualNetworkRule

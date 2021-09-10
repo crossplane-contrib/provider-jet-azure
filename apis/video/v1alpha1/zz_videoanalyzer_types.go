@@ -37,9 +37,9 @@ type StorageAccountObservation struct {
 }
 
 type StorageAccountParameters struct {
-	Id string `json:"id" tf:"id"`
+	ID string `json:"id" tf:"id"`
 
-	UserAssignedIdentityId string `json:"userAssignedIdentityId" tf:"user_assigned_identity_id"`
+	UserAssignedIdentityID string `json:"userAssignedIdentityId" tf:"user_assigned_identity_id"`
 }
 
 type VideoAnalyzerObservation struct {

@@ -29,7 +29,7 @@ type IotTimeSeriesInsightsGen2EnvironmentObservation struct {
 }
 
 type IotTimeSeriesInsightsGen2EnvironmentParameters struct {
-	IdProperties []string `json:"idProperties" tf:"id_properties"`
+	IDProperties []string `json:"idProperties" tf:"id_properties"`
 
 	Location string `json:"location" tf:"location"`
 

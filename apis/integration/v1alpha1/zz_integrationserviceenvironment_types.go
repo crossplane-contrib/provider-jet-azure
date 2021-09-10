@@ -25,13 +25,13 @@ import (
 )
 
 type IntegrationServiceEnvironmentObservation struct {
-	ConnectorEndpointIpAddresses []string `json:"connectorEndpointIpAddresses" tf:"connector_endpoint_ip_addresses"`
+	ConnectorEndpointIPAddresses []string `json:"connectorEndpointIpAddresses" tf:"connector_endpoint_ip_addresses"`
 
-	ConnectorOutboundIpAddresses []string `json:"connectorOutboundIpAddresses" tf:"connector_outbound_ip_addresses"`
+	ConnectorOutboundIPAddresses []string `json:"connectorOutboundIpAddresses" tf:"connector_outbound_ip_addresses"`
 
-	WorkflowEndpointIpAddresses []string `json:"workflowEndpointIpAddresses" tf:"workflow_endpoint_ip_addresses"`
+	WorkflowEndpointIPAddresses []string `json:"workflowEndpointIpAddresses" tf:"workflow_endpoint_ip_addresses"`
 
-	WorkflowOutboundIpAddresses []string `json:"workflowOutboundIpAddresses" tf:"workflow_outbound_ip_addresses"`
+	WorkflowOutboundIPAddresses []string `json:"workflowOutboundIpAddresses" tf:"workflow_outbound_ip_addresses"`
 }
 
 type IntegrationServiceEnvironmentParameters struct {

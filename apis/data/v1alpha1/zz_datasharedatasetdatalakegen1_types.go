@@ -29,9 +29,9 @@ type DataShareDatasetDataLakeGen1Observation struct {
 }
 
 type DataShareDatasetDataLakeGen1Parameters struct {
-	DataLakeStoreId string `json:"dataLakeStoreId" tf:"data_lake_store_id"`
+	DataLakeStoreID string `json:"dataLakeStoreId" tf:"data_lake_store_id"`
 
-	DataShareId string `json:"dataShareId" tf:"data_share_id"`
+	DataShareID string `json:"dataShareId" tf:"data_share_id"`
 
 	FileName *string `json:"fileName,omitempty" tf:"file_name"`
 

@@ -28,9 +28,9 @@ type SubnetRouteTableAssociationObservation struct {
 }
 
 type SubnetRouteTableAssociationParameters struct {
-	RouteTableId string `json:"routeTableId" tf:"route_table_id"`
+	RouteTableID string `json:"routeTableId" tf:"route_table_id"`
 
-	SubnetId string `json:"subnetId" tf:"subnet_id"`
+	SubnetID string `json:"subnetId" tf:"subnet_id"`
 }
 
 // SubnetRouteTableAssociationSpec defines the desired state of SubnetRouteTableAssociation

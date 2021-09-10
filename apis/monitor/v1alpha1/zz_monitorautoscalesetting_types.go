@@ -80,7 +80,7 @@ type MetricTriggerParameters struct {
 
 	MetricNamespace *string `json:"metricNamespace,omitempty" tf:"metric_namespace"`
 
-	MetricResourceId string `json:"metricResourceId" tf:"metric_resource_id"`
+	MetricResourceID string `json:"metricResourceId" tf:"metric_resource_id"`
 
 	Operator string `json:"operator" tf:"operator"`
 
@@ -113,7 +113,7 @@ type MonitorAutoscaleSettingParameters struct {
 
 	Tags map[string]string `json:"tags,omitempty" tf:"tags"`
 
-	TargetResourceId string `json:"targetResourceId" tf:"target_resource_id"`
+	TargetResourceID string `json:"targetResourceId" tf:"target_resource_id"`
 }
 
 type NotificationObservation struct {
@@ -181,7 +181,7 @@ type WebhookObservation struct {
 type WebhookParameters struct {
 	Properties map[string]string `json:"properties,omitempty" tf:"properties"`
 
-	ServiceUri string `json:"serviceUri" tf:"service_uri"`
+	ServiceURI string `json:"serviceUri" tf:"service_uri"`
 }
 
 // MonitorAutoscaleSettingSpec defines the desired state of MonitorAutoscaleSetting

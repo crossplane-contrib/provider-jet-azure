@@ -28,7 +28,7 @@ type ApiManagementUserObservation struct {
 }
 
 type ApiManagementUserParameters struct {
-	ApiManagementName string `json:"apiManagementName" tf:"api_management_name"`
+	APIManagementName string `json:"apiManagementName" tf:"api_management_name"`
 
 	Confirmation *string `json:"confirmation,omitempty" tf:"confirmation"`
 
@@ -46,7 +46,7 @@ type ApiManagementUserParameters struct {
 
 	State *string `json:"state,omitempty" tf:"state"`
 
-	UserId string `json:"userId" tf:"user_id"`
+	UserID string `json:"userId" tf:"user_id"`
 }
 
 // ApiManagementUserSpec defines the desired state of ApiManagementUser

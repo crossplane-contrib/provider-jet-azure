@@ -32,7 +32,7 @@ type DataFactoryCustomDatasetParameters struct {
 
 	Annotations []string `json:"annotations,omitempty" tf:"annotations"`
 
-	DataFactoryId string `json:"dataFactoryId" tf:"data_factory_id"`
+	DataFactoryID string `json:"dataFactoryId" tf:"data_factory_id"`
 
 	Description *string `json:"description,omitempty" tf:"description"`
 
@@ -44,11 +44,11 @@ type DataFactoryCustomDatasetParameters struct {
 
 	Parameters map[string]string `json:"parameters,omitempty" tf:"parameters"`
 
-	SchemaJson *string `json:"schemaJson,omitempty" tf:"schema_json"`
+	SchemaJSON *string `json:"schemaJson,omitempty" tf:"schema_json"`
 
 	Type string `json:"type" tf:"type"`
 
-	TypePropertiesJson string `json:"typePropertiesJson" tf:"type_properties_json"`
+	TypePropertiesJSON string `json:"typePropertiesJson" tf:"type_properties_json"`
 }
 
 type LinkedServiceObservation struct {

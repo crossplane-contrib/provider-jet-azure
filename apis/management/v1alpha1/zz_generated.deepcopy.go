@@ -141,8 +141,8 @@ func (in *ManagementGroupParameters) DeepCopyInto(out *ManagementGroupParameters
 		*out = new(string)
 		**out = **in
 	}
-	if in.GroupId != nil {
-		in, out := &in.GroupId, &out.GroupId
+	if in.GroupID != nil {
+		in, out := &in.GroupID, &out.GroupID
 		*out = new(string)
 		**out = **in
 	}
@@ -151,8 +151,8 @@ func (in *ManagementGroupParameters) DeepCopyInto(out *ManagementGroupParameters
 		*out = new(string)
 		**out = **in
 	}
-	if in.ParentManagementGroupId != nil {
-		in, out := &in.ParentManagementGroupId, &out.ParentManagementGroupId
+	if in.ParentManagementGroupID != nil {
+		in, out := &in.ParentManagementGroupID, &out.ParentManagementGroupID
 		*out = new(string)
 		**out = **in
 	}
@@ -594,8 +594,8 @@ func (in *ManagementGroupTemplateDeploymentParameters) DeepCopyInto(out *Managem
 		*out = new(string)
 		**out = **in
 	}
-	if in.TemplateSpecVersionId != nil {
-		in, out := &in.TemplateSpecVersionId, &out.TemplateSpecVersionId
+	if in.TemplateSpecVersionID != nil {
+		in, out := &in.TemplateSpecVersionID, &out.TemplateSpecVersionID
 		*out = new(string)
 		**out = **in
 	}

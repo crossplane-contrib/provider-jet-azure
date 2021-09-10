@@ -70,7 +70,7 @@ type EdgeNodeParameters struct {
 
 	TargetInstanceCount int64 `json:"targetInstanceCount" tf:"target_instance_count"`
 
-	VmSize string `json:"vmSize" tf:"vm_size"`
+	VMSize string `json:"vmSize" tf:"vm_size"`
 }
 
 type GatewayObservation struct {
@@ -85,9 +85,9 @@ type GatewayParameters struct {
 }
 
 type HdinsightHadoopClusterObservation struct {
-	HttpsEndpoint string `json:"httpsEndpoint" tf:"https_endpoint"`
+	HTTPSEndpoint string `json:"httpsEndpoint" tf:"https_endpoint"`
 
-	SshEndpoint string `json:"sshEndpoint" tf:"ssh_endpoint"`
+	SSHEndpoint string `json:"sshEndpoint" tf:"ssh_endpoint"`
 }
 
 type HdinsightHadoopClusterParameters struct {
@@ -115,11 +115,11 @@ type HdinsightHadoopClusterParameters struct {
 
 	StorageAccountGen2 []StorageAccountGen2Parameters `json:"storageAccountGen2,omitempty" tf:"storage_account_gen2"`
 
+	TLSMinVersion *string `json:"tlsMinVersion,omitempty" tf:"tls_min_version"`
+
 	Tags map[string]string `json:"tags,omitempty" tf:"tags"`
 
 	Tier string `json:"tier" tf:"tier"`
-
-	TlsMinVersion *string `json:"tlsMinVersion,omitempty" tf:"tls_min_version"`
 }
 
 type HeadNodeObservation struct {
@@ -128,15 +128,15 @@ type HeadNodeObservation struct {
 type HeadNodeParameters struct {
 	Password *string `json:"password,omitempty" tf:"password"`
 
-	SshKeys []string `json:"sshKeys,omitempty" tf:"ssh_keys"`
+	SSHKeys []string `json:"sshKeys,omitempty" tf:"ssh_keys"`
 
-	SubnetId *string `json:"subnetId,omitempty" tf:"subnet_id"`
+	SubnetID *string `json:"subnetId,omitempty" tf:"subnet_id"`
 
 	Username string `json:"username" tf:"username"`
 
-	VirtualNetworkId *string `json:"virtualNetworkId,omitempty" tf:"virtual_network_id"`
+	VMSize string `json:"vmSize" tf:"vm_size"`
 
-	VmSize string `json:"vmSize" tf:"vm_size"`
+	VirtualNetworkID *string `json:"virtualNetworkId,omitempty" tf:"virtual_network_id"`
 }
 
 type HiveObservation struct {
@@ -158,7 +158,7 @@ type InstallScriptActionObservation struct {
 type InstallScriptActionParameters struct {
 	Name string `json:"name" tf:"name"`
 
-	Uri string `json:"uri" tf:"uri"`
+	URI string `json:"uri" tf:"uri"`
 }
 
 type MetastoresObservation struct {
@@ -176,7 +176,7 @@ type MonitorObservation struct {
 }
 
 type MonitorParameters struct {
-	LogAnalyticsWorkspaceId string `json:"logAnalyticsWorkspaceId" tf:"log_analytics_workspace_id"`
+	LogAnalyticsWorkspaceID string `json:"logAnalyticsWorkspaceId" tf:"log_analytics_workspace_id"`
 
 	PrimaryKey string `json:"primaryKey" tf:"primary_key"`
 }
@@ -240,13 +240,13 @@ type StorageAccountGen2Observation struct {
 }
 
 type StorageAccountGen2Parameters struct {
-	FilesystemId string `json:"filesystemId" tf:"filesystem_id"`
+	FilesystemID string `json:"filesystemId" tf:"filesystem_id"`
 
 	IsDefault bool `json:"isDefault" tf:"is_default"`
 
-	ManagedIdentityResourceId string `json:"managedIdentityResourceId" tf:"managed_identity_resource_id"`
+	ManagedIdentityResourceID string `json:"managedIdentityResourceId" tf:"managed_identity_resource_id"`
 
-	StorageResourceId string `json:"storageResourceId" tf:"storage_resource_id"`
+	StorageResourceID string `json:"storageResourceId" tf:"storage_resource_id"`
 }
 
 type StorageAccountObservation struct {
@@ -257,7 +257,7 @@ type StorageAccountParameters struct {
 
 	StorageAccountKey string `json:"storageAccountKey" tf:"storage_account_key"`
 
-	StorageContainerId string `json:"storageContainerId" tf:"storage_container_id"`
+	StorageContainerID string `json:"storageContainerId" tf:"storage_container_id"`
 }
 
 type WorkerNodeObservation struct {
@@ -270,17 +270,17 @@ type WorkerNodeParameters struct {
 
 	Password *string `json:"password,omitempty" tf:"password"`
 
-	SshKeys []string `json:"sshKeys,omitempty" tf:"ssh_keys"`
+	SSHKeys []string `json:"sshKeys,omitempty" tf:"ssh_keys"`
 
-	SubnetId *string `json:"subnetId,omitempty" tf:"subnet_id"`
+	SubnetID *string `json:"subnetId,omitempty" tf:"subnet_id"`
 
 	TargetInstanceCount int64 `json:"targetInstanceCount" tf:"target_instance_count"`
 
 	Username string `json:"username" tf:"username"`
 
-	VirtualNetworkId *string `json:"virtualNetworkId,omitempty" tf:"virtual_network_id"`
+	VMSize string `json:"vmSize" tf:"vm_size"`
 
-	VmSize string `json:"vmSize" tf:"vm_size"`
+	VirtualNetworkID *string `json:"virtualNetworkId,omitempty" tf:"virtual_network_id"`
 }
 
 type ZookeeperNodeObservation struct {
@@ -289,15 +289,15 @@ type ZookeeperNodeObservation struct {
 type ZookeeperNodeParameters struct {
 	Password *string `json:"password,omitempty" tf:"password"`
 
-	SshKeys []string `json:"sshKeys,omitempty" tf:"ssh_keys"`
+	SSHKeys []string `json:"sshKeys,omitempty" tf:"ssh_keys"`
 
-	SubnetId *string `json:"subnetId,omitempty" tf:"subnet_id"`
+	SubnetID *string `json:"subnetId,omitempty" tf:"subnet_id"`
 
 	Username string `json:"username" tf:"username"`
 
-	VirtualNetworkId *string `json:"virtualNetworkId,omitempty" tf:"virtual_network_id"`
+	VMSize string `json:"vmSize" tf:"vm_size"`
 
-	VmSize string `json:"vmSize" tf:"vm_size"`
+	VirtualNetworkID *string `json:"virtualNetworkId,omitempty" tf:"virtual_network_id"`
 }
 
 // HdinsightHadoopClusterSpec defines the desired state of HdinsightHadoopCluster

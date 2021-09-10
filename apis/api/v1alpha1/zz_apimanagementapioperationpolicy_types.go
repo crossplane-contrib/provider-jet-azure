@@ -28,17 +28,17 @@ type ApiManagementApiOperationPolicyObservation struct {
 }
 
 type ApiManagementApiOperationPolicyParameters struct {
-	ApiManagementName string `json:"apiManagementName" tf:"api_management_name"`
+	APIManagementName string `json:"apiManagementName" tf:"api_management_name"`
 
-	ApiName string `json:"apiName" tf:"api_name"`
+	APIName string `json:"apiName" tf:"api_name"`
 
-	OperationId string `json:"operationId" tf:"operation_id"`
+	OperationID string `json:"operationId" tf:"operation_id"`
 
 	ResourceGroupName string `json:"resourceGroupName" tf:"resource_group_name"`
 
-	XmlContent *string `json:"xmlContent,omitempty" tf:"xml_content"`
+	XMLContent *string `json:"xmlContent,omitempty" tf:"xml_content"`
 
-	XmlLink *string `json:"xmlLink,omitempty" tf:"xml_link"`
+	XMLLink *string `json:"xmlLink,omitempty" tf:"xml_link"`
 }
 
 // ApiManagementApiOperationPolicySpec defines the desired state of ApiManagementApiOperationPolicy

@@ -28,15 +28,15 @@ type DataProtectionBackupInstancePostgresqlObservation struct {
 }
 
 type DataProtectionBackupInstancePostgresqlParameters struct {
-	BackupPolicyId string `json:"backupPolicyId" tf:"backup_policy_id"`
+	BackupPolicyID string `json:"backupPolicyId" tf:"backup_policy_id"`
 
-	DatabaseId string `json:"databaseId" tf:"database_id"`
+	DatabaseID string `json:"databaseId" tf:"database_id"`
 
 	Location string `json:"location" tf:"location"`
 
 	Name string `json:"name" tf:"name"`
 
-	VaultId string `json:"vaultId" tf:"vault_id"`
+	VaultID string `json:"vaultId" tf:"vault_id"`
 }
 
 // DataProtectionBackupInstancePostgresqlSpec defines the desired state of DataProtectionBackupInstancePostgresql

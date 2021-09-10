@@ -30,13 +30,13 @@ type SqlActiveDirectoryAdministratorObservation struct {
 type SqlActiveDirectoryAdministratorParameters struct {
 	Login string `json:"login" tf:"login"`
 
-	ObjectId string `json:"objectId" tf:"object_id"`
+	ObjectID string `json:"objectId" tf:"object_id"`
 
 	ResourceGroupName string `json:"resourceGroupName" tf:"resource_group_name"`
 
 	ServerName string `json:"serverName" tf:"server_name"`
 
-	TenantId string `json:"tenantId" tf:"tenant_id"`
+	TenantID string `json:"tenantId" tf:"tenant_id"`
 }
 
 // SqlActiveDirectoryAdministratorSpec defines the desired state of SqlActiveDirectoryAdministrator

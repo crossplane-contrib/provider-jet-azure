@@ -37,9 +37,9 @@ type ServicebusNamespaceDisasterRecoveryConfigObservation struct {
 type ServicebusNamespaceDisasterRecoveryConfigParameters struct {
 	Name string `json:"name" tf:"name"`
 
-	PartnerNamespaceId string `json:"partnerNamespaceId" tf:"partner_namespace_id"`
+	PartnerNamespaceID string `json:"partnerNamespaceId" tf:"partner_namespace_id"`
 
-	PrimaryNamespaceId string `json:"primaryNamespaceId" tf:"primary_namespace_id"`
+	PrimaryNamespaceID string `json:"primaryNamespaceId" tf:"primary_namespace_id"`
 }
 
 // ServicebusNamespaceDisasterRecoveryConfigSpec defines the desired state of ServicebusNamespaceDisasterRecoveryConfig

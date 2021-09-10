@@ -56,7 +56,7 @@ type DevTestWindowsVirtualMachineObservation struct {
 type DevTestWindowsVirtualMachineParameters struct {
 	AllowClaim *bool `json:"allowClaim,omitempty" tf:"allow_claim"`
 
-	DisallowPublicIpAddress *bool `json:"disallowPublicIpAddress,omitempty" tf:"disallow_public_ip_address"`
+	DisallowPublicIPAddress *bool `json:"disallowPublicIpAddress,omitempty" tf:"disallow_public_ip_address"`
 
 	GalleryImageReference []DevTestWindowsVirtualMachineGalleryImageReferenceParameters `json:"galleryImageReference" tf:"gallery_image_reference"`
 
@@ -66,7 +66,7 @@ type DevTestWindowsVirtualMachineParameters struct {
 
 	LabSubnetName string `json:"labSubnetName" tf:"lab_subnet_name"`
 
-	LabVirtualNetworkId string `json:"labVirtualNetworkId" tf:"lab_virtual_network_id"`
+	LabVirtualNetworkID string `json:"labVirtualNetworkId" tf:"lab_virtual_network_id"`
 
 	Location string `json:"location" tf:"location"`
 

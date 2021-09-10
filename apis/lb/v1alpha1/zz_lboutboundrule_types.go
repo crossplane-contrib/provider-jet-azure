@@ -24,11 +24,11 @@ import (
 	"k8s.io/apimachinery/pkg/runtime/schema"
 )
 
-type LbOutboundRuleFrontendIpConfigurationObservation struct {
-	Id string `json:"id" tf:"id"`
+type LbOutboundRuleFrontendIPConfigurationObservation struct {
+	ID string `json:"id" tf:"id"`
 }
 
-type LbOutboundRuleFrontendIpConfigurationParameters struct {
+type LbOutboundRuleFrontendIPConfigurationParameters struct {
 	Name string `json:"name" tf:"name"`
 }
 
@@ -38,15 +38,15 @@ type LbOutboundRuleObservation struct {
 type LbOutboundRuleParameters struct {
 	AllocatedOutboundPorts *int64 `json:"allocatedOutboundPorts,omitempty" tf:"allocated_outbound_ports"`
 
-	BackendAddressPoolId string `json:"backendAddressPoolId" tf:"backend_address_pool_id"`
+	BackendAddressPoolID string `json:"backendAddressPoolId" tf:"backend_address_pool_id"`
 
-	EnableTcpReset *bool `json:"enableTcpReset,omitempty" tf:"enable_tcp_reset"`
+	EnableTCPReset *bool `json:"enableTcpReset,omitempty" tf:"enable_tcp_reset"`
 
-	FrontendIpConfiguration []LbOutboundRuleFrontendIpConfigurationParameters `json:"frontendIpConfiguration,omitempty" tf:"frontend_ip_configuration"`
+	FrontendIPConfiguration []LbOutboundRuleFrontendIPConfigurationParameters `json:"frontendIpConfiguration,omitempty" tf:"frontend_ip_configuration"`
 
 	IdleTimeoutInMinutes *int64 `json:"idleTimeoutInMinutes,omitempty" tf:"idle_timeout_in_minutes"`
 
-	LoadbalancerId string `json:"loadbalancerId" tf:"loadbalancer_id"`
+	LoadbalancerID string `json:"loadbalancerId" tf:"loadbalancer_id"`
 
 	Name string `json:"name" tf:"name"`
 

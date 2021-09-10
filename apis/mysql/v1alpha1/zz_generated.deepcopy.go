@@ -771,8 +771,8 @@ func (in *MysqlServerParameters) DeepCopyInto(out *MysqlServerParameters) {
 		*out = new(string)
 		**out = **in
 	}
-	if in.CreationSourceServerId != nil {
-		in, out := &in.CreationSourceServerId, &out.CreationSourceServerId
+	if in.CreationSourceServerID != nil {
+		in, out := &in.CreationSourceServerID, &out.CreationSourceServerID
 		*out = new(string)
 		**out = **in
 	}
@@ -811,8 +811,8 @@ func (in *MysqlServerParameters) DeepCopyInto(out *MysqlServerParameters) {
 		*out = new(bool)
 		**out = **in
 	}
-	if in.SslMinimalTlsVersionEnforced != nil {
-		in, out := &in.SslMinimalTlsVersionEnforced, &out.SslMinimalTlsVersionEnforced
+	if in.SslMinimalTLSVersionEnforced != nil {
+		in, out := &in.SslMinimalTLSVersionEnforced, &out.SslMinimalTLSVersionEnforced
 		*out = new(string)
 		**out = **in
 	}

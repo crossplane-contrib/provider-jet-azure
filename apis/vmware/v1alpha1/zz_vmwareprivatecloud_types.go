@@ -25,9 +25,9 @@ import (
 )
 
 type CircuitObservation struct {
-	ExpressRouteId string `json:"expressRouteId" tf:"express_route_id"`
+	ExpressRouteID string `json:"expressRouteId" tf:"express_route_id"`
 
-	ExpressRoutePrivatePeeringId string `json:"expressRoutePrivatePeeringId" tf:"express_route_private_peering_id"`
+	ExpressRoutePrivatePeeringID string `json:"expressRoutePrivatePeeringId" tf:"express_route_private_peering_id"`
 
 	PrimarySubnetCidr string `json:"primarySubnetCidr" tf:"primary_subnet_cidr"`
 
@@ -40,7 +40,7 @@ type CircuitParameters struct {
 type ManagementClusterObservation struct {
 	Hosts []string `json:"hosts" tf:"hosts"`
 
-	Id int64 `json:"id" tf:"id"`
+	ID int64 `json:"id" tf:"id"`
 }
 
 type ManagementClusterParameters struct {

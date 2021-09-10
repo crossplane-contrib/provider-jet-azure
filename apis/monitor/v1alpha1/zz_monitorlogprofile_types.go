@@ -36,9 +36,9 @@ type MonitorLogProfileParameters struct {
 
 	RetentionPolicy []MonitorLogProfileRetentionPolicyParameters `json:"retentionPolicy" tf:"retention_policy"`
 
-	ServicebusRuleId *string `json:"servicebusRuleId,omitempty" tf:"servicebus_rule_id"`
+	ServicebusRuleID *string `json:"servicebusRuleId,omitempty" tf:"servicebus_rule_id"`
 
-	StorageAccountId *string `json:"storageAccountId,omitempty" tf:"storage_account_id"`
+	StorageAccountID *string `json:"storageAccountId,omitempty" tf:"storage_account_id"`
 }
 
 type MonitorLogProfileRetentionPolicyObservation struct {

@@ -66,11 +66,11 @@ type SharedImageParameters struct {
 
 	OsType string `json:"osType" tf:"os_type"`
 
-	PrivacyStatementUri *string `json:"privacyStatementUri,omitempty" tf:"privacy_statement_uri"`
+	PrivacyStatementURI *string `json:"privacyStatementUri,omitempty" tf:"privacy_statement_uri"`
 
 	PurchasePlan []PurchasePlanParameters `json:"purchasePlan,omitempty" tf:"purchase_plan"`
 
-	ReleaseNoteUri *string `json:"releaseNoteUri,omitempty" tf:"release_note_uri"`
+	ReleaseNoteURI *string `json:"releaseNoteUri,omitempty" tf:"release_note_uri"`
 
 	ResourceGroupName string `json:"resourceGroupName" tf:"resource_group_name"`
 

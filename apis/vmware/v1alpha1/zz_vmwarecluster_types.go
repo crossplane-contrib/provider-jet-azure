@@ -37,7 +37,7 @@ type VmwareClusterParameters struct {
 
 	SkuName string `json:"skuName" tf:"sku_name"`
 
-	VmwareCloudId string `json:"vmwareCloudId" tf:"vmware_cloud_id"`
+	VmwareCloudID string `json:"vmwareCloudId" tf:"vmware_cloud_id"`
 }
 
 // VmwareClusterSpec defines the desired state of VmwareCluster

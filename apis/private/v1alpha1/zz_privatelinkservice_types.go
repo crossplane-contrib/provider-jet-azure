@@ -24,19 +24,19 @@ import (
 	"k8s.io/apimachinery/pkg/runtime/schema"
 )
 
-type NatIpConfigurationObservation struct {
+type NatIPConfigurationObservation struct {
 }
 
-type NatIpConfigurationParameters struct {
+type NatIPConfigurationParameters struct {
 	Name string `json:"name" tf:"name"`
 
 	Primary bool `json:"primary" tf:"primary"`
 
-	PrivateIpAddress *string `json:"privateIpAddress,omitempty" tf:"private_ip_address"`
+	PrivateIPAddress *string `json:"privateIpAddress,omitempty" tf:"private_ip_address"`
 
-	PrivateIpAddressVersion *string `json:"privateIpAddressVersion,omitempty" tf:"private_ip_address_version"`
+	PrivateIPAddressVersion *string `json:"privateIpAddressVersion,omitempty" tf:"private_ip_address_version"`
 
-	SubnetId string `json:"subnetId" tf:"subnet_id"`
+	SubnetID string `json:"subnetId" tf:"subnet_id"`
 }
 
 type PrivateLinkServiceObservation struct {
@@ -48,13 +48,13 @@ type PrivateLinkServiceParameters struct {
 
 	EnableProxyProtocol *bool `json:"enableProxyProtocol,omitempty" tf:"enable_proxy_protocol"`
 
-	LoadBalancerFrontendIpConfigurationIds []string `json:"loadBalancerFrontendIpConfigurationIds" tf:"load_balancer_frontend_ip_configuration_ids"`
+	LoadBalancerFrontendIPConfigurationIds []string `json:"loadBalancerFrontendIpConfigurationIds" tf:"load_balancer_frontend_ip_configuration_ids"`
 
 	Location string `json:"location" tf:"location"`
 
 	Name string `json:"name" tf:"name"`
 
-	NatIpConfiguration []NatIpConfigurationParameters `json:"natIpConfiguration" tf:"nat_ip_configuration"`
+	NatIPConfiguration []NatIPConfigurationParameters `json:"natIpConfiguration" tf:"nat_ip_configuration"`
 
 	ResourceGroupName string `json:"resourceGroupName" tf:"resource_group_name"`
 

@@ -37,7 +37,7 @@ type KustoDatabasePrincipalAssignmentParameters struct {
 
 	Name string `json:"name" tf:"name"`
 
-	PrincipalId string `json:"principalId" tf:"principal_id"`
+	PrincipalID string `json:"principalId" tf:"principal_id"`
 
 	PrincipalType string `json:"principalType" tf:"principal_type"`
 
@@ -45,7 +45,7 @@ type KustoDatabasePrincipalAssignmentParameters struct {
 
 	Role string `json:"role" tf:"role"`
 
-	TenantId string `json:"tenantId" tf:"tenant_id"`
+	TenantID string `json:"tenantId" tf:"tenant_id"`
 }
 
 // KustoDatabasePrincipalAssignmentSpec defines the desired state of KustoDatabasePrincipalAssignment

@@ -35,9 +35,9 @@ type PrivateDnsCnameRecordParameters struct {
 
 	ResourceGroupName string `json:"resourceGroupName" tf:"resource_group_name"`
 
-	Tags map[string]string `json:"tags,omitempty" tf:"tags"`
+	TTL int64 `json:"ttl" tf:"ttl"`
 
-	Ttl int64 `json:"ttl" tf:"ttl"`
+	Tags map[string]string `json:"tags,omitempty" tf:"tags"`
 
 	ZoneName string `json:"zoneName" tf:"zone_name"`
 }

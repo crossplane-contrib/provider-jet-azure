@@ -28,21 +28,21 @@ type KeyVaultAccessPolicyObservation struct {
 }
 
 type KeyVaultAccessPolicyParameters struct {
-	ApplicationId *string `json:"applicationId,omitempty" tf:"application_id"`
+	ApplicationID *string `json:"applicationId,omitempty" tf:"application_id"`
 
 	CertificatePermissions []string `json:"certificatePermissions,omitempty" tf:"certificate_permissions"`
 
 	KeyPermissions []string `json:"keyPermissions,omitempty" tf:"key_permissions"`
 
-	KeyVaultId string `json:"keyVaultId" tf:"key_vault_id"`
+	KeyVaultID string `json:"keyVaultId" tf:"key_vault_id"`
 
-	ObjectId string `json:"objectId" tf:"object_id"`
+	ObjectID string `json:"objectId" tf:"object_id"`
 
 	SecretPermissions []string `json:"secretPermissions,omitempty" tf:"secret_permissions"`
 
 	StoragePermissions []string `json:"storagePermissions,omitempty" tf:"storage_permissions"`
 
-	TenantId string `json:"tenantId" tf:"tenant_id"`
+	TenantID string `json:"tenantId" tf:"tenant_id"`
 }
 
 // KeyVaultAccessPolicySpec defines the desired state of KeyVaultAccessPolicy

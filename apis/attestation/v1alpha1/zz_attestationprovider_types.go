@@ -25,7 +25,7 @@ import (
 )
 
 type AttestationProviderObservation struct {
-	AttestationUri string `json:"attestationUri" tf:"attestation_uri"`
+	AttestationURI string `json:"attestationUri" tf:"attestation_uri"`
 
 	TrustModel string `json:"trustModel" tf:"trust_model"`
 }

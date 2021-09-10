@@ -30,7 +30,7 @@ type BotConnectionObservation struct {
 type BotConnectionParameters struct {
 	BotName string `json:"botName" tf:"bot_name"`
 
-	ClientId string `json:"clientId" tf:"client_id"`
+	ClientID string `json:"clientId" tf:"client_id"`
 
 	ClientSecret string `json:"clientSecret" tf:"client_secret"`
 

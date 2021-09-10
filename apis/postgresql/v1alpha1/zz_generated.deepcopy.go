@@ -1102,8 +1102,8 @@ func (in *PostgresqlFlexibleServerParameters) DeepCopyInto(out *PostgresqlFlexib
 		*out = new(string)
 		**out = **in
 	}
-	if in.DelegatedSubnetId != nil {
-		in, out := &in.DelegatedSubnetId, &out.DelegatedSubnetId
+	if in.DelegatedSubnetID != nil {
+		in, out := &in.DelegatedSubnetID, &out.DelegatedSubnetID
 		*out = new(string)
 		**out = **in
 	}
@@ -1126,8 +1126,8 @@ func (in *PostgresqlFlexibleServerParameters) DeepCopyInto(out *PostgresqlFlexib
 		*out = new(string)
 		**out = **in
 	}
-	if in.PrivateDnsZoneId != nil {
-		in, out := &in.PrivateDnsZoneId, &out.PrivateDnsZoneId
+	if in.PrivateDNSZoneID != nil {
+		in, out := &in.PrivateDNSZoneID, &out.PrivateDNSZoneID
 		*out = new(string)
 		**out = **in
 	}
@@ -1136,8 +1136,8 @@ func (in *PostgresqlFlexibleServerParameters) DeepCopyInto(out *PostgresqlFlexib
 		*out = new(string)
 		**out = **in
 	}
-	if in.SourceServerId != nil {
-		in, out := &in.SourceServerId, &out.SourceServerId
+	if in.SourceServerID != nil {
+		in, out := &in.SourceServerID, &out.SourceServerID
 		*out = new(string)
 		**out = **in
 	}
@@ -1434,8 +1434,8 @@ func (in *PostgresqlServerParameters) DeepCopyInto(out *PostgresqlServerParamete
 		*out = new(string)
 		**out = **in
 	}
-	if in.CreationSourceServerId != nil {
-		in, out := &in.CreationSourceServerId, &out.CreationSourceServerId
+	if in.CreationSourceServerID != nil {
+		in, out := &in.CreationSourceServerID, &out.CreationSourceServerID
 		*out = new(string)
 		**out = **in
 	}
@@ -1474,8 +1474,8 @@ func (in *PostgresqlServerParameters) DeepCopyInto(out *PostgresqlServerParamete
 		*out = new(bool)
 		**out = **in
 	}
-	if in.SslMinimalTlsVersionEnforced != nil {
-		in, out := &in.SslMinimalTlsVersionEnforced, &out.SslMinimalTlsVersionEnforced
+	if in.SslMinimalTLSVersionEnforced != nil {
+		in, out := &in.SslMinimalTLSVersionEnforced, &out.SslMinimalTLSVersionEnforced
 		*out = new(string)
 		**out = **in
 	}

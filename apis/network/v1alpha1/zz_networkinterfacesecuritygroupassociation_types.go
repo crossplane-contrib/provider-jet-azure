@@ -28,9 +28,9 @@ type NetworkInterfaceSecurityGroupAssociationObservation struct {
 }
 
 type NetworkInterfaceSecurityGroupAssociationParameters struct {
-	NetworkInterfaceId string `json:"networkInterfaceId" tf:"network_interface_id"`
+	NetworkInterfaceID string `json:"networkInterfaceId" tf:"network_interface_id"`
 
-	NetworkSecurityGroupId string `json:"networkSecurityGroupId" tf:"network_security_group_id"`
+	NetworkSecurityGroupID string `json:"networkSecurityGroupId" tf:"network_security_group_id"`
 }
 
 // NetworkInterfaceSecurityGroupAssociationSpec defines the desired state of NetworkInterfaceSecurityGroupAssociation

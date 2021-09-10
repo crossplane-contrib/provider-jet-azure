@@ -28,7 +28,7 @@ type ApiManagementNamedValueObservation struct {
 }
 
 type ApiManagementNamedValueParameters struct {
-	ApiManagementName string `json:"apiManagementName" tf:"api_management_name"`
+	APIManagementName string `json:"apiManagementName" tf:"api_management_name"`
 
 	DisplayName string `json:"displayName" tf:"display_name"`
 
@@ -49,9 +49,9 @@ type ValueFromKeyVaultObservation struct {
 }
 
 type ValueFromKeyVaultParameters struct {
-	IdentityClientId *string `json:"identityClientId,omitempty" tf:"identity_client_id"`
+	IdentityClientID *string `json:"identityClientId,omitempty" tf:"identity_client_id"`
 
-	SecretId string `json:"secretId" tf:"secret_id"`
+	SecretID string `json:"secretId" tf:"secret_id"`
 }
 
 // ApiManagementNamedValueSpec defines the desired state of ApiManagementNamedValue

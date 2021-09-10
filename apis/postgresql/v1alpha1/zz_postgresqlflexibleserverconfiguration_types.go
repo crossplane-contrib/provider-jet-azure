@@ -30,7 +30,7 @@ type PostgresqlFlexibleServerConfigurationObservation struct {
 type PostgresqlFlexibleServerConfigurationParameters struct {
 	Name string `json:"name" tf:"name"`
 
-	ServerId string `json:"serverId" tf:"server_id"`
+	ServerID string `json:"serverId" tf:"server_id"`
 
 	Value string `json:"value" tf:"value"`
 }

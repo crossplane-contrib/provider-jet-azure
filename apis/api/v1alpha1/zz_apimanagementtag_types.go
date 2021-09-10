@@ -28,7 +28,7 @@ type ApiManagementTagObservation struct {
 }
 
 type ApiManagementTagParameters struct {
-	ApiManagementId string `json:"apiManagementId" tf:"api_management_id"`
+	APIManagementID string `json:"apiManagementId" tf:"api_management_id"`
 
 	DisplayName *string `json:"displayName,omitempty" tf:"display_name"`
 

@@ -42,7 +42,7 @@ type ContainerRegistryWebhookParameters struct {
 
 	Scope *string `json:"scope,omitempty" tf:"scope"`
 
-	ServiceUri string `json:"serviceUri" tf:"service_uri"`
+	ServiceURI string `json:"serviceUri" tf:"service_uri"`
 
 	Status *string `json:"status,omitempty" tf:"status"`
 

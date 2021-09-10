@@ -238,7 +238,7 @@ type EventgridSystemTopicEventSubscriptionAzureFunctionEndpointObservation struc
 }
 
 type EventgridSystemTopicEventSubscriptionAzureFunctionEndpointParameters struct {
-	FunctionId string `json:"functionId" tf:"function_id"`
+	FunctionID string `json:"functionId" tf:"function_id"`
 
 	MaxEventsPerBatch *int64 `json:"maxEventsPerBatch,omitempty" tf:"max_events_per_batch"`
 
@@ -257,11 +257,11 @@ type EventgridSystemTopicEventSubscriptionParameters struct {
 
 	EventDeliverySchema *string `json:"eventDeliverySchema,omitempty" tf:"event_delivery_schema"`
 
-	EventhubEndpointId *string `json:"eventhubEndpointId,omitempty" tf:"eventhub_endpoint_id"`
+	EventhubEndpointID *string `json:"eventhubEndpointId,omitempty" tf:"eventhub_endpoint_id"`
 
 	ExpirationTimeUtc *string `json:"expirationTimeUtc,omitempty" tf:"expiration_time_utc"`
 
-	HybridConnectionEndpointId *string `json:"hybridConnectionEndpointId,omitempty" tf:"hybrid_connection_endpoint_id"`
+	HybridConnectionEndpointID *string `json:"hybridConnectionEndpointId,omitempty" tf:"hybrid_connection_endpoint_id"`
 
 	IncludedEventTypes []string `json:"includedEventTypes,omitempty" tf:"included_event_types"`
 
@@ -273,9 +273,9 @@ type EventgridSystemTopicEventSubscriptionParameters struct {
 
 	RetryPolicy []EventgridSystemTopicEventSubscriptionRetryPolicyParameters `json:"retryPolicy,omitempty" tf:"retry_policy"`
 
-	ServiceBusQueueEndpointId *string `json:"serviceBusQueueEndpointId,omitempty" tf:"service_bus_queue_endpoint_id"`
+	ServiceBusQueueEndpointID *string `json:"serviceBusQueueEndpointId,omitempty" tf:"service_bus_queue_endpoint_id"`
 
-	ServiceBusTopicEndpointId *string `json:"serviceBusTopicEndpointId,omitempty" tf:"service_bus_topic_endpoint_id"`
+	ServiceBusTopicEndpointID *string `json:"serviceBusTopicEndpointId,omitempty" tf:"service_bus_topic_endpoint_id"`
 
 	StorageBlobDeadLetterDestination []EventgridSystemTopicEventSubscriptionStorageBlobDeadLetterDestinationParameters `json:"storageBlobDeadLetterDestination,omitempty" tf:"storage_blob_dead_letter_destination"`
 
@@ -301,7 +301,7 @@ type EventgridSystemTopicEventSubscriptionStorageBlobDeadLetterDestinationObserv
 }
 
 type EventgridSystemTopicEventSubscriptionStorageBlobDeadLetterDestinationParameters struct {
-	StorageAccountId string `json:"storageAccountId" tf:"storage_account_id"`
+	StorageAccountID string `json:"storageAccountId" tf:"storage_account_id"`
 
 	StorageBlobContainerName string `json:"storageBlobContainerName" tf:"storage_blob_container_name"`
 }
@@ -312,7 +312,7 @@ type EventgridSystemTopicEventSubscriptionStorageQueueEndpointObservation struct
 type EventgridSystemTopicEventSubscriptionStorageQueueEndpointParameters struct {
 	QueueName string `json:"queueName" tf:"queue_name"`
 
-	StorageAccountId string `json:"storageAccountId" tf:"storage_account_id"`
+	StorageAccountID string `json:"storageAccountId" tf:"storage_account_id"`
 }
 
 type EventgridSystemTopicEventSubscriptionSubjectFilterObservation struct {
@@ -327,19 +327,19 @@ type EventgridSystemTopicEventSubscriptionSubjectFilterParameters struct {
 }
 
 type EventgridSystemTopicEventSubscriptionWebhookEndpointObservation struct {
-	BaseUrl string `json:"baseUrl" tf:"base_url"`
+	BaseURL string `json:"baseUrl" tf:"base_url"`
 }
 
 type EventgridSystemTopicEventSubscriptionWebhookEndpointParameters struct {
-	ActiveDirectoryAppIdOrUri *string `json:"activeDirectoryAppIdOrUri,omitempty" tf:"active_directory_app_id_or_uri"`
+	ActiveDirectoryAppIDOrURI *string `json:"activeDirectoryAppIdOrUri,omitempty" tf:"active_directory_app_id_or_uri"`
 
-	ActiveDirectoryTenantId *string `json:"activeDirectoryTenantId,omitempty" tf:"active_directory_tenant_id"`
+	ActiveDirectoryTenantID *string `json:"activeDirectoryTenantId,omitempty" tf:"active_directory_tenant_id"`
 
 	MaxEventsPerBatch *int64 `json:"maxEventsPerBatch,omitempty" tf:"max_events_per_batch"`
 
 	PreferredBatchSizeInKilobytes *int64 `json:"preferredBatchSizeInKilobytes,omitempty" tf:"preferred_batch_size_in_kilobytes"`
 
-	Url string `json:"url" tf:"url"`
+	URL string `json:"url" tf:"url"`
 }
 
 // EventgridSystemTopicEventSubscriptionSpec defines the desired state of EventgridSystemTopicEventSubscription

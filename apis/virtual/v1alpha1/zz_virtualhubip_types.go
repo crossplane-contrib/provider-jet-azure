@@ -30,15 +30,15 @@ type VirtualHubIpObservation struct {
 type VirtualHubIpParameters struct {
 	Name string `json:"name" tf:"name"`
 
-	PrivateIpAddress *string `json:"privateIpAddress,omitempty" tf:"private_ip_address"`
+	PrivateIPAddress *string `json:"privateIpAddress,omitempty" tf:"private_ip_address"`
 
-	PrivateIpAllocationMethod *string `json:"privateIpAllocationMethod,omitempty" tf:"private_ip_allocation_method"`
+	PrivateIPAllocationMethod *string `json:"privateIpAllocationMethod,omitempty" tf:"private_ip_allocation_method"`
 
-	PublicIpAddressId *string `json:"publicIpAddressId,omitempty" tf:"public_ip_address_id"`
+	PublicIPAddressID *string `json:"publicIpAddressId,omitempty" tf:"public_ip_address_id"`
 
-	SubnetId string `json:"subnetId" tf:"subnet_id"`
+	SubnetID string `json:"subnetId" tf:"subnet_id"`
 
-	VirtualHubId string `json:"virtualHubId" tf:"virtual_hub_id"`
+	VirtualHubID string `json:"virtualHubId" tf:"virtual_hub_id"`
 }
 
 // VirtualHubIpSpec defines the desired state of VirtualHubIp

@@ -25,7 +25,7 @@ import (
 )
 
 type StaticSiteObservation struct {
-	ApiKey string `json:"apiKey" tf:"api_key"`
+	APIKey string `json:"apiKey" tf:"api_key"`
 
 	DefaultHostName string `json:"defaultHostName" tf:"default_host_name"`
 }

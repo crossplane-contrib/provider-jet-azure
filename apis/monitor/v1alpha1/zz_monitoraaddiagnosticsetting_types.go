@@ -39,17 +39,17 @@ type MonitorAadDiagnosticSettingObservation struct {
 }
 
 type MonitorAadDiagnosticSettingParameters struct {
-	EventhubAuthorizationRuleId *string `json:"eventhubAuthorizationRuleId,omitempty" tf:"eventhub_authorization_rule_id"`
+	EventhubAuthorizationRuleID *string `json:"eventhubAuthorizationRuleId,omitempty" tf:"eventhub_authorization_rule_id"`
 
 	EventhubName *string `json:"eventhubName,omitempty" tf:"eventhub_name"`
 
 	Log []LogParameters `json:"log" tf:"log"`
 
-	LogAnalyticsWorkspaceId *string `json:"logAnalyticsWorkspaceId,omitempty" tf:"log_analytics_workspace_id"`
+	LogAnalyticsWorkspaceID *string `json:"logAnalyticsWorkspaceId,omitempty" tf:"log_analytics_workspace_id"`
 
 	Name string `json:"name" tf:"name"`
 
-	StorageAccountId *string `json:"storageAccountId,omitempty" tf:"storage_account_id"`
+	StorageAccountID *string `json:"storageAccountId,omitempty" tf:"storage_account_id"`
 }
 
 type RetentionPolicyObservation struct {

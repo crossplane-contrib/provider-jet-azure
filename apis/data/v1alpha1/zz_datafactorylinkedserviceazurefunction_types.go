@@ -46,7 +46,7 @@ type DataFactoryLinkedServiceAzureFunctionParameters struct {
 
 	ResourceGroupName string `json:"resourceGroupName" tf:"resource_group_name"`
 
-	Url string `json:"url" tf:"url"`
+	URL string `json:"url" tf:"url"`
 }
 
 // DataFactoryLinkedServiceAzureFunctionSpec defines the desired state of DataFactoryLinkedServiceAzureFunction

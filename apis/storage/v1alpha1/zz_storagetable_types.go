@@ -24,10 +24,10 @@ import (
 	"k8s.io/apimachinery/pkg/runtime/schema"
 )
 
-type AclAccessPolicyObservation struct {
+type ACLAccessPolicyObservation struct {
 }
 
-type AclAccessPolicyParameters struct {
+type ACLAccessPolicyParameters struct {
 	Expiry string `json:"expiry" tf:"expiry"`
 
 	Permissions string `json:"permissions" tf:"permissions"`
@@ -35,20 +35,20 @@ type AclAccessPolicyParameters struct {
 	Start string `json:"start" tf:"start"`
 }
 
-type StorageTableAclObservation struct {
+type StorageTableACLObservation struct {
 }
 
-type StorageTableAclParameters struct {
-	AccessPolicy []AclAccessPolicyParameters `json:"accessPolicy,omitempty" tf:"access_policy"`
+type StorageTableACLParameters struct {
+	AccessPolicy []ACLAccessPolicyParameters `json:"accessPolicy,omitempty" tf:"access_policy"`
 
-	Id string `json:"id" tf:"id"`
+	ID string `json:"id" tf:"id"`
 }
 
 type StorageTableObservation struct {
 }
 
 type StorageTableParameters struct {
-	Acl []StorageTableAclParameters `json:"acl,omitempty" tf:"acl"`
+	ACL []StorageTableACLParameters `json:"acl,omitempty" tf:"acl"`
 
 	Name string `json:"name" tf:"name"`
 

@@ -44,7 +44,7 @@ type StorageShareFileParameters struct {
 
 	Source *string `json:"source,omitempty" tf:"source"`
 
-	StorageShareId string `json:"storageShareId" tf:"storage_share_id"`
+	StorageShareID string `json:"storageShareId" tf:"storage_share_id"`
 }
 
 // StorageShareFileSpec defines the desired state of StorageShareFile

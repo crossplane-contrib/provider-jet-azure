@@ -30,11 +30,11 @@ type BotChannelSlackObservation struct {
 type BotChannelSlackParameters struct {
 	BotName string `json:"botName" tf:"bot_name"`
 
-	ClientId string `json:"clientId" tf:"client_id"`
+	ClientID string `json:"clientId" tf:"client_id"`
 
 	ClientSecret string `json:"clientSecret" tf:"client_secret"`
 
-	LandingPageUrl *string `json:"landingPageUrl,omitempty" tf:"landing_page_url"`
+	LandingPageURL *string `json:"landingPageUrl,omitempty" tf:"landing_page_url"`
 
 	Location string `json:"location" tf:"location"`
 

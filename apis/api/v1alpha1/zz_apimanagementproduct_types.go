@@ -28,7 +28,7 @@ type ApiManagementProductObservation struct {
 }
 
 type ApiManagementProductParameters struct {
-	ApiManagementName string `json:"apiManagementName" tf:"api_management_name"`
+	APIManagementName string `json:"apiManagementName" tf:"api_management_name"`
 
 	ApprovalRequired *bool `json:"approvalRequired,omitempty" tf:"approval_required"`
 
@@ -36,7 +36,7 @@ type ApiManagementProductParameters struct {
 
 	DisplayName string `json:"displayName" tf:"display_name"`
 
-	ProductId string `json:"productId" tf:"product_id"`
+	ProductID string `json:"productId" tf:"product_id"`
 
 	Published bool `json:"published" tf:"published"`
 

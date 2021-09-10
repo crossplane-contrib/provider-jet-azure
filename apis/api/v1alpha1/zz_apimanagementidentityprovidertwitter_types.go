@@ -28,11 +28,11 @@ type ApiManagementIdentityProviderTwitterObservation struct {
 }
 
 type ApiManagementIdentityProviderTwitterParameters struct {
-	ApiKey string `json:"apiKey" tf:"api_key"`
+	APIKey string `json:"apiKey" tf:"api_key"`
 
-	ApiManagementName string `json:"apiManagementName" tf:"api_management_name"`
+	APIManagementName string `json:"apiManagementName" tf:"api_management_name"`
 
-	ApiSecretKey string `json:"apiSecretKey" tf:"api_secret_key"`
+	APISecretKey string `json:"apiSecretKey" tf:"api_secret_key"`
 
 	ResourceGroupName string `json:"resourceGroupName" tf:"resource_group_name"`
 }

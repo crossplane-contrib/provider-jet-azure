@@ -116,8 +116,8 @@ func (in *AvailabilitySetParameters) DeepCopyInto(out *AvailabilitySetParameters
 		*out = new(int64)
 		**out = **in
 	}
-	if in.ProximityPlacementGroupId != nil {
-		in, out := &in.ProximityPlacementGroupId, &out.ProximityPlacementGroupId
+	if in.ProximityPlacementGroupID != nil {
+		in, out := &in.ProximityPlacementGroupID, &out.ProximityPlacementGroupID
 		*out = new(string)
 		**out = **in
 	}

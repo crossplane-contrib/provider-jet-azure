@@ -28,7 +28,7 @@ type MssqlDatabaseExtendedAuditingPolicyObservation struct {
 }
 
 type MssqlDatabaseExtendedAuditingPolicyParameters struct {
-	DatabaseId string `json:"databaseId" tf:"database_id"`
+	DatabaseID string `json:"databaseId" tf:"database_id"`
 
 	LogMonitoringEnabled *bool `json:"logMonitoringEnabled,omitempty" tf:"log_monitoring_enabled"`
 

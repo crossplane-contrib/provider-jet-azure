@@ -40,7 +40,7 @@ type LogAnalyticsSolutionParameters struct {
 
 	WorkspaceName string `json:"workspaceName" tf:"workspace_name"`
 
-	WorkspaceResourceId string `json:"workspaceResourceId" tf:"workspace_resource_id"`
+	WorkspaceResourceID string `json:"workspaceResourceId" tf:"workspace_resource_id"`
 }
 
 type PlanObservation struct {

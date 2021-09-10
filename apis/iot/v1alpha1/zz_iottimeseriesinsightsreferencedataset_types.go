@@ -38,7 +38,7 @@ type IotTimeSeriesInsightsReferenceDataSetParameters struct {
 
 	Tags map[string]string `json:"tags,omitempty" tf:"tags"`
 
-	TimeSeriesInsightsEnvironmentId string `json:"timeSeriesInsightsEnvironmentId" tf:"time_series_insights_environment_id"`
+	TimeSeriesInsightsEnvironmentID string `json:"timeSeriesInsightsEnvironmentId" tf:"time_series_insights_environment_id"`
 }
 
 type KeyPropertyObservation struct {

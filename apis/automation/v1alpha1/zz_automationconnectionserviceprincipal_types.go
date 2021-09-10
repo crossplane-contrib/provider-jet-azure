@@ -28,7 +28,7 @@ type AutomationConnectionServicePrincipalObservation struct {
 }
 
 type AutomationConnectionServicePrincipalParameters struct {
-	ApplicationId string `json:"applicationId" tf:"application_id"`
+	ApplicationID string `json:"applicationId" tf:"application_id"`
 
 	AutomationAccountName string `json:"automationAccountName" tf:"automation_account_name"`
 
@@ -40,9 +40,9 @@ type AutomationConnectionServicePrincipalParameters struct {
 
 	ResourceGroupName string `json:"resourceGroupName" tf:"resource_group_name"`
 
-	SubscriptionId string `json:"subscriptionId" tf:"subscription_id"`
+	SubscriptionID string `json:"subscriptionId" tf:"subscription_id"`
 
-	TenantId string `json:"tenantId" tf:"tenant_id"`
+	TenantID string `json:"tenantId" tf:"tenant_id"`
 }
 
 // AutomationConnectionServicePrincipalSpec defines the desired state of AutomationConnectionServicePrincipal

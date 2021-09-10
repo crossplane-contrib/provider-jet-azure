@@ -38,7 +38,7 @@ type PermissionsParameters struct {
 }
 
 type RoleDefinitionObservation struct {
-	RoleDefinitionResourceId string `json:"roleDefinitionResourceId" tf:"role_definition_resource_id"`
+	RoleDefinitionResourceID string `json:"roleDefinitionResourceId" tf:"role_definition_resource_id"`
 }
 
 type RoleDefinitionParameters struct {
@@ -50,7 +50,7 @@ type RoleDefinitionParameters struct {
 
 	Permissions []PermissionsParameters `json:"permissions,omitempty" tf:"permissions"`
 
-	RoleDefinitionId *string `json:"roleDefinitionId,omitempty" tf:"role_definition_id"`
+	RoleDefinitionID *string `json:"roleDefinitionId,omitempty" tf:"role_definition_id"`
 
 	Scope string `json:"scope" tf:"scope"`
 }

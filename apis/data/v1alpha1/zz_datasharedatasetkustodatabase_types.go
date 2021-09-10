@@ -31,11 +31,11 @@ type DataShareDatasetKustoDatabaseObservation struct {
 }
 
 type DataShareDatasetKustoDatabaseParameters struct {
-	KustoDatabaseId string `json:"kustoDatabaseId" tf:"kusto_database_id"`
+	KustoDatabaseID string `json:"kustoDatabaseId" tf:"kusto_database_id"`
 
 	Name string `json:"name" tf:"name"`
 
-	ShareId string `json:"shareId" tf:"share_id"`
+	ShareID string `json:"shareId" tf:"share_id"`
 }
 
 // DataShareDatasetKustoDatabaseSpec defines the desired state of DataShareDatasetKustoDatabase

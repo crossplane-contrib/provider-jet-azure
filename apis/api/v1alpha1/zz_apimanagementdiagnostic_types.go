@@ -135,11 +135,11 @@ type ApiManagementDiagnosticObservation struct {
 }
 
 type ApiManagementDiagnosticParameters struct {
+	APIManagementLoggerID string `json:"apiManagementLoggerId" tf:"api_management_logger_id"`
+
+	APIManagementName string `json:"apiManagementName" tf:"api_management_name"`
+
 	AlwaysLogErrors *bool `json:"alwaysLogErrors,omitempty" tf:"always_log_errors"`
-
-	ApiManagementLoggerId string `json:"apiManagementLoggerId" tf:"api_management_logger_id"`
-
-	ApiManagementName string `json:"apiManagementName" tf:"api_management_name"`
 
 	BackendRequest []ApiManagementDiagnosticBackendRequestParameters `json:"backendRequest,omitempty" tf:"backend_request"`
 
@@ -151,11 +151,11 @@ type ApiManagementDiagnosticParameters struct {
 
 	FrontendResponse []ApiManagementDiagnosticFrontendResponseParameters `json:"frontendResponse,omitempty" tf:"frontend_response"`
 
-	HttpCorrelationProtocol *string `json:"httpCorrelationProtocol,omitempty" tf:"http_correlation_protocol"`
+	HTTPCorrelationProtocol *string `json:"httpCorrelationProtocol,omitempty" tf:"http_correlation_protocol"`
 
 	Identifier string `json:"identifier" tf:"identifier"`
 
-	LogClientIp *bool `json:"logClientIp,omitempty" tf:"log_client_ip"`
+	LogClientIP *bool `json:"logClientIp,omitempty" tf:"log_client_ip"`
 
 	OperationNameFormat *string `json:"operationNameFormat,omitempty" tf:"operation_name_format"`
 

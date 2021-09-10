@@ -32,11 +32,11 @@ type IotTimeSeriesInsightsAccessPolicyParameters struct {
 
 	Name string `json:"name" tf:"name"`
 
-	PrincipalObjectId string `json:"principalObjectId" tf:"principal_object_id"`
+	PrincipalObjectID string `json:"principalObjectId" tf:"principal_object_id"`
 
 	Roles []string `json:"roles" tf:"roles"`
 
-	TimeSeriesInsightsEnvironmentId string `json:"timeSeriesInsightsEnvironmentId" tf:"time_series_insights_environment_id"`
+	TimeSeriesInsightsEnvironmentID string `json:"timeSeriesInsightsEnvironmentId" tf:"time_series_insights_environment_id"`
 }
 
 // IotTimeSeriesInsightsAccessPolicySpec defines the desired state of IotTimeSeriesInsightsAccessPolicy

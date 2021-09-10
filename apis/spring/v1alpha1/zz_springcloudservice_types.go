@@ -28,23 +28,23 @@ type ConfigServerGitSettingObservation struct {
 }
 
 type ConfigServerGitSettingParameters struct {
-	HttpBasicAuth []HttpBasicAuthParameters `json:"httpBasicAuth,omitempty" tf:"http_basic_auth"`
+	HTTPBasicAuth []HTTPBasicAuthParameters `json:"httpBasicAuth,omitempty" tf:"http_basic_auth"`
 
 	Label *string `json:"label,omitempty" tf:"label"`
 
 	Repository []RepositoryParameters `json:"repository,omitempty" tf:"repository"`
 
+	SSHAuth []ConfigServerGitSettingSSHAuthParameters `json:"sshAuth,omitempty" tf:"ssh_auth"`
+
 	SearchPaths []string `json:"searchPaths,omitempty" tf:"search_paths"`
 
-	SshAuth []ConfigServerGitSettingSshAuthParameters `json:"sshAuth,omitempty" tf:"ssh_auth"`
-
-	Uri string `json:"uri" tf:"uri"`
+	URI string `json:"uri" tf:"uri"`
 }
 
-type ConfigServerGitSettingSshAuthObservation struct {
+type ConfigServerGitSettingSSHAuthObservation struct {
 }
 
-type ConfigServerGitSettingSshAuthParameters struct {
+type ConfigServerGitSettingSSHAuthParameters struct {
 	HostKey *string `json:"hostKey,omitempty" tf:"host_key"`
 
 	HostKeyAlgorithm *string `json:"hostKeyAlgorithm,omitempty" tf:"host_key_algorithm"`
@@ -54,10 +54,10 @@ type ConfigServerGitSettingSshAuthParameters struct {
 	StrictHostKeyCheckingEnabled *bool `json:"strictHostKeyCheckingEnabled,omitempty" tf:"strict_host_key_checking_enabled"`
 }
 
-type HttpBasicAuthObservation struct {
+type HTTPBasicAuthObservation struct {
 }
 
-type HttpBasicAuthParameters struct {
+type HTTPBasicAuthParameters struct {
 	Password string `json:"password" tf:"password"`
 
 	Username string `json:"username" tf:"username"`
@@ -69,19 +69,19 @@ type NetworkObservation struct {
 type NetworkParameters struct {
 	AppNetworkResourceGroup *string `json:"appNetworkResourceGroup,omitempty" tf:"app_network_resource_group"`
 
-	AppSubnetId string `json:"appSubnetId" tf:"app_subnet_id"`
+	AppSubnetID string `json:"appSubnetId" tf:"app_subnet_id"`
 
 	CidrRanges []string `json:"cidrRanges" tf:"cidr_ranges"`
 
 	ServiceRuntimeNetworkResourceGroup *string `json:"serviceRuntimeNetworkResourceGroup,omitempty" tf:"service_runtime_network_resource_group"`
 
-	ServiceRuntimeSubnetId string `json:"serviceRuntimeSubnetId" tf:"service_runtime_subnet_id"`
+	ServiceRuntimeSubnetID string `json:"serviceRuntimeSubnetId" tf:"service_runtime_subnet_id"`
 }
 
-type RepositoryHttpBasicAuthObservation struct {
+type RepositoryHTTPBasicAuthObservation struct {
 }
 
-type RepositoryHttpBasicAuthParameters struct {
+type RepositoryHTTPBasicAuthParameters struct {
 	Password string `json:"password" tf:"password"`
 
 	Username string `json:"username" tf:"username"`
@@ -91,7 +91,7 @@ type RepositoryObservation struct {
 }
 
 type RepositoryParameters struct {
-	HttpBasicAuth []RepositoryHttpBasicAuthParameters `json:"httpBasicAuth,omitempty" tf:"http_basic_auth"`
+	HTTPBasicAuth []RepositoryHTTPBasicAuthParameters `json:"httpBasicAuth,omitempty" tf:"http_basic_auth"`
 
 	Label *string `json:"label,omitempty" tf:"label"`
 
@@ -99,11 +99,11 @@ type RepositoryParameters struct {
 
 	Pattern []string `json:"pattern,omitempty" tf:"pattern"`
 
+	SSHAuth []SSHAuthParameters `json:"sshAuth,omitempty" tf:"ssh_auth"`
+
 	SearchPaths []string `json:"searchPaths,omitempty" tf:"search_paths"`
 
-	SshAuth []SshAuthParameters `json:"sshAuth,omitempty" tf:"ssh_auth"`
-
-	Uri string `json:"uri" tf:"uri"`
+	URI string `json:"uri" tf:"uri"`
 }
 
 type RequiredNetworkTrafficRulesObservation struct {
@@ -111,7 +111,7 @@ type RequiredNetworkTrafficRulesObservation struct {
 
 	Fqdns []string `json:"fqdns" tf:"fqdns"`
 
-	IpAddresses []string `json:"ipAddresses" tf:"ip_addresses"`
+	IPAddresses []string `json:"ipAddresses" tf:"ip_addresses"`
 
 	Port int64 `json:"port" tf:"port"`
 
@@ -121,8 +121,21 @@ type RequiredNetworkTrafficRulesObservation struct {
 type RequiredNetworkTrafficRulesParameters struct {
 }
 
+type SSHAuthObservation struct {
+}
+
+type SSHAuthParameters struct {
+	HostKey *string `json:"hostKey,omitempty" tf:"host_key"`
+
+	HostKeyAlgorithm *string `json:"hostKeyAlgorithm,omitempty" tf:"host_key_algorithm"`
+
+	PrivateKey string `json:"privateKey" tf:"private_key"`
+
+	StrictHostKeyCheckingEnabled *bool `json:"strictHostKeyCheckingEnabled,omitempty" tf:"strict_host_key_checking_enabled"`
+}
+
 type SpringCloudServiceObservation struct {
-	OutboundPublicIpAddresses []string `json:"outboundPublicIpAddresses" tf:"outbound_public_ip_addresses"`
+	OutboundPublicIPAddresses []string `json:"outboundPublicIpAddresses" tf:"outbound_public_ip_addresses"`
 
 	RequiredNetworkTrafficRules []RequiredNetworkTrafficRulesObservation `json:"requiredNetworkTrafficRules" tf:"required_network_traffic_rules"`
 }
@@ -143,19 +156,6 @@ type SpringCloudServiceParameters struct {
 	Tags map[string]string `json:"tags,omitempty" tf:"tags"`
 
 	Trace []TraceParameters `json:"trace,omitempty" tf:"trace"`
-}
-
-type SshAuthObservation struct {
-}
-
-type SshAuthParameters struct {
-	HostKey *string `json:"hostKey,omitempty" tf:"host_key"`
-
-	HostKeyAlgorithm *string `json:"hostKeyAlgorithm,omitempty" tf:"host_key_algorithm"`
-
-	PrivateKey string `json:"privateKey" tf:"private_key"`
-
-	StrictHostKeyCheckingEnabled *bool `json:"strictHostKeyCheckingEnabled,omitempty" tf:"strict_host_key_checking_enabled"`
 }
 
 type TraceObservation struct {

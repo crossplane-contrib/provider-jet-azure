@@ -50,11 +50,11 @@ type BootDiagnosticsObservation struct {
 type BootDiagnosticsParameters struct {
 	Enabled bool `json:"enabled" tf:"enabled"`
 
-	StorageUri string `json:"storageUri" tf:"storage_uri"`
+	StorageURI string `json:"storageUri" tf:"storage_uri"`
 }
 
 type IdentityObservation struct {
-	PrincipalId string `json:"principalId" tf:"principal_id"`
+	PrincipalID string `json:"principalId" tf:"principal_id"`
 }
 
 type IdentityParameters struct {
@@ -69,7 +69,7 @@ type OsProfileLinuxConfigObservation struct {
 type OsProfileLinuxConfigParameters struct {
 	DisablePasswordAuthentication bool `json:"disablePasswordAuthentication" tf:"disable_password_authentication"`
 
-	SshKeys []SshKeysParameters `json:"sshKeys,omitempty" tf:"ssh_keys"`
+	SSHKeys []SSHKeysParameters `json:"sshKeys,omitempty" tf:"ssh_keys"`
 }
 
 type OsProfileObservation struct {
@@ -89,7 +89,7 @@ type OsProfileSecretsObservation struct {
 }
 
 type OsProfileSecretsParameters struct {
-	SourceVaultId string `json:"sourceVaultId" tf:"source_vault_id"`
+	SourceVaultID string `json:"sourceVaultId" tf:"source_vault_id"`
 
 	VaultCertificates []VaultCertificatesParameters `json:"vaultCertificates,omitempty" tf:"vault_certificates"`
 }
@@ -102,7 +102,7 @@ type OsProfileWindowsConfigParameters struct {
 
 	EnableAutomaticUpgrades *bool `json:"enableAutomaticUpgrades,omitempty" tf:"enable_automatic_upgrades"`
 
-	ProvisionVmAgent *bool `json:"provisionVmAgent,omitempty" tf:"provision_vm_agent"`
+	ProvisionVMAgent *bool `json:"provisionVmAgent,omitempty" tf:"provision_vm_agent"`
 
 	Timezone *string `json:"timezone,omitempty" tf:"timezone"`
 
@@ -120,10 +120,10 @@ type PlanParameters struct {
 	Publisher string `json:"publisher" tf:"publisher"`
 }
 
-type SshKeysObservation struct {
+type SSHKeysObservation struct {
 }
 
-type SshKeysParameters struct {
+type SSHKeysParameters struct {
 	KeyData string `json:"keyData" tf:"key_data"`
 
 	Path string `json:"path" tf:"path"`
@@ -141,13 +141,13 @@ type StorageDataDiskParameters struct {
 
 	Lun int64 `json:"lun" tf:"lun"`
 
-	ManagedDiskId *string `json:"managedDiskId,omitempty" tf:"managed_disk_id"`
+	ManagedDiskID *string `json:"managedDiskId,omitempty" tf:"managed_disk_id"`
 
 	ManagedDiskType *string `json:"managedDiskType,omitempty" tf:"managed_disk_type"`
 
 	Name string `json:"name" tf:"name"`
 
-	VhdUri *string `json:"vhdUri,omitempty" tf:"vhd_uri"`
+	VhdURI *string `json:"vhdUri,omitempty" tf:"vhd_uri"`
 
 	WriteAcceleratorEnabled *bool `json:"writeAcceleratorEnabled,omitempty" tf:"write_accelerator_enabled"`
 }
@@ -156,7 +156,7 @@ type StorageImageReferenceObservation struct {
 }
 
 type StorageImageReferenceParameters struct {
-	Id *string `json:"id,omitempty" tf:"id"`
+	ID *string `json:"id,omitempty" tf:"id"`
 
 	Offer *string `json:"offer,omitempty" tf:"offer"`
 
@@ -177,9 +177,9 @@ type StorageOsDiskParameters struct {
 
 	DiskSizeGb *int64 `json:"diskSizeGb,omitempty" tf:"disk_size_gb"`
 
-	ImageUri *string `json:"imageUri,omitempty" tf:"image_uri"`
+	ImageURI *string `json:"imageUri,omitempty" tf:"image_uri"`
 
-	ManagedDiskId *string `json:"managedDiskId,omitempty" tf:"managed_disk_id"`
+	ManagedDiskID *string `json:"managedDiskId,omitempty" tf:"managed_disk_id"`
 
 	ManagedDiskType *string `json:"managedDiskType,omitempty" tf:"managed_disk_type"`
 
@@ -187,7 +187,7 @@ type StorageOsDiskParameters struct {
 
 	OsType *string `json:"osType,omitempty" tf:"os_type"`
 
-	VhdUri *string `json:"vhdUri,omitempty" tf:"vhd_uri"`
+	VhdURI *string `json:"vhdUri,omitempty" tf:"vhd_uri"`
 
 	WriteAcceleratorEnabled *bool `json:"writeAcceleratorEnabled,omitempty" tf:"write_accelerator_enabled"`
 }
@@ -198,7 +198,7 @@ type VaultCertificatesObservation struct {
 type VaultCertificatesParameters struct {
 	CertificateStore *string `json:"certificateStore,omitempty" tf:"certificate_store"`
 
-	CertificateUrl string `json:"certificateUrl" tf:"certificate_url"`
+	CertificateURL string `json:"certificateUrl" tf:"certificate_url"`
 }
 
 type VirtualMachineObservation struct {
@@ -207,7 +207,7 @@ type VirtualMachineObservation struct {
 type VirtualMachineParameters struct {
 	AdditionalCapabilities []AdditionalCapabilitiesParameters `json:"additionalCapabilities,omitempty" tf:"additional_capabilities"`
 
-	AvailabilitySetId *string `json:"availabilitySetId,omitempty" tf:"availability_set_id"`
+	AvailabilitySetID *string `json:"availabilitySetId,omitempty" tf:"availability_set_id"`
 
 	BootDiagnostics []BootDiagnosticsParameters `json:"bootDiagnostics,omitempty" tf:"boot_diagnostics"`
 
@@ -235,9 +235,9 @@ type VirtualMachineParameters struct {
 
 	Plan []PlanParameters `json:"plan,omitempty" tf:"plan"`
 
-	PrimaryNetworkInterfaceId *string `json:"primaryNetworkInterfaceId,omitempty" tf:"primary_network_interface_id"`
+	PrimaryNetworkInterfaceID *string `json:"primaryNetworkInterfaceId,omitempty" tf:"primary_network_interface_id"`
 
-	ProximityPlacementGroupId *string `json:"proximityPlacementGroupId,omitempty" tf:"proximity_placement_group_id"`
+	ProximityPlacementGroupID *string `json:"proximityPlacementGroupId,omitempty" tf:"proximity_placement_group_id"`
 
 	ResourceGroupName string `json:"resourceGroupName" tf:"resource_group_name"`
 
@@ -249,7 +249,7 @@ type VirtualMachineParameters struct {
 
 	Tags map[string]string `json:"tags,omitempty" tf:"tags"`
 
-	VmSize string `json:"vmSize" tf:"vm_size"`
+	VMSize string `json:"vmSize" tf:"vm_size"`
 
 	Zones []string `json:"zones,omitempty" tf:"zones"`
 }
@@ -258,7 +258,7 @@ type WinrmObservation struct {
 }
 
 type WinrmParameters struct {
-	CertificateUrl *string `json:"certificateUrl,omitempty" tf:"certificate_url"`
+	CertificateURL *string `json:"certificateUrl,omitempty" tf:"certificate_url"`
 
 	Protocol string `json:"protocol" tf:"protocol"`
 }

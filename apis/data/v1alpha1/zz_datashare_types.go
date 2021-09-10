@@ -28,7 +28,7 @@ type DataShareObservation struct {
 }
 
 type DataShareParameters struct {
-	AccountId string `json:"accountId" tf:"account_id"`
+	AccountID string `json:"accountId" tf:"account_id"`
 
 	Description *string `json:"description,omitempty" tf:"description"`
 

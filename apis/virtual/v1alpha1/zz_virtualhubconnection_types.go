@@ -37,7 +37,7 @@ type RoutingObservation struct {
 }
 
 type RoutingParameters struct {
-	AssociatedRouteTableId *string `json:"associatedRouteTableId,omitempty" tf:"associated_route_table_id"`
+	AssociatedRouteTableID *string `json:"associatedRouteTableId,omitempty" tf:"associated_route_table_id"`
 
 	PropagatedRouteTable []PropagatedRouteTableParameters `json:"propagatedRouteTable,omitempty" tf:"propagated_route_table"`
 
@@ -52,7 +52,7 @@ type StaticVnetRouteParameters struct {
 
 	Name *string `json:"name,omitempty" tf:"name"`
 
-	NextHopIpAddress *string `json:"nextHopIpAddress,omitempty" tf:"next_hop_ip_address"`
+	NextHopIPAddress *string `json:"nextHopIpAddress,omitempty" tf:"next_hop_ip_address"`
 }
 
 type VirtualHubConnectionObservation struct {
@@ -65,11 +65,11 @@ type VirtualHubConnectionParameters struct {
 
 	Name string `json:"name" tf:"name"`
 
-	RemoteVirtualNetworkId string `json:"remoteVirtualNetworkId" tf:"remote_virtual_network_id"`
+	RemoteVirtualNetworkID string `json:"remoteVirtualNetworkId" tf:"remote_virtual_network_id"`
 
 	Routing []RoutingParameters `json:"routing,omitempty" tf:"routing"`
 
-	VirtualHubId string `json:"virtualHubId" tf:"virtual_hub_id"`
+	VirtualHubID string `json:"virtualHubId" tf:"virtual_hub_id"`
 
 	VitualNetworkToHubGatewaysTrafficAllowed *bool `json:"vitualNetworkToHubGatewaysTrafficAllowed,omitempty" tf:"vitual_network_to_hub_gateways_traffic_allowed"`
 }

@@ -28,9 +28,9 @@ type ApiManagementApiOperationObservation struct {
 }
 
 type ApiManagementApiOperationParameters struct {
-	ApiManagementName string `json:"apiManagementName" tf:"api_management_name"`
+	APIManagementName string `json:"apiManagementName" tf:"api_management_name"`
 
-	ApiName string `json:"apiName" tf:"api_name"`
+	APIName string `json:"apiName" tf:"api_name"`
 
 	Description *string `json:"description,omitempty" tf:"description"`
 
@@ -38,7 +38,7 @@ type ApiManagementApiOperationParameters struct {
 
 	Method string `json:"method" tf:"method"`
 
-	OperationId string `json:"operationId" tf:"operation_id"`
+	OperationID string `json:"operationId" tf:"operation_id"`
 
 	Request []RequestParameters `json:"request,omitempty" tf:"request"`
 
@@ -48,7 +48,7 @@ type ApiManagementApiOperationParameters struct {
 
 	TemplateParameter []TemplateParameterParameters `json:"templateParameter,omitempty" tf:"template_parameter"`
 
-	UrlTemplate string `json:"urlTemplate" tf:"url_template"`
+	URLTemplate string `json:"urlTemplate" tf:"url_template"`
 }
 
 type FormParameterObservation struct {
@@ -129,7 +129,7 @@ type RepresentationParameters struct {
 
 	Sample *string `json:"sample,omitempty" tf:"sample"`
 
-	SchemaId *string `json:"schemaId,omitempty" tf:"schema_id"`
+	SchemaID *string `json:"schemaId,omitempty" tf:"schema_id"`
 
 	TypeName *string `json:"typeName,omitempty" tf:"type_name"`
 }
@@ -187,7 +187,7 @@ type ResponseRepresentationParameters struct {
 
 	Sample *string `json:"sample,omitempty" tf:"sample"`
 
-	SchemaId *string `json:"schemaId,omitempty" tf:"schema_id"`
+	SchemaID *string `json:"schemaId,omitempty" tf:"schema_id"`
 
 	TypeName *string `json:"typeName,omitempty" tf:"type_name"`
 }

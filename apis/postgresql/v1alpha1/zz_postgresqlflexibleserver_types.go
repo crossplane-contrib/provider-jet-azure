@@ -61,7 +61,7 @@ type PostgresqlFlexibleServerParameters struct {
 
 	CreateMode *string `json:"createMode,omitempty" tf:"create_mode"`
 
-	DelegatedSubnetId *string `json:"delegatedSubnetId,omitempty" tf:"delegated_subnet_id"`
+	DelegatedSubnetID *string `json:"delegatedSubnetId,omitempty" tf:"delegated_subnet_id"`
 
 	HighAvailability []HighAvailabilityParameters `json:"highAvailability,omitempty" tf:"high_availability"`
 
@@ -73,13 +73,13 @@ type PostgresqlFlexibleServerParameters struct {
 
 	PointInTimeRestoreTimeInUtc *string `json:"pointInTimeRestoreTimeInUtc,omitempty" tf:"point_in_time_restore_time_in_utc"`
 
-	PrivateDnsZoneId *string `json:"privateDnsZoneId,omitempty" tf:"private_dns_zone_id"`
+	PrivateDNSZoneID *string `json:"privateDnsZoneId,omitempty" tf:"private_dns_zone_id"`
 
 	ResourceGroupName string `json:"resourceGroupName" tf:"resource_group_name"`
 
 	SkuName *string `json:"skuName,omitempty" tf:"sku_name"`
 
-	SourceServerId *string `json:"sourceServerId,omitempty" tf:"source_server_id"`
+	SourceServerID *string `json:"sourceServerId,omitempty" tf:"source_server_id"`
 
 	StorageMb *int64 `json:"storageMb,omitempty" tf:"storage_mb"`
 

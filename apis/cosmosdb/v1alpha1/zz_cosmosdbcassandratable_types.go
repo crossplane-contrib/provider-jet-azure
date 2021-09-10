@@ -53,13 +53,13 @@ type CosmosdbCassandraTableObservation struct {
 }
 
 type CosmosdbCassandraTableParameters struct {
-	AnalyticalStorageTtl *int64 `json:"analyticalStorageTtl,omitempty" tf:"analytical_storage_ttl"`
+	AnalyticalStorageTTL *int64 `json:"analyticalStorageTtl,omitempty" tf:"analytical_storage_ttl"`
 
 	AutoscaleSettings []CosmosdbCassandraTableAutoscaleSettingsParameters `json:"autoscaleSettings,omitempty" tf:"autoscale_settings"`
 
-	CassandraKeyspaceId string `json:"cassandraKeyspaceId" tf:"cassandra_keyspace_id"`
+	CassandraKeyspaceID string `json:"cassandraKeyspaceId" tf:"cassandra_keyspace_id"`
 
-	DefaultTtl *int64 `json:"defaultTtl,omitempty" tf:"default_ttl"`
+	DefaultTTL *int64 `json:"defaultTtl,omitempty" tf:"default_ttl"`
 
 	Name string `json:"name" tf:"name"`
 

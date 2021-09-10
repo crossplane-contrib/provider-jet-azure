@@ -31,19 +31,19 @@ type LogAnalyticsLinkedServiceObservation struct {
 type LogAnalyticsLinkedServiceParameters struct {
 	LinkedServiceName *string `json:"linkedServiceName,omitempty" tf:"linked_service_name"`
 
-	ReadAccessId *string `json:"readAccessId,omitempty" tf:"read_access_id"`
+	ReadAccessID *string `json:"readAccessId,omitempty" tf:"read_access_id"`
 
 	ResourceGroupName string `json:"resourceGroupName" tf:"resource_group_name"`
 
-	ResourceId *string `json:"resourceId,omitempty" tf:"resource_id"`
+	ResourceID *string `json:"resourceId,omitempty" tf:"resource_id"`
 
 	Tags map[string]string `json:"tags,omitempty" tf:"tags"`
 
-	WorkspaceId *string `json:"workspaceId,omitempty" tf:"workspace_id"`
+	WorkspaceID *string `json:"workspaceId,omitempty" tf:"workspace_id"`
 
 	WorkspaceName *string `json:"workspaceName,omitempty" tf:"workspace_name"`
 
-	WriteAccessId *string `json:"writeAccessId,omitempty" tf:"write_access_id"`
+	WriteAccessID *string `json:"writeAccessId,omitempty" tf:"write_access_id"`
 }
 
 // LogAnalyticsLinkedServiceSpec defines the desired state of LogAnalyticsLinkedService

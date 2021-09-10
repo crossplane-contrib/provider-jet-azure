@@ -31,7 +31,7 @@ type ApiManagementEmailTemplateObservation struct {
 }
 
 type ApiManagementEmailTemplateParameters struct {
-	ApiManagementName string `json:"apiManagementName" tf:"api_management_name"`
+	APIManagementName string `json:"apiManagementName" tf:"api_management_name"`
 
 	Body string `json:"body" tf:"body"`
 

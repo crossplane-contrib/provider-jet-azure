@@ -28,13 +28,13 @@ type BotChannelsRegistrationObservation struct {
 }
 
 type BotChannelsRegistrationParameters struct {
-	CmkKeyVaultUrl *string `json:"cmkKeyVaultUrl,omitempty" tf:"cmk_key_vault_url"`
+	CmkKeyVaultURL *string `json:"cmkKeyVaultUrl,omitempty" tf:"cmk_key_vault_url"`
 
 	Description *string `json:"description,omitempty" tf:"description"`
 
-	DeveloperAppInsightsApiKey *string `json:"developerAppInsightsApiKey,omitempty" tf:"developer_app_insights_api_key"`
+	DeveloperAppInsightsAPIKey *string `json:"developerAppInsightsApiKey,omitempty" tf:"developer_app_insights_api_key"`
 
-	DeveloperAppInsightsApplicationId *string `json:"developerAppInsightsApplicationId,omitempty" tf:"developer_app_insights_application_id"`
+	DeveloperAppInsightsApplicationID *string `json:"developerAppInsightsApplicationId,omitempty" tf:"developer_app_insights_application_id"`
 
 	DeveloperAppInsightsKey *string `json:"developerAppInsightsKey,omitempty" tf:"developer_app_insights_key"`
 
@@ -42,13 +42,13 @@ type BotChannelsRegistrationParameters struct {
 
 	Endpoint *string `json:"endpoint,omitempty" tf:"endpoint"`
 
-	IconUrl *string `json:"iconUrl,omitempty" tf:"icon_url"`
+	IconURL *string `json:"iconUrl,omitempty" tf:"icon_url"`
 
 	IsolatedNetworkEnabled *bool `json:"isolatedNetworkEnabled,omitempty" tf:"isolated_network_enabled"`
 
 	Location string `json:"location" tf:"location"`
 
-	MicrosoftAppId string `json:"microsoftAppId" tf:"microsoft_app_id"`
+	MicrosoftAppID string `json:"microsoftAppId" tf:"microsoft_app_id"`
 
 	Name string `json:"name" tf:"name"`
 

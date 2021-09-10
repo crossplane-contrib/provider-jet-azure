@@ -28,13 +28,13 @@ type SynapseFirewallRuleObservation struct {
 }
 
 type SynapseFirewallRuleParameters struct {
-	EndIpAddress string `json:"endIpAddress" tf:"end_ip_address"`
+	EndIPAddress string `json:"endIpAddress" tf:"end_ip_address"`
 
 	Name string `json:"name" tf:"name"`
 
-	StartIpAddress string `json:"startIpAddress" tf:"start_ip_address"`
+	StartIPAddress string `json:"startIpAddress" tf:"start_ip_address"`
 
-	SynapseWorkspaceId string `json:"synapseWorkspaceId" tf:"synapse_workspace_id"`
+	SynapseWorkspaceID string `json:"synapseWorkspaceId" tf:"synapse_workspace_id"`
 }
 
 // SynapseFirewallRuleSpec defines the desired state of SynapseFirewallRule

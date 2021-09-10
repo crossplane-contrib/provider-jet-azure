@@ -32,7 +32,7 @@ type LogicAppTriggerRecurrenceParameters struct {
 
 	Interval int64 `json:"interval" tf:"interval"`
 
-	LogicAppId string `json:"logicAppId" tf:"logic_app_id"`
+	LogicAppID string `json:"logicAppId" tf:"logic_app_id"`
 
 	Name string `json:"name" tf:"name"`
 

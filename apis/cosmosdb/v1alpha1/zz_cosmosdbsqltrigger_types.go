@@ -30,7 +30,7 @@ type CosmosdbSqlTriggerObservation struct {
 type CosmosdbSqlTriggerParameters struct {
 	Body string `json:"body" tf:"body"`
 
-	ContainerId string `json:"containerId" tf:"container_id"`
+	ContainerID string `json:"containerId" tf:"container_id"`
 
 	Name string `json:"name" tf:"name"`
 

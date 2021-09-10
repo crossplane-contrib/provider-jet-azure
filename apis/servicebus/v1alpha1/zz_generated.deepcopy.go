@@ -47,8 +47,8 @@ func (in *CorrelationFilterParameters) DeepCopyInto(out *CorrelationFilterParame
 		*out = new(string)
 		**out = **in
 	}
-	if in.CorrelationId != nil {
-		in, out := &in.CorrelationId, &out.CorrelationId
+	if in.CorrelationID != nil {
+		in, out := &in.CorrelationID, &out.CorrelationID
 		*out = new(string)
 		**out = **in
 	}
@@ -57,8 +57,8 @@ func (in *CorrelationFilterParameters) DeepCopyInto(out *CorrelationFilterParame
 		*out = new(string)
 		**out = **in
 	}
-	if in.MessageId != nil {
-		in, out := &in.MessageId, &out.MessageId
+	if in.MessageID != nil {
+		in, out := &in.MessageID, &out.MessageID
 		*out = new(string)
 		**out = **in
 	}
@@ -74,13 +74,13 @@ func (in *CorrelationFilterParameters) DeepCopyInto(out *CorrelationFilterParame
 		*out = new(string)
 		**out = **in
 	}
-	if in.ReplyToSessionId != nil {
-		in, out := &in.ReplyToSessionId, &out.ReplyToSessionId
+	if in.ReplyToSessionID != nil {
+		in, out := &in.ReplyToSessionID, &out.ReplyToSessionID
 		*out = new(string)
 		**out = **in
 	}
-	if in.SessionId != nil {
-		in, out := &in.SessionId, &out.SessionId
+	if in.SessionID != nil {
+		in, out := &in.SessionID, &out.SessionID
 		*out = new(string)
 		**out = **in
 	}
@@ -538,8 +538,8 @@ func (in *ServicebusNamespaceNetworkRuleSetParameters) DeepCopyInto(out *Service
 		*out = new(string)
 		**out = **in
 	}
-	if in.IpRules != nil {
-		in, out := &in.IpRules, &out.IpRules
+	if in.IPRules != nil {
+		in, out := &in.IPRules, &out.IPRules
 		*out = make([]string, len(*in))
 		copy(*out, *in)
 	}
@@ -902,8 +902,8 @@ func (in *ServicebusQueueParameters) DeepCopyInto(out *ServicebusQueueParameters
 		*out = new(bool)
 		**out = **in
 	}
-	if in.DefaultMessageTtl != nil {
-		in, out := &in.DefaultMessageTtl, &out.DefaultMessageTtl
+	if in.DefaultMessageTTL != nil {
+		in, out := &in.DefaultMessageTTL, &out.DefaultMessageTTL
 		*out = new(string)
 		**out = **in
 	}
@@ -1105,8 +1105,8 @@ func (in *ServicebusSubscriptionParameters) DeepCopyInto(out *ServicebusSubscrip
 		*out = new(bool)
 		**out = **in
 	}
-	if in.DefaultMessageTtl != nil {
-		in, out := &in.DefaultMessageTtl, &out.DefaultMessageTtl
+	if in.DefaultMessageTTL != nil {
+		in, out := &in.DefaultMessageTTL, &out.DefaultMessageTTL
 		*out = new(string)
 		**out = **in
 	}
@@ -1241,8 +1241,8 @@ func (in *ServicebusSubscriptionRuleParameters) DeepCopyInto(out *ServicebusSubs
 			(*in)[i].DeepCopyInto(&(*out)[i])
 		}
 	}
-	if in.SqlFilter != nil {
-		in, out := &in.SqlFilter, &out.SqlFilter
+	if in.SQLFilter != nil {
+		in, out := &in.SQLFilter, &out.SQLFilter
 		*out = new(string)
 		**out = **in
 	}
@@ -1546,8 +1546,8 @@ func (in *ServicebusTopicParameters) DeepCopyInto(out *ServicebusTopicParameters
 		*out = new(string)
 		**out = **in
 	}
-	if in.DefaultMessageTtl != nil {
-		in, out := &in.DefaultMessageTtl, &out.DefaultMessageTtl
+	if in.DefaultMessageTTL != nil {
+		in, out := &in.DefaultMessageTTL, &out.DefaultMessageTTL
 		*out = new(string)
 		**out = **in
 	}

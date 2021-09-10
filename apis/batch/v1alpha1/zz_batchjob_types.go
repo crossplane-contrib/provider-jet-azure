@@ -28,7 +28,7 @@ type BatchJobObservation struct {
 }
 
 type BatchJobParameters struct {
-	BatchPoolId string `json:"batchPoolId" tf:"batch_pool_id"`
+	BatchPoolID string `json:"batchPoolId" tf:"batch_pool_id"`
 
 	CommonEnvironmentProperties map[string]string `json:"commonEnvironmentProperties,omitempty" tf:"common_environment_properties"`
 

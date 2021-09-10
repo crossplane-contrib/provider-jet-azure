@@ -101,7 +101,7 @@ type KeyVaultCertificateObservation struct {
 
 	CertificateDataBase64 string `json:"certificateDataBase64" tf:"certificate_data_base64"`
 
-	SecretId string `json:"secretId" tf:"secret_id"`
+	SecretID string `json:"secretId" tf:"secret_id"`
 
 	Thumbprint string `json:"thumbprint" tf:"thumbprint"`
 
@@ -113,7 +113,7 @@ type KeyVaultCertificateParameters struct {
 
 	CertificatePolicy []CertificatePolicyParameters `json:"certificatePolicy" tf:"certificate_policy"`
 
-	KeyVaultId string `json:"keyVaultId" tf:"key_vault_id"`
+	KeyVaultID string `json:"keyVaultId" tf:"key_vault_id"`
 
 	Name string `json:"name" tf:"name"`
 
@@ -140,7 +140,7 @@ type SubjectAlternativeNamesObservation struct {
 }
 
 type SubjectAlternativeNamesParameters struct {
-	DnsNames []string `json:"dnsNames,omitempty" tf:"dns_names"`
+	DNSNames []string `json:"dnsNames,omitempty" tf:"dns_names"`
 
 	Emails []string `json:"emails,omitempty" tf:"emails"`
 

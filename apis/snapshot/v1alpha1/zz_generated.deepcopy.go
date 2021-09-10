@@ -213,18 +213,18 @@ func (in *SnapshotParameters) DeepCopyInto(out *SnapshotParameters) {
 			(*in)[i].DeepCopyInto(&(*out)[i])
 		}
 	}
-	if in.SourceResourceId != nil {
-		in, out := &in.SourceResourceId, &out.SourceResourceId
+	if in.SourceResourceID != nil {
+		in, out := &in.SourceResourceID, &out.SourceResourceID
 		*out = new(string)
 		**out = **in
 	}
-	if in.SourceUri != nil {
-		in, out := &in.SourceUri, &out.SourceUri
+	if in.SourceURI != nil {
+		in, out := &in.SourceURI, &out.SourceURI
 		*out = new(string)
 		**out = **in
 	}
-	if in.StorageAccountId != nil {
-		in, out := &in.StorageAccountId, &out.StorageAccountId
+	if in.StorageAccountID != nil {
+		in, out := &in.StorageAccountID, &out.StorageAccountID
 		*out = new(string)
 		**out = **in
 	}

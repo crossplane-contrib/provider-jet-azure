@@ -33,9 +33,9 @@ type AppServiceCertificateBindingObservation struct {
 }
 
 type AppServiceCertificateBindingParameters struct {
-	CertificateId string `json:"certificateId" tf:"certificate_id"`
+	CertificateID string `json:"certificateId" tf:"certificate_id"`
 
-	HostnameBindingId string `json:"hostnameBindingId" tf:"hostname_binding_id"`
+	HostnameBindingID string `json:"hostnameBindingId" tf:"hostname_binding_id"`
 
 	SslState string `json:"sslState" tf:"ssl_state"`
 }

@@ -30,7 +30,7 @@ type AuthSettingsActiveDirectoryObservation struct {
 type AuthSettingsActiveDirectoryParameters struct {
 	AllowedAudiences []string `json:"allowedAudiences,omitempty" tf:"allowed_audiences"`
 
-	ClientId string `json:"clientId" tf:"client_id"`
+	ClientID string `json:"clientId" tf:"client_id"`
 
 	ClientSecret *string `json:"clientSecret,omitempty" tf:"client_secret"`
 }
@@ -39,7 +39,7 @@ type AuthSettingsFacebookObservation struct {
 }
 
 type AuthSettingsFacebookParameters struct {
-	AppId string `json:"appId" tf:"app_id"`
+	AppID string `json:"appId" tf:"app_id"`
 
 	AppSecret string `json:"appSecret" tf:"app_secret"`
 
@@ -50,7 +50,7 @@ type AuthSettingsGoogleObservation struct {
 }
 
 type AuthSettingsGoogleParameters struct {
-	ClientId string `json:"clientId" tf:"client_id"`
+	ClientID string `json:"clientId" tf:"client_id"`
 
 	ClientSecret string `json:"clientSecret" tf:"client_secret"`
 
@@ -61,7 +61,7 @@ type AuthSettingsMicrosoftObservation struct {
 }
 
 type AuthSettingsMicrosoftParameters struct {
-	ClientId string `json:"clientId" tf:"client_id"`
+	ClientID string `json:"clientId" tf:"client_id"`
 
 	ClientSecret string `json:"clientSecret" tf:"client_secret"`
 
@@ -122,9 +122,9 @@ type FunctionAppSlotConnectionStringParameters struct {
 }
 
 type FunctionAppSlotIdentityObservation struct {
-	PrincipalId string `json:"principalId" tf:"principal_id"`
+	PrincipalID string `json:"principalId" tf:"principal_id"`
 
-	TenantId string `json:"tenantId" tf:"tenant_id"`
+	TenantID string `json:"tenantId" tf:"tenant_id"`
 }
 
 type FunctionAppSlotIdentityParameters struct {
@@ -138,15 +138,15 @@ type FunctionAppSlotObservation struct {
 
 	Kind string `json:"kind" tf:"kind"`
 
-	OutboundIpAddresses string `json:"outboundIpAddresses" tf:"outbound_ip_addresses"`
+	OutboundIPAddresses string `json:"outboundIpAddresses" tf:"outbound_ip_addresses"`
 
-	PossibleOutboundIpAddresses string `json:"possibleOutboundIpAddresses" tf:"possible_outbound_ip_addresses"`
+	PossibleOutboundIPAddresses string `json:"possibleOutboundIpAddresses" tf:"possible_outbound_ip_addresses"`
 
 	SiteCredential []FunctionAppSlotSiteCredentialObservation `json:"siteCredential" tf:"site_credential"`
 }
 
 type FunctionAppSlotParameters struct {
-	AppServicePlanId string `json:"appServicePlanId" tf:"app_service_plan_id"`
+	AppServicePlanID string `json:"appServicePlanId" tf:"app_service_plan_id"`
 
 	AppSettings map[string]string `json:"appSettings,omitempty" tf:"app_settings"`
 
@@ -164,7 +164,7 @@ type FunctionAppSlotParameters struct {
 
 	FunctionAppName string `json:"functionAppName" tf:"function_app_name"`
 
-	HttpsOnly *bool `json:"httpsOnly,omitempty" tf:"https_only"`
+	HTTPSOnly *bool `json:"httpsOnly,omitempty" tf:"https_only"`
 
 	Identity []FunctionAppSlotIdentityParameters `json:"identity,omitempty" tf:"identity"`
 
@@ -209,23 +209,23 @@ type FunctionAppSlotSiteConfigParameters struct {
 
 	Http2Enabled *bool `json:"http2Enabled,omitempty" tf:"http2_enabled"`
 
-	IpRestriction []SiteConfigIpRestrictionParameters `json:"ipRestriction,omitempty" tf:"ip_restriction"`
+	IPRestriction []SiteConfigIPRestrictionParameters `json:"ipRestriction,omitempty" tf:"ip_restriction"`
 
 	JavaVersion *string `json:"javaVersion,omitempty" tf:"java_version"`
 
 	LinuxFxVersion *string `json:"linuxFxVersion,omitempty" tf:"linux_fx_version"`
 
-	MinTlsVersion *string `json:"minTlsVersion,omitempty" tf:"min_tls_version"`
+	MinTLSVersion *string `json:"minTlsVersion,omitempty" tf:"min_tls_version"`
 
 	PreWarmedInstanceCount *int64 `json:"preWarmedInstanceCount,omitempty" tf:"pre_warmed_instance_count"`
 
 	RuntimeScaleMonitoringEnabled *bool `json:"runtimeScaleMonitoringEnabled,omitempty" tf:"runtime_scale_monitoring_enabled"`
 
-	ScmIpRestriction []SiteConfigScmIpRestrictionParameters `json:"scmIpRestriction,omitempty" tf:"scm_ip_restriction"`
+	ScmIPRestriction []SiteConfigScmIPRestrictionParameters `json:"scmIpRestriction,omitempty" tf:"scm_ip_restriction"`
 
 	ScmType *string `json:"scmType,omitempty" tf:"scm_type"`
 
-	ScmUseMainIpRestriction *bool `json:"scmUseMainIpRestriction,omitempty" tf:"scm_use_main_ip_restriction"`
+	ScmUseMainIPRestriction *bool `json:"scmUseMainIpRestriction,omitempty" tf:"scm_use_main_ip_restriction"`
 
 	Use32BitWorkerProcess *bool `json:"use32BitWorkerProcess,omitempty" tf:"use_32_bit_worker_process"`
 
@@ -241,10 +241,10 @@ type FunctionAppSlotSiteCredentialObservation struct {
 type FunctionAppSlotSiteCredentialParameters struct {
 }
 
-type IpRestrictionHeadersObservation struct {
+type IPRestrictionHeadersObservation struct {
 }
 
-type IpRestrictionHeadersParameters struct {
+type IPRestrictionHeadersParameters struct {
 	XAzureFdid []string `json:"xAzureFdid,omitempty" tf:"x_azure_fdid"`
 
 	XFdHealthProbe []string `json:"xFdHealthProbe,omitempty" tf:"x_fd_health_probe"`
@@ -263,15 +263,15 @@ type SiteConfigCorsParameters struct {
 	SupportCredentials *bool `json:"supportCredentials,omitempty" tf:"support_credentials"`
 }
 
-type SiteConfigIpRestrictionObservation struct {
+type SiteConfigIPRestrictionObservation struct {
 }
 
-type SiteConfigIpRestrictionParameters struct {
+type SiteConfigIPRestrictionParameters struct {
 	Action *string `json:"action,omitempty" tf:"action"`
 
-	Headers []IpRestrictionHeadersParameters `json:"headers,omitempty" tf:"headers"`
+	Headers []IPRestrictionHeadersParameters `json:"headers,omitempty" tf:"headers"`
 
-	IpAddress *string `json:"ipAddress,omitempty" tf:"ip_address"`
+	IPAddress *string `json:"ipAddress,omitempty" tf:"ip_address"`
 
 	Name *string `json:"name,omitempty" tf:"name"`
 
@@ -279,13 +279,13 @@ type SiteConfigIpRestrictionParameters struct {
 
 	ServiceTag *string `json:"serviceTag,omitempty" tf:"service_tag"`
 
-	VirtualNetworkSubnetId *string `json:"virtualNetworkSubnetId,omitempty" tf:"virtual_network_subnet_id"`
+	VirtualNetworkSubnetID *string `json:"virtualNetworkSubnetId,omitempty" tf:"virtual_network_subnet_id"`
 }
 
-type SiteConfigScmIpRestrictionHeadersObservation struct {
+type SiteConfigScmIPRestrictionHeadersObservation struct {
 }
 
-type SiteConfigScmIpRestrictionHeadersParameters struct {
+type SiteConfigScmIPRestrictionHeadersParameters struct {
 	XAzureFdid []string `json:"xAzureFdid,omitempty" tf:"x_azure_fdid"`
 
 	XFdHealthProbe []string `json:"xFdHealthProbe,omitempty" tf:"x_fd_health_probe"`
@@ -295,15 +295,15 @@ type SiteConfigScmIpRestrictionHeadersParameters struct {
 	XForwardedHost []string `json:"xForwardedHost,omitempty" tf:"x_forwarded_host"`
 }
 
-type SiteConfigScmIpRestrictionObservation struct {
+type SiteConfigScmIPRestrictionObservation struct {
 }
 
-type SiteConfigScmIpRestrictionParameters struct {
+type SiteConfigScmIPRestrictionParameters struct {
 	Action *string `json:"action,omitempty" tf:"action"`
 
-	Headers []SiteConfigScmIpRestrictionHeadersParameters `json:"headers,omitempty" tf:"headers"`
+	Headers []SiteConfigScmIPRestrictionHeadersParameters `json:"headers,omitempty" tf:"headers"`
 
-	IpAddress *string `json:"ipAddress,omitempty" tf:"ip_address"`
+	IPAddress *string `json:"ipAddress,omitempty" tf:"ip_address"`
 
 	Name *string `json:"name,omitempty" tf:"name"`
 
@@ -311,7 +311,7 @@ type SiteConfigScmIpRestrictionParameters struct {
 
 	ServiceTag *string `json:"serviceTag,omitempty" tf:"service_tag"`
 
-	VirtualNetworkSubnetId *string `json:"virtualNetworkSubnetId,omitempty" tf:"virtual_network_subnet_id"`
+	VirtualNetworkSubnetID *string `json:"virtualNetworkSubnetId,omitempty" tf:"virtual_network_subnet_id"`
 }
 
 // FunctionAppSlotSpec defines the desired state of FunctionAppSlot

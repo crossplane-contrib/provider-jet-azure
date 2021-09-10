@@ -30,15 +30,15 @@ type KubernetesClusterNodePoolKubeletConfigObservation struct {
 type KubernetesClusterNodePoolKubeletConfigParameters struct {
 	AllowedUnsafeSysctls []string `json:"allowedUnsafeSysctls,omitempty" tf:"allowed_unsafe_sysctls"`
 
+	CPUCfsQuotaEnabled *bool `json:"cpuCfsQuotaEnabled,omitempty" tf:"cpu_cfs_quota_enabled"`
+
+	CPUCfsQuotaPeriod *string `json:"cpuCfsQuotaPeriod,omitempty" tf:"cpu_cfs_quota_period"`
+
+	CPUManagerPolicy *string `json:"cpuManagerPolicy,omitempty" tf:"cpu_manager_policy"`
+
 	ContainerLogMaxLine *int64 `json:"containerLogMaxLine,omitempty" tf:"container_log_max_line"`
 
 	ContainerLogMaxSizeMb *int64 `json:"containerLogMaxSizeMb,omitempty" tf:"container_log_max_size_mb"`
-
-	CpuCfsQuotaEnabled *bool `json:"cpuCfsQuotaEnabled,omitempty" tf:"cpu_cfs_quota_enabled"`
-
-	CpuCfsQuotaPeriod *string `json:"cpuCfsQuotaPeriod,omitempty" tf:"cpu_cfs_quota_period"`
-
-	CpuManagerPolicy *string `json:"cpuManagerPolicy,omitempty" tf:"cpu_manager_policy"`
 
 	ImageGcHighThreshold *int64 `json:"imageGcHighThreshold,omitempty" tf:"image_gc_high_threshold"`
 
@@ -72,7 +72,7 @@ type KubernetesClusterNodePoolParameters struct {
 
 	EnableHostEncryption *bool `json:"enableHostEncryption,omitempty" tf:"enable_host_encryption"`
 
-	EnableNodePublicIp *bool `json:"enableNodePublicIp,omitempty" tf:"enable_node_public_ip"`
+	EnableNodePublicIP *bool `json:"enableNodePublicIp,omitempty" tf:"enable_node_public_ip"`
 
 	EvictionPolicy *string `json:"evictionPolicy,omitempty" tf:"eviction_policy"`
 
@@ -82,7 +82,7 @@ type KubernetesClusterNodePoolParameters struct {
 
 	KubeletDiskType *string `json:"kubeletDiskType,omitempty" tf:"kubelet_disk_type"`
 
-	KubernetesClusterId string `json:"kubernetesClusterId" tf:"kubernetes_cluster_id"`
+	KubernetesClusterID string `json:"kubernetesClusterId" tf:"kubernetes_cluster_id"`
 
 	LinuxOsConfig []KubernetesClusterNodePoolLinuxOsConfigParameters `json:"linuxOsConfig,omitempty" tf:"linux_os_config"`
 
@@ -100,7 +100,7 @@ type KubernetesClusterNodePoolParameters struct {
 
 	NodeLabels map[string]string `json:"nodeLabels,omitempty" tf:"node_labels"`
 
-	NodePublicIpPrefixId *string `json:"nodePublicIpPrefixId,omitempty" tf:"node_public_ip_prefix_id"`
+	NodePublicIPPrefixID *string `json:"nodePublicIpPrefixId,omitempty" tf:"node_public_ip_prefix_id"`
 
 	NodeTaints []string `json:"nodeTaints,omitempty" tf:"node_taints"`
 
@@ -112,11 +112,11 @@ type KubernetesClusterNodePoolParameters struct {
 
 	OsType *string `json:"osType,omitempty" tf:"os_type"`
 
-	PodSubnetId *string `json:"podSubnetId,omitempty" tf:"pod_subnet_id"`
+	PodSubnetID *string `json:"podSubnetId,omitempty" tf:"pod_subnet_id"`
 
 	Priority *string `json:"priority,omitempty" tf:"priority"`
 
-	ProximityPlacementGroupId *string `json:"proximityPlacementGroupId,omitempty" tf:"proximity_placement_group_id"`
+	ProximityPlacementGroupID *string `json:"proximityPlacementGroupId,omitempty" tf:"proximity_placement_group_id"`
 
 	SpotMaxPrice *float64 `json:"spotMaxPrice,omitempty" tf:"spot_max_price"`
 
@@ -126,9 +126,9 @@ type KubernetesClusterNodePoolParameters struct {
 
 	UpgradeSettings []KubernetesClusterNodePoolUpgradeSettingsParameters `json:"upgradeSettings,omitempty" tf:"upgrade_settings"`
 
-	VmSize string `json:"vmSize" tf:"vm_size"`
+	VMSize string `json:"vmSize" tf:"vm_size"`
 
-	VnetSubnetId *string `json:"vnetSubnetId,omitempty" tf:"vnet_subnet_id"`
+	VnetSubnetID *string `json:"vnetSubnetId,omitempty" tf:"vnet_subnet_id"`
 }
 
 type KubernetesClusterNodePoolUpgradeSettingsObservation struct {
@@ -166,39 +166,39 @@ type LinuxOsConfigSysctlConfigParameters struct {
 
 	NetCoreWmemMax *int64 `json:"netCoreWmemMax,omitempty" tf:"net_core_wmem_max"`
 
-	NetIpv4IpLocalPortRangeMax *int64 `json:"netIpv4IpLocalPortRangeMax,omitempty" tf:"net_ipv4_ip_local_port_range_max"`
+	NetIPv4IPLocalPortRangeMax *int64 `json:"netIpv4IpLocalPortRangeMax,omitempty" tf:"net_ipv4_ip_local_port_range_max"`
 
-	NetIpv4IpLocalPortRangeMin *int64 `json:"netIpv4IpLocalPortRangeMin,omitempty" tf:"net_ipv4_ip_local_port_range_min"`
+	NetIPv4IPLocalPortRangeMin *int64 `json:"netIpv4IpLocalPortRangeMin,omitempty" tf:"net_ipv4_ip_local_port_range_min"`
 
-	NetIpv4NeighDefaultGcThresh1 *int64 `json:"netIpv4NeighDefaultGcThresh1,omitempty" tf:"net_ipv4_neigh_default_gc_thresh1"`
+	NetIPv4NeighDefaultGcThresh1 *int64 `json:"netIpv4NeighDefaultGcThresh1,omitempty" tf:"net_ipv4_neigh_default_gc_thresh1"`
 
-	NetIpv4NeighDefaultGcThresh2 *int64 `json:"netIpv4NeighDefaultGcThresh2,omitempty" tf:"net_ipv4_neigh_default_gc_thresh2"`
+	NetIPv4NeighDefaultGcThresh2 *int64 `json:"netIpv4NeighDefaultGcThresh2,omitempty" tf:"net_ipv4_neigh_default_gc_thresh2"`
 
-	NetIpv4NeighDefaultGcThresh3 *int64 `json:"netIpv4NeighDefaultGcThresh3,omitempty" tf:"net_ipv4_neigh_default_gc_thresh3"`
+	NetIPv4NeighDefaultGcThresh3 *int64 `json:"netIpv4NeighDefaultGcThresh3,omitempty" tf:"net_ipv4_neigh_default_gc_thresh3"`
 
-	NetIpv4TcpFinTimeout *int64 `json:"netIpv4TcpFinTimeout,omitempty" tf:"net_ipv4_tcp_fin_timeout"`
+	NetIPv4TCPFinTimeout *int64 `json:"netIpv4TcpFinTimeout,omitempty" tf:"net_ipv4_tcp_fin_timeout"`
 
-	NetIpv4TcpKeepaliveIntvl *int64 `json:"netIpv4TcpKeepaliveIntvl,omitempty" tf:"net_ipv4_tcp_keepalive_intvl"`
+	NetIPv4TCPKeepaliveIntvl *int64 `json:"netIpv4TcpKeepaliveIntvl,omitempty" tf:"net_ipv4_tcp_keepalive_intvl"`
 
-	NetIpv4TcpKeepaliveProbes *int64 `json:"netIpv4TcpKeepaliveProbes,omitempty" tf:"net_ipv4_tcp_keepalive_probes"`
+	NetIPv4TCPKeepaliveProbes *int64 `json:"netIpv4TcpKeepaliveProbes,omitempty" tf:"net_ipv4_tcp_keepalive_probes"`
 
-	NetIpv4TcpKeepaliveTime *int64 `json:"netIpv4TcpKeepaliveTime,omitempty" tf:"net_ipv4_tcp_keepalive_time"`
+	NetIPv4TCPKeepaliveTime *int64 `json:"netIpv4TcpKeepaliveTime,omitempty" tf:"net_ipv4_tcp_keepalive_time"`
 
-	NetIpv4TcpMaxSynBacklog *int64 `json:"netIpv4TcpMaxSynBacklog,omitempty" tf:"net_ipv4_tcp_max_syn_backlog"`
+	NetIPv4TCPMaxSynBacklog *int64 `json:"netIpv4TcpMaxSynBacklog,omitempty" tf:"net_ipv4_tcp_max_syn_backlog"`
 
-	NetIpv4TcpMaxTwBuckets *int64 `json:"netIpv4TcpMaxTwBuckets,omitempty" tf:"net_ipv4_tcp_max_tw_buckets"`
+	NetIPv4TCPMaxTwBuckets *int64 `json:"netIpv4TcpMaxTwBuckets,omitempty" tf:"net_ipv4_tcp_max_tw_buckets"`
 
-	NetIpv4TcpTwReuse *bool `json:"netIpv4TcpTwReuse,omitempty" tf:"net_ipv4_tcp_tw_reuse"`
+	NetIPv4TCPTwReuse *bool `json:"netIpv4TcpTwReuse,omitempty" tf:"net_ipv4_tcp_tw_reuse"`
 
 	NetNetfilterNfConntrackBuckets *int64 `json:"netNetfilterNfConntrackBuckets,omitempty" tf:"net_netfilter_nf_conntrack_buckets"`
 
 	NetNetfilterNfConntrackMax *int64 `json:"netNetfilterNfConntrackMax,omitempty" tf:"net_netfilter_nf_conntrack_max"`
 
-	VmMaxMapCount *int64 `json:"vmMaxMapCount,omitempty" tf:"vm_max_map_count"`
+	VMMaxMapCount *int64 `json:"vmMaxMapCount,omitempty" tf:"vm_max_map_count"`
 
-	VmSwappiness *int64 `json:"vmSwappiness,omitempty" tf:"vm_swappiness"`
+	VMSwappiness *int64 `json:"vmSwappiness,omitempty" tf:"vm_swappiness"`
 
-	VmVfsCachePressure *int64 `json:"vmVfsCachePressure,omitempty" tf:"vm_vfs_cache_pressure"`
+	VMVfsCachePressure *int64 `json:"vmVfsCachePressure,omitempty" tf:"vm_vfs_cache_pressure"`
 }
 
 // KubernetesClusterNodePoolSpec defines the desired state of KubernetesClusterNodePool

@@ -25,7 +25,7 @@ import (
 )
 
 type ApplicationInsightsObservation struct {
-	AppId string `json:"appId" tf:"app_id"`
+	AppID string `json:"appId" tf:"app_id"`
 
 	ConnectionString string `json:"connectionString" tf:"connection_string"`
 
@@ -39,7 +39,7 @@ type ApplicationInsightsParameters struct {
 
 	DailyDataCapNotificationsDisabled *bool `json:"dailyDataCapNotificationsDisabled,omitempty" tf:"daily_data_cap_notifications_disabled"`
 
-	DisableIpMasking *bool `json:"disableIpMasking,omitempty" tf:"disable_ip_masking"`
+	DisableIPMasking *bool `json:"disableIpMasking,omitempty" tf:"disable_ip_masking"`
 
 	Location string `json:"location" tf:"location"`
 
@@ -53,7 +53,7 @@ type ApplicationInsightsParameters struct {
 
 	Tags map[string]string `json:"tags,omitempty" tf:"tags"`
 
-	WorkspaceId *string `json:"workspaceId,omitempty" tf:"workspace_id"`
+	WorkspaceID *string `json:"workspaceId,omitempty" tf:"workspace_id"`
 }
 
 // ApplicationInsightsSpec defines the desired state of ApplicationInsights

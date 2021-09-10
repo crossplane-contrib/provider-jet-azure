@@ -32,9 +32,9 @@ type PolicyRemediationParameters struct {
 
 	Name string `json:"name" tf:"name"`
 
-	PolicyAssignmentId string `json:"policyAssignmentId" tf:"policy_assignment_id"`
+	PolicyAssignmentID string `json:"policyAssignmentId" tf:"policy_assignment_id"`
 
-	PolicyDefinitionReferenceId *string `json:"policyDefinitionReferenceId,omitempty" tf:"policy_definition_reference_id"`
+	PolicyDefinitionReferenceID *string `json:"policyDefinitionReferenceId,omitempty" tf:"policy_definition_reference_id"`
 
 	ResourceDiscoveryMode *string `json:"resourceDiscoveryMode,omitempty" tf:"resource_discovery_mode"`
 

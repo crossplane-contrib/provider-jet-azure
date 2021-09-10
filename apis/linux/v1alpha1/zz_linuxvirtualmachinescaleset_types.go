@@ -50,7 +50,7 @@ type DataDiskParameters struct {
 
 	CreateOption *string `json:"createOption,omitempty" tf:"create_option"`
 
-	DiskEncryptionSetId *string `json:"diskEncryptionSetId,omitempty" tf:"disk_encryption_set_id"`
+	DiskEncryptionSetID *string `json:"diskEncryptionSetId,omitempty" tf:"disk_encryption_set_id"`
 
 	DiskIopsReadWrite *int64 `json:"diskIopsReadWrite,omitempty" tf:"disk_iops_read_write"`
 
@@ -88,10 +88,10 @@ type ExtensionParameters struct {
 	TypeHandlerVersion string `json:"typeHandlerVersion" tf:"type_handler_version"`
 }
 
-type IpConfigurationObservation struct {
+type IPConfigurationObservation struct {
 }
 
-type IpConfigurationParameters struct {
+type IPConfigurationParameters struct {
 	ApplicationGatewayBackendAddressPoolIds []string `json:"applicationGatewayBackendAddressPoolIds,omitempty" tf:"application_gateway_backend_address_pool_ids"`
 
 	ApplicationSecurityGroupIds []string `json:"applicationSecurityGroupIds,omitempty" tf:"application_security_group_ids"`
@@ -104,17 +104,17 @@ type IpConfigurationParameters struct {
 
 	Primary *bool `json:"primary,omitempty" tf:"primary"`
 
-	PublicIpAddress []PublicIpAddressParameters `json:"publicIpAddress,omitempty" tf:"public_ip_address"`
+	PublicIPAddress []PublicIPAddressParameters `json:"publicIpAddress,omitempty" tf:"public_ip_address"`
 
-	SubnetId *string `json:"subnetId,omitempty" tf:"subnet_id"`
+	SubnetID *string `json:"subnetId,omitempty" tf:"subnet_id"`
 
 	Version *string `json:"version,omitempty" tf:"version"`
 }
 
-type IpTagObservation struct {
+type IPTagObservation struct {
 }
 
-type IpTagParameters struct {
+type IPTagParameters struct {
 	Tag string `json:"tag" tf:"tag"`
 
 	Type string `json:"type" tf:"type"`
@@ -127,10 +127,10 @@ type LinuxVirtualMachineScaleSetAdditionalCapabilitiesParameters struct {
 	UltraSsdEnabled *bool `json:"ultraSsdEnabled,omitempty" tf:"ultra_ssd_enabled"`
 }
 
-type LinuxVirtualMachineScaleSetAdminSshKeyObservation struct {
+type LinuxVirtualMachineScaleSetAdminSSHKeyObservation struct {
 }
 
-type LinuxVirtualMachineScaleSetAdminSshKeyParameters struct {
+type LinuxVirtualMachineScaleSetAdminSSHKeyParameters struct {
 	PublicKey string `json:"publicKey" tf:"public_key"`
 
 	Username string `json:"username" tf:"username"`
@@ -140,11 +140,11 @@ type LinuxVirtualMachineScaleSetBootDiagnosticsObservation struct {
 }
 
 type LinuxVirtualMachineScaleSetBootDiagnosticsParameters struct {
-	StorageAccountUri *string `json:"storageAccountUri,omitempty" tf:"storage_account_uri"`
+	StorageAccountURI *string `json:"storageAccountUri,omitempty" tf:"storage_account_uri"`
 }
 
 type LinuxVirtualMachineScaleSetIdentityObservation struct {
-	PrincipalId string `json:"principalId" tf:"principal_id"`
+	PrincipalID string `json:"principalId" tf:"principal_id"`
 }
 
 type LinuxVirtualMachineScaleSetIdentityParameters struct {
@@ -154,7 +154,7 @@ type LinuxVirtualMachineScaleSetIdentityParameters struct {
 }
 
 type LinuxVirtualMachineScaleSetObservation struct {
-	UniqueId string `json:"uniqueId" tf:"unique_id"`
+	UniqueID string `json:"uniqueId" tf:"unique_id"`
 }
 
 type LinuxVirtualMachineScaleSetOsDiskObservation struct {
@@ -165,7 +165,7 @@ type LinuxVirtualMachineScaleSetOsDiskParameters struct {
 
 	DiffDiskSettings []OsDiskDiffDiskSettingsParameters `json:"diffDiskSettings,omitempty" tf:"diff_disk_settings"`
 
-	DiskEncryptionSetId *string `json:"diskEncryptionSetId,omitempty" tf:"disk_encryption_set_id"`
+	DiskEncryptionSetID *string `json:"diskEncryptionSetId,omitempty" tf:"disk_encryption_set_id"`
 
 	DiskSizeGb *int64 `json:"diskSizeGb,omitempty" tf:"disk_size_gb"`
 
@@ -179,7 +179,7 @@ type LinuxVirtualMachineScaleSetParameters struct {
 
 	AdminPassword *string `json:"adminPassword,omitempty" tf:"admin_password"`
 
-	AdminSshKey []LinuxVirtualMachineScaleSetAdminSshKeyParameters `json:"adminSshKey,omitempty" tf:"admin_ssh_key"`
+	AdminSSHKey []LinuxVirtualMachineScaleSetAdminSSHKeyParameters `json:"adminSshKey,omitempty" tf:"admin_ssh_key"`
 
 	AdminUsername string `json:"adminUsername" tf:"admin_username"`
 
@@ -207,7 +207,7 @@ type LinuxVirtualMachineScaleSetParameters struct {
 
 	ExtensionsTimeBudget *string `json:"extensionsTimeBudget,omitempty" tf:"extensions_time_budget"`
 
-	HealthProbeId *string `json:"healthProbeId,omitempty" tf:"health_probe_id"`
+	HealthProbeID *string `json:"healthProbeId,omitempty" tf:"health_probe_id"`
 
 	Identity []LinuxVirtualMachineScaleSetIdentityParameters `json:"identity,omitempty" tf:"identity"`
 
@@ -231,9 +231,9 @@ type LinuxVirtualMachineScaleSetParameters struct {
 
 	Priority *string `json:"priority,omitempty" tf:"priority"`
 
-	ProvisionVmAgent *bool `json:"provisionVmAgent,omitempty" tf:"provision_vm_agent"`
+	ProvisionVMAgent *bool `json:"provisionVmAgent,omitempty" tf:"provision_vm_agent"`
 
-	ProximityPlacementGroupId *string `json:"proximityPlacementGroupId,omitempty" tf:"proximity_placement_group_id"`
+	ProximityPlacementGroupID *string `json:"proximityPlacementGroupId,omitempty" tf:"proximity_placement_group_id"`
 
 	ResourceGroupName string `json:"resourceGroupName" tf:"resource_group_name"`
 
@@ -247,7 +247,7 @@ type LinuxVirtualMachineScaleSetParameters struct {
 
 	Sku string `json:"sku" tf:"sku"`
 
-	SourceImageId *string `json:"sourceImageId,omitempty" tf:"source_image_id"`
+	SourceImageID *string `json:"sourceImageId,omitempty" tf:"source_image_id"`
 
 	SourceImageReference []LinuxVirtualMachineScaleSetSourceImageReferenceParameters `json:"sourceImageReference,omitempty" tf:"source_image_reference"`
 
@@ -279,7 +279,7 @@ type LinuxVirtualMachineScaleSetSecretObservation struct {
 type LinuxVirtualMachineScaleSetSecretParameters struct {
 	Certificate []SecretCertificateParameters `json:"certificate" tf:"certificate"`
 
-	KeyVaultId string `json:"keyVaultId" tf:"key_vault_id"`
+	KeyVaultID string `json:"keyVaultId" tf:"key_vault_id"`
 }
 
 type LinuxVirtualMachineScaleSetSourceImageReferenceObservation struct {
@@ -299,17 +299,17 @@ type NetworkInterfaceObservation struct {
 }
 
 type NetworkInterfaceParameters struct {
-	DnsServers []string `json:"dnsServers,omitempty" tf:"dns_servers"`
+	DNSServers []string `json:"dnsServers,omitempty" tf:"dns_servers"`
 
 	EnableAcceleratedNetworking *bool `json:"enableAcceleratedNetworking,omitempty" tf:"enable_accelerated_networking"`
 
-	EnableIpForwarding *bool `json:"enableIpForwarding,omitempty" tf:"enable_ip_forwarding"`
+	EnableIPForwarding *bool `json:"enableIpForwarding,omitempty" tf:"enable_ip_forwarding"`
 
-	IpConfiguration []IpConfigurationParameters `json:"ipConfiguration" tf:"ip_configuration"`
+	IPConfiguration []IPConfigurationParameters `json:"ipConfiguration" tf:"ip_configuration"`
 
 	Name string `json:"name" tf:"name"`
 
-	NetworkSecurityGroupId *string `json:"networkSecurityGroupId,omitempty" tf:"network_security_group_id"`
+	NetworkSecurityGroupID *string `json:"networkSecurityGroupId,omitempty" tf:"network_security_group_id"`
 
 	Primary *bool `json:"primary,omitempty" tf:"primary"`
 }
@@ -321,19 +321,19 @@ type OsDiskDiffDiskSettingsParameters struct {
 	Option string `json:"option" tf:"option"`
 }
 
-type PublicIpAddressObservation struct {
+type PublicIPAddressObservation struct {
 }
 
-type PublicIpAddressParameters struct {
+type PublicIPAddressParameters struct {
 	DomainNameLabel *string `json:"domainNameLabel,omitempty" tf:"domain_name_label"`
+
+	IPTag []IPTagParameters `json:"ipTag,omitempty" tf:"ip_tag"`
 
 	IdleTimeoutInMinutes *int64 `json:"idleTimeoutInMinutes,omitempty" tf:"idle_timeout_in_minutes"`
 
-	IpTag []IpTagParameters `json:"ipTag,omitempty" tf:"ip_tag"`
-
 	Name string `json:"name" tf:"name"`
 
-	PublicIpPrefixId *string `json:"publicIpPrefixId,omitempty" tf:"public_ip_prefix_id"`
+	PublicIPPrefixID *string `json:"publicIpPrefixId,omitempty" tf:"public_ip_prefix_id"`
 }
 
 type RollingUpgradePolicyObservation struct {
@@ -353,7 +353,7 @@ type SecretCertificateObservation struct {
 }
 
 type SecretCertificateParameters struct {
-	Url string `json:"url" tf:"url"`
+	URL string `json:"url" tf:"url"`
 }
 
 type TerminateNotificationObservation struct {

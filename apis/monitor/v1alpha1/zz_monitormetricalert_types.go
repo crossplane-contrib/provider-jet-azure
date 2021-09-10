@@ -28,11 +28,11 @@ type ApplicationInsightsWebTestLocationAvailabilityCriteriaObservation struct {
 }
 
 type ApplicationInsightsWebTestLocationAvailabilityCriteriaParameters struct {
-	ComponentId string `json:"componentId" tf:"component_id"`
+	ComponentID string `json:"componentId" tf:"component_id"`
 
 	FailedLocationCount int64 `json:"failedLocationCount" tf:"failed_location_count"`
 
-	WebTestId string `json:"webTestId" tf:"web_test_id"`
+	WebTestID string `json:"webTestId" tf:"web_test_id"`
 }
 
 type DimensionObservation struct {
@@ -86,7 +86,7 @@ type MonitorMetricAlertActionObservation struct {
 }
 
 type MonitorMetricAlertActionParameters struct {
-	ActionGroupId string `json:"actionGroupId" tf:"action_group_id"`
+	ActionGroupID string `json:"actionGroupId" tf:"action_group_id"`
 
 	WebhookProperties map[string]string `json:"webhookProperties,omitempty" tf:"webhook_properties"`
 }

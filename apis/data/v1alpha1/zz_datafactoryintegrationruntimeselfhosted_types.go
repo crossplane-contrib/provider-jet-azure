@@ -46,7 +46,7 @@ type RbacAuthorizationObservation struct {
 }
 
 type RbacAuthorizationParameters struct {
-	ResourceId string `json:"resourceId" tf:"resource_id"`
+	ResourceID string `json:"resourceId" tf:"resource_id"`
 }
 
 // DataFactoryIntegrationRuntimeSelfHostedSpec defines the desired state of DataFactoryIntegrationRuntimeSelfHosted

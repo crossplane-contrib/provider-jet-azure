@@ -25,9 +25,9 @@ import (
 )
 
 type IdentityObservation struct {
-	PrincipalId string `json:"principalId" tf:"principal_id"`
+	PrincipalID string `json:"principalId" tf:"principal_id"`
 
-	TenantId string `json:"tenantId" tf:"tenant_id"`
+	TenantID string `json:"tenantId" tf:"tenant_id"`
 }
 
 type IdentityParameters struct {
@@ -48,7 +48,7 @@ type ManagementGroupPolicyAssignmentParameters struct {
 
 	Location *string `json:"location,omitempty" tf:"location"`
 
-	ManagementGroupId string `json:"managementGroupId" tf:"management_group_id"`
+	ManagementGroupID string `json:"managementGroupId" tf:"management_group_id"`
 
 	Metadata *string `json:"metadata,omitempty" tf:"metadata"`
 
@@ -58,7 +58,7 @@ type ManagementGroupPolicyAssignmentParameters struct {
 
 	Parameters *string `json:"parameters,omitempty" tf:"parameters"`
 
-	PolicyDefinitionId string `json:"policyDefinitionId" tf:"policy_definition_id"`
+	PolicyDefinitionID string `json:"policyDefinitionId" tf:"policy_definition_id"`
 }
 
 // ManagementGroupPolicyAssignmentSpec defines the desired state of ManagementGroupPolicyAssignment

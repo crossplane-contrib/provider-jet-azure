@@ -34,7 +34,7 @@ type PostgresqlFlexibleServerDatabaseParameters struct {
 
 	Name string `json:"name" tf:"name"`
 
-	ServerId string `json:"serverId" tf:"server_id"`
+	ServerID string `json:"serverId" tf:"server_id"`
 }
 
 // PostgresqlFlexibleServerDatabaseSpec defines the desired state of PostgresqlFlexibleServerDatabase

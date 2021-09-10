@@ -65,7 +65,7 @@ type CommonEncryptionCencParameters struct {
 
 	DrmPlayready []DrmPlayreadyParameters `json:"drmPlayready,omitempty" tf:"drm_playready"`
 
-	DrmWidevineCustomLicenseAcquisitionUrlTemplate *string `json:"drmWidevineCustomLicenseAcquisitionUrlTemplate,omitempty" tf:"drm_widevine_custom_license_acquisition_url_template"`
+	DrmWidevineCustomLicenseAcquisitionURLTemplate *string `json:"drmWidevineCustomLicenseAcquisitionUrlTemplate,omitempty" tf:"drm_widevine_custom_license_acquisition_url_template"`
 
 	EnabledProtocols []CommonEncryptionCencEnabledProtocolsParameters `json:"enabledProtocols,omitempty" tf:"enabled_protocols"`
 }
@@ -85,7 +85,7 @@ type DrmFairplayObservation struct {
 type DrmFairplayParameters struct {
 	AllowPersistentLicense *bool `json:"allowPersistentLicense,omitempty" tf:"allow_persistent_license"`
 
-	CustomLicenseAcquisitionUrlTemplate *string `json:"customLicenseAcquisitionUrlTemplate,omitempty" tf:"custom_license_acquisition_url_template"`
+	CustomLicenseAcquisitionURLTemplate *string `json:"customLicenseAcquisitionUrlTemplate,omitempty" tf:"custom_license_acquisition_url_template"`
 }
 
 type DrmPlayreadyObservation struct {
@@ -94,7 +94,7 @@ type DrmPlayreadyObservation struct {
 type DrmPlayreadyParameters struct {
 	CustomAttributes *string `json:"customAttributes,omitempty" tf:"custom_attributes"`
 
-	CustomLicenseAcquisitionUrlTemplate *string `json:"customLicenseAcquisitionUrlTemplate,omitempty" tf:"custom_license_acquisition_url_template"`
+	CustomLicenseAcquisitionURLTemplate *string `json:"customLicenseAcquisitionUrlTemplate,omitempty" tf:"custom_license_acquisition_url_template"`
 }
 
 type EnabledProtocolsObservation struct {

@@ -33,7 +33,7 @@ type ApplicationInsightsAnalyticsItemObservation struct {
 }
 
 type ApplicationInsightsAnalyticsItemParameters struct {
-	ApplicationInsightsId string `json:"applicationInsightsId" tf:"application_insights_id"`
+	ApplicationInsightsID string `json:"applicationInsightsId" tf:"application_insights_id"`
 
 	Content string `json:"content" tf:"content"`
 

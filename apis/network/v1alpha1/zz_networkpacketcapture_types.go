@@ -28,13 +28,13 @@ type NetworkPacketCaptureFilterObservation struct {
 }
 
 type NetworkPacketCaptureFilterParameters struct {
-	LocalIpAddress *string `json:"localIpAddress,omitempty" tf:"local_ip_address"`
+	LocalIPAddress *string `json:"localIpAddress,omitempty" tf:"local_ip_address"`
 
 	LocalPort *string `json:"localPort,omitempty" tf:"local_port"`
 
 	Protocol string `json:"protocol" tf:"protocol"`
 
-	RemoteIpAddress *string `json:"remoteIpAddress,omitempty" tf:"remote_ip_address"`
+	RemoteIPAddress *string `json:"remoteIpAddress,omitempty" tf:"remote_ip_address"`
 
 	RemotePort *string `json:"remotePort,omitempty" tf:"remote_port"`
 }
@@ -59,7 +59,7 @@ type NetworkPacketCaptureParameters struct {
 
 	StorageLocation []StorageLocationParameters `json:"storageLocation" tf:"storage_location"`
 
-	TargetResourceId string `json:"targetResourceId" tf:"target_resource_id"`
+	TargetResourceID string `json:"targetResourceId" tf:"target_resource_id"`
 }
 
 type StorageLocationObservation struct {
@@ -69,7 +69,7 @@ type StorageLocationObservation struct {
 type StorageLocationParameters struct {
 	FilePath *string `json:"filePath,omitempty" tf:"file_path"`
 
-	StorageAccountId *string `json:"storageAccountId,omitempty" tf:"storage_account_id"`
+	StorageAccountID *string `json:"storageAccountId,omitempty" tf:"storage_account_id"`
 }
 
 // NetworkPacketCaptureSpec defines the desired state of NetworkPacketCapture

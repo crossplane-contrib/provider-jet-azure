@@ -50,10 +50,10 @@ type DataFactoryDatasetDelimitedTextAzureBlobStorageLocationParameters struct {
 	Path *string `json:"path,omitempty" tf:"path"`
 }
 
-type DataFactoryDatasetDelimitedTextHttpServerLocationObservation struct {
+type DataFactoryDatasetDelimitedTextHTTPServerLocationObservation struct {
 }
 
-type DataFactoryDatasetDelimitedTextHttpServerLocationParameters struct {
+type DataFactoryDatasetDelimitedTextHTTPServerLocationParameters struct {
 	DynamicFilenameEnabled *bool `json:"dynamicFilenameEnabled,omitempty" tf:"dynamic_filename_enabled"`
 
 	DynamicPathEnabled *bool `json:"dynamicPathEnabled,omitempty" tf:"dynamic_path_enabled"`
@@ -62,7 +62,7 @@ type DataFactoryDatasetDelimitedTextHttpServerLocationParameters struct {
 
 	Path string `json:"path" tf:"path"`
 
-	RelativeUrl string `json:"relativeUrl" tf:"relative_url"`
+	RelativeURL string `json:"relativeUrl" tf:"relative_url"`
 }
 
 type DataFactoryDatasetDelimitedTextObservation struct {
@@ -95,7 +95,7 @@ type DataFactoryDatasetDelimitedTextParameters struct {
 
 	Folder *string `json:"folder,omitempty" tf:"folder"`
 
-	HttpServerLocation []DataFactoryDatasetDelimitedTextHttpServerLocationParameters `json:"httpServerLocation,omitempty" tf:"http_server_location"`
+	HTTPServerLocation []DataFactoryDatasetDelimitedTextHTTPServerLocationParameters `json:"httpServerLocation,omitempty" tf:"http_server_location"`
 
 	LinkedServiceName string `json:"linkedServiceName" tf:"linked_service_name"`
 

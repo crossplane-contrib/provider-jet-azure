@@ -42,7 +42,7 @@ type CostManagementExportResourceGroupParameters struct {
 
 	RecurrenceType string `json:"recurrenceType" tf:"recurrence_type"`
 
-	ResourceGroupId string `json:"resourceGroupId" tf:"resource_group_id"`
+	ResourceGroupID string `json:"resourceGroupId" tf:"resource_group_id"`
 }
 
 type DeliveryInfoObservation struct {
@@ -53,7 +53,7 @@ type DeliveryInfoParameters struct {
 
 	RootFolderPath string `json:"rootFolderPath" tf:"root_folder_path"`
 
-	StorageAccountId string `json:"storageAccountId" tf:"storage_account_id"`
+	StorageAccountID string `json:"storageAccountId" tf:"storage_account_id"`
 }
 
 type QueryObservation struct {

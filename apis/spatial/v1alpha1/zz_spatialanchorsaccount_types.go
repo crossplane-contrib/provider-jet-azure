@@ -27,7 +27,7 @@ import (
 type SpatialAnchorsAccountObservation struct {
 	AccountDomain string `json:"accountDomain" tf:"account_domain"`
 
-	AccountId string `json:"accountId" tf:"account_id"`
+	AccountID string `json:"accountId" tf:"account_id"`
 }
 
 type SpatialAnchorsAccountParameters struct {

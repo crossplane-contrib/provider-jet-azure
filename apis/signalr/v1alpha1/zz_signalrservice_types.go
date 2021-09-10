@@ -43,7 +43,7 @@ type FeaturesParameters struct {
 type SignalrServiceObservation struct {
 	Hostname string `json:"hostname" tf:"hostname"`
 
-	IpAddress string `json:"ipAddress" tf:"ip_address"`
+	IPAddress string `json:"ipAddress" tf:"ip_address"`
 
 	PrimaryAccessKey string `json:"primaryAccessKey" tf:"primary_access_key"`
 
@@ -95,7 +95,7 @@ type UpstreamEndpointParameters struct {
 
 	HubPattern []string `json:"hubPattern" tf:"hub_pattern"`
 
-	UrlTemplate string `json:"urlTemplate" tf:"url_template"`
+	URLTemplate string `json:"urlTemplate" tf:"url_template"`
 }
 
 // SignalrServiceSpec defines the desired state of SignalrService

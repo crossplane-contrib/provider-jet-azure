@@ -25,9 +25,9 @@ import (
 )
 
 type IdentityObservation struct {
-	PrincipalId string `json:"principalId" tf:"principal_id"`
+	PrincipalID string `json:"principalId" tf:"principal_id"`
 
-	TenantId string `json:"tenantId" tf:"tenant_id"`
+	TenantID string `json:"tenantId" tf:"tenant_id"`
 }
 
 type IdentityParameters struct {
@@ -35,7 +35,7 @@ type IdentityParameters struct {
 }
 
 type LogAnalyticsClusterObservation struct {
-	ClusterId string `json:"clusterId" tf:"cluster_id"`
+	ClusterID string `json:"clusterId" tf:"cluster_id"`
 }
 
 type LogAnalyticsClusterParameters struct {

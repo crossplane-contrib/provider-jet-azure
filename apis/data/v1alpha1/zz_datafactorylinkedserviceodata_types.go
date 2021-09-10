@@ -55,7 +55,7 @@ type DataFactoryLinkedServiceOdataParameters struct {
 
 	ResourceGroupName string `json:"resourceGroupName" tf:"resource_group_name"`
 
-	Url string `json:"url" tf:"url"`
+	URL string `json:"url" tf:"url"`
 }
 
 // DataFactoryLinkedServiceOdataSpec defines the desired state of DataFactoryLinkedServiceOdata

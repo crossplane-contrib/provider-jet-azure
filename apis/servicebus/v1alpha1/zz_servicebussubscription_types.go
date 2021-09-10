@@ -34,7 +34,7 @@ type ServicebusSubscriptionParameters struct {
 
 	DeadLetteringOnMessageExpiration *bool `json:"deadLetteringOnMessageExpiration,omitempty" tf:"dead_lettering_on_message_expiration"`
 
-	DefaultMessageTtl *string `json:"defaultMessageTtl,omitempty" tf:"default_message_ttl"`
+	DefaultMessageTTL *string `json:"defaultMessageTtl,omitempty" tf:"default_message_ttl"`
 
 	EnableBatchedOperations *bool `json:"enableBatchedOperations,omitempty" tf:"enable_batched_operations"`
 

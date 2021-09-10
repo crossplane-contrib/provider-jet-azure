@@ -28,11 +28,11 @@ type AppServiceSlotVirtualNetworkSwiftConnectionObservation struct {
 }
 
 type AppServiceSlotVirtualNetworkSwiftConnectionParameters struct {
-	AppServiceId string `json:"appServiceId" tf:"app_service_id"`
+	AppServiceID string `json:"appServiceId" tf:"app_service_id"`
 
 	SlotName string `json:"slotName" tf:"slot_name"`
 
-	SubnetId string `json:"subnetId" tf:"subnet_id"`
+	SubnetID string `json:"subnetId" tf:"subnet_id"`
 }
 
 // AppServiceSlotVirtualNetworkSwiftConnectionSpec defines the desired state of AppServiceSlotVirtualNetworkSwiftConnection

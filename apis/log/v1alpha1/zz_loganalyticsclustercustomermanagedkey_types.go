@@ -28,9 +28,9 @@ type LogAnalyticsClusterCustomerManagedKeyObservation struct {
 }
 
 type LogAnalyticsClusterCustomerManagedKeyParameters struct {
-	KeyVaultKeyId string `json:"keyVaultKeyId" tf:"key_vault_key_id"`
+	KeyVaultKeyID string `json:"keyVaultKeyId" tf:"key_vault_key_id"`
 
-	LogAnalyticsClusterId string `json:"logAnalyticsClusterId" tf:"log_analytics_cluster_id"`
+	LogAnalyticsClusterID string `json:"logAnalyticsClusterId" tf:"log_analytics_cluster_id"`
 }
 
 // LogAnalyticsClusterCustomerManagedKeySpec defines the desired state of LogAnalyticsClusterCustomerManagedKey

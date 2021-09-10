@@ -30,7 +30,7 @@ type DigitalTwinsEndpointEventhubObservation struct {
 type DigitalTwinsEndpointEventhubParameters struct {
 	DeadLetterStorageSecret *string `json:"deadLetterStorageSecret,omitempty" tf:"dead_letter_storage_secret"`
 
-	DigitalTwinsId string `json:"digitalTwinsId" tf:"digital_twins_id"`
+	DigitalTwinsID string `json:"digitalTwinsId" tf:"digital_twins_id"`
 
 	EventhubPrimaryConnectionString string `json:"eventhubPrimaryConnectionString" tf:"eventhub_primary_connection_string"`
 

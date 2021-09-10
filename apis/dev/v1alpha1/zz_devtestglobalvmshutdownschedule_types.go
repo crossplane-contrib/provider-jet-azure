@@ -40,7 +40,7 @@ type DevTestGlobalVmShutdownScheduleParameters struct {
 
 	Timezone string `json:"timezone" tf:"timezone"`
 
-	VirtualMachineId string `json:"virtualMachineId" tf:"virtual_machine_id"`
+	VirtualMachineID string `json:"virtualMachineId" tf:"virtual_machine_id"`
 }
 
 type NotificationSettingsObservation struct {
@@ -53,7 +53,7 @@ type NotificationSettingsParameters struct {
 
 	TimeInMinutes *int64 `json:"timeInMinutes,omitempty" tf:"time_in_minutes"`
 
-	WebhookUrl *string `json:"webhookUrl,omitempty" tf:"webhook_url"`
+	WebhookURL *string `json:"webhookUrl,omitempty" tf:"webhook_url"`
 }
 
 // DevTestGlobalVmShutdownScheduleSpec defines the desired state of DevTestGlobalVmShutdownSchedule

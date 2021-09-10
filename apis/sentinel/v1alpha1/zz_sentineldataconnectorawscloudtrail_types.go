@@ -30,7 +30,7 @@ type SentinelDataConnectorAwsCloudTrailObservation struct {
 type SentinelDataConnectorAwsCloudTrailParameters struct {
 	AwsRoleArn string `json:"awsRoleArn" tf:"aws_role_arn"`
 
-	LogAnalyticsWorkspaceId string `json:"logAnalyticsWorkspaceId" tf:"log_analytics_workspace_id"`
+	LogAnalyticsWorkspaceID string `json:"logAnalyticsWorkspaceId" tf:"log_analytics_workspace_id"`
 
 	Name string `json:"name" tf:"name"`
 }

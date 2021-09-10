@@ -28,11 +28,11 @@ type SpringCloudAppCosmosdbAssociationObservation struct {
 }
 
 type SpringCloudAppCosmosdbAssociationParameters struct {
-	ApiType string `json:"apiType" tf:"api_type"`
+	APIType string `json:"apiType" tf:"api_type"`
 
 	CosmosdbAccessKey string `json:"cosmosdbAccessKey" tf:"cosmosdb_access_key"`
 
-	CosmosdbAccountId string `json:"cosmosdbAccountId" tf:"cosmosdb_account_id"`
+	CosmosdbAccountID string `json:"cosmosdbAccountId" tf:"cosmosdb_account_id"`
 
 	CosmosdbCassandraKeyspaceName *string `json:"cosmosdbCassandraKeyspaceName,omitempty" tf:"cosmosdb_cassandra_keyspace_name"`
 
@@ -42,11 +42,11 @@ type SpringCloudAppCosmosdbAssociationParameters struct {
 
 	CosmosdbMongoDatabaseName *string `json:"cosmosdbMongoDatabaseName,omitempty" tf:"cosmosdb_mongo_database_name"`
 
-	CosmosdbSqlDatabaseName *string `json:"cosmosdbSqlDatabaseName,omitempty" tf:"cosmosdb_sql_database_name"`
+	CosmosdbSQLDatabaseName *string `json:"cosmosdbSqlDatabaseName,omitempty" tf:"cosmosdb_sql_database_name"`
 
 	Name string `json:"name" tf:"name"`
 
-	SpringCloudAppId string `json:"springCloudAppId" tf:"spring_cloud_app_id"`
+	SpringCloudAppID string `json:"springCloudAppId" tf:"spring_cloud_app_id"`
 }
 
 // SpringCloudAppCosmosdbAssociationSpec defines the desired state of SpringCloudAppCosmosdbAssociation

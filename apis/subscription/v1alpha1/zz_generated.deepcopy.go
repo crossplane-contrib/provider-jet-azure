@@ -148,13 +148,13 @@ func (in *SubscriptionParameters) DeepCopyInto(out *SubscriptionParameters) {
 		*out = new(string)
 		**out = **in
 	}
-	if in.BillingScopeId != nil {
-		in, out := &in.BillingScopeId, &out.BillingScopeId
+	if in.BillingScopeID != nil {
+		in, out := &in.BillingScopeID, &out.BillingScopeID
 		*out = new(string)
 		**out = **in
 	}
-	if in.SubscriptionId != nil {
-		in, out := &in.SubscriptionId, &out.SubscriptionId
+	if in.SubscriptionID != nil {
+		in, out := &in.SubscriptionID, &out.SubscriptionID
 		*out = new(string)
 		**out = **in
 	}
@@ -473,8 +473,8 @@ func (in *SubscriptionTemplateDeploymentParameters) DeepCopyInto(out *Subscripti
 		*out = new(string)
 		**out = **in
 	}
-	if in.TemplateSpecVersionId != nil {
-		in, out := &in.TemplateSpecVersionId, &out.TemplateSpecVersionId
+	if in.TemplateSpecVersionID != nil {
+		in, out := &in.TemplateSpecVersionID, &out.TemplateSpecVersionID
 		*out = new(string)
 		**out = **in
 	}

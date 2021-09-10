@@ -47,13 +47,13 @@ type CustomRouteParameters struct {
 type PeeringAddressesObservation struct {
 	DefaultAddresses []string `json:"defaultAddresses" tf:"default_addresses"`
 
-	TunnelIpAddresses []string `json:"tunnelIpAddresses" tf:"tunnel_ip_addresses"`
+	TunnelIPAddresses []string `json:"tunnelIpAddresses" tf:"tunnel_ip_addresses"`
 }
 
 type PeeringAddressesParameters struct {
 	ApipaAddresses []string `json:"apipaAddresses,omitempty" tf:"apipa_addresses"`
 
-	IpConfigurationName *string `json:"ipConfigurationName,omitempty" tf:"ip_configuration_name"`
+	IPConfigurationName *string `json:"ipConfigurationName,omitempty" tf:"ip_configuration_name"`
 }
 
 type RevokedCertificateObservation struct {
@@ -74,17 +74,17 @@ type RootCertificateParameters struct {
 	PublicCertData string `json:"publicCertData" tf:"public_cert_data"`
 }
 
-type VirtualNetworkGatewayIpConfigurationObservation struct {
+type VirtualNetworkGatewayIPConfigurationObservation struct {
 }
 
-type VirtualNetworkGatewayIpConfigurationParameters struct {
+type VirtualNetworkGatewayIPConfigurationParameters struct {
 	Name *string `json:"name,omitempty" tf:"name"`
 
-	PrivateIpAddressAllocation *string `json:"privateIpAddressAllocation,omitempty" tf:"private_ip_address_allocation"`
+	PrivateIPAddressAllocation *string `json:"privateIpAddressAllocation,omitempty" tf:"private_ip_address_allocation"`
 
-	PublicIpAddressId string `json:"publicIpAddressId" tf:"public_ip_address_id"`
+	PublicIPAddressID string `json:"publicIpAddressId" tf:"public_ip_address_id"`
 
-	SubnetId string `json:"subnetId" tf:"subnet_id"`
+	SubnetID string `json:"subnetId" tf:"subnet_id"`
 }
 
 type VirtualNetworkGatewayObservation struct {
@@ -97,19 +97,19 @@ type VirtualNetworkGatewayParameters struct {
 
 	CustomRoute []CustomRouteParameters `json:"customRoute,omitempty" tf:"custom_route"`
 
-	DefaultLocalNetworkGatewayId *string `json:"defaultLocalNetworkGatewayId,omitempty" tf:"default_local_network_gateway_id"`
+	DefaultLocalNetworkGatewayID *string `json:"defaultLocalNetworkGatewayId,omitempty" tf:"default_local_network_gateway_id"`
 
 	EnableBgp *bool `json:"enableBgp,omitempty" tf:"enable_bgp"`
 
 	Generation *string `json:"generation,omitempty" tf:"generation"`
 
-	IpConfiguration []VirtualNetworkGatewayIpConfigurationParameters `json:"ipConfiguration" tf:"ip_configuration"`
+	IPConfiguration []VirtualNetworkGatewayIPConfigurationParameters `json:"ipConfiguration" tf:"ip_configuration"`
 
 	Location string `json:"location" tf:"location"`
 
 	Name string `json:"name" tf:"name"`
 
-	PrivateIpAddressEnabled *bool `json:"privateIpAddressEnabled,omitempty" tf:"private_ip_address_enabled"`
+	PrivateIPAddressEnabled *bool `json:"privateIpAddressEnabled,omitempty" tf:"private_ip_address_enabled"`
 
 	ResourceGroupName string `json:"resourceGroupName" tf:"resource_group_name"`
 

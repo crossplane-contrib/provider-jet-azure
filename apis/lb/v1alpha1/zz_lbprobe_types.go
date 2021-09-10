@@ -31,7 +31,7 @@ type LbProbeObservation struct {
 type LbProbeParameters struct {
 	IntervalInSeconds *int64 `json:"intervalInSeconds,omitempty" tf:"interval_in_seconds"`
 
-	LoadbalancerId string `json:"loadbalancerId" tf:"loadbalancer_id"`
+	LoadbalancerID string `json:"loadbalancerId" tf:"loadbalancer_id"`
 
 	Name string `json:"name" tf:"name"`
 

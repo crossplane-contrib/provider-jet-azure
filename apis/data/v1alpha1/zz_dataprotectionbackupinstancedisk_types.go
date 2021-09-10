@@ -28,9 +28,9 @@ type DataProtectionBackupInstanceDiskObservation struct {
 }
 
 type DataProtectionBackupInstanceDiskParameters struct {
-	BackupPolicyId string `json:"backupPolicyId" tf:"backup_policy_id"`
+	BackupPolicyID string `json:"backupPolicyId" tf:"backup_policy_id"`
 
-	DiskId string `json:"diskId" tf:"disk_id"`
+	DiskID string `json:"diskId" tf:"disk_id"`
 
 	Location string `json:"location" tf:"location"`
 
@@ -38,7 +38,7 @@ type DataProtectionBackupInstanceDiskParameters struct {
 
 	SnapshotResourceGroupName string `json:"snapshotResourceGroupName" tf:"snapshot_resource_group_name"`
 
-	VaultId string `json:"vaultId" tf:"vault_id"`
+	VaultID string `json:"vaultId" tf:"vault_id"`
 }
 
 // DataProtectionBackupInstanceDiskSpec defines the desired state of DataProtectionBackupInstanceDisk

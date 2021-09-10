@@ -25,17 +25,17 @@ import (
 )
 
 type AppServiceEnvironmentObservation struct {
-	InternalIpAddress string `json:"internalIpAddress" tf:"internal_ip_address"`
+	InternalIPAddress string `json:"internalIpAddress" tf:"internal_ip_address"`
 
 	Location string `json:"location" tf:"location"`
 
-	OutboundIpAddresses []string `json:"outboundIpAddresses" tf:"outbound_ip_addresses"`
+	OutboundIPAddresses []string `json:"outboundIpAddresses" tf:"outbound_ip_addresses"`
 
-	ServiceIpAddress string `json:"serviceIpAddress" tf:"service_ip_address"`
+	ServiceIPAddress string `json:"serviceIpAddress" tf:"service_ip_address"`
 }
 
 type AppServiceEnvironmentParameters struct {
-	AllowedUserIpCidrs []string `json:"allowedUserIpCidrs,omitempty" tf:"allowed_user_ip_cidrs"`
+	AllowedUserIPCidrs []string `json:"allowedUserIpCidrs,omitempty" tf:"allowed_user_ip_cidrs"`
 
 	ClusterSetting []ClusterSettingParameters `json:"clusterSetting,omitempty" tf:"cluster_setting"`
 
@@ -49,11 +49,11 @@ type AppServiceEnvironmentParameters struct {
 
 	ResourceGroupName *string `json:"resourceGroupName,omitempty" tf:"resource_group_name"`
 
-	SubnetId string `json:"subnetId" tf:"subnet_id"`
+	SubnetID string `json:"subnetId" tf:"subnet_id"`
 
 	Tags map[string]string `json:"tags,omitempty" tf:"tags"`
 
-	UserWhitelistedIpRanges []string `json:"userWhitelistedIpRanges,omitempty" tf:"user_whitelisted_ip_ranges"`
+	UserWhitelistedIPRanges []string `json:"userWhitelistedIpRanges,omitempty" tf:"user_whitelisted_ip_ranges"`
 }
 
 type ClusterSettingObservation struct {

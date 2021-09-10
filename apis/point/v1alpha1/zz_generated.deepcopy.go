@@ -152,8 +152,8 @@ func (in *PointToSiteVpnGatewayParameters) DeepCopyInto(out *PointToSiteVpnGatew
 			(*in)[i].DeepCopyInto(&(*out)[i])
 		}
 	}
-	if in.DnsServers != nil {
-		in, out := &in.DnsServers, &out.DnsServers
+	if in.DNSServers != nil {
+		in, out := &in.DNSServers, &out.DNSServers
 		*out = make([]string, len(*in))
 		copy(*out, *in)
 	}

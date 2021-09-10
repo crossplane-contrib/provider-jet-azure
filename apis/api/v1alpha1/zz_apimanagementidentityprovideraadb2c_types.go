@@ -28,13 +28,13 @@ type ApiManagementIdentityProviderAadb2CObservation struct {
 }
 
 type ApiManagementIdentityProviderAadb2CParameters struct {
-	AllowedTenant string `json:"allowedTenant" tf:"allowed_tenant"`
+	APIManagementName string `json:"apiManagementName" tf:"api_management_name"`
 
-	ApiManagementName string `json:"apiManagementName" tf:"api_management_name"`
+	AllowedTenant string `json:"allowedTenant" tf:"allowed_tenant"`
 
 	Authority string `json:"authority" tf:"authority"`
 
-	ClientId string `json:"clientId" tf:"client_id"`
+	ClientID string `json:"clientId" tf:"client_id"`
 
 	ClientSecret string `json:"clientSecret" tf:"client_secret"`
 

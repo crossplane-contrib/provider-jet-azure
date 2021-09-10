@@ -33,7 +33,7 @@ type EventgridDomainObservation struct {
 }
 
 type EventgridDomainParameters struct {
-	InboundIpRule []InboundIpRuleParameters `json:"inboundIpRule,omitempty" tf:"inbound_ip_rule"`
+	InboundIPRule []InboundIPRuleParameters `json:"inboundIpRule,omitempty" tf:"inbound_ip_rule"`
 
 	InputMappingDefaultValues []InputMappingDefaultValuesParameters `json:"inputMappingDefaultValues,omitempty" tf:"input_mapping_default_values"`
 
@@ -52,13 +52,13 @@ type EventgridDomainParameters struct {
 	Tags map[string]string `json:"tags,omitempty" tf:"tags"`
 }
 
-type InboundIpRuleObservation struct {
+type InboundIPRuleObservation struct {
 }
 
-type InboundIpRuleParameters struct {
+type InboundIPRuleParameters struct {
 	Action *string `json:"action,omitempty" tf:"action"`
 
-	IpMask string `json:"ipMask" tf:"ip_mask"`
+	IPMask string `json:"ipMask" tf:"ip_mask"`
 }
 
 type InputMappingDefaultValuesObservation struct {
@@ -82,7 +82,7 @@ type InputMappingFieldsParameters struct {
 
 	EventType *string `json:"eventType,omitempty" tf:"event_type"`
 
-	Id *string `json:"id,omitempty" tf:"id"`
+	ID *string `json:"id,omitempty" tf:"id"`
 
 	Subject *string `json:"subject,omitempty" tf:"subject"`
 

@@ -25,9 +25,9 @@ import (
 )
 
 type IdentityObservation struct {
-	PrincipalId string `json:"principalId" tf:"principal_id"`
+	PrincipalID string `json:"principalId" tf:"principal_id"`
 
-	TenantId string `json:"tenantId" tf:"tenant_id"`
+	TenantID string `json:"tenantId" tf:"tenant_id"`
 }
 
 type IdentityParameters struct {
@@ -40,7 +40,7 @@ type KeyDeliveryAccessControlObservation struct {
 type KeyDeliveryAccessControlParameters struct {
 	DefaultAction *string `json:"defaultAction,omitempty" tf:"default_action"`
 
-	IpAllowList []string `json:"ipAllowList,omitempty" tf:"ip_allow_list"`
+	IPAllowList []string `json:"ipAllowList,omitempty" tf:"ip_allow_list"`
 }
 
 type MediaServicesAccountObservation struct {
@@ -68,7 +68,7 @@ type StorageAccountObservation struct {
 }
 
 type StorageAccountParameters struct {
-	Id string `json:"id" tf:"id"`
+	ID string `json:"id" tf:"id"`
 
 	IsPrimary *bool `json:"isPrimary,omitempty" tf:"is_primary"`
 }

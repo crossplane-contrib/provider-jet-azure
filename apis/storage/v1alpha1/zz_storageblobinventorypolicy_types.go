@@ -52,7 +52,7 @@ type StorageBlobInventoryPolicyObservation struct {
 type StorageBlobInventoryPolicyParameters struct {
 	Rules []RulesParameters `json:"rules" tf:"rules"`
 
-	StorageAccountId string `json:"storageAccountId" tf:"storage_account_id"`
+	StorageAccountID string `json:"storageAccountId" tf:"storage_account_id"`
 
 	StorageContainerName string `json:"storageContainerName" tf:"storage_container_name"`
 }

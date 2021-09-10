@@ -69,7 +69,7 @@ type AppServiceCertificateOrderParameters struct {
 type CertificatesObservation struct {
 	CertificateName string `json:"certificateName" tf:"certificate_name"`
 
-	KeyVaultId string `json:"keyVaultId" tf:"key_vault_id"`
+	KeyVaultID string `json:"keyVaultId" tf:"key_vault_id"`
 
 	KeyVaultSecretName string `json:"keyVaultSecretName" tf:"key_vault_secret_name"`
 

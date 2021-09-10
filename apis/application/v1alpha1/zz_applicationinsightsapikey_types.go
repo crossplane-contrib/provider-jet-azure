@@ -25,11 +25,11 @@ import (
 )
 
 type ApplicationInsightsApiKeyObservation struct {
-	ApiKey string `json:"apiKey" tf:"api_key"`
+	APIKey string `json:"apiKey" tf:"api_key"`
 }
 
 type ApplicationInsightsApiKeyParameters struct {
-	ApplicationInsightsId string `json:"applicationInsightsId" tf:"application_insights_id"`
+	ApplicationInsightsID string `json:"applicationInsightsId" tf:"application_insights_id"`
 
 	Name string `json:"name" tf:"name"`
 

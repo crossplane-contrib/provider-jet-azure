@@ -102,7 +102,7 @@ type PlayreadyConfigurationLicenseParameters struct {
 
 	ContentKeyLocationFromHeaderEnabled *bool `json:"contentKeyLocationFromHeaderEnabled,omitempty" tf:"content_key_location_from_header_enabled"`
 
-	ContentKeyLocationFromKeyId *string `json:"contentKeyLocationFromKeyId,omitempty" tf:"content_key_location_from_key_id"`
+	ContentKeyLocationFromKeyID *string `json:"contentKeyLocationFromKeyId,omitempty" tf:"content_key_location_from_key_id"`
 
 	ContentType *string `json:"contentType,omitempty" tf:"content_type"`
 
@@ -155,7 +155,7 @@ type TokenRestrictionParameters struct {
 
 	Issuer *string `json:"issuer,omitempty" tf:"issuer"`
 
-	OpenIdConnectDiscoveryDocument *string `json:"openIdConnectDiscoveryDocument,omitempty" tf:"open_id_connect_discovery_document"`
+	OpenIDConnectDiscoveryDocument *string `json:"openIdConnectDiscoveryDocument,omitempty" tf:"open_id_connect_discovery_document"`
 
 	PrimaryRsaTokenKeyExponent *string `json:"primaryRsaTokenKeyExponent,omitempty" tf:"primary_rsa_token_key_exponent"`
 

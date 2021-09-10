@@ -28,7 +28,7 @@ type ApiManagementApiOperationTagObservation struct {
 }
 
 type ApiManagementApiOperationTagParameters struct {
-	ApiOperationId string `json:"apiOperationId" tf:"api_operation_id"`
+	APIOperationID string `json:"apiOperationId" tf:"api_operation_id"`
 
 	DisplayName string `json:"displayName" tf:"display_name"`
 

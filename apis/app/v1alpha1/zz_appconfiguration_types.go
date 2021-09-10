@@ -51,9 +51,9 @@ type AppConfigurationParameters struct {
 }
 
 type IdentityObservation struct {
-	PrincipalId string `json:"principalId" tf:"principal_id"`
+	PrincipalID string `json:"principalId" tf:"principal_id"`
 
-	TenantId string `json:"tenantId" tf:"tenant_id"`
+	TenantID string `json:"tenantId" tf:"tenant_id"`
 }
 
 type IdentityParameters struct {
@@ -65,7 +65,7 @@ type IdentityParameters struct {
 type PrimaryReadKeyObservation struct {
 	ConnectionString string `json:"connectionString" tf:"connection_string"`
 
-	Id string `json:"id" tf:"id"`
+	ID string `json:"id" tf:"id"`
 
 	Secret string `json:"secret" tf:"secret"`
 }
@@ -76,7 +76,7 @@ type PrimaryReadKeyParameters struct {
 type PrimaryWriteKeyObservation struct {
 	ConnectionString string `json:"connectionString" tf:"connection_string"`
 
-	Id string `json:"id" tf:"id"`
+	ID string `json:"id" tf:"id"`
 
 	Secret string `json:"secret" tf:"secret"`
 }
@@ -87,7 +87,7 @@ type PrimaryWriteKeyParameters struct {
 type SecondaryReadKeyObservation struct {
 	ConnectionString string `json:"connectionString" tf:"connection_string"`
 
-	Id string `json:"id" tf:"id"`
+	ID string `json:"id" tf:"id"`
 
 	Secret string `json:"secret" tf:"secret"`
 }
@@ -98,7 +98,7 @@ type SecondaryReadKeyParameters struct {
 type SecondaryWriteKeyObservation struct {
 	ConnectionString string `json:"connectionString" tf:"connection_string"`
 
-	Id string `json:"id" tf:"id"`
+	ID string `json:"id" tf:"id"`
 
 	Secret string `json:"secret" tf:"secret"`
 }

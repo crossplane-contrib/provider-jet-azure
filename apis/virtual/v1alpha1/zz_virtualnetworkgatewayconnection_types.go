@@ -66,21 +66,21 @@ type VirtualNetworkGatewayConnectionParameters struct {
 
 	EnableBgp *bool `json:"enableBgp,omitempty" tf:"enable_bgp"`
 
-	ExpressRouteCircuitId *string `json:"expressRouteCircuitId,omitempty" tf:"express_route_circuit_id"`
+	ExpressRouteCircuitID *string `json:"expressRouteCircuitId,omitempty" tf:"express_route_circuit_id"`
 
 	ExpressRouteGatewayBypass *bool `json:"expressRouteGatewayBypass,omitempty" tf:"express_route_gateway_bypass"`
 
 	IpsecPolicy []IpsecPolicyParameters `json:"ipsecPolicy,omitempty" tf:"ipsec_policy"`
 
-	LocalAzureIpAddressEnabled *bool `json:"localAzureIpAddressEnabled,omitempty" tf:"local_azure_ip_address_enabled"`
+	LocalAzureIPAddressEnabled *bool `json:"localAzureIpAddressEnabled,omitempty" tf:"local_azure_ip_address_enabled"`
 
-	LocalNetworkGatewayId *string `json:"localNetworkGatewayId,omitempty" tf:"local_network_gateway_id"`
+	LocalNetworkGatewayID *string `json:"localNetworkGatewayId,omitempty" tf:"local_network_gateway_id"`
 
 	Location string `json:"location" tf:"location"`
 
 	Name string `json:"name" tf:"name"`
 
-	PeerVirtualNetworkGatewayId *string `json:"peerVirtualNetworkGatewayId,omitempty" tf:"peer_virtual_network_gateway_id"`
+	PeerVirtualNetworkGatewayID *string `json:"peerVirtualNetworkGatewayId,omitempty" tf:"peer_virtual_network_gateway_id"`
 
 	ResourceGroupName string `json:"resourceGroupName" tf:"resource_group_name"`
 
@@ -96,7 +96,7 @@ type VirtualNetworkGatewayConnectionParameters struct {
 
 	UsePolicyBasedTrafficSelectors *bool `json:"usePolicyBasedTrafficSelectors,omitempty" tf:"use_policy_based_traffic_selectors"`
 
-	VirtualNetworkGatewayId string `json:"virtualNetworkGatewayId" tf:"virtual_network_gateway_id"`
+	VirtualNetworkGatewayID string `json:"virtualNetworkGatewayId" tf:"virtual_network_gateway_id"`
 }
 
 // VirtualNetworkGatewayConnectionSpec defines the desired state of VirtualNetworkGatewayConnection

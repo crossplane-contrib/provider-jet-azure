@@ -41,7 +41,7 @@ type DataFactoryIntegrationRuntimeManagedCustomSetupScriptObservation struct {
 }
 
 type DataFactoryIntegrationRuntimeManagedCustomSetupScriptParameters struct {
-	BlobContainerUri string `json:"blobContainerUri" tf:"blob_container_uri"`
+	BlobContainerURI string `json:"blobContainerUri" tf:"blob_container_uri"`
 
 	SasToken string `json:"sasToken" tf:"sas_token"`
 }
@@ -83,7 +83,7 @@ type DataFactoryIntegrationRuntimeManagedVnetIntegrationObservation struct {
 type DataFactoryIntegrationRuntimeManagedVnetIntegrationParameters struct {
 	SubnetName string `json:"subnetName" tf:"subnet_name"`
 
-	VnetId string `json:"vnetId" tf:"vnet_id"`
+	VnetID string `json:"vnetId" tf:"vnet_id"`
 }
 
 // DataFactoryIntegrationRuntimeManagedSpec defines the desired state of DataFactoryIntegrationRuntimeManaged

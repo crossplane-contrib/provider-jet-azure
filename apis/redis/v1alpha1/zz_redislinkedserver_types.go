@@ -29,7 +29,7 @@ type RedisLinkedServerObservation struct {
 }
 
 type RedisLinkedServerParameters struct {
-	LinkedRedisCacheId string `json:"linkedRedisCacheId" tf:"linked_redis_cache_id"`
+	LinkedRedisCacheID string `json:"linkedRedisCacheId" tf:"linked_redis_cache_id"`
 
 	LinkedRedisCacheLocation string `json:"linkedRedisCacheLocation" tf:"linked_redis_cache_location"`
 

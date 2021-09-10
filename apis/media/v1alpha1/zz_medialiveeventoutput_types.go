@@ -34,9 +34,9 @@ type MediaLiveEventOutputParameters struct {
 
 	Description *string `json:"description,omitempty" tf:"description"`
 
-	HlsFragmentsPerTsSegment *int64 `json:"hlsFragmentsPerTsSegment,omitempty" tf:"hls_fragments_per_ts_segment"`
+	HlsFragmentsPerTSSegment *int64 `json:"hlsFragmentsPerTsSegment,omitempty" tf:"hls_fragments_per_ts_segment"`
 
-	LiveEventId string `json:"liveEventId" tf:"live_event_id"`
+	LiveEventID string `json:"liveEventId" tf:"live_event_id"`
 
 	ManifestName *string `json:"manifestName,omitempty" tf:"manifest_name"`
 

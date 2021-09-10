@@ -25,7 +25,7 @@ import (
 )
 
 type EventgridSystemTopicObservation struct {
-	MetricArmResourceId string `json:"metricArmResourceId" tf:"metric_arm_resource_id"`
+	MetricArmResourceID string `json:"metricArmResourceId" tf:"metric_arm_resource_id"`
 }
 
 type EventgridSystemTopicParameters struct {
@@ -35,7 +35,7 @@ type EventgridSystemTopicParameters struct {
 
 	ResourceGroupName string `json:"resourceGroupName" tf:"resource_group_name"`
 
-	SourceArmResourceId string `json:"sourceArmResourceId" tf:"source_arm_resource_id"`
+	SourceArmResourceID string `json:"sourceArmResourceId" tf:"source_arm_resource_id"`
 
 	Tags map[string]string `json:"tags,omitempty" tf:"tags"`
 

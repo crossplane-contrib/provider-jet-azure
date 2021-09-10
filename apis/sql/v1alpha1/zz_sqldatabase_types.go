@@ -55,7 +55,7 @@ type ImportParameters struct {
 
 	StorageKeyType string `json:"storageKeyType" tf:"storage_key_type"`
 
-	StorageUri string `json:"storageUri" tf:"storage_uri"`
+	StorageURI string `json:"storageUri" tf:"storage_uri"`
 }
 
 type SqlDatabaseObservation struct {
@@ -89,7 +89,7 @@ type SqlDatabaseParameters struct {
 
 	ReadScale *bool `json:"readScale,omitempty" tf:"read_scale"`
 
-	RequestedServiceObjectiveId *string `json:"requestedServiceObjectiveId,omitempty" tf:"requested_service_objective_id"`
+	RequestedServiceObjectiveID *string `json:"requestedServiceObjectiveId,omitempty" tf:"requested_service_objective_id"`
 
 	RequestedServiceObjectiveName *string `json:"requestedServiceObjectiveName,omitempty" tf:"requested_service_objective_name"`
 
@@ -101,7 +101,7 @@ type SqlDatabaseParameters struct {
 
 	SourceDatabaseDeletionDate *string `json:"sourceDatabaseDeletionDate,omitempty" tf:"source_database_deletion_date"`
 
-	SourceDatabaseId *string `json:"sourceDatabaseId,omitempty" tf:"source_database_id"`
+	SourceDatabaseID *string `json:"sourceDatabaseId,omitempty" tf:"source_database_id"`
 
 	Tags map[string]string `json:"tags,omitempty" tf:"tags"`
 

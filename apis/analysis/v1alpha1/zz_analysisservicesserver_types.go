@@ -31,11 +31,11 @@ type AnalysisServicesServerObservation struct {
 type AnalysisServicesServerParameters struct {
 	AdminUsers []string `json:"adminUsers,omitempty" tf:"admin_users"`
 
-	BackupBlobContainerUri *string `json:"backupBlobContainerUri,omitempty" tf:"backup_blob_container_uri"`
+	BackupBlobContainerURI *string `json:"backupBlobContainerUri,omitempty" tf:"backup_blob_container_uri"`
 
 	EnablePowerBiService *bool `json:"enablePowerBiService,omitempty" tf:"enable_power_bi_service"`
 
-	Ipv4FirewallRule []Ipv4FirewallRuleParameters `json:"ipv4FirewallRule,omitempty" tf:"ipv4_firewall_rule"`
+	IPv4FirewallRule []IPv4FirewallRuleParameters `json:"ipv4FirewallRule,omitempty" tf:"ipv4_firewall_rule"`
 
 	Location string `json:"location" tf:"location"`
 
@@ -50,10 +50,10 @@ type AnalysisServicesServerParameters struct {
 	Tags map[string]string `json:"tags,omitempty" tf:"tags"`
 }
 
-type Ipv4FirewallRuleObservation struct {
+type IPv4FirewallRuleObservation struct {
 }
 
-type Ipv4FirewallRuleParameters struct {
+type IPv4FirewallRuleParameters struct {
 	Name string `json:"name" tf:"name"`
 
 	RangeEnd string `json:"rangeEnd" tf:"range_end"`

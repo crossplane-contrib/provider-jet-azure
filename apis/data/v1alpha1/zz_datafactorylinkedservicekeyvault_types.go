@@ -38,7 +38,7 @@ type DataFactoryLinkedServiceKeyVaultParameters struct {
 
 	IntegrationRuntimeName *string `json:"integrationRuntimeName,omitempty" tf:"integration_runtime_name"`
 
-	KeyVaultId string `json:"keyVaultId" tf:"key_vault_id"`
+	KeyVaultID string `json:"keyVaultId" tf:"key_vault_id"`
 
 	Name string `json:"name" tf:"name"`
 

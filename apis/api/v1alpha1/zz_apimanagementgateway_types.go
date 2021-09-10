@@ -28,7 +28,7 @@ type ApiManagementGatewayObservation struct {
 }
 
 type ApiManagementGatewayParameters struct {
-	ApiManagementId string `json:"apiManagementId" tf:"api_management_id"`
+	APIManagementID string `json:"apiManagementId" tf:"api_management_id"`
 
 	Description *string `json:"description,omitempty" tf:"description"`
 

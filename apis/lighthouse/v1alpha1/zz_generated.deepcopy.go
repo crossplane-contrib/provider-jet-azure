@@ -281,8 +281,8 @@ func (in *LighthouseDefinitionParameters) DeepCopyInto(out *LighthouseDefinition
 		*out = new(string)
 		**out = **in
 	}
-	if in.LighthouseDefinitionId != nil {
-		in, out := &in.LighthouseDefinitionId, &out.LighthouseDefinitionId
+	if in.LighthouseDefinitionID != nil {
+		in, out := &in.LighthouseDefinitionID, &out.LighthouseDefinitionID
 		*out = new(string)
 		**out = **in
 	}

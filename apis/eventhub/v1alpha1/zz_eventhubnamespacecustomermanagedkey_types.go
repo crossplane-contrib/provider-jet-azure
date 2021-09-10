@@ -28,7 +28,7 @@ type EventhubNamespaceCustomerManagedKeyObservation struct {
 }
 
 type EventhubNamespaceCustomerManagedKeyParameters struct {
-	EventhubNamespaceId string `json:"eventhubNamespaceId" tf:"eventhub_namespace_id"`
+	EventhubNamespaceID string `json:"eventhubNamespaceId" tf:"eventhub_namespace_id"`
 
 	KeyVaultKeyIds []string `json:"keyVaultKeyIds" tf:"key_vault_key_ids"`
 }

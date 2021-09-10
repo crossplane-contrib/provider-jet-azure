@@ -32,7 +32,7 @@ type StorageAccountNetworkRulesParameters struct {
 
 	DefaultAction string `json:"defaultAction" tf:"default_action"`
 
-	IpRules []string `json:"ipRules,omitempty" tf:"ip_rules"`
+	IPRules []string `json:"ipRules,omitempty" tf:"ip_rules"`
 
 	PrivateLinkAccess []StorageAccountNetworkRulesPrivateLinkAccessParameters `json:"privateLinkAccess,omitempty" tf:"private_link_access"`
 
@@ -47,9 +47,9 @@ type StorageAccountNetworkRulesPrivateLinkAccessObservation struct {
 }
 
 type StorageAccountNetworkRulesPrivateLinkAccessParameters struct {
-	EndpointResourceId string `json:"endpointResourceId" tf:"endpoint_resource_id"`
+	EndpointResourceID string `json:"endpointResourceId" tf:"endpoint_resource_id"`
 
-	EndpointTenantId *string `json:"endpointTenantId,omitempty" tf:"endpoint_tenant_id"`
+	EndpointTenantID *string `json:"endpointTenantId,omitempty" tf:"endpoint_tenant_id"`
 }
 
 // StorageAccountNetworkRulesSpec defines the desired state of StorageAccountNetworkRules

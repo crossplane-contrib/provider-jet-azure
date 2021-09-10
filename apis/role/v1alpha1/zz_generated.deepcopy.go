@@ -161,8 +161,8 @@ func (in *RoleAssignmentParameters) DeepCopyInto(out *RoleAssignmentParameters) 
 		*out = new(string)
 		**out = **in
 	}
-	if in.DelegatedManagedIdentityResourceId != nil {
-		in, out := &in.DelegatedManagedIdentityResourceId, &out.DelegatedManagedIdentityResourceId
+	if in.DelegatedManagedIdentityResourceID != nil {
+		in, out := &in.DelegatedManagedIdentityResourceID, &out.DelegatedManagedIdentityResourceID
 		*out = new(string)
 		**out = **in
 	}
@@ -176,8 +176,8 @@ func (in *RoleAssignmentParameters) DeepCopyInto(out *RoleAssignmentParameters) 
 		*out = new(string)
 		**out = **in
 	}
-	if in.RoleDefinitionId != nil {
-		in, out := &in.RoleDefinitionId, &out.RoleDefinitionId
+	if in.RoleDefinitionID != nil {
+		in, out := &in.RoleDefinitionID, &out.RoleDefinitionID
 		*out = new(string)
 		**out = **in
 	}
@@ -331,8 +331,8 @@ func (in *RoleDefinitionParameters) DeepCopyInto(out *RoleDefinitionParameters) 
 			(*in)[i].DeepCopyInto(&(*out)[i])
 		}
 	}
-	if in.RoleDefinitionId != nil {
-		in, out := &in.RoleDefinitionId, &out.RoleDefinitionId
+	if in.RoleDefinitionID != nil {
+		in, out := &in.RoleDefinitionID, &out.RoleDefinitionID
 		*out = new(string)
 		**out = **in
 	}

@@ -32,7 +32,7 @@ type DataFactoryLinkedServiceKustoParameters struct {
 
 	Annotations []string `json:"annotations,omitempty" tf:"annotations"`
 
-	DataFactoryId string `json:"dataFactoryId" tf:"data_factory_id"`
+	DataFactoryID string `json:"dataFactoryId" tf:"data_factory_id"`
 
 	Description *string `json:"description,omitempty" tf:"description"`
 
@@ -46,7 +46,7 @@ type DataFactoryLinkedServiceKustoParameters struct {
 
 	Parameters map[string]string `json:"parameters,omitempty" tf:"parameters"`
 
-	ServicePrincipalId *string `json:"servicePrincipalId,omitempty" tf:"service_principal_id"`
+	ServicePrincipalID *string `json:"servicePrincipalId,omitempty" tf:"service_principal_id"`
 
 	ServicePrincipalKey *string `json:"servicePrincipalKey,omitempty" tf:"service_principal_key"`
 

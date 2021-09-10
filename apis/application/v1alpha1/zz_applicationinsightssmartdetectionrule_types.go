@@ -30,7 +30,7 @@ type ApplicationInsightsSmartDetectionRuleObservation struct {
 type ApplicationInsightsSmartDetectionRuleParameters struct {
 	AdditionalEmailRecipients []string `json:"additionalEmailRecipients,omitempty" tf:"additional_email_recipients"`
 
-	ApplicationInsightsId string `json:"applicationInsightsId" tf:"application_insights_id"`
+	ApplicationInsightsID string `json:"applicationInsightsId" tf:"application_insights_id"`
 
 	Enabled *bool `json:"enabled,omitempty" tf:"enabled"`
 

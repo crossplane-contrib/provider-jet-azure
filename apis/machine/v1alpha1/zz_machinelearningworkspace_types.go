@@ -25,9 +25,9 @@ import (
 )
 
 type MachineLearningWorkspaceIdentityObservation struct {
-	PrincipalId string `json:"principalId" tf:"principal_id"`
+	PrincipalID string `json:"principalId" tf:"principal_id"`
 
-	TenantId string `json:"tenantId" tf:"tenant_id"`
+	TenantID string `json:"tenantId" tf:"tenant_id"`
 }
 
 type MachineLearningWorkspaceIdentityParameters struct {
@@ -38,9 +38,9 @@ type MachineLearningWorkspaceObservation struct {
 }
 
 type MachineLearningWorkspaceParameters struct {
-	ApplicationInsightsId string `json:"applicationInsightsId" tf:"application_insights_id"`
+	ApplicationInsightsID string `json:"applicationInsightsId" tf:"application_insights_id"`
 
-	ContainerRegistryId *string `json:"containerRegistryId,omitempty" tf:"container_registry_id"`
+	ContainerRegistryID *string `json:"containerRegistryId,omitempty" tf:"container_registry_id"`
 
 	Description *string `json:"description,omitempty" tf:"description"`
 
@@ -50,7 +50,7 @@ type MachineLearningWorkspaceParameters struct {
 
 	Identity []MachineLearningWorkspaceIdentityParameters `json:"identity" tf:"identity"`
 
-	KeyVaultId string `json:"keyVaultId" tf:"key_vault_id"`
+	KeyVaultID string `json:"keyVaultId" tf:"key_vault_id"`
 
 	Location string `json:"location" tf:"location"`
 
@@ -60,7 +60,7 @@ type MachineLearningWorkspaceParameters struct {
 
 	SkuName *string `json:"skuName,omitempty" tf:"sku_name"`
 
-	StorageAccountId string `json:"storageAccountId" tf:"storage_account_id"`
+	StorageAccountID string `json:"storageAccountId" tf:"storage_account_id"`
 
 	Tags map[string]string `json:"tags,omitempty" tf:"tags"`
 }

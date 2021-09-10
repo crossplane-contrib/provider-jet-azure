@@ -28,9 +28,9 @@ type SubnetNatGatewayAssociationObservation struct {
 }
 
 type SubnetNatGatewayAssociationParameters struct {
-	NatGatewayId string `json:"natGatewayId" tf:"nat_gateway_id"`
+	NatGatewayID string `json:"natGatewayId" tf:"nat_gateway_id"`
 
-	SubnetId string `json:"subnetId" tf:"subnet_id"`
+	SubnetID string `json:"subnetId" tf:"subnet_id"`
 }
 
 // SubnetNatGatewayAssociationSpec defines the desired state of SubnetNatGatewayAssociation

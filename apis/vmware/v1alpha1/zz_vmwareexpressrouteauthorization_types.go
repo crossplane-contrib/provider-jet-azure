@@ -25,7 +25,7 @@ import (
 )
 
 type VmwareExpressRouteAuthorizationObservation struct {
-	ExpressRouteAuthorizationId string `json:"expressRouteAuthorizationId" tf:"express_route_authorization_id"`
+	ExpressRouteAuthorizationID string `json:"expressRouteAuthorizationId" tf:"express_route_authorization_id"`
 
 	ExpressRouteAuthorizationKey string `json:"expressRouteAuthorizationKey" tf:"express_route_authorization_key"`
 }
@@ -33,7 +33,7 @@ type VmwareExpressRouteAuthorizationObservation struct {
 type VmwareExpressRouteAuthorizationParameters struct {
 	Name string `json:"name" tf:"name"`
 
-	PrivateCloudId string `json:"privateCloudId" tf:"private_cloud_id"`
+	PrivateCloudID string `json:"privateCloudId" tf:"private_cloud_id"`
 }
 
 // VmwareExpressRouteAuthorizationSpec defines the desired state of VmwareExpressRouteAuthorization

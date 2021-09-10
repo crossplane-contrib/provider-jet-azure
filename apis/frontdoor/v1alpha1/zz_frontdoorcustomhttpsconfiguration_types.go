@@ -24,20 +24,20 @@ import (
 	"k8s.io/apimachinery/pkg/runtime/schema"
 )
 
-type CustomHttpsConfigurationObservation struct {
-	MinimumTlsVersion string `json:"minimumTlsVersion" tf:"minimum_tls_version"`
+type CustomHTTPSConfigurationObservation struct {
+	MinimumTLSVersion string `json:"minimumTlsVersion" tf:"minimum_tls_version"`
 
 	ProvisioningState string `json:"provisioningState" tf:"provisioning_state"`
 
 	ProvisioningSubstate string `json:"provisioningSubstate" tf:"provisioning_substate"`
 }
 
-type CustomHttpsConfigurationParameters struct {
+type CustomHTTPSConfigurationParameters struct {
 	AzureKeyVaultCertificateSecretName *string `json:"azureKeyVaultCertificateSecretName,omitempty" tf:"azure_key_vault_certificate_secret_name"`
 
 	AzureKeyVaultCertificateSecretVersion *string `json:"azureKeyVaultCertificateSecretVersion,omitempty" tf:"azure_key_vault_certificate_secret_version"`
 
-	AzureKeyVaultCertificateVaultId *string `json:"azureKeyVaultCertificateVaultId,omitempty" tf:"azure_key_vault_certificate_vault_id"`
+	AzureKeyVaultCertificateVaultID *string `json:"azureKeyVaultCertificateVaultId,omitempty" tf:"azure_key_vault_certificate_vault_id"`
 
 	CertificateSource *string `json:"certificateSource,omitempty" tf:"certificate_source"`
 }
@@ -46,11 +46,11 @@ type FrontdoorCustomHttpsConfigurationObservation struct {
 }
 
 type FrontdoorCustomHttpsConfigurationParameters struct {
-	CustomHttpsConfiguration []CustomHttpsConfigurationParameters `json:"customHttpsConfiguration,omitempty" tf:"custom_https_configuration"`
+	CustomHTTPSConfiguration []CustomHTTPSConfigurationParameters `json:"customHttpsConfiguration,omitempty" tf:"custom_https_configuration"`
 
-	CustomHttpsProvisioningEnabled bool `json:"customHttpsProvisioningEnabled" tf:"custom_https_provisioning_enabled"`
+	CustomHTTPSProvisioningEnabled bool `json:"customHttpsProvisioningEnabled" tf:"custom_https_provisioning_enabled"`
 
-	FrontendEndpointId string `json:"frontendEndpointId" tf:"frontend_endpoint_id"`
+	FrontendEndpointID string `json:"frontendEndpointId" tf:"frontend_endpoint_id"`
 }
 
 // FrontdoorCustomHttpsConfigurationSpec defines the desired state of FrontdoorCustomHttpsConfiguration

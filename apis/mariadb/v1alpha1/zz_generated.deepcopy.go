@@ -495,8 +495,8 @@ func (in *MariadbServerParameters) DeepCopyInto(out *MariadbServerParameters) {
 		*out = new(string)
 		**out = **in
 	}
-	if in.CreationSourceServerId != nil {
-		in, out := &in.CreationSourceServerId, &out.CreationSourceServerId
+	if in.CreationSourceServerID != nil {
+		in, out := &in.CreationSourceServerID, &out.CreationSourceServerID
 		*out = new(string)
 		**out = **in
 	}

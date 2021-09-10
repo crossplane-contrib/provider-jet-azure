@@ -220,8 +220,8 @@ func (in *HealthcareServiceParameters) DeepCopyInto(out *HealthcareServiceParame
 			(*in)[i].DeepCopyInto(&(*out)[i])
 		}
 	}
-	if in.CosmosdbKeyVaultKeyVersionlessId != nil {
-		in, out := &in.CosmosdbKeyVaultKeyVersionlessId, &out.CosmosdbKeyVaultKeyVersionlessId
+	if in.CosmosdbKeyVaultKeyVersionlessID != nil {
+		in, out := &in.CosmosdbKeyVaultKeyVersionlessID, &out.CosmosdbKeyVaultKeyVersionlessID
 		*out = new(string)
 		**out = **in
 	}

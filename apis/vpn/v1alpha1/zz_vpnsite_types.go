@@ -34,7 +34,7 @@ type BgpParameters struct {
 }
 
 type LinkObservation struct {
-	Id string `json:"id" tf:"id"`
+	ID string `json:"id" tf:"id"`
 }
 
 type LinkParameters struct {
@@ -42,7 +42,7 @@ type LinkParameters struct {
 
 	Fqdn *string `json:"fqdn,omitempty" tf:"fqdn"`
 
-	IpAddress *string `json:"ipAddress,omitempty" tf:"ip_address"`
+	IPAddress *string `json:"ipAddress,omitempty" tf:"ip_address"`
 
 	Name string `json:"name" tf:"name"`
 
@@ -71,7 +71,7 @@ type VpnSiteParameters struct {
 
 	Tags map[string]string `json:"tags,omitempty" tf:"tags"`
 
-	VirtualWanId string `json:"virtualWanId" tf:"virtual_wan_id"`
+	VirtualWanID string `json:"virtualWanId" tf:"virtual_wan_id"`
 }
 
 // VpnSiteSpec defines the desired state of VpnSite

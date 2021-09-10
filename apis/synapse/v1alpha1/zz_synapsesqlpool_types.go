@@ -30,7 +30,7 @@ type RestoreObservation struct {
 type RestoreParameters struct {
 	PointInTime string `json:"pointInTime" tf:"point_in_time"`
 
-	SourceDatabaseId string `json:"sourceDatabaseId" tf:"source_database_id"`
+	SourceDatabaseID string `json:"sourceDatabaseId" tf:"source_database_id"`
 }
 
 type SynapseSqlPoolObservation struct {
@@ -45,13 +45,13 @@ type SynapseSqlPoolParameters struct {
 
 	Name string `json:"name" tf:"name"`
 
-	RecoveryDatabaseId *string `json:"recoveryDatabaseId,omitempty" tf:"recovery_database_id"`
+	RecoveryDatabaseID *string `json:"recoveryDatabaseId,omitempty" tf:"recovery_database_id"`
 
 	Restore []RestoreParameters `json:"restore,omitempty" tf:"restore"`
 
 	SkuName string `json:"skuName" tf:"sku_name"`
 
-	SynapseWorkspaceId string `json:"synapseWorkspaceId" tf:"synapse_workspace_id"`
+	SynapseWorkspaceID string `json:"synapseWorkspaceId" tf:"synapse_workspace_id"`
 
 	Tags map[string]string `json:"tags,omitempty" tf:"tags"`
 }

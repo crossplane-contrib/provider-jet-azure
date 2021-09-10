@@ -33,13 +33,13 @@ type ApiManagementCertificateObservation struct {
 }
 
 type ApiManagementCertificateParameters struct {
-	ApiManagementName string `json:"apiManagementName" tf:"api_management_name"`
+	APIManagementName string `json:"apiManagementName" tf:"api_management_name"`
 
 	Data *string `json:"data,omitempty" tf:"data"`
 
-	KeyVaultIdentityClientId *string `json:"keyVaultIdentityClientId,omitempty" tf:"key_vault_identity_client_id"`
+	KeyVaultIdentityClientID *string `json:"keyVaultIdentityClientId,omitempty" tf:"key_vault_identity_client_id"`
 
-	KeyVaultSecretId *string `json:"keyVaultSecretId,omitempty" tf:"key_vault_secret_id"`
+	KeyVaultSecretID *string `json:"keyVaultSecretId,omitempty" tf:"key_vault_secret_id"`
 
 	Name string `json:"name" tf:"name"`
 

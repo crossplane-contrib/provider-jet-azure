@@ -31,7 +31,7 @@ type ApiManagementApiObservation struct {
 }
 
 type ApiManagementApiParameters struct {
-	ApiManagementName string `json:"apiManagementName" tf:"api_management_name"`
+	APIManagementName string `json:"apiManagementName" tf:"api_management_name"`
 
 	Description *string `json:"description,omitempty" tf:"description"`
 
@@ -55,11 +55,11 @@ type ApiManagementApiParameters struct {
 
 	RevisionDescription *string `json:"revisionDescription,omitempty" tf:"revision_description"`
 
-	ServiceUrl *string `json:"serviceUrl,omitempty" tf:"service_url"`
+	ServiceURL *string `json:"serviceUrl,omitempty" tf:"service_url"`
 
 	SoapPassThrough *bool `json:"soapPassThrough,omitempty" tf:"soap_pass_through"`
 
-	SourceApiId *string `json:"sourceApiId,omitempty" tf:"source_api_id"`
+	SourceAPIID *string `json:"sourceApiId,omitempty" tf:"source_api_id"`
 
 	SubscriptionKeyParameterNames []SubscriptionKeyParameterNamesParameters `json:"subscriptionKeyParameterNames,omitempty" tf:"subscription_key_parameter_names"`
 
@@ -69,7 +69,7 @@ type ApiManagementApiParameters struct {
 
 	VersionDescription *string `json:"versionDescription,omitempty" tf:"version_description"`
 
-	VersionSetId *string `json:"versionSetId,omitempty" tf:"version_set_id"`
+	VersionSetID *string `json:"versionSetId,omitempty" tf:"version_set_id"`
 }
 
 type ImportObservation struct {

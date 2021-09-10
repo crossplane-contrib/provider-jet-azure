@@ -28,7 +28,7 @@ type ApiManagementApiVersionSetObservation struct {
 }
 
 type ApiManagementApiVersionSetParameters struct {
-	ApiManagementName string `json:"apiManagementName" tf:"api_management_name"`
+	APIManagementName string `json:"apiManagementName" tf:"api_management_name"`
 
 	Description *string `json:"description,omitempty" tf:"description"`
 

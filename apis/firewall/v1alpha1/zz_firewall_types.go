@@ -28,19 +28,19 @@ type FirewallObservation struct {
 }
 
 type FirewallParameters struct {
-	DnsServers []string `json:"dnsServers,omitempty" tf:"dns_servers"`
+	DNSServers []string `json:"dnsServers,omitempty" tf:"dns_servers"`
 
-	FirewallPolicyId *string `json:"firewallPolicyId,omitempty" tf:"firewall_policy_id"`
+	FirewallPolicyID *string `json:"firewallPolicyId,omitempty" tf:"firewall_policy_id"`
 
-	IpConfiguration []IpConfigurationParameters `json:"ipConfiguration,omitempty" tf:"ip_configuration"`
+	IPConfiguration []IPConfigurationParameters `json:"ipConfiguration,omitempty" tf:"ip_configuration"`
 
 	Location string `json:"location" tf:"location"`
 
-	ManagementIpConfiguration []ManagementIpConfigurationParameters `json:"managementIpConfiguration,omitempty" tf:"management_ip_configuration"`
+	ManagementIPConfiguration []ManagementIPConfigurationParameters `json:"managementIpConfiguration,omitempty" tf:"management_ip_configuration"`
 
 	Name string `json:"name" tf:"name"`
 
-	PrivateIpRanges []string `json:"privateIpRanges,omitempty" tf:"private_ip_ranges"`
+	PrivateIPRanges []string `json:"privateIpRanges,omitempty" tf:"private_ip_ranges"`
 
 	ResourceGroupName string `json:"resourceGroupName" tf:"resource_group_name"`
 
@@ -57,40 +57,40 @@ type FirewallParameters struct {
 	Zones []string `json:"zones,omitempty" tf:"zones"`
 }
 
-type IpConfigurationObservation struct {
-	PrivateIpAddress string `json:"privateIpAddress" tf:"private_ip_address"`
+type IPConfigurationObservation struct {
+	PrivateIPAddress string `json:"privateIpAddress" tf:"private_ip_address"`
 }
 
-type IpConfigurationParameters struct {
+type IPConfigurationParameters struct {
 	Name string `json:"name" tf:"name"`
 
-	PublicIpAddressId string `json:"publicIpAddressId" tf:"public_ip_address_id"`
+	PublicIPAddressID string `json:"publicIpAddressId" tf:"public_ip_address_id"`
 
-	SubnetId *string `json:"subnetId,omitempty" tf:"subnet_id"`
+	SubnetID *string `json:"subnetId,omitempty" tf:"subnet_id"`
 }
 
-type ManagementIpConfigurationObservation struct {
-	PrivateIpAddress string `json:"privateIpAddress" tf:"private_ip_address"`
+type ManagementIPConfigurationObservation struct {
+	PrivateIPAddress string `json:"privateIpAddress" tf:"private_ip_address"`
 }
 
-type ManagementIpConfigurationParameters struct {
+type ManagementIPConfigurationParameters struct {
 	Name string `json:"name" tf:"name"`
 
-	PublicIpAddressId string `json:"publicIpAddressId" tf:"public_ip_address_id"`
+	PublicIPAddressID string `json:"publicIpAddressId" tf:"public_ip_address_id"`
 
-	SubnetId string `json:"subnetId" tf:"subnet_id"`
+	SubnetID string `json:"subnetId" tf:"subnet_id"`
 }
 
 type VirtualHubObservation struct {
-	PrivateIpAddress string `json:"privateIpAddress" tf:"private_ip_address"`
+	PrivateIPAddress string `json:"privateIpAddress" tf:"private_ip_address"`
 
-	PublicIpAddresses []string `json:"publicIpAddresses" tf:"public_ip_addresses"`
+	PublicIPAddresses []string `json:"publicIpAddresses" tf:"public_ip_addresses"`
 }
 
 type VirtualHubParameters struct {
-	PublicIpCount *int64 `json:"publicIpCount,omitempty" tf:"public_ip_count"`
+	PublicIPCount *int64 `json:"publicIpCount,omitempty" tf:"public_ip_count"`
 
-	VirtualHubId string `json:"virtualHubId" tf:"virtual_hub_id"`
+	VirtualHubID string `json:"virtualHubId" tf:"virtual_hub_id"`
 }
 
 // FirewallSpec defines the desired state of Firewall

@@ -77,7 +77,7 @@ type FrontdoorFirewallPolicyParameters struct {
 
 	Name string `json:"name" tf:"name"`
 
-	RedirectUrl *string `json:"redirectUrl,omitempty" tf:"redirect_url"`
+	RedirectURL *string `json:"redirectUrl,omitempty" tf:"redirect_url"`
 
 	ResourceGroupName string `json:"resourceGroupName" tf:"resource_group_name"`
 
@@ -157,7 +157,7 @@ type RuleParameters struct {
 
 	Exclusion []RuleExclusionParameters `json:"exclusion,omitempty" tf:"exclusion"`
 
-	RuleId string `json:"ruleId" tf:"rule_id"`
+	RuleID string `json:"ruleId" tf:"rule_id"`
 }
 
 // FrontdoorFirewallPolicySpec defines the desired state of FrontdoorFirewallPolicy

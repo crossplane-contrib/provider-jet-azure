@@ -38,7 +38,7 @@ type AvailabilitySetParameters struct {
 
 	PlatformUpdateDomainCount *int64 `json:"platformUpdateDomainCount,omitempty" tf:"platform_update_domain_count"`
 
-	ProximityPlacementGroupId *string `json:"proximityPlacementGroupId,omitempty" tf:"proximity_placement_group_id"`
+	ProximityPlacementGroupID *string `json:"proximityPlacementGroupId,omitempty" tf:"proximity_placement_group_id"`
 
 	ResourceGroupName string `json:"resourceGroupName" tf:"resource_group_name"`
 

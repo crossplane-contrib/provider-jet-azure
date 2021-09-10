@@ -28,9 +28,9 @@ type ApiManagementGatewayApiObservation struct {
 }
 
 type ApiManagementGatewayApiParameters struct {
-	ApiId string `json:"apiId" tf:"api_id"`
+	APIID string `json:"apiId" tf:"api_id"`
 
-	GatewayId string `json:"gatewayId" tf:"gateway_id"`
+	GatewayID string `json:"gatewayId" tf:"gateway_id"`
 }
 
 // ApiManagementGatewayApiSpec defines the desired state of ApiManagementGatewayApi

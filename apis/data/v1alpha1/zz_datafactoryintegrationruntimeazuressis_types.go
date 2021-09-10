@@ -67,7 +67,7 @@ type CustomSetupScriptObservation struct {
 }
 
 type CustomSetupScriptParameters struct {
-	BlobContainerUri string `json:"blobContainerUri" tf:"blob_container_uri"`
+	BlobContainerURI string `json:"blobContainerUri" tf:"blob_container_uri"`
 
 	SasToken string `json:"sasToken" tf:"sas_token"`
 }
@@ -176,7 +176,7 @@ type VnetIntegrationParameters struct {
 
 	SubnetName string `json:"subnetName" tf:"subnet_name"`
 
-	VnetId string `json:"vnetId" tf:"vnet_id"`
+	VnetID string `json:"vnetId" tf:"vnet_id"`
 }
 
 // DataFactoryIntegrationRuntimeAzureSsisSpec defines the desired state of DataFactoryIntegrationRuntimeAzureSsis

@@ -28,13 +28,13 @@ type ApiManagementGroupUserObservation struct {
 }
 
 type ApiManagementGroupUserParameters struct {
-	ApiManagementName string `json:"apiManagementName" tf:"api_management_name"`
+	APIManagementName string `json:"apiManagementName" tf:"api_management_name"`
 
 	GroupName string `json:"groupName" tf:"group_name"`
 
 	ResourceGroupName string `json:"resourceGroupName" tf:"resource_group_name"`
 
-	UserId string `json:"userId" tf:"user_id"`
+	UserID string `json:"userId" tf:"user_id"`
 }
 
 // ApiManagementGroupUserSpec defines the desired state of ApiManagementGroupUser

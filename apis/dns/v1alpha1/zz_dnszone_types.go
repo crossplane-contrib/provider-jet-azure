@@ -53,7 +53,7 @@ type SoaRecordParameters struct {
 
 	HostName string `json:"hostName" tf:"host_name"`
 
-	MinimumTtl *int64 `json:"minimumTtl,omitempty" tf:"minimum_ttl"`
+	MinimumTTL *int64 `json:"minimumTtl,omitempty" tf:"minimum_ttl"`
 
 	RefreshTime *int64 `json:"refreshTime,omitempty" tf:"refresh_time"`
 
@@ -61,9 +61,9 @@ type SoaRecordParameters struct {
 
 	SerialNumber *int64 `json:"serialNumber,omitempty" tf:"serial_number"`
 
-	Tags map[string]string `json:"tags,omitempty" tf:"tags"`
+	TTL *int64 `json:"ttl,omitempty" tf:"ttl"`
 
-	Ttl *int64 `json:"ttl,omitempty" tf:"ttl"`
+	Tags map[string]string `json:"tags,omitempty" tf:"tags"`
 }
 
 // DnsZoneSpec defines the desired state of DnsZone

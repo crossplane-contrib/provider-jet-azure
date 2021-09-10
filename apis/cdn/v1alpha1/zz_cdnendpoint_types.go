@@ -57,9 +57,9 @@ type CdnEndpointParameters struct {
 
 	IsCompressionEnabled *bool `json:"isCompressionEnabled,omitempty" tf:"is_compression_enabled"`
 
-	IsHttpAllowed *bool `json:"isHttpAllowed,omitempty" tf:"is_http_allowed"`
+	IsHTTPAllowed *bool `json:"isHttpAllowed,omitempty" tf:"is_http_allowed"`
 
-	IsHttpsAllowed *bool `json:"isHttpsAllowed,omitempty" tf:"is_https_allowed"`
+	IsHTTPSAllowed *bool `json:"isHttpsAllowed,omitempty" tf:"is_https_allowed"`
 
 	Location string `json:"location" tf:"location"`
 
@@ -111,7 +111,7 @@ type DeliveryRuleParameters struct {
 
 	DeviceCondition []DeviceConditionParameters `json:"deviceCondition,omitempty" tf:"device_condition"`
 
-	HttpVersionCondition []HttpVersionConditionParameters `json:"httpVersionCondition,omitempty" tf:"http_version_condition"`
+	HTTPVersionCondition []HTTPVersionConditionParameters `json:"httpVersionCondition,omitempty" tf:"http_version_condition"`
 
 	ModifyRequestHeaderAction []ModifyRequestHeaderActionParameters `json:"modifyRequestHeaderAction,omitempty" tf:"modify_request_header_action"`
 
@@ -135,17 +135,17 @@ type DeliveryRuleParameters struct {
 
 	RequestSchemeCondition []RequestSchemeConditionParameters `json:"requestSchemeCondition,omitempty" tf:"request_scheme_condition"`
 
-	RequestUriCondition []RequestUriConditionParameters `json:"requestUriCondition,omitempty" tf:"request_uri_condition"`
+	RequestURICondition []RequestURIConditionParameters `json:"requestUriCondition,omitempty" tf:"request_uri_condition"`
 
-	UrlFileExtensionCondition []UrlFileExtensionConditionParameters `json:"urlFileExtensionCondition,omitempty" tf:"url_file_extension_condition"`
+	URLFileExtensionCondition []URLFileExtensionConditionParameters `json:"urlFileExtensionCondition,omitempty" tf:"url_file_extension_condition"`
 
-	UrlFileNameCondition []UrlFileNameConditionParameters `json:"urlFileNameCondition,omitempty" tf:"url_file_name_condition"`
+	URLFileNameCondition []URLFileNameConditionParameters `json:"urlFileNameCondition,omitempty" tf:"url_file_name_condition"`
 
-	UrlPathCondition []UrlPathConditionParameters `json:"urlPathCondition,omitempty" tf:"url_path_condition"`
+	URLPathCondition []URLPathConditionParameters `json:"urlPathCondition,omitempty" tf:"url_path_condition"`
 
-	UrlRedirectAction []UrlRedirectActionParameters `json:"urlRedirectAction,omitempty" tf:"url_redirect_action"`
+	URLRedirectAction []URLRedirectActionParameters `json:"urlRedirectAction,omitempty" tf:"url_redirect_action"`
 
-	UrlRewriteAction []UrlRewriteActionParameters `json:"urlRewriteAction,omitempty" tf:"url_rewrite_action"`
+	URLRewriteAction []URLRewriteActionParameters `json:"urlRewriteAction,omitempty" tf:"url_rewrite_action"`
 }
 
 type DeviceConditionObservation struct {
@@ -222,15 +222,15 @@ type GlobalDeliveryRuleParameters struct {
 
 	ModifyResponseHeaderAction []GlobalDeliveryRuleModifyResponseHeaderActionParameters `json:"modifyResponseHeaderAction,omitempty" tf:"modify_response_header_action"`
 
-	UrlRedirectAction []GlobalDeliveryRuleUrlRedirectActionParameters `json:"urlRedirectAction,omitempty" tf:"url_redirect_action"`
+	URLRedirectAction []GlobalDeliveryRuleURLRedirectActionParameters `json:"urlRedirectAction,omitempty" tf:"url_redirect_action"`
 
-	UrlRewriteAction []GlobalDeliveryRuleUrlRewriteActionParameters `json:"urlRewriteAction,omitempty" tf:"url_rewrite_action"`
+	URLRewriteAction []GlobalDeliveryRuleURLRewriteActionParameters `json:"urlRewriteAction,omitempty" tf:"url_rewrite_action"`
 }
 
-type GlobalDeliveryRuleUrlRedirectActionObservation struct {
+type GlobalDeliveryRuleURLRedirectActionObservation struct {
 }
 
-type GlobalDeliveryRuleUrlRedirectActionParameters struct {
+type GlobalDeliveryRuleURLRedirectActionParameters struct {
 	Fragment *string `json:"fragment,omitempty" tf:"fragment"`
 
 	Hostname *string `json:"hostname,omitempty" tf:"hostname"`
@@ -244,10 +244,10 @@ type GlobalDeliveryRuleUrlRedirectActionParameters struct {
 	RedirectType string `json:"redirectType" tf:"redirect_type"`
 }
 
-type GlobalDeliveryRuleUrlRewriteActionObservation struct {
+type GlobalDeliveryRuleURLRewriteActionObservation struct {
 }
 
-type GlobalDeliveryRuleUrlRewriteActionParameters struct {
+type GlobalDeliveryRuleURLRewriteActionParameters struct {
 	Destination string `json:"destination" tf:"destination"`
 
 	PreserveUnmatchedPath *bool `json:"preserveUnmatchedPath,omitempty" tf:"preserve_unmatched_path"`
@@ -255,10 +255,10 @@ type GlobalDeliveryRuleUrlRewriteActionParameters struct {
 	SourcePattern string `json:"sourcePattern" tf:"source_pattern"`
 }
 
-type HttpVersionConditionObservation struct {
+type HTTPVersionConditionObservation struct {
 }
 
-type HttpVersionConditionParameters struct {
+type HTTPVersionConditionParameters struct {
 	MatchValues []string `json:"matchValues" tf:"match_values"`
 
 	NegateCondition *bool `json:"negateCondition,omitempty" tf:"negate_condition"`
@@ -292,11 +292,11 @@ type OriginObservation struct {
 }
 
 type OriginParameters struct {
+	HTTPPort *int64 `json:"httpPort,omitempty" tf:"http_port"`
+
+	HTTPSPort *int64 `json:"httpsPort,omitempty" tf:"https_port"`
+
 	HostName string `json:"hostName" tf:"host_name"`
-
-	HttpPort *int64 `json:"httpPort,omitempty" tf:"http_port"`
-
-	HttpsPort *int64 `json:"httpsPort,omitempty" tf:"https_port"`
 
 	Name string `json:"name" tf:"name"`
 }
@@ -390,10 +390,10 @@ type RequestSchemeConditionParameters struct {
 	Operator *string `json:"operator,omitempty" tf:"operator"`
 }
 
-type RequestUriConditionObservation struct {
+type RequestURIConditionObservation struct {
 }
 
-type RequestUriConditionParameters struct {
+type RequestURIConditionParameters struct {
 	MatchValues []string `json:"matchValues,omitempty" tf:"match_values"`
 
 	NegateCondition *bool `json:"negateCondition,omitempty" tf:"negate_condition"`
@@ -403,10 +403,10 @@ type RequestUriConditionParameters struct {
 	Transforms []string `json:"transforms,omitempty" tf:"transforms"`
 }
 
-type UrlFileExtensionConditionObservation struct {
+type URLFileExtensionConditionObservation struct {
 }
 
-type UrlFileExtensionConditionParameters struct {
+type URLFileExtensionConditionParameters struct {
 	MatchValues []string `json:"matchValues,omitempty" tf:"match_values"`
 
 	NegateCondition *bool `json:"negateCondition,omitempty" tf:"negate_condition"`
@@ -416,10 +416,10 @@ type UrlFileExtensionConditionParameters struct {
 	Transforms []string `json:"transforms,omitempty" tf:"transforms"`
 }
 
-type UrlFileNameConditionObservation struct {
+type URLFileNameConditionObservation struct {
 }
 
-type UrlFileNameConditionParameters struct {
+type URLFileNameConditionParameters struct {
 	MatchValues []string `json:"matchValues,omitempty" tf:"match_values"`
 
 	NegateCondition *bool `json:"negateCondition,omitempty" tf:"negate_condition"`
@@ -429,10 +429,10 @@ type UrlFileNameConditionParameters struct {
 	Transforms []string `json:"transforms,omitempty" tf:"transforms"`
 }
 
-type UrlPathConditionObservation struct {
+type URLPathConditionObservation struct {
 }
 
-type UrlPathConditionParameters struct {
+type URLPathConditionParameters struct {
 	MatchValues []string `json:"matchValues,omitempty" tf:"match_values"`
 
 	NegateCondition *bool `json:"negateCondition,omitempty" tf:"negate_condition"`
@@ -442,10 +442,10 @@ type UrlPathConditionParameters struct {
 	Transforms []string `json:"transforms,omitempty" tf:"transforms"`
 }
 
-type UrlRedirectActionObservation struct {
+type URLRedirectActionObservation struct {
 }
 
-type UrlRedirectActionParameters struct {
+type URLRedirectActionParameters struct {
 	Fragment *string `json:"fragment,omitempty" tf:"fragment"`
 
 	Hostname *string `json:"hostname,omitempty" tf:"hostname"`
@@ -459,10 +459,10 @@ type UrlRedirectActionParameters struct {
 	RedirectType string `json:"redirectType" tf:"redirect_type"`
 }
 
-type UrlRewriteActionObservation struct {
+type URLRewriteActionObservation struct {
 }
 
-type UrlRewriteActionParameters struct {
+type URLRewriteActionParameters struct {
 	Destination string `json:"destination" tf:"destination"`
 
 	PreserveUnmatchedPath *bool `json:"preserveUnmatchedPath,omitempty" tf:"preserve_unmatched_path"`

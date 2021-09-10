@@ -28,13 +28,13 @@ type DataFactoryManagedPrivateEndpointObservation struct {
 }
 
 type DataFactoryManagedPrivateEndpointParameters struct {
-	DataFactoryId string `json:"dataFactoryId" tf:"data_factory_id"`
+	DataFactoryID string `json:"dataFactoryId" tf:"data_factory_id"`
 
 	Name string `json:"name" tf:"name"`
 
 	SubresourceName string `json:"subresourceName" tf:"subresource_name"`
 
-	TargetResourceId string `json:"targetResourceId" tf:"target_resource_id"`
+	TargetResourceID string `json:"targetResourceId" tf:"target_resource_id"`
 }
 
 // DataFactoryManagedPrivateEndpointSpec defines the desired state of DataFactoryManagedPrivateEndpoint

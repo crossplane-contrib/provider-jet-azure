@@ -48,7 +48,7 @@ type DataFactoryLinkedServiceWebParameters struct {
 
 	ResourceGroupName string `json:"resourceGroupName" tf:"resource_group_name"`
 
-	Url string `json:"url" tf:"url"`
+	URL string `json:"url" tf:"url"`
 
 	Username *string `json:"username,omitempty" tf:"username"`
 }

@@ -28,7 +28,7 @@ type ActiveDirectoryObservation struct {
 }
 
 type ActiveDirectoryParameters struct {
-	DnsServers []string `json:"dnsServers" tf:"dns_servers"`
+	DNSServers []string `json:"dnsServers" tf:"dns_servers"`
 
 	Domain string `json:"domain" tf:"domain"`
 

@@ -30,7 +30,7 @@ type ServicebusTopicObservation struct {
 type ServicebusTopicParameters struct {
 	AutoDeleteOnIdle *string `json:"autoDeleteOnIdle,omitempty" tf:"auto_delete_on_idle"`
 
-	DefaultMessageTtl *string `json:"defaultMessageTtl,omitempty" tf:"default_message_ttl"`
+	DefaultMessageTTL *string `json:"defaultMessageTtl,omitempty" tf:"default_message_ttl"`
 
 	DuplicateDetectionHistoryTimeWindow *string `json:"duplicateDetectionHistoryTimeWindow,omitempty" tf:"duplicate_detection_history_time_window"`
 

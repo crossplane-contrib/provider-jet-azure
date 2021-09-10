@@ -38,7 +38,7 @@ type KustoEventgridDataConnectionParameters struct {
 
 	EventhubConsumerGroupName string `json:"eventhubConsumerGroupName" tf:"eventhub_consumer_group_name"`
 
-	EventhubId string `json:"eventhubId" tf:"eventhub_id"`
+	EventhubID string `json:"eventhubId" tf:"eventhub_id"`
 
 	Location string `json:"location" tf:"location"`
 
@@ -50,7 +50,7 @@ type KustoEventgridDataConnectionParameters struct {
 
 	SkipFirstRecord *bool `json:"skipFirstRecord,omitempty" tf:"skip_first_record"`
 
-	StorageAccountId string `json:"storageAccountId" tf:"storage_account_id"`
+	StorageAccountID string `json:"storageAccountId" tf:"storage_account_id"`
 
 	TableName *string `json:"tableName,omitempty" tf:"table_name"`
 }

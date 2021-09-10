@@ -43,7 +43,7 @@ type ResourceGroupTemplateDeploymentParameters struct {
 
 	TemplateContent *string `json:"templateContent,omitempty" tf:"template_content"`
 
-	TemplateSpecVersionId *string `json:"templateSpecVersionId,omitempty" tf:"template_spec_version_id"`
+	TemplateSpecVersionID *string `json:"templateSpecVersionId,omitempty" tf:"template_spec_version_id"`
 }
 
 // ResourceGroupTemplateDeploymentSpec defines the desired state of ResourceGroupTemplateDeployment

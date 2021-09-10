@@ -59,9 +59,9 @@ type TrafficManagerEndpointParameters struct {
 
 	MinChildEndpoints *int64 `json:"minChildEndpoints,omitempty" tf:"min_child_endpoints"`
 
-	MinimumRequiredChildEndpointsIpv4 *int64 `json:"minimumRequiredChildEndpointsIpv4,omitempty" tf:"minimum_required_child_endpoints_ipv4"`
+	MinimumRequiredChildEndpointsIPv4 *int64 `json:"minimumRequiredChildEndpointsIpv4,omitempty" tf:"minimum_required_child_endpoints_ipv4"`
 
-	MinimumRequiredChildEndpointsIpv6 *int64 `json:"minimumRequiredChildEndpointsIpv6,omitempty" tf:"minimum_required_child_endpoints_ipv6"`
+	MinimumRequiredChildEndpointsIPv6 *int64 `json:"minimumRequiredChildEndpointsIpv6,omitempty" tf:"minimum_required_child_endpoints_ipv6"`
 
 	Name string `json:"name" tf:"name"`
 
@@ -75,7 +75,7 @@ type TrafficManagerEndpointParameters struct {
 
 	Target *string `json:"target,omitempty" tf:"target"`
 
-	TargetResourceId *string `json:"targetResourceId,omitempty" tf:"target_resource_id"`
+	TargetResourceID *string `json:"targetResourceId,omitempty" tf:"target_resource_id"`
 
 	Type string `json:"type" tf:"type"`
 

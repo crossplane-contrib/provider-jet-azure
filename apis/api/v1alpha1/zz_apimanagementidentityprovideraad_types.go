@@ -28,11 +28,11 @@ type ApiManagementIdentityProviderAadObservation struct {
 }
 
 type ApiManagementIdentityProviderAadParameters struct {
+	APIManagementName string `json:"apiManagementName" tf:"api_management_name"`
+
 	AllowedTenants []string `json:"allowedTenants" tf:"allowed_tenants"`
 
-	ApiManagementName string `json:"apiManagementName" tf:"api_management_name"`
-
-	ClientId string `json:"clientId" tf:"client_id"`
+	ClientID string `json:"clientId" tf:"client_id"`
 
 	ClientSecret string `json:"clientSecret" tf:"client_secret"`
 

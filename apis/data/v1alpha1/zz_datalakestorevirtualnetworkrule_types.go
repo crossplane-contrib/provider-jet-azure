@@ -34,7 +34,7 @@ type DataLakeStoreVirtualNetworkRuleParameters struct {
 
 	ResourceGroupName string `json:"resourceGroupName" tf:"resource_group_name"`
 
-	SubnetId string `json:"subnetId" tf:"subnet_id"`
+	SubnetID string `json:"subnetId" tf:"subnet_id"`
 }
 
 // DataLakeStoreVirtualNetworkRuleSpec defines the desired state of DataLakeStoreVirtualNetworkRule

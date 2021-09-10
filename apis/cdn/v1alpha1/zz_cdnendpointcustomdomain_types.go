@@ -28,7 +28,7 @@ type CdnEndpointCustomDomainObservation struct {
 }
 
 type CdnEndpointCustomDomainParameters struct {
-	CdnEndpointId string `json:"cdnEndpointId" tf:"cdn_endpoint_id"`
+	CdnEndpointID string `json:"cdnEndpointId" tf:"cdn_endpoint_id"`
 
 	HostName string `json:"hostName" tf:"host_name"`
 

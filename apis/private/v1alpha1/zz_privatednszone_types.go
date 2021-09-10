@@ -57,15 +57,15 @@ type SoaRecordParameters struct {
 
 	ExpireTime *int64 `json:"expireTime,omitempty" tf:"expire_time"`
 
-	MinimumTtl *int64 `json:"minimumTtl,omitempty" tf:"minimum_ttl"`
+	MinimumTTL *int64 `json:"minimumTtl,omitempty" tf:"minimum_ttl"`
 
 	RefreshTime *int64 `json:"refreshTime,omitempty" tf:"refresh_time"`
 
 	RetryTime *int64 `json:"retryTime,omitempty" tf:"retry_time"`
 
-	Tags map[string]string `json:"tags,omitempty" tf:"tags"`
+	TTL *int64 `json:"ttl,omitempty" tf:"ttl"`
 
-	Ttl *int64 `json:"ttl,omitempty" tf:"ttl"`
+	Tags map[string]string `json:"tags,omitempty" tf:"tags"`
 }
 
 // PrivateDnsZoneSpec defines the desired state of PrivateDnsZone

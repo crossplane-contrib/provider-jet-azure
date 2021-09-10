@@ -30,9 +30,9 @@ type HpcCacheAccessPolicyAccessRuleObservation struct {
 type HpcCacheAccessPolicyAccessRuleParameters struct {
 	Access string `json:"access" tf:"access"`
 
-	AnonymousGid *int64 `json:"anonymousGid,omitempty" tf:"anonymous_gid"`
+	AnonymousGID *int64 `json:"anonymousGid,omitempty" tf:"anonymous_gid"`
 
-	AnonymousUid *int64 `json:"anonymousUid,omitempty" tf:"anonymous_uid"`
+	AnonymousUID *int64 `json:"anonymousUid,omitempty" tf:"anonymous_uid"`
 
 	Filter *string `json:"filter,omitempty" tf:"filter"`
 
@@ -51,7 +51,7 @@ type HpcCacheAccessPolicyObservation struct {
 type HpcCacheAccessPolicyParameters struct {
 	AccessRule []HpcCacheAccessPolicyAccessRuleParameters `json:"accessRule" tf:"access_rule"`
 
-	HpcCacheId string `json:"hpcCacheId" tf:"hpc_cache_id"`
+	HpcCacheID string `json:"hpcCacheId" tf:"hpc_cache_id"`
 
 	Name string `json:"name" tf:"name"`
 }

@@ -27,7 +27,7 @@ import (
 type KeyVaultSecretObservation struct {
 	Version string `json:"version" tf:"version"`
 
-	VersionlessId string `json:"versionlessId" tf:"versionless_id"`
+	VersionlessID string `json:"versionlessId" tf:"versionless_id"`
 }
 
 type KeyVaultSecretParameters struct {
@@ -35,7 +35,7 @@ type KeyVaultSecretParameters struct {
 
 	ExpirationDate *string `json:"expirationDate,omitempty" tf:"expiration_date"`
 
-	KeyVaultId string `json:"keyVaultId" tf:"key_vault_id"`
+	KeyVaultID string `json:"keyVaultId" tf:"key_vault_id"`
 
 	Name string `json:"name" tf:"name"`
 

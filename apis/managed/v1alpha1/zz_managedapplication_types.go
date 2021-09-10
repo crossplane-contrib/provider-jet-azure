@@ -29,7 +29,7 @@ type ManagedApplicationObservation struct {
 }
 
 type ManagedApplicationParameters struct {
-	ApplicationDefinitionId *string `json:"applicationDefinitionId,omitempty" tf:"application_definition_id"`
+	ApplicationDefinitionID *string `json:"applicationDefinitionId,omitempty" tf:"application_definition_id"`
 
 	Kind string `json:"kind" tf:"kind"`
 

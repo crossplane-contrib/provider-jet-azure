@@ -32,7 +32,7 @@ type DataProtectionBackupPolicyBlobStorageParameters struct {
 
 	RetentionDuration string `json:"retentionDuration" tf:"retention_duration"`
 
-	VaultId string `json:"vaultId" tf:"vault_id"`
+	VaultID string `json:"vaultId" tf:"vault_id"`
 }
 
 // DataProtectionBackupPolicyBlobStorageSpec defines the desired state of DataProtectionBackupPolicyBlobStorage

@@ -28,7 +28,7 @@ type StorageDataLakeGen2PathAceObservation struct {
 }
 
 type StorageDataLakeGen2PathAceParameters struct {
-	Id *string `json:"id,omitempty" tf:"id"`
+	ID *string `json:"id,omitempty" tf:"id"`
 
 	Permissions string `json:"permissions" tf:"permissions"`
 
@@ -53,7 +53,7 @@ type StorageDataLakeGen2PathParameters struct {
 
 	Resource string `json:"resource" tf:"resource"`
 
-	StorageAccountId string `json:"storageAccountId" tf:"storage_account_id"`
+	StorageAccountID string `json:"storageAccountId" tf:"storage_account_id"`
 }
 
 // StorageDataLakeGen2PathSpec defines the desired state of StorageDataLakeGen2Path

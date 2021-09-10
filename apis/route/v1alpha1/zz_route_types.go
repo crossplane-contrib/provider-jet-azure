@@ -32,7 +32,7 @@ type RouteParameters struct {
 
 	Name string `json:"name" tf:"name"`
 
-	NextHopInIpAddress *string `json:"nextHopInIpAddress,omitempty" tf:"next_hop_in_ip_address"`
+	NextHopInIPAddress *string `json:"nextHopInIpAddress,omitempty" tf:"next_hop_in_ip_address"`
 
 	NextHopType string `json:"nextHopType" tf:"next_hop_type"`
 

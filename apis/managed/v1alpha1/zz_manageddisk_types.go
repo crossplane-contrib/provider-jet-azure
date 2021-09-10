@@ -28,9 +28,9 @@ type DiskEncryptionKeyObservation struct {
 }
 
 type DiskEncryptionKeyParameters struct {
-	SecretUrl string `json:"secretUrl" tf:"secret_url"`
+	SecretURL string `json:"secretUrl" tf:"secret_url"`
 
-	SourceVaultId string `json:"sourceVaultId" tf:"source_vault_id"`
+	SourceVaultID string `json:"sourceVaultId" tf:"source_vault_id"`
 }
 
 type EncryptionSettingsObservation struct {
@@ -48,9 +48,9 @@ type KeyEncryptionKeyObservation struct {
 }
 
 type KeyEncryptionKeyParameters struct {
-	KeyUrl string `json:"keyUrl" tf:"key_url"`
+	KeyURL string `json:"keyUrl" tf:"key_url"`
 
-	SourceVaultId string `json:"sourceVaultId" tf:"source_vault_id"`
+	SourceVaultID string `json:"sourceVaultId" tf:"source_vault_id"`
 }
 
 type ManagedDiskObservation struct {
@@ -59,9 +59,9 @@ type ManagedDiskObservation struct {
 type ManagedDiskParameters struct {
 	CreateOption string `json:"createOption" tf:"create_option"`
 
-	DiskAccessId *string `json:"diskAccessId,omitempty" tf:"disk_access_id"`
+	DiskAccessID *string `json:"diskAccessId,omitempty" tf:"disk_access_id"`
 
-	DiskEncryptionSetId *string `json:"diskEncryptionSetId,omitempty" tf:"disk_encryption_set_id"`
+	DiskEncryptionSetID *string `json:"diskEncryptionSetId,omitempty" tf:"disk_encryption_set_id"`
 
 	DiskIopsReadWrite *int64 `json:"diskIopsReadWrite,omitempty" tf:"disk_iops_read_write"`
 
@@ -71,7 +71,7 @@ type ManagedDiskParameters struct {
 
 	EncryptionSettings []EncryptionSettingsParameters `json:"encryptionSettings,omitempty" tf:"encryption_settings"`
 
-	ImageReferenceId *string `json:"imageReferenceId,omitempty" tf:"image_reference_id"`
+	ImageReferenceID *string `json:"imageReferenceId,omitempty" tf:"image_reference_id"`
 
 	Location string `json:"location" tf:"location"`
 
@@ -83,11 +83,11 @@ type ManagedDiskParameters struct {
 
 	ResourceGroupName string `json:"resourceGroupName" tf:"resource_group_name"`
 
-	SourceResourceId *string `json:"sourceResourceId,omitempty" tf:"source_resource_id"`
+	SourceResourceID *string `json:"sourceResourceId,omitempty" tf:"source_resource_id"`
 
-	SourceUri *string `json:"sourceUri,omitempty" tf:"source_uri"`
+	SourceURI *string `json:"sourceUri,omitempty" tf:"source_uri"`
 
-	StorageAccountId *string `json:"storageAccountId,omitempty" tf:"storage_account_id"`
+	StorageAccountID *string `json:"storageAccountId,omitempty" tf:"storage_account_id"`
 
 	StorageAccountType string `json:"storageAccountType" tf:"storage_account_type"`
 

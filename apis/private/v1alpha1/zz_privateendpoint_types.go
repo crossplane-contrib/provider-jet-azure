@@ -24,42 +24,42 @@ import (
 	"k8s.io/apimachinery/pkg/runtime/schema"
 )
 
-type CustomDnsConfigsObservation struct {
+type CustomDNSConfigsObservation struct {
 	Fqdn string `json:"fqdn" tf:"fqdn"`
 
-	IpAddresses []string `json:"ipAddresses" tf:"ip_addresses"`
+	IPAddresses []string `json:"ipAddresses" tf:"ip_addresses"`
 }
 
-type CustomDnsConfigsParameters struct {
+type CustomDNSConfigsParameters struct {
 }
 
-type PrivateDnsZoneConfigsObservation struct {
-	Id string `json:"id" tf:"id"`
+type PrivateDNSZoneConfigsObservation struct {
+	ID string `json:"id" tf:"id"`
 
 	Name string `json:"name" tf:"name"`
 
-	PrivateDnsZoneId string `json:"privateDnsZoneId" tf:"private_dns_zone_id"`
+	PrivateDNSZoneID string `json:"privateDnsZoneId" tf:"private_dns_zone_id"`
 
 	RecordSets []RecordSetsObservation `json:"recordSets" tf:"record_sets"`
 }
 
-type PrivateDnsZoneConfigsParameters struct {
+type PrivateDNSZoneConfigsParameters struct {
 }
 
-type PrivateDnsZoneGroupObservation struct {
-	Id string `json:"id" tf:"id"`
+type PrivateDNSZoneGroupObservation struct {
+	ID string `json:"id" tf:"id"`
 }
 
-type PrivateDnsZoneGroupParameters struct {
+type PrivateDNSZoneGroupParameters struct {
 	Name string `json:"name" tf:"name"`
 
-	PrivateDnsZoneIds []string `json:"privateDnsZoneIds" tf:"private_dns_zone_ids"`
+	PrivateDNSZoneIds []string `json:"privateDnsZoneIds" tf:"private_dns_zone_ids"`
 }
 
 type PrivateEndpointObservation struct {
-	CustomDnsConfigs []CustomDnsConfigsObservation `json:"customDnsConfigs" tf:"custom_dns_configs"`
+	CustomDNSConfigs []CustomDNSConfigsObservation `json:"customDnsConfigs" tf:"custom_dns_configs"`
 
-	PrivateDnsZoneConfigs []PrivateDnsZoneConfigsObservation `json:"privateDnsZoneConfigs" tf:"private_dns_zone_configs"`
+	PrivateDNSZoneConfigs []PrivateDNSZoneConfigsObservation `json:"privateDnsZoneConfigs" tf:"private_dns_zone_configs"`
 }
 
 type PrivateEndpointParameters struct {
@@ -67,19 +67,19 @@ type PrivateEndpointParameters struct {
 
 	Name string `json:"name" tf:"name"`
 
-	PrivateDnsZoneGroup []PrivateDnsZoneGroupParameters `json:"privateDnsZoneGroup,omitempty" tf:"private_dns_zone_group"`
+	PrivateDNSZoneGroup []PrivateDNSZoneGroupParameters `json:"privateDnsZoneGroup,omitempty" tf:"private_dns_zone_group"`
 
 	PrivateServiceConnection []PrivateServiceConnectionParameters `json:"privateServiceConnection" tf:"private_service_connection"`
 
 	ResourceGroupName string `json:"resourceGroupName" tf:"resource_group_name"`
 
-	SubnetId string `json:"subnetId" tf:"subnet_id"`
+	SubnetID string `json:"subnetId" tf:"subnet_id"`
 
 	Tags map[string]string `json:"tags,omitempty" tf:"tags"`
 }
 
 type PrivateServiceConnectionObservation struct {
-	PrivateIpAddress string `json:"privateIpAddress" tf:"private_ip_address"`
+	PrivateIPAddress string `json:"privateIpAddress" tf:"private_ip_address"`
 }
 
 type PrivateServiceConnectionParameters struct {
@@ -89,7 +89,7 @@ type PrivateServiceConnectionParameters struct {
 
 	PrivateConnectionResourceAlias *string `json:"privateConnectionResourceAlias,omitempty" tf:"private_connection_resource_alias"`
 
-	PrivateConnectionResourceId *string `json:"privateConnectionResourceId,omitempty" tf:"private_connection_resource_id"`
+	PrivateConnectionResourceID *string `json:"privateConnectionResourceId,omitempty" tf:"private_connection_resource_id"`
 
 	RequestMessage *string `json:"requestMessage,omitempty" tf:"request_message"`
 
@@ -99,11 +99,11 @@ type PrivateServiceConnectionParameters struct {
 type RecordSetsObservation struct {
 	Fqdn string `json:"fqdn" tf:"fqdn"`
 
-	IpAddresses []string `json:"ipAddresses" tf:"ip_addresses"`
+	IPAddresses []string `json:"ipAddresses" tf:"ip_addresses"`
 
 	Name string `json:"name" tf:"name"`
 
-	Ttl int64 `json:"ttl" tf:"ttl"`
+	TTL int64 `json:"ttl" tf:"ttl"`
 
 	Type string `json:"type" tf:"type"`
 }

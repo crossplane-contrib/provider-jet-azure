@@ -30,9 +30,9 @@ type ActionObservation struct {
 type ActionParameters struct {
 	ConnectionString *string `json:"connectionString,omitempty" tf:"connection_string"`
 
-	ResourceId string `json:"resourceId" tf:"resource_id"`
+	ResourceID string `json:"resourceId" tf:"resource_id"`
 
-	TriggerUrl *string `json:"triggerUrl,omitempty" tf:"trigger_url"`
+	TriggerURL *string `json:"triggerUrl,omitempty" tf:"trigger_url"`
 
 	Type string `json:"type" tf:"type"`
 }

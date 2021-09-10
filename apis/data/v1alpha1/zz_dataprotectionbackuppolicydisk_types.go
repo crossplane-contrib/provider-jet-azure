@@ -43,7 +43,7 @@ type DataProtectionBackupPolicyDiskParameters struct {
 
 	RetentionRule []RetentionRuleParameters `json:"retentionRule,omitempty" tf:"retention_rule"`
 
-	VaultId string `json:"vaultId" tf:"vault_id"`
+	VaultID string `json:"vaultId" tf:"vault_id"`
 }
 
 type RetentionRuleObservation struct {

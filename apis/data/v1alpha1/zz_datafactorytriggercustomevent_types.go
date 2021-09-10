@@ -34,11 +34,11 @@ type DataFactoryTriggerCustomEventParameters struct {
 
 	Annotations []string `json:"annotations,omitempty" tf:"annotations"`
 
-	DataFactoryId string `json:"dataFactoryId" tf:"data_factory_id"`
+	DataFactoryID string `json:"dataFactoryId" tf:"data_factory_id"`
 
 	Description *string `json:"description,omitempty" tf:"description"`
 
-	EventgridTopicId string `json:"eventgridTopicId" tf:"eventgrid_topic_id"`
+	EventgridTopicID string `json:"eventgridTopicId" tf:"eventgrid_topic_id"`
 
 	Events []string `json:"events" tf:"events"`
 

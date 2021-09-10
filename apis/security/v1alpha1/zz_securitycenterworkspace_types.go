@@ -30,7 +30,7 @@ type SecurityCenterWorkspaceObservation struct {
 type SecurityCenterWorkspaceParameters struct {
 	Scope string `json:"scope" tf:"scope"`
 
-	WorkspaceId string `json:"workspaceId" tf:"workspace_id"`
+	WorkspaceID string `json:"workspaceId" tf:"workspace_id"`
 }
 
 // SecurityCenterWorkspaceSpec defines the desired state of SecurityCenterWorkspace

@@ -33,7 +33,7 @@ type DataFactoryLinkedServiceAzureSearchParameters struct {
 
 	Annotations []string `json:"annotations,omitempty" tf:"annotations"`
 
-	DataFactoryId string `json:"dataFactoryId" tf:"data_factory_id"`
+	DataFactoryID string `json:"dataFactoryId" tf:"data_factory_id"`
 
 	Description *string `json:"description,omitempty" tf:"description"`
 
@@ -45,7 +45,7 @@ type DataFactoryLinkedServiceAzureSearchParameters struct {
 
 	SearchServiceKey string `json:"searchServiceKey" tf:"search_service_key"`
 
-	Url string `json:"url" tf:"url"`
+	URL string `json:"url" tf:"url"`
 }
 
 // DataFactoryLinkedServiceAzureSearchSpec defines the desired state of DataFactoryLinkedServiceAzureSearch

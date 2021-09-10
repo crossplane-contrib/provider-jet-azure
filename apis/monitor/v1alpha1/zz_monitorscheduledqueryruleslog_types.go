@@ -52,7 +52,7 @@ type MonitorScheduledQueryRulesLogParameters struct {
 
 	Criteria []MonitorScheduledQueryRulesLogCriteriaParameters `json:"criteria" tf:"criteria"`
 
-	DataSourceId string `json:"dataSourceId" tf:"data_source_id"`
+	DataSourceID string `json:"dataSourceId" tf:"data_source_id"`
 
 	Description *string `json:"description,omitempty" tf:"description"`
 

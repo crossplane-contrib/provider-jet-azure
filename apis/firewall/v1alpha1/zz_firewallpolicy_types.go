@@ -24,10 +24,10 @@ import (
 	"k8s.io/apimachinery/pkg/runtime/schema"
 )
 
-type DnsObservation struct {
+type DNSObservation struct {
 }
 
-type DnsParameters struct {
+type DNSParameters struct {
 	NetworkRuleFqdnEnabled *bool `json:"networkRuleFqdnEnabled,omitempty" tf:"network_rule_fqdn_enabled"`
 
 	ProxyEnabled *bool `json:"proxyEnabled,omitempty" tf:"proxy_enabled"`
@@ -44,9 +44,9 @@ type FirewallPolicyObservation struct {
 }
 
 type FirewallPolicyParameters struct {
-	BasePolicyId *string `json:"basePolicyId,omitempty" tf:"base_policy_id"`
+	BasePolicyID *string `json:"basePolicyId,omitempty" tf:"base_policy_id"`
 
-	Dns []DnsParameters `json:"dns,omitempty" tf:"dns"`
+	DNS []DNSParameters `json:"dns,omitempty" tf:"dns"`
 
 	Identity []IdentityParameters `json:"identity,omitempty" tf:"identity"`
 
@@ -56,25 +56,25 @@ type FirewallPolicyParameters struct {
 
 	Name string `json:"name" tf:"name"`
 
-	PrivateIpRanges []string `json:"privateIpRanges,omitempty" tf:"private_ip_ranges"`
+	PrivateIPRanges []string `json:"privateIpRanges,omitempty" tf:"private_ip_ranges"`
 
 	ResourceGroupName string `json:"resourceGroupName" tf:"resource_group_name"`
 
 	Sku *string `json:"sku,omitempty" tf:"sku"`
+
+	TLSCertificate []TLSCertificateParameters `json:"tlsCertificate,omitempty" tf:"tls_certificate"`
 
 	Tags map[string]string `json:"tags,omitempty" tf:"tags"`
 
 	ThreatIntelligenceAllowlist []ThreatIntelligenceAllowlistParameters `json:"threatIntelligenceAllowlist,omitempty" tf:"threat_intelligence_allowlist"`
 
 	ThreatIntelligenceMode *string `json:"threatIntelligenceMode,omitempty" tf:"threat_intelligence_mode"`
-
-	TlsCertificate []TlsCertificateParameters `json:"tlsCertificate,omitempty" tf:"tls_certificate"`
 }
 
 type IdentityObservation struct {
-	PrincipalId string `json:"principalId" tf:"principal_id"`
+	PrincipalID string `json:"principalId" tf:"principal_id"`
 
-	TenantId string `json:"tenantId" tf:"tenant_id"`
+	TenantID string `json:"tenantId" tf:"tenant_id"`
 }
 
 type IdentityParameters struct {
@@ -98,9 +98,18 @@ type SignatureOverridesObservation struct {
 }
 
 type SignatureOverridesParameters struct {
-	Id *string `json:"id,omitempty" tf:"id"`
+	ID *string `json:"id,omitempty" tf:"id"`
 
 	State *string `json:"state,omitempty" tf:"state"`
+}
+
+type TLSCertificateObservation struct {
+}
+
+type TLSCertificateParameters struct {
+	KeyVaultSecretID string `json:"keyVaultSecretId" tf:"key_vault_secret_id"`
+
+	Name string `json:"name" tf:"name"`
 }
 
 type ThreatIntelligenceAllowlistObservation struct {
@@ -109,16 +118,7 @@ type ThreatIntelligenceAllowlistObservation struct {
 type ThreatIntelligenceAllowlistParameters struct {
 	Fqdns []string `json:"fqdns,omitempty" tf:"fqdns"`
 
-	IpAddresses []string `json:"ipAddresses,omitempty" tf:"ip_addresses"`
-}
-
-type TlsCertificateObservation struct {
-}
-
-type TlsCertificateParameters struct {
-	KeyVaultSecretId string `json:"keyVaultSecretId" tf:"key_vault_secret_id"`
-
-	Name string `json:"name" tf:"name"`
+	IPAddresses []string `json:"ipAddresses,omitempty" tf:"ip_addresses"`
 }
 
 type TrafficBypassObservation struct {
@@ -129,7 +129,7 @@ type TrafficBypassParameters struct {
 
 	DestinationAddresses []string `json:"destinationAddresses,omitempty" tf:"destination_addresses"`
 
-	DestinationIpGroups []string `json:"destinationIpGroups,omitempty" tf:"destination_ip_groups"`
+	DestinationIPGroups []string `json:"destinationIpGroups,omitempty" tf:"destination_ip_groups"`
 
 	DestinationPorts []string `json:"destinationPorts,omitempty" tf:"destination_ports"`
 
@@ -139,7 +139,7 @@ type TrafficBypassParameters struct {
 
 	SourceAddresses []string `json:"sourceAddresses,omitempty" tf:"source_addresses"`
 
-	SourceIpGroups []string `json:"sourceIpGroups,omitempty" tf:"source_ip_groups"`
+	SourceIPGroups []string `json:"sourceIpGroups,omitempty" tf:"source_ip_groups"`
 }
 
 // FirewallPolicySpec defines the desired state of FirewallPolicy

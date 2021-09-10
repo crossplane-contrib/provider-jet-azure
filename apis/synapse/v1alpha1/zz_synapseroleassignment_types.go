@@ -28,13 +28,13 @@ type SynapseRoleAssignmentObservation struct {
 }
 
 type SynapseRoleAssignmentParameters struct {
-	PrincipalId string `json:"principalId" tf:"principal_id"`
+	PrincipalID string `json:"principalId" tf:"principal_id"`
 
 	RoleName string `json:"roleName" tf:"role_name"`
 
-	SynapseSparkPoolId *string `json:"synapseSparkPoolId,omitempty" tf:"synapse_spark_pool_id"`
+	SynapseSparkPoolID *string `json:"synapseSparkPoolId,omitempty" tf:"synapse_spark_pool_id"`
 
-	SynapseWorkspaceId *string `json:"synapseWorkspaceId,omitempty" tf:"synapse_workspace_id"`
+	SynapseWorkspaceID *string `json:"synapseWorkspaceId,omitempty" tf:"synapse_workspace_id"`
 }
 
 // SynapseRoleAssignmentSpec defines the desired state of SynapseRoleAssignment

@@ -28,7 +28,7 @@ type AllowRuleObservation struct {
 }
 
 type AllowRuleParameters struct {
-	ConnectionToIpNotAllowed []string `json:"connectionToIpNotAllowed,omitempty" tf:"connection_to_ip_not_allowed"`
+	ConnectionToIPNotAllowed []string `json:"connectionToIpNotAllowed,omitempty" tf:"connection_to_ip_not_allowed"`
 
 	LocalUserNotAllowed []string `json:"localUserNotAllowed,omitempty" tf:"local_user_not_allowed"`
 
@@ -41,7 +41,7 @@ type IotSecurityDeviceGroupObservation struct {
 type IotSecurityDeviceGroupParameters struct {
 	AllowRule []AllowRuleParameters `json:"allowRule,omitempty" tf:"allow_rule"`
 
-	IothubId string `json:"iothubId" tf:"iothub_id"`
+	IothubID string `json:"iothubId" tf:"iothub_id"`
 
 	Name string `json:"name" tf:"name"`
 

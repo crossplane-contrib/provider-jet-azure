@@ -28,9 +28,9 @@ type MssqlServerTransparentDataEncryptionObservation struct {
 }
 
 type MssqlServerTransparentDataEncryptionParameters struct {
-	KeyVaultKeyId *string `json:"keyVaultKeyId,omitempty" tf:"key_vault_key_id"`
+	KeyVaultKeyID *string `json:"keyVaultKeyId,omitempty" tf:"key_vault_key_id"`
 
-	ServerId string `json:"serverId" tf:"server_id"`
+	ServerID string `json:"serverId" tf:"server_id"`
 }
 
 // MssqlServerTransparentDataEncryptionSpec defines the desired state of MssqlServerTransparentDataEncryption

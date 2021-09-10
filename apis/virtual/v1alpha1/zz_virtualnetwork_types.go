@@ -30,11 +30,11 @@ type DdosProtectionPlanObservation struct {
 type DdosProtectionPlanParameters struct {
 	Enable bool `json:"enable" tf:"enable"`
 
-	Id string `json:"id" tf:"id"`
+	ID string `json:"id" tf:"id"`
 }
 
 type SubnetObservation struct {
-	Id string `json:"id" tf:"id"`
+	ID string `json:"id" tf:"id"`
 }
 
 type SubnetParameters struct {
@@ -46,7 +46,7 @@ type SubnetParameters struct {
 }
 
 type VirtualNetworkObservation struct {
-	Guid string `json:"guid" tf:"guid"`
+	GUID string `json:"guid" tf:"guid"`
 }
 
 type VirtualNetworkParameters struct {
@@ -54,9 +54,9 @@ type VirtualNetworkParameters struct {
 
 	BgpCommunity *string `json:"bgpCommunity,omitempty" tf:"bgp_community"`
 
-	DdosProtectionPlan []DdosProtectionPlanParameters `json:"ddosProtectionPlan,omitempty" tf:"ddos_protection_plan"`
+	DNSServers []string `json:"dnsServers,omitempty" tf:"dns_servers"`
 
-	DnsServers []string `json:"dnsServers,omitempty" tf:"dns_servers"`
+	DdosProtectionPlan []DdosProtectionPlanParameters `json:"ddosProtectionPlan,omitempty" tf:"ddos_protection_plan"`
 
 	Location string `json:"location" tf:"location"`
 
@@ -68,7 +68,7 @@ type VirtualNetworkParameters struct {
 
 	Tags map[string]string `json:"tags,omitempty" tf:"tags"`
 
-	VmProtectionEnabled *bool `json:"vmProtectionEnabled,omitempty" tf:"vm_protection_enabled"`
+	VMProtectionEnabled *bool `json:"vmProtectionEnabled,omitempty" tf:"vm_protection_enabled"`
 }
 
 // VirtualNetworkSpec defines the desired state of VirtualNetwork

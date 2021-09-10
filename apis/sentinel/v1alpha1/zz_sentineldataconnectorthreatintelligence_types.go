@@ -28,11 +28,11 @@ type SentinelDataConnectorThreatIntelligenceObservation struct {
 }
 
 type SentinelDataConnectorThreatIntelligenceParameters struct {
-	LogAnalyticsWorkspaceId string `json:"logAnalyticsWorkspaceId" tf:"log_analytics_workspace_id"`
+	LogAnalyticsWorkspaceID string `json:"logAnalyticsWorkspaceId" tf:"log_analytics_workspace_id"`
 
 	Name string `json:"name" tf:"name"`
 
-	TenantId *string `json:"tenantId,omitempty" tf:"tenant_id"`
+	TenantID *string `json:"tenantId,omitempty" tf:"tenant_id"`
 }
 
 // SentinelDataConnectorThreatIntelligenceSpec defines the desired state of SentinelDataConnectorThreatIntelligence

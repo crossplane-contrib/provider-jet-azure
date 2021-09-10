@@ -60,7 +60,7 @@ type HealthcareServiceParameters struct {
 
 	CorsConfiguration []CorsConfigurationParameters `json:"corsConfiguration,omitempty" tf:"cors_configuration"`
 
-	CosmosdbKeyVaultKeyVersionlessId *string `json:"cosmosdbKeyVaultKeyVersionlessId,omitempty" tf:"cosmosdb_key_vault_key_versionless_id"`
+	CosmosdbKeyVaultKeyVersionlessID *string `json:"cosmosdbKeyVaultKeyVersionlessId,omitempty" tf:"cosmosdb_key_vault_key_versionless_id"`
 
 	CosmosdbThroughput *int64 `json:"cosmosdbThroughput,omitempty" tf:"cosmosdb_throughput"`
 

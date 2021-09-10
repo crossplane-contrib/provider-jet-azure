@@ -39,11 +39,11 @@ type ApiManagementCustomDomainDeveloperPortalParameters struct {
 
 	HostName string `json:"hostName" tf:"host_name"`
 
-	KeyVaultId *string `json:"keyVaultId,omitempty" tf:"key_vault_id"`
+	KeyVaultID *string `json:"keyVaultId,omitempty" tf:"key_vault_id"`
 
 	NegotiateClientCertificate *bool `json:"negotiateClientCertificate,omitempty" tf:"negotiate_client_certificate"`
 
-	SslKeyvaultIdentityClientId *string `json:"sslKeyvaultIdentityClientId,omitempty" tf:"ssl_keyvault_identity_client_id"`
+	SslKeyvaultIdentityClientID *string `json:"sslKeyvaultIdentityClientId,omitempty" tf:"ssl_keyvault_identity_client_id"`
 }
 
 type ApiManagementCustomDomainManagementObservation struct {
@@ -61,18 +61,18 @@ type ApiManagementCustomDomainManagementParameters struct {
 
 	HostName string `json:"hostName" tf:"host_name"`
 
-	KeyVaultId *string `json:"keyVaultId,omitempty" tf:"key_vault_id"`
+	KeyVaultID *string `json:"keyVaultId,omitempty" tf:"key_vault_id"`
 
 	NegotiateClientCertificate *bool `json:"negotiateClientCertificate,omitempty" tf:"negotiate_client_certificate"`
 
-	SslKeyvaultIdentityClientId *string `json:"sslKeyvaultIdentityClientId,omitempty" tf:"ssl_keyvault_identity_client_id"`
+	SslKeyvaultIdentityClientID *string `json:"sslKeyvaultIdentityClientId,omitempty" tf:"ssl_keyvault_identity_client_id"`
 }
 
 type ApiManagementCustomDomainObservation struct {
 }
 
 type ApiManagementCustomDomainParameters struct {
-	ApiManagementId string `json:"apiManagementId" tf:"api_management_id"`
+	APIManagementID string `json:"apiManagementId" tf:"api_management_id"`
 
 	DeveloperPortal []ApiManagementCustomDomainDeveloperPortalParameters `json:"developerPortal,omitempty" tf:"developer_portal"`
 
@@ -100,11 +100,11 @@ type ApiManagementCustomDomainPortalParameters struct {
 
 	HostName string `json:"hostName" tf:"host_name"`
 
-	KeyVaultId *string `json:"keyVaultId,omitempty" tf:"key_vault_id"`
+	KeyVaultID *string `json:"keyVaultId,omitempty" tf:"key_vault_id"`
 
 	NegotiateClientCertificate *bool `json:"negotiateClientCertificate,omitempty" tf:"negotiate_client_certificate"`
 
-	SslKeyvaultIdentityClientId *string `json:"sslKeyvaultIdentityClientId,omitempty" tf:"ssl_keyvault_identity_client_id"`
+	SslKeyvaultIdentityClientID *string `json:"sslKeyvaultIdentityClientId,omitempty" tf:"ssl_keyvault_identity_client_id"`
 }
 
 type ApiManagementCustomDomainProxyObservation struct {
@@ -124,11 +124,11 @@ type ApiManagementCustomDomainProxyParameters struct {
 
 	HostName string `json:"hostName" tf:"host_name"`
 
-	KeyVaultId *string `json:"keyVaultId,omitempty" tf:"key_vault_id"`
+	KeyVaultID *string `json:"keyVaultId,omitempty" tf:"key_vault_id"`
 
 	NegotiateClientCertificate *bool `json:"negotiateClientCertificate,omitempty" tf:"negotiate_client_certificate"`
 
-	SslKeyvaultIdentityClientId *string `json:"sslKeyvaultIdentityClientId,omitempty" tf:"ssl_keyvault_identity_client_id"`
+	SslKeyvaultIdentityClientID *string `json:"sslKeyvaultIdentityClientId,omitempty" tf:"ssl_keyvault_identity_client_id"`
 }
 
 type ApiManagementCustomDomainScmObservation struct {
@@ -146,11 +146,11 @@ type ApiManagementCustomDomainScmParameters struct {
 
 	HostName string `json:"hostName" tf:"host_name"`
 
-	KeyVaultId *string `json:"keyVaultId,omitempty" tf:"key_vault_id"`
+	KeyVaultID *string `json:"keyVaultId,omitempty" tf:"key_vault_id"`
 
 	NegotiateClientCertificate *bool `json:"negotiateClientCertificate,omitempty" tf:"negotiate_client_certificate"`
 
-	SslKeyvaultIdentityClientId *string `json:"sslKeyvaultIdentityClientId,omitempty" tf:"ssl_keyvault_identity_client_id"`
+	SslKeyvaultIdentityClientID *string `json:"sslKeyvaultIdentityClientId,omitempty" tf:"ssl_keyvault_identity_client_id"`
 }
 
 // ApiManagementCustomDomainSpec defines the desired state of ApiManagementCustomDomain

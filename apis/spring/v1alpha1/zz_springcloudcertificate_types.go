@@ -29,7 +29,7 @@ type SpringCloudCertificateObservation struct {
 }
 
 type SpringCloudCertificateParameters struct {
-	KeyVaultCertificateId string `json:"keyVaultCertificateId" tf:"key_vault_certificate_id"`
+	KeyVaultCertificateID string `json:"keyVaultCertificateId" tf:"key_vault_certificate_id"`
 
 	Name string `json:"name" tf:"name"`
 

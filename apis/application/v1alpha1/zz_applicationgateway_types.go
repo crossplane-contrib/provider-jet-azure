@@ -34,21 +34,21 @@ type ApplicationGatewayParameters struct {
 
 	BackendAddressPool []BackendAddressPoolParameters `json:"backendAddressPool" tf:"backend_address_pool"`
 
-	BackendHttpSettings []BackendHttpSettingsParameters `json:"backendHttpSettings" tf:"backend_http_settings"`
+	BackendHTTPSettings []BackendHTTPSettingsParameters `json:"backendHttpSettings" tf:"backend_http_settings"`
 
 	CustomErrorConfiguration []CustomErrorConfigurationParameters `json:"customErrorConfiguration,omitempty" tf:"custom_error_configuration"`
 
 	EnableHttp2 *bool `json:"enableHttp2,omitempty" tf:"enable_http2"`
 
-	FirewallPolicyId *string `json:"firewallPolicyId,omitempty" tf:"firewall_policy_id"`
+	FirewallPolicyID *string `json:"firewallPolicyId,omitempty" tf:"firewall_policy_id"`
 
-	FrontendIpConfiguration []FrontendIpConfigurationParameters `json:"frontendIpConfiguration" tf:"frontend_ip_configuration"`
+	FrontendIPConfiguration []FrontendIPConfigurationParameters `json:"frontendIpConfiguration" tf:"frontend_ip_configuration"`
 
 	FrontendPort []FrontendPortParameters `json:"frontendPort" tf:"frontend_port"`
 
-	GatewayIpConfiguration []GatewayIpConfigurationParameters `json:"gatewayIpConfiguration" tf:"gateway_ip_configuration"`
+	GatewayIPConfiguration []GatewayIPConfigurationParameters `json:"gatewayIpConfiguration" tf:"gateway_ip_configuration"`
 
-	HttpListener []HttpListenerParameters `json:"httpListener" tf:"http_listener"`
+	HTTPListener []HTTPListenerParameters `json:"httpListener" tf:"http_listener"`
 
 	Identity []IdentityParameters `json:"identity,omitempty" tf:"identity"`
 
@@ -76,7 +76,7 @@ type ApplicationGatewayParameters struct {
 
 	TrustedRootCertificate []TrustedRootCertificateParameters `json:"trustedRootCertificate,omitempty" tf:"trusted_root_certificate"`
 
-	UrlPathMap []UrlPathMapParameters `json:"urlPathMap,omitempty" tf:"url_path_map"`
+	URLPathMap []URLPathMapParameters `json:"urlPathMap,omitempty" tf:"url_path_map"`
 
 	WafConfiguration []WafConfigurationParameters `json:"wafConfiguration,omitempty" tf:"waf_configuration"`
 
@@ -84,7 +84,7 @@ type ApplicationGatewayParameters struct {
 }
 
 type AuthenticationCertificateObservation struct {
-	Id string `json:"id" tf:"id"`
+	ID string `json:"id" tf:"id"`
 }
 
 type AuthenticationCertificateParameters struct {
@@ -103,35 +103,35 @@ type AutoscaleConfigurationParameters struct {
 }
 
 type BackendAddressPoolObservation struct {
-	Id string `json:"id" tf:"id"`
+	ID string `json:"id" tf:"id"`
 }
 
 type BackendAddressPoolParameters struct {
 	Fqdns []string `json:"fqdns,omitempty" tf:"fqdns"`
 
-	IpAddresses []string `json:"ipAddresses,omitempty" tf:"ip_addresses"`
+	IPAddresses []string `json:"ipAddresses,omitempty" tf:"ip_addresses"`
 
 	Name string `json:"name" tf:"name"`
 }
 
-type BackendHttpSettingsAuthenticationCertificateObservation struct {
-	Id string `json:"id" tf:"id"`
+type BackendHTTPSettingsAuthenticationCertificateObservation struct {
+	ID string `json:"id" tf:"id"`
 }
 
-type BackendHttpSettingsAuthenticationCertificateParameters struct {
+type BackendHTTPSettingsAuthenticationCertificateParameters struct {
 	Name string `json:"name" tf:"name"`
 }
 
-type BackendHttpSettingsObservation struct {
-	Id string `json:"id" tf:"id"`
+type BackendHTTPSettingsObservation struct {
+	ID string `json:"id" tf:"id"`
 
-	ProbeId string `json:"probeId" tf:"probe_id"`
+	ProbeID string `json:"probeId" tf:"probe_id"`
 }
 
-type BackendHttpSettingsParameters struct {
+type BackendHTTPSettingsParameters struct {
 	AffinityCookieName *string `json:"affinityCookieName,omitempty" tf:"affinity_cookie_name"`
 
-	AuthenticationCertificate []BackendHttpSettingsAuthenticationCertificateParameters `json:"authenticationCertificate,omitempty" tf:"authentication_certificate"`
+	AuthenticationCertificate []BackendHTTPSettingsAuthenticationCertificateParameters `json:"authenticationCertificate,omitempty" tf:"authentication_certificate"`
 
 	ConnectionDraining []ConnectionDrainingParameters `json:"connectionDraining,omitempty" tf:"connection_draining"`
 
@@ -179,11 +179,11 @@ type ConnectionDrainingParameters struct {
 }
 
 type CustomErrorConfigurationObservation struct {
-	Id string `json:"id" tf:"id"`
+	ID string `json:"id" tf:"id"`
 }
 
 type CustomErrorConfigurationParameters struct {
-	CustomErrorPageUrl string `json:"customErrorPageUrl" tf:"custom_error_page_url"`
+	CustomErrorPageURL string `json:"customErrorPageUrl" tf:"custom_error_page_url"`
 
 	StatusCode string `json:"statusCode" tf:"status_code"`
 }
@@ -208,24 +208,24 @@ type ExclusionParameters struct {
 	SelectorMatchOperator *string `json:"selectorMatchOperator,omitempty" tf:"selector_match_operator"`
 }
 
-type FrontendIpConfigurationObservation struct {
-	Id string `json:"id" tf:"id"`
+type FrontendIPConfigurationObservation struct {
+	ID string `json:"id" tf:"id"`
 }
 
-type FrontendIpConfigurationParameters struct {
+type FrontendIPConfigurationParameters struct {
 	Name string `json:"name" tf:"name"`
 
-	PrivateIpAddress *string `json:"privateIpAddress,omitempty" tf:"private_ip_address"`
+	PrivateIPAddress *string `json:"privateIpAddress,omitempty" tf:"private_ip_address"`
 
-	PrivateIpAddressAllocation *string `json:"privateIpAddressAllocation,omitempty" tf:"private_ip_address_allocation"`
+	PrivateIPAddressAllocation *string `json:"privateIpAddressAllocation,omitempty" tf:"private_ip_address_allocation"`
 
-	PublicIpAddressId *string `json:"publicIpAddressId,omitempty" tf:"public_ip_address_id"`
+	PublicIPAddressID *string `json:"publicIpAddressId,omitempty" tf:"public_ip_address_id"`
 
-	SubnetId *string `json:"subnetId,omitempty" tf:"subnet_id"`
+	SubnetID *string `json:"subnetId,omitempty" tf:"subnet_id"`
 }
 
 type FrontendPortObservation struct {
-	Id string `json:"id" tf:"id"`
+	ID string `json:"id" tf:"id"`
 }
 
 type FrontendPortParameters struct {
@@ -234,42 +234,42 @@ type FrontendPortParameters struct {
 	Port int64 `json:"port" tf:"port"`
 }
 
-type GatewayIpConfigurationObservation struct {
-	Id string `json:"id" tf:"id"`
+type GatewayIPConfigurationObservation struct {
+	ID string `json:"id" tf:"id"`
 }
 
-type GatewayIpConfigurationParameters struct {
+type GatewayIPConfigurationParameters struct {
 	Name string `json:"name" tf:"name"`
 
-	SubnetId string `json:"subnetId" tf:"subnet_id"`
+	SubnetID string `json:"subnetId" tf:"subnet_id"`
 }
 
-type HttpListenerCustomErrorConfigurationObservation struct {
-	Id string `json:"id" tf:"id"`
+type HTTPListenerCustomErrorConfigurationObservation struct {
+	ID string `json:"id" tf:"id"`
 }
 
-type HttpListenerCustomErrorConfigurationParameters struct {
-	CustomErrorPageUrl string `json:"customErrorPageUrl" tf:"custom_error_page_url"`
+type HTTPListenerCustomErrorConfigurationParameters struct {
+	CustomErrorPageURL string `json:"customErrorPageUrl" tf:"custom_error_page_url"`
 
 	StatusCode string `json:"statusCode" tf:"status_code"`
 }
 
-type HttpListenerObservation struct {
-	FrontendIpConfigurationId string `json:"frontendIpConfigurationId" tf:"frontend_ip_configuration_id"`
+type HTTPListenerObservation struct {
+	FrontendIPConfigurationID string `json:"frontendIpConfigurationId" tf:"frontend_ip_configuration_id"`
 
-	FrontendPortId string `json:"frontendPortId" tf:"frontend_port_id"`
+	FrontendPortID string `json:"frontendPortId" tf:"frontend_port_id"`
 
-	Id string `json:"id" tf:"id"`
+	ID string `json:"id" tf:"id"`
 
-	SslCertificateId string `json:"sslCertificateId" tf:"ssl_certificate_id"`
+	SslCertificateID string `json:"sslCertificateId" tf:"ssl_certificate_id"`
 }
 
-type HttpListenerParameters struct {
-	CustomErrorConfiguration []HttpListenerCustomErrorConfigurationParameters `json:"customErrorConfiguration,omitempty" tf:"custom_error_configuration"`
+type HTTPListenerParameters struct {
+	CustomErrorConfiguration []HTTPListenerCustomErrorConfigurationParameters `json:"customErrorConfiguration,omitempty" tf:"custom_error_configuration"`
 
-	FirewallPolicyId *string `json:"firewallPolicyId,omitempty" tf:"firewall_policy_id"`
+	FirewallPolicyID *string `json:"firewallPolicyId,omitempty" tf:"firewall_policy_id"`
 
-	FrontendIpConfigurationName string `json:"frontendIpConfigurationName" tf:"frontend_ip_configuration_name"`
+	FrontendIPConfigurationName string `json:"frontendIpConfigurationName" tf:"frontend_ip_configuration_name"`
 
 	FrontendPortName string `json:"frontendPortName" tf:"frontend_port_name"`
 
@@ -305,23 +305,23 @@ type MatchParameters struct {
 }
 
 type PathRuleObservation struct {
-	BackendAddressPoolId string `json:"backendAddressPoolId" tf:"backend_address_pool_id"`
+	BackendAddressPoolID string `json:"backendAddressPoolId" tf:"backend_address_pool_id"`
 
-	BackendHttpSettingsId string `json:"backendHttpSettingsId" tf:"backend_http_settings_id"`
+	BackendHTTPSettingsID string `json:"backendHttpSettingsId" tf:"backend_http_settings_id"`
 
-	Id string `json:"id" tf:"id"`
+	ID string `json:"id" tf:"id"`
 
-	RedirectConfigurationId string `json:"redirectConfigurationId" tf:"redirect_configuration_id"`
+	RedirectConfigurationID string `json:"redirectConfigurationId" tf:"redirect_configuration_id"`
 
-	RewriteRuleSetId string `json:"rewriteRuleSetId" tf:"rewrite_rule_set_id"`
+	RewriteRuleSetID string `json:"rewriteRuleSetId" tf:"rewrite_rule_set_id"`
 }
 
 type PathRuleParameters struct {
 	BackendAddressPoolName *string `json:"backendAddressPoolName,omitempty" tf:"backend_address_pool_name"`
 
-	BackendHttpSettingsName *string `json:"backendHttpSettingsName,omitempty" tf:"backend_http_settings_name"`
+	BackendHTTPSettingsName *string `json:"backendHttpSettingsName,omitempty" tf:"backend_http_settings_name"`
 
-	FirewallPolicyId *string `json:"firewallPolicyId,omitempty" tf:"firewall_policy_id"`
+	FirewallPolicyID *string `json:"firewallPolicyId,omitempty" tf:"firewall_policy_id"`
 
 	Name string `json:"name" tf:"name"`
 
@@ -333,7 +333,7 @@ type PathRuleParameters struct {
 }
 
 type ProbeObservation struct {
-	Id string `json:"id" tf:"id"`
+	ID string `json:"id" tf:"id"`
 }
 
 type ProbeParameters struct {
@@ -349,7 +349,7 @@ type ProbeParameters struct {
 
 	Path string `json:"path" tf:"path"`
 
-	PickHostNameFromBackendHttpSettings *bool `json:"pickHostNameFromBackendHttpSettings,omitempty" tf:"pick_host_name_from_backend_http_settings"`
+	PickHostNameFromBackendHTTPSettings *bool `json:"pickHostNameFromBackendHttpSettings,omitempty" tf:"pick_host_name_from_backend_http_settings"`
 
 	Port *int64 `json:"port,omitempty" tf:"port"`
 
@@ -361,9 +361,9 @@ type ProbeParameters struct {
 }
 
 type RedirectConfigurationObservation struct {
-	Id string `json:"id" tf:"id"`
+	ID string `json:"id" tf:"id"`
 
-	TargetListenerId string `json:"targetListenerId" tf:"target_listener_id"`
+	TargetListenerID string `json:"targetListenerId" tf:"target_listener_id"`
 }
 
 type RedirectConfigurationParameters struct {
@@ -377,7 +377,7 @@ type RedirectConfigurationParameters struct {
 
 	TargetListenerName *string `json:"targetListenerName,omitempty" tf:"target_listener_name"`
 
-	TargetUrl *string `json:"targetUrl,omitempty" tf:"target_url"`
+	TargetURL *string `json:"targetUrl,omitempty" tf:"target_url"`
 }
 
 type RequestHeaderConfigurationObservation struct {
@@ -390,27 +390,27 @@ type RequestHeaderConfigurationParameters struct {
 }
 
 type RequestRoutingRuleObservation struct {
-	BackendAddressPoolId string `json:"backendAddressPoolId" tf:"backend_address_pool_id"`
+	BackendAddressPoolID string `json:"backendAddressPoolId" tf:"backend_address_pool_id"`
 
-	BackendHttpSettingsId string `json:"backendHttpSettingsId" tf:"backend_http_settings_id"`
+	BackendHTTPSettingsID string `json:"backendHttpSettingsId" tf:"backend_http_settings_id"`
 
-	HttpListenerId string `json:"httpListenerId" tf:"http_listener_id"`
+	HTTPListenerID string `json:"httpListenerId" tf:"http_listener_id"`
 
-	Id string `json:"id" tf:"id"`
+	ID string `json:"id" tf:"id"`
 
-	RedirectConfigurationId string `json:"redirectConfigurationId" tf:"redirect_configuration_id"`
+	RedirectConfigurationID string `json:"redirectConfigurationId" tf:"redirect_configuration_id"`
 
-	RewriteRuleSetId string `json:"rewriteRuleSetId" tf:"rewrite_rule_set_id"`
+	RewriteRuleSetID string `json:"rewriteRuleSetId" tf:"rewrite_rule_set_id"`
 
-	UrlPathMapId string `json:"urlPathMapId" tf:"url_path_map_id"`
+	URLPathMapID string `json:"urlPathMapId" tf:"url_path_map_id"`
 }
 
 type RequestRoutingRuleParameters struct {
 	BackendAddressPoolName *string `json:"backendAddressPoolName,omitempty" tf:"backend_address_pool_name"`
 
-	BackendHttpSettingsName *string `json:"backendHttpSettingsName,omitempty" tf:"backend_http_settings_name"`
+	BackendHTTPSettingsName *string `json:"backendHttpSettingsName,omitempty" tf:"backend_http_settings_name"`
 
-	HttpListenerName string `json:"httpListenerName" tf:"http_listener_name"`
+	HTTPListenerName string `json:"httpListenerName" tf:"http_listener_name"`
 
 	Name string `json:"name" tf:"name"`
 
@@ -420,7 +420,7 @@ type RequestRoutingRuleParameters struct {
 
 	RuleType string `json:"ruleType" tf:"rule_type"`
 
-	UrlPathMapName *string `json:"urlPathMapName,omitempty" tf:"url_path_map_name"`
+	URLPathMapName *string `json:"urlPathMapName,omitempty" tf:"url_path_map_name"`
 }
 
 type ResponseHeaderConfigurationObservation struct {
@@ -446,11 +446,11 @@ type RewriteRuleParameters struct {
 
 	RuleSequence int64 `json:"ruleSequence" tf:"rule_sequence"`
 
-	Url []UrlParameters `json:"url,omitempty" tf:"url"`
+	URL []URLParameters `json:"url,omitempty" tf:"url"`
 }
 
 type RewriteRuleSetObservation struct {
-	Id string `json:"id" tf:"id"`
+	ID string `json:"id" tf:"id"`
 }
 
 type RewriteRuleSetParameters struct {
@@ -471,7 +471,7 @@ type SkuParameters struct {
 }
 
 type SslCertificateObservation struct {
-	Id string `json:"id" tf:"id"`
+	ID string `json:"id" tf:"id"`
 
 	PublicCertData string `json:"publicCertData" tf:"public_cert_data"`
 }
@@ -479,7 +479,7 @@ type SslCertificateObservation struct {
 type SslCertificateParameters struct {
 	Data *string `json:"data,omitempty" tf:"data"`
 
-	KeyVaultSecretId *string `json:"keyVaultSecretId,omitempty" tf:"key_vault_secret_id"`
+	KeyVaultSecretID *string `json:"keyVaultSecretId,omitempty" tf:"key_vault_secret_id"`
 
 	Name string `json:"name" tf:"name"`
 
@@ -502,7 +502,7 @@ type SslPolicyParameters struct {
 }
 
 type TrustedRootCertificateObservation struct {
-	Id string `json:"id" tf:"id"`
+	ID string `json:"id" tf:"id"`
 }
 
 type TrustedRootCertificateParameters struct {
@@ -511,10 +511,10 @@ type TrustedRootCertificateParameters struct {
 	Name string `json:"name" tf:"name"`
 }
 
-type UrlObservation struct {
+type URLObservation struct {
 }
 
-type UrlParameters struct {
+type URLParameters struct {
 	Path *string `json:"path,omitempty" tf:"path"`
 
 	QueryString *string `json:"queryString,omitempty" tf:"query_string"`
@@ -522,22 +522,22 @@ type UrlParameters struct {
 	Reroute *bool `json:"reroute,omitempty" tf:"reroute"`
 }
 
-type UrlPathMapObservation struct {
-	DefaultBackendAddressPoolId string `json:"defaultBackendAddressPoolId" tf:"default_backend_address_pool_id"`
+type URLPathMapObservation struct {
+	DefaultBackendAddressPoolID string `json:"defaultBackendAddressPoolId" tf:"default_backend_address_pool_id"`
 
-	DefaultBackendHttpSettingsId string `json:"defaultBackendHttpSettingsId" tf:"default_backend_http_settings_id"`
+	DefaultBackendHTTPSettingsID string `json:"defaultBackendHttpSettingsId" tf:"default_backend_http_settings_id"`
 
-	DefaultRedirectConfigurationId string `json:"defaultRedirectConfigurationId" tf:"default_redirect_configuration_id"`
+	DefaultRedirectConfigurationID string `json:"defaultRedirectConfigurationId" tf:"default_redirect_configuration_id"`
 
-	DefaultRewriteRuleSetId string `json:"defaultRewriteRuleSetId" tf:"default_rewrite_rule_set_id"`
+	DefaultRewriteRuleSetID string `json:"defaultRewriteRuleSetId" tf:"default_rewrite_rule_set_id"`
 
-	Id string `json:"id" tf:"id"`
+	ID string `json:"id" tf:"id"`
 }
 
-type UrlPathMapParameters struct {
+type URLPathMapParameters struct {
 	DefaultBackendAddressPoolName *string `json:"defaultBackendAddressPoolName,omitempty" tf:"default_backend_address_pool_name"`
 
-	DefaultBackendHttpSettingsName *string `json:"defaultBackendHttpSettingsName,omitempty" tf:"default_backend_http_settings_name"`
+	DefaultBackendHTTPSettingsName *string `json:"defaultBackendHttpSettingsName,omitempty" tf:"default_backend_http_settings_name"`
 
 	DefaultRedirectConfigurationName *string `json:"defaultRedirectConfigurationName,omitempty" tf:"default_redirect_configuration_name"`
 

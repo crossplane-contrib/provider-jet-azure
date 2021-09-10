@@ -30,7 +30,7 @@ type DedicatedHostObservation struct {
 type DedicatedHostParameters struct {
 	AutoReplaceOnFailure *bool `json:"autoReplaceOnFailure,omitempty" tf:"auto_replace_on_failure"`
 
-	DedicatedHostGroupId string `json:"dedicatedHostGroupId" tf:"dedicated_host_group_id"`
+	DedicatedHostGroupID string `json:"dedicatedHostGroupId" tf:"dedicated_host_group_id"`
 
 	LicenseType *string `json:"licenseType,omitempty" tf:"license_type"`
 

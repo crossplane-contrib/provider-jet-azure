@@ -32,11 +32,11 @@ type MachineLearningInferenceClusterParameters struct {
 
 	Description *string `json:"description,omitempty" tf:"description"`
 
-	KubernetesClusterId string `json:"kubernetesClusterId" tf:"kubernetes_cluster_id"`
+	KubernetesClusterID string `json:"kubernetesClusterId" tf:"kubernetes_cluster_id"`
 
 	Location string `json:"location" tf:"location"`
 
-	MachineLearningWorkspaceId string `json:"machineLearningWorkspaceId" tf:"machine_learning_workspace_id"`
+	MachineLearningWorkspaceID string `json:"machineLearningWorkspaceId" tf:"machine_learning_workspace_id"`
 
 	Name string `json:"name" tf:"name"`
 

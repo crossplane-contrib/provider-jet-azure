@@ -35,7 +35,7 @@ type ExpressRouteCircuitPeeringObservation struct {
 type ExpressRouteCircuitPeeringParameters struct {
 	ExpressRouteCircuitName string `json:"expressRouteCircuitName" tf:"express_route_circuit_name"`
 
-	Ipv6 []Ipv6Parameters `json:"ipv6,omitempty" tf:"ipv6"`
+	IPv6 []IPv6Parameters `json:"ipv6,omitempty" tf:"ipv6"`
 
 	MicrosoftPeeringConfig []MicrosoftPeeringConfigParameters `json:"microsoftPeeringConfig,omitempty" tf:"microsoft_peering_config"`
 
@@ -47,24 +47,24 @@ type ExpressRouteCircuitPeeringParameters struct {
 
 	ResourceGroupName string `json:"resourceGroupName" tf:"resource_group_name"`
 
-	RouteFilterId *string `json:"routeFilterId,omitempty" tf:"route_filter_id"`
+	RouteFilterID *string `json:"routeFilterId,omitempty" tf:"route_filter_id"`
 
 	SecondaryPeerAddressPrefix string `json:"secondaryPeerAddressPrefix" tf:"secondary_peer_address_prefix"`
 
 	SharedKey *string `json:"sharedKey,omitempty" tf:"shared_key"`
 
-	VlanId int64 `json:"vlanId" tf:"vlan_id"`
+	VlanID int64 `json:"vlanId" tf:"vlan_id"`
 }
 
-type Ipv6Observation struct {
+type IPv6Observation struct {
 }
 
-type Ipv6Parameters struct {
+type IPv6Parameters struct {
 	MicrosoftPeering []MicrosoftPeeringParameters `json:"microsoftPeering" tf:"microsoft_peering"`
 
 	PrimaryPeerAddressPrefix string `json:"primaryPeerAddressPrefix" tf:"primary_peer_address_prefix"`
 
-	RouteFilterId *string `json:"routeFilterId,omitempty" tf:"route_filter_id"`
+	RouteFilterID *string `json:"routeFilterId,omitempty" tf:"route_filter_id"`
 
 	SecondaryPeerAddressPrefix string `json:"secondaryPeerAddressPrefix" tf:"secondary_peer_address_prefix"`
 }

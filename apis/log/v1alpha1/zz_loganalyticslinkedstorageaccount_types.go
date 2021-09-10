@@ -34,7 +34,7 @@ type LogAnalyticsLinkedStorageAccountParameters struct {
 
 	StorageAccountIds []string `json:"storageAccountIds" tf:"storage_account_ids"`
 
-	WorkspaceResourceId string `json:"workspaceResourceId" tf:"workspace_resource_id"`
+	WorkspaceResourceID string `json:"workspaceResourceId" tf:"workspace_resource_id"`
 }
 
 // LogAnalyticsLinkedStorageAccountSpec defines the desired state of LogAnalyticsLinkedStorageAccount

@@ -41,7 +41,7 @@ type SubscriptionTemplateDeploymentParameters struct {
 
 	TemplateContent *string `json:"templateContent,omitempty" tf:"template_content"`
 
-	TemplateSpecVersionId *string `json:"templateSpecVersionId,omitempty" tf:"template_spec_version_id"`
+	TemplateSpecVersionID *string `json:"templateSpecVersionId,omitempty" tf:"template_spec_version_id"`
 }
 
 // SubscriptionTemplateDeploymentSpec defines the desired state of SubscriptionTemplateDeployment

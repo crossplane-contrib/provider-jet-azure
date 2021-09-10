@@ -68,7 +68,7 @@ type MonitorDiagnosticSettingObservation struct {
 }
 
 type MonitorDiagnosticSettingParameters struct {
-	EventhubAuthorizationRuleId *string `json:"eventhubAuthorizationRuleId,omitempty" tf:"eventhub_authorization_rule_id"`
+	EventhubAuthorizationRuleID *string `json:"eventhubAuthorizationRuleId,omitempty" tf:"eventhub_authorization_rule_id"`
 
 	EventhubName *string `json:"eventhubName,omitempty" tf:"eventhub_name"`
 
@@ -76,15 +76,15 @@ type MonitorDiagnosticSettingParameters struct {
 
 	LogAnalyticsDestinationType *string `json:"logAnalyticsDestinationType,omitempty" tf:"log_analytics_destination_type"`
 
-	LogAnalyticsWorkspaceId *string `json:"logAnalyticsWorkspaceId,omitempty" tf:"log_analytics_workspace_id"`
+	LogAnalyticsWorkspaceID *string `json:"logAnalyticsWorkspaceId,omitempty" tf:"log_analytics_workspace_id"`
 
 	Metric []MetricParameters `json:"metric,omitempty" tf:"metric"`
 
 	Name string `json:"name" tf:"name"`
 
-	StorageAccountId *string `json:"storageAccountId,omitempty" tf:"storage_account_id"`
+	StorageAccountID *string `json:"storageAccountId,omitempty" tf:"storage_account_id"`
 
-	TargetResourceId string `json:"targetResourceId" tf:"target_resource_id"`
+	TargetResourceID string `json:"targetResourceId" tf:"target_resource_id"`
 }
 
 // MonitorDiagnosticSettingSpec defines the desired state of MonitorDiagnosticSetting

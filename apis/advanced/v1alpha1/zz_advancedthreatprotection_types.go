@@ -30,7 +30,7 @@ type AdvancedThreatProtectionObservation struct {
 type AdvancedThreatProtectionParameters struct {
 	Enabled bool `json:"enabled" tf:"enabled"`
 
-	TargetResourceId string `json:"targetResourceId" tf:"target_resource_id"`
+	TargetResourceID string `json:"targetResourceId" tf:"target_resource_id"`
 }
 
 // AdvancedThreatProtectionSpec defines the desired state of AdvancedThreatProtection

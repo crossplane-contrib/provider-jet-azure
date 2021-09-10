@@ -27,7 +27,7 @@ import (
 type IothubDpsObservation struct {
 	DeviceProvisioningHostName string `json:"deviceProvisioningHostName" tf:"device_provisioning_host_name"`
 
-	IdScope string `json:"idScope" tf:"id_scope"`
+	IDScope string `json:"idScope" tf:"id_scope"`
 
 	ServiceOperationsHostName string `json:"serviceOperationsHostName" tf:"service_operations_host_name"`
 }

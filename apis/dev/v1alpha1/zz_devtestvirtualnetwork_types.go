@@ -49,7 +49,7 @@ type SubnetObservation struct {
 type SubnetParameters struct {
 	UseInVirtualMachineCreation *string `json:"useInVirtualMachineCreation,omitempty" tf:"use_in_virtual_machine_creation"`
 
-	UsePublicIpAddress *string `json:"usePublicIpAddress,omitempty" tf:"use_public_ip_address"`
+	UsePublicIPAddress *string `json:"usePublicIpAddress,omitempty" tf:"use_public_ip_address"`
 }
 
 // DevTestVirtualNetworkSpec defines the desired state of DevTestVirtualNetwork

@@ -98,7 +98,7 @@ type StorageManagementPolicyObservation struct {
 type StorageManagementPolicyParameters struct {
 	Rule []RuleParameters `json:"rule,omitempty" tf:"rule"`
 
-	StorageAccountId string `json:"storageAccountId" tf:"storage_account_id"`
+	StorageAccountID string `json:"storageAccountId" tf:"storage_account_id"`
 }
 
 type VersionObservation struct {

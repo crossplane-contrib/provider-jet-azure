@@ -28,7 +28,7 @@ type MssqlJobAgentObservation struct {
 }
 
 type MssqlJobAgentParameters struct {
-	DatabaseId string `json:"databaseId" tf:"database_id"`
+	DatabaseID string `json:"databaseId" tf:"database_id"`
 
 	Location string `json:"location" tf:"location"`
 

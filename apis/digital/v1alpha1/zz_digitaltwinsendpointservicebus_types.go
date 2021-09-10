@@ -30,7 +30,7 @@ type DigitalTwinsEndpointServicebusObservation struct {
 type DigitalTwinsEndpointServicebusParameters struct {
 	DeadLetterStorageSecret *string `json:"deadLetterStorageSecret,omitempty" tf:"dead_letter_storage_secret"`
 
-	DigitalTwinsId string `json:"digitalTwinsId" tf:"digital_twins_id"`
+	DigitalTwinsID string `json:"digitalTwinsId" tf:"digital_twins_id"`
 
 	Name string `json:"name" tf:"name"`
 

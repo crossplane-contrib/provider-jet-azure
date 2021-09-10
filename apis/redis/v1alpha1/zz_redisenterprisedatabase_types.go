@@ -43,7 +43,7 @@ type RedisEnterpriseDatabaseObservation struct {
 type RedisEnterpriseDatabaseParameters struct {
 	ClientProtocol *string `json:"clientProtocol,omitempty" tf:"client_protocol"`
 
-	ClusterId string `json:"clusterId" tf:"cluster_id"`
+	ClusterID string `json:"clusterId" tf:"cluster_id"`
 
 	ClusteringPolicy *string `json:"clusteringPolicy,omitempty" tf:"clustering_policy"`
 

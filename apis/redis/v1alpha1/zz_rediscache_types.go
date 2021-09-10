@@ -60,13 +60,13 @@ type RedisCacheParameters struct {
 
 	Location string `json:"location" tf:"location"`
 
-	MinimumTlsVersion *string `json:"minimumTlsVersion,omitempty" tf:"minimum_tls_version"`
+	MinimumTLSVersion *string `json:"minimumTlsVersion,omitempty" tf:"minimum_tls_version"`
 
 	Name string `json:"name" tf:"name"`
 
 	PatchSchedule []PatchScheduleParameters `json:"patchSchedule,omitempty" tf:"patch_schedule"`
 
-	PrivateStaticIpAddress *string `json:"privateStaticIpAddress,omitempty" tf:"private_static_ip_address"`
+	PrivateStaticIPAddress *string `json:"privateStaticIpAddress,omitempty" tf:"private_static_ip_address"`
 
 	PublicNetworkAccessEnabled *bool `json:"publicNetworkAccessEnabled,omitempty" tf:"public_network_access_enabled"`
 
@@ -84,7 +84,7 @@ type RedisCacheParameters struct {
 
 	SkuName string `json:"skuName" tf:"sku_name"`
 
-	SubnetId *string `json:"subnetId,omitempty" tf:"subnet_id"`
+	SubnetID *string `json:"subnetId,omitempty" tf:"subnet_id"`
 
 	Tags map[string]string `json:"tags,omitempty" tf:"tags"`
 

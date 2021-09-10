@@ -34,7 +34,7 @@ type LogAnalyticsStorageInsightsParameters struct {
 
 	ResourceGroupName string `json:"resourceGroupName" tf:"resource_group_name"`
 
-	StorageAccountId string `json:"storageAccountId" tf:"storage_account_id"`
+	StorageAccountID string `json:"storageAccountId" tf:"storage_account_id"`
 
 	StorageAccountKey string `json:"storageAccountKey" tf:"storage_account_key"`
 
@@ -42,7 +42,7 @@ type LogAnalyticsStorageInsightsParameters struct {
 
 	Tags map[string]string `json:"tags,omitempty" tf:"tags"`
 
-	WorkspaceId string `json:"workspaceId" tf:"workspace_id"`
+	WorkspaceID string `json:"workspaceId" tf:"workspace_id"`
 }
 
 // LogAnalyticsStorageInsightsSpec defines the desired state of LogAnalyticsStorageInsights

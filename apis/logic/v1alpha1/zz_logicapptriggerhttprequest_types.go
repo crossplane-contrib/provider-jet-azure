@@ -25,11 +25,11 @@ import (
 )
 
 type LogicAppTriggerHttpRequestObservation struct {
-	CallbackUrl string `json:"callbackUrl" tf:"callback_url"`
+	CallbackURL string `json:"callbackUrl" tf:"callback_url"`
 }
 
 type LogicAppTriggerHttpRequestParameters struct {
-	LogicAppId string `json:"logicAppId" tf:"logic_app_id"`
+	LogicAppID string `json:"logicAppId" tf:"logic_app_id"`
 
 	Method *string `json:"method,omitempty" tf:"method"`
 

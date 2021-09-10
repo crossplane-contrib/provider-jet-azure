@@ -28,11 +28,11 @@ type SentinelDataConnectorAzureAdvancedThreatProtectionObservation struct {
 }
 
 type SentinelDataConnectorAzureAdvancedThreatProtectionParameters struct {
-	LogAnalyticsWorkspaceId string `json:"logAnalyticsWorkspaceId" tf:"log_analytics_workspace_id"`
+	LogAnalyticsWorkspaceID string `json:"logAnalyticsWorkspaceId" tf:"log_analytics_workspace_id"`
 
 	Name string `json:"name" tf:"name"`
 
-	TenantId *string `json:"tenantId,omitempty" tf:"tenant_id"`
+	TenantID *string `json:"tenantId,omitempty" tf:"tenant_id"`
 }
 
 // SentinelDataConnectorAzureAdvancedThreatProtectionSpec defines the desired state of SentinelDataConnectorAzureAdvancedThreatProtection

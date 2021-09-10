@@ -25,7 +25,7 @@ import (
 )
 
 type OrchestratedVirtualMachineScaleSetObservation struct {
-	UniqueId string `json:"uniqueId" tf:"unique_id"`
+	UniqueID string `json:"uniqueId" tf:"unique_id"`
 }
 
 type OrchestratedVirtualMachineScaleSetParameters struct {
@@ -35,7 +35,7 @@ type OrchestratedVirtualMachineScaleSetParameters struct {
 
 	PlatformFaultDomainCount int64 `json:"platformFaultDomainCount" tf:"platform_fault_domain_count"`
 
-	ProximityPlacementGroupId *string `json:"proximityPlacementGroupId,omitempty" tf:"proximity_placement_group_id"`
+	ProximityPlacementGroupID *string `json:"proximityPlacementGroupId,omitempty" tf:"proximity_placement_group_id"`
 
 	ResourceGroupName string `json:"resourceGroupName" tf:"resource_group_name"`
 

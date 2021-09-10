@@ -28,7 +28,7 @@ type ApiManagementRedisCacheObservation struct {
 }
 
 type ApiManagementRedisCacheParameters struct {
-	ApiManagementId string `json:"apiManagementId" tf:"api_management_id"`
+	APIManagementID string `json:"apiManagementId" tf:"api_management_id"`
 
 	CacheLocation *string `json:"cacheLocation,omitempty" tf:"cache_location"`
 
@@ -38,7 +38,7 @@ type ApiManagementRedisCacheParameters struct {
 
 	Name string `json:"name" tf:"name"`
 
-	RedisCacheId *string `json:"redisCacheId,omitempty" tf:"redis_cache_id"`
+	RedisCacheID *string `json:"redisCacheId,omitempty" tf:"redis_cache_id"`
 }
 
 // ApiManagementRedisCacheSpec defines the desired state of ApiManagementRedisCache

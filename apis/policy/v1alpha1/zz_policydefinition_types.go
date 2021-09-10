@@ -32,7 +32,7 @@ type PolicyDefinitionParameters struct {
 
 	DisplayName string `json:"displayName" tf:"display_name"`
 
-	ManagementGroupId *string `json:"managementGroupId,omitempty" tf:"management_group_id"`
+	ManagementGroupID *string `json:"managementGroupId,omitempty" tf:"management_group_id"`
 
 	ManagementGroupName *string `json:"managementGroupName,omitempty" tf:"management_group_name"`
 

@@ -27,15 +27,15 @@ import (
 type SubscriptionObservation struct {
 	Tags map[string]string `json:"tags" tf:"tags"`
 
-	TenantId string `json:"tenantId" tf:"tenant_id"`
+	TenantID string `json:"tenantId" tf:"tenant_id"`
 }
 
 type SubscriptionParameters struct {
 	Alias *string `json:"alias,omitempty" tf:"alias"`
 
-	BillingScopeId *string `json:"billingScopeId,omitempty" tf:"billing_scope_id"`
+	BillingScopeID *string `json:"billingScopeId,omitempty" tf:"billing_scope_id"`
 
-	SubscriptionId *string `json:"subscriptionId,omitempty" tf:"subscription_id"`
+	SubscriptionID *string `json:"subscriptionId,omitempty" tf:"subscription_id"`
 
 	SubscriptionName string `json:"subscriptionName" tf:"subscription_name"`
 

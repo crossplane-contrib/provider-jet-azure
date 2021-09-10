@@ -326,8 +326,8 @@ func (in *SharedImageParameters) DeepCopyInto(out *SharedImageParameters) {
 		*out = make([]IdentifierParameters, len(*in))
 		copy(*out, *in)
 	}
-	if in.PrivacyStatementUri != nil {
-		in, out := &in.PrivacyStatementUri, &out.PrivacyStatementUri
+	if in.PrivacyStatementURI != nil {
+		in, out := &in.PrivacyStatementURI, &out.PrivacyStatementURI
 		*out = new(string)
 		**out = **in
 	}
@@ -338,8 +338,8 @@ func (in *SharedImageParameters) DeepCopyInto(out *SharedImageParameters) {
 			(*in)[i].DeepCopyInto(&(*out)[i])
 		}
 	}
-	if in.ReleaseNoteUri != nil {
-		in, out := &in.ReleaseNoteUri, &out.ReleaseNoteUri
+	if in.ReleaseNoteURI != nil {
+		in, out := &in.ReleaseNoteURI, &out.ReleaseNoteURI
 		*out = new(string)
 		**out = **in
 	}
@@ -483,13 +483,13 @@ func (in *SharedImageVersionParameters) DeepCopyInto(out *SharedImageVersionPara
 		*out = new(bool)
 		**out = **in
 	}
-	if in.ManagedImageId != nil {
-		in, out := &in.ManagedImageId, &out.ManagedImageId
+	if in.ManagedImageID != nil {
+		in, out := &in.ManagedImageID, &out.ManagedImageID
 		*out = new(string)
 		**out = **in
 	}
-	if in.OsDiskSnapshotId != nil {
-		in, out := &in.OsDiskSnapshotId, &out.OsDiskSnapshotId
+	if in.OsDiskSnapshotID != nil {
+		in, out := &in.OsDiskSnapshotID, &out.OsDiskSnapshotID
 		*out = new(string)
 		**out = **in
 	}

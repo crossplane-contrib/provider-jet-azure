@@ -27,7 +27,7 @@ import (
 type ExpressRoutePortObservation struct {
 	Ethertype string `json:"ethertype" tf:"ethertype"`
 
-	Guid string `json:"guid" tf:"guid"`
+	GUID string `json:"guid" tf:"guid"`
 
 	Mtu string `json:"mtu" tf:"mtu"`
 }
@@ -66,13 +66,13 @@ type IdentityParameters struct {
 type Link1Observation struct {
 	ConnectorType string `json:"connectorType" tf:"connector_type"`
 
-	Id string `json:"id" tf:"id"`
+	ID string `json:"id" tf:"id"`
 
 	InterfaceName string `json:"interfaceName" tf:"interface_name"`
 
-	PatchPanelId string `json:"patchPanelId" tf:"patch_panel_id"`
+	PatchPanelID string `json:"patchPanelId" tf:"patch_panel_id"`
 
-	RackId string `json:"rackId" tf:"rack_id"`
+	RackID string `json:"rackId" tf:"rack_id"`
 
 	RouterName string `json:"routerName" tf:"router_name"`
 }
@@ -80,23 +80,23 @@ type Link1Observation struct {
 type Link1Parameters struct {
 	AdminEnabled *bool `json:"adminEnabled,omitempty" tf:"admin_enabled"`
 
-	MacsecCakKeyvaultSecretId *string `json:"macsecCakKeyvaultSecretId,omitempty" tf:"macsec_cak_keyvault_secret_id"`
+	MacsecCakKeyvaultSecretID *string `json:"macsecCakKeyvaultSecretId,omitempty" tf:"macsec_cak_keyvault_secret_id"`
 
 	MacsecCipher *string `json:"macsecCipher,omitempty" tf:"macsec_cipher"`
 
-	MacsecCknKeyvaultSecretId *string `json:"macsecCknKeyvaultSecretId,omitempty" tf:"macsec_ckn_keyvault_secret_id"`
+	MacsecCknKeyvaultSecretID *string `json:"macsecCknKeyvaultSecretId,omitempty" tf:"macsec_ckn_keyvault_secret_id"`
 }
 
 type Link2Observation struct {
 	ConnectorType string `json:"connectorType" tf:"connector_type"`
 
-	Id string `json:"id" tf:"id"`
+	ID string `json:"id" tf:"id"`
 
 	InterfaceName string `json:"interfaceName" tf:"interface_name"`
 
-	PatchPanelId string `json:"patchPanelId" tf:"patch_panel_id"`
+	PatchPanelID string `json:"patchPanelId" tf:"patch_panel_id"`
 
-	RackId string `json:"rackId" tf:"rack_id"`
+	RackID string `json:"rackId" tf:"rack_id"`
 
 	RouterName string `json:"routerName" tf:"router_name"`
 }
@@ -104,11 +104,11 @@ type Link2Observation struct {
 type Link2Parameters struct {
 	AdminEnabled *bool `json:"adminEnabled,omitempty" tf:"admin_enabled"`
 
-	MacsecCakKeyvaultSecretId *string `json:"macsecCakKeyvaultSecretId,omitempty" tf:"macsec_cak_keyvault_secret_id"`
+	MacsecCakKeyvaultSecretID *string `json:"macsecCakKeyvaultSecretId,omitempty" tf:"macsec_cak_keyvault_secret_id"`
 
 	MacsecCipher *string `json:"macsecCipher,omitempty" tf:"macsec_cipher"`
 
-	MacsecCknKeyvaultSecretId *string `json:"macsecCknKeyvaultSecretId,omitempty" tf:"macsec_ckn_keyvault_secret_id"`
+	MacsecCknKeyvaultSecretID *string `json:"macsecCknKeyvaultSecretId,omitempty" tf:"macsec_ckn_keyvault_secret_id"`
 }
 
 // ExpressRoutePortSpec defines the desired state of ExpressRoutePort

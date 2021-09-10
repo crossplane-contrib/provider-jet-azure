@@ -24,11 +24,11 @@ import (
 	"k8s.io/apimachinery/pkg/runtime/schema"
 )
 
-type DnsSettingsObservation struct {
+type DNSSettingsObservation struct {
 }
 
-type DnsSettingsParameters struct {
-	DnsServers []string `json:"dnsServers" tf:"dns_servers"`
+type DNSSettingsParameters struct {
+	DNSServers []string `json:"dnsServers" tf:"dns_servers"`
 }
 
 type ExtensionObservation struct {
@@ -52,10 +52,10 @@ type ExtensionParameters struct {
 	TypeHandlerVersion string `json:"typeHandlerVersion" tf:"type_handler_version"`
 }
 
-type IpConfigurationObservation struct {
+type IPConfigurationObservation struct {
 }
 
-type IpConfigurationParameters struct {
+type IPConfigurationParameters struct {
 	ApplicationGatewayBackendAddressPoolIds []string `json:"applicationGatewayBackendAddressPoolIds,omitempty" tf:"application_gateway_backend_address_pool_ids"`
 
 	ApplicationSecurityGroupIds []string `json:"applicationSecurityGroupIds,omitempty" tf:"application_security_group_ids"`
@@ -68,9 +68,9 @@ type IpConfigurationParameters struct {
 
 	Primary bool `json:"primary" tf:"primary"`
 
-	PublicIpAddressConfiguration []PublicIpAddressConfigurationParameters `json:"publicIpAddressConfiguration,omitempty" tf:"public_ip_address_configuration"`
+	PublicIPAddressConfiguration []PublicIPAddressConfigurationParameters `json:"publicIpAddressConfiguration,omitempty" tf:"public_ip_address_configuration"`
 
-	SubnetId string `json:"subnetId" tf:"subnet_id"`
+	SubnetID string `json:"subnetId" tf:"subnet_id"`
 }
 
 type NetworkProfileObservation struct {
@@ -79,23 +79,23 @@ type NetworkProfileObservation struct {
 type NetworkProfileParameters struct {
 	AcceleratedNetworking *bool `json:"acceleratedNetworking,omitempty" tf:"accelerated_networking"`
 
-	DnsSettings []DnsSettingsParameters `json:"dnsSettings,omitempty" tf:"dns_settings"`
+	DNSSettings []DNSSettingsParameters `json:"dnsSettings,omitempty" tf:"dns_settings"`
 
-	IpConfiguration []IpConfigurationParameters `json:"ipConfiguration" tf:"ip_configuration"`
+	IPConfiguration []IPConfigurationParameters `json:"ipConfiguration" tf:"ip_configuration"`
 
-	IpForwarding *bool `json:"ipForwarding,omitempty" tf:"ip_forwarding"`
+	IPForwarding *bool `json:"ipForwarding,omitempty" tf:"ip_forwarding"`
 
 	Name string `json:"name" tf:"name"`
 
-	NetworkSecurityGroupId *string `json:"networkSecurityGroupId,omitempty" tf:"network_security_group_id"`
+	NetworkSecurityGroupID *string `json:"networkSecurityGroupId,omitempty" tf:"network_security_group_id"`
 
 	Primary bool `json:"primary" tf:"primary"`
 }
 
-type OsProfileLinuxConfigSshKeysObservation struct {
+type OsProfileLinuxConfigSSHKeysObservation struct {
 }
 
-type OsProfileLinuxConfigSshKeysParameters struct {
+type OsProfileLinuxConfigSSHKeysParameters struct {
 	KeyData *string `json:"keyData,omitempty" tf:"key_data"`
 
 	Path string `json:"path" tf:"path"`
@@ -107,7 +107,7 @@ type OsProfileSecretsVaultCertificatesObservation struct {
 type OsProfileSecretsVaultCertificatesParameters struct {
 	CertificateStore *string `json:"certificateStore,omitempty" tf:"certificate_store"`
 
-	CertificateUrl string `json:"certificateUrl" tf:"certificate_url"`
+	CertificateURL string `json:"certificateUrl" tf:"certificate_url"`
 }
 
 type OsProfileWindowsConfigAdditionalUnattendConfigObservation struct {
@@ -127,15 +127,15 @@ type OsProfileWindowsConfigWinrmObservation struct {
 }
 
 type OsProfileWindowsConfigWinrmParameters struct {
-	CertificateUrl *string `json:"certificateUrl,omitempty" tf:"certificate_url"`
+	CertificateURL *string `json:"certificateUrl,omitempty" tf:"certificate_url"`
 
 	Protocol string `json:"protocol" tf:"protocol"`
 }
 
-type PublicIpAddressConfigurationObservation struct {
+type PublicIPAddressConfigurationObservation struct {
 }
 
-type PublicIpAddressConfigurationParameters struct {
+type PublicIPAddressConfigurationParameters struct {
 	DomainNameLabel string `json:"domainNameLabel" tf:"domain_name_label"`
 
 	IdleTimeout int64 `json:"idleTimeout" tf:"idle_timeout"`
@@ -186,7 +186,7 @@ type StorageProfileImageReferenceObservation struct {
 }
 
 type StorageProfileImageReferenceParameters struct {
-	Id *string `json:"id,omitempty" tf:"id"`
+	ID *string `json:"id,omitempty" tf:"id"`
 
 	Offer *string `json:"offer,omitempty" tf:"offer"`
 
@@ -222,11 +222,11 @@ type VirtualMachineScaleSetBootDiagnosticsObservation struct {
 type VirtualMachineScaleSetBootDiagnosticsParameters struct {
 	Enabled *bool `json:"enabled,omitempty" tf:"enabled"`
 
-	StorageUri string `json:"storageUri" tf:"storage_uri"`
+	StorageURI string `json:"storageUri" tf:"storage_uri"`
 }
 
 type VirtualMachineScaleSetIdentityObservation struct {
-	PrincipalId string `json:"principalId" tf:"principal_id"`
+	PrincipalID string `json:"principalId" tf:"principal_id"`
 }
 
 type VirtualMachineScaleSetIdentityParameters struct {
@@ -244,7 +244,7 @@ type VirtualMachineScaleSetOsProfileLinuxConfigObservation struct {
 type VirtualMachineScaleSetOsProfileLinuxConfigParameters struct {
 	DisablePasswordAuthentication *bool `json:"disablePasswordAuthentication,omitempty" tf:"disable_password_authentication"`
 
-	SshKeys []OsProfileLinuxConfigSshKeysParameters `json:"sshKeys,omitempty" tf:"ssh_keys"`
+	SSHKeys []OsProfileLinuxConfigSSHKeysParameters `json:"sshKeys,omitempty" tf:"ssh_keys"`
 }
 
 type VirtualMachineScaleSetOsProfileObservation struct {
@@ -264,7 +264,7 @@ type VirtualMachineScaleSetOsProfileSecretsObservation struct {
 }
 
 type VirtualMachineScaleSetOsProfileSecretsParameters struct {
-	SourceVaultId string `json:"sourceVaultId" tf:"source_vault_id"`
+	SourceVaultID string `json:"sourceVaultId" tf:"source_vault_id"`
 
 	VaultCertificates []OsProfileSecretsVaultCertificatesParameters `json:"vaultCertificates,omitempty" tf:"vault_certificates"`
 }
@@ -277,7 +277,7 @@ type VirtualMachineScaleSetOsProfileWindowsConfigParameters struct {
 
 	EnableAutomaticUpgrades *bool `json:"enableAutomaticUpgrades,omitempty" tf:"enable_automatic_upgrades"`
 
-	ProvisionVmAgent *bool `json:"provisionVmAgent,omitempty" tf:"provision_vm_agent"`
+	ProvisionVMAgent *bool `json:"provisionVmAgent,omitempty" tf:"provision_vm_agent"`
 
 	Winrm []OsProfileWindowsConfigWinrmParameters `json:"winrm,omitempty" tf:"winrm"`
 }
@@ -291,7 +291,7 @@ type VirtualMachineScaleSetParameters struct {
 
 	Extension []ExtensionParameters `json:"extension,omitempty" tf:"extension"`
 
-	HealthProbeId *string `json:"healthProbeId,omitempty" tf:"health_probe_id"`
+	HealthProbeID *string `json:"healthProbeId,omitempty" tf:"health_probe_id"`
 
 	Identity []VirtualMachineScaleSetIdentityParameters `json:"identity,omitempty" tf:"identity"`
 
@@ -317,7 +317,7 @@ type VirtualMachineScaleSetParameters struct {
 
 	Priority *string `json:"priority,omitempty" tf:"priority"`
 
-	ProximityPlacementGroupId *string `json:"proximityPlacementGroupId,omitempty" tf:"proximity_placement_group_id"`
+	ProximityPlacementGroupID *string `json:"proximityPlacementGroupId,omitempty" tf:"proximity_placement_group_id"`
 
 	ResourceGroupName string `json:"resourceGroupName" tf:"resource_group_name"`
 

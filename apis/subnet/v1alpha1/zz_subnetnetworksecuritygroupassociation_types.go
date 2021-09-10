@@ -28,9 +28,9 @@ type SubnetNetworkSecurityGroupAssociationObservation struct {
 }
 
 type SubnetNetworkSecurityGroupAssociationParameters struct {
-	NetworkSecurityGroupId string `json:"networkSecurityGroupId" tf:"network_security_group_id"`
+	NetworkSecurityGroupID string `json:"networkSecurityGroupId" tf:"network_security_group_id"`
 
-	SubnetId string `json:"subnetId" tf:"subnet_id"`
+	SubnetID string `json:"subnetId" tf:"subnet_id"`
 }
 
 // SubnetNetworkSecurityGroupAssociationSpec defines the desired state of SubnetNetworkSecurityGroupAssociation

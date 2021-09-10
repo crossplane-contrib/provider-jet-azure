@@ -25,9 +25,9 @@ import (
 )
 
 type IdentityObservation struct {
-	PrincipalId string `json:"principalId" tf:"principal_id"`
+	PrincipalID string `json:"principalId" tf:"principal_id"`
 
-	TenantId string `json:"tenantId" tf:"tenant_id"`
+	TenantID string `json:"tenantId" tf:"tenant_id"`
 }
 
 type IdentityParameters struct {
@@ -56,9 +56,9 @@ type SubscriptionPolicyAssignmentParameters struct {
 
 	Parameters *string `json:"parameters,omitempty" tf:"parameters"`
 
-	PolicyDefinitionId string `json:"policyDefinitionId" tf:"policy_definition_id"`
+	PolicyDefinitionID string `json:"policyDefinitionId" tf:"policy_definition_id"`
 
-	SubscriptionId string `json:"subscriptionId" tf:"subscription_id"`
+	SubscriptionID string `json:"subscriptionId" tf:"subscription_id"`
 }
 
 // SubscriptionPolicyAssignmentSpec defines the desired state of SubscriptionPolicyAssignment

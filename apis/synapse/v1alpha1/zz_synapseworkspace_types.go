@@ -30,9 +30,9 @@ type AadAdminObservation struct {
 type AadAdminParameters struct {
 	Login string `json:"login" tf:"login"`
 
-	ObjectId string `json:"objectId" tf:"object_id"`
+	ObjectID string `json:"objectId" tf:"object_id"`
 
-	TenantId string `json:"tenantId" tf:"tenant_id"`
+	TenantID string `json:"tenantId" tf:"tenant_id"`
 }
 
 type AzureDevopsRepoObservation struct {
@@ -58,7 +58,7 @@ type GithubRepoParameters struct {
 
 	BranchName string `json:"branchName" tf:"branch_name"`
 
-	GitUrl *string `json:"gitUrl,omitempty" tf:"git_url"`
+	GitURL *string `json:"gitUrl,omitempty" tf:"git_url"`
 
 	RepositoryName string `json:"repositoryName" tf:"repository_name"`
 
@@ -66,9 +66,9 @@ type GithubRepoParameters struct {
 }
 
 type IdentityObservation struct {
-	PrincipalId string `json:"principalId" tf:"principal_id"`
+	PrincipalID string `json:"principalId" tf:"principal_id"`
 
-	TenantId string `json:"tenantId" tf:"tenant_id"`
+	TenantID string `json:"tenantId" tf:"tenant_id"`
 
 	Type string `json:"type" tf:"type"`
 }
@@ -87,7 +87,7 @@ type SynapseWorkspaceParameters struct {
 
 	AzureDevopsRepo []AzureDevopsRepoParameters `json:"azureDevopsRepo,omitempty" tf:"azure_devops_repo"`
 
-	CustomerManagedKeyVersionlessId *string `json:"customerManagedKeyVersionlessId,omitempty" tf:"customer_managed_key_versionless_id"`
+	CustomerManagedKeyVersionlessID *string `json:"customerManagedKeyVersionlessId,omitempty" tf:"customer_managed_key_versionless_id"`
 
 	DataExfiltrationProtectionEnabled *bool `json:"dataExfiltrationProtectionEnabled,omitempty" tf:"data_exfiltration_protection_enabled"`
 
@@ -103,13 +103,13 @@ type SynapseWorkspaceParameters struct {
 
 	ResourceGroupName string `json:"resourceGroupName" tf:"resource_group_name"`
 
-	SqlAdministratorLogin string `json:"sqlAdministratorLogin" tf:"sql_administrator_login"`
+	SQLAdministratorLogin string `json:"sqlAdministratorLogin" tf:"sql_administrator_login"`
 
-	SqlAdministratorLoginPassword string `json:"sqlAdministratorLoginPassword" tf:"sql_administrator_login_password"`
+	SQLAdministratorLoginPassword string `json:"sqlAdministratorLoginPassword" tf:"sql_administrator_login_password"`
 
-	SqlIdentityControlEnabled *bool `json:"sqlIdentityControlEnabled,omitempty" tf:"sql_identity_control_enabled"`
+	SQLIdentityControlEnabled *bool `json:"sqlIdentityControlEnabled,omitempty" tf:"sql_identity_control_enabled"`
 
-	StorageDataLakeGen2FilesystemId string `json:"storageDataLakeGen2FilesystemId" tf:"storage_data_lake_gen2_filesystem_id"`
+	StorageDataLakeGen2FilesystemID string `json:"storageDataLakeGen2FilesystemId" tf:"storage_data_lake_gen2_filesystem_id"`
 
 	Tags map[string]string `json:"tags,omitempty" tf:"tags"`
 }

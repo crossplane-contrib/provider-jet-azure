@@ -30,13 +30,13 @@ type DataLakeStoreFirewallRuleObservation struct {
 type DataLakeStoreFirewallRuleParameters struct {
 	AccountName string `json:"accountName" tf:"account_name"`
 
-	EndIpAddress string `json:"endIpAddress" tf:"end_ip_address"`
+	EndIPAddress string `json:"endIpAddress" tf:"end_ip_address"`
 
 	Name string `json:"name" tf:"name"`
 
 	ResourceGroupName string `json:"resourceGroupName" tf:"resource_group_name"`
 
-	StartIpAddress string `json:"startIpAddress" tf:"start_ip_address"`
+	StartIPAddress string `json:"startIpAddress" tf:"start_ip_address"`
 }
 
 // DataLakeStoreFirewallRuleSpec defines the desired state of DataLakeStoreFirewallRule

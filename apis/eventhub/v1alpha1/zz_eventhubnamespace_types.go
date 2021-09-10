@@ -43,7 +43,7 @@ type EventhubNamespaceParameters struct {
 
 	Capacity *int64 `json:"capacity,omitempty" tf:"capacity"`
 
-	DedicatedClusterId *string `json:"dedicatedClusterId,omitempty" tf:"dedicated_cluster_id"`
+	DedicatedClusterID *string `json:"dedicatedClusterId,omitempty" tf:"dedicated_cluster_id"`
 
 	Identity []IdentityParameters `json:"identity,omitempty" tf:"identity"`
 
@@ -64,23 +64,23 @@ type EventhubNamespaceParameters struct {
 	ZoneRedundant *bool `json:"zoneRedundant,omitempty" tf:"zone_redundant"`
 }
 
-type IdentityObservation struct {
-	PrincipalId string `json:"principalId" tf:"principal_id"`
+type IPRuleObservation struct {
+}
 
-	TenantId string `json:"tenantId" tf:"tenant_id"`
+type IPRuleParameters struct {
+	Action *string `json:"action,omitempty" tf:"action"`
+
+	IPMask string `json:"ipMask" tf:"ip_mask"`
+}
+
+type IdentityObservation struct {
+	PrincipalID string `json:"principalId" tf:"principal_id"`
+
+	TenantID string `json:"tenantId" tf:"tenant_id"`
 }
 
 type IdentityParameters struct {
 	Type *string `json:"type,omitempty" tf:"type"`
-}
-
-type IpRuleObservation struct {
-}
-
-type IpRuleParameters struct {
-	Action *string `json:"action,omitempty" tf:"action"`
-
-	IpMask string `json:"ipMask" tf:"ip_mask"`
 }
 
 type NetworkRulesetsObservation struct {
@@ -89,7 +89,7 @@ type NetworkRulesetsObservation struct {
 type NetworkRulesetsParameters struct {
 	DefaultAction string `json:"defaultAction" tf:"default_action"`
 
-	IpRule []IpRuleParameters `json:"ipRule,omitempty" tf:"ip_rule"`
+	IPRule []IPRuleParameters `json:"ipRule,omitempty" tf:"ip_rule"`
 
 	TrustedServiceAccessEnabled *bool `json:"trustedServiceAccessEnabled,omitempty" tf:"trusted_service_access_enabled"`
 
@@ -102,7 +102,7 @@ type VirtualNetworkRuleObservation struct {
 type VirtualNetworkRuleParameters struct {
 	IgnoreMissingVirtualNetworkServiceEndpoint *bool `json:"ignoreMissingVirtualNetworkServiceEndpoint,omitempty" tf:"ignore_missing_virtual_network_service_endpoint"`
 
-	SubnetId string `json:"subnetId" tf:"subnet_id"`
+	SubnetID string `json:"subnetId" tf:"subnet_id"`
 }
 
 // EventhubNamespaceSpec defines the desired state of EventhubNamespace

@@ -28,7 +28,7 @@ type ActiveDirectoryObservation struct {
 }
 
 type ActiveDirectoryParameters struct {
-	DomainGuid string `json:"domainGuid" tf:"domain_guid"`
+	DomainGUID string `json:"domainGuid" tf:"domain_guid"`
 
 	DomainName string `json:"domainName" tf:"domain_name"`
 
@@ -121,9 +121,9 @@ type HourMetricsParameters struct {
 }
 
 type IdentityObservation struct {
-	PrincipalId string `json:"principalId" tf:"principal_id"`
+	PrincipalID string `json:"principalId" tf:"principal_id"`
 
-	TenantId string `json:"tenantId" tf:"tenant_id"`
+	TenantID string `json:"tenantId" tf:"tenant_id"`
 }
 
 type IdentityParameters struct {
@@ -168,7 +168,7 @@ type NetworkRulesParameters struct {
 
 	DefaultAction string `json:"defaultAction" tf:"default_action"`
 
-	IpRules []string `json:"ipRules,omitempty" tf:"ip_rules"`
+	IPRules []string `json:"ipRules,omitempty" tf:"ip_rules"`
 
 	PrivateLinkAccess []PrivateLinkAccessParameters `json:"privateLinkAccess,omitempty" tf:"private_link_access"`
 
@@ -179,9 +179,9 @@ type PrivateLinkAccessObservation struct {
 }
 
 type PrivateLinkAccessParameters struct {
-	EndpointResourceId string `json:"endpointResourceId" tf:"endpoint_resource_id"`
+	EndpointResourceID string `json:"endpointResourceId" tf:"endpoint_resource_id"`
 
-	EndpointTenantId *string `json:"endpointTenantId,omitempty" tf:"endpoint_tenant_id"`
+	EndpointTenantID *string `json:"endpointTenantId,omitempty" tf:"endpoint_tenant_id"`
 }
 
 type QueuePropertiesCorsRuleObservation struct {
@@ -361,7 +361,7 @@ type StorageAccountParameters struct {
 
 	CustomDomain []CustomDomainParameters `json:"customDomain,omitempty" tf:"custom_domain"`
 
-	EnableHttpsTrafficOnly *bool `json:"enableHttpsTrafficOnly,omitempty" tf:"enable_https_traffic_only"`
+	EnableHTTPSTrafficOnly *bool `json:"enableHttpsTrafficOnly,omitempty" tf:"enable_https_traffic_only"`
 
 	Identity []IdentityParameters `json:"identity,omitempty" tf:"identity"`
 
@@ -371,7 +371,7 @@ type StorageAccountParameters struct {
 
 	Location string `json:"location" tf:"location"`
 
-	MinTlsVersion *string `json:"minTlsVersion,omitempty" tf:"min_tls_version"`
+	MinTLSVersion *string `json:"minTlsVersion,omitempty" tf:"min_tls_version"`
 
 	Name string `json:"name" tf:"name"`
 

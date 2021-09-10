@@ -27,31 +27,31 @@ import (
 type ContainerGroupObservation struct {
 	Fqdn string `json:"fqdn" tf:"fqdn"`
 
-	IpAddress string `json:"ipAddress" tf:"ip_address"`
+	IPAddress string `json:"ipAddress" tf:"ip_address"`
 }
 
 type ContainerGroupParameters struct {
 	Container []ContainerParameters `json:"container" tf:"container"`
 
+	DNSConfig []DNSConfigParameters `json:"dnsConfig,omitempty" tf:"dns_config"`
+
+	DNSNameLabel *string `json:"dnsNameLabel,omitempty" tf:"dns_name_label"`
+
 	Diagnostics []DiagnosticsParameters `json:"diagnostics,omitempty" tf:"diagnostics"`
 
-	DnsConfig []DnsConfigParameters `json:"dnsConfig,omitempty" tf:"dns_config"`
-
-	DnsNameLabel *string `json:"dnsNameLabel,omitempty" tf:"dns_name_label"`
-
 	ExposedPort []ExposedPortParameters `json:"exposedPort,omitempty" tf:"exposed_port"`
+
+	IPAddressType *string `json:"ipAddressType,omitempty" tf:"ip_address_type"`
 
 	Identity []IdentityParameters `json:"identity,omitempty" tf:"identity"`
 
 	ImageRegistryCredential []ImageRegistryCredentialParameters `json:"imageRegistryCredential,omitempty" tf:"image_registry_credential"`
 
-	IpAddressType *string `json:"ipAddressType,omitempty" tf:"ip_address_type"`
-
 	Location string `json:"location" tf:"location"`
 
 	Name string `json:"name" tf:"name"`
 
-	NetworkProfileId *string `json:"networkProfileId,omitempty" tf:"network_profile_id"`
+	NetworkProfileID *string `json:"networkProfileId,omitempty" tf:"network_profile_id"`
 
 	OsType string `json:"osType" tf:"os_type"`
 
@@ -66,9 +66,9 @@ type ContainerObservation struct {
 }
 
 type ContainerParameters struct {
-	Commands []string `json:"commands,omitempty" tf:"commands"`
+	CPU float64 `json:"cpu" tf:"cpu"`
 
-	Cpu float64 `json:"cpu" tf:"cpu"`
+	Commands []string `json:"commands,omitempty" tf:"commands"`
 
 	EnvironmentVariables map[string]string `json:"environmentVariables,omitempty" tf:"environment_variables"`
 
@@ -91,22 +91,22 @@ type ContainerParameters struct {
 	Volume []VolumeParameters `json:"volume,omitempty" tf:"volume"`
 }
 
-type DiagnosticsObservation struct {
+type DNSConfigObservation struct {
 }
 
-type DiagnosticsParameters struct {
-	LogAnalytics []LogAnalyticsParameters `json:"logAnalytics" tf:"log_analytics"`
-}
-
-type DnsConfigObservation struct {
-}
-
-type DnsConfigParameters struct {
+type DNSConfigParameters struct {
 	Nameservers []string `json:"nameservers" tf:"nameservers"`
 
 	Options []string `json:"options" tf:"options"`
 
 	SearchDomains []string `json:"searchDomains" tf:"search_domains"`
+}
+
+type DiagnosticsObservation struct {
+}
+
+type DiagnosticsParameters struct {
+	LogAnalytics []LogAnalyticsParameters `json:"logAnalytics" tf:"log_analytics"`
 }
 
 type ExposedPortObservation struct {
@@ -126,7 +126,7 @@ type GitRepoParameters struct {
 
 	Revision *string `json:"revision,omitempty" tf:"revision"`
 
-	Url string `json:"url" tf:"url"`
+	URL string `json:"url" tf:"url"`
 }
 
 type GpuObservation struct {
@@ -138,10 +138,10 @@ type GpuParameters struct {
 	Sku *string `json:"sku,omitempty" tf:"sku"`
 }
 
-type HttpGetObservation struct {
+type HTTPGetObservation struct {
 }
 
-type HttpGetParameters struct {
+type HTTPGetParameters struct {
 	Path *string `json:"path,omitempty" tf:"path"`
 
 	Port *int64 `json:"port,omitempty" tf:"port"`
@@ -150,7 +150,7 @@ type HttpGetParameters struct {
 }
 
 type IdentityObservation struct {
-	PrincipalId string `json:"principalId" tf:"principal_id"`
+	PrincipalID string `json:"principalId" tf:"principal_id"`
 }
 
 type IdentityParameters struct {
@@ -178,7 +178,7 @@ type LivenessProbeParameters struct {
 
 	FailureThreshold *int64 `json:"failureThreshold,omitempty" tf:"failure_threshold"`
 
-	HttpGet []HttpGetParameters `json:"httpGet,omitempty" tf:"http_get"`
+	HTTPGet []HTTPGetParameters `json:"httpGet,omitempty" tf:"http_get"`
 
 	InitialDelaySeconds *int64 `json:"initialDelaySeconds,omitempty" tf:"initial_delay_seconds"`
 
@@ -197,7 +197,7 @@ type LogAnalyticsParameters struct {
 
 	Metadata map[string]string `json:"metadata,omitempty" tf:"metadata"`
 
-	WorkspaceId string `json:"workspaceId" tf:"workspace_id"`
+	WorkspaceID string `json:"workspaceId" tf:"workspace_id"`
 
 	WorkspaceKey string `json:"workspaceKey" tf:"workspace_key"`
 }
@@ -211,10 +211,10 @@ type PortsParameters struct {
 	Protocol *string `json:"protocol,omitempty" tf:"protocol"`
 }
 
-type ReadinessProbeHttpGetObservation struct {
+type ReadinessProbeHTTPGetObservation struct {
 }
 
-type ReadinessProbeHttpGetParameters struct {
+type ReadinessProbeHTTPGetParameters struct {
 	Path *string `json:"path,omitempty" tf:"path"`
 
 	Port *int64 `json:"port,omitempty" tf:"port"`
@@ -230,7 +230,7 @@ type ReadinessProbeParameters struct {
 
 	FailureThreshold *int64 `json:"failureThreshold,omitempty" tf:"failure_threshold"`
 
-	HttpGet []ReadinessProbeHttpGetParameters `json:"httpGet,omitempty" tf:"http_get"`
+	HTTPGet []ReadinessProbeHTTPGetParameters `json:"httpGet,omitempty" tf:"http_get"`
 
 	InitialDelaySeconds *int64 `json:"initialDelaySeconds,omitempty" tf:"initial_delay_seconds"`
 

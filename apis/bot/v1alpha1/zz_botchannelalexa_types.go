@@ -34,7 +34,7 @@ type BotChannelAlexaParameters struct {
 
 	ResourceGroupName string `json:"resourceGroupName" tf:"resource_group_name"`
 
-	SkillId string `json:"skillId" tf:"skill_id"`
+	SkillID string `json:"skillId" tf:"skill_id"`
 }
 
 // BotChannelAlexaSpec defines the desired state of BotChannelAlexa

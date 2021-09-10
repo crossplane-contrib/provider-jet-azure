@@ -28,9 +28,9 @@ type ApiManagementIdentityProviderFacebookObservation struct {
 }
 
 type ApiManagementIdentityProviderFacebookParameters struct {
-	ApiManagementName string `json:"apiManagementName" tf:"api_management_name"`
+	APIManagementName string `json:"apiManagementName" tf:"api_management_name"`
 
-	AppId string `json:"appId" tf:"app_id"`
+	AppID string `json:"appId" tf:"app_id"`
 
 	AppSecret string `json:"appSecret" tf:"app_secret"`
 

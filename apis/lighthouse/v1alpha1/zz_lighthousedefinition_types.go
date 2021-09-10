@@ -32,9 +32,9 @@ type AuthorizationParameters struct {
 
 	PrincipalDisplayName *string `json:"principalDisplayName,omitempty" tf:"principal_display_name"`
 
-	PrincipalId string `json:"principalId" tf:"principal_id"`
+	PrincipalID string `json:"principalId" tf:"principal_id"`
 
-	RoleDefinitionId string `json:"roleDefinitionId" tf:"role_definition_id"`
+	RoleDefinitionID string `json:"roleDefinitionId" tf:"role_definition_id"`
 }
 
 type LighthouseDefinitionObservation struct {
@@ -45,9 +45,9 @@ type LighthouseDefinitionParameters struct {
 
 	Description *string `json:"description,omitempty" tf:"description"`
 
-	LighthouseDefinitionId *string `json:"lighthouseDefinitionId,omitempty" tf:"lighthouse_definition_id"`
+	LighthouseDefinitionID *string `json:"lighthouseDefinitionId,omitempty" tf:"lighthouse_definition_id"`
 
-	ManagingTenantId string `json:"managingTenantId" tf:"managing_tenant_id"`
+	ManagingTenantID string `json:"managingTenantId" tf:"managing_tenant_id"`
 
 	Name string `json:"name" tf:"name"`
 

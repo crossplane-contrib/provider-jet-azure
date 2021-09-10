@@ -28,9 +28,9 @@ type AuthorizationObservation struct {
 }
 
 type AuthorizationParameters struct {
-	RoleDefinitionId string `json:"roleDefinitionId" tf:"role_definition_id"`
+	RoleDefinitionID string `json:"roleDefinitionId" tf:"role_definition_id"`
 
-	ServicePrincipalId string `json:"servicePrincipalId" tf:"service_principal_id"`
+	ServicePrincipalID string `json:"servicePrincipalId" tf:"service_principal_id"`
 }
 
 type ManagedApplicationDefinitionObservation struct {
@@ -39,7 +39,7 @@ type ManagedApplicationDefinitionObservation struct {
 type ManagedApplicationDefinitionParameters struct {
 	Authorization []AuthorizationParameters `json:"authorization,omitempty" tf:"authorization"`
 
-	CreateUiDefinition *string `json:"createUiDefinition,omitempty" tf:"create_ui_definition"`
+	CreateUIDefinition *string `json:"createUiDefinition,omitempty" tf:"create_ui_definition"`
 
 	Description *string `json:"description,omitempty" tf:"description"`
 
@@ -55,7 +55,7 @@ type ManagedApplicationDefinitionParameters struct {
 
 	PackageEnabled *bool `json:"packageEnabled,omitempty" tf:"package_enabled"`
 
-	PackageFileUri *string `json:"packageFileUri,omitempty" tf:"package_file_uri"`
+	PackageFileURI *string `json:"packageFileUri,omitempty" tf:"package_file_uri"`
 
 	ResourceGroupName string `json:"resourceGroupName" tf:"resource_group_name"`
 

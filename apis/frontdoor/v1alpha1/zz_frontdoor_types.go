@@ -32,11 +32,11 @@ type BackendParameters struct {
 
 	Enabled *bool `json:"enabled,omitempty" tf:"enabled"`
 
+	HTTPPort int64 `json:"httpPort" tf:"http_port"`
+
+	HTTPSPort int64 `json:"httpsPort" tf:"https_port"`
+
 	HostHeader string `json:"hostHeader" tf:"host_header"`
-
-	HttpPort int64 `json:"httpPort" tf:"http_port"`
-
-	HttpsPort int64 `json:"httpsPort" tf:"https_port"`
 
 	Priority *int64 `json:"priority,omitempty" tf:"priority"`
 
@@ -44,7 +44,7 @@ type BackendParameters struct {
 }
 
 type BackendPoolHealthProbeObservation struct {
-	Id string `json:"id" tf:"id"`
+	ID string `json:"id" tf:"id"`
 }
 
 type BackendPoolHealthProbeParameters struct {
@@ -62,7 +62,7 @@ type BackendPoolHealthProbeParameters struct {
 }
 
 type BackendPoolLoadBalancingObservation struct {
-	Id string `json:"id" tf:"id"`
+	ID string `json:"id" tf:"id"`
 }
 
 type BackendPoolLoadBalancingParameters struct {
@@ -76,7 +76,7 @@ type BackendPoolLoadBalancingParameters struct {
 }
 
 type BackendPoolObservation struct {
-	Id string `json:"id" tf:"id"`
+	ID string `json:"id" tf:"id"`
 }
 
 type BackendPoolParameters struct {
@@ -138,7 +138,7 @@ type FrontdoorObservation struct {
 
 	FrontendEndpoints map[string]string `json:"frontendEndpoints" tf:"frontend_endpoints"`
 
-	HeaderFrontdoorId string `json:"headerFrontdoorId" tf:"header_frontdoor_id"`
+	HeaderFrontdoorID string `json:"headerFrontdoorId" tf:"header_frontdoor_id"`
 
 	RoutingRules map[string]string `json:"routingRules" tf:"routing_rules"`
 }
@@ -172,7 +172,7 @@ type FrontdoorParameters struct {
 }
 
 type FrontendEndpointObservation struct {
-	Id string `json:"id" tf:"id"`
+	ID string `json:"id" tf:"id"`
 }
 
 type FrontendEndpointParameters struct {
@@ -182,9 +182,9 @@ type FrontendEndpointParameters struct {
 
 	SessionAffinityEnabled *bool `json:"sessionAffinityEnabled,omitempty" tf:"session_affinity_enabled"`
 
-	SessionAffinityTtlSeconds *int64 `json:"sessionAffinityTtlSeconds,omitempty" tf:"session_affinity_ttl_seconds"`
+	SessionAffinityTTLSeconds *int64 `json:"sessionAffinityTtlSeconds,omitempty" tf:"session_affinity_ttl_seconds"`
 
-	WebApplicationFirewallPolicyLinkId *string `json:"webApplicationFirewallPolicyLinkId,omitempty" tf:"web_application_firewall_policy_link_id"`
+	WebApplicationFirewallPolicyLinkID *string `json:"webApplicationFirewallPolicyLinkId,omitempty" tf:"web_application_firewall_policy_link_id"`
 }
 
 type RedirectConfigurationObservation struct {
@@ -205,7 +205,7 @@ type RedirectConfigurationParameters struct {
 }
 
 type RoutingRuleObservation struct {
-	Id string `json:"id" tf:"id"`
+	ID string `json:"id" tf:"id"`
 }
 
 type RoutingRuleParameters struct {

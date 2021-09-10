@@ -123,8 +123,8 @@ func (in *TenantTemplateDeploymentParameters) DeepCopyInto(out *TenantTemplateDe
 		*out = new(string)
 		**out = **in
 	}
-	if in.TemplateSpecVersionId != nil {
-		in, out := &in.TemplateSpecVersionId, &out.TemplateSpecVersionId
+	if in.TemplateSpecVersionID != nil {
+		in, out := &in.TemplateSpecVersionID, &out.TemplateSpecVersionID
 		*out = new(string)
 		**out = **in
 	}

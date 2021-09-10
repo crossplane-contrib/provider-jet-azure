@@ -32,9 +32,9 @@ type SpringCloudAppRedisAssociationParameters struct {
 
 	RedisAccessKey string `json:"redisAccessKey" tf:"redis_access_key"`
 
-	RedisCacheId string `json:"redisCacheId" tf:"redis_cache_id"`
+	RedisCacheID string `json:"redisCacheId" tf:"redis_cache_id"`
 
-	SpringCloudAppId string `json:"springCloudAppId" tf:"spring_cloud_app_id"`
+	SpringCloudAppID string `json:"springCloudAppId" tf:"spring_cloud_app_id"`
 
 	SslEnabled *bool `json:"sslEnabled,omitempty" tf:"ssl_enabled"`
 }

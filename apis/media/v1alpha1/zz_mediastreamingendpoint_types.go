@@ -30,7 +30,7 @@ type AccessControlObservation struct {
 type AccessControlParameters struct {
 	AkamaiSignatureHeaderAuthenticationKey []AkamaiSignatureHeaderAuthenticationKeyParameters `json:"akamaiSignatureHeaderAuthenticationKey,omitempty" tf:"akamai_signature_header_authentication_key"`
 
-	IpAllow []IpAllowParameters `json:"ipAllow,omitempty" tf:"ip_allow"`
+	IPAllow []IPAllowParameters `json:"ipAllow,omitempty" tf:"ip_allow"`
 }
 
 type AkamaiSignatureHeaderAuthenticationKeyObservation struct {
@@ -44,10 +44,10 @@ type AkamaiSignatureHeaderAuthenticationKeyParameters struct {
 	Identifier *string `json:"identifier,omitempty" tf:"identifier"`
 }
 
-type IpAllowObservation struct {
+type IPAllowObservation struct {
 }
 
-type IpAllowParameters struct {
+type IPAllowParameters struct {
 	Address *string `json:"address,omitempty" tf:"address"`
 
 	Name *string `json:"name,omitempty" tf:"name"`

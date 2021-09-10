@@ -41,7 +41,7 @@ type BgpSettingsParameters struct {
 type Instance0BgpPeeringAddressObservation struct {
 	DefaultIps []string `json:"defaultIps" tf:"default_ips"`
 
-	IpConfigurationId string `json:"ipConfigurationId" tf:"ip_configuration_id"`
+	IPConfigurationID string `json:"ipConfigurationId" tf:"ip_configuration_id"`
 
 	TunnelIps []string `json:"tunnelIps" tf:"tunnel_ips"`
 }
@@ -53,7 +53,7 @@ type Instance0BgpPeeringAddressParameters struct {
 type Instance1BgpPeeringAddressObservation struct {
 	DefaultIps []string `json:"defaultIps" tf:"default_ips"`
 
-	IpConfigurationId string `json:"ipConfigurationId" tf:"ip_configuration_id"`
+	IPConfigurationID string `json:"ipConfigurationId" tf:"ip_configuration_id"`
 
 	TunnelIps []string `json:"tunnelIps" tf:"tunnel_ips"`
 }
@@ -78,7 +78,7 @@ type VpnGatewayParameters struct {
 
 	Tags map[string]string `json:"tags,omitempty" tf:"tags"`
 
-	VirtualHubId string `json:"virtualHubId" tf:"virtual_hub_id"`
+	VirtualHubID string `json:"virtualHubId" tf:"virtual_hub_id"`
 }
 
 // VpnGatewaySpec defines the desired state of VpnGateway

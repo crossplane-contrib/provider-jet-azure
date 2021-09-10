@@ -25,17 +25,17 @@ import (
 )
 
 type StorageObjectReplicationObservation struct {
-	DestinationObjectReplicationId string `json:"destinationObjectReplicationId" tf:"destination_object_replication_id"`
+	DestinationObjectReplicationID string `json:"destinationObjectReplicationId" tf:"destination_object_replication_id"`
 
-	SourceObjectReplicationId string `json:"sourceObjectReplicationId" tf:"source_object_replication_id"`
+	SourceObjectReplicationID string `json:"sourceObjectReplicationId" tf:"source_object_replication_id"`
 }
 
 type StorageObjectReplicationParameters struct {
-	DestinationStorageAccountId string `json:"destinationStorageAccountId" tf:"destination_storage_account_id"`
+	DestinationStorageAccountID string `json:"destinationStorageAccountId" tf:"destination_storage_account_id"`
 
 	Rules []StorageObjectReplicationRulesParameters `json:"rules" tf:"rules"`
 
-	SourceStorageAccountId string `json:"sourceStorageAccountId" tf:"source_storage_account_id"`
+	SourceStorageAccountID string `json:"sourceStorageAccountId" tf:"source_storage_account_id"`
 }
 
 type StorageObjectReplicationRulesObservation struct {

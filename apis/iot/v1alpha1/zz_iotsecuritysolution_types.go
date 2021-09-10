@@ -38,7 +38,7 @@ type IotSecuritySolutionParameters struct {
 
 	Location string `json:"location" tf:"location"`
 
-	LogAnalyticsWorkspaceId *string `json:"logAnalyticsWorkspaceId,omitempty" tf:"log_analytics_workspace_id"`
+	LogAnalyticsWorkspaceID *string `json:"logAnalyticsWorkspaceId,omitempty" tf:"log_analytics_workspace_id"`
 
 	LogUnmaskedIpsEnabled *bool `json:"logUnmaskedIpsEnabled,omitempty" tf:"log_unmasked_ips_enabled"`
 
@@ -69,13 +69,13 @@ type RecommendationsEnabledParameters struct {
 
 	EdgeLoggingOption *bool `json:"edgeLoggingOption,omitempty" tf:"edge_logging_option"`
 
+	IPFilterDenyAll *bool `json:"ipFilterDenyAll,omitempty" tf:"ip_filter_deny_all"`
+
+	IPFilterPermissiveRule *bool `json:"ipFilterPermissiveRule,omitempty" tf:"ip_filter_permissive_rule"`
+
 	InconsistentModuleSettings *bool `json:"inconsistentModuleSettings,omitempty" tf:"inconsistent_module_settings"`
 
 	InstallAgent *bool `json:"installAgent,omitempty" tf:"install_agent"`
-
-	IpFilterDenyAll *bool `json:"ipFilterDenyAll,omitempty" tf:"ip_filter_deny_all"`
-
-	IpFilterPermissiveRule *bool `json:"ipFilterPermissiveRule,omitempty" tf:"ip_filter_permissive_rule"`
 
 	OpenPorts *bool `json:"openPorts,omitempty" tf:"open_ports"`
 
@@ -89,7 +89,7 @@ type RecommendationsEnabledParameters struct {
 
 	SharedCredentials *bool `json:"sharedCredentials,omitempty" tf:"shared_credentials"`
 
-	VulnerableTlsCipherSuite *bool `json:"vulnerableTlsCipherSuite,omitempty" tf:"vulnerable_tls_cipher_suite"`
+	VulnerableTLSCipherSuite *bool `json:"vulnerableTlsCipherSuite,omitempty" tf:"vulnerable_tls_cipher_suite"`
 }
 
 // IotSecuritySolutionSpec defines the desired state of IotSecuritySolution

@@ -29,7 +29,7 @@ type AppServicePlanObservation struct {
 }
 
 type AppServicePlanParameters struct {
-	AppServiceEnvironmentId *string `json:"appServiceEnvironmentId,omitempty" tf:"app_service_environment_id"`
+	AppServiceEnvironmentID *string `json:"appServiceEnvironmentId,omitempty" tf:"app_service_environment_id"`
 
 	IsXenon *bool `json:"isXenon,omitempty" tf:"is_xenon"`
 

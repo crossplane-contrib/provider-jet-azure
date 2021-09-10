@@ -49,10 +49,21 @@ type EncodingParameters struct {
 type EndpointObservation struct {
 	Protocol string `json:"protocol" tf:"protocol"`
 
-	Url string `json:"url" tf:"url"`
+	URL string `json:"url" tf:"url"`
 }
 
 type EndpointParameters struct {
+}
+
+type IPAccessControlAllowObservation struct {
+}
+
+type IPAccessControlAllowParameters struct {
+	Address *string `json:"address,omitempty" tf:"address"`
+
+	Name *string `json:"name,omitempty" tf:"name"`
+
+	SubnetPrefixLength *int64 `json:"subnetPrefixLength,omitempty" tf:"subnet_prefix_length"`
 }
 
 type InputObservation struct {
@@ -62,22 +73,11 @@ type InputObservation struct {
 type InputParameters struct {
 	AccessToken *string `json:"accessToken,omitempty" tf:"access_token"`
 
-	IpAccessControlAllow []IpAccessControlAllowParameters `json:"ipAccessControlAllow,omitempty" tf:"ip_access_control_allow"`
+	IPAccessControlAllow []IPAccessControlAllowParameters `json:"ipAccessControlAllow,omitempty" tf:"ip_access_control_allow"`
 
 	KeyFrameIntervalDuration *string `json:"keyFrameIntervalDuration,omitempty" tf:"key_frame_interval_duration"`
 
 	StreamingProtocol *string `json:"streamingProtocol,omitempty" tf:"streaming_protocol"`
-}
-
-type IpAccessControlAllowObservation struct {
-}
-
-type IpAccessControlAllowParameters struct {
-	Address *string `json:"address,omitempty" tf:"address"`
-
-	Name *string `json:"name,omitempty" tf:"name"`
-
-	SubnetPrefixLength *int64 `json:"subnetPrefixLength,omitempty" tf:"subnet_prefix_length"`
 }
 
 type MediaLiveEventObservation struct {
@@ -116,16 +116,16 @@ type MediaLiveEventParameters struct {
 type PreviewEndpointObservation struct {
 	Protocol string `json:"protocol" tf:"protocol"`
 
-	Url string `json:"url" tf:"url"`
+	URL string `json:"url" tf:"url"`
 }
 
 type PreviewEndpointParameters struct {
 }
 
-type PreviewIpAccessControlAllowObservation struct {
+type PreviewIPAccessControlAllowObservation struct {
 }
 
-type PreviewIpAccessControlAllowParameters struct {
+type PreviewIPAccessControlAllowParameters struct {
 	Address *string `json:"address,omitempty" tf:"address"`
 
 	Name *string `json:"name,omitempty" tf:"name"`
@@ -138,9 +138,9 @@ type PreviewObservation struct {
 }
 
 type PreviewParameters struct {
-	AlternativeMediaId *string `json:"alternativeMediaId,omitempty" tf:"alternative_media_id"`
+	AlternativeMediaID *string `json:"alternativeMediaId,omitempty" tf:"alternative_media_id"`
 
-	IpAccessControlAllow []PreviewIpAccessControlAllowParameters `json:"ipAccessControlAllow,omitempty" tf:"ip_access_control_allow"`
+	IPAccessControlAllow []PreviewIPAccessControlAllowParameters `json:"ipAccessControlAllow,omitempty" tf:"ip_access_control_allow"`
 
 	PreviewLocator *string `json:"previewLocator,omitempty" tf:"preview_locator"`
 

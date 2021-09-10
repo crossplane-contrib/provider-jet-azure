@@ -63,7 +63,7 @@ type DataFactoryLinkedServiceAzureFileStorageParameters struct {
 
 	ResourceGroupName string `json:"resourceGroupName" tf:"resource_group_name"`
 
-	UserId *string `json:"userId,omitempty" tf:"user_id"`
+	UserID *string `json:"userId,omitempty" tf:"user_id"`
 }
 
 // DataFactoryLinkedServiceAzureFileStorageSpec defines the desired state of DataFactoryLinkedServiceAzureFileStorage

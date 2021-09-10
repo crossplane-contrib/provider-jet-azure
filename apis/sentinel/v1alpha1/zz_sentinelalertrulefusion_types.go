@@ -28,11 +28,11 @@ type SentinelAlertRuleFusionObservation struct {
 }
 
 type SentinelAlertRuleFusionParameters struct {
-	AlertRuleTemplateGuid string `json:"alertRuleTemplateGuid" tf:"alert_rule_template_guid"`
+	AlertRuleTemplateGUID string `json:"alertRuleTemplateGuid" tf:"alert_rule_template_guid"`
 
 	Enabled *bool `json:"enabled,omitempty" tf:"enabled"`
 
-	LogAnalyticsWorkspaceId string `json:"logAnalyticsWorkspaceId" tf:"log_analytics_workspace_id"`
+	LogAnalyticsWorkspaceID string `json:"logAnalyticsWorkspaceId" tf:"log_analytics_workspace_id"`
 
 	Name string `json:"name" tf:"name"`
 }

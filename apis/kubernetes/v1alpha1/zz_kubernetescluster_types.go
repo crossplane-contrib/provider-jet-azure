@@ -41,7 +41,7 @@ type AddonProfileParameters struct {
 
 	AzurePolicy []AzurePolicyParameters `json:"azurePolicy,omitempty" tf:"azure_policy"`
 
-	HttpApplicationRouting []HttpApplicationRoutingParameters `json:"httpApplicationRouting,omitempty" tf:"http_application_routing"`
+	HTTPApplicationRouting []HTTPApplicationRoutingParameters `json:"httpApplicationRouting,omitempty" tf:"http_application_routing"`
 
 	IngressApplicationGateway []IngressApplicationGatewayParameters `json:"ingressApplicationGateway,omitempty" tf:"ingress_application_gateway"`
 
@@ -106,15 +106,15 @@ type AzureActiveDirectoryParameters struct {
 
 	AzureRbacEnabled *bool `json:"azureRbacEnabled,omitempty" tf:"azure_rbac_enabled"`
 
-	ClientAppId *string `json:"clientAppId,omitempty" tf:"client_app_id"`
+	ClientAppID *string `json:"clientAppId,omitempty" tf:"client_app_id"`
 
 	Managed *bool `json:"managed,omitempty" tf:"managed"`
 
-	ServerAppId *string `json:"serverAppId,omitempty" tf:"server_app_id"`
+	ServerAppID *string `json:"serverAppId,omitempty" tf:"server_app_id"`
 
 	ServerAppSecret *string `json:"serverAppSecret,omitempty" tf:"server_app_secret"`
 
-	TenantId *string `json:"tenantId,omitempty" tf:"tenant_id"`
+	TenantID *string `json:"tenantId,omitempty" tf:"tenant_id"`
 }
 
 type AzurePolicyObservation struct {
@@ -134,7 +134,7 @@ type DefaultNodePoolParameters struct {
 
 	EnableHostEncryption *bool `json:"enableHostEncryption,omitempty" tf:"enable_host_encryption"`
 
-	EnableNodePublicIp *bool `json:"enableNodePublicIp,omitempty" tf:"enable_node_public_ip"`
+	EnableNodePublicIP *bool `json:"enableNodePublicIp,omitempty" tf:"enable_node_public_ip"`
 
 	FipsEnabled *bool `json:"fipsEnabled,omitempty" tf:"fips_enabled"`
 
@@ -156,7 +156,7 @@ type DefaultNodePoolParameters struct {
 
 	NodeLabels map[string]string `json:"nodeLabels,omitempty" tf:"node_labels"`
 
-	NodePublicIpPrefixId *string `json:"nodePublicIpPrefixId,omitempty" tf:"node_public_ip_prefix_id"`
+	NodePublicIPPrefixID *string `json:"nodePublicIpPrefixId,omitempty" tf:"node_public_ip_prefix_id"`
 
 	NodeTaints []string `json:"nodeTaints,omitempty" tf:"node_taints"`
 
@@ -168,9 +168,9 @@ type DefaultNodePoolParameters struct {
 
 	OsDiskType *string `json:"osDiskType,omitempty" tf:"os_disk_type"`
 
-	PodSubnetId *string `json:"podSubnetId,omitempty" tf:"pod_subnet_id"`
+	PodSubnetID *string `json:"podSubnetId,omitempty" tf:"pod_subnet_id"`
 
-	ProximityPlacementGroupId *string `json:"proximityPlacementGroupId,omitempty" tf:"proximity_placement_group_id"`
+	ProximityPlacementGroupID *string `json:"proximityPlacementGroupId,omitempty" tf:"proximity_placement_group_id"`
 
 	Tags map[string]string `json:"tags,omitempty" tf:"tags"`
 
@@ -180,44 +180,44 @@ type DefaultNodePoolParameters struct {
 
 	UpgradeSettings []UpgradeSettingsParameters `json:"upgradeSettings,omitempty" tf:"upgrade_settings"`
 
-	VmSize string `json:"vmSize" tf:"vm_size"`
+	VMSize string `json:"vmSize" tf:"vm_size"`
 
-	VnetSubnetId *string `json:"vnetSubnetId,omitempty" tf:"vnet_subnet_id"`
+	VnetSubnetID *string `json:"vnetSubnetId,omitempty" tf:"vnet_subnet_id"`
 }
 
-type HttpApplicationRoutingObservation struct {
-	HttpApplicationRoutingZoneName string `json:"httpApplicationRoutingZoneName" tf:"http_application_routing_zone_name"`
+type HTTPApplicationRoutingObservation struct {
+	HTTPApplicationRoutingZoneName string `json:"httpApplicationRoutingZoneName" tf:"http_application_routing_zone_name"`
 }
 
-type HttpApplicationRoutingParameters struct {
+type HTTPApplicationRoutingParameters struct {
 	Enabled bool `json:"enabled" tf:"enabled"`
 }
 
 type IdentityObservation struct {
-	PrincipalId string `json:"principalId" tf:"principal_id"`
+	PrincipalID string `json:"principalId" tf:"principal_id"`
 
-	TenantId string `json:"tenantId" tf:"tenant_id"`
+	TenantID string `json:"tenantId" tf:"tenant_id"`
 }
 
 type IdentityParameters struct {
 	Type string `json:"type" tf:"type"`
 
-	UserAssignedIdentityId *string `json:"userAssignedIdentityId,omitempty" tf:"user_assigned_identity_id"`
+	UserAssignedIdentityID *string `json:"userAssignedIdentityId,omitempty" tf:"user_assigned_identity_id"`
 }
 
 type IngressApplicationGatewayIdentityObservation struct {
-	ClientId string `json:"clientId" tf:"client_id"`
+	ClientID string `json:"clientId" tf:"client_id"`
 
-	ObjectId string `json:"objectId" tf:"object_id"`
+	ObjectID string `json:"objectId" tf:"object_id"`
 
-	UserAssignedIdentityId string `json:"userAssignedIdentityId" tf:"user_assigned_identity_id"`
+	UserAssignedIdentityID string `json:"userAssignedIdentityId" tf:"user_assigned_identity_id"`
 }
 
 type IngressApplicationGatewayIdentityParameters struct {
 }
 
 type IngressApplicationGatewayObservation struct {
-	EffectiveGatewayId string `json:"effectiveGatewayId" tf:"effective_gateway_id"`
+	EffectiveGatewayID string `json:"effectiveGatewayId" tf:"effective_gateway_id"`
 
 	IngressApplicationGatewayIdentity []IngressApplicationGatewayIdentityObservation `json:"ingressApplicationGatewayIdentity" tf:"ingress_application_gateway_identity"`
 }
@@ -225,13 +225,13 @@ type IngressApplicationGatewayObservation struct {
 type IngressApplicationGatewayParameters struct {
 	Enabled bool `json:"enabled" tf:"enabled"`
 
-	GatewayId *string `json:"gatewayId,omitempty" tf:"gateway_id"`
+	GatewayID *string `json:"gatewayId,omitempty" tf:"gateway_id"`
 
 	GatewayName *string `json:"gatewayName,omitempty" tf:"gateway_name"`
 
 	SubnetCidr *string `json:"subnetCidr,omitempty" tf:"subnet_cidr"`
 
-	SubnetId *string `json:"subnetId,omitempty" tf:"subnet_id"`
+	SubnetID *string `json:"subnetId,omitempty" tf:"subnet_id"`
 }
 
 type KubeAdminConfigObservation struct {
@@ -281,15 +281,15 @@ type KubeletConfigObservation struct {
 type KubeletConfigParameters struct {
 	AllowedUnsafeSysctls []string `json:"allowedUnsafeSysctls,omitempty" tf:"allowed_unsafe_sysctls"`
 
+	CPUCfsQuotaEnabled *bool `json:"cpuCfsQuotaEnabled,omitempty" tf:"cpu_cfs_quota_enabled"`
+
+	CPUCfsQuotaPeriod *string `json:"cpuCfsQuotaPeriod,omitempty" tf:"cpu_cfs_quota_period"`
+
+	CPUManagerPolicy *string `json:"cpuManagerPolicy,omitempty" tf:"cpu_manager_policy"`
+
 	ContainerLogMaxLine *int64 `json:"containerLogMaxLine,omitempty" tf:"container_log_max_line"`
 
 	ContainerLogMaxSizeMb *int64 `json:"containerLogMaxSizeMb,omitempty" tf:"container_log_max_size_mb"`
-
-	CpuCfsQuotaEnabled *bool `json:"cpuCfsQuotaEnabled,omitempty" tf:"cpu_cfs_quota_enabled"`
-
-	CpuCfsQuotaPeriod *string `json:"cpuCfsQuotaPeriod,omitempty" tf:"cpu_cfs_quota_period"`
-
-	CpuManagerPolicy *string `json:"cpuManagerPolicy,omitempty" tf:"cpu_manager_policy"`
 
 	ImageGcHighThreshold *int64 `json:"imageGcHighThreshold,omitempty" tf:"image_gc_high_threshold"`
 
@@ -304,11 +304,11 @@ type KubeletIdentityObservation struct {
 }
 
 type KubeletIdentityParameters struct {
-	ClientId *string `json:"clientId,omitempty" tf:"client_id"`
+	ClientID *string `json:"clientId,omitempty" tf:"client_id"`
 
-	ObjectId *string `json:"objectId,omitempty" tf:"object_id"`
+	ObjectID *string `json:"objectId,omitempty" tf:"object_id"`
 
-	UserAssignedIdentityId *string `json:"userAssignedIdentityId,omitempty" tf:"user_assigned_identity_id"`
+	UserAssignedIdentityID *string `json:"userAssignedIdentityId,omitempty" tf:"user_assigned_identity_id"`
 }
 
 type KubernetesClusterObservation struct {
@@ -326,21 +326,21 @@ type KubernetesClusterObservation struct {
 }
 
 type KubernetesClusterParameters struct {
-	AddonProfile []AddonProfileParameters `json:"addonProfile,omitempty" tf:"addon_profile"`
+	APIServerAuthorizedIPRanges []string `json:"apiServerAuthorizedIpRanges,omitempty" tf:"api_server_authorized_ip_ranges"`
 
-	ApiServerAuthorizedIpRanges []string `json:"apiServerAuthorizedIpRanges,omitempty" tf:"api_server_authorized_ip_ranges"`
+	AddonProfile []AddonProfileParameters `json:"addonProfile,omitempty" tf:"addon_profile"`
 
 	AutoScalerProfile []AutoScalerProfileParameters `json:"autoScalerProfile,omitempty" tf:"auto_scaler_profile"`
 
 	AutomaticChannelUpgrade *string `json:"automaticChannelUpgrade,omitempty" tf:"automatic_channel_upgrade"`
 
+	DNSPrefix *string `json:"dnsPrefix,omitempty" tf:"dns_prefix"`
+
+	DNSPrefixPrivateCluster *string `json:"dnsPrefixPrivateCluster,omitempty" tf:"dns_prefix_private_cluster"`
+
 	DefaultNodePool []DefaultNodePoolParameters `json:"defaultNodePool" tf:"default_node_pool"`
 
-	DiskEncryptionSetId *string `json:"diskEncryptionSetId,omitempty" tf:"disk_encryption_set_id"`
-
-	DnsPrefix *string `json:"dnsPrefix,omitempty" tf:"dns_prefix"`
-
-	DnsPrefixPrivateCluster *string `json:"dnsPrefixPrivateCluster,omitempty" tf:"dns_prefix_private_cluster"`
+	DiskEncryptionSetID *string `json:"diskEncryptionSetId,omitempty" tf:"disk_encryption_set_id"`
 
 	EnablePodSecurityPolicy *bool `json:"enablePodSecurityPolicy,omitempty" tf:"enable_pod_security_policy"`
 
@@ -368,7 +368,7 @@ type KubernetesClusterParameters struct {
 
 	PrivateClusterPublicFqdnEnabled *bool `json:"privateClusterPublicFqdnEnabled,omitempty" tf:"private_cluster_public_fqdn_enabled"`
 
-	PrivateDnsZoneId *string `json:"privateDnsZoneId,omitempty" tf:"private_dns_zone_id"`
+	PrivateDNSZoneID *string `json:"privateDnsZoneId,omitempty" tf:"private_dns_zone_id"`
 
 	PrivateLinkEnabled *bool `json:"privateLinkEnabled,omitempty" tf:"private_link_enabled"`
 
@@ -404,7 +404,7 @@ type LinuxProfileObservation struct {
 type LinuxProfileParameters struct {
 	AdminUsername string `json:"adminUsername" tf:"admin_username"`
 
-	SshKey []SshKeyParameters `json:"sshKey" tf:"ssh_key"`
+	SSHKey []SSHKeyParameters `json:"sshKey" tf:"ssh_key"`
 }
 
 type LoadBalancerProfileObservation struct {
@@ -414,11 +414,11 @@ type LoadBalancerProfileObservation struct {
 type LoadBalancerProfileParameters struct {
 	IdleTimeoutInMinutes *int64 `json:"idleTimeoutInMinutes,omitempty" tf:"idle_timeout_in_minutes"`
 
-	ManagedOutboundIpCount *int64 `json:"managedOutboundIpCount,omitempty" tf:"managed_outbound_ip_count"`
+	ManagedOutboundIPCount *int64 `json:"managedOutboundIpCount,omitempty" tf:"managed_outbound_ip_count"`
 
-	OutboundIpAddressIds []string `json:"outboundIpAddressIds,omitempty" tf:"outbound_ip_address_ids"`
+	OutboundIPAddressIds []string `json:"outboundIpAddressIds,omitempty" tf:"outbound_ip_address_ids"`
 
-	OutboundIpPrefixIds []string `json:"outboundIpPrefixIds,omitempty" tf:"outbound_ip_prefix_ids"`
+	OutboundIPPrefixIds []string `json:"outboundIpPrefixIds,omitempty" tf:"outbound_ip_prefix_ids"`
 
 	OutboundPortsAllocated *int64 `json:"outboundPortsAllocated,omitempty" tf:"outbound_ports_allocated"`
 }
@@ -436,7 +436,7 @@ type NetworkProfileObservation struct {
 }
 
 type NetworkProfileParameters struct {
-	DnsServiceIp *string `json:"dnsServiceIp,omitempty" tf:"dns_service_ip"`
+	DNSServiceIP *string `json:"dnsServiceIp,omitempty" tf:"dns_service_ip"`
 
 	DockerBridgeCidr *string `json:"dockerBridgeCidr,omitempty" tf:"docker_bridge_cidr"`
 
@@ -467,11 +467,11 @@ type NotAllowedParameters struct {
 }
 
 type OmsAgentIdentityObservation struct {
-	ClientId string `json:"clientId" tf:"client_id"`
+	ClientID string `json:"clientId" tf:"client_id"`
 
-	ObjectId string `json:"objectId" tf:"object_id"`
+	ObjectID string `json:"objectId" tf:"object_id"`
 
-	UserAssignedIdentityId string `json:"userAssignedIdentityId" tf:"user_assigned_identity_id"`
+	UserAssignedIdentityID string `json:"userAssignedIdentityId" tf:"user_assigned_identity_id"`
 }
 
 type OmsAgentIdentityParameters struct {
@@ -484,7 +484,7 @@ type OmsAgentObservation struct {
 type OmsAgentParameters struct {
 	Enabled bool `json:"enabled" tf:"enabled"`
 
-	LogAnalyticsWorkspaceId *string `json:"logAnalyticsWorkspaceId,omitempty" tf:"log_analytics_workspace_id"`
+	LogAnalyticsWorkspaceID *string `json:"logAnalyticsWorkspaceId,omitempty" tf:"log_analytics_workspace_id"`
 }
 
 type RoleBasedAccessControlObservation struct {
@@ -496,20 +496,20 @@ type RoleBasedAccessControlParameters struct {
 	Enabled bool `json:"enabled" tf:"enabled"`
 }
 
+type SSHKeyObservation struct {
+}
+
+type SSHKeyParameters struct {
+	KeyData string `json:"keyData" tf:"key_data"`
+}
+
 type ServicePrincipalObservation struct {
 }
 
 type ServicePrincipalParameters struct {
-	ClientId string `json:"clientId" tf:"client_id"`
+	ClientID string `json:"clientId" tf:"client_id"`
 
 	ClientSecret string `json:"clientSecret" tf:"client_secret"`
-}
-
-type SshKeyObservation struct {
-}
-
-type SshKeyParameters struct {
-	KeyData string `json:"keyData" tf:"key_data"`
 }
 
 type SysctlConfigObservation struct {
@@ -540,39 +540,39 @@ type SysctlConfigParameters struct {
 
 	NetCoreWmemMax *int64 `json:"netCoreWmemMax,omitempty" tf:"net_core_wmem_max"`
 
-	NetIpv4IpLocalPortRangeMax *int64 `json:"netIpv4IpLocalPortRangeMax,omitempty" tf:"net_ipv4_ip_local_port_range_max"`
+	NetIPv4IPLocalPortRangeMax *int64 `json:"netIpv4IpLocalPortRangeMax,omitempty" tf:"net_ipv4_ip_local_port_range_max"`
 
-	NetIpv4IpLocalPortRangeMin *int64 `json:"netIpv4IpLocalPortRangeMin,omitempty" tf:"net_ipv4_ip_local_port_range_min"`
+	NetIPv4IPLocalPortRangeMin *int64 `json:"netIpv4IpLocalPortRangeMin,omitempty" tf:"net_ipv4_ip_local_port_range_min"`
 
-	NetIpv4NeighDefaultGcThresh1 *int64 `json:"netIpv4NeighDefaultGcThresh1,omitempty" tf:"net_ipv4_neigh_default_gc_thresh1"`
+	NetIPv4NeighDefaultGcThresh1 *int64 `json:"netIpv4NeighDefaultGcThresh1,omitempty" tf:"net_ipv4_neigh_default_gc_thresh1"`
 
-	NetIpv4NeighDefaultGcThresh2 *int64 `json:"netIpv4NeighDefaultGcThresh2,omitempty" tf:"net_ipv4_neigh_default_gc_thresh2"`
+	NetIPv4NeighDefaultGcThresh2 *int64 `json:"netIpv4NeighDefaultGcThresh2,omitempty" tf:"net_ipv4_neigh_default_gc_thresh2"`
 
-	NetIpv4NeighDefaultGcThresh3 *int64 `json:"netIpv4NeighDefaultGcThresh3,omitempty" tf:"net_ipv4_neigh_default_gc_thresh3"`
+	NetIPv4NeighDefaultGcThresh3 *int64 `json:"netIpv4NeighDefaultGcThresh3,omitempty" tf:"net_ipv4_neigh_default_gc_thresh3"`
 
-	NetIpv4TcpFinTimeout *int64 `json:"netIpv4TcpFinTimeout,omitempty" tf:"net_ipv4_tcp_fin_timeout"`
+	NetIPv4TCPFinTimeout *int64 `json:"netIpv4TcpFinTimeout,omitempty" tf:"net_ipv4_tcp_fin_timeout"`
 
-	NetIpv4TcpKeepaliveIntvl *int64 `json:"netIpv4TcpKeepaliveIntvl,omitempty" tf:"net_ipv4_tcp_keepalive_intvl"`
+	NetIPv4TCPKeepaliveIntvl *int64 `json:"netIpv4TcpKeepaliveIntvl,omitempty" tf:"net_ipv4_tcp_keepalive_intvl"`
 
-	NetIpv4TcpKeepaliveProbes *int64 `json:"netIpv4TcpKeepaliveProbes,omitempty" tf:"net_ipv4_tcp_keepalive_probes"`
+	NetIPv4TCPKeepaliveProbes *int64 `json:"netIpv4TcpKeepaliveProbes,omitempty" tf:"net_ipv4_tcp_keepalive_probes"`
 
-	NetIpv4TcpKeepaliveTime *int64 `json:"netIpv4TcpKeepaliveTime,omitempty" tf:"net_ipv4_tcp_keepalive_time"`
+	NetIPv4TCPKeepaliveTime *int64 `json:"netIpv4TcpKeepaliveTime,omitempty" tf:"net_ipv4_tcp_keepalive_time"`
 
-	NetIpv4TcpMaxSynBacklog *int64 `json:"netIpv4TcpMaxSynBacklog,omitempty" tf:"net_ipv4_tcp_max_syn_backlog"`
+	NetIPv4TCPMaxSynBacklog *int64 `json:"netIpv4TcpMaxSynBacklog,omitempty" tf:"net_ipv4_tcp_max_syn_backlog"`
 
-	NetIpv4TcpMaxTwBuckets *int64 `json:"netIpv4TcpMaxTwBuckets,omitempty" tf:"net_ipv4_tcp_max_tw_buckets"`
+	NetIPv4TCPMaxTwBuckets *int64 `json:"netIpv4TcpMaxTwBuckets,omitempty" tf:"net_ipv4_tcp_max_tw_buckets"`
 
-	NetIpv4TcpTwReuse *bool `json:"netIpv4TcpTwReuse,omitempty" tf:"net_ipv4_tcp_tw_reuse"`
+	NetIPv4TCPTwReuse *bool `json:"netIpv4TcpTwReuse,omitempty" tf:"net_ipv4_tcp_tw_reuse"`
 
 	NetNetfilterNfConntrackBuckets *int64 `json:"netNetfilterNfConntrackBuckets,omitempty" tf:"net_netfilter_nf_conntrack_buckets"`
 
 	NetNetfilterNfConntrackMax *int64 `json:"netNetfilterNfConntrackMax,omitempty" tf:"net_netfilter_nf_conntrack_max"`
 
-	VmMaxMapCount *int64 `json:"vmMaxMapCount,omitempty" tf:"vm_max_map_count"`
+	VMMaxMapCount *int64 `json:"vmMaxMapCount,omitempty" tf:"vm_max_map_count"`
 
-	VmSwappiness *int64 `json:"vmSwappiness,omitempty" tf:"vm_swappiness"`
+	VMSwappiness *int64 `json:"vmSwappiness,omitempty" tf:"vm_swappiness"`
 
-	VmVfsCachePressure *int64 `json:"vmVfsCachePressure,omitempty" tf:"vm_vfs_cache_pressure"`
+	VMVfsCachePressure *int64 `json:"vmVfsCachePressure,omitempty" tf:"vm_vfs_cache_pressure"`
 }
 
 type UpgradeSettingsObservation struct {

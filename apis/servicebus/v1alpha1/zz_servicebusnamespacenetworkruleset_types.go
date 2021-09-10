@@ -30,7 +30,7 @@ type NetworkRulesObservation struct {
 type NetworkRulesParameters struct {
 	IgnoreMissingVnetServiceEndpoint *bool `json:"ignoreMissingVnetServiceEndpoint,omitempty" tf:"ignore_missing_vnet_service_endpoint"`
 
-	SubnetId string `json:"subnetId" tf:"subnet_id"`
+	SubnetID string `json:"subnetId" tf:"subnet_id"`
 }
 
 type ServicebusNamespaceNetworkRuleSetObservation struct {
@@ -39,7 +39,7 @@ type ServicebusNamespaceNetworkRuleSetObservation struct {
 type ServicebusNamespaceNetworkRuleSetParameters struct {
 	DefaultAction *string `json:"defaultAction,omitempty" tf:"default_action"`
 
-	IpRules []string `json:"ipRules,omitempty" tf:"ip_rules"`
+	IPRules []string `json:"ipRules,omitempty" tf:"ip_rules"`
 
 	NamespaceName string `json:"namespaceName" tf:"namespace_name"`
 

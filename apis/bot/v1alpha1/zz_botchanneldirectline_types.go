@@ -38,7 +38,7 @@ type BotChannelDirectlineParameters struct {
 }
 
 type SiteObservation struct {
-	Id string `json:"id" tf:"id"`
+	ID string `json:"id" tf:"id"`
 
 	Key string `json:"key" tf:"key"`
 

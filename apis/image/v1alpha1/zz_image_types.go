@@ -28,13 +28,13 @@ type DataDiskObservation struct {
 }
 
 type DataDiskParameters struct {
-	BlobUri *string `json:"blobUri,omitempty" tf:"blob_uri"`
+	BlobURI *string `json:"blobUri,omitempty" tf:"blob_uri"`
 
 	Caching *string `json:"caching,omitempty" tf:"caching"`
 
 	Lun *int64 `json:"lun,omitempty" tf:"lun"`
 
-	ManagedDiskId *string `json:"managedDiskId,omitempty" tf:"managed_disk_id"`
+	ManagedDiskID *string `json:"managedDiskId,omitempty" tf:"managed_disk_id"`
 
 	SizeGb *int64 `json:"sizeGb,omitempty" tf:"size_gb"`
 }
@@ -55,7 +55,7 @@ type ImageParameters struct {
 
 	ResourceGroupName string `json:"resourceGroupName" tf:"resource_group_name"`
 
-	SourceVirtualMachineId *string `json:"sourceVirtualMachineId,omitempty" tf:"source_virtual_machine_id"`
+	SourceVirtualMachineID *string `json:"sourceVirtualMachineId,omitempty" tf:"source_virtual_machine_id"`
 
 	Tags map[string]string `json:"tags,omitempty" tf:"tags"`
 
@@ -66,11 +66,11 @@ type OsDiskObservation struct {
 }
 
 type OsDiskParameters struct {
-	BlobUri *string `json:"blobUri,omitempty" tf:"blob_uri"`
+	BlobURI *string `json:"blobUri,omitempty" tf:"blob_uri"`
 
 	Caching *string `json:"caching,omitempty" tf:"caching"`
 
-	ManagedDiskId *string `json:"managedDiskId,omitempty" tf:"managed_disk_id"`
+	ManagedDiskID *string `json:"managedDiskId,omitempty" tf:"managed_disk_id"`
 
 	OsState *string `json:"osState,omitempty" tf:"os_state"`
 

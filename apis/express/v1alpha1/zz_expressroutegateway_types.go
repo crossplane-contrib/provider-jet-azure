@@ -38,7 +38,7 @@ type ExpressRouteGatewayParameters struct {
 
 	Tags map[string]string `json:"tags,omitempty" tf:"tags"`
 
-	VirtualHubId string `json:"virtualHubId" tf:"virtual_hub_id"`
+	VirtualHubID string `json:"virtualHubId" tf:"virtual_hub_id"`
 }
 
 // ExpressRouteGatewaySpec defines the desired state of ExpressRouteGateway

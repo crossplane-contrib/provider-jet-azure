@@ -28,13 +28,13 @@ type MssqlFirewallRuleObservation struct {
 }
 
 type MssqlFirewallRuleParameters struct {
-	EndIpAddress string `json:"endIpAddress" tf:"end_ip_address"`
+	EndIPAddress string `json:"endIpAddress" tf:"end_ip_address"`
 
 	Name string `json:"name" tf:"name"`
 
-	ServerId string `json:"serverId" tf:"server_id"`
+	ServerID string `json:"serverId" tf:"server_id"`
 
-	StartIpAddress string `json:"startIpAddress" tf:"start_ip_address"`
+	StartIPAddress string `json:"startIpAddress" tf:"start_ip_address"`
 }
 
 // MssqlFirewallRuleSpec defines the desired state of MssqlFirewallRule

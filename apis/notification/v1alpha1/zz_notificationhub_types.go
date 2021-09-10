@@ -30,11 +30,11 @@ type ApnsCredentialObservation struct {
 type ApnsCredentialParameters struct {
 	ApplicationMode string `json:"applicationMode" tf:"application_mode"`
 
-	BundleId string `json:"bundleId" tf:"bundle_id"`
+	BundleID string `json:"bundleId" tf:"bundle_id"`
 
-	KeyId string `json:"keyId" tf:"key_id"`
+	KeyID string `json:"keyId" tf:"key_id"`
 
-	TeamId string `json:"teamId" tf:"team_id"`
+	TeamID string `json:"teamId" tf:"team_id"`
 
 	Token string `json:"token" tf:"token"`
 }
@@ -43,7 +43,7 @@ type GcmCredentialObservation struct {
 }
 
 type GcmCredentialParameters struct {
-	ApiKey string `json:"apiKey" tf:"api_key"`
+	APIKey string `json:"apiKey" tf:"api_key"`
 }
 
 type NotificationHubObservation struct {

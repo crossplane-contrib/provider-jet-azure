@@ -24,13 +24,13 @@ import (
 	"k8s.io/apimachinery/pkg/runtime/schema"
 )
 
-type DnsConfigObservation struct {
+type DNSConfigObservation struct {
 }
 
-type DnsConfigParameters struct {
+type DNSConfigParameters struct {
 	RelativeName string `json:"relativeName" tf:"relative_name"`
 
-	Ttl int64 `json:"ttl" tf:"ttl"`
+	TTL int64 `json:"ttl" tf:"ttl"`
 }
 
 type MonitorConfigCustomHeaderObservation struct {
@@ -68,7 +68,7 @@ type TrafficManagerProfileObservation struct {
 }
 
 type TrafficManagerProfileParameters struct {
-	DnsConfig []DnsConfigParameters `json:"dnsConfig" tf:"dns_config"`
+	DNSConfig []DNSConfigParameters `json:"dnsConfig" tf:"dns_config"`
 
 	MaxReturn *int64 `json:"maxReturn,omitempty" tf:"max_return"`
 

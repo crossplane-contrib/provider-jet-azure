@@ -30,7 +30,7 @@ type KeyVaultKeyObservation struct {
 type KeyVaultKeyParameters struct {
 	KeyName string `json:"keyName" tf:"key_name"`
 
-	KeyVaultId string `json:"keyVaultId" tf:"key_vault_id"`
+	KeyVaultID string `json:"keyVaultId" tf:"key_vault_id"`
 
 	KeyVersion *string `json:"keyVersion,omitempty" tf:"key_version"`
 }

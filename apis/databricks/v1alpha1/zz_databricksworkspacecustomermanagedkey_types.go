@@ -28,9 +28,9 @@ type DatabricksWorkspaceCustomerManagedKeyObservation struct {
 }
 
 type DatabricksWorkspaceCustomerManagedKeyParameters struct {
-	KeyVaultKeyId string `json:"keyVaultKeyId" tf:"key_vault_key_id"`
+	KeyVaultKeyID string `json:"keyVaultKeyId" tf:"key_vault_key_id"`
 
-	WorkspaceId string `json:"workspaceId" tf:"workspace_id"`
+	WorkspaceID string `json:"workspaceId" tf:"workspace_id"`
 }
 
 // DatabricksWorkspaceCustomerManagedKeySpec defines the desired state of DatabricksWorkspaceCustomerManagedKey

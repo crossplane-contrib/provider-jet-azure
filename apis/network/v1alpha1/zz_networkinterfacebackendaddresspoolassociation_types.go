@@ -28,11 +28,11 @@ type NetworkInterfaceBackendAddressPoolAssociationObservation struct {
 }
 
 type NetworkInterfaceBackendAddressPoolAssociationParameters struct {
-	BackendAddressPoolId string `json:"backendAddressPoolId" tf:"backend_address_pool_id"`
+	BackendAddressPoolID string `json:"backendAddressPoolId" tf:"backend_address_pool_id"`
 
-	IpConfigurationName string `json:"ipConfigurationName" tf:"ip_configuration_name"`
+	IPConfigurationName string `json:"ipConfigurationName" tf:"ip_configuration_name"`
 
-	NetworkInterfaceId string `json:"networkInterfaceId" tf:"network_interface_id"`
+	NetworkInterfaceID string `json:"networkInterfaceId" tf:"network_interface_id"`
 }
 
 // NetworkInterfaceBackendAddressPoolAssociationSpec defines the desired state of NetworkInterfaceBackendAddressPoolAssociation

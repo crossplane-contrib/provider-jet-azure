@@ -28,9 +28,9 @@ type DiskEncryptionKeyObservation struct {
 }
 
 type DiskEncryptionKeyParameters struct {
-	SecretUrl string `json:"secretUrl" tf:"secret_url"`
+	SecretURL string `json:"secretUrl" tf:"secret_url"`
 
-	SourceVaultId string `json:"sourceVaultId" tf:"source_vault_id"`
+	SourceVaultID string `json:"sourceVaultId" tf:"source_vault_id"`
 }
 
 type EncryptionSettingsObservation struct {
@@ -48,9 +48,9 @@ type KeyEncryptionKeyObservation struct {
 }
 
 type KeyEncryptionKeyParameters struct {
-	KeyUrl string `json:"keyUrl" tf:"key_url"`
+	KeyURL string `json:"keyUrl" tf:"key_url"`
 
-	SourceVaultId string `json:"sourceVaultId" tf:"source_vault_id"`
+	SourceVaultID string `json:"sourceVaultId" tf:"source_vault_id"`
 }
 
 type SnapshotObservation struct {
@@ -69,11 +69,11 @@ type SnapshotParameters struct {
 
 	ResourceGroupName string `json:"resourceGroupName" tf:"resource_group_name"`
 
-	SourceResourceId *string `json:"sourceResourceId,omitempty" tf:"source_resource_id"`
+	SourceResourceID *string `json:"sourceResourceId,omitempty" tf:"source_resource_id"`
 
-	SourceUri *string `json:"sourceUri,omitempty" tf:"source_uri"`
+	SourceURI *string `json:"sourceUri,omitempty" tf:"source_uri"`
 
-	StorageAccountId *string `json:"storageAccountId,omitempty" tf:"storage_account_id"`
+	StorageAccountID *string `json:"storageAccountId,omitempty" tf:"storage_account_id"`
 
 	Tags map[string]string `json:"tags,omitempty" tf:"tags"`
 }

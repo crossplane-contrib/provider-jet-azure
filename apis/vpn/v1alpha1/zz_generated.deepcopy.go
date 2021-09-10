@@ -336,8 +336,8 @@ func (in *LinkParameters) DeepCopyInto(out *LinkParameters) {
 		*out = new(string)
 		**out = **in
 	}
-	if in.IpAddress != nil {
-		in, out := &in.IpAddress, &out.IpAddress
+	if in.IPAddress != nil {
+		in, out := &in.IPAddress, &out.IPAddress
 		*out = new(string)
 		**out = **in
 	}
@@ -950,8 +950,8 @@ func (in *VpnLinkParameters) DeepCopyInto(out *VpnLinkParameters) {
 		*out = make([]IpsecPolicyParameters, len(*in))
 		copy(*out, *in)
 	}
-	if in.LocalAzureIpAddressEnabled != nil {
-		in, out := &in.LocalAzureIpAddressEnabled, &out.LocalAzureIpAddressEnabled
+	if in.LocalAzureIPAddressEnabled != nil {
+		in, out := &in.LocalAzureIPAddressEnabled, &out.LocalAzureIPAddressEnabled
 		*out = new(bool)
 		**out = **in
 	}

@@ -32,11 +32,11 @@ type StorageSyncCloudEndpointParameters struct {
 
 	Name string `json:"name" tf:"name"`
 
-	StorageAccountId string `json:"storageAccountId" tf:"storage_account_id"`
+	StorageAccountID string `json:"storageAccountId" tf:"storage_account_id"`
 
-	StorageAccountTenantId *string `json:"storageAccountTenantId,omitempty" tf:"storage_account_tenant_id"`
+	StorageAccountTenantID *string `json:"storageAccountTenantId,omitempty" tf:"storage_account_tenant_id"`
 
-	StorageSyncGroupId string `json:"storageSyncGroupId" tf:"storage_sync_group_id"`
+	StorageSyncGroupID string `json:"storageSyncGroupId" tf:"storage_sync_group_id"`
 }
 
 // StorageSyncCloudEndpointSpec defines the desired state of StorageSyncCloudEndpoint

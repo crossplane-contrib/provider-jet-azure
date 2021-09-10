@@ -29,9 +29,9 @@ type SqlElasticpoolObservation struct {
 }
 
 type SqlElasticpoolParameters struct {
-	DbDtuMax *int64 `json:"dbDtuMax,omitempty" tf:"db_dtu_max"`
+	DBDtuMax *int64 `json:"dbDtuMax,omitempty" tf:"db_dtu_max"`
 
-	DbDtuMin *int64 `json:"dbDtuMin,omitempty" tf:"db_dtu_min"`
+	DBDtuMin *int64 `json:"dbDtuMin,omitempty" tf:"db_dtu_min"`
 
 	Dtu int64 `json:"dtu" tf:"dtu"`
 

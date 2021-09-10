@@ -38,7 +38,7 @@ type HpcCacheBlobTargetParameters struct {
 
 	ResourceGroupName string `json:"resourceGroupName" tf:"resource_group_name"`
 
-	StorageContainerId string `json:"storageContainerId" tf:"storage_container_id"`
+	StorageContainerID string `json:"storageContainerId" tf:"storage_container_id"`
 }
 
 // HpcCacheBlobTargetSpec defines the desired state of HpcCacheBlobTarget

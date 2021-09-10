@@ -25,11 +25,11 @@ import (
 )
 
 type BastionHostObservation struct {
-	DnsName string `json:"dnsName" tf:"dns_name"`
+	DNSName string `json:"dnsName" tf:"dns_name"`
 }
 
 type BastionHostParameters struct {
-	IpConfiguration []IpConfigurationParameters `json:"ipConfiguration,omitempty" tf:"ip_configuration"`
+	IPConfiguration []IPConfigurationParameters `json:"ipConfiguration,omitempty" tf:"ip_configuration"`
 
 	Location string `json:"location" tf:"location"`
 
@@ -40,15 +40,15 @@ type BastionHostParameters struct {
 	Tags map[string]string `json:"tags,omitempty" tf:"tags"`
 }
 
-type IpConfigurationObservation struct {
+type IPConfigurationObservation struct {
 }
 
-type IpConfigurationParameters struct {
+type IPConfigurationParameters struct {
 	Name string `json:"name" tf:"name"`
 
-	PublicIpAddressId string `json:"publicIpAddressId" tf:"public_ip_address_id"`
+	PublicIPAddressID string `json:"publicIpAddressId" tf:"public_ip_address_id"`
 
-	SubnetId string `json:"subnetId" tf:"subnet_id"`
+	SubnetID string `json:"subnetId" tf:"subnet_id"`
 }
 
 // BastionHostSpec defines the desired state of BastionHost

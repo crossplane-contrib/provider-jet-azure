@@ -36,7 +36,7 @@ type ConsumptionBudgetResourceGroupParameters struct {
 
 	Notification []NotificationParameters `json:"notification" tf:"notification"`
 
-	ResourceGroupId string `json:"resourceGroupId" tf:"resource_group_id"`
+	ResourceGroupID string `json:"resourceGroupId" tf:"resource_group_id"`
 
 	TimeGrain *string `json:"timeGrain,omitempty" tf:"time_grain"`
 

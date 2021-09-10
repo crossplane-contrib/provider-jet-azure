@@ -37,9 +37,9 @@ type DataShareDatasetDataLakeGen2Parameters struct {
 
 	Name string `json:"name" tf:"name"`
 
-	ShareId string `json:"shareId" tf:"share_id"`
+	ShareID string `json:"shareId" tf:"share_id"`
 
-	StorageAccountId string `json:"storageAccountId" tf:"storage_account_id"`
+	StorageAccountID string `json:"storageAccountId" tf:"storage_account_id"`
 }
 
 // DataShareDatasetDataLakeGen2Spec defines the desired state of DataShareDatasetDataLakeGen2

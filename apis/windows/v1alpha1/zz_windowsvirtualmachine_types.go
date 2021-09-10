@@ -44,7 +44,7 @@ type BootDiagnosticsObservation struct {
 }
 
 type BootDiagnosticsParameters struct {
-	StorageAccountUri *string `json:"storageAccountUri,omitempty" tf:"storage_account_uri"`
+	StorageAccountURI *string `json:"storageAccountUri,omitempty" tf:"storage_account_uri"`
 }
 
 type CertificateObservation struct {
@@ -53,7 +53,7 @@ type CertificateObservation struct {
 type CertificateParameters struct {
 	Store string `json:"store" tf:"store"`
 
-	Url string `json:"url" tf:"url"`
+	URL string `json:"url" tf:"url"`
 }
 
 type DiffDiskSettingsObservation struct {
@@ -64,9 +64,9 @@ type DiffDiskSettingsParameters struct {
 }
 
 type IdentityObservation struct {
-	PrincipalId string `json:"principalId" tf:"principal_id"`
+	PrincipalID string `json:"principalId" tf:"principal_id"`
 
-	TenantId string `json:"tenantId" tf:"tenant_id"`
+	TenantID string `json:"tenantId" tf:"tenant_id"`
 }
 
 type IdentityParameters struct {
@@ -83,7 +83,7 @@ type OsDiskParameters struct {
 
 	DiffDiskSettings []DiffDiskSettingsParameters `json:"diffDiskSettings,omitempty" tf:"diff_disk_settings"`
 
-	DiskEncryptionSetId *string `json:"diskEncryptionSetId,omitempty" tf:"disk_encryption_set_id"`
+	DiskEncryptionSetID *string `json:"diskEncryptionSetId,omitempty" tf:"disk_encryption_set_id"`
 
 	DiskSizeGb *int64 `json:"diskSizeGb,omitempty" tf:"disk_size_gb"`
 
@@ -111,7 +111,7 @@ type SecretObservation struct {
 type SecretParameters struct {
 	Certificate []CertificateParameters `json:"certificate" tf:"certificate"`
 
-	KeyVaultId string `json:"keyVaultId" tf:"key_vault_id"`
+	KeyVaultID string `json:"keyVaultId" tf:"key_vault_id"`
 }
 
 type SourceImageReferenceObservation struct {
@@ -128,15 +128,15 @@ type SourceImageReferenceParameters struct {
 }
 
 type WindowsVirtualMachineObservation struct {
-	PrivateIpAddress string `json:"privateIpAddress" tf:"private_ip_address"`
+	PrivateIPAddress string `json:"privateIpAddress" tf:"private_ip_address"`
 
-	PrivateIpAddresses []string `json:"privateIpAddresses" tf:"private_ip_addresses"`
+	PrivateIPAddresses []string `json:"privateIpAddresses" tf:"private_ip_addresses"`
 
-	PublicIpAddress string `json:"publicIpAddress" tf:"public_ip_address"`
+	PublicIPAddress string `json:"publicIpAddress" tf:"public_ip_address"`
 
-	PublicIpAddresses []string `json:"publicIpAddresses" tf:"public_ip_addresses"`
+	PublicIPAddresses []string `json:"publicIpAddresses" tf:"public_ip_addresses"`
 
-	VirtualMachineId string `json:"virtualMachineId" tf:"virtual_machine_id"`
+	VirtualMachineID string `json:"virtualMachineId" tf:"virtual_machine_id"`
 }
 
 type WindowsVirtualMachineParameters struct {
@@ -150,7 +150,7 @@ type WindowsVirtualMachineParameters struct {
 
 	AllowExtensionOperations *bool `json:"allowExtensionOperations,omitempty" tf:"allow_extension_operations"`
 
-	AvailabilitySetId *string `json:"availabilitySetId,omitempty" tf:"availability_set_id"`
+	AvailabilitySetID *string `json:"availabilitySetId,omitempty" tf:"availability_set_id"`
 
 	BootDiagnostics []BootDiagnosticsParameters `json:"bootDiagnostics,omitempty" tf:"boot_diagnostics"`
 
@@ -158,7 +158,7 @@ type WindowsVirtualMachineParameters struct {
 
 	CustomData *string `json:"customData,omitempty" tf:"custom_data"`
 
-	DedicatedHostId *string `json:"dedicatedHostId,omitempty" tf:"dedicated_host_id"`
+	DedicatedHostID *string `json:"dedicatedHostId,omitempty" tf:"dedicated_host_id"`
 
 	EnableAutomaticUpdates *bool `json:"enableAutomaticUpdates,omitempty" tf:"enable_automatic_updates"`
 
@@ -190,9 +190,9 @@ type WindowsVirtualMachineParameters struct {
 
 	Priority *string `json:"priority,omitempty" tf:"priority"`
 
-	ProvisionVmAgent *bool `json:"provisionVmAgent,omitempty" tf:"provision_vm_agent"`
+	ProvisionVMAgent *bool `json:"provisionVmAgent,omitempty" tf:"provision_vm_agent"`
 
-	ProximityPlacementGroupId *string `json:"proximityPlacementGroupId,omitempty" tf:"proximity_placement_group_id"`
+	ProximityPlacementGroupID *string `json:"proximityPlacementGroupId,omitempty" tf:"proximity_placement_group_id"`
 
 	ResourceGroupName string `json:"resourceGroupName" tf:"resource_group_name"`
 
@@ -200,7 +200,7 @@ type WindowsVirtualMachineParameters struct {
 
 	Size string `json:"size" tf:"size"`
 
-	SourceImageId *string `json:"sourceImageId,omitempty" tf:"source_image_id"`
+	SourceImageID *string `json:"sourceImageId,omitempty" tf:"source_image_id"`
 
 	SourceImageReference []SourceImageReferenceParameters `json:"sourceImageReference,omitempty" tf:"source_image_reference"`
 
@@ -208,7 +208,7 @@ type WindowsVirtualMachineParameters struct {
 
 	Timezone *string `json:"timezone,omitempty" tf:"timezone"`
 
-	VirtualMachineScaleSetId *string `json:"virtualMachineScaleSetId,omitempty" tf:"virtual_machine_scale_set_id"`
+	VirtualMachineScaleSetID *string `json:"virtualMachineScaleSetId,omitempty" tf:"virtual_machine_scale_set_id"`
 
 	WinrmListener []WinrmListenerParameters `json:"winrmListener,omitempty" tf:"winrm_listener"`
 
@@ -219,7 +219,7 @@ type WinrmListenerObservation struct {
 }
 
 type WinrmListenerParameters struct {
-	CertificateUrl *string `json:"certificateUrl,omitempty" tf:"certificate_url"`
+	CertificateURL *string `json:"certificateUrl,omitempty" tf:"certificate_url"`
 
 	Protocol string `json:"protocol" tf:"protocol"`
 }

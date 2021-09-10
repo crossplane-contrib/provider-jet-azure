@@ -66,7 +66,7 @@ type DataFactoryDatasetBinaryParameters struct {
 
 	Folder *string `json:"folder,omitempty" tf:"folder"`
 
-	HttpServerLocation []HttpServerLocationParameters `json:"httpServerLocation,omitempty" tf:"http_server_location"`
+	HTTPServerLocation []HTTPServerLocationParameters `json:"httpServerLocation,omitempty" tf:"http_server_location"`
 
 	LinkedServiceName string `json:"linkedServiceName" tf:"linked_service_name"`
 
@@ -79,10 +79,10 @@ type DataFactoryDatasetBinaryParameters struct {
 	SftpServerLocation []SftpServerLocationParameters `json:"sftpServerLocation,omitempty" tf:"sftp_server_location"`
 }
 
-type HttpServerLocationObservation struct {
+type HTTPServerLocationObservation struct {
 }
 
-type HttpServerLocationParameters struct {
+type HTTPServerLocationParameters struct {
 	DynamicFilenameEnabled *bool `json:"dynamicFilenameEnabled,omitempty" tf:"dynamic_filename_enabled"`
 
 	DynamicPathEnabled *bool `json:"dynamicPathEnabled,omitempty" tf:"dynamic_path_enabled"`
@@ -91,7 +91,7 @@ type HttpServerLocationParameters struct {
 
 	Path string `json:"path" tf:"path"`
 
-	RelativeUrl string `json:"relativeUrl" tf:"relative_url"`
+	RelativeURL string `json:"relativeUrl" tf:"relative_url"`
 }
 
 type SftpServerLocationObservation struct {

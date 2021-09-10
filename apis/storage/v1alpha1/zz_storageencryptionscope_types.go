@@ -30,13 +30,13 @@ type StorageEncryptionScopeObservation struct {
 type StorageEncryptionScopeParameters struct {
 	InfrastructureEncryptionRequired *bool `json:"infrastructureEncryptionRequired,omitempty" tf:"infrastructure_encryption_required"`
 
-	KeyVaultKeyId *string `json:"keyVaultKeyId,omitempty" tf:"key_vault_key_id"`
+	KeyVaultKeyID *string `json:"keyVaultKeyId,omitempty" tf:"key_vault_key_id"`
 
 	Name string `json:"name" tf:"name"`
 
 	Source string `json:"source" tf:"source"`
 
-	StorageAccountId string `json:"storageAccountId" tf:"storage_account_id"`
+	StorageAccountID string `json:"storageAccountId" tf:"storage_account_id"`
 }
 
 // StorageEncryptionScopeSpec defines the desired state of StorageEncryptionScope

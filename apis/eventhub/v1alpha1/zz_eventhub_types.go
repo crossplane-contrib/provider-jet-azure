@@ -51,7 +51,7 @@ type DestinationParameters struct {
 
 	Name string `json:"name" tf:"name"`
 
-	StorageAccountId string `json:"storageAccountId" tf:"storage_account_id"`
+	StorageAccountID string `json:"storageAccountId" tf:"storage_account_id"`
 }
 
 type EventhubObservation struct {

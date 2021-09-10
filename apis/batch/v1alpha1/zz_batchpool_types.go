@@ -66,7 +66,7 @@ type BatchPoolParameters struct {
 
 	NetworkConfiguration []NetworkConfigurationParameters `json:"networkConfiguration,omitempty" tf:"network_configuration"`
 
-	NodeAgentSkuId string `json:"nodeAgentSkuId" tf:"node_agent_sku_id"`
+	NodeAgentSkuID string `json:"nodeAgentSkuId" tf:"node_agent_sku_id"`
 
 	ResourceGroupName string `json:"resourceGroupName" tf:"resource_group_name"`
 
@@ -76,14 +76,14 @@ type BatchPoolParameters struct {
 
 	StorageImageReference []StorageImageReferenceParameters `json:"storageImageReference" tf:"storage_image_reference"`
 
-	VmSize string `json:"vmSize" tf:"vm_size"`
+	VMSize string `json:"vmSize" tf:"vm_size"`
 }
 
 type CertificateObservation struct {
 }
 
 type CertificateParameters struct {
-	Id string `json:"id" tf:"id"`
+	ID string `json:"id" tf:"id"`
 
 	StoreLocation string `json:"storeLocation" tf:"store_location"`
 
@@ -150,7 +150,7 @@ type NetworkConfigurationParameters struct {
 
 	PublicIps []string `json:"publicIps,omitempty" tf:"public_ips"`
 
-	SubnetId string `json:"subnetId" tf:"subnet_id"`
+	SubnetID string `json:"subnetId" tf:"subnet_id"`
 }
 
 type NetworkSecurityGroupRulesObservation struct {
@@ -176,9 +176,9 @@ type ResourceFileParameters struct {
 
 	FilePath *string `json:"filePath,omitempty" tf:"file_path"`
 
-	HttpUrl *string `json:"httpUrl,omitempty" tf:"http_url"`
+	HTTPURL *string `json:"httpUrl,omitempty" tf:"http_url"`
 
-	StorageContainerUrl *string `json:"storageContainerUrl,omitempty" tf:"storage_container_url"`
+	StorageContainerURL *string `json:"storageContainerUrl,omitempty" tf:"storage_container_url"`
 }
 
 type StartTaskObservation struct {
@@ -202,7 +202,7 @@ type StorageImageReferenceObservation struct {
 }
 
 type StorageImageReferenceParameters struct {
-	Id *string `json:"id,omitempty" tf:"id"`
+	ID *string `json:"id,omitempty" tf:"id"`
 
 	Offer *string `json:"offer,omitempty" tf:"offer"`
 

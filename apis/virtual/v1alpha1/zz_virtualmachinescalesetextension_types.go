@@ -46,7 +46,7 @@ type VirtualMachineScaleSetExtensionParameters struct {
 
 	TypeHandlerVersion string `json:"typeHandlerVersion" tf:"type_handler_version"`
 
-	VirtualMachineScaleSetId string `json:"virtualMachineScaleSetId" tf:"virtual_machine_scale_set_id"`
+	VirtualMachineScaleSetID string `json:"virtualMachineScaleSetId" tf:"virtual_machine_scale_set_id"`
 }
 
 // VirtualMachineScaleSetExtensionSpec defines the desired state of VirtualMachineScaleSetExtension

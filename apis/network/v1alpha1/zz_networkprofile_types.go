@@ -24,20 +24,20 @@ import (
 	"k8s.io/apimachinery/pkg/runtime/schema"
 )
 
-type ContainerNetworkInterfaceIpConfigurationObservation struct {
+type ContainerNetworkInterfaceIPConfigurationObservation struct {
 }
 
-type ContainerNetworkInterfaceIpConfigurationParameters struct {
+type ContainerNetworkInterfaceIPConfigurationParameters struct {
 	Name string `json:"name" tf:"name"`
 
-	SubnetId string `json:"subnetId" tf:"subnet_id"`
+	SubnetID string `json:"subnetId" tf:"subnet_id"`
 }
 
 type ContainerNetworkInterfaceObservation struct {
 }
 
 type ContainerNetworkInterfaceParameters struct {
-	IpConfiguration []ContainerNetworkInterfaceIpConfigurationParameters `json:"ipConfiguration" tf:"ip_configuration"`
+	IPConfiguration []ContainerNetworkInterfaceIPConfigurationParameters `json:"ipConfiguration" tf:"ip_configuration"`
 
 	Name string `json:"name" tf:"name"`
 }

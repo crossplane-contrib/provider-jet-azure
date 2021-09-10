@@ -38,7 +38,7 @@ type DedicatedHardwareSecurityModuleParameters struct {
 
 	SkuName string `json:"skuName" tf:"sku_name"`
 
-	StampId *string `json:"stampId,omitempty" tf:"stamp_id"`
+	StampID *string `json:"stampId,omitempty" tf:"stamp_id"`
 
 	Tags map[string]string `json:"tags,omitempty" tf:"tags"`
 
@@ -49,9 +49,9 @@ type NetworkProfileObservation struct {
 }
 
 type NetworkProfileParameters struct {
-	NetworkInterfacePrivateIpAddresses []string `json:"networkInterfacePrivateIpAddresses" tf:"network_interface_private_ip_addresses"`
+	NetworkInterfacePrivateIPAddresses []string `json:"networkInterfacePrivateIpAddresses" tf:"network_interface_private_ip_addresses"`
 
-	SubnetId string `json:"subnetId" tf:"subnet_id"`
+	SubnetID string `json:"subnetId" tf:"subnet_id"`
 }
 
 // DedicatedHardwareSecurityModuleSpec defines the desired state of DedicatedHardwareSecurityModule

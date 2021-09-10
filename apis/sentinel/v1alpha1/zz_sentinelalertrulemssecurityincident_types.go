@@ -28,7 +28,7 @@ type SentinelAlertRuleMsSecurityIncidentObservation struct {
 }
 
 type SentinelAlertRuleMsSecurityIncidentParameters struct {
-	AlertRuleTemplateGuid *string `json:"alertRuleTemplateGuid,omitempty" tf:"alert_rule_template_guid"`
+	AlertRuleTemplateGUID *string `json:"alertRuleTemplateGuid,omitempty" tf:"alert_rule_template_guid"`
 
 	Description *string `json:"description,omitempty" tf:"description"`
 
@@ -40,7 +40,7 @@ type SentinelAlertRuleMsSecurityIncidentParameters struct {
 
 	Enabled *bool `json:"enabled,omitempty" tf:"enabled"`
 
-	LogAnalyticsWorkspaceId string `json:"logAnalyticsWorkspaceId" tf:"log_analytics_workspace_id"`
+	LogAnalyticsWorkspaceID string `json:"logAnalyticsWorkspaceId" tf:"log_analytics_workspace_id"`
 
 	Name string `json:"name" tf:"name"`
 

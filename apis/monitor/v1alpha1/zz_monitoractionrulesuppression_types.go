@@ -33,10 +33,10 @@ type ConditionAlertContextParameters struct {
 	Values []string `json:"values" tf:"values"`
 }
 
-type ConditionAlertRuleIdObservation struct {
+type ConditionAlertRuleIDObservation struct {
 }
 
-type ConditionAlertRuleIdParameters struct {
+type ConditionAlertRuleIDParameters struct {
 	Operator string `json:"operator" tf:"operator"`
 
 	Values []string `json:"values" tf:"values"`
@@ -93,7 +93,7 @@ type MonitorActionRuleSuppressionConditionObservation struct {
 type MonitorActionRuleSuppressionConditionParameters struct {
 	AlertContext []ConditionAlertContextParameters `json:"alertContext,omitempty" tf:"alert_context"`
 
-	AlertRuleId []ConditionAlertRuleIdParameters `json:"alertRuleId,omitempty" tf:"alert_rule_id"`
+	AlertRuleID []ConditionAlertRuleIDParameters `json:"alertRuleId,omitempty" tf:"alert_rule_id"`
 
 	Description []ConditionDescriptionParameters `json:"description,omitempty" tf:"description"`
 

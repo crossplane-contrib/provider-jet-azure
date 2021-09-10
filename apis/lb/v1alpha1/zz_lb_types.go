@@ -24,8 +24,8 @@ import (
 	"k8s.io/apimachinery/pkg/runtime/schema"
 )
 
-type FrontendIpConfigurationObservation struct {
-	Id string `json:"id" tf:"id"`
+type FrontendIPConfigurationObservation struct {
+	ID string `json:"id" tf:"id"`
 
 	InboundNatRules []string `json:"inboundNatRules" tf:"inbound_nat_rules"`
 
@@ -34,34 +34,34 @@ type FrontendIpConfigurationObservation struct {
 	OutboundRules []string `json:"outboundRules" tf:"outbound_rules"`
 }
 
-type FrontendIpConfigurationParameters struct {
+type FrontendIPConfigurationParameters struct {
 	AvailabilityZone *string `json:"availabilityZone,omitempty" tf:"availability_zone"`
 
 	Name string `json:"name" tf:"name"`
 
-	PrivateIpAddress *string `json:"privateIpAddress,omitempty" tf:"private_ip_address"`
+	PrivateIPAddress *string `json:"privateIpAddress,omitempty" tf:"private_ip_address"`
 
-	PrivateIpAddressAllocation *string `json:"privateIpAddressAllocation,omitempty" tf:"private_ip_address_allocation"`
+	PrivateIPAddressAllocation *string `json:"privateIpAddressAllocation,omitempty" tf:"private_ip_address_allocation"`
 
-	PrivateIpAddressVersion *string `json:"privateIpAddressVersion,omitempty" tf:"private_ip_address_version"`
+	PrivateIPAddressVersion *string `json:"privateIpAddressVersion,omitempty" tf:"private_ip_address_version"`
 
-	PublicIpAddressId *string `json:"publicIpAddressId,omitempty" tf:"public_ip_address_id"`
+	PublicIPAddressID *string `json:"publicIpAddressId,omitempty" tf:"public_ip_address_id"`
 
-	PublicIpPrefixId *string `json:"publicIpPrefixId,omitempty" tf:"public_ip_prefix_id"`
+	PublicIPPrefixID *string `json:"publicIpPrefixId,omitempty" tf:"public_ip_prefix_id"`
 
-	SubnetId *string `json:"subnetId,omitempty" tf:"subnet_id"`
+	SubnetID *string `json:"subnetId,omitempty" tf:"subnet_id"`
 
 	Zones []string `json:"zones,omitempty" tf:"zones"`
 }
 
 type LbObservation struct {
-	PrivateIpAddress string `json:"privateIpAddress" tf:"private_ip_address"`
+	PrivateIPAddress string `json:"privateIpAddress" tf:"private_ip_address"`
 
-	PrivateIpAddresses []string `json:"privateIpAddresses" tf:"private_ip_addresses"`
+	PrivateIPAddresses []string `json:"privateIpAddresses" tf:"private_ip_addresses"`
 }
 
 type LbParameters struct {
-	FrontendIpConfiguration []FrontendIpConfigurationParameters `json:"frontendIpConfiguration,omitempty" tf:"frontend_ip_configuration"`
+	FrontendIPConfiguration []FrontendIPConfigurationParameters `json:"frontendIpConfiguration,omitempty" tf:"frontend_ip_configuration"`
 
 	Location string `json:"location" tf:"location"`
 

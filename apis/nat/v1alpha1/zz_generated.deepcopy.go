@@ -106,13 +106,13 @@ func (in *NatGatewayParameters) DeepCopyInto(out *NatGatewayParameters) {
 		*out = new(int64)
 		**out = **in
 	}
-	if in.PublicIpAddressIds != nil {
-		in, out := &in.PublicIpAddressIds, &out.PublicIpAddressIds
+	if in.PublicIPAddressIds != nil {
+		in, out := &in.PublicIPAddressIds, &out.PublicIPAddressIds
 		*out = make([]string, len(*in))
 		copy(*out, *in)
 	}
-	if in.PublicIpPrefixIds != nil {
-		in, out := &in.PublicIpPrefixIds, &out.PublicIpPrefixIds
+	if in.PublicIPPrefixIds != nil {
+		in, out := &in.PublicIPPrefixIds, &out.PublicIPPrefixIds
 		*out = make([]string, len(*in))
 		copy(*out, *in)
 	}

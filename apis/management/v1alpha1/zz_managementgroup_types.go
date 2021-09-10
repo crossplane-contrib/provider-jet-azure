@@ -30,11 +30,11 @@ type ManagementGroupObservation struct {
 type ManagementGroupParameters struct {
 	DisplayName *string `json:"displayName,omitempty" tf:"display_name"`
 
-	GroupId *string `json:"groupId,omitempty" tf:"group_id"`
+	GroupID *string `json:"groupId,omitempty" tf:"group_id"`
 
 	Name *string `json:"name,omitempty" tf:"name"`
 
-	ParentManagementGroupId *string `json:"parentManagementGroupId,omitempty" tf:"parent_management_group_id"`
+	ParentManagementGroupID *string `json:"parentManagementGroupId,omitempty" tf:"parent_management_group_id"`
 
 	SubscriptionIds []string `json:"subscriptionIds,omitempty" tf:"subscription_ids"`
 }

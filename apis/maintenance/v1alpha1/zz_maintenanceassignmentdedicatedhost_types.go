@@ -28,11 +28,11 @@ type MaintenanceAssignmentDedicatedHostObservation struct {
 }
 
 type MaintenanceAssignmentDedicatedHostParameters struct {
-	DedicatedHostId string `json:"dedicatedHostId" tf:"dedicated_host_id"`
+	DedicatedHostID string `json:"dedicatedHostId" tf:"dedicated_host_id"`
 
 	Location string `json:"location" tf:"location"`
 
-	MaintenanceConfigurationId string `json:"maintenanceConfigurationId" tf:"maintenance_configuration_id"`
+	MaintenanceConfigurationID string `json:"maintenanceConfigurationId" tf:"maintenance_configuration_id"`
 }
 
 // MaintenanceAssignmentDedicatedHostSpec defines the desired state of MaintenanceAssignmentDedicatedHost

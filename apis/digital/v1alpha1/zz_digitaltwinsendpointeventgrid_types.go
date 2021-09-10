@@ -30,7 +30,7 @@ type DigitalTwinsEndpointEventgridObservation struct {
 type DigitalTwinsEndpointEventgridParameters struct {
 	DeadLetterStorageSecret *string `json:"deadLetterStorageSecret,omitempty" tf:"dead_letter_storage_secret"`
 
-	DigitalTwinsId string `json:"digitalTwinsId" tf:"digital_twins_id"`
+	DigitalTwinsID string `json:"digitalTwinsId" tf:"digital_twins_id"`
 
 	EventgridTopicEndpoint string `json:"eventgridTopicEndpoint" tf:"eventgrid_topic_endpoint"`
 

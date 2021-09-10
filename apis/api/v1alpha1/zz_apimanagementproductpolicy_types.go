@@ -28,15 +28,15 @@ type ApiManagementProductPolicyObservation struct {
 }
 
 type ApiManagementProductPolicyParameters struct {
-	ApiManagementName string `json:"apiManagementName" tf:"api_management_name"`
+	APIManagementName string `json:"apiManagementName" tf:"api_management_name"`
 
-	ProductId string `json:"productId" tf:"product_id"`
+	ProductID string `json:"productId" tf:"product_id"`
 
 	ResourceGroupName string `json:"resourceGroupName" tf:"resource_group_name"`
 
-	XmlContent *string `json:"xmlContent,omitempty" tf:"xml_content"`
+	XMLContent *string `json:"xmlContent,omitempty" tf:"xml_content"`
 
-	XmlLink *string `json:"xmlLink,omitempty" tf:"xml_link"`
+	XMLLink *string `json:"xmlLink,omitempty" tf:"xml_link"`
 }
 
 // ApiManagementProductPolicySpec defines the desired state of ApiManagementProductPolicy

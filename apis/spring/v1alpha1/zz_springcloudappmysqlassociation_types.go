@@ -30,13 +30,13 @@ type SpringCloudAppMysqlAssociationObservation struct {
 type SpringCloudAppMysqlAssociationParameters struct {
 	DatabaseName string `json:"databaseName" tf:"database_name"`
 
-	MysqlServerId string `json:"mysqlServerId" tf:"mysql_server_id"`
+	MysqlServerID string `json:"mysqlServerId" tf:"mysql_server_id"`
 
 	Name string `json:"name" tf:"name"`
 
 	Password string `json:"password" tf:"password"`
 
-	SpringCloudAppId string `json:"springCloudAppId" tf:"spring_cloud_app_id"`
+	SpringCloudAppID string `json:"springCloudAppId" tf:"spring_cloud_app_id"`
 
 	Username string `json:"username" tf:"username"`
 }

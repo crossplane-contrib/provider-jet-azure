@@ -30,7 +30,7 @@ type RouteObservation struct {
 type RouteParameters struct {
 	AddressPrefixes []string `json:"addressPrefixes" tf:"address_prefixes"`
 
-	NextHopIpAddress string `json:"nextHopIpAddress" tf:"next_hop_ip_address"`
+	NextHopIPAddress string `json:"nextHopIpAddress" tf:"next_hop_ip_address"`
 }
 
 type VirtualHubObservation struct {
@@ -51,7 +51,7 @@ type VirtualHubParameters struct {
 
 	Tags map[string]string `json:"tags,omitempty" tf:"tags"`
 
-	VirtualWanId *string `json:"virtualWanId,omitempty" tf:"virtual_wan_id"`
+	VirtualWanID *string `json:"virtualWanId,omitempty" tf:"virtual_wan_id"`
 }
 
 // VirtualHubSpec defines the desired state of VirtualHub

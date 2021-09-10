@@ -25,9 +25,9 @@ import (
 )
 
 type IdentityObservation struct {
-	PrincipalId string `json:"principalId" tf:"principal_id"`
+	PrincipalID string `json:"principalId" tf:"principal_id"`
 
-	TenantId string `json:"tenantId" tf:"tenant_id"`
+	TenantID string `json:"tenantId" tf:"tenant_id"`
 }
 
 type IdentityParameters struct {
@@ -56,9 +56,9 @@ type ResourceGroupPolicyAssignmentParameters struct {
 
 	Parameters *string `json:"parameters,omitempty" tf:"parameters"`
 
-	PolicyDefinitionId string `json:"policyDefinitionId" tf:"policy_definition_id"`
+	PolicyDefinitionID string `json:"policyDefinitionId" tf:"policy_definition_id"`
 
-	ResourceGroupId string `json:"resourceGroupId" tf:"resource_group_id"`
+	ResourceGroupID string `json:"resourceGroupId" tf:"resource_group_id"`
 }
 
 // ResourceGroupPolicyAssignmentSpec defines the desired state of ResourceGroupPolicyAssignment

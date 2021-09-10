@@ -66,9 +66,9 @@ type ReturnTrackingObservation struct {
 
 	SerialNumber string `json:"serialNumber" tf:"serial_number"`
 
-	TrackingId string `json:"trackingId" tf:"tracking_id"`
+	TrackingID string `json:"trackingId" tf:"tracking_id"`
 
-	TrackingUrl string `json:"trackingUrl" tf:"tracking_url"`
+	TrackingURL string `json:"trackingUrl" tf:"tracking_url"`
 }
 
 type ReturnTrackingParameters struct {
@@ -105,9 +105,9 @@ type ShipmentTrackingObservation struct {
 
 	SerialNumber string `json:"serialNumber" tf:"serial_number"`
 
-	TrackingId string `json:"trackingId" tf:"tracking_id"`
+	TrackingID string `json:"trackingId" tf:"tracking_id"`
 
-	TrackingUrl string `json:"trackingUrl" tf:"tracking_url"`
+	TrackingURL string `json:"trackingUrl" tf:"tracking_url"`
 }
 
 type ShipmentTrackingParameters struct {

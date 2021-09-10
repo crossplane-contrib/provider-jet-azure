@@ -29,7 +29,7 @@ type MapsAccountObservation struct {
 
 	SecondaryAccessKey string `json:"secondaryAccessKey" tf:"secondary_access_key"`
 
-	XMsClientId string `json:"xMsClientId" tf:"x_ms_client_id"`
+	XMsClientID string `json:"xMsClientId" tf:"x_ms_client_id"`
 }
 
 type MapsAccountParameters struct {

@@ -44,7 +44,7 @@ type VirtualMachineExtensionParameters struct {
 
 	TypeHandlerVersion string `json:"typeHandlerVersion" tf:"type_handler_version"`
 
-	VirtualMachineId string `json:"virtualMachineId" tf:"virtual_machine_id"`
+	VirtualMachineID string `json:"virtualMachineId" tf:"virtual_machine_id"`
 }
 
 // VirtualMachineExtensionSpec defines the desired state of VirtualMachineExtension

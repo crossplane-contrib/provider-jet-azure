@@ -37,11 +37,11 @@ type AzureActiveDirectoryObservation struct {
 }
 
 type AzureActiveDirectoryParameters struct {
-	ClientApplicationId string `json:"clientApplicationId" tf:"client_application_id"`
+	ClientApplicationID string `json:"clientApplicationId" tf:"client_application_id"`
 
-	ClusterApplicationId string `json:"clusterApplicationId" tf:"cluster_application_id"`
+	ClusterApplicationID string `json:"clusterApplicationId" tf:"cluster_application_id"`
 
-	TenantId string `json:"tenantId" tf:"tenant_id"`
+	TenantID string `json:"tenantId" tf:"tenant_id"`
 }
 
 type CertificateCommonNamesObservation struct {
@@ -160,7 +160,7 @@ type NodeTypeParameters struct {
 
 	EphemeralPorts []EphemeralPortsParameters `json:"ephemeralPorts,omitempty" tf:"ephemeral_ports"`
 
-	HttpEndpointPort int64 `json:"httpEndpointPort" tf:"http_endpoint_port"`
+	HTTPEndpointPort int64 `json:"httpEndpointPort" tf:"http_endpoint_port"`
 
 	InstanceCount int64 `json:"instanceCount" tf:"instance_count"`
 
@@ -247,7 +247,7 @@ type ServiceFabricClusterParameters struct {
 
 	UpgradePolicy []UpgradePolicyParameters `json:"upgradePolicy,omitempty" tf:"upgrade_policy"`
 
-	VmImage string `json:"vmImage" tf:"vm_image"`
+	VMImage string `json:"vmImage" tf:"vm_image"`
 }
 
 type UpgradePolicyObservation struct {

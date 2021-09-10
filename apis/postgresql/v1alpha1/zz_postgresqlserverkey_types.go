@@ -28,9 +28,9 @@ type PostgresqlServerKeyObservation struct {
 }
 
 type PostgresqlServerKeyParameters struct {
-	KeyVaultKeyId string `json:"keyVaultKeyId" tf:"key_vault_key_id"`
+	KeyVaultKeyID string `json:"keyVaultKeyId" tf:"key_vault_key_id"`
 
-	ServerId string `json:"serverId" tf:"server_id"`
+	ServerID string `json:"serverId" tf:"server_id"`
 }
 
 // PostgresqlServerKeySpec defines the desired state of PostgresqlServerKey

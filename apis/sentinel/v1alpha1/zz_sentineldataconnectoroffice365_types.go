@@ -30,7 +30,7 @@ type SentinelDataConnectorOffice365Observation struct {
 type SentinelDataConnectorOffice365Parameters struct {
 	ExchangeEnabled *bool `json:"exchangeEnabled,omitempty" tf:"exchange_enabled"`
 
-	LogAnalyticsWorkspaceId string `json:"logAnalyticsWorkspaceId" tf:"log_analytics_workspace_id"`
+	LogAnalyticsWorkspaceID string `json:"logAnalyticsWorkspaceId" tf:"log_analytics_workspace_id"`
 
 	Name string `json:"name" tf:"name"`
 
@@ -38,7 +38,7 @@ type SentinelDataConnectorOffice365Parameters struct {
 
 	TeamsEnabled *bool `json:"teamsEnabled,omitempty" tf:"teams_enabled"`
 
-	TenantId *string `json:"tenantId,omitempty" tf:"tenant_id"`
+	TenantID *string `json:"tenantId,omitempty" tf:"tenant_id"`
 }
 
 // SentinelDataConnectorOffice365Spec defines the desired state of SentinelDataConnectorOffice365

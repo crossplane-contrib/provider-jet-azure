@@ -45,9 +45,9 @@ type CognitiveAccountParameters struct {
 
 	Location string `json:"location" tf:"location"`
 
-	MetricsAdvisorAadClientId *string `json:"metricsAdvisorAadClientId,omitempty" tf:"metrics_advisor_aad_client_id"`
+	MetricsAdvisorAadClientID *string `json:"metricsAdvisorAadClientId,omitempty" tf:"metrics_advisor_aad_client_id"`
 
-	MetricsAdvisorAadTenantId *string `json:"metricsAdvisorAadTenantId,omitempty" tf:"metrics_advisor_aad_tenant_id"`
+	MetricsAdvisorAadTenantID *string `json:"metricsAdvisorAadTenantId,omitempty" tf:"metrics_advisor_aad_tenant_id"`
 
 	MetricsAdvisorSuperUserName *string `json:"metricsAdvisorSuperUserName,omitempty" tf:"metrics_advisor_super_user_name"`
 
@@ -73,9 +73,9 @@ type CognitiveAccountParameters struct {
 }
 
 type IdentityObservation struct {
-	PrincipalId string `json:"principalId" tf:"principal_id"`
+	PrincipalID string `json:"principalId" tf:"principal_id"`
 
-	TenantId string `json:"tenantId" tf:"tenant_id"`
+	TenantID string `json:"tenantId" tf:"tenant_id"`
 }
 
 type IdentityParameters struct {
@@ -90,7 +90,7 @@ type NetworkAclsObservation struct {
 type NetworkAclsParameters struct {
 	DefaultAction string `json:"defaultAction" tf:"default_action"`
 
-	IpRules []string `json:"ipRules,omitempty" tf:"ip_rules"`
+	IPRules []string `json:"ipRules,omitempty" tf:"ip_rules"`
 
 	VirtualNetworkRules []VirtualNetworkRulesParameters `json:"virtualNetworkRules,omitempty" tf:"virtual_network_rules"`
 
@@ -101,9 +101,9 @@ type StorageObservation struct {
 }
 
 type StorageParameters struct {
-	IdentityClientId *string `json:"identityClientId,omitempty" tf:"identity_client_id"`
+	IdentityClientID *string `json:"identityClientId,omitempty" tf:"identity_client_id"`
 
-	StorageAccountId string `json:"storageAccountId" tf:"storage_account_id"`
+	StorageAccountID string `json:"storageAccountId" tf:"storage_account_id"`
 }
 
 type VirtualNetworkRulesObservation struct {
@@ -112,7 +112,7 @@ type VirtualNetworkRulesObservation struct {
 type VirtualNetworkRulesParameters struct {
 	IgnoreMissingVnetServiceEndpoint *bool `json:"ignoreMissingVnetServiceEndpoint,omitempty" tf:"ignore_missing_vnet_service_endpoint"`
 
-	SubnetId string `json:"subnetId" tf:"subnet_id"`
+	SubnetID string `json:"subnetId" tf:"subnet_id"`
 }
 
 // CognitiveAccountSpec defines the desired state of CognitiveAccount

@@ -33,7 +33,7 @@ type ManagementGroupTemplateDeploymentParameters struct {
 
 	Location string `json:"location" tf:"location"`
 
-	ManagementGroupId string `json:"managementGroupId" tf:"management_group_id"`
+	ManagementGroupID string `json:"managementGroupId" tf:"management_group_id"`
 
 	Name string `json:"name" tf:"name"`
 
@@ -43,7 +43,7 @@ type ManagementGroupTemplateDeploymentParameters struct {
 
 	TemplateContent *string `json:"templateContent,omitempty" tf:"template_content"`
 
-	TemplateSpecVersionId *string `json:"templateSpecVersionId,omitempty" tf:"template_spec_version_id"`
+	TemplateSpecVersionID *string `json:"templateSpecVersionId,omitempty" tf:"template_spec_version_id"`
 }
 
 // ManagementGroupTemplateDeploymentSpec defines the desired state of ManagementGroupTemplateDeployment

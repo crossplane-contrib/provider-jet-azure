@@ -25,9 +25,9 @@ import (
 )
 
 type ResourcePolicyAssignmentIdentityObservation struct {
-	PrincipalId string `json:"principalId" tf:"principal_id"`
+	PrincipalID string `json:"principalId" tf:"principal_id"`
 
-	TenantId string `json:"tenantId" tf:"tenant_id"`
+	TenantID string `json:"tenantId" tf:"tenant_id"`
 }
 
 type ResourcePolicyAssignmentIdentityParameters struct {
@@ -56,9 +56,9 @@ type ResourcePolicyAssignmentParameters struct {
 
 	Parameters *string `json:"parameters,omitempty" tf:"parameters"`
 
-	PolicyDefinitionId string `json:"policyDefinitionId" tf:"policy_definition_id"`
+	PolicyDefinitionID string `json:"policyDefinitionId" tf:"policy_definition_id"`
 
-	ResourceId string `json:"resourceId" tf:"resource_id"`
+	ResourceID string `json:"resourceId" tf:"resource_id"`
 }
 
 // ResourcePolicyAssignmentSpec defines the desired state of ResourcePolicyAssignment

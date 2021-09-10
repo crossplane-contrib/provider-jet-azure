@@ -30,9 +30,9 @@ type MaintenanceAssignmentVirtualMachineObservation struct {
 type MaintenanceAssignmentVirtualMachineParameters struct {
 	Location string `json:"location" tf:"location"`
 
-	MaintenanceConfigurationId string `json:"maintenanceConfigurationId" tf:"maintenance_configuration_id"`
+	MaintenanceConfigurationID string `json:"maintenanceConfigurationId" tf:"maintenance_configuration_id"`
 
-	VirtualMachineId string `json:"virtualMachineId" tf:"virtual_machine_id"`
+	VirtualMachineID string `json:"virtualMachineId" tf:"virtual_machine_id"`
 }
 
 // MaintenanceAssignmentVirtualMachineSpec defines the desired state of MaintenanceAssignmentVirtualMachine

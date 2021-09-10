@@ -25,9 +25,9 @@ import (
 )
 
 type IdentityObservation struct {
-	PrincipalId string `json:"principalId" tf:"principal_id"`
+	PrincipalID string `json:"principalId" tf:"principal_id"`
 
-	TenantId string `json:"tenantId" tf:"tenant_id"`
+	TenantID string `json:"tenantId" tf:"tenant_id"`
 }
 
 type IdentityParameters struct {
@@ -49,7 +49,7 @@ type PostgresqlServerParameters struct {
 
 	CreateMode *string `json:"createMode,omitempty" tf:"create_mode"`
 
-	CreationSourceServerId *string `json:"creationSourceServerId,omitempty" tf:"creation_source_server_id"`
+	CreationSourceServerID *string `json:"creationSourceServerId,omitempty" tf:"creation_source_server_id"`
 
 	GeoRedundantBackupEnabled *bool `json:"geoRedundantBackupEnabled,omitempty" tf:"geo_redundant_backup_enabled"`
 
@@ -73,7 +73,7 @@ type PostgresqlServerParameters struct {
 
 	SslEnforcementEnabled *bool `json:"sslEnforcementEnabled,omitempty" tf:"ssl_enforcement_enabled"`
 
-	SslMinimalTlsVersionEnforced *string `json:"sslMinimalTlsVersionEnforced,omitempty" tf:"ssl_minimal_tls_version_enforced"`
+	SslMinimalTLSVersionEnforced *string `json:"sslMinimalTlsVersionEnforced,omitempty" tf:"ssl_minimal_tls_version_enforced"`
 
 	StorageMb *int64 `json:"storageMb,omitempty" tf:"storage_mb"`
 

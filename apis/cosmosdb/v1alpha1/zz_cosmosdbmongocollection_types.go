@@ -47,13 +47,13 @@ type CosmosdbMongoCollectionObservation struct {
 type CosmosdbMongoCollectionParameters struct {
 	AccountName string `json:"accountName" tf:"account_name"`
 
-	AnalyticalStorageTtl *int64 `json:"analyticalStorageTtl,omitempty" tf:"analytical_storage_ttl"`
+	AnalyticalStorageTTL *int64 `json:"analyticalStorageTtl,omitempty" tf:"analytical_storage_ttl"`
 
 	AutoscaleSettings []CosmosdbMongoCollectionAutoscaleSettingsParameters `json:"autoscaleSettings,omitempty" tf:"autoscale_settings"`
 
 	DatabaseName string `json:"databaseName" tf:"database_name"`
 
-	DefaultTtlSeconds *int64 `json:"defaultTtlSeconds,omitempty" tf:"default_ttl_seconds"`
+	DefaultTTLSeconds *int64 `json:"defaultTtlSeconds,omitempty" tf:"default_ttl_seconds"`
 
 	Index []CosmosdbMongoCollectionIndexParameters `json:"index,omitempty" tf:"index"`
 

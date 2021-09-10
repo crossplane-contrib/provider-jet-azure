@@ -33,7 +33,7 @@ type DevTestLinuxVirtualMachineObservation struct {
 type DevTestLinuxVirtualMachineParameters struct {
 	AllowClaim *bool `json:"allowClaim,omitempty" tf:"allow_claim"`
 
-	DisallowPublicIpAddress *bool `json:"disallowPublicIpAddress,omitempty" tf:"disallow_public_ip_address"`
+	DisallowPublicIPAddress *bool `json:"disallowPublicIpAddress,omitempty" tf:"disallow_public_ip_address"`
 
 	GalleryImageReference []GalleryImageReferenceParameters `json:"galleryImageReference" tf:"gallery_image_reference"`
 
@@ -43,7 +43,7 @@ type DevTestLinuxVirtualMachineParameters struct {
 
 	LabSubnetName string `json:"labSubnetName" tf:"lab_subnet_name"`
 
-	LabVirtualNetworkId string `json:"labVirtualNetworkId" tf:"lab_virtual_network_id"`
+	LabVirtualNetworkID string `json:"labVirtualNetworkId" tf:"lab_virtual_network_id"`
 
 	Location string `json:"location" tf:"location"`
 
@@ -55,9 +55,9 @@ type DevTestLinuxVirtualMachineParameters struct {
 
 	ResourceGroupName string `json:"resourceGroupName" tf:"resource_group_name"`
 
-	Size string `json:"size" tf:"size"`
+	SSHKey *string `json:"sshKey,omitempty" tf:"ssh_key"`
 
-	SshKey *string `json:"sshKey,omitempty" tf:"ssh_key"`
+	Size string `json:"size" tf:"size"`
 
 	StorageType string `json:"storageType" tf:"storage_type"`
 

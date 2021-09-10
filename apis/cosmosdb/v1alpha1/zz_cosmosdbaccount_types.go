@@ -115,13 +115,13 @@ type CosmosdbAccountParameters struct {
 
 	GeoLocation []GeoLocationParameters `json:"geoLocation" tf:"geo_location"`
 
-	Identity []IdentityParameters `json:"identity,omitempty" tf:"identity"`
+	IPRangeFilter *string `json:"ipRangeFilter,omitempty" tf:"ip_range_filter"`
 
-	IpRangeFilter *string `json:"ipRangeFilter,omitempty" tf:"ip_range_filter"`
+	Identity []IdentityParameters `json:"identity,omitempty" tf:"identity"`
 
 	IsVirtualNetworkFilterEnabled *bool `json:"isVirtualNetworkFilterEnabled,omitempty" tf:"is_virtual_network_filter_enabled"`
 
-	KeyVaultKeyId *string `json:"keyVaultKeyId,omitempty" tf:"key_vault_key_id"`
+	KeyVaultKeyID *string `json:"keyVaultKeyId,omitempty" tf:"key_vault_key_id"`
 
 	Kind *string `json:"kind,omitempty" tf:"kind"`
 
@@ -131,9 +131,9 @@ type CosmosdbAccountParameters struct {
 
 	Name string `json:"name" tf:"name"`
 
-	NetworkAclBypassForAzureServices *bool `json:"networkAclBypassForAzureServices,omitempty" tf:"network_acl_bypass_for_azure_services"`
+	NetworkACLBypassForAzureServices *bool `json:"networkAclBypassForAzureServices,omitempty" tf:"network_acl_bypass_for_azure_services"`
 
-	NetworkAclBypassIds []string `json:"networkAclBypassIds,omitempty" tf:"network_acl_bypass_ids"`
+	NetworkACLBypassIds []string `json:"networkAclBypassIds,omitempty" tf:"network_acl_bypass_ids"`
 
 	OfferType string `json:"offerType" tf:"offer_type"`
 
@@ -147,7 +147,7 @@ type CosmosdbAccountParameters struct {
 }
 
 type GeoLocationObservation struct {
-	Id string `json:"id" tf:"id"`
+	ID string `json:"id" tf:"id"`
 }
 
 type GeoLocationParameters struct {
@@ -161,9 +161,9 @@ type GeoLocationParameters struct {
 }
 
 type IdentityObservation struct {
-	PrincipalId string `json:"principalId" tf:"principal_id"`
+	PrincipalID string `json:"principalId" tf:"principal_id"`
 
-	TenantId string `json:"tenantId" tf:"tenant_id"`
+	TenantID string `json:"tenantId" tf:"tenant_id"`
 }
 
 type IdentityParameters struct {
@@ -174,7 +174,7 @@ type VirtualNetworkRuleObservation struct {
 }
 
 type VirtualNetworkRuleParameters struct {
-	Id string `json:"id" tf:"id"`
+	ID string `json:"id" tf:"id"`
 
 	IgnoreMissingVnetServiceEndpoint *bool `json:"ignoreMissingVnetServiceEndpoint,omitempty" tf:"ignore_missing_vnet_service_endpoint"`
 }

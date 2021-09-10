@@ -28,7 +28,7 @@ type ApiManagementLoggerObservation struct {
 }
 
 type ApiManagementLoggerParameters struct {
-	ApiManagementName string `json:"apiManagementName" tf:"api_management_name"`
+	APIManagementName string `json:"apiManagementName" tf:"api_management_name"`
 
 	ApplicationInsights []ApplicationInsightsParameters `json:"applicationInsights,omitempty" tf:"application_insights"`
 
@@ -42,7 +42,7 @@ type ApiManagementLoggerParameters struct {
 
 	ResourceGroupName string `json:"resourceGroupName" tf:"resource_group_name"`
 
-	ResourceId *string `json:"resourceId,omitempty" tf:"resource_id"`
+	ResourceID *string `json:"resourceId,omitempty" tf:"resource_id"`
 }
 
 type ApplicationInsightsObservation struct {

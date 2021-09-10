@@ -25,7 +25,7 @@ import (
 )
 
 type NatGatewayObservation struct {
-	ResourceGuid string `json:"resourceGuid" tf:"resource_guid"`
+	ResourceGUID string `json:"resourceGuid" tf:"resource_guid"`
 }
 
 type NatGatewayParameters struct {
@@ -35,9 +35,9 @@ type NatGatewayParameters struct {
 
 	Name string `json:"name" tf:"name"`
 
-	PublicIpAddressIds []string `json:"publicIpAddressIds,omitempty" tf:"public_ip_address_ids"`
+	PublicIPAddressIds []string `json:"publicIpAddressIds,omitempty" tf:"public_ip_address_ids"`
 
-	PublicIpPrefixIds []string `json:"publicIpPrefixIds,omitempty" tf:"public_ip_prefix_ids"`
+	PublicIPPrefixIds []string `json:"publicIpPrefixIds,omitempty" tf:"public_ip_prefix_ids"`
 
 	ResourceGroupName string `json:"resourceGroupName" tf:"resource_group_name"`
 

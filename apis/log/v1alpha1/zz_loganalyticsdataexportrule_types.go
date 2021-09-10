@@ -25,11 +25,11 @@ import (
 )
 
 type LogAnalyticsDataExportRuleObservation struct {
-	ExportRuleId string `json:"exportRuleId" tf:"export_rule_id"`
+	ExportRuleID string `json:"exportRuleId" tf:"export_rule_id"`
 }
 
 type LogAnalyticsDataExportRuleParameters struct {
-	DestinationResourceId string `json:"destinationResourceId" tf:"destination_resource_id"`
+	DestinationResourceID string `json:"destinationResourceId" tf:"destination_resource_id"`
 
 	Enabled *bool `json:"enabled,omitempty" tf:"enabled"`
 
@@ -39,7 +39,7 @@ type LogAnalyticsDataExportRuleParameters struct {
 
 	TableNames []string `json:"tableNames" tf:"table_names"`
 
-	WorkspaceResourceId string `json:"workspaceResourceId" tf:"workspace_resource_id"`
+	WorkspaceResourceID string `json:"workspaceResourceId" tf:"workspace_resource_id"`
 }
 
 // LogAnalyticsDataExportRuleSpec defines the desired state of LogAnalyticsDataExportRule

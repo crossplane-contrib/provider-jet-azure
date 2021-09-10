@@ -24,13 +24,13 @@ import (
 	"k8s.io/apimachinery/pkg/runtime/schema"
 )
 
-type EventgridTopicInboundIpRuleObservation struct {
+type EventgridTopicInboundIPRuleObservation struct {
 }
 
-type EventgridTopicInboundIpRuleParameters struct {
+type EventgridTopicInboundIPRuleParameters struct {
 	Action *string `json:"action,omitempty" tf:"action"`
 
-	IpMask string `json:"ipMask" tf:"ip_mask"`
+	IPMask string `json:"ipMask" tf:"ip_mask"`
 }
 
 type EventgridTopicInputMappingDefaultValuesObservation struct {
@@ -54,7 +54,7 @@ type EventgridTopicInputMappingFieldsParameters struct {
 
 	EventType *string `json:"eventType,omitempty" tf:"event_type"`
 
-	Id *string `json:"id,omitempty" tf:"id"`
+	ID *string `json:"id,omitempty" tf:"id"`
 
 	Subject *string `json:"subject,omitempty" tf:"subject"`
 
@@ -70,7 +70,7 @@ type EventgridTopicObservation struct {
 }
 
 type EventgridTopicParameters struct {
-	InboundIpRule []EventgridTopicInboundIpRuleParameters `json:"inboundIpRule,omitempty" tf:"inbound_ip_rule"`
+	InboundIPRule []EventgridTopicInboundIPRuleParameters `json:"inboundIpRule,omitempty" tf:"inbound_ip_rule"`
 
 	InputMappingDefaultValues []EventgridTopicInputMappingDefaultValuesParameters `json:"inputMappingDefaultValues,omitempty" tf:"input_mapping_default_values"`
 

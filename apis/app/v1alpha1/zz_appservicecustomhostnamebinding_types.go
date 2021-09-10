@@ -25,7 +25,7 @@ import (
 )
 
 type AppServiceCustomHostnameBindingObservation struct {
-	VirtualIp string `json:"virtualIp" tf:"virtual_ip"`
+	VirtualIP string `json:"virtualIp" tf:"virtual_ip"`
 }
 
 type AppServiceCustomHostnameBindingParameters struct {

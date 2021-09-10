@@ -30,11 +30,11 @@ type SecurityCenterAssessmentObservation struct {
 type SecurityCenterAssessmentParameters struct {
 	AdditionalData map[string]string `json:"additionalData,omitempty" tf:"additional_data"`
 
-	AssessmentPolicyId string `json:"assessmentPolicyId" tf:"assessment_policy_id"`
+	AssessmentPolicyID string `json:"assessmentPolicyId" tf:"assessment_policy_id"`
 
 	Status []StatusParameters `json:"status" tf:"status"`
 
-	TargetResourceId string `json:"targetResourceId" tf:"target_resource_id"`
+	TargetResourceID string `json:"targetResourceId" tf:"target_resource_id"`
 }
 
 type StatusObservation struct {

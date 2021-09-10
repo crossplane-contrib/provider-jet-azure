@@ -29,7 +29,7 @@ type StorageContainerObservation struct {
 
 	HasLegalHold bool `json:"hasLegalHold" tf:"has_legal_hold"`
 
-	ResourceManagerId string `json:"resourceManagerId" tf:"resource_manager_id"`
+	ResourceManagerID string `json:"resourceManagerId" tf:"resource_manager_id"`
 }
 
 type StorageContainerParameters struct {

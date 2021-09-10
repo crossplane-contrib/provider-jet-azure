@@ -24,6 +24,15 @@ import (
 	"k8s.io/apimachinery/pkg/runtime/schema"
 )
 
+type ACLObservation struct {
+}
+
+type ACLParameters struct {
+	AccessPolicy []AccessPolicyParameters `json:"accessPolicy,omitempty" tf:"access_policy"`
+
+	ID string `json:"id" tf:"id"`
+}
+
 type AccessPolicyObservation struct {
 }
 
@@ -35,23 +44,14 @@ type AccessPolicyParameters struct {
 	Start *string `json:"start,omitempty" tf:"start"`
 }
 
-type AclObservation struct {
-}
-
-type AclParameters struct {
-	AccessPolicy []AccessPolicyParameters `json:"accessPolicy,omitempty" tf:"access_policy"`
-
-	Id string `json:"id" tf:"id"`
-}
-
 type StorageShareObservation struct {
-	ResourceManagerId string `json:"resourceManagerId" tf:"resource_manager_id"`
+	ResourceManagerID string `json:"resourceManagerId" tf:"resource_manager_id"`
 
-	Url string `json:"url" tf:"url"`
+	URL string `json:"url" tf:"url"`
 }
 
 type StorageShareParameters struct {
-	Acl []AclParameters `json:"acl,omitempty" tf:"acl"`
+	ACL []ACLParameters `json:"acl,omitempty" tf:"acl"`
 
 	Metadata map[string]string `json:"metadata,omitempty" tf:"metadata"`
 

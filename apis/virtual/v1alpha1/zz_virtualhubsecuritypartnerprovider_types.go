@@ -38,7 +38,7 @@ type VirtualHubSecurityPartnerProviderParameters struct {
 
 	Tags map[string]string `json:"tags,omitempty" tf:"tags"`
 
-	VirtualHubId *string `json:"virtualHubId,omitempty" tf:"virtual_hub_id"`
+	VirtualHubID *string `json:"virtualHubId,omitempty" tf:"virtual_hub_id"`
 }
 
 // VirtualHubSecurityPartnerProviderSpec defines the desired state of VirtualHubSecurityPartnerProvider

@@ -28,7 +28,7 @@ type StackHciClusterObservation struct {
 }
 
 type StackHciClusterParameters struct {
-	ClientId string `json:"clientId" tf:"client_id"`
+	ClientID string `json:"clientId" tf:"client_id"`
 
 	Location string `json:"location" tf:"location"`
 
@@ -38,7 +38,7 @@ type StackHciClusterParameters struct {
 
 	Tags map[string]string `json:"tags,omitempty" tf:"tags"`
 
-	TenantId *string `json:"tenantId,omitempty" tf:"tenant_id"`
+	TenantID *string `json:"tenantId,omitempty" tf:"tenant_id"`
 }
 
 // StackHciClusterSpec defines the desired state of StackHciCluster

@@ -38,7 +38,7 @@ type HpcCacheBlobNfsTargetParameters struct {
 
 	ResourceGroupName string `json:"resourceGroupName" tf:"resource_group_name"`
 
-	StorageContainerId string `json:"storageContainerId" tf:"storage_container_id"`
+	StorageContainerID string `json:"storageContainerId" tf:"storage_container_id"`
 
 	UsageModel string `json:"usageModel" tf:"usage_model"`
 }

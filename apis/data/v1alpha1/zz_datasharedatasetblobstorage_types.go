@@ -31,7 +31,7 @@ type DataShareDatasetBlobStorageObservation struct {
 type DataShareDatasetBlobStorageParameters struct {
 	ContainerName string `json:"containerName" tf:"container_name"`
 
-	DataShareId string `json:"dataShareId" tf:"data_share_id"`
+	DataShareID string `json:"dataShareId" tf:"data_share_id"`
 
 	FilePath *string `json:"filePath,omitempty" tf:"file_path"`
 
@@ -50,7 +50,7 @@ type StorageAccountParameters struct {
 
 	ResourceGroupName string `json:"resourceGroupName" tf:"resource_group_name"`
 
-	SubscriptionId string `json:"subscriptionId" tf:"subscription_id"`
+	SubscriptionID string `json:"subscriptionId" tf:"subscription_id"`
 }
 
 // DataShareDatasetBlobStorageSpec defines the desired state of DataShareDatasetBlobStorage

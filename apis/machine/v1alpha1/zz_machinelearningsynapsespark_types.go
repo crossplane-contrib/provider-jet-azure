@@ -25,9 +25,9 @@ import (
 )
 
 type MachineLearningSynapseSparkIdentityObservation struct {
-	PrincipalId string `json:"principalId" tf:"principal_id"`
+	PrincipalID string `json:"principalId" tf:"principal_id"`
 
-	TenantId string `json:"tenantId" tf:"tenant_id"`
+	TenantID string `json:"tenantId" tf:"tenant_id"`
 }
 
 type MachineLearningSynapseSparkIdentityParameters struct {
@@ -46,11 +46,11 @@ type MachineLearningSynapseSparkParameters struct {
 
 	Location string `json:"location" tf:"location"`
 
-	MachineLearningWorkspaceId string `json:"machineLearningWorkspaceId" tf:"machine_learning_workspace_id"`
+	MachineLearningWorkspaceID string `json:"machineLearningWorkspaceId" tf:"machine_learning_workspace_id"`
 
 	Name string `json:"name" tf:"name"`
 
-	SynapseSparkPoolId string `json:"synapseSparkPoolId" tf:"synapse_spark_pool_id"`
+	SynapseSparkPoolID string `json:"synapseSparkPoolId" tf:"synapse_spark_pool_id"`
 
 	Tags map[string]string `json:"tags,omitempty" tf:"tags"`
 }

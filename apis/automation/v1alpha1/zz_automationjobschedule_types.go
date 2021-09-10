@@ -30,7 +30,7 @@ type AutomationJobScheduleObservation struct {
 type AutomationJobScheduleParameters struct {
 	AutomationAccountName string `json:"automationAccountName" tf:"automation_account_name"`
 
-	JobScheduleId *string `json:"jobScheduleId,omitempty" tf:"job_schedule_id"`
+	JobScheduleID *string `json:"jobScheduleId,omitempty" tf:"job_schedule_id"`
 
 	Parameters map[string]string `json:"parameters,omitempty" tf:"parameters"`
 

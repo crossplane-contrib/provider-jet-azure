@@ -43,7 +43,7 @@ type DevspaceControllerParameters struct {
 
 	TargetContainerHostCredentialsBase64 string `json:"targetContainerHostCredentialsBase64" tf:"target_container_host_credentials_base64"`
 
-	TargetContainerHostResourceId string `json:"targetContainerHostResourceId" tf:"target_container_host_resource_id"`
+	TargetContainerHostResourceID string `json:"targetContainerHostResourceId" tf:"target_container_host_resource_id"`
 }
 
 // DevspaceControllerSpec defines the desired state of DevspaceController

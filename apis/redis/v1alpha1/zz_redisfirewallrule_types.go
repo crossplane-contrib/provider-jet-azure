@@ -28,7 +28,7 @@ type RedisFirewallRuleObservation struct {
 }
 
 type RedisFirewallRuleParameters struct {
-	EndIp string `json:"endIp" tf:"end_ip"`
+	EndIP string `json:"endIp" tf:"end_ip"`
 
 	Name string `json:"name" tf:"name"`
 
@@ -36,7 +36,7 @@ type RedisFirewallRuleParameters struct {
 
 	ResourceGroupName string `json:"resourceGroupName" tf:"resource_group_name"`
 
-	StartIp string `json:"startIp" tf:"start_ip"`
+	StartIP string `json:"startIp" tf:"start_ip"`
 }
 
 // RedisFirewallRuleSpec defines the desired state of RedisFirewallRule

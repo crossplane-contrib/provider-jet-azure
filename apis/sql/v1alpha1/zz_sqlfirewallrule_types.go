@@ -28,7 +28,7 @@ type SqlFirewallRuleObservation struct {
 }
 
 type SqlFirewallRuleParameters struct {
-	EndIpAddress string `json:"endIpAddress" tf:"end_ip_address"`
+	EndIPAddress string `json:"endIpAddress" tf:"end_ip_address"`
 
 	Name string `json:"name" tf:"name"`
 
@@ -36,7 +36,7 @@ type SqlFirewallRuleParameters struct {
 
 	ServerName string `json:"serverName" tf:"server_name"`
 
-	StartIpAddress string `json:"startIpAddress" tf:"start_ip_address"`
+	StartIPAddress string `json:"startIpAddress" tf:"start_ip_address"`
 }
 
 // SqlFirewallRuleSpec defines the desired state of SqlFirewallRule

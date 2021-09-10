@@ -28,9 +28,9 @@ type NetworkInterfaceApplicationSecurityGroupAssociationObservation struct {
 }
 
 type NetworkInterfaceApplicationSecurityGroupAssociationParameters struct {
-	ApplicationSecurityGroupId string `json:"applicationSecurityGroupId" tf:"application_security_group_id"`
+	ApplicationSecurityGroupID string `json:"applicationSecurityGroupId" tf:"application_security_group_id"`
 
-	NetworkInterfaceId string `json:"networkInterfaceId" tf:"network_interface_id"`
+	NetworkInterfaceID string `json:"networkInterfaceId" tf:"network_interface_id"`
 }
 
 // NetworkInterfaceApplicationSecurityGroupAssociationSpec defines the desired state of NetworkInterfaceApplicationSecurityGroupAssociation

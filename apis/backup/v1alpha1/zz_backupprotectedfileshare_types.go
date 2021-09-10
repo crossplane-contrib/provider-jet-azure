@@ -28,7 +28,7 @@ type BackupProtectedFileShareObservation struct {
 }
 
 type BackupProtectedFileShareParameters struct {
-	BackupPolicyId string `json:"backupPolicyId" tf:"backup_policy_id"`
+	BackupPolicyID string `json:"backupPolicyId" tf:"backup_policy_id"`
 
 	RecoveryVaultName string `json:"recoveryVaultName" tf:"recovery_vault_name"`
 
@@ -36,7 +36,7 @@ type BackupProtectedFileShareParameters struct {
 
 	SourceFileShareName string `json:"sourceFileShareName" tf:"source_file_share_name"`
 
-	SourceStorageAccountId string `json:"sourceStorageAccountId" tf:"source_storage_account_id"`
+	SourceStorageAccountID string `json:"sourceStorageAccountId" tf:"source_storage_account_id"`
 }
 
 // BackupProtectedFileShareSpec defines the desired state of BackupProtectedFileShare

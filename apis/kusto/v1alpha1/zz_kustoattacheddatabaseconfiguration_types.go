@@ -31,7 +31,7 @@ type KustoAttachedDatabaseConfigurationObservation struct {
 type KustoAttachedDatabaseConfigurationParameters struct {
 	ClusterName string `json:"clusterName" tf:"cluster_name"`
 
-	ClusterResourceId string `json:"clusterResourceId" tf:"cluster_resource_id"`
+	ClusterResourceID string `json:"clusterResourceId" tf:"cluster_resource_id"`
 
 	DatabaseName string `json:"databaseName" tf:"database_name"`
 

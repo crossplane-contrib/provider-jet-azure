@@ -28,17 +28,17 @@ type ExpressRouteCircuitConnectionObservation struct {
 }
 
 type ExpressRouteCircuitConnectionParameters struct {
-	AddressPrefixIpv4 string `json:"addressPrefixIpv4" tf:"address_prefix_ipv4"`
+	AddressPrefixIPv4 string `json:"addressPrefixIpv4" tf:"address_prefix_ipv4"`
 
-	AddressPrefixIpv6 *string `json:"addressPrefixIpv6,omitempty" tf:"address_prefix_ipv6"`
+	AddressPrefixIPv6 *string `json:"addressPrefixIpv6,omitempty" tf:"address_prefix_ipv6"`
 
 	AuthorizationKey *string `json:"authorizationKey,omitempty" tf:"authorization_key"`
 
 	Name string `json:"name" tf:"name"`
 
-	PeerPeeringId string `json:"peerPeeringId" tf:"peer_peering_id"`
+	PeerPeeringID string `json:"peerPeeringId" tf:"peer_peering_id"`
 
-	PeeringId string `json:"peeringId" tf:"peering_id"`
+	PeeringID string `json:"peeringId" tf:"peering_id"`
 }
 
 // ExpressRouteCircuitConnectionSpec defines the desired state of ExpressRouteCircuitConnection

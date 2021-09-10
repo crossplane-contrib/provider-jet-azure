@@ -32,9 +32,9 @@ type VirtualHubBgpConnectionParameters struct {
 
 	PeerAsn int64 `json:"peerAsn" tf:"peer_asn"`
 
-	PeerIp string `json:"peerIp" tf:"peer_ip"`
+	PeerIP string `json:"peerIp" tf:"peer_ip"`
 
-	VirtualHubId string `json:"virtualHubId" tf:"virtual_hub_id"`
+	VirtualHubID string `json:"virtualHubId" tf:"virtual_hub_id"`
 }
 
 // VirtualHubBgpConnectionSpec defines the desired state of VirtualHubBgpConnection

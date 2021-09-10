@@ -24,49 +24,49 @@ import (
 	"k8s.io/apimachinery/pkg/runtime/schema"
 )
 
-type IpConfigurationObservation struct {
+type IPConfigurationObservation struct {
 }
 
-type IpConfigurationParameters struct {
+type IPConfigurationParameters struct {
 	Name string `json:"name" tf:"name"`
 
 	Primary *bool `json:"primary,omitempty" tf:"primary"`
 
-	PrivateIpAddress *string `json:"privateIpAddress,omitempty" tf:"private_ip_address"`
+	PrivateIPAddress *string `json:"privateIpAddress,omitempty" tf:"private_ip_address"`
 
-	PrivateIpAddressAllocation string `json:"privateIpAddressAllocation" tf:"private_ip_address_allocation"`
+	PrivateIPAddressAllocation string `json:"privateIpAddressAllocation" tf:"private_ip_address_allocation"`
 
-	PrivateIpAddressVersion *string `json:"privateIpAddressVersion,omitempty" tf:"private_ip_address_version"`
+	PrivateIPAddressVersion *string `json:"privateIpAddressVersion,omitempty" tf:"private_ip_address_version"`
 
-	PublicIpAddressId *string `json:"publicIpAddressId,omitempty" tf:"public_ip_address_id"`
+	PublicIPAddressID *string `json:"publicIpAddressId,omitempty" tf:"public_ip_address_id"`
 
-	SubnetId *string `json:"subnetId,omitempty" tf:"subnet_id"`
+	SubnetID *string `json:"subnetId,omitempty" tf:"subnet_id"`
 }
 
 type NetworkInterfaceObservation struct {
-	AppliedDnsServers []string `json:"appliedDnsServers" tf:"applied_dns_servers"`
+	AppliedDNSServers []string `json:"appliedDnsServers" tf:"applied_dns_servers"`
 
 	InternalDomainNameSuffix string `json:"internalDomainNameSuffix" tf:"internal_domain_name_suffix"`
 
 	MacAddress string `json:"macAddress" tf:"mac_address"`
 
-	PrivateIpAddress string `json:"privateIpAddress" tf:"private_ip_address"`
+	PrivateIPAddress string `json:"privateIpAddress" tf:"private_ip_address"`
 
-	PrivateIpAddresses []string `json:"privateIpAddresses" tf:"private_ip_addresses"`
+	PrivateIPAddresses []string `json:"privateIpAddresses" tf:"private_ip_addresses"`
 
-	VirtualMachineId string `json:"virtualMachineId" tf:"virtual_machine_id"`
+	VirtualMachineID string `json:"virtualMachineId" tf:"virtual_machine_id"`
 }
 
 type NetworkInterfaceParameters struct {
-	DnsServers []string `json:"dnsServers,omitempty" tf:"dns_servers"`
+	DNSServers []string `json:"dnsServers,omitempty" tf:"dns_servers"`
 
 	EnableAcceleratedNetworking *bool `json:"enableAcceleratedNetworking,omitempty" tf:"enable_accelerated_networking"`
 
-	EnableIpForwarding *bool `json:"enableIpForwarding,omitempty" tf:"enable_ip_forwarding"`
+	EnableIPForwarding *bool `json:"enableIpForwarding,omitempty" tf:"enable_ip_forwarding"`
 
-	InternalDnsNameLabel *string `json:"internalDnsNameLabel,omitempty" tf:"internal_dns_name_label"`
+	IPConfiguration []IPConfigurationParameters `json:"ipConfiguration" tf:"ip_configuration"`
 
-	IpConfiguration []IpConfigurationParameters `json:"ipConfiguration" tf:"ip_configuration"`
+	InternalDNSNameLabel *string `json:"internalDnsNameLabel,omitempty" tf:"internal_dns_name_label"`
 
 	Location string `json:"location" tf:"location"`
 

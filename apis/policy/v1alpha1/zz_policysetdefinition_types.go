@@ -28,7 +28,7 @@ type PolicyDefinitionGroupObservation struct {
 }
 
 type PolicyDefinitionGroupParameters struct {
-	AdditionalMetadataResourceId *string `json:"additionalMetadataResourceId,omitempty" tf:"additional_metadata_resource_id"`
+	AdditionalMetadataResourceID *string `json:"additionalMetadataResourceId,omitempty" tf:"additional_metadata_resource_id"`
 
 	Category *string `json:"category,omitempty" tf:"category"`
 
@@ -47,11 +47,11 @@ type PolicyDefinitionReferenceParameters struct {
 
 	Parameters map[string]string `json:"parameters,omitempty" tf:"parameters"`
 
-	PolicyDefinitionId string `json:"policyDefinitionId" tf:"policy_definition_id"`
+	PolicyDefinitionID string `json:"policyDefinitionId" tf:"policy_definition_id"`
 
 	PolicyGroupNames []string `json:"policyGroupNames,omitempty" tf:"policy_group_names"`
 
-	ReferenceId *string `json:"referenceId,omitempty" tf:"reference_id"`
+	ReferenceID *string `json:"referenceId,omitempty" tf:"reference_id"`
 }
 
 type PolicySetDefinitionObservation struct {
@@ -62,7 +62,7 @@ type PolicySetDefinitionParameters struct {
 
 	DisplayName string `json:"displayName" tf:"display_name"`
 
-	ManagementGroupId *string `json:"managementGroupId,omitempty" tf:"management_group_id"`
+	ManagementGroupID *string `json:"managementGroupId,omitempty" tf:"management_group_id"`
 
 	ManagementGroupName *string `json:"managementGroupName,omitempty" tf:"management_group_name"`
 

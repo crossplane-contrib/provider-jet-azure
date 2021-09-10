@@ -25,9 +25,9 @@ import (
 )
 
 type IdentityObservation struct {
-	PrincipalId string `json:"principalId" tf:"principal_id"`
+	PrincipalID string `json:"principalId" tf:"principal_id"`
 
-	TenantId string `json:"tenantId" tf:"tenant_id"`
+	TenantID string `json:"tenantId" tf:"tenant_id"`
 }
 
 type IdentityParameters struct {
@@ -46,11 +46,11 @@ type PersistentDiskParameters struct {
 type SpringCloudAppObservation struct {
 	Fqdn string `json:"fqdn" tf:"fqdn"`
 
-	Url string `json:"url" tf:"url"`
+	URL string `json:"url" tf:"url"`
 }
 
 type SpringCloudAppParameters struct {
-	HttpsOnly *bool `json:"httpsOnly,omitempty" tf:"https_only"`
+	HTTPSOnly *bool `json:"httpsOnly,omitempty" tf:"https_only"`
 
 	Identity []IdentityParameters `json:"identity,omitempty" tf:"identity"`
 
@@ -64,7 +64,7 @@ type SpringCloudAppParameters struct {
 
 	ServiceName string `json:"serviceName" tf:"service_name"`
 
-	TlsEnabled *bool `json:"tlsEnabled,omitempty" tf:"tls_enabled"`
+	TLSEnabled *bool `json:"tlsEnabled,omitempty" tf:"tls_enabled"`
 }
 
 // SpringCloudAppSpec defines the desired state of SpringCloudApp

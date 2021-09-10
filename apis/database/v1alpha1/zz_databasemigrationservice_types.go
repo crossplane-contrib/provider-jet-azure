@@ -36,7 +36,7 @@ type DatabaseMigrationServiceParameters struct {
 
 	SkuName string `json:"skuName" tf:"sku_name"`
 
-	SubnetId string `json:"subnetId" tf:"subnet_id"`
+	SubnetID string `json:"subnetId" tf:"subnet_id"`
 
 	Tags map[string]string `json:"tags,omitempty" tf:"tags"`
 }

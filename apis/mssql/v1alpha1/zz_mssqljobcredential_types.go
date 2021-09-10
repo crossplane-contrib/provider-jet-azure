@@ -28,7 +28,7 @@ type MssqlJobCredentialObservation struct {
 }
 
 type MssqlJobCredentialParameters struct {
-	JobAgentId string `json:"jobAgentId" tf:"job_agent_id"`
+	JobAgentID string `json:"jobAgentId" tf:"job_agent_id"`
 
 	Name string `json:"name" tf:"name"`
 

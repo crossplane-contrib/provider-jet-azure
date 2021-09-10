@@ -111,25 +111,25 @@ func (in *PublicIpParameters) DeepCopyInto(out *PublicIpParameters) {
 		*out = new(string)
 		**out = **in
 	}
-	if in.IdleTimeoutInMinutes != nil {
-		in, out := &in.IdleTimeoutInMinutes, &out.IdleTimeoutInMinutes
-		*out = new(int64)
-		**out = **in
-	}
-	if in.IpTags != nil {
-		in, out := &in.IpTags, &out.IpTags
+	if in.IPTags != nil {
+		in, out := &in.IPTags, &out.IPTags
 		*out = make(map[string]string, len(*in))
 		for key, val := range *in {
 			(*out)[key] = val
 		}
 	}
-	if in.IpVersion != nil {
-		in, out := &in.IpVersion, &out.IpVersion
+	if in.IPVersion != nil {
+		in, out := &in.IPVersion, &out.IPVersion
 		*out = new(string)
 		**out = **in
 	}
-	if in.PublicIpPrefixId != nil {
-		in, out := &in.PublicIpPrefixId, &out.PublicIpPrefixId
+	if in.IdleTimeoutInMinutes != nil {
+		in, out := &in.IdleTimeoutInMinutes, &out.IdleTimeoutInMinutes
+		*out = new(int64)
+		**out = **in
+	}
+	if in.PublicIPPrefixID != nil {
+		in, out := &in.PublicIPPrefixID, &out.PublicIPPrefixID
 		*out = new(string)
 		**out = **in
 	}

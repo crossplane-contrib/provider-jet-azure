@@ -25,11 +25,11 @@ import (
 )
 
 type AdditionalLocationObservation struct {
-	GatewayRegionalUrl string `json:"gatewayRegionalUrl" tf:"gateway_regional_url"`
+	GatewayRegionalURL string `json:"gatewayRegionalUrl" tf:"gateway_regional_url"`
 
-	PrivateIpAddresses []string `json:"privateIpAddresses" tf:"private_ip_addresses"`
+	PrivateIPAddresses []string `json:"privateIpAddresses" tf:"private_ip_addresses"`
 
-	PublicIpAddresses []string `json:"publicIpAddresses" tf:"public_ip_addresses"`
+	PublicIPAddresses []string `json:"publicIpAddresses" tf:"public_ip_addresses"`
 }
 
 type AdditionalLocationParameters struct {
@@ -39,21 +39,21 @@ type AdditionalLocationParameters struct {
 }
 
 type ApiManagementObservation struct {
-	DeveloperPortalUrl string `json:"developerPortalUrl" tf:"developer_portal_url"`
+	DeveloperPortalURL string `json:"developerPortalUrl" tf:"developer_portal_url"`
 
-	GatewayRegionalUrl string `json:"gatewayRegionalUrl" tf:"gateway_regional_url"`
+	GatewayRegionalURL string `json:"gatewayRegionalUrl" tf:"gateway_regional_url"`
 
-	GatewayUrl string `json:"gatewayUrl" tf:"gateway_url"`
+	GatewayURL string `json:"gatewayUrl" tf:"gateway_url"`
 
-	ManagementApiUrl string `json:"managementApiUrl" tf:"management_api_url"`
+	ManagementAPIURL string `json:"managementApiUrl" tf:"management_api_url"`
 
-	PortalUrl string `json:"portalUrl" tf:"portal_url"`
+	PortalURL string `json:"portalUrl" tf:"portal_url"`
 
-	PrivateIpAddresses []string `json:"privateIpAddresses" tf:"private_ip_addresses"`
+	PrivateIPAddresses []string `json:"privateIpAddresses" tf:"private_ip_addresses"`
 
-	PublicIpAddresses []string `json:"publicIpAddresses" tf:"public_ip_addresses"`
+	PublicIPAddresses []string `json:"publicIpAddresses" tf:"public_ip_addresses"`
 
-	ScmUrl string `json:"scmUrl" tf:"scm_url"`
+	ScmURL string `json:"scmUrl" tf:"scm_url"`
 }
 
 type ApiManagementParameters struct {
@@ -71,7 +71,7 @@ type ApiManagementParameters struct {
 
 	Location string `json:"location" tf:"location"`
 
-	MinApiVersion *string `json:"minApiVersion,omitempty" tf:"min_api_version"`
+	MinAPIVersion *string `json:"minApiVersion,omitempty" tf:"min_api_version"`
 
 	Name string `json:"name" tf:"name"`
 
@@ -110,7 +110,7 @@ type ApiManagementVirtualNetworkConfigurationObservation struct {
 }
 
 type ApiManagementVirtualNetworkConfigurationParameters struct {
-	SubnetId string `json:"subnetId" tf:"subnet_id"`
+	SubnetID string `json:"subnetId" tf:"subnet_id"`
 }
 
 type CertificateObservation struct {
@@ -144,11 +144,11 @@ type DeveloperPortalParameters struct {
 
 	HostName string `json:"hostName" tf:"host_name"`
 
-	KeyVaultId *string `json:"keyVaultId,omitempty" tf:"key_vault_id"`
+	KeyVaultID *string `json:"keyVaultId,omitempty" tf:"key_vault_id"`
 
 	NegotiateClientCertificate *bool `json:"negotiateClientCertificate,omitempty" tf:"negotiate_client_certificate"`
 
-	SslKeyvaultIdentityClientId *string `json:"sslKeyvaultIdentityClientId,omitempty" tf:"ssl_keyvault_identity_client_id"`
+	SslKeyvaultIdentityClientID *string `json:"sslKeyvaultIdentityClientId,omitempty" tf:"ssl_keyvault_identity_client_id"`
 }
 
 type HostnameConfigurationObservation struct {
@@ -167,9 +167,9 @@ type HostnameConfigurationParameters struct {
 }
 
 type IdentityObservation struct {
-	PrincipalId string `json:"principalId" tf:"principal_id"`
+	PrincipalID string `json:"principalId" tf:"principal_id"`
 
-	TenantId string `json:"tenantId" tf:"tenant_id"`
+	TenantID string `json:"tenantId" tf:"tenant_id"`
 }
 
 type IdentityParameters struct {
@@ -193,20 +193,20 @@ type ManagementParameters struct {
 
 	HostName string `json:"hostName" tf:"host_name"`
 
-	KeyVaultId *string `json:"keyVaultId,omitempty" tf:"key_vault_id"`
+	KeyVaultID *string `json:"keyVaultId,omitempty" tf:"key_vault_id"`
 
 	NegotiateClientCertificate *bool `json:"negotiateClientCertificate,omitempty" tf:"negotiate_client_certificate"`
 
-	SslKeyvaultIdentityClientId *string `json:"sslKeyvaultIdentityClientId,omitempty" tf:"ssl_keyvault_identity_client_id"`
+	SslKeyvaultIdentityClientID *string `json:"sslKeyvaultIdentityClientId,omitempty" tf:"ssl_keyvault_identity_client_id"`
 }
 
 type PolicyObservation struct {
 }
 
 type PolicyParameters struct {
-	XmlContent *string `json:"xmlContent,omitempty" tf:"xml_content"`
+	XMLContent *string `json:"xmlContent,omitempty" tf:"xml_content"`
 
-	XmlLink *string `json:"xmlLink,omitempty" tf:"xml_link"`
+	XMLLink *string `json:"xmlLink,omitempty" tf:"xml_link"`
 }
 
 type PortalObservation struct {
@@ -224,11 +224,11 @@ type PortalParameters struct {
 
 	HostName string `json:"hostName" tf:"host_name"`
 
-	KeyVaultId *string `json:"keyVaultId,omitempty" tf:"key_vault_id"`
+	KeyVaultID *string `json:"keyVaultId,omitempty" tf:"key_vault_id"`
 
 	NegotiateClientCertificate *bool `json:"negotiateClientCertificate,omitempty" tf:"negotiate_client_certificate"`
 
-	SslKeyvaultIdentityClientId *string `json:"sslKeyvaultIdentityClientId,omitempty" tf:"ssl_keyvault_identity_client_id"`
+	SslKeyvaultIdentityClientID *string `json:"sslKeyvaultIdentityClientId,omitempty" tf:"ssl_keyvault_identity_client_id"`
 }
 
 type ProtocolsObservation struct {
@@ -255,11 +255,11 @@ type ProxyParameters struct {
 
 	HostName string `json:"hostName" tf:"host_name"`
 
-	KeyVaultId *string `json:"keyVaultId,omitempty" tf:"key_vault_id"`
+	KeyVaultID *string `json:"keyVaultId,omitempty" tf:"key_vault_id"`
 
 	NegotiateClientCertificate *bool `json:"negotiateClientCertificate,omitempty" tf:"negotiate_client_certificate"`
 
-	SslKeyvaultIdentityClientId *string `json:"sslKeyvaultIdentityClientId,omitempty" tf:"ssl_keyvault_identity_client_id"`
+	SslKeyvaultIdentityClientID *string `json:"sslKeyvaultIdentityClientId,omitempty" tf:"ssl_keyvault_identity_client_id"`
 }
 
 type ScmObservation struct {
@@ -277,11 +277,11 @@ type ScmParameters struct {
 
 	HostName string `json:"hostName" tf:"host_name"`
 
-	KeyVaultId *string `json:"keyVaultId,omitempty" tf:"key_vault_id"`
+	KeyVaultID *string `json:"keyVaultId,omitempty" tf:"key_vault_id"`
 
 	NegotiateClientCertificate *bool `json:"negotiateClientCertificate,omitempty" tf:"negotiate_client_certificate"`
 
-	SslKeyvaultIdentityClientId *string `json:"sslKeyvaultIdentityClientId,omitempty" tf:"ssl_keyvault_identity_client_id"`
+	SslKeyvaultIdentityClientID *string `json:"sslKeyvaultIdentityClientId,omitempty" tf:"ssl_keyvault_identity_client_id"`
 }
 
 type SecurityObservation struct {
@@ -302,23 +302,23 @@ type SecurityParameters struct {
 
 	EnableTripleDesCiphers *bool `json:"enableTripleDesCiphers,omitempty" tf:"enable_triple_des_ciphers"`
 
-	TlsEcdheEcdsaWithAes128CbcShaCiphersEnabled *bool `json:"tlsEcdheEcdsaWithAes128CbcShaCiphersEnabled,omitempty" tf:"tls_ecdhe_ecdsa_with_aes128_cbc_sha_ciphers_enabled"`
+	TLSEcdheEcdsaWithAes128CbcShaCiphersEnabled *bool `json:"tlsEcdheEcdsaWithAes128CbcShaCiphersEnabled,omitempty" tf:"tls_ecdhe_ecdsa_with_aes128_cbc_sha_ciphers_enabled"`
 
-	TlsEcdheEcdsaWithAes256CbcShaCiphersEnabled *bool `json:"tlsEcdheEcdsaWithAes256CbcShaCiphersEnabled,omitempty" tf:"tls_ecdhe_ecdsa_with_aes256_cbc_sha_ciphers_enabled"`
+	TLSEcdheEcdsaWithAes256CbcShaCiphersEnabled *bool `json:"tlsEcdheEcdsaWithAes256CbcShaCiphersEnabled,omitempty" tf:"tls_ecdhe_ecdsa_with_aes256_cbc_sha_ciphers_enabled"`
 
-	TlsEcdheRsaWithAes128CbcShaCiphersEnabled *bool `json:"tlsEcdheRsaWithAes128CbcShaCiphersEnabled,omitempty" tf:"tls_ecdhe_rsa_with_aes128_cbc_sha_ciphers_enabled"`
+	TLSEcdheRsaWithAes128CbcShaCiphersEnabled *bool `json:"tlsEcdheRsaWithAes128CbcShaCiphersEnabled,omitempty" tf:"tls_ecdhe_rsa_with_aes128_cbc_sha_ciphers_enabled"`
 
-	TlsEcdheRsaWithAes256CbcShaCiphersEnabled *bool `json:"tlsEcdheRsaWithAes256CbcShaCiphersEnabled,omitempty" tf:"tls_ecdhe_rsa_with_aes256_cbc_sha_ciphers_enabled"`
+	TLSEcdheRsaWithAes256CbcShaCiphersEnabled *bool `json:"tlsEcdheRsaWithAes256CbcShaCiphersEnabled,omitempty" tf:"tls_ecdhe_rsa_with_aes256_cbc_sha_ciphers_enabled"`
 
-	TlsRsaWithAes128CbcSha256CiphersEnabled *bool `json:"tlsRsaWithAes128CbcSha256CiphersEnabled,omitempty" tf:"tls_rsa_with_aes128_cbc_sha256_ciphers_enabled"`
+	TLSRsaWithAes128CbcSha256CiphersEnabled *bool `json:"tlsRsaWithAes128CbcSha256CiphersEnabled,omitempty" tf:"tls_rsa_with_aes128_cbc_sha256_ciphers_enabled"`
 
-	TlsRsaWithAes128CbcShaCiphersEnabled *bool `json:"tlsRsaWithAes128CbcShaCiphersEnabled,omitempty" tf:"tls_rsa_with_aes128_cbc_sha_ciphers_enabled"`
+	TLSRsaWithAes128CbcShaCiphersEnabled *bool `json:"tlsRsaWithAes128CbcShaCiphersEnabled,omitempty" tf:"tls_rsa_with_aes128_cbc_sha_ciphers_enabled"`
 
-	TlsRsaWithAes128GcmSha256CiphersEnabled *bool `json:"tlsRsaWithAes128GcmSha256CiphersEnabled,omitempty" tf:"tls_rsa_with_aes128_gcm_sha256_ciphers_enabled"`
+	TLSRsaWithAes128GcmSha256CiphersEnabled *bool `json:"tlsRsaWithAes128GcmSha256CiphersEnabled,omitempty" tf:"tls_rsa_with_aes128_gcm_sha256_ciphers_enabled"`
 
-	TlsRsaWithAes256CbcSha256CiphersEnabled *bool `json:"tlsRsaWithAes256CbcSha256CiphersEnabled,omitempty" tf:"tls_rsa_with_aes256_cbc_sha256_ciphers_enabled"`
+	TLSRsaWithAes256CbcSha256CiphersEnabled *bool `json:"tlsRsaWithAes256CbcSha256CiphersEnabled,omitempty" tf:"tls_rsa_with_aes256_cbc_sha256_ciphers_enabled"`
 
-	TlsRsaWithAes256CbcShaCiphersEnabled *bool `json:"tlsRsaWithAes256CbcShaCiphersEnabled,omitempty" tf:"tls_rsa_with_aes256_cbc_sha_ciphers_enabled"`
+	TLSRsaWithAes256CbcShaCiphersEnabled *bool `json:"tlsRsaWithAes256CbcShaCiphersEnabled,omitempty" tf:"tls_rsa_with_aes256_cbc_sha_ciphers_enabled"`
 
 	TripleDesCiphersEnabled *bool `json:"tripleDesCiphersEnabled,omitempty" tf:"triple_des_ciphers_enabled"`
 }
@@ -344,7 +344,7 @@ type TenantAccessObservation struct {
 
 	SecondaryKey string `json:"secondaryKey" tf:"secondary_key"`
 
-	TenantId string `json:"tenantId" tf:"tenant_id"`
+	TenantID string `json:"tenantId" tf:"tenant_id"`
 }
 
 type TenantAccessParameters struct {
@@ -366,7 +366,7 @@ type VirtualNetworkConfigurationObservation struct {
 }
 
 type VirtualNetworkConfigurationParameters struct {
-	SubnetId string `json:"subnetId" tf:"subnet_id"`
+	SubnetID string `json:"subnetId" tf:"subnet_id"`
 }
 
 // ApiManagementSpec defines the desired state of ApiManagement

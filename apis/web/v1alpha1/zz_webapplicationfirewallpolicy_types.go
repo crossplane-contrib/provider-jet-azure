@@ -119,7 +119,7 @@ type RuleGroupOverrideParameters struct {
 }
 
 type WebApplicationFirewallPolicyObservation struct {
-	HttpListenerIds []string `json:"httpListenerIds" tf:"http_listener_ids"`
+	HTTPListenerIds []string `json:"httpListenerIds" tf:"http_listener_ids"`
 
 	PathBasedRuleIds []string `json:"pathBasedRuleIds" tf:"path_based_rule_ids"`
 }

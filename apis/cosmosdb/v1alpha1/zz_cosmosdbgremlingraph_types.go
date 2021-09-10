@@ -61,7 +61,7 @@ type CosmosdbGremlinGraphParameters struct {
 
 	DatabaseName string `json:"databaseName" tf:"database_name"`
 
-	DefaultTtl *int64 `json:"defaultTtl,omitempty" tf:"default_ttl"`
+	DefaultTTL *int64 `json:"defaultTtl,omitempty" tf:"default_ttl"`
 
 	IndexPolicy []IndexPolicyParameters `json:"indexPolicy,omitempty" tf:"index_policy"`
 

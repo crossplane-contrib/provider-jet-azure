@@ -49,7 +49,7 @@ type DataFactoryLinkedServiceAzureDatabricksParameters struct {
 
 	Description *string `json:"description,omitempty" tf:"description"`
 
-	ExistingClusterId *string `json:"existingClusterId,omitempty" tf:"existing_cluster_id"`
+	ExistingClusterID *string `json:"existingClusterId,omitempty" tf:"existing_cluster_id"`
 
 	InstancePool []InstancePoolParameters `json:"instancePool,omitempty" tf:"instance_pool"`
 
@@ -57,7 +57,7 @@ type DataFactoryLinkedServiceAzureDatabricksParameters struct {
 
 	KeyVaultPassword []DataFactoryLinkedServiceAzureDatabricksKeyVaultPasswordParameters `json:"keyVaultPassword,omitempty" tf:"key_vault_password"`
 
-	MsiWorkSpaceResourceId *string `json:"msiWorkSpaceResourceId,omitempty" tf:"msi_work_space_resource_id"`
+	MsiWorkSpaceResourceID *string `json:"msiWorkSpaceResourceId,omitempty" tf:"msi_work_space_resource_id"`
 
 	Name string `json:"name" tf:"name"`
 
@@ -74,7 +74,7 @@ type InstancePoolObservation struct {
 type InstancePoolParameters struct {
 	ClusterVersion string `json:"clusterVersion" tf:"cluster_version"`
 
-	InstancePoolId string `json:"instancePoolId" tf:"instance_pool_id"`
+	InstancePoolID string `json:"instancePoolId" tf:"instance_pool_id"`
 
 	MaxNumberOfWorkers *int64 `json:"maxNumberOfWorkers,omitempty" tf:"max_number_of_workers"`
 

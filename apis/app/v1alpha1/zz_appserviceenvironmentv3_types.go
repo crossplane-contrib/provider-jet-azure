@@ -34,23 +34,23 @@ type AppServiceEnvironmentV3ClusterSettingParameters struct {
 }
 
 type AppServiceEnvironmentV3Observation struct {
-	DnsSuffix string `json:"dnsSuffix" tf:"dns_suffix"`
+	DNSSuffix string `json:"dnsSuffix" tf:"dns_suffix"`
 
-	ExternalInboundIpAddresses []string `json:"externalInboundIpAddresses" tf:"external_inbound_ip_addresses"`
+	ExternalInboundIPAddresses []string `json:"externalInboundIpAddresses" tf:"external_inbound_ip_addresses"`
+
+	IPSslAddressCount int64 `json:"ipSslAddressCount" tf:"ip_ssl_address_count"`
 
 	InboundNetworkDependencies []InboundNetworkDependenciesObservation `json:"inboundNetworkDependencies" tf:"inbound_network_dependencies"`
 
-	InternalInboundIpAddresses []string `json:"internalInboundIpAddresses" tf:"internal_inbound_ip_addresses"`
+	InternalInboundIPAddresses []string `json:"internalInboundIpAddresses" tf:"internal_inbound_ip_addresses"`
 
-	IpSslAddressCount int64 `json:"ipSslAddressCount" tf:"ip_ssl_address_count"`
-
-	LinuxOutboundIpAddresses []string `json:"linuxOutboundIpAddresses" tf:"linux_outbound_ip_addresses"`
+	LinuxOutboundIPAddresses []string `json:"linuxOutboundIpAddresses" tf:"linux_outbound_ip_addresses"`
 
 	Location string `json:"location" tf:"location"`
 
 	PricingTier string `json:"pricingTier" tf:"pricing_tier"`
 
-	WindowsOutboundIpAddresses []string `json:"windowsOutboundIpAddresses" tf:"windows_outbound_ip_addresses"`
+	WindowsOutboundIPAddresses []string `json:"windowsOutboundIpAddresses" tf:"windows_outbound_ip_addresses"`
 }
 
 type AppServiceEnvironmentV3Parameters struct {
@@ -66,7 +66,7 @@ type AppServiceEnvironmentV3Parameters struct {
 
 	ResourceGroupName string `json:"resourceGroupName" tf:"resource_group_name"`
 
-	SubnetId string `json:"subnetId" tf:"subnet_id"`
+	SubnetID string `json:"subnetId" tf:"subnet_id"`
 
 	Tags map[string]string `json:"tags,omitempty" tf:"tags"`
 
@@ -76,7 +76,7 @@ type AppServiceEnvironmentV3Parameters struct {
 type InboundNetworkDependenciesObservation struct {
 	Description string `json:"description" tf:"description"`
 
-	IpAddresses []string `json:"ipAddresses" tf:"ip_addresses"`
+	IPAddresses []string `json:"ipAddresses" tf:"ip_addresses"`
 
 	Ports []string `json:"ports" tf:"ports"`
 }

@@ -73,7 +73,7 @@ type SynapseSparkPoolParameters struct {
 
 	SparkVersion *string `json:"sparkVersion,omitempty" tf:"spark_version"`
 
-	SynapseWorkspaceId string `json:"synapseWorkspaceId" tf:"synapse_workspace_id"`
+	SynapseWorkspaceID string `json:"synapseWorkspaceId" tf:"synapse_workspace_id"`
 
 	Tags map[string]string `json:"tags,omitempty" tf:"tags"`
 }

@@ -413,8 +413,8 @@ func (in *DevTestLinuxVirtualMachineParameters) DeepCopyInto(out *DevTestLinuxVi
 		*out = new(bool)
 		**out = **in
 	}
-	if in.DisallowPublicIpAddress != nil {
-		in, out := &in.DisallowPublicIpAddress, &out.DisallowPublicIpAddress
+	if in.DisallowPublicIPAddress != nil {
+		in, out := &in.DisallowPublicIPAddress, &out.DisallowPublicIPAddress
 		*out = new(bool)
 		**out = **in
 	}
@@ -438,8 +438,8 @@ func (in *DevTestLinuxVirtualMachineParameters) DeepCopyInto(out *DevTestLinuxVi
 		*out = new(string)
 		**out = **in
 	}
-	if in.SshKey != nil {
-		in, out := &in.SshKey, &out.SshKey
+	if in.SSHKey != nil {
+		in, out := &in.SSHKey, &out.SSHKey
 		*out = new(string)
 		**out = **in
 	}
@@ -723,8 +723,8 @@ func (in *DevTestScheduleNotificationSettingsParameters) DeepCopyInto(out *DevTe
 		*out = new(int64)
 		**out = **in
 	}
-	if in.WebhookUrl != nil {
-		in, out := &in.WebhookUrl, &out.WebhookUrl
+	if in.WebhookURL != nil {
+		in, out := &in.WebhookURL, &out.WebhookURL
 		*out = new(string)
 		**out = **in
 	}
@@ -1124,8 +1124,8 @@ func (in *DevTestWindowsVirtualMachineParameters) DeepCopyInto(out *DevTestWindo
 		*out = new(bool)
 		**out = **in
 	}
-	if in.DisallowPublicIpAddress != nil {
-		in, out := &in.DisallowPublicIpAddress, &out.DisallowPublicIpAddress
+	if in.DisallowPublicIPAddress != nil {
+		in, out := &in.DisallowPublicIPAddress, &out.DisallowPublicIPAddress
 		*out = new(bool)
 		**out = **in
 	}
@@ -1315,8 +1315,8 @@ func (in *NotificationSettingsParameters) DeepCopyInto(out *NotificationSettings
 		*out = new(int64)
 		**out = **in
 	}
-	if in.WebhookUrl != nil {
-		in, out := &in.WebhookUrl, &out.WebhookUrl
+	if in.WebhookURL != nil {
+		in, out := &in.WebhookURL, &out.WebhookURL
 		*out = new(string)
 		**out = **in
 	}
@@ -1355,8 +1355,8 @@ func (in *SubnetParameters) DeepCopyInto(out *SubnetParameters) {
 		*out = new(string)
 		**out = **in
 	}
-	if in.UsePublicIpAddress != nil {
-		in, out := &in.UsePublicIpAddress, &out.UsePublicIpAddress
+	if in.UsePublicIPAddress != nil {
+		in, out := &in.UsePublicIPAddress, &out.UsePublicIPAddress
 		*out = new(string)
 		**out = **in
 	}

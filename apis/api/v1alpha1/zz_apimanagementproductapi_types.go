@@ -28,11 +28,11 @@ type ApiManagementProductApiObservation struct {
 }
 
 type ApiManagementProductApiParameters struct {
-	ApiManagementName string `json:"apiManagementName" tf:"api_management_name"`
+	APIManagementName string `json:"apiManagementName" tf:"api_management_name"`
 
-	ApiName string `json:"apiName" tf:"api_name"`
+	APIName string `json:"apiName" tf:"api_name"`
 
-	ProductId string `json:"productId" tf:"product_id"`
+	ProductID string `json:"productId" tf:"product_id"`
 
 	ResourceGroupName string `json:"resourceGroupName" tf:"resource_group_name"`
 }

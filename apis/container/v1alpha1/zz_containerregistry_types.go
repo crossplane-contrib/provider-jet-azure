@@ -25,9 +25,9 @@ import (
 )
 
 type ContainerRegistryIdentityObservation struct {
-	PrincipalId string `json:"principalId" tf:"principal_id"`
+	PrincipalID string `json:"principalId" tf:"principal_id"`
 
-	TenantId string `json:"tenantId" tf:"tenant_id"`
+	TenantID string `json:"tenantId" tf:"tenant_id"`
 }
 
 type ContainerRegistryIdentityParameters struct {
@@ -71,7 +71,7 @@ type ContainerRegistryParameters struct {
 
 	Sku *string `json:"sku,omitempty" tf:"sku"`
 
-	StorageAccountId *string `json:"storageAccountId,omitempty" tf:"storage_account_id"`
+	StorageAccountID *string `json:"storageAccountId,omitempty" tf:"storage_account_id"`
 
 	Tags map[string]string `json:"tags,omitempty" tf:"tags"`
 
@@ -86,9 +86,9 @@ type EncryptionObservation struct {
 type EncryptionParameters struct {
 	Enabled *bool `json:"enabled,omitempty" tf:"enabled"`
 
-	IdentityClientId string `json:"identityClientId" tf:"identity_client_id"`
+	IdentityClientID string `json:"identityClientId" tf:"identity_client_id"`
 
-	KeyVaultKeyId string `json:"keyVaultKeyId" tf:"key_vault_key_id"`
+	KeyVaultKeyID string `json:"keyVaultKeyId" tf:"key_vault_key_id"`
 }
 
 type GeoreplicationsObservation struct {
@@ -102,13 +102,13 @@ type GeoreplicationsParameters struct {
 	ZoneRedundancyEnabled *bool `json:"zoneRedundancyEnabled,omitempty" tf:"zone_redundancy_enabled"`
 }
 
-type IpRuleObservation struct {
+type IPRuleObservation struct {
 }
 
-type IpRuleParameters struct {
+type IPRuleParameters struct {
 	Action string `json:"action" tf:"action"`
 
-	IpRange string `json:"ipRange" tf:"ip_range"`
+	IPRange string `json:"ipRange" tf:"ip_range"`
 }
 
 type NetworkRuleSetObservation struct {
@@ -117,7 +117,7 @@ type NetworkRuleSetObservation struct {
 type NetworkRuleSetParameters struct {
 	DefaultAction *string `json:"defaultAction,omitempty" tf:"default_action"`
 
-	IpRule []IpRuleParameters `json:"ipRule,omitempty" tf:"ip_rule"`
+	IPRule []IPRuleParameters `json:"ipRule,omitempty" tf:"ip_rule"`
 
 	VirtualNetwork []VirtualNetworkParameters `json:"virtualNetwork,omitempty" tf:"virtual_network"`
 }
@@ -144,7 +144,7 @@ type VirtualNetworkObservation struct {
 type VirtualNetworkParameters struct {
 	Action string `json:"action" tf:"action"`
 
-	SubnetId string `json:"subnetId" tf:"subnet_id"`
+	SubnetID string `json:"subnetId" tf:"subnet_id"`
 }
 
 // ContainerRegistrySpec defines the desired state of ContainerRegistry

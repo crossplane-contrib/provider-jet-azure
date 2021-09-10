@@ -59,11 +59,11 @@ type DataFactoryLinkedServiceAzureSqlDatabaseParameters struct {
 
 	ResourceGroupName string `json:"resourceGroupName" tf:"resource_group_name"`
 
-	ServicePrincipalId *string `json:"servicePrincipalId,omitempty" tf:"service_principal_id"`
+	ServicePrincipalID *string `json:"servicePrincipalId,omitempty" tf:"service_principal_id"`
 
 	ServicePrincipalKey *string `json:"servicePrincipalKey,omitempty" tf:"service_principal_key"`
 
-	TenantId *string `json:"tenantId,omitempty" tf:"tenant_id"`
+	TenantID *string `json:"tenantId,omitempty" tf:"tenant_id"`
 
 	UseManagedIdentity *bool `json:"useManagedIdentity,omitempty" tf:"use_managed_identity"`
 }

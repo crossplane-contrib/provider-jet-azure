@@ -41,7 +41,7 @@ type PointToSiteVpnGatewayObservation struct {
 type PointToSiteVpnGatewayParameters struct {
 	ConnectionConfiguration []ConnectionConfigurationParameters `json:"connectionConfiguration" tf:"connection_configuration"`
 
-	DnsServers []string `json:"dnsServers,omitempty" tf:"dns_servers"`
+	DNSServers []string `json:"dnsServers,omitempty" tf:"dns_servers"`
 
 	Location string `json:"location" tf:"location"`
 
@@ -53,9 +53,9 @@ type PointToSiteVpnGatewayParameters struct {
 
 	Tags map[string]string `json:"tags,omitempty" tf:"tags"`
 
-	VirtualHubId string `json:"virtualHubId" tf:"virtual_hub_id"`
+	VirtualHubID string `json:"virtualHubId" tf:"virtual_hub_id"`
 
-	VpnServerConfigurationId string `json:"vpnServerConfigurationId" tf:"vpn_server_configuration_id"`
+	VpnServerConfigurationID string `json:"vpnServerConfigurationId" tf:"vpn_server_configuration_id"`
 }
 
 type PropagatedRouteTableObservation struct {
@@ -71,7 +71,7 @@ type RouteObservation struct {
 }
 
 type RouteParameters struct {
-	AssociatedRouteTableId string `json:"associatedRouteTableId" tf:"associated_route_table_id"`
+	AssociatedRouteTableID string `json:"associatedRouteTableId" tf:"associated_route_table_id"`
 
 	PropagatedRouteTable []PropagatedRouteTableParameters `json:"propagatedRouteTable,omitempty" tf:"propagated_route_table"`
 }

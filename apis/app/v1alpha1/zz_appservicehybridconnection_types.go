@@ -43,7 +43,7 @@ type AppServiceHybridConnectionParameters struct {
 
 	Port int64 `json:"port" tf:"port"`
 
-	RelayId string `json:"relayId" tf:"relay_id"`
+	RelayID string `json:"relayId" tf:"relay_id"`
 
 	ResourceGroupName string `json:"resourceGroupName" tf:"resource_group_name"`
 

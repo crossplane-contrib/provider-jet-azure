@@ -28,7 +28,7 @@ type ApiManagementAuthorizationServerObservation struct {
 }
 
 type ApiManagementAuthorizationServerParameters struct {
-	ApiManagementName string `json:"apiManagementName" tf:"api_management_name"`
+	APIManagementName string `json:"apiManagementName" tf:"api_management_name"`
 
 	AuthorizationEndpoint string `json:"authorizationEndpoint" tf:"authorization_endpoint"`
 
@@ -38,7 +38,7 @@ type ApiManagementAuthorizationServerParameters struct {
 
 	ClientAuthenticationMethod []string `json:"clientAuthenticationMethod,omitempty" tf:"client_authentication_method"`
 
-	ClientId string `json:"clientId" tf:"client_id"`
+	ClientID string `json:"clientId" tf:"client_id"`
 
 	ClientRegistrationEndpoint string `json:"clientRegistrationEndpoint" tf:"client_registration_endpoint"`
 

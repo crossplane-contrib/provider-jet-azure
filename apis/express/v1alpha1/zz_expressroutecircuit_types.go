@@ -37,7 +37,7 @@ type ExpressRouteCircuitParameters struct {
 
 	BandwidthInMbps *int64 `json:"bandwidthInMbps,omitempty" tf:"bandwidth_in_mbps"`
 
-	ExpressRoutePortId *string `json:"expressRoutePortId,omitempty" tf:"express_route_port_id"`
+	ExpressRoutePortID *string `json:"expressRoutePortId,omitempty" tf:"express_route_port_id"`
 
 	Location string `json:"location" tf:"location"`
 

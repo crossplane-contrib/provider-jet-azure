@@ -28,9 +28,9 @@ type ManagementGroupSubscriptionAssociationObservation struct {
 }
 
 type ManagementGroupSubscriptionAssociationParameters struct {
-	ManagementGroupId string `json:"managementGroupId" tf:"management_group_id"`
+	ManagementGroupID string `json:"managementGroupId" tf:"management_group_id"`
 
-	SubscriptionId string `json:"subscriptionId" tf:"subscription_id"`
+	SubscriptionID string `json:"subscriptionId" tf:"subscription_id"`
 }
 
 // ManagementGroupSubscriptionAssociationSpec defines the desired state of ManagementGroupSubscriptionAssociation

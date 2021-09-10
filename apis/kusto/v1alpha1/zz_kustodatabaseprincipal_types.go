@@ -25,7 +25,7 @@ import (
 )
 
 type KustoDatabasePrincipalObservation struct {
-	AppId string `json:"appId" tf:"app_id"`
+	AppID string `json:"appId" tf:"app_id"`
 
 	Email string `json:"email" tf:"email"`
 
@@ -35,13 +35,13 @@ type KustoDatabasePrincipalObservation struct {
 }
 
 type KustoDatabasePrincipalParameters struct {
-	ClientId string `json:"clientId" tf:"client_id"`
+	ClientID string `json:"clientId" tf:"client_id"`
 
 	ClusterName string `json:"clusterName" tf:"cluster_name"`
 
 	DatabaseName string `json:"databaseName" tf:"database_name"`
 
-	ObjectId string `json:"objectId" tf:"object_id"`
+	ObjectID string `json:"objectId" tf:"object_id"`
 
 	ResourceGroupName string `json:"resourceGroupName" tf:"resource_group_name"`
 

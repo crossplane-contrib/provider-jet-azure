@@ -31,7 +31,7 @@ type KeyVaultKeyObservation struct {
 
 	Version string `json:"version" tf:"version"`
 
-	VersionlessId string `json:"versionlessId" tf:"versionless_id"`
+	VersionlessID string `json:"versionlessId" tf:"versionless_id"`
 
 	X string `json:"x" tf:"x"`
 
@@ -49,7 +49,7 @@ type KeyVaultKeyParameters struct {
 
 	KeyType string `json:"keyType" tf:"key_type"`
 
-	KeyVaultId string `json:"keyVaultId" tf:"key_vault_id"`
+	KeyVaultID string `json:"keyVaultId" tf:"key_vault_id"`
 
 	Name string `json:"name" tf:"name"`
 

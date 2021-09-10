@@ -31,11 +31,11 @@ type DataShareDatasetKustoClusterObservation struct {
 }
 
 type DataShareDatasetKustoClusterParameters struct {
-	KustoClusterId string `json:"kustoClusterId" tf:"kusto_cluster_id"`
+	KustoClusterID string `json:"kustoClusterId" tf:"kusto_cluster_id"`
 
 	Name string `json:"name" tf:"name"`
 
-	ShareId string `json:"shareId" tf:"share_id"`
+	ShareID string `json:"shareId" tf:"share_id"`
 }
 
 // DataShareDatasetKustoClusterSpec defines the desired state of DataShareDatasetKustoCluster

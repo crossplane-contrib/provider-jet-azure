@@ -44,7 +44,7 @@ type DataFactoryLinkedServiceDataLakeStorageGen2Parameters struct {
 
 	ResourceGroupName string `json:"resourceGroupName" tf:"resource_group_name"`
 
-	ServicePrincipalId *string `json:"servicePrincipalId,omitempty" tf:"service_principal_id"`
+	ServicePrincipalID *string `json:"servicePrincipalId,omitempty" tf:"service_principal_id"`
 
 	ServicePrincipalKey *string `json:"servicePrincipalKey,omitempty" tf:"service_principal_key"`
 
@@ -52,7 +52,7 @@ type DataFactoryLinkedServiceDataLakeStorageGen2Parameters struct {
 
 	Tenant *string `json:"tenant,omitempty" tf:"tenant"`
 
-	Url string `json:"url" tf:"url"`
+	URL string `json:"url" tf:"url"`
 
 	UseManagedIdentity *bool `json:"useManagedIdentity,omitempty" tf:"use_managed_identity"`
 }

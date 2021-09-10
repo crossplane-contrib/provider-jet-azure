@@ -62,11 +62,11 @@ type VpnGatewayConnectionParameters struct {
 
 	Name string `json:"name" tf:"name"`
 
-	RemoteVpnSiteId string `json:"remoteVpnSiteId" tf:"remote_vpn_site_id"`
+	RemoteVpnSiteID string `json:"remoteVpnSiteId" tf:"remote_vpn_site_id"`
 
 	Routing []RoutingParameters `json:"routing,omitempty" tf:"routing"`
 
-	VpnGatewayId string `json:"vpnGatewayId" tf:"vpn_gateway_id"`
+	VpnGatewayID string `json:"vpnGatewayId" tf:"vpn_gateway_id"`
 
 	VpnLink []VpnLinkParameters `json:"vpnLink" tf:"vpn_link"`
 }
@@ -81,7 +81,7 @@ type VpnLinkParameters struct {
 
 	IpsecPolicy []IpsecPolicyParameters `json:"ipsecPolicy,omitempty" tf:"ipsec_policy"`
 
-	LocalAzureIpAddressEnabled *bool `json:"localAzureIpAddressEnabled,omitempty" tf:"local_azure_ip_address_enabled"`
+	LocalAzureIPAddressEnabled *bool `json:"localAzureIpAddressEnabled,omitempty" tf:"local_azure_ip_address_enabled"`
 
 	Name string `json:"name" tf:"name"`
 
@@ -95,7 +95,7 @@ type VpnLinkParameters struct {
 
 	SharedKey *string `json:"sharedKey,omitempty" tf:"shared_key"`
 
-	VpnSiteLinkId string `json:"vpnSiteLinkId" tf:"vpn_site_link_id"`
+	VpnSiteLinkID string `json:"vpnSiteLinkId" tf:"vpn_site_link_id"`
 }
 
 // VpnGatewayConnectionSpec defines the desired state of VpnGatewayConnection

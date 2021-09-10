@@ -36,7 +36,7 @@ type SqlVirtualNetworkRuleParameters struct {
 
 	ServerName string `json:"serverName" tf:"server_name"`
 
-	SubnetId string `json:"subnetId" tf:"subnet_id"`
+	SubnetID string `json:"subnetId" tf:"subnet_id"`
 }
 
 // SqlVirtualNetworkRuleSpec defines the desired state of SqlVirtualNetworkRule

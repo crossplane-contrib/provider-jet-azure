@@ -36,7 +36,7 @@ type PostgresqlVirtualNetworkRuleParameters struct {
 
 	ServerName string `json:"serverName" tf:"server_name"`
 
-	SubnetId string `json:"subnetId" tf:"subnet_id"`
+	SubnetID string `json:"subnetId" tf:"subnet_id"`
 }
 
 // PostgresqlVirtualNetworkRuleSpec defines the desired state of PostgresqlVirtualNetworkRule

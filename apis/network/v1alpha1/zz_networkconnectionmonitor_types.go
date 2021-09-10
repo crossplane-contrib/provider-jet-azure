@@ -32,7 +32,7 @@ type DestinationParameters struct {
 
 	Port *int64 `json:"port,omitempty" tf:"port"`
 
-	VirtualMachineId *string `json:"virtualMachineId,omitempty" tf:"virtual_machine_id"`
+	VirtualMachineID *string `json:"virtualMachineId,omitempty" tf:"virtual_machine_id"`
 }
 
 type EndpointObservation struct {
@@ -43,19 +43,19 @@ type EndpointParameters struct {
 
 	CoverageLevel *string `json:"coverageLevel,omitempty" tf:"coverage_level"`
 
-	ExcludedIpAddresses []string `json:"excludedIpAddresses,omitempty" tf:"excluded_ip_addresses"`
+	ExcludedIPAddresses []string `json:"excludedIpAddresses,omitempty" tf:"excluded_ip_addresses"`
 
 	Filter []FilterParameters `json:"filter,omitempty" tf:"filter"`
 
-	IncludedIpAddresses []string `json:"includedIpAddresses,omitempty" tf:"included_ip_addresses"`
+	IncludedIPAddresses []string `json:"includedIpAddresses,omitempty" tf:"included_ip_addresses"`
 
 	Name string `json:"name" tf:"name"`
 
-	TargetResourceId *string `json:"targetResourceId,omitempty" tf:"target_resource_id"`
+	TargetResourceID *string `json:"targetResourceId,omitempty" tf:"target_resource_id"`
 
 	TargetResourceType *string `json:"targetResourceType,omitempty" tf:"target_resource_type"`
 
-	VirtualMachineId *string `json:"virtualMachineId,omitempty" tf:"virtual_machine_id"`
+	VirtualMachineID *string `json:"virtualMachineId,omitempty" tf:"virtual_machine_id"`
 }
 
 type FilterObservation struct {
@@ -67,17 +67,17 @@ type FilterParameters struct {
 	Type *string `json:"type,omitempty" tf:"type"`
 }
 
-type HttpConfigurationObservation struct {
+type HTTPConfigurationObservation struct {
 }
 
-type HttpConfigurationParameters struct {
+type HTTPConfigurationParameters struct {
 	Method *string `json:"method,omitempty" tf:"method"`
 
 	Path *string `json:"path,omitempty" tf:"path"`
 
 	Port *int64 `json:"port,omitempty" tf:"port"`
 
-	PreferHttps *bool `json:"preferHttps,omitempty" tf:"prefer_https"`
+	PreferHTTPS *bool `json:"preferHttps,omitempty" tf:"prefer_https"`
 
 	RequestHeader []RequestHeaderParameters `json:"requestHeader,omitempty" tf:"request_header"`
 
@@ -116,7 +116,7 @@ type NetworkConnectionMonitorParameters struct {
 
 	Name string `json:"name" tf:"name"`
 
-	NetworkWatcherId string `json:"networkWatcherId" tf:"network_watcher_id"`
+	NetworkWatcherID string `json:"networkWatcherId" tf:"network_watcher_id"`
 
 	Notes *string `json:"notes,omitempty" tf:"notes"`
 
@@ -146,7 +146,7 @@ type SourceObservation struct {
 type SourceParameters struct {
 	Port *int64 `json:"port,omitempty" tf:"port"`
 
-	VirtualMachineId *string `json:"virtualMachineId,omitempty" tf:"virtual_machine_id"`
+	VirtualMachineID *string `json:"virtualMachineId,omitempty" tf:"virtual_machine_id"`
 }
 
 type SuccessThresholdObservation struct {
@@ -158,10 +158,10 @@ type SuccessThresholdParameters struct {
 	RoundTripTimeMs *float64 `json:"roundTripTimeMs,omitempty" tf:"round_trip_time_ms"`
 }
 
-type TcpConfigurationObservation struct {
+type TCPConfigurationObservation struct {
 }
 
-type TcpConfigurationParameters struct {
+type TCPConfigurationParameters struct {
 	Port int64 `json:"port" tf:"port"`
 
 	TraceRouteEnabled *bool `json:"traceRouteEnabled,omitempty" tf:"trace_route_enabled"`
@@ -171,19 +171,19 @@ type TestConfigurationObservation struct {
 }
 
 type TestConfigurationParameters struct {
-	HttpConfiguration []HttpConfigurationParameters `json:"httpConfiguration,omitempty" tf:"http_configuration"`
+	HTTPConfiguration []HTTPConfigurationParameters `json:"httpConfiguration,omitempty" tf:"http_configuration"`
 
 	IcmpConfiguration []IcmpConfigurationParameters `json:"icmpConfiguration,omitempty" tf:"icmp_configuration"`
 
 	Name string `json:"name" tf:"name"`
 
-	PreferredIpVersion *string `json:"preferredIpVersion,omitempty" tf:"preferred_ip_version"`
+	PreferredIPVersion *string `json:"preferredIpVersion,omitempty" tf:"preferred_ip_version"`
 
 	Protocol string `json:"protocol" tf:"protocol"`
 
 	SuccessThreshold []SuccessThresholdParameters `json:"successThreshold,omitempty" tf:"success_threshold"`
 
-	TcpConfiguration []TcpConfigurationParameters `json:"tcpConfiguration,omitempty" tf:"tcp_configuration"`
+	TCPConfiguration []TCPConfigurationParameters `json:"tcpConfiguration,omitempty" tf:"tcp_configuration"`
 
 	TestFrequencyInSeconds *int64 `json:"testFrequencyInSeconds,omitempty" tf:"test_frequency_in_seconds"`
 }

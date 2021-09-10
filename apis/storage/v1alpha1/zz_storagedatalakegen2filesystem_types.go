@@ -28,7 +28,7 @@ type AceObservation struct {
 }
 
 type AceParameters struct {
-	Id *string `json:"id,omitempty" tf:"id"`
+	ID *string `json:"id,omitempty" tf:"id"`
 
 	Permissions string `json:"permissions" tf:"permissions"`
 
@@ -47,7 +47,7 @@ type StorageDataLakeGen2FilesystemParameters struct {
 
 	Properties map[string]string `json:"properties,omitempty" tf:"properties"`
 
-	StorageAccountId string `json:"storageAccountId" tf:"storage_account_id"`
+	StorageAccountID string `json:"storageAccountId" tf:"storage_account_id"`
 }
 
 // StorageDataLakeGen2FilesystemSpec defines the desired state of StorageDataLakeGen2Filesystem

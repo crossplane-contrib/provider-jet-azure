@@ -38,7 +38,7 @@ type DataFactoryTriggerBlobEventParameters struct {
 
 	BlobPathEndsWith *string `json:"blobPathEndsWith,omitempty" tf:"blob_path_ends_with"`
 
-	DataFactoryId string `json:"dataFactoryId" tf:"data_factory_id"`
+	DataFactoryID string `json:"dataFactoryId" tf:"data_factory_id"`
 
 	Description *string `json:"description,omitempty" tf:"description"`
 
@@ -50,7 +50,7 @@ type DataFactoryTriggerBlobEventParameters struct {
 
 	Pipeline []PipelineParameters `json:"pipeline" tf:"pipeline"`
 
-	StorageAccountId string `json:"storageAccountId" tf:"storage_account_id"`
+	StorageAccountID string `json:"storageAccountId" tf:"storage_account_id"`
 }
 
 type PipelineObservation struct {

@@ -28,7 +28,7 @@ type DataFactoryObservation struct {
 }
 
 type DataFactoryParameters struct {
-	CustomerManagedKeyId *string `json:"customerManagedKeyId,omitempty" tf:"customer_managed_key_id"`
+	CustomerManagedKeyID *string `json:"customerManagedKeyId,omitempty" tf:"customer_managed_key_id"`
 
 	GithubConfiguration []GithubConfigurationParameters `json:"githubConfiguration,omitempty" tf:"github_configuration"`
 
@@ -59,7 +59,7 @@ type GithubConfigurationParameters struct {
 
 	BranchName string `json:"branchName" tf:"branch_name"`
 
-	GitUrl string `json:"gitUrl" tf:"git_url"`
+	GitURL string `json:"gitUrl" tf:"git_url"`
 
 	RepositoryName string `json:"repositoryName" tf:"repository_name"`
 
@@ -78,9 +78,9 @@ type GlobalParameterParameters struct {
 }
 
 type IdentityObservation struct {
-	PrincipalId string `json:"principalId" tf:"principal_id"`
+	PrincipalID string `json:"principalId" tf:"principal_id"`
 
-	TenantId string `json:"tenantId" tf:"tenant_id"`
+	TenantID string `json:"tenantId" tf:"tenant_id"`
 }
 
 type IdentityParameters struct {
@@ -103,7 +103,7 @@ type VstsConfigurationParameters struct {
 
 	RootFolder string `json:"rootFolder" tf:"root_folder"`
 
-	TenantId string `json:"tenantId" tf:"tenant_id"`
+	TenantID string `json:"tenantId" tf:"tenant_id"`
 }
 
 // DataFactorySpec defines the desired state of DataFactory

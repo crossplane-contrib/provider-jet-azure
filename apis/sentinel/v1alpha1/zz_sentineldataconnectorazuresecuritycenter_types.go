@@ -28,11 +28,11 @@ type SentinelDataConnectorAzureSecurityCenterObservation struct {
 }
 
 type SentinelDataConnectorAzureSecurityCenterParameters struct {
-	LogAnalyticsWorkspaceId string `json:"logAnalyticsWorkspaceId" tf:"log_analytics_workspace_id"`
+	LogAnalyticsWorkspaceID string `json:"logAnalyticsWorkspaceId" tf:"log_analytics_workspace_id"`
 
 	Name string `json:"name" tf:"name"`
 
-	SubscriptionId *string `json:"subscriptionId,omitempty" tf:"subscription_id"`
+	SubscriptionID *string `json:"subscriptionId,omitempty" tf:"subscription_id"`
 }
 
 // SentinelDataConnectorAzureSecurityCenterSpec defines the desired state of SentinelDataConnectorAzureSecurityCenter

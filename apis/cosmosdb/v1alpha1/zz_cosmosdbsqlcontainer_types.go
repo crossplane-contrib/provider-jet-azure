@@ -57,7 +57,7 @@ type CosmosdbSqlContainerObservation struct {
 type CosmosdbSqlContainerParameters struct {
 	AccountName string `json:"accountName" tf:"account_name"`
 
-	AnalyticalStorageTtl *int64 `json:"analyticalStorageTtl,omitempty" tf:"analytical_storage_ttl"`
+	AnalyticalStorageTTL *int64 `json:"analyticalStorageTtl,omitempty" tf:"analytical_storage_ttl"`
 
 	AutoscaleSettings []CosmosdbSqlContainerAutoscaleSettingsParameters `json:"autoscaleSettings,omitempty" tf:"autoscale_settings"`
 
@@ -65,7 +65,7 @@ type CosmosdbSqlContainerParameters struct {
 
 	DatabaseName string `json:"databaseName" tf:"database_name"`
 
-	DefaultTtl *int64 `json:"defaultTtl,omitempty" tf:"default_ttl"`
+	DefaultTTL *int64 `json:"defaultTtl,omitempty" tf:"default_ttl"`
 
 	IndexingPolicy []IndexingPolicyParameters `json:"indexingPolicy,omitempty" tf:"indexing_policy"`
 

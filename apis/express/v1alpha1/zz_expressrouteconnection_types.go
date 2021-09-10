@@ -32,9 +32,9 @@ type ExpressRouteConnectionParameters struct {
 
 	EnableInternetSecurity *bool `json:"enableInternetSecurity,omitempty" tf:"enable_internet_security"`
 
-	ExpressRouteCircuitPeeringId string `json:"expressRouteCircuitPeeringId" tf:"express_route_circuit_peering_id"`
+	ExpressRouteCircuitPeeringID string `json:"expressRouteCircuitPeeringId" tf:"express_route_circuit_peering_id"`
 
-	ExpressRouteGatewayId string `json:"expressRouteGatewayId" tf:"express_route_gateway_id"`
+	ExpressRouteGatewayID string `json:"expressRouteGatewayId" tf:"express_route_gateway_id"`
 
 	Name string `json:"name" tf:"name"`
 
@@ -56,7 +56,7 @@ type RoutingObservation struct {
 }
 
 type RoutingParameters struct {
-	AssociatedRouteTableId *string `json:"associatedRouteTableId,omitempty" tf:"associated_route_table_id"`
+	AssociatedRouteTableID *string `json:"associatedRouteTableId,omitempty" tf:"associated_route_table_id"`
 
 	PropagatedRouteTable []PropagatedRouteTableParameters `json:"propagatedRouteTable,omitempty" tf:"propagated_route_table"`
 }

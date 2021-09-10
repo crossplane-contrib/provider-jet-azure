@@ -25,7 +25,7 @@ import (
 )
 
 type KeyVaultManagedHardwareSecurityModuleObservation struct {
-	HsmUri string `json:"hsmUri" tf:"hsm_uri"`
+	HsmURI string `json:"hsmUri" tf:"hsm_uri"`
 }
 
 type KeyVaultManagedHardwareSecurityModuleParameters struct {
@@ -45,7 +45,7 @@ type KeyVaultManagedHardwareSecurityModuleParameters struct {
 
 	Tags map[string]string `json:"tags,omitempty" tf:"tags"`
 
-	TenantId string `json:"tenantId" tf:"tenant_id"`
+	TenantID string `json:"tenantId" tf:"tenant_id"`
 }
 
 // KeyVaultManagedHardwareSecurityModuleSpec defines the desired state of KeyVaultManagedHardwareSecurityModule

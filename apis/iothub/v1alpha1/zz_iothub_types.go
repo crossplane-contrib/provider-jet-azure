@@ -79,7 +79,7 @@ type FileUploadParameters struct {
 
 	ContainerName string `json:"containerName" tf:"container_name"`
 
-	DefaultTtl *string `json:"defaultTtl,omitempty" tf:"default_ttl"`
+	DefaultTTL *string `json:"defaultTtl,omitempty" tf:"default_ttl"`
 
 	LockDuration *string `json:"lockDuration,omitempty" tf:"lock_duration"`
 
@@ -87,7 +87,18 @@ type FileUploadParameters struct {
 
 	Notifications *bool `json:"notifications,omitempty" tf:"notifications"`
 
-	SasTtl *string `json:"sasTtl,omitempty" tf:"sas_ttl"`
+	SasTTL *string `json:"sasTtl,omitempty" tf:"sas_ttl"`
+}
+
+type IPFilterRuleObservation struct {
+}
+
+type IPFilterRuleParameters struct {
+	Action string `json:"action" tf:"action"`
+
+	IPMask string `json:"ipMask" tf:"ip_mask"`
+
+	Name string `json:"name" tf:"name"`
 }
 
 type IothubObservation struct {
@@ -119,11 +130,11 @@ type IothubParameters struct {
 
 	FileUpload []FileUploadParameters `json:"fileUpload,omitempty" tf:"file_upload"`
 
-	IpFilterRule []IpFilterRuleParameters `json:"ipFilterRule,omitempty" tf:"ip_filter_rule"`
+	IPFilterRule []IPFilterRuleParameters `json:"ipFilterRule,omitempty" tf:"ip_filter_rule"`
 
 	Location string `json:"location" tf:"location"`
 
-	MinTlsVersion *string `json:"minTlsVersion,omitempty" tf:"min_tls_version"`
+	MinTLSVersion *string `json:"minTlsVersion,omitempty" tf:"min_tls_version"`
 
 	Name string `json:"name" tf:"name"`
 
@@ -136,17 +147,6 @@ type IothubParameters struct {
 	Sku []SkuParameters `json:"sku" tf:"sku"`
 
 	Tags map[string]string `json:"tags,omitempty" tf:"tags"`
-}
-
-type IpFilterRuleObservation struct {
-}
-
-type IpFilterRuleParameters struct {
-	Action string `json:"action" tf:"action"`
-
-	IpMask string `json:"ipMask" tf:"ip_mask"`
-
-	Name string `json:"name" tf:"name"`
 }
 
 type RouteObservation struct {

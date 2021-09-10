@@ -28,7 +28,7 @@ type MediaAssetObservation struct {
 }
 
 type MediaAssetParameters struct {
-	AlternateId *string `json:"alternateId,omitempty" tf:"alternate_id"`
+	AlternateID *string `json:"alternateId,omitempty" tf:"alternate_id"`
 
 	Container *string `json:"container,omitempty" tf:"container"`
 

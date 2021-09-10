@@ -28,13 +28,13 @@ type LbBackendAddressPoolAddressObservation struct {
 }
 
 type LbBackendAddressPoolAddressParameters struct {
-	BackendAddressPoolId string `json:"backendAddressPoolId" tf:"backend_address_pool_id"`
+	BackendAddressPoolID string `json:"backendAddressPoolId" tf:"backend_address_pool_id"`
 
-	IpAddress string `json:"ipAddress" tf:"ip_address"`
+	IPAddress string `json:"ipAddress" tf:"ip_address"`
 
 	Name string `json:"name" tf:"name"`
 
-	VirtualNetworkId string `json:"virtualNetworkId" tf:"virtual_network_id"`
+	VirtualNetworkID string `json:"virtualNetworkId" tf:"virtual_network_id"`
 }
 
 // LbBackendAddressPoolAddressSpec defines the desired state of LbBackendAddressPoolAddress

@@ -28,7 +28,7 @@ type LighthouseAssignmentObservation struct {
 }
 
 type LighthouseAssignmentParameters struct {
-	LighthouseDefinitionId string `json:"lighthouseDefinitionId" tf:"lighthouse_definition_id"`
+	LighthouseDefinitionID string `json:"lighthouseDefinitionId" tf:"lighthouse_definition_id"`
 
 	Name *string `json:"name,omitempty" tf:"name"`
 

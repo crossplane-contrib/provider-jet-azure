@@ -28,15 +28,15 @@ type BackendAddressObservation struct {
 }
 
 type BackendAddressParameters struct {
-	IpAddress string `json:"ipAddress" tf:"ip_address"`
+	IPAddress string `json:"ipAddress" tf:"ip_address"`
 
 	Name string `json:"name" tf:"name"`
 
-	VirtualNetworkId string `json:"virtualNetworkId" tf:"virtual_network_id"`
+	VirtualNetworkID string `json:"virtualNetworkId" tf:"virtual_network_id"`
 }
 
 type LbBackendAddressPoolObservation struct {
-	BackendIpConfigurations []string `json:"backendIpConfigurations" tf:"backend_ip_configurations"`
+	BackendIPConfigurations []string `json:"backendIpConfigurations" tf:"backend_ip_configurations"`
 
 	LoadBalancingRules []string `json:"loadBalancingRules" tf:"load_balancing_rules"`
 
@@ -46,7 +46,7 @@ type LbBackendAddressPoolObservation struct {
 type LbBackendAddressPoolParameters struct {
 	BackendAddress []BackendAddressParameters `json:"backendAddress,omitempty" tf:"backend_address"`
 
-	LoadbalancerId string `json:"loadbalancerId" tf:"loadbalancer_id"`
+	LoadbalancerID string `json:"loadbalancerId" tf:"loadbalancer_id"`
 
 	Name string `json:"name" tf:"name"`
 

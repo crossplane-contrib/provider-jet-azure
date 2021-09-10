@@ -33,7 +33,7 @@ type NetworkWatcherFlowLogParameters struct {
 
 	Location *string `json:"location,omitempty" tf:"location"`
 
-	NetworkSecurityGroupId string `json:"networkSecurityGroupId" tf:"network_security_group_id"`
+	NetworkSecurityGroupID string `json:"networkSecurityGroupId" tf:"network_security_group_id"`
 
 	NetworkWatcherName string `json:"networkWatcherName" tf:"network_watcher_name"`
 
@@ -41,7 +41,7 @@ type NetworkWatcherFlowLogParameters struct {
 
 	RetentionPolicy []RetentionPolicyParameters `json:"retentionPolicy" tf:"retention_policy"`
 
-	StorageAccountId string `json:"storageAccountId" tf:"storage_account_id"`
+	StorageAccountID string `json:"storageAccountId" tf:"storage_account_id"`
 
 	Tags map[string]string `json:"tags,omitempty" tf:"tags"`
 
@@ -67,11 +67,11 @@ type TrafficAnalyticsParameters struct {
 
 	IntervalInMinutes *int64 `json:"intervalInMinutes,omitempty" tf:"interval_in_minutes"`
 
-	WorkspaceId string `json:"workspaceId" tf:"workspace_id"`
+	WorkspaceID string `json:"workspaceId" tf:"workspace_id"`
 
 	WorkspaceRegion string `json:"workspaceRegion" tf:"workspace_region"`
 
-	WorkspaceResourceId string `json:"workspaceResourceId" tf:"workspace_resource_id"`
+	WorkspaceResourceID string `json:"workspaceResourceId" tf:"workspace_resource_id"`
 }
 
 // NetworkWatcherFlowLogSpec defines the desired state of NetworkWatcherFlowLog

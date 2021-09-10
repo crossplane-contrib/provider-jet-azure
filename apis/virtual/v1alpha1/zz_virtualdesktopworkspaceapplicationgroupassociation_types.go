@@ -28,9 +28,9 @@ type VirtualDesktopWorkspaceApplicationGroupAssociationObservation struct {
 }
 
 type VirtualDesktopWorkspaceApplicationGroupAssociationParameters struct {
-	ApplicationGroupId string `json:"applicationGroupId" tf:"application_group_id"`
+	ApplicationGroupID string `json:"applicationGroupId" tf:"application_group_id"`
 
-	WorkspaceId string `json:"workspaceId" tf:"workspace_id"`
+	WorkspaceID string `json:"workspaceId" tf:"workspace_id"`
 }
 
 // VirtualDesktopWorkspaceApplicationGroupAssociationSpec defines the desired state of VirtualDesktopWorkspaceApplicationGroupAssociation

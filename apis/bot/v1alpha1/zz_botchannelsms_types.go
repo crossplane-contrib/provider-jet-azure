@@ -36,7 +36,7 @@ type BotChannelSmsParameters struct {
 
 	ResourceGroupName string `json:"resourceGroupName" tf:"resource_group_name"`
 
-	SmsChannelAccountSecurityId string `json:"smsChannelAccountSecurityId" tf:"sms_channel_account_security_id"`
+	SmsChannelAccountSecurityID string `json:"smsChannelAccountSecurityId" tf:"sms_channel_account_security_id"`
 
 	SmsChannelAuthToken string `json:"smsChannelAuthToken" tf:"sms_channel_auth_token"`
 }

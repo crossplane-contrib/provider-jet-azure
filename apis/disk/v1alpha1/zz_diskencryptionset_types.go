@@ -30,7 +30,7 @@ type DiskEncryptionSetObservation struct {
 type DiskEncryptionSetParameters struct {
 	Identity []IdentityParameters `json:"identity" tf:"identity"`
 
-	KeyVaultKeyId string `json:"keyVaultKeyId" tf:"key_vault_key_id"`
+	KeyVaultKeyID string `json:"keyVaultKeyId" tf:"key_vault_key_id"`
 
 	Location string `json:"location" tf:"location"`
 
@@ -42,9 +42,9 @@ type DiskEncryptionSetParameters struct {
 }
 
 type IdentityObservation struct {
-	PrincipalId string `json:"principalId" tf:"principal_id"`
+	PrincipalID string `json:"principalId" tf:"principal_id"`
 
-	TenantId string `json:"tenantId" tf:"tenant_id"`
+	TenantID string `json:"tenantId" tf:"tenant_id"`
 }
 
 type IdentityParameters struct {

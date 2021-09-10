@@ -49,15 +49,15 @@ type BlueprintAssignmentParameters struct {
 
 	ResourceGroups *string `json:"resourceGroups,omitempty" tf:"resource_groups"`
 
-	TargetSubscriptionId string `json:"targetSubscriptionId" tf:"target_subscription_id"`
+	TargetSubscriptionID string `json:"targetSubscriptionId" tf:"target_subscription_id"`
 
-	VersionId string `json:"versionId" tf:"version_id"`
+	VersionID string `json:"versionId" tf:"version_id"`
 }
 
 type IdentityObservation struct {
-	PrincipalId string `json:"principalId" tf:"principal_id"`
+	PrincipalID string `json:"principalId" tf:"principal_id"`
 
-	TenantId string `json:"tenantId" tf:"tenant_id"`
+	TenantID string `json:"tenantId" tf:"tenant_id"`
 }
 
 type IdentityParameters struct {

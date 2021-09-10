@@ -43,7 +43,7 @@ type MonitorScheduledQueryRulesAlertParameters struct {
 
 	AuthorizedResourceIds []string `json:"authorizedResourceIds,omitempty" tf:"authorized_resource_ids"`
 
-	DataSourceId string `json:"dataSourceId" tf:"data_source_id"`
+	DataSourceID string `json:"dataSourceId" tf:"data_source_id"`
 
 	Description *string `json:"description,omitempty" tf:"description"`
 

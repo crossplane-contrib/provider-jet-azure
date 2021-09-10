@@ -36,7 +36,7 @@ type VirtualNetworkPeeringParameters struct {
 
 	Name string `json:"name" tf:"name"`
 
-	RemoteVirtualNetworkId string `json:"remoteVirtualNetworkId" tf:"remote_virtual_network_id"`
+	RemoteVirtualNetworkID string `json:"remoteVirtualNetworkId" tf:"remote_virtual_network_id"`
 
 	ResourceGroupName string `json:"resourceGroupName" tf:"resource_group_name"`
 

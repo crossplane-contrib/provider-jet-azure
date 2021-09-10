@@ -43,7 +43,7 @@ type AppServiceManagedCertificateObservation struct {
 }
 
 type AppServiceManagedCertificateParameters struct {
-	CustomHostnameBindingId string `json:"customHostnameBindingId" tf:"custom_hostname_binding_id"`
+	CustomHostnameBindingID string `json:"customHostnameBindingId" tf:"custom_hostname_binding_id"`
 
 	Tags map[string]string `json:"tags,omitempty" tf:"tags"`
 }

@@ -25,9 +25,9 @@ import (
 )
 
 type IdentityObservation struct {
-	PrincipalId string `json:"principalId" tf:"principal_id"`
+	PrincipalID string `json:"principalId" tf:"principal_id"`
 
-	TenantId string `json:"tenantId" tf:"tenant_id"`
+	TenantID string `json:"tenantId" tf:"tenant_id"`
 }
 
 type IdentityParameters struct {
@@ -44,19 +44,19 @@ type MachineLearningComputeClusterParameters struct {
 
 	Location string `json:"location" tf:"location"`
 
-	MachineLearningWorkspaceId string `json:"machineLearningWorkspaceId" tf:"machine_learning_workspace_id"`
+	MachineLearningWorkspaceID string `json:"machineLearningWorkspaceId" tf:"machine_learning_workspace_id"`
 
 	Name string `json:"name" tf:"name"`
 
 	ScaleSettings []ScaleSettingsParameters `json:"scaleSettings" tf:"scale_settings"`
 
-	SubnetResourceId *string `json:"subnetResourceId,omitempty" tf:"subnet_resource_id"`
+	SubnetResourceID *string `json:"subnetResourceId,omitempty" tf:"subnet_resource_id"`
 
 	Tags map[string]string `json:"tags,omitempty" tf:"tags"`
 
-	VmPriority string `json:"vmPriority" tf:"vm_priority"`
+	VMPriority string `json:"vmPriority" tf:"vm_priority"`
 
-	VmSize string `json:"vmSize" tf:"vm_size"`
+	VMSize string `json:"vmSize" tf:"vm_size"`
 }
 
 type ScaleSettingsObservation struct {

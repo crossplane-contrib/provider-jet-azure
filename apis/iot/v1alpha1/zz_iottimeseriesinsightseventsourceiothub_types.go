@@ -30,9 +30,9 @@ type IotTimeSeriesInsightsEventSourceIothubObservation struct {
 type IotTimeSeriesInsightsEventSourceIothubParameters struct {
 	ConsumerGroupName string `json:"consumerGroupName" tf:"consumer_group_name"`
 
-	EnvironmentId string `json:"environmentId" tf:"environment_id"`
+	EnvironmentID string `json:"environmentId" tf:"environment_id"`
 
-	EventSourceResourceId string `json:"eventSourceResourceId" tf:"event_source_resource_id"`
+	EventSourceResourceID string `json:"eventSourceResourceId" tf:"event_source_resource_id"`
 
 	IothubName string `json:"iothubName" tf:"iothub_name"`
 

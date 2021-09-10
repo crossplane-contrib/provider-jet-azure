@@ -30,7 +30,7 @@ type PrivateDnsZoneVirtualNetworkLinkObservation struct {
 type PrivateDnsZoneVirtualNetworkLinkParameters struct {
 	Name string `json:"name" tf:"name"`
 
-	PrivateDnsZoneName string `json:"privateDnsZoneName" tf:"private_dns_zone_name"`
+	PrivateDNSZoneName string `json:"privateDnsZoneName" tf:"private_dns_zone_name"`
 
 	RegistrationEnabled *bool `json:"registrationEnabled,omitempty" tf:"registration_enabled"`
 
@@ -38,7 +38,7 @@ type PrivateDnsZoneVirtualNetworkLinkParameters struct {
 
 	Tags map[string]string `json:"tags,omitempty" tf:"tags"`
 
-	VirtualNetworkId string `json:"virtualNetworkId" tf:"virtual_network_id"`
+	VirtualNetworkID string `json:"virtualNetworkId" tf:"virtual_network_id"`
 }
 
 // PrivateDnsZoneVirtualNetworkLinkSpec defines the desired state of PrivateDnsZoneVirtualNetworkLink

@@ -28,7 +28,7 @@ type VirtualDesktopApplicationObservation struct {
 }
 
 type VirtualDesktopApplicationParameters struct {
-	ApplicationGroupId string `json:"applicationGroupId" tf:"application_group_id"`
+	ApplicationGroupID string `json:"applicationGroupId" tf:"application_group_id"`
 
 	CommandLineArgumentPolicy string `json:"commandLineArgumentPolicy" tf:"command_line_argument_policy"`
 

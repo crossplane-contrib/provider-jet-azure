@@ -28,19 +28,19 @@ type AccessPolicyObservation struct {
 }
 
 type AccessPolicyParameters struct {
-	ApplicationId *string `json:"applicationId,omitempty" tf:"application_id"`
+	ApplicationID *string `json:"applicationId,omitempty" tf:"application_id"`
 
 	CertificatePermissions []string `json:"certificatePermissions,omitempty" tf:"certificate_permissions"`
 
 	KeyPermissions []string `json:"keyPermissions,omitempty" tf:"key_permissions"`
 
-	ObjectId string `json:"objectId" tf:"object_id"`
+	ObjectID string `json:"objectId" tf:"object_id"`
 
 	SecretPermissions []string `json:"secretPermissions,omitempty" tf:"secret_permissions"`
 
 	StoragePermissions []string `json:"storagePermissions,omitempty" tf:"storage_permissions"`
 
-	TenantId string `json:"tenantId" tf:"tenant_id"`
+	TenantID string `json:"tenantId" tf:"tenant_id"`
 }
 
 type ContactObservation struct {
@@ -55,7 +55,7 @@ type ContactParameters struct {
 }
 
 type KeyVaultObservation struct {
-	VaultUri string `json:"vaultUri" tf:"vault_uri"`
+	VaultURI string `json:"vaultUri" tf:"vault_uri"`
 }
 
 type KeyVaultParameters struct {
@@ -89,7 +89,7 @@ type KeyVaultParameters struct {
 
 	Tags map[string]string `json:"tags,omitempty" tf:"tags"`
 
-	TenantId string `json:"tenantId" tf:"tenant_id"`
+	TenantID string `json:"tenantId" tf:"tenant_id"`
 }
 
 type NetworkAclsObservation struct {
@@ -100,7 +100,7 @@ type NetworkAclsParameters struct {
 
 	DefaultAction string `json:"defaultAction" tf:"default_action"`
 
-	IpRules []string `json:"ipRules,omitempty" tf:"ip_rules"`
+	IPRules []string `json:"ipRules,omitempty" tf:"ip_rules"`
 
 	VirtualNetworkSubnetIds []string `json:"virtualNetworkSubnetIds,omitempty" tf:"virtual_network_subnet_ids"`
 }

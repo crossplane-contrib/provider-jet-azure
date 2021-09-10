@@ -32,7 +32,7 @@ type ServiceFabricMeshSecretValueParameters struct {
 
 	Name string `json:"name" tf:"name"`
 
-	ServiceFabricMeshSecretId string `json:"serviceFabricMeshSecretId" tf:"service_fabric_mesh_secret_id"`
+	ServiceFabricMeshSecretID string `json:"serviceFabricMeshSecretId" tf:"service_fabric_mesh_secret_id"`
 
 	Tags map[string]string `json:"tags,omitempty" tf:"tags"`
 

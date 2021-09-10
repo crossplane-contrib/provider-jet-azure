@@ -69,9 +69,9 @@ type AppServiceSlotConnectionStringParameters struct {
 }
 
 type AppServiceSlotIdentityObservation struct {
-	PrincipalId string `json:"principalId" tf:"principal_id"`
+	PrincipalID string `json:"principalId" tf:"principal_id"`
 
-	TenantId string `json:"tenantId" tf:"tenant_id"`
+	TenantID string `json:"tenantId" tf:"tenant_id"`
 }
 
 type AppServiceSlotIdentityParameters struct {
@@ -90,7 +90,7 @@ type AppServiceSlotLogsParameters struct {
 
 	FailedRequestTracingEnabled *bool `json:"failedRequestTracingEnabled,omitempty" tf:"failed_request_tracing_enabled"`
 
-	HttpLogs []LogsHttpLogsParameters `json:"httpLogs,omitempty" tf:"http_logs"`
+	HTTPLogs []LogsHTTPLogsParameters `json:"httpLogs,omitempty" tf:"http_logs"`
 }
 
 type AppServiceSlotObservation struct {
@@ -102,7 +102,7 @@ type AppServiceSlotObservation struct {
 type AppServiceSlotParameters struct {
 	AppServiceName string `json:"appServiceName" tf:"app_service_name"`
 
-	AppServicePlanId string `json:"appServicePlanId" tf:"app_service_plan_id"`
+	AppServicePlanID string `json:"appServicePlanId" tf:"app_service_plan_id"`
 
 	AppSettings map[string]string `json:"appSettings,omitempty" tf:"app_settings"`
 
@@ -114,7 +114,7 @@ type AppServiceSlotParameters struct {
 
 	Enabled *bool `json:"enabled,omitempty" tf:"enabled"`
 
-	HttpsOnly *bool `json:"httpsOnly,omitempty" tf:"https_only"`
+	HTTPSOnly *bool `json:"httpsOnly,omitempty" tf:"https_only"`
 
 	Identity []AppServiceSlotIdentityParameters `json:"identity,omitempty" tf:"identity"`
 
@@ -137,7 +137,7 @@ type AppServiceSlotSiteConfigObservation struct {
 type AppServiceSlotSiteConfigParameters struct {
 	AcrUseManagedIdentityCredentials *bool `json:"acrUseManagedIdentityCredentials,omitempty" tf:"acr_use_managed_identity_credentials"`
 
-	AcrUserManagedIdentityClientId *string `json:"acrUserManagedIdentityClientId,omitempty" tf:"acr_user_managed_identity_client_id"`
+	AcrUserManagedIdentityClientID *string `json:"acrUserManagedIdentityClientId,omitempty" tf:"acr_user_managed_identity_client_id"`
 
 	AlwaysOn *bool `json:"alwaysOn,omitempty" tf:"always_on"`
 
@@ -157,7 +157,7 @@ type AppServiceSlotSiteConfigParameters struct {
 
 	Http2Enabled *bool `json:"http2Enabled,omitempty" tf:"http2_enabled"`
 
-	IpRestriction []SiteConfigIpRestrictionParameters `json:"ipRestriction,omitempty" tf:"ip_restriction"`
+	IPRestriction []SiteConfigIPRestrictionParameters `json:"ipRestriction,omitempty" tf:"ip_restriction"`
 
 	JavaContainer *string `json:"javaContainer,omitempty" tf:"java_container"`
 
@@ -171,7 +171,7 @@ type AppServiceSlotSiteConfigParameters struct {
 
 	ManagedPipelineMode *string `json:"managedPipelineMode,omitempty" tf:"managed_pipeline_mode"`
 
-	MinTlsVersion *string `json:"minTlsVersion,omitempty" tf:"min_tls_version"`
+	MinTLSVersion *string `json:"minTlsVersion,omitempty" tf:"min_tls_version"`
 
 	NumberOfWorkers *int64 `json:"numberOfWorkers,omitempty" tf:"number_of_workers"`
 
@@ -183,11 +183,11 @@ type AppServiceSlotSiteConfigParameters struct {
 
 	RemoteDebuggingVersion *string `json:"remoteDebuggingVersion,omitempty" tf:"remote_debugging_version"`
 
-	ScmIpRestriction []SiteConfigScmIpRestrictionParameters `json:"scmIpRestriction,omitempty" tf:"scm_ip_restriction"`
+	ScmIPRestriction []SiteConfigScmIPRestrictionParameters `json:"scmIpRestriction,omitempty" tf:"scm_ip_restriction"`
 
 	ScmType *string `json:"scmType,omitempty" tf:"scm_type"`
 
-	ScmUseMainIpRestriction *bool `json:"scmUseMainIpRestriction,omitempty" tf:"scm_use_main_ip_restriction"`
+	ScmUseMainIPRestriction *bool `json:"scmUseMainIpRestriction,omitempty" tf:"scm_use_main_ip_restriction"`
 
 	Use32BitWorkerProcess *bool `json:"use32BitWorkerProcess,omitempty" tf:"use_32_bit_worker_process"`
 
@@ -215,7 +215,7 @@ type ApplicationLogsAzureBlobStorageParameters struct {
 
 	RetentionInDays int64 `json:"retentionInDays" tf:"retention_in_days"`
 
-	SasUrl string `json:"sasUrl" tf:"sas_url"`
+	SasURL string `json:"sasUrl" tf:"sas_url"`
 }
 
 type AuthSettingsActiveDirectoryObservation struct {
@@ -224,7 +224,7 @@ type AuthSettingsActiveDirectoryObservation struct {
 type AuthSettingsActiveDirectoryParameters struct {
 	AllowedAudiences []string `json:"allowedAudiences,omitempty" tf:"allowed_audiences"`
 
-	ClientId string `json:"clientId" tf:"client_id"`
+	ClientID string `json:"clientId" tf:"client_id"`
 
 	ClientSecret *string `json:"clientSecret,omitempty" tf:"client_secret"`
 }
@@ -233,7 +233,7 @@ type AuthSettingsFacebookObservation struct {
 }
 
 type AuthSettingsFacebookParameters struct {
-	AppId string `json:"appId" tf:"app_id"`
+	AppID string `json:"appId" tf:"app_id"`
 
 	AppSecret string `json:"appSecret" tf:"app_secret"`
 
@@ -244,7 +244,7 @@ type AuthSettingsGoogleObservation struct {
 }
 
 type AuthSettingsGoogleParameters struct {
-	ClientId string `json:"clientId" tf:"client_id"`
+	ClientID string `json:"clientId" tf:"client_id"`
 
 	ClientSecret string `json:"clientSecret" tf:"client_secret"`
 
@@ -255,7 +255,7 @@ type AuthSettingsMicrosoftObservation struct {
 }
 
 type AuthSettingsMicrosoftParameters struct {
-	ClientId string `json:"clientId" tf:"client_id"`
+	ClientID string `json:"clientId" tf:"client_id"`
 
 	ClientSecret string `json:"clientSecret" tf:"client_secret"`
 
@@ -271,19 +271,19 @@ type AuthSettingsTwitterParameters struct {
 	ConsumerSecret string `json:"consumerSecret" tf:"consumer_secret"`
 }
 
-type HttpLogsFileSystemObservation struct {
+type HTTPLogsFileSystemObservation struct {
 }
 
-type HttpLogsFileSystemParameters struct {
+type HTTPLogsFileSystemParameters struct {
 	RetentionInDays int64 `json:"retentionInDays" tf:"retention_in_days"`
 
 	RetentionInMb int64 `json:"retentionInMb" tf:"retention_in_mb"`
 }
 
-type IpRestrictionHeadersObservation struct {
+type IPRestrictionHeadersObservation struct {
 }
 
-type IpRestrictionHeadersParameters struct {
+type IPRestrictionHeadersParameters struct {
 	XAzureFdid []string `json:"xAzureFdid,omitempty" tf:"x_azure_fdid"`
 
 	XFdHealthProbe []string `json:"xFdHealthProbe,omitempty" tf:"x_fd_health_probe"`
@@ -302,22 +302,22 @@ type LogsApplicationLogsParameters struct {
 	FileSystemLevel *string `json:"fileSystemLevel,omitempty" tf:"file_system_level"`
 }
 
-type LogsHttpLogsAzureBlobStorageObservation struct {
+type LogsHTTPLogsAzureBlobStorageObservation struct {
 }
 
-type LogsHttpLogsAzureBlobStorageParameters struct {
+type LogsHTTPLogsAzureBlobStorageParameters struct {
 	RetentionInDays int64 `json:"retentionInDays" tf:"retention_in_days"`
 
-	SasUrl string `json:"sasUrl" tf:"sas_url"`
+	SasURL string `json:"sasUrl" tf:"sas_url"`
 }
 
-type LogsHttpLogsObservation struct {
+type LogsHTTPLogsObservation struct {
 }
 
-type LogsHttpLogsParameters struct {
-	AzureBlobStorage []LogsHttpLogsAzureBlobStorageParameters `json:"azureBlobStorage,omitempty" tf:"azure_blob_storage"`
+type LogsHTTPLogsParameters struct {
+	AzureBlobStorage []LogsHTTPLogsAzureBlobStorageParameters `json:"azureBlobStorage,omitempty" tf:"azure_blob_storage"`
 
-	FileSystem []HttpLogsFileSystemParameters `json:"fileSystem,omitempty" tf:"file_system"`
+	FileSystem []HTTPLogsFileSystemParameters `json:"fileSystem,omitempty" tf:"file_system"`
 }
 
 type SiteConfigCorsObservation struct {
@@ -329,15 +329,15 @@ type SiteConfigCorsParameters struct {
 	SupportCredentials *bool `json:"supportCredentials,omitempty" tf:"support_credentials"`
 }
 
-type SiteConfigIpRestrictionObservation struct {
+type SiteConfigIPRestrictionObservation struct {
 }
 
-type SiteConfigIpRestrictionParameters struct {
+type SiteConfigIPRestrictionParameters struct {
 	Action *string `json:"action,omitempty" tf:"action"`
 
-	Headers []IpRestrictionHeadersParameters `json:"headers,omitempty" tf:"headers"`
+	Headers []IPRestrictionHeadersParameters `json:"headers,omitempty" tf:"headers"`
 
-	IpAddress *string `json:"ipAddress,omitempty" tf:"ip_address"`
+	IPAddress *string `json:"ipAddress,omitempty" tf:"ip_address"`
 
 	Name *string `json:"name,omitempty" tf:"name"`
 
@@ -345,13 +345,13 @@ type SiteConfigIpRestrictionParameters struct {
 
 	ServiceTag *string `json:"serviceTag,omitempty" tf:"service_tag"`
 
-	VirtualNetworkSubnetId *string `json:"virtualNetworkSubnetId,omitempty" tf:"virtual_network_subnet_id"`
+	VirtualNetworkSubnetID *string `json:"virtualNetworkSubnetId,omitempty" tf:"virtual_network_subnet_id"`
 }
 
-type SiteConfigScmIpRestrictionHeadersObservation struct {
+type SiteConfigScmIPRestrictionHeadersObservation struct {
 }
 
-type SiteConfigScmIpRestrictionHeadersParameters struct {
+type SiteConfigScmIPRestrictionHeadersParameters struct {
 	XAzureFdid []string `json:"xAzureFdid,omitempty" tf:"x_azure_fdid"`
 
 	XFdHealthProbe []string `json:"xFdHealthProbe,omitempty" tf:"x_fd_health_probe"`
@@ -361,15 +361,15 @@ type SiteConfigScmIpRestrictionHeadersParameters struct {
 	XForwardedHost []string `json:"xForwardedHost,omitempty" tf:"x_forwarded_host"`
 }
 
-type SiteConfigScmIpRestrictionObservation struct {
+type SiteConfigScmIPRestrictionObservation struct {
 }
 
-type SiteConfigScmIpRestrictionParameters struct {
+type SiteConfigScmIPRestrictionParameters struct {
 	Action *string `json:"action,omitempty" tf:"action"`
 
-	Headers []SiteConfigScmIpRestrictionHeadersParameters `json:"headers,omitempty" tf:"headers"`
+	Headers []SiteConfigScmIPRestrictionHeadersParameters `json:"headers,omitempty" tf:"headers"`
 
-	IpAddress *string `json:"ipAddress,omitempty" tf:"ip_address"`
+	IPAddress *string `json:"ipAddress,omitempty" tf:"ip_address"`
 
 	Name *string `json:"name,omitempty" tf:"name"`
 
@@ -377,7 +377,7 @@ type SiteConfigScmIpRestrictionParameters struct {
 
 	ServiceTag *string `json:"serviceTag,omitempty" tf:"service_tag"`
 
-	VirtualNetworkSubnetId *string `json:"virtualNetworkSubnetId,omitempty" tf:"virtual_network_subnet_id"`
+	VirtualNetworkSubnetID *string `json:"virtualNetworkSubnetId,omitempty" tf:"virtual_network_subnet_id"`
 }
 
 // AppServiceSlotSpec defines the desired state of AppServiceSlot

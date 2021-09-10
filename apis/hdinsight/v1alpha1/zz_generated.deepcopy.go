@@ -453,17 +453,17 @@ func (in *HdinsightHadoopClusterParameters) DeepCopyInto(out *HdinsightHadoopClu
 		*out = make([]StorageAccountGen2Parameters, len(*in))
 		copy(*out, *in)
 	}
+	if in.TLSMinVersion != nil {
+		in, out := &in.TLSMinVersion, &out.TLSMinVersion
+		*out = new(string)
+		**out = **in
+	}
 	if in.Tags != nil {
 		in, out := &in.Tags, &out.Tags
 		*out = make(map[string]string, len(*in))
 		for key, val := range *in {
 			(*out)[key] = val
 		}
-	}
-	if in.TlsMinVersion != nil {
-		in, out := &in.TlsMinVersion, &out.TlsMinVersion
-		*out = new(string)
-		**out = **in
 	}
 }
 
@@ -769,17 +769,17 @@ func (in *HdinsightHbaseClusterParameters) DeepCopyInto(out *HdinsightHbaseClust
 		*out = make([]HdinsightHbaseClusterStorageAccountGen2Parameters, len(*in))
 		copy(*out, *in)
 	}
+	if in.TLSMinVersion != nil {
+		in, out := &in.TLSMinVersion, &out.TLSMinVersion
+		*out = new(string)
+		**out = **in
+	}
 	if in.Tags != nil {
 		in, out := &in.Tags, &out.Tags
 		*out = make(map[string]string, len(*in))
 		for key, val := range *in {
 			(*out)[key] = val
 		}
-	}
-	if in.TlsMinVersion != nil {
-		in, out := &in.TlsMinVersion, &out.TlsMinVersion
-		*out = new(string)
-		**out = **in
 	}
 }
 
@@ -1338,17 +1338,17 @@ func (in *HdinsightInteractiveQueryClusterParameters) DeepCopyInto(out *Hdinsigh
 		*out = make([]HdinsightInteractiveQueryClusterStorageAccountGen2Parameters, len(*in))
 		copy(*out, *in)
 	}
+	if in.TLSMinVersion != nil {
+		in, out := &in.TLSMinVersion, &out.TLSMinVersion
+		*out = new(string)
+		**out = **in
+	}
 	if in.Tags != nil {
 		in, out := &in.Tags, &out.Tags
 		*out = make(map[string]string, len(*in))
 		for key, val := range *in {
 			(*out)[key] = val
 		}
-	}
-	if in.TlsMinVersion != nil {
-		in, out := &in.TlsMinVersion, &out.TlsMinVersion
-		*out = new(string)
-		**out = **in
 	}
 }
 
@@ -1385,18 +1385,18 @@ func (in *HdinsightInteractiveQueryClusterRolesHeadNodeParameters) DeepCopyInto(
 		*out = new(string)
 		**out = **in
 	}
-	if in.SshKeys != nil {
-		in, out := &in.SshKeys, &out.SshKeys
+	if in.SSHKeys != nil {
+		in, out := &in.SSHKeys, &out.SSHKeys
 		*out = make([]string, len(*in))
 		copy(*out, *in)
 	}
-	if in.SubnetId != nil {
-		in, out := &in.SubnetId, &out.SubnetId
+	if in.SubnetID != nil {
+		in, out := &in.SubnetID, &out.SubnetID
 		*out = new(string)
 		**out = **in
 	}
-	if in.VirtualNetworkId != nil {
-		in, out := &in.VirtualNetworkId, &out.VirtualNetworkId
+	if in.VirtualNetworkID != nil {
+		in, out := &in.VirtualNetworkID, &out.VirtualNetworkID
 		*out = new(string)
 		**out = **in
 	}
@@ -1498,18 +1498,18 @@ func (in *HdinsightInteractiveQueryClusterRolesWorkerNodeParameters) DeepCopyInt
 		*out = new(string)
 		**out = **in
 	}
-	if in.SshKeys != nil {
-		in, out := &in.SshKeys, &out.SshKeys
+	if in.SSHKeys != nil {
+		in, out := &in.SSHKeys, &out.SSHKeys
 		*out = make([]string, len(*in))
 		copy(*out, *in)
 	}
-	if in.SubnetId != nil {
-		in, out := &in.SubnetId, &out.SubnetId
+	if in.SubnetID != nil {
+		in, out := &in.SubnetID, &out.SubnetID
 		*out = new(string)
 		**out = **in
 	}
-	if in.VirtualNetworkId != nil {
-		in, out := &in.VirtualNetworkId, &out.VirtualNetworkId
+	if in.VirtualNetworkID != nil {
+		in, out := &in.VirtualNetworkID, &out.VirtualNetworkID
 		*out = new(string)
 		**out = **in
 	}
@@ -1548,18 +1548,18 @@ func (in *HdinsightInteractiveQueryClusterRolesZookeeperNodeParameters) DeepCopy
 		*out = new(string)
 		**out = **in
 	}
-	if in.SshKeys != nil {
-		in, out := &in.SshKeys, &out.SshKeys
+	if in.SSHKeys != nil {
+		in, out := &in.SSHKeys, &out.SSHKeys
 		*out = make([]string, len(*in))
 		copy(*out, *in)
 	}
-	if in.SubnetId != nil {
-		in, out := &in.SubnetId, &out.SubnetId
+	if in.SubnetID != nil {
+		in, out := &in.SubnetID, &out.SubnetID
 		*out = new(string)
 		**out = **in
 	}
-	if in.VirtualNetworkId != nil {
-		in, out := &in.VirtualNetworkId, &out.VirtualNetworkId
+	if in.VirtualNetworkID != nil {
+		in, out := &in.VirtualNetworkID, &out.VirtualNetworkID
 		*out = new(string)
 		**out = **in
 	}
@@ -2027,17 +2027,17 @@ func (in *HdinsightKafkaClusterParameters) DeepCopyInto(out *HdinsightKafkaClust
 		*out = make([]HdinsightKafkaClusterStorageAccountGen2Parameters, len(*in))
 		copy(*out, *in)
 	}
+	if in.TLSMinVersion != nil {
+		in, out := &in.TLSMinVersion, &out.TLSMinVersion
+		*out = new(string)
+		**out = **in
+	}
 	if in.Tags != nil {
 		in, out := &in.Tags, &out.Tags
 		*out = make(map[string]string, len(*in))
 		for key, val := range *in {
 			(*out)[key] = val
 		}
-	}
-	if in.TlsMinVersion != nil {
-		in, out := &in.TlsMinVersion, &out.TlsMinVersion
-		*out = new(string)
-		**out = **in
 	}
 }
 
@@ -2074,18 +2074,18 @@ func (in *HdinsightKafkaClusterRolesHeadNodeParameters) DeepCopyInto(out *Hdinsi
 		*out = new(string)
 		**out = **in
 	}
-	if in.SshKeys != nil {
-		in, out := &in.SshKeys, &out.SshKeys
+	if in.SSHKeys != nil {
+		in, out := &in.SSHKeys, &out.SSHKeys
 		*out = make([]string, len(*in))
 		copy(*out, *in)
 	}
-	if in.SubnetId != nil {
-		in, out := &in.SubnetId, &out.SubnetId
+	if in.SubnetID != nil {
+		in, out := &in.SubnetID, &out.SubnetID
 		*out = new(string)
 		**out = **in
 	}
-	if in.VirtualNetworkId != nil {
-		in, out := &in.VirtualNetworkId, &out.VirtualNetworkId
+	if in.VirtualNetworkID != nil {
+		in, out := &in.VirtualNetworkID, &out.VirtualNetworkID
 		*out = new(string)
 		**out = **in
 	}
@@ -2187,18 +2187,18 @@ func (in *HdinsightKafkaClusterRolesWorkerNodeParameters) DeepCopyInto(out *Hdin
 		*out = new(string)
 		**out = **in
 	}
-	if in.SshKeys != nil {
-		in, out := &in.SshKeys, &out.SshKeys
+	if in.SSHKeys != nil {
+		in, out := &in.SSHKeys, &out.SSHKeys
 		*out = make([]string, len(*in))
 		copy(*out, *in)
 	}
-	if in.SubnetId != nil {
-		in, out := &in.SubnetId, &out.SubnetId
+	if in.SubnetID != nil {
+		in, out := &in.SubnetID, &out.SubnetID
 		*out = new(string)
 		**out = **in
 	}
-	if in.VirtualNetworkId != nil {
-		in, out := &in.VirtualNetworkId, &out.VirtualNetworkId
+	if in.VirtualNetworkID != nil {
+		in, out := &in.VirtualNetworkID, &out.VirtualNetworkID
 		*out = new(string)
 		**out = **in
 	}
@@ -2237,18 +2237,18 @@ func (in *HdinsightKafkaClusterRolesZookeeperNodeParameters) DeepCopyInto(out *H
 		*out = new(string)
 		**out = **in
 	}
-	if in.SshKeys != nil {
-		in, out := &in.SshKeys, &out.SshKeys
+	if in.SSHKeys != nil {
+		in, out := &in.SSHKeys, &out.SSHKeys
 		*out = make([]string, len(*in))
 		copy(*out, *in)
 	}
-	if in.SubnetId != nil {
-		in, out := &in.SubnetId, &out.SubnetId
+	if in.SubnetID != nil {
+		in, out := &in.SubnetID, &out.SubnetID
 		*out = new(string)
 		**out = **in
 	}
-	if in.VirtualNetworkId != nil {
-		in, out := &in.VirtualNetworkId, &out.VirtualNetworkId
+	if in.VirtualNetworkID != nil {
+		in, out := &in.VirtualNetworkID, &out.VirtualNetworkID
 		*out = new(string)
 		**out = **in
 	}
@@ -2489,17 +2489,17 @@ func (in *HdinsightMlServicesClusterParameters) DeepCopyInto(out *HdinsightMlSer
 		*out = make([]HdinsightMlServicesClusterStorageAccountParameters, len(*in))
 		copy(*out, *in)
 	}
+	if in.TLSMinVersion != nil {
+		in, out := &in.TLSMinVersion, &out.TLSMinVersion
+		*out = new(string)
+		**out = **in
+	}
 	if in.Tags != nil {
 		in, out := &in.Tags, &out.Tags
 		*out = make(map[string]string, len(*in))
 		for key, val := range *in {
 			(*out)[key] = val
 		}
-	}
-	if in.TlsMinVersion != nil {
-		in, out := &in.TlsMinVersion, &out.TlsMinVersion
-		*out = new(string)
-		**out = **in
 	}
 }
 
@@ -2536,18 +2536,18 @@ func (in *HdinsightMlServicesClusterRolesHeadNodeParameters) DeepCopyInto(out *H
 		*out = new(string)
 		**out = **in
 	}
-	if in.SshKeys != nil {
-		in, out := &in.SshKeys, &out.SshKeys
+	if in.SSHKeys != nil {
+		in, out := &in.SSHKeys, &out.SSHKeys
 		*out = make([]string, len(*in))
 		copy(*out, *in)
 	}
-	if in.SubnetId != nil {
-		in, out := &in.SubnetId, &out.SubnetId
+	if in.SubnetID != nil {
+		in, out := &in.SubnetID, &out.SubnetID
 		*out = new(string)
 		**out = **in
 	}
-	if in.VirtualNetworkId != nil {
-		in, out := &in.VirtualNetworkId, &out.VirtualNetworkId
+	if in.VirtualNetworkID != nil {
+		in, out := &in.VirtualNetworkID, &out.VirtualNetworkID
 		*out = new(string)
 		**out = **in
 	}
@@ -2649,18 +2649,18 @@ func (in *HdinsightMlServicesClusterRolesWorkerNodeParameters) DeepCopyInto(out 
 		*out = new(string)
 		**out = **in
 	}
-	if in.SshKeys != nil {
-		in, out := &in.SshKeys, &out.SshKeys
+	if in.SSHKeys != nil {
+		in, out := &in.SSHKeys, &out.SSHKeys
 		*out = make([]string, len(*in))
 		copy(*out, *in)
 	}
-	if in.SubnetId != nil {
-		in, out := &in.SubnetId, &out.SubnetId
+	if in.SubnetID != nil {
+		in, out := &in.SubnetID, &out.SubnetID
 		*out = new(string)
 		**out = **in
 	}
-	if in.VirtualNetworkId != nil {
-		in, out := &in.VirtualNetworkId, &out.VirtualNetworkId
+	if in.VirtualNetworkID != nil {
+		in, out := &in.VirtualNetworkID, &out.VirtualNetworkID
 		*out = new(string)
 		**out = **in
 	}
@@ -2699,18 +2699,18 @@ func (in *HdinsightMlServicesClusterRolesZookeeperNodeParameters) DeepCopyInto(o
 		*out = new(string)
 		**out = **in
 	}
-	if in.SshKeys != nil {
-		in, out := &in.SshKeys, &out.SshKeys
+	if in.SSHKeys != nil {
+		in, out := &in.SSHKeys, &out.SSHKeys
 		*out = make([]string, len(*in))
 		copy(*out, *in)
 	}
-	if in.SubnetId != nil {
-		in, out := &in.SubnetId, &out.SubnetId
+	if in.SubnetID != nil {
+		in, out := &in.SubnetID, &out.SubnetID
 		*out = new(string)
 		**out = **in
 	}
-	if in.VirtualNetworkId != nil {
-		in, out := &in.VirtualNetworkId, &out.VirtualNetworkId
+	if in.VirtualNetworkID != nil {
+		in, out := &in.VirtualNetworkID, &out.VirtualNetworkID
 		*out = new(string)
 		**out = **in
 	}
@@ -2921,17 +2921,17 @@ func (in *HdinsightRserverClusterParameters) DeepCopyInto(out *HdinsightRserverC
 		*out = make([]HdinsightRserverClusterStorageAccountParameters, len(*in))
 		copy(*out, *in)
 	}
+	if in.TLSMinVersion != nil {
+		in, out := &in.TLSMinVersion, &out.TLSMinVersion
+		*out = new(string)
+		**out = **in
+	}
 	if in.Tags != nil {
 		in, out := &in.Tags, &out.Tags
 		*out = make(map[string]string, len(*in))
 		for key, val := range *in {
 			(*out)[key] = val
 		}
-	}
-	if in.TlsMinVersion != nil {
-		in, out := &in.TlsMinVersion, &out.TlsMinVersion
-		*out = new(string)
-		**out = **in
 	}
 }
 
@@ -2968,18 +2968,18 @@ func (in *HdinsightRserverClusterRolesEdgeNodeParameters) DeepCopyInto(out *Hdin
 		*out = new(string)
 		**out = **in
 	}
-	if in.SshKeys != nil {
-		in, out := &in.SshKeys, &out.SshKeys
+	if in.SSHKeys != nil {
+		in, out := &in.SSHKeys, &out.SSHKeys
 		*out = make([]string, len(*in))
 		copy(*out, *in)
 	}
-	if in.SubnetId != nil {
-		in, out := &in.SubnetId, &out.SubnetId
+	if in.SubnetID != nil {
+		in, out := &in.SubnetID, &out.SubnetID
 		*out = new(string)
 		**out = **in
 	}
-	if in.VirtualNetworkId != nil {
-		in, out := &in.VirtualNetworkId, &out.VirtualNetworkId
+	if in.VirtualNetworkID != nil {
+		in, out := &in.VirtualNetworkID, &out.VirtualNetworkID
 		*out = new(string)
 		**out = **in
 	}
@@ -3018,18 +3018,18 @@ func (in *HdinsightRserverClusterRolesHeadNodeParameters) DeepCopyInto(out *Hdin
 		*out = new(string)
 		**out = **in
 	}
-	if in.SshKeys != nil {
-		in, out := &in.SshKeys, &out.SshKeys
+	if in.SSHKeys != nil {
+		in, out := &in.SSHKeys, &out.SSHKeys
 		*out = make([]string, len(*in))
 		copy(*out, *in)
 	}
-	if in.SubnetId != nil {
-		in, out := &in.SubnetId, &out.SubnetId
+	if in.SubnetID != nil {
+		in, out := &in.SubnetID, &out.SubnetID
 		*out = new(string)
 		**out = **in
 	}
-	if in.VirtualNetworkId != nil {
-		in, out := &in.VirtualNetworkId, &out.VirtualNetworkId
+	if in.VirtualNetworkID != nil {
+		in, out := &in.VirtualNetworkID, &out.VirtualNetworkID
 		*out = new(string)
 		**out = **in
 	}
@@ -3131,18 +3131,18 @@ func (in *HdinsightRserverClusterRolesWorkerNodeParameters) DeepCopyInto(out *Hd
 		*out = new(string)
 		**out = **in
 	}
-	if in.SshKeys != nil {
-		in, out := &in.SshKeys, &out.SshKeys
+	if in.SSHKeys != nil {
+		in, out := &in.SSHKeys, &out.SSHKeys
 		*out = make([]string, len(*in))
 		copy(*out, *in)
 	}
-	if in.SubnetId != nil {
-		in, out := &in.SubnetId, &out.SubnetId
+	if in.SubnetID != nil {
+		in, out := &in.SubnetID, &out.SubnetID
 		*out = new(string)
 		**out = **in
 	}
-	if in.VirtualNetworkId != nil {
-		in, out := &in.VirtualNetworkId, &out.VirtualNetworkId
+	if in.VirtualNetworkID != nil {
+		in, out := &in.VirtualNetworkID, &out.VirtualNetworkID
 		*out = new(string)
 		**out = **in
 	}
@@ -3181,18 +3181,18 @@ func (in *HdinsightRserverClusterRolesZookeeperNodeParameters) DeepCopyInto(out 
 		*out = new(string)
 		**out = **in
 	}
-	if in.SshKeys != nil {
-		in, out := &in.SshKeys, &out.SshKeys
+	if in.SSHKeys != nil {
+		in, out := &in.SSHKeys, &out.SSHKeys
 		*out = make([]string, len(*in))
 		copy(*out, *in)
 	}
-	if in.SubnetId != nil {
-		in, out := &in.SubnetId, &out.SubnetId
+	if in.SubnetID != nil {
+		in, out := &in.SubnetID, &out.SubnetID
 		*out = new(string)
 		**out = **in
 	}
-	if in.VirtualNetworkId != nil {
-		in, out := &in.VirtualNetworkId, &out.VirtualNetworkId
+	if in.VirtualNetworkID != nil {
+		in, out := &in.VirtualNetworkID, &out.VirtualNetworkID
 		*out = new(string)
 		**out = **in
 	}
@@ -3672,17 +3672,17 @@ func (in *HdinsightSparkClusterParameters) DeepCopyInto(out *HdinsightSparkClust
 		*out = make([]HdinsightSparkClusterStorageAccountGen2Parameters, len(*in))
 		copy(*out, *in)
 	}
+	if in.TLSMinVersion != nil {
+		in, out := &in.TLSMinVersion, &out.TLSMinVersion
+		*out = new(string)
+		**out = **in
+	}
 	if in.Tags != nil {
 		in, out := &in.Tags, &out.Tags
 		*out = make(map[string]string, len(*in))
 		for key, val := range *in {
 			(*out)[key] = val
 		}
-	}
-	if in.TlsMinVersion != nil {
-		in, out := &in.TlsMinVersion, &out.TlsMinVersion
-		*out = new(string)
-		**out = **in
 	}
 }
 
@@ -3719,18 +3719,18 @@ func (in *HdinsightSparkClusterRolesHeadNodeParameters) DeepCopyInto(out *Hdinsi
 		*out = new(string)
 		**out = **in
 	}
-	if in.SshKeys != nil {
-		in, out := &in.SshKeys, &out.SshKeys
+	if in.SSHKeys != nil {
+		in, out := &in.SSHKeys, &out.SSHKeys
 		*out = make([]string, len(*in))
 		copy(*out, *in)
 	}
-	if in.SubnetId != nil {
-		in, out := &in.SubnetId, &out.SubnetId
+	if in.SubnetID != nil {
+		in, out := &in.SubnetID, &out.SubnetID
 		*out = new(string)
 		**out = **in
 	}
-	if in.VirtualNetworkId != nil {
-		in, out := &in.VirtualNetworkId, &out.VirtualNetworkId
+	if in.VirtualNetworkID != nil {
+		in, out := &in.VirtualNetworkID, &out.VirtualNetworkID
 		*out = new(string)
 		**out = **in
 	}
@@ -3874,18 +3874,18 @@ func (in *HdinsightSparkClusterRolesWorkerNodeParameters) DeepCopyInto(out *Hdin
 		*out = new(string)
 		**out = **in
 	}
-	if in.SshKeys != nil {
-		in, out := &in.SshKeys, &out.SshKeys
+	if in.SSHKeys != nil {
+		in, out := &in.SSHKeys, &out.SSHKeys
 		*out = make([]string, len(*in))
 		copy(*out, *in)
 	}
-	if in.SubnetId != nil {
-		in, out := &in.SubnetId, &out.SubnetId
+	if in.SubnetID != nil {
+		in, out := &in.SubnetID, &out.SubnetID
 		*out = new(string)
 		**out = **in
 	}
-	if in.VirtualNetworkId != nil {
-		in, out := &in.VirtualNetworkId, &out.VirtualNetworkId
+	if in.VirtualNetworkID != nil {
+		in, out := &in.VirtualNetworkID, &out.VirtualNetworkID
 		*out = new(string)
 		**out = **in
 	}
@@ -3924,18 +3924,18 @@ func (in *HdinsightSparkClusterRolesZookeeperNodeParameters) DeepCopyInto(out *H
 		*out = new(string)
 		**out = **in
 	}
-	if in.SshKeys != nil {
-		in, out := &in.SshKeys, &out.SshKeys
+	if in.SSHKeys != nil {
+		in, out := &in.SSHKeys, &out.SSHKeys
 		*out = make([]string, len(*in))
 		copy(*out, *in)
 	}
-	if in.SubnetId != nil {
-		in, out := &in.SubnetId, &out.SubnetId
+	if in.SubnetID != nil {
+		in, out := &in.SubnetID, &out.SubnetID
 		*out = new(string)
 		**out = **in
 	}
-	if in.VirtualNetworkId != nil {
-		in, out := &in.VirtualNetworkId, &out.VirtualNetworkId
+	if in.VirtualNetworkID != nil {
+		in, out := &in.VirtualNetworkID, &out.VirtualNetworkID
 		*out = new(string)
 		**out = **in
 	}
@@ -4388,17 +4388,17 @@ func (in *HdinsightStormClusterParameters) DeepCopyInto(out *HdinsightStormClust
 		*out = make([]HdinsightStormClusterStorageAccountParameters, len(*in))
 		copy(*out, *in)
 	}
+	if in.TLSMinVersion != nil {
+		in, out := &in.TLSMinVersion, &out.TLSMinVersion
+		*out = new(string)
+		**out = **in
+	}
 	if in.Tags != nil {
 		in, out := &in.Tags, &out.Tags
 		*out = make(map[string]string, len(*in))
 		for key, val := range *in {
 			(*out)[key] = val
 		}
-	}
-	if in.TlsMinVersion != nil {
-		in, out := &in.TlsMinVersion, &out.TlsMinVersion
-		*out = new(string)
-		**out = **in
 	}
 }
 
@@ -4435,18 +4435,18 @@ func (in *HdinsightStormClusterRolesHeadNodeParameters) DeepCopyInto(out *Hdinsi
 		*out = new(string)
 		**out = **in
 	}
-	if in.SshKeys != nil {
-		in, out := &in.SshKeys, &out.SshKeys
+	if in.SSHKeys != nil {
+		in, out := &in.SSHKeys, &out.SSHKeys
 		*out = make([]string, len(*in))
 		copy(*out, *in)
 	}
-	if in.SubnetId != nil {
-		in, out := &in.SubnetId, &out.SubnetId
+	if in.SubnetID != nil {
+		in, out := &in.SubnetID, &out.SubnetID
 		*out = new(string)
 		**out = **in
 	}
-	if in.VirtualNetworkId != nil {
-		in, out := &in.VirtualNetworkId, &out.VirtualNetworkId
+	if in.VirtualNetworkID != nil {
+		in, out := &in.VirtualNetworkID, &out.VirtualNetworkID
 		*out = new(string)
 		**out = **in
 	}
@@ -4541,18 +4541,18 @@ func (in *HdinsightStormClusterRolesWorkerNodeParameters) DeepCopyInto(out *Hdin
 		*out = new(string)
 		**out = **in
 	}
-	if in.SshKeys != nil {
-		in, out := &in.SshKeys, &out.SshKeys
+	if in.SSHKeys != nil {
+		in, out := &in.SSHKeys, &out.SSHKeys
 		*out = make([]string, len(*in))
 		copy(*out, *in)
 	}
-	if in.SubnetId != nil {
-		in, out := &in.SubnetId, &out.SubnetId
+	if in.SubnetID != nil {
+		in, out := &in.SubnetID, &out.SubnetID
 		*out = new(string)
 		**out = **in
 	}
-	if in.VirtualNetworkId != nil {
-		in, out := &in.VirtualNetworkId, &out.VirtualNetworkId
+	if in.VirtualNetworkID != nil {
+		in, out := &in.VirtualNetworkID, &out.VirtualNetworkID
 		*out = new(string)
 		**out = **in
 	}
@@ -4591,18 +4591,18 @@ func (in *HdinsightStormClusterRolesZookeeperNodeParameters) DeepCopyInto(out *H
 		*out = new(string)
 		**out = **in
 	}
-	if in.SshKeys != nil {
-		in, out := &in.SshKeys, &out.SshKeys
+	if in.SSHKeys != nil {
+		in, out := &in.SSHKeys, &out.SSHKeys
 		*out = make([]string, len(*in))
 		copy(*out, *in)
 	}
-	if in.SubnetId != nil {
-		in, out := &in.SubnetId, &out.SubnetId
+	if in.SubnetID != nil {
+		in, out := &in.SubnetID, &out.SubnetID
 		*out = new(string)
 		**out = **in
 	}
-	if in.VirtualNetworkId != nil {
-		in, out := &in.VirtualNetworkId, &out.VirtualNetworkId
+	if in.VirtualNetworkID != nil {
+		in, out := &in.VirtualNetworkID, &out.VirtualNetworkID
 		*out = new(string)
 		**out = **in
 	}
@@ -4705,18 +4705,18 @@ func (in *HeadNodeParameters) DeepCopyInto(out *HeadNodeParameters) {
 		*out = new(string)
 		**out = **in
 	}
-	if in.SshKeys != nil {
-		in, out := &in.SshKeys, &out.SshKeys
+	if in.SSHKeys != nil {
+		in, out := &in.SSHKeys, &out.SSHKeys
 		*out = make([]string, len(*in))
 		copy(*out, *in)
 	}
-	if in.SubnetId != nil {
-		in, out := &in.SubnetId, &out.SubnetId
+	if in.SubnetID != nil {
+		in, out := &in.SubnetID, &out.SubnetID
 		*out = new(string)
 		**out = **in
 	}
-	if in.VirtualNetworkId != nil {
-		in, out := &in.VirtualNetworkId, &out.VirtualNetworkId
+	if in.VirtualNetworkID != nil {
+		in, out := &in.VirtualNetworkID, &out.VirtualNetworkID
 		*out = new(string)
 		**out = **in
 	}
@@ -4815,18 +4815,18 @@ func (in *KafkaManagementNodeParameters) DeepCopyInto(out *KafkaManagementNodePa
 		*out = new(string)
 		**out = **in
 	}
-	if in.SshKeys != nil {
-		in, out := &in.SshKeys, &out.SshKeys
+	if in.SSHKeys != nil {
+		in, out := &in.SSHKeys, &out.SSHKeys
 		*out = make([]string, len(*in))
 		copy(*out, *in)
 	}
-	if in.SubnetId != nil {
-		in, out := &in.SubnetId, &out.SubnetId
+	if in.SubnetID != nil {
+		in, out := &in.SubnetID, &out.SubnetID
 		*out = new(string)
 		**out = **in
 	}
-	if in.VirtualNetworkId != nil {
-		in, out := &in.VirtualNetworkId, &out.VirtualNetworkId
+	if in.VirtualNetworkID != nil {
+		in, out := &in.VirtualNetworkID, &out.VirtualNetworkID
 		*out = new(string)
 		**out = **in
 	}
@@ -5202,18 +5202,18 @@ func (in *RolesEdgeNodeParameters) DeepCopyInto(out *RolesEdgeNodeParameters) {
 		*out = new(string)
 		**out = **in
 	}
-	if in.SshKeys != nil {
-		in, out := &in.SshKeys, &out.SshKeys
+	if in.SSHKeys != nil {
+		in, out := &in.SSHKeys, &out.SSHKeys
 		*out = make([]string, len(*in))
 		copy(*out, *in)
 	}
-	if in.SubnetId != nil {
-		in, out := &in.SubnetId, &out.SubnetId
+	if in.SubnetID != nil {
+		in, out := &in.SubnetID, &out.SubnetID
 		*out = new(string)
 		**out = **in
 	}
-	if in.VirtualNetworkId != nil {
-		in, out := &in.VirtualNetworkId, &out.VirtualNetworkId
+	if in.VirtualNetworkID != nil {
+		in, out := &in.VirtualNetworkID, &out.VirtualNetworkID
 		*out = new(string)
 		**out = **in
 	}
@@ -5252,18 +5252,18 @@ func (in *RolesHeadNodeParameters) DeepCopyInto(out *RolesHeadNodeParameters) {
 		*out = new(string)
 		**out = **in
 	}
-	if in.SshKeys != nil {
-		in, out := &in.SshKeys, &out.SshKeys
+	if in.SSHKeys != nil {
+		in, out := &in.SSHKeys, &out.SSHKeys
 		*out = make([]string, len(*in))
 		copy(*out, *in)
 	}
-	if in.SubnetId != nil {
-		in, out := &in.SubnetId, &out.SubnetId
+	if in.SubnetID != nil {
+		in, out := &in.SubnetID, &out.SubnetID
 		*out = new(string)
 		**out = **in
 	}
-	if in.VirtualNetworkId != nil {
-		in, out := &in.VirtualNetworkId, &out.VirtualNetworkId
+	if in.VirtualNetworkID != nil {
+		in, out := &in.VirtualNetworkID, &out.VirtualNetworkID
 		*out = new(string)
 		**out = **in
 	}
@@ -5451,18 +5451,18 @@ func (in *RolesWorkerNodeParameters) DeepCopyInto(out *RolesWorkerNodeParameters
 		*out = new(string)
 		**out = **in
 	}
-	if in.SshKeys != nil {
-		in, out := &in.SshKeys, &out.SshKeys
+	if in.SSHKeys != nil {
+		in, out := &in.SSHKeys, &out.SSHKeys
 		*out = make([]string, len(*in))
 		copy(*out, *in)
 	}
-	if in.SubnetId != nil {
-		in, out := &in.SubnetId, &out.SubnetId
+	if in.SubnetID != nil {
+		in, out := &in.SubnetID, &out.SubnetID
 		*out = new(string)
 		**out = **in
 	}
-	if in.VirtualNetworkId != nil {
-		in, out := &in.VirtualNetworkId, &out.VirtualNetworkId
+	if in.VirtualNetworkID != nil {
+		in, out := &in.VirtualNetworkID, &out.VirtualNetworkID
 		*out = new(string)
 		**out = **in
 	}
@@ -5501,18 +5501,18 @@ func (in *RolesZookeeperNodeParameters) DeepCopyInto(out *RolesZookeeperNodePara
 		*out = new(string)
 		**out = **in
 	}
-	if in.SshKeys != nil {
-		in, out := &in.SshKeys, &out.SshKeys
+	if in.SSHKeys != nil {
+		in, out := &in.SSHKeys, &out.SSHKeys
 		*out = make([]string, len(*in))
 		copy(*out, *in)
 	}
-	if in.SubnetId != nil {
-		in, out := &in.SubnetId, &out.SubnetId
+	if in.SubnetID != nil {
+		in, out := &in.SubnetID, &out.SubnetID
 		*out = new(string)
 		**out = **in
 	}
-	if in.VirtualNetworkId != nil {
-		in, out := &in.VirtualNetworkId, &out.VirtualNetworkId
+	if in.VirtualNetworkID != nil {
+		in, out := &in.VirtualNetworkID, &out.VirtualNetworkID
 		*out = new(string)
 		**out = **in
 	}
@@ -5797,18 +5797,18 @@ func (in *WorkerNodeParameters) DeepCopyInto(out *WorkerNodeParameters) {
 		*out = new(string)
 		**out = **in
 	}
-	if in.SshKeys != nil {
-		in, out := &in.SshKeys, &out.SshKeys
+	if in.SSHKeys != nil {
+		in, out := &in.SSHKeys, &out.SSHKeys
 		*out = make([]string, len(*in))
 		copy(*out, *in)
 	}
-	if in.SubnetId != nil {
-		in, out := &in.SubnetId, &out.SubnetId
+	if in.SubnetID != nil {
+		in, out := &in.SubnetID, &out.SubnetID
 		*out = new(string)
 		**out = **in
 	}
-	if in.VirtualNetworkId != nil {
-		in, out := &in.VirtualNetworkId, &out.VirtualNetworkId
+	if in.VirtualNetworkID != nil {
+		in, out := &in.VirtualNetworkID, &out.VirtualNetworkID
 		*out = new(string)
 		**out = **in
 	}
@@ -5847,18 +5847,18 @@ func (in *ZookeeperNodeParameters) DeepCopyInto(out *ZookeeperNodeParameters) {
 		*out = new(string)
 		**out = **in
 	}
-	if in.SshKeys != nil {
-		in, out := &in.SshKeys, &out.SshKeys
+	if in.SSHKeys != nil {
+		in, out := &in.SSHKeys, &out.SSHKeys
 		*out = make([]string, len(*in))
 		copy(*out, *in)
 	}
-	if in.SubnetId != nil {
-		in, out := &in.SubnetId, &out.SubnetId
+	if in.SubnetID != nil {
+		in, out := &in.SubnetID, &out.SubnetID
 		*out = new(string)
 		**out = **in
 	}
-	if in.VirtualNetworkId != nil {
-		in, out := &in.VirtualNetworkId, &out.VirtualNetworkId
+	if in.VirtualNetworkID != nil {
+		in, out := &in.VirtualNetworkID, &out.VirtualNetworkID
 		*out = new(string)
 		**out = **in
 	}

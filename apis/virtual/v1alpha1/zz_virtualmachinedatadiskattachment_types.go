@@ -34,9 +34,9 @@ type VirtualMachineDataDiskAttachmentParameters struct {
 
 	Lun int64 `json:"lun" tf:"lun"`
 
-	ManagedDiskId string `json:"managedDiskId" tf:"managed_disk_id"`
+	ManagedDiskID string `json:"managedDiskId" tf:"managed_disk_id"`
 
-	VirtualMachineId string `json:"virtualMachineId" tf:"virtual_machine_id"`
+	VirtualMachineID string `json:"virtualMachineId" tf:"virtual_machine_id"`
 
 	WriteAcceleratorEnabled *bool `json:"writeAcceleratorEnabled,omitempty" tf:"write_accelerator_enabled"`
 }

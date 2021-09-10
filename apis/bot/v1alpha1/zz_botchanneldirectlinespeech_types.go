@@ -34,9 +34,9 @@ type BotChannelDirectLineSpeechParameters struct {
 
 	CognitiveServiceLocation string `json:"cognitiveServiceLocation" tf:"cognitive_service_location"`
 
-	CustomSpeechModelId *string `json:"customSpeechModelId,omitempty" tf:"custom_speech_model_id"`
+	CustomSpeechModelID *string `json:"customSpeechModelId,omitempty" tf:"custom_speech_model_id"`
 
-	CustomVoiceDeploymentId *string `json:"customVoiceDeploymentId,omitempty" tf:"custom_voice_deployment_id"`
+	CustomVoiceDeploymentID *string `json:"customVoiceDeploymentId,omitempty" tf:"custom_voice_deployment_id"`
 
 	Location string `json:"location" tf:"location"`
 

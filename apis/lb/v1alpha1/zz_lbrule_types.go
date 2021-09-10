@@ -25,21 +25,21 @@ import (
 )
 
 type LbRuleObservation struct {
-	FrontendIpConfigurationId string `json:"frontendIpConfigurationId" tf:"frontend_ip_configuration_id"`
+	FrontendIPConfigurationID string `json:"frontendIpConfigurationId" tf:"frontend_ip_configuration_id"`
 }
 
 type LbRuleParameters struct {
-	BackendAddressPoolId *string `json:"backendAddressPoolId,omitempty" tf:"backend_address_pool_id"`
+	BackendAddressPoolID *string `json:"backendAddressPoolId,omitempty" tf:"backend_address_pool_id"`
 
 	BackendPort int64 `json:"backendPort" tf:"backend_port"`
 
 	DisableOutboundSnat *bool `json:"disableOutboundSnat,omitempty" tf:"disable_outbound_snat"`
 
-	EnableFloatingIp *bool `json:"enableFloatingIp,omitempty" tf:"enable_floating_ip"`
+	EnableFloatingIP *bool `json:"enableFloatingIp,omitempty" tf:"enable_floating_ip"`
 
-	EnableTcpReset *bool `json:"enableTcpReset,omitempty" tf:"enable_tcp_reset"`
+	EnableTCPReset *bool `json:"enableTcpReset,omitempty" tf:"enable_tcp_reset"`
 
-	FrontendIpConfigurationName string `json:"frontendIpConfigurationName" tf:"frontend_ip_configuration_name"`
+	FrontendIPConfigurationName string `json:"frontendIpConfigurationName" tf:"frontend_ip_configuration_name"`
 
 	FrontendPort int64 `json:"frontendPort" tf:"frontend_port"`
 
@@ -47,11 +47,11 @@ type LbRuleParameters struct {
 
 	LoadDistribution *string `json:"loadDistribution,omitempty" tf:"load_distribution"`
 
-	LoadbalancerId string `json:"loadbalancerId" tf:"loadbalancer_id"`
+	LoadbalancerID string `json:"loadbalancerId" tf:"loadbalancer_id"`
 
 	Name string `json:"name" tf:"name"`
 
-	ProbeId *string `json:"probeId,omitempty" tf:"probe_id"`
+	ProbeID *string `json:"probeId,omitempty" tf:"probe_id"`
 
 	Protocol string `json:"protocol" tf:"protocol"`
 
