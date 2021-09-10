@@ -25,7 +25,7 @@ import (
 	"strings"
 
 	"github.com/hashicorp/terraform-plugin-sdk/v2/helper/schema"
-	"github.com/hashicorp/terraform-provider-azurerm/azurerm"
+	"github.com/hashicorp/terraform-provider-azurerm/xpprovider"
 	"github.com/iancoleman/strcase"
 	"github.com/pkg/errors"
 
@@ -57,6 +57,7 @@ var skipList = map[string]struct{}{
 	"azurerm_sentinel_data_connector_microsoft_defender_advanced_threat_protection":  {},
 }
 
+// "make prepare.azurerm" should be run before running this generator pipeline
 func main() { // nolint:gocyclo
 	// Cyclomatic complexity of this function is above our goal of 10,
 	// and it establishes a Terrajet code generation pipeline that's very similar
@@ -66,7 +67,7 @@ func main() { // nolint:gocyclo
 		panic(errors.Wrap(err, "cannot get working directory"))
 	}
 	groups := map[string]map[string]*schema.Resource{}
-	for name, resource := range azurerm.Provider().ResourcesMap {
+	for name, resource := range xpprovider.Provider().ResourcesMap {
 		fmt.Println(name)
 
 		if len(resource.Schema) == 0 {

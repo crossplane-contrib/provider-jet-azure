@@ -7,7 +7,8 @@ ENV USER_ID=1001
 
 # Setup Terraform environment
 ENV TERRAFORM_VERSION 1.0.5
-ENV TERRAFORM_PROVIDER_AZURERM_VERSION 2.75.0
+# must match Makefile variable AZURERM_REFSPEC
+ENV TERRAFORM_PROVIDER_AZURERM_VERSION 2.74.0
 ENV PLUGIN_DIR /terraform/provider-mirror/registry.terraform.io/hashicorp/azurerm/${TERRAFORM_PROVIDER_AZURERM_VERSION}/linux_${ARCH}
 ENV TF_CLI_CONFIG_FILE /terraform/.terraformrc
 ENV TF_FORK 0

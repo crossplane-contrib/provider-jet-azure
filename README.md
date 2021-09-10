@@ -7,6 +7,12 @@ wraps the Terraform CLI and exposes XRM-conformant managed resources for
 
 ## Developing
 
+Run code-generation pipeline:
+```console
+make prepare.azurerm
+go run cmd/generator/main.go
+```
+
 Run against a Kubernetes cluster:
 
 ```console
