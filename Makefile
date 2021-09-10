@@ -93,12 +93,17 @@ run: go.build
 go.build: prepare.azurerm
 reviewable: prepare.azurerm
 test: prepare.azurerm
+generate: prepare.azurerm codegen.pipeline
+
 
 # must match Docker build file env. variable TERRAFORM_PROVIDER_AZURERM_VERSION in
 # cluster/images/provider-tf-azure-controller/Dockerfile
 AZURERM_REFSPEC ?= v2.74.0
 prepare.azurerm:
 	@WORK_DIR=$(WORK_DIR) AZURERM_REFSPEC=$(AZURERM_REFSPEC) ./scripts/prepare_azurerm.sh
+
+codegen.pipeline:
+	@go run cmd/generator/main.go
 
 .PHONY: cobertura submodules fallthrough run crds.clean
 
