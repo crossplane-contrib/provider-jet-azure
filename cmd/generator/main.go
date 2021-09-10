@@ -18,6 +18,7 @@ package main
 
 import (
 	"fmt"
+	"io/ioutil"
 	"os"
 	"os/exec"
 	"path/filepath"
@@ -57,19 +58,53 @@ var skipList = map[string]struct{}{
 	"azurerm_sentinel_data_connector_microsoft_defender_advanced_threat_protection":  {},
 }
 
+var includeList = map[string]struct{}{
+	"azurerm_virtual_hub_connection":                                  {},
+	"azurerm_virtual_machine_configuration_policy_assignment":         {},
+	"azurerm_virtual_hub_bgp_connection":                              {},
+	"azurerm_virtual_hub_security_partner_provider":                   {},
+	"azurerm_virtual_machine_data_disk_attachment":                    {},
+	"azurerm_virtual_wan":                                             {},
+	"azurerm_virtual_hub_ip":                                          {},
+	"azurerm_virtual_desktop_host_pool":                               {},
+	"azurerm_virtual_desktop_application":                             {},
+	"azurerm_virtual_machine_extension":                               {},
+	"azurerm_virtual_machine":                                         {},
+	"azurerm_virtual_network_gateway":                                 {},
+	"azurerm_virtual_network_peering":                                 {},
+	"azurerm_virtual_machine_scale_set_extension":                     {},
+	"azurerm_virtual_desktop_application_group":                       {},
+	"azurerm_virtual_hub":                                             {},
+	"azurerm_virtual_network_dns_servers":                             {},
+	"azurerm_virtual_network_gateway_connection":                      {},
+	"azurerm_virtual_desktop_workspace_application_group_association": {},
+	"azurerm_virtual_hub_route_table":                                 {},
+	"azurerm_virtual_machine_scale_set":                               {},
+	"azurerm_virtual_network":                                         {},
+	"azurerm_virtual_desktop_workspace":                               {},
+}
+
 // "make prepare.azurerm" should be run before running this generator pipeline
 func main() { // nolint:gocyclo
 	// Cyclomatic complexity of this function is above our goal of 10,
 	// and it establishes a Terrajet code generation pipeline that's very similar
 	// to other Terrajet based providers.
+	// delete API dirs
+	deleteGenDirs("apis", map[string]struct{}{
+		"v1alpha1": {},
+	})
+	// delete controller dirs
+	deleteGenDirs("internal/controller", map[string]struct{}{
+		"config": {},
+	})
+
 	wd, err := os.Getwd()
 	if err != nil {
 		panic(errors.Wrap(err, "cannot get working directory"))
 	}
 	groups := map[string]map[string]*schema.Resource{}
+	useIncludeList := os.Getenv("USE_INCLUDE_LIST") == "true"
 	for name, resource := range xpprovider.Provider().ResourcesMap {
-		fmt.Println(name)
-
 		if len(resource.Schema) == 0 {
 			// There are resources with no schema, that we will address later.
 			fmt.Printf("Skipping resource %s because it has no schema\n", name)
@@ -78,6 +113,13 @@ func main() { // nolint:gocyclo
 		if _, ok := skipList[name]; ok {
 			continue
 		}
+		if useIncludeList {
+			if _, ok := includeList[name]; !ok {
+				continue
+			}
+		}
+		fmt.Printf("Generating code for resource: %s\n", name)
+
 		words := strings.Split(name, "_")
 		groupName := words[1]
 		if len(groups[groupName]) == 0 {
@@ -144,4 +186,25 @@ func main() { // nolint:gocyclo
 		panic(errors.Wrap(err, "cannot run goimports for internal folder"))
 	}
 	fmt.Printf("\nGenerated %d resources!\n", count)
+}
+
+// delete API subdirs for a clean start
+func deleteGenDirs(rootDir string, keepMap map[string]struct{}) {
+	files, err := ioutil.ReadDir(rootDir)
+	if err != nil {
+		panic(errors.Wrapf(err, "cannot list files under %s", rootDir))
+	}
+
+	for _, f := range files {
+		if !f.IsDir() {
+			continue
+		}
+		if _, ok := keepMap[f.Name()]; ok {
+			continue
+		}
+		removeDir := filepath.Join(rootDir, f.Name())
+		if err := os.RemoveAll(removeDir); err != nil {
+			panic(errors.Wrapf(err, "cannot remove API dir: %s", removeDir))
+		}
+	}
 }
