@@ -28,8 +28,11 @@ type VirtualDesktopWorkspaceApplicationGroupAssociationObservation struct {
 }
 
 type VirtualDesktopWorkspaceApplicationGroupAssociationParameters struct {
+
+	// +kubebuilder:validation:Required
 	ApplicationGroupID string `json:"applicationGroupId" tf:"application_group_id"`
 
+	// +kubebuilder:validation:Required
 	WorkspaceID string `json:"workspaceId" tf:"workspace_id"`
 }
 

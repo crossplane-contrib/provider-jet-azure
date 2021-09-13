@@ -28,22 +28,32 @@ type VirtualWanObservation struct {
 }
 
 type VirtualWanParameters struct {
+
+	// +kubebuilder:validation:Optional
 	AllowBranchToBranchTraffic *bool `json:"allowBranchToBranchTraffic,omitempty" tf:"allow_branch_to_branch_traffic"`
 
+	// +kubebuilder:validation:Optional
 	AllowVnetToVnetTraffic *bool `json:"allowVnetToVnetTraffic,omitempty" tf:"allow_vnet_to_vnet_traffic"`
 
+	// +kubebuilder:validation:Optional
 	DisableVpnEncryption *bool `json:"disableVpnEncryption,omitempty" tf:"disable_vpn_encryption"`
 
+	// +kubebuilder:validation:Required
 	Location string `json:"location" tf:"location"`
 
+	// +kubebuilder:validation:Required
 	Name string `json:"name" tf:"name"`
 
+	// +kubebuilder:validation:Optional
 	Office365LocalBreakoutCategory *string `json:"office365LocalBreakoutCategory,omitempty" tf:"office365_local_breakout_category"`
 
+	// +kubebuilder:validation:Required
 	ResourceGroupName string `json:"resourceGroupName" tf:"resource_group_name"`
 
+	// +kubebuilder:validation:Optional
 	Tags map[string]string `json:"tags,omitempty" tf:"tags"`
 
+	// +kubebuilder:validation:Optional
 	Type *string `json:"type,omitempty" tf:"type"`
 }
 

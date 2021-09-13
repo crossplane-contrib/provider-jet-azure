@@ -18,12 +18,7 @@ limitations under the License.
 
 package v1alpha1
 
-import (
-	"github.com/pkg/errors"
-
-	"github.com/crossplane-contrib/terrajet/pkg/conversion"
-	"github.com/crossplane-contrib/terrajet/pkg/conversion/lateinit"
-)
+import "github.com/crossplane-contrib/terrajet/pkg/conversion"
 
 // GetTerraformResourceType returns Terraform resource type for this VirtualDesktopHostPool
 func (mg *VirtualDesktopHostPool) GetTerraformResourceType() string {
@@ -53,16 +48,4 @@ func (tr *VirtualDesktopHostPool) GetParameters() ([]byte, error) {
 // SetParameters for this VirtualDesktopHostPool
 func (tr *VirtualDesktopHostPool) SetParameters(data []byte) error {
 	return conversion.TFParser.Unmarshal(data, &tr.Spec.ForProvider)
-}
-
-// LateInitialize this VirtualDesktopHostPool using its observed tfState.
-// returns True if there are any spec changes for the resource.
-func (tr *VirtualDesktopHostPool) LateInitialize(tfState []byte) (bool, error) {
-	stateObject := &VirtualDesktopHostPoolParameters{}
-	if err := conversion.TFParser.Unmarshal(tfState, stateObject); err != nil {
-		return false, errors.Wrap(err, "failed to unmarshal Terraform state for late initialization")
-	}
-
-	return lateinit.LateInitializeFromResponse("", &tr.Spec.ForProvider, stateObject,
-		lateinit.ZeroValueJSONOmitEmptyFilter(lateinit.CNameWildcard), lateinit.ZeroElemPtrFilter(lateinit.CNameWildcard))
 }

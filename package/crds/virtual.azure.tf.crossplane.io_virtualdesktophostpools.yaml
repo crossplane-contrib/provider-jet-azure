@@ -81,6 +81,7 @@ spec:
                   personalDesktopAssignmentType:
                     type: string
                   preferredAppGroupType:
+                    description: Preferred App Group type to display
                     type: string
                   registrationInfo:
                     items:

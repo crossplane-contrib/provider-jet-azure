@@ -18,12 +18,7 @@ limitations under the License.
 
 package v1alpha1
 
-import (
-	"github.com/pkg/errors"
-
-	"github.com/crossplane-contrib/terrajet/pkg/conversion"
-	"github.com/crossplane-contrib/terrajet/pkg/conversion/lateinit"
-)
+import "github.com/crossplane-contrib/terrajet/pkg/conversion"
 
 // GetTerraformResourceType returns Terraform resource type for this VirtualDesktopWorkspace
 func (mg *VirtualDesktopWorkspace) GetTerraformResourceType() string {
@@ -53,16 +48,4 @@ func (tr *VirtualDesktopWorkspace) GetParameters() ([]byte, error) {
 // SetParameters for this VirtualDesktopWorkspace
 func (tr *VirtualDesktopWorkspace) SetParameters(data []byte) error {
 	return conversion.TFParser.Unmarshal(data, &tr.Spec.ForProvider)
-}
-
-// LateInitialize this VirtualDesktopWorkspace using its observed tfState.
-// returns True if there are any spec changes for the resource.
-func (tr *VirtualDesktopWorkspace) LateInitialize(tfState []byte) (bool, error) {
-	stateObject := &VirtualDesktopWorkspaceParameters{}
-	if err := conversion.TFParser.Unmarshal(tfState, stateObject); err != nil {
-		return false, errors.Wrap(err, "failed to unmarshal Terraform state for late initialization")
-	}
-
-	return lateinit.LateInitializeFromResponse("", &tr.Spec.ForProvider, stateObject,
-		lateinit.ZeroValueJSONOmitEmptyFilter(lateinit.CNameWildcard), lateinit.ZeroElemPtrFilter(lateinit.CNameWildcard))
 }

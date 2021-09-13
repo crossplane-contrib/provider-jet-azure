@@ -28,12 +28,17 @@ type BgpSettingsObservation struct {
 }
 
 type BgpSettingsParameters struct {
+
+	// +kubebuilder:validation:Optional
 	Asn *int64 `json:"asn,omitempty" tf:"asn"`
 
+	// +kubebuilder:validation:Optional
 	PeerWeight *int64 `json:"peerWeight,omitempty" tf:"peer_weight"`
 
+	// +kubebuilder:validation:Optional
 	PeeringAddress *string `json:"peeringAddress,omitempty" tf:"peering_address"`
 
+	// +kubebuilder:validation:Optional
 	PeeringAddresses []PeeringAddressesParameters `json:"peeringAddresses,omitempty" tf:"peering_addresses"`
 }
 
@@ -41,6 +46,8 @@ type CustomRouteObservation struct {
 }
 
 type CustomRouteParameters struct {
+
+	// +kubebuilder:validation:Optional
 	AddressPrefixes []string `json:"addressPrefixes,omitempty" tf:"address_prefixes"`
 }
 
@@ -51,8 +58,11 @@ type PeeringAddressesObservation struct {
 }
 
 type PeeringAddressesParameters struct {
+
+	// +kubebuilder:validation:Optional
 	ApipaAddresses []string `json:"apipaAddresses,omitempty" tf:"apipa_addresses"`
 
+	// +kubebuilder:validation:Optional
 	IPConfigurationName *string `json:"ipConfigurationName,omitempty" tf:"ip_configuration_name"`
 }
 
@@ -60,8 +70,11 @@ type RevokedCertificateObservation struct {
 }
 
 type RevokedCertificateParameters struct {
+
+	// +kubebuilder:validation:Required
 	Name string `json:"name" tf:"name"`
 
+	// +kubebuilder:validation:Required
 	Thumbprint string `json:"thumbprint" tf:"thumbprint"`
 }
 
@@ -69,8 +82,11 @@ type RootCertificateObservation struct {
 }
 
 type RootCertificateParameters struct {
+
+	// +kubebuilder:validation:Required
 	Name string `json:"name" tf:"name"`
 
+	// +kubebuilder:validation:Required
 	PublicCertData string `json:"publicCertData" tf:"public_cert_data"`
 }
 
@@ -78,12 +94,17 @@ type VirtualNetworkGatewayIPConfigurationObservation struct {
 }
 
 type VirtualNetworkGatewayIPConfigurationParameters struct {
+
+	// +kubebuilder:validation:Optional
 	Name *string `json:"name,omitempty" tf:"name"`
 
+	// +kubebuilder:validation:Optional
 	PrivateIPAddressAllocation *string `json:"privateIpAddressAllocation,omitempty" tf:"private_ip_address_allocation"`
 
+	// +kubebuilder:validation:Required
 	PublicIPAddressID string `json:"publicIpAddressId" tf:"public_ip_address_id"`
 
+	// +kubebuilder:validation:Required
 	SubnetID string `json:"subnetId" tf:"subnet_id"`
 }
 
@@ -91,36 +112,53 @@ type VirtualNetworkGatewayObservation struct {
 }
 
 type VirtualNetworkGatewayParameters struct {
+
+	// +kubebuilder:validation:Optional
 	ActiveActive *bool `json:"activeActive,omitempty" tf:"active_active"`
 
+	// +kubebuilder:validation:Optional
 	BgpSettings []BgpSettingsParameters `json:"bgpSettings,omitempty" tf:"bgp_settings"`
 
+	// +kubebuilder:validation:Optional
 	CustomRoute []CustomRouteParameters `json:"customRoute,omitempty" tf:"custom_route"`
 
+	// +kubebuilder:validation:Optional
 	DefaultLocalNetworkGatewayID *string `json:"defaultLocalNetworkGatewayId,omitempty" tf:"default_local_network_gateway_id"`
 
+	// +kubebuilder:validation:Optional
 	EnableBgp *bool `json:"enableBgp,omitempty" tf:"enable_bgp"`
 
+	// +kubebuilder:validation:Optional
 	Generation *string `json:"generation,omitempty" tf:"generation"`
 
+	// +kubebuilder:validation:Required
 	IPConfiguration []VirtualNetworkGatewayIPConfigurationParameters `json:"ipConfiguration" tf:"ip_configuration"`
 
+	// +kubebuilder:validation:Required
 	Location string `json:"location" tf:"location"`
 
+	// +kubebuilder:validation:Required
 	Name string `json:"name" tf:"name"`
 
+	// +kubebuilder:validation:Optional
 	PrivateIPAddressEnabled *bool `json:"privateIpAddressEnabled,omitempty" tf:"private_ip_address_enabled"`
 
+	// +kubebuilder:validation:Required
 	ResourceGroupName string `json:"resourceGroupName" tf:"resource_group_name"`
 
+	// +kubebuilder:validation:Required
 	Sku string `json:"sku" tf:"sku"`
 
+	// +kubebuilder:validation:Optional
 	Tags map[string]string `json:"tags,omitempty" tf:"tags"`
 
+	// +kubebuilder:validation:Required
 	Type string `json:"type" tf:"type"`
 
+	// +kubebuilder:validation:Optional
 	VpnClientConfiguration []VpnClientConfigurationParameters `json:"vpnClientConfiguration,omitempty" tf:"vpn_client_configuration"`
 
+	// +kubebuilder:validation:Optional
 	VpnType *string `json:"vpnType,omitempty" tf:"vpn_type"`
 }
 
@@ -128,22 +166,32 @@ type VpnClientConfigurationObservation struct {
 }
 
 type VpnClientConfigurationParameters struct {
+
+	// +kubebuilder:validation:Optional
 	AadAudience *string `json:"aadAudience,omitempty" tf:"aad_audience"`
 
+	// +kubebuilder:validation:Optional
 	AadIssuer *string `json:"aadIssuer,omitempty" tf:"aad_issuer"`
 
+	// +kubebuilder:validation:Optional
 	AadTenant *string `json:"aadTenant,omitempty" tf:"aad_tenant"`
 
+	// +kubebuilder:validation:Required
 	AddressSpace []string `json:"addressSpace" tf:"address_space"`
 
+	// +kubebuilder:validation:Optional
 	RadiusServerAddress *string `json:"radiusServerAddress,omitempty" tf:"radius_server_address"`
 
+	// +kubebuilder:validation:Optional
 	RadiusServerSecret *string `json:"radiusServerSecret,omitempty" tf:"radius_server_secret"`
 
+	// +kubebuilder:validation:Optional
 	RevokedCertificate []RevokedCertificateParameters `json:"revokedCertificate,omitempty" tf:"revoked_certificate"`
 
+	// +kubebuilder:validation:Optional
 	RootCertificate []RootCertificateParameters `json:"rootCertificate,omitempty" tf:"root_certificate"`
 
+	// +kubebuilder:validation:Optional
 	VpnClientProtocols []string `json:"vpnClientProtocols,omitempty" tf:"vpn_client_protocols"`
 }
 

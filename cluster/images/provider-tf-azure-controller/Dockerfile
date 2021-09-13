@@ -4,6 +4,8 @@ RUN apk --no-cache add ca-certificates bash
 ARG ARCH
 ARG TINI_VERSION
 ENV USER_ID=1001
+ENV XP_TERRAFORM_PROVIDER_VERSION=2.74.0
+ENV XP_TERRAFORM_PROVIDER_SOURCE=hashicorp/azurerm
 
 # Setup Terraform environment
 ENV TERRAFORM_VERSION 1.0.5

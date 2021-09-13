@@ -28,12 +28,17 @@ type VirtualHubRouteTableObservation struct {
 }
 
 type VirtualHubRouteTableParameters struct {
+
+	// +kubebuilder:validation:Optional
 	Labels []string `json:"labels,omitempty" tf:"labels"`
 
+	// +kubebuilder:validation:Required
 	Name string `json:"name" tf:"name"`
 
+	// +kubebuilder:validation:Optional
 	Route []VirtualHubRouteTableRouteParameters `json:"route,omitempty" tf:"route"`
 
+	// +kubebuilder:validation:Required
 	VirtualHubID string `json:"virtualHubId" tf:"virtual_hub_id"`
 }
 
@@ -41,14 +46,20 @@ type VirtualHubRouteTableRouteObservation struct {
 }
 
 type VirtualHubRouteTableRouteParameters struct {
+
+	// +kubebuilder:validation:Required
 	Destinations []string `json:"destinations" tf:"destinations"`
 
+	// +kubebuilder:validation:Required
 	DestinationsType string `json:"destinationsType" tf:"destinations_type"`
 
+	// +kubebuilder:validation:Required
 	Name string `json:"name" tf:"name"`
 
+	// +kubebuilder:validation:Required
 	NextHop string `json:"nextHop" tf:"next_hop"`
 
+	// +kubebuilder:validation:Optional
 	NextHopType *string `json:"nextHopType,omitempty" tf:"next_hop_type"`
 }
 

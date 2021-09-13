@@ -28,16 +28,23 @@ type VirtualDesktopWorkspaceObservation struct {
 }
 
 type VirtualDesktopWorkspaceParameters struct {
+
+	// +kubebuilder:validation:Optional
 	Description *string `json:"description,omitempty" tf:"description"`
 
+	// +kubebuilder:validation:Optional
 	FriendlyName *string `json:"friendlyName,omitempty" tf:"friendly_name"`
 
+	// +kubebuilder:validation:Required
 	Location string `json:"location" tf:"location"`
 
+	// +kubebuilder:validation:Required
 	Name string `json:"name" tf:"name"`
 
+	// +kubebuilder:validation:Required
 	ResourceGroupName string `json:"resourceGroupName" tf:"resource_group_name"`
 
+	// +kubebuilder:validation:Optional
 	Tags map[string]string `json:"tags,omitempty" tf:"tags"`
 }
 

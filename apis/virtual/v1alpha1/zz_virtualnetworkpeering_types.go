@@ -28,20 +28,29 @@ type VirtualNetworkPeeringObservation struct {
 }
 
 type VirtualNetworkPeeringParameters struct {
+
+	// +kubebuilder:validation:Optional
 	AllowForwardedTraffic *bool `json:"allowForwardedTraffic,omitempty" tf:"allow_forwarded_traffic"`
 
+	// +kubebuilder:validation:Optional
 	AllowGatewayTransit *bool `json:"allowGatewayTransit,omitempty" tf:"allow_gateway_transit"`
 
+	// +kubebuilder:validation:Optional
 	AllowVirtualNetworkAccess *bool `json:"allowVirtualNetworkAccess,omitempty" tf:"allow_virtual_network_access"`
 
+	// +kubebuilder:validation:Required
 	Name string `json:"name" tf:"name"`
 
+	// +kubebuilder:validation:Required
 	RemoteVirtualNetworkID string `json:"remoteVirtualNetworkId" tf:"remote_virtual_network_id"`
 
+	// +kubebuilder:validation:Required
 	ResourceGroupName string `json:"resourceGroupName" tf:"resource_group_name"`
 
+	// +kubebuilder:validation:Optional
 	UseRemoteGateways *bool `json:"useRemoteGateways,omitempty" tf:"use_remote_gateways"`
 
+	// +kubebuilder:validation:Required
 	VirtualNetworkName string `json:"virtualNetworkName" tf:"virtual_network_name"`
 }
 

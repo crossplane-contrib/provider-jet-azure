@@ -28,22 +28,32 @@ type VirtualMachineExtensionObservation struct {
 }
 
 type VirtualMachineExtensionParameters struct {
+
+	// +kubebuilder:validation:Optional
 	AutoUpgradeMinorVersion *bool `json:"autoUpgradeMinorVersion,omitempty" tf:"auto_upgrade_minor_version"`
 
+	// +kubebuilder:validation:Required
 	Name string `json:"name" tf:"name"`
 
+	// +kubebuilder:validation:Optional
 	ProtectedSettings *string `json:"protectedSettings,omitempty" tf:"protected_settings"`
 
+	// +kubebuilder:validation:Required
 	Publisher string `json:"publisher" tf:"publisher"`
 
+	// +kubebuilder:validation:Optional
 	Settings *string `json:"settings,omitempty" tf:"settings"`
 
+	// +kubebuilder:validation:Optional
 	Tags map[string]string `json:"tags,omitempty" tf:"tags"`
 
+	// +kubebuilder:validation:Required
 	Type string `json:"type" tf:"type"`
 
+	// +kubebuilder:validation:Required
 	TypeHandlerVersion string `json:"typeHandlerVersion" tf:"type_handler_version"`
 
+	// +kubebuilder:validation:Required
 	VirtualMachineID string `json:"virtualMachineId" tf:"virtual_machine_id"`
 }
 

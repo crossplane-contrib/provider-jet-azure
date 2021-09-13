@@ -28,24 +28,35 @@ type KubernetesClusterNodePoolKubeletConfigObservation struct {
 }
 
 type KubernetesClusterNodePoolKubeletConfigParameters struct {
+
+	// +kubebuilder:validation:Optional
 	AllowedUnsafeSysctls []string `json:"allowedUnsafeSysctls,omitempty" tf:"allowed_unsafe_sysctls"`
 
+	// +kubebuilder:validation:Optional
 	CPUCfsQuotaEnabled *bool `json:"cpuCfsQuotaEnabled,omitempty" tf:"cpu_cfs_quota_enabled"`
 
+	// +kubebuilder:validation:Optional
 	CPUCfsQuotaPeriod *string `json:"cpuCfsQuotaPeriod,omitempty" tf:"cpu_cfs_quota_period"`
 
+	// +kubebuilder:validation:Optional
 	CPUManagerPolicy *string `json:"cpuManagerPolicy,omitempty" tf:"cpu_manager_policy"`
 
+	// +kubebuilder:validation:Optional
 	ContainerLogMaxLine *int64 `json:"containerLogMaxLine,omitempty" tf:"container_log_max_line"`
 
+	// +kubebuilder:validation:Optional
 	ContainerLogMaxSizeMb *int64 `json:"containerLogMaxSizeMb,omitempty" tf:"container_log_max_size_mb"`
 
+	// +kubebuilder:validation:Optional
 	ImageGcHighThreshold *int64 `json:"imageGcHighThreshold,omitempty" tf:"image_gc_high_threshold"`
 
+	// +kubebuilder:validation:Optional
 	ImageGcLowThreshold *int64 `json:"imageGcLowThreshold,omitempty" tf:"image_gc_low_threshold"`
 
+	// +kubebuilder:validation:Optional
 	PodMaxPid *int64 `json:"podMaxPid,omitempty" tf:"pod_max_pid"`
 
+	// +kubebuilder:validation:Optional
 	TopologyManagerPolicy *string `json:"topologyManagerPolicy,omitempty" tf:"topology_manager_policy"`
 }
 
@@ -53,12 +64,17 @@ type KubernetesClusterNodePoolLinuxOsConfigObservation struct {
 }
 
 type KubernetesClusterNodePoolLinuxOsConfigParameters struct {
+
+	// +kubebuilder:validation:Optional
 	SwapFileSizeMb *int64 `json:"swapFileSizeMb,omitempty" tf:"swap_file_size_mb"`
 
+	// +kubebuilder:validation:Optional
 	SysctlConfig []LinuxOsConfigSysctlConfigParameters `json:"sysctlConfig,omitempty" tf:"sysctl_config"`
 
+	// +kubebuilder:validation:Optional
 	TransparentHugePageDefrag *string `json:"transparentHugePageDefrag,omitempty" tf:"transparent_huge_page_defrag"`
 
+	// +kubebuilder:validation:Optional
 	TransparentHugePageEnabled *string `json:"transparentHugePageEnabled,omitempty" tf:"transparent_huge_page_enabled"`
 }
 
@@ -66,68 +82,101 @@ type KubernetesClusterNodePoolObservation struct {
 }
 
 type KubernetesClusterNodePoolParameters struct {
+
+	// +kubebuilder:validation:Optional
 	AvailabilityZones []string `json:"availabilityZones,omitempty" tf:"availability_zones"`
 
+	// +kubebuilder:validation:Optional
 	EnableAutoScaling *bool `json:"enableAutoScaling,omitempty" tf:"enable_auto_scaling"`
 
+	// +kubebuilder:validation:Optional
 	EnableHostEncryption *bool `json:"enableHostEncryption,omitempty" tf:"enable_host_encryption"`
 
+	// +kubebuilder:validation:Optional
 	EnableNodePublicIP *bool `json:"enableNodePublicIp,omitempty" tf:"enable_node_public_ip"`
 
+	// +kubebuilder:validation:Optional
 	EvictionPolicy *string `json:"evictionPolicy,omitempty" tf:"eviction_policy"`
 
+	// +kubebuilder:validation:Optional
 	FipsEnabled *bool `json:"fipsEnabled,omitempty" tf:"fips_enabled"`
 
+	// +kubebuilder:validation:Optional
 	KubeletConfig []KubernetesClusterNodePoolKubeletConfigParameters `json:"kubeletConfig,omitempty" tf:"kubelet_config"`
 
+	// +kubebuilder:validation:Optional
 	KubeletDiskType *string `json:"kubeletDiskType,omitempty" tf:"kubelet_disk_type"`
 
+	// +kubebuilder:validation:Required
 	KubernetesClusterID string `json:"kubernetesClusterId" tf:"kubernetes_cluster_id"`
 
+	// +kubebuilder:validation:Optional
 	LinuxOsConfig []KubernetesClusterNodePoolLinuxOsConfigParameters `json:"linuxOsConfig,omitempty" tf:"linux_os_config"`
 
+	// +kubebuilder:validation:Optional
 	MaxCount *int64 `json:"maxCount,omitempty" tf:"max_count"`
 
+	// +kubebuilder:validation:Optional
 	MaxPods *int64 `json:"maxPods,omitempty" tf:"max_pods"`
 
+	// +kubebuilder:validation:Optional
 	MinCount *int64 `json:"minCount,omitempty" tf:"min_count"`
 
+	// +kubebuilder:validation:Optional
 	Mode *string `json:"mode,omitempty" tf:"mode"`
 
+	// +kubebuilder:validation:Required
 	Name string `json:"name" tf:"name"`
 
+	// +kubebuilder:validation:Optional
 	NodeCount *int64 `json:"nodeCount,omitempty" tf:"node_count"`
 
+	// +kubebuilder:validation:Optional
 	NodeLabels map[string]string `json:"nodeLabels,omitempty" tf:"node_labels"`
 
+	// +kubebuilder:validation:Optional
 	NodePublicIPPrefixID *string `json:"nodePublicIpPrefixId,omitempty" tf:"node_public_ip_prefix_id"`
 
+	// +kubebuilder:validation:Optional
 	NodeTaints []string `json:"nodeTaints,omitempty" tf:"node_taints"`
 
+	// +kubebuilder:validation:Optional
 	OrchestratorVersion *string `json:"orchestratorVersion,omitempty" tf:"orchestrator_version"`
 
+	// +kubebuilder:validation:Optional
 	OsDiskSizeGb *int64 `json:"osDiskSizeGb,omitempty" tf:"os_disk_size_gb"`
 
+	// +kubebuilder:validation:Optional
 	OsDiskType *string `json:"osDiskType,omitempty" tf:"os_disk_type"`
 
+	// +kubebuilder:validation:Optional
 	OsType *string `json:"osType,omitempty" tf:"os_type"`
 
+	// +kubebuilder:validation:Optional
 	PodSubnetID *string `json:"podSubnetId,omitempty" tf:"pod_subnet_id"`
 
+	// +kubebuilder:validation:Optional
 	Priority *string `json:"priority,omitempty" tf:"priority"`
 
+	// +kubebuilder:validation:Optional
 	ProximityPlacementGroupID *string `json:"proximityPlacementGroupId,omitempty" tf:"proximity_placement_group_id"`
 
+	// +kubebuilder:validation:Optional
 	SpotMaxPrice *float64 `json:"spotMaxPrice,omitempty" tf:"spot_max_price"`
 
+	// +kubebuilder:validation:Optional
 	Tags map[string]string `json:"tags,omitempty" tf:"tags"`
 
+	// +kubebuilder:validation:Optional
 	UltraSsdEnabled *bool `json:"ultraSsdEnabled,omitempty" tf:"ultra_ssd_enabled"`
 
+	// +kubebuilder:validation:Optional
 	UpgradeSettings []KubernetesClusterNodePoolUpgradeSettingsParameters `json:"upgradeSettings,omitempty" tf:"upgrade_settings"`
 
+	// +kubebuilder:validation:Required
 	VMSize string `json:"vmSize" tf:"vm_size"`
 
+	// +kubebuilder:validation:Optional
 	VnetSubnetID *string `json:"vnetSubnetId,omitempty" tf:"vnet_subnet_id"`
 }
 
@@ -135,6 +184,8 @@ type KubernetesClusterNodePoolUpgradeSettingsObservation struct {
 }
 
 type KubernetesClusterNodePoolUpgradeSettingsParameters struct {
+
+	// +kubebuilder:validation:Required
 	MaxSurge string `json:"maxSurge" tf:"max_surge"`
 }
 
@@ -142,62 +193,92 @@ type LinuxOsConfigSysctlConfigObservation struct {
 }
 
 type LinuxOsConfigSysctlConfigParameters struct {
+
+	// +kubebuilder:validation:Optional
 	FsAioMaxNr *int64 `json:"fsAioMaxNr,omitempty" tf:"fs_aio_max_nr"`
 
+	// +kubebuilder:validation:Optional
 	FsFileMax *int64 `json:"fsFileMax,omitempty" tf:"fs_file_max"`
 
+	// +kubebuilder:validation:Optional
 	FsInotifyMaxUserWatches *int64 `json:"fsInotifyMaxUserWatches,omitempty" tf:"fs_inotify_max_user_watches"`
 
+	// +kubebuilder:validation:Optional
 	FsNrOpen *int64 `json:"fsNrOpen,omitempty" tf:"fs_nr_open"`
 
+	// +kubebuilder:validation:Optional
 	KernelThreadsMax *int64 `json:"kernelThreadsMax,omitempty" tf:"kernel_threads_max"`
 
+	// +kubebuilder:validation:Optional
 	NetCoreNetdevMaxBacklog *int64 `json:"netCoreNetdevMaxBacklog,omitempty" tf:"net_core_netdev_max_backlog"`
 
+	// +kubebuilder:validation:Optional
 	NetCoreOptmemMax *int64 `json:"netCoreOptmemMax,omitempty" tf:"net_core_optmem_max"`
 
+	// +kubebuilder:validation:Optional
 	NetCoreRmemDefault *int64 `json:"netCoreRmemDefault,omitempty" tf:"net_core_rmem_default"`
 
+	// +kubebuilder:validation:Optional
 	NetCoreRmemMax *int64 `json:"netCoreRmemMax,omitempty" tf:"net_core_rmem_max"`
 
+	// +kubebuilder:validation:Optional
 	NetCoreSomaxconn *int64 `json:"netCoreSomaxconn,omitempty" tf:"net_core_somaxconn"`
 
+	// +kubebuilder:validation:Optional
 	NetCoreWmemDefault *int64 `json:"netCoreWmemDefault,omitempty" tf:"net_core_wmem_default"`
 
+	// +kubebuilder:validation:Optional
 	NetCoreWmemMax *int64 `json:"netCoreWmemMax,omitempty" tf:"net_core_wmem_max"`
 
+	// +kubebuilder:validation:Optional
 	NetIPv4IPLocalPortRangeMax *int64 `json:"netIpv4IpLocalPortRangeMax,omitempty" tf:"net_ipv4_ip_local_port_range_max"`
 
+	// +kubebuilder:validation:Optional
 	NetIPv4IPLocalPortRangeMin *int64 `json:"netIpv4IpLocalPortRangeMin,omitempty" tf:"net_ipv4_ip_local_port_range_min"`
 
+	// +kubebuilder:validation:Optional
 	NetIPv4NeighDefaultGcThresh1 *int64 `json:"netIpv4NeighDefaultGcThresh1,omitempty" tf:"net_ipv4_neigh_default_gc_thresh1"`
 
+	// +kubebuilder:validation:Optional
 	NetIPv4NeighDefaultGcThresh2 *int64 `json:"netIpv4NeighDefaultGcThresh2,omitempty" tf:"net_ipv4_neigh_default_gc_thresh2"`
 
+	// +kubebuilder:validation:Optional
 	NetIPv4NeighDefaultGcThresh3 *int64 `json:"netIpv4NeighDefaultGcThresh3,omitempty" tf:"net_ipv4_neigh_default_gc_thresh3"`
 
+	// +kubebuilder:validation:Optional
 	NetIPv4TCPFinTimeout *int64 `json:"netIpv4TcpFinTimeout,omitempty" tf:"net_ipv4_tcp_fin_timeout"`
 
+	// +kubebuilder:validation:Optional
 	NetIPv4TCPKeepaliveIntvl *int64 `json:"netIpv4TcpKeepaliveIntvl,omitempty" tf:"net_ipv4_tcp_keepalive_intvl"`
 
+	// +kubebuilder:validation:Optional
 	NetIPv4TCPKeepaliveProbes *int64 `json:"netIpv4TcpKeepaliveProbes,omitempty" tf:"net_ipv4_tcp_keepalive_probes"`
 
+	// +kubebuilder:validation:Optional
 	NetIPv4TCPKeepaliveTime *int64 `json:"netIpv4TcpKeepaliveTime,omitempty" tf:"net_ipv4_tcp_keepalive_time"`
 
+	// +kubebuilder:validation:Optional
 	NetIPv4TCPMaxSynBacklog *int64 `json:"netIpv4TcpMaxSynBacklog,omitempty" tf:"net_ipv4_tcp_max_syn_backlog"`
 
+	// +kubebuilder:validation:Optional
 	NetIPv4TCPMaxTwBuckets *int64 `json:"netIpv4TcpMaxTwBuckets,omitempty" tf:"net_ipv4_tcp_max_tw_buckets"`
 
+	// +kubebuilder:validation:Optional
 	NetIPv4TCPTwReuse *bool `json:"netIpv4TcpTwReuse,omitempty" tf:"net_ipv4_tcp_tw_reuse"`
 
+	// +kubebuilder:validation:Optional
 	NetNetfilterNfConntrackBuckets *int64 `json:"netNetfilterNfConntrackBuckets,omitempty" tf:"net_netfilter_nf_conntrack_buckets"`
 
+	// +kubebuilder:validation:Optional
 	NetNetfilterNfConntrackMax *int64 `json:"netNetfilterNfConntrackMax,omitempty" tf:"net_netfilter_nf_conntrack_max"`
 
+	// +kubebuilder:validation:Optional
 	VMMaxMapCount *int64 `json:"vmMaxMapCount,omitempty" tf:"vm_max_map_count"`
 
+	// +kubebuilder:validation:Optional
 	VMSwappiness *int64 `json:"vmSwappiness,omitempty" tf:"vm_swappiness"`
 
+	// +kubebuilder:validation:Optional
 	VMVfsCachePressure *int64 `json:"vmVfsCachePressure,omitempty" tf:"vm_vfs_cache_pressure"`
 }
 

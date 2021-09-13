@@ -3,8 +3,8 @@ module github.com/crossplane-contrib/provider-tf-azure
 go 1.16
 
 require (
-	github.com/crossplane-contrib/terrajet v0.0.0-20210825052229-d4afdfba2baf
-	github.com/crossplane/crossplane-runtime v0.14.1-0.20210805220729-047d9387efbb
+	github.com/crossplane-contrib/terrajet v0.0.0-20210913112933-4c1b52bdd159
+	github.com/crossplane/crossplane-runtime v0.15.0
 	github.com/crossplane/crossplane-tools v0.0.0-20210320162312-1baca298c527
 	github.com/hashicorp/terraform-plugin-sdk/v2 v2.7.0
 	// github.com/hashicorp/terraform-provider-azurerm is replaced with  ./.work/.azurerm
@@ -20,5 +20,3 @@ require (
 )
 
 replace github.com/hashicorp/terraform-provider-azurerm => ./.work/.azurerm
-
-replace github.com/crossplane-contrib/terrajet => github.com/ulucinar/terrajet v0.0.0-20210910152859-339f6b9d8a7e

@@ -28,16 +28,23 @@ type VirtualHubIpObservation struct {
 }
 
 type VirtualHubIpParameters struct {
+
+	// +kubebuilder:validation:Required
 	Name string `json:"name" tf:"name"`
 
+	// +kubebuilder:validation:Optional
 	PrivateIPAddress *string `json:"privateIpAddress,omitempty" tf:"private_ip_address"`
 
+	// +kubebuilder:validation:Optional
 	PrivateIPAllocationMethod *string `json:"privateIpAllocationMethod,omitempty" tf:"private_ip_allocation_method"`
 
+	// +kubebuilder:validation:Optional
 	PublicIPAddressID *string `json:"publicIpAddressId,omitempty" tf:"public_ip_address_id"`
 
+	// +kubebuilder:validation:Required
 	SubnetID string `json:"subnetId" tf:"subnet_id"`
 
+	// +kubebuilder:validation:Required
 	VirtualHubID string `json:"virtualHubId" tf:"virtual_hub_id"`
 }
 

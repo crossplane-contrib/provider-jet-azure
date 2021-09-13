@@ -28,12 +28,17 @@ type VirtualHubBgpConnectionObservation struct {
 }
 
 type VirtualHubBgpConnectionParameters struct {
+
+	// +kubebuilder:validation:Required
 	Name string `json:"name" tf:"name"`
 
+	// +kubebuilder:validation:Required
 	PeerAsn int64 `json:"peerAsn" tf:"peer_asn"`
 
+	// +kubebuilder:validation:Required
 	PeerIP string `json:"peerIp" tf:"peer_ip"`
 
+	// +kubebuilder:validation:Required
 	VirtualHubID string `json:"virtualHubId" tf:"virtual_hub_id"`
 }
 

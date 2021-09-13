@@ -28,8 +28,11 @@ type PropagatedRouteTableObservation struct {
 }
 
 type PropagatedRouteTableParameters struct {
+
+	// +kubebuilder:validation:Optional
 	Labels []string `json:"labels,omitempty" tf:"labels"`
 
+	// +kubebuilder:validation:Optional
 	RouteTableIds []string `json:"routeTableIds,omitempty" tf:"route_table_ids"`
 }
 
@@ -37,10 +40,14 @@ type RoutingObservation struct {
 }
 
 type RoutingParameters struct {
+
+	// +kubebuilder:validation:Optional
 	AssociatedRouteTableID *string `json:"associatedRouteTableId,omitempty" tf:"associated_route_table_id"`
 
+	// +kubebuilder:validation:Optional
 	PropagatedRouteTable []PropagatedRouteTableParameters `json:"propagatedRouteTable,omitempty" tf:"propagated_route_table"`
 
+	// +kubebuilder:validation:Optional
 	StaticVnetRoute []StaticVnetRouteParameters `json:"staticVnetRoute,omitempty" tf:"static_vnet_route"`
 }
 
@@ -48,10 +55,14 @@ type StaticVnetRouteObservation struct {
 }
 
 type StaticVnetRouteParameters struct {
+
+	// +kubebuilder:validation:Optional
 	AddressPrefixes []string `json:"addressPrefixes,omitempty" tf:"address_prefixes"`
 
+	// +kubebuilder:validation:Optional
 	Name *string `json:"name,omitempty" tf:"name"`
 
+	// +kubebuilder:validation:Optional
 	NextHopIPAddress *string `json:"nextHopIpAddress,omitempty" tf:"next_hop_ip_address"`
 }
 
@@ -59,18 +70,26 @@ type VirtualHubConnectionObservation struct {
 }
 
 type VirtualHubConnectionParameters struct {
+
+	// +kubebuilder:validation:Optional
 	HubToVitualNetworkTrafficAllowed *bool `json:"hubToVitualNetworkTrafficAllowed,omitempty" tf:"hub_to_vitual_network_traffic_allowed"`
 
+	// +kubebuilder:validation:Optional
 	InternetSecurityEnabled *bool `json:"internetSecurityEnabled,omitempty" tf:"internet_security_enabled"`
 
+	// +kubebuilder:validation:Required
 	Name string `json:"name" tf:"name"`
 
+	// +kubebuilder:validation:Required
 	RemoteVirtualNetworkID string `json:"remoteVirtualNetworkId" tf:"remote_virtual_network_id"`
 
+	// +kubebuilder:validation:Optional
 	Routing []RoutingParameters `json:"routing,omitempty" tf:"routing"`
 
+	// +kubebuilder:validation:Required
 	VirtualHubID string `json:"virtualHubId" tf:"virtual_hub_id"`
 
+	// +kubebuilder:validation:Optional
 	VitualNetworkToHubGatewaysTrafficAllowed *bool `json:"vitualNetworkToHubGatewaysTrafficAllowed,omitempty" tf:"vitual_network_to_hub_gateways_traffic_allowed"`
 }
 

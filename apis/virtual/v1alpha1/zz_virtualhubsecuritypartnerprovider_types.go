@@ -28,16 +28,23 @@ type VirtualHubSecurityPartnerProviderObservation struct {
 }
 
 type VirtualHubSecurityPartnerProviderParameters struct {
+
+	// +kubebuilder:validation:Required
 	Location string `json:"location" tf:"location"`
 
+	// +kubebuilder:validation:Required
 	Name string `json:"name" tf:"name"`
 
+	// +kubebuilder:validation:Required
 	ResourceGroupName string `json:"resourceGroupName" tf:"resource_group_name"`
 
+	// +kubebuilder:validation:Required
 	SecurityProviderName string `json:"securityProviderName" tf:"security_provider_name"`
 
+	// +kubebuilder:validation:Optional
 	Tags map[string]string `json:"tags,omitempty" tf:"tags"`
 
+	// +kubebuilder:validation:Optional
 	VirtualHubID *string `json:"virtualHubId,omitempty" tf:"virtual_hub_id"`
 }
 

@@ -28,6 +28,8 @@ type AdditionalCapabilitiesObservation struct {
 }
 
 type AdditionalCapabilitiesParameters struct {
+
+	// +kubebuilder:validation:Required
 	UltraSsdEnabled bool `json:"ultraSsdEnabled" tf:"ultra_ssd_enabled"`
 }
 
@@ -35,12 +37,17 @@ type AdditionalUnattendConfigObservation struct {
 }
 
 type AdditionalUnattendConfigParameters struct {
+
+	// +kubebuilder:validation:Required
 	Component string `json:"component" tf:"component"`
 
+	// +kubebuilder:validation:Required
 	Content string `json:"content" tf:"content"`
 
+	// +kubebuilder:validation:Required
 	Pass string `json:"pass" tf:"pass"`
 
+	// +kubebuilder:validation:Required
 	SettingName string `json:"settingName" tf:"setting_name"`
 }
 
@@ -48,8 +55,11 @@ type BootDiagnosticsObservation struct {
 }
 
 type BootDiagnosticsParameters struct {
+
+	// +kubebuilder:validation:Required
 	Enabled bool `json:"enabled" tf:"enabled"`
 
+	// +kubebuilder:validation:Required
 	StorageURI string `json:"storageUri" tf:"storage_uri"`
 }
 
@@ -58,8 +68,11 @@ type IdentityObservation struct {
 }
 
 type IdentityParameters struct {
+
+	// +kubebuilder:validation:Optional
 	IdentityIds []string `json:"identityIds,omitempty" tf:"identity_ids"`
 
+	// +kubebuilder:validation:Required
 	Type string `json:"type" tf:"type"`
 }
 
@@ -67,8 +80,11 @@ type OsProfileLinuxConfigObservation struct {
 }
 
 type OsProfileLinuxConfigParameters struct {
+
+	// +kubebuilder:validation:Required
 	DisablePasswordAuthentication bool `json:"disablePasswordAuthentication" tf:"disable_password_authentication"`
 
+	// +kubebuilder:validation:Optional
 	SSHKeys []SSHKeysParameters `json:"sshKeys,omitempty" tf:"ssh_keys"`
 }
 
@@ -76,12 +92,17 @@ type OsProfileObservation struct {
 }
 
 type OsProfileParameters struct {
+
+	// +kubebuilder:validation:Optional
 	AdminPassword *string `json:"adminPassword,omitempty" tf:"admin_password"`
 
+	// +kubebuilder:validation:Required
 	AdminUsername string `json:"adminUsername" tf:"admin_username"`
 
+	// +kubebuilder:validation:Required
 	ComputerName string `json:"computerName" tf:"computer_name"`
 
+	// +kubebuilder:validation:Optional
 	CustomData *string `json:"customData,omitempty" tf:"custom_data"`
 }
 
@@ -89,8 +110,11 @@ type OsProfileSecretsObservation struct {
 }
 
 type OsProfileSecretsParameters struct {
+
+	// +kubebuilder:validation:Required
 	SourceVaultID string `json:"sourceVaultId" tf:"source_vault_id"`
 
+	// +kubebuilder:validation:Optional
 	VaultCertificates []VaultCertificatesParameters `json:"vaultCertificates,omitempty" tf:"vault_certificates"`
 }
 
@@ -98,14 +122,20 @@ type OsProfileWindowsConfigObservation struct {
 }
 
 type OsProfileWindowsConfigParameters struct {
+
+	// +kubebuilder:validation:Optional
 	AdditionalUnattendConfig []AdditionalUnattendConfigParameters `json:"additionalUnattendConfig,omitempty" tf:"additional_unattend_config"`
 
+	// +kubebuilder:validation:Optional
 	EnableAutomaticUpgrades *bool `json:"enableAutomaticUpgrades,omitempty" tf:"enable_automatic_upgrades"`
 
+	// +kubebuilder:validation:Optional
 	ProvisionVMAgent *bool `json:"provisionVmAgent,omitempty" tf:"provision_vm_agent"`
 
+	// +kubebuilder:validation:Optional
 	Timezone *string `json:"timezone,omitempty" tf:"timezone"`
 
+	// +kubebuilder:validation:Optional
 	Winrm []WinrmParameters `json:"winrm,omitempty" tf:"winrm"`
 }
 
@@ -113,10 +143,14 @@ type PlanObservation struct {
 }
 
 type PlanParameters struct {
+
+	// +kubebuilder:validation:Required
 	Name string `json:"name" tf:"name"`
 
+	// +kubebuilder:validation:Required
 	Product string `json:"product" tf:"product"`
 
+	// +kubebuilder:validation:Required
 	Publisher string `json:"publisher" tf:"publisher"`
 }
 
@@ -124,8 +158,11 @@ type SSHKeysObservation struct {
 }
 
 type SSHKeysParameters struct {
+
+	// +kubebuilder:validation:Required
 	KeyData string `json:"keyData" tf:"key_data"`
 
+	// +kubebuilder:validation:Required
 	Path string `json:"path" tf:"path"`
 }
 
@@ -133,22 +170,32 @@ type StorageDataDiskObservation struct {
 }
 
 type StorageDataDiskParameters struct {
+
+	// +kubebuilder:validation:Optional
 	Caching *string `json:"caching,omitempty" tf:"caching"`
 
+	// +kubebuilder:validation:Required
 	CreateOption string `json:"createOption" tf:"create_option"`
 
+	// +kubebuilder:validation:Optional
 	DiskSizeGb *int64 `json:"diskSizeGb,omitempty" tf:"disk_size_gb"`
 
+	// +kubebuilder:validation:Required
 	Lun int64 `json:"lun" tf:"lun"`
 
+	// +kubebuilder:validation:Optional
 	ManagedDiskID *string `json:"managedDiskId,omitempty" tf:"managed_disk_id"`
 
+	// +kubebuilder:validation:Optional
 	ManagedDiskType *string `json:"managedDiskType,omitempty" tf:"managed_disk_type"`
 
+	// +kubebuilder:validation:Required
 	Name string `json:"name" tf:"name"`
 
+	// +kubebuilder:validation:Optional
 	VhdURI *string `json:"vhdUri,omitempty" tf:"vhd_uri"`
 
+	// +kubebuilder:validation:Optional
 	WriteAcceleratorEnabled *bool `json:"writeAcceleratorEnabled,omitempty" tf:"write_accelerator_enabled"`
 }
 
@@ -156,14 +203,20 @@ type StorageImageReferenceObservation struct {
 }
 
 type StorageImageReferenceParameters struct {
+
+	// +kubebuilder:validation:Optional
 	ID *string `json:"id,omitempty" tf:"id"`
 
+	// +kubebuilder:validation:Optional
 	Offer *string `json:"offer,omitempty" tf:"offer"`
 
+	// +kubebuilder:validation:Optional
 	Publisher *string `json:"publisher,omitempty" tf:"publisher"`
 
+	// +kubebuilder:validation:Optional
 	Sku *string `json:"sku,omitempty" tf:"sku"`
 
+	// +kubebuilder:validation:Optional
 	Version *string `json:"version,omitempty" tf:"version"`
 }
 
@@ -171,24 +224,35 @@ type StorageOsDiskObservation struct {
 }
 
 type StorageOsDiskParameters struct {
+
+	// +kubebuilder:validation:Optional
 	Caching *string `json:"caching,omitempty" tf:"caching"`
 
+	// +kubebuilder:validation:Required
 	CreateOption string `json:"createOption" tf:"create_option"`
 
+	// +kubebuilder:validation:Optional
 	DiskSizeGb *int64 `json:"diskSizeGb,omitempty" tf:"disk_size_gb"`
 
+	// +kubebuilder:validation:Optional
 	ImageURI *string `json:"imageUri,omitempty" tf:"image_uri"`
 
+	// +kubebuilder:validation:Optional
 	ManagedDiskID *string `json:"managedDiskId,omitempty" tf:"managed_disk_id"`
 
+	// +kubebuilder:validation:Optional
 	ManagedDiskType *string `json:"managedDiskType,omitempty" tf:"managed_disk_type"`
 
+	// +kubebuilder:validation:Required
 	Name string `json:"name" tf:"name"`
 
+	// +kubebuilder:validation:Optional
 	OsType *string `json:"osType,omitempty" tf:"os_type"`
 
+	// +kubebuilder:validation:Optional
 	VhdURI *string `json:"vhdUri,omitempty" tf:"vhd_uri"`
 
+	// +kubebuilder:validation:Optional
 	WriteAcceleratorEnabled *bool `json:"writeAcceleratorEnabled,omitempty" tf:"write_accelerator_enabled"`
 }
 
@@ -196,8 +260,11 @@ type VaultCertificatesObservation struct {
 }
 
 type VaultCertificatesParameters struct {
+
+	// +kubebuilder:validation:Optional
 	CertificateStore *string `json:"certificateStore,omitempty" tf:"certificate_store"`
 
+	// +kubebuilder:validation:Required
 	CertificateURL string `json:"certificateUrl" tf:"certificate_url"`
 }
 
@@ -205,52 +272,77 @@ type VirtualMachineObservation struct {
 }
 
 type VirtualMachineParameters struct {
+
+	// +kubebuilder:validation:Optional
 	AdditionalCapabilities []AdditionalCapabilitiesParameters `json:"additionalCapabilities,omitempty" tf:"additional_capabilities"`
 
+	// +kubebuilder:validation:Optional
 	AvailabilitySetID *string `json:"availabilitySetId,omitempty" tf:"availability_set_id"`
 
+	// +kubebuilder:validation:Optional
 	BootDiagnostics []BootDiagnosticsParameters `json:"bootDiagnostics,omitempty" tf:"boot_diagnostics"`
 
+	// +kubebuilder:validation:Optional
 	DeleteDataDisksOnTermination *bool `json:"deleteDataDisksOnTermination,omitempty" tf:"delete_data_disks_on_termination"`
 
+	// +kubebuilder:validation:Optional
 	DeleteOsDiskOnTermination *bool `json:"deleteOsDiskOnTermination,omitempty" tf:"delete_os_disk_on_termination"`
 
+	// +kubebuilder:validation:Optional
 	Identity []IdentityParameters `json:"identity,omitempty" tf:"identity"`
 
+	// +kubebuilder:validation:Optional
 	LicenseType *string `json:"licenseType,omitempty" tf:"license_type"`
 
+	// +kubebuilder:validation:Required
 	Location string `json:"location" tf:"location"`
 
+	// +kubebuilder:validation:Required
 	Name string `json:"name" tf:"name"`
 
+	// +kubebuilder:validation:Required
 	NetworkInterfaceIds []string `json:"networkInterfaceIds" tf:"network_interface_ids"`
 
+	// +kubebuilder:validation:Optional
 	OsProfile []OsProfileParameters `json:"osProfile,omitempty" tf:"os_profile"`
 
+	// +kubebuilder:validation:Optional
 	OsProfileLinuxConfig []OsProfileLinuxConfigParameters `json:"osProfileLinuxConfig,omitempty" tf:"os_profile_linux_config"`
 
+	// +kubebuilder:validation:Optional
 	OsProfileSecrets []OsProfileSecretsParameters `json:"osProfileSecrets,omitempty" tf:"os_profile_secrets"`
 
+	// +kubebuilder:validation:Optional
 	OsProfileWindowsConfig []OsProfileWindowsConfigParameters `json:"osProfileWindowsConfig,omitempty" tf:"os_profile_windows_config"`
 
+	// +kubebuilder:validation:Optional
 	Plan []PlanParameters `json:"plan,omitempty" tf:"plan"`
 
+	// +kubebuilder:validation:Optional
 	PrimaryNetworkInterfaceID *string `json:"primaryNetworkInterfaceId,omitempty" tf:"primary_network_interface_id"`
 
+	// +kubebuilder:validation:Optional
 	ProximityPlacementGroupID *string `json:"proximityPlacementGroupId,omitempty" tf:"proximity_placement_group_id"`
 
+	// +kubebuilder:validation:Required
 	ResourceGroupName string `json:"resourceGroupName" tf:"resource_group_name"`
 
+	// +kubebuilder:validation:Optional
 	StorageDataDisk []StorageDataDiskParameters `json:"storageDataDisk,omitempty" tf:"storage_data_disk"`
 
+	// +kubebuilder:validation:Optional
 	StorageImageReference []StorageImageReferenceParameters `json:"storageImageReference,omitempty" tf:"storage_image_reference"`
 
+	// +kubebuilder:validation:Required
 	StorageOsDisk []StorageOsDiskParameters `json:"storageOsDisk" tf:"storage_os_disk"`
 
+	// +kubebuilder:validation:Optional
 	Tags map[string]string `json:"tags,omitempty" tf:"tags"`
 
+	// +kubebuilder:validation:Required
 	VMSize string `json:"vmSize" tf:"vm_size"`
 
+	// +kubebuilder:validation:Optional
 	Zones []string `json:"zones,omitempty" tf:"zones"`
 }
 
@@ -258,8 +350,11 @@ type WinrmObservation struct {
 }
 
 type WinrmParameters struct {
+
+	// +kubebuilder:validation:Optional
 	CertificateURL *string `json:"certificateUrl,omitempty" tf:"certificate_url"`
 
+	// +kubebuilder:validation:Required
 	Protocol string `json:"protocol" tf:"protocol"`
 }
 

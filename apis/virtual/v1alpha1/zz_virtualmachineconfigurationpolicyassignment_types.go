@@ -28,10 +28,14 @@ type ConfigurationObservation struct {
 }
 
 type ConfigurationParameters struct {
+
+	// +kubebuilder:validation:Required
 	Name string `json:"name" tf:"name"`
 
+	// +kubebuilder:validation:Optional
 	Parameter []ParameterParameters `json:"parameter,omitempty" tf:"parameter"`
 
+	// +kubebuilder:validation:Optional
 	Version *string `json:"version,omitempty" tf:"version"`
 }
 
@@ -39,8 +43,11 @@ type ParameterObservation struct {
 }
 
 type ParameterParameters struct {
+
+	// +kubebuilder:validation:Required
 	Name string `json:"name" tf:"name"`
 
+	// +kubebuilder:validation:Required
 	Value string `json:"value" tf:"value"`
 }
 
@@ -48,12 +55,17 @@ type VirtualMachineConfigurationPolicyAssignmentObservation struct {
 }
 
 type VirtualMachineConfigurationPolicyAssignmentParameters struct {
+
+	// +kubebuilder:validation:Required
 	Configuration []ConfigurationParameters `json:"configuration" tf:"configuration"`
 
+	// +kubebuilder:validation:Required
 	Location string `json:"location" tf:"location"`
 
+	// +kubebuilder:validation:Required
 	Name string `json:"name" tf:"name"`
 
+	// +kubebuilder:validation:Required
 	VirtualMachineID string `json:"virtualMachineId" tf:"virtual_machine_id"`
 }
 
