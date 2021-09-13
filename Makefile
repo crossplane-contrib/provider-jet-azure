@@ -94,6 +94,7 @@ go.build: prepare.azurerm
 reviewable: prepare.azurerm
 test: prepare.azurerm
 generate: codegen.pipeline
+build: prepare.azurerm
 
 
 # must match Docker build file env. variable TERRAFORM_PROVIDER_AZURERM_VERSION in
