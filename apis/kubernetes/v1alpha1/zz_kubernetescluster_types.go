@@ -256,7 +256,7 @@ type DefaultNodePoolParameters struct {
 }
 
 type HTTPApplicationRoutingObservation struct {
-	HTTPApplicationRoutingZoneName string `json:"httpApplicationRoutingZoneName" tf:"http_application_routing_zone_name"`
+	HTTPApplicationRoutingZoneName string `json:"httpApplicationRoutingZoneName,omitempty" tf:"http_application_routing_zone_name"`
 }
 
 type HTTPApplicationRoutingParameters struct {
@@ -266,9 +266,9 @@ type HTTPApplicationRoutingParameters struct {
 }
 
 type IdentityObservation struct {
-	PrincipalID string `json:"principalId" tf:"principal_id"`
+	PrincipalID string `json:"principalId,omitempty" tf:"principal_id"`
 
-	TenantID string `json:"tenantId" tf:"tenant_id"`
+	TenantID string `json:"tenantId,omitempty" tf:"tenant_id"`
 }
 
 type IdentityParameters struct {
@@ -281,20 +281,20 @@ type IdentityParameters struct {
 }
 
 type IngressApplicationGatewayIdentityObservation struct {
-	ClientID string `json:"clientId" tf:"client_id"`
+	ClientID string `json:"clientId,omitempty" tf:"client_id"`
 
-	ObjectID string `json:"objectId" tf:"object_id"`
+	ObjectID string `json:"objectId,omitempty" tf:"object_id"`
 
-	UserAssignedIdentityID string `json:"userAssignedIdentityId" tf:"user_assigned_identity_id"`
+	UserAssignedIdentityID string `json:"userAssignedIdentityId,omitempty" tf:"user_assigned_identity_id"`
 }
 
 type IngressApplicationGatewayIdentityParameters struct {
 }
 
 type IngressApplicationGatewayObservation struct {
-	EffectiveGatewayID string `json:"effectiveGatewayId" tf:"effective_gateway_id"`
+	EffectiveGatewayID string `json:"effectiveGatewayId,omitempty" tf:"effective_gateway_id"`
 
-	IngressApplicationGatewayIdentity []IngressApplicationGatewayIdentityObservation `json:"ingressApplicationGatewayIdentity" tf:"ingress_application_gateway_identity"`
+	IngressApplicationGatewayIdentity []IngressApplicationGatewayIdentityObservation `json:"ingressApplicationGatewayIdentity,omitempty" tf:"ingress_application_gateway_identity"`
 }
 
 type IngressApplicationGatewayParameters struct {
@@ -316,34 +316,34 @@ type IngressApplicationGatewayParameters struct {
 }
 
 type KubeAdminConfigObservation struct {
-	ClientCertificate string `json:"clientCertificate" tf:"client_certificate"`
+	ClientCertificate string `json:"clientCertificate,omitempty" tf:"client_certificate"`
 
-	ClientKey string `json:"clientKey" tf:"client_key"`
+	ClientKey string `json:"clientKey,omitempty" tf:"client_key"`
 
-	ClusterCaCertificate string `json:"clusterCaCertificate" tf:"cluster_ca_certificate"`
+	ClusterCaCertificate string `json:"clusterCaCertificate,omitempty" tf:"cluster_ca_certificate"`
 
-	Host string `json:"host" tf:"host"`
+	Host string `json:"host,omitempty" tf:"host"`
 
-	Password string `json:"password" tf:"password"`
+	Password string `json:"password,omitempty" tf:"password"`
 
-	Username string `json:"username" tf:"username"`
+	Username string `json:"username,omitempty" tf:"username"`
 }
 
 type KubeAdminConfigParameters struct {
 }
 
 type KubeConfigObservation struct {
-	ClientCertificate string `json:"clientCertificate" tf:"client_certificate"`
+	ClientCertificate string `json:"clientCertificate,omitempty" tf:"client_certificate"`
 
-	ClientKey string `json:"clientKey" tf:"client_key"`
+	ClientKey string `json:"clientKey,omitempty" tf:"client_key"`
 
-	ClusterCaCertificate string `json:"clusterCaCertificate" tf:"cluster_ca_certificate"`
+	ClusterCaCertificate string `json:"clusterCaCertificate,omitempty" tf:"cluster_ca_certificate"`
 
-	Host string `json:"host" tf:"host"`
+	Host string `json:"host,omitempty" tf:"host"`
 
-	Password string `json:"password" tf:"password"`
+	Password string `json:"password,omitempty" tf:"password"`
 
-	Username string `json:"username" tf:"username"`
+	Username string `json:"username,omitempty" tf:"username"`
 }
 
 type KubeConfigParameters struct {
@@ -410,17 +410,17 @@ type KubeletIdentityParameters struct {
 }
 
 type KubernetesClusterObservation struct {
-	Fqdn string `json:"fqdn" tf:"fqdn"`
+	Fqdn string `json:"fqdn,omitempty" tf:"fqdn"`
 
-	KubeAdminConfig []KubeAdminConfigObservation `json:"kubeAdminConfig" tf:"kube_admin_config"`
+	KubeAdminConfig []KubeAdminConfigObservation `json:"kubeAdminConfig,omitempty" tf:"kube_admin_config"`
 
-	KubeAdminConfigRaw string `json:"kubeAdminConfigRaw" tf:"kube_admin_config_raw"`
+	KubeAdminConfigRaw string `json:"kubeAdminConfigRaw,omitempty" tf:"kube_admin_config_raw"`
 
-	KubeConfig []KubeConfigObservation `json:"kubeConfig" tf:"kube_config"`
+	KubeConfig []KubeConfigObservation `json:"kubeConfig,omitempty" tf:"kube_config"`
 
-	KubeConfigRaw string `json:"kubeConfigRaw" tf:"kube_config_raw"`
+	KubeConfigRaw string `json:"kubeConfigRaw,omitempty" tf:"kube_config_raw"`
 
-	PrivateFqdn string `json:"privateFqdn" tf:"private_fqdn"`
+	PrivateFqdn string `json:"privateFqdn,omitempty" tf:"private_fqdn"`
 }
 
 type KubernetesClusterParameters struct {
@@ -544,7 +544,7 @@ type LinuxProfileParameters struct {
 }
 
 type LoadBalancerProfileObservation struct {
-	EffectiveOutboundIps []string `json:"effectiveOutboundIps" tf:"effective_outbound_ips"`
+	EffectiveOutboundIps []string `json:"effectiveOutboundIps,omitempty" tf:"effective_outbound_ips"`
 }
 
 type LoadBalancerProfileParameters struct {
@@ -626,18 +626,18 @@ type NotAllowedParameters struct {
 }
 
 type OmsAgentIdentityObservation struct {
-	ClientID string `json:"clientId" tf:"client_id"`
+	ClientID string `json:"clientId,omitempty" tf:"client_id"`
 
-	ObjectID string `json:"objectId" tf:"object_id"`
+	ObjectID string `json:"objectId,omitempty" tf:"object_id"`
 
-	UserAssignedIdentityID string `json:"userAssignedIdentityId" tf:"user_assigned_identity_id"`
+	UserAssignedIdentityID string `json:"userAssignedIdentityId,omitempty" tf:"user_assigned_identity_id"`
 }
 
 type OmsAgentIdentityParameters struct {
 }
 
 type OmsAgentObservation struct {
-	OmsAgentIdentity []OmsAgentIdentityObservation `json:"omsAgentIdentity" tf:"oms_agent_identity"`
+	OmsAgentIdentity []OmsAgentIdentityObservation `json:"omsAgentIdentity,omitempty" tf:"oms_agent_identity"`
 }
 
 type OmsAgentParameters struct {

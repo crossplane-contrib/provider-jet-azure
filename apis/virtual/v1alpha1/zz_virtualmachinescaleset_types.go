@@ -304,7 +304,7 @@ type VirtualMachineScaleSetBootDiagnosticsParameters struct {
 }
 
 type VirtualMachineScaleSetIdentityObservation struct {
-	PrincipalID string `json:"principalId" tf:"principal_id"`
+	PrincipalID string `json:"principalId,omitempty" tf:"principal_id"`
 }
 
 type VirtualMachineScaleSetIdentityParameters struct {

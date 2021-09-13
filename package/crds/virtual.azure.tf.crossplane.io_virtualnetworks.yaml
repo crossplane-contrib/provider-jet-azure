@@ -167,8 +167,6 @@ spec:
                 properties:
                   guid:
                     type: string
-                required:
-                - guid
                 type: object
               conditions:
                 description: Conditions of the resource.

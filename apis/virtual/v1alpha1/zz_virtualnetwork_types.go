@@ -37,7 +37,7 @@ type DdosProtectionPlanParameters struct {
 }
 
 type SubnetObservation struct {
-	ID string `json:"id" tf:"id"`
+	ID string `json:"id,omitempty" tf:"id"`
 }
 
 type SubnetParameters struct {
@@ -53,7 +53,7 @@ type SubnetParameters struct {
 }
 
 type VirtualNetworkObservation struct {
-	GUID string `json:"guid" tf:"guid"`
+	GUID string `json:"guid,omitempty" tf:"guid"`
 }
 
 type VirtualNetworkParameters struct {

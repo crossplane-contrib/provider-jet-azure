@@ -675,13 +675,6 @@ spec:
                           type: string
                         username:
                           type: string
-                      required:
-                      - clientCertificate
-                      - clientKey
-                      - clusterCaCertificate
-                      - host
-                      - password
-                      - username
                       type: object
                     type: array
                   kubeAdminConfigRaw:
@@ -701,26 +694,12 @@ spec:
                           type: string
                         username:
                           type: string
-                      required:
-                      - clientCertificate
-                      - clientKey
-                      - clusterCaCertificate
-                      - host
-                      - password
-                      - username
                       type: object
                     type: array
                   kubeConfigRaw:
                     type: string
                   privateFqdn:
                     type: string
-                required:
-                - fqdn
-                - kubeAdminConfig
-                - kubeAdminConfigRaw
-                - kubeConfig
-                - kubeConfigRaw
-                - privateFqdn
                 type: object
               conditions:
                 description: Conditions of the resource.

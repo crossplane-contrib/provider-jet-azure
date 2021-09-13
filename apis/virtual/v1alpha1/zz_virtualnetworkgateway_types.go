@@ -52,9 +52,9 @@ type CustomRouteParameters struct {
 }
 
 type PeeringAddressesObservation struct {
-	DefaultAddresses []string `json:"defaultAddresses" tf:"default_addresses"`
+	DefaultAddresses []string `json:"defaultAddresses,omitempty" tf:"default_addresses"`
 
-	TunnelIPAddresses []string `json:"tunnelIpAddresses" tf:"tunnel_ip_addresses"`
+	TunnelIPAddresses []string `json:"tunnelIpAddresses,omitempty" tf:"tunnel_ip_addresses"`
 }
 
 type PeeringAddressesParameters struct {

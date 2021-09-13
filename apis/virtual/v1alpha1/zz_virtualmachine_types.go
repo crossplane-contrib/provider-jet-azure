@@ -64,7 +64,7 @@ type BootDiagnosticsParameters struct {
 }
 
 type IdentityObservation struct {
-	PrincipalID string `json:"principalId" tf:"principal_id"`
+	PrincipalID string `json:"principalId,omitempty" tf:"principal_id"`
 }
 
 type IdentityParameters struct {

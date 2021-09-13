@@ -25,9 +25,9 @@ import (
 )
 
 type RegistrationInfoObservation struct {
-	ResetToken bool `json:"resetToken" tf:"reset_token"`
+	ResetToken bool `json:"resetToken,omitempty" tf:"reset_token"`
 
-	Token string `json:"token" tf:"token"`
+	Token string `json:"token,omitempty" tf:"token"`
 }
 
 type RegistrationInfoParameters struct {
