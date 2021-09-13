@@ -1,0 +1,16 @@
+apiVersion: virtual.azure.tf.crossplane.io/v1alpha1
+kind: VirtualNetwork
+metadata:
+  name: example
+spec:
+  forProvider:
+    name: "virtualNetwork1"
+    location: "East US"
+    resourceGroupName: "example-rg"
+    addressSpace:
+      - "10.0.0.0/16"
+    dnsServers:
+      - "10.0.0.4"
+      - "10.0.0.5"
+  providerConfigRef:
+    name: example

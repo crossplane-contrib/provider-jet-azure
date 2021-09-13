@@ -1,15 +1,17 @@
-# provider-template
+# provider-tf-azure
 
-`provider-template` is a minimal [Crossplane](https://crossplane.io/) Provider
-that is meant to be used as a template for implementing new Providers. It comes
-with the following features that are meant to be refactored:
+`provider-tf-azure` is a [Crossplane](https://crossplane.io/) provider that
+wraps the Terraform CLI and exposes XRM-conformant managed resources for
+[Microsoft Azure](https://azure.microsoft.com/).
 
-- A `ProviderConfig` type that only points to a credentials `Secret`.
-- A `MyType` resource type that serves as an example managed resource.
-- A managed resource controller that reconciles `MyType` objects and simply
-  prints their configuration in its `Observe` method.
 
 ## Developing
+
+Run code-generation pipeline:
+```console
+make prepare.azurerm
+go run cmd/generator/main.go
+```
 
 Run against a Kubernetes cluster:
 

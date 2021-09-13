@@ -1,0 +1,20 @@
+apiVersion: kubernetes.azure.tf.crossplane.io/v1alpha1
+kind: KubernetesCluster
+metadata:
+  name: example
+spec:
+  forProvider:
+    name: "kubernetesCluster1"
+    location: "East US"
+    resourceGroupName: "example-rg"
+    dnsPrefix: "exampleaks1"
+    defaultNodePool:
+      - name: default
+        nodeCount: 1
+        vmSize: "Standard_D2_v2"
+    identity:
+      - type: "SystemAssigned"
+    tags:
+      purpose: example
+  providerConfigRef:
+    name: example
