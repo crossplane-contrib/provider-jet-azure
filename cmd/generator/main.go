@@ -22,6 +22,7 @@ import (
 	"os"
 	"os/exec"
 	"path/filepath"
+	"regexp"
 	"sort"
 	"strings"
 
@@ -58,30 +59,9 @@ var skipList = map[string]struct{}{
 	"azurerm_sentinel_data_connector_microsoft_defender_advanced_threat_protection":  {},
 }
 
-var includeList = map[string]struct{}{
-	"azurerm_virtual_hub_connection":                                  {},
-	"azurerm_virtual_machine_configuration_policy_assignment":         {},
-	"azurerm_virtual_hub_bgp_connection":                              {},
-	"azurerm_virtual_hub_security_partner_provider":                   {},
-	"azurerm_virtual_machine_data_disk_attachment":                    {},
-	"azurerm_virtual_wan":                                             {},
-	"azurerm_virtual_hub_ip":                                          {},
-	"azurerm_virtual_desktop_host_pool":                               {},
-	"azurerm_virtual_desktop_application":                             {},
-	"azurerm_virtual_machine_extension":                               {},
-	"azurerm_virtual_machine":                                         {},
-	"azurerm_virtual_network_gateway":                                 {},
-	"azurerm_virtual_network_peering":                                 {},
-	"azurerm_virtual_machine_scale_set_extension":                     {},
-	"azurerm_virtual_desktop_application_group":                       {},
-	"azurerm_virtual_hub":                                             {},
-	"azurerm_virtual_network_dns_servers":                             {},
-	"azurerm_virtual_network_gateway_connection":                      {},
-	"azurerm_virtual_desktop_workspace_application_group_association": {},
-	"azurerm_virtual_hub_route_table":                                 {},
-	"azurerm_virtual_machine_scale_set":                               {},
-	"azurerm_virtual_network":                                         {},
-	"azurerm_virtual_desktop_workspace":                               {},
+var includeList = []string{
+	"azurerm_virtual_.+",
+	"azurerm_kubernetes_.+",
 }
 
 // "make prepare.azurerm" should be run before running this generator pipeline
@@ -114,7 +94,18 @@ func main() { // nolint:gocyclo
 			continue
 		}
 		if useIncludeList {
-			if _, ok := includeList[name]; !ok {
+			match := false
+			for _, r := range includeList {
+				ok, err := regexp.MatchString(r, name)
+				if err != nil {
+					panic(errors.Wrap(err, "cannot match regular expression"))
+				}
+				if ok {
+					match = true
+					break
+				}
+			}
+			if !match {
 				continue
 			}
 		}
