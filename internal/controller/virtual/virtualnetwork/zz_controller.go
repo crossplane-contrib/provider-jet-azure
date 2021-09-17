@@ -34,7 +34,7 @@ import (
 )
 
 // Setup adds a controller that reconciles VirtualNetwork managed resources.
-func Setup(mgr ctrl.Manager, l logging.Logger, rl workqueue.RateLimiter) error {
+func Setup(mgr ctrl.Manager, l logging.Logger, rl workqueue.RateLimiter, concurrency int) error {
 	name := managed.ControllerName(v1alpha1.VirtualNetworkGroupVersionKind.String())
 	r := managed.NewReconciler(mgr,
 		xpresource.ManagedKind(v1alpha1.VirtualNetworkGroupVersionKind),
@@ -45,7 +45,7 @@ func Setup(mgr ctrl.Manager, l logging.Logger, rl workqueue.RateLimiter) error {
 
 	return ctrl.NewControllerManagedBy(mgr).
 		Named(name).
-		WithOptions(controller.Options{RateLimiter: rl}).
+		WithOptions(controller.Options{RateLimiter: rl, MaxConcurrentReconciles: concurrency}).
 		For(&v1alpha1.VirtualNetwork{}).
 		Complete(r)
 }
