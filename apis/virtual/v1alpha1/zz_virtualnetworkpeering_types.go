@@ -19,9 +19,10 @@ limitations under the License.
 package v1alpha1
 
 import (
-	xpv1 "github.com/crossplane/crossplane-runtime/apis/common/v1"
 	metav1 "k8s.io/apimachinery/pkg/apis/meta/v1"
 	"k8s.io/apimachinery/pkg/runtime/schema"
+
+	v1 "github.com/crossplane/crossplane-runtime/apis/common/v1"
 )
 
 type VirtualNetworkPeeringObservation struct {
@@ -56,14 +57,14 @@ type VirtualNetworkPeeringParameters struct {
 
 // VirtualNetworkPeeringSpec defines the desired state of VirtualNetworkPeering
 type VirtualNetworkPeeringSpec struct {
-	xpv1.ResourceSpec `json:",inline"`
-	ForProvider       VirtualNetworkPeeringParameters `json:"forProvider"`
+	v1.ResourceSpec `json:",inline"`
+	ForProvider     VirtualNetworkPeeringParameters `json:"forProvider"`
 }
 
 // VirtualNetworkPeeringStatus defines the observed state of VirtualNetworkPeering.
 type VirtualNetworkPeeringStatus struct {
-	xpv1.ResourceStatus `json:",inline"`
-	AtProvider          VirtualNetworkPeeringObservation `json:"atProvider,omitempty"`
+	v1.ResourceStatus `json:",inline"`
+	AtProvider        VirtualNetworkPeeringObservation `json:"atProvider,omitempty"`
 }
 
 // +kubebuilder:object:root=true

@@ -19,9 +19,10 @@ limitations under the License.
 package v1alpha1
 
 import (
-	xpv1 "github.com/crossplane/crossplane-runtime/apis/common/v1"
 	metav1 "k8s.io/apimachinery/pkg/apis/meta/v1"
 	"k8s.io/apimachinery/pkg/runtime/schema"
+
+	v1 "github.com/crossplane/crossplane-runtime/apis/common/v1"
 )
 
 type KubernetesClusterNodePoolKubeletConfigObservation struct {
@@ -284,14 +285,14 @@ type LinuxOsConfigSysctlConfigParameters struct {
 
 // KubernetesClusterNodePoolSpec defines the desired state of KubernetesClusterNodePool
 type KubernetesClusterNodePoolSpec struct {
-	xpv1.ResourceSpec `json:",inline"`
-	ForProvider       KubernetesClusterNodePoolParameters `json:"forProvider"`
+	v1.ResourceSpec `json:",inline"`
+	ForProvider     KubernetesClusterNodePoolParameters `json:"forProvider"`
 }
 
 // KubernetesClusterNodePoolStatus defines the observed state of KubernetesClusterNodePool.
 type KubernetesClusterNodePoolStatus struct {
-	xpv1.ResourceStatus `json:",inline"`
-	AtProvider          KubernetesClusterNodePoolObservation `json:"atProvider,omitempty"`
+	v1.ResourceStatus `json:",inline"`
+	AtProvider        KubernetesClusterNodePoolObservation `json:"atProvider,omitempty"`
 }
 
 // +kubebuilder:object:root=true

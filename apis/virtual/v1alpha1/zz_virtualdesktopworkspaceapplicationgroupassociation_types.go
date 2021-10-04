@@ -19,9 +19,10 @@ limitations under the License.
 package v1alpha1
 
 import (
-	xpv1 "github.com/crossplane/crossplane-runtime/apis/common/v1"
 	metav1 "k8s.io/apimachinery/pkg/apis/meta/v1"
 	"k8s.io/apimachinery/pkg/runtime/schema"
+
+	v1 "github.com/crossplane/crossplane-runtime/apis/common/v1"
 )
 
 type VirtualDesktopWorkspaceApplicationGroupAssociationObservation struct {
@@ -38,14 +39,14 @@ type VirtualDesktopWorkspaceApplicationGroupAssociationParameters struct {
 
 // VirtualDesktopWorkspaceApplicationGroupAssociationSpec defines the desired state of VirtualDesktopWorkspaceApplicationGroupAssociation
 type VirtualDesktopWorkspaceApplicationGroupAssociationSpec struct {
-	xpv1.ResourceSpec `json:",inline"`
-	ForProvider       VirtualDesktopWorkspaceApplicationGroupAssociationParameters `json:"forProvider"`
+	v1.ResourceSpec `json:",inline"`
+	ForProvider     VirtualDesktopWorkspaceApplicationGroupAssociationParameters `json:"forProvider"`
 }
 
 // VirtualDesktopWorkspaceApplicationGroupAssociationStatus defines the observed state of VirtualDesktopWorkspaceApplicationGroupAssociation.
 type VirtualDesktopWorkspaceApplicationGroupAssociationStatus struct {
-	xpv1.ResourceStatus `json:",inline"`
-	AtProvider          VirtualDesktopWorkspaceApplicationGroupAssociationObservation `json:"atProvider,omitempty"`
+	v1.ResourceStatus `json:",inline"`
+	AtProvider        VirtualDesktopWorkspaceApplicationGroupAssociationObservation `json:"atProvider,omitempty"`
 }
 
 // +kubebuilder:object:root=true

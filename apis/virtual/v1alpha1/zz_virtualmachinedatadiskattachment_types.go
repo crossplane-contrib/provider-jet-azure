@@ -19,9 +19,10 @@ limitations under the License.
 package v1alpha1
 
 import (
-	xpv1 "github.com/crossplane/crossplane-runtime/apis/common/v1"
 	metav1 "k8s.io/apimachinery/pkg/apis/meta/v1"
 	"k8s.io/apimachinery/pkg/runtime/schema"
+
+	v1 "github.com/crossplane/crossplane-runtime/apis/common/v1"
 )
 
 type VirtualMachineDataDiskAttachmentObservation struct {
@@ -50,14 +51,14 @@ type VirtualMachineDataDiskAttachmentParameters struct {
 
 // VirtualMachineDataDiskAttachmentSpec defines the desired state of VirtualMachineDataDiskAttachment
 type VirtualMachineDataDiskAttachmentSpec struct {
-	xpv1.ResourceSpec `json:",inline"`
-	ForProvider       VirtualMachineDataDiskAttachmentParameters `json:"forProvider"`
+	v1.ResourceSpec `json:",inline"`
+	ForProvider     VirtualMachineDataDiskAttachmentParameters `json:"forProvider"`
 }
 
 // VirtualMachineDataDiskAttachmentStatus defines the observed state of VirtualMachineDataDiskAttachment.
 type VirtualMachineDataDiskAttachmentStatus struct {
-	xpv1.ResourceStatus `json:",inline"`
-	AtProvider          VirtualMachineDataDiskAttachmentObservation `json:"atProvider,omitempty"`
+	v1.ResourceStatus `json:",inline"`
+	AtProvider        VirtualMachineDataDiskAttachmentObservation `json:"atProvider,omitempty"`
 }
 
 // +kubebuilder:object:root=true

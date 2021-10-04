@@ -19,9 +19,10 @@ limitations under the License.
 package v1alpha1
 
 import (
-	xpv1 "github.com/crossplane/crossplane-runtime/apis/common/v1"
 	metav1 "k8s.io/apimachinery/pkg/apis/meta/v1"
 	"k8s.io/apimachinery/pkg/runtime/schema"
+
+	v1 "github.com/crossplane/crossplane-runtime/apis/common/v1"
 )
 
 type IpsecPolicyObservation struct {
@@ -134,14 +135,14 @@ type VirtualNetworkGatewayConnectionParameters struct {
 
 // VirtualNetworkGatewayConnectionSpec defines the desired state of VirtualNetworkGatewayConnection
 type VirtualNetworkGatewayConnectionSpec struct {
-	xpv1.ResourceSpec `json:",inline"`
-	ForProvider       VirtualNetworkGatewayConnectionParameters `json:"forProvider"`
+	v1.ResourceSpec `json:",inline"`
+	ForProvider     VirtualNetworkGatewayConnectionParameters `json:"forProvider"`
 }
 
 // VirtualNetworkGatewayConnectionStatus defines the observed state of VirtualNetworkGatewayConnection.
 type VirtualNetworkGatewayConnectionStatus struct {
-	xpv1.ResourceStatus `json:",inline"`
-	AtProvider          VirtualNetworkGatewayConnectionObservation `json:"atProvider,omitempty"`
+	v1.ResourceStatus `json:",inline"`
+	AtProvider        VirtualNetworkGatewayConnectionObservation `json:"atProvider,omitempty"`
 }
 
 // +kubebuilder:object:root=true

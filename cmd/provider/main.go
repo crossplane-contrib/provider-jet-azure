@@ -28,15 +28,19 @@ import (
 	"github.com/crossplane/crossplane-runtime/pkg/ratelimiter"
 
 	"github.com/crossplane-contrib/provider-tf-azure/apis"
+	"github.com/crossplane-contrib/provider-tf-azure/internal/clients"
 	"github.com/crossplane-contrib/provider-tf-azure/internal/controller"
 )
 
 func main() {
 	var (
-		app            = kingpin.New(filepath.Base(os.Args[0]), "Azure support for Crossplane.").DefaultEnvars()
-		debug          = app.Flag("debug", "Run with debug logging.").Short('d').Bool()
-		syncPeriod     = app.Flag("sync", "Controller manager sync period such as 300ms, 1.5h, or 2h45m").Short('s').Default("1h").Duration()
-		leaderElection = app.Flag("leader-election", "Use leader election for the controller manager.").Short('l').Default("false").OverrideDefaultFromEnvar("LEADER_ELECTION").Bool()
+		app              = kingpin.New(filepath.Base(os.Args[0]), "Azure support for Crossplane.").DefaultEnvars()
+		debug            = app.Flag("debug", "Run with debug logging.").Short('d').Bool()
+		syncPeriod       = app.Flag("sync", "Controller manager sync period such as 300ms, 1.5h, or 2h45m").Short('s').Default("1h").Duration()
+		leaderElection   = app.Flag("leader-election", "Use leader election for the controller manager.").Short('l').Default("false").OverrideDefaultFromEnvar("LEADER_ELECTION").Bool()
+		terraformVersion = app.Flag("terraform-version", "Terraform version.").Required().Envar("TERRAFORM_VERSION").String()
+		providerSource   = app.Flag("terraform-provider-source", "Terraform provider source.").Required().Envar("TERRAFORM_PROVIDER_SOURCE").String()
+		providerVersion  = app.Flag("terraform-provider-version", "Terraform provider version.").Required().Envar("TERRAFORM_PROVIDER_VERSION").String()
 	)
 	kingpin.MustParse(app.Parse(os.Args[1:]))
 
@@ -63,6 +67,6 @@ func main() {
 
 	rl := ratelimiter.NewDefaultProviderRateLimiter(ratelimiter.DefaultProviderRPS)
 	kingpin.FatalIfError(apis.AddToScheme(mgr.GetScheme()), "Cannot add Azure APIs to scheme")
-	kingpin.FatalIfError(controller.Setup(mgr, log, rl), "Cannot setup Azure controllers")
+	kingpin.FatalIfError(controller.Setup(mgr, log, rl, clients.TerraformSetupBuilder(*terraformVersion, *providerSource, *providerVersion), 1), "Cannot setup Azure controllers")
 	kingpin.FatalIfError(mgr.Start(ctrl.SetupSignalHandler()), "Cannot start controller manager")
 }

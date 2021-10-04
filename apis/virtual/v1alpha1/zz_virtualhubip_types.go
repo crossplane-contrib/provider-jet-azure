@@ -19,9 +19,10 @@ limitations under the License.
 package v1alpha1
 
 import (
-	xpv1 "github.com/crossplane/crossplane-runtime/apis/common/v1"
 	metav1 "k8s.io/apimachinery/pkg/apis/meta/v1"
 	"k8s.io/apimachinery/pkg/runtime/schema"
+
+	v1 "github.com/crossplane/crossplane-runtime/apis/common/v1"
 )
 
 type VirtualHubIpObservation struct {
@@ -50,14 +51,14 @@ type VirtualHubIpParameters struct {
 
 // VirtualHubIpSpec defines the desired state of VirtualHubIp
 type VirtualHubIpSpec struct {
-	xpv1.ResourceSpec `json:",inline"`
-	ForProvider       VirtualHubIpParameters `json:"forProvider"`
+	v1.ResourceSpec `json:",inline"`
+	ForProvider     VirtualHubIpParameters `json:"forProvider"`
 }
 
 // VirtualHubIpStatus defines the observed state of VirtualHubIp.
 type VirtualHubIpStatus struct {
-	xpv1.ResourceStatus `json:",inline"`
-	AtProvider          VirtualHubIpObservation `json:"atProvider,omitempty"`
+	v1.ResourceStatus `json:",inline"`
+	AtProvider        VirtualHubIpObservation `json:"atProvider,omitempty"`
 }
 
 // +kubebuilder:object:root=true

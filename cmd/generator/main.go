@@ -31,6 +31,7 @@ import (
 	"github.com/iancoleman/strcase"
 	"github.com/pkg/errors"
 
+	"github.com/crossplane-contrib/terrajet/pkg/config"
 	"github.com/crossplane-contrib/terrajet/pkg/pipeline"
 )
 
@@ -131,7 +132,7 @@ func main() { // nolint:gocyclo
 
 		crdGen := pipeline.NewCRDGenerator(versionGen.Package(), versionGen.DirectoryPath(), strings.ToLower(group)+groupSuffix, "azure")
 		tfGen := pipeline.NewTerraformedGenerator(versionGen.Package(), versionGen.DirectoryPath())
-		ctrlGen := pipeline.NewControllerGenerator(wd, modulePath, strings.ToLower(group)+groupSuffix, providerConfigBuilderPath)
+		ctrlGen := pipeline.NewControllerGenerator(wd, modulePath, strings.ToLower(group)+groupSuffix)
 
 		keys := make([]string, len(resources))
 		i := 0
@@ -144,13 +145,15 @@ func main() { // nolint:gocyclo
 		for _, name := range keys {
 			// We don't want Azurerm prefix in all kinds.
 			kind := strings.TrimPrefix(strcase.ToCamel(name), "Azurerm")
-			if err := crdGen.Generate(version, kind, resources[name]); err != nil {
+			resource := resources[name]
+			c := config.NewResource(version, kind, name)
+			if err := crdGen.Generate(c, resource); err != nil {
 				panic(errors.Wrap(err, "cannot generate crd"))
 			}
-			if err := tfGen.Generate(version, kind, name, "id"); err != nil {
+			if err := tfGen.Generate(c); err != nil {
 				panic(errors.Wrap(err, "cannot generate terraformed"))
 			}
-			ctrlPkgPath, err := ctrlGen.Generate(versionGen.Package().Path(), kind)
+			ctrlPkgPath, err := ctrlGen.Generate(c, versionGen.Package().Path())
 			if err != nil {
 				panic(errors.Wrap(err, "cannot generate controller"))
 			}

@@ -18,7 +18,12 @@ limitations under the License.
 
 package v1alpha1
 
-import "github.com/crossplane-contrib/terrajet/pkg/conversion"
+import (
+	"github.com/pkg/errors"
+
+	"github.com/crossplane-contrib/terrajet/pkg/conversion"
+	"github.com/crossplane-contrib/terrajet/pkg/json"
+)
 
 // GetTerraformResourceType returns Terraform resource type for this VirtualNetwork
 func (mg *VirtualNetwork) GetTerraformResourceType() string {
@@ -31,21 +36,51 @@ func (tr *VirtualNetwork) GetTerraformResourceIdField() string {
 }
 
 // GetObservation of this VirtualNetwork
-func (tr *VirtualNetwork) GetObservation() ([]byte, error) {
-	return conversion.TFParser.Marshal(tr.Status.AtProvider)
+func (tr *VirtualNetwork) GetObservation() (map[string]interface{}, error) {
+	o, err := json.TFParser.Marshal(tr.Status.AtProvider)
+	if err != nil {
+		return nil, err
+	}
+	base := map[string]interface{}{}
+	return base, json.TFParser.Unmarshal(o, &base)
 }
 
 // SetObservation for this VirtualNetwork
-func (tr *VirtualNetwork) SetObservation(data []byte) error {
-	return conversion.TFParser.Unmarshal(data, &tr.Status.AtProvider)
+func (tr *VirtualNetwork) SetObservation(obs map[string]interface{}) error {
+	p, err := json.TFParser.Marshal(obs)
+	if err != nil {
+		return err
+	}
+	return json.TFParser.Unmarshal(p, &tr.Status.AtProvider)
 }
 
 // GetParameters of this VirtualNetwork
-func (tr *VirtualNetwork) GetParameters() ([]byte, error) {
-	return conversion.TFParser.Marshal(tr.Spec.ForProvider)
+func (tr *VirtualNetwork) GetParameters() (map[string]interface{}, error) {
+	p, err := json.TFParser.Marshal(tr.Spec.ForProvider)
+	if err != nil {
+		return nil, err
+	}
+	base := map[string]interface{}{}
+	return base, json.TFParser.Unmarshal(p, &base)
 }
 
 // SetParameters for this VirtualNetwork
-func (tr *VirtualNetwork) SetParameters(data []byte) error {
-	return conversion.TFParser.Unmarshal(data, &tr.Spec.ForProvider)
+func (tr *VirtualNetwork) SetParameters(params map[string]interface{}) error {
+	p, err := json.TFParser.Marshal(params)
+	if err != nil {
+		return err
+	}
+	return json.TFParser.Unmarshal(p, &tr.Spec.ForProvider)
+}
+
+// LateInitialize this VirtualNetwork using its observed tfState.
+// returns True if there are any spec changes for the resource.
+func (tr *VirtualNetwork) LateInitialize(attrs []byte) (bool, error) {
+	params := &VirtualNetworkParameters{}
+	if err := json.TFParser.Unmarshal(attrs, params); err != nil {
+		return false, errors.Wrap(err, "failed to unmarshal Terraform state parameters for late-initialization")
+	}
+	li := conversion.NewLateInitializer(conversion.WithZeroValueJSONOmitEmptyFilter(conversion.CNameWildcard),
+		conversion.WithZeroElemPtrFilter(conversion.CNameWildcard))
+	return li.LateInitialize(&tr.Spec.ForProvider, params)
 }
