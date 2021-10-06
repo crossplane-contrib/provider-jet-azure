@@ -33,6 +33,8 @@ import (
 
 	"github.com/crossplane-contrib/terrajet/pkg/config"
 	"github.com/crossplane-contrib/terrajet/pkg/pipeline"
+
+	_ "github.com/crossplane-contrib/provider-tf-azure/apis"
 )
 
 // Constants to use in generated artifacts.
@@ -71,13 +73,13 @@ func main() { // nolint:gocyclo
 	// and it establishes a Terrajet code generation pipeline that's very similar
 	// to other Terrajet based providers.
 	// delete API dirs
-	deleteGenDirs("apis", map[string]struct{}{
-		"v1alpha1": {},
-	})
-	// delete controller dirs
-	deleteGenDirs("internal/controller", map[string]struct{}{
-		"config": {},
-	})
+	/*	deleteGenDirs("apis", map[string]struct{}{
+			"v1alpha1": {},
+		})
+		// delete controller dirs
+		deleteGenDirs("internal/controller", map[string]struct{}{
+			"config": {},
+		})*/
 
 	wd, err := os.Getwd()
 	if err != nil {
@@ -146,14 +148,17 @@ func main() { // nolint:gocyclo
 			// We don't want Azurerm prefix in all kinds.
 			kind := strings.TrimPrefix(strcase.ToCamel(name), "Azurerm")
 			resource := resources[name]
-			c := config.NewResource(version, kind, name)
-			if err := crdGen.Generate(c, resource); err != nil {
+			r := config.NewResource(version, kind, name)
+			if err = r.OverrideConfig(config.Store.GetForResource(name)); err != nil {
+				panic(errors.Wrap(err, "cannot override config"))
+			}
+			if err := crdGen.Generate(r, resource); err != nil {
 				panic(errors.Wrap(err, "cannot generate crd"))
 			}
-			if err := tfGen.Generate(c); err != nil {
+			if err := tfGen.Generate(r); err != nil {
 				panic(errors.Wrap(err, "cannot generate terraformed"))
 			}
-			ctrlPkgPath, err := ctrlGen.Generate(c, versionGen.Package().Path())
+			ctrlPkgPath, err := ctrlGen.Generate(r, versionGen.Package().Path())
 			if err != nil {
 				panic(errors.Wrap(err, "cannot generate controller"))
 			}

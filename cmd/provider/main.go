@@ -20,6 +20,7 @@ import (
 	"os"
 	"path/filepath"
 
+	"github.com/crossplane-contrib/terrajet/pkg/terraform"
 	"gopkg.in/alecthomas/kingpin.v2"
 	ctrl "sigs.k8s.io/controller-runtime"
 	"sigs.k8s.io/controller-runtime/pkg/log/zap"
@@ -67,6 +68,8 @@ func main() {
 
 	rl := ratelimiter.NewDefaultProviderRateLimiter(ratelimiter.DefaultProviderRPS)
 	kingpin.FatalIfError(apis.AddToScheme(mgr.GetScheme()), "Cannot add Azure APIs to scheme")
-	kingpin.FatalIfError(controller.Setup(mgr, log, rl, clients.TerraformSetupBuilder(*terraformVersion, *providerSource, *providerVersion), 1), "Cannot setup Azure controllers")
+	kingpin.FatalIfError(controller.Setup(mgr, log, rl,
+		clients.TerraformSetupBuilder(*terraformVersion, *providerSource, *providerVersion), terraform.NewWorkspaceStore(log), 1),
+		"Cannot setup Azure controllers")
 	kingpin.FatalIfError(mgr.Start(ctrl.SetupSignalHandler()), "Cannot start controller manager")
 }

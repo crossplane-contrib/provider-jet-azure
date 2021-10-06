@@ -5,7 +5,6 @@ import (
 	"encoding/json"
 
 	"github.com/crossplane-contrib/terrajet/pkg/terraform"
-	"github.com/crossplane-contrib/terrajet/pkg/tfcli"
 	"github.com/pkg/errors"
 	"k8s.io/apimachinery/pkg/types"
 	"sigs.k8s.io/controller-runtime/pkg/client"
@@ -23,7 +22,6 @@ const (
 	errTrackUsage           = "cannot track ProviderConfig usage"
 	errExtractCredentials   = "cannot extract credentials"
 	errUnmarshalCredentials = "cannot unmarshal Azure credentials as JSON"
-	errMarshalProviderBlock = "cannot marshal Terraform Azurerm provider block as JSON"
 	// Azure service principal credentials file JSON keys
 	keyAzureSubscriptionID = "subscriptionId"
 	keyAzureClientID       = "clientId"
@@ -41,10 +39,10 @@ const (
 // configuration like provider credentials used to connect to cloud APIs in the
 // expected form of a Terraform provider.
 func TerraformSetupBuilder(version, providerSource, providerVersion string) terraform.SetupFn { //nolint:gocyclo
-	return func(ctx context.Context, client client.Client, mg resource.Managed) (tfcli.TerraformSetup, error) {
-		ps := tfcli.TerraformSetup{
+	return func(ctx context.Context, client client.Client, mg resource.Managed) (terraform.Setup, error) {
+		ps := terraform.Setup{
 			Version: version,
-			Requirement: tfcli.ProviderRequirement{
+			Requirement: terraform.ProviderRequirement{
 				Source:  providerSource,
 				Version: providerVersion,
 			},

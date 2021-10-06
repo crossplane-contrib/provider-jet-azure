@@ -19,10 +19,11 @@ limitations under the License.
 package v1alpha1
 
 import (
+	"github.com/crossplane/crossplane-runtime/pkg/meta"
 	"github.com/pkg/errors"
 
-	"github.com/crossplane-contrib/terrajet/pkg/conversion"
-	"github.com/crossplane-contrib/terrajet/pkg/json"
+	"github.com/crossplane-contrib/terrajet/pkg/resource"
+	"github.com/crossplane-contrib/terrajet/pkg/resource/json"
 )
 
 // GetTerraformResourceType returns Terraform resource type for this VirtualNetwork
@@ -30,8 +31,8 @@ func (mg *VirtualNetwork) GetTerraformResourceType() string {
 	return "azurerm_virtual_network"
 }
 
-// GetTerraformResourceIdField returns Terraform identifier field for this VirtualNetwork
-func (tr *VirtualNetwork) GetTerraformResourceIdField() string {
+// GetTerraformResourceIDField returns Terraform identifier field for this VirtualNetwork
+func (tr *VirtualNetwork) GetTerraformResourceIDField() string {
 	return "id"
 }
 
@@ -61,6 +62,7 @@ func (tr *VirtualNetwork) GetParameters() (map[string]interface{}, error) {
 		return nil, err
 	}
 	base := map[string]interface{}{}
+	virtualNetworkExternalNameConfigure(base, meta.GetExternalName(tr))
 	return base, json.TFParser.Unmarshal(p, &base)
 }
 
@@ -80,7 +82,7 @@ func (tr *VirtualNetwork) LateInitialize(attrs []byte) (bool, error) {
 	if err := json.TFParser.Unmarshal(attrs, params); err != nil {
 		return false, errors.Wrap(err, "failed to unmarshal Terraform state parameters for late-initialization")
 	}
-	li := conversion.NewLateInitializer(conversion.WithZeroValueJSONOmitEmptyFilter(conversion.CNameWildcard),
-		conversion.WithZeroElemPtrFilter(conversion.CNameWildcard))
+	li := resource.NewGenericLateInitializer(resource.WithZeroValueJSONOmitEmptyFilter(resource.CNameWildcard),
+		resource.WithZeroElemPtrFilter(resource.CNameWildcard))
 	return li.LateInitialize(&tr.Spec.ForProvider, params)
 }

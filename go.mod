@@ -3,8 +3,8 @@ module github.com/crossplane-contrib/provider-tf-azure
 go 1.16
 
 require (
-	github.com/crossplane-contrib/terrajet v0.0.0-20211004200536-9e0f04f9b9f3
-	github.com/crossplane/crossplane-runtime v0.15.0
+	github.com/crossplane-contrib/terrajet v0.0.0-20211006135237-05d93004a01a
+	github.com/crossplane/crossplane-runtime v0.15.1-0.20210930095326-d5661210733b
 	github.com/crossplane/crossplane-tools v0.0.0-20210320162312-1baca298c527
 	github.com/hashicorp/terraform-plugin-sdk/v2 v2.7.0
 	// github.com/hashicorp/terraform-provider-azurerm is replaced with  ./.work/.azurerm
@@ -15,8 +15,8 @@ require (
 	gopkg.in/alecthomas/kingpin.v2 v2.2.6
 	k8s.io/apimachinery v0.22.0
 	k8s.io/client-go v0.22.0
-	sigs.k8s.io/controller-runtime v0.9.2
-	sigs.k8s.io/controller-tools v0.4.0
+	sigs.k8s.io/controller-runtime v0.9.6
+	sigs.k8s.io/controller-tools v0.6.2
 )
 
 replace github.com/hashicorp/terraform-provider-azurerm => ./.work/.azurerm
