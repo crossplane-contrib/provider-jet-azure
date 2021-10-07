@@ -37,28 +37,28 @@ type VirtualMachineScaleSetExtensionParameters struct {
 	ForceUpdateTag *string `json:"forceUpdateTag,omitempty" tf:"force_update_tag"`
 
 	// +kubebuilder:validation:Required
-	Name string `json:"name" tf:"name"`
+	Name *string `json:"name" tf:"name"`
 
 	// +kubebuilder:validation:Optional
-	ProtectedSettings *string `json:"protectedSettings,omitempty" tf:"protected_settings"`
+	ProtectedSettingsSecretRef v1.SecretKeySelector `json:"protectedSettingsSecretRef,omitempty" tf:"-"`
 
 	// +kubebuilder:validation:Optional
-	ProvisionAfterExtensions []string `json:"provisionAfterExtensions,omitempty" tf:"provision_after_extensions"`
+	ProvisionAfterExtensions []*string `json:"provisionAfterExtensions,omitempty" tf:"provision_after_extensions"`
 
 	// +kubebuilder:validation:Required
-	Publisher string `json:"publisher" tf:"publisher"`
+	Publisher *string `json:"publisher" tf:"publisher"`
 
 	// +kubebuilder:validation:Optional
 	Settings *string `json:"settings,omitempty" tf:"settings"`
 
 	// +kubebuilder:validation:Required
-	Type string `json:"type" tf:"type"`
+	Type *string `json:"type" tf:"type"`
 
 	// +kubebuilder:validation:Required
-	TypeHandlerVersion string `json:"typeHandlerVersion" tf:"type_handler_version"`
+	TypeHandlerVersion *string `json:"typeHandlerVersion" tf:"type_handler_version"`
 
 	// +kubebuilder:validation:Required
-	VirtualMachineScaleSetID string `json:"virtualMachineScaleSetId" tf:"virtual_machine_scale_set_id"`
+	VirtualMachineScaleSetID *string `json:"virtualMachineScaleSetId" tf:"virtual_machine_scale_set_id"`
 }
 
 // VirtualMachineScaleSetExtensionSpec defines the desired state of VirtualMachineScaleSetExtension

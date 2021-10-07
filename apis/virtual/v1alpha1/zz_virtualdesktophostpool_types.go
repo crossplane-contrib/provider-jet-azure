@@ -26,15 +26,13 @@ import (
 )
 
 type RegistrationInfoObservation struct {
-	ResetToken bool `json:"resetToken,omitempty" tf:"reset_token"`
-
-	Token string `json:"token,omitempty" tf:"token"`
+	ResetToken *bool `json:"resetToken,omitempty" tf:"reset_token"`
 }
 
 type RegistrationInfoParameters struct {
 
 	// +kubebuilder:validation:Required
-	ExpirationDate string `json:"expirationDate" tf:"expiration_date"`
+	ExpirationDate *string `json:"expirationDate" tf:"expiration_date"`
 }
 
 type VirtualDesktopHostPoolObservation struct {
@@ -52,16 +50,16 @@ type VirtualDesktopHostPoolParameters struct {
 	FriendlyName *string `json:"friendlyName,omitempty" tf:"friendly_name"`
 
 	// +kubebuilder:validation:Required
-	LoadBalancerType string `json:"loadBalancerType" tf:"load_balancer_type"`
+	LoadBalancerType *string `json:"loadBalancerType" tf:"load_balancer_type"`
 
 	// +kubebuilder:validation:Required
-	Location string `json:"location" tf:"location"`
+	Location *string `json:"location" tf:"location"`
 
 	// +kubebuilder:validation:Optional
 	MaximumSessionsAllowed *int64 `json:"maximumSessionsAllowed,omitempty" tf:"maximum_sessions_allowed"`
 
 	// +kubebuilder:validation:Required
-	Name string `json:"name" tf:"name"`
+	Name *string `json:"name" tf:"name"`
 
 	// +kubebuilder:validation:Optional
 	PersonalDesktopAssignmentType *string `json:"personalDesktopAssignmentType,omitempty" tf:"personal_desktop_assignment_type"`
@@ -74,16 +72,16 @@ type VirtualDesktopHostPoolParameters struct {
 	RegistrationInfo []RegistrationInfoParameters `json:"registrationInfo,omitempty" tf:"registration_info"`
 
 	// +kubebuilder:validation:Required
-	ResourceGroupName string `json:"resourceGroupName" tf:"resource_group_name"`
+	ResourceGroupName *string `json:"resourceGroupName" tf:"resource_group_name"`
 
 	// +kubebuilder:validation:Optional
 	StartVMOnConnect *bool `json:"startVmOnConnect,omitempty" tf:"start_vm_on_connect"`
 
 	// +kubebuilder:validation:Optional
-	Tags map[string]string `json:"tags,omitempty" tf:"tags"`
+	Tags map[string]*string `json:"tags,omitempty" tf:"tags"`
 
 	// +kubebuilder:validation:Required
-	Type string `json:"type" tf:"type"`
+	Type *string `json:"type" tf:"type"`
 
 	// +kubebuilder:validation:Optional
 	ValidateEnvironment *bool `json:"validateEnvironment,omitempty" tf:"validate_environment"`

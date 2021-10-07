@@ -3,6 +3,9 @@ kind: KubernetesCluster
 metadata:
   name: example
 spec:
+  writeConnectionSecretToRef:
+    name: example-kubeconfig
+    namespace: crossplane-system
   forProvider:
     name: "kubernetesCluster1"
     location: "East US"

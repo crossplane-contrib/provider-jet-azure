@@ -4,7 +4,7 @@ go 1.16
 
 require (
 	github.com/crossplane-contrib/terrajet v0.0.0-20211006135237-05d93004a01a
-	github.com/crossplane/crossplane-runtime v0.15.1-0.20210930095326-d5661210733b
+	github.com/crossplane/crossplane-runtime v0.15.1-0.20211004150827-579c1833b513
 	github.com/crossplane/crossplane-tools v0.0.0-20210320162312-1baca298c527
 	github.com/hashicorp/terraform-plugin-sdk/v2 v2.7.0
 	// github.com/hashicorp/terraform-provider-azurerm is replaced with  ./.work/.azurerm
@@ -20,3 +20,5 @@ require (
 )
 
 replace github.com/hashicorp/terraform-provider-azurerm => ./.work/.azurerm
+
+replace github.com/crossplane-contrib/terrajet => ../terrajet

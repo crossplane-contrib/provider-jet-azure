@@ -27,6 +27,20 @@ import (
 	config "github.com/crossplane-contrib/provider-tf-azure/internal/controller/config"
 	kubernetescluster "github.com/crossplane-contrib/provider-tf-azure/internal/controller/kubernetes/kubernetescluster"
 	kubernetesclusternodepool "github.com/crossplane-contrib/provider-tf-azure/internal/controller/kubernetes/kubernetesclusternodepool"
+	postgresqlactivedirectoryadministrator "github.com/crossplane-contrib/provider-tf-azure/internal/controller/postgresql/postgresqlactivedirectoryadministrator"
+	postgresqlconfiguration "github.com/crossplane-contrib/provider-tf-azure/internal/controller/postgresql/postgresqlconfiguration"
+	postgresqldatabase "github.com/crossplane-contrib/provider-tf-azure/internal/controller/postgresql/postgresqldatabase"
+	postgresqlfirewallrule "github.com/crossplane-contrib/provider-tf-azure/internal/controller/postgresql/postgresqlfirewallrule"
+	postgresqlflexibleserver "github.com/crossplane-contrib/provider-tf-azure/internal/controller/postgresql/postgresqlflexibleserver"
+	postgresqlflexibleserverconfiguration "github.com/crossplane-contrib/provider-tf-azure/internal/controller/postgresql/postgresqlflexibleserverconfiguration"
+	postgresqlflexibleserverdatabase "github.com/crossplane-contrib/provider-tf-azure/internal/controller/postgresql/postgresqlflexibleserverdatabase"
+	postgresqlflexibleserverfirewallrule "github.com/crossplane-contrib/provider-tf-azure/internal/controller/postgresql/postgresqlflexibleserverfirewallrule"
+	postgresqlserver "github.com/crossplane-contrib/provider-tf-azure/internal/controller/postgresql/postgresqlserver"
+	postgresqlserverkey "github.com/crossplane-contrib/provider-tf-azure/internal/controller/postgresql/postgresqlserverkey"
+	postgresqlvirtualnetworkrule "github.com/crossplane-contrib/provider-tf-azure/internal/controller/postgresql/postgresqlvirtualnetworkrule"
+	resourcegroup "github.com/crossplane-contrib/provider-tf-azure/internal/controller/resource/resourcegroup"
+	resourcegrouppolicyassignment "github.com/crossplane-contrib/provider-tf-azure/internal/controller/resource/resourcegrouppolicyassignment"
+	resourcegrouptemplatedeployment "github.com/crossplane-contrib/provider-tf-azure/internal/controller/resource/resourcegrouptemplatedeployment"
 	virtualdesktopapplication "github.com/crossplane-contrib/provider-tf-azure/internal/controller/virtual/virtualdesktopapplication"
 	virtualdesktophostpool "github.com/crossplane-contrib/provider-tf-azure/internal/controller/virtual/virtualdesktophostpool"
 	virtualdesktopworkspace "github.com/crossplane-contrib/provider-tf-azure/internal/controller/virtual/virtualdesktopworkspace"
@@ -58,6 +72,20 @@ func Setup(mgr ctrl.Manager, l logging.Logger, wl workqueue.RateLimiter, ps terr
 		config.Setup,
 		kubernetescluster.Setup,
 		kubernetesclusternodepool.Setup,
+		postgresqlactivedirectoryadministrator.Setup,
+		postgresqlconfiguration.Setup,
+		postgresqldatabase.Setup,
+		postgresqlfirewallrule.Setup,
+		postgresqlflexibleserver.Setup,
+		postgresqlflexibleserverconfiguration.Setup,
+		postgresqlflexibleserverdatabase.Setup,
+		postgresqlflexibleserverfirewallrule.Setup,
+		postgresqlserver.Setup,
+		postgresqlserverkey.Setup,
+		postgresqlvirtualnetworkrule.Setup,
+		resourcegroup.Setup,
+		resourcegrouppolicyassignment.Setup,
+		resourcegrouptemplatedeployment.Setup,
 		virtualdesktopapplication.Setup,
 		virtualdesktophostpool.Setup,
 		virtualdesktopworkspace.Setup,

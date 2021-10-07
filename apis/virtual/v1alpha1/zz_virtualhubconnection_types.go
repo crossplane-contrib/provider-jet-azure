@@ -31,10 +31,10 @@ type PropagatedRouteTableObservation struct {
 type PropagatedRouteTableParameters struct {
 
 	// +kubebuilder:validation:Optional
-	Labels []string `json:"labels,omitempty" tf:"labels"`
+	Labels []*string `json:"labels,omitempty" tf:"labels"`
 
 	// +kubebuilder:validation:Optional
-	RouteTableIds []string `json:"routeTableIds,omitempty" tf:"route_table_ids"`
+	RouteTableIds []*string `json:"routeTableIds,omitempty" tf:"route_table_ids"`
 }
 
 type RoutingObservation struct {
@@ -58,7 +58,7 @@ type StaticVnetRouteObservation struct {
 type StaticVnetRouteParameters struct {
 
 	// +kubebuilder:validation:Optional
-	AddressPrefixes []string `json:"addressPrefixes,omitempty" tf:"address_prefixes"`
+	AddressPrefixes []*string `json:"addressPrefixes,omitempty" tf:"address_prefixes"`
 
 	// +kubebuilder:validation:Optional
 	Name *string `json:"name,omitempty" tf:"name"`
@@ -79,16 +79,16 @@ type VirtualHubConnectionParameters struct {
 	InternetSecurityEnabled *bool `json:"internetSecurityEnabled,omitempty" tf:"internet_security_enabled"`
 
 	// +kubebuilder:validation:Required
-	Name string `json:"name" tf:"name"`
+	Name *string `json:"name" tf:"name"`
 
 	// +kubebuilder:validation:Required
-	RemoteVirtualNetworkID string `json:"remoteVirtualNetworkId" tf:"remote_virtual_network_id"`
+	RemoteVirtualNetworkID *string `json:"remoteVirtualNetworkId" tf:"remote_virtual_network_id"`
 
 	// +kubebuilder:validation:Optional
 	Routing []RoutingParameters `json:"routing,omitempty" tf:"routing"`
 
 	// +kubebuilder:validation:Required
-	VirtualHubID string `json:"virtualHubId" tf:"virtual_hub_id"`
+	VirtualHubID *string `json:"virtualHubId" tf:"virtual_hub_id"`
 
 	// +kubebuilder:validation:Optional
 	VitualNetworkToHubGatewaysTrafficAllowed *bool `json:"vitualNetworkToHubGatewaysTrafficAllowed,omitempty" tf:"vitual_network_to_hub_gateways_traffic_allowed"`

@@ -35,6 +35,11 @@ func (tr *VirtualHubIp) GetTerraformResourceIDField() string {
 	return "id"
 }
 
+// GetConnectionDetailsMapping for this VirtualHubIp
+func (tr *VirtualHubIp) GetConnectionDetailsMapping() map[string]string {
+	return nil
+}
+
 // GetObservation of this VirtualHubIp
 func (tr *VirtualHubIp) GetObservation() (map[string]interface{}, error) {
 	o, err := json.TFParser.Marshal(tr.Status.AtProvider)
@@ -80,7 +85,8 @@ func (tr *VirtualHubIp) LateInitialize(attrs []byte) (bool, error) {
 	if err := json.TFParser.Unmarshal(attrs, params); err != nil {
 		return false, errors.Wrap(err, "failed to unmarshal Terraform state parameters for late-initialization")
 	}
-	li := resource.NewGenericLateInitializer(resource.WithZeroValueJSONOmitEmptyFilter(resource.CNameWildcard),
-		resource.WithZeroElemPtrFilter(resource.CNameWildcard))
+	opts := []resource.GenericLateInitializerOption{resource.WithZeroValueJSONOmitEmptyFilter(resource.CNameWildcard)}
+
+	li := resource.NewGenericLateInitializer(opts...)
 	return li.LateInitialize(&tr.Spec.ForProvider, params)
 }

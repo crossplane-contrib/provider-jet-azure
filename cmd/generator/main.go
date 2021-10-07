@@ -65,6 +65,8 @@ var skipList = map[string]struct{}{
 var includeList = []string{
 	"azurerm_virtual_.+",
 	"azurerm_kubernetes_.+",
+	"azurerm_postgresql_.+",
+	"azurerm_resource_group",
 }
 
 // "make prepare.azurerm" should be run before running this generator pipeline

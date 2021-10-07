@@ -31,22 +31,22 @@ type IpsecPolicyObservation struct {
 type IpsecPolicyParameters struct {
 
 	// +kubebuilder:validation:Required
-	DhGroup string `json:"dhGroup" tf:"dh_group"`
+	DhGroup *string `json:"dhGroup" tf:"dh_group"`
 
 	// +kubebuilder:validation:Required
-	IkeEncryption string `json:"ikeEncryption" tf:"ike_encryption"`
+	IkeEncryption *string `json:"ikeEncryption" tf:"ike_encryption"`
 
 	// +kubebuilder:validation:Required
-	IkeIntegrity string `json:"ikeIntegrity" tf:"ike_integrity"`
+	IkeIntegrity *string `json:"ikeIntegrity" tf:"ike_integrity"`
 
 	// +kubebuilder:validation:Required
-	IpsecEncryption string `json:"ipsecEncryption" tf:"ipsec_encryption"`
+	IpsecEncryption *string `json:"ipsecEncryption" tf:"ipsec_encryption"`
 
 	// +kubebuilder:validation:Required
-	IpsecIntegrity string `json:"ipsecIntegrity" tf:"ipsec_integrity"`
+	IpsecIntegrity *string `json:"ipsecIntegrity" tf:"ipsec_integrity"`
 
 	// +kubebuilder:validation:Required
-	PfsGroup string `json:"pfsGroup" tf:"pfs_group"`
+	PfsGroup *string `json:"pfsGroup" tf:"pfs_group"`
 
 	// +kubebuilder:validation:Optional
 	SaDatasize *int64 `json:"saDatasize,omitempty" tf:"sa_datasize"`
@@ -61,10 +61,10 @@ type TrafficSelectorPolicyObservation struct {
 type TrafficSelectorPolicyParameters struct {
 
 	// +kubebuilder:validation:Required
-	LocalAddressCidrs []string `json:"localAddressCidrs" tf:"local_address_cidrs"`
+	LocalAddressCidrs []*string `json:"localAddressCidrs" tf:"local_address_cidrs"`
 
 	// +kubebuilder:validation:Required
-	RemoteAddressCidrs []string `json:"remoteAddressCidrs" tf:"remote_address_cidrs"`
+	RemoteAddressCidrs []*string `json:"remoteAddressCidrs" tf:"remote_address_cidrs"`
 }
 
 type VirtualNetworkGatewayConnectionObservation struct {
@@ -73,7 +73,7 @@ type VirtualNetworkGatewayConnectionObservation struct {
 type VirtualNetworkGatewayConnectionParameters struct {
 
 	// +kubebuilder:validation:Optional
-	AuthorizationKey *string `json:"authorizationKey,omitempty" tf:"authorization_key"`
+	AuthorizationKeySecretRef v1.SecretKeySelector `json:"authorizationKeySecretRef,omitempty" tf:"-"`
 
 	// +kubebuilder:validation:Optional
 	ConnectionProtocol *string `json:"connectionProtocol,omitempty" tf:"connection_protocol"`
@@ -100,37 +100,37 @@ type VirtualNetworkGatewayConnectionParameters struct {
 	LocalNetworkGatewayID *string `json:"localNetworkGatewayId,omitempty" tf:"local_network_gateway_id"`
 
 	// +kubebuilder:validation:Required
-	Location string `json:"location" tf:"location"`
+	Location *string `json:"location" tf:"location"`
 
 	// +kubebuilder:validation:Required
-	Name string `json:"name" tf:"name"`
+	Name *string `json:"name" tf:"name"`
 
 	// +kubebuilder:validation:Optional
 	PeerVirtualNetworkGatewayID *string `json:"peerVirtualNetworkGatewayId,omitempty" tf:"peer_virtual_network_gateway_id"`
 
 	// +kubebuilder:validation:Required
-	ResourceGroupName string `json:"resourceGroupName" tf:"resource_group_name"`
+	ResourceGroupName *string `json:"resourceGroupName" tf:"resource_group_name"`
 
 	// +kubebuilder:validation:Optional
 	RoutingWeight *int64 `json:"routingWeight,omitempty" tf:"routing_weight"`
 
 	// +kubebuilder:validation:Optional
-	SharedKey *string `json:"sharedKey,omitempty" tf:"shared_key"`
+	SharedKeySecretRef v1.SecretKeySelector `json:"sharedKeySecretRef,omitempty" tf:"-"`
 
 	// +kubebuilder:validation:Optional
-	Tags map[string]string `json:"tags,omitempty" tf:"tags"`
+	Tags map[string]*string `json:"tags,omitempty" tf:"tags"`
 
 	// +kubebuilder:validation:Optional
 	TrafficSelectorPolicy []TrafficSelectorPolicyParameters `json:"trafficSelectorPolicy,omitempty" tf:"traffic_selector_policy"`
 
 	// +kubebuilder:validation:Required
-	Type string `json:"type" tf:"type"`
+	Type *string `json:"type" tf:"type"`
 
 	// +kubebuilder:validation:Optional
 	UsePolicyBasedTrafficSelectors *bool `json:"usePolicyBasedTrafficSelectors,omitempty" tf:"use_policy_based_traffic_selectors"`
 
 	// +kubebuilder:validation:Required
-	VirtualNetworkGatewayID string `json:"virtualNetworkGatewayId" tf:"virtual_network_gateway_id"`
+	VirtualNetworkGatewayID *string `json:"virtualNetworkGatewayId" tf:"virtual_network_gateway_id"`
 }
 
 // VirtualNetworkGatewayConnectionSpec defines the desired state of VirtualNetworkGatewayConnection

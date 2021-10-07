@@ -31,19 +31,19 @@ type VirtualMachineDataDiskAttachmentObservation struct {
 type VirtualMachineDataDiskAttachmentParameters struct {
 
 	// +kubebuilder:validation:Required
-	Caching string `json:"caching" tf:"caching"`
+	Caching *string `json:"caching" tf:"caching"`
 
 	// +kubebuilder:validation:Optional
 	CreateOption *string `json:"createOption,omitempty" tf:"create_option"`
 
 	// +kubebuilder:validation:Required
-	Lun int64 `json:"lun" tf:"lun"`
+	Lun *int64 `json:"lun" tf:"lun"`
 
 	// +kubebuilder:validation:Required
-	ManagedDiskID string `json:"managedDiskId" tf:"managed_disk_id"`
+	ManagedDiskID *string `json:"managedDiskId" tf:"managed_disk_id"`
 
 	// +kubebuilder:validation:Required
-	VirtualMachineID string `json:"virtualMachineId" tf:"virtual_machine_id"`
+	VirtualMachineID *string `json:"virtualMachineId" tf:"virtual_machine_id"`
 
 	// +kubebuilder:validation:Optional
 	WriteAcceleratorEnabled *bool `json:"writeAcceleratorEnabled,omitempty" tf:"write_accelerator_enabled"`

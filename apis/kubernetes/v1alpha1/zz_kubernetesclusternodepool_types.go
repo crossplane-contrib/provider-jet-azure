@@ -31,7 +31,7 @@ type KubernetesClusterNodePoolKubeletConfigObservation struct {
 type KubernetesClusterNodePoolKubeletConfigParameters struct {
 
 	// +kubebuilder:validation:Optional
-	AllowedUnsafeSysctls []string `json:"allowedUnsafeSysctls,omitempty" tf:"allowed_unsafe_sysctls"`
+	AllowedUnsafeSysctls []*string `json:"allowedUnsafeSysctls,omitempty" tf:"allowed_unsafe_sysctls"`
 
 	// +kubebuilder:validation:Optional
 	CPUCfsQuotaEnabled *bool `json:"cpuCfsQuotaEnabled,omitempty" tf:"cpu_cfs_quota_enabled"`
@@ -85,7 +85,7 @@ type KubernetesClusterNodePoolObservation struct {
 type KubernetesClusterNodePoolParameters struct {
 
 	// +kubebuilder:validation:Optional
-	AvailabilityZones []string `json:"availabilityZones,omitempty" tf:"availability_zones"`
+	AvailabilityZones []*string `json:"availabilityZones,omitempty" tf:"availability_zones"`
 
 	// +kubebuilder:validation:Optional
 	EnableAutoScaling *bool `json:"enableAutoScaling,omitempty" tf:"enable_auto_scaling"`
@@ -109,7 +109,7 @@ type KubernetesClusterNodePoolParameters struct {
 	KubeletDiskType *string `json:"kubeletDiskType,omitempty" tf:"kubelet_disk_type"`
 
 	// +kubebuilder:validation:Required
-	KubernetesClusterID string `json:"kubernetesClusterId" tf:"kubernetes_cluster_id"`
+	KubernetesClusterID *string `json:"kubernetesClusterId" tf:"kubernetes_cluster_id"`
 
 	// +kubebuilder:validation:Optional
 	LinuxOsConfig []KubernetesClusterNodePoolLinuxOsConfigParameters `json:"linuxOsConfig,omitempty" tf:"linux_os_config"`
@@ -127,19 +127,19 @@ type KubernetesClusterNodePoolParameters struct {
 	Mode *string `json:"mode,omitempty" tf:"mode"`
 
 	// +kubebuilder:validation:Required
-	Name string `json:"name" tf:"name"`
+	Name *string `json:"name" tf:"name"`
 
 	// +kubebuilder:validation:Optional
 	NodeCount *int64 `json:"nodeCount,omitempty" tf:"node_count"`
 
 	// +kubebuilder:validation:Optional
-	NodeLabels map[string]string `json:"nodeLabels,omitempty" tf:"node_labels"`
+	NodeLabels map[string]*string `json:"nodeLabels,omitempty" tf:"node_labels"`
 
 	// +kubebuilder:validation:Optional
 	NodePublicIPPrefixID *string `json:"nodePublicIpPrefixId,omitempty" tf:"node_public_ip_prefix_id"`
 
 	// +kubebuilder:validation:Optional
-	NodeTaints []string `json:"nodeTaints,omitempty" tf:"node_taints"`
+	NodeTaints []*string `json:"nodeTaints,omitempty" tf:"node_taints"`
 
 	// +kubebuilder:validation:Optional
 	OrchestratorVersion *string `json:"orchestratorVersion,omitempty" tf:"orchestrator_version"`
@@ -166,7 +166,7 @@ type KubernetesClusterNodePoolParameters struct {
 	SpotMaxPrice *float64 `json:"spotMaxPrice,omitempty" tf:"spot_max_price"`
 
 	// +kubebuilder:validation:Optional
-	Tags map[string]string `json:"tags,omitempty" tf:"tags"`
+	Tags map[string]*string `json:"tags,omitempty" tf:"tags"`
 
 	// +kubebuilder:validation:Optional
 	UltraSsdEnabled *bool `json:"ultraSsdEnabled,omitempty" tf:"ultra_ssd_enabled"`
@@ -175,7 +175,7 @@ type KubernetesClusterNodePoolParameters struct {
 	UpgradeSettings []KubernetesClusterNodePoolUpgradeSettingsParameters `json:"upgradeSettings,omitempty" tf:"upgrade_settings"`
 
 	// +kubebuilder:validation:Required
-	VMSize string `json:"vmSize" tf:"vm_size"`
+	VMSize *string `json:"vmSize" tf:"vm_size"`
 
 	// +kubebuilder:validation:Optional
 	VnetSubnetID *string `json:"vnetSubnetId,omitempty" tf:"vnet_subnet_id"`
@@ -187,7 +187,7 @@ type KubernetesClusterNodePoolUpgradeSettingsObservation struct {
 type KubernetesClusterNodePoolUpgradeSettingsParameters struct {
 
 	// +kubebuilder:validation:Required
-	MaxSurge string `json:"maxSurge" tf:"max_surge"`
+	MaxSurge *string `json:"maxSurge" tf:"max_surge"`
 }
 
 type LinuxOsConfigSysctlConfigObservation struct {

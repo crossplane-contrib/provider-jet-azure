@@ -40,19 +40,19 @@ type VirtualNetworkPeeringParameters struct {
 	AllowVirtualNetworkAccess *bool `json:"allowVirtualNetworkAccess,omitempty" tf:"allow_virtual_network_access"`
 
 	// +kubebuilder:validation:Required
-	Name string `json:"name" tf:"name"`
+	Name *string `json:"name" tf:"name"`
 
 	// +kubebuilder:validation:Required
-	RemoteVirtualNetworkID string `json:"remoteVirtualNetworkId" tf:"remote_virtual_network_id"`
+	RemoteVirtualNetworkID *string `json:"remoteVirtualNetworkId" tf:"remote_virtual_network_id"`
 
 	// +kubebuilder:validation:Required
-	ResourceGroupName string `json:"resourceGroupName" tf:"resource_group_name"`
+	ResourceGroupName *string `json:"resourceGroupName" tf:"resource_group_name"`
 
 	// +kubebuilder:validation:Optional
 	UseRemoteGateways *bool `json:"useRemoteGateways,omitempty" tf:"use_remote_gateways"`
 
 	// +kubebuilder:validation:Required
-	VirtualNetworkName string `json:"virtualNetworkName" tf:"virtual_network_name"`
+	VirtualNetworkName *string `json:"virtualNetworkName" tf:"virtual_network_name"`
 }
 
 // VirtualNetworkPeeringSpec defines the desired state of VirtualNetworkPeering

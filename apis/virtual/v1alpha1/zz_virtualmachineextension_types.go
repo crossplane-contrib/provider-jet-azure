@@ -34,28 +34,28 @@ type VirtualMachineExtensionParameters struct {
 	AutoUpgradeMinorVersion *bool `json:"autoUpgradeMinorVersion,omitempty" tf:"auto_upgrade_minor_version"`
 
 	// +kubebuilder:validation:Required
-	Name string `json:"name" tf:"name"`
+	Name *string `json:"name" tf:"name"`
 
 	// +kubebuilder:validation:Optional
-	ProtectedSettings *string `json:"protectedSettings,omitempty" tf:"protected_settings"`
+	ProtectedSettingsSecretRef v1.SecretKeySelector `json:"protectedSettingsSecretRef,omitempty" tf:"-"`
 
 	// +kubebuilder:validation:Required
-	Publisher string `json:"publisher" tf:"publisher"`
+	Publisher *string `json:"publisher" tf:"publisher"`
 
 	// +kubebuilder:validation:Optional
 	Settings *string `json:"settings,omitempty" tf:"settings"`
 
 	// +kubebuilder:validation:Optional
-	Tags map[string]string `json:"tags,omitempty" tf:"tags"`
+	Tags map[string]*string `json:"tags,omitempty" tf:"tags"`
 
 	// +kubebuilder:validation:Required
-	Type string `json:"type" tf:"type"`
+	Type *string `json:"type" tf:"type"`
 
 	// +kubebuilder:validation:Required
-	TypeHandlerVersion string `json:"typeHandlerVersion" tf:"type_handler_version"`
+	TypeHandlerVersion *string `json:"typeHandlerVersion" tf:"type_handler_version"`
 
 	// +kubebuilder:validation:Required
-	VirtualMachineID string `json:"virtualMachineId" tf:"virtual_machine_id"`
+	VirtualMachineID *string `json:"virtualMachineId" tf:"virtual_machine_id"`
 }
 
 // VirtualMachineExtensionSpec defines the desired state of VirtualMachineExtension

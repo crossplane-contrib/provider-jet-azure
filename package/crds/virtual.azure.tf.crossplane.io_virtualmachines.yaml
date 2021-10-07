@@ -115,8 +115,24 @@ spec:
                   osProfile:
                     items:
                       properties:
-                        adminPassword:
-                          type: string
+                        adminPasswordSecretRef:
+                          description: A SecretKeySelector is a reference to a secret
+                            key in an arbitrary namespace.
+                          properties:
+                            key:
+                              description: The key to select.
+                              type: string
+                            name:
+                              description: Name of the secret.
+                              type: string
+                            namespace:
+                              description: Namespace of the secret.
+                              type: string
+                          required:
+                          - key
+                          - name
+                          - namespace
+                          type: object
                         adminUsername:
                           type: string
                         computerName:
@@ -177,15 +193,31 @@ spec:
                             properties:
                               component:
                                 type: string
-                              content:
-                                type: string
+                              contentSecretRef:
+                                description: A SecretKeySelector is a reference to
+                                  a secret key in an arbitrary namespace.
+                                properties:
+                                  key:
+                                    description: The key to select.
+                                    type: string
+                                  name:
+                                    description: Name of the secret.
+                                    type: string
+                                  namespace:
+                                    description: Namespace of the secret.
+                                    type: string
+                                required:
+                                - key
+                                - name
+                                - namespace
+                                type: object
                               pass:
                                 type: string
                               settingName:
                                 type: string
                             required:
                             - component
-                            - content
+                            - contentSecretRef
                             - pass
                             - settingName
                             type: object

@@ -35,6 +35,11 @@ func (tr *KubernetesClusterNodePool) GetTerraformResourceIDField() string {
 	return "id"
 }
 
+// GetConnectionDetailsMapping for this KubernetesClusterNodePool
+func (tr *KubernetesClusterNodePool) GetConnectionDetailsMapping() map[string]string {
+	return nil
+}
+
 // GetObservation of this KubernetesClusterNodePool
 func (tr *KubernetesClusterNodePool) GetObservation() (map[string]interface{}, error) {
 	o, err := json.TFParser.Marshal(tr.Status.AtProvider)
@@ -80,7 +85,8 @@ func (tr *KubernetesClusterNodePool) LateInitialize(attrs []byte) (bool, error) 
 	if err := json.TFParser.Unmarshal(attrs, params); err != nil {
 		return false, errors.Wrap(err, "failed to unmarshal Terraform state parameters for late-initialization")
 	}
-	li := resource.NewGenericLateInitializer(resource.WithZeroValueJSONOmitEmptyFilter(resource.CNameWildcard),
-		resource.WithZeroElemPtrFilter(resource.CNameWildcard))
+	opts := []resource.GenericLateInitializerOption{resource.WithZeroValueJSONOmitEmptyFilter(resource.CNameWildcard)}
+
+	li := resource.NewGenericLateInitializer(opts...)
 	return li.LateInitialize(&tr.Spec.ForProvider, params)
 }

@@ -31,10 +31,10 @@ type RouteObservation struct {
 type RouteParameters struct {
 
 	// +kubebuilder:validation:Required
-	AddressPrefixes []string `json:"addressPrefixes" tf:"address_prefixes"`
+	AddressPrefixes []*string `json:"addressPrefixes" tf:"address_prefixes"`
 
 	// +kubebuilder:validation:Required
-	NextHopIPAddress string `json:"nextHopIpAddress" tf:"next_hop_ip_address"`
+	NextHopIPAddress *string `json:"nextHopIpAddress" tf:"next_hop_ip_address"`
 }
 
 type VirtualHubObservation struct {
@@ -46,13 +46,13 @@ type VirtualHubParameters struct {
 	AddressPrefix *string `json:"addressPrefix,omitempty" tf:"address_prefix"`
 
 	// +kubebuilder:validation:Required
-	Location string `json:"location" tf:"location"`
+	Location *string `json:"location" tf:"location"`
 
 	// +kubebuilder:validation:Required
-	Name string `json:"name" tf:"name"`
+	Name *string `json:"name" tf:"name"`
 
 	// +kubebuilder:validation:Required
-	ResourceGroupName string `json:"resourceGroupName" tf:"resource_group_name"`
+	ResourceGroupName *string `json:"resourceGroupName" tf:"resource_group_name"`
 
 	// +kubebuilder:validation:Optional
 	Route []RouteParameters `json:"route,omitempty" tf:"route"`
@@ -61,7 +61,7 @@ type VirtualHubParameters struct {
 	Sku *string `json:"sku,omitempty" tf:"sku"`
 
 	// +kubebuilder:validation:Optional
-	Tags map[string]string `json:"tags,omitempty" tf:"tags"`
+	Tags map[string]*string `json:"tags,omitempty" tf:"tags"`
 
 	// +kubebuilder:validation:Optional
 	VirtualWanID *string `json:"virtualWanId,omitempty" tf:"virtual_wan_id"`

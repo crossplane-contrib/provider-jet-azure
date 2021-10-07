@@ -31,7 +31,7 @@ type DNSSettingsObservation struct {
 type DNSSettingsParameters struct {
 
 	// +kubebuilder:validation:Required
-	DNSServers []string `json:"dnsServers" tf:"dns_servers"`
+	DNSServers []*string `json:"dnsServers" tf:"dns_servers"`
 }
 
 type ExtensionObservation struct {
@@ -43,25 +43,25 @@ type ExtensionParameters struct {
 	AutoUpgradeMinorVersion *bool `json:"autoUpgradeMinorVersion,omitempty" tf:"auto_upgrade_minor_version"`
 
 	// +kubebuilder:validation:Required
-	Name string `json:"name" tf:"name"`
+	Name *string `json:"name" tf:"name"`
 
 	// +kubebuilder:validation:Optional
-	ProtectedSettings *string `json:"protectedSettings,omitempty" tf:"protected_settings"`
+	ProtectedSettingsSecretRef v1.SecretKeySelector `json:"protectedSettingsSecretRef,omitempty" tf:"-"`
 
 	// +kubebuilder:validation:Optional
-	ProvisionAfterExtensions []string `json:"provisionAfterExtensions,omitempty" tf:"provision_after_extensions"`
+	ProvisionAfterExtensions []*string `json:"provisionAfterExtensions,omitempty" tf:"provision_after_extensions"`
 
 	// +kubebuilder:validation:Required
-	Publisher string `json:"publisher" tf:"publisher"`
+	Publisher *string `json:"publisher" tf:"publisher"`
 
 	// +kubebuilder:validation:Optional
 	Settings *string `json:"settings,omitempty" tf:"settings"`
 
 	// +kubebuilder:validation:Required
-	Type string `json:"type" tf:"type"`
+	Type *string `json:"type" tf:"type"`
 
 	// +kubebuilder:validation:Required
-	TypeHandlerVersion string `json:"typeHandlerVersion" tf:"type_handler_version"`
+	TypeHandlerVersion *string `json:"typeHandlerVersion" tf:"type_handler_version"`
 }
 
 type IPConfigurationObservation struct {
@@ -70,28 +70,28 @@ type IPConfigurationObservation struct {
 type IPConfigurationParameters struct {
 
 	// +kubebuilder:validation:Optional
-	ApplicationGatewayBackendAddressPoolIds []string `json:"applicationGatewayBackendAddressPoolIds,omitempty" tf:"application_gateway_backend_address_pool_ids"`
+	ApplicationGatewayBackendAddressPoolIds []*string `json:"applicationGatewayBackendAddressPoolIds,omitempty" tf:"application_gateway_backend_address_pool_ids"`
 
 	// +kubebuilder:validation:Optional
-	ApplicationSecurityGroupIds []string `json:"applicationSecurityGroupIds,omitempty" tf:"application_security_group_ids"`
+	ApplicationSecurityGroupIds []*string `json:"applicationSecurityGroupIds,omitempty" tf:"application_security_group_ids"`
 
 	// +kubebuilder:validation:Optional
-	LoadBalancerBackendAddressPoolIds []string `json:"loadBalancerBackendAddressPoolIds,omitempty" tf:"load_balancer_backend_address_pool_ids"`
+	LoadBalancerBackendAddressPoolIds []*string `json:"loadBalancerBackendAddressPoolIds,omitempty" tf:"load_balancer_backend_address_pool_ids"`
 
 	// +kubebuilder:validation:Optional
-	LoadBalancerInboundNatRulesIds []string `json:"loadBalancerInboundNatRulesIds,omitempty" tf:"load_balancer_inbound_nat_rules_ids"`
+	LoadBalancerInboundNatRulesIds []*string `json:"loadBalancerInboundNatRulesIds,omitempty" tf:"load_balancer_inbound_nat_rules_ids"`
 
 	// +kubebuilder:validation:Required
-	Name string `json:"name" tf:"name"`
+	Name *string `json:"name" tf:"name"`
 
 	// +kubebuilder:validation:Required
-	Primary bool `json:"primary" tf:"primary"`
+	Primary *bool `json:"primary" tf:"primary"`
 
 	// +kubebuilder:validation:Optional
 	PublicIPAddressConfiguration []PublicIPAddressConfigurationParameters `json:"publicIpAddressConfiguration,omitempty" tf:"public_ip_address_configuration"`
 
 	// +kubebuilder:validation:Required
-	SubnetID string `json:"subnetId" tf:"subnet_id"`
+	SubnetID *string `json:"subnetId" tf:"subnet_id"`
 }
 
 type NetworkProfileObservation struct {
@@ -112,13 +112,13 @@ type NetworkProfileParameters struct {
 	IPForwarding *bool `json:"ipForwarding,omitempty" tf:"ip_forwarding"`
 
 	// +kubebuilder:validation:Required
-	Name string `json:"name" tf:"name"`
+	Name *string `json:"name" tf:"name"`
 
 	// +kubebuilder:validation:Optional
 	NetworkSecurityGroupID *string `json:"networkSecurityGroupId,omitempty" tf:"network_security_group_id"`
 
 	// +kubebuilder:validation:Required
-	Primary bool `json:"primary" tf:"primary"`
+	Primary *bool `json:"primary" tf:"primary"`
 }
 
 type OsProfileLinuxConfigSSHKeysObservation struct {
@@ -130,7 +130,7 @@ type OsProfileLinuxConfigSSHKeysParameters struct {
 	KeyData *string `json:"keyData,omitempty" tf:"key_data"`
 
 	// +kubebuilder:validation:Required
-	Path string `json:"path" tf:"path"`
+	Path *string `json:"path" tf:"path"`
 }
 
 type OsProfileSecretsVaultCertificatesObservation struct {
@@ -142,7 +142,7 @@ type OsProfileSecretsVaultCertificatesParameters struct {
 	CertificateStore *string `json:"certificateStore,omitempty" tf:"certificate_store"`
 
 	// +kubebuilder:validation:Required
-	CertificateURL string `json:"certificateUrl" tf:"certificate_url"`
+	CertificateURL *string `json:"certificateUrl" tf:"certificate_url"`
 }
 
 type OsProfileWindowsConfigAdditionalUnattendConfigObservation struct {
@@ -151,16 +151,16 @@ type OsProfileWindowsConfigAdditionalUnattendConfigObservation struct {
 type OsProfileWindowsConfigAdditionalUnattendConfigParameters struct {
 
 	// +kubebuilder:validation:Required
-	Component string `json:"component" tf:"component"`
+	Component *string `json:"component" tf:"component"`
 
 	// +kubebuilder:validation:Required
-	Content string `json:"content" tf:"content"`
+	ContentSecretRef v1.SecretKeySelector `json:"contentSecretRef" tf:"-"`
 
 	// +kubebuilder:validation:Required
-	Pass string `json:"pass" tf:"pass"`
+	Pass *string `json:"pass" tf:"pass"`
 
 	// +kubebuilder:validation:Required
-	SettingName string `json:"settingName" tf:"setting_name"`
+	SettingName *string `json:"settingName" tf:"setting_name"`
 }
 
 type OsProfileWindowsConfigWinrmObservation struct {
@@ -172,7 +172,7 @@ type OsProfileWindowsConfigWinrmParameters struct {
 	CertificateURL *string `json:"certificateUrl,omitempty" tf:"certificate_url"`
 
 	// +kubebuilder:validation:Required
-	Protocol string `json:"protocol" tf:"protocol"`
+	Protocol *string `json:"protocol" tf:"protocol"`
 }
 
 type PublicIPAddressConfigurationObservation struct {
@@ -181,13 +181,13 @@ type PublicIPAddressConfigurationObservation struct {
 type PublicIPAddressConfigurationParameters struct {
 
 	// +kubebuilder:validation:Required
-	DomainNameLabel string `json:"domainNameLabel" tf:"domain_name_label"`
+	DomainNameLabel *string `json:"domainNameLabel" tf:"domain_name_label"`
 
 	// +kubebuilder:validation:Required
-	IdleTimeout int64 `json:"idleTimeout" tf:"idle_timeout"`
+	IdleTimeout *int64 `json:"idleTimeout" tf:"idle_timeout"`
 
 	// +kubebuilder:validation:Required
-	Name string `json:"name" tf:"name"`
+	Name *string `json:"name" tf:"name"`
 }
 
 type RollingUpgradePolicyObservation struct {
@@ -214,10 +214,10 @@ type SkuObservation struct {
 type SkuParameters struct {
 
 	// +kubebuilder:validation:Required
-	Capacity int64 `json:"capacity" tf:"capacity"`
+	Capacity *int64 `json:"capacity" tf:"capacity"`
 
 	// +kubebuilder:validation:Required
-	Name string `json:"name" tf:"name"`
+	Name *string `json:"name" tf:"name"`
 
 	// +kubebuilder:validation:Optional
 	Tier *string `json:"tier,omitempty" tf:"tier"`
@@ -232,13 +232,13 @@ type StorageProfileDataDiskParameters struct {
 	Caching *string `json:"caching,omitempty" tf:"caching"`
 
 	// +kubebuilder:validation:Required
-	CreateOption string `json:"createOption" tf:"create_option"`
+	CreateOption *string `json:"createOption" tf:"create_option"`
 
 	// +kubebuilder:validation:Optional
 	DiskSizeGb *int64 `json:"diskSizeGb,omitempty" tf:"disk_size_gb"`
 
 	// +kubebuilder:validation:Required
-	Lun int64 `json:"lun" tf:"lun"`
+	Lun *int64 `json:"lun" tf:"lun"`
 
 	// +kubebuilder:validation:Optional
 	ManagedDiskType *string `json:"managedDiskType,omitempty" tf:"managed_disk_type"`
@@ -274,7 +274,7 @@ type StorageProfileOsDiskParameters struct {
 	Caching *string `json:"caching,omitempty" tf:"caching"`
 
 	// +kubebuilder:validation:Required
-	CreateOption string `json:"createOption" tf:"create_option"`
+	CreateOption *string `json:"createOption" tf:"create_option"`
 
 	// +kubebuilder:validation:Optional
 	Image *string `json:"image,omitempty" tf:"image"`
@@ -289,7 +289,7 @@ type StorageProfileOsDiskParameters struct {
 	OsType *string `json:"osType,omitempty" tf:"os_type"`
 
 	// +kubebuilder:validation:Optional
-	VhdContainers []string `json:"vhdContainers,omitempty" tf:"vhd_containers"`
+	VhdContainers []*string `json:"vhdContainers,omitempty" tf:"vhd_containers"`
 }
 
 type VirtualMachineScaleSetBootDiagnosticsObservation struct {
@@ -301,20 +301,20 @@ type VirtualMachineScaleSetBootDiagnosticsParameters struct {
 	Enabled *bool `json:"enabled,omitempty" tf:"enabled"`
 
 	// +kubebuilder:validation:Required
-	StorageURI string `json:"storageUri" tf:"storage_uri"`
+	StorageURI *string `json:"storageUri" tf:"storage_uri"`
 }
 
 type VirtualMachineScaleSetIdentityObservation struct {
-	PrincipalID string `json:"principalId,omitempty" tf:"principal_id"`
+	PrincipalID *string `json:"principalId,omitempty" tf:"principal_id"`
 }
 
 type VirtualMachineScaleSetIdentityParameters struct {
 
 	// +kubebuilder:validation:Optional
-	IdentityIds []string `json:"identityIds,omitempty" tf:"identity_ids"`
+	IdentityIds []*string `json:"identityIds,omitempty" tf:"identity_ids"`
 
 	// +kubebuilder:validation:Required
-	Type string `json:"type" tf:"type"`
+	Type *string `json:"type" tf:"type"`
 }
 
 type VirtualMachineScaleSetObservation struct {
@@ -338,13 +338,13 @@ type VirtualMachineScaleSetOsProfileObservation struct {
 type VirtualMachineScaleSetOsProfileParameters struct {
 
 	// +kubebuilder:validation:Optional
-	AdminPassword *string `json:"adminPassword,omitempty" tf:"admin_password"`
+	AdminPasswordSecretRef v1.SecretKeySelector `json:"adminPasswordSecretRef,omitempty" tf:"-"`
 
 	// +kubebuilder:validation:Required
-	AdminUsername string `json:"adminUsername" tf:"admin_username"`
+	AdminUsername *string `json:"adminUsername" tf:"admin_username"`
 
 	// +kubebuilder:validation:Required
-	ComputerNamePrefix string `json:"computerNamePrefix" tf:"computer_name_prefix"`
+	ComputerNamePrefix *string `json:"computerNamePrefix" tf:"computer_name_prefix"`
 
 	// +kubebuilder:validation:Optional
 	CustomData *string `json:"customData,omitempty" tf:"custom_data"`
@@ -356,7 +356,7 @@ type VirtualMachineScaleSetOsProfileSecretsObservation struct {
 type VirtualMachineScaleSetOsProfileSecretsParameters struct {
 
 	// +kubebuilder:validation:Required
-	SourceVaultID string `json:"sourceVaultId" tf:"source_vault_id"`
+	SourceVaultID *string `json:"sourceVaultId" tf:"source_vault_id"`
 
 	// +kubebuilder:validation:Optional
 	VaultCertificates []OsProfileSecretsVaultCertificatesParameters `json:"vaultCertificates,omitempty" tf:"vault_certificates"`
@@ -404,10 +404,10 @@ type VirtualMachineScaleSetParameters struct {
 	LicenseType *string `json:"licenseType,omitempty" tf:"license_type"`
 
 	// +kubebuilder:validation:Required
-	Location string `json:"location" tf:"location"`
+	Location *string `json:"location" tf:"location"`
 
 	// +kubebuilder:validation:Required
-	Name string `json:"name" tf:"name"`
+	Name *string `json:"name" tf:"name"`
 
 	// +kubebuilder:validation:Required
 	NetworkProfile []NetworkProfileParameters `json:"networkProfile" tf:"network_profile"`
@@ -437,7 +437,7 @@ type VirtualMachineScaleSetParameters struct {
 	ProximityPlacementGroupID *string `json:"proximityPlacementGroupId,omitempty" tf:"proximity_placement_group_id"`
 
 	// +kubebuilder:validation:Required
-	ResourceGroupName string `json:"resourceGroupName" tf:"resource_group_name"`
+	ResourceGroupName *string `json:"resourceGroupName" tf:"resource_group_name"`
 
 	// +kubebuilder:validation:Optional
 	RollingUpgradePolicy []RollingUpgradePolicyParameters `json:"rollingUpgradePolicy,omitempty" tf:"rolling_upgrade_policy"`
@@ -458,13 +458,13 @@ type VirtualMachineScaleSetParameters struct {
 	StorageProfileOsDisk []StorageProfileOsDiskParameters `json:"storageProfileOsDisk" tf:"storage_profile_os_disk"`
 
 	// +kubebuilder:validation:Optional
-	Tags map[string]string `json:"tags,omitempty" tf:"tags"`
+	Tags map[string]*string `json:"tags,omitempty" tf:"tags"`
 
 	// +kubebuilder:validation:Required
-	UpgradePolicyMode string `json:"upgradePolicyMode" tf:"upgrade_policy_mode"`
+	UpgradePolicyMode *string `json:"upgradePolicyMode" tf:"upgrade_policy_mode"`
 
 	// +kubebuilder:validation:Optional
-	Zones []string `json:"zones,omitempty" tf:"zones"`
+	Zones []*string `json:"zones,omitempty" tf:"zones"`
 }
 
 type VirtualMachineScaleSetPlanObservation struct {
@@ -473,13 +473,13 @@ type VirtualMachineScaleSetPlanObservation struct {
 type VirtualMachineScaleSetPlanParameters struct {
 
 	// +kubebuilder:validation:Required
-	Name string `json:"name" tf:"name"`
+	Name *string `json:"name" tf:"name"`
 
 	// +kubebuilder:validation:Required
-	Product string `json:"product" tf:"product"`
+	Product *string `json:"product" tf:"product"`
 
 	// +kubebuilder:validation:Required
-	Publisher string `json:"publisher" tf:"publisher"`
+	Publisher *string `json:"publisher" tf:"publisher"`
 }
 
 // VirtualMachineScaleSetSpec defines the desired state of VirtualMachineScaleSet

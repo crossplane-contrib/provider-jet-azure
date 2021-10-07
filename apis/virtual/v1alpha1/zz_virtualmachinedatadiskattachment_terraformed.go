@@ -35,6 +35,11 @@ func (tr *VirtualMachineDataDiskAttachment) GetTerraformResourceIDField() string
 	return "id"
 }
 
+// GetConnectionDetailsMapping for this VirtualMachineDataDiskAttachment
+func (tr *VirtualMachineDataDiskAttachment) GetConnectionDetailsMapping() map[string]string {
+	return nil
+}
+
 // GetObservation of this VirtualMachineDataDiskAttachment
 func (tr *VirtualMachineDataDiskAttachment) GetObservation() (map[string]interface{}, error) {
 	o, err := json.TFParser.Marshal(tr.Status.AtProvider)
@@ -80,7 +85,8 @@ func (tr *VirtualMachineDataDiskAttachment) LateInitialize(attrs []byte) (bool, 
 	if err := json.TFParser.Unmarshal(attrs, params); err != nil {
 		return false, errors.Wrap(err, "failed to unmarshal Terraform state parameters for late-initialization")
 	}
-	li := resource.NewGenericLateInitializer(resource.WithZeroValueJSONOmitEmptyFilter(resource.CNameWildcard),
-		resource.WithZeroElemPtrFilter(resource.CNameWildcard))
+	opts := []resource.GenericLateInitializerOption{resource.WithZeroValueJSONOmitEmptyFilter(resource.CNameWildcard)}
+
+	li := resource.NewGenericLateInitializer(opts...)
 	return li.LateInitialize(&tr.Spec.ForProvider, params)
 }

@@ -35,6 +35,11 @@ func (tr *VirtualNetworkGatewayConnection) GetTerraformResourceIDField() string 
 	return "id"
 }
 
+// GetConnectionDetailsMapping for this VirtualNetworkGatewayConnection
+func (tr *VirtualNetworkGatewayConnection) GetConnectionDetailsMapping() map[string]string {
+	return map[string]string{"authorization_key": "spec.forProvider.authorizationKeySecretRef", "shared_key": "spec.forProvider.sharedKeySecretRef"}
+}
+
 // GetObservation of this VirtualNetworkGatewayConnection
 func (tr *VirtualNetworkGatewayConnection) GetObservation() (map[string]interface{}, error) {
 	o, err := json.TFParser.Marshal(tr.Status.AtProvider)
@@ -80,7 +85,8 @@ func (tr *VirtualNetworkGatewayConnection) LateInitialize(attrs []byte) (bool, e
 	if err := json.TFParser.Unmarshal(attrs, params); err != nil {
 		return false, errors.Wrap(err, "failed to unmarshal Terraform state parameters for late-initialization")
 	}
-	li := resource.NewGenericLateInitializer(resource.WithZeroValueJSONOmitEmptyFilter(resource.CNameWildcard),
-		resource.WithZeroElemPtrFilter(resource.CNameWildcard))
+	opts := []resource.GenericLateInitializerOption{resource.WithZeroValueJSONOmitEmptyFilter(resource.CNameWildcard)}
+
+	li := resource.NewGenericLateInitializer(opts...)
 	return li.LateInitialize(&tr.Spec.ForProvider, params)
 }

@@ -64,8 +64,24 @@ spec:
                 type: string
               forProvider:
                 properties:
-                  authorizationKey:
-                    type: string
+                  authorizationKeySecretRef:
+                    description: A SecretKeySelector is a reference to a secret key
+                      in an arbitrary namespace.
+                    properties:
+                      key:
+                        description: The key to select.
+                        type: string
+                      name:
+                        description: Name of the secret.
+                        type: string
+                      namespace:
+                        description: Namespace of the secret.
+                        type: string
+                    required:
+                    - key
+                    - name
+                    - namespace
+                    type: object
                   connectionProtocol:
                     type: string
                   dpdTimeoutSeconds:
@@ -122,8 +138,24 @@ spec:
                   routingWeight:
                     format: int64
                     type: integer
-                  sharedKey:
-                    type: string
+                  sharedKeySecretRef:
+                    description: A SecretKeySelector is a reference to a secret key
+                      in an arbitrary namespace.
+                    properties:
+                      key:
+                        description: The key to select.
+                        type: string
+                      name:
+                        description: Name of the secret.
+                        type: string
+                      namespace:
+                        description: Namespace of the secret.
+                        type: string
+                    required:
+                    - key
+                    - name
+                    - namespace
+                    type: object
                   tags:
                     additionalProperties:
                       type: string

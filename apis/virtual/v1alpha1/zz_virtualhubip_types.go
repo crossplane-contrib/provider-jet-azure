@@ -31,7 +31,7 @@ type VirtualHubIpObservation struct {
 type VirtualHubIpParameters struct {
 
 	// +kubebuilder:validation:Required
-	Name string `json:"name" tf:"name"`
+	Name *string `json:"name" tf:"name"`
 
 	// +kubebuilder:validation:Optional
 	PrivateIPAddress *string `json:"privateIpAddress,omitempty" tf:"private_ip_address"`
@@ -43,10 +43,10 @@ type VirtualHubIpParameters struct {
 	PublicIPAddressID *string `json:"publicIpAddressId,omitempty" tf:"public_ip_address_id"`
 
 	// +kubebuilder:validation:Required
-	SubnetID string `json:"subnetId" tf:"subnet_id"`
+	SubnetID *string `json:"subnetId" tf:"subnet_id"`
 
 	// +kubebuilder:validation:Required
-	VirtualHubID string `json:"virtualHubId" tf:"virtual_hub_id"`
+	VirtualHubID *string `json:"virtualHubId" tf:"virtual_hub_id"`
 }
 
 // VirtualHubIpSpec defines the desired state of VirtualHubIp

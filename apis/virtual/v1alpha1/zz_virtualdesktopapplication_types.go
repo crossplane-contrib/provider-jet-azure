@@ -31,10 +31,10 @@ type VirtualDesktopApplicationObservation struct {
 type VirtualDesktopApplicationParameters struct {
 
 	// +kubebuilder:validation:Required
-	ApplicationGroupID string `json:"applicationGroupId" tf:"application_group_id"`
+	ApplicationGroupID *string `json:"applicationGroupId" tf:"application_group_id"`
 
 	// +kubebuilder:validation:Required
-	CommandLineArgumentPolicy string `json:"commandLineArgumentPolicy" tf:"command_line_argument_policy"`
+	CommandLineArgumentPolicy *string `json:"commandLineArgumentPolicy" tf:"command_line_argument_policy"`
 
 	// +kubebuilder:validation:Optional
 	CommandLineArguments *string `json:"commandLineArguments,omitempty" tf:"command_line_arguments"`
@@ -52,10 +52,10 @@ type VirtualDesktopApplicationParameters struct {
 	IconPath *string `json:"iconPath,omitempty" tf:"icon_path"`
 
 	// +kubebuilder:validation:Required
-	Name string `json:"name" tf:"name"`
+	Name *string `json:"name" tf:"name"`
 
 	// +kubebuilder:validation:Required
-	Path string `json:"path" tf:"path"`
+	Path *string `json:"path" tf:"path"`
 
 	// +kubebuilder:validation:Optional
 	ShowInPortal *bool `json:"showInPortal,omitempty" tf:"show_in_portal"`

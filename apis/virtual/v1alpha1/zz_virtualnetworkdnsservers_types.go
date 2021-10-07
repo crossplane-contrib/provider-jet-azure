@@ -31,10 +31,10 @@ type VirtualNetworkDnsServersObservation struct {
 type VirtualNetworkDnsServersParameters struct {
 
 	// +kubebuilder:validation:Optional
-	DNSServers []string `json:"dnsServers,omitempty" tf:"dns_servers"`
+	DNSServers []*string `json:"dnsServers,omitempty" tf:"dns_servers"`
 
 	// +kubebuilder:validation:Required
-	VirtualNetworkID string `json:"virtualNetworkId" tf:"virtual_network_id"`
+	VirtualNetworkID *string `json:"virtualNetworkId" tf:"virtual_network_id"`
 }
 
 // VirtualNetworkDnsServersSpec defines the desired state of VirtualNetworkDnsServers

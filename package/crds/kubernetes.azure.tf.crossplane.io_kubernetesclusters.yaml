@@ -560,8 +560,24 @@ spec:
                                 type: boolean
                               serverAppId:
                                 type: string
-                              serverAppSecret:
-                                type: string
+                              serverAppSecretSecretRef:
+                                description: A SecretKeySelector is a reference to
+                                  a secret key in an arbitrary namespace.
+                                properties:
+                                  key:
+                                    description: The key to select.
+                                    type: string
+                                  name:
+                                    description: Name of the secret.
+                                    type: string
+                                  namespace:
+                                    description: Namespace of the secret.
+                                    type: string
+                                required:
+                                - key
+                                - name
+                                - namespace
+                                type: object
                               tenantId:
                                 type: string
                             type: object
@@ -577,11 +593,27 @@ spec:
                       properties:
                         clientId:
                           type: string
-                        clientSecret:
-                          type: string
+                        clientSecretSecretRef:
+                          description: A SecretKeySelector is a reference to a secret
+                            key in an arbitrary namespace.
+                          properties:
+                            key:
+                              description: The key to select.
+                              type: string
+                            name:
+                              description: Name of the secret.
+                              type: string
+                            namespace:
+                              description: Namespace of the secret.
+                              type: string
+                          required:
+                          - key
+                          - name
+                          - namespace
+                          type: object
                       required:
                       - clientId
-                      - clientSecret
+                      - clientSecretSecretRef
                       type: object
                     type: array
                   skuTier:
@@ -593,8 +625,24 @@ spec:
                   windowsProfile:
                     items:
                       properties:
-                        adminPassword:
-                          type: string
+                        adminPasswordSecretRef:
+                          description: A SecretKeySelector is a reference to a secret
+                            key in an arbitrary namespace.
+                          properties:
+                            key:
+                              description: The key to select.
+                              type: string
+                            name:
+                              description: Name of the secret.
+                              type: string
+                            namespace:
+                              description: Namespace of the secret.
+                              type: string
+                          required:
+                          - key
+                          - name
+                          - namespace
+                          type: object
                         adminUsername:
                           type: string
                         license:
@@ -663,41 +711,21 @@ spec:
                   kubeAdminConfig:
                     items:
                       properties:
-                        clientCertificate:
-                          type: string
-                        clientKey:
-                          type: string
-                        clusterCaCertificate:
-                          type: string
                         host:
-                          type: string
-                        password:
                           type: string
                         username:
                           type: string
                       type: object
                     type: array
-                  kubeAdminConfigRaw:
-                    type: string
                   kubeConfig:
                     items:
                       properties:
-                        clientCertificate:
-                          type: string
-                        clientKey:
-                          type: string
-                        clusterCaCertificate:
-                          type: string
                         host:
-                          type: string
-                        password:
                           type: string
                         username:
                           type: string
                       type: object
                     type: array
-                  kubeConfigRaw:
-                    type: string
                   privateFqdn:
                     type: string
                 type: object
