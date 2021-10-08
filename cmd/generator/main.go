@@ -34,8 +34,6 @@ import (
 	"github.com/crossplane-contrib/terrajet/pkg/config"
 	"github.com/crossplane-contrib/terrajet/pkg/pipeline"
 
-	// _ "github.com/crossplane-contrib/provider-tf-azure/apis"
-
 	genConfig "github.com/crossplane-contrib/provider-tf-azure/cmd/generator/config"
 )
 
@@ -77,13 +75,13 @@ func main() { // nolint:gocyclo
 	// and it establishes a Terrajet code generation pipeline that's very similar
 	// to other Terrajet based providers.
 	// delete API dirs
-	/*	deleteGenDirs("apis", map[string]struct{}{
-			"v1alpha1": {},
-		})
-		// delete controller dirs
-		deleteGenDirs("internal/controller", map[string]struct{}{
-			"config": {},
-		})*/
+	deleteGenDirs("apis", map[string]struct{}{
+		"v1alpha1": {},
+	})
+	// delete controller dirs
+	deleteGenDirs("internal/controller", map[string]struct{}{
+		"config": {},
+	})
 
 	genConfig.SetResourceConfigurations()
 	wd, err := os.Getwd()
