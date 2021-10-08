@@ -1,0 +1,15 @@
+apiVersion: kubernetes.azure.tf.crossplane.io/v1alpha1
+kind: KubernetesClusterNodePool
+metadata:
+  name: example
+spec:
+  forProvider:
+    name: "nodepool1"
+    kubernetesClusterIDRef:
+      name: example
+    vmSize: "Standard_DS2_v2"
+    nodeCount: 1
+    tags:
+      purpose: example
+  providerConfigRef:
+    name: example

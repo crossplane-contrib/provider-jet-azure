@@ -5,7 +5,8 @@ metadata:
 spec:
   forProvider:
     name: array_nulls
-    resourceGroupName: "example-rg"
+    resourceGroupNameRef:
+      name: example-rg
     serverName: example-psql
     value: "off"
   providerConfigRef:

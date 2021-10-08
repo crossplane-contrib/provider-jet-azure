@@ -49,10 +49,6 @@ func SetResourceConfigurations() {
 			DisableNameInitializer: true,
 		},
 		References: config.References{
-			"resource_group_name": config.Reference{
-				Type:      APISPackagePath + "/resource/v1alpha1.ResourceGroup",
-				Extractor: APISPackagePath + "/rconfig.ExtractResourceName()",
-			},
 			"kubernetes_cluster_id": config.Reference{
 				Type: "KubernetesCluster",
 			},

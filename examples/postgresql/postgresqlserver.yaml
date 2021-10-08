@@ -5,7 +5,8 @@ metadata:
 spec:
   forProvider:
     name: example-psqlserver
-    resourceGroupName: "example-rg"
+    resourceGroupNameRef:
+      name: example-rg
     location: "East US"
     administratorLogin: "psqladminun"
     administratorLoginPasswordSecretRef:
