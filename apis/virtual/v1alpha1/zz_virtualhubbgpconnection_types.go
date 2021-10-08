@@ -39,8 +39,15 @@ type VirtualHubBgpConnectionParameters struct {
 	// +kubebuilder:validation:Required
 	PeerIP *string `json:"peerIp" tf:"peer_ip"`
 
-	// +kubebuilder:validation:Required
-	VirtualHubID *string `json:"virtualHubId" tf:"virtual_hub_id"`
+	// +crossplane:generate:reference:type=VirtualHub
+	// +kubebuilder:validation:Optional
+	VirtualHubID *string `json:"virtualHubId,omitempty" tf:"virtual_hub_id"`
+
+	// +kubebuilder:validation:Optional
+	VirtualHubIDRef *v1.Reference `json:"virtualHubIDRef,omitempty" tf:"-"`
+
+	// +kubebuilder:validation:Optional
+	VirtualHubIDSelector *v1.Selector `json:"virtualHubIDSelector,omitempty" tf:"-"`
 }
 
 // VirtualHubBgpConnectionSpec defines the desired state of VirtualHubBgpConnection

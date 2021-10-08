@@ -81,14 +81,28 @@ type VirtualHubConnectionParameters struct {
 	// +kubebuilder:validation:Required
 	Name *string `json:"name" tf:"name"`
 
-	// +kubebuilder:validation:Required
-	RemoteVirtualNetworkID *string `json:"remoteVirtualNetworkId" tf:"remote_virtual_network_id"`
+	// +crossplane:generate:reference:type=VirtualNetwork
+	// +kubebuilder:validation:Optional
+	RemoteVirtualNetworkID *string `json:"remoteVirtualNetworkId,omitempty" tf:"remote_virtual_network_id"`
+
+	// +kubebuilder:validation:Optional
+	RemoteVirtualNetworkIDRef *v1.Reference `json:"remoteVirtualNetworkIDRef,omitempty" tf:"-"`
+
+	// +kubebuilder:validation:Optional
+	RemoteVirtualNetworkIDSelector *v1.Selector `json:"remoteVirtualNetworkIDSelector,omitempty" tf:"-"`
 
 	// +kubebuilder:validation:Optional
 	Routing []RoutingParameters `json:"routing,omitempty" tf:"routing"`
 
-	// +kubebuilder:validation:Required
-	VirtualHubID *string `json:"virtualHubId" tf:"virtual_hub_id"`
+	// +crossplane:generate:reference:type=VirtualHub
+	// +kubebuilder:validation:Optional
+	VirtualHubID *string `json:"virtualHubId,omitempty" tf:"virtual_hub_id"`
+
+	// +kubebuilder:validation:Optional
+	VirtualHubIDRef *v1.Reference `json:"virtualHubIDRef,omitempty" tf:"-"`
+
+	// +kubebuilder:validation:Optional
+	VirtualHubIDSelector *v1.Selector `json:"virtualHubIDSelector,omitempty" tf:"-"`
 
 	// +kubebuilder:validation:Optional
 	VitualNetworkToHubGatewaysTrafficAllowed *bool `json:"vitualNetworkToHubGatewaysTrafficAllowed,omitempty" tf:"vitual_network_to_hub_gateways_traffic_allowed"`

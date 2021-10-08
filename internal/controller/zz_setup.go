@@ -25,6 +25,20 @@ import (
 	"github.com/crossplane-contrib/terrajet/pkg/terraform"
 
 	config "github.com/crossplane-contrib/provider-tf-azure/internal/controller/config"
+	cosmosdbaccount "github.com/crossplane-contrib/provider-tf-azure/internal/controller/cosmosdb/cosmosdbaccount"
+	cosmosdbcassandrakeyspace "github.com/crossplane-contrib/provider-tf-azure/internal/controller/cosmosdb/cosmosdbcassandrakeyspace"
+	cosmosdbcassandratable "github.com/crossplane-contrib/provider-tf-azure/internal/controller/cosmosdb/cosmosdbcassandratable"
+	cosmosdbgremlindatabase "github.com/crossplane-contrib/provider-tf-azure/internal/controller/cosmosdb/cosmosdbgremlindatabase"
+	cosmosdbgremlingraph "github.com/crossplane-contrib/provider-tf-azure/internal/controller/cosmosdb/cosmosdbgremlingraph"
+	cosmosdbmongocollection "github.com/crossplane-contrib/provider-tf-azure/internal/controller/cosmosdb/cosmosdbmongocollection"
+	cosmosdbmongodatabase "github.com/crossplane-contrib/provider-tf-azure/internal/controller/cosmosdb/cosmosdbmongodatabase"
+	cosmosdbnotebookworkspace "github.com/crossplane-contrib/provider-tf-azure/internal/controller/cosmosdb/cosmosdbnotebookworkspace"
+	cosmosdbsqlcontainer "github.com/crossplane-contrib/provider-tf-azure/internal/controller/cosmosdb/cosmosdbsqlcontainer"
+	cosmosdbsqldatabase "github.com/crossplane-contrib/provider-tf-azure/internal/controller/cosmosdb/cosmosdbsqldatabase"
+	cosmosdbsqlfunction "github.com/crossplane-contrib/provider-tf-azure/internal/controller/cosmosdb/cosmosdbsqlfunction"
+	cosmosdbsqlstoredprocedure "github.com/crossplane-contrib/provider-tf-azure/internal/controller/cosmosdb/cosmosdbsqlstoredprocedure"
+	cosmosdbsqltrigger "github.com/crossplane-contrib/provider-tf-azure/internal/controller/cosmosdb/cosmosdbsqltrigger"
+	cosmosdbtable "github.com/crossplane-contrib/provider-tf-azure/internal/controller/cosmosdb/cosmosdbtable"
 	kubernetescluster "github.com/crossplane-contrib/provider-tf-azure/internal/controller/kubernetes/kubernetescluster"
 	kubernetesclusternodepool "github.com/crossplane-contrib/provider-tf-azure/internal/controller/kubernetes/kubernetesclusternodepool"
 	postgresqlactivedirectoryadministrator "github.com/crossplane-contrib/provider-tf-azure/internal/controller/postgresql/postgresqlactivedirectoryadministrator"
@@ -44,21 +58,13 @@ import (
 	virtualdesktopapplication "github.com/crossplane-contrib/provider-tf-azure/internal/controller/virtual/virtualdesktopapplication"
 	virtualdesktophostpool "github.com/crossplane-contrib/provider-tf-azure/internal/controller/virtual/virtualdesktophostpool"
 	virtualdesktopworkspace "github.com/crossplane-contrib/provider-tf-azure/internal/controller/virtual/virtualdesktopworkspace"
-	virtualdesktopworkspaceapplicationgroupassociation "github.com/crossplane-contrib/provider-tf-azure/internal/controller/virtual/virtualdesktopworkspaceapplicationgroupassociation"
 	virtualhub "github.com/crossplane-contrib/provider-tf-azure/internal/controller/virtual/virtualhub"
 	virtualhubbgpconnection "github.com/crossplane-contrib/provider-tf-azure/internal/controller/virtual/virtualhubbgpconnection"
 	virtualhubconnection "github.com/crossplane-contrib/provider-tf-azure/internal/controller/virtual/virtualhubconnection"
 	virtualhubip "github.com/crossplane-contrib/provider-tf-azure/internal/controller/virtual/virtualhubip"
 	virtualhubroutetable "github.com/crossplane-contrib/provider-tf-azure/internal/controller/virtual/virtualhubroutetable"
 	virtualhubsecuritypartnerprovider "github.com/crossplane-contrib/provider-tf-azure/internal/controller/virtual/virtualhubsecuritypartnerprovider"
-	virtualmachine "github.com/crossplane-contrib/provider-tf-azure/internal/controller/virtual/virtualmachine"
-	virtualmachineconfigurationpolicyassignment "github.com/crossplane-contrib/provider-tf-azure/internal/controller/virtual/virtualmachineconfigurationpolicyassignment"
-	virtualmachinedatadiskattachment "github.com/crossplane-contrib/provider-tf-azure/internal/controller/virtual/virtualmachinedatadiskattachment"
-	virtualmachineextension "github.com/crossplane-contrib/provider-tf-azure/internal/controller/virtual/virtualmachineextension"
-	virtualmachinescaleset "github.com/crossplane-contrib/provider-tf-azure/internal/controller/virtual/virtualmachinescaleset"
-	virtualmachinescalesetextension "github.com/crossplane-contrib/provider-tf-azure/internal/controller/virtual/virtualmachinescalesetextension"
 	virtualnetwork "github.com/crossplane-contrib/provider-tf-azure/internal/controller/virtual/virtualnetwork"
-	virtualnetworkdnsservers "github.com/crossplane-contrib/provider-tf-azure/internal/controller/virtual/virtualnetworkdnsservers"
 	virtualnetworkgateway "github.com/crossplane-contrib/provider-tf-azure/internal/controller/virtual/virtualnetworkgateway"
 	virtualnetworkgatewayconnection "github.com/crossplane-contrib/provider-tf-azure/internal/controller/virtual/virtualnetworkgatewayconnection"
 	virtualnetworkpeering "github.com/crossplane-contrib/provider-tf-azure/internal/controller/virtual/virtualnetworkpeering"
@@ -70,6 +76,20 @@ import (
 func Setup(mgr ctrl.Manager, l logging.Logger, wl workqueue.RateLimiter, ps terraform.SetupFn, ws *terraform.WorkspaceStore, concurrency int) error {
 	for _, setup := range []func(ctrl.Manager, logging.Logger, workqueue.RateLimiter, terraform.SetupFn, *terraform.WorkspaceStore, int) error{
 		config.Setup,
+		cosmosdbaccount.Setup,
+		cosmosdbcassandrakeyspace.Setup,
+		cosmosdbcassandratable.Setup,
+		cosmosdbgremlindatabase.Setup,
+		cosmosdbgremlingraph.Setup,
+		cosmosdbmongocollection.Setup,
+		cosmosdbmongodatabase.Setup,
+		cosmosdbnotebookworkspace.Setup,
+		cosmosdbsqlcontainer.Setup,
+		cosmosdbsqldatabase.Setup,
+		cosmosdbsqlfunction.Setup,
+		cosmosdbsqlstoredprocedure.Setup,
+		cosmosdbsqltrigger.Setup,
+		cosmosdbtable.Setup,
 		kubernetescluster.Setup,
 		kubernetesclusternodepool.Setup,
 		postgresqlactivedirectoryadministrator.Setup,
@@ -89,21 +109,13 @@ func Setup(mgr ctrl.Manager, l logging.Logger, wl workqueue.RateLimiter, ps terr
 		virtualdesktopapplication.Setup,
 		virtualdesktophostpool.Setup,
 		virtualdesktopworkspace.Setup,
-		virtualdesktopworkspaceapplicationgroupassociation.Setup,
 		virtualhub.Setup,
 		virtualhubbgpconnection.Setup,
 		virtualhubconnection.Setup,
 		virtualhubip.Setup,
 		virtualhubroutetable.Setup,
 		virtualhubsecuritypartnerprovider.Setup,
-		virtualmachine.Setup,
-		virtualmachineconfigurationpolicyassignment.Setup,
-		virtualmachinedatadiskattachment.Setup,
-		virtualmachineextension.Setup,
-		virtualmachinescaleset.Setup,
-		virtualmachinescalesetextension.Setup,
 		virtualnetwork.Setup,
-		virtualnetworkdnsservers.Setup,
 		virtualnetworkgateway.Setup,
 		virtualnetworkgatewayconnection.Setup,
 		virtualnetworkpeering.Setup,

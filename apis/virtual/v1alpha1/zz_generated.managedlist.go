@@ -37,15 +37,6 @@ func (l *VirtualDesktopHostPoolList) GetItems() []resource.Managed {
 	return items
 }
 
-// GetItems of this VirtualDesktopWorkspaceApplicationGroupAssociationList.
-func (l *VirtualDesktopWorkspaceApplicationGroupAssociationList) GetItems() []resource.Managed {
-	items := make([]resource.Managed, len(l.Items))
-	for i := range l.Items {
-		items[i] = &l.Items[i]
-	}
-	return items
-}
-
 // GetItems of this VirtualDesktopWorkspaceList.
 func (l *VirtualDesktopWorkspaceList) GetItems() []resource.Managed {
 	items := make([]resource.Managed, len(l.Items))
@@ -102,69 +93,6 @@ func (l *VirtualHubRouteTableList) GetItems() []resource.Managed {
 
 // GetItems of this VirtualHubSecurityPartnerProviderList.
 func (l *VirtualHubSecurityPartnerProviderList) GetItems() []resource.Managed {
-	items := make([]resource.Managed, len(l.Items))
-	for i := range l.Items {
-		items[i] = &l.Items[i]
-	}
-	return items
-}
-
-// GetItems of this VirtualMachineConfigurationPolicyAssignmentList.
-func (l *VirtualMachineConfigurationPolicyAssignmentList) GetItems() []resource.Managed {
-	items := make([]resource.Managed, len(l.Items))
-	for i := range l.Items {
-		items[i] = &l.Items[i]
-	}
-	return items
-}
-
-// GetItems of this VirtualMachineDataDiskAttachmentList.
-func (l *VirtualMachineDataDiskAttachmentList) GetItems() []resource.Managed {
-	items := make([]resource.Managed, len(l.Items))
-	for i := range l.Items {
-		items[i] = &l.Items[i]
-	}
-	return items
-}
-
-// GetItems of this VirtualMachineExtensionList.
-func (l *VirtualMachineExtensionList) GetItems() []resource.Managed {
-	items := make([]resource.Managed, len(l.Items))
-	for i := range l.Items {
-		items[i] = &l.Items[i]
-	}
-	return items
-}
-
-// GetItems of this VirtualMachineList.
-func (l *VirtualMachineList) GetItems() []resource.Managed {
-	items := make([]resource.Managed, len(l.Items))
-	for i := range l.Items {
-		items[i] = &l.Items[i]
-	}
-	return items
-}
-
-// GetItems of this VirtualMachineScaleSetExtensionList.
-func (l *VirtualMachineScaleSetExtensionList) GetItems() []resource.Managed {
-	items := make([]resource.Managed, len(l.Items))
-	for i := range l.Items {
-		items[i] = &l.Items[i]
-	}
-	return items
-}
-
-// GetItems of this VirtualMachineScaleSetList.
-func (l *VirtualMachineScaleSetList) GetItems() []resource.Managed {
-	items := make([]resource.Managed, len(l.Items))
-	for i := range l.Items {
-		items[i] = &l.Items[i]
-	}
-	return items
-}
-
-// GetItems of this VirtualNetworkDnsServersList.
-func (l *VirtualNetworkDnsServersList) GetItems() []resource.Managed {
 	items := make([]resource.Managed, len(l.Items))
 	for i := range l.Items {
 		items[i] = &l.Items[i]

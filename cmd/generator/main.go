@@ -57,15 +57,27 @@ var skipList = map[string]struct{}{
 	"azurerm_dedicated_host_group":              {},
 	"azurerm_storage_sync_group":                {},
 	"azurerm_virtual_desktop_application_group": {},
+	// associated with non-generated
+	"azurerm_virtual_desktop_workspace_application_group_association": {},
 	// generated name too long
 	"azurerm_network_interface_application_gateway_backend_address_pool_association": {},
 	"azurerm_sentinel_data_connector_microsoft_defender_advanced_threat_protection":  {},
+	// deprecated
+	"azurerm_virtual_machine_scale_set":                       {},
+	"azurerm_virtual_machine_configuration_policy_assignment": {},
+	"azurerm_virtual_machine":                                 {},
+	"azurerm_virtual_machine_extension":                       {},
+	"azurerm_virtual_machine_data_disk_attachment":            {},
+	"azurerm_virtual_machine_scale_set_extension":             {},
+	// doc not found in Terraform Azurerm provider
+	"azurerm_virtual_network_dns_servers": {},
 }
 
 var includeList = []string{
 	"azurerm_virtual_.+",
 	"azurerm_kubernetes_.+",
 	"azurerm_postgresql_.+",
+	"azurerm_cosmosdb_.+",
 	"azurerm_resource_group",
 }
 
@@ -77,6 +89,7 @@ func main() { // nolint:gocyclo
 	// delete API dirs
 	deleteGenDirs("apis", map[string]struct{}{
 		"v1alpha1": {},
+		"rconfig":  {},
 	})
 	// delete controller dirs
 	deleteGenDirs("internal/controller", map[string]struct{}{

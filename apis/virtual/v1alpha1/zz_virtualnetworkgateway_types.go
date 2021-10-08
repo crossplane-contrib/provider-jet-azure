@@ -52,6 +52,24 @@ type CustomRouteParameters struct {
 	AddressPrefixes []*string `json:"addressPrefixes,omitempty" tf:"address_prefixes"`
 }
 
+type IPConfigurationObservation struct {
+}
+
+type IPConfigurationParameters struct {
+
+	// +kubebuilder:validation:Optional
+	Name *string `json:"name,omitempty" tf:"name"`
+
+	// +kubebuilder:validation:Optional
+	PrivateIPAddressAllocation *string `json:"privateIpAddressAllocation,omitempty" tf:"private_ip_address_allocation"`
+
+	// +kubebuilder:validation:Required
+	PublicIPAddressID *string `json:"publicIpAddressId" tf:"public_ip_address_id"`
+
+	// +kubebuilder:validation:Required
+	SubnetID *string `json:"subnetId" tf:"subnet_id"`
+}
+
 type PeeringAddressesObservation struct {
 	DefaultAddresses []*string `json:"defaultAddresses,omitempty" tf:"default_addresses"`
 
@@ -91,24 +109,6 @@ type RootCertificateParameters struct {
 	PublicCertData *string `json:"publicCertData" tf:"public_cert_data"`
 }
 
-type VirtualNetworkGatewayIPConfigurationObservation struct {
-}
-
-type VirtualNetworkGatewayIPConfigurationParameters struct {
-
-	// +kubebuilder:validation:Optional
-	Name *string `json:"name,omitempty" tf:"name"`
-
-	// +kubebuilder:validation:Optional
-	PrivateIPAddressAllocation *string `json:"privateIpAddressAllocation,omitempty" tf:"private_ip_address_allocation"`
-
-	// +kubebuilder:validation:Required
-	PublicIPAddressID *string `json:"publicIpAddressId" tf:"public_ip_address_id"`
-
-	// +kubebuilder:validation:Required
-	SubnetID *string `json:"subnetId" tf:"subnet_id"`
-}
-
 type VirtualNetworkGatewayObservation struct {
 }
 
@@ -133,7 +133,7 @@ type VirtualNetworkGatewayParameters struct {
 	Generation *string `json:"generation,omitempty" tf:"generation"`
 
 	// +kubebuilder:validation:Required
-	IPConfiguration []VirtualNetworkGatewayIPConfigurationParameters `json:"ipConfiguration" tf:"ip_configuration"`
+	IPConfiguration []IPConfigurationParameters `json:"ipConfiguration" tf:"ip_configuration"`
 
 	// +kubebuilder:validation:Required
 	Location *string `json:"location" tf:"location"`
@@ -144,8 +144,16 @@ type VirtualNetworkGatewayParameters struct {
 	// +kubebuilder:validation:Optional
 	PrivateIPAddressEnabled *bool `json:"privateIpAddressEnabled,omitempty" tf:"private_ip_address_enabled"`
 
-	// +kubebuilder:validation:Required
-	ResourceGroupName *string `json:"resourceGroupName" tf:"resource_group_name"`
+	// +crossplane:generate:reference:type=github.com/crossplane-contrib/provider-tf-azure/apis/resource/v1alpha1.ResourceGroup
+	// +crossplane:generate:reference:extractor=github.com/crossplane-contrib/provider-tf-azure/apis/rconfig.ExtractResourceName()
+	// +kubebuilder:validation:Optional
+	ResourceGroupName *string `json:"resourceGroupName,omitempty" tf:"resource_group_name"`
+
+	// +kubebuilder:validation:Optional
+	ResourceGroupNameRef *v1.Reference `json:"resourceGroupNameRef,omitempty" tf:"-"`
+
+	// +kubebuilder:validation:Optional
+	ResourceGroupNameSelector *v1.Selector `json:"resourceGroupNameSelector,omitempty" tf:"-"`
 
 	// +kubebuilder:validation:Required
 	Sku *string `json:"sku" tf:"sku"`

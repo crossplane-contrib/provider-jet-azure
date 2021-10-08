@@ -108,8 +108,15 @@ type KubernetesClusterNodePoolParameters struct {
 	// +kubebuilder:validation:Optional
 	KubeletDiskType *string `json:"kubeletDiskType,omitempty" tf:"kubelet_disk_type"`
 
-	// +kubebuilder:validation:Required
-	KubernetesClusterID *string `json:"kubernetesClusterId" tf:"kubernetes_cluster_id"`
+	// +crossplane:generate:reference:type=KubernetesCluster
+	// +kubebuilder:validation:Optional
+	KubernetesClusterID *string `json:"kubernetesClusterId,omitempty" tf:"kubernetes_cluster_id"`
+
+	// +kubebuilder:validation:Optional
+	KubernetesClusterIDRef *v1.Reference `json:"kubernetesClusterIDRef,omitempty" tf:"-"`
+
+	// +kubebuilder:validation:Optional
+	KubernetesClusterIDSelector *v1.Selector `json:"kubernetesClusterIDSelector,omitempty" tf:"-"`
 
 	// +kubebuilder:validation:Optional
 	LinuxOsConfig []KubernetesClusterNodePoolLinuxOsConfigParameters `json:"linuxOsConfig,omitempty" tf:"linux_os_config"`

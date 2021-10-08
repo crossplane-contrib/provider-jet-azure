@@ -105,11 +105,26 @@ type VirtualNetworkGatewayConnectionParameters struct {
 	// +kubebuilder:validation:Required
 	Name *string `json:"name" tf:"name"`
 
+	// +crossplane:generate:reference:type=VirtualNetworkGateway
 	// +kubebuilder:validation:Optional
 	PeerVirtualNetworkGatewayID *string `json:"peerVirtualNetworkGatewayId,omitempty" tf:"peer_virtual_network_gateway_id"`
 
-	// +kubebuilder:validation:Required
-	ResourceGroupName *string `json:"resourceGroupName" tf:"resource_group_name"`
+	// +kubebuilder:validation:Optional
+	PeerVirtualNetworkGatewayIDRef *v1.Reference `json:"peerVirtualNetworkGatewayIDRef,omitempty" tf:"-"`
+
+	// +kubebuilder:validation:Optional
+	PeerVirtualNetworkGatewayIDSelector *v1.Selector `json:"peerVirtualNetworkGatewayIDSelector,omitempty" tf:"-"`
+
+	// +crossplane:generate:reference:type=github.com/crossplane-contrib/provider-tf-azure/apis/resource/v1alpha1.ResourceGroup
+	// +crossplane:generate:reference:extractor=github.com/crossplane-contrib/provider-tf-azure/apis/rconfig.ExtractResourceName()
+	// +kubebuilder:validation:Optional
+	ResourceGroupName *string `json:"resourceGroupName,omitempty" tf:"resource_group_name"`
+
+	// +kubebuilder:validation:Optional
+	ResourceGroupNameRef *v1.Reference `json:"resourceGroupNameRef,omitempty" tf:"-"`
+
+	// +kubebuilder:validation:Optional
+	ResourceGroupNameSelector *v1.Selector `json:"resourceGroupNameSelector,omitempty" tf:"-"`
 
 	// +kubebuilder:validation:Optional
 	RoutingWeight *int64 `json:"routingWeight,omitempty" tf:"routing_weight"`
@@ -129,8 +144,15 @@ type VirtualNetworkGatewayConnectionParameters struct {
 	// +kubebuilder:validation:Optional
 	UsePolicyBasedTrafficSelectors *bool `json:"usePolicyBasedTrafficSelectors,omitempty" tf:"use_policy_based_traffic_selectors"`
 
-	// +kubebuilder:validation:Required
-	VirtualNetworkGatewayID *string `json:"virtualNetworkGatewayId" tf:"virtual_network_gateway_id"`
+	// +crossplane:generate:reference:type=VirtualNetworkGateway
+	// +kubebuilder:validation:Optional
+	VirtualNetworkGatewayID *string `json:"virtualNetworkGatewayId,omitempty" tf:"virtual_network_gateway_id"`
+
+	// +kubebuilder:validation:Optional
+	VirtualNetworkGatewayIDRef *v1.Reference `json:"virtualNetworkGatewayIDRef,omitempty" tf:"-"`
+
+	// +kubebuilder:validation:Optional
+	VirtualNetworkGatewayIDSelector *v1.Selector `json:"virtualNetworkGatewayIDSelector,omitempty" tf:"-"`
 }
 
 // VirtualNetworkGatewayConnectionSpec defines the desired state of VirtualNetworkGatewayConnection

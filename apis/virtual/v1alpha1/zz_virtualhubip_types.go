@@ -45,8 +45,15 @@ type VirtualHubIpParameters struct {
 	// +kubebuilder:validation:Required
 	SubnetID *string `json:"subnetId" tf:"subnet_id"`
 
-	// +kubebuilder:validation:Required
-	VirtualHubID *string `json:"virtualHubId" tf:"virtual_hub_id"`
+	// +crossplane:generate:reference:type=VirtualHub
+	// +kubebuilder:validation:Optional
+	VirtualHubID *string `json:"virtualHubId,omitempty" tf:"virtual_hub_id"`
+
+	// +kubebuilder:validation:Optional
+	VirtualHubIDRef *v1.Reference `json:"virtualHubIDRef,omitempty" tf:"-"`
+
+	// +kubebuilder:validation:Optional
+	VirtualHubIDSelector *v1.Selector `json:"virtualHubIDSelector,omitempty" tf:"-"`
 }
 
 // VirtualHubIpSpec defines the desired state of VirtualHubIp

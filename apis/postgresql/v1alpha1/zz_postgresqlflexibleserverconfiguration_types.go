@@ -33,8 +33,15 @@ type PostgresqlFlexibleServerConfigurationParameters struct {
 	// +kubebuilder:validation:Required
 	Name *string `json:"name" tf:"name"`
 
-	// +kubebuilder:validation:Required
-	ServerID *string `json:"serverId" tf:"server_id"`
+	// +crossplane:generate:reference:type=PostgresqlFlexibleServer
+	// +kubebuilder:validation:Optional
+	ServerID *string `json:"serverId,omitempty" tf:"server_id"`
+
+	// +kubebuilder:validation:Optional
+	ServerIDRef *v1.Reference `json:"serverIDRef,omitempty" tf:"-"`
+
+	// +kubebuilder:validation:Optional
+	ServerIDSelector *v1.Selector `json:"serverIDSelector,omitempty" tf:"-"`
 
 	// +kubebuilder:validation:Required
 	Value *string `json:"value" tf:"value"`

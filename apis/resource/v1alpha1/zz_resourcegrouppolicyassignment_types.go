@@ -72,8 +72,15 @@ type ResourceGroupPolicyAssignmentParameters struct {
 	// +kubebuilder:validation:Required
 	PolicyDefinitionID *string `json:"policyDefinitionId" tf:"policy_definition_id"`
 
-	// +kubebuilder:validation:Required
-	ResourceGroupID *string `json:"resourceGroupId" tf:"resource_group_id"`
+	// +crossplane:generate:reference:type=ResourceGroup
+	// +kubebuilder:validation:Optional
+	ResourceGroupID *string `json:"resourceGroupId,omitempty" tf:"resource_group_id"`
+
+	// +kubebuilder:validation:Optional
+	ResourceGroupIDRef *v1.Reference `json:"resourceGroupIDRef,omitempty" tf:"-"`
+
+	// +kubebuilder:validation:Optional
+	ResourceGroupIDSelector *v1.Selector `json:"resourceGroupIDSelector,omitempty" tf:"-"`
 }
 
 // ResourceGroupPolicyAssignmentSpec defines the desired state of ResourceGroupPolicyAssignment
