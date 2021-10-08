@@ -22,6 +22,8 @@ import (
 	xpresource "github.com/crossplane/crossplane-runtime/pkg/resource"
 )
 
+// ExtractResourceName extracts the value of `spec.forProvider.name`
+// from a managed resource
 func ExtractResourceName() xpref.ExtractValueFn {
 	return func(mr xpresource.Managed) string {
 		p, err := fieldpath.PaveObject(mr)
