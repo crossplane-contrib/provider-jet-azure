@@ -20,8 +20,11 @@ import (
 	"github.com/crossplane-contrib/terrajet/pkg/config"
 )
 
+// APISPackagePath is the package path for generated APIs root package
 const APISPackagePath = "github.com/crossplane-contrib/provider-tf-azure/apis"
 
+// SetResourceConfigurations sets the Terraformed resource configurations
+// for the generated resources
 func SetResourceConfigurations() {
 	config.Store.SetForResource("azurerm_resource_group", config.Resource{
 		ExternalName: config.ExternalName{

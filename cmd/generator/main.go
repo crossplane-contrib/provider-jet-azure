@@ -43,12 +43,6 @@ const (
 	groupSuffix = ".azure.tf.crossplane.io"
 )
 
-var (
-	// We expect a function called "ProviderConfigBuilder" of type
-	// "ProviderConfigFn" (https://github.com/crossplane-contrib/terrajet/blob/4246657031f181fdaf0de83e83ceaa8735307180/pkg/terraform/controller.go#L33)
-	// available at this path
-	providerConfigBuilderPath = filepath.Join(modulePath, "internal", "clients")
-)
 var skipList = map[string]struct{}{
 	"azurerm_mssql_server_extended_auditing_policy": {},
 	// group prefix collision
