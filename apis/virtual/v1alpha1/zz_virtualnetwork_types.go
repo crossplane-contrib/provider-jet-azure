@@ -19,9 +19,10 @@ limitations under the License.
 package v1alpha1
 
 import (
-	xpv1 "github.com/crossplane/crossplane-runtime/apis/common/v1"
 	metav1 "k8s.io/apimachinery/pkg/apis/meta/v1"
 	"k8s.io/apimachinery/pkg/runtime/schema"
+
+	v1 "github.com/crossplane/crossplane-runtime/apis/common/v1"
 )
 
 type DdosProtectionPlanObservation struct {
@@ -30,60 +31,68 @@ type DdosProtectionPlanObservation struct {
 type DdosProtectionPlanParameters struct {
 
 	// +kubebuilder:validation:Required
-	Enable bool `json:"enable" tf:"enable"`
+	Enable *bool `json:"enable" tf:"enable"`
 
 	// +kubebuilder:validation:Required
-	ID string `json:"id" tf:"id"`
+	ID *string `json:"id" tf:"id"`
 }
 
 type SubnetObservation struct {
-	ID string `json:"id,omitempty" tf:"id"`
+	ID *string `json:"id,omitempty" tf:"id"`
 }
 
 type SubnetParameters struct {
 
 	// +kubebuilder:validation:Required
-	AddressPrefix string `json:"addressPrefix" tf:"address_prefix"`
+	AddressPrefix *string `json:"addressPrefix" tf:"address_prefix"`
 
 	// +kubebuilder:validation:Required
-	Name string `json:"name" tf:"name"`
+	Name *string `json:"name" tf:"name"`
 
 	// +kubebuilder:validation:Optional
 	SecurityGroup *string `json:"securityGroup,omitempty" tf:"security_group"`
 }
 
 type VirtualNetworkObservation struct {
-	GUID string `json:"guid,omitempty" tf:"guid"`
+	GUID *string `json:"guid,omitempty" tf:"guid"`
 }
 
 type VirtualNetworkParameters struct {
 
 	// +kubebuilder:validation:Required
-	AddressSpace []string `json:"addressSpace" tf:"address_space"`
+	AddressSpace []*string `json:"addressSpace" tf:"address_space"`
 
 	// +kubebuilder:validation:Optional
 	BgpCommunity *string `json:"bgpCommunity,omitempty" tf:"bgp_community"`
 
 	// +kubebuilder:validation:Optional
-	DNSServers []string `json:"dnsServers,omitempty" tf:"dns_servers"`
+	DNSServers []*string `json:"dnsServers,omitempty" tf:"dns_servers"`
 
 	// +kubebuilder:validation:Optional
 	DdosProtectionPlan []DdosProtectionPlanParameters `json:"ddosProtectionPlan,omitempty" tf:"ddos_protection_plan"`
 
 	// +kubebuilder:validation:Required
-	Location string `json:"location" tf:"location"`
+	Location *string `json:"location" tf:"location"`
 
 	// +kubebuilder:validation:Required
-	Name string `json:"name" tf:"name"`
+	Name *string `json:"name" tf:"name"`
 
-	// +kubebuilder:validation:Required
-	ResourceGroupName string `json:"resourceGroupName" tf:"resource_group_name"`
+	// +crossplane:generate:reference:type=github.com/crossplane-contrib/provider-tf-azure/apis/resource/v1alpha1.ResourceGroup
+	// +crossplane:generate:reference:extractor=github.com/crossplane-contrib/provider-tf-azure/apis/rconfig.ExtractResourceName()
+	// +kubebuilder:validation:Optional
+	ResourceGroupName *string `json:"resourceGroupName,omitempty" tf:"resource_group_name"`
+
+	// +kubebuilder:validation:Optional
+	ResourceGroupNameRef *v1.Reference `json:"resourceGroupNameRef,omitempty" tf:"-"`
+
+	// +kubebuilder:validation:Optional
+	ResourceGroupNameSelector *v1.Selector `json:"resourceGroupNameSelector,omitempty" tf:"-"`
 
 	// +kubebuilder:validation:Optional
 	Subnet []SubnetParameters `json:"subnet,omitempty" tf:"subnet"`
 
 	// +kubebuilder:validation:Optional
-	Tags map[string]string `json:"tags,omitempty" tf:"tags"`
+	Tags map[string]*string `json:"tags,omitempty" tf:"tags"`
 
 	// +kubebuilder:validation:Optional
 	VMProtectionEnabled *bool `json:"vmProtectionEnabled,omitempty" tf:"vm_protection_enabled"`
@@ -91,14 +100,14 @@ type VirtualNetworkParameters struct {
 
 // VirtualNetworkSpec defines the desired state of VirtualNetwork
 type VirtualNetworkSpec struct {
-	xpv1.ResourceSpec `json:",inline"`
-	ForProvider       VirtualNetworkParameters `json:"forProvider"`
+	v1.ResourceSpec `json:",inline"`
+	ForProvider     VirtualNetworkParameters `json:"forProvider"`
 }
 
 // VirtualNetworkStatus defines the observed state of VirtualNetwork.
 type VirtualNetworkStatus struct {
-	xpv1.ResourceStatus `json:",inline"`
-	AtProvider          VirtualNetworkObservation `json:"atProvider,omitempty"`
+	v1.ResourceStatus `json:",inline"`
+	AtProvider        VirtualNetworkObservation `json:"atProvider,omitempty"`
 }
 
 // +kubebuilder:object:root=true

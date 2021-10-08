@@ -19,9 +19,10 @@ limitations under the License.
 package v1alpha1
 
 import (
-	xpv1 "github.com/crossplane/crossplane-runtime/apis/common/v1"
 	metav1 "k8s.io/apimachinery/pkg/apis/meta/v1"
 	"k8s.io/apimachinery/pkg/runtime/schema"
+
+	v1 "github.com/crossplane/crossplane-runtime/apis/common/v1"
 )
 
 type VirtualHubIpObservation struct {
@@ -30,7 +31,7 @@ type VirtualHubIpObservation struct {
 type VirtualHubIpParameters struct {
 
 	// +kubebuilder:validation:Required
-	Name string `json:"name" tf:"name"`
+	Name *string `json:"name" tf:"name"`
 
 	// +kubebuilder:validation:Optional
 	PrivateIPAddress *string `json:"privateIpAddress,omitempty" tf:"private_ip_address"`
@@ -42,22 +43,29 @@ type VirtualHubIpParameters struct {
 	PublicIPAddressID *string `json:"publicIpAddressId,omitempty" tf:"public_ip_address_id"`
 
 	// +kubebuilder:validation:Required
-	SubnetID string `json:"subnetId" tf:"subnet_id"`
+	SubnetID *string `json:"subnetId" tf:"subnet_id"`
 
-	// +kubebuilder:validation:Required
-	VirtualHubID string `json:"virtualHubId" tf:"virtual_hub_id"`
+	// +crossplane:generate:reference:type=VirtualHub
+	// +kubebuilder:validation:Optional
+	VirtualHubID *string `json:"virtualHubId,omitempty" tf:"virtual_hub_id"`
+
+	// +kubebuilder:validation:Optional
+	VirtualHubIDRef *v1.Reference `json:"virtualHubIDRef,omitempty" tf:"-"`
+
+	// +kubebuilder:validation:Optional
+	VirtualHubIDSelector *v1.Selector `json:"virtualHubIDSelector,omitempty" tf:"-"`
 }
 
 // VirtualHubIpSpec defines the desired state of VirtualHubIp
 type VirtualHubIpSpec struct {
-	xpv1.ResourceSpec `json:",inline"`
-	ForProvider       VirtualHubIpParameters `json:"forProvider"`
+	v1.ResourceSpec `json:",inline"`
+	ForProvider     VirtualHubIpParameters `json:"forProvider"`
 }
 
 // VirtualHubIpStatus defines the observed state of VirtualHubIp.
 type VirtualHubIpStatus struct {
-	xpv1.ResourceStatus `json:",inline"`
-	AtProvider          VirtualHubIpObservation `json:"atProvider,omitempty"`
+	v1.ResourceStatus `json:",inline"`
+	AtProvider        VirtualHubIpObservation `json:"atProvider,omitempty"`
 }
 
 // +kubebuilder:object:root=true

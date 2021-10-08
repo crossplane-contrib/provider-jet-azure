@@ -18,34 +18,75 @@ limitations under the License.
 
 package v1alpha1
 
-import "github.com/crossplane-contrib/terrajet/pkg/conversion"
+import (
+	"github.com/pkg/errors"
+
+	"github.com/crossplane-contrib/terrajet/pkg/resource"
+	"github.com/crossplane-contrib/terrajet/pkg/resource/json"
+)
 
 // GetTerraformResourceType returns Terraform resource type for this VirtualNetworkPeering
 func (mg *VirtualNetworkPeering) GetTerraformResourceType() string {
 	return "azurerm_virtual_network_peering"
 }
 
-// GetTerraformResourceIdField returns Terraform identifier field for this VirtualNetworkPeering
-func (tr *VirtualNetworkPeering) GetTerraformResourceIdField() string {
+// GetTerraformResourceIDField returns Terraform identifier field for this VirtualNetworkPeering
+func (tr *VirtualNetworkPeering) GetTerraformResourceIDField() string {
 	return "id"
 }
 
+// GetConnectionDetailsMapping for this VirtualNetworkPeering
+func (tr *VirtualNetworkPeering) GetConnectionDetailsMapping() map[string]string {
+	return nil
+}
+
 // GetObservation of this VirtualNetworkPeering
-func (tr *VirtualNetworkPeering) GetObservation() ([]byte, error) {
-	return conversion.TFParser.Marshal(tr.Status.AtProvider)
+func (tr *VirtualNetworkPeering) GetObservation() (map[string]interface{}, error) {
+	o, err := json.TFParser.Marshal(tr.Status.AtProvider)
+	if err != nil {
+		return nil, err
+	}
+	base := map[string]interface{}{}
+	return base, json.TFParser.Unmarshal(o, &base)
 }
 
 // SetObservation for this VirtualNetworkPeering
-func (tr *VirtualNetworkPeering) SetObservation(data []byte) error {
-	return conversion.TFParser.Unmarshal(data, &tr.Status.AtProvider)
+func (tr *VirtualNetworkPeering) SetObservation(obs map[string]interface{}) error {
+	p, err := json.TFParser.Marshal(obs)
+	if err != nil {
+		return err
+	}
+	return json.TFParser.Unmarshal(p, &tr.Status.AtProvider)
 }
 
 // GetParameters of this VirtualNetworkPeering
-func (tr *VirtualNetworkPeering) GetParameters() ([]byte, error) {
-	return conversion.TFParser.Marshal(tr.Spec.ForProvider)
+func (tr *VirtualNetworkPeering) GetParameters() (map[string]interface{}, error) {
+	p, err := json.TFParser.Marshal(tr.Spec.ForProvider)
+	if err != nil {
+		return nil, err
+	}
+	base := map[string]interface{}{}
+	return base, json.TFParser.Unmarshal(p, &base)
 }
 
 // SetParameters for this VirtualNetworkPeering
-func (tr *VirtualNetworkPeering) SetParameters(data []byte) error {
-	return conversion.TFParser.Unmarshal(data, &tr.Spec.ForProvider)
+func (tr *VirtualNetworkPeering) SetParameters(params map[string]interface{}) error {
+	p, err := json.TFParser.Marshal(params)
+	if err != nil {
+		return err
+	}
+	return json.TFParser.Unmarshal(p, &tr.Spec.ForProvider)
+}
+
+// LateInitialize this VirtualNetworkPeering using its observed tfState.
+// returns True if there are any spec changes for the resource.
+func (tr *VirtualNetworkPeering) LateInitialize(attrs []byte) (bool, error) {
+	params := &VirtualNetworkPeeringParameters{}
+	if err := json.TFParser.Unmarshal(attrs, params); err != nil {
+		return false, errors.Wrap(err, "failed to unmarshal Terraform state parameters for late-initialization")
+	}
+	opts := []resource.GenericLateInitializerOption{resource.WithZeroValueJSONOmitEmptyFilter(resource.CNameWildcard)}
+
+	li := resource.NewGenericLateInitializer(opts...)
+	return li.LateInitialize(&tr.Spec.ForProvider, params)
 }

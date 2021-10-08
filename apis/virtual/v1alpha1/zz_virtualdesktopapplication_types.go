@@ -19,9 +19,10 @@ limitations under the License.
 package v1alpha1
 
 import (
-	xpv1 "github.com/crossplane/crossplane-runtime/apis/common/v1"
 	metav1 "k8s.io/apimachinery/pkg/apis/meta/v1"
 	"k8s.io/apimachinery/pkg/runtime/schema"
+
+	v1 "github.com/crossplane/crossplane-runtime/apis/common/v1"
 )
 
 type VirtualDesktopApplicationObservation struct {
@@ -30,10 +31,10 @@ type VirtualDesktopApplicationObservation struct {
 type VirtualDesktopApplicationParameters struct {
 
 	// +kubebuilder:validation:Required
-	ApplicationGroupID string `json:"applicationGroupId" tf:"application_group_id"`
+	ApplicationGroupID *string `json:"applicationGroupId" tf:"application_group_id"`
 
 	// +kubebuilder:validation:Required
-	CommandLineArgumentPolicy string `json:"commandLineArgumentPolicy" tf:"command_line_argument_policy"`
+	CommandLineArgumentPolicy *string `json:"commandLineArgumentPolicy" tf:"command_line_argument_policy"`
 
 	// +kubebuilder:validation:Optional
 	CommandLineArguments *string `json:"commandLineArguments,omitempty" tf:"command_line_arguments"`
@@ -51,10 +52,10 @@ type VirtualDesktopApplicationParameters struct {
 	IconPath *string `json:"iconPath,omitempty" tf:"icon_path"`
 
 	// +kubebuilder:validation:Required
-	Name string `json:"name" tf:"name"`
+	Name *string `json:"name" tf:"name"`
 
 	// +kubebuilder:validation:Required
-	Path string `json:"path" tf:"path"`
+	Path *string `json:"path" tf:"path"`
 
 	// +kubebuilder:validation:Optional
 	ShowInPortal *bool `json:"showInPortal,omitempty" tf:"show_in_portal"`
@@ -62,14 +63,14 @@ type VirtualDesktopApplicationParameters struct {
 
 // VirtualDesktopApplicationSpec defines the desired state of VirtualDesktopApplication
 type VirtualDesktopApplicationSpec struct {
-	xpv1.ResourceSpec `json:",inline"`
-	ForProvider       VirtualDesktopApplicationParameters `json:"forProvider"`
+	v1.ResourceSpec `json:",inline"`
+	ForProvider     VirtualDesktopApplicationParameters `json:"forProvider"`
 }
 
 // VirtualDesktopApplicationStatus defines the observed state of VirtualDesktopApplication.
 type VirtualDesktopApplicationStatus struct {
-	xpv1.ResourceStatus `json:",inline"`
-	AtProvider          VirtualDesktopApplicationObservation `json:"atProvider,omitempty"`
+	v1.ResourceStatus `json:",inline"`
+	AtProvider        VirtualDesktopApplicationObservation `json:"atProvider,omitempty"`
 }
 
 // +kubebuilder:object:root=true

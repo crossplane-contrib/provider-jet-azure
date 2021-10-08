@@ -3,11 +3,15 @@ kind: KubernetesCluster
 metadata:
   name: example
 spec:
+  writeConnectionSecretToRef:
+    name: example-kubeconfig
+    namespace: crossplane-system
   forProvider:
-    name: "kubernetesCluster1"
+    name: "example-aks"
     location: "East US"
-    resourceGroupName: "example-rg"
-    dnsPrefix: "exampleaks1"
+    resourceGroupNameRef:
+      name: example-rg
+    dnsPrefix: "exampleaks"
     defaultNodePool:
       - name: default
         nodeCount: 1

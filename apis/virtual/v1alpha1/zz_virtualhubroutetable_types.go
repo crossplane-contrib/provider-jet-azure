@@ -19,9 +19,10 @@ limitations under the License.
 package v1alpha1
 
 import (
-	xpv1 "github.com/crossplane/crossplane-runtime/apis/common/v1"
 	metav1 "k8s.io/apimachinery/pkg/apis/meta/v1"
 	"k8s.io/apimachinery/pkg/runtime/schema"
+
+	v1 "github.com/crossplane/crossplane-runtime/apis/common/v1"
 )
 
 type VirtualHubRouteTableObservation struct {
@@ -30,16 +31,23 @@ type VirtualHubRouteTableObservation struct {
 type VirtualHubRouteTableParameters struct {
 
 	// +kubebuilder:validation:Optional
-	Labels []string `json:"labels,omitempty" tf:"labels"`
+	Labels []*string `json:"labels,omitempty" tf:"labels"`
 
 	// +kubebuilder:validation:Required
-	Name string `json:"name" tf:"name"`
+	Name *string `json:"name" tf:"name"`
 
 	// +kubebuilder:validation:Optional
 	Route []VirtualHubRouteTableRouteParameters `json:"route,omitempty" tf:"route"`
 
-	// +kubebuilder:validation:Required
-	VirtualHubID string `json:"virtualHubId" tf:"virtual_hub_id"`
+	// +crossplane:generate:reference:type=VirtualHub
+	// +kubebuilder:validation:Optional
+	VirtualHubID *string `json:"virtualHubId,omitempty" tf:"virtual_hub_id"`
+
+	// +kubebuilder:validation:Optional
+	VirtualHubIDRef *v1.Reference `json:"virtualHubIDRef,omitempty" tf:"-"`
+
+	// +kubebuilder:validation:Optional
+	VirtualHubIDSelector *v1.Selector `json:"virtualHubIDSelector,omitempty" tf:"-"`
 }
 
 type VirtualHubRouteTableRouteObservation struct {
@@ -48,16 +56,16 @@ type VirtualHubRouteTableRouteObservation struct {
 type VirtualHubRouteTableRouteParameters struct {
 
 	// +kubebuilder:validation:Required
-	Destinations []string `json:"destinations" tf:"destinations"`
+	Destinations []*string `json:"destinations" tf:"destinations"`
 
 	// +kubebuilder:validation:Required
-	DestinationsType string `json:"destinationsType" tf:"destinations_type"`
+	DestinationsType *string `json:"destinationsType" tf:"destinations_type"`
 
 	// +kubebuilder:validation:Required
-	Name string `json:"name" tf:"name"`
+	Name *string `json:"name" tf:"name"`
 
 	// +kubebuilder:validation:Required
-	NextHop string `json:"nextHop" tf:"next_hop"`
+	NextHop *string `json:"nextHop" tf:"next_hop"`
 
 	// +kubebuilder:validation:Optional
 	NextHopType *string `json:"nextHopType,omitempty" tf:"next_hop_type"`
@@ -65,14 +73,14 @@ type VirtualHubRouteTableRouteParameters struct {
 
 // VirtualHubRouteTableSpec defines the desired state of VirtualHubRouteTable
 type VirtualHubRouteTableSpec struct {
-	xpv1.ResourceSpec `json:",inline"`
-	ForProvider       VirtualHubRouteTableParameters `json:"forProvider"`
+	v1.ResourceSpec `json:",inline"`
+	ForProvider     VirtualHubRouteTableParameters `json:"forProvider"`
 }
 
 // VirtualHubRouteTableStatus defines the observed state of VirtualHubRouteTable.
 type VirtualHubRouteTableStatus struct {
-	xpv1.ResourceStatus `json:",inline"`
-	AtProvider          VirtualHubRouteTableObservation `json:"atProvider,omitempty"`
+	v1.ResourceStatus `json:",inline"`
+	AtProvider        VirtualHubRouteTableObservation `json:"atProvider,omitempty"`
 }
 
 // +kubebuilder:object:root=true

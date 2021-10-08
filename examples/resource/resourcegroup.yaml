@@ -1,0 +1,12 @@
+apiVersion: resource.azure.tf.crossplane.io/v1alpha1
+kind: ResourceGroup
+metadata:
+  name: example
+spec:
+  forProvider:
+    name: example-resourcegroup
+    location: "East US"
+    tags:
+      provisioner: crossplane
+  providerConfigRef:
+    name: example

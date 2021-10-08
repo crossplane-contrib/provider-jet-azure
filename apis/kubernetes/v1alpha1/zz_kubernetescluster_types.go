@@ -19,9 +19,10 @@ limitations under the License.
 package v1alpha1
 
 import (
-	xpv1 "github.com/crossplane/crossplane-runtime/apis/common/v1"
 	metav1 "k8s.io/apimachinery/pkg/apis/meta/v1"
 	"k8s.io/apimachinery/pkg/runtime/schema"
+
+	v1 "github.com/crossplane/crossplane-runtime/apis/common/v1"
 )
 
 type AciConnectorLinuxObservation struct {
@@ -30,7 +31,7 @@ type AciConnectorLinuxObservation struct {
 type AciConnectorLinuxParameters struct {
 
 	// +kubebuilder:validation:Required
-	Enabled bool `json:"enabled" tf:"enabled"`
+	Enabled *bool `json:"enabled" tf:"enabled"`
 
 	// +kubebuilder:validation:Optional
 	SubnetName *string `json:"subnetName,omitempty" tf:"subnet_name"`
@@ -66,10 +67,10 @@ type AllowedObservation struct {
 type AllowedParameters struct {
 
 	// +kubebuilder:validation:Required
-	Day string `json:"day" tf:"day"`
+	Day *string `json:"day" tf:"day"`
 
 	// +kubebuilder:validation:Required
-	Hours []int64 `json:"hours" tf:"hours"`
+	Hours []*int64 `json:"hours" tf:"hours"`
 }
 
 type AutoScalerProfileObservation struct {
@@ -135,7 +136,7 @@ type AzureActiveDirectoryObservation struct {
 type AzureActiveDirectoryParameters struct {
 
 	// +kubebuilder:validation:Optional
-	AdminGroupObjectIds []string `json:"adminGroupObjectIds,omitempty" tf:"admin_group_object_ids"`
+	AdminGroupObjectIds []*string `json:"adminGroupObjectIds,omitempty" tf:"admin_group_object_ids"`
 
 	// +kubebuilder:validation:Optional
 	AzureRbacEnabled *bool `json:"azureRbacEnabled,omitempty" tf:"azure_rbac_enabled"`
@@ -150,7 +151,7 @@ type AzureActiveDirectoryParameters struct {
 	ServerAppID *string `json:"serverAppId,omitempty" tf:"server_app_id"`
 
 	// +kubebuilder:validation:Optional
-	ServerAppSecret *string `json:"serverAppSecret,omitempty" tf:"server_app_secret"`
+	ServerAppSecretSecretRef v1.SecretKeySelector `json:"serverAppSecretSecretRef,omitempty" tf:"-"`
 
 	// +kubebuilder:validation:Optional
 	TenantID *string `json:"tenantId,omitempty" tf:"tenant_id"`
@@ -162,7 +163,7 @@ type AzurePolicyObservation struct {
 type AzurePolicyParameters struct {
 
 	// +kubebuilder:validation:Required
-	Enabled bool `json:"enabled" tf:"enabled"`
+	Enabled *bool `json:"enabled" tf:"enabled"`
 }
 
 type DefaultNodePoolObservation struct {
@@ -171,7 +172,7 @@ type DefaultNodePoolObservation struct {
 type DefaultNodePoolParameters struct {
 
 	// +kubebuilder:validation:Optional
-	AvailabilityZones []string `json:"availabilityZones,omitempty" tf:"availability_zones"`
+	AvailabilityZones []*string `json:"availabilityZones,omitempty" tf:"availability_zones"`
 
 	// +kubebuilder:validation:Optional
 	EnableAutoScaling *bool `json:"enableAutoScaling,omitempty" tf:"enable_auto_scaling"`
@@ -204,19 +205,19 @@ type DefaultNodePoolParameters struct {
 	MinCount *int64 `json:"minCount,omitempty" tf:"min_count"`
 
 	// +kubebuilder:validation:Required
-	Name string `json:"name" tf:"name"`
+	Name *string `json:"name" tf:"name"`
 
 	// +kubebuilder:validation:Optional
 	NodeCount *int64 `json:"nodeCount,omitempty" tf:"node_count"`
 
 	// +kubebuilder:validation:Optional
-	NodeLabels map[string]string `json:"nodeLabels,omitempty" tf:"node_labels"`
+	NodeLabels map[string]*string `json:"nodeLabels,omitempty" tf:"node_labels"`
 
 	// +kubebuilder:validation:Optional
 	NodePublicIPPrefixID *string `json:"nodePublicIpPrefixId,omitempty" tf:"node_public_ip_prefix_id"`
 
 	// +kubebuilder:validation:Optional
-	NodeTaints []string `json:"nodeTaints,omitempty" tf:"node_taints"`
+	NodeTaints []*string `json:"nodeTaints,omitempty" tf:"node_taints"`
 
 	// +kubebuilder:validation:Optional
 	OnlyCriticalAddonsEnabled *bool `json:"onlyCriticalAddonsEnabled,omitempty" tf:"only_critical_addons_enabled"`
@@ -237,7 +238,7 @@ type DefaultNodePoolParameters struct {
 	ProximityPlacementGroupID *string `json:"proximityPlacementGroupId,omitempty" tf:"proximity_placement_group_id"`
 
 	// +kubebuilder:validation:Optional
-	Tags map[string]string `json:"tags,omitempty" tf:"tags"`
+	Tags map[string]*string `json:"tags,omitempty" tf:"tags"`
 
 	// +kubebuilder:validation:Optional
 	Type *string `json:"type,omitempty" tf:"type"`
@@ -249,50 +250,50 @@ type DefaultNodePoolParameters struct {
 	UpgradeSettings []UpgradeSettingsParameters `json:"upgradeSettings,omitempty" tf:"upgrade_settings"`
 
 	// +kubebuilder:validation:Required
-	VMSize string `json:"vmSize" tf:"vm_size"`
+	VMSize *string `json:"vmSize" tf:"vm_size"`
 
 	// +kubebuilder:validation:Optional
 	VnetSubnetID *string `json:"vnetSubnetId,omitempty" tf:"vnet_subnet_id"`
 }
 
 type HTTPApplicationRoutingObservation struct {
-	HTTPApplicationRoutingZoneName string `json:"httpApplicationRoutingZoneName,omitempty" tf:"http_application_routing_zone_name"`
+	HTTPApplicationRoutingZoneName *string `json:"httpApplicationRoutingZoneName,omitempty" tf:"http_application_routing_zone_name"`
 }
 
 type HTTPApplicationRoutingParameters struct {
 
 	// +kubebuilder:validation:Required
-	Enabled bool `json:"enabled" tf:"enabled"`
+	Enabled *bool `json:"enabled" tf:"enabled"`
 }
 
 type IdentityObservation struct {
-	PrincipalID string `json:"principalId,omitempty" tf:"principal_id"`
+	PrincipalID *string `json:"principalId,omitempty" tf:"principal_id"`
 
-	TenantID string `json:"tenantId,omitempty" tf:"tenant_id"`
+	TenantID *string `json:"tenantId,omitempty" tf:"tenant_id"`
 }
 
 type IdentityParameters struct {
 
 	// +kubebuilder:validation:Required
-	Type string `json:"type" tf:"type"`
+	Type *string `json:"type" tf:"type"`
 
 	// +kubebuilder:validation:Optional
 	UserAssignedIdentityID *string `json:"userAssignedIdentityId,omitempty" tf:"user_assigned_identity_id"`
 }
 
 type IngressApplicationGatewayIdentityObservation struct {
-	ClientID string `json:"clientId,omitempty" tf:"client_id"`
+	ClientID *string `json:"clientId,omitempty" tf:"client_id"`
 
-	ObjectID string `json:"objectId,omitempty" tf:"object_id"`
+	ObjectID *string `json:"objectId,omitempty" tf:"object_id"`
 
-	UserAssignedIdentityID string `json:"userAssignedIdentityId,omitempty" tf:"user_assigned_identity_id"`
+	UserAssignedIdentityID *string `json:"userAssignedIdentityId,omitempty" tf:"user_assigned_identity_id"`
 }
 
 type IngressApplicationGatewayIdentityParameters struct {
 }
 
 type IngressApplicationGatewayObservation struct {
-	EffectiveGatewayID string `json:"effectiveGatewayId,omitempty" tf:"effective_gateway_id"`
+	EffectiveGatewayID *string `json:"effectiveGatewayId,omitempty" tf:"effective_gateway_id"`
 
 	IngressApplicationGatewayIdentity []IngressApplicationGatewayIdentityObservation `json:"ingressApplicationGatewayIdentity,omitempty" tf:"ingress_application_gateway_identity"`
 }
@@ -300,7 +301,7 @@ type IngressApplicationGatewayObservation struct {
 type IngressApplicationGatewayParameters struct {
 
 	// +kubebuilder:validation:Required
-	Enabled bool `json:"enabled" tf:"enabled"`
+	Enabled *bool `json:"enabled" tf:"enabled"`
 
 	// +kubebuilder:validation:Optional
 	GatewayID *string `json:"gatewayId,omitempty" tf:"gateway_id"`
@@ -316,34 +317,18 @@ type IngressApplicationGatewayParameters struct {
 }
 
 type KubeAdminConfigObservation struct {
-	ClientCertificate string `json:"clientCertificate,omitempty" tf:"client_certificate"`
+	Host *string `json:"host,omitempty" tf:"host"`
 
-	ClientKey string `json:"clientKey,omitempty" tf:"client_key"`
-
-	ClusterCaCertificate string `json:"clusterCaCertificate,omitempty" tf:"cluster_ca_certificate"`
-
-	Host string `json:"host,omitempty" tf:"host"`
-
-	Password string `json:"password,omitempty" tf:"password"`
-
-	Username string `json:"username,omitempty" tf:"username"`
+	Username *string `json:"username,omitempty" tf:"username"`
 }
 
 type KubeAdminConfigParameters struct {
 }
 
 type KubeConfigObservation struct {
-	ClientCertificate string `json:"clientCertificate,omitempty" tf:"client_certificate"`
+	Host *string `json:"host,omitempty" tf:"host"`
 
-	ClientKey string `json:"clientKey,omitempty" tf:"client_key"`
-
-	ClusterCaCertificate string `json:"clusterCaCertificate,omitempty" tf:"cluster_ca_certificate"`
-
-	Host string `json:"host,omitempty" tf:"host"`
-
-	Password string `json:"password,omitempty" tf:"password"`
-
-	Username string `json:"username,omitempty" tf:"username"`
+	Username *string `json:"username,omitempty" tf:"username"`
 }
 
 type KubeConfigParameters struct {
@@ -355,7 +340,7 @@ type KubeDashboardObservation struct {
 type KubeDashboardParameters struct {
 
 	// +kubebuilder:validation:Required
-	Enabled bool `json:"enabled" tf:"enabled"`
+	Enabled *bool `json:"enabled" tf:"enabled"`
 }
 
 type KubeletConfigObservation struct {
@@ -364,7 +349,7 @@ type KubeletConfigObservation struct {
 type KubeletConfigParameters struct {
 
 	// +kubebuilder:validation:Optional
-	AllowedUnsafeSysctls []string `json:"allowedUnsafeSysctls,omitempty" tf:"allowed_unsafe_sysctls"`
+	AllowedUnsafeSysctls []*string `json:"allowedUnsafeSysctls,omitempty" tf:"allowed_unsafe_sysctls"`
 
 	// +kubebuilder:validation:Optional
 	CPUCfsQuotaEnabled *bool `json:"cpuCfsQuotaEnabled,omitempty" tf:"cpu_cfs_quota_enabled"`
@@ -410,23 +395,19 @@ type KubeletIdentityParameters struct {
 }
 
 type KubernetesClusterObservation struct {
-	Fqdn string `json:"fqdn,omitempty" tf:"fqdn"`
+	Fqdn *string `json:"fqdn,omitempty" tf:"fqdn"`
 
 	KubeAdminConfig []KubeAdminConfigObservation `json:"kubeAdminConfig,omitempty" tf:"kube_admin_config"`
 
-	KubeAdminConfigRaw string `json:"kubeAdminConfigRaw,omitempty" tf:"kube_admin_config_raw"`
-
 	KubeConfig []KubeConfigObservation `json:"kubeConfig,omitempty" tf:"kube_config"`
 
-	KubeConfigRaw string `json:"kubeConfigRaw,omitempty" tf:"kube_config_raw"`
-
-	PrivateFqdn string `json:"privateFqdn,omitempty" tf:"private_fqdn"`
+	PrivateFqdn *string `json:"privateFqdn,omitempty" tf:"private_fqdn"`
 }
 
 type KubernetesClusterParameters struct {
 
 	// +kubebuilder:validation:Optional
-	APIServerAuthorizedIPRanges []string `json:"apiServerAuthorizedIpRanges,omitempty" tf:"api_server_authorized_ip_ranges"`
+	APIServerAuthorizedIPRanges []*string `json:"apiServerAuthorizedIpRanges,omitempty" tf:"api_server_authorized_ip_ranges"`
 
 	// +kubebuilder:validation:Optional
 	AddonProfile []AddonProfileParameters `json:"addonProfile,omitempty" tf:"addon_profile"`
@@ -468,13 +449,13 @@ type KubernetesClusterParameters struct {
 	LocalAccountDisabled *bool `json:"localAccountDisabled,omitempty" tf:"local_account_disabled"`
 
 	// +kubebuilder:validation:Required
-	Location string `json:"location" tf:"location"`
+	Location *string `json:"location" tf:"location"`
 
 	// +kubebuilder:validation:Optional
 	MaintenanceWindow []MaintenanceWindowParameters `json:"maintenanceWindow,omitempty" tf:"maintenance_window"`
 
 	// +kubebuilder:validation:Required
-	Name string `json:"name" tf:"name"`
+	Name *string `json:"name" tf:"name"`
 
 	// +kubebuilder:validation:Optional
 	NetworkProfile []NetworkProfileParameters `json:"networkProfile,omitempty" tf:"network_profile"`
@@ -494,8 +475,16 @@ type KubernetesClusterParameters struct {
 	// +kubebuilder:validation:Optional
 	PrivateLinkEnabled *bool `json:"privateLinkEnabled,omitempty" tf:"private_link_enabled"`
 
-	// +kubebuilder:validation:Required
-	ResourceGroupName string `json:"resourceGroupName" tf:"resource_group_name"`
+	// +crossplane:generate:reference:type=github.com/crossplane-contrib/provider-tf-azure/apis/resource/v1alpha1.ResourceGroup
+	// +crossplane:generate:reference:extractor=github.com/crossplane-contrib/provider-tf-azure/apis/rconfig.ExtractResourceName()
+	// +kubebuilder:validation:Optional
+	ResourceGroupName *string `json:"resourceGroupName,omitempty" tf:"resource_group_name"`
+
+	// +kubebuilder:validation:Optional
+	ResourceGroupNameRef *v1.Reference `json:"resourceGroupNameRef,omitempty" tf:"-"`
+
+	// +kubebuilder:validation:Optional
+	ResourceGroupNameSelector *v1.Selector `json:"resourceGroupNameSelector,omitempty" tf:"-"`
 
 	// +kubebuilder:validation:Optional
 	RoleBasedAccessControl []RoleBasedAccessControlParameters `json:"roleBasedAccessControl,omitempty" tf:"role_based_access_control"`
@@ -507,7 +496,7 @@ type KubernetesClusterParameters struct {
 	SkuTier *string `json:"skuTier,omitempty" tf:"sku_tier"`
 
 	// +kubebuilder:validation:Optional
-	Tags map[string]string `json:"tags,omitempty" tf:"tags"`
+	Tags map[string]*string `json:"tags,omitempty" tf:"tags"`
 
 	// +kubebuilder:validation:Optional
 	WindowsProfile []WindowsProfileParameters `json:"windowsProfile,omitempty" tf:"windows_profile"`
@@ -537,14 +526,14 @@ type LinuxProfileObservation struct {
 type LinuxProfileParameters struct {
 
 	// +kubebuilder:validation:Required
-	AdminUsername string `json:"adminUsername" tf:"admin_username"`
+	AdminUsername *string `json:"adminUsername" tf:"admin_username"`
 
 	// +kubebuilder:validation:Required
 	SSHKey []SSHKeyParameters `json:"sshKey" tf:"ssh_key"`
 }
 
 type LoadBalancerProfileObservation struct {
-	EffectiveOutboundIps []string `json:"effectiveOutboundIps,omitempty" tf:"effective_outbound_ips"`
+	EffectiveOutboundIps []*string `json:"effectiveOutboundIps,omitempty" tf:"effective_outbound_ips"`
 }
 
 type LoadBalancerProfileParameters struct {
@@ -556,10 +545,10 @@ type LoadBalancerProfileParameters struct {
 	ManagedOutboundIPCount *int64 `json:"managedOutboundIpCount,omitempty" tf:"managed_outbound_ip_count"`
 
 	// +kubebuilder:validation:Optional
-	OutboundIPAddressIds []string `json:"outboundIpAddressIds,omitempty" tf:"outbound_ip_address_ids"`
+	OutboundIPAddressIds []*string `json:"outboundIpAddressIds,omitempty" tf:"outbound_ip_address_ids"`
 
 	// +kubebuilder:validation:Optional
-	OutboundIPPrefixIds []string `json:"outboundIpPrefixIds,omitempty" tf:"outbound_ip_prefix_ids"`
+	OutboundIPPrefixIds []*string `json:"outboundIpPrefixIds,omitempty" tf:"outbound_ip_prefix_ids"`
 
 	// +kubebuilder:validation:Optional
 	OutboundPortsAllocated *int64 `json:"outboundPortsAllocated,omitempty" tf:"outbound_ports_allocated"`
@@ -598,7 +587,7 @@ type NetworkProfileParameters struct {
 	NetworkMode *string `json:"networkMode,omitempty" tf:"network_mode"`
 
 	// +kubebuilder:validation:Required
-	NetworkPlugin string `json:"networkPlugin" tf:"network_plugin"`
+	NetworkPlugin *string `json:"networkPlugin" tf:"network_plugin"`
 
 	// +kubebuilder:validation:Optional
 	NetworkPolicy *string `json:"networkPolicy,omitempty" tf:"network_policy"`
@@ -619,18 +608,18 @@ type NotAllowedObservation struct {
 type NotAllowedParameters struct {
 
 	// +kubebuilder:validation:Required
-	End string `json:"end" tf:"end"`
+	End *string `json:"end" tf:"end"`
 
 	// +kubebuilder:validation:Required
-	Start string `json:"start" tf:"start"`
+	Start *string `json:"start" tf:"start"`
 }
 
 type OmsAgentIdentityObservation struct {
-	ClientID string `json:"clientId,omitempty" tf:"client_id"`
+	ClientID *string `json:"clientId,omitempty" tf:"client_id"`
 
-	ObjectID string `json:"objectId,omitempty" tf:"object_id"`
+	ObjectID *string `json:"objectId,omitempty" tf:"object_id"`
 
-	UserAssignedIdentityID string `json:"userAssignedIdentityId,omitempty" tf:"user_assigned_identity_id"`
+	UserAssignedIdentityID *string `json:"userAssignedIdentityId,omitempty" tf:"user_assigned_identity_id"`
 }
 
 type OmsAgentIdentityParameters struct {
@@ -643,7 +632,7 @@ type OmsAgentObservation struct {
 type OmsAgentParameters struct {
 
 	// +kubebuilder:validation:Required
-	Enabled bool `json:"enabled" tf:"enabled"`
+	Enabled *bool `json:"enabled" tf:"enabled"`
 
 	// +kubebuilder:validation:Optional
 	LogAnalyticsWorkspaceID *string `json:"logAnalyticsWorkspaceId,omitempty" tf:"log_analytics_workspace_id"`
@@ -658,7 +647,7 @@ type RoleBasedAccessControlParameters struct {
 	AzureActiveDirectory []AzureActiveDirectoryParameters `json:"azureActiveDirectory,omitempty" tf:"azure_active_directory"`
 
 	// +kubebuilder:validation:Required
-	Enabled bool `json:"enabled" tf:"enabled"`
+	Enabled *bool `json:"enabled" tf:"enabled"`
 }
 
 type SSHKeyObservation struct {
@@ -667,7 +656,7 @@ type SSHKeyObservation struct {
 type SSHKeyParameters struct {
 
 	// +kubebuilder:validation:Required
-	KeyData string `json:"keyData" tf:"key_data"`
+	KeyData *string `json:"keyData" tf:"key_data"`
 }
 
 type ServicePrincipalObservation struct {
@@ -676,10 +665,10 @@ type ServicePrincipalObservation struct {
 type ServicePrincipalParameters struct {
 
 	// +kubebuilder:validation:Required
-	ClientID string `json:"clientId" tf:"client_id"`
+	ClientID *string `json:"clientId" tf:"client_id"`
 
 	// +kubebuilder:validation:Required
-	ClientSecret string `json:"clientSecret" tf:"client_secret"`
+	ClientSecretSecretRef v1.SecretKeySelector `json:"clientSecretSecretRef" tf:"-"`
 }
 
 type SysctlConfigObservation struct {
@@ -781,7 +770,7 @@ type UpgradeSettingsObservation struct {
 type UpgradeSettingsParameters struct {
 
 	// +kubebuilder:validation:Required
-	MaxSurge string `json:"maxSurge" tf:"max_surge"`
+	MaxSurge *string `json:"maxSurge" tf:"max_surge"`
 }
 
 type WindowsProfileObservation struct {
@@ -790,10 +779,10 @@ type WindowsProfileObservation struct {
 type WindowsProfileParameters struct {
 
 	// +kubebuilder:validation:Optional
-	AdminPassword *string `json:"adminPassword,omitempty" tf:"admin_password"`
+	AdminPasswordSecretRef v1.SecretKeySelector `json:"adminPasswordSecretRef,omitempty" tf:"-"`
 
 	// +kubebuilder:validation:Required
-	AdminUsername string `json:"adminUsername" tf:"admin_username"`
+	AdminUsername *string `json:"adminUsername" tf:"admin_username"`
 
 	// +kubebuilder:validation:Optional
 	License *string `json:"license,omitempty" tf:"license"`
@@ -801,14 +790,14 @@ type WindowsProfileParameters struct {
 
 // KubernetesClusterSpec defines the desired state of KubernetesCluster
 type KubernetesClusterSpec struct {
-	xpv1.ResourceSpec `json:",inline"`
-	ForProvider       KubernetesClusterParameters `json:"forProvider"`
+	v1.ResourceSpec `json:",inline"`
+	ForProvider     KubernetesClusterParameters `json:"forProvider"`
 }
 
 // KubernetesClusterStatus defines the observed state of KubernetesCluster.
 type KubernetesClusterStatus struct {
-	xpv1.ResourceStatus `json:",inline"`
-	AtProvider          KubernetesClusterObservation `json:"atProvider,omitempty"`
+	v1.ResourceStatus `json:",inline"`
+	AtProvider        KubernetesClusterObservation `json:"atProvider,omitempty"`
 }
 
 // +kubebuilder:object:root=true

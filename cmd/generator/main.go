@@ -31,7 +31,10 @@ import (
 	"github.com/iancoleman/strcase"
 	"github.com/pkg/errors"
 
+	"github.com/crossplane-contrib/terrajet/pkg/config"
 	"github.com/crossplane-contrib/terrajet/pkg/pipeline"
+
+	genConfig "github.com/crossplane-contrib/provider-tf-azure/cmd/generator/config"
 )
 
 // Constants to use in generated artifacts.
@@ -54,14 +57,28 @@ var skipList = map[string]struct{}{
 	"azurerm_dedicated_host_group":              {},
 	"azurerm_storage_sync_group":                {},
 	"azurerm_virtual_desktop_application_group": {},
+	// associated with non-generated
+	"azurerm_virtual_desktop_workspace_application_group_association": {},
 	// generated name too long
 	"azurerm_network_interface_application_gateway_backend_address_pool_association": {},
 	"azurerm_sentinel_data_connector_microsoft_defender_advanced_threat_protection":  {},
+	// deprecated
+	"azurerm_virtual_machine_scale_set":                       {},
+	"azurerm_virtual_machine_configuration_policy_assignment": {},
+	"azurerm_virtual_machine":                                 {},
+	"azurerm_virtual_machine_extension":                       {},
+	"azurerm_virtual_machine_data_disk_attachment":            {},
+	"azurerm_virtual_machine_scale_set_extension":             {},
+	// doc not found in Terraform Azurerm provider
+	"azurerm_virtual_network_dns_servers": {},
 }
 
 var includeList = []string{
 	"azurerm_virtual_.+",
 	"azurerm_kubernetes_.+",
+	"azurerm_postgresql_.+",
+	"azurerm_cosmosdb_.+",
+	"azurerm_resource_group",
 }
 
 // "make prepare.azurerm" should be run before running this generator pipeline
@@ -72,12 +89,14 @@ func main() { // nolint:gocyclo
 	// delete API dirs
 	deleteGenDirs("apis", map[string]struct{}{
 		"v1alpha1": {},
+		"rconfig":  {},
 	})
 	// delete controller dirs
 	deleteGenDirs("internal/controller", map[string]struct{}{
 		"config": {},
 	})
 
+	genConfig.SetResourceConfigurations()
 	wd, err := os.Getwd()
 	if err != nil {
 		panic(errors.Wrap(err, "cannot get working directory"))
@@ -131,7 +150,7 @@ func main() { // nolint:gocyclo
 
 		crdGen := pipeline.NewCRDGenerator(versionGen.Package(), versionGen.DirectoryPath(), strings.ToLower(group)+groupSuffix, "azure")
 		tfGen := pipeline.NewTerraformedGenerator(versionGen.Package(), versionGen.DirectoryPath())
-		ctrlGen := pipeline.NewControllerGenerator(wd, modulePath, strings.ToLower(group)+groupSuffix, providerConfigBuilderPath)
+		ctrlGen := pipeline.NewControllerGenerator(wd, modulePath, strings.ToLower(group)+groupSuffix)
 
 		keys := make([]string, len(resources))
 		i := 0
@@ -144,13 +163,18 @@ func main() { // nolint:gocyclo
 		for _, name := range keys {
 			// We don't want Azurerm prefix in all kinds.
 			kind := strings.TrimPrefix(strcase.ToCamel(name), "Azurerm")
-			if err := crdGen.Generate(version, kind, resources[name]); err != nil {
+			resource := resources[name]
+			r := config.NewResource(version, kind, name)
+			if err = r.OverrideConfig(config.Store.GetForResource(name)); err != nil {
+				panic(errors.Wrap(err, "cannot override config"))
+			}
+			if err := crdGen.Generate(r, resource); err != nil {
 				panic(errors.Wrap(err, "cannot generate crd"))
 			}
-			if err := tfGen.Generate(version, kind, name, "id"); err != nil {
+			if err := tfGen.Generate(r); err != nil {
 				panic(errors.Wrap(err, "cannot generate terraformed"))
 			}
-			ctrlPkgPath, err := ctrlGen.Generate(versionGen.Package().Path(), kind)
+			ctrlPkgPath, err := ctrlGen.Generate(r, versionGen.Package().Path())
 			if err != nil {
 				panic(errors.Wrap(err, "cannot generate controller"))
 			}

@@ -19,9 +19,10 @@ limitations under the License.
 package v1alpha1
 
 import (
-	xpv1 "github.com/crossplane/crossplane-runtime/apis/common/v1"
 	metav1 "k8s.io/apimachinery/pkg/apis/meta/v1"
 	"k8s.io/apimachinery/pkg/runtime/schema"
+
+	v1 "github.com/crossplane/crossplane-runtime/apis/common/v1"
 )
 
 type PropagatedRouteTableObservation struct {
@@ -30,10 +31,10 @@ type PropagatedRouteTableObservation struct {
 type PropagatedRouteTableParameters struct {
 
 	// +kubebuilder:validation:Optional
-	Labels []string `json:"labels,omitempty" tf:"labels"`
+	Labels []*string `json:"labels,omitempty" tf:"labels"`
 
 	// +kubebuilder:validation:Optional
-	RouteTableIds []string `json:"routeTableIds,omitempty" tf:"route_table_ids"`
+	RouteTableIds []*string `json:"routeTableIds,omitempty" tf:"route_table_ids"`
 }
 
 type RoutingObservation struct {
@@ -57,7 +58,7 @@ type StaticVnetRouteObservation struct {
 type StaticVnetRouteParameters struct {
 
 	// +kubebuilder:validation:Optional
-	AddressPrefixes []string `json:"addressPrefixes,omitempty" tf:"address_prefixes"`
+	AddressPrefixes []*string `json:"addressPrefixes,omitempty" tf:"address_prefixes"`
 
 	// +kubebuilder:validation:Optional
 	Name *string `json:"name,omitempty" tf:"name"`
@@ -78,16 +79,30 @@ type VirtualHubConnectionParameters struct {
 	InternetSecurityEnabled *bool `json:"internetSecurityEnabled,omitempty" tf:"internet_security_enabled"`
 
 	// +kubebuilder:validation:Required
-	Name string `json:"name" tf:"name"`
+	Name *string `json:"name" tf:"name"`
 
-	// +kubebuilder:validation:Required
-	RemoteVirtualNetworkID string `json:"remoteVirtualNetworkId" tf:"remote_virtual_network_id"`
+	// +crossplane:generate:reference:type=VirtualNetwork
+	// +kubebuilder:validation:Optional
+	RemoteVirtualNetworkID *string `json:"remoteVirtualNetworkId,omitempty" tf:"remote_virtual_network_id"`
+
+	// +kubebuilder:validation:Optional
+	RemoteVirtualNetworkIDRef *v1.Reference `json:"remoteVirtualNetworkIDRef,omitempty" tf:"-"`
+
+	// +kubebuilder:validation:Optional
+	RemoteVirtualNetworkIDSelector *v1.Selector `json:"remoteVirtualNetworkIDSelector,omitempty" tf:"-"`
 
 	// +kubebuilder:validation:Optional
 	Routing []RoutingParameters `json:"routing,omitempty" tf:"routing"`
 
-	// +kubebuilder:validation:Required
-	VirtualHubID string `json:"virtualHubId" tf:"virtual_hub_id"`
+	// +crossplane:generate:reference:type=VirtualHub
+	// +kubebuilder:validation:Optional
+	VirtualHubID *string `json:"virtualHubId,omitempty" tf:"virtual_hub_id"`
+
+	// +kubebuilder:validation:Optional
+	VirtualHubIDRef *v1.Reference `json:"virtualHubIDRef,omitempty" tf:"-"`
+
+	// +kubebuilder:validation:Optional
+	VirtualHubIDSelector *v1.Selector `json:"virtualHubIDSelector,omitempty" tf:"-"`
 
 	// +kubebuilder:validation:Optional
 	VitualNetworkToHubGatewaysTrafficAllowed *bool `json:"vitualNetworkToHubGatewaysTrafficAllowed,omitempty" tf:"vitual_network_to_hub_gateways_traffic_allowed"`
@@ -95,14 +110,14 @@ type VirtualHubConnectionParameters struct {
 
 // VirtualHubConnectionSpec defines the desired state of VirtualHubConnection
 type VirtualHubConnectionSpec struct {
-	xpv1.ResourceSpec `json:",inline"`
-	ForProvider       VirtualHubConnectionParameters `json:"forProvider"`
+	v1.ResourceSpec `json:",inline"`
+	ForProvider     VirtualHubConnectionParameters `json:"forProvider"`
 }
 
 // VirtualHubConnectionStatus defines the observed state of VirtualHubConnection.
 type VirtualHubConnectionStatus struct {
-	xpv1.ResourceStatus `json:",inline"`
-	AtProvider          VirtualHubConnectionObservation `json:"atProvider,omitempty"`
+	v1.ResourceStatus `json:",inline"`
+	AtProvider        VirtualHubConnectionObservation `json:"atProvider,omitempty"`
 }
 
 // +kubebuilder:object:root=true

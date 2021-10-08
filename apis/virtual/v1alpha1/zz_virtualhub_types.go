@@ -19,9 +19,10 @@ limitations under the License.
 package v1alpha1
 
 import (
-	xpv1 "github.com/crossplane/crossplane-runtime/apis/common/v1"
 	metav1 "k8s.io/apimachinery/pkg/apis/meta/v1"
 	"k8s.io/apimachinery/pkg/runtime/schema"
+
+	v1 "github.com/crossplane/crossplane-runtime/apis/common/v1"
 )
 
 type RouteObservation struct {
@@ -30,10 +31,10 @@ type RouteObservation struct {
 type RouteParameters struct {
 
 	// +kubebuilder:validation:Required
-	AddressPrefixes []string `json:"addressPrefixes" tf:"address_prefixes"`
+	AddressPrefixes []*string `json:"addressPrefixes" tf:"address_prefixes"`
 
 	// +kubebuilder:validation:Required
-	NextHopIPAddress string `json:"nextHopIpAddress" tf:"next_hop_ip_address"`
+	NextHopIPAddress *string `json:"nextHopIpAddress" tf:"next_hop_ip_address"`
 }
 
 type VirtualHubObservation struct {
@@ -45,13 +46,21 @@ type VirtualHubParameters struct {
 	AddressPrefix *string `json:"addressPrefix,omitempty" tf:"address_prefix"`
 
 	// +kubebuilder:validation:Required
-	Location string `json:"location" tf:"location"`
+	Location *string `json:"location" tf:"location"`
 
 	// +kubebuilder:validation:Required
-	Name string `json:"name" tf:"name"`
+	Name *string `json:"name" tf:"name"`
 
-	// +kubebuilder:validation:Required
-	ResourceGroupName string `json:"resourceGroupName" tf:"resource_group_name"`
+	// +crossplane:generate:reference:type=github.com/crossplane-contrib/provider-tf-azure/apis/resource/v1alpha1.ResourceGroup
+	// +crossplane:generate:reference:extractor=github.com/crossplane-contrib/provider-tf-azure/apis/rconfig.ExtractResourceName()
+	// +kubebuilder:validation:Optional
+	ResourceGroupName *string `json:"resourceGroupName,omitempty" tf:"resource_group_name"`
+
+	// +kubebuilder:validation:Optional
+	ResourceGroupNameRef *v1.Reference `json:"resourceGroupNameRef,omitempty" tf:"-"`
+
+	// +kubebuilder:validation:Optional
+	ResourceGroupNameSelector *v1.Selector `json:"resourceGroupNameSelector,omitempty" tf:"-"`
 
 	// +kubebuilder:validation:Optional
 	Route []RouteParameters `json:"route,omitempty" tf:"route"`
@@ -60,22 +69,29 @@ type VirtualHubParameters struct {
 	Sku *string `json:"sku,omitempty" tf:"sku"`
 
 	// +kubebuilder:validation:Optional
-	Tags map[string]string `json:"tags,omitempty" tf:"tags"`
+	Tags map[string]*string `json:"tags,omitempty" tf:"tags"`
 
+	// +crossplane:generate:reference:type=VirtualWan
 	// +kubebuilder:validation:Optional
 	VirtualWanID *string `json:"virtualWanId,omitempty" tf:"virtual_wan_id"`
+
+	// +kubebuilder:validation:Optional
+	VirtualWanIDRef *v1.Reference `json:"virtualWanIDRef,omitempty" tf:"-"`
+
+	// +kubebuilder:validation:Optional
+	VirtualWanIDSelector *v1.Selector `json:"virtualWanIDSelector,omitempty" tf:"-"`
 }
 
 // VirtualHubSpec defines the desired state of VirtualHub
 type VirtualHubSpec struct {
-	xpv1.ResourceSpec `json:",inline"`
-	ForProvider       VirtualHubParameters `json:"forProvider"`
+	v1.ResourceSpec `json:",inline"`
+	ForProvider     VirtualHubParameters `json:"forProvider"`
 }
 
 // VirtualHubStatus defines the observed state of VirtualHub.
 type VirtualHubStatus struct {
-	xpv1.ResourceStatus `json:",inline"`
-	AtProvider          VirtualHubObservation `json:"atProvider,omitempty"`
+	v1.ResourceStatus `json:",inline"`
+	AtProvider        VirtualHubObservation `json:"atProvider,omitempty"`
 }
 
 // +kubebuilder:object:root=true

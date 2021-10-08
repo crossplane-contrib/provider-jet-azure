@@ -19,9 +19,10 @@ limitations under the License.
 package v1alpha1
 
 import (
-	xpv1 "github.com/crossplane/crossplane-runtime/apis/common/v1"
 	metav1 "k8s.io/apimachinery/pkg/apis/meta/v1"
 	"k8s.io/apimachinery/pkg/runtime/schema"
+
+	v1 "github.com/crossplane/crossplane-runtime/apis/common/v1"
 )
 
 type VirtualHubSecurityPartnerProviderObservation struct {
@@ -30,34 +31,49 @@ type VirtualHubSecurityPartnerProviderObservation struct {
 type VirtualHubSecurityPartnerProviderParameters struct {
 
 	// +kubebuilder:validation:Required
-	Location string `json:"location" tf:"location"`
+	Location *string `json:"location" tf:"location"`
 
 	// +kubebuilder:validation:Required
-	Name string `json:"name" tf:"name"`
+	Name *string `json:"name" tf:"name"`
 
-	// +kubebuilder:validation:Required
-	ResourceGroupName string `json:"resourceGroupName" tf:"resource_group_name"`
-
-	// +kubebuilder:validation:Required
-	SecurityProviderName string `json:"securityProviderName" tf:"security_provider_name"`
+	// +crossplane:generate:reference:type=github.com/crossplane-contrib/provider-tf-azure/apis/resource/v1alpha1.ResourceGroup
+	// +crossplane:generate:reference:extractor=github.com/crossplane-contrib/provider-tf-azure/apis/rconfig.ExtractResourceName()
+	// +kubebuilder:validation:Optional
+	ResourceGroupName *string `json:"resourceGroupName,omitempty" tf:"resource_group_name"`
 
 	// +kubebuilder:validation:Optional
-	Tags map[string]string `json:"tags,omitempty" tf:"tags"`
+	ResourceGroupNameRef *v1.Reference `json:"resourceGroupNameRef,omitempty" tf:"-"`
 
+	// +kubebuilder:validation:Optional
+	ResourceGroupNameSelector *v1.Selector `json:"resourceGroupNameSelector,omitempty" tf:"-"`
+
+	// +kubebuilder:validation:Required
+	SecurityProviderName *string `json:"securityProviderName" tf:"security_provider_name"`
+
+	// +kubebuilder:validation:Optional
+	Tags map[string]*string `json:"tags,omitempty" tf:"tags"`
+
+	// +crossplane:generate:reference:type=VirtualHub
 	// +kubebuilder:validation:Optional
 	VirtualHubID *string `json:"virtualHubId,omitempty" tf:"virtual_hub_id"`
+
+	// +kubebuilder:validation:Optional
+	VirtualHubIDRef *v1.Reference `json:"virtualHubIDRef,omitempty" tf:"-"`
+
+	// +kubebuilder:validation:Optional
+	VirtualHubIDSelector *v1.Selector `json:"virtualHubIDSelector,omitempty" tf:"-"`
 }
 
 // VirtualHubSecurityPartnerProviderSpec defines the desired state of VirtualHubSecurityPartnerProvider
 type VirtualHubSecurityPartnerProviderSpec struct {
-	xpv1.ResourceSpec `json:",inline"`
-	ForProvider       VirtualHubSecurityPartnerProviderParameters `json:"forProvider"`
+	v1.ResourceSpec `json:",inline"`
+	ForProvider     VirtualHubSecurityPartnerProviderParameters `json:"forProvider"`
 }
 
 // VirtualHubSecurityPartnerProviderStatus defines the observed state of VirtualHubSecurityPartnerProvider.
 type VirtualHubSecurityPartnerProviderStatus struct {
-	xpv1.ResourceStatus `json:",inline"`
-	AtProvider          VirtualHubSecurityPartnerProviderObservation `json:"atProvider,omitempty"`
+	v1.ResourceStatus `json:",inline"`
+	AtProvider        VirtualHubSecurityPartnerProviderObservation `json:"atProvider,omitempty"`
 }
 
 // +kubebuilder:object:root=true

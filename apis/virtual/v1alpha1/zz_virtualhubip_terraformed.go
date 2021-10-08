@@ -18,34 +18,75 @@ limitations under the License.
 
 package v1alpha1
 
-import "github.com/crossplane-contrib/terrajet/pkg/conversion"
+import (
+	"github.com/pkg/errors"
+
+	"github.com/crossplane-contrib/terrajet/pkg/resource"
+	"github.com/crossplane-contrib/terrajet/pkg/resource/json"
+)
 
 // GetTerraformResourceType returns Terraform resource type for this VirtualHubIp
 func (mg *VirtualHubIp) GetTerraformResourceType() string {
 	return "azurerm_virtual_hub_ip"
 }
 
-// GetTerraformResourceIdField returns Terraform identifier field for this VirtualHubIp
-func (tr *VirtualHubIp) GetTerraformResourceIdField() string {
+// GetTerraformResourceIDField returns Terraform identifier field for this VirtualHubIp
+func (tr *VirtualHubIp) GetTerraformResourceIDField() string {
 	return "id"
 }
 
+// GetConnectionDetailsMapping for this VirtualHubIp
+func (tr *VirtualHubIp) GetConnectionDetailsMapping() map[string]string {
+	return nil
+}
+
 // GetObservation of this VirtualHubIp
-func (tr *VirtualHubIp) GetObservation() ([]byte, error) {
-	return conversion.TFParser.Marshal(tr.Status.AtProvider)
+func (tr *VirtualHubIp) GetObservation() (map[string]interface{}, error) {
+	o, err := json.TFParser.Marshal(tr.Status.AtProvider)
+	if err != nil {
+		return nil, err
+	}
+	base := map[string]interface{}{}
+	return base, json.TFParser.Unmarshal(o, &base)
 }
 
 // SetObservation for this VirtualHubIp
-func (tr *VirtualHubIp) SetObservation(data []byte) error {
-	return conversion.TFParser.Unmarshal(data, &tr.Status.AtProvider)
+func (tr *VirtualHubIp) SetObservation(obs map[string]interface{}) error {
+	p, err := json.TFParser.Marshal(obs)
+	if err != nil {
+		return err
+	}
+	return json.TFParser.Unmarshal(p, &tr.Status.AtProvider)
 }
 
 // GetParameters of this VirtualHubIp
-func (tr *VirtualHubIp) GetParameters() ([]byte, error) {
-	return conversion.TFParser.Marshal(tr.Spec.ForProvider)
+func (tr *VirtualHubIp) GetParameters() (map[string]interface{}, error) {
+	p, err := json.TFParser.Marshal(tr.Spec.ForProvider)
+	if err != nil {
+		return nil, err
+	}
+	base := map[string]interface{}{}
+	return base, json.TFParser.Unmarshal(p, &base)
 }
 
 // SetParameters for this VirtualHubIp
-func (tr *VirtualHubIp) SetParameters(data []byte) error {
-	return conversion.TFParser.Unmarshal(data, &tr.Spec.ForProvider)
+func (tr *VirtualHubIp) SetParameters(params map[string]interface{}) error {
+	p, err := json.TFParser.Marshal(params)
+	if err != nil {
+		return err
+	}
+	return json.TFParser.Unmarshal(p, &tr.Spec.ForProvider)
+}
+
+// LateInitialize this VirtualHubIp using its observed tfState.
+// returns True if there are any spec changes for the resource.
+func (tr *VirtualHubIp) LateInitialize(attrs []byte) (bool, error) {
+	params := &VirtualHubIpParameters{}
+	if err := json.TFParser.Unmarshal(attrs, params); err != nil {
+		return false, errors.Wrap(err, "failed to unmarshal Terraform state parameters for late-initialization")
+	}
+	opts := []resource.GenericLateInitializerOption{resource.WithZeroValueJSONOmitEmptyFilter(resource.CNameWildcard)}
+
+	li := resource.NewGenericLateInitializer(opts...)
+	return li.LateInitialize(&tr.Spec.ForProvider, params)
 }

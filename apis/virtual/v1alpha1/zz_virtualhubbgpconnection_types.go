@@ -19,9 +19,10 @@ limitations under the License.
 package v1alpha1
 
 import (
-	xpv1 "github.com/crossplane/crossplane-runtime/apis/common/v1"
 	metav1 "k8s.io/apimachinery/pkg/apis/meta/v1"
 	"k8s.io/apimachinery/pkg/runtime/schema"
+
+	v1 "github.com/crossplane/crossplane-runtime/apis/common/v1"
 )
 
 type VirtualHubBgpConnectionObservation struct {
@@ -30,28 +31,35 @@ type VirtualHubBgpConnectionObservation struct {
 type VirtualHubBgpConnectionParameters struct {
 
 	// +kubebuilder:validation:Required
-	Name string `json:"name" tf:"name"`
+	Name *string `json:"name" tf:"name"`
 
 	// +kubebuilder:validation:Required
-	PeerAsn int64 `json:"peerAsn" tf:"peer_asn"`
+	PeerAsn *int64 `json:"peerAsn" tf:"peer_asn"`
 
 	// +kubebuilder:validation:Required
-	PeerIP string `json:"peerIp" tf:"peer_ip"`
+	PeerIP *string `json:"peerIp" tf:"peer_ip"`
 
-	// +kubebuilder:validation:Required
-	VirtualHubID string `json:"virtualHubId" tf:"virtual_hub_id"`
+	// +crossplane:generate:reference:type=VirtualHub
+	// +kubebuilder:validation:Optional
+	VirtualHubID *string `json:"virtualHubId,omitempty" tf:"virtual_hub_id"`
+
+	// +kubebuilder:validation:Optional
+	VirtualHubIDRef *v1.Reference `json:"virtualHubIDRef,omitempty" tf:"-"`
+
+	// +kubebuilder:validation:Optional
+	VirtualHubIDSelector *v1.Selector `json:"virtualHubIDSelector,omitempty" tf:"-"`
 }
 
 // VirtualHubBgpConnectionSpec defines the desired state of VirtualHubBgpConnection
 type VirtualHubBgpConnectionSpec struct {
-	xpv1.ResourceSpec `json:",inline"`
-	ForProvider       VirtualHubBgpConnectionParameters `json:"forProvider"`
+	v1.ResourceSpec `json:",inline"`
+	ForProvider     VirtualHubBgpConnectionParameters `json:"forProvider"`
 }
 
 // VirtualHubBgpConnectionStatus defines the observed state of VirtualHubBgpConnection.
 type VirtualHubBgpConnectionStatus struct {
-	xpv1.ResourceStatus `json:",inline"`
-	AtProvider          VirtualHubBgpConnectionObservation `json:"atProvider,omitempty"`
+	v1.ResourceStatus `json:",inline"`
+	AtProvider        VirtualHubBgpConnectionObservation `json:"atProvider,omitempty"`
 }
 
 // +kubebuilder:object:root=true
