@@ -16,7 +16,29 @@ limitations under the License.
 
 package config
 
-import "github.com/crossplane-contrib/terrajet/pkg/config"
+import (
+	"github.com/crossplane-contrib/terrajet/pkg/config"
+
+	"github.com/crossplane/crossplane-runtime/pkg/fieldpath"
+
+	xpref "github.com/crossplane/crossplane-runtime/pkg/reference"
+	xpresource "github.com/crossplane/crossplane-runtime/pkg/resource"
+)
+
+func ExtractResourceName() xpref.ExtractValueFn {
+	return func(mr xpresource.Managed) string {
+		p, err := fieldpath.PaveObject(mr)
+		if err != nil {
+			return ""
+		}
+
+		name, err := p.GetString("spec.forProvider.name")
+		if err != nil {
+			return ""
+		}
+		return name
+	}
+}
 
 func SetResourceConfigurations() {
 	config.Store.SetForResource("azurerm_resource_group", config.Resource{
@@ -38,6 +60,12 @@ func SetResourceConfigurations() {
 	config.Store.SetForResource("azurerm_virtual_network", config.Resource{
 		ExternalName: config.ExternalName{
 			DisableNameInitializer: true,
+		},
+		References: config.References{
+			"resource_group_name": config.Reference{
+				Type:      "github.com/crossplane-contrib/provider-tf-azure/apis/resource/v1alpha1.ResourceGroup",
+				Extractor: "github.com/crossplane-contrib/provider-tf-azure/cmd/generator/config.ExtractResourceName()",
+			},
 		},
 	})
 
