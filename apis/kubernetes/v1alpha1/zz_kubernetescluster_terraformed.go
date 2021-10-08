@@ -19,7 +19,6 @@ limitations under the License.
 package v1alpha1
 
 import (
-	"github.com/crossplane/crossplane-runtime/pkg/meta"
 	"github.com/pkg/errors"
 
 	"github.com/crossplane-contrib/terrajet/pkg/resource"
@@ -67,7 +66,6 @@ func (tr *KubernetesCluster) GetParameters() (map[string]interface{}, error) {
 		return nil, err
 	}
 	base := map[string]interface{}{}
-	kubernetesClusterExternalNameConfigure(base, meta.GetExternalName(tr))
 	return base, json.TFParser.Unmarshal(p, &base)
 }
 

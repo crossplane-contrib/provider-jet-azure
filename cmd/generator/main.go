@@ -34,7 +34,9 @@ import (
 	"github.com/crossplane-contrib/terrajet/pkg/config"
 	"github.com/crossplane-contrib/terrajet/pkg/pipeline"
 
-	_ "github.com/crossplane-contrib/provider-tf-azure/apis"
+	// _ "github.com/crossplane-contrib/provider-tf-azure/apis"
+
+	genConfig "github.com/crossplane-contrib/provider-tf-azure/cmd/generator/config"
 )
 
 // Constants to use in generated artifacts.
@@ -83,6 +85,7 @@ func main() { // nolint:gocyclo
 			"config": {},
 		})*/
 
+	genConfig.SetResourceConfigurations()
 	wd, err := os.Getwd()
 	if err != nil {
 		panic(errors.Wrap(err, "cannot get working directory"))
