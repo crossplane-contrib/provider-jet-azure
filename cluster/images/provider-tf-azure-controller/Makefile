@@ -3,9 +3,11 @@
 
 PLATFORMS := linux_amd64 linux_arm64
 # Terraform configuration
+# TODO(aru): how to pass these from root Makefile?
 TERRAFORM_VERSION ?= 1.0.5
 TERRAFORM_PROVIDER_SOURCE ?= hashicorp/azurerm
-TERRAFORM_PROVIDER_VERSION ?= 2.74.0
+# version specified here should currently match the `AZURERM_REFSPEC` variable of the root Makefile
+TERRAFORM_PROVIDER_VERSION ?= 2.80.0
 
 include ../../../build/makelib/common.mk
 

@@ -99,7 +99,7 @@ build: prepare.azurerm
 
 # must match Docker build file env. variable TERRAFORM_PROVIDER_AZURERM_VERSION in
 # cluster/images/provider-tf-azure-controller/Dockerfile
-AZURERM_REFSPEC ?= v2.74.0
+AZURERM_REFSPEC ?= v2.80.0
 prepare.azurerm:
 	@WORK_DIR=.work AZURERM_REFSPEC=$(AZURERM_REFSPEC) ./scripts/prepare_azurerm.sh
 
