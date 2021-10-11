@@ -2,6 +2,11 @@
 # Setup Project
 
 PLATFORMS := linux_amd64 linux_arm64
+# Terraform configuration
+TERRAFORM_VERSION ?= 1.0.5
+TERRAFORM_PROVIDER_SOURCE ?= hashicorp/azurerm
+TERRAFORM_PROVIDER_VERSION ?= 2.74.0
+
 include ../../../build/makelib/common.mk
 
 # ====================================================================================
@@ -21,6 +26,9 @@ img.build:
 	@docker build $(BUILD_ARGS) \
 		--build-arg ARCH=$(ARCH) \
 		--build-arg TINI_VERSION=$(TINI_VERSION) \
+		--build-arg TERRAFORM_VERSION=$(TERRAFORM_VERSION) \
+		--build-arg TERRAFORM_PROVIDER_SOURCE=$(TERRAFORM_PROVIDER_SOURCE) \
+		--build-arg TERRAFORM_PROVIDER_VERSION=$(TERRAFORM_PROVIDER_VERSION) \
 		-t $(IMAGE) \
 		$(IMAGE_TEMP_DIR) || $(FAIL)
 	@$(OK) docker build $(IMAGE)
