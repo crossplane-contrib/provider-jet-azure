@@ -31,7 +31,7 @@ type CompositeIndexObservation struct {
 type CompositeIndexParameters struct {
 
 	// +kubebuilder:validation:Required
-	Index []IndexParameters `json:"index" tf:"index"`
+	Index []IndexParameters `json:"index" tf:"index,omitempty"`
 }
 
 type ConflictResolutionPolicyObservation struct {
@@ -40,13 +40,13 @@ type ConflictResolutionPolicyObservation struct {
 type ConflictResolutionPolicyParameters struct {
 
 	// +kubebuilder:validation:Optional
-	ConflictResolutionPath *string `json:"conflictResolutionPath,omitempty" tf:"conflict_resolution_path"`
+	ConflictResolutionPath *string `json:"conflictResolutionPath,omitempty" tf:"conflict_resolution_path,omitempty"`
 
 	// +kubebuilder:validation:Optional
-	ConflictResolutionProcedure *string `json:"conflictResolutionProcedure,omitempty" tf:"conflict_resolution_procedure"`
+	ConflictResolutionProcedure *string `json:"conflictResolutionProcedure,omitempty" tf:"conflict_resolution_procedure,omitempty"`
 
 	// +kubebuilder:validation:Required
-	Mode *string `json:"mode" tf:"mode"`
+	Mode *string `json:"mode" tf:"mode,omitempty"`
 }
 
 type CosmosdbGremlinGraphAutoscaleSettingsObservation struct {
@@ -55,7 +55,7 @@ type CosmosdbGremlinGraphAutoscaleSettingsObservation struct {
 type CosmosdbGremlinGraphAutoscaleSettingsParameters struct {
 
 	// +kubebuilder:validation:Optional
-	MaxThroughput *int64 `json:"maxThroughput,omitempty" tf:"max_throughput"`
+	MaxThroughput *int64 `json:"maxThroughput,omitempty" tf:"max_throughput,omitempty"`
 }
 
 type CosmosdbGremlinGraphObservation struct {
@@ -66,7 +66,7 @@ type CosmosdbGremlinGraphParameters struct {
 	// +crossplane:generate:reference:type=CosmosdbAccount
 	// +crossplane:generate:reference:extractor=github.com/crossplane-contrib/provider-tf-azure/apis/rconfig.ExtractResourceName()
 	// +kubebuilder:validation:Optional
-	AccountName *string `json:"accountName,omitempty" tf:"account_name"`
+	AccountName *string `json:"accountName,omitempty" tf:"account_name,omitempty"`
 
 	// +kubebuilder:validation:Optional
 	AccountNameRef *v1.Reference `json:"accountNameRef,omitempty" tf:"-"`
@@ -75,15 +75,15 @@ type CosmosdbGremlinGraphParameters struct {
 	AccountNameSelector *v1.Selector `json:"accountNameSelector,omitempty" tf:"-"`
 
 	// +kubebuilder:validation:Optional
-	AutoscaleSettings []CosmosdbGremlinGraphAutoscaleSettingsParameters `json:"autoscaleSettings,omitempty" tf:"autoscale_settings"`
+	AutoscaleSettings []CosmosdbGremlinGraphAutoscaleSettingsParameters `json:"autoscaleSettings,omitempty" tf:"autoscale_settings,omitempty"`
 
 	// +kubebuilder:validation:Optional
-	ConflictResolutionPolicy []ConflictResolutionPolicyParameters `json:"conflictResolutionPolicy,omitempty" tf:"conflict_resolution_policy"`
+	ConflictResolutionPolicy []ConflictResolutionPolicyParameters `json:"conflictResolutionPolicy,omitempty" tf:"conflict_resolution_policy,omitempty"`
 
 	// +crossplane:generate:reference:type=CosmosdbGremlinDatabase
 	// +crossplane:generate:reference:extractor=github.com/crossplane-contrib/provider-tf-azure/apis/rconfig.ExtractResourceName()
 	// +kubebuilder:validation:Optional
-	DatabaseName *string `json:"databaseName,omitempty" tf:"database_name"`
+	DatabaseName *string `json:"databaseName,omitempty" tf:"database_name,omitempty"`
 
 	// +kubebuilder:validation:Optional
 	DatabaseNameRef *v1.Reference `json:"databaseNameRef,omitempty" tf:"-"`
@@ -92,24 +92,24 @@ type CosmosdbGremlinGraphParameters struct {
 	DatabaseNameSelector *v1.Selector `json:"databaseNameSelector,omitempty" tf:"-"`
 
 	// +kubebuilder:validation:Optional
-	DefaultTTL *int64 `json:"defaultTtl,omitempty" tf:"default_ttl"`
+	DefaultTTL *int64 `json:"defaultTtl,omitempty" tf:"default_ttl,omitempty"`
 
 	// +kubebuilder:validation:Optional
-	IndexPolicy []IndexPolicyParameters `json:"indexPolicy,omitempty" tf:"index_policy"`
+	IndexPolicy []IndexPolicyParameters `json:"indexPolicy,omitempty" tf:"index_policy,omitempty"`
 
 	// +kubebuilder:validation:Required
-	Name *string `json:"name" tf:"name"`
+	Name *string `json:"name" tf:"name,omitempty"`
 
 	// +kubebuilder:validation:Required
-	PartitionKeyPath *string `json:"partitionKeyPath" tf:"partition_key_path"`
+	PartitionKeyPath *string `json:"partitionKeyPath" tf:"partition_key_path,omitempty"`
 
 	// +kubebuilder:validation:Optional
-	PartitionKeyVersion *int64 `json:"partitionKeyVersion,omitempty" tf:"partition_key_version"`
+	PartitionKeyVersion *int64 `json:"partitionKeyVersion,omitempty" tf:"partition_key_version,omitempty"`
 
 	// +crossplane:generate:reference:type=github.com/crossplane-contrib/provider-tf-azure/apis/resource/v1alpha1.ResourceGroup
 	// +crossplane:generate:reference:extractor=github.com/crossplane-contrib/provider-tf-azure/apis/rconfig.ExtractResourceName()
 	// +kubebuilder:validation:Optional
-	ResourceGroupName *string `json:"resourceGroupName,omitempty" tf:"resource_group_name"`
+	ResourceGroupName *string `json:"resourceGroupName,omitempty" tf:"resource_group_name,omitempty"`
 
 	// +kubebuilder:validation:Optional
 	ResourceGroupNameRef *v1.Reference `json:"resourceGroupNameRef,omitempty" tf:"-"`
@@ -118,10 +118,10 @@ type CosmosdbGremlinGraphParameters struct {
 	ResourceGroupNameSelector *v1.Selector `json:"resourceGroupNameSelector,omitempty" tf:"-"`
 
 	// +kubebuilder:validation:Optional
-	Throughput *int64 `json:"throughput,omitempty" tf:"throughput"`
+	Throughput *int64 `json:"throughput,omitempty" tf:"throughput,omitempty"`
 
 	// +kubebuilder:validation:Optional
-	UniqueKey []UniqueKeyParameters `json:"uniqueKey,omitempty" tf:"unique_key"`
+	UniqueKey []UniqueKeyParameters `json:"uniqueKey,omitempty" tf:"unique_key,omitempty"`
 }
 
 type IndexObservation struct {
@@ -130,10 +130,10 @@ type IndexObservation struct {
 type IndexParameters struct {
 
 	// +kubebuilder:validation:Required
-	Order *string `json:"order" tf:"order"`
+	Order *string `json:"order" tf:"order,omitempty"`
 
 	// +kubebuilder:validation:Required
-	Path *string `json:"path" tf:"path"`
+	Path *string `json:"path" tf:"path,omitempty"`
 }
 
 type IndexPolicyObservation struct {
@@ -142,32 +142,32 @@ type IndexPolicyObservation struct {
 type IndexPolicyParameters struct {
 
 	// +kubebuilder:validation:Optional
-	Automatic *bool `json:"automatic,omitempty" tf:"automatic"`
+	Automatic *bool `json:"automatic,omitempty" tf:"automatic,omitempty"`
 
 	// +kubebuilder:validation:Optional
-	CompositeIndex []CompositeIndexParameters `json:"compositeIndex,omitempty" tf:"composite_index"`
+	CompositeIndex []CompositeIndexParameters `json:"compositeIndex,omitempty" tf:"composite_index,omitempty"`
 
 	// +kubebuilder:validation:Optional
-	ExcludedPaths []*string `json:"excludedPaths,omitempty" tf:"excluded_paths"`
+	ExcludedPaths []*string `json:"excludedPaths,omitempty" tf:"excluded_paths,omitempty"`
 
 	// +kubebuilder:validation:Optional
-	IncludedPaths []*string `json:"includedPaths,omitempty" tf:"included_paths"`
+	IncludedPaths []*string `json:"includedPaths,omitempty" tf:"included_paths,omitempty"`
 
 	// +kubebuilder:validation:Required
-	IndexingMode *string `json:"indexingMode" tf:"indexing_mode"`
+	IndexingMode *string `json:"indexingMode" tf:"indexing_mode,omitempty"`
 
 	// +kubebuilder:validation:Optional
-	SpatialIndex []SpatialIndexParameters `json:"spatialIndex,omitempty" tf:"spatial_index"`
+	SpatialIndex []SpatialIndexParameters `json:"spatialIndex,omitempty" tf:"spatial_index,omitempty"`
 }
 
 type SpatialIndexObservation struct {
-	Types []*string `json:"types,omitempty" tf:"types"`
+	Types []*string `json:"types,omitempty" tf:"types,omitempty"`
 }
 
 type SpatialIndexParameters struct {
 
 	// +kubebuilder:validation:Required
-	Path *string `json:"path" tf:"path"`
+	Path *string `json:"path" tf:"path,omitempty"`
 }
 
 type UniqueKeyObservation struct {
@@ -176,7 +176,7 @@ type UniqueKeyObservation struct {
 type UniqueKeyParameters struct {
 
 	// +kubebuilder:validation:Required
-	Paths []*string `json:"paths" tf:"paths"`
+	Paths []*string `json:"paths" tf:"paths,omitempty"`
 }
 
 // CosmosdbGremlinGraphSpec defines the desired state of CosmosdbGremlinGraph

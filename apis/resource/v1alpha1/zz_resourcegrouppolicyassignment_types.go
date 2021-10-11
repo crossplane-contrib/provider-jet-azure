@@ -26,15 +26,15 @@ import (
 )
 
 type IdentityObservation struct {
-	PrincipalID *string `json:"principalId,omitempty" tf:"principal_id"`
+	PrincipalID *string `json:"principalId,omitempty" tf:"principal_id,omitempty"`
 
-	TenantID *string `json:"tenantId,omitempty" tf:"tenant_id"`
+	TenantID *string `json:"tenantId,omitempty" tf:"tenant_id,omitempty"`
 }
 
 type IdentityParameters struct {
 
 	// +kubebuilder:validation:Optional
-	Type *string `json:"type,omitempty" tf:"type"`
+	Type *string `json:"type,omitempty" tf:"type,omitempty"`
 }
 
 type ResourceGroupPolicyAssignmentObservation struct {
@@ -43,44 +43,44 @@ type ResourceGroupPolicyAssignmentObservation struct {
 type ResourceGroupPolicyAssignmentParameters struct {
 
 	// +kubebuilder:validation:Optional
-	Description *string `json:"description,omitempty" tf:"description"`
+	Description *string `json:"description,omitempty" tf:"description,omitempty"`
 
 	// +kubebuilder:validation:Optional
-	DisplayName *string `json:"displayName,omitempty" tf:"display_name"`
+	DisplayName *string `json:"displayName,omitempty" tf:"display_name,omitempty"`
 
 	// +kubebuilder:validation:Optional
-	Enforce *bool `json:"enforce,omitempty" tf:"enforce"`
+	Enforce *bool `json:"enforce,omitempty" tf:"enforce,omitempty"`
 
 	// +kubebuilder:validation:Optional
-	Identity []IdentityParameters `json:"identity,omitempty" tf:"identity"`
+	Identity []IdentityParameters `json:"identity,omitempty" tf:"identity,omitempty"`
 
 	// +kubebuilder:validation:Optional
-	Location *string `json:"location,omitempty" tf:"location"`
+	Location *string `json:"location,omitempty" tf:"location,omitempty"`
 
 	// +kubebuilder:validation:Optional
-	Metadata *string `json:"metadata,omitempty" tf:"metadata"`
+	Metadata *string `json:"metadata,omitempty" tf:"metadata,omitempty"`
 
 	// +kubebuilder:validation:Required
-	Name *string `json:"name" tf:"name"`
+	Name *string `json:"name" tf:"name,omitempty"`
 
 	// +kubebuilder:validation:Optional
-	NotScopes []*string `json:"notScopes,omitempty" tf:"not_scopes"`
+	NotScopes []*string `json:"notScopes,omitempty" tf:"not_scopes,omitempty"`
 
 	// +kubebuilder:validation:Optional
-	Parameters *string `json:"parameters,omitempty" tf:"parameters"`
+	Parameters *string `json:"parameters,omitempty" tf:"parameters,omitempty"`
 
 	// +kubebuilder:validation:Required
-	PolicyDefinitionID *string `json:"policyDefinitionId" tf:"policy_definition_id"`
+	PolicyDefinitionID *string `json:"policyDefinitionId" tf:"policy_definition_id,omitempty"`
 
 	// +crossplane:generate:reference:type=ResourceGroup
 	// +kubebuilder:validation:Optional
-	ResourceGroupID *string `json:"resourceGroupId,omitempty" tf:"resource_group_id"`
+	ResourceGroupID *string `json:"resourceGroupId,omitempty" tf:"resource_group_id,omitempty"`
 
 	// +kubebuilder:validation:Optional
-	ResourceGroupIDRef *v1.Reference `json:"resourceGroupIDRef,omitempty" tf:"-"`
+	ResourceGroupIDRef *v1.Reference `json:"resourceGroupIdRef,omitempty" tf:"-"`
 
 	// +kubebuilder:validation:Optional
-	ResourceGroupIDSelector *v1.Selector `json:"resourceGroupIDSelector,omitempty" tf:"-"`
+	ResourceGroupIDSelector *v1.Selector `json:"resourceGroupIdSelector,omitempty" tf:"-"`
 }
 
 // ResourceGroupPolicyAssignmentSpec defines the desired state of ResourceGroupPolicyAssignment

@@ -71,7 +71,9 @@ spec:
                     type: boolean
                   name:
                     type: string
-                  remoteVirtualNetworkIDRef:
+                  remoteVirtualNetworkId:
+                    type: string
+                  remoteVirtualNetworkIdRef:
                     description: A Reference to a named object.
                     properties:
                       name:
@@ -80,7 +82,7 @@ spec:
                     required:
                     - name
                     type: object
-                  remoteVirtualNetworkIDSelector:
+                  remoteVirtualNetworkIdSelector:
                     description: A Selector selects an object.
                     properties:
                       matchControllerRef:
@@ -94,8 +96,6 @@ spec:
                           is selected.
                         type: object
                     type: object
-                  remoteVirtualNetworkId:
-                    type: string
                   resourceGroupName:
                     type: string
                   resourceGroupNameRef:

@@ -44,6 +44,15 @@ func SetResourceConfigurations() {
 				Type:      APISPackagePath + "/resource/v1alpha1.ResourceGroup",
 				Extractor: APISPackagePath + "/rconfig.ExtractResourceName()",
 			},
+			"default_node_pool[*].pod_subnet_id": config.Reference{
+				Type: APISPackagePath + "/subnet/v1alpha1.Subnet",
+			},
+			"default_node_pool[*].vnet_subnet_id": config.Reference{
+				Type: APISPackagePath + "/subnet/v1alpha1.Subnet",
+			},
+			"addon_profile[*].ingress_application_gateway[*].subnet_id": config.Reference{
+				Type: APISPackagePath + "/subnet/v1alpha1.Subnet",
+			},
 		},
 		UseAsync: true,
 	})
@@ -54,6 +63,12 @@ func SetResourceConfigurations() {
 		References: config.References{
 			"kubernetes_cluster_id": config.Reference{
 				Type: "KubernetesCluster",
+			},
+			"pod_subnet_id": config.Reference{
+				Type: APISPackagePath + "/subnet/v1alpha1.Subnet",
+			},
+			"vnet_subnet_id": config.Reference{
+				Type: APISPackagePath + "/subnet/v1alpha1.Subnet",
 			},
 		},
 		UseAsync: true,
@@ -126,6 +141,9 @@ func SetResourceConfigurations() {
 			"resource_group_name": config.Reference{
 				Type:      APISPackagePath + "/resource/v1alpha1.ResourceGroup",
 				Extractor: APISPackagePath + "/rconfig.ExtractResourceName()",
+			},
+			"ip_configuration[*].subnet_id": config.Reference{
+				Type: APISPackagePath + "/subnet/v1alpha1.Subnet",
 			},
 		},
 		UseAsync: true,
@@ -461,6 +479,9 @@ func SetResourceConfigurations() {
 				Type:      APISPackagePath + "/resource/v1alpha1.ResourceGroup",
 				Extractor: APISPackagePath + "/rconfig.ExtractResourceName()",
 			},
+			"delegated_subnet_id": config.Reference{
+				Type: APISPackagePath + "/subnet/v1alpha1.Subnet",
+			},
 		},
 		UseAsync: true,
 	})
@@ -476,6 +497,9 @@ func SetResourceConfigurations() {
 			"server_name": config.Reference{
 				Type:      "PostgresqlServer",
 				Extractor: APISPackagePath + "/rconfig.ExtractResourceName()",
+			},
+			"subnet_id": config.Reference{
+				Type: APISPackagePath + "/subnet/v1alpha1.Subnet",
 			},
 		},
 		UseAsync: true,
@@ -589,6 +613,9 @@ func SetResourceConfigurations() {
 			"virtual_hub_id": config.Reference{
 				Type: "VirtualHub",
 			},
+			"subnet_id": config.Reference{
+				Type: APISPackagePath + "/subnet/v1alpha1.Subnet",
+			},
 		},
 		UseAsync: true,
 	})
@@ -642,6 +669,66 @@ func SetResourceConfigurations() {
 			},
 			"virtual_wan_id": config.Reference{
 				Type: "VirtualWan",
+			},
+		},
+		UseAsync: true,
+	})
+	config.Store.SetForResource("azurerm_subnet", config.Resource{
+		ExternalName: config.ExternalName{
+			DisableNameInitializer: true,
+		},
+		LateInitializer: config.LateInitializer{
+			IgnoredFields: []string{"AddressPrefix"},
+		},
+		References: config.References{
+			"resource_group_name": config.Reference{
+				Type:      APISPackagePath + "/resource/v1alpha1.ResourceGroup",
+				Extractor: APISPackagePath + "/rconfig.ExtractResourceName()",
+			},
+		},
+		UseAsync: true,
+	})
+	config.Store.SetForResource("azurerm_subnet_nat_gateway_association", config.Resource{
+		ExternalName: config.ExternalName{
+			DisableNameInitializer: true,
+		},
+		References: config.References{
+			"subnet_id": config.Reference{
+				Type: "Subnet",
+			},
+		},
+		UseAsync: true,
+	})
+	config.Store.SetForResource("azurerm_subnet_network_security_group_association", config.Resource{
+		ExternalName: config.ExternalName{
+			DisableNameInitializer: true,
+		},
+		References: config.References{
+			"subnet_id": config.Reference{
+				Type: "Subnet",
+			},
+		},
+		UseAsync: true,
+	})
+	config.Store.SetForResource("azurerm_subnet_service_endpoint_storage_policy", config.Resource{
+		ExternalName: config.ExternalName{
+			DisableNameInitializer: true,
+		},
+		References: config.References{
+			"resource_group_name": config.Reference{
+				Type:      APISPackagePath + "/resource/v1alpha1.ResourceGroup",
+				Extractor: APISPackagePath + "/rconfig.ExtractResourceName()",
+			},
+		},
+		UseAsync: true,
+	})
+	config.Store.SetForResource("azurerm_subnet_route_table_association", config.Resource{
+		ExternalName: config.ExternalName{
+			DisableNameInitializer: true,
+		},
+		References: config.References{
+			"subnet_id": config.Reference{
+				Type: "Subnet",
 			},
 		},
 		UseAsync: true,

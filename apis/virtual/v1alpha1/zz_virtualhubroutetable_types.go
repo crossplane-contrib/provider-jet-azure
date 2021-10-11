@@ -31,23 +31,23 @@ type VirtualHubRouteTableObservation struct {
 type VirtualHubRouteTableParameters struct {
 
 	// +kubebuilder:validation:Optional
-	Labels []*string `json:"labels,omitempty" tf:"labels"`
+	Labels []*string `json:"labels,omitempty" tf:"labels,omitempty"`
 
 	// +kubebuilder:validation:Required
-	Name *string `json:"name" tf:"name"`
+	Name *string `json:"name" tf:"name,omitempty"`
 
 	// +kubebuilder:validation:Optional
-	Route []VirtualHubRouteTableRouteParameters `json:"route,omitempty" tf:"route"`
+	Route []VirtualHubRouteTableRouteParameters `json:"route,omitempty" tf:"route,omitempty"`
 
 	// +crossplane:generate:reference:type=VirtualHub
 	// +kubebuilder:validation:Optional
-	VirtualHubID *string `json:"virtualHubId,omitempty" tf:"virtual_hub_id"`
+	VirtualHubID *string `json:"virtualHubId,omitempty" tf:"virtual_hub_id,omitempty"`
 
 	// +kubebuilder:validation:Optional
-	VirtualHubIDRef *v1.Reference `json:"virtualHubIDRef,omitempty" tf:"-"`
+	VirtualHubIDRef *v1.Reference `json:"virtualHubIdRef,omitempty" tf:"-"`
 
 	// +kubebuilder:validation:Optional
-	VirtualHubIDSelector *v1.Selector `json:"virtualHubIDSelector,omitempty" tf:"-"`
+	VirtualHubIDSelector *v1.Selector `json:"virtualHubIdSelector,omitempty" tf:"-"`
 }
 
 type VirtualHubRouteTableRouteObservation struct {
@@ -56,19 +56,19 @@ type VirtualHubRouteTableRouteObservation struct {
 type VirtualHubRouteTableRouteParameters struct {
 
 	// +kubebuilder:validation:Required
-	Destinations []*string `json:"destinations" tf:"destinations"`
+	Destinations []*string `json:"destinations" tf:"destinations,omitempty"`
 
 	// +kubebuilder:validation:Required
-	DestinationsType *string `json:"destinationsType" tf:"destinations_type"`
+	DestinationsType *string `json:"destinationsType" tf:"destinations_type,omitempty"`
 
 	// +kubebuilder:validation:Required
-	Name *string `json:"name" tf:"name"`
+	Name *string `json:"name" tf:"name,omitempty"`
 
 	// +kubebuilder:validation:Required
-	NextHop *string `json:"nextHop" tf:"next_hop"`
+	NextHop *string `json:"nextHop" tf:"next_hop,omitempty"`
 
 	// +kubebuilder:validation:Optional
-	NextHopType *string `json:"nextHopType,omitempty" tf:"next_hop_type"`
+	NextHopType *string `json:"nextHopType,omitempty" tf:"next_hop_type,omitempty"`
 }
 
 // VirtualHubRouteTableSpec defines the desired state of VirtualHubRouteTable

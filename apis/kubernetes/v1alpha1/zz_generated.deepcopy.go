@@ -544,10 +544,25 @@ func (in *DefaultNodePoolParameters) DeepCopyInto(out *DefaultNodePoolParameters
 		*out = new(string)
 		**out = **in
 	}
+	if in.OsSku != nil {
+		in, out := &in.OsSku, &out.OsSku
+		*out = new(string)
+		**out = **in
+	}
 	if in.PodSubnetID != nil {
 		in, out := &in.PodSubnetID, &out.PodSubnetID
 		*out = new(string)
 		**out = **in
+	}
+	if in.PodSubnetIDRef != nil {
+		in, out := &in.PodSubnetIDRef, &out.PodSubnetIDRef
+		*out = new(v1.Reference)
+		**out = **in
+	}
+	if in.PodSubnetIDSelector != nil {
+		in, out := &in.PodSubnetIDSelector, &out.PodSubnetIDSelector
+		*out = new(v1.Selector)
+		(*in).DeepCopyInto(*out)
 	}
 	if in.ProximityPlacementGroupID != nil {
 		in, out := &in.ProximityPlacementGroupID, &out.ProximityPlacementGroupID
@@ -595,6 +610,16 @@ func (in *DefaultNodePoolParameters) DeepCopyInto(out *DefaultNodePoolParameters
 		in, out := &in.VnetSubnetID, &out.VnetSubnetID
 		*out = new(string)
 		**out = **in
+	}
+	if in.VnetSubnetIDRef != nil {
+		in, out := &in.VnetSubnetIDRef, &out.VnetSubnetIDRef
+		*out = new(v1.Reference)
+		**out = **in
+	}
+	if in.VnetSubnetIDSelector != nil {
+		in, out := &in.VnetSubnetIDSelector, &out.VnetSubnetIDSelector
+		*out = new(v1.Selector)
+		(*in).DeepCopyInto(*out)
 	}
 }
 
@@ -797,6 +822,16 @@ func (in *IngressApplicationGatewayParameters) DeepCopyInto(out *IngressApplicat
 		in, out := &in.SubnetID, &out.SubnetID
 		*out = new(string)
 		**out = **in
+	}
+	if in.SubnetIDRef != nil {
+		in, out := &in.SubnetIDRef, &out.SubnetIDRef
+		*out = new(v1.Reference)
+		**out = **in
+	}
+	if in.SubnetIDSelector != nil {
+		in, out := &in.SubnetIDSelector, &out.SubnetIDSelector
+		*out = new(v1.Selector)
+		(*in).DeepCopyInto(*out)
 	}
 }
 
@@ -1476,6 +1511,11 @@ func (in *KubernetesClusterNodePoolParameters) DeepCopyInto(out *KubernetesClust
 		*out = new(string)
 		**out = **in
 	}
+	if in.OsSku != nil {
+		in, out := &in.OsSku, &out.OsSku
+		*out = new(string)
+		**out = **in
+	}
 	if in.OsType != nil {
 		in, out := &in.OsType, &out.OsType
 		*out = new(string)
@@ -1485,6 +1525,16 @@ func (in *KubernetesClusterNodePoolParameters) DeepCopyInto(out *KubernetesClust
 		in, out := &in.PodSubnetID, &out.PodSubnetID
 		*out = new(string)
 		**out = **in
+	}
+	if in.PodSubnetIDRef != nil {
+		in, out := &in.PodSubnetIDRef, &out.PodSubnetIDRef
+		*out = new(v1.Reference)
+		**out = **in
+	}
+	if in.PodSubnetIDSelector != nil {
+		in, out := &in.PodSubnetIDSelector, &out.PodSubnetIDSelector
+		*out = new(v1.Selector)
+		(*in).DeepCopyInto(*out)
 	}
 	if in.Priority != nil {
 		in, out := &in.Priority, &out.Priority
@@ -1537,6 +1587,16 @@ func (in *KubernetesClusterNodePoolParameters) DeepCopyInto(out *KubernetesClust
 		in, out := &in.VnetSubnetID, &out.VnetSubnetID
 		*out = new(string)
 		**out = **in
+	}
+	if in.VnetSubnetIDRef != nil {
+		in, out := &in.VnetSubnetIDRef, &out.VnetSubnetIDRef
+		*out = new(v1.Reference)
+		**out = **in
+	}
+	if in.VnetSubnetIDSelector != nil {
+		in, out := &in.VnetSubnetIDSelector, &out.VnetSubnetIDSelector
+		*out = new(v1.Selector)
+		(*in).DeepCopyInto(*out)
 	}
 }
 

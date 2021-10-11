@@ -31,26 +31,26 @@ type CosmosdbSqlTriggerObservation struct {
 type CosmosdbSqlTriggerParameters struct {
 
 	// +kubebuilder:validation:Required
-	Body *string `json:"body" tf:"body"`
+	Body *string `json:"body" tf:"body,omitempty"`
 
 	// +crossplane:generate:reference:type=CosmosdbSqlContainer
 	// +kubebuilder:validation:Optional
-	ContainerID *string `json:"containerId,omitempty" tf:"container_id"`
+	ContainerID *string `json:"containerId,omitempty" tf:"container_id,omitempty"`
 
 	// +kubebuilder:validation:Optional
-	ContainerIDRef *v1.Reference `json:"containerIDRef,omitempty" tf:"-"`
+	ContainerIDRef *v1.Reference `json:"containerIdRef,omitempty" tf:"-"`
 
 	// +kubebuilder:validation:Optional
-	ContainerIDSelector *v1.Selector `json:"containerIDSelector,omitempty" tf:"-"`
+	ContainerIDSelector *v1.Selector `json:"containerIdSelector,omitempty" tf:"-"`
 
 	// +kubebuilder:validation:Required
-	Name *string `json:"name" tf:"name"`
+	Name *string `json:"name" tf:"name,omitempty"`
 
 	// +kubebuilder:validation:Required
-	Operation *string `json:"operation" tf:"operation"`
+	Operation *string `json:"operation" tf:"operation,omitempty"`
 
 	// +kubebuilder:validation:Required
-	Type *string `json:"type" tf:"type"`
+	Type *string `json:"type" tf:"type,omitempty"`
 }
 
 // CosmosdbSqlTriggerSpec defines the desired state of CosmosdbSqlTrigger

@@ -657,6 +657,11 @@ func (in *CosmosdbAccountParameters) DeepCopyInto(out *CosmosdbAccountParameters
 		*out = new(string)
 		**out = **in
 	}
+	if in.LocalAuthenticationDisabled != nil {
+		in, out := &in.LocalAuthenticationDisabled, &out.LocalAuthenticationDisabled
+		*out = new(bool)
+		**out = **in
+	}
 	if in.Location != nil {
 		in, out := &in.Location, &out.Location
 		*out = new(string)

@@ -31,23 +31,23 @@ type PostgresqlFlexibleServerDatabaseObservation struct {
 type PostgresqlFlexibleServerDatabaseParameters struct {
 
 	// +kubebuilder:validation:Optional
-	Charset *string `json:"charset,omitempty" tf:"charset"`
+	Charset *string `json:"charset,omitempty" tf:"charset,omitempty"`
 
 	// +kubebuilder:validation:Optional
-	Collation *string `json:"collation,omitempty" tf:"collation"`
+	Collation *string `json:"collation,omitempty" tf:"collation,omitempty"`
 
 	// +kubebuilder:validation:Required
-	Name *string `json:"name" tf:"name"`
+	Name *string `json:"name" tf:"name,omitempty"`
 
 	// +crossplane:generate:reference:type=PostgresqlFlexibleServer
 	// +kubebuilder:validation:Optional
-	ServerID *string `json:"serverId,omitempty" tf:"server_id"`
+	ServerID *string `json:"serverId,omitempty" tf:"server_id,omitempty"`
 
 	// +kubebuilder:validation:Optional
-	ServerIDRef *v1.Reference `json:"serverIDRef,omitempty" tf:"-"`
+	ServerIDRef *v1.Reference `json:"serverIdRef,omitempty" tf:"-"`
 
 	// +kubebuilder:validation:Optional
-	ServerIDSelector *v1.Selector `json:"serverIDSelector,omitempty" tf:"-"`
+	ServerIDSelector *v1.Selector `json:"serverIdSelector,omitempty" tf:"-"`
 }
 
 // PostgresqlFlexibleServerDatabaseSpec defines the desired state of PostgresqlFlexibleServerDatabase

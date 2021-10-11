@@ -91,7 +91,9 @@ spec:
                     type: string
                   policyDefinitionId:
                     type: string
-                  resourceGroupIDRef:
+                  resourceGroupId:
+                    type: string
+                  resourceGroupIdRef:
                     description: A Reference to a named object.
                     properties:
                       name:
@@ -100,7 +102,7 @@ spec:
                     required:
                     - name
                     type: object
-                  resourceGroupIDSelector:
+                  resourceGroupIdSelector:
                     description: A Selector selects an object.
                     properties:
                       matchControllerRef:
@@ -114,8 +116,6 @@ spec:
                           is selected.
                         type: object
                     type: object
-                  resourceGroupId:
-                    type: string
                 required:
                 - name
                 - policyDefinitionId

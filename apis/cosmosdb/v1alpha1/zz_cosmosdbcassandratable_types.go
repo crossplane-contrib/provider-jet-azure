@@ -31,10 +31,10 @@ type ClusterKeyObservation struct {
 type ClusterKeyParameters struct {
 
 	// +kubebuilder:validation:Required
-	Name *string `json:"name" tf:"name"`
+	Name *string `json:"name" tf:"name,omitempty"`
 
 	// +kubebuilder:validation:Required
-	OrderBy *string `json:"orderBy" tf:"order_by"`
+	OrderBy *string `json:"orderBy" tf:"order_by,omitempty"`
 }
 
 type ColumnObservation struct {
@@ -43,10 +43,10 @@ type ColumnObservation struct {
 type ColumnParameters struct {
 
 	// +kubebuilder:validation:Required
-	Name *string `json:"name" tf:"name"`
+	Name *string `json:"name" tf:"name,omitempty"`
 
 	// +kubebuilder:validation:Required
-	Type *string `json:"type" tf:"type"`
+	Type *string `json:"type" tf:"type,omitempty"`
 }
 
 type CosmosdbCassandraTableAutoscaleSettingsObservation struct {
@@ -55,7 +55,7 @@ type CosmosdbCassandraTableAutoscaleSettingsObservation struct {
 type CosmosdbCassandraTableAutoscaleSettingsParameters struct {
 
 	// +kubebuilder:validation:Optional
-	MaxThroughput *int64 `json:"maxThroughput,omitempty" tf:"max_throughput"`
+	MaxThroughput *int64 `json:"maxThroughput,omitempty" tf:"max_throughput,omitempty"`
 }
 
 type CosmosdbCassandraTableObservation struct {
@@ -64,32 +64,32 @@ type CosmosdbCassandraTableObservation struct {
 type CosmosdbCassandraTableParameters struct {
 
 	// +kubebuilder:validation:Optional
-	AnalyticalStorageTTL *int64 `json:"analyticalStorageTtl,omitempty" tf:"analytical_storage_ttl"`
+	AnalyticalStorageTTL *int64 `json:"analyticalStorageTtl,omitempty" tf:"analytical_storage_ttl,omitempty"`
 
 	// +kubebuilder:validation:Optional
-	AutoscaleSettings []CosmosdbCassandraTableAutoscaleSettingsParameters `json:"autoscaleSettings,omitempty" tf:"autoscale_settings"`
+	AutoscaleSettings []CosmosdbCassandraTableAutoscaleSettingsParameters `json:"autoscaleSettings,omitempty" tf:"autoscale_settings,omitempty"`
 
 	// +crossplane:generate:reference:type=CosmosdbCassandraKeyspace
 	// +kubebuilder:validation:Optional
-	CassandraKeyspaceID *string `json:"cassandraKeyspaceId,omitempty" tf:"cassandra_keyspace_id"`
+	CassandraKeyspaceID *string `json:"cassandraKeyspaceId,omitempty" tf:"cassandra_keyspace_id,omitempty"`
 
 	// +kubebuilder:validation:Optional
-	CassandraKeyspaceIDRef *v1.Reference `json:"cassandraKeyspaceIDRef,omitempty" tf:"-"`
+	CassandraKeyspaceIDRef *v1.Reference `json:"cassandraKeyspaceIdRef,omitempty" tf:"-"`
 
 	// +kubebuilder:validation:Optional
-	CassandraKeyspaceIDSelector *v1.Selector `json:"cassandraKeyspaceIDSelector,omitempty" tf:"-"`
+	CassandraKeyspaceIDSelector *v1.Selector `json:"cassandraKeyspaceIdSelector,omitempty" tf:"-"`
 
 	// +kubebuilder:validation:Optional
-	DefaultTTL *int64 `json:"defaultTtl,omitempty" tf:"default_ttl"`
+	DefaultTTL *int64 `json:"defaultTtl,omitempty" tf:"default_ttl,omitempty"`
 
 	// +kubebuilder:validation:Required
-	Name *string `json:"name" tf:"name"`
+	Name *string `json:"name" tf:"name,omitempty"`
 
 	// +kubebuilder:validation:Required
-	Schema []SchemaParameters `json:"schema" tf:"schema"`
+	Schema []SchemaParameters `json:"schema" tf:"schema,omitempty"`
 
 	// +kubebuilder:validation:Optional
-	Throughput *int64 `json:"throughput,omitempty" tf:"throughput"`
+	Throughput *int64 `json:"throughput,omitempty" tf:"throughput,omitempty"`
 }
 
 type PartitionKeyObservation struct {
@@ -98,7 +98,7 @@ type PartitionKeyObservation struct {
 type PartitionKeyParameters struct {
 
 	// +kubebuilder:validation:Required
-	Name *string `json:"name" tf:"name"`
+	Name *string `json:"name" tf:"name,omitempty"`
 }
 
 type SchemaObservation struct {
@@ -107,13 +107,13 @@ type SchemaObservation struct {
 type SchemaParameters struct {
 
 	// +kubebuilder:validation:Optional
-	ClusterKey []ClusterKeyParameters `json:"clusterKey,omitempty" tf:"cluster_key"`
+	ClusterKey []ClusterKeyParameters `json:"clusterKey,omitempty" tf:"cluster_key,omitempty"`
 
 	// +kubebuilder:validation:Required
-	Column []ColumnParameters `json:"column" tf:"column"`
+	Column []ColumnParameters `json:"column" tf:"column,omitempty"`
 
 	// +kubebuilder:validation:Required
-	PartitionKey []PartitionKeyParameters `json:"partitionKey" tf:"partition_key"`
+	PartitionKey []PartitionKeyParameters `json:"partitionKey" tf:"partition_key,omitempty"`
 }
 
 // CosmosdbCassandraTableSpec defines the desired state of CosmosdbCassandraTable

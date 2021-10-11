@@ -26,63 +26,63 @@ import (
 )
 
 type IdentityObservation struct {
-	PrincipalID *string `json:"principalId,omitempty" tf:"principal_id"`
+	PrincipalID *string `json:"principalId,omitempty" tf:"principal_id,omitempty"`
 
-	TenantID *string `json:"tenantId,omitempty" tf:"tenant_id"`
+	TenantID *string `json:"tenantId,omitempty" tf:"tenant_id,omitempty"`
 }
 
 type IdentityParameters struct {
 
 	// +kubebuilder:validation:Required
-	Type *string `json:"type" tf:"type"`
+	Type *string `json:"type" tf:"type,omitempty"`
 }
 
 type PostgresqlServerObservation struct {
-	Fqdn *string `json:"fqdn,omitempty" tf:"fqdn"`
+	Fqdn *string `json:"fqdn,omitempty" tf:"fqdn,omitempty"`
 }
 
 type PostgresqlServerParameters struct {
 
 	// +kubebuilder:validation:Optional
-	AdministratorLogin *string `json:"administratorLogin,omitempty" tf:"administrator_login"`
+	AdministratorLogin *string `json:"administratorLogin,omitempty" tf:"administrator_login,omitempty"`
 
 	// +kubebuilder:validation:Optional
 	AdministratorLoginPasswordSecretRef v1.SecretKeySelector `json:"administratorLoginPasswordSecretRef,omitempty" tf:"-"`
 
 	// +kubebuilder:validation:Optional
-	AutoGrowEnabled *bool `json:"autoGrowEnabled,omitempty" tf:"auto_grow_enabled"`
+	AutoGrowEnabled *bool `json:"autoGrowEnabled,omitempty" tf:"auto_grow_enabled,omitempty"`
 
 	// +kubebuilder:validation:Optional
-	BackupRetentionDays *int64 `json:"backupRetentionDays,omitempty" tf:"backup_retention_days"`
+	BackupRetentionDays *int64 `json:"backupRetentionDays,omitempty" tf:"backup_retention_days,omitempty"`
 
 	// +kubebuilder:validation:Optional
-	CreateMode *string `json:"createMode,omitempty" tf:"create_mode"`
+	CreateMode *string `json:"createMode,omitempty" tf:"create_mode,omitempty"`
 
 	// +kubebuilder:validation:Optional
-	CreationSourceServerID *string `json:"creationSourceServerId,omitempty" tf:"creation_source_server_id"`
+	CreationSourceServerID *string `json:"creationSourceServerId,omitempty" tf:"creation_source_server_id,omitempty"`
 
 	// +kubebuilder:validation:Optional
-	GeoRedundantBackupEnabled *bool `json:"geoRedundantBackupEnabled,omitempty" tf:"geo_redundant_backup_enabled"`
+	GeoRedundantBackupEnabled *bool `json:"geoRedundantBackupEnabled,omitempty" tf:"geo_redundant_backup_enabled,omitempty"`
 
 	// +kubebuilder:validation:Optional
-	Identity []IdentityParameters `json:"identity,omitempty" tf:"identity"`
+	Identity []IdentityParameters `json:"identity,omitempty" tf:"identity,omitempty"`
 
 	// +kubebuilder:validation:Optional
-	InfrastructureEncryptionEnabled *bool `json:"infrastructureEncryptionEnabled,omitempty" tf:"infrastructure_encryption_enabled"`
+	InfrastructureEncryptionEnabled *bool `json:"infrastructureEncryptionEnabled,omitempty" tf:"infrastructure_encryption_enabled,omitempty"`
 
 	// +kubebuilder:validation:Required
-	Location *string `json:"location" tf:"location"`
+	Location *string `json:"location" tf:"location,omitempty"`
 
 	// +kubebuilder:validation:Required
-	Name *string `json:"name" tf:"name"`
+	Name *string `json:"name" tf:"name,omitempty"`
 
 	// +kubebuilder:validation:Optional
-	PublicNetworkAccessEnabled *bool `json:"publicNetworkAccessEnabled,omitempty" tf:"public_network_access_enabled"`
+	PublicNetworkAccessEnabled *bool `json:"publicNetworkAccessEnabled,omitempty" tf:"public_network_access_enabled,omitempty"`
 
 	// +crossplane:generate:reference:type=github.com/crossplane-contrib/provider-tf-azure/apis/resource/v1alpha1.ResourceGroup
 	// +crossplane:generate:reference:extractor=github.com/crossplane-contrib/provider-tf-azure/apis/rconfig.ExtractResourceName()
 	// +kubebuilder:validation:Optional
-	ResourceGroupName *string `json:"resourceGroupName,omitempty" tf:"resource_group_name"`
+	ResourceGroupName *string `json:"resourceGroupName,omitempty" tf:"resource_group_name,omitempty"`
 
 	// +kubebuilder:validation:Optional
 	ResourceGroupNameRef *v1.Reference `json:"resourceGroupNameRef,omitempty" tf:"-"`
@@ -91,34 +91,34 @@ type PostgresqlServerParameters struct {
 	ResourceGroupNameSelector *v1.Selector `json:"resourceGroupNameSelector,omitempty" tf:"-"`
 
 	// +kubebuilder:validation:Optional
-	RestorePointInTime *string `json:"restorePointInTime,omitempty" tf:"restore_point_in_time"`
+	RestorePointInTime *string `json:"restorePointInTime,omitempty" tf:"restore_point_in_time,omitempty"`
 
 	// +kubebuilder:validation:Required
-	SkuName *string `json:"skuName" tf:"sku_name"`
+	SkuName *string `json:"skuName" tf:"sku_name,omitempty"`
 
 	// +kubebuilder:validation:Optional
-	SslEnforcement *string `json:"sslEnforcement,omitempty" tf:"ssl_enforcement"`
+	SslEnforcement *string `json:"sslEnforcement,omitempty" tf:"ssl_enforcement,omitempty"`
 
 	// +kubebuilder:validation:Optional
-	SslEnforcementEnabled *bool `json:"sslEnforcementEnabled,omitempty" tf:"ssl_enforcement_enabled"`
+	SslEnforcementEnabled *bool `json:"sslEnforcementEnabled,omitempty" tf:"ssl_enforcement_enabled,omitempty"`
 
 	// +kubebuilder:validation:Optional
-	SslMinimalTLSVersionEnforced *string `json:"sslMinimalTlsVersionEnforced,omitempty" tf:"ssl_minimal_tls_version_enforced"`
+	SslMinimalTLSVersionEnforced *string `json:"sslMinimalTlsVersionEnforced,omitempty" tf:"ssl_minimal_tls_version_enforced,omitempty"`
 
 	// +kubebuilder:validation:Optional
-	StorageMb *int64 `json:"storageMb,omitempty" tf:"storage_mb"`
+	StorageMb *int64 `json:"storageMb,omitempty" tf:"storage_mb,omitempty"`
 
 	// +kubebuilder:validation:Optional
-	StorageProfile []StorageProfileParameters `json:"storageProfile,omitempty" tf:"storage_profile"`
+	StorageProfile []StorageProfileParameters `json:"storageProfile,omitempty" tf:"storage_profile,omitempty"`
 
 	// +kubebuilder:validation:Optional
-	Tags map[string]*string `json:"tags,omitempty" tf:"tags"`
+	Tags map[string]*string `json:"tags,omitempty" tf:"tags,omitempty"`
 
 	// +kubebuilder:validation:Optional
-	ThreatDetectionPolicy []ThreatDetectionPolicyParameters `json:"threatDetectionPolicy,omitempty" tf:"threat_detection_policy"`
+	ThreatDetectionPolicy []ThreatDetectionPolicyParameters `json:"threatDetectionPolicy,omitempty" tf:"threat_detection_policy,omitempty"`
 
 	// +kubebuilder:validation:Required
-	Version *string `json:"version" tf:"version"`
+	Version *string `json:"version" tf:"version,omitempty"`
 }
 
 type StorageProfileObservation struct {
@@ -127,16 +127,16 @@ type StorageProfileObservation struct {
 type StorageProfileParameters struct {
 
 	// +kubebuilder:validation:Optional
-	AutoGrow *string `json:"autoGrow,omitempty" tf:"auto_grow"`
+	AutoGrow *string `json:"autoGrow,omitempty" tf:"auto_grow,omitempty"`
 
 	// +kubebuilder:validation:Optional
-	BackupRetentionDays *int64 `json:"backupRetentionDays,omitempty" tf:"backup_retention_days"`
+	BackupRetentionDays *int64 `json:"backupRetentionDays,omitempty" tf:"backup_retention_days,omitempty"`
 
 	// +kubebuilder:validation:Optional
-	GeoRedundantBackup *string `json:"geoRedundantBackup,omitempty" tf:"geo_redundant_backup"`
+	GeoRedundantBackup *string `json:"geoRedundantBackup,omitempty" tf:"geo_redundant_backup,omitempty"`
 
 	// +kubebuilder:validation:Optional
-	StorageMb *int64 `json:"storageMb,omitempty" tf:"storage_mb"`
+	StorageMb *int64 `json:"storageMb,omitempty" tf:"storage_mb,omitempty"`
 }
 
 type ThreatDetectionPolicyObservation struct {
@@ -145,25 +145,25 @@ type ThreatDetectionPolicyObservation struct {
 type ThreatDetectionPolicyParameters struct {
 
 	// +kubebuilder:validation:Optional
-	DisabledAlerts []*string `json:"disabledAlerts,omitempty" tf:"disabled_alerts"`
+	DisabledAlerts []*string `json:"disabledAlerts,omitempty" tf:"disabled_alerts,omitempty"`
 
 	// +kubebuilder:validation:Optional
-	EmailAccountAdmins *bool `json:"emailAccountAdmins,omitempty" tf:"email_account_admins"`
+	EmailAccountAdmins *bool `json:"emailAccountAdmins,omitempty" tf:"email_account_admins,omitempty"`
 
 	// +kubebuilder:validation:Optional
-	EmailAddresses []*string `json:"emailAddresses,omitempty" tf:"email_addresses"`
+	EmailAddresses []*string `json:"emailAddresses,omitempty" tf:"email_addresses,omitempty"`
 
 	// +kubebuilder:validation:Optional
-	Enabled *bool `json:"enabled,omitempty" tf:"enabled"`
+	Enabled *bool `json:"enabled,omitempty" tf:"enabled,omitempty"`
 
 	// +kubebuilder:validation:Optional
-	RetentionDays *int64 `json:"retentionDays,omitempty" tf:"retention_days"`
+	RetentionDays *int64 `json:"retentionDays,omitempty" tf:"retention_days,omitempty"`
 
 	// +kubebuilder:validation:Optional
 	StorageAccountAccessKeySecretRef v1.SecretKeySelector `json:"storageAccountAccessKeySecretRef,omitempty" tf:"-"`
 
 	// +kubebuilder:validation:Optional
-	StorageEndpoint *string `json:"storageEndpoint,omitempty" tf:"storage_endpoint"`
+	StorageEndpoint *string `json:"storageEndpoint,omitempty" tf:"storage_endpoint,omitempty"`
 }
 
 // PostgresqlServerSpec defines the desired state of PostgresqlServer

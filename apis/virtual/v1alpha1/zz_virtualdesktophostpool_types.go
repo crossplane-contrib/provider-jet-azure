@@ -26,13 +26,13 @@ import (
 )
 
 type RegistrationInfoObservation struct {
-	ResetToken *bool `json:"resetToken,omitempty" tf:"reset_token"`
+	ResetToken *bool `json:"resetToken,omitempty" tf:"reset_token,omitempty"`
 }
 
 type RegistrationInfoParameters struct {
 
 	// +kubebuilder:validation:Required
-	ExpirationDate *string `json:"expirationDate" tf:"expiration_date"`
+	ExpirationDate *string `json:"expirationDate" tf:"expiration_date,omitempty"`
 }
 
 type VirtualDesktopHostPoolObservation struct {
@@ -41,40 +41,40 @@ type VirtualDesktopHostPoolObservation struct {
 type VirtualDesktopHostPoolParameters struct {
 
 	// +kubebuilder:validation:Optional
-	CustomRdpProperties *string `json:"customRdpProperties,omitempty" tf:"custom_rdp_properties"`
+	CustomRdpProperties *string `json:"customRdpProperties,omitempty" tf:"custom_rdp_properties,omitempty"`
 
 	// +kubebuilder:validation:Optional
-	Description *string `json:"description,omitempty" tf:"description"`
+	Description *string `json:"description,omitempty" tf:"description,omitempty"`
 
 	// +kubebuilder:validation:Optional
-	FriendlyName *string `json:"friendlyName,omitempty" tf:"friendly_name"`
+	FriendlyName *string `json:"friendlyName,omitempty" tf:"friendly_name,omitempty"`
 
 	// +kubebuilder:validation:Required
-	LoadBalancerType *string `json:"loadBalancerType" tf:"load_balancer_type"`
+	LoadBalancerType *string `json:"loadBalancerType" tf:"load_balancer_type,omitempty"`
 
 	// +kubebuilder:validation:Required
-	Location *string `json:"location" tf:"location"`
+	Location *string `json:"location" tf:"location,omitempty"`
 
 	// +kubebuilder:validation:Optional
-	MaximumSessionsAllowed *int64 `json:"maximumSessionsAllowed,omitempty" tf:"maximum_sessions_allowed"`
+	MaximumSessionsAllowed *int64 `json:"maximumSessionsAllowed,omitempty" tf:"maximum_sessions_allowed,omitempty"`
 
 	// +kubebuilder:validation:Required
-	Name *string `json:"name" tf:"name"`
+	Name *string `json:"name" tf:"name,omitempty"`
 
 	// +kubebuilder:validation:Optional
-	PersonalDesktopAssignmentType *string `json:"personalDesktopAssignmentType,omitempty" tf:"personal_desktop_assignment_type"`
+	PersonalDesktopAssignmentType *string `json:"personalDesktopAssignmentType,omitempty" tf:"personal_desktop_assignment_type,omitempty"`
 
 	// Preferred App Group type to display
 	// +kubebuilder:validation:Optional
-	PreferredAppGroupType *string `json:"preferredAppGroupType,omitempty" tf:"preferred_app_group_type"`
+	PreferredAppGroupType *string `json:"preferredAppGroupType,omitempty" tf:"preferred_app_group_type,omitempty"`
 
 	// +kubebuilder:validation:Optional
-	RegistrationInfo []RegistrationInfoParameters `json:"registrationInfo,omitempty" tf:"registration_info"`
+	RegistrationInfo []RegistrationInfoParameters `json:"registrationInfo,omitempty" tf:"registration_info,omitempty"`
 
 	// +crossplane:generate:reference:type=github.com/crossplane-contrib/provider-tf-azure/apis/resource/v1alpha1.ResourceGroup
 	// +crossplane:generate:reference:extractor=github.com/crossplane-contrib/provider-tf-azure/apis/rconfig.ExtractResourceName()
 	// +kubebuilder:validation:Optional
-	ResourceGroupName *string `json:"resourceGroupName,omitempty" tf:"resource_group_name"`
+	ResourceGroupName *string `json:"resourceGroupName,omitempty" tf:"resource_group_name,omitempty"`
 
 	// +kubebuilder:validation:Optional
 	ResourceGroupNameRef *v1.Reference `json:"resourceGroupNameRef,omitempty" tf:"-"`
@@ -83,16 +83,16 @@ type VirtualDesktopHostPoolParameters struct {
 	ResourceGroupNameSelector *v1.Selector `json:"resourceGroupNameSelector,omitempty" tf:"-"`
 
 	// +kubebuilder:validation:Optional
-	StartVMOnConnect *bool `json:"startVmOnConnect,omitempty" tf:"start_vm_on_connect"`
+	StartVMOnConnect *bool `json:"startVmOnConnect,omitempty" tf:"start_vm_on_connect,omitempty"`
 
 	// +kubebuilder:validation:Optional
-	Tags map[string]*string `json:"tags,omitempty" tf:"tags"`
+	Tags map[string]*string `json:"tags,omitempty" tf:"tags,omitempty"`
 
 	// +kubebuilder:validation:Required
-	Type *string `json:"type" tf:"type"`
+	Type *string `json:"type" tf:"type,omitempty"`
 
 	// +kubebuilder:validation:Optional
-	ValidateEnvironment *bool `json:"validateEnvironment,omitempty" tf:"validate_environment"`
+	ValidateEnvironment *bool `json:"validateEnvironment,omitempty" tf:"validate_environment,omitempty"`
 }
 
 // VirtualDesktopHostPoolSpec defines the desired state of VirtualDesktopHostPool

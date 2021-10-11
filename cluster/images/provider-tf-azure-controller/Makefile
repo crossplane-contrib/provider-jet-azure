@@ -2,6 +2,13 @@
 # Setup Project
 
 PLATFORMS := linux_amd64 linux_arm64
+# Terraform configuration
+# TODO(aru): how to pass these from root Makefile?
+TERRAFORM_VERSION ?= 1.0.5
+TERRAFORM_PROVIDER_SOURCE ?= hashicorp/azurerm
+# version specified here should currently match the `AZURERM_REFSPEC` variable of the root Makefile
+TERRAFORM_PROVIDER_VERSION ?= 2.78.0
+
 include ../../../build/makelib/common.mk
 
 # ====================================================================================
@@ -21,6 +28,9 @@ img.build:
 	@docker build $(BUILD_ARGS) \
 		--build-arg ARCH=$(ARCH) \
 		--build-arg TINI_VERSION=$(TINI_VERSION) \
+		--build-arg TERRAFORM_VERSION=$(TERRAFORM_VERSION) \
+		--build-arg TERRAFORM_PROVIDER_SOURCE=$(TERRAFORM_PROVIDER_SOURCE) \
+		--build-arg TERRAFORM_PROVIDER_VERSION=$(TERRAFORM_PROVIDER_VERSION) \
 		-t $(IMAGE) \
 		$(IMAGE_TEMP_DIR) || $(FAIL)
 	@$(OK) docker build $(IMAGE)

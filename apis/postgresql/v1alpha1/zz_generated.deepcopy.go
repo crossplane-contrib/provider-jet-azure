@@ -1389,6 +1389,16 @@ func (in *PostgresqlFlexibleServerParameters) DeepCopyInto(out *PostgresqlFlexib
 		*out = new(string)
 		**out = **in
 	}
+	if in.DelegatedSubnetIDRef != nil {
+		in, out := &in.DelegatedSubnetIDRef, &out.DelegatedSubnetIDRef
+		*out = new(v1.Reference)
+		**out = **in
+	}
+	if in.DelegatedSubnetIDSelector != nil {
+		in, out := &in.DelegatedSubnetIDSelector, &out.DelegatedSubnetIDSelector
+		*out = new(v1.Selector)
+		(*in).DeepCopyInto(*out)
+	}
 	if in.HighAvailability != nil {
 		in, out := &in.HighAvailability, &out.HighAvailability
 		*out = make([]HighAvailabilityParameters, len(*in))
@@ -2053,6 +2063,16 @@ func (in *PostgresqlVirtualNetworkRuleParameters) DeepCopyInto(out *PostgresqlVi
 		in, out := &in.SubnetID, &out.SubnetID
 		*out = new(string)
 		**out = **in
+	}
+	if in.SubnetIDRef != nil {
+		in, out := &in.SubnetIDRef, &out.SubnetIDRef
+		*out = new(v1.Reference)
+		**out = **in
+	}
+	if in.SubnetIDSelector != nil {
+		in, out := &in.SubnetIDSelector, &out.SubnetIDSelector
+		*out = new(v1.Selector)
+		(*in).DeepCopyInto(*out)
 	}
 }
 

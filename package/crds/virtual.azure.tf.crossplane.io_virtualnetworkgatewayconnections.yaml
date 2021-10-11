@@ -131,7 +131,9 @@ spec:
                     type: string
                   name:
                     type: string
-                  peerVirtualNetworkGatewayIDRef:
+                  peerVirtualNetworkGatewayId:
+                    type: string
+                  peerVirtualNetworkGatewayIdRef:
                     description: A Reference to a named object.
                     properties:
                       name:
@@ -140,7 +142,7 @@ spec:
                     required:
                     - name
                     type: object
-                  peerVirtualNetworkGatewayIDSelector:
+                  peerVirtualNetworkGatewayIdSelector:
                     description: A Selector selects an object.
                     properties:
                       matchControllerRef:
@@ -154,8 +156,6 @@ spec:
                           is selected.
                         type: object
                     type: object
-                  peerVirtualNetworkGatewayId:
-                    type: string
                   resourceGroupName:
                     type: string
                   resourceGroupNameRef:
@@ -226,7 +226,9 @@ spec:
                     type: string
                   usePolicyBasedTrafficSelectors:
                     type: boolean
-                  virtualNetworkGatewayIDRef:
+                  virtualNetworkGatewayId:
+                    type: string
+                  virtualNetworkGatewayIdRef:
                     description: A Reference to a named object.
                     properties:
                       name:
@@ -235,7 +237,7 @@ spec:
                     required:
                     - name
                     type: object
-                  virtualNetworkGatewayIDSelector:
+                  virtualNetworkGatewayIdSelector:
                     description: A Selector selects an object.
                     properties:
                       matchControllerRef:
@@ -249,8 +251,6 @@ spec:
                           is selected.
                         type: object
                     type: object
-                  virtualNetworkGatewayId:
-                    type: string
                 required:
                 - location
                 - name

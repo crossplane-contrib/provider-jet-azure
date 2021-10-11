@@ -73,6 +73,7 @@ var includeList = []string{
 	"azurerm_postgresql_.+",
 	"azurerm_cosmosdb_.+",
 	"azurerm_resource_group",
+	"azurerm_subnet",
 }
 
 // "make prepare.azurerm" should be run before running this generator pipeline
@@ -98,6 +99,13 @@ func main() { // nolint:gocyclo
 	groups := map[string]map[string]*schema.Resource{}
 	useIncludeList := os.Getenv("USE_INCLUDE_LIST") == "true"
 	for name, resource := range xpprovider.Provider().ResourcesMap {
+		if name == "azurerm_virtual_network" {
+			if t, ok := resource.Schema["subnet"]; ok {
+				t.Computed = true
+				t.Optional = false
+			}
+		}
+
 		if len(resource.Schema) == 0 {
 			// There are resources with no schema, that we will address later.
 			fmt.Printf("Skipping resource %s because it has no schema\n", name)

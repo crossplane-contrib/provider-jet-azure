@@ -99,9 +99,9 @@ build: prepare.azurerm
 
 # must match Docker build file env. variable TERRAFORM_PROVIDER_AZURERM_VERSION in
 # cluster/images/provider-tf-azure-controller/Dockerfile
-AZURERM_REFSPEC ?= v2.74.0
+AZURERM_REFSPEC ?= v2.78.0
 prepare.azurerm:
-	@WORK_DIR=$(WORK_DIR) AZURERM_REFSPEC=$(AZURERM_REFSPEC) ./scripts/prepare_azurerm.sh
+	@WORK_DIR=.work AZURERM_REFSPEC=$(AZURERM_REFSPEC) ./scripts/prepare_azurerm.sh
 
 codegen.pipeline: prepare.azurerm
 	@USE_INCLUDE_LIST=true go run cmd/generator/main.go

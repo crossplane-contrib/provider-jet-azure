@@ -99,7 +99,9 @@ spec:
                     additionalProperties:
                       type: string
                     type: object
-                  virtualHubIDRef:
+                  virtualHubId:
+                    type: string
+                  virtualHubIdRef:
                     description: A Reference to a named object.
                     properties:
                       name:
@@ -108,7 +110,7 @@ spec:
                     required:
                     - name
                     type: object
-                  virtualHubIDSelector:
+                  virtualHubIdSelector:
                     description: A Selector selects an object.
                     properties:
                       matchControllerRef:
@@ -122,8 +124,6 @@ spec:
                           is selected.
                         type: object
                     type: object
-                  virtualHubId:
-                    type: string
                 required:
                 - location
                 - name

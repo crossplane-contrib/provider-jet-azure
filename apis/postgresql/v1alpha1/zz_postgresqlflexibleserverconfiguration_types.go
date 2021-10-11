@@ -31,20 +31,20 @@ type PostgresqlFlexibleServerConfigurationObservation struct {
 type PostgresqlFlexibleServerConfigurationParameters struct {
 
 	// +kubebuilder:validation:Required
-	Name *string `json:"name" tf:"name"`
+	Name *string `json:"name" tf:"name,omitempty"`
 
 	// +crossplane:generate:reference:type=PostgresqlFlexibleServer
 	// +kubebuilder:validation:Optional
-	ServerID *string `json:"serverId,omitempty" tf:"server_id"`
+	ServerID *string `json:"serverId,omitempty" tf:"server_id,omitempty"`
 
 	// +kubebuilder:validation:Optional
-	ServerIDRef *v1.Reference `json:"serverIDRef,omitempty" tf:"-"`
+	ServerIDRef *v1.Reference `json:"serverIdRef,omitempty" tf:"-"`
 
 	// +kubebuilder:validation:Optional
-	ServerIDSelector *v1.Selector `json:"serverIDSelector,omitempty" tf:"-"`
+	ServerIDSelector *v1.Selector `json:"serverIdSelector,omitempty" tf:"-"`
 
 	// +kubebuilder:validation:Required
-	Value *string `json:"value" tf:"value"`
+	Value *string `json:"value" tf:"value,omitempty"`
 }
 
 // PostgresqlFlexibleServerConfigurationSpec defines the desired state of PostgresqlFlexibleServerConfiguration

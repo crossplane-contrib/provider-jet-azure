@@ -31,15 +31,15 @@ type PostgresqlActiveDirectoryAdministratorObservation struct {
 type PostgresqlActiveDirectoryAdministratorParameters struct {
 
 	// +kubebuilder:validation:Required
-	Login *string `json:"login" tf:"login"`
+	Login *string `json:"login" tf:"login,omitempty"`
 
 	// +kubebuilder:validation:Required
-	ObjectID *string `json:"objectId" tf:"object_id"`
+	ObjectID *string `json:"objectId" tf:"object_id,omitempty"`
 
 	// +crossplane:generate:reference:type=github.com/crossplane-contrib/provider-tf-azure/apis/resource/v1alpha1.ResourceGroup
 	// +crossplane:generate:reference:extractor=github.com/crossplane-contrib/provider-tf-azure/apis/rconfig.ExtractResourceName()
 	// +kubebuilder:validation:Optional
-	ResourceGroupName *string `json:"resourceGroupName,omitempty" tf:"resource_group_name"`
+	ResourceGroupName *string `json:"resourceGroupName,omitempty" tf:"resource_group_name,omitempty"`
 
 	// +kubebuilder:validation:Optional
 	ResourceGroupNameRef *v1.Reference `json:"resourceGroupNameRef,omitempty" tf:"-"`
@@ -50,7 +50,7 @@ type PostgresqlActiveDirectoryAdministratorParameters struct {
 	// +crossplane:generate:reference:type=PostgresqlServer
 	// +crossplane:generate:reference:extractor=github.com/crossplane-contrib/provider-tf-azure/apis/rconfig.ExtractResourceName()
 	// +kubebuilder:validation:Optional
-	ServerName *string `json:"serverName,omitempty" tf:"server_name"`
+	ServerName *string `json:"serverName,omitempty" tf:"server_name,omitempty"`
 
 	// +kubebuilder:validation:Optional
 	ServerNameRef *v1.Reference `json:"serverNameRef,omitempty" tf:"-"`
@@ -59,7 +59,7 @@ type PostgresqlActiveDirectoryAdministratorParameters struct {
 	ServerNameSelector *v1.Selector `json:"serverNameSelector,omitempty" tf:"-"`
 
 	// +kubebuilder:validation:Required
-	TenantID *string `json:"tenantId" tf:"tenant_id"`
+	TenantID *string `json:"tenantId" tf:"tenant_id,omitempty"`
 }
 
 // PostgresqlActiveDirectoryAdministratorSpec defines the desired state of PostgresqlActiveDirectoryAdministrator

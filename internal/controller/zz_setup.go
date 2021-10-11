@@ -55,6 +55,11 @@ import (
 	resourcegroup "github.com/crossplane-contrib/provider-tf-azure/internal/controller/resource/resourcegroup"
 	resourcegrouppolicyassignment "github.com/crossplane-contrib/provider-tf-azure/internal/controller/resource/resourcegrouppolicyassignment"
 	resourcegrouptemplatedeployment "github.com/crossplane-contrib/provider-tf-azure/internal/controller/resource/resourcegrouptemplatedeployment"
+	subnet "github.com/crossplane-contrib/provider-tf-azure/internal/controller/subnet/subnet"
+	subnetnatgatewayassociation "github.com/crossplane-contrib/provider-tf-azure/internal/controller/subnet/subnetnatgatewayassociation"
+	subnetnetworksecuritygroupassociation "github.com/crossplane-contrib/provider-tf-azure/internal/controller/subnet/subnetnetworksecuritygroupassociation"
+	subnetroutetableassociation "github.com/crossplane-contrib/provider-tf-azure/internal/controller/subnet/subnetroutetableassociation"
+	subnetserviceendpointstoragepolicy "github.com/crossplane-contrib/provider-tf-azure/internal/controller/subnet/subnetserviceendpointstoragepolicy"
 	virtualdesktopapplication "github.com/crossplane-contrib/provider-tf-azure/internal/controller/virtual/virtualdesktopapplication"
 	virtualdesktophostpool "github.com/crossplane-contrib/provider-tf-azure/internal/controller/virtual/virtualdesktophostpool"
 	virtualdesktopworkspace "github.com/crossplane-contrib/provider-tf-azure/internal/controller/virtual/virtualdesktopworkspace"
@@ -106,6 +111,11 @@ func Setup(mgr ctrl.Manager, l logging.Logger, wl workqueue.RateLimiter, ps terr
 		resourcegroup.Setup,
 		resourcegrouppolicyassignment.Setup,
 		resourcegrouptemplatedeployment.Setup,
+		subnet.Setup,
+		subnetnatgatewayassociation.Setup,
+		subnetnetworksecuritygroupassociation.Setup,
+		subnetroutetableassociation.Setup,
+		subnetserviceendpointstoragepolicy.Setup,
 		virtualdesktopapplication.Setup,
 		virtualdesktophostpool.Setup,
 		virtualdesktopworkspace.Setup,

@@ -31,34 +31,34 @@ type VirtualDesktopApplicationObservation struct {
 type VirtualDesktopApplicationParameters struct {
 
 	// +kubebuilder:validation:Required
-	ApplicationGroupID *string `json:"applicationGroupId" tf:"application_group_id"`
+	ApplicationGroupID *string `json:"applicationGroupId" tf:"application_group_id,omitempty"`
 
 	// +kubebuilder:validation:Required
-	CommandLineArgumentPolicy *string `json:"commandLineArgumentPolicy" tf:"command_line_argument_policy"`
+	CommandLineArgumentPolicy *string `json:"commandLineArgumentPolicy" tf:"command_line_argument_policy,omitempty"`
 
 	// +kubebuilder:validation:Optional
-	CommandLineArguments *string `json:"commandLineArguments,omitempty" tf:"command_line_arguments"`
+	CommandLineArguments *string `json:"commandLineArguments,omitempty" tf:"command_line_arguments,omitempty"`
 
 	// +kubebuilder:validation:Optional
-	Description *string `json:"description,omitempty" tf:"description"`
+	Description *string `json:"description,omitempty" tf:"description,omitempty"`
 
 	// +kubebuilder:validation:Optional
-	FriendlyName *string `json:"friendlyName,omitempty" tf:"friendly_name"`
+	FriendlyName *string `json:"friendlyName,omitempty" tf:"friendly_name,omitempty"`
 
 	// +kubebuilder:validation:Optional
-	IconIndex *int64 `json:"iconIndex,omitempty" tf:"icon_index"`
+	IconIndex *int64 `json:"iconIndex,omitempty" tf:"icon_index,omitempty"`
 
 	// +kubebuilder:validation:Optional
-	IconPath *string `json:"iconPath,omitempty" tf:"icon_path"`
+	IconPath *string `json:"iconPath,omitempty" tf:"icon_path,omitempty"`
 
 	// +kubebuilder:validation:Required
-	Name *string `json:"name" tf:"name"`
+	Name *string `json:"name" tf:"name,omitempty"`
 
 	// +kubebuilder:validation:Required
-	Path *string `json:"path" tf:"path"`
+	Path *string `json:"path" tf:"path,omitempty"`
 
 	// +kubebuilder:validation:Optional
-	ShowInPortal *bool `json:"showInPortal,omitempty" tf:"show_in_portal"`
+	ShowInPortal *bool `json:"showInPortal,omitempty" tf:"show_in_portal,omitempty"`
 }
 
 // VirtualDesktopApplicationSpec defines the desired state of VirtualDesktopApplication

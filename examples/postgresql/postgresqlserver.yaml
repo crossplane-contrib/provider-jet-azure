@@ -6,7 +6,7 @@ spec:
   forProvider:
     name: example-psqlserver
     resourceGroupNameRef:
-      name: example-rg
+      name: example
     location: "East US"
     administratorLogin: "psqladminun"
     administratorLoginPasswordSecretRef:

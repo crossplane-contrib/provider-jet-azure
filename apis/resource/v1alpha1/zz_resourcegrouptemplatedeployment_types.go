@@ -26,27 +26,27 @@ import (
 )
 
 type ResourceGroupTemplateDeploymentObservation struct {
-	OutputContent *string `json:"outputContent,omitempty" tf:"output_content"`
+	OutputContent *string `json:"outputContent,omitempty" tf:"output_content,omitempty"`
 }
 
 type ResourceGroupTemplateDeploymentParameters struct {
 
 	// +kubebuilder:validation:Optional
-	DebugLevel *string `json:"debugLevel,omitempty" tf:"debug_level"`
+	DebugLevel *string `json:"debugLevel,omitempty" tf:"debug_level,omitempty"`
 
 	// +kubebuilder:validation:Required
-	DeploymentMode *string `json:"deploymentMode" tf:"deployment_mode"`
+	DeploymentMode *string `json:"deploymentMode" tf:"deployment_mode,omitempty"`
 
 	// +kubebuilder:validation:Required
-	Name *string `json:"name" tf:"name"`
+	Name *string `json:"name" tf:"name,omitempty"`
 
 	// +kubebuilder:validation:Optional
-	ParametersContent *string `json:"parametersContent,omitempty" tf:"parameters_content"`
+	ParametersContent *string `json:"parametersContent,omitempty" tf:"parameters_content,omitempty"`
 
 	// +crossplane:generate:reference:type=ResourceGroup
 	// +crossplane:generate:reference:extractor=github.com/crossplane-contrib/provider-tf-azure/apis/rconfig.ExtractResourceName()
 	// +kubebuilder:validation:Optional
-	ResourceGroupName *string `json:"resourceGroupName,omitempty" tf:"resource_group_name"`
+	ResourceGroupName *string `json:"resourceGroupName,omitempty" tf:"resource_group_name,omitempty"`
 
 	// +kubebuilder:validation:Optional
 	ResourceGroupNameRef *v1.Reference `json:"resourceGroupNameRef,omitempty" tf:"-"`
@@ -55,13 +55,13 @@ type ResourceGroupTemplateDeploymentParameters struct {
 	ResourceGroupNameSelector *v1.Selector `json:"resourceGroupNameSelector,omitempty" tf:"-"`
 
 	// +kubebuilder:validation:Optional
-	Tags map[string]*string `json:"tags,omitempty" tf:"tags"`
+	Tags map[string]*string `json:"tags,omitempty" tf:"tags,omitempty"`
 
 	// +kubebuilder:validation:Optional
-	TemplateContent *string `json:"templateContent,omitempty" tf:"template_content"`
+	TemplateContent *string `json:"templateContent,omitempty" tf:"template_content,omitempty"`
 
 	// +kubebuilder:validation:Optional
-	TemplateSpecVersionID *string `json:"templateSpecVersionId,omitempty" tf:"template_spec_version_id"`
+	TemplateSpecVersionID *string `json:"templateSpecVersionId,omitempty" tf:"template_spec_version_id,omitempty"`
 }
 
 // ResourceGroupTemplateDeploymentSpec defines the desired state of ResourceGroupTemplateDeployment

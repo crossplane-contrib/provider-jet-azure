@@ -31,23 +31,23 @@ type VirtualHubBgpConnectionObservation struct {
 type VirtualHubBgpConnectionParameters struct {
 
 	// +kubebuilder:validation:Required
-	Name *string `json:"name" tf:"name"`
+	Name *string `json:"name" tf:"name,omitempty"`
 
 	// +kubebuilder:validation:Required
-	PeerAsn *int64 `json:"peerAsn" tf:"peer_asn"`
+	PeerAsn *int64 `json:"peerAsn" tf:"peer_asn,omitempty"`
 
 	// +kubebuilder:validation:Required
-	PeerIP *string `json:"peerIp" tf:"peer_ip"`
+	PeerIP *string `json:"peerIp" tf:"peer_ip,omitempty"`
 
 	// +crossplane:generate:reference:type=VirtualHub
 	// +kubebuilder:validation:Optional
-	VirtualHubID *string `json:"virtualHubId,omitempty" tf:"virtual_hub_id"`
+	VirtualHubID *string `json:"virtualHubId,omitempty" tf:"virtual_hub_id,omitempty"`
 
 	// +kubebuilder:validation:Optional
-	VirtualHubIDRef *v1.Reference `json:"virtualHubIDRef,omitempty" tf:"-"`
+	VirtualHubIDRef *v1.Reference `json:"virtualHubIdRef,omitempty" tf:"-"`
 
 	// +kubebuilder:validation:Optional
-	VirtualHubIDSelector *v1.Selector `json:"virtualHubIDSelector,omitempty" tf:"-"`
+	VirtualHubIDSelector *v1.Selector `json:"virtualHubIdSelector,omitempty" tf:"-"`
 }
 
 // VirtualHubBgpConnectionSpec defines the desired state of VirtualHubBgpConnection
