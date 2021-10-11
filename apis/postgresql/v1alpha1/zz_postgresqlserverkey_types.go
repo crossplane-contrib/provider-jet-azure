@@ -31,17 +31,17 @@ type PostgresqlServerKeyObservation struct {
 type PostgresqlServerKeyParameters struct {
 
 	// +kubebuilder:validation:Required
-	KeyVaultKeyID *string `json:"keyVaultKeyId" tf:"key_vault_key_id"`
+	KeyVaultKeyID *string `json:"keyVaultKeyId" tf:"key_vault_key_id,omitempty"`
 
 	// +crossplane:generate:reference:type=PostgresqlServer
 	// +kubebuilder:validation:Optional
-	ServerID *string `json:"serverId,omitempty" tf:"server_id"`
+	ServerID *string `json:"serverId,omitempty" tf:"server_id,omitempty"`
 
 	// +kubebuilder:validation:Optional
-	ServerIDRef *v1.Reference `json:"serverIDRef,omitempty" tf:"-"`
+	ServerIDRef *v1.Reference `json:"serverIdRef,omitempty" tf:"-"`
 
 	// +kubebuilder:validation:Optional
-	ServerIDSelector *v1.Selector `json:"serverIDSelector,omitempty" tf:"-"`
+	ServerIDSelector *v1.Selector `json:"serverIdSelector,omitempty" tf:"-"`
 }
 
 // PostgresqlServerKeySpec defines the desired state of PostgresqlServerKey

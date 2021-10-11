@@ -175,6 +175,8 @@ spec:
                     type: string
                   kind:
                     type: string
+                  localAuthenticationDisabled:
+                    type: boolean
                   location:
                     type: string
                   mongoServerVersion:

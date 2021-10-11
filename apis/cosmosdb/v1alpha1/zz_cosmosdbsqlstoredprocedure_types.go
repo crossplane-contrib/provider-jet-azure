@@ -33,7 +33,7 @@ type CosmosdbSqlStoredProcedureParameters struct {
 	// +crossplane:generate:reference:type=CosmosdbAccount
 	// +crossplane:generate:reference:extractor=github.com/crossplane-contrib/provider-tf-azure/apis/rconfig.ExtractResourceName()
 	// +kubebuilder:validation:Optional
-	AccountName *string `json:"accountName,omitempty" tf:"account_name"`
+	AccountName *string `json:"accountName,omitempty" tf:"account_name,omitempty"`
 
 	// +kubebuilder:validation:Optional
 	AccountNameRef *v1.Reference `json:"accountNameRef,omitempty" tf:"-"`
@@ -42,12 +42,12 @@ type CosmosdbSqlStoredProcedureParameters struct {
 	AccountNameSelector *v1.Selector `json:"accountNameSelector,omitempty" tf:"-"`
 
 	// +kubebuilder:validation:Required
-	Body *string `json:"body" tf:"body"`
+	Body *string `json:"body" tf:"body,omitempty"`
 
 	// +crossplane:generate:reference:type=CosmosdbSqlContainer
 	// +crossplane:generate:reference:extractor=github.com/crossplane-contrib/provider-tf-azure/apis/rconfig.ExtractResourceName()
 	// +kubebuilder:validation:Optional
-	ContainerName *string `json:"containerName,omitempty" tf:"container_name"`
+	ContainerName *string `json:"containerName,omitempty" tf:"container_name,omitempty"`
 
 	// +kubebuilder:validation:Optional
 	ContainerNameRef *v1.Reference `json:"containerNameRef,omitempty" tf:"-"`
@@ -58,7 +58,7 @@ type CosmosdbSqlStoredProcedureParameters struct {
 	// +crossplane:generate:reference:type=CosmosdbSqlDatabase
 	// +crossplane:generate:reference:extractor=github.com/crossplane-contrib/provider-tf-azure/apis/rconfig.ExtractResourceName()
 	// +kubebuilder:validation:Optional
-	DatabaseName *string `json:"databaseName,omitempty" tf:"database_name"`
+	DatabaseName *string `json:"databaseName,omitempty" tf:"database_name,omitempty"`
 
 	// +kubebuilder:validation:Optional
 	DatabaseNameRef *v1.Reference `json:"databaseNameRef,omitempty" tf:"-"`
@@ -67,12 +67,12 @@ type CosmosdbSqlStoredProcedureParameters struct {
 	DatabaseNameSelector *v1.Selector `json:"databaseNameSelector,omitempty" tf:"-"`
 
 	// +kubebuilder:validation:Required
-	Name *string `json:"name" tf:"name"`
+	Name *string `json:"name" tf:"name,omitempty"`
 
 	// +crossplane:generate:reference:type=github.com/crossplane-contrib/provider-tf-azure/apis/resource/v1alpha1.ResourceGroup
 	// +crossplane:generate:reference:extractor=github.com/crossplane-contrib/provider-tf-azure/apis/rconfig.ExtractResourceName()
 	// +kubebuilder:validation:Optional
-	ResourceGroupName *string `json:"resourceGroupName,omitempty" tf:"resource_group_name"`
+	ResourceGroupName *string `json:"resourceGroupName,omitempty" tf:"resource_group_name,omitempty"`
 
 	// +kubebuilder:validation:Optional
 	ResourceGroupNameRef *v1.Reference `json:"resourceGroupNameRef,omitempty" tf:"-"`

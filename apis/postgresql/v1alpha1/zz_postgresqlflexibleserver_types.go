@@ -31,10 +31,10 @@ type HighAvailabilityObservation struct {
 type HighAvailabilityParameters struct {
 
 	// +kubebuilder:validation:Required
-	Mode *string `json:"mode" tf:"mode"`
+	Mode *string `json:"mode" tf:"mode,omitempty"`
 
 	// +kubebuilder:validation:Optional
-	StandbyAvailabilityZone *string `json:"standbyAvailabilityZone,omitempty" tf:"standby_availability_zone"`
+	StandbyAvailabilityZone *string `json:"standbyAvailabilityZone,omitempty" tf:"standby_availability_zone,omitempty"`
 }
 
 type MaintenanceWindowObservation struct {
@@ -43,62 +43,69 @@ type MaintenanceWindowObservation struct {
 type MaintenanceWindowParameters struct {
 
 	// +kubebuilder:validation:Optional
-	DayOfWeek *int64 `json:"dayOfWeek,omitempty" tf:"day_of_week"`
+	DayOfWeek *int64 `json:"dayOfWeek,omitempty" tf:"day_of_week,omitempty"`
 
 	// +kubebuilder:validation:Optional
-	StartHour *int64 `json:"startHour,omitempty" tf:"start_hour"`
+	StartHour *int64 `json:"startHour,omitempty" tf:"start_hour,omitempty"`
 
 	// +kubebuilder:validation:Optional
-	StartMinute *int64 `json:"startMinute,omitempty" tf:"start_minute"`
+	StartMinute *int64 `json:"startMinute,omitempty" tf:"start_minute,omitempty"`
 }
 
 type PostgresqlFlexibleServerObservation struct {
-	CmkEnabled *string `json:"cmkEnabled,omitempty" tf:"cmk_enabled"`
+	CmkEnabled *string `json:"cmkEnabled,omitempty" tf:"cmk_enabled,omitempty"`
 
-	Fqdn *string `json:"fqdn,omitempty" tf:"fqdn"`
+	Fqdn *string `json:"fqdn,omitempty" tf:"fqdn,omitempty"`
 
-	PublicNetworkAccessEnabled *bool `json:"publicNetworkAccessEnabled,omitempty" tf:"public_network_access_enabled"`
+	PublicNetworkAccessEnabled *bool `json:"publicNetworkAccessEnabled,omitempty" tf:"public_network_access_enabled,omitempty"`
 }
 
 type PostgresqlFlexibleServerParameters struct {
 
 	// +kubebuilder:validation:Optional
-	AdministratorLogin *string `json:"administratorLogin,omitempty" tf:"administrator_login"`
+	AdministratorLogin *string `json:"administratorLogin,omitempty" tf:"administrator_login,omitempty"`
 
 	// +kubebuilder:validation:Optional
 	AdministratorPasswordSecretRef v1.SecretKeySelector `json:"administratorPasswordSecretRef,omitempty" tf:"-"`
 
 	// +kubebuilder:validation:Optional
-	BackupRetentionDays *int64 `json:"backupRetentionDays,omitempty" tf:"backup_retention_days"`
+	BackupRetentionDays *int64 `json:"backupRetentionDays,omitempty" tf:"backup_retention_days,omitempty"`
 
 	// +kubebuilder:validation:Optional
-	CreateMode *string `json:"createMode,omitempty" tf:"create_mode"`
+	CreateMode *string `json:"createMode,omitempty" tf:"create_mode,omitempty"`
+
+	// +crossplane:generate:reference:type=github.com/crossplane-contrib/provider-tf-azure/apis/subnet/v1alpha1.Subnet
+	// +kubebuilder:validation:Optional
+	DelegatedSubnetID *string `json:"delegatedSubnetId,omitempty" tf:"delegated_subnet_id,omitempty"`
 
 	// +kubebuilder:validation:Optional
-	DelegatedSubnetID *string `json:"delegatedSubnetId,omitempty" tf:"delegated_subnet_id"`
+	DelegatedSubnetIDRef *v1.Reference `json:"delegatedSubnetIdRef,omitempty" tf:"-"`
 
 	// +kubebuilder:validation:Optional
-	HighAvailability []HighAvailabilityParameters `json:"highAvailability,omitempty" tf:"high_availability"`
+	DelegatedSubnetIDSelector *v1.Selector `json:"delegatedSubnetIdSelector,omitempty" tf:"-"`
+
+	// +kubebuilder:validation:Optional
+	HighAvailability []HighAvailabilityParameters `json:"highAvailability,omitempty" tf:"high_availability,omitempty"`
 
 	// +kubebuilder:validation:Required
-	Location *string `json:"location" tf:"location"`
+	Location *string `json:"location" tf:"location,omitempty"`
 
 	// +kubebuilder:validation:Optional
-	MaintenanceWindow []MaintenanceWindowParameters `json:"maintenanceWindow,omitempty" tf:"maintenance_window"`
+	MaintenanceWindow []MaintenanceWindowParameters `json:"maintenanceWindow,omitempty" tf:"maintenance_window,omitempty"`
 
 	// +kubebuilder:validation:Required
-	Name *string `json:"name" tf:"name"`
+	Name *string `json:"name" tf:"name,omitempty"`
 
 	// +kubebuilder:validation:Optional
-	PointInTimeRestoreTimeInUtc *string `json:"pointInTimeRestoreTimeInUtc,omitempty" tf:"point_in_time_restore_time_in_utc"`
+	PointInTimeRestoreTimeInUtc *string `json:"pointInTimeRestoreTimeInUtc,omitempty" tf:"point_in_time_restore_time_in_utc,omitempty"`
 
 	// +kubebuilder:validation:Optional
-	PrivateDNSZoneID *string `json:"privateDnsZoneId,omitempty" tf:"private_dns_zone_id"`
+	PrivateDNSZoneID *string `json:"privateDnsZoneId,omitempty" tf:"private_dns_zone_id,omitempty"`
 
 	// +crossplane:generate:reference:type=github.com/crossplane-contrib/provider-tf-azure/apis/resource/v1alpha1.ResourceGroup
 	// +crossplane:generate:reference:extractor=github.com/crossplane-contrib/provider-tf-azure/apis/rconfig.ExtractResourceName()
 	// +kubebuilder:validation:Optional
-	ResourceGroupName *string `json:"resourceGroupName,omitempty" tf:"resource_group_name"`
+	ResourceGroupName *string `json:"resourceGroupName,omitempty" tf:"resource_group_name,omitempty"`
 
 	// +kubebuilder:validation:Optional
 	ResourceGroupNameRef *v1.Reference `json:"resourceGroupNameRef,omitempty" tf:"-"`
@@ -107,22 +114,22 @@ type PostgresqlFlexibleServerParameters struct {
 	ResourceGroupNameSelector *v1.Selector `json:"resourceGroupNameSelector,omitempty" tf:"-"`
 
 	// +kubebuilder:validation:Optional
-	SkuName *string `json:"skuName,omitempty" tf:"sku_name"`
+	SkuName *string `json:"skuName,omitempty" tf:"sku_name,omitempty"`
 
 	// +kubebuilder:validation:Optional
-	SourceServerID *string `json:"sourceServerId,omitempty" tf:"source_server_id"`
+	SourceServerID *string `json:"sourceServerId,omitempty" tf:"source_server_id,omitempty"`
 
 	// +kubebuilder:validation:Optional
-	StorageMb *int64 `json:"storageMb,omitempty" tf:"storage_mb"`
+	StorageMb *int64 `json:"storageMb,omitempty" tf:"storage_mb,omitempty"`
 
 	// +kubebuilder:validation:Optional
-	Tags map[string]*string `json:"tags,omitempty" tf:"tags"`
+	Tags map[string]*string `json:"tags,omitempty" tf:"tags,omitempty"`
 
 	// +kubebuilder:validation:Optional
-	Version *string `json:"version,omitempty" tf:"version"`
+	Version *string `json:"version,omitempty" tf:"version,omitempty"`
 
 	// +kubebuilder:validation:Optional
-	Zone *string `json:"zone,omitempty" tf:"zone"`
+	Zone *string `json:"zone,omitempty" tf:"zone,omitempty"`
 }
 
 // PostgresqlFlexibleServerSpec defines the desired state of PostgresqlFlexibleServer

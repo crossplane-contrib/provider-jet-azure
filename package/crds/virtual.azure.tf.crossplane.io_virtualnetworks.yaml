@@ -113,20 +113,6 @@ spec:
                           is selected.
                         type: object
                     type: object
-                  subnet:
-                    items:
-                      properties:
-                        addressPrefix:
-                          type: string
-                        name:
-                          type: string
-                        securityGroup:
-                          type: string
-                      required:
-                      - addressPrefix
-                      - name
-                      type: object
-                    type: array
                   tags:
                     additionalProperties:
                       type: string
@@ -189,6 +175,13 @@ spec:
                 properties:
                   guid:
                     type: string
+                  subnet:
+                    items:
+                      properties:
+                        id:
+                          type: string
+                      type: object
+                    type: array
                 type: object
               conditions:
                 description: Conditions of the resource.

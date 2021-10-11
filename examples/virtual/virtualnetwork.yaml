@@ -7,7 +7,7 @@ spec:
     name: "virtualNetwork1"
     location: "East US"
     resourceGroupNameRef:
-      name: example-rg
+      name: example
     addressSpace:
       - "10.0.0.0/16"
     dnsServers:

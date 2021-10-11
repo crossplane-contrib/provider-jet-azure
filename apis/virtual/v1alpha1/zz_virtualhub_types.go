@@ -31,10 +31,10 @@ type RouteObservation struct {
 type RouteParameters struct {
 
 	// +kubebuilder:validation:Required
-	AddressPrefixes []*string `json:"addressPrefixes" tf:"address_prefixes"`
+	AddressPrefixes []*string `json:"addressPrefixes" tf:"address_prefixes,omitempty"`
 
 	// +kubebuilder:validation:Required
-	NextHopIPAddress *string `json:"nextHopIpAddress" tf:"next_hop_ip_address"`
+	NextHopIPAddress *string `json:"nextHopIpAddress" tf:"next_hop_ip_address,omitempty"`
 }
 
 type VirtualHubObservation struct {
@@ -43,18 +43,18 @@ type VirtualHubObservation struct {
 type VirtualHubParameters struct {
 
 	// +kubebuilder:validation:Optional
-	AddressPrefix *string `json:"addressPrefix,omitempty" tf:"address_prefix"`
+	AddressPrefix *string `json:"addressPrefix,omitempty" tf:"address_prefix,omitempty"`
 
 	// +kubebuilder:validation:Required
-	Location *string `json:"location" tf:"location"`
+	Location *string `json:"location" tf:"location,omitempty"`
 
 	// +kubebuilder:validation:Required
-	Name *string `json:"name" tf:"name"`
+	Name *string `json:"name" tf:"name,omitempty"`
 
 	// +crossplane:generate:reference:type=github.com/crossplane-contrib/provider-tf-azure/apis/resource/v1alpha1.ResourceGroup
 	// +crossplane:generate:reference:extractor=github.com/crossplane-contrib/provider-tf-azure/apis/rconfig.ExtractResourceName()
 	// +kubebuilder:validation:Optional
-	ResourceGroupName *string `json:"resourceGroupName,omitempty" tf:"resource_group_name"`
+	ResourceGroupName *string `json:"resourceGroupName,omitempty" tf:"resource_group_name,omitempty"`
 
 	// +kubebuilder:validation:Optional
 	ResourceGroupNameRef *v1.Reference `json:"resourceGroupNameRef,omitempty" tf:"-"`
@@ -63,23 +63,23 @@ type VirtualHubParameters struct {
 	ResourceGroupNameSelector *v1.Selector `json:"resourceGroupNameSelector,omitempty" tf:"-"`
 
 	// +kubebuilder:validation:Optional
-	Route []RouteParameters `json:"route,omitempty" tf:"route"`
+	Route []RouteParameters `json:"route,omitempty" tf:"route,omitempty"`
 
 	// +kubebuilder:validation:Optional
-	Sku *string `json:"sku,omitempty" tf:"sku"`
+	Sku *string `json:"sku,omitempty" tf:"sku,omitempty"`
 
 	// +kubebuilder:validation:Optional
-	Tags map[string]*string `json:"tags,omitempty" tf:"tags"`
+	Tags map[string]*string `json:"tags,omitempty" tf:"tags,omitempty"`
 
 	// +crossplane:generate:reference:type=VirtualWan
 	// +kubebuilder:validation:Optional
-	VirtualWanID *string `json:"virtualWanId,omitempty" tf:"virtual_wan_id"`
+	VirtualWanID *string `json:"virtualWanId,omitempty" tf:"virtual_wan_id,omitempty"`
 
 	// +kubebuilder:validation:Optional
-	VirtualWanIDRef *v1.Reference `json:"virtualWanIDRef,omitempty" tf:"-"`
+	VirtualWanIDRef *v1.Reference `json:"virtualWanIdRef,omitempty" tf:"-"`
 
 	// +kubebuilder:validation:Optional
-	VirtualWanIDSelector *v1.Selector `json:"virtualWanIDSelector,omitempty" tf:"-"`
+	VirtualWanIDSelector *v1.Selector `json:"virtualWanIdSelector,omitempty" tf:"-"`
 }
 
 // VirtualHubSpec defines the desired state of VirtualHub

@@ -112,7 +112,9 @@ spec:
                     type: array
                   kubeletDiskType:
                     type: string
-                  kubernetesClusterIDRef:
+                  kubernetesClusterId:
+                    type: string
+                  kubernetesClusterIdRef:
                     description: A Reference to a named object.
                     properties:
                       name:
@@ -121,7 +123,7 @@ spec:
                     required:
                     - name
                     type: object
-                  kubernetesClusterIDSelector:
+                  kubernetesClusterIdSelector:
                     description: A Selector selects an object.
                     properties:
                       matchControllerRef:
@@ -135,8 +137,6 @@ spec:
                           is selected.
                         type: object
                     type: object
-                  kubernetesClusterId:
-                    type: string
                   linuxOsConfig:
                     items:
                       properties:
@@ -273,10 +273,35 @@ spec:
                     type: integer
                   osDiskType:
                     type: string
+                  osSku:
+                    type: string
                   osType:
                     type: string
                   podSubnetId:
                     type: string
+                  podSubnetIdRef:
+                    description: A Reference to a named object.
+                    properties:
+                      name:
+                        description: Name of the referenced object.
+                        type: string
+                    required:
+                    - name
+                    type: object
+                  podSubnetIdSelector:
+                    description: A Selector selects an object.
+                    properties:
+                      matchControllerRef:
+                        description: MatchControllerRef ensures an object with the
+                          same controller reference as the selecting object is selected.
+                        type: boolean
+                      matchLabels:
+                        additionalProperties:
+                          type: string
+                        description: MatchLabels ensures an object with matching labels
+                          is selected.
+                        type: object
+                    type: object
                   priority:
                     type: string
                   proximityPlacementGroupId:
@@ -302,6 +327,29 @@ spec:
                     type: string
                   vnetSubnetId:
                     type: string
+                  vnetSubnetIdRef:
+                    description: A Reference to a named object.
+                    properties:
+                      name:
+                        description: Name of the referenced object.
+                        type: string
+                    required:
+                    - name
+                    type: object
+                  vnetSubnetIdSelector:
+                    description: A Selector selects an object.
+                    properties:
+                      matchControllerRef:
+                        description: MatchControllerRef ensures an object with the
+                          same controller reference as the selecting object is selected.
+                        type: boolean
+                      matchLabels:
+                        additionalProperties:
+                          type: string
+                        description: MatchLabels ensures an object with matching labels
+                          is selected.
+                        type: object
+                    type: object
                 required:
                 - name
                 - vmSize

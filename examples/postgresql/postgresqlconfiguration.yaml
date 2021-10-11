@@ -6,7 +6,7 @@ spec:
   forProvider:
     name: array_nulls
     resourceGroupNameRef:
-      name: example-rg
+      name: example
     serverName: example-psql
     value: "off"
   providerConfigRef:

@@ -31,20 +31,20 @@ type CosmosdbSqlFunctionObservation struct {
 type CosmosdbSqlFunctionParameters struct {
 
 	// +kubebuilder:validation:Required
-	Body *string `json:"body" tf:"body"`
+	Body *string `json:"body" tf:"body,omitempty"`
 
 	// +crossplane:generate:reference:type=CosmosdbSqlContainer
 	// +kubebuilder:validation:Optional
-	ContainerID *string `json:"containerId,omitempty" tf:"container_id"`
+	ContainerID *string `json:"containerId,omitempty" tf:"container_id,omitempty"`
 
 	// +kubebuilder:validation:Optional
-	ContainerIDRef *v1.Reference `json:"containerIDRef,omitempty" tf:"-"`
+	ContainerIDRef *v1.Reference `json:"containerIdRef,omitempty" tf:"-"`
 
 	// +kubebuilder:validation:Optional
-	ContainerIDSelector *v1.Selector `json:"containerIDSelector,omitempty" tf:"-"`
+	ContainerIDSelector *v1.Selector `json:"containerIdSelector,omitempty" tf:"-"`
 
 	// +kubebuilder:validation:Required
-	Name *string `json:"name" tf:"name"`
+	Name *string `json:"name" tf:"name,omitempty"`
 }
 
 // CosmosdbSqlFunctionSpec defines the desired state of CosmosdbSqlFunction

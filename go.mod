@@ -3,10 +3,9 @@ module github.com/crossplane-contrib/provider-tf-azure
 go 1.16
 
 require (
-	github.com/crossplane-contrib/terrajet v0.0.0-20211011080828-519fe16e4dd6
+	github.com/crossplane-contrib/terrajet v0.1.0
 	github.com/crossplane/crossplane-runtime v0.15.1-0.20211004150827-579c1833b513
 	github.com/crossplane/crossplane-tools v0.0.0-20210916125540-071de511ae8e
-	github.com/hashicorp/go-azure-helpers v0.16.5 // indirect
 	github.com/hashicorp/terraform-plugin-sdk/v2 v2.7.0
 	// github.com/hashicorp/terraform-provider-azurerm is replaced with  ./.work/.azurerm
 	// and the dependency version is specified in the Makefile via make variable AZURERM_REFSPEC

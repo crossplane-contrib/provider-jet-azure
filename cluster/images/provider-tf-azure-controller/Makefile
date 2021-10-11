@@ -7,7 +7,7 @@ PLATFORMS := linux_amd64 linux_arm64
 TERRAFORM_VERSION ?= 1.0.5
 TERRAFORM_PROVIDER_SOURCE ?= hashicorp/azurerm
 # version specified here should currently match the `AZURERM_REFSPEC` variable of the root Makefile
-TERRAFORM_PROVIDER_VERSION ?= 2.80.0
+TERRAFORM_PROVIDER_VERSION ?= 2.78.0
 
 include ../../../build/makelib/common.mk
 

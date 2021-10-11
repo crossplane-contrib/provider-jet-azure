@@ -31,13 +31,13 @@ type BackupObservation struct {
 type BackupParameters struct {
 
 	// +kubebuilder:validation:Optional
-	IntervalInMinutes *int64 `json:"intervalInMinutes,omitempty" tf:"interval_in_minutes"`
+	IntervalInMinutes *int64 `json:"intervalInMinutes,omitempty" tf:"interval_in_minutes,omitempty"`
 
 	// +kubebuilder:validation:Optional
-	RetentionInHours *int64 `json:"retentionInHours,omitempty" tf:"retention_in_hours"`
+	RetentionInHours *int64 `json:"retentionInHours,omitempty" tf:"retention_in_hours,omitempty"`
 
 	// +kubebuilder:validation:Required
-	Type *string `json:"type" tf:"type"`
+	Type *string `json:"type" tf:"type,omitempty"`
 }
 
 type CapabilitiesObservation struct {
@@ -46,7 +46,7 @@ type CapabilitiesObservation struct {
 type CapabilitiesParameters struct {
 
 	// +kubebuilder:validation:Required
-	Name *string `json:"name" tf:"name"`
+	Name *string `json:"name" tf:"name,omitempty"`
 }
 
 type ConsistencyPolicyObservation struct {
@@ -55,13 +55,13 @@ type ConsistencyPolicyObservation struct {
 type ConsistencyPolicyParameters struct {
 
 	// +kubebuilder:validation:Required
-	ConsistencyLevel *string `json:"consistencyLevel" tf:"consistency_level"`
+	ConsistencyLevel *string `json:"consistencyLevel" tf:"consistency_level,omitempty"`
 
 	// +kubebuilder:validation:Optional
-	MaxIntervalInSeconds *int64 `json:"maxIntervalInSeconds,omitempty" tf:"max_interval_in_seconds"`
+	MaxIntervalInSeconds *int64 `json:"maxIntervalInSeconds,omitempty" tf:"max_interval_in_seconds,omitempty"`
 
 	// +kubebuilder:validation:Optional
-	MaxStalenessPrefix *int64 `json:"maxStalenessPrefix,omitempty" tf:"max_staleness_prefix"`
+	MaxStalenessPrefix *int64 `json:"maxStalenessPrefix,omitempty" tf:"max_staleness_prefix,omitempty"`
 }
 
 type CorsRuleObservation struct {
@@ -70,101 +70,104 @@ type CorsRuleObservation struct {
 type CorsRuleParameters struct {
 
 	// +kubebuilder:validation:Required
-	AllowedHeaders []*string `json:"allowedHeaders" tf:"allowed_headers"`
+	AllowedHeaders []*string `json:"allowedHeaders" tf:"allowed_headers,omitempty"`
 
 	// +kubebuilder:validation:Required
-	AllowedMethods []*string `json:"allowedMethods" tf:"allowed_methods"`
+	AllowedMethods []*string `json:"allowedMethods" tf:"allowed_methods,omitempty"`
 
 	// +kubebuilder:validation:Required
-	AllowedOrigins []*string `json:"allowedOrigins" tf:"allowed_origins"`
+	AllowedOrigins []*string `json:"allowedOrigins" tf:"allowed_origins,omitempty"`
 
 	// +kubebuilder:validation:Required
-	ExposedHeaders []*string `json:"exposedHeaders" tf:"exposed_headers"`
+	ExposedHeaders []*string `json:"exposedHeaders" tf:"exposed_headers,omitempty"`
 
 	// +kubebuilder:validation:Required
-	MaxAgeInSeconds *int64 `json:"maxAgeInSeconds" tf:"max_age_in_seconds"`
+	MaxAgeInSeconds *int64 `json:"maxAgeInSeconds" tf:"max_age_in_seconds,omitempty"`
 }
 
 type CosmosdbAccountObservation struct {
-	Endpoint *string `json:"endpoint,omitempty" tf:"endpoint"`
+	Endpoint *string `json:"endpoint,omitempty" tf:"endpoint,omitempty"`
 
-	ReadEndpoints []*string `json:"readEndpoints,omitempty" tf:"read_endpoints"`
+	ReadEndpoints []*string `json:"readEndpoints,omitempty" tf:"read_endpoints,omitempty"`
 
-	WriteEndpoints []*string `json:"writeEndpoints,omitempty" tf:"write_endpoints"`
+	WriteEndpoints []*string `json:"writeEndpoints,omitempty" tf:"write_endpoints,omitempty"`
 }
 
 type CosmosdbAccountParameters struct {
 
 	// +kubebuilder:validation:Optional
-	AccessKeyMetadataWritesEnabled *bool `json:"accessKeyMetadataWritesEnabled,omitempty" tf:"access_key_metadata_writes_enabled"`
+	AccessKeyMetadataWritesEnabled *bool `json:"accessKeyMetadataWritesEnabled,omitempty" tf:"access_key_metadata_writes_enabled,omitempty"`
 
 	// +kubebuilder:validation:Optional
-	AnalyticalStorageEnabled *bool `json:"analyticalStorageEnabled,omitempty" tf:"analytical_storage_enabled"`
+	AnalyticalStorageEnabled *bool `json:"analyticalStorageEnabled,omitempty" tf:"analytical_storage_enabled,omitempty"`
 
 	// +kubebuilder:validation:Optional
-	Backup []BackupParameters `json:"backup,omitempty" tf:"backup"`
+	Backup []BackupParameters `json:"backup,omitempty" tf:"backup,omitempty"`
 
 	// +kubebuilder:validation:Optional
-	Capabilities []CapabilitiesParameters `json:"capabilities,omitempty" tf:"capabilities"`
+	Capabilities []CapabilitiesParameters `json:"capabilities,omitempty" tf:"capabilities,omitempty"`
 
 	// +kubebuilder:validation:Required
-	ConsistencyPolicy []ConsistencyPolicyParameters `json:"consistencyPolicy" tf:"consistency_policy"`
+	ConsistencyPolicy []ConsistencyPolicyParameters `json:"consistencyPolicy" tf:"consistency_policy,omitempty"`
 
 	// +kubebuilder:validation:Optional
-	CorsRule []CorsRuleParameters `json:"corsRule,omitempty" tf:"cors_rule"`
+	CorsRule []CorsRuleParameters `json:"corsRule,omitempty" tf:"cors_rule,omitempty"`
 
 	// +kubebuilder:validation:Optional
-	EnableAutomaticFailover *bool `json:"enableAutomaticFailover,omitempty" tf:"enable_automatic_failover"`
+	EnableAutomaticFailover *bool `json:"enableAutomaticFailover,omitempty" tf:"enable_automatic_failover,omitempty"`
 
 	// +kubebuilder:validation:Optional
-	EnableFreeTier *bool `json:"enableFreeTier,omitempty" tf:"enable_free_tier"`
+	EnableFreeTier *bool `json:"enableFreeTier,omitempty" tf:"enable_free_tier,omitempty"`
 
 	// +kubebuilder:validation:Optional
-	EnableMultipleWriteLocations *bool `json:"enableMultipleWriteLocations,omitempty" tf:"enable_multiple_write_locations"`
+	EnableMultipleWriteLocations *bool `json:"enableMultipleWriteLocations,omitempty" tf:"enable_multiple_write_locations,omitempty"`
 
 	// +kubebuilder:validation:Required
-	GeoLocation []GeoLocationParameters `json:"geoLocation" tf:"geo_location"`
+	GeoLocation []GeoLocationParameters `json:"geoLocation" tf:"geo_location,omitempty"`
 
 	// +kubebuilder:validation:Optional
-	IPRangeFilter *string `json:"ipRangeFilter,omitempty" tf:"ip_range_filter"`
+	IPRangeFilter *string `json:"ipRangeFilter,omitempty" tf:"ip_range_filter,omitempty"`
 
 	// +kubebuilder:validation:Optional
-	Identity []IdentityParameters `json:"identity,omitempty" tf:"identity"`
+	Identity []IdentityParameters `json:"identity,omitempty" tf:"identity,omitempty"`
 
 	// +kubebuilder:validation:Optional
-	IsVirtualNetworkFilterEnabled *bool `json:"isVirtualNetworkFilterEnabled,omitempty" tf:"is_virtual_network_filter_enabled"`
+	IsVirtualNetworkFilterEnabled *bool `json:"isVirtualNetworkFilterEnabled,omitempty" tf:"is_virtual_network_filter_enabled,omitempty"`
 
 	// +kubebuilder:validation:Optional
-	KeyVaultKeyID *string `json:"keyVaultKeyId,omitempty" tf:"key_vault_key_id"`
+	KeyVaultKeyID *string `json:"keyVaultKeyId,omitempty" tf:"key_vault_key_id,omitempty"`
 
 	// +kubebuilder:validation:Optional
-	Kind *string `json:"kind,omitempty" tf:"kind"`
+	Kind *string `json:"kind,omitempty" tf:"kind,omitempty"`
+
+	// +kubebuilder:validation:Optional
+	LocalAuthenticationDisabled *bool `json:"localAuthenticationDisabled,omitempty" tf:"local_authentication_disabled,omitempty"`
 
 	// +kubebuilder:validation:Required
-	Location *string `json:"location" tf:"location"`
+	Location *string `json:"location" tf:"location,omitempty"`
 
 	// +kubebuilder:validation:Optional
-	MongoServerVersion *string `json:"mongoServerVersion,omitempty" tf:"mongo_server_version"`
+	MongoServerVersion *string `json:"mongoServerVersion,omitempty" tf:"mongo_server_version,omitempty"`
 
 	// +kubebuilder:validation:Required
-	Name *string `json:"name" tf:"name"`
+	Name *string `json:"name" tf:"name,omitempty"`
 
 	// +kubebuilder:validation:Optional
-	NetworkACLBypassForAzureServices *bool `json:"networkAclBypassForAzureServices,omitempty" tf:"network_acl_bypass_for_azure_services"`
+	NetworkACLBypassForAzureServices *bool `json:"networkAclBypassForAzureServices,omitempty" tf:"network_acl_bypass_for_azure_services,omitempty"`
 
 	// +kubebuilder:validation:Optional
-	NetworkACLBypassIds []*string `json:"networkAclBypassIds,omitempty" tf:"network_acl_bypass_ids"`
+	NetworkACLBypassIds []*string `json:"networkAclBypassIds,omitempty" tf:"network_acl_bypass_ids,omitempty"`
 
 	// +kubebuilder:validation:Required
-	OfferType *string `json:"offerType" tf:"offer_type"`
+	OfferType *string `json:"offerType" tf:"offer_type,omitempty"`
 
 	// +kubebuilder:validation:Optional
-	PublicNetworkAccessEnabled *bool `json:"publicNetworkAccessEnabled,omitempty" tf:"public_network_access_enabled"`
+	PublicNetworkAccessEnabled *bool `json:"publicNetworkAccessEnabled,omitempty" tf:"public_network_access_enabled,omitempty"`
 
 	// +crossplane:generate:reference:type=github.com/crossplane-contrib/provider-tf-azure/apis/resource/v1alpha1.ResourceGroup
 	// +crossplane:generate:reference:extractor=github.com/crossplane-contrib/provider-tf-azure/apis/rconfig.ExtractResourceName()
 	// +kubebuilder:validation:Optional
-	ResourceGroupName *string `json:"resourceGroupName,omitempty" tf:"resource_group_name"`
+	ResourceGroupName *string `json:"resourceGroupName,omitempty" tf:"resource_group_name,omitempty"`
 
 	// +kubebuilder:validation:Optional
 	ResourceGroupNameRef *v1.Reference `json:"resourceGroupNameRef,omitempty" tf:"-"`
@@ -173,41 +176,41 @@ type CosmosdbAccountParameters struct {
 	ResourceGroupNameSelector *v1.Selector `json:"resourceGroupNameSelector,omitempty" tf:"-"`
 
 	// +kubebuilder:validation:Optional
-	Tags map[string]*string `json:"tags,omitempty" tf:"tags"`
+	Tags map[string]*string `json:"tags,omitempty" tf:"tags,omitempty"`
 
 	// +kubebuilder:validation:Optional
-	VirtualNetworkRule []VirtualNetworkRuleParameters `json:"virtualNetworkRule,omitempty" tf:"virtual_network_rule"`
+	VirtualNetworkRule []VirtualNetworkRuleParameters `json:"virtualNetworkRule,omitempty" tf:"virtual_network_rule,omitempty"`
 }
 
 type GeoLocationObservation struct {
-	ID *string `json:"id,omitempty" tf:"id"`
+	ID *string `json:"id,omitempty" tf:"id,omitempty"`
 }
 
 type GeoLocationParameters struct {
 
 	// +kubebuilder:validation:Required
-	FailoverPriority *int64 `json:"failoverPriority" tf:"failover_priority"`
+	FailoverPriority *int64 `json:"failoverPriority" tf:"failover_priority,omitempty"`
 
 	// +kubebuilder:validation:Required
-	Location *string `json:"location" tf:"location"`
+	Location *string `json:"location" tf:"location,omitempty"`
 
 	// +kubebuilder:validation:Optional
-	Prefix *string `json:"prefix,omitempty" tf:"prefix"`
+	Prefix *string `json:"prefix,omitempty" tf:"prefix,omitempty"`
 
 	// +kubebuilder:validation:Optional
-	ZoneRedundant *bool `json:"zoneRedundant,omitempty" tf:"zone_redundant"`
+	ZoneRedundant *bool `json:"zoneRedundant,omitempty" tf:"zone_redundant,omitempty"`
 }
 
 type IdentityObservation struct {
-	PrincipalID *string `json:"principalId,omitempty" tf:"principal_id"`
+	PrincipalID *string `json:"principalId,omitempty" tf:"principal_id,omitempty"`
 
-	TenantID *string `json:"tenantId,omitempty" tf:"tenant_id"`
+	TenantID *string `json:"tenantId,omitempty" tf:"tenant_id,omitempty"`
 }
 
 type IdentityParameters struct {
 
 	// +kubebuilder:validation:Required
-	Type *string `json:"type" tf:"type"`
+	Type *string `json:"type" tf:"type,omitempty"`
 }
 
 type VirtualNetworkRuleObservation struct {
@@ -216,10 +219,10 @@ type VirtualNetworkRuleObservation struct {
 type VirtualNetworkRuleParameters struct {
 
 	// +kubebuilder:validation:Required
-	ID *string `json:"id" tf:"id"`
+	ID *string `json:"id" tf:"id,omitempty"`
 
 	// +kubebuilder:validation:Optional
-	IgnoreMissingVnetServiceEndpoint *bool `json:"ignoreMissingVnetServiceEndpoint,omitempty" tf:"ignore_missing_vnet_service_endpoint"`
+	IgnoreMissingVnetServiceEndpoint *bool `json:"ignoreMissingVnetServiceEndpoint,omitempty" tf:"ignore_missing_vnet_service_endpoint,omitempty"`
 }
 
 // CosmosdbAccountSpec defines the desired state of CosmosdbAccount

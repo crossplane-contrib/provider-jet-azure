@@ -31,16 +31,16 @@ type BgpSettingsObservation struct {
 type BgpSettingsParameters struct {
 
 	// +kubebuilder:validation:Optional
-	Asn *int64 `json:"asn,omitempty" tf:"asn"`
+	Asn *int64 `json:"asn,omitempty" tf:"asn,omitempty"`
 
 	// +kubebuilder:validation:Optional
-	PeerWeight *int64 `json:"peerWeight,omitempty" tf:"peer_weight"`
+	PeerWeight *int64 `json:"peerWeight,omitempty" tf:"peer_weight,omitempty"`
 
 	// +kubebuilder:validation:Optional
-	PeeringAddress *string `json:"peeringAddress,omitempty" tf:"peering_address"`
+	PeeringAddress *string `json:"peeringAddress,omitempty" tf:"peering_address,omitempty"`
 
 	// +kubebuilder:validation:Optional
-	PeeringAddresses []PeeringAddressesParameters `json:"peeringAddresses,omitempty" tf:"peering_addresses"`
+	PeeringAddresses []PeeringAddressesParameters `json:"peeringAddresses,omitempty" tf:"peering_addresses,omitempty"`
 }
 
 type CustomRouteObservation struct {
@@ -49,7 +49,7 @@ type CustomRouteObservation struct {
 type CustomRouteParameters struct {
 
 	// +kubebuilder:validation:Optional
-	AddressPrefixes []*string `json:"addressPrefixes,omitempty" tf:"address_prefixes"`
+	AddressPrefixes []*string `json:"addressPrefixes,omitempty" tf:"address_prefixes,omitempty"`
 }
 
 type IPConfigurationObservation struct {
@@ -58,31 +58,38 @@ type IPConfigurationObservation struct {
 type IPConfigurationParameters struct {
 
 	// +kubebuilder:validation:Optional
-	Name *string `json:"name,omitempty" tf:"name"`
+	Name *string `json:"name,omitempty" tf:"name,omitempty"`
 
 	// +kubebuilder:validation:Optional
-	PrivateIPAddressAllocation *string `json:"privateIpAddressAllocation,omitempty" tf:"private_ip_address_allocation"`
+	PrivateIPAddressAllocation *string `json:"privateIpAddressAllocation,omitempty" tf:"private_ip_address_allocation,omitempty"`
 
 	// +kubebuilder:validation:Required
-	PublicIPAddressID *string `json:"publicIpAddressId" tf:"public_ip_address_id"`
+	PublicIPAddressID *string `json:"publicIpAddressId" tf:"public_ip_address_id,omitempty"`
 
-	// +kubebuilder:validation:Required
-	SubnetID *string `json:"subnetId" tf:"subnet_id"`
+	// +crossplane:generate:reference:type=github.com/crossplane-contrib/provider-tf-azure/apis/subnet/v1alpha1.Subnet
+	// +kubebuilder:validation:Optional
+	SubnetID *string `json:"subnetId,omitempty" tf:"subnet_id,omitempty"`
+
+	// +kubebuilder:validation:Optional
+	SubnetIDRef *v1.Reference `json:"subnetIdRef,omitempty" tf:"-"`
+
+	// +kubebuilder:validation:Optional
+	SubnetIDSelector *v1.Selector `json:"subnetIdSelector,omitempty" tf:"-"`
 }
 
 type PeeringAddressesObservation struct {
-	DefaultAddresses []*string `json:"defaultAddresses,omitempty" tf:"default_addresses"`
+	DefaultAddresses []*string `json:"defaultAddresses,omitempty" tf:"default_addresses,omitempty"`
 
-	TunnelIPAddresses []*string `json:"tunnelIpAddresses,omitempty" tf:"tunnel_ip_addresses"`
+	TunnelIPAddresses []*string `json:"tunnelIpAddresses,omitempty" tf:"tunnel_ip_addresses,omitempty"`
 }
 
 type PeeringAddressesParameters struct {
 
 	// +kubebuilder:validation:Optional
-	ApipaAddresses []*string `json:"apipaAddresses,omitempty" tf:"apipa_addresses"`
+	ApipaAddresses []*string `json:"apipaAddresses,omitempty" tf:"apipa_addresses,omitempty"`
 
 	// +kubebuilder:validation:Optional
-	IPConfigurationName *string `json:"ipConfigurationName,omitempty" tf:"ip_configuration_name"`
+	IPConfigurationName *string `json:"ipConfigurationName,omitempty" tf:"ip_configuration_name,omitempty"`
 }
 
 type RevokedCertificateObservation struct {
@@ -91,10 +98,10 @@ type RevokedCertificateObservation struct {
 type RevokedCertificateParameters struct {
 
 	// +kubebuilder:validation:Required
-	Name *string `json:"name" tf:"name"`
+	Name *string `json:"name" tf:"name,omitempty"`
 
 	// +kubebuilder:validation:Required
-	Thumbprint *string `json:"thumbprint" tf:"thumbprint"`
+	Thumbprint *string `json:"thumbprint" tf:"thumbprint,omitempty"`
 }
 
 type RootCertificateObservation struct {
@@ -103,10 +110,10 @@ type RootCertificateObservation struct {
 type RootCertificateParameters struct {
 
 	// +kubebuilder:validation:Required
-	Name *string `json:"name" tf:"name"`
+	Name *string `json:"name" tf:"name,omitempty"`
 
 	// +kubebuilder:validation:Required
-	PublicCertData *string `json:"publicCertData" tf:"public_cert_data"`
+	PublicCertData *string `json:"publicCertData" tf:"public_cert_data,omitempty"`
 }
 
 type VirtualNetworkGatewayObservation struct {
@@ -115,39 +122,39 @@ type VirtualNetworkGatewayObservation struct {
 type VirtualNetworkGatewayParameters struct {
 
 	// +kubebuilder:validation:Optional
-	ActiveActive *bool `json:"activeActive,omitempty" tf:"active_active"`
+	ActiveActive *bool `json:"activeActive,omitempty" tf:"active_active,omitempty"`
 
 	// +kubebuilder:validation:Optional
-	BgpSettings []BgpSettingsParameters `json:"bgpSettings,omitempty" tf:"bgp_settings"`
+	BgpSettings []BgpSettingsParameters `json:"bgpSettings,omitempty" tf:"bgp_settings,omitempty"`
 
 	// +kubebuilder:validation:Optional
-	CustomRoute []CustomRouteParameters `json:"customRoute,omitempty" tf:"custom_route"`
+	CustomRoute []CustomRouteParameters `json:"customRoute,omitempty" tf:"custom_route,omitempty"`
 
 	// +kubebuilder:validation:Optional
-	DefaultLocalNetworkGatewayID *string `json:"defaultLocalNetworkGatewayId,omitempty" tf:"default_local_network_gateway_id"`
+	DefaultLocalNetworkGatewayID *string `json:"defaultLocalNetworkGatewayId,omitempty" tf:"default_local_network_gateway_id,omitempty"`
 
 	// +kubebuilder:validation:Optional
-	EnableBgp *bool `json:"enableBgp,omitempty" tf:"enable_bgp"`
+	EnableBgp *bool `json:"enableBgp,omitempty" tf:"enable_bgp,omitempty"`
 
 	// +kubebuilder:validation:Optional
-	Generation *string `json:"generation,omitempty" tf:"generation"`
+	Generation *string `json:"generation,omitempty" tf:"generation,omitempty"`
 
 	// +kubebuilder:validation:Required
-	IPConfiguration []IPConfigurationParameters `json:"ipConfiguration" tf:"ip_configuration"`
+	IPConfiguration []IPConfigurationParameters `json:"ipConfiguration" tf:"ip_configuration,omitempty"`
 
 	// +kubebuilder:validation:Required
-	Location *string `json:"location" tf:"location"`
+	Location *string `json:"location" tf:"location,omitempty"`
 
 	// +kubebuilder:validation:Required
-	Name *string `json:"name" tf:"name"`
+	Name *string `json:"name" tf:"name,omitempty"`
 
 	// +kubebuilder:validation:Optional
-	PrivateIPAddressEnabled *bool `json:"privateIpAddressEnabled,omitempty" tf:"private_ip_address_enabled"`
+	PrivateIPAddressEnabled *bool `json:"privateIpAddressEnabled,omitempty" tf:"private_ip_address_enabled,omitempty"`
 
 	// +crossplane:generate:reference:type=github.com/crossplane-contrib/provider-tf-azure/apis/resource/v1alpha1.ResourceGroup
 	// +crossplane:generate:reference:extractor=github.com/crossplane-contrib/provider-tf-azure/apis/rconfig.ExtractResourceName()
 	// +kubebuilder:validation:Optional
-	ResourceGroupName *string `json:"resourceGroupName,omitempty" tf:"resource_group_name"`
+	ResourceGroupName *string `json:"resourceGroupName,omitempty" tf:"resource_group_name,omitempty"`
 
 	// +kubebuilder:validation:Optional
 	ResourceGroupNameRef *v1.Reference `json:"resourceGroupNameRef,omitempty" tf:"-"`
@@ -156,19 +163,19 @@ type VirtualNetworkGatewayParameters struct {
 	ResourceGroupNameSelector *v1.Selector `json:"resourceGroupNameSelector,omitempty" tf:"-"`
 
 	// +kubebuilder:validation:Required
-	Sku *string `json:"sku" tf:"sku"`
+	Sku *string `json:"sku" tf:"sku,omitempty"`
 
 	// +kubebuilder:validation:Optional
-	Tags map[string]*string `json:"tags,omitempty" tf:"tags"`
+	Tags map[string]*string `json:"tags,omitempty" tf:"tags,omitempty"`
 
 	// +kubebuilder:validation:Required
-	Type *string `json:"type" tf:"type"`
+	Type *string `json:"type" tf:"type,omitempty"`
 
 	// +kubebuilder:validation:Optional
-	VpnClientConfiguration []VpnClientConfigurationParameters `json:"vpnClientConfiguration,omitempty" tf:"vpn_client_configuration"`
+	VpnClientConfiguration []VpnClientConfigurationParameters `json:"vpnClientConfiguration,omitempty" tf:"vpn_client_configuration,omitempty"`
 
 	// +kubebuilder:validation:Optional
-	VpnType *string `json:"vpnType,omitempty" tf:"vpn_type"`
+	VpnType *string `json:"vpnType,omitempty" tf:"vpn_type,omitempty"`
 }
 
 type VpnClientConfigurationObservation struct {
@@ -177,31 +184,34 @@ type VpnClientConfigurationObservation struct {
 type VpnClientConfigurationParameters struct {
 
 	// +kubebuilder:validation:Optional
-	AadAudience *string `json:"aadAudience,omitempty" tf:"aad_audience"`
+	AadAudience *string `json:"aadAudience,omitempty" tf:"aad_audience,omitempty"`
 
 	// +kubebuilder:validation:Optional
-	AadIssuer *string `json:"aadIssuer,omitempty" tf:"aad_issuer"`
+	AadIssuer *string `json:"aadIssuer,omitempty" tf:"aad_issuer,omitempty"`
 
 	// +kubebuilder:validation:Optional
-	AadTenant *string `json:"aadTenant,omitempty" tf:"aad_tenant"`
+	AadTenant *string `json:"aadTenant,omitempty" tf:"aad_tenant,omitempty"`
 
 	// +kubebuilder:validation:Required
-	AddressSpace []*string `json:"addressSpace" tf:"address_space"`
+	AddressSpace []*string `json:"addressSpace" tf:"address_space,omitempty"`
 
 	// +kubebuilder:validation:Optional
-	RadiusServerAddress *string `json:"radiusServerAddress,omitempty" tf:"radius_server_address"`
+	RadiusServerAddress *string `json:"radiusServerAddress,omitempty" tf:"radius_server_address,omitempty"`
 
 	// +kubebuilder:validation:Optional
-	RadiusServerSecret *string `json:"radiusServerSecret,omitempty" tf:"radius_server_secret"`
+	RadiusServerSecret *string `json:"radiusServerSecret,omitempty" tf:"radius_server_secret,omitempty"`
 
 	// +kubebuilder:validation:Optional
-	RevokedCertificate []RevokedCertificateParameters `json:"revokedCertificate,omitempty" tf:"revoked_certificate"`
+	RevokedCertificate []RevokedCertificateParameters `json:"revokedCertificate,omitempty" tf:"revoked_certificate,omitempty"`
 
 	// +kubebuilder:validation:Optional
-	RootCertificate []RootCertificateParameters `json:"rootCertificate,omitempty" tf:"root_certificate"`
+	RootCertificate []RootCertificateParameters `json:"rootCertificate,omitempty" tf:"root_certificate,omitempty"`
 
 	// +kubebuilder:validation:Optional
-	VpnClientProtocols []*string `json:"vpnClientProtocols,omitempty" tf:"vpn_client_protocols"`
+	VpnAuthTypes []*string `json:"vpnAuthTypes,omitempty" tf:"vpn_auth_types,omitempty"`
+
+	// +kubebuilder:validation:Optional
+	VpnClientProtocols []*string `json:"vpnClientProtocols,omitempty" tf:"vpn_client_protocols,omitempty"`
 }
 
 // VirtualNetworkGatewaySpec defines the desired state of VirtualNetworkGateway

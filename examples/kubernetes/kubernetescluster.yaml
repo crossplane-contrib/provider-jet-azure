@@ -7,10 +7,10 @@ spec:
     name: example-kubeconfig
     namespace: crossplane-system
   forProvider:
-    name: "example-aks"
+    name: "example-aks2"
     location: "East US"
     resourceGroupNameRef:
-      name: example-rg
+      name: example
     dnsPrefix: "exampleaks"
     defaultNodePool:
       - name: default

@@ -31,23 +31,23 @@ type PostgresqlFlexibleServerFirewallRuleObservation struct {
 type PostgresqlFlexibleServerFirewallRuleParameters struct {
 
 	// +kubebuilder:validation:Required
-	EndIPAddress *string `json:"endIpAddress" tf:"end_ip_address"`
+	EndIPAddress *string `json:"endIpAddress" tf:"end_ip_address,omitempty"`
 
 	// +kubebuilder:validation:Required
-	Name *string `json:"name" tf:"name"`
+	Name *string `json:"name" tf:"name,omitempty"`
 
 	// +crossplane:generate:reference:type=PostgresqlFlexibleServer
 	// +kubebuilder:validation:Optional
-	ServerID *string `json:"serverId,omitempty" tf:"server_id"`
+	ServerID *string `json:"serverId,omitempty" tf:"server_id,omitempty"`
 
 	// +kubebuilder:validation:Optional
-	ServerIDRef *v1.Reference `json:"serverIDRef,omitempty" tf:"-"`
+	ServerIDRef *v1.Reference `json:"serverIdRef,omitempty" tf:"-"`
 
 	// +kubebuilder:validation:Optional
-	ServerIDSelector *v1.Selector `json:"serverIDSelector,omitempty" tf:"-"`
+	ServerIDSelector *v1.Selector `json:"serverIdSelector,omitempty" tf:"-"`
 
 	// +kubebuilder:validation:Required
-	StartIPAddress *string `json:"startIpAddress" tf:"start_ip_address"`
+	StartIPAddress *string `json:"startIpAddress" tf:"start_ip_address,omitempty"`
 }
 
 // PostgresqlFlexibleServerFirewallRuleSpec defines the desired state of PostgresqlFlexibleServerFirewallRule

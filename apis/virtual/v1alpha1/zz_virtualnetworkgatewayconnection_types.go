@@ -31,28 +31,28 @@ type IpsecPolicyObservation struct {
 type IpsecPolicyParameters struct {
 
 	// +kubebuilder:validation:Required
-	DhGroup *string `json:"dhGroup" tf:"dh_group"`
+	DhGroup *string `json:"dhGroup" tf:"dh_group,omitempty"`
 
 	// +kubebuilder:validation:Required
-	IkeEncryption *string `json:"ikeEncryption" tf:"ike_encryption"`
+	IkeEncryption *string `json:"ikeEncryption" tf:"ike_encryption,omitempty"`
 
 	// +kubebuilder:validation:Required
-	IkeIntegrity *string `json:"ikeIntegrity" tf:"ike_integrity"`
+	IkeIntegrity *string `json:"ikeIntegrity" tf:"ike_integrity,omitempty"`
 
 	// +kubebuilder:validation:Required
-	IpsecEncryption *string `json:"ipsecEncryption" tf:"ipsec_encryption"`
+	IpsecEncryption *string `json:"ipsecEncryption" tf:"ipsec_encryption,omitempty"`
 
 	// +kubebuilder:validation:Required
-	IpsecIntegrity *string `json:"ipsecIntegrity" tf:"ipsec_integrity"`
+	IpsecIntegrity *string `json:"ipsecIntegrity" tf:"ipsec_integrity,omitempty"`
 
 	// +kubebuilder:validation:Required
-	PfsGroup *string `json:"pfsGroup" tf:"pfs_group"`
+	PfsGroup *string `json:"pfsGroup" tf:"pfs_group,omitempty"`
 
 	// +kubebuilder:validation:Optional
-	SaDatasize *int64 `json:"saDatasize,omitempty" tf:"sa_datasize"`
+	SaDatasize *int64 `json:"saDatasize,omitempty" tf:"sa_datasize,omitempty"`
 
 	// +kubebuilder:validation:Optional
-	SaLifetime *int64 `json:"saLifetime,omitempty" tf:"sa_lifetime"`
+	SaLifetime *int64 `json:"saLifetime,omitempty" tf:"sa_lifetime,omitempty"`
 }
 
 type TrafficSelectorPolicyObservation struct {
@@ -61,10 +61,10 @@ type TrafficSelectorPolicyObservation struct {
 type TrafficSelectorPolicyParameters struct {
 
 	// +kubebuilder:validation:Required
-	LocalAddressCidrs []*string `json:"localAddressCidrs" tf:"local_address_cidrs"`
+	LocalAddressCidrs []*string `json:"localAddressCidrs" tf:"local_address_cidrs,omitempty"`
 
 	// +kubebuilder:validation:Required
-	RemoteAddressCidrs []*string `json:"remoteAddressCidrs" tf:"remote_address_cidrs"`
+	RemoteAddressCidrs []*string `json:"remoteAddressCidrs" tf:"remote_address_cidrs,omitempty"`
 }
 
 type VirtualNetworkGatewayConnectionObservation struct {
@@ -76,49 +76,49 @@ type VirtualNetworkGatewayConnectionParameters struct {
 	AuthorizationKeySecretRef v1.SecretKeySelector `json:"authorizationKeySecretRef,omitempty" tf:"-"`
 
 	// +kubebuilder:validation:Optional
-	ConnectionProtocol *string `json:"connectionProtocol,omitempty" tf:"connection_protocol"`
+	ConnectionProtocol *string `json:"connectionProtocol,omitempty" tf:"connection_protocol,omitempty"`
 
 	// +kubebuilder:validation:Optional
-	DpdTimeoutSeconds *int64 `json:"dpdTimeoutSeconds,omitempty" tf:"dpd_timeout_seconds"`
+	DpdTimeoutSeconds *int64 `json:"dpdTimeoutSeconds,omitempty" tf:"dpd_timeout_seconds,omitempty"`
 
 	// +kubebuilder:validation:Optional
-	EnableBgp *bool `json:"enableBgp,omitempty" tf:"enable_bgp"`
+	EnableBgp *bool `json:"enableBgp,omitempty" tf:"enable_bgp,omitempty"`
 
 	// +kubebuilder:validation:Optional
-	ExpressRouteCircuitID *string `json:"expressRouteCircuitId,omitempty" tf:"express_route_circuit_id"`
+	ExpressRouteCircuitID *string `json:"expressRouteCircuitId,omitempty" tf:"express_route_circuit_id,omitempty"`
 
 	// +kubebuilder:validation:Optional
-	ExpressRouteGatewayBypass *bool `json:"expressRouteGatewayBypass,omitempty" tf:"express_route_gateway_bypass"`
+	ExpressRouteGatewayBypass *bool `json:"expressRouteGatewayBypass,omitempty" tf:"express_route_gateway_bypass,omitempty"`
 
 	// +kubebuilder:validation:Optional
-	IpsecPolicy []IpsecPolicyParameters `json:"ipsecPolicy,omitempty" tf:"ipsec_policy"`
+	IpsecPolicy []IpsecPolicyParameters `json:"ipsecPolicy,omitempty" tf:"ipsec_policy,omitempty"`
 
 	// +kubebuilder:validation:Optional
-	LocalAzureIPAddressEnabled *bool `json:"localAzureIpAddressEnabled,omitempty" tf:"local_azure_ip_address_enabled"`
+	LocalAzureIPAddressEnabled *bool `json:"localAzureIpAddressEnabled,omitempty" tf:"local_azure_ip_address_enabled,omitempty"`
 
 	// +kubebuilder:validation:Optional
-	LocalNetworkGatewayID *string `json:"localNetworkGatewayId,omitempty" tf:"local_network_gateway_id"`
+	LocalNetworkGatewayID *string `json:"localNetworkGatewayId,omitempty" tf:"local_network_gateway_id,omitempty"`
 
 	// +kubebuilder:validation:Required
-	Location *string `json:"location" tf:"location"`
+	Location *string `json:"location" tf:"location,omitempty"`
 
 	// +kubebuilder:validation:Required
-	Name *string `json:"name" tf:"name"`
+	Name *string `json:"name" tf:"name,omitempty"`
 
 	// +crossplane:generate:reference:type=VirtualNetworkGateway
 	// +kubebuilder:validation:Optional
-	PeerVirtualNetworkGatewayID *string `json:"peerVirtualNetworkGatewayId,omitempty" tf:"peer_virtual_network_gateway_id"`
+	PeerVirtualNetworkGatewayID *string `json:"peerVirtualNetworkGatewayId,omitempty" tf:"peer_virtual_network_gateway_id,omitempty"`
 
 	// +kubebuilder:validation:Optional
-	PeerVirtualNetworkGatewayIDRef *v1.Reference `json:"peerVirtualNetworkGatewayIDRef,omitempty" tf:"-"`
+	PeerVirtualNetworkGatewayIDRef *v1.Reference `json:"peerVirtualNetworkGatewayIdRef,omitempty" tf:"-"`
 
 	// +kubebuilder:validation:Optional
-	PeerVirtualNetworkGatewayIDSelector *v1.Selector `json:"peerVirtualNetworkGatewayIDSelector,omitempty" tf:"-"`
+	PeerVirtualNetworkGatewayIDSelector *v1.Selector `json:"peerVirtualNetworkGatewayIdSelector,omitempty" tf:"-"`
 
 	// +crossplane:generate:reference:type=github.com/crossplane-contrib/provider-tf-azure/apis/resource/v1alpha1.ResourceGroup
 	// +crossplane:generate:reference:extractor=github.com/crossplane-contrib/provider-tf-azure/apis/rconfig.ExtractResourceName()
 	// +kubebuilder:validation:Optional
-	ResourceGroupName *string `json:"resourceGroupName,omitempty" tf:"resource_group_name"`
+	ResourceGroupName *string `json:"resourceGroupName,omitempty" tf:"resource_group_name,omitempty"`
 
 	// +kubebuilder:validation:Optional
 	ResourceGroupNameRef *v1.Reference `json:"resourceGroupNameRef,omitempty" tf:"-"`
@@ -127,32 +127,32 @@ type VirtualNetworkGatewayConnectionParameters struct {
 	ResourceGroupNameSelector *v1.Selector `json:"resourceGroupNameSelector,omitempty" tf:"-"`
 
 	// +kubebuilder:validation:Optional
-	RoutingWeight *int64 `json:"routingWeight,omitempty" tf:"routing_weight"`
+	RoutingWeight *int64 `json:"routingWeight,omitempty" tf:"routing_weight,omitempty"`
 
 	// +kubebuilder:validation:Optional
 	SharedKeySecretRef v1.SecretKeySelector `json:"sharedKeySecretRef,omitempty" tf:"-"`
 
 	// +kubebuilder:validation:Optional
-	Tags map[string]*string `json:"tags,omitempty" tf:"tags"`
+	Tags map[string]*string `json:"tags,omitempty" tf:"tags,omitempty"`
 
 	// +kubebuilder:validation:Optional
-	TrafficSelectorPolicy []TrafficSelectorPolicyParameters `json:"trafficSelectorPolicy,omitempty" tf:"traffic_selector_policy"`
+	TrafficSelectorPolicy []TrafficSelectorPolicyParameters `json:"trafficSelectorPolicy,omitempty" tf:"traffic_selector_policy,omitempty"`
 
 	// +kubebuilder:validation:Required
-	Type *string `json:"type" tf:"type"`
+	Type *string `json:"type" tf:"type,omitempty"`
 
 	// +kubebuilder:validation:Optional
-	UsePolicyBasedTrafficSelectors *bool `json:"usePolicyBasedTrafficSelectors,omitempty" tf:"use_policy_based_traffic_selectors"`
+	UsePolicyBasedTrafficSelectors *bool `json:"usePolicyBasedTrafficSelectors,omitempty" tf:"use_policy_based_traffic_selectors,omitempty"`
 
 	// +crossplane:generate:reference:type=VirtualNetworkGateway
 	// +kubebuilder:validation:Optional
-	VirtualNetworkGatewayID *string `json:"virtualNetworkGatewayId,omitempty" tf:"virtual_network_gateway_id"`
+	VirtualNetworkGatewayID *string `json:"virtualNetworkGatewayId,omitempty" tf:"virtual_network_gateway_id,omitempty"`
 
 	// +kubebuilder:validation:Optional
-	VirtualNetworkGatewayIDRef *v1.Reference `json:"virtualNetworkGatewayIDRef,omitempty" tf:"-"`
+	VirtualNetworkGatewayIDRef *v1.Reference `json:"virtualNetworkGatewayIdRef,omitempty" tf:"-"`
 
 	// +kubebuilder:validation:Optional
-	VirtualNetworkGatewayIDSelector *v1.Selector `json:"virtualNetworkGatewayIDSelector,omitempty" tf:"-"`
+	VirtualNetworkGatewayIDSelector *v1.Selector `json:"virtualNetworkGatewayIdSelector,omitempty" tf:"-"`
 }
 
 // VirtualNetworkGatewayConnectionSpec defines the desired state of VirtualNetworkGatewayConnection

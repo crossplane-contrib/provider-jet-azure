@@ -113,7 +113,9 @@ spec:
                     additionalProperties:
                       type: string
                     type: object
-                  virtualWanIDRef:
+                  virtualWanId:
+                    type: string
+                  virtualWanIdRef:
                     description: A Reference to a named object.
                     properties:
                       name:
@@ -122,7 +124,7 @@ spec:
                     required:
                     - name
                     type: object
-                  virtualWanIDSelector:
+                  virtualWanIdSelector:
                     description: A Selector selects an object.
                     properties:
                       matchControllerRef:
@@ -136,8 +138,6 @@ spec:
                           is selected.
                         type: object
                     type: object
-                  virtualWanId:
-                    type: string
                 required:
                 - location
                 - name

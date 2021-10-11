@@ -70,7 +70,9 @@ spec:
                     type: string
                   name:
                     type: string
-                  serverIDRef:
+                  serverId:
+                    type: string
+                  serverIdRef:
                     description: A Reference to a named object.
                     properties:
                       name:
@@ -79,7 +81,7 @@ spec:
                     required:
                     - name
                     type: object
-                  serverIDSelector:
+                  serverIdSelector:
                     description: A Selector selects an object.
                     properties:
                       matchControllerRef:
@@ -93,8 +95,6 @@ spec:
                           is selected.
                         type: object
                     type: object
-                  serverId:
-                    type: string
                 required:
                 - name
                 type: object

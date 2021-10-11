@@ -31,10 +31,10 @@ type CompositeIndexIndexObservation struct {
 type CompositeIndexIndexParameters struct {
 
 	// +kubebuilder:validation:Required
-	Order *string `json:"order" tf:"order"`
+	Order *string `json:"order" tf:"order,omitempty"`
 
 	// +kubebuilder:validation:Required
-	Path *string `json:"path" tf:"path"`
+	Path *string `json:"path" tf:"path,omitempty"`
 }
 
 type CosmosdbSqlContainerAutoscaleSettingsObservation struct {
@@ -43,7 +43,7 @@ type CosmosdbSqlContainerAutoscaleSettingsObservation struct {
 type CosmosdbSqlContainerAutoscaleSettingsParameters struct {
 
 	// +kubebuilder:validation:Optional
-	MaxThroughput *int64 `json:"maxThroughput,omitempty" tf:"max_throughput"`
+	MaxThroughput *int64 `json:"maxThroughput,omitempty" tf:"max_throughput,omitempty"`
 }
 
 type CosmosdbSqlContainerConflictResolutionPolicyObservation struct {
@@ -52,13 +52,13 @@ type CosmosdbSqlContainerConflictResolutionPolicyObservation struct {
 type CosmosdbSqlContainerConflictResolutionPolicyParameters struct {
 
 	// +kubebuilder:validation:Optional
-	ConflictResolutionPath *string `json:"conflictResolutionPath,omitempty" tf:"conflict_resolution_path"`
+	ConflictResolutionPath *string `json:"conflictResolutionPath,omitempty" tf:"conflict_resolution_path,omitempty"`
 
 	// +kubebuilder:validation:Optional
-	ConflictResolutionProcedure *string `json:"conflictResolutionProcedure,omitempty" tf:"conflict_resolution_procedure"`
+	ConflictResolutionProcedure *string `json:"conflictResolutionProcedure,omitempty" tf:"conflict_resolution_procedure,omitempty"`
 
 	// +kubebuilder:validation:Required
-	Mode *string `json:"mode" tf:"mode"`
+	Mode *string `json:"mode" tf:"mode,omitempty"`
 }
 
 type CosmosdbSqlContainerObservation struct {
@@ -69,7 +69,7 @@ type CosmosdbSqlContainerParameters struct {
 	// +crossplane:generate:reference:type=CosmosdbAccount
 	// +crossplane:generate:reference:extractor=github.com/crossplane-contrib/provider-tf-azure/apis/rconfig.ExtractResourceName()
 	// +kubebuilder:validation:Optional
-	AccountName *string `json:"accountName,omitempty" tf:"account_name"`
+	AccountName *string `json:"accountName,omitempty" tf:"account_name,omitempty"`
 
 	// +kubebuilder:validation:Optional
 	AccountNameRef *v1.Reference `json:"accountNameRef,omitempty" tf:"-"`
@@ -78,18 +78,18 @@ type CosmosdbSqlContainerParameters struct {
 	AccountNameSelector *v1.Selector `json:"accountNameSelector,omitempty" tf:"-"`
 
 	// +kubebuilder:validation:Optional
-	AnalyticalStorageTTL *int64 `json:"analyticalStorageTtl,omitempty" tf:"analytical_storage_ttl"`
+	AnalyticalStorageTTL *int64 `json:"analyticalStorageTtl,omitempty" tf:"analytical_storage_ttl,omitempty"`
 
 	// +kubebuilder:validation:Optional
-	AutoscaleSettings []CosmosdbSqlContainerAutoscaleSettingsParameters `json:"autoscaleSettings,omitempty" tf:"autoscale_settings"`
+	AutoscaleSettings []CosmosdbSqlContainerAutoscaleSettingsParameters `json:"autoscaleSettings,omitempty" tf:"autoscale_settings,omitempty"`
 
 	// +kubebuilder:validation:Optional
-	ConflictResolutionPolicy []CosmosdbSqlContainerConflictResolutionPolicyParameters `json:"conflictResolutionPolicy,omitempty" tf:"conflict_resolution_policy"`
+	ConflictResolutionPolicy []CosmosdbSqlContainerConflictResolutionPolicyParameters `json:"conflictResolutionPolicy,omitempty" tf:"conflict_resolution_policy,omitempty"`
 
 	// +crossplane:generate:reference:type=CosmosdbSqlDatabase
 	// +crossplane:generate:reference:extractor=github.com/crossplane-contrib/provider-tf-azure/apis/rconfig.ExtractResourceName()
 	// +kubebuilder:validation:Optional
-	DatabaseName *string `json:"databaseName,omitempty" tf:"database_name"`
+	DatabaseName *string `json:"databaseName,omitempty" tf:"database_name,omitempty"`
 
 	// +kubebuilder:validation:Optional
 	DatabaseNameRef *v1.Reference `json:"databaseNameRef,omitempty" tf:"-"`
@@ -98,24 +98,24 @@ type CosmosdbSqlContainerParameters struct {
 	DatabaseNameSelector *v1.Selector `json:"databaseNameSelector,omitempty" tf:"-"`
 
 	// +kubebuilder:validation:Optional
-	DefaultTTL *int64 `json:"defaultTtl,omitempty" tf:"default_ttl"`
+	DefaultTTL *int64 `json:"defaultTtl,omitempty" tf:"default_ttl,omitempty"`
 
 	// +kubebuilder:validation:Optional
-	IndexingPolicy []IndexingPolicyParameters `json:"indexingPolicy,omitempty" tf:"indexing_policy"`
+	IndexingPolicy []IndexingPolicyParameters `json:"indexingPolicy,omitempty" tf:"indexing_policy,omitempty"`
 
 	// +kubebuilder:validation:Required
-	Name *string `json:"name" tf:"name"`
+	Name *string `json:"name" tf:"name,omitempty"`
 
 	// +kubebuilder:validation:Required
-	PartitionKeyPath *string `json:"partitionKeyPath" tf:"partition_key_path"`
+	PartitionKeyPath *string `json:"partitionKeyPath" tf:"partition_key_path,omitempty"`
 
 	// +kubebuilder:validation:Optional
-	PartitionKeyVersion *int64 `json:"partitionKeyVersion,omitempty" tf:"partition_key_version"`
+	PartitionKeyVersion *int64 `json:"partitionKeyVersion,omitempty" tf:"partition_key_version,omitempty"`
 
 	// +crossplane:generate:reference:type=github.com/crossplane-contrib/provider-tf-azure/apis/resource/v1alpha1.ResourceGroup
 	// +crossplane:generate:reference:extractor=github.com/crossplane-contrib/provider-tf-azure/apis/rconfig.ExtractResourceName()
 	// +kubebuilder:validation:Optional
-	ResourceGroupName *string `json:"resourceGroupName,omitempty" tf:"resource_group_name"`
+	ResourceGroupName *string `json:"resourceGroupName,omitempty" tf:"resource_group_name,omitempty"`
 
 	// +kubebuilder:validation:Optional
 	ResourceGroupNameRef *v1.Reference `json:"resourceGroupNameRef,omitempty" tf:"-"`
@@ -124,10 +124,10 @@ type CosmosdbSqlContainerParameters struct {
 	ResourceGroupNameSelector *v1.Selector `json:"resourceGroupNameSelector,omitempty" tf:"-"`
 
 	// +kubebuilder:validation:Optional
-	Throughput *int64 `json:"throughput,omitempty" tf:"throughput"`
+	Throughput *int64 `json:"throughput,omitempty" tf:"throughput,omitempty"`
 
 	// +kubebuilder:validation:Optional
-	UniqueKey []CosmosdbSqlContainerUniqueKeyParameters `json:"uniqueKey,omitempty" tf:"unique_key"`
+	UniqueKey []CosmosdbSqlContainerUniqueKeyParameters `json:"uniqueKey,omitempty" tf:"unique_key,omitempty"`
 }
 
 type CosmosdbSqlContainerUniqueKeyObservation struct {
@@ -136,7 +136,7 @@ type CosmosdbSqlContainerUniqueKeyObservation struct {
 type CosmosdbSqlContainerUniqueKeyParameters struct {
 
 	// +kubebuilder:validation:Required
-	Paths []*string `json:"paths" tf:"paths"`
+	Paths []*string `json:"paths" tf:"paths,omitempty"`
 }
 
 type ExcludedPathObservation struct {
@@ -145,7 +145,7 @@ type ExcludedPathObservation struct {
 type ExcludedPathParameters struct {
 
 	// +kubebuilder:validation:Required
-	Path *string `json:"path" tf:"path"`
+	Path *string `json:"path" tf:"path,omitempty"`
 }
 
 type IncludedPathObservation struct {
@@ -154,7 +154,7 @@ type IncludedPathObservation struct {
 type IncludedPathParameters struct {
 
 	// +kubebuilder:validation:Required
-	Path *string `json:"path" tf:"path"`
+	Path *string `json:"path" tf:"path,omitempty"`
 }
 
 type IndexingPolicyCompositeIndexObservation struct {
@@ -163,7 +163,7 @@ type IndexingPolicyCompositeIndexObservation struct {
 type IndexingPolicyCompositeIndexParameters struct {
 
 	// +kubebuilder:validation:Required
-	Index []CompositeIndexIndexParameters `json:"index" tf:"index"`
+	Index []CompositeIndexIndexParameters `json:"index" tf:"index,omitempty"`
 }
 
 type IndexingPolicyObservation struct {
@@ -172,29 +172,29 @@ type IndexingPolicyObservation struct {
 type IndexingPolicyParameters struct {
 
 	// +kubebuilder:validation:Optional
-	CompositeIndex []IndexingPolicyCompositeIndexParameters `json:"compositeIndex,omitempty" tf:"composite_index"`
+	CompositeIndex []IndexingPolicyCompositeIndexParameters `json:"compositeIndex,omitempty" tf:"composite_index,omitempty"`
 
 	// +kubebuilder:validation:Optional
-	ExcludedPath []ExcludedPathParameters `json:"excludedPath,omitempty" tf:"excluded_path"`
+	ExcludedPath []ExcludedPathParameters `json:"excludedPath,omitempty" tf:"excluded_path,omitempty"`
 
 	// +kubebuilder:validation:Optional
-	IncludedPath []IncludedPathParameters `json:"includedPath,omitempty" tf:"included_path"`
+	IncludedPath []IncludedPathParameters `json:"includedPath,omitempty" tf:"included_path,omitempty"`
 
 	// +kubebuilder:validation:Optional
-	IndexingMode *string `json:"indexingMode,omitempty" tf:"indexing_mode"`
+	IndexingMode *string `json:"indexingMode,omitempty" tf:"indexing_mode,omitempty"`
 
 	// +kubebuilder:validation:Optional
-	SpatialIndex []IndexingPolicySpatialIndexParameters `json:"spatialIndex,omitempty" tf:"spatial_index"`
+	SpatialIndex []IndexingPolicySpatialIndexParameters `json:"spatialIndex,omitempty" tf:"spatial_index,omitempty"`
 }
 
 type IndexingPolicySpatialIndexObservation struct {
-	Types []*string `json:"types,omitempty" tf:"types"`
+	Types []*string `json:"types,omitempty" tf:"types,omitempty"`
 }
 
 type IndexingPolicySpatialIndexParameters struct {
 
 	// +kubebuilder:validation:Required
-	Path *string `json:"path" tf:"path"`
+	Path *string `json:"path" tf:"path,omitempty"`
 }
 
 // CosmosdbSqlContainerSpec defines the desired state of CosmosdbSqlContainer

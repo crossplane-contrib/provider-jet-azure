@@ -31,7 +31,7 @@ type CosmosdbMongoCollectionAutoscaleSettingsObservation struct {
 type CosmosdbMongoCollectionAutoscaleSettingsParameters struct {
 
 	// +kubebuilder:validation:Optional
-	MaxThroughput *int64 `json:"maxThroughput,omitempty" tf:"max_throughput"`
+	MaxThroughput *int64 `json:"maxThroughput,omitempty" tf:"max_throughput,omitempty"`
 }
 
 type CosmosdbMongoCollectionIndexObservation struct {
@@ -40,14 +40,14 @@ type CosmosdbMongoCollectionIndexObservation struct {
 type CosmosdbMongoCollectionIndexParameters struct {
 
 	// +kubebuilder:validation:Required
-	Keys []*string `json:"keys" tf:"keys"`
+	Keys []*string `json:"keys" tf:"keys,omitempty"`
 
 	// +kubebuilder:validation:Optional
-	Unique *bool `json:"unique,omitempty" tf:"unique"`
+	Unique *bool `json:"unique,omitempty" tf:"unique,omitempty"`
 }
 
 type CosmosdbMongoCollectionObservation struct {
-	SystemIndexes []SystemIndexesObservation `json:"systemIndexes,omitempty" tf:"system_indexes"`
+	SystemIndexes []SystemIndexesObservation `json:"systemIndexes,omitempty" tf:"system_indexes,omitempty"`
 }
 
 type CosmosdbMongoCollectionParameters struct {
@@ -55,7 +55,7 @@ type CosmosdbMongoCollectionParameters struct {
 	// +crossplane:generate:reference:type=CosmosdbAccount
 	// +crossplane:generate:reference:extractor=github.com/crossplane-contrib/provider-tf-azure/apis/rconfig.ExtractResourceName()
 	// +kubebuilder:validation:Optional
-	AccountName *string `json:"accountName,omitempty" tf:"account_name"`
+	AccountName *string `json:"accountName,omitempty" tf:"account_name,omitempty"`
 
 	// +kubebuilder:validation:Optional
 	AccountNameRef *v1.Reference `json:"accountNameRef,omitempty" tf:"-"`
@@ -64,15 +64,15 @@ type CosmosdbMongoCollectionParameters struct {
 	AccountNameSelector *v1.Selector `json:"accountNameSelector,omitempty" tf:"-"`
 
 	// +kubebuilder:validation:Optional
-	AnalyticalStorageTTL *int64 `json:"analyticalStorageTtl,omitempty" tf:"analytical_storage_ttl"`
+	AnalyticalStorageTTL *int64 `json:"analyticalStorageTtl,omitempty" tf:"analytical_storage_ttl,omitempty"`
 
 	// +kubebuilder:validation:Optional
-	AutoscaleSettings []CosmosdbMongoCollectionAutoscaleSettingsParameters `json:"autoscaleSettings,omitempty" tf:"autoscale_settings"`
+	AutoscaleSettings []CosmosdbMongoCollectionAutoscaleSettingsParameters `json:"autoscaleSettings,omitempty" tf:"autoscale_settings,omitempty"`
 
 	// +crossplane:generate:reference:type=CosmosdbMongoDatabase
 	// +crossplane:generate:reference:extractor=github.com/crossplane-contrib/provider-tf-azure/apis/rconfig.ExtractResourceName()
 	// +kubebuilder:validation:Optional
-	DatabaseName *string `json:"databaseName,omitempty" tf:"database_name"`
+	DatabaseName *string `json:"databaseName,omitempty" tf:"database_name,omitempty"`
 
 	// +kubebuilder:validation:Optional
 	DatabaseNameRef *v1.Reference `json:"databaseNameRef,omitempty" tf:"-"`
@@ -81,18 +81,18 @@ type CosmosdbMongoCollectionParameters struct {
 	DatabaseNameSelector *v1.Selector `json:"databaseNameSelector,omitempty" tf:"-"`
 
 	// +kubebuilder:validation:Optional
-	DefaultTTLSeconds *int64 `json:"defaultTtlSeconds,omitempty" tf:"default_ttl_seconds"`
+	DefaultTTLSeconds *int64 `json:"defaultTtlSeconds,omitempty" tf:"default_ttl_seconds,omitempty"`
 
 	// +kubebuilder:validation:Optional
-	Index []CosmosdbMongoCollectionIndexParameters `json:"index,omitempty" tf:"index"`
+	Index []CosmosdbMongoCollectionIndexParameters `json:"index,omitempty" tf:"index,omitempty"`
 
 	// +kubebuilder:validation:Required
-	Name *string `json:"name" tf:"name"`
+	Name *string `json:"name" tf:"name,omitempty"`
 
 	// +crossplane:generate:reference:type=github.com/crossplane-contrib/provider-tf-azure/apis/resource/v1alpha1.ResourceGroup
 	// +crossplane:generate:reference:extractor=github.com/crossplane-contrib/provider-tf-azure/apis/rconfig.ExtractResourceName()
 	// +kubebuilder:validation:Optional
-	ResourceGroupName *string `json:"resourceGroupName,omitempty" tf:"resource_group_name"`
+	ResourceGroupName *string `json:"resourceGroupName,omitempty" tf:"resource_group_name,omitempty"`
 
 	// +kubebuilder:validation:Optional
 	ResourceGroupNameRef *v1.Reference `json:"resourceGroupNameRef,omitempty" tf:"-"`
@@ -101,16 +101,16 @@ type CosmosdbMongoCollectionParameters struct {
 	ResourceGroupNameSelector *v1.Selector `json:"resourceGroupNameSelector,omitempty" tf:"-"`
 
 	// +kubebuilder:validation:Optional
-	ShardKey *string `json:"shardKey,omitempty" tf:"shard_key"`
+	ShardKey *string `json:"shardKey,omitempty" tf:"shard_key,omitempty"`
 
 	// +kubebuilder:validation:Optional
-	Throughput *int64 `json:"throughput,omitempty" tf:"throughput"`
+	Throughput *int64 `json:"throughput,omitempty" tf:"throughput,omitempty"`
 }
 
 type SystemIndexesObservation struct {
-	Keys []*string `json:"keys,omitempty" tf:"keys"`
+	Keys []*string `json:"keys,omitempty" tf:"keys,omitempty"`
 
-	Unique *bool `json:"unique,omitempty" tf:"unique"`
+	Unique *bool `json:"unique,omitempty" tf:"unique,omitempty"`
 }
 
 type SystemIndexesParameters struct {

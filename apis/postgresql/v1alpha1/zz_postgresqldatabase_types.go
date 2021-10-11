@@ -31,18 +31,18 @@ type PostgresqlDatabaseObservation struct {
 type PostgresqlDatabaseParameters struct {
 
 	// +kubebuilder:validation:Required
-	Charset *string `json:"charset" tf:"charset"`
+	Charset *string `json:"charset" tf:"charset,omitempty"`
 
 	// +kubebuilder:validation:Required
-	Collation *string `json:"collation" tf:"collation"`
+	Collation *string `json:"collation" tf:"collation,omitempty"`
 
 	// +kubebuilder:validation:Required
-	Name *string `json:"name" tf:"name"`
+	Name *string `json:"name" tf:"name,omitempty"`
 
 	// +crossplane:generate:reference:type=github.com/crossplane-contrib/provider-tf-azure/apis/resource/v1alpha1.ResourceGroup
 	// +crossplane:generate:reference:extractor=github.com/crossplane-contrib/provider-tf-azure/apis/rconfig.ExtractResourceName()
 	// +kubebuilder:validation:Optional
-	ResourceGroupName *string `json:"resourceGroupName,omitempty" tf:"resource_group_name"`
+	ResourceGroupName *string `json:"resourceGroupName,omitempty" tf:"resource_group_name,omitempty"`
 
 	// +kubebuilder:validation:Optional
 	ResourceGroupNameRef *v1.Reference `json:"resourceGroupNameRef,omitempty" tf:"-"`
@@ -53,7 +53,7 @@ type PostgresqlDatabaseParameters struct {
 	// +crossplane:generate:reference:type=PostgresqlServer
 	// +crossplane:generate:reference:extractor=github.com/crossplane-contrib/provider-tf-azure/apis/rconfig.ExtractResourceName()
 	// +kubebuilder:validation:Optional
-	ServerName *string `json:"serverName,omitempty" tf:"server_name"`
+	ServerName *string `json:"serverName,omitempty" tf:"server_name,omitempty"`
 
 	// +kubebuilder:validation:Optional
 	ServerNameRef *v1.Reference `json:"serverNameRef,omitempty" tf:"-"`
