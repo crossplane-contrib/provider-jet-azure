@@ -24,6 +24,7 @@ import (
 
 	v1alpha1cosmosdb "github.com/crossplane-contrib/provider-tf-azure/apis/cosmosdb/v1alpha1"
 	v1alpha1kubernetes "github.com/crossplane-contrib/provider-tf-azure/apis/kubernetes/v1alpha1"
+	v1alpha1lb "github.com/crossplane-contrib/provider-tf-azure/apis/lb/v1alpha1"
 	v1alpha1postgresql "github.com/crossplane-contrib/provider-tf-azure/apis/postgresql/v1alpha1"
 	v1alpha1resource "github.com/crossplane-contrib/provider-tf-azure/apis/resource/v1alpha1"
 	v1alpha1subnet "github.com/crossplane-contrib/provider-tf-azure/apis/subnet/v1alpha1"
@@ -37,6 +38,7 @@ func init() {
 		v1alpha1.SchemeBuilder.AddToScheme,
 		v1alpha1cosmosdb.SchemeBuilder.AddToScheme,
 		v1alpha1kubernetes.SchemeBuilder.AddToScheme,
+		v1alpha1lb.SchemeBuilder.AddToScheme,
 		v1alpha1postgresql.SchemeBuilder.AddToScheme,
 		v1alpha1resource.SchemeBuilder.AddToScheme,
 		v1alpha1subnet.SchemeBuilder.AddToScheme,
