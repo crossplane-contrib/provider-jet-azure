@@ -1,0 +1,12 @@
+apiVersion: lb.azure.tf.crossplane.io/v1alpha1
+kind: Lb
+metadata:
+  name: example
+spec:
+  forProvider:
+    location: East US
+    name: example-lb
+    resourceGroupNameRef:
+      name: example
+  providerConfigRef:
+    name: example

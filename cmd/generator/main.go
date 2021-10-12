@@ -74,6 +74,7 @@ var includeList = []string{
 	"azurerm_cosmosdb_.+",
 	"azurerm_resource_group",
 	"azurerm_subnet",
+	"azurerm_lb$",
 }
 
 // "make prepare.azurerm" should be run before running this generator pipeline
