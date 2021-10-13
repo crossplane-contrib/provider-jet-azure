@@ -3,6 +3,7 @@ package clients
 import (
 	"context"
 	"encoding/json"
+	"fmt"
 
 	"github.com/crossplane-contrib/terrajet/pkg/terraform"
 	"github.com/pkg/errors"
@@ -28,11 +29,14 @@ const (
 	keyAzureClientSecret   = "clientSecret"
 	keyAzureTenantID       = "tenantId"
 	// Terraform Provider configuration keys
-	keyTerraformSubscriptionID = "subscription_id"
-	keyTerraformClientID       = "client_id"
-	keyTerraformClientSecret   = "client_secret"
-	keyTerraformTenantID       = "tenant_id"
-	keyTerraformFeatures       = "features"
+	keyTerraformFeatures = "features"
+	// environment variable names for storing credentials
+	envClientID       = "ARM_CLIENT_ID"
+	envClientSecret   = "ARM_CLIENT_SECRET"
+	envSubscriptionID = "ARM_SUBSCRIPTION_ID"
+	envTenantID       = "ARM_TENANT_ID"
+
+	fmtEnvVar = "%s=%s"
 )
 
 // TerraformSetupBuilder returns Terraform setup with provider specific
@@ -71,13 +75,16 @@ func TerraformSetupBuilder(version, providerSource, providerVersion string) terr
 			return ps, errors.Wrap(err, errUnmarshalCredentials)
 		}
 
-		tfProviderBlock := map[string]interface{}{}
-		tfProviderBlock[keyTerraformSubscriptionID] = azureCreds[keyAzureSubscriptionID]
-		tfProviderBlock[keyTerraformTenantID] = azureCreds[keyAzureTenantID]
-		tfProviderBlock[keyTerraformClientID] = azureCreds[keyAzureClientID]
-		tfProviderBlock[keyTerraformClientSecret] = azureCreds[keyAzureClientSecret]
-		tfProviderBlock[keyTerraformFeatures] = struct{}{}
-		ps.Configuration = tfProviderBlock
+		ps.Configuration = map[string]interface{}{
+			keyTerraformFeatures: struct{}{},
+		}
+		// set credentials environment
+		ps.Env = []string{
+			fmt.Sprintf(fmtEnvVar, envSubscriptionID, azureCreds[keyAzureSubscriptionID]),
+			fmt.Sprintf(fmtEnvVar, envTenantID, azureCreds[keyAzureTenantID]),
+			fmt.Sprintf(fmtEnvVar, envClientID, azureCreds[keyAzureClientID]),
+			fmt.Sprintf(fmtEnvVar, envClientSecret, azureCreds[keyAzureClientSecret]),
+		}
 		return ps, err
 	}
 }
