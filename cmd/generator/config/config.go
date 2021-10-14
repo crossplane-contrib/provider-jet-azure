@@ -734,6 +734,7 @@ func SetResourceConfigurations() {
 		UseAsync: true,
 	})
 	config.Store.SetForResource("azurerm_lb", config.Resource{
+		Kind: "LoadBalancer",
 		ExternalName: config.ExternalName{
 			DisableNameInitializer: true,
 		},

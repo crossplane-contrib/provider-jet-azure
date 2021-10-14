@@ -25,23 +25,23 @@ import (
 	"github.com/crossplane-contrib/terrajet/pkg/resource/json"
 )
 
-// GetTerraformResourceType returns Terraform resource type for this Lb
-func (mg *Lb) GetTerraformResourceType() string {
+// GetTerraformResourceType returns Terraform resource type for this LoadBalancer
+func (mg *LoadBalancer) GetTerraformResourceType() string {
 	return "azurerm_lb"
 }
 
-// GetTerraformResourceIDField returns Terraform identifier field for this Lb
-func (tr *Lb) GetTerraformResourceIDField() string {
+// GetTerraformResourceIDField returns Terraform identifier field for this LoadBalancer
+func (tr *LoadBalancer) GetTerraformResourceIDField() string {
 	return "id"
 }
 
-// GetConnectionDetailsMapping for this Lb
-func (tr *Lb) GetConnectionDetailsMapping() map[string]string {
+// GetConnectionDetailsMapping for this LoadBalancer
+func (tr *LoadBalancer) GetConnectionDetailsMapping() map[string]string {
 	return nil
 }
 
-// GetObservation of this Lb
-func (tr *Lb) GetObservation() (map[string]interface{}, error) {
+// GetObservation of this LoadBalancer
+func (tr *LoadBalancer) GetObservation() (map[string]interface{}, error) {
 	o, err := json.TFParser.Marshal(tr.Status.AtProvider)
 	if err != nil {
 		return nil, err
@@ -50,8 +50,8 @@ func (tr *Lb) GetObservation() (map[string]interface{}, error) {
 	return base, json.TFParser.Unmarshal(o, &base)
 }
 
-// SetObservation for this Lb
-func (tr *Lb) SetObservation(obs map[string]interface{}) error {
+// SetObservation for this LoadBalancer
+func (tr *LoadBalancer) SetObservation(obs map[string]interface{}) error {
 	p, err := json.TFParser.Marshal(obs)
 	if err != nil {
 		return err
@@ -59,8 +59,8 @@ func (tr *Lb) SetObservation(obs map[string]interface{}) error {
 	return json.TFParser.Unmarshal(p, &tr.Status.AtProvider)
 }
 
-// GetParameters of this Lb
-func (tr *Lb) GetParameters() (map[string]interface{}, error) {
+// GetParameters of this LoadBalancer
+func (tr *LoadBalancer) GetParameters() (map[string]interface{}, error) {
 	p, err := json.TFParser.Marshal(tr.Spec.ForProvider)
 	if err != nil {
 		return nil, err
@@ -69,8 +69,8 @@ func (tr *Lb) GetParameters() (map[string]interface{}, error) {
 	return base, json.TFParser.Unmarshal(p, &base)
 }
 
-// SetParameters for this Lb
-func (tr *Lb) SetParameters(params map[string]interface{}) error {
+// SetParameters for this LoadBalancer
+func (tr *LoadBalancer) SetParameters(params map[string]interface{}) error {
 	p, err := json.TFParser.Marshal(params)
 	if err != nil {
 		return err
@@ -78,10 +78,10 @@ func (tr *Lb) SetParameters(params map[string]interface{}) error {
 	return json.TFParser.Unmarshal(p, &tr.Spec.ForProvider)
 }
 
-// LateInitialize this Lb using its observed tfState.
+// LateInitialize this LoadBalancer using its observed tfState.
 // returns True if there are any spec changes for the resource.
-func (tr *Lb) LateInitialize(attrs []byte) (bool, error) {
-	params := &LbParameters{}
+func (tr *LoadBalancer) LateInitialize(attrs []byte) (bool, error) {
+	params := &LoadBalancerParameters{}
 	if err := json.TFParser.Unmarshal(attrs, params); err != nil {
 		return false, errors.Wrap(err, "failed to unmarshal Terraform state parameters for late-initialization")
 	}

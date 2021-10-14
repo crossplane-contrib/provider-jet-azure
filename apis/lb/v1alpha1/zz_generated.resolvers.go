@@ -26,8 +26,8 @@ import (
 	client "sigs.k8s.io/controller-runtime/pkg/client"
 )
 
-// ResolveReferences of this Lb.
-func (mg *Lb) ResolveReferences(ctx context.Context, c client.Reader) error {
+// ResolveReferences of this LoadBalancer.
+func (mg *LoadBalancer) ResolveReferences(ctx context.Context, c client.Reader) error {
 	r := reference.NewAPIResolver(c, mg)
 
 	var rsp reference.ResolutionResponse
