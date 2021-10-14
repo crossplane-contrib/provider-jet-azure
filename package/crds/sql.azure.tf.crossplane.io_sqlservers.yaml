@@ -4,18 +4,18 @@ metadata:
   annotations:
     controller-gen.kubebuilder.io/version: v0.6.2
   creationTimestamp: null
-  name: storagetableentities.storage.azure.tf.crossplane.io
+  name: sqlservers.sql.azure.tf.crossplane.io
 spec:
-  group: storage.azure.tf.crossplane.io
+  group: sql.azure.tf.crossplane.io
   names:
     categories:
     - crossplane
     - managed
     - azure
-    kind: StorageTableEntity
-    listKind: StorageTableEntityList
-    plural: storagetableentities
-    singular: storagetableentity
+    kind: SqlServer
+    listKind: SqlServerList
+    plural: sqlservers
+    singular: sqlserver
   scope: Cluster
   versions:
   - additionalPrinterColumns:
@@ -34,8 +34,7 @@ spec:
     name: v1alpha1
     schema:
       openAPIV3Schema:
-        description: StorageTableEntity is the Schema for the StorageTableEntitys
-          API
+        description: SqlServer is the Schema for the SqlServers API
         properties:
           apiVersion:
             description: 'APIVersion defines the versioned schema of this representation
@@ -50,7 +49,7 @@ spec:
           metadata:
             type: object
           spec:
-            description: StorageTableEntitySpec defines the desired state of StorageTableEntity
+            description: SqlServerSpec defines the desired state of SqlServer
             properties:
               deletionPolicy:
                 default: Delete
@@ -63,24 +62,128 @@ spec:
                 type: string
               forProvider:
                 properties:
-                  entity:
+                  administratorLogin:
+                    type: string
+                  administratorLoginPasswordSecretRef:
+                    description: A SecretKeySelector is a reference to a secret key
+                      in an arbitrary namespace.
+                    properties:
+                      key:
+                        description: The key to select.
+                        type: string
+                      name:
+                        description: Name of the secret.
+                        type: string
+                      namespace:
+                        description: Namespace of the secret.
+                        type: string
+                    required:
+                    - key
+                    - name
+                    - namespace
+                    type: object
+                  connectionPolicy:
+                    type: string
+                  extendedAuditingPolicy:
+                    items:
+                      properties:
+                        logMonitoringEnabled:
+                          type: boolean
+                        retentionInDays:
+                          format: int64
+                          type: integer
+                        storageAccountAccessKeyIsSecondary:
+                          type: boolean
+                        storageAccountAccessKeySecretRef:
+                          description: A SecretKeySelector is a reference to a secret
+                            key in an arbitrary namespace.
+                          properties:
+                            key:
+                              description: The key to select.
+                              type: string
+                            name:
+                              description: Name of the secret.
+                              type: string
+                            namespace:
+                              description: Namespace of the secret.
+                              type: string
+                          required:
+                          - key
+                          - name
+                          - namespace
+                          type: object
+                        storageEndpoint:
+                          type: string
+                      type: object
+                    type: array
+                  identity:
+                    items:
+                      properties:
+                        type:
+                          type: string
+                      required:
+                      - type
+                      type: object
+                    type: array
+                  location:
+                    type: string
+                  name:
+                    type: string
+                  resourceGroupName:
+                    type: string
+                  tags:
                     additionalProperties:
                       type: string
                     type: object
-                  partitionKey:
-                    type: string
-                  rowKey:
-                    type: string
-                  storageAccountName:
-                    type: string
-                  tableName:
+                  threatDetectionPolicy:
+                    items:
+                      properties:
+                        disabledAlerts:
+                          items:
+                            type: string
+                          type: array
+                        emailAccountAdmins:
+                          type: boolean
+                        emailAddresses:
+                          items:
+                            type: string
+                          type: array
+                        retentionDays:
+                          format: int64
+                          type: integer
+                        state:
+                          type: string
+                        storageAccountAccessKeySecretRef:
+                          description: A SecretKeySelector is a reference to a secret
+                            key in an arbitrary namespace.
+                          properties:
+                            key:
+                              description: The key to select.
+                              type: string
+                            name:
+                              description: Name of the secret.
+                              type: string
+                            namespace:
+                              description: Namespace of the secret.
+                              type: string
+                          required:
+                          - key
+                          - name
+                          - namespace
+                          type: object
+                        storageEndpoint:
+                          type: string
+                      type: object
+                    type: array
+                  version:
                     type: string
                 required:
-                - entity
-                - partitionKey
-                - rowKey
-                - storageAccountName
-                - tableName
+                - administratorLogin
+                - administratorLoginPasswordSecretRef
+                - location
+                - name
+                - resourceGroupName
+                - version
                 type: object
               providerConfigRef:
                 default:
@@ -127,9 +230,12 @@ spec:
             - forProvider
             type: object
           status:
-            description: StorageTableEntityStatus defines the observed state of StorageTableEntity.
+            description: SqlServerStatus defines the observed state of SqlServer.
             properties:
               atProvider:
+                properties:
+                  fullyQualifiedDomainName:
+                    type: string
                 type: object
               conditions:
                 description: Conditions of the resource.
