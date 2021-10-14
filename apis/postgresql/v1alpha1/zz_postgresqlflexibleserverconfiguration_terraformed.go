@@ -90,3 +90,8 @@ func (tr *PostgresqlFlexibleServerConfiguration) LateInitialize(attrs []byte) (b
 	li := resource.NewGenericLateInitializer(opts...)
 	return li.LateInitialize(&tr.Spec.ForProvider, params)
 }
+
+// GetTerraformSchemaVersion returns the associated Terraform schema version
+func (tr *PostgresqlFlexibleServerConfiguration) GetTerraformSchemaVersion() int {
+	return 0
+}

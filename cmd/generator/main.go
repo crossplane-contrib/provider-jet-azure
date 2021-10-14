@@ -74,6 +74,7 @@ var includeList = []string{
 	"azurerm_cosmosdb_.+",
 	"azurerm_resource_group",
 	"azurerm_subnet",
+	"azurerm_storage",
 	"azurerm_lb$",
 }
 
@@ -174,7 +175,7 @@ func main() { // nolint:gocyclo
 			if err := crdGen.Generate(r, resource); err != nil {
 				panic(errors.Wrap(err, "cannot generate crd"))
 			}
-			if err := tfGen.Generate(r); err != nil {
+			if err := tfGen.Generate(r, resource); err != nil {
 				panic(errors.Wrap(err, "cannot generate terraformed"))
 			}
 			ctrlPkgPath, err := ctrlGen.Generate(r, versionGen.Package().Path())

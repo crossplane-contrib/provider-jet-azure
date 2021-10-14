@@ -90,3 +90,8 @@ func (tr *VirtualHubSecurityPartnerProvider) LateInitialize(attrs []byte) (bool,
 	li := resource.NewGenericLateInitializer(opts...)
 	return li.LateInitialize(&tr.Spec.ForProvider, params)
 }
+
+// GetTerraformSchemaVersion returns the associated Terraform schema version
+func (tr *VirtualHubSecurityPartnerProvider) GetTerraformSchemaVersion() int {
+	return 0
+}
