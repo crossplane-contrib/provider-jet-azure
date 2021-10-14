@@ -1,0 +1,15 @@
+apiVersion: storage.azure.tf.crossplane.io/v1alpha1
+kind: StorageBlob
+metadata:
+  name: example
+spec:
+  forProvider:
+    name: sample_content
+    type: Block
+    sourceContent: inline contents of this blob
+    storageAccountNameRef:
+      name: example
+    storageContainerNameRef:
+      name: example
+  providerConfigRef:
+    name: example

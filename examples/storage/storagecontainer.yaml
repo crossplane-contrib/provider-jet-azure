@@ -1,0 +1,12 @@
+apiVersion: storage.azure.tf.crossplane.io/v1alpha1
+kind: StorageContainer
+metadata:
+  name: example
+spec:
+  forProvider:
+    name: content
+    containerAccessType: private
+    storageAccountNameRef:
+      name: example
+  providerConfigRef:
+    name: example

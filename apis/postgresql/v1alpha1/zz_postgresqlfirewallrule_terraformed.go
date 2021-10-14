@@ -90,3 +90,8 @@ func (tr *PostgresqlFirewallRule) LateInitialize(attrs []byte) (bool, error) {
 	li := resource.NewGenericLateInitializer(opts...)
 	return li.LateInitialize(&tr.Spec.ForProvider, params)
 }
+
+// GetTerraformSchemaVersion returns the associated Terraform schema version
+func (tr *PostgresqlFirewallRule) GetTerraformSchemaVersion() int {
+	return 0
+}
