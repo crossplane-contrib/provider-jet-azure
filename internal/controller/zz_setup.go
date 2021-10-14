@@ -41,7 +41,7 @@ import (
 	cosmosdbtable "github.com/crossplane-contrib/provider-tf-azure/internal/controller/cosmosdb/cosmosdbtable"
 	kubernetescluster "github.com/crossplane-contrib/provider-tf-azure/internal/controller/kubernetes/kubernetescluster"
 	kubernetesclusternodepool "github.com/crossplane-contrib/provider-tf-azure/internal/controller/kubernetes/kubernetesclusternodepool"
-	lb "github.com/crossplane-contrib/provider-tf-azure/internal/controller/lb/lb"
+	loadbalancer "github.com/crossplane-contrib/provider-tf-azure/internal/controller/lb/loadbalancer"
 	postgresqlactivedirectoryadministrator "github.com/crossplane-contrib/provider-tf-azure/internal/controller/postgresql/postgresqlactivedirectoryadministrator"
 	postgresqlconfiguration "github.com/crossplane-contrib/provider-tf-azure/internal/controller/postgresql/postgresqlconfiguration"
 	postgresqldatabase "github.com/crossplane-contrib/provider-tf-azure/internal/controller/postgresql/postgresqldatabase"
@@ -98,7 +98,7 @@ func Setup(mgr ctrl.Manager, l logging.Logger, wl workqueue.RateLimiter, ps terr
 		cosmosdbtable.Setup,
 		kubernetescluster.Setup,
 		kubernetesclusternodepool.Setup,
-		lb.Setup,
+		loadbalancer.Setup,
 		postgresqlactivedirectoryadministrator.Setup,
 		postgresqlconfiguration.Setup,
 		postgresqldatabase.Setup,

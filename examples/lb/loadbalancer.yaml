@@ -1,5 +1,5 @@
 apiVersion: lb.azure.tf.crossplane.io/v1alpha1
-kind: Lb
+kind: LoadBalancer
 metadata:
   name: example
 spec:

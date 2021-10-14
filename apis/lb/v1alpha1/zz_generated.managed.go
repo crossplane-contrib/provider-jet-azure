@@ -19,58 +19,58 @@ package v1alpha1
 
 import xpv1 "github.com/crossplane/crossplane-runtime/apis/common/v1"
 
-// GetCondition of this Lb.
-func (mg *Lb) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
+// GetCondition of this LoadBalancer.
+func (mg *LoadBalancer) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
 	return mg.Status.GetCondition(ct)
 }
 
-// GetDeletionPolicy of this Lb.
-func (mg *Lb) GetDeletionPolicy() xpv1.DeletionPolicy {
+// GetDeletionPolicy of this LoadBalancer.
+func (mg *LoadBalancer) GetDeletionPolicy() xpv1.DeletionPolicy {
 	return mg.Spec.DeletionPolicy
 }
 
-// GetProviderConfigReference of this Lb.
-func (mg *Lb) GetProviderConfigReference() *xpv1.Reference {
+// GetProviderConfigReference of this LoadBalancer.
+func (mg *LoadBalancer) GetProviderConfigReference() *xpv1.Reference {
 	return mg.Spec.ProviderConfigReference
 }
 
 /*
-GetProviderReference of this Lb.
+GetProviderReference of this LoadBalancer.
 Deprecated: Use GetProviderConfigReference.
 */
-func (mg *Lb) GetProviderReference() *xpv1.Reference {
+func (mg *LoadBalancer) GetProviderReference() *xpv1.Reference {
 	return mg.Spec.ProviderReference
 }
 
-// GetWriteConnectionSecretToReference of this Lb.
-func (mg *Lb) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
+// GetWriteConnectionSecretToReference of this LoadBalancer.
+func (mg *LoadBalancer) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
 	return mg.Spec.WriteConnectionSecretToReference
 }
 
-// SetConditions of this Lb.
-func (mg *Lb) SetConditions(c ...xpv1.Condition) {
+// SetConditions of this LoadBalancer.
+func (mg *LoadBalancer) SetConditions(c ...xpv1.Condition) {
 	mg.Status.SetConditions(c...)
 }
 
-// SetDeletionPolicy of this Lb.
-func (mg *Lb) SetDeletionPolicy(r xpv1.DeletionPolicy) {
+// SetDeletionPolicy of this LoadBalancer.
+func (mg *LoadBalancer) SetDeletionPolicy(r xpv1.DeletionPolicy) {
 	mg.Spec.DeletionPolicy = r
 }
 
-// SetProviderConfigReference of this Lb.
-func (mg *Lb) SetProviderConfigReference(r *xpv1.Reference) {
+// SetProviderConfigReference of this LoadBalancer.
+func (mg *LoadBalancer) SetProviderConfigReference(r *xpv1.Reference) {
 	mg.Spec.ProviderConfigReference = r
 }
 
 /*
-SetProviderReference of this Lb.
+SetProviderReference of this LoadBalancer.
 Deprecated: Use SetProviderConfigReference.
 */
-func (mg *Lb) SetProviderReference(r *xpv1.Reference) {
+func (mg *LoadBalancer) SetProviderReference(r *xpv1.Reference) {
 	mg.Spec.ProviderReference = r
 }
 
-// SetWriteConnectionSecretToReference of this Lb.
-func (mg *Lb) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
+// SetWriteConnectionSecretToReference of this LoadBalancer.
+func (mg *LoadBalancer) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
 	mg.Spec.WriteConnectionSecretToReference = r
 }

@@ -65,13 +65,13 @@ type FrontendIPConfigurationParameters struct {
 	Zones []*string `json:"zones,omitempty" tf:"zones,omitempty"`
 }
 
-type LbObservation struct {
+type LoadBalancerObservation struct {
 	PrivateIPAddress *string `json:"privateIpAddress,omitempty" tf:"private_ip_address,omitempty"`
 
 	PrivateIPAddresses []*string `json:"privateIpAddresses,omitempty" tf:"private_ip_addresses,omitempty"`
 }
 
-type LbParameters struct {
+type LoadBalancerParameters struct {
 
 	// +kubebuilder:validation:Optional
 	FrontendIPConfiguration []FrontendIPConfigurationParameters `json:"frontendIpConfiguration,omitempty" tf:"frontend_ip_configuration,omitempty"`
@@ -100,51 +100,51 @@ type LbParameters struct {
 	Tags map[string]*string `json:"tags,omitempty" tf:"tags,omitempty"`
 }
 
-// LbSpec defines the desired state of Lb
-type LbSpec struct {
+// LoadBalancerSpec defines the desired state of LoadBalancer
+type LoadBalancerSpec struct {
 	v1.ResourceSpec `json:",inline"`
-	ForProvider     LbParameters `json:"forProvider"`
+	ForProvider     LoadBalancerParameters `json:"forProvider"`
 }
 
-// LbStatus defines the observed state of Lb.
-type LbStatus struct {
+// LoadBalancerStatus defines the observed state of LoadBalancer.
+type LoadBalancerStatus struct {
 	v1.ResourceStatus `json:",inline"`
-	AtProvider        LbObservation `json:"atProvider,omitempty"`
+	AtProvider        LoadBalancerObservation `json:"atProvider,omitempty"`
 }
 
 // +kubebuilder:object:root=true
 
-// Lb is the Schema for the Lbs API
+// LoadBalancer is the Schema for the LoadBalancers API
 // +kubebuilder:printcolumn:name="READY",type="string",JSONPath=".status.conditions[?(@.type=='Ready')].status"
 // +kubebuilder:printcolumn:name="SYNCED",type="string",JSONPath=".status.conditions[?(@.type=='Synced')].status"
 // +kubebuilder:printcolumn:name="EXTERNAL-NAME",type="string",JSONPath=".metadata.annotations.crossplane\\.io/external-name"
 // +kubebuilder:printcolumn:name="AGE",type="date",JSONPath=".metadata.creationTimestamp"
 // +kubebuilder:subresource:status
 // +kubebuilder:resource:scope=Cluster,categories={crossplane,managed,azure}
-type Lb struct {
+type LoadBalancer struct {
 	metav1.TypeMeta   `json:",inline"`
 	metav1.ObjectMeta `json:"metadata,omitempty"`
-	Spec              LbSpec   `json:"spec"`
-	Status            LbStatus `json:"status,omitempty"`
+	Spec              LoadBalancerSpec   `json:"spec"`
+	Status            LoadBalancerStatus `json:"status,omitempty"`
 }
 
 // +kubebuilder:object:root=true
 
-// LbList contains a list of Lbs
-type LbList struct {
+// LoadBalancerList contains a list of LoadBalancers
+type LoadBalancerList struct {
 	metav1.TypeMeta `json:",inline"`
 	metav1.ListMeta `json:"metadata,omitempty"`
-	Items           []Lb `json:"items"`
+	Items           []LoadBalancer `json:"items"`
 }
 
 // Repository type metadata.
 var (
-	LbKind             = "Lb"
-	LbGroupKind        = schema.GroupKind{Group: Group, Kind: LbKind}.String()
-	LbKindAPIVersion   = LbKind + "." + GroupVersion.String()
-	LbGroupVersionKind = GroupVersion.WithKind(LbKind)
+	LoadBalancerKind             = "LoadBalancer"
+	LoadBalancerGroupKind        = schema.GroupKind{Group: Group, Kind: LoadBalancerKind}.String()
+	LoadBalancerKindAPIVersion   = LoadBalancerKind + "." + GroupVersion.String()
+	LoadBalancerGroupVersionKind = GroupVersion.WithKind(LoadBalancerKind)
 )
 
 func init() {
-	SchemeBuilder.Register(&Lb{}, &LbList{})
+	SchemeBuilder.Register(&LoadBalancer{}, &LoadBalancerList{})
 }
