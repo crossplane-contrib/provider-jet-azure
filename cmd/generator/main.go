@@ -74,7 +74,10 @@ var includeList = []string{
 	"azurerm_cosmosdb_.+",
 	"azurerm_resource_group",
 	"azurerm_subnet",
-	"azurerm_storage",
+	"azurerm_storage_account$",
+	"azurerm_storage_container$",
+	"azurerm_storage_blob$",
+	"azurerm_sql_server",
 	"azurerm_lb$",
 }
 

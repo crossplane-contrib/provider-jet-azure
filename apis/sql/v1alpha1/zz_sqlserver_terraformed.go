@@ -25,23 +25,23 @@ import (
 	"github.com/crossplane-contrib/terrajet/pkg/resource/json"
 )
 
-// GetTerraformResourceType returns Terraform resource type for this StorageDataLakeGen2Path
-func (mg *StorageDataLakeGen2Path) GetTerraformResourceType() string {
-	return "azurerm_storage_data_lake_gen2_path"
+// GetTerraformResourceType returns Terraform resource type for this SqlServer
+func (mg *SqlServer) GetTerraformResourceType() string {
+	return "azurerm_sql_server"
 }
 
-// GetTerraformResourceIDField returns Terraform identifier field for this StorageDataLakeGen2Path
-func (tr *StorageDataLakeGen2Path) GetTerraformResourceIDField() string {
+// GetTerraformResourceIDField returns Terraform identifier field for this SqlServer
+func (tr *SqlServer) GetTerraformResourceIDField() string {
 	return "id"
 }
 
-// GetConnectionDetailsMapping for this StorageDataLakeGen2Path
-func (tr *StorageDataLakeGen2Path) GetConnectionDetailsMapping() map[string]string {
-	return nil
+// GetConnectionDetailsMapping for this SqlServer
+func (tr *SqlServer) GetConnectionDetailsMapping() map[string]string {
+	return map[string]string{"administrator_login_password": "spec.forProvider.administratorLoginPasswordSecretRef", "extended_auditing_policy[*].storage_account_access_key": "spec.forProvider.extendedAuditingPolicy[*].storageAccountAccessKeySecretRef", "threat_detection_policy[*].storage_account_access_key": "spec.forProvider.threatDetectionPolicy[*].storageAccountAccessKeySecretRef"}
 }
 
-// GetObservation of this StorageDataLakeGen2Path
-func (tr *StorageDataLakeGen2Path) GetObservation() (map[string]interface{}, error) {
+// GetObservation of this SqlServer
+func (tr *SqlServer) GetObservation() (map[string]interface{}, error) {
 	o, err := json.TFParser.Marshal(tr.Status.AtProvider)
 	if err != nil {
 		return nil, err
@@ -50,8 +50,8 @@ func (tr *StorageDataLakeGen2Path) GetObservation() (map[string]interface{}, err
 	return base, json.TFParser.Unmarshal(o, &base)
 }
 
-// SetObservation for this StorageDataLakeGen2Path
-func (tr *StorageDataLakeGen2Path) SetObservation(obs map[string]interface{}) error {
+// SetObservation for this SqlServer
+func (tr *SqlServer) SetObservation(obs map[string]interface{}) error {
 	p, err := json.TFParser.Marshal(obs)
 	if err != nil {
 		return err
@@ -59,8 +59,8 @@ func (tr *StorageDataLakeGen2Path) SetObservation(obs map[string]interface{}) er
 	return json.TFParser.Unmarshal(p, &tr.Status.AtProvider)
 }
 
-// GetParameters of this StorageDataLakeGen2Path
-func (tr *StorageDataLakeGen2Path) GetParameters() (map[string]interface{}, error) {
+// GetParameters of this SqlServer
+func (tr *SqlServer) GetParameters() (map[string]interface{}, error) {
 	p, err := json.TFParser.Marshal(tr.Spec.ForProvider)
 	if err != nil {
 		return nil, err
@@ -69,8 +69,8 @@ func (tr *StorageDataLakeGen2Path) GetParameters() (map[string]interface{}, erro
 	return base, json.TFParser.Unmarshal(p, &base)
 }
 
-// SetParameters for this StorageDataLakeGen2Path
-func (tr *StorageDataLakeGen2Path) SetParameters(params map[string]interface{}) error {
+// SetParameters for this SqlServer
+func (tr *SqlServer) SetParameters(params map[string]interface{}) error {
 	p, err := json.TFParser.Marshal(params)
 	if err != nil {
 		return err
@@ -78,10 +78,10 @@ func (tr *StorageDataLakeGen2Path) SetParameters(params map[string]interface{}) 
 	return json.TFParser.Unmarshal(p, &tr.Spec.ForProvider)
 }
 
-// LateInitialize this StorageDataLakeGen2Path using its observed tfState.
+// LateInitialize this SqlServer using its observed tfState.
 // returns True if there are any spec changes for the resource.
-func (tr *StorageDataLakeGen2Path) LateInitialize(attrs []byte) (bool, error) {
-	params := &StorageDataLakeGen2PathParameters{}
+func (tr *SqlServer) LateInitialize(attrs []byte) (bool, error) {
+	params := &SqlServerParameters{}
 	if err := json.TFParser.Unmarshal(attrs, params); err != nil {
 		return false, errors.Wrap(err, "failed to unmarshal Terraform state parameters for late-initialization")
 	}
@@ -92,6 +92,6 @@ func (tr *StorageDataLakeGen2Path) LateInitialize(attrs []byte) (bool, error) {
 }
 
 // GetTerraformSchemaVersion returns the associated Terraform schema version
-func (tr *StorageDataLakeGen2Path) GetTerraformSchemaVersion() int {
+func (tr *SqlServer) GetTerraformSchemaVersion() int {
 	return 0
 }

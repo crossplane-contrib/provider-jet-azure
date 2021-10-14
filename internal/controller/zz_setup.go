@@ -56,25 +56,10 @@ import (
 	resourcegroup "github.com/crossplane-contrib/provider-tf-azure/internal/controller/resource/resourcegroup"
 	resourcegrouppolicyassignment "github.com/crossplane-contrib/provider-tf-azure/internal/controller/resource/resourcegrouppolicyassignment"
 	resourcegrouptemplatedeployment "github.com/crossplane-contrib/provider-tf-azure/internal/controller/resource/resourcegrouptemplatedeployment"
+	sqlserver "github.com/crossplane-contrib/provider-tf-azure/internal/controller/sql/sqlserver"
 	storageaccount "github.com/crossplane-contrib/provider-tf-azure/internal/controller/storage/storageaccount"
-	storageaccountcustomermanagedkey "github.com/crossplane-contrib/provider-tf-azure/internal/controller/storage/storageaccountcustomermanagedkey"
-	storageaccountnetworkrules "github.com/crossplane-contrib/provider-tf-azure/internal/controller/storage/storageaccountnetworkrules"
 	storageblob "github.com/crossplane-contrib/provider-tf-azure/internal/controller/storage/storageblob"
-	storageblobinventorypolicy "github.com/crossplane-contrib/provider-tf-azure/internal/controller/storage/storageblobinventorypolicy"
 	storagecontainer "github.com/crossplane-contrib/provider-tf-azure/internal/controller/storage/storagecontainer"
-	storagedatalakegen2filesystem "github.com/crossplane-contrib/provider-tf-azure/internal/controller/storage/storagedatalakegen2filesystem"
-	storagedatalakegen2path "github.com/crossplane-contrib/provider-tf-azure/internal/controller/storage/storagedatalakegen2path"
-	storageencryptionscope "github.com/crossplane-contrib/provider-tf-azure/internal/controller/storage/storageencryptionscope"
-	storagemanagementpolicy "github.com/crossplane-contrib/provider-tf-azure/internal/controller/storage/storagemanagementpolicy"
-	storageobjectreplication "github.com/crossplane-contrib/provider-tf-azure/internal/controller/storage/storageobjectreplication"
-	storagequeue "github.com/crossplane-contrib/provider-tf-azure/internal/controller/storage/storagequeue"
-	storageshare "github.com/crossplane-contrib/provider-tf-azure/internal/controller/storage/storageshare"
-	storagesharedirectory "github.com/crossplane-contrib/provider-tf-azure/internal/controller/storage/storagesharedirectory"
-	storagesharefile "github.com/crossplane-contrib/provider-tf-azure/internal/controller/storage/storagesharefile"
-	storagesync "github.com/crossplane-contrib/provider-tf-azure/internal/controller/storage/storagesync"
-	storagesynccloudendpoint "github.com/crossplane-contrib/provider-tf-azure/internal/controller/storage/storagesynccloudendpoint"
-	storagetable "github.com/crossplane-contrib/provider-tf-azure/internal/controller/storage/storagetable"
-	storagetableentity "github.com/crossplane-contrib/provider-tf-azure/internal/controller/storage/storagetableentity"
 	subnet "github.com/crossplane-contrib/provider-tf-azure/internal/controller/subnet/subnet"
 	subnetnatgatewayassociation "github.com/crossplane-contrib/provider-tf-azure/internal/controller/subnet/subnetnatgatewayassociation"
 	subnetnetworksecuritygroupassociation "github.com/crossplane-contrib/provider-tf-azure/internal/controller/subnet/subnetnetworksecuritygroupassociation"
@@ -132,25 +117,10 @@ func Setup(mgr ctrl.Manager, l logging.Logger, wl workqueue.RateLimiter, ps terr
 		resourcegroup.Setup,
 		resourcegrouppolicyassignment.Setup,
 		resourcegrouptemplatedeployment.Setup,
+		sqlserver.Setup,
 		storageaccount.Setup,
-		storageaccountcustomermanagedkey.Setup,
-		storageaccountnetworkrules.Setup,
 		storageblob.Setup,
-		storageblobinventorypolicy.Setup,
 		storagecontainer.Setup,
-		storagedatalakegen2filesystem.Setup,
-		storagedatalakegen2path.Setup,
-		storageencryptionscope.Setup,
-		storagemanagementpolicy.Setup,
-		storageobjectreplication.Setup,
-		storagequeue.Setup,
-		storageshare.Setup,
-		storagesharedirectory.Setup,
-		storagesharefile.Setup,
-		storagesync.Setup,
-		storagesynccloudendpoint.Setup,
-		storagetable.Setup,
-		storagetableentity.Setup,
 		subnet.Setup,
 		subnetnatgatewayassociation.Setup,
 		subnetnetworksecuritygroupassociation.Setup,

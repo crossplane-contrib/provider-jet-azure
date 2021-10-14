@@ -52,32 +52,6 @@ func (mg *StorageAccount) ResolveReferences(ctx context.Context, c client.Reader
 	return nil
 }
 
-// ResolveReferences of this StorageAccountNetworkRules.
-func (mg *StorageAccountNetworkRules) ResolveReferences(ctx context.Context, c client.Reader) error {
-	r := reference.NewAPIResolver(c, mg)
-
-	var rsp reference.ResolutionResponse
-	var err error
-
-	rsp, err = r.Resolve(ctx, reference.ResolutionRequest{
-		CurrentValue: reference.FromPtrValue(mg.Spec.ForProvider.ResourceGroupName),
-		Extract:      rconfig.ExtractResourceName(),
-		Reference:    mg.Spec.ForProvider.ResourceGroupNameRef,
-		Selector:     mg.Spec.ForProvider.ResourceGroupNameSelector,
-		To: reference.To{
-			List:    &v1alpha1.ResourceGroupList{},
-			Managed: &v1alpha1.ResourceGroup{},
-		},
-	})
-	if err != nil {
-		return errors.Wrap(err, "mg.Spec.ForProvider.ResourceGroupName")
-	}
-	mg.Spec.ForProvider.ResourceGroupName = reference.ToPtrValue(rsp.ResolvedValue)
-	mg.Spec.ForProvider.ResourceGroupNameRef = rsp.ResolvedReference
-
-	return nil
-}
-
 // ResolveReferences of this StorageBlob.
 func (mg *StorageBlob) ResolveReferences(ctx context.Context, c client.Reader) error {
 	r := reference.NewAPIResolver(c, mg)
@@ -142,32 +116,6 @@ func (mg *StorageContainer) ResolveReferences(ctx context.Context, c client.Read
 	}
 	mg.Spec.ForProvider.StorageAccountName = reference.ToPtrValue(rsp.ResolvedValue)
 	mg.Spec.ForProvider.StorageAccountNameRef = rsp.ResolvedReference
-
-	return nil
-}
-
-// ResolveReferences of this StorageSync.
-func (mg *StorageSync) ResolveReferences(ctx context.Context, c client.Reader) error {
-	r := reference.NewAPIResolver(c, mg)
-
-	var rsp reference.ResolutionResponse
-	var err error
-
-	rsp, err = r.Resolve(ctx, reference.ResolutionRequest{
-		CurrentValue: reference.FromPtrValue(mg.Spec.ForProvider.ResourceGroupName),
-		Extract:      rconfig.ExtractResourceName(),
-		Reference:    mg.Spec.ForProvider.ResourceGroupNameRef,
-		Selector:     mg.Spec.ForProvider.ResourceGroupNameSelector,
-		To: reference.To{
-			List:    &v1alpha1.ResourceGroupList{},
-			Managed: &v1alpha1.ResourceGroup{},
-		},
-	})
-	if err != nil {
-		return errors.Wrap(err, "mg.Spec.ForProvider.ResourceGroupName")
-	}
-	mg.Spec.ForProvider.ResourceGroupName = reference.ToPtrValue(rsp.ResolvedValue)
-	mg.Spec.ForProvider.ResourceGroupNameRef = rsp.ResolvedReference
 
 	return nil
 }
