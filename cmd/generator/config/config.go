@@ -733,4 +733,17 @@ func SetResourceConfigurations() {
 		},
 		UseAsync: true,
 	})
+	config.Store.SetForResource("azurerm_lb", config.Resource{
+		Kind: "LoadBalancer",
+		ExternalName: config.ExternalName{
+			DisableNameInitializer: true,
+		},
+		References: config.References{
+			"resource_group_name": config.Reference{
+				Type:      APISPackagePath + "/resource/v1alpha1.ResourceGroup",
+				Extractor: APISPackagePath + "/rconfig.ExtractResourceName()",
+			},
+		},
+		UseAsync: true,
+	})
 }
