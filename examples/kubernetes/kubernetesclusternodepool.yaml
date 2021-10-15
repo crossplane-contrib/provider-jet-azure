@@ -5,7 +5,7 @@ metadata:
 spec:
   forProvider:
     name: "nodepool1"
-    kubernetesClusterIDRef:
+    kubernetesClusterIdRef:
       name: example
     vmSize: "Standard_DS2_v2"
     nodeCount: 1
