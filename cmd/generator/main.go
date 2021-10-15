@@ -201,11 +201,11 @@ func main() { // nolint:gocyclo
 	if err := pipeline.NewSetupGenerator(wd, modulePath).Generate(controllerPkgList); err != nil {
 		panic(errors.Wrap(err, "cannot generate setup file"))
 	}
-	if err := exec.Command("bash", "-c", "goimports -w $(find apis -iname 'zz_*')").Run(); err != nil {
-		panic(errors.Wrap(err, "cannot run goimports for apis folder"))
+	if out, err := exec.Command("bash", "-c", "goimports -w $(find apis -iname 'zz_*')").CombinedOutput(); err != nil {
+		panic(errors.Wrap(err, "cannot run goimports for apis folder: "+string(out)))
 	}
-	if err := exec.Command("bash", "-c", "goimports -w $(find internal -iname 'zz_*')").Run(); err != nil {
-		panic(errors.Wrap(err, "cannot run goimports for internal folder"))
+	if out, err := exec.Command("bash", "-c", "goimports -w $(find internal -iname 'zz_*')").CombinedOutput(); err != nil {
+		panic(errors.Wrap(err, "cannot run goimports for internal folder: "+string(out)))
 	}
 	fmt.Printf("\nGenerated %d resources!\n", count)
 }
