@@ -95,7 +95,7 @@ reviewable: prepare.azurerm
 test: prepare.azurerm
 generate: codegen.pipeline
 build: prepare.azurerm
-
+provider-tf-azure.vendor: prepare.azurerm vendor
 
 # must match Docker build file env. variable TERRAFORM_PROVIDER_AZURERM_VERSION in
 # cluster/images/provider-tf-azure-controller/Dockerfile
