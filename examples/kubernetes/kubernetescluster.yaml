@@ -7,7 +7,7 @@ spec:
     name: example-kubeconfig
     namespace: crossplane-system
   forProvider:
-    name: "example-aks2"
+    name: "example-aks"
     location: "East US"
     resourceGroupNameRef:
       name: example
