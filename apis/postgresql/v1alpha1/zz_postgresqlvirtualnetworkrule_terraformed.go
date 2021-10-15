@@ -90,3 +90,8 @@ func (tr *PostgresqlVirtualNetworkRule) LateInitialize(attrs []byte) (bool, erro
 	li := resource.NewGenericLateInitializer(opts...)
 	return li.LateInitialize(&tr.Spec.ForProvider, params)
 }
+
+// GetTerraformSchemaVersion returns the associated Terraform schema version
+func (tr *PostgresqlVirtualNetworkRule) GetTerraformSchemaVersion() int {
+	return 0
+}

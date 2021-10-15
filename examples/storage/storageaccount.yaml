@@ -1,0 +1,16 @@
+apiVersion: storage.azure.tf.crossplane.io/v1alpha1
+kind: StorageAccount
+metadata:
+  name: example
+spec:
+  forProvider:
+    name: crossplaneexamplestoracc
+    resourceGroupNameRef:
+      name: example
+    location: "East US"
+    accountTier: "Standard"
+    accountReplicationType: "LRS"
+    tags:
+      provisioner: crossplane
+  providerConfigRef:
+    name: example

@@ -90,3 +90,8 @@ func (tr *VirtualNetworkGatewayConnection) LateInitialize(attrs []byte) (bool, e
 	li := resource.NewGenericLateInitializer(opts...)
 	return li.LateInitialize(&tr.Spec.ForProvider, params)
 }
+
+// GetTerraformSchemaVersion returns the associated Terraform schema version
+func (tr *VirtualNetworkGatewayConnection) GetTerraformSchemaVersion() int {
+	return 0
+}

@@ -74,6 +74,11 @@ var includeList = []string{
 	"azurerm_cosmosdb_.+",
 	"azurerm_resource_group",
 	"azurerm_subnet",
+	"azurerm_storage_account$",
+	"azurerm_storage_container$",
+	"azurerm_storage_blob$",
+	"azurerm_sql_server",
+	"azurerm_lb$",
 }
 
 // "make prepare.azurerm" should be run before running this generator pipeline
@@ -173,7 +178,7 @@ func main() { // nolint:gocyclo
 			if err := crdGen.Generate(r, resource); err != nil {
 				panic(errors.Wrap(err, "cannot generate crd"))
 			}
-			if err := tfGen.Generate(r); err != nil {
+			if err := tfGen.Generate(r, resource); err != nil {
 				panic(errors.Wrap(err, "cannot generate terraformed"))
 			}
 			ctrlPkgPath, err := ctrlGen.Generate(r, versionGen.Package().Path())
@@ -196,11 +201,11 @@ func main() { // nolint:gocyclo
 	if err := pipeline.NewSetupGenerator(wd, modulePath).Generate(controllerPkgList); err != nil {
 		panic(errors.Wrap(err, "cannot generate setup file"))
 	}
-	if err := exec.Command("bash", "-c", "goimports -w $(find apis -iname 'zz_*')").Run(); err != nil {
-		panic(errors.Wrap(err, "cannot run goimports for apis folder"))
+	if out, err := exec.Command("bash", "-c", "goimports -w $(find apis -iname 'zz_*')").CombinedOutput(); err != nil {
+		panic(errors.Wrap(err, "cannot run goimports for apis folder: "+string(out)))
 	}
-	if err := exec.Command("bash", "-c", "goimports -w $(find internal -iname 'zz_*')").Run(); err != nil {
-		panic(errors.Wrap(err, "cannot run goimports for internal folder"))
+	if out, err := exec.Command("bash", "-c", "goimports -w $(find internal -iname 'zz_*')").CombinedOutput(); err != nil {
+		panic(errors.Wrap(err, "cannot run goimports for internal folder: "+string(out)))
 	}
 	fmt.Printf("\nGenerated %d resources!\n", count)
 }

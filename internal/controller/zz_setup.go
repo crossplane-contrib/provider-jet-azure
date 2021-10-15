@@ -41,6 +41,7 @@ import (
 	cosmosdbtable "github.com/crossplane-contrib/provider-tf-azure/internal/controller/cosmosdb/cosmosdbtable"
 	kubernetescluster "github.com/crossplane-contrib/provider-tf-azure/internal/controller/kubernetes/kubernetescluster"
 	kubernetesclusternodepool "github.com/crossplane-contrib/provider-tf-azure/internal/controller/kubernetes/kubernetesclusternodepool"
+	loadbalancer "github.com/crossplane-contrib/provider-tf-azure/internal/controller/lb/loadbalancer"
 	postgresqlactivedirectoryadministrator "github.com/crossplane-contrib/provider-tf-azure/internal/controller/postgresql/postgresqlactivedirectoryadministrator"
 	postgresqlconfiguration "github.com/crossplane-contrib/provider-tf-azure/internal/controller/postgresql/postgresqlconfiguration"
 	postgresqldatabase "github.com/crossplane-contrib/provider-tf-azure/internal/controller/postgresql/postgresqldatabase"
@@ -55,6 +56,10 @@ import (
 	resourcegroup "github.com/crossplane-contrib/provider-tf-azure/internal/controller/resource/resourcegroup"
 	resourcegrouppolicyassignment "github.com/crossplane-contrib/provider-tf-azure/internal/controller/resource/resourcegrouppolicyassignment"
 	resourcegrouptemplatedeployment "github.com/crossplane-contrib/provider-tf-azure/internal/controller/resource/resourcegrouptemplatedeployment"
+	sqlserver "github.com/crossplane-contrib/provider-tf-azure/internal/controller/sql/sqlserver"
+	storageaccount "github.com/crossplane-contrib/provider-tf-azure/internal/controller/storage/storageaccount"
+	storageblob "github.com/crossplane-contrib/provider-tf-azure/internal/controller/storage/storageblob"
+	storagecontainer "github.com/crossplane-contrib/provider-tf-azure/internal/controller/storage/storagecontainer"
 	subnet "github.com/crossplane-contrib/provider-tf-azure/internal/controller/subnet/subnet"
 	subnetnatgatewayassociation "github.com/crossplane-contrib/provider-tf-azure/internal/controller/subnet/subnetnatgatewayassociation"
 	subnetnetworksecuritygroupassociation "github.com/crossplane-contrib/provider-tf-azure/internal/controller/subnet/subnetnetworksecuritygroupassociation"
@@ -97,6 +102,7 @@ func Setup(mgr ctrl.Manager, l logging.Logger, wl workqueue.RateLimiter, ps terr
 		cosmosdbtable.Setup,
 		kubernetescluster.Setup,
 		kubernetesclusternodepool.Setup,
+		loadbalancer.Setup,
 		postgresqlactivedirectoryadministrator.Setup,
 		postgresqlconfiguration.Setup,
 		postgresqldatabase.Setup,
@@ -111,6 +117,10 @@ func Setup(mgr ctrl.Manager, l logging.Logger, wl workqueue.RateLimiter, ps terr
 		resourcegroup.Setup,
 		resourcegrouppolicyassignment.Setup,
 		resourcegrouptemplatedeployment.Setup,
+		sqlserver.Setup,
+		storageaccount.Setup,
+		storageblob.Setup,
+		storagecontainer.Setup,
 		subnet.Setup,
 		subnetnatgatewayassociation.Setup,
 		subnetnetworksecuritygroupassociation.Setup,
