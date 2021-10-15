@@ -7,7 +7,8 @@ spec:
     name: array_nulls
     resourceGroupNameRef:
       name: example
-    serverName: example-psql
+    serverNameRef:
+      name: example
     value: "off"
   providerConfigRef:
     name: example
