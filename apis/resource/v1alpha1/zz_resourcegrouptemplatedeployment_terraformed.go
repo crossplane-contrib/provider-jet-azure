@@ -90,3 +90,8 @@ func (tr *ResourceGroupTemplateDeployment) LateInitialize(attrs []byte) (bool, e
 	li := resource.NewGenericLateInitializer(opts...)
 	return li.LateInitialize(&tr.Spec.ForProvider, params)
 }
+
+// GetTerraformSchemaVersion returns the associated Terraform schema version
+func (tr *ResourceGroupTemplateDeployment) GetTerraformSchemaVersion() int {
+	return 0
+}
