@@ -41,11 +41,14 @@ func Setup(mgr ctrl.Manager, l logging.Logger, rl workqueue.RateLimiter, s terra
 	name := managed.ControllerName(v1alpha1.SqlServerGroupVersionKind.String())
 	r := managed.NewReconciler(mgr,
 		xpresource.ManagedKind(v1alpha1.SqlServerGroupVersionKind),
-		managed.WithExternalConnecter(tjcontroller.NewConnector(mgr.GetClient(), ws, s)),
+		managed.WithExternalConnecter(tjcontroller.NewConnector(mgr.GetClient(), ws, s,
+			tjcontroller.UseAsync(),
+		)),
 		managed.WithLogger(l.WithValues("controller", name)),
 		managed.WithRecorder(event.NewAPIRecorder(mgr.GetEventRecorderFor(name))),
 		managed.WithFinalizer(terraform.NewWorkspaceFinalizer(ws, xpresource.NewAPIFinalizer(mgr.GetClient(), managed.FinalizerName))),
 		managed.WithTimeout(3*time.Minute),
+		managed.WithInitializers(),
 	)
 
 	return ctrl.NewControllerManagedBy(mgr).
