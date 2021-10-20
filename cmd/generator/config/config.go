@@ -27,15 +27,11 @@ const APISPackagePath = "github.com/crossplane-contrib/provider-tf-azure/apis"
 // for the generated resources
 func SetResourceConfigurations() {
 	config.Store.SetForResource("azurerm_resource_group", config.Resource{
-		ExternalName: config.ExternalName{
-			DisableNameInitializer: true,
-		},
+		ExternalName: config.IdentifierFromProvider,
 	})
 
 	config.Store.SetForResource("azurerm_kubernetes_cluster", config.Resource{
-		ExternalName: config.ExternalName{
-			DisableNameInitializer: true,
-		},
+		ExternalName: config.IdentifierFromProvider,
 		LateInitializer: config.LateInitializer{
 			IgnoredFields: []string{"KubeletIdentity"},
 		},
@@ -57,9 +53,7 @@ func SetResourceConfigurations() {
 		UseAsync: true,
 	})
 	config.Store.SetForResource("azurerm_kubernetes_cluster_node_pool", config.Resource{
-		ExternalName: config.ExternalName{
-			DisableNameInitializer: true,
-		},
+		ExternalName: config.IdentifierFromProvider,
 		References: config.References{
 			"kubernetes_cluster_id": config.Reference{
 				Type: "KubernetesCluster",
@@ -74,9 +68,7 @@ func SetResourceConfigurations() {
 		UseAsync: true,
 	})
 	config.Store.SetForResource("azurerm_virtual_network", config.Resource{
-		ExternalName: config.ExternalName{
-			DisableNameInitializer: true,
-		},
+		ExternalName: config.IdentifierFromProvider,
 		References: config.References{
 			"resource_group_name": config.Reference{
 				Type:      APISPackagePath + "/resource/v1alpha1.ResourceGroup",
@@ -85,9 +77,7 @@ func SetResourceConfigurations() {
 		},
 	})
 	config.Store.SetForResource("azurerm_postgresql_server", config.Resource{
-		ExternalName: config.ExternalName{
-			DisableNameInitializer: true,
-		},
+		ExternalName: config.IdentifierFromProvider,
 		LateInitializer: config.LateInitializer{
 			IgnoredFields: []string{"SslEnforcement", "StorageProfile"},
 		},
@@ -100,9 +90,7 @@ func SetResourceConfigurations() {
 		UseAsync: true,
 	})
 	config.Store.SetForResource("azurerm_cosmosdb_sql_container", config.Resource{
-		ExternalName: config.ExternalName{
-			DisableNameInitializer: true,
-		},
+		ExternalName: config.IdentifierFromProvider,
 		References: config.References{
 			"resource_group_name": config.Reference{
 				Type:      APISPackagePath + "/resource/v1alpha1.ResourceGroup",
@@ -120,9 +108,7 @@ func SetResourceConfigurations() {
 		UseAsync: true,
 	})
 	config.Store.SetForResource("azurerm_virtual_hub_connection", config.Resource{
-		ExternalName: config.ExternalName{
-			DisableNameInitializer: true,
-		},
+		ExternalName: config.IdentifierFromProvider,
 		References: config.References{
 			"virtual_hub_id": config.Reference{
 				Type: "VirtualHub",
@@ -134,9 +120,7 @@ func SetResourceConfigurations() {
 		UseAsync: true,
 	})
 	config.Store.SetForResource("azurerm_virtual_network_gateway", config.Resource{
-		ExternalName: config.ExternalName{
-			DisableNameInitializer: true,
-		},
+		ExternalName: config.IdentifierFromProvider,
 		References: config.References{
 			"resource_group_name": config.Reference{
 				Type:      APISPackagePath + "/resource/v1alpha1.ResourceGroup",
@@ -149,9 +133,7 @@ func SetResourceConfigurations() {
 		UseAsync: true,
 	})
 	config.Store.SetForResource("azurerm_cosmosdb_mongo_collection", config.Resource{
-		ExternalName: config.ExternalName{
-			DisableNameInitializer: true,
-		},
+		ExternalName: config.IdentifierFromProvider,
 		References: config.References{
 			"resource_group_name": config.Reference{
 				Type:      APISPackagePath + "/resource/v1alpha1.ResourceGroup",
@@ -169,9 +151,7 @@ func SetResourceConfigurations() {
 		UseAsync: true,
 	})
 	config.Store.SetForResource("azurerm_virtual_network_peering", config.Resource{
-		ExternalName: config.ExternalName{
-			DisableNameInitializer: true,
-		},
+		ExternalName: config.IdentifierFromProvider,
 		References: config.References{
 			"resource_group_name": config.Reference{
 				Type:      APISPackagePath + "/resource/v1alpha1.ResourceGroup",
@@ -188,9 +168,7 @@ func SetResourceConfigurations() {
 		UseAsync: true,
 	})
 	config.Store.SetForResource("azurerm_virtual_desktop_application", config.Resource{
-		ExternalName: config.ExternalName{
-			DisableNameInitializer: true,
-		},
+		ExternalName: config.IdentifierFromProvider,
 		References: config.References{
 			"resource_group_name": config.Reference{
 				Type:      APISPackagePath + "/resource/v1alpha1.ResourceGroup",
@@ -200,9 +178,7 @@ func SetResourceConfigurations() {
 		UseAsync: true,
 	})
 	config.Store.SetForResource("azurerm_cosmosdb_cassandra_keyspace", config.Resource{
-		ExternalName: config.ExternalName{
-			DisableNameInitializer: true,
-		},
+		ExternalName: config.IdentifierFromProvider,
 		References: config.References{
 			"resource_group_name": config.Reference{
 				Type:      APISPackagePath + "/resource/v1alpha1.ResourceGroup",
@@ -216,9 +192,7 @@ func SetResourceConfigurations() {
 		UseAsync: true,
 	})
 	config.Store.SetForResource("azurerm_virtual_desktop_host_pool", config.Resource{
-		ExternalName: config.ExternalName{
-			DisableNameInitializer: true,
-		},
+		ExternalName: config.IdentifierFromProvider,
 		References: config.References{
 			"resource_group_name": config.Reference{
 				Type:      APISPackagePath + "/resource/v1alpha1.ResourceGroup",
@@ -228,9 +202,7 @@ func SetResourceConfigurations() {
 		UseAsync: true,
 	})
 	config.Store.SetForResource("azurerm_virtual_hub_bgp_connection", config.Resource{
-		ExternalName: config.ExternalName{
-			DisableNameInitializer: true,
-		},
+		ExternalName: config.IdentifierFromProvider,
 		References: config.References{
 			"virtual_hub_id": config.Reference{
 				Type: "VirtualHub",
@@ -239,9 +211,7 @@ func SetResourceConfigurations() {
 		UseAsync: true,
 	})
 	config.Store.SetForResource("azurerm_postgresql_flexible_server_configuration", config.Resource{
-		ExternalName: config.ExternalName{
-			DisableNameInitializer: true,
-		},
+		ExternalName: config.IdentifierFromProvider,
 		References: config.References{
 			"server_id": config.Reference{
 				Type: "PostgresqlFlexibleServer",
@@ -250,9 +220,7 @@ func SetResourceConfigurations() {
 		UseAsync: true,
 	})
 	config.Store.SetForResource("azurerm_postgresql_database", config.Resource{
-		ExternalName: config.ExternalName{
-			DisableNameInitializer: true,
-		},
+		ExternalName: config.IdentifierFromProvider,
 		References: config.References{
 			"resource_group_name": config.Reference{
 				Type:      APISPackagePath + "/resource/v1alpha1.ResourceGroup",
@@ -266,9 +234,7 @@ func SetResourceConfigurations() {
 		UseAsync: true,
 	})
 	config.Store.SetForResource("azurerm_cosmosdb_cassandra_table", config.Resource{
-		ExternalName: config.ExternalName{
-			DisableNameInitializer: true,
-		},
+		ExternalName: config.IdentifierFromProvider,
 		References: config.References{
 			"cassandra_keyspace_id": config.Reference{
 				Type: "CosmosdbCassandraKeyspace",
@@ -277,9 +243,7 @@ func SetResourceConfigurations() {
 		UseAsync: true,
 	})
 	config.Store.SetForResource("azurerm_cosmosdb_gremlin_graph", config.Resource{
-		ExternalName: config.ExternalName{
-			DisableNameInitializer: true,
-		},
+		ExternalName: config.IdentifierFromProvider,
 		References: config.References{
 			"resource_group_name": config.Reference{
 				Type:      APISPackagePath + "/resource/v1alpha1.ResourceGroup",
@@ -297,9 +261,7 @@ func SetResourceConfigurations() {
 		UseAsync: true,
 	})
 	config.Store.SetForResource("azurerm_virtual_network_gateway_connection", config.Resource{
-		ExternalName: config.ExternalName{
-			DisableNameInitializer: true,
-		},
+		ExternalName: config.IdentifierFromProvider,
 		References: config.References{
 			"resource_group_name": config.Reference{
 				Type:      APISPackagePath + "/resource/v1alpha1.ResourceGroup",
@@ -315,9 +277,7 @@ func SetResourceConfigurations() {
 		UseAsync: true,
 	})
 	config.Store.SetForResource("azurerm_cosmosdb_sql_function", config.Resource{
-		ExternalName: config.ExternalName{
-			DisableNameInitializer: true,
-		},
+		ExternalName: config.IdentifierFromProvider,
 		References: config.References{
 			"container_id": config.Reference{
 				Type: "CosmosdbSqlContainer",
@@ -326,9 +286,7 @@ func SetResourceConfigurations() {
 		UseAsync: true,
 	})
 	config.Store.SetForResource("azurerm_postgresql_active_directory_administrator", config.Resource{
-		ExternalName: config.ExternalName{
-			DisableNameInitializer: true,
-		},
+		ExternalName: config.IdentifierFromProvider,
 		References: config.References{
 			// TODO(aru): this may have to be a reference to the server's resource group
 			"resource_group_name": config.Reference{
@@ -343,9 +301,7 @@ func SetResourceConfigurations() {
 		UseAsync: true,
 	})
 	config.Store.SetForResource("azurerm_postgresql_flexible_server_database", config.Resource{
-		ExternalName: config.ExternalName{
-			DisableNameInitializer: true,
-		},
+		ExternalName: config.IdentifierFromProvider,
 		References: config.References{
 			"server_id": config.Reference{
 				Type: "PostgresqlFlexibleServer",
@@ -354,9 +310,7 @@ func SetResourceConfigurations() {
 		UseAsync: true,
 	})
 	config.Store.SetForResource("azurerm_cosmosdb_sql_stored_procedure", config.Resource{
-		ExternalName: config.ExternalName{
-			DisableNameInitializer: true,
-		},
+		ExternalName: config.IdentifierFromProvider,
 		References: config.References{
 			"resource_group_name": config.Reference{
 				Type:      APISPackagePath + "/resource/v1alpha1.ResourceGroup",
@@ -378,9 +332,7 @@ func SetResourceConfigurations() {
 		UseAsync: true,
 	})
 	config.Store.SetForResource("azurerm_cosmosdb_gremlin_database", config.Resource{
-		ExternalName: config.ExternalName{
-			DisableNameInitializer: true,
-		},
+		ExternalName: config.IdentifierFromProvider,
 		References: config.References{
 			"resource_group_name": config.Reference{
 				Type:      APISPackagePath + "/resource/v1alpha1.ResourceGroup",
@@ -394,9 +346,7 @@ func SetResourceConfigurations() {
 		UseAsync: true,
 	})
 	config.Store.SetForResource("azurerm_cosmosdb_mongo_database", config.Resource{
-		ExternalName: config.ExternalName{
-			DisableNameInitializer: true,
-		},
+		ExternalName: config.IdentifierFromProvider,
 		References: config.References{
 			"resource_group_name": config.Reference{
 				Type:      APISPackagePath + "/resource/v1alpha1.ResourceGroup",
@@ -410,9 +360,7 @@ func SetResourceConfigurations() {
 		UseAsync: true,
 	})
 	config.Store.SetForResource("azurerm_postgresql_firewall_rule", config.Resource{
-		ExternalName: config.ExternalName{
-			DisableNameInitializer: true,
-		},
+		ExternalName: config.IdentifierFromProvider,
 		References: config.References{
 			"resource_group_name": config.Reference{
 				Type:      APISPackagePath + "/resource/v1alpha1.ResourceGroup",
@@ -426,9 +374,7 @@ func SetResourceConfigurations() {
 		UseAsync: true,
 	})
 	config.Store.SetForResource("azurerm_virtual_hub_security_partner_provider", config.Resource{
-		ExternalName: config.ExternalName{
-			DisableNameInitializer: true,
-		},
+		ExternalName: config.IdentifierFromProvider,
 		References: config.References{
 			"resource_group_name": config.Reference{
 				Type:      APISPackagePath + "/resource/v1alpha1.ResourceGroup",
@@ -441,9 +387,7 @@ func SetResourceConfigurations() {
 		UseAsync: true,
 	})
 	config.Store.SetForResource("azurerm_cosmosdb_sql_database", config.Resource{
-		ExternalName: config.ExternalName{
-			DisableNameInitializer: true,
-		},
+		ExternalName: config.IdentifierFromProvider,
 		References: config.References{
 			"resource_group_name": config.Reference{
 				Type:      APISPackagePath + "/resource/v1alpha1.ResourceGroup",
@@ -457,9 +401,7 @@ func SetResourceConfigurations() {
 		UseAsync: true,
 	})
 	config.Store.SetForResource("azurerm_postgresql_flexible_server_firewall_rule", config.Resource{
-		ExternalName: config.ExternalName{
-			DisableNameInitializer: true,
-		},
+		ExternalName: config.IdentifierFromProvider,
 		References: config.References{
 			"server_id": config.Reference{
 				Type: "PostgresqlFlexibleServer",
@@ -468,9 +410,7 @@ func SetResourceConfigurations() {
 		UseAsync: true,
 	})
 	config.Store.SetForResource("azurerm_postgresql_flexible_server", config.Resource{
-		ExternalName: config.ExternalName{
-			DisableNameInitializer: true,
-		},
+		ExternalName: config.IdentifierFromProvider,
 		LateInitializer: config.LateInitializer{
 			IgnoredFields: []string{"SslEnforcement", "StorageProfile"},
 		},
@@ -486,9 +426,7 @@ func SetResourceConfigurations() {
 		UseAsync: true,
 	})
 	config.Store.SetForResource("azurerm_postgresql_virtual_network_rule", config.Resource{
-		ExternalName: config.ExternalName{
-			DisableNameInitializer: true,
-		},
+		ExternalName: config.IdentifierFromProvider,
 		References: config.References{
 			"resource_group_name": config.Reference{
 				Type:      APISPackagePath + "/resource/v1alpha1.ResourceGroup",
@@ -505,9 +443,7 @@ func SetResourceConfigurations() {
 		UseAsync: true,
 	})
 	config.Store.SetForResource("azurerm_cosmosdb_table", config.Resource{
-		ExternalName: config.ExternalName{
-			DisableNameInitializer: true,
-		},
+		ExternalName: config.IdentifierFromProvider,
 		References: config.References{
 			"resource_group_name": config.Reference{
 				Type:      APISPackagePath + "/resource/v1alpha1.ResourceGroup",
@@ -521,9 +457,7 @@ func SetResourceConfigurations() {
 		UseAsync: true,
 	})
 	config.Store.SetForResource("azurerm_cosmosdb_account", config.Resource{
-		ExternalName: config.ExternalName{
-			DisableNameInitializer: true,
-		},
+		ExternalName: config.IdentifierFromProvider,
 		References: config.References{
 			"resource_group_name": config.Reference{
 				Type:      APISPackagePath + "/resource/v1alpha1.ResourceGroup",
@@ -533,9 +467,7 @@ func SetResourceConfigurations() {
 		UseAsync: true,
 	})
 	config.Store.SetForResource("azurerm_postgresql_server_key", config.Resource{
-		ExternalName: config.ExternalName{
-			DisableNameInitializer: true,
-		},
+		ExternalName: config.IdentifierFromProvider,
 		References: config.References{
 			"server_id": config.Reference{
 				Type: "PostgresqlServer",
@@ -544,9 +476,7 @@ func SetResourceConfigurations() {
 		UseAsync: true,
 	})
 	config.Store.SetForResource("azurerm_virtual_hub_route_table", config.Resource{
-		ExternalName: config.ExternalName{
-			DisableNameInitializer: true,
-		},
+		ExternalName: config.IdentifierFromProvider,
 		References: config.References{
 			"virtual_hub_id": config.Reference{
 				Type: "VirtualHub",
@@ -555,9 +485,7 @@ func SetResourceConfigurations() {
 		UseAsync: true,
 	})
 	config.Store.SetForResource("azurerm_virtual_desktop_workspace", config.Resource{
-		ExternalName: config.ExternalName{
-			DisableNameInitializer: true,
-		},
+		ExternalName: config.IdentifierFromProvider,
 		References: config.References{
 			"resource_group_name": config.Reference{
 				Type:      APISPackagePath + "/resource/v1alpha1.ResourceGroup",
@@ -567,9 +495,7 @@ func SetResourceConfigurations() {
 		UseAsync: true,
 	})
 	config.Store.SetForResource("azurerm_resource_group_template_deployment", config.Resource{
-		ExternalName: config.ExternalName{
-			DisableNameInitializer: true,
-		},
+		ExternalName: config.IdentifierFromProvider,
 		References: config.References{
 			"resource_group_name": config.Reference{
 				Type:      "ResourceGroup",
@@ -579,9 +505,7 @@ func SetResourceConfigurations() {
 		UseAsync: true,
 	})
 	config.Store.SetForResource("azurerm_resource_group_policy_assignment", config.Resource{
-		ExternalName: config.ExternalName{
-			DisableNameInitializer: true,
-		},
+		ExternalName: config.IdentifierFromProvider,
 		References: config.References{
 			"resource_group_id": config.Reference{
 				Type: "ResourceGroup",
@@ -590,9 +514,7 @@ func SetResourceConfigurations() {
 		UseAsync: true,
 	})
 	config.Store.SetForResource("azurerm_postgresql_configuration", config.Resource{
-		ExternalName: config.ExternalName{
-			DisableNameInitializer: true,
-		},
+		ExternalName: config.IdentifierFromProvider,
 		References: config.References{
 			"resource_group_name": config.Reference{
 				Type:      APISPackagePath + "/resource/v1alpha1.ResourceGroup",
@@ -606,9 +528,7 @@ func SetResourceConfigurations() {
 		UseAsync: true,
 	})
 	config.Store.SetForResource("azurerm_virtual_hub_ip", config.Resource{
-		ExternalName: config.ExternalName{
-			DisableNameInitializer: true,
-		},
+		ExternalName: config.IdentifierFromProvider,
 		References: config.References{
 			"virtual_hub_id": config.Reference{
 				Type: "VirtualHub",
@@ -620,9 +540,7 @@ func SetResourceConfigurations() {
 		UseAsync: true,
 	})
 	config.Store.SetForResource("azurerm_cosmosdb_notebook_workspace", config.Resource{
-		ExternalName: config.ExternalName{
-			DisableNameInitializer: true,
-		},
+		ExternalName: config.IdentifierFromProvider,
 		References: config.References{
 			"resource_group_name": config.Reference{
 				Type:      APISPackagePath + "/resource/v1alpha1.ResourceGroup",
@@ -636,9 +554,7 @@ func SetResourceConfigurations() {
 		UseAsync: true,
 	})
 	config.Store.SetForResource("azurerm_cosmosdb_sql_trigger", config.Resource{
-		ExternalName: config.ExternalName{
-			DisableNameInitializer: true,
-		},
+		ExternalName: config.IdentifierFromProvider,
 		References: config.References{
 			"container_id": config.Reference{
 				Type: "CosmosdbSqlContainer",
@@ -647,9 +563,7 @@ func SetResourceConfigurations() {
 		UseAsync: true,
 	})
 	config.Store.SetForResource("azurerm_virtual_wan", config.Resource{
-		ExternalName: config.ExternalName{
-			DisableNameInitializer: true,
-		},
+		ExternalName: config.IdentifierFromProvider,
 		References: config.References{
 			"resource_group_name": config.Reference{
 				Type:      APISPackagePath + "/resource/v1alpha1.ResourceGroup",
@@ -659,9 +573,7 @@ func SetResourceConfigurations() {
 		UseAsync: true,
 	})
 	config.Store.SetForResource("azurerm_virtual_hub", config.Resource{
-		ExternalName: config.ExternalName{
-			DisableNameInitializer: true,
-		},
+		ExternalName: config.IdentifierFromProvider,
 		References: config.References{
 			"resource_group_name": config.Reference{
 				Type:      APISPackagePath + "/resource/v1alpha1.ResourceGroup",
@@ -674,9 +586,7 @@ func SetResourceConfigurations() {
 		UseAsync: true,
 	})
 	config.Store.SetForResource("azurerm_subnet", config.Resource{
-		ExternalName: config.ExternalName{
-			DisableNameInitializer: true,
-		},
+		ExternalName: config.IdentifierFromProvider,
 		LateInitializer: config.LateInitializer{
 			IgnoredFields: []string{"AddressPrefix"},
 		},
@@ -689,9 +599,7 @@ func SetResourceConfigurations() {
 		UseAsync: true,
 	})
 	config.Store.SetForResource("azurerm_subnet_nat_gateway_association", config.Resource{
-		ExternalName: config.ExternalName{
-			DisableNameInitializer: true,
-		},
+		ExternalName: config.IdentifierFromProvider,
 		References: config.References{
 			"subnet_id": config.Reference{
 				Type: "Subnet",
@@ -700,9 +608,7 @@ func SetResourceConfigurations() {
 		UseAsync: true,
 	})
 	config.Store.SetForResource("azurerm_subnet_network_security_group_association", config.Resource{
-		ExternalName: config.ExternalName{
-			DisableNameInitializer: true,
-		},
+		ExternalName: config.IdentifierFromProvider,
 		References: config.References{
 			"subnet_id": config.Reference{
 				Type: "Subnet",
@@ -711,9 +617,7 @@ func SetResourceConfigurations() {
 		UseAsync: true,
 	})
 	config.Store.SetForResource("azurerm_subnet_service_endpoint_storage_policy", config.Resource{
-		ExternalName: config.ExternalName{
-			DisableNameInitializer: true,
-		},
+		ExternalName: config.IdentifierFromProvider,
 		References: config.References{
 			"resource_group_name": config.Reference{
 				Type:      APISPackagePath + "/resource/v1alpha1.ResourceGroup",
@@ -723,9 +627,7 @@ func SetResourceConfigurations() {
 		UseAsync: true,
 	})
 	config.Store.SetForResource("azurerm_subnet_route_table_association", config.Resource{
-		ExternalName: config.ExternalName{
-			DisableNameInitializer: true,
-		},
+		ExternalName: config.IdentifierFromProvider,
 		References: config.References{
 			"subnet_id": config.Reference{
 				Type: "Subnet",
@@ -735,9 +637,7 @@ func SetResourceConfigurations() {
 	})
 	config.Store.SetForResource("azurerm_lb", config.Resource{
 		Kind: "LoadBalancer",
-		ExternalName: config.ExternalName{
-			DisableNameInitializer: true,
-		},
+		ExternalName: config.IdentifierFromProvider,
 		References: config.References{
 			"resource_group_name": config.Reference{
 				Type:      APISPackagePath + "/resource/v1alpha1.ResourceGroup",
@@ -747,9 +647,7 @@ func SetResourceConfigurations() {
 		UseAsync: true,
 	})
 	config.Store.SetForResource("azurerm_storage_account", config.Resource{
-		ExternalName: config.ExternalName{
-			DisableNameInitializer: true,
-		},
+		ExternalName: config.IdentifierFromProvider,
 		References: config.References{
 			"resource_group_name": config.Reference{
 				Type:      APISPackagePath + "/resource/v1alpha1.ResourceGroup",
@@ -760,9 +658,7 @@ func SetResourceConfigurations() {
 		UseAsync: true,
 	})
 	config.Store.SetForResource("azurerm_storage_blob", config.Resource{
-		ExternalName: config.ExternalName{
-			DisableNameInitializer: true,
-		},
+		ExternalName: config.IdentifierFromProvider,
 		References: config.References{
 			"resource_group_name": config.Reference{
 				Type:      APISPackagePath + "/resource/v1alpha1.ResourceGroup",
@@ -780,9 +676,7 @@ func SetResourceConfigurations() {
 		UseAsync: true,
 	})
 	config.Store.SetForResource("azurerm_storage_container", config.Resource{
-		ExternalName: config.ExternalName{
-			DisableNameInitializer: true,
-		},
+		ExternalName: config.IdentifierFromProvider,
 		References: config.References{
 			"storage_account_name": config.Reference{
 				Type:      "StorageAccount",
@@ -792,9 +686,7 @@ func SetResourceConfigurations() {
 		UseAsync: true,
 	})
 	config.Store.SetForResource("azurerm_sql_server", config.Resource{
-		ExternalName: config.ExternalName{
-			DisableNameInitializer: true,
-		},
+		ExternalName: config.IdentifierFromProvider,
 		LateInitializer: config.LateInitializer{
 			IgnoredFields: []string{"ThreatDetectionPolicy"},
 		},
