@@ -37,7 +37,15 @@ import (
 )
 
 // Setup adds a controller that reconciles StorageAccount managed resources.
-func Setup(mgr ctrl.Manager, l logging.Logger, rl workqueue.RateLimiter, s terraform.SetupFn, ws *terraform.WorkspaceStore, concurrency int) error {
+func Setup(mgr ctrl.Manager, l logging.Logger, rl workqueue.RateLimiter, s terraform.SetupFn, ws *terraform.WorkspaceStore, concurrency int, enabledAPIs []string) error {
+	enabled, err := tjcontroller.IsAPIEnabled(v1alpha1.StorageAccountGroupVersionKind, enabledAPIs)
+	if err != nil {
+		return err
+	}
+	if !enabled {
+		return nil
+	}
+
 	name := managed.ControllerName(v1alpha1.StorageAccountGroupVersionKind.String())
 	r := managed.NewReconciler(mgr,
 		xpresource.ManagedKind(v1alpha1.StorageAccountGroupVersionKind),

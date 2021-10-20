@@ -37,7 +37,15 @@ import (
 )
 
 // Setup adds a controller that reconciles PostgresqlFlexibleServer managed resources.
-func Setup(mgr ctrl.Manager, l logging.Logger, rl workqueue.RateLimiter, s terraform.SetupFn, ws *terraform.WorkspaceStore, concurrency int) error {
+func Setup(mgr ctrl.Manager, l logging.Logger, rl workqueue.RateLimiter, s terraform.SetupFn, ws *terraform.WorkspaceStore, concurrency int, enabledAPIs []string) error {
+	enabled, err := tjcontroller.IsAPIEnabled(v1alpha1.PostgresqlFlexibleServerGroupVersionKind, enabledAPIs)
+	if err != nil {
+		return err
+	}
+	if !enabled {
+		return nil
+	}
+
 	name := managed.ControllerName(v1alpha1.PostgresqlFlexibleServerGroupVersionKind.String())
 	r := managed.NewReconciler(mgr,
 		xpresource.ManagedKind(v1alpha1.PostgresqlFlexibleServerGroupVersionKind),

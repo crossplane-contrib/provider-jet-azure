@@ -19,6 +19,7 @@ package main
 import (
 	"os"
 	"path/filepath"
+	"strings"
 
 	"github.com/crossplane/crossplane-runtime/pkg/logging"
 	"github.com/crossplane/crossplane-runtime/pkg/ratelimiter"
@@ -44,6 +45,7 @@ func main() {
 		terraformVersion = app.Flag("terraform-version", "Terraform version.").Required().Envar("TERRAFORM_VERSION").String()
 		providerSource   = app.Flag("terraform-provider-source", "Terraform provider source.").Required().Envar("TERRAFORM_PROVIDER_SOURCE").String()
 		providerVersion  = app.Flag("terraform-provider-version", "Terraform provider version.").Required().Envar("TERRAFORM_PROVIDER_VERSION").String()
+		enabledAPIs      = app.Flag("enabled-apis", "Enabled APIs for the provider.").String()
 	)
 	kingpin.MustParse(app.Parse(os.Args[1:]))
 
@@ -70,11 +72,15 @@ func main() {
 
 	genConfig.SetResourceConfigurations()
 	ws := terraform.NewWorkspaceStore(&config.Store, log)
+	var apiArr []string
+	if enabledAPIs != nil && strings.TrimSpace(*enabledAPIs) != "" {
+		apiArr = strings.Split(strings.TrimSpace(*enabledAPIs), ",")
+	}
 
 	rl := ratelimiter.NewGlobal(ratelimiter.DefaultGlobalRPS)
 	kingpin.FatalIfError(apis.AddToScheme(mgr.GetScheme()), "Cannot add Azure APIs to scheme")
 	kingpin.FatalIfError(controller.Setup(mgr, log, rl,
-		clients.TerraformSetupBuilder(*terraformVersion, *providerSource, *providerVersion), ws, 1),
+		clients.TerraformSetupBuilder(*terraformVersion, *providerSource, *providerVersion), ws, 1, apiArr),
 		"Cannot setup Azure controllers")
 	kingpin.FatalIfError(mgr.Start(ctrl.SetupSignalHandler()), "Cannot start controller manager")
 }

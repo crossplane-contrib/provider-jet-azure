@@ -83,8 +83,8 @@ import (
 
 // Setup creates all controllers with the supplied logger and adds them to
 // the supplied manager.
-func Setup(mgr ctrl.Manager, l logging.Logger, wl workqueue.RateLimiter, ps terraform.SetupFn, ws *terraform.WorkspaceStore, concurrency int) error {
-	for _, setup := range []func(ctrl.Manager, logging.Logger, workqueue.RateLimiter, terraform.SetupFn, *terraform.WorkspaceStore, int) error{
+func Setup(mgr ctrl.Manager, l logging.Logger, wl workqueue.RateLimiter, ps terraform.SetupFn, ws *terraform.WorkspaceStore, concurrency int, enabledAPIs []string) error {
+	for _, setup := range []func(ctrl.Manager, logging.Logger, workqueue.RateLimiter, terraform.SetupFn, *terraform.WorkspaceStore, int, []string) error{
 		config.Setup,
 		cosmosdbaccount.Setup,
 		cosmosdbcassandrakeyspace.Setup,
@@ -141,7 +141,7 @@ func Setup(mgr ctrl.Manager, l logging.Logger, wl workqueue.RateLimiter, ps terr
 		virtualnetworkpeering.Setup,
 		virtualwan.Setup,
 	} {
-		if err := setup(mgr, l, wl, ps, ws, concurrency); err != nil {
+		if err := setup(mgr, l, wl, ps, ws, concurrency, enabledAPIs); err != nil {
 			return err
 		}
 	}
