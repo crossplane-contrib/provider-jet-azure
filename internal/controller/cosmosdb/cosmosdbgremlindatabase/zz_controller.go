@@ -30,6 +30,7 @@ import (
 	xpresource "github.com/crossplane/crossplane-runtime/pkg/resource"
 	"sigs.k8s.io/controller-runtime/pkg/controller"
 
+	"github.com/crossplane-contrib/terrajet/pkg/config"
 	tjcontroller "github.com/crossplane-contrib/terrajet/pkg/controller"
 	"github.com/crossplane-contrib/terrajet/pkg/terraform"
 
@@ -37,19 +38,11 @@ import (
 )
 
 // Setup adds a controller that reconciles CosmosdbGremlinDatabase managed resources.
-func Setup(mgr ctrl.Manager, l logging.Logger, rl workqueue.RateLimiter, s terraform.SetupFn, ws *terraform.WorkspaceStore, concurrency int, enabledAPIs []string) error {
-	enabled, err := tjcontroller.IsAPIEnabled(v1alpha1.CosmosdbGremlinDatabaseGroupVersionKind, enabledAPIs)
-	if err != nil {
-		return err
-	}
-	if !enabled {
-		return nil
-	}
-
+func Setup(mgr ctrl.Manager, l logging.Logger, rl workqueue.RateLimiter, s terraform.SetupFn, ws *terraform.WorkspaceStore, concurrency int) error {
 	name := managed.ControllerName(v1alpha1.CosmosdbGremlinDatabaseGroupVersionKind.String())
 	r := managed.NewReconciler(mgr,
 		xpresource.ManagedKind(v1alpha1.CosmosdbGremlinDatabaseGroupVersionKind),
-		managed.WithExternalConnecter(tjcontroller.NewConnector(mgr.GetClient(), ws, s,
+		managed.WithExternalConnecter(tjcontroller.NewConnector(mgr.GetClient(), ws, s, config.Store.GetForResource("azurerm_cosmosdb_gremlin_database"),
 			tjcontroller.UseAsync(),
 		)),
 		managed.WithLogger(l.WithValues("controller", name)),

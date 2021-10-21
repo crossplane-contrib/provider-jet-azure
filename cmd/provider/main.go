@@ -27,7 +27,7 @@ import (
 	ctrl "sigs.k8s.io/controller-runtime"
 	"sigs.k8s.io/controller-runtime/pkg/log/zap"
 
-	"github.com/crossplane-contrib/terrajet/pkg/config"
+	tjcontroller "github.com/crossplane-contrib/terrajet/pkg/controller"
 	"github.com/crossplane-contrib/terrajet/pkg/terraform"
 
 	"github.com/crossplane-contrib/provider-tf-azure/apis"
@@ -71,16 +71,30 @@ func main() {
 	kingpin.FatalIfError(err, "Cannot create controller manager")
 
 	genConfig.SetResourceConfigurations()
-	ws := terraform.NewWorkspaceStore(&config.Store, log)
+	ws := terraform.NewWorkspaceStore(log)
+	rl := ratelimiter.NewGlobal(ratelimiter.DefaultGlobalRPS)
 	var apiArr []string
 	if enabledAPIs != nil && strings.TrimSpace(*enabledAPIs) != "" {
 		apiArr = strings.Split(strings.TrimSpace(*enabledAPIs), ",")
 	}
 
-	rl := ratelimiter.NewGlobal(ratelimiter.DefaultGlobalRPS)
-	kingpin.FatalIfError(apis.AddToScheme(mgr.GetScheme()), "Cannot add Azure APIs to scheme")
-	kingpin.FatalIfError(controller.Setup(mgr, log, rl,
-		clients.TerraformSetupBuilder(*terraformVersion, *providerSource, *providerVersion), ws, 1, apiArr),
-		"Cannot setup Azure controllers")
+	// register API groups & start controllers for enabled APIs
+	schemeBuilders := apis.GetRegisterMap()
+	for gvk, setup := range controller.GetSetupMap() {
+		enabled, err := tjcontroller.IsAPIEnabled(gvk, apiArr)
+		kingpin.FatalIfError(err, "Cannot setup Azure controller for: %s", gvk.String())
+		if !enabled {
+			continue
+		}
+		builder, ok := schemeBuilders[gvk.GroupVersion()]
+		if !ok {
+			kingpin.Fatalf("Scheme builder not found for: %s", gvk.String())
+		}
+		kingpin.FatalIfError(builder.AddToScheme(mgr.GetScheme()), "Cannot add Azure API to scheme for: %s", gvk.GroupVersion().String())
+		kingpin.FatalIfError(
+			setup(mgr, log, rl, clients.TerraformSetupBuilder(*terraformVersion, *providerSource, *providerVersion), ws, 1),
+			"Cannot setup controller for: ", gvk.String())
+	}
+
 	kingpin.FatalIfError(mgr.Start(ctrl.SetupSignalHandler()), "Cannot start controller manager")
 }

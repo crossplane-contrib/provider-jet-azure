@@ -17,12 +17,8 @@ limitations under the License.
 package controller
 
 import (
-	"k8s.io/client-go/util/workqueue"
-	ctrl "sigs.k8s.io/controller-runtime"
-
-	"github.com/crossplane/crossplane-runtime/pkg/logging"
-
-	"github.com/crossplane-contrib/terrajet/pkg/terraform"
+	tjcontroller "github.com/crossplane-contrib/terrajet/pkg/controller"
+	"k8s.io/apimachinery/pkg/runtime/schema"
 
 	config "github.com/crossplane-contrib/provider-tf-azure/internal/controller/config"
 	cosmosdbaccount "github.com/crossplane-contrib/provider-tf-azure/internal/controller/cosmosdb/cosmosdbaccount"
@@ -81,69 +77,65 @@ import (
 	virtualwan "github.com/crossplane-contrib/provider-tf-azure/internal/controller/virtual/virtualwan"
 )
 
-// Setup creates all controllers with the supplied logger and adds them to
-// the supplied manager.
-func Setup(mgr ctrl.Manager, l logging.Logger, wl workqueue.RateLimiter, ps terraform.SetupFn, ws *terraform.WorkspaceStore, concurrency int, enabledAPIs []string) error {
-	for _, setup := range []func(ctrl.Manager, logging.Logger, workqueue.RateLimiter, terraform.SetupFn, *terraform.WorkspaceStore, int, []string) error{
-		config.Setup,
-		cosmosdbaccount.Setup,
-		cosmosdbcassandrakeyspace.Setup,
-		cosmosdbcassandratable.Setup,
-		cosmosdbgremlindatabase.Setup,
-		cosmosdbgremlingraph.Setup,
-		cosmosdbmongocollection.Setup,
-		cosmosdbmongodatabase.Setup,
-		cosmosdbnotebookworkspace.Setup,
-		cosmosdbsqlcontainer.Setup,
-		cosmosdbsqldatabase.Setup,
-		cosmosdbsqlfunction.Setup,
-		cosmosdbsqlstoredprocedure.Setup,
-		cosmosdbsqltrigger.Setup,
-		cosmosdbtable.Setup,
-		kubernetescluster.Setup,
-		kubernetesclusternodepool.Setup,
-		loadbalancer.Setup,
-		postgresqlactivedirectoryadministrator.Setup,
-		postgresqlconfiguration.Setup,
-		postgresqldatabase.Setup,
-		postgresqlfirewallrule.Setup,
-		postgresqlflexibleserver.Setup,
-		postgresqlflexibleserverconfiguration.Setup,
-		postgresqlflexibleserverdatabase.Setup,
-		postgresqlflexibleserverfirewallrule.Setup,
-		postgresqlserver.Setup,
-		postgresqlserverkey.Setup,
-		postgresqlvirtualnetworkrule.Setup,
-		resourcegroup.Setup,
-		resourcegrouppolicyassignment.Setup,
-		resourcegrouptemplatedeployment.Setup,
-		sqlserver.Setup,
-		storageaccount.Setup,
-		storageblob.Setup,
-		storagecontainer.Setup,
-		subnet.Setup,
-		subnetnatgatewayassociation.Setup,
-		subnetnetworksecuritygroupassociation.Setup,
-		subnetroutetableassociation.Setup,
-		subnetserviceendpointstoragepolicy.Setup,
-		virtualdesktopapplication.Setup,
-		virtualdesktophostpool.Setup,
-		virtualdesktopworkspace.Setup,
-		virtualhub.Setup,
-		virtualhubbgpconnection.Setup,
-		virtualhubconnection.Setup,
-		virtualhubip.Setup,
-		virtualhubroutetable.Setup,
-		virtualhubsecuritypartnerprovider.Setup,
-		virtualnetwork.Setup,
-		virtualnetworkgateway.Setup,
-		virtualnetworkgatewayconnection.Setup,
-		virtualnetworkpeering.Setup,
-		virtualwan.Setup,
-	} {
-		if err := setup(mgr, l, wl, ps, ws, concurrency, enabledAPIs); err != nil {
-			return err
-		}
+// GetSetupMap returns a map from GVKs to
+// the respective controller setup functions.
+func GetSetupMap() map[schema.GroupVersionKind]tjcontroller.SetupFunc {
+	m := map[schema.GroupVersionKind]tjcontroller.SetupFunc{
+		schema.GroupVersionKind{Group: "azure.tf.crossplane.io", Version: "v1alpha1", Kind: "ProviderConfig"}:                                    config.Setup,
+		schema.GroupVersionKind{Group: "cosmosdb.azure.tf.crossplane.io", Version: "v1alpha1", Kind: "CosmosdbAccount"}:                          cosmosdbaccount.Setup,
+		schema.GroupVersionKind{Group: "cosmosdb.azure.tf.crossplane.io", Version: "v1alpha1", Kind: "CosmosdbCassandraKeyspace"}:                cosmosdbcassandrakeyspace.Setup,
+		schema.GroupVersionKind{Group: "cosmosdb.azure.tf.crossplane.io", Version: "v1alpha1", Kind: "CosmosdbCassandraTable"}:                   cosmosdbcassandratable.Setup,
+		schema.GroupVersionKind{Group: "cosmosdb.azure.tf.crossplane.io", Version: "v1alpha1", Kind: "CosmosdbGremlinDatabase"}:                  cosmosdbgremlindatabase.Setup,
+		schema.GroupVersionKind{Group: "cosmosdb.azure.tf.crossplane.io", Version: "v1alpha1", Kind: "CosmosdbGremlinGraph"}:                     cosmosdbgremlingraph.Setup,
+		schema.GroupVersionKind{Group: "cosmosdb.azure.tf.crossplane.io", Version: "v1alpha1", Kind: "CosmosdbMongoCollection"}:                  cosmosdbmongocollection.Setup,
+		schema.GroupVersionKind{Group: "cosmosdb.azure.tf.crossplane.io", Version: "v1alpha1", Kind: "CosmosdbMongoDatabase"}:                    cosmosdbmongodatabase.Setup,
+		schema.GroupVersionKind{Group: "cosmosdb.azure.tf.crossplane.io", Version: "v1alpha1", Kind: "CosmosdbNotebookWorkspace"}:                cosmosdbnotebookworkspace.Setup,
+		schema.GroupVersionKind{Group: "cosmosdb.azure.tf.crossplane.io", Version: "v1alpha1", Kind: "CosmosdbSqlContainer"}:                     cosmosdbsqlcontainer.Setup,
+		schema.GroupVersionKind{Group: "cosmosdb.azure.tf.crossplane.io", Version: "v1alpha1", Kind: "CosmosdbSqlDatabase"}:                      cosmosdbsqldatabase.Setup,
+		schema.GroupVersionKind{Group: "cosmosdb.azure.tf.crossplane.io", Version: "v1alpha1", Kind: "CosmosdbSqlFunction"}:                      cosmosdbsqlfunction.Setup,
+		schema.GroupVersionKind{Group: "cosmosdb.azure.tf.crossplane.io", Version: "v1alpha1", Kind: "CosmosdbSqlStoredProcedure"}:               cosmosdbsqlstoredprocedure.Setup,
+		schema.GroupVersionKind{Group: "cosmosdb.azure.tf.crossplane.io", Version: "v1alpha1", Kind: "CosmosdbSqlTrigger"}:                       cosmosdbsqltrigger.Setup,
+		schema.GroupVersionKind{Group: "cosmosdb.azure.tf.crossplane.io", Version: "v1alpha1", Kind: "CosmosdbTable"}:                            cosmosdbtable.Setup,
+		schema.GroupVersionKind{Group: "kubernetes.azure.tf.crossplane.io", Version: "v1alpha1", Kind: "KubernetesCluster"}:                      kubernetescluster.Setup,
+		schema.GroupVersionKind{Group: "kubernetes.azure.tf.crossplane.io", Version: "v1alpha1", Kind: "KubernetesClusterNodePool"}:              kubernetesclusternodepool.Setup,
+		schema.GroupVersionKind{Group: "lb.azure.tf.crossplane.io", Version: "v1alpha1", Kind: "LoadBalancer"}:                                   loadbalancer.Setup,
+		schema.GroupVersionKind{Group: "postgresql.azure.tf.crossplane.io", Version: "v1alpha1", Kind: "PostgresqlActiveDirectoryAdministrator"}: postgresqlactivedirectoryadministrator.Setup,
+		schema.GroupVersionKind{Group: "postgresql.azure.tf.crossplane.io", Version: "v1alpha1", Kind: "PostgresqlConfiguration"}:                postgresqlconfiguration.Setup,
+		schema.GroupVersionKind{Group: "postgresql.azure.tf.crossplane.io", Version: "v1alpha1", Kind: "PostgresqlDatabase"}:                     postgresqldatabase.Setup,
+		schema.GroupVersionKind{Group: "postgresql.azure.tf.crossplane.io", Version: "v1alpha1", Kind: "PostgresqlFirewallRule"}:                 postgresqlfirewallrule.Setup,
+		schema.GroupVersionKind{Group: "postgresql.azure.tf.crossplane.io", Version: "v1alpha1", Kind: "PostgresqlFlexibleServer"}:               postgresqlflexibleserver.Setup,
+		schema.GroupVersionKind{Group: "postgresql.azure.tf.crossplane.io", Version: "v1alpha1", Kind: "PostgresqlFlexibleServerConfiguration"}:  postgresqlflexibleserverconfiguration.Setup,
+		schema.GroupVersionKind{Group: "postgresql.azure.tf.crossplane.io", Version: "v1alpha1", Kind: "PostgresqlFlexibleServerDatabase"}:       postgresqlflexibleserverdatabase.Setup,
+		schema.GroupVersionKind{Group: "postgresql.azure.tf.crossplane.io", Version: "v1alpha1", Kind: "PostgresqlFlexibleServerFirewallRule"}:   postgresqlflexibleserverfirewallrule.Setup,
+		schema.GroupVersionKind{Group: "postgresql.azure.tf.crossplane.io", Version: "v1alpha1", Kind: "PostgresqlServer"}:                       postgresqlserver.Setup,
+		schema.GroupVersionKind{Group: "postgresql.azure.tf.crossplane.io", Version: "v1alpha1", Kind: "PostgresqlServerKey"}:                    postgresqlserverkey.Setup,
+		schema.GroupVersionKind{Group: "postgresql.azure.tf.crossplane.io", Version: "v1alpha1", Kind: "PostgresqlVirtualNetworkRule"}:           postgresqlvirtualnetworkrule.Setup,
+		schema.GroupVersionKind{Group: "resource.azure.tf.crossplane.io", Version: "v1alpha1", Kind: "ResourceGroup"}:                            resourcegroup.Setup,
+		schema.GroupVersionKind{Group: "resource.azure.tf.crossplane.io", Version: "v1alpha1", Kind: "ResourceGroupPolicyAssignment"}:            resourcegrouppolicyassignment.Setup,
+		schema.GroupVersionKind{Group: "resource.azure.tf.crossplane.io", Version: "v1alpha1", Kind: "ResourceGroupTemplateDeployment"}:          resourcegrouptemplatedeployment.Setup,
+		schema.GroupVersionKind{Group: "sql.azure.tf.crossplane.io", Version: "v1alpha1", Kind: "SqlServer"}:                                     sqlserver.Setup,
+		schema.GroupVersionKind{Group: "storage.azure.tf.crossplane.io", Version: "v1alpha1", Kind: "StorageAccount"}:                            storageaccount.Setup,
+		schema.GroupVersionKind{Group: "storage.azure.tf.crossplane.io", Version: "v1alpha1", Kind: "StorageBlob"}:                               storageblob.Setup,
+		schema.GroupVersionKind{Group: "storage.azure.tf.crossplane.io", Version: "v1alpha1", Kind: "StorageContainer"}:                          storagecontainer.Setup,
+		schema.GroupVersionKind{Group: "subnet.azure.tf.crossplane.io", Version: "v1alpha1", Kind: "Subnet"}:                                     subnet.Setup,
+		schema.GroupVersionKind{Group: "subnet.azure.tf.crossplane.io", Version: "v1alpha1", Kind: "SubnetNatGatewayAssociation"}:                subnetnatgatewayassociation.Setup,
+		schema.GroupVersionKind{Group: "subnet.azure.tf.crossplane.io", Version: "v1alpha1", Kind: "SubnetNetworkSecurityGroupAssociation"}:      subnetnetworksecuritygroupassociation.Setup,
+		schema.GroupVersionKind{Group: "subnet.azure.tf.crossplane.io", Version: "v1alpha1", Kind: "SubnetRouteTableAssociation"}:                subnetroutetableassociation.Setup,
+		schema.GroupVersionKind{Group: "subnet.azure.tf.crossplane.io", Version: "v1alpha1", Kind: "SubnetServiceEndpointStoragePolicy"}:         subnetserviceendpointstoragepolicy.Setup,
+		schema.GroupVersionKind{Group: "virtual.azure.tf.crossplane.io", Version: "v1alpha1", Kind: "VirtualDesktopApplication"}:                 virtualdesktopapplication.Setup,
+		schema.GroupVersionKind{Group: "virtual.azure.tf.crossplane.io", Version: "v1alpha1", Kind: "VirtualDesktopHostPool"}:                    virtualdesktophostpool.Setup,
+		schema.GroupVersionKind{Group: "virtual.azure.tf.crossplane.io", Version: "v1alpha1", Kind: "VirtualDesktopWorkspace"}:                   virtualdesktopworkspace.Setup,
+		schema.GroupVersionKind{Group: "virtual.azure.tf.crossplane.io", Version: "v1alpha1", Kind: "VirtualHub"}:                                virtualhub.Setup,
+		schema.GroupVersionKind{Group: "virtual.azure.tf.crossplane.io", Version: "v1alpha1", Kind: "VirtualHubBgpConnection"}:                   virtualhubbgpconnection.Setup,
+		schema.GroupVersionKind{Group: "virtual.azure.tf.crossplane.io", Version: "v1alpha1", Kind: "VirtualHubConnection"}:                      virtualhubconnection.Setup,
+		schema.GroupVersionKind{Group: "virtual.azure.tf.crossplane.io", Version: "v1alpha1", Kind: "VirtualHubIp"}:                              virtualhubip.Setup,
+		schema.GroupVersionKind{Group: "virtual.azure.tf.crossplane.io", Version: "v1alpha1", Kind: "VirtualHubRouteTable"}:                      virtualhubroutetable.Setup,
+		schema.GroupVersionKind{Group: "virtual.azure.tf.crossplane.io", Version: "v1alpha1", Kind: "VirtualHubSecurityPartnerProvider"}:         virtualhubsecuritypartnerprovider.Setup,
+		schema.GroupVersionKind{Group: "virtual.azure.tf.crossplane.io", Version: "v1alpha1", Kind: "VirtualNetwork"}:                            virtualnetwork.Setup,
+		schema.GroupVersionKind{Group: "virtual.azure.tf.crossplane.io", Version: "v1alpha1", Kind: "VirtualNetworkGateway"}:                     virtualnetworkgateway.Setup,
+		schema.GroupVersionKind{Group: "virtual.azure.tf.crossplane.io", Version: "v1alpha1", Kind: "VirtualNetworkGatewayConnection"}:           virtualnetworkgatewayconnection.Setup,
+		schema.GroupVersionKind{Group: "virtual.azure.tf.crossplane.io", Version: "v1alpha1", Kind: "VirtualNetworkPeering"}:                     virtualnetworkpeering.Setup,
+		schema.GroupVersionKind{Group: "virtual.azure.tf.crossplane.io", Version: "v1alpha1", Kind: "VirtualWan"}:                                virtualwan.Setup,
 	}
-	return nil
+	return m
 }

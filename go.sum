@@ -697,8 +697,8 @@ github.com/ulikunitz/xz v0.5.5/go.mod h1:2bypXElzHzzJZwzH67Y6wb67pO62Rzfn7BSiF4A
 github.com/ulikunitz/xz v0.5.8/go.mod h1:nbz6k7qbPmH4IRqmfOplQw/tblSgqTqBwxkY0oWt/14=
 github.com/ulikunitz/xz v0.5.10 h1:t92gobL9l3HE202wg3rlk19F6X+JOxl9BBrCCMYEYd8=
 github.com/ulikunitz/xz v0.5.10/go.mod h1:nbz6k7qbPmH4IRqmfOplQw/tblSgqTqBwxkY0oWt/14=
-github.com/ulucinar/terrajet v0.0.0-20211020075547-271c9b67f889 h1:m5LuhgSeNQk3x7zXhTe/ZH10hQTxmTRg4P9gs4JrkUg=
-github.com/ulucinar/terrajet v0.0.0-20211020075547-271c9b67f889/go.mod h1:qqmEllC3g+ZYm5uMXu3Hc/mzmWftlujtn+BeO3Ez108=
+github.com/ulucinar/terrajet v0.0.0-20211022153037-74f90d6cd58e h1:C7EleBQhYQYA9PDpSDn656zBOUq0xmYoGQvtbBqzc+4=
+github.com/ulucinar/terrajet v0.0.0-20211022153037-74f90d6cd58e/go.mod h1:oLDu+O8wmthF20pmBEYG9OMtH4hGbp8tcmkZ3BBDK8Q=
 github.com/urfave/cli v1.20.0/go.mod h1:70zkFmudgCuE/ngEzBv17Jvp/497gISqfk5gWijbERA=
 github.com/vmihailenco/msgpack v3.3.3+incompatible/go.mod h1:fy3FlTQTDXWkZ7Bh6AcGMlsjHatGryHQYUTf1ShIgkk=
 github.com/vmihailenco/msgpack v4.0.4+incompatible h1:dSLoQfGFAo3F6OoNhwUmLwVgaUXK79GlxNBwueZn0xI=

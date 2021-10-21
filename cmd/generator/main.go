@@ -30,10 +30,12 @@ import (
 	"github.com/hashicorp/terraform-provider-azurerm/xpprovider"
 	"github.com/iancoleman/strcase"
 	"github.com/pkg/errors"
+	kschema "k8s.io/apimachinery/pkg/runtime/schema"
 
 	"github.com/crossplane-contrib/terrajet/pkg/config"
 	"github.com/crossplane-contrib/terrajet/pkg/pipeline"
 
+	"github.com/crossplane-contrib/provider-tf-azure/apis/v1alpha1"
 	genConfig "github.com/crossplane-contrib/provider-tf-azure/cmd/generator/config"
 )
 
@@ -151,11 +153,15 @@ func main() { // nolint:gocyclo
 	controllerPkgList := []string{
 		"github.com/crossplane-contrib/provider-tf-azure/internal/controller/config",
 	}
+	gvkList := []kschema.GroupVersionKind{
+		v1alpha1.ProviderConfigGroupVersionKind,
+	}
 	for group, resources := range groups {
 		version := "v1alpha1"
 		versionGen := pipeline.NewVersionGenerator(wd, modulePath, strings.ToLower(group)+groupSuffix, version)
 
-		crdGen := pipeline.NewCRDGenerator(versionGen.Package(), versionGen.DirectoryPath(), strings.ToLower(group)+groupSuffix, "azure")
+		apiGroup := strings.ToLower(group) + groupSuffix
+		crdGen := pipeline.NewCRDGenerator(versionGen.Package(), versionGen.DirectoryPath(), apiGroup, "azure")
 		tfGen := pipeline.NewTerraformedGenerator(versionGen.Package(), versionGen.DirectoryPath())
 		ctrlGen := pipeline.NewControllerGenerator(wd, modulePath, strings.ToLower(group)+groupSuffix)
 
@@ -186,6 +192,11 @@ func main() { // nolint:gocyclo
 				panic(errors.Wrap(err, "cannot generate controller"))
 			}
 			controllerPkgList = append(controllerPkgList, ctrlPkgPath)
+			gvkList = append(gvkList, kschema.GroupVersionKind{
+				Group:   apiGroup,
+				Version: r.Version,
+				Kind:    r.Kind,
+			})
 			count++
 		}
 
@@ -198,7 +209,7 @@ func main() { // nolint:gocyclo
 	if err := pipeline.NewRegisterGenerator(wd, modulePath).Generate(versionPkgList); err != nil {
 		panic(errors.Wrap(err, "cannot generate register file"))
 	}
-	if err := pipeline.NewSetupGenerator(wd, modulePath).Generate(controllerPkgList); err != nil {
+	if err := pipeline.NewSetupGenerator(wd, modulePath).Generate(controllerPkgList, gvkList); err != nil {
 		panic(errors.Wrap(err, "cannot generate setup file"))
 	}
 	if out, err := exec.Command("bash", "-c", "goimports -w $(find apis -iname 'zz_*')").CombinedOutput(); err != nil {

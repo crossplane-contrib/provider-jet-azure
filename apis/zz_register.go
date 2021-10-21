@@ -20,7 +20,8 @@ limitations under the License.
 package apis
 
 import (
-	"k8s.io/apimachinery/pkg/runtime"
+	"k8s.io/apimachinery/pkg/runtime/schema"
+	"sigs.k8s.io/controller-runtime/pkg/scheme"
 
 	v1alpha1cosmosdb "github.com/crossplane-contrib/provider-tf-azure/apis/cosmosdb/v1alpha1"
 	v1alpha1kubernetes "github.com/crossplane-contrib/provider-tf-azure/apis/kubernetes/v1alpha1"
@@ -34,26 +35,22 @@ import (
 	v1alpha1virtual "github.com/crossplane-contrib/provider-tf-azure/apis/virtual/v1alpha1"
 )
 
-func init() {
-	// Register the types with the Scheme so the components can map objects to GroupVersionKinds and back
-	AddToSchemes = append(AddToSchemes,
-		v1alpha1.SchemeBuilder.AddToScheme,
-		v1alpha1cosmosdb.SchemeBuilder.AddToScheme,
-		v1alpha1kubernetes.SchemeBuilder.AddToScheme,
-		v1alpha1lb.SchemeBuilder.AddToScheme,
-		v1alpha1postgresql.SchemeBuilder.AddToScheme,
-		v1alpha1resource.SchemeBuilder.AddToScheme,
-		v1alpha1sql.SchemeBuilder.AddToScheme,
-		v1alpha1storage.SchemeBuilder.AddToScheme,
-		v1alpha1subnet.SchemeBuilder.AddToScheme,
-		v1alpha1virtual.SchemeBuilder.AddToScheme,
-	)
-}
-
-// AddToSchemes may be used to add all resources defined in the project to a Scheme
-var AddToSchemes runtime.SchemeBuilder
-
-// AddToScheme adds all Resources to the Scheme
-func AddToScheme(s *runtime.Scheme) error {
-	return AddToSchemes.AddToScheme(s)
+// GetRegisterMap returns a map for GVs to respective scheme builders.
+func GetRegisterMap() map[schema.GroupVersion]*scheme.Builder {
+	m := make(map[schema.GroupVersion]*scheme.Builder)
+	for _, builder := range []*scheme.Builder{
+		v1alpha1.SchemeBuilder,
+		v1alpha1cosmosdb.SchemeBuilder,
+		v1alpha1kubernetes.SchemeBuilder,
+		v1alpha1lb.SchemeBuilder,
+		v1alpha1postgresql.SchemeBuilder,
+		v1alpha1resource.SchemeBuilder,
+		v1alpha1sql.SchemeBuilder,
+		v1alpha1storage.SchemeBuilder,
+		v1alpha1subnet.SchemeBuilder,
+		v1alpha1virtual.SchemeBuilder,
+	} {
+		m[builder.GroupVersion] = builder
+	}
+	return m
 }
