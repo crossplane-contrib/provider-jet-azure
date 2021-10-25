@@ -523,62 +523,6 @@ func (mg *PostgresqlServer) SetWriteConnectionSecretToReference(r *xpv1.SecretRe
 	mg.Spec.WriteConnectionSecretToReference = r
 }
 
-// GetCondition of this PostgresqlServerKey.
-func (mg *PostgresqlServerKey) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
-	return mg.Status.GetCondition(ct)
-}
-
-// GetDeletionPolicy of this PostgresqlServerKey.
-func (mg *PostgresqlServerKey) GetDeletionPolicy() xpv1.DeletionPolicy {
-	return mg.Spec.DeletionPolicy
-}
-
-// GetProviderConfigReference of this PostgresqlServerKey.
-func (mg *PostgresqlServerKey) GetProviderConfigReference() *xpv1.Reference {
-	return mg.Spec.ProviderConfigReference
-}
-
-/*
-GetProviderReference of this PostgresqlServerKey.
-Deprecated: Use GetProviderConfigReference.
-*/
-func (mg *PostgresqlServerKey) GetProviderReference() *xpv1.Reference {
-	return mg.Spec.ProviderReference
-}
-
-// GetWriteConnectionSecretToReference of this PostgresqlServerKey.
-func (mg *PostgresqlServerKey) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
-	return mg.Spec.WriteConnectionSecretToReference
-}
-
-// SetConditions of this PostgresqlServerKey.
-func (mg *PostgresqlServerKey) SetConditions(c ...xpv1.Condition) {
-	mg.Status.SetConditions(c...)
-}
-
-// SetDeletionPolicy of this PostgresqlServerKey.
-func (mg *PostgresqlServerKey) SetDeletionPolicy(r xpv1.DeletionPolicy) {
-	mg.Spec.DeletionPolicy = r
-}
-
-// SetProviderConfigReference of this PostgresqlServerKey.
-func (mg *PostgresqlServerKey) SetProviderConfigReference(r *xpv1.Reference) {
-	mg.Spec.ProviderConfigReference = r
-}
-
-/*
-SetProviderReference of this PostgresqlServerKey.
-Deprecated: Use SetProviderConfigReference.
-*/
-func (mg *PostgresqlServerKey) SetProviderReference(r *xpv1.Reference) {
-	mg.Spec.ProviderReference = r
-}
-
-// SetWriteConnectionSecretToReference of this PostgresqlServerKey.
-func (mg *PostgresqlServerKey) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
-	mg.Spec.WriteConnectionSecretToReference = r
-}
-
 // GetCondition of this PostgresqlVirtualNetworkRule.
 func (mg *PostgresqlVirtualNetworkRule) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
 	return mg.Status.GetCondition(ct)

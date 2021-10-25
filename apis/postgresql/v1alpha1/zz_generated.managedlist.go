@@ -91,15 +91,6 @@ func (l *PostgresqlFlexibleServerList) GetItems() []resource.Managed {
 	return items
 }
 
-// GetItems of this PostgresqlServerKeyList.
-func (l *PostgresqlServerKeyList) GetItems() []resource.Managed {
-	items := make([]resource.Managed, len(l.Items))
-	for i := range l.Items {
-		items[i] = &l.Items[i]
-	}
-	return items
-}
-
 // GetItems of this PostgresqlServerList.
 func (l *PostgresqlServerList) GetItems() []resource.Managed {
 	items := make([]resource.Managed, len(l.Items))

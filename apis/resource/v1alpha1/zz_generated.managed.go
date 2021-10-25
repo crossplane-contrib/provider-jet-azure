@@ -186,3 +186,115 @@ func (mg *ResourceGroupTemplateDeployment) SetProviderReference(r *xpv1.Referenc
 func (mg *ResourceGroupTemplateDeployment) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
 	mg.Spec.WriteConnectionSecretToReference = r
 }
+
+// GetCondition of this ResourcePolicyAssignment.
+func (mg *ResourcePolicyAssignment) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
+	return mg.Status.GetCondition(ct)
+}
+
+// GetDeletionPolicy of this ResourcePolicyAssignment.
+func (mg *ResourcePolicyAssignment) GetDeletionPolicy() xpv1.DeletionPolicy {
+	return mg.Spec.DeletionPolicy
+}
+
+// GetProviderConfigReference of this ResourcePolicyAssignment.
+func (mg *ResourcePolicyAssignment) GetProviderConfigReference() *xpv1.Reference {
+	return mg.Spec.ProviderConfigReference
+}
+
+/*
+GetProviderReference of this ResourcePolicyAssignment.
+Deprecated: Use GetProviderConfigReference.
+*/
+func (mg *ResourcePolicyAssignment) GetProviderReference() *xpv1.Reference {
+	return mg.Spec.ProviderReference
+}
+
+// GetWriteConnectionSecretToReference of this ResourcePolicyAssignment.
+func (mg *ResourcePolicyAssignment) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
+	return mg.Spec.WriteConnectionSecretToReference
+}
+
+// SetConditions of this ResourcePolicyAssignment.
+func (mg *ResourcePolicyAssignment) SetConditions(c ...xpv1.Condition) {
+	mg.Status.SetConditions(c...)
+}
+
+// SetDeletionPolicy of this ResourcePolicyAssignment.
+func (mg *ResourcePolicyAssignment) SetDeletionPolicy(r xpv1.DeletionPolicy) {
+	mg.Spec.DeletionPolicy = r
+}
+
+// SetProviderConfigReference of this ResourcePolicyAssignment.
+func (mg *ResourcePolicyAssignment) SetProviderConfigReference(r *xpv1.Reference) {
+	mg.Spec.ProviderConfigReference = r
+}
+
+/*
+SetProviderReference of this ResourcePolicyAssignment.
+Deprecated: Use SetProviderConfigReference.
+*/
+func (mg *ResourcePolicyAssignment) SetProviderReference(r *xpv1.Reference) {
+	mg.Spec.ProviderReference = r
+}
+
+// SetWriteConnectionSecretToReference of this ResourcePolicyAssignment.
+func (mg *ResourcePolicyAssignment) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
+	mg.Spec.WriteConnectionSecretToReference = r
+}
+
+// GetCondition of this ResourceProviderRegistration.
+func (mg *ResourceProviderRegistration) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
+	return mg.Status.GetCondition(ct)
+}
+
+// GetDeletionPolicy of this ResourceProviderRegistration.
+func (mg *ResourceProviderRegistration) GetDeletionPolicy() xpv1.DeletionPolicy {
+	return mg.Spec.DeletionPolicy
+}
+
+// GetProviderConfigReference of this ResourceProviderRegistration.
+func (mg *ResourceProviderRegistration) GetProviderConfigReference() *xpv1.Reference {
+	return mg.Spec.ProviderConfigReference
+}
+
+/*
+GetProviderReference of this ResourceProviderRegistration.
+Deprecated: Use GetProviderConfigReference.
+*/
+func (mg *ResourceProviderRegistration) GetProviderReference() *xpv1.Reference {
+	return mg.Spec.ProviderReference
+}
+
+// GetWriteConnectionSecretToReference of this ResourceProviderRegistration.
+func (mg *ResourceProviderRegistration) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
+	return mg.Spec.WriteConnectionSecretToReference
+}
+
+// SetConditions of this ResourceProviderRegistration.
+func (mg *ResourceProviderRegistration) SetConditions(c ...xpv1.Condition) {
+	mg.Status.SetConditions(c...)
+}
+
+// SetDeletionPolicy of this ResourceProviderRegistration.
+func (mg *ResourceProviderRegistration) SetDeletionPolicy(r xpv1.DeletionPolicy) {
+	mg.Spec.DeletionPolicy = r
+}
+
+// SetProviderConfigReference of this ResourceProviderRegistration.
+func (mg *ResourceProviderRegistration) SetProviderConfigReference(r *xpv1.Reference) {
+	mg.Spec.ProviderConfigReference = r
+}
+
+/*
+SetProviderReference of this ResourceProviderRegistration.
+Deprecated: Use SetProviderConfigReference.
+*/
+func (mg *ResourceProviderRegistration) SetProviderReference(r *xpv1.Reference) {
+	mg.Spec.ProviderReference = r
+}
+
+// SetWriteConnectionSecretToReference of this ResourceProviderRegistration.
+func (mg *ResourceProviderRegistration) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
+	mg.Spec.WriteConnectionSecretToReference = r
+}

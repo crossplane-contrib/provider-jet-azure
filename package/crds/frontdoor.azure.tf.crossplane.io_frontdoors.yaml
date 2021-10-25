@@ -1,0 +1,411 @@
+apiVersion: apiextensions.k8s.io/v1
+kind: CustomResourceDefinition
+metadata:
+  annotations:
+    controller-gen.kubebuilder.io/version: v0.6.2
+  creationTimestamp: null
+  name: frontdoors.frontdoor.azure.tf.crossplane.io
+spec:
+  group: frontdoor.azure.tf.crossplane.io
+  names:
+    categories:
+    - crossplane
+    - managed
+    - azure
+    kind: Frontdoor
+    listKind: FrontdoorList
+    plural: frontdoors
+    singular: frontdoor
+  scope: Cluster
+  versions:
+  - additionalPrinterColumns:
+    - jsonPath: .status.conditions[?(@.type=='Ready')].status
+      name: READY
+      type: string
+    - jsonPath: .status.conditions[?(@.type=='Synced')].status
+      name: SYNCED
+      type: string
+    - jsonPath: .metadata.annotations.crossplane\.io/external-name
+      name: EXTERNAL-NAME
+      type: string
+    - jsonPath: .metadata.creationTimestamp
+      name: AGE
+      type: date
+    name: v1alpha1
+    schema:
+      openAPIV3Schema:
+        description: Frontdoor is the Schema for the Frontdoors API
+        properties:
+          apiVersion:
+            description: 'APIVersion defines the versioned schema of this representation
+              of an object. Servers should convert recognized schemas to the latest
+              internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources'
+            type: string
+          kind:
+            description: 'Kind is a string value representing the REST resource this
+              object represents. Servers may infer this from the endpoint the client
+              submits requests to. Cannot be updated. In CamelCase. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds'
+            type: string
+          metadata:
+            type: object
+          spec:
+            description: FrontdoorSpec defines the desired state of Frontdoor
+            properties:
+              deletionPolicy:
+                default: Delete
+                description: DeletionPolicy specifies what will happen to the underlying
+                  external when this managed resource is deleted - either "Delete"
+                  or "Orphan" the external resource.
+                enum:
+                - Orphan
+                - Delete
+                type: string
+              forProvider:
+                properties:
+                  backendPool:
+                    items:
+                      properties:
+                        backend:
+                          items:
+                            properties:
+                              address:
+                                type: string
+                              enabled:
+                                type: boolean
+                              hostHeader:
+                                type: string
+                              httpPort:
+                                format: int64
+                                type: integer
+                              httpsPort:
+                                format: int64
+                                type: integer
+                              priority:
+                                format: int64
+                                type: integer
+                              weight:
+                                format: int64
+                                type: integer
+                            required:
+                            - address
+                            - hostHeader
+                            - httpPort
+                            - httpsPort
+                            type: object
+                          type: array
+                        healthProbeName:
+                          type: string
+                        loadBalancingName:
+                          type: string
+                        name:
+                          type: string
+                      required:
+                      - backend
+                      - healthProbeName
+                      - loadBalancingName
+                      - name
+                      type: object
+                    type: array
+                  backendPoolHealthProbe:
+                    items:
+                      properties:
+                        enabled:
+                          type: boolean
+                        intervalInSeconds:
+                          format: int64
+                          type: integer
+                        name:
+                          type: string
+                        path:
+                          type: string
+                        probeMethod:
+                          type: string
+                        protocol:
+                          type: string
+                      required:
+                      - name
+                      type: object
+                    type: array
+                  backendPoolLoadBalancing:
+                    items:
+                      properties:
+                        additionalLatencyMilliseconds:
+                          format: int64
+                          type: integer
+                        name:
+                          type: string
+                        sampleSize:
+                          format: int64
+                          type: integer
+                        successfulSamplesRequired:
+                          format: int64
+                          type: integer
+                      required:
+                      - name
+                      type: object
+                    type: array
+                  backendPoolsSendReceiveTimeoutSeconds:
+                    format: int64
+                    type: integer
+                  enforceBackendPoolsCertificateNameCheck:
+                    type: boolean
+                  friendlyName:
+                    type: string
+                  frontendEndpoint:
+                    items:
+                      properties:
+                        hostName:
+                          type: string
+                        name:
+                          type: string
+                        sessionAffinityEnabled:
+                          type: boolean
+                        sessionAffinityTtlSeconds:
+                          format: int64
+                          type: integer
+                        webApplicationFirewallPolicyLinkId:
+                          type: string
+                      required:
+                      - hostName
+                      - name
+                      type: object
+                    type: array
+                  loadBalancerEnabled:
+                    type: boolean
+                  location:
+                    type: string
+                  name:
+                    type: string
+                  resourceGroupName:
+                    type: string
+                  routingRule:
+                    items:
+                      properties:
+                        acceptedProtocols:
+                          items:
+                            type: string
+                          type: array
+                        enabled:
+                          type: boolean
+                        forwardingConfiguration:
+                          items:
+                            properties:
+                              backendPoolName:
+                                type: string
+                              cacheDuration:
+                                type: string
+                              cacheEnabled:
+                                type: boolean
+                              cacheQueryParameterStripDirective:
+                                type: string
+                              cacheQueryParameters:
+                                items:
+                                  type: string
+                                type: array
+                              cacheUseDynamicCompression:
+                                type: boolean
+                              customForwardingPath:
+                                type: string
+                              forwardingProtocol:
+                                type: string
+                            required:
+                            - backendPoolName
+                            type: object
+                          type: array
+                        frontendEndpoints:
+                          items:
+                            type: string
+                          type: array
+                        name:
+                          type: string
+                        patternsToMatch:
+                          items:
+                            type: string
+                          type: array
+                        redirectConfiguration:
+                          items:
+                            properties:
+                              customFragment:
+                                type: string
+                              customHost:
+                                type: string
+                              customPath:
+                                type: string
+                              customQueryString:
+                                type: string
+                              redirectProtocol:
+                                type: string
+                              redirectType:
+                                type: string
+                            required:
+                            - redirectProtocol
+                            - redirectType
+                            type: object
+                          type: array
+                      required:
+                      - acceptedProtocols
+                      - frontendEndpoints
+                      - name
+                      - patternsToMatch
+                      type: object
+                    type: array
+                  tags:
+                    additionalProperties:
+                      type: string
+                    type: object
+                required:
+                - backendPool
+                - backendPoolHealthProbe
+                - backendPoolLoadBalancing
+                - enforceBackendPoolsCertificateNameCheck
+                - frontendEndpoint
+                - name
+                - resourceGroupName
+                - routingRule
+                type: object
+              providerConfigRef:
+                default:
+                  name: default
+                description: ProviderConfigReference specifies how the provider that
+                  will be used to create, observe, update, and delete this managed
+                  resource should be configured.
+                properties:
+                  name:
+                    description: Name of the referenced object.
+                    type: string
+                required:
+                - name
+                type: object
+              providerRef:
+                description: 'ProviderReference specifies the provider that will be
+                  used to create, observe, update, and delete this managed resource.
+                  Deprecated: Please use ProviderConfigReference, i.e. `providerConfigRef`'
+                properties:
+                  name:
+                    description: Name of the referenced object.
+                    type: string
+                required:
+                - name
+                type: object
+              writeConnectionSecretToRef:
+                description: WriteConnectionSecretToReference specifies the namespace
+                  and name of a Secret to which any connection details for this managed
+                  resource should be written. Connection details frequently include
+                  the endpoint, username, and password required to connect to the
+                  managed resource.
+                properties:
+                  name:
+                    description: Name of the secret.
+                    type: string
+                  namespace:
+                    description: Namespace of the secret.
+                    type: string
+                required:
+                - name
+                - namespace
+                type: object
+            required:
+            - forProvider
+            type: object
+          status:
+            description: FrontdoorStatus defines the observed state of Frontdoor.
+            properties:
+              atProvider:
+                properties:
+                  backendPoolHealthProbes:
+                    additionalProperties:
+                      type: string
+                    type: object
+                  backendPoolLoadBalancingSettings:
+                    additionalProperties:
+                      type: string
+                    type: object
+                  backendPools:
+                    additionalProperties:
+                      type: string
+                    type: object
+                  cname:
+                    type: string
+                  explicitResourceOrder:
+                    items:
+                      properties:
+                        backendPoolHealthProbeIds:
+                          items:
+                            type: string
+                          type: array
+                        backendPoolIds:
+                          items:
+                            type: string
+                          type: array
+                        backendPoolLoadBalancingIds:
+                          items:
+                            type: string
+                          type: array
+                        frontendEndpointIds:
+                          items:
+                            type: string
+                          type: array
+                        routingRuleIds:
+                          items:
+                            type: string
+                          type: array
+                      type: object
+                    type: array
+                  frontendEndpoints:
+                    additionalProperties:
+                      type: string
+                    type: object
+                  headerFrontdoorId:
+                    type: string
+                  routingRules:
+                    additionalProperties:
+                      type: string
+                    type: object
+                type: object
+              conditions:
+                description: Conditions of the resource.
+                items:
+                  description: A Condition that may apply to a resource.
+                  properties:
+                    lastTransitionTime:
+                      description: LastTransitionTime is the last time this condition
+                        transitioned from one status to another.
+                      format: date-time
+                      type: string
+                    message:
+                      description: A Message containing details about this condition's
+                        last transition from one status to another, if any.
+                      type: string
+                    reason:
+                      description: A Reason for this condition's last transition from
+                        one status to another.
+                      type: string
+                    status:
+                      description: Status of this condition; is it currently True,
+                        False, or Unknown?
+                      type: string
+                    type:
+                      description: Type of this condition. At most one of each condition
+                        type may apply to a resource at any point in time.
+                      type: string
+                  required:
+                  - lastTransitionTime
+                  - reason
+                  - status
+                  - type
+                  type: object
+                type: array
+            type: object
+        required:
+        - spec
+        type: object
+    served: true
+    storage: true
+    subresources:
+      status: {}
+status:
+  acceptedNames:
+    kind: ""
+    plural: ""
+  conditions: []
+  storedVersions: []

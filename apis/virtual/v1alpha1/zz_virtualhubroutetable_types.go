@@ -25,35 +25,10 @@ import (
 	v1 "github.com/crossplane/crossplane-runtime/apis/common/v1"
 )
 
-type VirtualHubRouteTableObservation struct {
+type RouteObservation struct {
 }
 
-type VirtualHubRouteTableParameters struct {
-
-	// +kubebuilder:validation:Optional
-	Labels []*string `json:"labels,omitempty" tf:"labels,omitempty"`
-
-	// +kubebuilder:validation:Required
-	Name *string `json:"name" tf:"name,omitempty"`
-
-	// +kubebuilder:validation:Optional
-	Route []VirtualHubRouteTableRouteParameters `json:"route,omitempty" tf:"route,omitempty"`
-
-	// +crossplane:generate:reference:type=VirtualHub
-	// +kubebuilder:validation:Optional
-	VirtualHubID *string `json:"virtualHubId,omitempty" tf:"virtual_hub_id,omitempty"`
-
-	// +kubebuilder:validation:Optional
-	VirtualHubIDRef *v1.Reference `json:"virtualHubIdRef,omitempty" tf:"-"`
-
-	// +kubebuilder:validation:Optional
-	VirtualHubIDSelector *v1.Selector `json:"virtualHubIdSelector,omitempty" tf:"-"`
-}
-
-type VirtualHubRouteTableRouteObservation struct {
-}
-
-type VirtualHubRouteTableRouteParameters struct {
+type RouteParameters struct {
 
 	// +kubebuilder:validation:Required
 	Destinations []*string `json:"destinations" tf:"destinations,omitempty"`
@@ -69,6 +44,24 @@ type VirtualHubRouteTableRouteParameters struct {
 
 	// +kubebuilder:validation:Optional
 	NextHopType *string `json:"nextHopType,omitempty" tf:"next_hop_type,omitempty"`
+}
+
+type VirtualHubRouteTableObservation struct {
+}
+
+type VirtualHubRouteTableParameters struct {
+
+	// +kubebuilder:validation:Optional
+	Labels []*string `json:"labels,omitempty" tf:"labels,omitempty"`
+
+	// +kubebuilder:validation:Required
+	Name *string `json:"name" tf:"name,omitempty"`
+
+	// +kubebuilder:validation:Optional
+	Route []RouteParameters `json:"route,omitempty" tf:"route,omitempty"`
+
+	// +kubebuilder:validation:Required
+	VirtualHubID *string `json:"virtualHubId" tf:"virtual_hub_id,omitempty"`
 }
 
 // VirtualHubRouteTableSpec defines the desired state of VirtualHubRouteTable

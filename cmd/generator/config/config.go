@@ -107,18 +107,6 @@ func SetResourceConfigurations() {
 		},
 		UseAsync: true,
 	})
-	config.Store.SetForResource("azurerm_virtual_hub_connection", config.Resource{
-		ExternalName: config.IdentifierFromProvider,
-		References: config.References{
-			"virtual_hub_id": config.Reference{
-				Type: "VirtualHub",
-			},
-			"remote_virtual_network_id": config.Reference{
-				Type: "VirtualNetwork",
-			},
-		},
-		UseAsync: true,
-	})
 	config.Store.SetForResource("azurerm_virtual_network_gateway", config.Resource{
 		ExternalName: config.IdentifierFromProvider,
 		References: config.References{
@@ -197,15 +185,6 @@ func SetResourceConfigurations() {
 			"resource_group_name": config.Reference{
 				Type:      APISPackagePath + "/resource/v1alpha1.ResourceGroup",
 				Extractor: APISPackagePath + "/rconfig.ExtractResourceName()",
-			},
-		},
-		UseAsync: true,
-	})
-	config.Store.SetForResource("azurerm_virtual_hub_bgp_connection", config.Resource{
-		ExternalName: config.IdentifierFromProvider,
-		References: config.References{
-			"virtual_hub_id": config.Reference{
-				Type: "VirtualHub",
 			},
 		},
 		UseAsync: true,
@@ -373,19 +352,6 @@ func SetResourceConfigurations() {
 		},
 		UseAsync: true,
 	})
-	config.Store.SetForResource("azurerm_virtual_hub_security_partner_provider", config.Resource{
-		ExternalName: config.IdentifierFromProvider,
-		References: config.References{
-			"resource_group_name": config.Reference{
-				Type:      APISPackagePath + "/resource/v1alpha1.ResourceGroup",
-				Extractor: APISPackagePath + "/rconfig.ExtractResourceName()",
-			},
-			"virtual_hub_id": config.Reference{
-				Type: "VirtualHub",
-			},
-		},
-		UseAsync: true,
-	})
 	config.Store.SetForResource("azurerm_cosmosdb_sql_database", config.Resource{
 		ExternalName: config.IdentifierFromProvider,
 		References: config.References{
@@ -475,15 +441,6 @@ func SetResourceConfigurations() {
 		},
 		UseAsync: true,
 	})
-	config.Store.SetForResource("azurerm_virtual_hub_route_table", config.Resource{
-		ExternalName: config.IdentifierFromProvider,
-		References: config.References{
-			"virtual_hub_id": config.Reference{
-				Type: "VirtualHub",
-			},
-		},
-		UseAsync: true,
-	})
 	config.Store.SetForResource("azurerm_virtual_desktop_workspace", config.Resource{
 		ExternalName: config.IdentifierFromProvider,
 		References: config.References{
@@ -527,18 +484,6 @@ func SetResourceConfigurations() {
 		},
 		UseAsync: true,
 	})
-	config.Store.SetForResource("azurerm_virtual_hub_ip", config.Resource{
-		ExternalName: config.IdentifierFromProvider,
-		References: config.References{
-			"virtual_hub_id": config.Reference{
-				Type: "VirtualHub",
-			},
-			"subnet_id": config.Reference{
-				Type: APISPackagePath + "/subnet/v1alpha1.Subnet",
-			},
-		},
-		UseAsync: true,
-	})
 	config.Store.SetForResource("azurerm_cosmosdb_notebook_workspace", config.Resource{
 		ExternalName: config.IdentifierFromProvider,
 		References: config.References{
@@ -568,19 +513,6 @@ func SetResourceConfigurations() {
 			"resource_group_name": config.Reference{
 				Type:      APISPackagePath + "/resource/v1alpha1.ResourceGroup",
 				Extractor: APISPackagePath + "/rconfig.ExtractResourceName()",
-			},
-		},
-		UseAsync: true,
-	})
-	config.Store.SetForResource("azurerm_virtual_hub", config.Resource{
-		ExternalName: config.IdentifierFromProvider,
-		References: config.References{
-			"resource_group_name": config.Reference{
-				Type:      APISPackagePath + "/resource/v1alpha1.ResourceGroup",
-				Extractor: APISPackagePath + "/rconfig.ExtractResourceName()",
-			},
-			"virtual_wan_id": config.Reference{
-				Type: "VirtualWan",
 			},
 		},
 		UseAsync: true,

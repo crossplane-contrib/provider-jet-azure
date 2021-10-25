@@ -65,20 +65,27 @@ var skipList = map[string]struct{}{
 	"azurerm_virtual_machine_scale_set_extension":             {},
 	// doc not found in Terraform Azurerm provider
 	"azurerm_virtual_network_dns_servers": {},
+	// unsupported sensitive field type
+	"azurerm_security_center_automation":                {},
+	"azurerm_data_factory_trigger_tumbling_window":      {},
+	"azurerm_storage_share_file":                        {},
+	"azurerm_sql_virtual_network_rule":                  {},
+	"azurerm_virtual_desktop_workspace":                 {},
+	"azurerm_data_lake_analytics_account":               {},
+	"azurerm_virtual_hub":                               {},
+	"azurerm_log_analytics_storage_insights":            {},
+	"azurerm_virtual_hub_bgp_connection":                {},
+	"azurerm_automation_dsc_configuration":              {},
+	"azurerm_monitor_log_profile":                       {},
+	"azurerm_machine_learning_inference_cluster":        {},
+	"azurerm_sql_failover_group":                        {},
+	"azurerm_logic_app_integration_account_certificate": {},
+	"azurerm_postgresql_server_key":                     {},
+	"azurerm_container_group":                           {},
 }
 
 var includeList = []string{
-	"azurerm_virtual_.+",
-	"azurerm_kubernetes_.+",
-	"azurerm_postgresql_.+",
-	"azurerm_cosmosdb_.+",
-	"azurerm_resource_group",
-	"azurerm_subnet",
-	"azurerm_storage_account$",
-	"azurerm_storage_container$",
-	"azurerm_storage_blob$",
-	"azurerm_sql_server",
-	"azurerm_lb$",
+	"azurerm_.+",
 }
 
 // "make prepare.azurerm" should be run before running this generator pipeline

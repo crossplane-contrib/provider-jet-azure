@@ -42,25 +42,11 @@ type VirtualHubIpParameters struct {
 	// +kubebuilder:validation:Optional
 	PublicIPAddressID *string `json:"publicIpAddressId,omitempty" tf:"public_ip_address_id,omitempty"`
 
-	// +crossplane:generate:reference:type=github.com/crossplane-contrib/provider-tf-azure/apis/subnet/v1alpha1.Subnet
-	// +kubebuilder:validation:Optional
-	SubnetID *string `json:"subnetId,omitempty" tf:"subnet_id,omitempty"`
+	// +kubebuilder:validation:Required
+	SubnetID *string `json:"subnetId" tf:"subnet_id,omitempty"`
 
-	// +kubebuilder:validation:Optional
-	SubnetIDRef *v1.Reference `json:"subnetIdRef,omitempty" tf:"-"`
-
-	// +kubebuilder:validation:Optional
-	SubnetIDSelector *v1.Selector `json:"subnetIdSelector,omitempty" tf:"-"`
-
-	// +crossplane:generate:reference:type=VirtualHub
-	// +kubebuilder:validation:Optional
-	VirtualHubID *string `json:"virtualHubId,omitempty" tf:"virtual_hub_id,omitempty"`
-
-	// +kubebuilder:validation:Optional
-	VirtualHubIDRef *v1.Reference `json:"virtualHubIdRef,omitempty" tf:"-"`
-
-	// +kubebuilder:validation:Optional
-	VirtualHubIDSelector *v1.Selector `json:"virtualHubIdSelector,omitempty" tf:"-"`
+	// +kubebuilder:validation:Required
+	VirtualHubID *string `json:"virtualHubId" tf:"virtual_hub_id,omitempty"`
 }
 
 // VirtualHubIpSpec defines the desired state of VirtualHubIp

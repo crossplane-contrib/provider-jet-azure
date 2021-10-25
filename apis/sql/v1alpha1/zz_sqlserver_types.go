@@ -25,10 +25,22 @@ import (
 	v1 "github.com/crossplane/crossplane-runtime/apis/common/v1"
 )
 
-type ExtendedAuditingPolicyObservation struct {
+type IdentityObservation struct {
+	PrincipalID *string `json:"principalId,omitempty" tf:"principal_id,omitempty"`
+
+	TenantID *string `json:"tenantId,omitempty" tf:"tenant_id,omitempty"`
 }
 
-type ExtendedAuditingPolicyParameters struct {
+type IdentityParameters struct {
+
+	// +kubebuilder:validation:Required
+	Type *string `json:"type" tf:"type,omitempty"`
+}
+
+type SqlServerExtendedAuditingPolicyObservation struct {
+}
+
+type SqlServerExtendedAuditingPolicyParameters struct {
 
 	// +kubebuilder:validation:Optional
 	LogMonitoringEnabled *bool `json:"logMonitoringEnabled,omitempty" tf:"log_monitoring_enabled,omitempty"`
@@ -44,18 +56,6 @@ type ExtendedAuditingPolicyParameters struct {
 
 	// +kubebuilder:validation:Optional
 	StorageEndpoint *string `json:"storageEndpoint,omitempty" tf:"storage_endpoint,omitempty"`
-}
-
-type IdentityObservation struct {
-	PrincipalID *string `json:"principalId,omitempty" tf:"principal_id,omitempty"`
-
-	TenantID *string `json:"tenantId,omitempty" tf:"tenant_id,omitempty"`
-}
-
-type IdentityParameters struct {
-
-	// +kubebuilder:validation:Required
-	Type *string `json:"type" tf:"type,omitempty"`
 }
 
 type SqlServerObservation struct {
@@ -74,7 +74,7 @@ type SqlServerParameters struct {
 	ConnectionPolicy *string `json:"connectionPolicy,omitempty" tf:"connection_policy,omitempty"`
 
 	// +kubebuilder:validation:Optional
-	ExtendedAuditingPolicy []ExtendedAuditingPolicyParameters `json:"extendedAuditingPolicy,omitempty" tf:"extended_auditing_policy,omitempty"`
+	ExtendedAuditingPolicy []SqlServerExtendedAuditingPolicyParameters `json:"extendedAuditingPolicy,omitempty" tf:"extended_auditing_policy,omitempty"`
 
 	// +kubebuilder:validation:Optional
 	Identity []IdentityParameters `json:"identity,omitempty" tf:"identity,omitempty"`
@@ -100,16 +100,16 @@ type SqlServerParameters struct {
 	Tags map[string]*string `json:"tags,omitempty" tf:"tags,omitempty"`
 
 	// +kubebuilder:validation:Optional
-	ThreatDetectionPolicy []ThreatDetectionPolicyParameters `json:"threatDetectionPolicy,omitempty" tf:"threat_detection_policy,omitempty"`
+	ThreatDetectionPolicy []SqlServerThreatDetectionPolicyParameters `json:"threatDetectionPolicy,omitempty" tf:"threat_detection_policy,omitempty"`
 
 	// +kubebuilder:validation:Required
 	Version *string `json:"version" tf:"version,omitempty"`
 }
 
-type ThreatDetectionPolicyObservation struct {
+type SqlServerThreatDetectionPolicyObservation struct {
 }
 
-type ThreatDetectionPolicyParameters struct {
+type SqlServerThreatDetectionPolicyParameters struct {
 
 	// +kubebuilder:validation:Optional
 	DisabledAlerts []*string `json:"disabledAlerts,omitempty" tf:"disabled_alerts,omitempty"`

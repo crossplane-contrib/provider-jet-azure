@@ -37,24 +37,6 @@ func (l *VirtualDesktopHostPoolList) GetItems() []resource.Managed {
 	return items
 }
 
-// GetItems of this VirtualDesktopWorkspaceList.
-func (l *VirtualDesktopWorkspaceList) GetItems() []resource.Managed {
-	items := make([]resource.Managed, len(l.Items))
-	for i := range l.Items {
-		items[i] = &l.Items[i]
-	}
-	return items
-}
-
-// GetItems of this VirtualHubBgpConnectionList.
-func (l *VirtualHubBgpConnectionList) GetItems() []resource.Managed {
-	items := make([]resource.Managed, len(l.Items))
-	for i := range l.Items {
-		items[i] = &l.Items[i]
-	}
-	return items
-}
-
 // GetItems of this VirtualHubConnectionList.
 func (l *VirtualHubConnectionList) GetItems() []resource.Managed {
 	items := make([]resource.Managed, len(l.Items))
@@ -66,15 +48,6 @@ func (l *VirtualHubConnectionList) GetItems() []resource.Managed {
 
 // GetItems of this VirtualHubIpList.
 func (l *VirtualHubIpList) GetItems() []resource.Managed {
-	items := make([]resource.Managed, len(l.Items))
-	for i := range l.Items {
-		items[i] = &l.Items[i]
-	}
-	return items
-}
-
-// GetItems of this VirtualHubList.
-func (l *VirtualHubList) GetItems() []resource.Managed {
 	items := make([]resource.Managed, len(l.Items))
 	for i := range l.Items {
 		items[i] = &l.Items[i]
