@@ -19,58 +19,58 @@ package v1alpha1
 
 import xpv1 "github.com/crossplane/crossplane-runtime/apis/common/v1"
 
-// GetCondition of this CustomProvider.
-func (mg *CustomProvider) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
+// GetCondition of this Provider.
+func (mg *Provider) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
 	return mg.Status.GetCondition(ct)
 }
 
-// GetDeletionPolicy of this CustomProvider.
-func (mg *CustomProvider) GetDeletionPolicy() xpv1.DeletionPolicy {
+// GetDeletionPolicy of this Provider.
+func (mg *Provider) GetDeletionPolicy() xpv1.DeletionPolicy {
 	return mg.Spec.DeletionPolicy
 }
 
-// GetProviderConfigReference of this CustomProvider.
-func (mg *CustomProvider) GetProviderConfigReference() *xpv1.Reference {
+// GetProviderConfigReference of this Provider.
+func (mg *Provider) GetProviderConfigReference() *xpv1.Reference {
 	return mg.Spec.ProviderConfigReference
 }
 
 /*
-GetProviderReference of this CustomProvider.
+GetProviderReference of this Provider.
 Deprecated: Use GetProviderConfigReference.
 */
-func (mg *CustomProvider) GetProviderReference() *xpv1.Reference {
+func (mg *Provider) GetProviderReference() *xpv1.Reference {
 	return mg.Spec.ProviderReference
 }
 
-// GetWriteConnectionSecretToReference of this CustomProvider.
-func (mg *CustomProvider) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
+// GetWriteConnectionSecretToReference of this Provider.
+func (mg *Provider) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
 	return mg.Spec.WriteConnectionSecretToReference
 }
 
-// SetConditions of this CustomProvider.
-func (mg *CustomProvider) SetConditions(c ...xpv1.Condition) {
+// SetConditions of this Provider.
+func (mg *Provider) SetConditions(c ...xpv1.Condition) {
 	mg.Status.SetConditions(c...)
 }
 
-// SetDeletionPolicy of this CustomProvider.
-func (mg *CustomProvider) SetDeletionPolicy(r xpv1.DeletionPolicy) {
+// SetDeletionPolicy of this Provider.
+func (mg *Provider) SetDeletionPolicy(r xpv1.DeletionPolicy) {
 	mg.Spec.DeletionPolicy = r
 }
 
-// SetProviderConfigReference of this CustomProvider.
-func (mg *CustomProvider) SetProviderConfigReference(r *xpv1.Reference) {
+// SetProviderConfigReference of this Provider.
+func (mg *Provider) SetProviderConfigReference(r *xpv1.Reference) {
 	mg.Spec.ProviderConfigReference = r
 }
 
 /*
-SetProviderReference of this CustomProvider.
+SetProviderReference of this Provider.
 Deprecated: Use SetProviderConfigReference.
 */
-func (mg *CustomProvider) SetProviderReference(r *xpv1.Reference) {
+func (mg *Provider) SetProviderReference(r *xpv1.Reference) {
 	mg.Spec.ProviderReference = r
 }
 
-// SetWriteConnectionSecretToReference of this CustomProvider.
-func (mg *CustomProvider) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
+// SetWriteConnectionSecretToReference of this Provider.
+func (mg *Provider) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
 	mg.Spec.WriteConnectionSecretToReference = r
 }

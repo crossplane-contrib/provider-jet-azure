@@ -19,58 +19,58 @@ package v1alpha1
 
 import xpv1 "github.com/crossplane/crossplane-runtime/apis/common/v1"
 
-// GetCondition of this AvailabilitySet.
-func (mg *AvailabilitySet) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
+// GetCondition of this Set.
+func (mg *Set) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
 	return mg.Status.GetCondition(ct)
 }
 
-// GetDeletionPolicy of this AvailabilitySet.
-func (mg *AvailabilitySet) GetDeletionPolicy() xpv1.DeletionPolicy {
+// GetDeletionPolicy of this Set.
+func (mg *Set) GetDeletionPolicy() xpv1.DeletionPolicy {
 	return mg.Spec.DeletionPolicy
 }
 
-// GetProviderConfigReference of this AvailabilitySet.
-func (mg *AvailabilitySet) GetProviderConfigReference() *xpv1.Reference {
+// GetProviderConfigReference of this Set.
+func (mg *Set) GetProviderConfigReference() *xpv1.Reference {
 	return mg.Spec.ProviderConfigReference
 }
 
 /*
-GetProviderReference of this AvailabilitySet.
+GetProviderReference of this Set.
 Deprecated: Use GetProviderConfigReference.
 */
-func (mg *AvailabilitySet) GetProviderReference() *xpv1.Reference {
+func (mg *Set) GetProviderReference() *xpv1.Reference {
 	return mg.Spec.ProviderReference
 }
 
-// GetWriteConnectionSecretToReference of this AvailabilitySet.
-func (mg *AvailabilitySet) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
+// GetWriteConnectionSecretToReference of this Set.
+func (mg *Set) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
 	return mg.Spec.WriteConnectionSecretToReference
 }
 
-// SetConditions of this AvailabilitySet.
-func (mg *AvailabilitySet) SetConditions(c ...xpv1.Condition) {
+// SetConditions of this Set.
+func (mg *Set) SetConditions(c ...xpv1.Condition) {
 	mg.Status.SetConditions(c...)
 }
 
-// SetDeletionPolicy of this AvailabilitySet.
-func (mg *AvailabilitySet) SetDeletionPolicy(r xpv1.DeletionPolicy) {
+// SetDeletionPolicy of this Set.
+func (mg *Set) SetDeletionPolicy(r xpv1.DeletionPolicy) {
 	mg.Spec.DeletionPolicy = r
 }
 
-// SetProviderConfigReference of this AvailabilitySet.
-func (mg *AvailabilitySet) SetProviderConfigReference(r *xpv1.Reference) {
+// SetProviderConfigReference of this Set.
+func (mg *Set) SetProviderConfigReference(r *xpv1.Reference) {
 	mg.Spec.ProviderConfigReference = r
 }
 
 /*
-SetProviderReference of this AvailabilitySet.
+SetProviderReference of this Set.
 Deprecated: Use SetProviderConfigReference.
 */
-func (mg *AvailabilitySet) SetProviderReference(r *xpv1.Reference) {
+func (mg *Set) SetProviderReference(r *xpv1.Reference) {
 	mg.Spec.ProviderReference = r
 }
 
-// SetWriteConnectionSecretToReference of this AvailabilitySet.
-func (mg *AvailabilitySet) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
+// SetWriteConnectionSecretToReference of this Set.
+func (mg *Set) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
 	mg.Spec.WriteConnectionSecretToReference = r
 }

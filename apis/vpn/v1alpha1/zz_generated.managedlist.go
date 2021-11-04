@@ -19,8 +19,8 @@ package v1alpha1
 
 import resource "github.com/crossplane/crossplane-runtime/pkg/resource"
 
-// GetItems of this VpnGatewayConnectionList.
-func (l *VpnGatewayConnectionList) GetItems() []resource.Managed {
+// GetItems of this GatewayConnectionList.
+func (l *GatewayConnectionList) GetItems() []resource.Managed {
 	items := make([]resource.Managed, len(l.Items))
 	for i := range l.Items {
 		items[i] = &l.Items[i]
@@ -28,8 +28,8 @@ func (l *VpnGatewayConnectionList) GetItems() []resource.Managed {
 	return items
 }
 
-// GetItems of this VpnGatewayList.
-func (l *VpnGatewayList) GetItems() []resource.Managed {
+// GetItems of this GatewayList.
+func (l *GatewayList) GetItems() []resource.Managed {
 	items := make([]resource.Managed, len(l.Items))
 	for i := range l.Items {
 		items[i] = &l.Items[i]
@@ -37,8 +37,8 @@ func (l *VpnGatewayList) GetItems() []resource.Managed {
 	return items
 }
 
-// GetItems of this VpnServerConfigurationList.
-func (l *VpnServerConfigurationList) GetItems() []resource.Managed {
+// GetItems of this ServerConfigurationList.
+func (l *ServerConfigurationList) GetItems() []resource.Managed {
 	items := make([]resource.Managed, len(l.Items))
 	for i := range l.Items {
 		items[i] = &l.Items[i]
@@ -46,8 +46,8 @@ func (l *VpnServerConfigurationList) GetItems() []resource.Managed {
 	return items
 }
 
-// GetItems of this VpnSiteList.
-func (l *VpnSiteList) GetItems() []resource.Managed {
+// GetItems of this SiteList.
+func (l *SiteList) GetItems() []resource.Managed {
 	items := make([]resource.Managed, len(l.Items))
 	for i := range l.Items {
 		items[i] = &l.Items[i]

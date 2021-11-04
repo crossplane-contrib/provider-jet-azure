@@ -19,114 +19,114 @@ package v1alpha1
 
 import xpv1 "github.com/crossplane/crossplane-runtime/apis/common/v1"
 
-// GetCondition of this WindowsVirtualMachine.
-func (mg *WindowsVirtualMachine) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
+// GetCondition of this VirtualMachine.
+func (mg *VirtualMachine) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
 	return mg.Status.GetCondition(ct)
 }
 
-// GetDeletionPolicy of this WindowsVirtualMachine.
-func (mg *WindowsVirtualMachine) GetDeletionPolicy() xpv1.DeletionPolicy {
+// GetDeletionPolicy of this VirtualMachine.
+func (mg *VirtualMachine) GetDeletionPolicy() xpv1.DeletionPolicy {
 	return mg.Spec.DeletionPolicy
 }
 
-// GetProviderConfigReference of this WindowsVirtualMachine.
-func (mg *WindowsVirtualMachine) GetProviderConfigReference() *xpv1.Reference {
+// GetProviderConfigReference of this VirtualMachine.
+func (mg *VirtualMachine) GetProviderConfigReference() *xpv1.Reference {
 	return mg.Spec.ProviderConfigReference
 }
 
 /*
-GetProviderReference of this WindowsVirtualMachine.
+GetProviderReference of this VirtualMachine.
 Deprecated: Use GetProviderConfigReference.
 */
-func (mg *WindowsVirtualMachine) GetProviderReference() *xpv1.Reference {
+func (mg *VirtualMachine) GetProviderReference() *xpv1.Reference {
 	return mg.Spec.ProviderReference
 }
 
-// GetWriteConnectionSecretToReference of this WindowsVirtualMachine.
-func (mg *WindowsVirtualMachine) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
+// GetWriteConnectionSecretToReference of this VirtualMachine.
+func (mg *VirtualMachine) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
 	return mg.Spec.WriteConnectionSecretToReference
 }
 
-// SetConditions of this WindowsVirtualMachine.
-func (mg *WindowsVirtualMachine) SetConditions(c ...xpv1.Condition) {
+// SetConditions of this VirtualMachine.
+func (mg *VirtualMachine) SetConditions(c ...xpv1.Condition) {
 	mg.Status.SetConditions(c...)
 }
 
-// SetDeletionPolicy of this WindowsVirtualMachine.
-func (mg *WindowsVirtualMachine) SetDeletionPolicy(r xpv1.DeletionPolicy) {
+// SetDeletionPolicy of this VirtualMachine.
+func (mg *VirtualMachine) SetDeletionPolicy(r xpv1.DeletionPolicy) {
 	mg.Spec.DeletionPolicy = r
 }
 
-// SetProviderConfigReference of this WindowsVirtualMachine.
-func (mg *WindowsVirtualMachine) SetProviderConfigReference(r *xpv1.Reference) {
+// SetProviderConfigReference of this VirtualMachine.
+func (mg *VirtualMachine) SetProviderConfigReference(r *xpv1.Reference) {
 	mg.Spec.ProviderConfigReference = r
 }
 
 /*
-SetProviderReference of this WindowsVirtualMachine.
+SetProviderReference of this VirtualMachine.
 Deprecated: Use SetProviderConfigReference.
 */
-func (mg *WindowsVirtualMachine) SetProviderReference(r *xpv1.Reference) {
+func (mg *VirtualMachine) SetProviderReference(r *xpv1.Reference) {
 	mg.Spec.ProviderReference = r
 }
 
-// SetWriteConnectionSecretToReference of this WindowsVirtualMachine.
-func (mg *WindowsVirtualMachine) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
+// SetWriteConnectionSecretToReference of this VirtualMachine.
+func (mg *VirtualMachine) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
 	mg.Spec.WriteConnectionSecretToReference = r
 }
 
-// GetCondition of this WindowsVirtualMachineScaleSet.
-func (mg *WindowsVirtualMachineScaleSet) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
+// GetCondition of this VirtualMachineScaleSet.
+func (mg *VirtualMachineScaleSet) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
 	return mg.Status.GetCondition(ct)
 }
 
-// GetDeletionPolicy of this WindowsVirtualMachineScaleSet.
-func (mg *WindowsVirtualMachineScaleSet) GetDeletionPolicy() xpv1.DeletionPolicy {
+// GetDeletionPolicy of this VirtualMachineScaleSet.
+func (mg *VirtualMachineScaleSet) GetDeletionPolicy() xpv1.DeletionPolicy {
 	return mg.Spec.DeletionPolicy
 }
 
-// GetProviderConfigReference of this WindowsVirtualMachineScaleSet.
-func (mg *WindowsVirtualMachineScaleSet) GetProviderConfigReference() *xpv1.Reference {
+// GetProviderConfigReference of this VirtualMachineScaleSet.
+func (mg *VirtualMachineScaleSet) GetProviderConfigReference() *xpv1.Reference {
 	return mg.Spec.ProviderConfigReference
 }
 
 /*
-GetProviderReference of this WindowsVirtualMachineScaleSet.
+GetProviderReference of this VirtualMachineScaleSet.
 Deprecated: Use GetProviderConfigReference.
 */
-func (mg *WindowsVirtualMachineScaleSet) GetProviderReference() *xpv1.Reference {
+func (mg *VirtualMachineScaleSet) GetProviderReference() *xpv1.Reference {
 	return mg.Spec.ProviderReference
 }
 
-// GetWriteConnectionSecretToReference of this WindowsVirtualMachineScaleSet.
-func (mg *WindowsVirtualMachineScaleSet) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
+// GetWriteConnectionSecretToReference of this VirtualMachineScaleSet.
+func (mg *VirtualMachineScaleSet) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
 	return mg.Spec.WriteConnectionSecretToReference
 }
 
-// SetConditions of this WindowsVirtualMachineScaleSet.
-func (mg *WindowsVirtualMachineScaleSet) SetConditions(c ...xpv1.Condition) {
+// SetConditions of this VirtualMachineScaleSet.
+func (mg *VirtualMachineScaleSet) SetConditions(c ...xpv1.Condition) {
 	mg.Status.SetConditions(c...)
 }
 
-// SetDeletionPolicy of this WindowsVirtualMachineScaleSet.
-func (mg *WindowsVirtualMachineScaleSet) SetDeletionPolicy(r xpv1.DeletionPolicy) {
+// SetDeletionPolicy of this VirtualMachineScaleSet.
+func (mg *VirtualMachineScaleSet) SetDeletionPolicy(r xpv1.DeletionPolicy) {
 	mg.Spec.DeletionPolicy = r
 }
 
-// SetProviderConfigReference of this WindowsVirtualMachineScaleSet.
-func (mg *WindowsVirtualMachineScaleSet) SetProviderConfigReference(r *xpv1.Reference) {
+// SetProviderConfigReference of this VirtualMachineScaleSet.
+func (mg *VirtualMachineScaleSet) SetProviderConfigReference(r *xpv1.Reference) {
 	mg.Spec.ProviderConfigReference = r
 }
 
 /*
-SetProviderReference of this WindowsVirtualMachineScaleSet.
+SetProviderReference of this VirtualMachineScaleSet.
 Deprecated: Use SetProviderConfigReference.
 */
-func (mg *WindowsVirtualMachineScaleSet) SetProviderReference(r *xpv1.Reference) {
+func (mg *VirtualMachineScaleSet) SetProviderReference(r *xpv1.Reference) {
 	mg.Spec.ProviderReference = r
 }
 
-// SetWriteConnectionSecretToReference of this WindowsVirtualMachineScaleSet.
-func (mg *WindowsVirtualMachineScaleSet) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
+// SetWriteConnectionSecretToReference of this VirtualMachineScaleSet.
+func (mg *VirtualMachineScaleSet) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
 	mg.Spec.WriteConnectionSecretToReference = r
 }

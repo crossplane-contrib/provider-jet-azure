@@ -19,58 +19,58 @@ package v1alpha1
 
 import xpv1 "github.com/crossplane/crossplane-runtime/apis/common/v1"
 
-// GetCondition of this AdvancedThreatProtection.
-func (mg *AdvancedThreatProtection) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
+// GetCondition of this ThreatProtection.
+func (mg *ThreatProtection) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
 	return mg.Status.GetCondition(ct)
 }
 
-// GetDeletionPolicy of this AdvancedThreatProtection.
-func (mg *AdvancedThreatProtection) GetDeletionPolicy() xpv1.DeletionPolicy {
+// GetDeletionPolicy of this ThreatProtection.
+func (mg *ThreatProtection) GetDeletionPolicy() xpv1.DeletionPolicy {
 	return mg.Spec.DeletionPolicy
 }
 
-// GetProviderConfigReference of this AdvancedThreatProtection.
-func (mg *AdvancedThreatProtection) GetProviderConfigReference() *xpv1.Reference {
+// GetProviderConfigReference of this ThreatProtection.
+func (mg *ThreatProtection) GetProviderConfigReference() *xpv1.Reference {
 	return mg.Spec.ProviderConfigReference
 }
 
 /*
-GetProviderReference of this AdvancedThreatProtection.
+GetProviderReference of this ThreatProtection.
 Deprecated: Use GetProviderConfigReference.
 */
-func (mg *AdvancedThreatProtection) GetProviderReference() *xpv1.Reference {
+func (mg *ThreatProtection) GetProviderReference() *xpv1.Reference {
 	return mg.Spec.ProviderReference
 }
 
-// GetWriteConnectionSecretToReference of this AdvancedThreatProtection.
-func (mg *AdvancedThreatProtection) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
+// GetWriteConnectionSecretToReference of this ThreatProtection.
+func (mg *ThreatProtection) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
 	return mg.Spec.WriteConnectionSecretToReference
 }
 
-// SetConditions of this AdvancedThreatProtection.
-func (mg *AdvancedThreatProtection) SetConditions(c ...xpv1.Condition) {
+// SetConditions of this ThreatProtection.
+func (mg *ThreatProtection) SetConditions(c ...xpv1.Condition) {
 	mg.Status.SetConditions(c...)
 }
 
-// SetDeletionPolicy of this AdvancedThreatProtection.
-func (mg *AdvancedThreatProtection) SetDeletionPolicy(r xpv1.DeletionPolicy) {
+// SetDeletionPolicy of this ThreatProtection.
+func (mg *ThreatProtection) SetDeletionPolicy(r xpv1.DeletionPolicy) {
 	mg.Spec.DeletionPolicy = r
 }
 
-// SetProviderConfigReference of this AdvancedThreatProtection.
-func (mg *AdvancedThreatProtection) SetProviderConfigReference(r *xpv1.Reference) {
+// SetProviderConfigReference of this ThreatProtection.
+func (mg *ThreatProtection) SetProviderConfigReference(r *xpv1.Reference) {
 	mg.Spec.ProviderConfigReference = r
 }
 
 /*
-SetProviderReference of this AdvancedThreatProtection.
+SetProviderReference of this ThreatProtection.
 Deprecated: Use SetProviderConfigReference.
 */
-func (mg *AdvancedThreatProtection) SetProviderReference(r *xpv1.Reference) {
+func (mg *ThreatProtection) SetProviderReference(r *xpv1.Reference) {
 	mg.Spec.ProviderReference = r
 }
 
-// SetWriteConnectionSecretToReference of this AdvancedThreatProtection.
-func (mg *AdvancedThreatProtection) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
+// SetWriteConnectionSecretToReference of this ThreatProtection.
+func (mg *ThreatProtection) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
 	mg.Spec.WriteConnectionSecretToReference = r
 }

@@ -19,58 +19,58 @@ package v1alpha1
 
 import xpv1 "github.com/crossplane/crossplane-runtime/apis/common/v1"
 
-// GetCondition of this BlueprintAssignment.
-func (mg *BlueprintAssignment) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
+// GetCondition of this Assignment.
+func (mg *Assignment) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
 	return mg.Status.GetCondition(ct)
 }
 
-// GetDeletionPolicy of this BlueprintAssignment.
-func (mg *BlueprintAssignment) GetDeletionPolicy() xpv1.DeletionPolicy {
+// GetDeletionPolicy of this Assignment.
+func (mg *Assignment) GetDeletionPolicy() xpv1.DeletionPolicy {
 	return mg.Spec.DeletionPolicy
 }
 
-// GetProviderConfigReference of this BlueprintAssignment.
-func (mg *BlueprintAssignment) GetProviderConfigReference() *xpv1.Reference {
+// GetProviderConfigReference of this Assignment.
+func (mg *Assignment) GetProviderConfigReference() *xpv1.Reference {
 	return mg.Spec.ProviderConfigReference
 }
 
 /*
-GetProviderReference of this BlueprintAssignment.
+GetProviderReference of this Assignment.
 Deprecated: Use GetProviderConfigReference.
 */
-func (mg *BlueprintAssignment) GetProviderReference() *xpv1.Reference {
+func (mg *Assignment) GetProviderReference() *xpv1.Reference {
 	return mg.Spec.ProviderReference
 }
 
-// GetWriteConnectionSecretToReference of this BlueprintAssignment.
-func (mg *BlueprintAssignment) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
+// GetWriteConnectionSecretToReference of this Assignment.
+func (mg *Assignment) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
 	return mg.Spec.WriteConnectionSecretToReference
 }
 
-// SetConditions of this BlueprintAssignment.
-func (mg *BlueprintAssignment) SetConditions(c ...xpv1.Condition) {
+// SetConditions of this Assignment.
+func (mg *Assignment) SetConditions(c ...xpv1.Condition) {
 	mg.Status.SetConditions(c...)
 }
 
-// SetDeletionPolicy of this BlueprintAssignment.
-func (mg *BlueprintAssignment) SetDeletionPolicy(r xpv1.DeletionPolicy) {
+// SetDeletionPolicy of this Assignment.
+func (mg *Assignment) SetDeletionPolicy(r xpv1.DeletionPolicy) {
 	mg.Spec.DeletionPolicy = r
 }
 
-// SetProviderConfigReference of this BlueprintAssignment.
-func (mg *BlueprintAssignment) SetProviderConfigReference(r *xpv1.Reference) {
+// SetProviderConfigReference of this Assignment.
+func (mg *Assignment) SetProviderConfigReference(r *xpv1.Reference) {
 	mg.Spec.ProviderConfigReference = r
 }
 
 /*
-SetProviderReference of this BlueprintAssignment.
+SetProviderReference of this Assignment.
 Deprecated: Use SetProviderConfigReference.
 */
-func (mg *BlueprintAssignment) SetProviderReference(r *xpv1.Reference) {
+func (mg *Assignment) SetProviderReference(r *xpv1.Reference) {
 	mg.Spec.ProviderReference = r
 }
 
-// SetWriteConnectionSecretToReference of this BlueprintAssignment.
-func (mg *BlueprintAssignment) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
+// SetWriteConnectionSecretToReference of this Assignment.
+func (mg *Assignment) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
 	mg.Spec.WriteConnectionSecretToReference = r
 }

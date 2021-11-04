@@ -19,282 +19,282 @@ package v1alpha1
 
 import xpv1 "github.com/crossplane/crossplane-runtime/apis/common/v1"
 
-// GetCondition of this BatchAccount.
-func (mg *BatchAccount) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
+// GetCondition of this Account.
+func (mg *Account) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
 	return mg.Status.GetCondition(ct)
 }
 
-// GetDeletionPolicy of this BatchAccount.
-func (mg *BatchAccount) GetDeletionPolicy() xpv1.DeletionPolicy {
+// GetDeletionPolicy of this Account.
+func (mg *Account) GetDeletionPolicy() xpv1.DeletionPolicy {
 	return mg.Spec.DeletionPolicy
 }
 
-// GetProviderConfigReference of this BatchAccount.
-func (mg *BatchAccount) GetProviderConfigReference() *xpv1.Reference {
+// GetProviderConfigReference of this Account.
+func (mg *Account) GetProviderConfigReference() *xpv1.Reference {
 	return mg.Spec.ProviderConfigReference
 }
 
 /*
-GetProviderReference of this BatchAccount.
+GetProviderReference of this Account.
 Deprecated: Use GetProviderConfigReference.
 */
-func (mg *BatchAccount) GetProviderReference() *xpv1.Reference {
+func (mg *Account) GetProviderReference() *xpv1.Reference {
 	return mg.Spec.ProviderReference
 }
 
-// GetWriteConnectionSecretToReference of this BatchAccount.
-func (mg *BatchAccount) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
+// GetWriteConnectionSecretToReference of this Account.
+func (mg *Account) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
 	return mg.Spec.WriteConnectionSecretToReference
 }
 
-// SetConditions of this BatchAccount.
-func (mg *BatchAccount) SetConditions(c ...xpv1.Condition) {
+// SetConditions of this Account.
+func (mg *Account) SetConditions(c ...xpv1.Condition) {
 	mg.Status.SetConditions(c...)
 }
 
-// SetDeletionPolicy of this BatchAccount.
-func (mg *BatchAccount) SetDeletionPolicy(r xpv1.DeletionPolicy) {
+// SetDeletionPolicy of this Account.
+func (mg *Account) SetDeletionPolicy(r xpv1.DeletionPolicy) {
 	mg.Spec.DeletionPolicy = r
 }
 
-// SetProviderConfigReference of this BatchAccount.
-func (mg *BatchAccount) SetProviderConfigReference(r *xpv1.Reference) {
+// SetProviderConfigReference of this Account.
+func (mg *Account) SetProviderConfigReference(r *xpv1.Reference) {
 	mg.Spec.ProviderConfigReference = r
 }
 
 /*
-SetProviderReference of this BatchAccount.
+SetProviderReference of this Account.
 Deprecated: Use SetProviderConfigReference.
 */
-func (mg *BatchAccount) SetProviderReference(r *xpv1.Reference) {
+func (mg *Account) SetProviderReference(r *xpv1.Reference) {
 	mg.Spec.ProviderReference = r
 }
 
-// SetWriteConnectionSecretToReference of this BatchAccount.
-func (mg *BatchAccount) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
+// SetWriteConnectionSecretToReference of this Account.
+func (mg *Account) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
 	mg.Spec.WriteConnectionSecretToReference = r
 }
 
-// GetCondition of this BatchApplication.
-func (mg *BatchApplication) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
+// GetCondition of this Application.
+func (mg *Application) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
 	return mg.Status.GetCondition(ct)
 }
 
-// GetDeletionPolicy of this BatchApplication.
-func (mg *BatchApplication) GetDeletionPolicy() xpv1.DeletionPolicy {
+// GetDeletionPolicy of this Application.
+func (mg *Application) GetDeletionPolicy() xpv1.DeletionPolicy {
 	return mg.Spec.DeletionPolicy
 }
 
-// GetProviderConfigReference of this BatchApplication.
-func (mg *BatchApplication) GetProviderConfigReference() *xpv1.Reference {
+// GetProviderConfigReference of this Application.
+func (mg *Application) GetProviderConfigReference() *xpv1.Reference {
 	return mg.Spec.ProviderConfigReference
 }
 
 /*
-GetProviderReference of this BatchApplication.
+GetProviderReference of this Application.
 Deprecated: Use GetProviderConfigReference.
 */
-func (mg *BatchApplication) GetProviderReference() *xpv1.Reference {
+func (mg *Application) GetProviderReference() *xpv1.Reference {
 	return mg.Spec.ProviderReference
 }
 
-// GetWriteConnectionSecretToReference of this BatchApplication.
-func (mg *BatchApplication) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
+// GetWriteConnectionSecretToReference of this Application.
+func (mg *Application) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
 	return mg.Spec.WriteConnectionSecretToReference
 }
 
-// SetConditions of this BatchApplication.
-func (mg *BatchApplication) SetConditions(c ...xpv1.Condition) {
+// SetConditions of this Application.
+func (mg *Application) SetConditions(c ...xpv1.Condition) {
 	mg.Status.SetConditions(c...)
 }
 
-// SetDeletionPolicy of this BatchApplication.
-func (mg *BatchApplication) SetDeletionPolicy(r xpv1.DeletionPolicy) {
+// SetDeletionPolicy of this Application.
+func (mg *Application) SetDeletionPolicy(r xpv1.DeletionPolicy) {
 	mg.Spec.DeletionPolicy = r
 }
 
-// SetProviderConfigReference of this BatchApplication.
-func (mg *BatchApplication) SetProviderConfigReference(r *xpv1.Reference) {
+// SetProviderConfigReference of this Application.
+func (mg *Application) SetProviderConfigReference(r *xpv1.Reference) {
 	mg.Spec.ProviderConfigReference = r
 }
 
 /*
-SetProviderReference of this BatchApplication.
+SetProviderReference of this Application.
 Deprecated: Use SetProviderConfigReference.
 */
-func (mg *BatchApplication) SetProviderReference(r *xpv1.Reference) {
+func (mg *Application) SetProviderReference(r *xpv1.Reference) {
 	mg.Spec.ProviderReference = r
 }
 
-// SetWriteConnectionSecretToReference of this BatchApplication.
-func (mg *BatchApplication) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
+// SetWriteConnectionSecretToReference of this Application.
+func (mg *Application) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
 	mg.Spec.WriteConnectionSecretToReference = r
 }
 
-// GetCondition of this BatchCertificate.
-func (mg *BatchCertificate) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
+// GetCondition of this Certificate.
+func (mg *Certificate) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
 	return mg.Status.GetCondition(ct)
 }
 
-// GetDeletionPolicy of this BatchCertificate.
-func (mg *BatchCertificate) GetDeletionPolicy() xpv1.DeletionPolicy {
+// GetDeletionPolicy of this Certificate.
+func (mg *Certificate) GetDeletionPolicy() xpv1.DeletionPolicy {
 	return mg.Spec.DeletionPolicy
 }
 
-// GetProviderConfigReference of this BatchCertificate.
-func (mg *BatchCertificate) GetProviderConfigReference() *xpv1.Reference {
+// GetProviderConfigReference of this Certificate.
+func (mg *Certificate) GetProviderConfigReference() *xpv1.Reference {
 	return mg.Spec.ProviderConfigReference
 }
 
 /*
-GetProviderReference of this BatchCertificate.
+GetProviderReference of this Certificate.
 Deprecated: Use GetProviderConfigReference.
 */
-func (mg *BatchCertificate) GetProviderReference() *xpv1.Reference {
+func (mg *Certificate) GetProviderReference() *xpv1.Reference {
 	return mg.Spec.ProviderReference
 }
 
-// GetWriteConnectionSecretToReference of this BatchCertificate.
-func (mg *BatchCertificate) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
+// GetWriteConnectionSecretToReference of this Certificate.
+func (mg *Certificate) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
 	return mg.Spec.WriteConnectionSecretToReference
 }
 
-// SetConditions of this BatchCertificate.
-func (mg *BatchCertificate) SetConditions(c ...xpv1.Condition) {
+// SetConditions of this Certificate.
+func (mg *Certificate) SetConditions(c ...xpv1.Condition) {
 	mg.Status.SetConditions(c...)
 }
 
-// SetDeletionPolicy of this BatchCertificate.
-func (mg *BatchCertificate) SetDeletionPolicy(r xpv1.DeletionPolicy) {
+// SetDeletionPolicy of this Certificate.
+func (mg *Certificate) SetDeletionPolicy(r xpv1.DeletionPolicy) {
 	mg.Spec.DeletionPolicy = r
 }
 
-// SetProviderConfigReference of this BatchCertificate.
-func (mg *BatchCertificate) SetProviderConfigReference(r *xpv1.Reference) {
+// SetProviderConfigReference of this Certificate.
+func (mg *Certificate) SetProviderConfigReference(r *xpv1.Reference) {
 	mg.Spec.ProviderConfigReference = r
 }
 
 /*
-SetProviderReference of this BatchCertificate.
+SetProviderReference of this Certificate.
 Deprecated: Use SetProviderConfigReference.
 */
-func (mg *BatchCertificate) SetProviderReference(r *xpv1.Reference) {
+func (mg *Certificate) SetProviderReference(r *xpv1.Reference) {
 	mg.Spec.ProviderReference = r
 }
 
-// SetWriteConnectionSecretToReference of this BatchCertificate.
-func (mg *BatchCertificate) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
+// SetWriteConnectionSecretToReference of this Certificate.
+func (mg *Certificate) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
 	mg.Spec.WriteConnectionSecretToReference = r
 }
 
-// GetCondition of this BatchJob.
-func (mg *BatchJob) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
+// GetCondition of this Job.
+func (mg *Job) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
 	return mg.Status.GetCondition(ct)
 }
 
-// GetDeletionPolicy of this BatchJob.
-func (mg *BatchJob) GetDeletionPolicy() xpv1.DeletionPolicy {
+// GetDeletionPolicy of this Job.
+func (mg *Job) GetDeletionPolicy() xpv1.DeletionPolicy {
 	return mg.Spec.DeletionPolicy
 }
 
-// GetProviderConfigReference of this BatchJob.
-func (mg *BatchJob) GetProviderConfigReference() *xpv1.Reference {
+// GetProviderConfigReference of this Job.
+func (mg *Job) GetProviderConfigReference() *xpv1.Reference {
 	return mg.Spec.ProviderConfigReference
 }
 
 /*
-GetProviderReference of this BatchJob.
+GetProviderReference of this Job.
 Deprecated: Use GetProviderConfigReference.
 */
-func (mg *BatchJob) GetProviderReference() *xpv1.Reference {
+func (mg *Job) GetProviderReference() *xpv1.Reference {
 	return mg.Spec.ProviderReference
 }
 
-// GetWriteConnectionSecretToReference of this BatchJob.
-func (mg *BatchJob) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
+// GetWriteConnectionSecretToReference of this Job.
+func (mg *Job) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
 	return mg.Spec.WriteConnectionSecretToReference
 }
 
-// SetConditions of this BatchJob.
-func (mg *BatchJob) SetConditions(c ...xpv1.Condition) {
+// SetConditions of this Job.
+func (mg *Job) SetConditions(c ...xpv1.Condition) {
 	mg.Status.SetConditions(c...)
 }
 
-// SetDeletionPolicy of this BatchJob.
-func (mg *BatchJob) SetDeletionPolicy(r xpv1.DeletionPolicy) {
+// SetDeletionPolicy of this Job.
+func (mg *Job) SetDeletionPolicy(r xpv1.DeletionPolicy) {
 	mg.Spec.DeletionPolicy = r
 }
 
-// SetProviderConfigReference of this BatchJob.
-func (mg *BatchJob) SetProviderConfigReference(r *xpv1.Reference) {
+// SetProviderConfigReference of this Job.
+func (mg *Job) SetProviderConfigReference(r *xpv1.Reference) {
 	mg.Spec.ProviderConfigReference = r
 }
 
 /*
-SetProviderReference of this BatchJob.
+SetProviderReference of this Job.
 Deprecated: Use SetProviderConfigReference.
 */
-func (mg *BatchJob) SetProviderReference(r *xpv1.Reference) {
+func (mg *Job) SetProviderReference(r *xpv1.Reference) {
 	mg.Spec.ProviderReference = r
 }
 
-// SetWriteConnectionSecretToReference of this BatchJob.
-func (mg *BatchJob) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
+// SetWriteConnectionSecretToReference of this Job.
+func (mg *Job) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
 	mg.Spec.WriteConnectionSecretToReference = r
 }
 
-// GetCondition of this BatchPool.
-func (mg *BatchPool) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
+// GetCondition of this Pool.
+func (mg *Pool) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
 	return mg.Status.GetCondition(ct)
 }
 
-// GetDeletionPolicy of this BatchPool.
-func (mg *BatchPool) GetDeletionPolicy() xpv1.DeletionPolicy {
+// GetDeletionPolicy of this Pool.
+func (mg *Pool) GetDeletionPolicy() xpv1.DeletionPolicy {
 	return mg.Spec.DeletionPolicy
 }
 
-// GetProviderConfigReference of this BatchPool.
-func (mg *BatchPool) GetProviderConfigReference() *xpv1.Reference {
+// GetProviderConfigReference of this Pool.
+func (mg *Pool) GetProviderConfigReference() *xpv1.Reference {
 	return mg.Spec.ProviderConfigReference
 }
 
 /*
-GetProviderReference of this BatchPool.
+GetProviderReference of this Pool.
 Deprecated: Use GetProviderConfigReference.
 */
-func (mg *BatchPool) GetProviderReference() *xpv1.Reference {
+func (mg *Pool) GetProviderReference() *xpv1.Reference {
 	return mg.Spec.ProviderReference
 }
 
-// GetWriteConnectionSecretToReference of this BatchPool.
-func (mg *BatchPool) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
+// GetWriteConnectionSecretToReference of this Pool.
+func (mg *Pool) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
 	return mg.Spec.WriteConnectionSecretToReference
 }
 
-// SetConditions of this BatchPool.
-func (mg *BatchPool) SetConditions(c ...xpv1.Condition) {
+// SetConditions of this Pool.
+func (mg *Pool) SetConditions(c ...xpv1.Condition) {
 	mg.Status.SetConditions(c...)
 }
 
-// SetDeletionPolicy of this BatchPool.
-func (mg *BatchPool) SetDeletionPolicy(r xpv1.DeletionPolicy) {
+// SetDeletionPolicy of this Pool.
+func (mg *Pool) SetDeletionPolicy(r xpv1.DeletionPolicy) {
 	mg.Spec.DeletionPolicy = r
 }
 
-// SetProviderConfigReference of this BatchPool.
-func (mg *BatchPool) SetProviderConfigReference(r *xpv1.Reference) {
+// SetProviderConfigReference of this Pool.
+func (mg *Pool) SetProviderConfigReference(r *xpv1.Reference) {
 	mg.Spec.ProviderConfigReference = r
 }
 
 /*
-SetProviderReference of this BatchPool.
+SetProviderReference of this Pool.
 Deprecated: Use SetProviderConfigReference.
 */
-func (mg *BatchPool) SetProviderReference(r *xpv1.Reference) {
+func (mg *Pool) SetProviderReference(r *xpv1.Reference) {
 	mg.Spec.ProviderReference = r
 }
 
-// SetWriteConnectionSecretToReference of this BatchPool.
-func (mg *BatchPool) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
+// SetWriteConnectionSecretToReference of this Pool.
+func (mg *Pool) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
 	mg.Spec.WriteConnectionSecretToReference = r
 }

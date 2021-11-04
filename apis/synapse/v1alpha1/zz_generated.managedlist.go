@@ -19,8 +19,8 @@ package v1alpha1
 
 import resource "github.com/crossplane/crossplane-runtime/pkg/resource"
 
-// GetItems of this SynapseFirewallRuleList.
-func (l *SynapseFirewallRuleList) GetItems() []resource.Managed {
+// GetItems of this FirewallRuleList.
+func (l *FirewallRuleList) GetItems() []resource.Managed {
 	items := make([]resource.Managed, len(l.Items))
 	for i := range l.Items {
 		items[i] = &l.Items[i]
@@ -28,8 +28,8 @@ func (l *SynapseFirewallRuleList) GetItems() []resource.Managed {
 	return items
 }
 
-// GetItems of this SynapseIntegrationRuntimeAzureList.
-func (l *SynapseIntegrationRuntimeAzureList) GetItems() []resource.Managed {
+// GetItems of this IntegrationRuntimeAzureList.
+func (l *IntegrationRuntimeAzureList) GetItems() []resource.Managed {
 	items := make([]resource.Managed, len(l.Items))
 	for i := range l.Items {
 		items[i] = &l.Items[i]
@@ -37,8 +37,8 @@ func (l *SynapseIntegrationRuntimeAzureList) GetItems() []resource.Managed {
 	return items
 }
 
-// GetItems of this SynapseIntegrationRuntimeSelfHostedList.
-func (l *SynapseIntegrationRuntimeSelfHostedList) GetItems() []resource.Managed {
+// GetItems of this IntegrationRuntimeSelfHostedList.
+func (l *IntegrationRuntimeSelfHostedList) GetItems() []resource.Managed {
 	items := make([]resource.Managed, len(l.Items))
 	for i := range l.Items {
 		items[i] = &l.Items[i]
@@ -46,8 +46,8 @@ func (l *SynapseIntegrationRuntimeSelfHostedList) GetItems() []resource.Managed 
 	return items
 }
 
-// GetItems of this SynapseLinkedServiceList.
-func (l *SynapseLinkedServiceList) GetItems() []resource.Managed {
+// GetItems of this LinkedServiceList.
+func (l *LinkedServiceList) GetItems() []resource.Managed {
 	items := make([]resource.Managed, len(l.Items))
 	for i := range l.Items {
 		items[i] = &l.Items[i]
@@ -55,8 +55,8 @@ func (l *SynapseLinkedServiceList) GetItems() []resource.Managed {
 	return items
 }
 
-// GetItems of this SynapseManagedPrivateEndpointList.
-func (l *SynapseManagedPrivateEndpointList) GetItems() []resource.Managed {
+// GetItems of this ManagedPrivateEndpointList.
+func (l *ManagedPrivateEndpointList) GetItems() []resource.Managed {
 	items := make([]resource.Managed, len(l.Items))
 	for i := range l.Items {
 		items[i] = &l.Items[i]
@@ -64,8 +64,8 @@ func (l *SynapseManagedPrivateEndpointList) GetItems() []resource.Managed {
 	return items
 }
 
-// GetItems of this SynapsePrivateLinkHubList.
-func (l *SynapsePrivateLinkHubList) GetItems() []resource.Managed {
+// GetItems of this PrivateLinkHubList.
+func (l *PrivateLinkHubList) GetItems() []resource.Managed {
 	items := make([]resource.Managed, len(l.Items))
 	for i := range l.Items {
 		items[i] = &l.Items[i]
@@ -73,8 +73,8 @@ func (l *SynapsePrivateLinkHubList) GetItems() []resource.Managed {
 	return items
 }
 
-// GetItems of this SynapseRoleAssignmentList.
-func (l *SynapseRoleAssignmentList) GetItems() []resource.Managed {
+// GetItems of this RoleAssignmentList.
+func (l *RoleAssignmentList) GetItems() []resource.Managed {
 	items := make([]resource.Managed, len(l.Items))
 	for i := range l.Items {
 		items[i] = &l.Items[i]
@@ -82,8 +82,8 @@ func (l *SynapseRoleAssignmentList) GetItems() []resource.Managed {
 	return items
 }
 
-// GetItems of this SynapseSparkPoolList.
-func (l *SynapseSparkPoolList) GetItems() []resource.Managed {
+// GetItems of this SparkPoolList.
+func (l *SparkPoolList) GetItems() []resource.Managed {
 	items := make([]resource.Managed, len(l.Items))
 	for i := range l.Items {
 		items[i] = &l.Items[i]
@@ -91,8 +91,8 @@ func (l *SynapseSparkPoolList) GetItems() []resource.Managed {
 	return items
 }
 
-// GetItems of this SynapseSqlPoolExtendedAuditingPolicyList.
-func (l *SynapseSqlPoolExtendedAuditingPolicyList) GetItems() []resource.Managed {
+// GetItems of this SqlPoolExtendedAuditingPolicyList.
+func (l *SqlPoolExtendedAuditingPolicyList) GetItems() []resource.Managed {
 	items := make([]resource.Managed, len(l.Items))
 	for i := range l.Items {
 		items[i] = &l.Items[i]
@@ -100,8 +100,8 @@ func (l *SynapseSqlPoolExtendedAuditingPolicyList) GetItems() []resource.Managed
 	return items
 }
 
-// GetItems of this SynapseSqlPoolList.
-func (l *SynapseSqlPoolList) GetItems() []resource.Managed {
+// GetItems of this SqlPoolList.
+func (l *SqlPoolList) GetItems() []resource.Managed {
 	items := make([]resource.Managed, len(l.Items))
 	for i := range l.Items {
 		items[i] = &l.Items[i]
@@ -109,8 +109,8 @@ func (l *SynapseSqlPoolList) GetItems() []resource.Managed {
 	return items
 }
 
-// GetItems of this SynapseSqlPoolSecurityAlertPolicyList.
-func (l *SynapseSqlPoolSecurityAlertPolicyList) GetItems() []resource.Managed {
+// GetItems of this SqlPoolSecurityAlertPolicyList.
+func (l *SqlPoolSecurityAlertPolicyList) GetItems() []resource.Managed {
 	items := make([]resource.Managed, len(l.Items))
 	for i := range l.Items {
 		items[i] = &l.Items[i]
@@ -118,8 +118,8 @@ func (l *SynapseSqlPoolSecurityAlertPolicyList) GetItems() []resource.Managed {
 	return items
 }
 
-// GetItems of this SynapseSqlPoolVulnerabilityAssessmentList.
-func (l *SynapseSqlPoolVulnerabilityAssessmentList) GetItems() []resource.Managed {
+// GetItems of this SqlPoolVulnerabilityAssessmentList.
+func (l *SqlPoolVulnerabilityAssessmentList) GetItems() []resource.Managed {
 	items := make([]resource.Managed, len(l.Items))
 	for i := range l.Items {
 		items[i] = &l.Items[i]
@@ -127,8 +127,8 @@ func (l *SynapseSqlPoolVulnerabilityAssessmentList) GetItems() []resource.Manage
 	return items
 }
 
-// GetItems of this SynapseWorkspaceExtendedAuditingPolicyList.
-func (l *SynapseWorkspaceExtendedAuditingPolicyList) GetItems() []resource.Managed {
+// GetItems of this WorkspaceExtendedAuditingPolicyList.
+func (l *WorkspaceExtendedAuditingPolicyList) GetItems() []resource.Managed {
 	items := make([]resource.Managed, len(l.Items))
 	for i := range l.Items {
 		items[i] = &l.Items[i]
@@ -136,8 +136,8 @@ func (l *SynapseWorkspaceExtendedAuditingPolicyList) GetItems() []resource.Manag
 	return items
 }
 
-// GetItems of this SynapseWorkspaceKeyList.
-func (l *SynapseWorkspaceKeyList) GetItems() []resource.Managed {
+// GetItems of this WorkspaceKeyList.
+func (l *WorkspaceKeyList) GetItems() []resource.Managed {
 	items := make([]resource.Managed, len(l.Items))
 	for i := range l.Items {
 		items[i] = &l.Items[i]
@@ -145,8 +145,8 @@ func (l *SynapseWorkspaceKeyList) GetItems() []resource.Managed {
 	return items
 }
 
-// GetItems of this SynapseWorkspaceList.
-func (l *SynapseWorkspaceList) GetItems() []resource.Managed {
+// GetItems of this WorkspaceList.
+func (l *WorkspaceList) GetItems() []resource.Managed {
 	items := make([]resource.Managed, len(l.Items))
 	for i := range l.Items {
 		items[i] = &l.Items[i]
@@ -154,8 +154,8 @@ func (l *SynapseWorkspaceList) GetItems() []resource.Managed {
 	return items
 }
 
-// GetItems of this SynapseWorkspaceSecurityAlertPolicyList.
-func (l *SynapseWorkspaceSecurityAlertPolicyList) GetItems() []resource.Managed {
+// GetItems of this WorkspaceSecurityAlertPolicyList.
+func (l *WorkspaceSecurityAlertPolicyList) GetItems() []resource.Managed {
 	items := make([]resource.Managed, len(l.Items))
 	for i := range l.Items {
 		items[i] = &l.Items[i]
@@ -163,8 +163,8 @@ func (l *SynapseWorkspaceSecurityAlertPolicyList) GetItems() []resource.Managed 
 	return items
 }
 
-// GetItems of this SynapseWorkspaceVulnerabilityAssessmentList.
-func (l *SynapseWorkspaceVulnerabilityAssessmentList) GetItems() []resource.Managed {
+// GetItems of this WorkspaceVulnerabilityAssessmentList.
+func (l *WorkspaceVulnerabilityAssessmentList) GetItems() []resource.Managed {
 	items := make([]resource.Managed, len(l.Items))
 	for i := range l.Items {
 		items[i] = &l.Items[i]

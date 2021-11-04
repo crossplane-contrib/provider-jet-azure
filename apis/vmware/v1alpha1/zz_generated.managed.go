@@ -19,170 +19,170 @@ package v1alpha1
 
 import xpv1 "github.com/crossplane/crossplane-runtime/apis/common/v1"
 
-// GetCondition of this VmwareCluster.
-func (mg *VmwareCluster) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
+// GetCondition of this Cluster.
+func (mg *Cluster) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
 	return mg.Status.GetCondition(ct)
 }
 
-// GetDeletionPolicy of this VmwareCluster.
-func (mg *VmwareCluster) GetDeletionPolicy() xpv1.DeletionPolicy {
+// GetDeletionPolicy of this Cluster.
+func (mg *Cluster) GetDeletionPolicy() xpv1.DeletionPolicy {
 	return mg.Spec.DeletionPolicy
 }
 
-// GetProviderConfigReference of this VmwareCluster.
-func (mg *VmwareCluster) GetProviderConfigReference() *xpv1.Reference {
+// GetProviderConfigReference of this Cluster.
+func (mg *Cluster) GetProviderConfigReference() *xpv1.Reference {
 	return mg.Spec.ProviderConfigReference
 }
 
 /*
-GetProviderReference of this VmwareCluster.
+GetProviderReference of this Cluster.
 Deprecated: Use GetProviderConfigReference.
 */
-func (mg *VmwareCluster) GetProviderReference() *xpv1.Reference {
+func (mg *Cluster) GetProviderReference() *xpv1.Reference {
 	return mg.Spec.ProviderReference
 }
 
-// GetWriteConnectionSecretToReference of this VmwareCluster.
-func (mg *VmwareCluster) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
+// GetWriteConnectionSecretToReference of this Cluster.
+func (mg *Cluster) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
 	return mg.Spec.WriteConnectionSecretToReference
 }
 
-// SetConditions of this VmwareCluster.
-func (mg *VmwareCluster) SetConditions(c ...xpv1.Condition) {
+// SetConditions of this Cluster.
+func (mg *Cluster) SetConditions(c ...xpv1.Condition) {
 	mg.Status.SetConditions(c...)
 }
 
-// SetDeletionPolicy of this VmwareCluster.
-func (mg *VmwareCluster) SetDeletionPolicy(r xpv1.DeletionPolicy) {
+// SetDeletionPolicy of this Cluster.
+func (mg *Cluster) SetDeletionPolicy(r xpv1.DeletionPolicy) {
 	mg.Spec.DeletionPolicy = r
 }
 
-// SetProviderConfigReference of this VmwareCluster.
-func (mg *VmwareCluster) SetProviderConfigReference(r *xpv1.Reference) {
+// SetProviderConfigReference of this Cluster.
+func (mg *Cluster) SetProviderConfigReference(r *xpv1.Reference) {
 	mg.Spec.ProviderConfigReference = r
 }
 
 /*
-SetProviderReference of this VmwareCluster.
+SetProviderReference of this Cluster.
 Deprecated: Use SetProviderConfigReference.
 */
-func (mg *VmwareCluster) SetProviderReference(r *xpv1.Reference) {
+func (mg *Cluster) SetProviderReference(r *xpv1.Reference) {
 	mg.Spec.ProviderReference = r
 }
 
-// SetWriteConnectionSecretToReference of this VmwareCluster.
-func (mg *VmwareCluster) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
+// SetWriteConnectionSecretToReference of this Cluster.
+func (mg *Cluster) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
 	mg.Spec.WriteConnectionSecretToReference = r
 }
 
-// GetCondition of this VmwareExpressRouteAuthorization.
-func (mg *VmwareExpressRouteAuthorization) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
+// GetCondition of this ExpressRouteAuthorization.
+func (mg *ExpressRouteAuthorization) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
 	return mg.Status.GetCondition(ct)
 }
 
-// GetDeletionPolicy of this VmwareExpressRouteAuthorization.
-func (mg *VmwareExpressRouteAuthorization) GetDeletionPolicy() xpv1.DeletionPolicy {
+// GetDeletionPolicy of this ExpressRouteAuthorization.
+func (mg *ExpressRouteAuthorization) GetDeletionPolicy() xpv1.DeletionPolicy {
 	return mg.Spec.DeletionPolicy
 }
 
-// GetProviderConfigReference of this VmwareExpressRouteAuthorization.
-func (mg *VmwareExpressRouteAuthorization) GetProviderConfigReference() *xpv1.Reference {
+// GetProviderConfigReference of this ExpressRouteAuthorization.
+func (mg *ExpressRouteAuthorization) GetProviderConfigReference() *xpv1.Reference {
 	return mg.Spec.ProviderConfigReference
 }
 
 /*
-GetProviderReference of this VmwareExpressRouteAuthorization.
+GetProviderReference of this ExpressRouteAuthorization.
 Deprecated: Use GetProviderConfigReference.
 */
-func (mg *VmwareExpressRouteAuthorization) GetProviderReference() *xpv1.Reference {
+func (mg *ExpressRouteAuthorization) GetProviderReference() *xpv1.Reference {
 	return mg.Spec.ProviderReference
 }
 
-// GetWriteConnectionSecretToReference of this VmwareExpressRouteAuthorization.
-func (mg *VmwareExpressRouteAuthorization) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
+// GetWriteConnectionSecretToReference of this ExpressRouteAuthorization.
+func (mg *ExpressRouteAuthorization) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
 	return mg.Spec.WriteConnectionSecretToReference
 }
 
-// SetConditions of this VmwareExpressRouteAuthorization.
-func (mg *VmwareExpressRouteAuthorization) SetConditions(c ...xpv1.Condition) {
+// SetConditions of this ExpressRouteAuthorization.
+func (mg *ExpressRouteAuthorization) SetConditions(c ...xpv1.Condition) {
 	mg.Status.SetConditions(c...)
 }
 
-// SetDeletionPolicy of this VmwareExpressRouteAuthorization.
-func (mg *VmwareExpressRouteAuthorization) SetDeletionPolicy(r xpv1.DeletionPolicy) {
+// SetDeletionPolicy of this ExpressRouteAuthorization.
+func (mg *ExpressRouteAuthorization) SetDeletionPolicy(r xpv1.DeletionPolicy) {
 	mg.Spec.DeletionPolicy = r
 }
 
-// SetProviderConfigReference of this VmwareExpressRouteAuthorization.
-func (mg *VmwareExpressRouteAuthorization) SetProviderConfigReference(r *xpv1.Reference) {
+// SetProviderConfigReference of this ExpressRouteAuthorization.
+func (mg *ExpressRouteAuthorization) SetProviderConfigReference(r *xpv1.Reference) {
 	mg.Spec.ProviderConfigReference = r
 }
 
 /*
-SetProviderReference of this VmwareExpressRouteAuthorization.
+SetProviderReference of this ExpressRouteAuthorization.
 Deprecated: Use SetProviderConfigReference.
 */
-func (mg *VmwareExpressRouteAuthorization) SetProviderReference(r *xpv1.Reference) {
+func (mg *ExpressRouteAuthorization) SetProviderReference(r *xpv1.Reference) {
 	mg.Spec.ProviderReference = r
 }
 
-// SetWriteConnectionSecretToReference of this VmwareExpressRouteAuthorization.
-func (mg *VmwareExpressRouteAuthorization) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
+// SetWriteConnectionSecretToReference of this ExpressRouteAuthorization.
+func (mg *ExpressRouteAuthorization) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
 	mg.Spec.WriteConnectionSecretToReference = r
 }
 
-// GetCondition of this VmwarePrivateCloud.
-func (mg *VmwarePrivateCloud) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
+// GetCondition of this PrivateCloud.
+func (mg *PrivateCloud) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
 	return mg.Status.GetCondition(ct)
 }
 
-// GetDeletionPolicy of this VmwarePrivateCloud.
-func (mg *VmwarePrivateCloud) GetDeletionPolicy() xpv1.DeletionPolicy {
+// GetDeletionPolicy of this PrivateCloud.
+func (mg *PrivateCloud) GetDeletionPolicy() xpv1.DeletionPolicy {
 	return mg.Spec.DeletionPolicy
 }
 
-// GetProviderConfigReference of this VmwarePrivateCloud.
-func (mg *VmwarePrivateCloud) GetProviderConfigReference() *xpv1.Reference {
+// GetProviderConfigReference of this PrivateCloud.
+func (mg *PrivateCloud) GetProviderConfigReference() *xpv1.Reference {
 	return mg.Spec.ProviderConfigReference
 }
 
 /*
-GetProviderReference of this VmwarePrivateCloud.
+GetProviderReference of this PrivateCloud.
 Deprecated: Use GetProviderConfigReference.
 */
-func (mg *VmwarePrivateCloud) GetProviderReference() *xpv1.Reference {
+func (mg *PrivateCloud) GetProviderReference() *xpv1.Reference {
 	return mg.Spec.ProviderReference
 }
 
-// GetWriteConnectionSecretToReference of this VmwarePrivateCloud.
-func (mg *VmwarePrivateCloud) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
+// GetWriteConnectionSecretToReference of this PrivateCloud.
+func (mg *PrivateCloud) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
 	return mg.Spec.WriteConnectionSecretToReference
 }
 
-// SetConditions of this VmwarePrivateCloud.
-func (mg *VmwarePrivateCloud) SetConditions(c ...xpv1.Condition) {
+// SetConditions of this PrivateCloud.
+func (mg *PrivateCloud) SetConditions(c ...xpv1.Condition) {
 	mg.Status.SetConditions(c...)
 }
 
-// SetDeletionPolicy of this VmwarePrivateCloud.
-func (mg *VmwarePrivateCloud) SetDeletionPolicy(r xpv1.DeletionPolicy) {
+// SetDeletionPolicy of this PrivateCloud.
+func (mg *PrivateCloud) SetDeletionPolicy(r xpv1.DeletionPolicy) {
 	mg.Spec.DeletionPolicy = r
 }
 
-// SetProviderConfigReference of this VmwarePrivateCloud.
-func (mg *VmwarePrivateCloud) SetProviderConfigReference(r *xpv1.Reference) {
+// SetProviderConfigReference of this PrivateCloud.
+func (mg *PrivateCloud) SetProviderConfigReference(r *xpv1.Reference) {
 	mg.Spec.ProviderConfigReference = r
 }
 
 /*
-SetProviderReference of this VmwarePrivateCloud.
+SetProviderReference of this PrivateCloud.
 Deprecated: Use SetProviderConfigReference.
 */
-func (mg *VmwarePrivateCloud) SetProviderReference(r *xpv1.Reference) {
+func (mg *PrivateCloud) SetProviderReference(r *xpv1.Reference) {
 	mg.Spec.ProviderReference = r
 }
 
-// SetWriteConnectionSecretToReference of this VmwarePrivateCloud.
-func (mg *VmwarePrivateCloud) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
+// SetWriteConnectionSecretToReference of this PrivateCloud.
+func (mg *PrivateCloud) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
 	mg.Spec.WriteConnectionSecretToReference = r
 }

@@ -19,8 +19,8 @@ package v1alpha1
 
 import resource "github.com/crossplane/crossplane-runtime/pkg/resource"
 
-// GetItems of this VmwareClusterList.
-func (l *VmwareClusterList) GetItems() []resource.Managed {
+// GetItems of this ClusterList.
+func (l *ClusterList) GetItems() []resource.Managed {
 	items := make([]resource.Managed, len(l.Items))
 	for i := range l.Items {
 		items[i] = &l.Items[i]
@@ -28,8 +28,8 @@ func (l *VmwareClusterList) GetItems() []resource.Managed {
 	return items
 }
 
-// GetItems of this VmwareExpressRouteAuthorizationList.
-func (l *VmwareExpressRouteAuthorizationList) GetItems() []resource.Managed {
+// GetItems of this ExpressRouteAuthorizationList.
+func (l *ExpressRouteAuthorizationList) GetItems() []resource.Managed {
 	items := make([]resource.Managed, len(l.Items))
 	for i := range l.Items {
 		items[i] = &l.Items[i]
@@ -37,8 +37,8 @@ func (l *VmwareExpressRouteAuthorizationList) GetItems() []resource.Managed {
 	return items
 }
 
-// GetItems of this VmwarePrivateCloudList.
-func (l *VmwarePrivateCloudList) GetItems() []resource.Managed {
+// GetItems of this PrivateCloudList.
+func (l *PrivateCloudList) GetItems() []resource.Managed {
 	items := make([]resource.Managed, len(l.Items))
 	for i := range l.Items {
 		items[i] = &l.Items[i]

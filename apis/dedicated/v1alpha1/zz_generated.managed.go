@@ -19,114 +19,114 @@ package v1alpha1
 
 import xpv1 "github.com/crossplane/crossplane-runtime/apis/common/v1"
 
-// GetCondition of this DedicatedHardwareSecurityModule.
-func (mg *DedicatedHardwareSecurityModule) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
+// GetCondition of this HardwareSecurityModule.
+func (mg *HardwareSecurityModule) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
 	return mg.Status.GetCondition(ct)
 }
 
-// GetDeletionPolicy of this DedicatedHardwareSecurityModule.
-func (mg *DedicatedHardwareSecurityModule) GetDeletionPolicy() xpv1.DeletionPolicy {
+// GetDeletionPolicy of this HardwareSecurityModule.
+func (mg *HardwareSecurityModule) GetDeletionPolicy() xpv1.DeletionPolicy {
 	return mg.Spec.DeletionPolicy
 }
 
-// GetProviderConfigReference of this DedicatedHardwareSecurityModule.
-func (mg *DedicatedHardwareSecurityModule) GetProviderConfigReference() *xpv1.Reference {
+// GetProviderConfigReference of this HardwareSecurityModule.
+func (mg *HardwareSecurityModule) GetProviderConfigReference() *xpv1.Reference {
 	return mg.Spec.ProviderConfigReference
 }
 
 /*
-GetProviderReference of this DedicatedHardwareSecurityModule.
+GetProviderReference of this HardwareSecurityModule.
 Deprecated: Use GetProviderConfigReference.
 */
-func (mg *DedicatedHardwareSecurityModule) GetProviderReference() *xpv1.Reference {
+func (mg *HardwareSecurityModule) GetProviderReference() *xpv1.Reference {
 	return mg.Spec.ProviderReference
 }
 
-// GetWriteConnectionSecretToReference of this DedicatedHardwareSecurityModule.
-func (mg *DedicatedHardwareSecurityModule) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
+// GetWriteConnectionSecretToReference of this HardwareSecurityModule.
+func (mg *HardwareSecurityModule) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
 	return mg.Spec.WriteConnectionSecretToReference
 }
 
-// SetConditions of this DedicatedHardwareSecurityModule.
-func (mg *DedicatedHardwareSecurityModule) SetConditions(c ...xpv1.Condition) {
+// SetConditions of this HardwareSecurityModule.
+func (mg *HardwareSecurityModule) SetConditions(c ...xpv1.Condition) {
 	mg.Status.SetConditions(c...)
 }
 
-// SetDeletionPolicy of this DedicatedHardwareSecurityModule.
-func (mg *DedicatedHardwareSecurityModule) SetDeletionPolicy(r xpv1.DeletionPolicy) {
+// SetDeletionPolicy of this HardwareSecurityModule.
+func (mg *HardwareSecurityModule) SetDeletionPolicy(r xpv1.DeletionPolicy) {
 	mg.Spec.DeletionPolicy = r
 }
 
-// SetProviderConfigReference of this DedicatedHardwareSecurityModule.
-func (mg *DedicatedHardwareSecurityModule) SetProviderConfigReference(r *xpv1.Reference) {
+// SetProviderConfigReference of this HardwareSecurityModule.
+func (mg *HardwareSecurityModule) SetProviderConfigReference(r *xpv1.Reference) {
 	mg.Spec.ProviderConfigReference = r
 }
 
 /*
-SetProviderReference of this DedicatedHardwareSecurityModule.
+SetProviderReference of this HardwareSecurityModule.
 Deprecated: Use SetProviderConfigReference.
 */
-func (mg *DedicatedHardwareSecurityModule) SetProviderReference(r *xpv1.Reference) {
+func (mg *HardwareSecurityModule) SetProviderReference(r *xpv1.Reference) {
 	mg.Spec.ProviderReference = r
 }
 
-// SetWriteConnectionSecretToReference of this DedicatedHardwareSecurityModule.
-func (mg *DedicatedHardwareSecurityModule) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
+// SetWriteConnectionSecretToReference of this HardwareSecurityModule.
+func (mg *HardwareSecurityModule) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
 	mg.Spec.WriteConnectionSecretToReference = r
 }
 
-// GetCondition of this DedicatedHost.
-func (mg *DedicatedHost) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
+// GetCondition of this Host.
+func (mg *Host) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
 	return mg.Status.GetCondition(ct)
 }
 
-// GetDeletionPolicy of this DedicatedHost.
-func (mg *DedicatedHost) GetDeletionPolicy() xpv1.DeletionPolicy {
+// GetDeletionPolicy of this Host.
+func (mg *Host) GetDeletionPolicy() xpv1.DeletionPolicy {
 	return mg.Spec.DeletionPolicy
 }
 
-// GetProviderConfigReference of this DedicatedHost.
-func (mg *DedicatedHost) GetProviderConfigReference() *xpv1.Reference {
+// GetProviderConfigReference of this Host.
+func (mg *Host) GetProviderConfigReference() *xpv1.Reference {
 	return mg.Spec.ProviderConfigReference
 }
 
 /*
-GetProviderReference of this DedicatedHost.
+GetProviderReference of this Host.
 Deprecated: Use GetProviderConfigReference.
 */
-func (mg *DedicatedHost) GetProviderReference() *xpv1.Reference {
+func (mg *Host) GetProviderReference() *xpv1.Reference {
 	return mg.Spec.ProviderReference
 }
 
-// GetWriteConnectionSecretToReference of this DedicatedHost.
-func (mg *DedicatedHost) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
+// GetWriteConnectionSecretToReference of this Host.
+func (mg *Host) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
 	return mg.Spec.WriteConnectionSecretToReference
 }
 
-// SetConditions of this DedicatedHost.
-func (mg *DedicatedHost) SetConditions(c ...xpv1.Condition) {
+// SetConditions of this Host.
+func (mg *Host) SetConditions(c ...xpv1.Condition) {
 	mg.Status.SetConditions(c...)
 }
 
-// SetDeletionPolicy of this DedicatedHost.
-func (mg *DedicatedHost) SetDeletionPolicy(r xpv1.DeletionPolicy) {
+// SetDeletionPolicy of this Host.
+func (mg *Host) SetDeletionPolicy(r xpv1.DeletionPolicy) {
 	mg.Spec.DeletionPolicy = r
 }
 
-// SetProviderConfigReference of this DedicatedHost.
-func (mg *DedicatedHost) SetProviderConfigReference(r *xpv1.Reference) {
+// SetProviderConfigReference of this Host.
+func (mg *Host) SetProviderConfigReference(r *xpv1.Reference) {
 	mg.Spec.ProviderConfigReference = r
 }
 
 /*
-SetProviderReference of this DedicatedHost.
+SetProviderReference of this Host.
 Deprecated: Use SetProviderConfigReference.
 */
-func (mg *DedicatedHost) SetProviderReference(r *xpv1.Reference) {
+func (mg *Host) SetProviderReference(r *xpv1.Reference) {
 	mg.Spec.ProviderReference = r
 }
 
-// SetWriteConnectionSecretToReference of this DedicatedHost.
-func (mg *DedicatedHost) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
+// SetWriteConnectionSecretToReference of this Host.
+func (mg *Host) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
 	mg.Spec.WriteConnectionSecretToReference = r
 }

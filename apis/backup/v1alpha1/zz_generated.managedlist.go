@@ -19,8 +19,8 @@ package v1alpha1
 
 import resource "github.com/crossplane/crossplane-runtime/pkg/resource"
 
-// GetItems of this BackupContainerStorageAccountList.
-func (l *BackupContainerStorageAccountList) GetItems() []resource.Managed {
+// GetItems of this ContainerStorageAccountList.
+func (l *ContainerStorageAccountList) GetItems() []resource.Managed {
 	items := make([]resource.Managed, len(l.Items))
 	for i := range l.Items {
 		items[i] = &l.Items[i]
@@ -28,8 +28,8 @@ func (l *BackupContainerStorageAccountList) GetItems() []resource.Managed {
 	return items
 }
 
-// GetItems of this BackupPolicyFileShareList.
-func (l *BackupPolicyFileShareList) GetItems() []resource.Managed {
+// GetItems of this PolicyFileShareList.
+func (l *PolicyFileShareList) GetItems() []resource.Managed {
 	items := make([]resource.Managed, len(l.Items))
 	for i := range l.Items {
 		items[i] = &l.Items[i]
@@ -37,8 +37,8 @@ func (l *BackupPolicyFileShareList) GetItems() []resource.Managed {
 	return items
 }
 
-// GetItems of this BackupPolicyVmList.
-func (l *BackupPolicyVmList) GetItems() []resource.Managed {
+// GetItems of this PolicyVmList.
+func (l *PolicyVmList) GetItems() []resource.Managed {
 	items := make([]resource.Managed, len(l.Items))
 	for i := range l.Items {
 		items[i] = &l.Items[i]
@@ -46,8 +46,8 @@ func (l *BackupPolicyVmList) GetItems() []resource.Managed {
 	return items
 }
 
-// GetItems of this BackupProtectedFileShareList.
-func (l *BackupProtectedFileShareList) GetItems() []resource.Managed {
+// GetItems of this ProtectedFileShareList.
+func (l *ProtectedFileShareList) GetItems() []resource.Managed {
 	items := make([]resource.Managed, len(l.Items))
 	for i := range l.Items {
 		items[i] = &l.Items[i]
@@ -55,8 +55,8 @@ func (l *BackupProtectedFileShareList) GetItems() []resource.Managed {
 	return items
 }
 
-// GetItems of this BackupProtectedVmList.
-func (l *BackupProtectedVmList) GetItems() []resource.Managed {
+// GetItems of this ProtectedVmList.
+func (l *ProtectedVmList) GetItems() []resource.Managed {
 	items := make([]resource.Managed, len(l.Items))
 	for i := range l.Items {
 		items[i] = &l.Items[i]

@@ -19,8 +19,8 @@ package v1alpha1
 
 import resource "github.com/crossplane/crossplane-runtime/pkg/resource"
 
-// GetItems of this BatchAccountList.
-func (l *BatchAccountList) GetItems() []resource.Managed {
+// GetItems of this AccountList.
+func (l *AccountList) GetItems() []resource.Managed {
 	items := make([]resource.Managed, len(l.Items))
 	for i := range l.Items {
 		items[i] = &l.Items[i]
@@ -28,8 +28,8 @@ func (l *BatchAccountList) GetItems() []resource.Managed {
 	return items
 }
 
-// GetItems of this BatchApplicationList.
-func (l *BatchApplicationList) GetItems() []resource.Managed {
+// GetItems of this ApplicationList.
+func (l *ApplicationList) GetItems() []resource.Managed {
 	items := make([]resource.Managed, len(l.Items))
 	for i := range l.Items {
 		items[i] = &l.Items[i]
@@ -37,8 +37,8 @@ func (l *BatchApplicationList) GetItems() []resource.Managed {
 	return items
 }
 
-// GetItems of this BatchCertificateList.
-func (l *BatchCertificateList) GetItems() []resource.Managed {
+// GetItems of this CertificateList.
+func (l *CertificateList) GetItems() []resource.Managed {
 	items := make([]resource.Managed, len(l.Items))
 	for i := range l.Items {
 		items[i] = &l.Items[i]
@@ -46,8 +46,8 @@ func (l *BatchCertificateList) GetItems() []resource.Managed {
 	return items
 }
 
-// GetItems of this BatchJobList.
-func (l *BatchJobList) GetItems() []resource.Managed {
+// GetItems of this JobList.
+func (l *JobList) GetItems() []resource.Managed {
 	items := make([]resource.Managed, len(l.Items))
 	for i := range l.Items {
 		items[i] = &l.Items[i]
@@ -55,8 +55,8 @@ func (l *BatchJobList) GetItems() []resource.Managed {
 	return items
 }
 
-// GetItems of this BatchPoolList.
-func (l *BatchPoolList) GetItems() []resource.Managed {
+// GetItems of this PoolList.
+func (l *PoolList) GetItems() []resource.Managed {
 	items := make([]resource.Managed, len(l.Items))
 	for i := range l.Items {
 		items[i] = &l.Items[i]

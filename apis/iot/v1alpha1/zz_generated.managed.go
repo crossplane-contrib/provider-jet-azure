@@ -19,394 +19,394 @@ package v1alpha1
 
 import xpv1 "github.com/crossplane/crossplane-runtime/apis/common/v1"
 
-// GetCondition of this IotSecurityDeviceGroup.
-func (mg *IotSecurityDeviceGroup) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
+// GetCondition of this SecurityDeviceGroup.
+func (mg *SecurityDeviceGroup) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
 	return mg.Status.GetCondition(ct)
 }
 
-// GetDeletionPolicy of this IotSecurityDeviceGroup.
-func (mg *IotSecurityDeviceGroup) GetDeletionPolicy() xpv1.DeletionPolicy {
+// GetDeletionPolicy of this SecurityDeviceGroup.
+func (mg *SecurityDeviceGroup) GetDeletionPolicy() xpv1.DeletionPolicy {
 	return mg.Spec.DeletionPolicy
 }
 
-// GetProviderConfigReference of this IotSecurityDeviceGroup.
-func (mg *IotSecurityDeviceGroup) GetProviderConfigReference() *xpv1.Reference {
+// GetProviderConfigReference of this SecurityDeviceGroup.
+func (mg *SecurityDeviceGroup) GetProviderConfigReference() *xpv1.Reference {
 	return mg.Spec.ProviderConfigReference
 }
 
 /*
-GetProviderReference of this IotSecurityDeviceGroup.
+GetProviderReference of this SecurityDeviceGroup.
 Deprecated: Use GetProviderConfigReference.
 */
-func (mg *IotSecurityDeviceGroup) GetProviderReference() *xpv1.Reference {
+func (mg *SecurityDeviceGroup) GetProviderReference() *xpv1.Reference {
 	return mg.Spec.ProviderReference
 }
 
-// GetWriteConnectionSecretToReference of this IotSecurityDeviceGroup.
-func (mg *IotSecurityDeviceGroup) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
+// GetWriteConnectionSecretToReference of this SecurityDeviceGroup.
+func (mg *SecurityDeviceGroup) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
 	return mg.Spec.WriteConnectionSecretToReference
 }
 
-// SetConditions of this IotSecurityDeviceGroup.
-func (mg *IotSecurityDeviceGroup) SetConditions(c ...xpv1.Condition) {
+// SetConditions of this SecurityDeviceGroup.
+func (mg *SecurityDeviceGroup) SetConditions(c ...xpv1.Condition) {
 	mg.Status.SetConditions(c...)
 }
 
-// SetDeletionPolicy of this IotSecurityDeviceGroup.
-func (mg *IotSecurityDeviceGroup) SetDeletionPolicy(r xpv1.DeletionPolicy) {
+// SetDeletionPolicy of this SecurityDeviceGroup.
+func (mg *SecurityDeviceGroup) SetDeletionPolicy(r xpv1.DeletionPolicy) {
 	mg.Spec.DeletionPolicy = r
 }
 
-// SetProviderConfigReference of this IotSecurityDeviceGroup.
-func (mg *IotSecurityDeviceGroup) SetProviderConfigReference(r *xpv1.Reference) {
+// SetProviderConfigReference of this SecurityDeviceGroup.
+func (mg *SecurityDeviceGroup) SetProviderConfigReference(r *xpv1.Reference) {
 	mg.Spec.ProviderConfigReference = r
 }
 
 /*
-SetProviderReference of this IotSecurityDeviceGroup.
+SetProviderReference of this SecurityDeviceGroup.
 Deprecated: Use SetProviderConfigReference.
 */
-func (mg *IotSecurityDeviceGroup) SetProviderReference(r *xpv1.Reference) {
+func (mg *SecurityDeviceGroup) SetProviderReference(r *xpv1.Reference) {
 	mg.Spec.ProviderReference = r
 }
 
-// SetWriteConnectionSecretToReference of this IotSecurityDeviceGroup.
-func (mg *IotSecurityDeviceGroup) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
+// SetWriteConnectionSecretToReference of this SecurityDeviceGroup.
+func (mg *SecurityDeviceGroup) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
 	mg.Spec.WriteConnectionSecretToReference = r
 }
 
-// GetCondition of this IotSecuritySolution.
-func (mg *IotSecuritySolution) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
+// GetCondition of this SecuritySolution.
+func (mg *SecuritySolution) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
 	return mg.Status.GetCondition(ct)
 }
 
-// GetDeletionPolicy of this IotSecuritySolution.
-func (mg *IotSecuritySolution) GetDeletionPolicy() xpv1.DeletionPolicy {
+// GetDeletionPolicy of this SecuritySolution.
+func (mg *SecuritySolution) GetDeletionPolicy() xpv1.DeletionPolicy {
 	return mg.Spec.DeletionPolicy
 }
 
-// GetProviderConfigReference of this IotSecuritySolution.
-func (mg *IotSecuritySolution) GetProviderConfigReference() *xpv1.Reference {
+// GetProviderConfigReference of this SecuritySolution.
+func (mg *SecuritySolution) GetProviderConfigReference() *xpv1.Reference {
 	return mg.Spec.ProviderConfigReference
 }
 
 /*
-GetProviderReference of this IotSecuritySolution.
+GetProviderReference of this SecuritySolution.
 Deprecated: Use GetProviderConfigReference.
 */
-func (mg *IotSecuritySolution) GetProviderReference() *xpv1.Reference {
+func (mg *SecuritySolution) GetProviderReference() *xpv1.Reference {
 	return mg.Spec.ProviderReference
 }
 
-// GetWriteConnectionSecretToReference of this IotSecuritySolution.
-func (mg *IotSecuritySolution) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
+// GetWriteConnectionSecretToReference of this SecuritySolution.
+func (mg *SecuritySolution) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
 	return mg.Spec.WriteConnectionSecretToReference
 }
 
-// SetConditions of this IotSecuritySolution.
-func (mg *IotSecuritySolution) SetConditions(c ...xpv1.Condition) {
+// SetConditions of this SecuritySolution.
+func (mg *SecuritySolution) SetConditions(c ...xpv1.Condition) {
 	mg.Status.SetConditions(c...)
 }
 
-// SetDeletionPolicy of this IotSecuritySolution.
-func (mg *IotSecuritySolution) SetDeletionPolicy(r xpv1.DeletionPolicy) {
+// SetDeletionPolicy of this SecuritySolution.
+func (mg *SecuritySolution) SetDeletionPolicy(r xpv1.DeletionPolicy) {
 	mg.Spec.DeletionPolicy = r
 }
 
-// SetProviderConfigReference of this IotSecuritySolution.
-func (mg *IotSecuritySolution) SetProviderConfigReference(r *xpv1.Reference) {
+// SetProviderConfigReference of this SecuritySolution.
+func (mg *SecuritySolution) SetProviderConfigReference(r *xpv1.Reference) {
 	mg.Spec.ProviderConfigReference = r
 }
 
 /*
-SetProviderReference of this IotSecuritySolution.
+SetProviderReference of this SecuritySolution.
 Deprecated: Use SetProviderConfigReference.
 */
-func (mg *IotSecuritySolution) SetProviderReference(r *xpv1.Reference) {
+func (mg *SecuritySolution) SetProviderReference(r *xpv1.Reference) {
 	mg.Spec.ProviderReference = r
 }
 
-// SetWriteConnectionSecretToReference of this IotSecuritySolution.
-func (mg *IotSecuritySolution) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
+// SetWriteConnectionSecretToReference of this SecuritySolution.
+func (mg *SecuritySolution) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
 	mg.Spec.WriteConnectionSecretToReference = r
 }
 
-// GetCondition of this IotTimeSeriesInsightsAccessPolicy.
-func (mg *IotTimeSeriesInsightsAccessPolicy) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
+// GetCondition of this TimeSeriesInsightsAccessPolicy.
+func (mg *TimeSeriesInsightsAccessPolicy) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
 	return mg.Status.GetCondition(ct)
 }
 
-// GetDeletionPolicy of this IotTimeSeriesInsightsAccessPolicy.
-func (mg *IotTimeSeriesInsightsAccessPolicy) GetDeletionPolicy() xpv1.DeletionPolicy {
+// GetDeletionPolicy of this TimeSeriesInsightsAccessPolicy.
+func (mg *TimeSeriesInsightsAccessPolicy) GetDeletionPolicy() xpv1.DeletionPolicy {
 	return mg.Spec.DeletionPolicy
 }
 
-// GetProviderConfigReference of this IotTimeSeriesInsightsAccessPolicy.
-func (mg *IotTimeSeriesInsightsAccessPolicy) GetProviderConfigReference() *xpv1.Reference {
+// GetProviderConfigReference of this TimeSeriesInsightsAccessPolicy.
+func (mg *TimeSeriesInsightsAccessPolicy) GetProviderConfigReference() *xpv1.Reference {
 	return mg.Spec.ProviderConfigReference
 }
 
 /*
-GetProviderReference of this IotTimeSeriesInsightsAccessPolicy.
+GetProviderReference of this TimeSeriesInsightsAccessPolicy.
 Deprecated: Use GetProviderConfigReference.
 */
-func (mg *IotTimeSeriesInsightsAccessPolicy) GetProviderReference() *xpv1.Reference {
+func (mg *TimeSeriesInsightsAccessPolicy) GetProviderReference() *xpv1.Reference {
 	return mg.Spec.ProviderReference
 }
 
-// GetWriteConnectionSecretToReference of this IotTimeSeriesInsightsAccessPolicy.
-func (mg *IotTimeSeriesInsightsAccessPolicy) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
+// GetWriteConnectionSecretToReference of this TimeSeriesInsightsAccessPolicy.
+func (mg *TimeSeriesInsightsAccessPolicy) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
 	return mg.Spec.WriteConnectionSecretToReference
 }
 
-// SetConditions of this IotTimeSeriesInsightsAccessPolicy.
-func (mg *IotTimeSeriesInsightsAccessPolicy) SetConditions(c ...xpv1.Condition) {
+// SetConditions of this TimeSeriesInsightsAccessPolicy.
+func (mg *TimeSeriesInsightsAccessPolicy) SetConditions(c ...xpv1.Condition) {
 	mg.Status.SetConditions(c...)
 }
 
-// SetDeletionPolicy of this IotTimeSeriesInsightsAccessPolicy.
-func (mg *IotTimeSeriesInsightsAccessPolicy) SetDeletionPolicy(r xpv1.DeletionPolicy) {
+// SetDeletionPolicy of this TimeSeriesInsightsAccessPolicy.
+func (mg *TimeSeriesInsightsAccessPolicy) SetDeletionPolicy(r xpv1.DeletionPolicy) {
 	mg.Spec.DeletionPolicy = r
 }
 
-// SetProviderConfigReference of this IotTimeSeriesInsightsAccessPolicy.
-func (mg *IotTimeSeriesInsightsAccessPolicy) SetProviderConfigReference(r *xpv1.Reference) {
+// SetProviderConfigReference of this TimeSeriesInsightsAccessPolicy.
+func (mg *TimeSeriesInsightsAccessPolicy) SetProviderConfigReference(r *xpv1.Reference) {
 	mg.Spec.ProviderConfigReference = r
 }
 
 /*
-SetProviderReference of this IotTimeSeriesInsightsAccessPolicy.
+SetProviderReference of this TimeSeriesInsightsAccessPolicy.
 Deprecated: Use SetProviderConfigReference.
 */
-func (mg *IotTimeSeriesInsightsAccessPolicy) SetProviderReference(r *xpv1.Reference) {
+func (mg *TimeSeriesInsightsAccessPolicy) SetProviderReference(r *xpv1.Reference) {
 	mg.Spec.ProviderReference = r
 }
 
-// SetWriteConnectionSecretToReference of this IotTimeSeriesInsightsAccessPolicy.
-func (mg *IotTimeSeriesInsightsAccessPolicy) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
+// SetWriteConnectionSecretToReference of this TimeSeriesInsightsAccessPolicy.
+func (mg *TimeSeriesInsightsAccessPolicy) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
 	mg.Spec.WriteConnectionSecretToReference = r
 }
 
-// GetCondition of this IotTimeSeriesInsightsEventSourceIothub.
-func (mg *IotTimeSeriesInsightsEventSourceIothub) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
+// GetCondition of this TimeSeriesInsightsEventSourceIothub.
+func (mg *TimeSeriesInsightsEventSourceIothub) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
 	return mg.Status.GetCondition(ct)
 }
 
-// GetDeletionPolicy of this IotTimeSeriesInsightsEventSourceIothub.
-func (mg *IotTimeSeriesInsightsEventSourceIothub) GetDeletionPolicy() xpv1.DeletionPolicy {
+// GetDeletionPolicy of this TimeSeriesInsightsEventSourceIothub.
+func (mg *TimeSeriesInsightsEventSourceIothub) GetDeletionPolicy() xpv1.DeletionPolicy {
 	return mg.Spec.DeletionPolicy
 }
 
-// GetProviderConfigReference of this IotTimeSeriesInsightsEventSourceIothub.
-func (mg *IotTimeSeriesInsightsEventSourceIothub) GetProviderConfigReference() *xpv1.Reference {
+// GetProviderConfigReference of this TimeSeriesInsightsEventSourceIothub.
+func (mg *TimeSeriesInsightsEventSourceIothub) GetProviderConfigReference() *xpv1.Reference {
 	return mg.Spec.ProviderConfigReference
 }
 
 /*
-GetProviderReference of this IotTimeSeriesInsightsEventSourceIothub.
+GetProviderReference of this TimeSeriesInsightsEventSourceIothub.
 Deprecated: Use GetProviderConfigReference.
 */
-func (mg *IotTimeSeriesInsightsEventSourceIothub) GetProviderReference() *xpv1.Reference {
+func (mg *TimeSeriesInsightsEventSourceIothub) GetProviderReference() *xpv1.Reference {
 	return mg.Spec.ProviderReference
 }
 
-// GetWriteConnectionSecretToReference of this IotTimeSeriesInsightsEventSourceIothub.
-func (mg *IotTimeSeriesInsightsEventSourceIothub) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
+// GetWriteConnectionSecretToReference of this TimeSeriesInsightsEventSourceIothub.
+func (mg *TimeSeriesInsightsEventSourceIothub) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
 	return mg.Spec.WriteConnectionSecretToReference
 }
 
-// SetConditions of this IotTimeSeriesInsightsEventSourceIothub.
-func (mg *IotTimeSeriesInsightsEventSourceIothub) SetConditions(c ...xpv1.Condition) {
+// SetConditions of this TimeSeriesInsightsEventSourceIothub.
+func (mg *TimeSeriesInsightsEventSourceIothub) SetConditions(c ...xpv1.Condition) {
 	mg.Status.SetConditions(c...)
 }
 
-// SetDeletionPolicy of this IotTimeSeriesInsightsEventSourceIothub.
-func (mg *IotTimeSeriesInsightsEventSourceIothub) SetDeletionPolicy(r xpv1.DeletionPolicy) {
+// SetDeletionPolicy of this TimeSeriesInsightsEventSourceIothub.
+func (mg *TimeSeriesInsightsEventSourceIothub) SetDeletionPolicy(r xpv1.DeletionPolicy) {
 	mg.Spec.DeletionPolicy = r
 }
 
-// SetProviderConfigReference of this IotTimeSeriesInsightsEventSourceIothub.
-func (mg *IotTimeSeriesInsightsEventSourceIothub) SetProviderConfigReference(r *xpv1.Reference) {
+// SetProviderConfigReference of this TimeSeriesInsightsEventSourceIothub.
+func (mg *TimeSeriesInsightsEventSourceIothub) SetProviderConfigReference(r *xpv1.Reference) {
 	mg.Spec.ProviderConfigReference = r
 }
 
 /*
-SetProviderReference of this IotTimeSeriesInsightsEventSourceIothub.
+SetProviderReference of this TimeSeriesInsightsEventSourceIothub.
 Deprecated: Use SetProviderConfigReference.
 */
-func (mg *IotTimeSeriesInsightsEventSourceIothub) SetProviderReference(r *xpv1.Reference) {
+func (mg *TimeSeriesInsightsEventSourceIothub) SetProviderReference(r *xpv1.Reference) {
 	mg.Spec.ProviderReference = r
 }
 
-// SetWriteConnectionSecretToReference of this IotTimeSeriesInsightsEventSourceIothub.
-func (mg *IotTimeSeriesInsightsEventSourceIothub) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
+// SetWriteConnectionSecretToReference of this TimeSeriesInsightsEventSourceIothub.
+func (mg *TimeSeriesInsightsEventSourceIothub) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
 	mg.Spec.WriteConnectionSecretToReference = r
 }
 
-// GetCondition of this IotTimeSeriesInsightsGen2Environment.
-func (mg *IotTimeSeriesInsightsGen2Environment) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
+// GetCondition of this TimeSeriesInsightsGen2Environment.
+func (mg *TimeSeriesInsightsGen2Environment) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
 	return mg.Status.GetCondition(ct)
 }
 
-// GetDeletionPolicy of this IotTimeSeriesInsightsGen2Environment.
-func (mg *IotTimeSeriesInsightsGen2Environment) GetDeletionPolicy() xpv1.DeletionPolicy {
+// GetDeletionPolicy of this TimeSeriesInsightsGen2Environment.
+func (mg *TimeSeriesInsightsGen2Environment) GetDeletionPolicy() xpv1.DeletionPolicy {
 	return mg.Spec.DeletionPolicy
 }
 
-// GetProviderConfigReference of this IotTimeSeriesInsightsGen2Environment.
-func (mg *IotTimeSeriesInsightsGen2Environment) GetProviderConfigReference() *xpv1.Reference {
+// GetProviderConfigReference of this TimeSeriesInsightsGen2Environment.
+func (mg *TimeSeriesInsightsGen2Environment) GetProviderConfigReference() *xpv1.Reference {
 	return mg.Spec.ProviderConfigReference
 }
 
 /*
-GetProviderReference of this IotTimeSeriesInsightsGen2Environment.
+GetProviderReference of this TimeSeriesInsightsGen2Environment.
 Deprecated: Use GetProviderConfigReference.
 */
-func (mg *IotTimeSeriesInsightsGen2Environment) GetProviderReference() *xpv1.Reference {
+func (mg *TimeSeriesInsightsGen2Environment) GetProviderReference() *xpv1.Reference {
 	return mg.Spec.ProviderReference
 }
 
-// GetWriteConnectionSecretToReference of this IotTimeSeriesInsightsGen2Environment.
-func (mg *IotTimeSeriesInsightsGen2Environment) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
+// GetWriteConnectionSecretToReference of this TimeSeriesInsightsGen2Environment.
+func (mg *TimeSeriesInsightsGen2Environment) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
 	return mg.Spec.WriteConnectionSecretToReference
 }
 
-// SetConditions of this IotTimeSeriesInsightsGen2Environment.
-func (mg *IotTimeSeriesInsightsGen2Environment) SetConditions(c ...xpv1.Condition) {
+// SetConditions of this TimeSeriesInsightsGen2Environment.
+func (mg *TimeSeriesInsightsGen2Environment) SetConditions(c ...xpv1.Condition) {
 	mg.Status.SetConditions(c...)
 }
 
-// SetDeletionPolicy of this IotTimeSeriesInsightsGen2Environment.
-func (mg *IotTimeSeriesInsightsGen2Environment) SetDeletionPolicy(r xpv1.DeletionPolicy) {
+// SetDeletionPolicy of this TimeSeriesInsightsGen2Environment.
+func (mg *TimeSeriesInsightsGen2Environment) SetDeletionPolicy(r xpv1.DeletionPolicy) {
 	mg.Spec.DeletionPolicy = r
 }
 
-// SetProviderConfigReference of this IotTimeSeriesInsightsGen2Environment.
-func (mg *IotTimeSeriesInsightsGen2Environment) SetProviderConfigReference(r *xpv1.Reference) {
+// SetProviderConfigReference of this TimeSeriesInsightsGen2Environment.
+func (mg *TimeSeriesInsightsGen2Environment) SetProviderConfigReference(r *xpv1.Reference) {
 	mg.Spec.ProviderConfigReference = r
 }
 
 /*
-SetProviderReference of this IotTimeSeriesInsightsGen2Environment.
+SetProviderReference of this TimeSeriesInsightsGen2Environment.
 Deprecated: Use SetProviderConfigReference.
 */
-func (mg *IotTimeSeriesInsightsGen2Environment) SetProviderReference(r *xpv1.Reference) {
+func (mg *TimeSeriesInsightsGen2Environment) SetProviderReference(r *xpv1.Reference) {
 	mg.Spec.ProviderReference = r
 }
 
-// SetWriteConnectionSecretToReference of this IotTimeSeriesInsightsGen2Environment.
-func (mg *IotTimeSeriesInsightsGen2Environment) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
+// SetWriteConnectionSecretToReference of this TimeSeriesInsightsGen2Environment.
+func (mg *TimeSeriesInsightsGen2Environment) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
 	mg.Spec.WriteConnectionSecretToReference = r
 }
 
-// GetCondition of this IotTimeSeriesInsightsReferenceDataSet.
-func (mg *IotTimeSeriesInsightsReferenceDataSet) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
+// GetCondition of this TimeSeriesInsightsReferenceDataSet.
+func (mg *TimeSeriesInsightsReferenceDataSet) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
 	return mg.Status.GetCondition(ct)
 }
 
-// GetDeletionPolicy of this IotTimeSeriesInsightsReferenceDataSet.
-func (mg *IotTimeSeriesInsightsReferenceDataSet) GetDeletionPolicy() xpv1.DeletionPolicy {
+// GetDeletionPolicy of this TimeSeriesInsightsReferenceDataSet.
+func (mg *TimeSeriesInsightsReferenceDataSet) GetDeletionPolicy() xpv1.DeletionPolicy {
 	return mg.Spec.DeletionPolicy
 }
 
-// GetProviderConfigReference of this IotTimeSeriesInsightsReferenceDataSet.
-func (mg *IotTimeSeriesInsightsReferenceDataSet) GetProviderConfigReference() *xpv1.Reference {
+// GetProviderConfigReference of this TimeSeriesInsightsReferenceDataSet.
+func (mg *TimeSeriesInsightsReferenceDataSet) GetProviderConfigReference() *xpv1.Reference {
 	return mg.Spec.ProviderConfigReference
 }
 
 /*
-GetProviderReference of this IotTimeSeriesInsightsReferenceDataSet.
+GetProviderReference of this TimeSeriesInsightsReferenceDataSet.
 Deprecated: Use GetProviderConfigReference.
 */
-func (mg *IotTimeSeriesInsightsReferenceDataSet) GetProviderReference() *xpv1.Reference {
+func (mg *TimeSeriesInsightsReferenceDataSet) GetProviderReference() *xpv1.Reference {
 	return mg.Spec.ProviderReference
 }
 
-// GetWriteConnectionSecretToReference of this IotTimeSeriesInsightsReferenceDataSet.
-func (mg *IotTimeSeriesInsightsReferenceDataSet) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
+// GetWriteConnectionSecretToReference of this TimeSeriesInsightsReferenceDataSet.
+func (mg *TimeSeriesInsightsReferenceDataSet) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
 	return mg.Spec.WriteConnectionSecretToReference
 }
 
-// SetConditions of this IotTimeSeriesInsightsReferenceDataSet.
-func (mg *IotTimeSeriesInsightsReferenceDataSet) SetConditions(c ...xpv1.Condition) {
+// SetConditions of this TimeSeriesInsightsReferenceDataSet.
+func (mg *TimeSeriesInsightsReferenceDataSet) SetConditions(c ...xpv1.Condition) {
 	mg.Status.SetConditions(c...)
 }
 
-// SetDeletionPolicy of this IotTimeSeriesInsightsReferenceDataSet.
-func (mg *IotTimeSeriesInsightsReferenceDataSet) SetDeletionPolicy(r xpv1.DeletionPolicy) {
+// SetDeletionPolicy of this TimeSeriesInsightsReferenceDataSet.
+func (mg *TimeSeriesInsightsReferenceDataSet) SetDeletionPolicy(r xpv1.DeletionPolicy) {
 	mg.Spec.DeletionPolicy = r
 }
 
-// SetProviderConfigReference of this IotTimeSeriesInsightsReferenceDataSet.
-func (mg *IotTimeSeriesInsightsReferenceDataSet) SetProviderConfigReference(r *xpv1.Reference) {
+// SetProviderConfigReference of this TimeSeriesInsightsReferenceDataSet.
+func (mg *TimeSeriesInsightsReferenceDataSet) SetProviderConfigReference(r *xpv1.Reference) {
 	mg.Spec.ProviderConfigReference = r
 }
 
 /*
-SetProviderReference of this IotTimeSeriesInsightsReferenceDataSet.
+SetProviderReference of this TimeSeriesInsightsReferenceDataSet.
 Deprecated: Use SetProviderConfigReference.
 */
-func (mg *IotTimeSeriesInsightsReferenceDataSet) SetProviderReference(r *xpv1.Reference) {
+func (mg *TimeSeriesInsightsReferenceDataSet) SetProviderReference(r *xpv1.Reference) {
 	mg.Spec.ProviderReference = r
 }
 
-// SetWriteConnectionSecretToReference of this IotTimeSeriesInsightsReferenceDataSet.
-func (mg *IotTimeSeriesInsightsReferenceDataSet) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
+// SetWriteConnectionSecretToReference of this TimeSeriesInsightsReferenceDataSet.
+func (mg *TimeSeriesInsightsReferenceDataSet) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
 	mg.Spec.WriteConnectionSecretToReference = r
 }
 
-// GetCondition of this IotTimeSeriesInsightsStandardEnvironment.
-func (mg *IotTimeSeriesInsightsStandardEnvironment) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
+// GetCondition of this TimeSeriesInsightsStandardEnvironment.
+func (mg *TimeSeriesInsightsStandardEnvironment) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
 	return mg.Status.GetCondition(ct)
 }
 
-// GetDeletionPolicy of this IotTimeSeriesInsightsStandardEnvironment.
-func (mg *IotTimeSeriesInsightsStandardEnvironment) GetDeletionPolicy() xpv1.DeletionPolicy {
+// GetDeletionPolicy of this TimeSeriesInsightsStandardEnvironment.
+func (mg *TimeSeriesInsightsStandardEnvironment) GetDeletionPolicy() xpv1.DeletionPolicy {
 	return mg.Spec.DeletionPolicy
 }
 
-// GetProviderConfigReference of this IotTimeSeriesInsightsStandardEnvironment.
-func (mg *IotTimeSeriesInsightsStandardEnvironment) GetProviderConfigReference() *xpv1.Reference {
+// GetProviderConfigReference of this TimeSeriesInsightsStandardEnvironment.
+func (mg *TimeSeriesInsightsStandardEnvironment) GetProviderConfigReference() *xpv1.Reference {
 	return mg.Spec.ProviderConfigReference
 }
 
 /*
-GetProviderReference of this IotTimeSeriesInsightsStandardEnvironment.
+GetProviderReference of this TimeSeriesInsightsStandardEnvironment.
 Deprecated: Use GetProviderConfigReference.
 */
-func (mg *IotTimeSeriesInsightsStandardEnvironment) GetProviderReference() *xpv1.Reference {
+func (mg *TimeSeriesInsightsStandardEnvironment) GetProviderReference() *xpv1.Reference {
 	return mg.Spec.ProviderReference
 }
 
-// GetWriteConnectionSecretToReference of this IotTimeSeriesInsightsStandardEnvironment.
-func (mg *IotTimeSeriesInsightsStandardEnvironment) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
+// GetWriteConnectionSecretToReference of this TimeSeriesInsightsStandardEnvironment.
+func (mg *TimeSeriesInsightsStandardEnvironment) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
 	return mg.Spec.WriteConnectionSecretToReference
 }
 
-// SetConditions of this IotTimeSeriesInsightsStandardEnvironment.
-func (mg *IotTimeSeriesInsightsStandardEnvironment) SetConditions(c ...xpv1.Condition) {
+// SetConditions of this TimeSeriesInsightsStandardEnvironment.
+func (mg *TimeSeriesInsightsStandardEnvironment) SetConditions(c ...xpv1.Condition) {
 	mg.Status.SetConditions(c...)
 }
 
-// SetDeletionPolicy of this IotTimeSeriesInsightsStandardEnvironment.
-func (mg *IotTimeSeriesInsightsStandardEnvironment) SetDeletionPolicy(r xpv1.DeletionPolicy) {
+// SetDeletionPolicy of this TimeSeriesInsightsStandardEnvironment.
+func (mg *TimeSeriesInsightsStandardEnvironment) SetDeletionPolicy(r xpv1.DeletionPolicy) {
 	mg.Spec.DeletionPolicy = r
 }
 
-// SetProviderConfigReference of this IotTimeSeriesInsightsStandardEnvironment.
-func (mg *IotTimeSeriesInsightsStandardEnvironment) SetProviderConfigReference(r *xpv1.Reference) {
+// SetProviderConfigReference of this TimeSeriesInsightsStandardEnvironment.
+func (mg *TimeSeriesInsightsStandardEnvironment) SetProviderConfigReference(r *xpv1.Reference) {
 	mg.Spec.ProviderConfigReference = r
 }
 
 /*
-SetProviderReference of this IotTimeSeriesInsightsStandardEnvironment.
+SetProviderReference of this TimeSeriesInsightsStandardEnvironment.
 Deprecated: Use SetProviderConfigReference.
 */
-func (mg *IotTimeSeriesInsightsStandardEnvironment) SetProviderReference(r *xpv1.Reference) {
+func (mg *TimeSeriesInsightsStandardEnvironment) SetProviderReference(r *xpv1.Reference) {
 	mg.Spec.ProviderReference = r
 }
 
-// SetWriteConnectionSecretToReference of this IotTimeSeriesInsightsStandardEnvironment.
-func (mg *IotTimeSeriesInsightsStandardEnvironment) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
+// SetWriteConnectionSecretToReference of this TimeSeriesInsightsStandardEnvironment.
+func (mg *TimeSeriesInsightsStandardEnvironment) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
 	mg.Spec.WriteConnectionSecretToReference = r
 }

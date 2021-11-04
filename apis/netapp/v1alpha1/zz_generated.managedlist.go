@@ -19,8 +19,8 @@ package v1alpha1
 
 import resource "github.com/crossplane/crossplane-runtime/pkg/resource"
 
-// GetItems of this NetappAccountList.
-func (l *NetappAccountList) GetItems() []resource.Managed {
+// GetItems of this AccountList.
+func (l *AccountList) GetItems() []resource.Managed {
 	items := make([]resource.Managed, len(l.Items))
 	for i := range l.Items {
 		items[i] = &l.Items[i]
@@ -28,8 +28,8 @@ func (l *NetappAccountList) GetItems() []resource.Managed {
 	return items
 }
 
-// GetItems of this NetappPoolList.
-func (l *NetappPoolList) GetItems() []resource.Managed {
+// GetItems of this PoolList.
+func (l *PoolList) GetItems() []resource.Managed {
 	items := make([]resource.Managed, len(l.Items))
 	for i := range l.Items {
 		items[i] = &l.Items[i]
@@ -37,8 +37,8 @@ func (l *NetappPoolList) GetItems() []resource.Managed {
 	return items
 }
 
-// GetItems of this NetappSnapshotList.
-func (l *NetappSnapshotList) GetItems() []resource.Managed {
+// GetItems of this SnapshotList.
+func (l *SnapshotList) GetItems() []resource.Managed {
 	items := make([]resource.Managed, len(l.Items))
 	for i := range l.Items {
 		items[i] = &l.Items[i]
@@ -46,8 +46,8 @@ func (l *NetappSnapshotList) GetItems() []resource.Managed {
 	return items
 }
 
-// GetItems of this NetappVolumeList.
-func (l *NetappVolumeList) GetItems() []resource.Managed {
+// GetItems of this VolumeList.
+func (l *VolumeList) GetItems() []resource.Managed {
 	items := make([]resource.Managed, len(l.Items))
 	for i := range l.Items {
 		items[i] = &l.Items[i]

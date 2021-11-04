@@ -19,8 +19,8 @@ package v1alpha1
 
 import resource "github.com/crossplane/crossplane-runtime/pkg/resource"
 
-// GetItems of this DatabricksWorkspaceCustomerManagedKeyList.
-func (l *DatabricksWorkspaceCustomerManagedKeyList) GetItems() []resource.Managed {
+// GetItems of this WorkspaceCustomerManagedKeyList.
+func (l *WorkspaceCustomerManagedKeyList) GetItems() []resource.Managed {
 	items := make([]resource.Managed, len(l.Items))
 	for i := range l.Items {
 		items[i] = &l.Items[i]
@@ -28,8 +28,8 @@ func (l *DatabricksWorkspaceCustomerManagedKeyList) GetItems() []resource.Manage
 	return items
 }
 
-// GetItems of this DatabricksWorkspaceList.
-func (l *DatabricksWorkspaceList) GetItems() []resource.Managed {
+// GetItems of this WorkspaceList.
+func (l *WorkspaceList) GetItems() []resource.Managed {
 	items := make([]resource.Managed, len(l.Items))
 	for i := range l.Items {
 		items[i] = &l.Items[i]

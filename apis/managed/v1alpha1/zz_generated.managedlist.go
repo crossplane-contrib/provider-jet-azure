@@ -19,8 +19,8 @@ package v1alpha1
 
 import resource "github.com/crossplane/crossplane-runtime/pkg/resource"
 
-// GetItems of this ManagedApplicationDefinitionList.
-func (l *ManagedApplicationDefinitionList) GetItems() []resource.Managed {
+// GetItems of this ApplicationDefinitionList.
+func (l *ApplicationDefinitionList) GetItems() []resource.Managed {
 	items := make([]resource.Managed, len(l.Items))
 	for i := range l.Items {
 		items[i] = &l.Items[i]
@@ -28,8 +28,8 @@ func (l *ManagedApplicationDefinitionList) GetItems() []resource.Managed {
 	return items
 }
 
-// GetItems of this ManagedApplicationList.
-func (l *ManagedApplicationList) GetItems() []resource.Managed {
+// GetItems of this ApplicationList.
+func (l *ApplicationList) GetItems() []resource.Managed {
 	items := make([]resource.Managed, len(l.Items))
 	for i := range l.Items {
 		items[i] = &l.Items[i]
@@ -37,8 +37,8 @@ func (l *ManagedApplicationList) GetItems() []resource.Managed {
 	return items
 }
 
-// GetItems of this ManagedDiskList.
-func (l *ManagedDiskList) GetItems() []resource.Managed {
+// GetItems of this DiskList.
+func (l *DiskList) GetItems() []resource.Managed {
 	items := make([]resource.Managed, len(l.Items))
 	for i := range l.Items {
 		items[i] = &l.Items[i]

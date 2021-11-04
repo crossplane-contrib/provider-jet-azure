@@ -19,170 +19,114 @@ package v1alpha1
 
 import xpv1 "github.com/crossplane/crossplane-runtime/apis/common/v1"
 
-// GetCondition of this Subscription.
-func (mg *Subscription) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
+// GetCondition of this PolicyAssignment.
+func (mg *PolicyAssignment) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
 	return mg.Status.GetCondition(ct)
 }
 
-// GetDeletionPolicy of this Subscription.
-func (mg *Subscription) GetDeletionPolicy() xpv1.DeletionPolicy {
+// GetDeletionPolicy of this PolicyAssignment.
+func (mg *PolicyAssignment) GetDeletionPolicy() xpv1.DeletionPolicy {
 	return mg.Spec.DeletionPolicy
 }
 
-// GetProviderConfigReference of this Subscription.
-func (mg *Subscription) GetProviderConfigReference() *xpv1.Reference {
+// GetProviderConfigReference of this PolicyAssignment.
+func (mg *PolicyAssignment) GetProviderConfigReference() *xpv1.Reference {
 	return mg.Spec.ProviderConfigReference
 }
 
 /*
-GetProviderReference of this Subscription.
+GetProviderReference of this PolicyAssignment.
 Deprecated: Use GetProviderConfigReference.
 */
-func (mg *Subscription) GetProviderReference() *xpv1.Reference {
+func (mg *PolicyAssignment) GetProviderReference() *xpv1.Reference {
 	return mg.Spec.ProviderReference
 }
 
-// GetWriteConnectionSecretToReference of this Subscription.
-func (mg *Subscription) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
+// GetWriteConnectionSecretToReference of this PolicyAssignment.
+func (mg *PolicyAssignment) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
 	return mg.Spec.WriteConnectionSecretToReference
 }
 
-// SetConditions of this Subscription.
-func (mg *Subscription) SetConditions(c ...xpv1.Condition) {
+// SetConditions of this PolicyAssignment.
+func (mg *PolicyAssignment) SetConditions(c ...xpv1.Condition) {
 	mg.Status.SetConditions(c...)
 }
 
-// SetDeletionPolicy of this Subscription.
-func (mg *Subscription) SetDeletionPolicy(r xpv1.DeletionPolicy) {
+// SetDeletionPolicy of this PolicyAssignment.
+func (mg *PolicyAssignment) SetDeletionPolicy(r xpv1.DeletionPolicy) {
 	mg.Spec.DeletionPolicy = r
 }
 
-// SetProviderConfigReference of this Subscription.
-func (mg *Subscription) SetProviderConfigReference(r *xpv1.Reference) {
+// SetProviderConfigReference of this PolicyAssignment.
+func (mg *PolicyAssignment) SetProviderConfigReference(r *xpv1.Reference) {
 	mg.Spec.ProviderConfigReference = r
 }
 
 /*
-SetProviderReference of this Subscription.
+SetProviderReference of this PolicyAssignment.
 Deprecated: Use SetProviderConfigReference.
 */
-func (mg *Subscription) SetProviderReference(r *xpv1.Reference) {
+func (mg *PolicyAssignment) SetProviderReference(r *xpv1.Reference) {
 	mg.Spec.ProviderReference = r
 }
 
-// SetWriteConnectionSecretToReference of this Subscription.
-func (mg *Subscription) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
+// SetWriteConnectionSecretToReference of this PolicyAssignment.
+func (mg *PolicyAssignment) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
 	mg.Spec.WriteConnectionSecretToReference = r
 }
 
-// GetCondition of this SubscriptionPolicyAssignment.
-func (mg *SubscriptionPolicyAssignment) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
+// GetCondition of this TemplateDeployment.
+func (mg *TemplateDeployment) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
 	return mg.Status.GetCondition(ct)
 }
 
-// GetDeletionPolicy of this SubscriptionPolicyAssignment.
-func (mg *SubscriptionPolicyAssignment) GetDeletionPolicy() xpv1.DeletionPolicy {
+// GetDeletionPolicy of this TemplateDeployment.
+func (mg *TemplateDeployment) GetDeletionPolicy() xpv1.DeletionPolicy {
 	return mg.Spec.DeletionPolicy
 }
 
-// GetProviderConfigReference of this SubscriptionPolicyAssignment.
-func (mg *SubscriptionPolicyAssignment) GetProviderConfigReference() *xpv1.Reference {
+// GetProviderConfigReference of this TemplateDeployment.
+func (mg *TemplateDeployment) GetProviderConfigReference() *xpv1.Reference {
 	return mg.Spec.ProviderConfigReference
 }
 
 /*
-GetProviderReference of this SubscriptionPolicyAssignment.
+GetProviderReference of this TemplateDeployment.
 Deprecated: Use GetProviderConfigReference.
 */
-func (mg *SubscriptionPolicyAssignment) GetProviderReference() *xpv1.Reference {
+func (mg *TemplateDeployment) GetProviderReference() *xpv1.Reference {
 	return mg.Spec.ProviderReference
 }
 
-// GetWriteConnectionSecretToReference of this SubscriptionPolicyAssignment.
-func (mg *SubscriptionPolicyAssignment) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
+// GetWriteConnectionSecretToReference of this TemplateDeployment.
+func (mg *TemplateDeployment) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
 	return mg.Spec.WriteConnectionSecretToReference
 }
 
-// SetConditions of this SubscriptionPolicyAssignment.
-func (mg *SubscriptionPolicyAssignment) SetConditions(c ...xpv1.Condition) {
+// SetConditions of this TemplateDeployment.
+func (mg *TemplateDeployment) SetConditions(c ...xpv1.Condition) {
 	mg.Status.SetConditions(c...)
 }
 
-// SetDeletionPolicy of this SubscriptionPolicyAssignment.
-func (mg *SubscriptionPolicyAssignment) SetDeletionPolicy(r xpv1.DeletionPolicy) {
+// SetDeletionPolicy of this TemplateDeployment.
+func (mg *TemplateDeployment) SetDeletionPolicy(r xpv1.DeletionPolicy) {
 	mg.Spec.DeletionPolicy = r
 }
 
-// SetProviderConfigReference of this SubscriptionPolicyAssignment.
-func (mg *SubscriptionPolicyAssignment) SetProviderConfigReference(r *xpv1.Reference) {
+// SetProviderConfigReference of this TemplateDeployment.
+func (mg *TemplateDeployment) SetProviderConfigReference(r *xpv1.Reference) {
 	mg.Spec.ProviderConfigReference = r
 }
 
 /*
-SetProviderReference of this SubscriptionPolicyAssignment.
+SetProviderReference of this TemplateDeployment.
 Deprecated: Use SetProviderConfigReference.
 */
-func (mg *SubscriptionPolicyAssignment) SetProviderReference(r *xpv1.Reference) {
+func (mg *TemplateDeployment) SetProviderReference(r *xpv1.Reference) {
 	mg.Spec.ProviderReference = r
 }
 
-// SetWriteConnectionSecretToReference of this SubscriptionPolicyAssignment.
-func (mg *SubscriptionPolicyAssignment) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
-	mg.Spec.WriteConnectionSecretToReference = r
-}
-
-// GetCondition of this SubscriptionTemplateDeployment.
-func (mg *SubscriptionTemplateDeployment) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
-	return mg.Status.GetCondition(ct)
-}
-
-// GetDeletionPolicy of this SubscriptionTemplateDeployment.
-func (mg *SubscriptionTemplateDeployment) GetDeletionPolicy() xpv1.DeletionPolicy {
-	return mg.Spec.DeletionPolicy
-}
-
-// GetProviderConfigReference of this SubscriptionTemplateDeployment.
-func (mg *SubscriptionTemplateDeployment) GetProviderConfigReference() *xpv1.Reference {
-	return mg.Spec.ProviderConfigReference
-}
-
-/*
-GetProviderReference of this SubscriptionTemplateDeployment.
-Deprecated: Use GetProviderConfigReference.
-*/
-func (mg *SubscriptionTemplateDeployment) GetProviderReference() *xpv1.Reference {
-	return mg.Spec.ProviderReference
-}
-
-// GetWriteConnectionSecretToReference of this SubscriptionTemplateDeployment.
-func (mg *SubscriptionTemplateDeployment) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
-	return mg.Spec.WriteConnectionSecretToReference
-}
-
-// SetConditions of this SubscriptionTemplateDeployment.
-func (mg *SubscriptionTemplateDeployment) SetConditions(c ...xpv1.Condition) {
-	mg.Status.SetConditions(c...)
-}
-
-// SetDeletionPolicy of this SubscriptionTemplateDeployment.
-func (mg *SubscriptionTemplateDeployment) SetDeletionPolicy(r xpv1.DeletionPolicy) {
-	mg.Spec.DeletionPolicy = r
-}
-
-// SetProviderConfigReference of this SubscriptionTemplateDeployment.
-func (mg *SubscriptionTemplateDeployment) SetProviderConfigReference(r *xpv1.Reference) {
-	mg.Spec.ProviderConfigReference = r
-}
-
-/*
-SetProviderReference of this SubscriptionTemplateDeployment.
-Deprecated: Use SetProviderConfigReference.
-*/
-func (mg *SubscriptionTemplateDeployment) SetProviderReference(r *xpv1.Reference) {
-	mg.Spec.ProviderReference = r
-}
-
-// SetWriteConnectionSecretToReference of this SubscriptionTemplateDeployment.
-func (mg *SubscriptionTemplateDeployment) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
+// SetWriteConnectionSecretToReference of this TemplateDeployment.
+func (mg *TemplateDeployment) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
 	mg.Spec.WriteConnectionSecretToReference = r
 }

@@ -19,8 +19,8 @@ package v1alpha1
 
 import resource "github.com/crossplane/crossplane-runtime/pkg/resource"
 
-// GetItems of this ApiManagementApiDiagnosticList.
-func (l *ApiManagementApiDiagnosticList) GetItems() []resource.Managed {
+// GetItems of this ManagementApiDiagnosticList.
+func (l *ManagementApiDiagnosticList) GetItems() []resource.Managed {
 	items := make([]resource.Managed, len(l.Items))
 	for i := range l.Items {
 		items[i] = &l.Items[i]
@@ -28,8 +28,8 @@ func (l *ApiManagementApiDiagnosticList) GetItems() []resource.Managed {
 	return items
 }
 
-// GetItems of this ApiManagementApiList.
-func (l *ApiManagementApiList) GetItems() []resource.Managed {
+// GetItems of this ManagementApiList.
+func (l *ManagementApiList) GetItems() []resource.Managed {
 	items := make([]resource.Managed, len(l.Items))
 	for i := range l.Items {
 		items[i] = &l.Items[i]
@@ -37,8 +37,8 @@ func (l *ApiManagementApiList) GetItems() []resource.Managed {
 	return items
 }
 
-// GetItems of this ApiManagementApiOperationList.
-func (l *ApiManagementApiOperationList) GetItems() []resource.Managed {
+// GetItems of this ManagementApiOperationList.
+func (l *ManagementApiOperationList) GetItems() []resource.Managed {
 	items := make([]resource.Managed, len(l.Items))
 	for i := range l.Items {
 		items[i] = &l.Items[i]
@@ -46,8 +46,8 @@ func (l *ApiManagementApiOperationList) GetItems() []resource.Managed {
 	return items
 }
 
-// GetItems of this ApiManagementApiOperationPolicyList.
-func (l *ApiManagementApiOperationPolicyList) GetItems() []resource.Managed {
+// GetItems of this ManagementApiOperationPolicyList.
+func (l *ManagementApiOperationPolicyList) GetItems() []resource.Managed {
 	items := make([]resource.Managed, len(l.Items))
 	for i := range l.Items {
 		items[i] = &l.Items[i]
@@ -55,8 +55,8 @@ func (l *ApiManagementApiOperationPolicyList) GetItems() []resource.Managed {
 	return items
 }
 
-// GetItems of this ApiManagementApiOperationTagList.
-func (l *ApiManagementApiOperationTagList) GetItems() []resource.Managed {
+// GetItems of this ManagementApiOperationTagList.
+func (l *ManagementApiOperationTagList) GetItems() []resource.Managed {
 	items := make([]resource.Managed, len(l.Items))
 	for i := range l.Items {
 		items[i] = &l.Items[i]
@@ -64,8 +64,8 @@ func (l *ApiManagementApiOperationTagList) GetItems() []resource.Managed {
 	return items
 }
 
-// GetItems of this ApiManagementApiPolicyList.
-func (l *ApiManagementApiPolicyList) GetItems() []resource.Managed {
+// GetItems of this ManagementApiPolicyList.
+func (l *ManagementApiPolicyList) GetItems() []resource.Managed {
 	items := make([]resource.Managed, len(l.Items))
 	for i := range l.Items {
 		items[i] = &l.Items[i]
@@ -73,8 +73,8 @@ func (l *ApiManagementApiPolicyList) GetItems() []resource.Managed {
 	return items
 }
 
-// GetItems of this ApiManagementApiReleaseList.
-func (l *ApiManagementApiReleaseList) GetItems() []resource.Managed {
+// GetItems of this ManagementApiReleaseList.
+func (l *ManagementApiReleaseList) GetItems() []resource.Managed {
 	items := make([]resource.Managed, len(l.Items))
 	for i := range l.Items {
 		items[i] = &l.Items[i]
@@ -82,8 +82,8 @@ func (l *ApiManagementApiReleaseList) GetItems() []resource.Managed {
 	return items
 }
 
-// GetItems of this ApiManagementApiSchemaList.
-func (l *ApiManagementApiSchemaList) GetItems() []resource.Managed {
+// GetItems of this ManagementApiSchemaList.
+func (l *ManagementApiSchemaList) GetItems() []resource.Managed {
 	items := make([]resource.Managed, len(l.Items))
 	for i := range l.Items {
 		items[i] = &l.Items[i]
@@ -91,8 +91,8 @@ func (l *ApiManagementApiSchemaList) GetItems() []resource.Managed {
 	return items
 }
 
-// GetItems of this ApiManagementApiVersionSetList.
-func (l *ApiManagementApiVersionSetList) GetItems() []resource.Managed {
+// GetItems of this ManagementApiVersionSetList.
+func (l *ManagementApiVersionSetList) GetItems() []resource.Managed {
 	items := make([]resource.Managed, len(l.Items))
 	for i := range l.Items {
 		items[i] = &l.Items[i]
@@ -100,8 +100,8 @@ func (l *ApiManagementApiVersionSetList) GetItems() []resource.Managed {
 	return items
 }
 
-// GetItems of this ApiManagementAuthorizationServerList.
-func (l *ApiManagementAuthorizationServerList) GetItems() []resource.Managed {
+// GetItems of this ManagementAuthorizationServerList.
+func (l *ManagementAuthorizationServerList) GetItems() []resource.Managed {
 	items := make([]resource.Managed, len(l.Items))
 	for i := range l.Items {
 		items[i] = &l.Items[i]
@@ -109,8 +109,8 @@ func (l *ApiManagementAuthorizationServerList) GetItems() []resource.Managed {
 	return items
 }
 
-// GetItems of this ApiManagementBackendList.
-func (l *ApiManagementBackendList) GetItems() []resource.Managed {
+// GetItems of this ManagementBackendList.
+func (l *ManagementBackendList) GetItems() []resource.Managed {
 	items := make([]resource.Managed, len(l.Items))
 	for i := range l.Items {
 		items[i] = &l.Items[i]
@@ -118,8 +118,8 @@ func (l *ApiManagementBackendList) GetItems() []resource.Managed {
 	return items
 }
 
-// GetItems of this ApiManagementCertificateList.
-func (l *ApiManagementCertificateList) GetItems() []resource.Managed {
+// GetItems of this ManagementCertificateList.
+func (l *ManagementCertificateList) GetItems() []resource.Managed {
 	items := make([]resource.Managed, len(l.Items))
 	for i := range l.Items {
 		items[i] = &l.Items[i]
@@ -127,8 +127,8 @@ func (l *ApiManagementCertificateList) GetItems() []resource.Managed {
 	return items
 }
 
-// GetItems of this ApiManagementCustomDomainList.
-func (l *ApiManagementCustomDomainList) GetItems() []resource.Managed {
+// GetItems of this ManagementCustomDomainList.
+func (l *ManagementCustomDomainList) GetItems() []resource.Managed {
 	items := make([]resource.Managed, len(l.Items))
 	for i := range l.Items {
 		items[i] = &l.Items[i]
@@ -136,8 +136,8 @@ func (l *ApiManagementCustomDomainList) GetItems() []resource.Managed {
 	return items
 }
 
-// GetItems of this ApiManagementDiagnosticList.
-func (l *ApiManagementDiagnosticList) GetItems() []resource.Managed {
+// GetItems of this ManagementDiagnosticList.
+func (l *ManagementDiagnosticList) GetItems() []resource.Managed {
 	items := make([]resource.Managed, len(l.Items))
 	for i := range l.Items {
 		items[i] = &l.Items[i]
@@ -145,8 +145,8 @@ func (l *ApiManagementDiagnosticList) GetItems() []resource.Managed {
 	return items
 }
 
-// GetItems of this ApiManagementEmailTemplateList.
-func (l *ApiManagementEmailTemplateList) GetItems() []resource.Managed {
+// GetItems of this ManagementEmailTemplateList.
+func (l *ManagementEmailTemplateList) GetItems() []resource.Managed {
 	items := make([]resource.Managed, len(l.Items))
 	for i := range l.Items {
 		items[i] = &l.Items[i]
@@ -154,8 +154,8 @@ func (l *ApiManagementEmailTemplateList) GetItems() []resource.Managed {
 	return items
 }
 
-// GetItems of this ApiManagementGatewayApiList.
-func (l *ApiManagementGatewayApiList) GetItems() []resource.Managed {
+// GetItems of this ManagementGatewayApiList.
+func (l *ManagementGatewayApiList) GetItems() []resource.Managed {
 	items := make([]resource.Managed, len(l.Items))
 	for i := range l.Items {
 		items[i] = &l.Items[i]
@@ -163,8 +163,8 @@ func (l *ApiManagementGatewayApiList) GetItems() []resource.Managed {
 	return items
 }
 
-// GetItems of this ApiManagementGatewayList.
-func (l *ApiManagementGatewayList) GetItems() []resource.Managed {
+// GetItems of this ManagementGatewayList.
+func (l *ManagementGatewayList) GetItems() []resource.Managed {
 	items := make([]resource.Managed, len(l.Items))
 	for i := range l.Items {
 		items[i] = &l.Items[i]
@@ -172,8 +172,8 @@ func (l *ApiManagementGatewayList) GetItems() []resource.Managed {
 	return items
 }
 
-// GetItems of this ApiManagementGroupUserList.
-func (l *ApiManagementGroupUserList) GetItems() []resource.Managed {
+// GetItems of this ManagementIdentityProviderAadList.
+func (l *ManagementIdentityProviderAadList) GetItems() []resource.Managed {
 	items := make([]resource.Managed, len(l.Items))
 	for i := range l.Items {
 		items[i] = &l.Items[i]
@@ -181,8 +181,8 @@ func (l *ApiManagementGroupUserList) GetItems() []resource.Managed {
 	return items
 }
 
-// GetItems of this ApiManagementIdentityProviderAadList.
-func (l *ApiManagementIdentityProviderAadList) GetItems() []resource.Managed {
+// GetItems of this ManagementIdentityProviderAadb2CList.
+func (l *ManagementIdentityProviderAadb2CList) GetItems() []resource.Managed {
 	items := make([]resource.Managed, len(l.Items))
 	for i := range l.Items {
 		items[i] = &l.Items[i]
@@ -190,8 +190,8 @@ func (l *ApiManagementIdentityProviderAadList) GetItems() []resource.Managed {
 	return items
 }
 
-// GetItems of this ApiManagementIdentityProviderAadb2CList.
-func (l *ApiManagementIdentityProviderAadb2CList) GetItems() []resource.Managed {
+// GetItems of this ManagementIdentityProviderFacebookList.
+func (l *ManagementIdentityProviderFacebookList) GetItems() []resource.Managed {
 	items := make([]resource.Managed, len(l.Items))
 	for i := range l.Items {
 		items[i] = &l.Items[i]
@@ -199,8 +199,8 @@ func (l *ApiManagementIdentityProviderAadb2CList) GetItems() []resource.Managed 
 	return items
 }
 
-// GetItems of this ApiManagementIdentityProviderFacebookList.
-func (l *ApiManagementIdentityProviderFacebookList) GetItems() []resource.Managed {
+// GetItems of this ManagementIdentityProviderGoogleList.
+func (l *ManagementIdentityProviderGoogleList) GetItems() []resource.Managed {
 	items := make([]resource.Managed, len(l.Items))
 	for i := range l.Items {
 		items[i] = &l.Items[i]
@@ -208,8 +208,8 @@ func (l *ApiManagementIdentityProviderFacebookList) GetItems() []resource.Manage
 	return items
 }
 
-// GetItems of this ApiManagementIdentityProviderGoogleList.
-func (l *ApiManagementIdentityProviderGoogleList) GetItems() []resource.Managed {
+// GetItems of this ManagementIdentityProviderMicrosoftList.
+func (l *ManagementIdentityProviderMicrosoftList) GetItems() []resource.Managed {
 	items := make([]resource.Managed, len(l.Items))
 	for i := range l.Items {
 		items[i] = &l.Items[i]
@@ -217,8 +217,8 @@ func (l *ApiManagementIdentityProviderGoogleList) GetItems() []resource.Managed 
 	return items
 }
 
-// GetItems of this ApiManagementIdentityProviderMicrosoftList.
-func (l *ApiManagementIdentityProviderMicrosoftList) GetItems() []resource.Managed {
+// GetItems of this ManagementIdentityProviderTwitterList.
+func (l *ManagementIdentityProviderTwitterList) GetItems() []resource.Managed {
 	items := make([]resource.Managed, len(l.Items))
 	for i := range l.Items {
 		items[i] = &l.Items[i]
@@ -226,8 +226,8 @@ func (l *ApiManagementIdentityProviderMicrosoftList) GetItems() []resource.Manag
 	return items
 }
 
-// GetItems of this ApiManagementIdentityProviderTwitterList.
-func (l *ApiManagementIdentityProviderTwitterList) GetItems() []resource.Managed {
+// GetItems of this ManagementList.
+func (l *ManagementList) GetItems() []resource.Managed {
 	items := make([]resource.Managed, len(l.Items))
 	for i := range l.Items {
 		items[i] = &l.Items[i]
@@ -235,8 +235,8 @@ func (l *ApiManagementIdentityProviderTwitterList) GetItems() []resource.Managed
 	return items
 }
 
-// GetItems of this ApiManagementList.
-func (l *ApiManagementList) GetItems() []resource.Managed {
+// GetItems of this ManagementLoggerList.
+func (l *ManagementLoggerList) GetItems() []resource.Managed {
 	items := make([]resource.Managed, len(l.Items))
 	for i := range l.Items {
 		items[i] = &l.Items[i]
@@ -244,8 +244,8 @@ func (l *ApiManagementList) GetItems() []resource.Managed {
 	return items
 }
 
-// GetItems of this ApiManagementLoggerList.
-func (l *ApiManagementLoggerList) GetItems() []resource.Managed {
+// GetItems of this ManagementNamedValueList.
+func (l *ManagementNamedValueList) GetItems() []resource.Managed {
 	items := make([]resource.Managed, len(l.Items))
 	for i := range l.Items {
 		items[i] = &l.Items[i]
@@ -253,8 +253,8 @@ func (l *ApiManagementLoggerList) GetItems() []resource.Managed {
 	return items
 }
 
-// GetItems of this ApiManagementNamedValueList.
-func (l *ApiManagementNamedValueList) GetItems() []resource.Managed {
+// GetItems of this ManagementNotificationRecipientEmailList.
+func (l *ManagementNotificationRecipientEmailList) GetItems() []resource.Managed {
 	items := make([]resource.Managed, len(l.Items))
 	for i := range l.Items {
 		items[i] = &l.Items[i]
@@ -262,8 +262,8 @@ func (l *ApiManagementNamedValueList) GetItems() []resource.Managed {
 	return items
 }
 
-// GetItems of this ApiManagementNotificationRecipientEmailList.
-func (l *ApiManagementNotificationRecipientEmailList) GetItems() []resource.Managed {
+// GetItems of this ManagementOpenidConnectProviderList.
+func (l *ManagementOpenidConnectProviderList) GetItems() []resource.Managed {
 	items := make([]resource.Managed, len(l.Items))
 	for i := range l.Items {
 		items[i] = &l.Items[i]
@@ -271,8 +271,8 @@ func (l *ApiManagementNotificationRecipientEmailList) GetItems() []resource.Mana
 	return items
 }
 
-// GetItems of this ApiManagementOpenidConnectProviderList.
-func (l *ApiManagementOpenidConnectProviderList) GetItems() []resource.Managed {
+// GetItems of this ManagementPolicyList.
+func (l *ManagementPolicyList) GetItems() []resource.Managed {
 	items := make([]resource.Managed, len(l.Items))
 	for i := range l.Items {
 		items[i] = &l.Items[i]
@@ -280,8 +280,8 @@ func (l *ApiManagementOpenidConnectProviderList) GetItems() []resource.Managed {
 	return items
 }
 
-// GetItems of this ApiManagementPolicyList.
-func (l *ApiManagementPolicyList) GetItems() []resource.Managed {
+// GetItems of this ManagementProductApiList.
+func (l *ManagementProductApiList) GetItems() []resource.Managed {
 	items := make([]resource.Managed, len(l.Items))
 	for i := range l.Items {
 		items[i] = &l.Items[i]
@@ -289,8 +289,8 @@ func (l *ApiManagementPolicyList) GetItems() []resource.Managed {
 	return items
 }
 
-// GetItems of this ApiManagementProductApiList.
-func (l *ApiManagementProductApiList) GetItems() []resource.Managed {
+// GetItems of this ManagementProductList.
+func (l *ManagementProductList) GetItems() []resource.Managed {
 	items := make([]resource.Managed, len(l.Items))
 	for i := range l.Items {
 		items[i] = &l.Items[i]
@@ -298,8 +298,8 @@ func (l *ApiManagementProductApiList) GetItems() []resource.Managed {
 	return items
 }
 
-// GetItems of this ApiManagementProductList.
-func (l *ApiManagementProductList) GetItems() []resource.Managed {
+// GetItems of this ManagementProductPolicyList.
+func (l *ManagementProductPolicyList) GetItems() []resource.Managed {
 	items := make([]resource.Managed, len(l.Items))
 	for i := range l.Items {
 		items[i] = &l.Items[i]
@@ -307,8 +307,8 @@ func (l *ApiManagementProductList) GetItems() []resource.Managed {
 	return items
 }
 
-// GetItems of this ApiManagementProductPolicyList.
-func (l *ApiManagementProductPolicyList) GetItems() []resource.Managed {
+// GetItems of this ManagementPropertyList.
+func (l *ManagementPropertyList) GetItems() []resource.Managed {
 	items := make([]resource.Managed, len(l.Items))
 	for i := range l.Items {
 		items[i] = &l.Items[i]
@@ -316,8 +316,8 @@ func (l *ApiManagementProductPolicyList) GetItems() []resource.Managed {
 	return items
 }
 
-// GetItems of this ApiManagementPropertyList.
-func (l *ApiManagementPropertyList) GetItems() []resource.Managed {
+// GetItems of this ManagementRedisCacheList.
+func (l *ManagementRedisCacheList) GetItems() []resource.Managed {
 	items := make([]resource.Managed, len(l.Items))
 	for i := range l.Items {
 		items[i] = &l.Items[i]
@@ -325,8 +325,8 @@ func (l *ApiManagementPropertyList) GetItems() []resource.Managed {
 	return items
 }
 
-// GetItems of this ApiManagementRedisCacheList.
-func (l *ApiManagementRedisCacheList) GetItems() []resource.Managed {
+// GetItems of this ManagementSubscriptionList.
+func (l *ManagementSubscriptionList) GetItems() []resource.Managed {
 	items := make([]resource.Managed, len(l.Items))
 	for i := range l.Items {
 		items[i] = &l.Items[i]
@@ -334,8 +334,8 @@ func (l *ApiManagementRedisCacheList) GetItems() []resource.Managed {
 	return items
 }
 
-// GetItems of this ApiManagementSubscriptionList.
-func (l *ApiManagementSubscriptionList) GetItems() []resource.Managed {
+// GetItems of this ManagementTagList.
+func (l *ManagementTagList) GetItems() []resource.Managed {
 	items := make([]resource.Managed, len(l.Items))
 	for i := range l.Items {
 		items[i] = &l.Items[i]
@@ -343,17 +343,8 @@ func (l *ApiManagementSubscriptionList) GetItems() []resource.Managed {
 	return items
 }
 
-// GetItems of this ApiManagementTagList.
-func (l *ApiManagementTagList) GetItems() []resource.Managed {
-	items := make([]resource.Managed, len(l.Items))
-	for i := range l.Items {
-		items[i] = &l.Items[i]
-	}
-	return items
-}
-
-// GetItems of this ApiManagementUserList.
-func (l *ApiManagementUserList) GetItems() []resource.Managed {
+// GetItems of this ManagementUserList.
+func (l *ManagementUserList) GetItems() []resource.Managed {
 	items := make([]resource.Managed, len(l.Items))
 	for i := range l.Items {
 		items[i] = &l.Items[i]

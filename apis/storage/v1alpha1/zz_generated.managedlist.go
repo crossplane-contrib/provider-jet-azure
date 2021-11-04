@@ -19,8 +19,8 @@ package v1alpha1
 
 import resource "github.com/crossplane/crossplane-runtime/pkg/resource"
 
-// GetItems of this StorageAccountCustomerManagedKeyList.
-func (l *StorageAccountCustomerManagedKeyList) GetItems() []resource.Managed {
+// GetItems of this AccountCustomerManagedKeyList.
+func (l *AccountCustomerManagedKeyList) GetItems() []resource.Managed {
 	items := make([]resource.Managed, len(l.Items))
 	for i := range l.Items {
 		items[i] = &l.Items[i]
@@ -28,8 +28,8 @@ func (l *StorageAccountCustomerManagedKeyList) GetItems() []resource.Managed {
 	return items
 }
 
-// GetItems of this StorageAccountList.
-func (l *StorageAccountList) GetItems() []resource.Managed {
+// GetItems of this AccountList.
+func (l *AccountList) GetItems() []resource.Managed {
 	items := make([]resource.Managed, len(l.Items))
 	for i := range l.Items {
 		items[i] = &l.Items[i]
@@ -37,8 +37,8 @@ func (l *StorageAccountList) GetItems() []resource.Managed {
 	return items
 }
 
-// GetItems of this StorageAccountNetworkRulesList.
-func (l *StorageAccountNetworkRulesList) GetItems() []resource.Managed {
+// GetItems of this AccountNetworkRulesList.
+func (l *AccountNetworkRulesList) GetItems() []resource.Managed {
 	items := make([]resource.Managed, len(l.Items))
 	for i := range l.Items {
 		items[i] = &l.Items[i]
@@ -46,8 +46,8 @@ func (l *StorageAccountNetworkRulesList) GetItems() []resource.Managed {
 	return items
 }
 
-// GetItems of this StorageBlobInventoryPolicyList.
-func (l *StorageBlobInventoryPolicyList) GetItems() []resource.Managed {
+// GetItems of this BlobInventoryPolicyList.
+func (l *BlobInventoryPolicyList) GetItems() []resource.Managed {
 	items := make([]resource.Managed, len(l.Items))
 	for i := range l.Items {
 		items[i] = &l.Items[i]
@@ -55,8 +55,8 @@ func (l *StorageBlobInventoryPolicyList) GetItems() []resource.Managed {
 	return items
 }
 
-// GetItems of this StorageBlobList.
-func (l *StorageBlobList) GetItems() []resource.Managed {
+// GetItems of this BlobList.
+func (l *BlobList) GetItems() []resource.Managed {
 	items := make([]resource.Managed, len(l.Items))
 	for i := range l.Items {
 		items[i] = &l.Items[i]
@@ -64,8 +64,8 @@ func (l *StorageBlobList) GetItems() []resource.Managed {
 	return items
 }
 
-// GetItems of this StorageContainerList.
-func (l *StorageContainerList) GetItems() []resource.Managed {
+// GetItems of this ContainerList.
+func (l *ContainerList) GetItems() []resource.Managed {
 	items := make([]resource.Managed, len(l.Items))
 	for i := range l.Items {
 		items[i] = &l.Items[i]
@@ -73,8 +73,8 @@ func (l *StorageContainerList) GetItems() []resource.Managed {
 	return items
 }
 
-// GetItems of this StorageDataLakeGen2FilesystemList.
-func (l *StorageDataLakeGen2FilesystemList) GetItems() []resource.Managed {
+// GetItems of this DataLakeGen2FilesystemList.
+func (l *DataLakeGen2FilesystemList) GetItems() []resource.Managed {
 	items := make([]resource.Managed, len(l.Items))
 	for i := range l.Items {
 		items[i] = &l.Items[i]
@@ -82,8 +82,8 @@ func (l *StorageDataLakeGen2FilesystemList) GetItems() []resource.Managed {
 	return items
 }
 
-// GetItems of this StorageDataLakeGen2PathList.
-func (l *StorageDataLakeGen2PathList) GetItems() []resource.Managed {
+// GetItems of this DataLakeGen2PathList.
+func (l *DataLakeGen2PathList) GetItems() []resource.Managed {
 	items := make([]resource.Managed, len(l.Items))
 	for i := range l.Items {
 		items[i] = &l.Items[i]
@@ -91,8 +91,8 @@ func (l *StorageDataLakeGen2PathList) GetItems() []resource.Managed {
 	return items
 }
 
-// GetItems of this StorageEncryptionScopeList.
-func (l *StorageEncryptionScopeList) GetItems() []resource.Managed {
+// GetItems of this EncryptionScopeList.
+func (l *EncryptionScopeList) GetItems() []resource.Managed {
 	items := make([]resource.Managed, len(l.Items))
 	for i := range l.Items {
 		items[i] = &l.Items[i]
@@ -100,8 +100,8 @@ func (l *StorageEncryptionScopeList) GetItems() []resource.Managed {
 	return items
 }
 
-// GetItems of this StorageManagementPolicyList.
-func (l *StorageManagementPolicyList) GetItems() []resource.Managed {
+// GetItems of this ManagementPolicyList.
+func (l *ManagementPolicyList) GetItems() []resource.Managed {
 	items := make([]resource.Managed, len(l.Items))
 	for i := range l.Items {
 		items[i] = &l.Items[i]
@@ -109,8 +109,8 @@ func (l *StorageManagementPolicyList) GetItems() []resource.Managed {
 	return items
 }
 
-// GetItems of this StorageObjectReplicationList.
-func (l *StorageObjectReplicationList) GetItems() []resource.Managed {
+// GetItems of this ObjectReplicationList.
+func (l *ObjectReplicationList) GetItems() []resource.Managed {
 	items := make([]resource.Managed, len(l.Items))
 	for i := range l.Items {
 		items[i] = &l.Items[i]
@@ -118,8 +118,8 @@ func (l *StorageObjectReplicationList) GetItems() []resource.Managed {
 	return items
 }
 
-// GetItems of this StorageQueueList.
-func (l *StorageQueueList) GetItems() []resource.Managed {
+// GetItems of this QueueList.
+func (l *QueueList) GetItems() []resource.Managed {
 	items := make([]resource.Managed, len(l.Items))
 	for i := range l.Items {
 		items[i] = &l.Items[i]
@@ -127,8 +127,8 @@ func (l *StorageQueueList) GetItems() []resource.Managed {
 	return items
 }
 
-// GetItems of this StorageShareDirectoryList.
-func (l *StorageShareDirectoryList) GetItems() []resource.Managed {
+// GetItems of this ShareDirectoryList.
+func (l *ShareDirectoryList) GetItems() []resource.Managed {
 	items := make([]resource.Managed, len(l.Items))
 	for i := range l.Items {
 		items[i] = &l.Items[i]
@@ -136,8 +136,8 @@ func (l *StorageShareDirectoryList) GetItems() []resource.Managed {
 	return items
 }
 
-// GetItems of this StorageShareList.
-func (l *StorageShareList) GetItems() []resource.Managed {
+// GetItems of this ShareList.
+func (l *ShareList) GetItems() []resource.Managed {
 	items := make([]resource.Managed, len(l.Items))
 	for i := range l.Items {
 		items[i] = &l.Items[i]
@@ -145,8 +145,8 @@ func (l *StorageShareList) GetItems() []resource.Managed {
 	return items
 }
 
-// GetItems of this StorageSyncCloudEndpointList.
-func (l *StorageSyncCloudEndpointList) GetItems() []resource.Managed {
+// GetItems of this SyncCloudEndpointList.
+func (l *SyncCloudEndpointList) GetItems() []resource.Managed {
 	items := make([]resource.Managed, len(l.Items))
 	for i := range l.Items {
 		items[i] = &l.Items[i]
@@ -154,8 +154,8 @@ func (l *StorageSyncCloudEndpointList) GetItems() []resource.Managed {
 	return items
 }
 
-// GetItems of this StorageSyncList.
-func (l *StorageSyncList) GetItems() []resource.Managed {
+// GetItems of this SyncList.
+func (l *SyncList) GetItems() []resource.Managed {
 	items := make([]resource.Managed, len(l.Items))
 	for i := range l.Items {
 		items[i] = &l.Items[i]
@@ -163,8 +163,8 @@ func (l *StorageSyncList) GetItems() []resource.Managed {
 	return items
 }
 
-// GetItems of this StorageTableEntityList.
-func (l *StorageTableEntityList) GetItems() []resource.Managed {
+// GetItems of this TableEntityList.
+func (l *TableEntityList) GetItems() []resource.Managed {
 	items := make([]resource.Managed, len(l.Items))
 	for i := range l.Items {
 		items[i] = &l.Items[i]
@@ -172,8 +172,8 @@ func (l *StorageTableEntityList) GetItems() []resource.Managed {
 	return items
 }
 
-// GetItems of this StorageTableList.
-func (l *StorageTableList) GetItems() []resource.Managed {
+// GetItems of this TableList.
+func (l *TableList) GetItems() []resource.Managed {
 	items := make([]resource.Managed, len(l.Items))
 	for i := range l.Items {
 		items[i] = &l.Items[i]

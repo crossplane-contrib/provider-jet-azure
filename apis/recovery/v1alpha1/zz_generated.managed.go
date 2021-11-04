@@ -19,58 +19,58 @@ package v1alpha1
 
 import xpv1 "github.com/crossplane/crossplane-runtime/apis/common/v1"
 
-// GetCondition of this RecoveryServicesVault.
-func (mg *RecoveryServicesVault) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
+// GetCondition of this ServicesVault.
+func (mg *ServicesVault) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
 	return mg.Status.GetCondition(ct)
 }
 
-// GetDeletionPolicy of this RecoveryServicesVault.
-func (mg *RecoveryServicesVault) GetDeletionPolicy() xpv1.DeletionPolicy {
+// GetDeletionPolicy of this ServicesVault.
+func (mg *ServicesVault) GetDeletionPolicy() xpv1.DeletionPolicy {
 	return mg.Spec.DeletionPolicy
 }
 
-// GetProviderConfigReference of this RecoveryServicesVault.
-func (mg *RecoveryServicesVault) GetProviderConfigReference() *xpv1.Reference {
+// GetProviderConfigReference of this ServicesVault.
+func (mg *ServicesVault) GetProviderConfigReference() *xpv1.Reference {
 	return mg.Spec.ProviderConfigReference
 }
 
 /*
-GetProviderReference of this RecoveryServicesVault.
+GetProviderReference of this ServicesVault.
 Deprecated: Use GetProviderConfigReference.
 */
-func (mg *RecoveryServicesVault) GetProviderReference() *xpv1.Reference {
+func (mg *ServicesVault) GetProviderReference() *xpv1.Reference {
 	return mg.Spec.ProviderReference
 }
 
-// GetWriteConnectionSecretToReference of this RecoveryServicesVault.
-func (mg *RecoveryServicesVault) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
+// GetWriteConnectionSecretToReference of this ServicesVault.
+func (mg *ServicesVault) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
 	return mg.Spec.WriteConnectionSecretToReference
 }
 
-// SetConditions of this RecoveryServicesVault.
-func (mg *RecoveryServicesVault) SetConditions(c ...xpv1.Condition) {
+// SetConditions of this ServicesVault.
+func (mg *ServicesVault) SetConditions(c ...xpv1.Condition) {
 	mg.Status.SetConditions(c...)
 }
 
-// SetDeletionPolicy of this RecoveryServicesVault.
-func (mg *RecoveryServicesVault) SetDeletionPolicy(r xpv1.DeletionPolicy) {
+// SetDeletionPolicy of this ServicesVault.
+func (mg *ServicesVault) SetDeletionPolicy(r xpv1.DeletionPolicy) {
 	mg.Spec.DeletionPolicy = r
 }
 
-// SetProviderConfigReference of this RecoveryServicesVault.
-func (mg *RecoveryServicesVault) SetProviderConfigReference(r *xpv1.Reference) {
+// SetProviderConfigReference of this ServicesVault.
+func (mg *ServicesVault) SetProviderConfigReference(r *xpv1.Reference) {
 	mg.Spec.ProviderConfigReference = r
 }
 
 /*
-SetProviderReference of this RecoveryServicesVault.
+SetProviderReference of this ServicesVault.
 Deprecated: Use SetProviderConfigReference.
 */
-func (mg *RecoveryServicesVault) SetProviderReference(r *xpv1.Reference) {
+func (mg *ServicesVault) SetProviderReference(r *xpv1.Reference) {
 	mg.Spec.ProviderReference = r
 }
 
-// SetWriteConnectionSecretToReference of this RecoveryServicesVault.
-func (mg *RecoveryServicesVault) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
+// SetWriteConnectionSecretToReference of this ServicesVault.
+func (mg *ServicesVault) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
 	mg.Spec.WriteConnectionSecretToReference = r
 }

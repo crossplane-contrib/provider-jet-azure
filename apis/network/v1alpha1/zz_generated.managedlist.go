@@ -19,8 +19,8 @@ package v1alpha1
 
 import resource "github.com/crossplane/crossplane-runtime/pkg/resource"
 
-// GetItems of this NetworkConnectionMonitorList.
-func (l *NetworkConnectionMonitorList) GetItems() []resource.Managed {
+// GetItems of this ConnectionMonitorList.
+func (l *ConnectionMonitorList) GetItems() []resource.Managed {
 	items := make([]resource.Managed, len(l.Items))
 	for i := range l.Items {
 		items[i] = &l.Items[i]
@@ -28,8 +28,8 @@ func (l *NetworkConnectionMonitorList) GetItems() []resource.Managed {
 	return items
 }
 
-// GetItems of this NetworkDdosProtectionPlanList.
-func (l *NetworkDdosProtectionPlanList) GetItems() []resource.Managed {
+// GetItems of this DdosProtectionPlanList.
+func (l *DdosProtectionPlanList) GetItems() []resource.Managed {
 	items := make([]resource.Managed, len(l.Items))
 	for i := range l.Items {
 		items[i] = &l.Items[i]
@@ -37,8 +37,8 @@ func (l *NetworkDdosProtectionPlanList) GetItems() []resource.Managed {
 	return items
 }
 
-// GetItems of this NetworkInterfaceApplicationSecurityGroupAssociationList.
-func (l *NetworkInterfaceApplicationSecurityGroupAssociationList) GetItems() []resource.Managed {
+// GetItems of this InterfaceApplicationSecurityGroupAssociationList.
+func (l *InterfaceApplicationSecurityGroupAssociationList) GetItems() []resource.Managed {
 	items := make([]resource.Managed, len(l.Items))
 	for i := range l.Items {
 		items[i] = &l.Items[i]
@@ -46,8 +46,26 @@ func (l *NetworkInterfaceApplicationSecurityGroupAssociationList) GetItems() []r
 	return items
 }
 
-// GetItems of this NetworkInterfaceBackendAddressPoolAssociationList.
-func (l *NetworkInterfaceBackendAddressPoolAssociationList) GetItems() []resource.Managed {
+// GetItems of this InterfaceBackendAddressPoolAssociationList.
+func (l *InterfaceBackendAddressPoolAssociationList) GetItems() []resource.Managed {
+	items := make([]resource.Managed, len(l.Items))
+	for i := range l.Items {
+		items[i] = &l.Items[i]
+	}
+	return items
+}
+
+// GetItems of this InterfaceNatRuleAssociationList.
+func (l *InterfaceNatRuleAssociationList) GetItems() []resource.Managed {
+	items := make([]resource.Managed, len(l.Items))
+	for i := range l.Items {
+		items[i] = &l.Items[i]
+	}
+	return items
+}
+
+// GetItems of this InterfaceSecurityGroupAssociationList.
+func (l *InterfaceSecurityGroupAssociationList) GetItems() []resource.Managed {
 	items := make([]resource.Managed, len(l.Items))
 	for i := range l.Items {
 		items[i] = &l.Items[i]
@@ -64,8 +82,8 @@ func (l *NetworkInterfaceList) GetItems() []resource.Managed {
 	return items
 }
 
-// GetItems of this NetworkInterfaceNatRuleAssociationList.
-func (l *NetworkInterfaceNatRuleAssociationList) GetItems() []resource.Managed {
+// GetItems of this PacketCaptureList.
+func (l *PacketCaptureList) GetItems() []resource.Managed {
 	items := make([]resource.Managed, len(l.Items))
 	for i := range l.Items {
 		items[i] = &l.Items[i]
@@ -73,8 +91,8 @@ func (l *NetworkInterfaceNatRuleAssociationList) GetItems() []resource.Managed {
 	return items
 }
 
-// GetItems of this NetworkInterfaceSecurityGroupAssociationList.
-func (l *NetworkInterfaceSecurityGroupAssociationList) GetItems() []resource.Managed {
+// GetItems of this ProfileList.
+func (l *ProfileList) GetItems() []resource.Managed {
 	items := make([]resource.Managed, len(l.Items))
 	for i := range l.Items {
 		items[i] = &l.Items[i]
@@ -82,8 +100,8 @@ func (l *NetworkInterfaceSecurityGroupAssociationList) GetItems() []resource.Man
 	return items
 }
 
-// GetItems of this NetworkPacketCaptureList.
-func (l *NetworkPacketCaptureList) GetItems() []resource.Managed {
+// GetItems of this SecurityGroupList.
+func (l *SecurityGroupList) GetItems() []resource.Managed {
 	items := make([]resource.Managed, len(l.Items))
 	for i := range l.Items {
 		items[i] = &l.Items[i]
@@ -91,8 +109,8 @@ func (l *NetworkPacketCaptureList) GetItems() []resource.Managed {
 	return items
 }
 
-// GetItems of this NetworkProfileList.
-func (l *NetworkProfileList) GetItems() []resource.Managed {
+// GetItems of this WatcherFlowLogList.
+func (l *WatcherFlowLogList) GetItems() []resource.Managed {
 	items := make([]resource.Managed, len(l.Items))
 	for i := range l.Items {
 		items[i] = &l.Items[i]
@@ -100,35 +118,8 @@ func (l *NetworkProfileList) GetItems() []resource.Managed {
 	return items
 }
 
-// GetItems of this NetworkSecurityGroupList.
-func (l *NetworkSecurityGroupList) GetItems() []resource.Managed {
-	items := make([]resource.Managed, len(l.Items))
-	for i := range l.Items {
-		items[i] = &l.Items[i]
-	}
-	return items
-}
-
-// GetItems of this NetworkSecurityRuleList.
-func (l *NetworkSecurityRuleList) GetItems() []resource.Managed {
-	items := make([]resource.Managed, len(l.Items))
-	for i := range l.Items {
-		items[i] = &l.Items[i]
-	}
-	return items
-}
-
-// GetItems of this NetworkWatcherFlowLogList.
-func (l *NetworkWatcherFlowLogList) GetItems() []resource.Managed {
-	items := make([]resource.Managed, len(l.Items))
-	for i := range l.Items {
-		items[i] = &l.Items[i]
-	}
-	return items
-}
-
-// GetItems of this NetworkWatcherList.
-func (l *NetworkWatcherList) GetItems() []resource.Managed {
+// GetItems of this WatcherList.
+func (l *WatcherList) GetItems() []resource.Managed {
 	items := make([]resource.Managed, len(l.Items))
 	for i := range l.Items {
 		items[i] = &l.Items[i]

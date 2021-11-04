@@ -19,58 +19,58 @@ package v1alpha1
 
 import xpv1 "github.com/crossplane/crossplane-runtime/apis/common/v1"
 
-// GetCondition of this ProximityPlacementGroup.
-func (mg *ProximityPlacementGroup) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
+// GetCondition of this PlacementGroup.
+func (mg *PlacementGroup) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
 	return mg.Status.GetCondition(ct)
 }
 
-// GetDeletionPolicy of this ProximityPlacementGroup.
-func (mg *ProximityPlacementGroup) GetDeletionPolicy() xpv1.DeletionPolicy {
+// GetDeletionPolicy of this PlacementGroup.
+func (mg *PlacementGroup) GetDeletionPolicy() xpv1.DeletionPolicy {
 	return mg.Spec.DeletionPolicy
 }
 
-// GetProviderConfigReference of this ProximityPlacementGroup.
-func (mg *ProximityPlacementGroup) GetProviderConfigReference() *xpv1.Reference {
+// GetProviderConfigReference of this PlacementGroup.
+func (mg *PlacementGroup) GetProviderConfigReference() *xpv1.Reference {
 	return mg.Spec.ProviderConfigReference
 }
 
 /*
-GetProviderReference of this ProximityPlacementGroup.
+GetProviderReference of this PlacementGroup.
 Deprecated: Use GetProviderConfigReference.
 */
-func (mg *ProximityPlacementGroup) GetProviderReference() *xpv1.Reference {
+func (mg *PlacementGroup) GetProviderReference() *xpv1.Reference {
 	return mg.Spec.ProviderReference
 }
 
-// GetWriteConnectionSecretToReference of this ProximityPlacementGroup.
-func (mg *ProximityPlacementGroup) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
+// GetWriteConnectionSecretToReference of this PlacementGroup.
+func (mg *PlacementGroup) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
 	return mg.Spec.WriteConnectionSecretToReference
 }
 
-// SetConditions of this ProximityPlacementGroup.
-func (mg *ProximityPlacementGroup) SetConditions(c ...xpv1.Condition) {
+// SetConditions of this PlacementGroup.
+func (mg *PlacementGroup) SetConditions(c ...xpv1.Condition) {
 	mg.Status.SetConditions(c...)
 }
 
-// SetDeletionPolicy of this ProximityPlacementGroup.
-func (mg *ProximityPlacementGroup) SetDeletionPolicy(r xpv1.DeletionPolicy) {
+// SetDeletionPolicy of this PlacementGroup.
+func (mg *PlacementGroup) SetDeletionPolicy(r xpv1.DeletionPolicy) {
 	mg.Spec.DeletionPolicy = r
 }
 
-// SetProviderConfigReference of this ProximityPlacementGroup.
-func (mg *ProximityPlacementGroup) SetProviderConfigReference(r *xpv1.Reference) {
+// SetProviderConfigReference of this PlacementGroup.
+func (mg *PlacementGroup) SetProviderConfigReference(r *xpv1.Reference) {
 	mg.Spec.ProviderConfigReference = r
 }
 
 /*
-SetProviderReference of this ProximityPlacementGroup.
+SetProviderReference of this PlacementGroup.
 Deprecated: Use SetProviderConfigReference.
 */
-func (mg *ProximityPlacementGroup) SetProviderReference(r *xpv1.Reference) {
+func (mg *PlacementGroup) SetProviderReference(r *xpv1.Reference) {
 	mg.Spec.ProviderReference = r
 }
 
-// SetWriteConnectionSecretToReference of this ProximityPlacementGroup.
-func (mg *ProximityPlacementGroup) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
+// SetWriteConnectionSecretToReference of this PlacementGroup.
+func (mg *PlacementGroup) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
 	mg.Spec.WriteConnectionSecretToReference = r
 }

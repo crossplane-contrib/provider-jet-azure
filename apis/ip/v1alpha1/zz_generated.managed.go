@@ -19,58 +19,58 @@ package v1alpha1
 
 import xpv1 "github.com/crossplane/crossplane-runtime/apis/common/v1"
 
-// GetCondition of this IpGroup.
-func (mg *IpGroup) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
+// GetCondition of this IPGroup.
+func (mg *IPGroup) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
 	return mg.Status.GetCondition(ct)
 }
 
-// GetDeletionPolicy of this IpGroup.
-func (mg *IpGroup) GetDeletionPolicy() xpv1.DeletionPolicy {
+// GetDeletionPolicy of this IPGroup.
+func (mg *IPGroup) GetDeletionPolicy() xpv1.DeletionPolicy {
 	return mg.Spec.DeletionPolicy
 }
 
-// GetProviderConfigReference of this IpGroup.
-func (mg *IpGroup) GetProviderConfigReference() *xpv1.Reference {
+// GetProviderConfigReference of this IPGroup.
+func (mg *IPGroup) GetProviderConfigReference() *xpv1.Reference {
 	return mg.Spec.ProviderConfigReference
 }
 
 /*
-GetProviderReference of this IpGroup.
+GetProviderReference of this IPGroup.
 Deprecated: Use GetProviderConfigReference.
 */
-func (mg *IpGroup) GetProviderReference() *xpv1.Reference {
+func (mg *IPGroup) GetProviderReference() *xpv1.Reference {
 	return mg.Spec.ProviderReference
 }
 
-// GetWriteConnectionSecretToReference of this IpGroup.
-func (mg *IpGroup) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
+// GetWriteConnectionSecretToReference of this IPGroup.
+func (mg *IPGroup) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
 	return mg.Spec.WriteConnectionSecretToReference
 }
 
-// SetConditions of this IpGroup.
-func (mg *IpGroup) SetConditions(c ...xpv1.Condition) {
+// SetConditions of this IPGroup.
+func (mg *IPGroup) SetConditions(c ...xpv1.Condition) {
 	mg.Status.SetConditions(c...)
 }
 
-// SetDeletionPolicy of this IpGroup.
-func (mg *IpGroup) SetDeletionPolicy(r xpv1.DeletionPolicy) {
+// SetDeletionPolicy of this IPGroup.
+func (mg *IPGroup) SetDeletionPolicy(r xpv1.DeletionPolicy) {
 	mg.Spec.DeletionPolicy = r
 }
 
-// SetProviderConfigReference of this IpGroup.
-func (mg *IpGroup) SetProviderConfigReference(r *xpv1.Reference) {
+// SetProviderConfigReference of this IPGroup.
+func (mg *IPGroup) SetProviderConfigReference(r *xpv1.Reference) {
 	mg.Spec.ProviderConfigReference = r
 }
 
 /*
-SetProviderReference of this IpGroup.
+SetProviderReference of this IPGroup.
 Deprecated: Use SetProviderConfigReference.
 */
-func (mg *IpGroup) SetProviderReference(r *xpv1.Reference) {
+func (mg *IPGroup) SetProviderReference(r *xpv1.Reference) {
 	mg.Spec.ProviderReference = r
 }
 
-// SetWriteConnectionSecretToReference of this IpGroup.
-func (mg *IpGroup) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
+// SetWriteConnectionSecretToReference of this IPGroup.
+func (mg *IPGroup) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
 	mg.Spec.WriteConnectionSecretToReference = r
 }

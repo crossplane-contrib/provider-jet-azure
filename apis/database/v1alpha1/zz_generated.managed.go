@@ -19,114 +19,114 @@ package v1alpha1
 
 import xpv1 "github.com/crossplane/crossplane-runtime/apis/common/v1"
 
-// GetCondition of this DatabaseMigrationProject.
-func (mg *DatabaseMigrationProject) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
+// GetCondition of this MigrationProject.
+func (mg *MigrationProject) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
 	return mg.Status.GetCondition(ct)
 }
 
-// GetDeletionPolicy of this DatabaseMigrationProject.
-func (mg *DatabaseMigrationProject) GetDeletionPolicy() xpv1.DeletionPolicy {
+// GetDeletionPolicy of this MigrationProject.
+func (mg *MigrationProject) GetDeletionPolicy() xpv1.DeletionPolicy {
 	return mg.Spec.DeletionPolicy
 }
 
-// GetProviderConfigReference of this DatabaseMigrationProject.
-func (mg *DatabaseMigrationProject) GetProviderConfigReference() *xpv1.Reference {
+// GetProviderConfigReference of this MigrationProject.
+func (mg *MigrationProject) GetProviderConfigReference() *xpv1.Reference {
 	return mg.Spec.ProviderConfigReference
 }
 
 /*
-GetProviderReference of this DatabaseMigrationProject.
+GetProviderReference of this MigrationProject.
 Deprecated: Use GetProviderConfigReference.
 */
-func (mg *DatabaseMigrationProject) GetProviderReference() *xpv1.Reference {
+func (mg *MigrationProject) GetProviderReference() *xpv1.Reference {
 	return mg.Spec.ProviderReference
 }
 
-// GetWriteConnectionSecretToReference of this DatabaseMigrationProject.
-func (mg *DatabaseMigrationProject) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
+// GetWriteConnectionSecretToReference of this MigrationProject.
+func (mg *MigrationProject) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
 	return mg.Spec.WriteConnectionSecretToReference
 }
 
-// SetConditions of this DatabaseMigrationProject.
-func (mg *DatabaseMigrationProject) SetConditions(c ...xpv1.Condition) {
+// SetConditions of this MigrationProject.
+func (mg *MigrationProject) SetConditions(c ...xpv1.Condition) {
 	mg.Status.SetConditions(c...)
 }
 
-// SetDeletionPolicy of this DatabaseMigrationProject.
-func (mg *DatabaseMigrationProject) SetDeletionPolicy(r xpv1.DeletionPolicy) {
+// SetDeletionPolicy of this MigrationProject.
+func (mg *MigrationProject) SetDeletionPolicy(r xpv1.DeletionPolicy) {
 	mg.Spec.DeletionPolicy = r
 }
 
-// SetProviderConfigReference of this DatabaseMigrationProject.
-func (mg *DatabaseMigrationProject) SetProviderConfigReference(r *xpv1.Reference) {
+// SetProviderConfigReference of this MigrationProject.
+func (mg *MigrationProject) SetProviderConfigReference(r *xpv1.Reference) {
 	mg.Spec.ProviderConfigReference = r
 }
 
 /*
-SetProviderReference of this DatabaseMigrationProject.
+SetProviderReference of this MigrationProject.
 Deprecated: Use SetProviderConfigReference.
 */
-func (mg *DatabaseMigrationProject) SetProviderReference(r *xpv1.Reference) {
+func (mg *MigrationProject) SetProviderReference(r *xpv1.Reference) {
 	mg.Spec.ProviderReference = r
 }
 
-// SetWriteConnectionSecretToReference of this DatabaseMigrationProject.
-func (mg *DatabaseMigrationProject) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
+// SetWriteConnectionSecretToReference of this MigrationProject.
+func (mg *MigrationProject) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
 	mg.Spec.WriteConnectionSecretToReference = r
 }
 
-// GetCondition of this DatabaseMigrationService.
-func (mg *DatabaseMigrationService) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
+// GetCondition of this MigrationService.
+func (mg *MigrationService) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
 	return mg.Status.GetCondition(ct)
 }
 
-// GetDeletionPolicy of this DatabaseMigrationService.
-func (mg *DatabaseMigrationService) GetDeletionPolicy() xpv1.DeletionPolicy {
+// GetDeletionPolicy of this MigrationService.
+func (mg *MigrationService) GetDeletionPolicy() xpv1.DeletionPolicy {
 	return mg.Spec.DeletionPolicy
 }
 
-// GetProviderConfigReference of this DatabaseMigrationService.
-func (mg *DatabaseMigrationService) GetProviderConfigReference() *xpv1.Reference {
+// GetProviderConfigReference of this MigrationService.
+func (mg *MigrationService) GetProviderConfigReference() *xpv1.Reference {
 	return mg.Spec.ProviderConfigReference
 }
 
 /*
-GetProviderReference of this DatabaseMigrationService.
+GetProviderReference of this MigrationService.
 Deprecated: Use GetProviderConfigReference.
 */
-func (mg *DatabaseMigrationService) GetProviderReference() *xpv1.Reference {
+func (mg *MigrationService) GetProviderReference() *xpv1.Reference {
 	return mg.Spec.ProviderReference
 }
 
-// GetWriteConnectionSecretToReference of this DatabaseMigrationService.
-func (mg *DatabaseMigrationService) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
+// GetWriteConnectionSecretToReference of this MigrationService.
+func (mg *MigrationService) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
 	return mg.Spec.WriteConnectionSecretToReference
 }
 
-// SetConditions of this DatabaseMigrationService.
-func (mg *DatabaseMigrationService) SetConditions(c ...xpv1.Condition) {
+// SetConditions of this MigrationService.
+func (mg *MigrationService) SetConditions(c ...xpv1.Condition) {
 	mg.Status.SetConditions(c...)
 }
 
-// SetDeletionPolicy of this DatabaseMigrationService.
-func (mg *DatabaseMigrationService) SetDeletionPolicy(r xpv1.DeletionPolicy) {
+// SetDeletionPolicy of this MigrationService.
+func (mg *MigrationService) SetDeletionPolicy(r xpv1.DeletionPolicy) {
 	mg.Spec.DeletionPolicy = r
 }
 
-// SetProviderConfigReference of this DatabaseMigrationService.
-func (mg *DatabaseMigrationService) SetProviderConfigReference(r *xpv1.Reference) {
+// SetProviderConfigReference of this MigrationService.
+func (mg *MigrationService) SetProviderConfigReference(r *xpv1.Reference) {
 	mg.Spec.ProviderConfigReference = r
 }
 
 /*
-SetProviderReference of this DatabaseMigrationService.
+SetProviderReference of this MigrationService.
 Deprecated: Use SetProviderConfigReference.
 */
-func (mg *DatabaseMigrationService) SetProviderReference(r *xpv1.Reference) {
+func (mg *MigrationService) SetProviderReference(r *xpv1.Reference) {
 	mg.Spec.ProviderReference = r
 }
 
-// SetWriteConnectionSecretToReference of this DatabaseMigrationService.
-func (mg *DatabaseMigrationService) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
+// SetWriteConnectionSecretToReference of this MigrationService.
+func (mg *MigrationService) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
 	mg.Spec.WriteConnectionSecretToReference = r
 }

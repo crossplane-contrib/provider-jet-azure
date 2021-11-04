@@ -19,8 +19,8 @@ package v1alpha1
 
 import resource "github.com/crossplane/crossplane-runtime/pkg/resource"
 
-// GetItems of this ActiveDirectoryDomainServiceList.
-func (l *ActiveDirectoryDomainServiceList) GetItems() []resource.Managed {
+// GetItems of this DirectoryDomainServiceList.
+func (l *DirectoryDomainServiceList) GetItems() []resource.Managed {
 	items := make([]resource.Managed, len(l.Items))
 	for i := range l.Items {
 		items[i] = &l.Items[i]
@@ -28,8 +28,8 @@ func (l *ActiveDirectoryDomainServiceList) GetItems() []resource.Managed {
 	return items
 }
 
-// GetItems of this ActiveDirectoryDomainServiceReplicaSetList.
-func (l *ActiveDirectoryDomainServiceReplicaSetList) GetItems() []resource.Managed {
+// GetItems of this DirectoryDomainServiceReplicaSetList.
+func (l *DirectoryDomainServiceReplicaSetList) GetItems() []resource.Managed {
 	items := make([]resource.Managed, len(l.Items))
 	for i := range l.Items {
 		items[i] = &l.Items[i]

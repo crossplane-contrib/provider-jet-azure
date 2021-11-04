@@ -19,58 +19,58 @@ package v1alpha1
 
 import xpv1 "github.com/crossplane/crossplane-runtime/apis/common/v1"
 
-// GetCondition of this IntegrationServiceEnvironment.
-func (mg *IntegrationServiceEnvironment) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
+// GetCondition of this ServiceEnvironment.
+func (mg *ServiceEnvironment) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
 	return mg.Status.GetCondition(ct)
 }
 
-// GetDeletionPolicy of this IntegrationServiceEnvironment.
-func (mg *IntegrationServiceEnvironment) GetDeletionPolicy() xpv1.DeletionPolicy {
+// GetDeletionPolicy of this ServiceEnvironment.
+func (mg *ServiceEnvironment) GetDeletionPolicy() xpv1.DeletionPolicy {
 	return mg.Spec.DeletionPolicy
 }
 
-// GetProviderConfigReference of this IntegrationServiceEnvironment.
-func (mg *IntegrationServiceEnvironment) GetProviderConfigReference() *xpv1.Reference {
+// GetProviderConfigReference of this ServiceEnvironment.
+func (mg *ServiceEnvironment) GetProviderConfigReference() *xpv1.Reference {
 	return mg.Spec.ProviderConfigReference
 }
 
 /*
-GetProviderReference of this IntegrationServiceEnvironment.
+GetProviderReference of this ServiceEnvironment.
 Deprecated: Use GetProviderConfigReference.
 */
-func (mg *IntegrationServiceEnvironment) GetProviderReference() *xpv1.Reference {
+func (mg *ServiceEnvironment) GetProviderReference() *xpv1.Reference {
 	return mg.Spec.ProviderReference
 }
 
-// GetWriteConnectionSecretToReference of this IntegrationServiceEnvironment.
-func (mg *IntegrationServiceEnvironment) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
+// GetWriteConnectionSecretToReference of this ServiceEnvironment.
+func (mg *ServiceEnvironment) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
 	return mg.Spec.WriteConnectionSecretToReference
 }
 
-// SetConditions of this IntegrationServiceEnvironment.
-func (mg *IntegrationServiceEnvironment) SetConditions(c ...xpv1.Condition) {
+// SetConditions of this ServiceEnvironment.
+func (mg *ServiceEnvironment) SetConditions(c ...xpv1.Condition) {
 	mg.Status.SetConditions(c...)
 }
 
-// SetDeletionPolicy of this IntegrationServiceEnvironment.
-func (mg *IntegrationServiceEnvironment) SetDeletionPolicy(r xpv1.DeletionPolicy) {
+// SetDeletionPolicy of this ServiceEnvironment.
+func (mg *ServiceEnvironment) SetDeletionPolicy(r xpv1.DeletionPolicy) {
 	mg.Spec.DeletionPolicy = r
 }
 
-// SetProviderConfigReference of this IntegrationServiceEnvironment.
-func (mg *IntegrationServiceEnvironment) SetProviderConfigReference(r *xpv1.Reference) {
+// SetProviderConfigReference of this ServiceEnvironment.
+func (mg *ServiceEnvironment) SetProviderConfigReference(r *xpv1.Reference) {
 	mg.Spec.ProviderConfigReference = r
 }
 
 /*
-SetProviderReference of this IntegrationServiceEnvironment.
+SetProviderReference of this ServiceEnvironment.
 Deprecated: Use SetProviderConfigReference.
 */
-func (mg *IntegrationServiceEnvironment) SetProviderReference(r *xpv1.Reference) {
+func (mg *ServiceEnvironment) SetProviderReference(r *xpv1.Reference) {
 	mg.Spec.ProviderReference = r
 }
 
-// SetWriteConnectionSecretToReference of this IntegrationServiceEnvironment.
-func (mg *IntegrationServiceEnvironment) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
+// SetWriteConnectionSecretToReference of this ServiceEnvironment.
+func (mg *ServiceEnvironment) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
 	mg.Spec.WriteConnectionSecretToReference = r
 }

@@ -19,282 +19,282 @@ package v1alpha1
 
 import xpv1 "github.com/crossplane/crossplane-runtime/apis/common/v1"
 
-// GetCondition of this BackupContainerStorageAccount.
-func (mg *BackupContainerStorageAccount) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
+// GetCondition of this ContainerStorageAccount.
+func (mg *ContainerStorageAccount) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
 	return mg.Status.GetCondition(ct)
 }
 
-// GetDeletionPolicy of this BackupContainerStorageAccount.
-func (mg *BackupContainerStorageAccount) GetDeletionPolicy() xpv1.DeletionPolicy {
+// GetDeletionPolicy of this ContainerStorageAccount.
+func (mg *ContainerStorageAccount) GetDeletionPolicy() xpv1.DeletionPolicy {
 	return mg.Spec.DeletionPolicy
 }
 
-// GetProviderConfigReference of this BackupContainerStorageAccount.
-func (mg *BackupContainerStorageAccount) GetProviderConfigReference() *xpv1.Reference {
+// GetProviderConfigReference of this ContainerStorageAccount.
+func (mg *ContainerStorageAccount) GetProviderConfigReference() *xpv1.Reference {
 	return mg.Spec.ProviderConfigReference
 }
 
 /*
-GetProviderReference of this BackupContainerStorageAccount.
+GetProviderReference of this ContainerStorageAccount.
 Deprecated: Use GetProviderConfigReference.
 */
-func (mg *BackupContainerStorageAccount) GetProviderReference() *xpv1.Reference {
+func (mg *ContainerStorageAccount) GetProviderReference() *xpv1.Reference {
 	return mg.Spec.ProviderReference
 }
 
-// GetWriteConnectionSecretToReference of this BackupContainerStorageAccount.
-func (mg *BackupContainerStorageAccount) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
+// GetWriteConnectionSecretToReference of this ContainerStorageAccount.
+func (mg *ContainerStorageAccount) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
 	return mg.Spec.WriteConnectionSecretToReference
 }
 
-// SetConditions of this BackupContainerStorageAccount.
-func (mg *BackupContainerStorageAccount) SetConditions(c ...xpv1.Condition) {
+// SetConditions of this ContainerStorageAccount.
+func (mg *ContainerStorageAccount) SetConditions(c ...xpv1.Condition) {
 	mg.Status.SetConditions(c...)
 }
 
-// SetDeletionPolicy of this BackupContainerStorageAccount.
-func (mg *BackupContainerStorageAccount) SetDeletionPolicy(r xpv1.DeletionPolicy) {
+// SetDeletionPolicy of this ContainerStorageAccount.
+func (mg *ContainerStorageAccount) SetDeletionPolicy(r xpv1.DeletionPolicy) {
 	mg.Spec.DeletionPolicy = r
 }
 
-// SetProviderConfigReference of this BackupContainerStorageAccount.
-func (mg *BackupContainerStorageAccount) SetProviderConfigReference(r *xpv1.Reference) {
+// SetProviderConfigReference of this ContainerStorageAccount.
+func (mg *ContainerStorageAccount) SetProviderConfigReference(r *xpv1.Reference) {
 	mg.Spec.ProviderConfigReference = r
 }
 
 /*
-SetProviderReference of this BackupContainerStorageAccount.
+SetProviderReference of this ContainerStorageAccount.
 Deprecated: Use SetProviderConfigReference.
 */
-func (mg *BackupContainerStorageAccount) SetProviderReference(r *xpv1.Reference) {
+func (mg *ContainerStorageAccount) SetProviderReference(r *xpv1.Reference) {
 	mg.Spec.ProviderReference = r
 }
 
-// SetWriteConnectionSecretToReference of this BackupContainerStorageAccount.
-func (mg *BackupContainerStorageAccount) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
+// SetWriteConnectionSecretToReference of this ContainerStorageAccount.
+func (mg *ContainerStorageAccount) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
 	mg.Spec.WriteConnectionSecretToReference = r
 }
 
-// GetCondition of this BackupPolicyFileShare.
-func (mg *BackupPolicyFileShare) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
+// GetCondition of this PolicyFileShare.
+func (mg *PolicyFileShare) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
 	return mg.Status.GetCondition(ct)
 }
 
-// GetDeletionPolicy of this BackupPolicyFileShare.
-func (mg *BackupPolicyFileShare) GetDeletionPolicy() xpv1.DeletionPolicy {
+// GetDeletionPolicy of this PolicyFileShare.
+func (mg *PolicyFileShare) GetDeletionPolicy() xpv1.DeletionPolicy {
 	return mg.Spec.DeletionPolicy
 }
 
-// GetProviderConfigReference of this BackupPolicyFileShare.
-func (mg *BackupPolicyFileShare) GetProviderConfigReference() *xpv1.Reference {
+// GetProviderConfigReference of this PolicyFileShare.
+func (mg *PolicyFileShare) GetProviderConfigReference() *xpv1.Reference {
 	return mg.Spec.ProviderConfigReference
 }
 
 /*
-GetProviderReference of this BackupPolicyFileShare.
+GetProviderReference of this PolicyFileShare.
 Deprecated: Use GetProviderConfigReference.
 */
-func (mg *BackupPolicyFileShare) GetProviderReference() *xpv1.Reference {
+func (mg *PolicyFileShare) GetProviderReference() *xpv1.Reference {
 	return mg.Spec.ProviderReference
 }
 
-// GetWriteConnectionSecretToReference of this BackupPolicyFileShare.
-func (mg *BackupPolicyFileShare) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
+// GetWriteConnectionSecretToReference of this PolicyFileShare.
+func (mg *PolicyFileShare) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
 	return mg.Spec.WriteConnectionSecretToReference
 }
 
-// SetConditions of this BackupPolicyFileShare.
-func (mg *BackupPolicyFileShare) SetConditions(c ...xpv1.Condition) {
+// SetConditions of this PolicyFileShare.
+func (mg *PolicyFileShare) SetConditions(c ...xpv1.Condition) {
 	mg.Status.SetConditions(c...)
 }
 
-// SetDeletionPolicy of this BackupPolicyFileShare.
-func (mg *BackupPolicyFileShare) SetDeletionPolicy(r xpv1.DeletionPolicy) {
+// SetDeletionPolicy of this PolicyFileShare.
+func (mg *PolicyFileShare) SetDeletionPolicy(r xpv1.DeletionPolicy) {
 	mg.Spec.DeletionPolicy = r
 }
 
-// SetProviderConfigReference of this BackupPolicyFileShare.
-func (mg *BackupPolicyFileShare) SetProviderConfigReference(r *xpv1.Reference) {
+// SetProviderConfigReference of this PolicyFileShare.
+func (mg *PolicyFileShare) SetProviderConfigReference(r *xpv1.Reference) {
 	mg.Spec.ProviderConfigReference = r
 }
 
 /*
-SetProviderReference of this BackupPolicyFileShare.
+SetProviderReference of this PolicyFileShare.
 Deprecated: Use SetProviderConfigReference.
 */
-func (mg *BackupPolicyFileShare) SetProviderReference(r *xpv1.Reference) {
+func (mg *PolicyFileShare) SetProviderReference(r *xpv1.Reference) {
 	mg.Spec.ProviderReference = r
 }
 
-// SetWriteConnectionSecretToReference of this BackupPolicyFileShare.
-func (mg *BackupPolicyFileShare) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
+// SetWriteConnectionSecretToReference of this PolicyFileShare.
+func (mg *PolicyFileShare) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
 	mg.Spec.WriteConnectionSecretToReference = r
 }
 
-// GetCondition of this BackupPolicyVm.
-func (mg *BackupPolicyVm) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
+// GetCondition of this PolicyVm.
+func (mg *PolicyVm) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
 	return mg.Status.GetCondition(ct)
 }
 
-// GetDeletionPolicy of this BackupPolicyVm.
-func (mg *BackupPolicyVm) GetDeletionPolicy() xpv1.DeletionPolicy {
+// GetDeletionPolicy of this PolicyVm.
+func (mg *PolicyVm) GetDeletionPolicy() xpv1.DeletionPolicy {
 	return mg.Spec.DeletionPolicy
 }
 
-// GetProviderConfigReference of this BackupPolicyVm.
-func (mg *BackupPolicyVm) GetProviderConfigReference() *xpv1.Reference {
+// GetProviderConfigReference of this PolicyVm.
+func (mg *PolicyVm) GetProviderConfigReference() *xpv1.Reference {
 	return mg.Spec.ProviderConfigReference
 }
 
 /*
-GetProviderReference of this BackupPolicyVm.
+GetProviderReference of this PolicyVm.
 Deprecated: Use GetProviderConfigReference.
 */
-func (mg *BackupPolicyVm) GetProviderReference() *xpv1.Reference {
+func (mg *PolicyVm) GetProviderReference() *xpv1.Reference {
 	return mg.Spec.ProviderReference
 }
 
-// GetWriteConnectionSecretToReference of this BackupPolicyVm.
-func (mg *BackupPolicyVm) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
+// GetWriteConnectionSecretToReference of this PolicyVm.
+func (mg *PolicyVm) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
 	return mg.Spec.WriteConnectionSecretToReference
 }
 
-// SetConditions of this BackupPolicyVm.
-func (mg *BackupPolicyVm) SetConditions(c ...xpv1.Condition) {
+// SetConditions of this PolicyVm.
+func (mg *PolicyVm) SetConditions(c ...xpv1.Condition) {
 	mg.Status.SetConditions(c...)
 }
 
-// SetDeletionPolicy of this BackupPolicyVm.
-func (mg *BackupPolicyVm) SetDeletionPolicy(r xpv1.DeletionPolicy) {
+// SetDeletionPolicy of this PolicyVm.
+func (mg *PolicyVm) SetDeletionPolicy(r xpv1.DeletionPolicy) {
 	mg.Spec.DeletionPolicy = r
 }
 
-// SetProviderConfigReference of this BackupPolicyVm.
-func (mg *BackupPolicyVm) SetProviderConfigReference(r *xpv1.Reference) {
+// SetProviderConfigReference of this PolicyVm.
+func (mg *PolicyVm) SetProviderConfigReference(r *xpv1.Reference) {
 	mg.Spec.ProviderConfigReference = r
 }
 
 /*
-SetProviderReference of this BackupPolicyVm.
+SetProviderReference of this PolicyVm.
 Deprecated: Use SetProviderConfigReference.
 */
-func (mg *BackupPolicyVm) SetProviderReference(r *xpv1.Reference) {
+func (mg *PolicyVm) SetProviderReference(r *xpv1.Reference) {
 	mg.Spec.ProviderReference = r
 }
 
-// SetWriteConnectionSecretToReference of this BackupPolicyVm.
-func (mg *BackupPolicyVm) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
+// SetWriteConnectionSecretToReference of this PolicyVm.
+func (mg *PolicyVm) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
 	mg.Spec.WriteConnectionSecretToReference = r
 }
 
-// GetCondition of this BackupProtectedFileShare.
-func (mg *BackupProtectedFileShare) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
+// GetCondition of this ProtectedFileShare.
+func (mg *ProtectedFileShare) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
 	return mg.Status.GetCondition(ct)
 }
 
-// GetDeletionPolicy of this BackupProtectedFileShare.
-func (mg *BackupProtectedFileShare) GetDeletionPolicy() xpv1.DeletionPolicy {
+// GetDeletionPolicy of this ProtectedFileShare.
+func (mg *ProtectedFileShare) GetDeletionPolicy() xpv1.DeletionPolicy {
 	return mg.Spec.DeletionPolicy
 }
 
-// GetProviderConfigReference of this BackupProtectedFileShare.
-func (mg *BackupProtectedFileShare) GetProviderConfigReference() *xpv1.Reference {
+// GetProviderConfigReference of this ProtectedFileShare.
+func (mg *ProtectedFileShare) GetProviderConfigReference() *xpv1.Reference {
 	return mg.Spec.ProviderConfigReference
 }
 
 /*
-GetProviderReference of this BackupProtectedFileShare.
+GetProviderReference of this ProtectedFileShare.
 Deprecated: Use GetProviderConfigReference.
 */
-func (mg *BackupProtectedFileShare) GetProviderReference() *xpv1.Reference {
+func (mg *ProtectedFileShare) GetProviderReference() *xpv1.Reference {
 	return mg.Spec.ProviderReference
 }
 
-// GetWriteConnectionSecretToReference of this BackupProtectedFileShare.
-func (mg *BackupProtectedFileShare) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
+// GetWriteConnectionSecretToReference of this ProtectedFileShare.
+func (mg *ProtectedFileShare) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
 	return mg.Spec.WriteConnectionSecretToReference
 }
 
-// SetConditions of this BackupProtectedFileShare.
-func (mg *BackupProtectedFileShare) SetConditions(c ...xpv1.Condition) {
+// SetConditions of this ProtectedFileShare.
+func (mg *ProtectedFileShare) SetConditions(c ...xpv1.Condition) {
 	mg.Status.SetConditions(c...)
 }
 
-// SetDeletionPolicy of this BackupProtectedFileShare.
-func (mg *BackupProtectedFileShare) SetDeletionPolicy(r xpv1.DeletionPolicy) {
+// SetDeletionPolicy of this ProtectedFileShare.
+func (mg *ProtectedFileShare) SetDeletionPolicy(r xpv1.DeletionPolicy) {
 	mg.Spec.DeletionPolicy = r
 }
 
-// SetProviderConfigReference of this BackupProtectedFileShare.
-func (mg *BackupProtectedFileShare) SetProviderConfigReference(r *xpv1.Reference) {
+// SetProviderConfigReference of this ProtectedFileShare.
+func (mg *ProtectedFileShare) SetProviderConfigReference(r *xpv1.Reference) {
 	mg.Spec.ProviderConfigReference = r
 }
 
 /*
-SetProviderReference of this BackupProtectedFileShare.
+SetProviderReference of this ProtectedFileShare.
 Deprecated: Use SetProviderConfigReference.
 */
-func (mg *BackupProtectedFileShare) SetProviderReference(r *xpv1.Reference) {
+func (mg *ProtectedFileShare) SetProviderReference(r *xpv1.Reference) {
 	mg.Spec.ProviderReference = r
 }
 
-// SetWriteConnectionSecretToReference of this BackupProtectedFileShare.
-func (mg *BackupProtectedFileShare) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
+// SetWriteConnectionSecretToReference of this ProtectedFileShare.
+func (mg *ProtectedFileShare) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
 	mg.Spec.WriteConnectionSecretToReference = r
 }
 
-// GetCondition of this BackupProtectedVm.
-func (mg *BackupProtectedVm) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
+// GetCondition of this ProtectedVm.
+func (mg *ProtectedVm) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
 	return mg.Status.GetCondition(ct)
 }
 
-// GetDeletionPolicy of this BackupProtectedVm.
-func (mg *BackupProtectedVm) GetDeletionPolicy() xpv1.DeletionPolicy {
+// GetDeletionPolicy of this ProtectedVm.
+func (mg *ProtectedVm) GetDeletionPolicy() xpv1.DeletionPolicy {
 	return mg.Spec.DeletionPolicy
 }
 
-// GetProviderConfigReference of this BackupProtectedVm.
-func (mg *BackupProtectedVm) GetProviderConfigReference() *xpv1.Reference {
+// GetProviderConfigReference of this ProtectedVm.
+func (mg *ProtectedVm) GetProviderConfigReference() *xpv1.Reference {
 	return mg.Spec.ProviderConfigReference
 }
 
 /*
-GetProviderReference of this BackupProtectedVm.
+GetProviderReference of this ProtectedVm.
 Deprecated: Use GetProviderConfigReference.
 */
-func (mg *BackupProtectedVm) GetProviderReference() *xpv1.Reference {
+func (mg *ProtectedVm) GetProviderReference() *xpv1.Reference {
 	return mg.Spec.ProviderReference
 }
 
-// GetWriteConnectionSecretToReference of this BackupProtectedVm.
-func (mg *BackupProtectedVm) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
+// GetWriteConnectionSecretToReference of this ProtectedVm.
+func (mg *ProtectedVm) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
 	return mg.Spec.WriteConnectionSecretToReference
 }
 
-// SetConditions of this BackupProtectedVm.
-func (mg *BackupProtectedVm) SetConditions(c ...xpv1.Condition) {
+// SetConditions of this ProtectedVm.
+func (mg *ProtectedVm) SetConditions(c ...xpv1.Condition) {
 	mg.Status.SetConditions(c...)
 }
 
-// SetDeletionPolicy of this BackupProtectedVm.
-func (mg *BackupProtectedVm) SetDeletionPolicy(r xpv1.DeletionPolicy) {
+// SetDeletionPolicy of this ProtectedVm.
+func (mg *ProtectedVm) SetDeletionPolicy(r xpv1.DeletionPolicy) {
 	mg.Spec.DeletionPolicy = r
 }
 
-// SetProviderConfigReference of this BackupProtectedVm.
-func (mg *BackupProtectedVm) SetProviderConfigReference(r *xpv1.Reference) {
+// SetProviderConfigReference of this ProtectedVm.
+func (mg *ProtectedVm) SetProviderConfigReference(r *xpv1.Reference) {
 	mg.Spec.ProviderConfigReference = r
 }
 
 /*
-SetProviderReference of this BackupProtectedVm.
+SetProviderReference of this ProtectedVm.
 Deprecated: Use SetProviderConfigReference.
 */
-func (mg *BackupProtectedVm) SetProviderReference(r *xpv1.Reference) {
+func (mg *ProtectedVm) SetProviderReference(r *xpv1.Reference) {
 	mg.Spec.ProviderReference = r
 }
 
-// SetWriteConnectionSecretToReference of this BackupProtectedVm.
-func (mg *BackupProtectedVm) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
+// SetWriteConnectionSecretToReference of this ProtectedVm.
+func (mg *ProtectedVm) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
 	mg.Spec.WriteConnectionSecretToReference = r
 }

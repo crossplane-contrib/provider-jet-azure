@@ -19,58 +19,58 @@ package v1alpha1
 
 import xpv1 "github.com/crossplane/crossplane-runtime/apis/common/v1"
 
-// GetCondition of this SshPublicKey.
-func (mg *SshPublicKey) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
+// GetCondition of this PublicKey.
+func (mg *PublicKey) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
 	return mg.Status.GetCondition(ct)
 }
 
-// GetDeletionPolicy of this SshPublicKey.
-func (mg *SshPublicKey) GetDeletionPolicy() xpv1.DeletionPolicy {
+// GetDeletionPolicy of this PublicKey.
+func (mg *PublicKey) GetDeletionPolicy() xpv1.DeletionPolicy {
 	return mg.Spec.DeletionPolicy
 }
 
-// GetProviderConfigReference of this SshPublicKey.
-func (mg *SshPublicKey) GetProviderConfigReference() *xpv1.Reference {
+// GetProviderConfigReference of this PublicKey.
+func (mg *PublicKey) GetProviderConfigReference() *xpv1.Reference {
 	return mg.Spec.ProviderConfigReference
 }
 
 /*
-GetProviderReference of this SshPublicKey.
+GetProviderReference of this PublicKey.
 Deprecated: Use GetProviderConfigReference.
 */
-func (mg *SshPublicKey) GetProviderReference() *xpv1.Reference {
+func (mg *PublicKey) GetProviderReference() *xpv1.Reference {
 	return mg.Spec.ProviderReference
 }
 
-// GetWriteConnectionSecretToReference of this SshPublicKey.
-func (mg *SshPublicKey) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
+// GetWriteConnectionSecretToReference of this PublicKey.
+func (mg *PublicKey) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
 	return mg.Spec.WriteConnectionSecretToReference
 }
 
-// SetConditions of this SshPublicKey.
-func (mg *SshPublicKey) SetConditions(c ...xpv1.Condition) {
+// SetConditions of this PublicKey.
+func (mg *PublicKey) SetConditions(c ...xpv1.Condition) {
 	mg.Status.SetConditions(c...)
 }
 
-// SetDeletionPolicy of this SshPublicKey.
-func (mg *SshPublicKey) SetDeletionPolicy(r xpv1.DeletionPolicy) {
+// SetDeletionPolicy of this PublicKey.
+func (mg *PublicKey) SetDeletionPolicy(r xpv1.DeletionPolicy) {
 	mg.Spec.DeletionPolicy = r
 }
 
-// SetProviderConfigReference of this SshPublicKey.
-func (mg *SshPublicKey) SetProviderConfigReference(r *xpv1.Reference) {
+// SetProviderConfigReference of this PublicKey.
+func (mg *PublicKey) SetProviderConfigReference(r *xpv1.Reference) {
 	mg.Spec.ProviderConfigReference = r
 }
 
 /*
-SetProviderReference of this SshPublicKey.
+SetProviderReference of this PublicKey.
 Deprecated: Use SetProviderConfigReference.
 */
-func (mg *SshPublicKey) SetProviderReference(r *xpv1.Reference) {
+func (mg *PublicKey) SetProviderReference(r *xpv1.Reference) {
 	mg.Spec.ProviderReference = r
 }
 
-// SetWriteConnectionSecretToReference of this SshPublicKey.
-func (mg *SshPublicKey) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
+// SetWriteConnectionSecretToReference of this PublicKey.
+func (mg *PublicKey) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
 	mg.Spec.WriteConnectionSecretToReference = r
 }

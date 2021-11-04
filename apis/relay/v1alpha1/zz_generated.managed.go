@@ -19,226 +19,226 @@ package v1alpha1
 
 import xpv1 "github.com/crossplane/crossplane-runtime/apis/common/v1"
 
-// GetCondition of this RelayHybridConnection.
-func (mg *RelayHybridConnection) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
+// GetCondition of this HybridConnection.
+func (mg *HybridConnection) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
 	return mg.Status.GetCondition(ct)
 }
 
-// GetDeletionPolicy of this RelayHybridConnection.
-func (mg *RelayHybridConnection) GetDeletionPolicy() xpv1.DeletionPolicy {
+// GetDeletionPolicy of this HybridConnection.
+func (mg *HybridConnection) GetDeletionPolicy() xpv1.DeletionPolicy {
 	return mg.Spec.DeletionPolicy
 }
 
-// GetProviderConfigReference of this RelayHybridConnection.
-func (mg *RelayHybridConnection) GetProviderConfigReference() *xpv1.Reference {
+// GetProviderConfigReference of this HybridConnection.
+func (mg *HybridConnection) GetProviderConfigReference() *xpv1.Reference {
 	return mg.Spec.ProviderConfigReference
 }
 
 /*
-GetProviderReference of this RelayHybridConnection.
+GetProviderReference of this HybridConnection.
 Deprecated: Use GetProviderConfigReference.
 */
-func (mg *RelayHybridConnection) GetProviderReference() *xpv1.Reference {
+func (mg *HybridConnection) GetProviderReference() *xpv1.Reference {
 	return mg.Spec.ProviderReference
 }
 
-// GetWriteConnectionSecretToReference of this RelayHybridConnection.
-func (mg *RelayHybridConnection) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
+// GetWriteConnectionSecretToReference of this HybridConnection.
+func (mg *HybridConnection) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
 	return mg.Spec.WriteConnectionSecretToReference
 }
 
-// SetConditions of this RelayHybridConnection.
-func (mg *RelayHybridConnection) SetConditions(c ...xpv1.Condition) {
+// SetConditions of this HybridConnection.
+func (mg *HybridConnection) SetConditions(c ...xpv1.Condition) {
 	mg.Status.SetConditions(c...)
 }
 
-// SetDeletionPolicy of this RelayHybridConnection.
-func (mg *RelayHybridConnection) SetDeletionPolicy(r xpv1.DeletionPolicy) {
+// SetDeletionPolicy of this HybridConnection.
+func (mg *HybridConnection) SetDeletionPolicy(r xpv1.DeletionPolicy) {
 	mg.Spec.DeletionPolicy = r
 }
 
-// SetProviderConfigReference of this RelayHybridConnection.
-func (mg *RelayHybridConnection) SetProviderConfigReference(r *xpv1.Reference) {
+// SetProviderConfigReference of this HybridConnection.
+func (mg *HybridConnection) SetProviderConfigReference(r *xpv1.Reference) {
 	mg.Spec.ProviderConfigReference = r
 }
 
 /*
-SetProviderReference of this RelayHybridConnection.
+SetProviderReference of this HybridConnection.
 Deprecated: Use SetProviderConfigReference.
 */
-func (mg *RelayHybridConnection) SetProviderReference(r *xpv1.Reference) {
+func (mg *HybridConnection) SetProviderReference(r *xpv1.Reference) {
 	mg.Spec.ProviderReference = r
 }
 
-// SetWriteConnectionSecretToReference of this RelayHybridConnection.
-func (mg *RelayHybridConnection) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
+// SetWriteConnectionSecretToReference of this HybridConnection.
+func (mg *HybridConnection) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
 	mg.Spec.WriteConnectionSecretToReference = r
 }
 
-// GetCondition of this RelayHybridConnectionAuthorizationRule.
-func (mg *RelayHybridConnectionAuthorizationRule) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
+// GetCondition of this HybridConnectionAuthorizationRule.
+func (mg *HybridConnectionAuthorizationRule) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
 	return mg.Status.GetCondition(ct)
 }
 
-// GetDeletionPolicy of this RelayHybridConnectionAuthorizationRule.
-func (mg *RelayHybridConnectionAuthorizationRule) GetDeletionPolicy() xpv1.DeletionPolicy {
+// GetDeletionPolicy of this HybridConnectionAuthorizationRule.
+func (mg *HybridConnectionAuthorizationRule) GetDeletionPolicy() xpv1.DeletionPolicy {
 	return mg.Spec.DeletionPolicy
 }
 
-// GetProviderConfigReference of this RelayHybridConnectionAuthorizationRule.
-func (mg *RelayHybridConnectionAuthorizationRule) GetProviderConfigReference() *xpv1.Reference {
+// GetProviderConfigReference of this HybridConnectionAuthorizationRule.
+func (mg *HybridConnectionAuthorizationRule) GetProviderConfigReference() *xpv1.Reference {
 	return mg.Spec.ProviderConfigReference
 }
 
 /*
-GetProviderReference of this RelayHybridConnectionAuthorizationRule.
+GetProviderReference of this HybridConnectionAuthorizationRule.
 Deprecated: Use GetProviderConfigReference.
 */
-func (mg *RelayHybridConnectionAuthorizationRule) GetProviderReference() *xpv1.Reference {
+func (mg *HybridConnectionAuthorizationRule) GetProviderReference() *xpv1.Reference {
 	return mg.Spec.ProviderReference
 }
 
-// GetWriteConnectionSecretToReference of this RelayHybridConnectionAuthorizationRule.
-func (mg *RelayHybridConnectionAuthorizationRule) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
+// GetWriteConnectionSecretToReference of this HybridConnectionAuthorizationRule.
+func (mg *HybridConnectionAuthorizationRule) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
 	return mg.Spec.WriteConnectionSecretToReference
 }
 
-// SetConditions of this RelayHybridConnectionAuthorizationRule.
-func (mg *RelayHybridConnectionAuthorizationRule) SetConditions(c ...xpv1.Condition) {
+// SetConditions of this HybridConnectionAuthorizationRule.
+func (mg *HybridConnectionAuthorizationRule) SetConditions(c ...xpv1.Condition) {
 	mg.Status.SetConditions(c...)
 }
 
-// SetDeletionPolicy of this RelayHybridConnectionAuthorizationRule.
-func (mg *RelayHybridConnectionAuthorizationRule) SetDeletionPolicy(r xpv1.DeletionPolicy) {
+// SetDeletionPolicy of this HybridConnectionAuthorizationRule.
+func (mg *HybridConnectionAuthorizationRule) SetDeletionPolicy(r xpv1.DeletionPolicy) {
 	mg.Spec.DeletionPolicy = r
 }
 
-// SetProviderConfigReference of this RelayHybridConnectionAuthorizationRule.
-func (mg *RelayHybridConnectionAuthorizationRule) SetProviderConfigReference(r *xpv1.Reference) {
+// SetProviderConfigReference of this HybridConnectionAuthorizationRule.
+func (mg *HybridConnectionAuthorizationRule) SetProviderConfigReference(r *xpv1.Reference) {
 	mg.Spec.ProviderConfigReference = r
 }
 
 /*
-SetProviderReference of this RelayHybridConnectionAuthorizationRule.
+SetProviderReference of this HybridConnectionAuthorizationRule.
 Deprecated: Use SetProviderConfigReference.
 */
-func (mg *RelayHybridConnectionAuthorizationRule) SetProviderReference(r *xpv1.Reference) {
+func (mg *HybridConnectionAuthorizationRule) SetProviderReference(r *xpv1.Reference) {
 	mg.Spec.ProviderReference = r
 }
 
-// SetWriteConnectionSecretToReference of this RelayHybridConnectionAuthorizationRule.
-func (mg *RelayHybridConnectionAuthorizationRule) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
+// SetWriteConnectionSecretToReference of this HybridConnectionAuthorizationRule.
+func (mg *HybridConnectionAuthorizationRule) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
 	mg.Spec.WriteConnectionSecretToReference = r
 }
 
-// GetCondition of this RelayNamespace.
-func (mg *RelayNamespace) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
+// GetCondition of this Namespace.
+func (mg *Namespace) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
 	return mg.Status.GetCondition(ct)
 }
 
-// GetDeletionPolicy of this RelayNamespace.
-func (mg *RelayNamespace) GetDeletionPolicy() xpv1.DeletionPolicy {
+// GetDeletionPolicy of this Namespace.
+func (mg *Namespace) GetDeletionPolicy() xpv1.DeletionPolicy {
 	return mg.Spec.DeletionPolicy
 }
 
-// GetProviderConfigReference of this RelayNamespace.
-func (mg *RelayNamespace) GetProviderConfigReference() *xpv1.Reference {
+// GetProviderConfigReference of this Namespace.
+func (mg *Namespace) GetProviderConfigReference() *xpv1.Reference {
 	return mg.Spec.ProviderConfigReference
 }
 
 /*
-GetProviderReference of this RelayNamespace.
+GetProviderReference of this Namespace.
 Deprecated: Use GetProviderConfigReference.
 */
-func (mg *RelayNamespace) GetProviderReference() *xpv1.Reference {
+func (mg *Namespace) GetProviderReference() *xpv1.Reference {
 	return mg.Spec.ProviderReference
 }
 
-// GetWriteConnectionSecretToReference of this RelayNamespace.
-func (mg *RelayNamespace) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
+// GetWriteConnectionSecretToReference of this Namespace.
+func (mg *Namespace) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
 	return mg.Spec.WriteConnectionSecretToReference
 }
 
-// SetConditions of this RelayNamespace.
-func (mg *RelayNamespace) SetConditions(c ...xpv1.Condition) {
+// SetConditions of this Namespace.
+func (mg *Namespace) SetConditions(c ...xpv1.Condition) {
 	mg.Status.SetConditions(c...)
 }
 
-// SetDeletionPolicy of this RelayNamespace.
-func (mg *RelayNamespace) SetDeletionPolicy(r xpv1.DeletionPolicy) {
+// SetDeletionPolicy of this Namespace.
+func (mg *Namespace) SetDeletionPolicy(r xpv1.DeletionPolicy) {
 	mg.Spec.DeletionPolicy = r
 }
 
-// SetProviderConfigReference of this RelayNamespace.
-func (mg *RelayNamespace) SetProviderConfigReference(r *xpv1.Reference) {
+// SetProviderConfigReference of this Namespace.
+func (mg *Namespace) SetProviderConfigReference(r *xpv1.Reference) {
 	mg.Spec.ProviderConfigReference = r
 }
 
 /*
-SetProviderReference of this RelayNamespace.
+SetProviderReference of this Namespace.
 Deprecated: Use SetProviderConfigReference.
 */
-func (mg *RelayNamespace) SetProviderReference(r *xpv1.Reference) {
+func (mg *Namespace) SetProviderReference(r *xpv1.Reference) {
 	mg.Spec.ProviderReference = r
 }
 
-// SetWriteConnectionSecretToReference of this RelayNamespace.
-func (mg *RelayNamespace) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
+// SetWriteConnectionSecretToReference of this Namespace.
+func (mg *Namespace) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
 	mg.Spec.WriteConnectionSecretToReference = r
 }
 
-// GetCondition of this RelayNamespaceAuthorizationRule.
-func (mg *RelayNamespaceAuthorizationRule) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
+// GetCondition of this NamespaceAuthorizationRule.
+func (mg *NamespaceAuthorizationRule) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
 	return mg.Status.GetCondition(ct)
 }
 
-// GetDeletionPolicy of this RelayNamespaceAuthorizationRule.
-func (mg *RelayNamespaceAuthorizationRule) GetDeletionPolicy() xpv1.DeletionPolicy {
+// GetDeletionPolicy of this NamespaceAuthorizationRule.
+func (mg *NamespaceAuthorizationRule) GetDeletionPolicy() xpv1.DeletionPolicy {
 	return mg.Spec.DeletionPolicy
 }
 
-// GetProviderConfigReference of this RelayNamespaceAuthorizationRule.
-func (mg *RelayNamespaceAuthorizationRule) GetProviderConfigReference() *xpv1.Reference {
+// GetProviderConfigReference of this NamespaceAuthorizationRule.
+func (mg *NamespaceAuthorizationRule) GetProviderConfigReference() *xpv1.Reference {
 	return mg.Spec.ProviderConfigReference
 }
 
 /*
-GetProviderReference of this RelayNamespaceAuthorizationRule.
+GetProviderReference of this NamespaceAuthorizationRule.
 Deprecated: Use GetProviderConfigReference.
 */
-func (mg *RelayNamespaceAuthorizationRule) GetProviderReference() *xpv1.Reference {
+func (mg *NamespaceAuthorizationRule) GetProviderReference() *xpv1.Reference {
 	return mg.Spec.ProviderReference
 }
 
-// GetWriteConnectionSecretToReference of this RelayNamespaceAuthorizationRule.
-func (mg *RelayNamespaceAuthorizationRule) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
+// GetWriteConnectionSecretToReference of this NamespaceAuthorizationRule.
+func (mg *NamespaceAuthorizationRule) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
 	return mg.Spec.WriteConnectionSecretToReference
 }
 
-// SetConditions of this RelayNamespaceAuthorizationRule.
-func (mg *RelayNamespaceAuthorizationRule) SetConditions(c ...xpv1.Condition) {
+// SetConditions of this NamespaceAuthorizationRule.
+func (mg *NamespaceAuthorizationRule) SetConditions(c ...xpv1.Condition) {
 	mg.Status.SetConditions(c...)
 }
 
-// SetDeletionPolicy of this RelayNamespaceAuthorizationRule.
-func (mg *RelayNamespaceAuthorizationRule) SetDeletionPolicy(r xpv1.DeletionPolicy) {
+// SetDeletionPolicy of this NamespaceAuthorizationRule.
+func (mg *NamespaceAuthorizationRule) SetDeletionPolicy(r xpv1.DeletionPolicy) {
 	mg.Spec.DeletionPolicy = r
 }
 
-// SetProviderConfigReference of this RelayNamespaceAuthorizationRule.
-func (mg *RelayNamespaceAuthorizationRule) SetProviderConfigReference(r *xpv1.Reference) {
+// SetProviderConfigReference of this NamespaceAuthorizationRule.
+func (mg *NamespaceAuthorizationRule) SetProviderConfigReference(r *xpv1.Reference) {
 	mg.Spec.ProviderConfigReference = r
 }
 
 /*
-SetProviderReference of this RelayNamespaceAuthorizationRule.
+SetProviderReference of this NamespaceAuthorizationRule.
 Deprecated: Use SetProviderConfigReference.
 */
-func (mg *RelayNamespaceAuthorizationRule) SetProviderReference(r *xpv1.Reference) {
+func (mg *NamespaceAuthorizationRule) SetProviderReference(r *xpv1.Reference) {
 	mg.Spec.ProviderReference = r
 }
 
-// SetWriteConnectionSecretToReference of this RelayNamespaceAuthorizationRule.
-func (mg *RelayNamespaceAuthorizationRule) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
+// SetWriteConnectionSecretToReference of this NamespaceAuthorizationRule.
+func (mg *NamespaceAuthorizationRule) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
 	mg.Spec.WriteConnectionSecretToReference = r
 }

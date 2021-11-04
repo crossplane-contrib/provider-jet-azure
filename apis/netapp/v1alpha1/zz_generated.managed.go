@@ -19,226 +19,226 @@ package v1alpha1
 
 import xpv1 "github.com/crossplane/crossplane-runtime/apis/common/v1"
 
-// GetCondition of this NetappAccount.
-func (mg *NetappAccount) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
+// GetCondition of this Account.
+func (mg *Account) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
 	return mg.Status.GetCondition(ct)
 }
 
-// GetDeletionPolicy of this NetappAccount.
-func (mg *NetappAccount) GetDeletionPolicy() xpv1.DeletionPolicy {
+// GetDeletionPolicy of this Account.
+func (mg *Account) GetDeletionPolicy() xpv1.DeletionPolicy {
 	return mg.Spec.DeletionPolicy
 }
 
-// GetProviderConfigReference of this NetappAccount.
-func (mg *NetappAccount) GetProviderConfigReference() *xpv1.Reference {
+// GetProviderConfigReference of this Account.
+func (mg *Account) GetProviderConfigReference() *xpv1.Reference {
 	return mg.Spec.ProviderConfigReference
 }
 
 /*
-GetProviderReference of this NetappAccount.
+GetProviderReference of this Account.
 Deprecated: Use GetProviderConfigReference.
 */
-func (mg *NetappAccount) GetProviderReference() *xpv1.Reference {
+func (mg *Account) GetProviderReference() *xpv1.Reference {
 	return mg.Spec.ProviderReference
 }
 
-// GetWriteConnectionSecretToReference of this NetappAccount.
-func (mg *NetappAccount) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
+// GetWriteConnectionSecretToReference of this Account.
+func (mg *Account) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
 	return mg.Spec.WriteConnectionSecretToReference
 }
 
-// SetConditions of this NetappAccount.
-func (mg *NetappAccount) SetConditions(c ...xpv1.Condition) {
+// SetConditions of this Account.
+func (mg *Account) SetConditions(c ...xpv1.Condition) {
 	mg.Status.SetConditions(c...)
 }
 
-// SetDeletionPolicy of this NetappAccount.
-func (mg *NetappAccount) SetDeletionPolicy(r xpv1.DeletionPolicy) {
+// SetDeletionPolicy of this Account.
+func (mg *Account) SetDeletionPolicy(r xpv1.DeletionPolicy) {
 	mg.Spec.DeletionPolicy = r
 }
 
-// SetProviderConfigReference of this NetappAccount.
-func (mg *NetappAccount) SetProviderConfigReference(r *xpv1.Reference) {
+// SetProviderConfigReference of this Account.
+func (mg *Account) SetProviderConfigReference(r *xpv1.Reference) {
 	mg.Spec.ProviderConfigReference = r
 }
 
 /*
-SetProviderReference of this NetappAccount.
+SetProviderReference of this Account.
 Deprecated: Use SetProviderConfigReference.
 */
-func (mg *NetappAccount) SetProviderReference(r *xpv1.Reference) {
+func (mg *Account) SetProviderReference(r *xpv1.Reference) {
 	mg.Spec.ProviderReference = r
 }
 
-// SetWriteConnectionSecretToReference of this NetappAccount.
-func (mg *NetappAccount) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
+// SetWriteConnectionSecretToReference of this Account.
+func (mg *Account) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
 	mg.Spec.WriteConnectionSecretToReference = r
 }
 
-// GetCondition of this NetappPool.
-func (mg *NetappPool) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
+// GetCondition of this Pool.
+func (mg *Pool) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
 	return mg.Status.GetCondition(ct)
 }
 
-// GetDeletionPolicy of this NetappPool.
-func (mg *NetappPool) GetDeletionPolicy() xpv1.DeletionPolicy {
+// GetDeletionPolicy of this Pool.
+func (mg *Pool) GetDeletionPolicy() xpv1.DeletionPolicy {
 	return mg.Spec.DeletionPolicy
 }
 
-// GetProviderConfigReference of this NetappPool.
-func (mg *NetappPool) GetProviderConfigReference() *xpv1.Reference {
+// GetProviderConfigReference of this Pool.
+func (mg *Pool) GetProviderConfigReference() *xpv1.Reference {
 	return mg.Spec.ProviderConfigReference
 }
 
 /*
-GetProviderReference of this NetappPool.
+GetProviderReference of this Pool.
 Deprecated: Use GetProviderConfigReference.
 */
-func (mg *NetappPool) GetProviderReference() *xpv1.Reference {
+func (mg *Pool) GetProviderReference() *xpv1.Reference {
 	return mg.Spec.ProviderReference
 }
 
-// GetWriteConnectionSecretToReference of this NetappPool.
-func (mg *NetappPool) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
+// GetWriteConnectionSecretToReference of this Pool.
+func (mg *Pool) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
 	return mg.Spec.WriteConnectionSecretToReference
 }
 
-// SetConditions of this NetappPool.
-func (mg *NetappPool) SetConditions(c ...xpv1.Condition) {
+// SetConditions of this Pool.
+func (mg *Pool) SetConditions(c ...xpv1.Condition) {
 	mg.Status.SetConditions(c...)
 }
 
-// SetDeletionPolicy of this NetappPool.
-func (mg *NetappPool) SetDeletionPolicy(r xpv1.DeletionPolicy) {
+// SetDeletionPolicy of this Pool.
+func (mg *Pool) SetDeletionPolicy(r xpv1.DeletionPolicy) {
 	mg.Spec.DeletionPolicy = r
 }
 
-// SetProviderConfigReference of this NetappPool.
-func (mg *NetappPool) SetProviderConfigReference(r *xpv1.Reference) {
+// SetProviderConfigReference of this Pool.
+func (mg *Pool) SetProviderConfigReference(r *xpv1.Reference) {
 	mg.Spec.ProviderConfigReference = r
 }
 
 /*
-SetProviderReference of this NetappPool.
+SetProviderReference of this Pool.
 Deprecated: Use SetProviderConfigReference.
 */
-func (mg *NetappPool) SetProviderReference(r *xpv1.Reference) {
+func (mg *Pool) SetProviderReference(r *xpv1.Reference) {
 	mg.Spec.ProviderReference = r
 }
 
-// SetWriteConnectionSecretToReference of this NetappPool.
-func (mg *NetappPool) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
+// SetWriteConnectionSecretToReference of this Pool.
+func (mg *Pool) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
 	mg.Spec.WriteConnectionSecretToReference = r
 }
 
-// GetCondition of this NetappSnapshot.
-func (mg *NetappSnapshot) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
+// GetCondition of this Snapshot.
+func (mg *Snapshot) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
 	return mg.Status.GetCondition(ct)
 }
 
-// GetDeletionPolicy of this NetappSnapshot.
-func (mg *NetappSnapshot) GetDeletionPolicy() xpv1.DeletionPolicy {
+// GetDeletionPolicy of this Snapshot.
+func (mg *Snapshot) GetDeletionPolicy() xpv1.DeletionPolicy {
 	return mg.Spec.DeletionPolicy
 }
 
-// GetProviderConfigReference of this NetappSnapshot.
-func (mg *NetappSnapshot) GetProviderConfigReference() *xpv1.Reference {
+// GetProviderConfigReference of this Snapshot.
+func (mg *Snapshot) GetProviderConfigReference() *xpv1.Reference {
 	return mg.Spec.ProviderConfigReference
 }
 
 /*
-GetProviderReference of this NetappSnapshot.
+GetProviderReference of this Snapshot.
 Deprecated: Use GetProviderConfigReference.
 */
-func (mg *NetappSnapshot) GetProviderReference() *xpv1.Reference {
+func (mg *Snapshot) GetProviderReference() *xpv1.Reference {
 	return mg.Spec.ProviderReference
 }
 
-// GetWriteConnectionSecretToReference of this NetappSnapshot.
-func (mg *NetappSnapshot) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
+// GetWriteConnectionSecretToReference of this Snapshot.
+func (mg *Snapshot) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
 	return mg.Spec.WriteConnectionSecretToReference
 }
 
-// SetConditions of this NetappSnapshot.
-func (mg *NetappSnapshot) SetConditions(c ...xpv1.Condition) {
+// SetConditions of this Snapshot.
+func (mg *Snapshot) SetConditions(c ...xpv1.Condition) {
 	mg.Status.SetConditions(c...)
 }
 
-// SetDeletionPolicy of this NetappSnapshot.
-func (mg *NetappSnapshot) SetDeletionPolicy(r xpv1.DeletionPolicy) {
+// SetDeletionPolicy of this Snapshot.
+func (mg *Snapshot) SetDeletionPolicy(r xpv1.DeletionPolicy) {
 	mg.Spec.DeletionPolicy = r
 }
 
-// SetProviderConfigReference of this NetappSnapshot.
-func (mg *NetappSnapshot) SetProviderConfigReference(r *xpv1.Reference) {
+// SetProviderConfigReference of this Snapshot.
+func (mg *Snapshot) SetProviderConfigReference(r *xpv1.Reference) {
 	mg.Spec.ProviderConfigReference = r
 }
 
 /*
-SetProviderReference of this NetappSnapshot.
+SetProviderReference of this Snapshot.
 Deprecated: Use SetProviderConfigReference.
 */
-func (mg *NetappSnapshot) SetProviderReference(r *xpv1.Reference) {
+func (mg *Snapshot) SetProviderReference(r *xpv1.Reference) {
 	mg.Spec.ProviderReference = r
 }
 
-// SetWriteConnectionSecretToReference of this NetappSnapshot.
-func (mg *NetappSnapshot) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
+// SetWriteConnectionSecretToReference of this Snapshot.
+func (mg *Snapshot) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
 	mg.Spec.WriteConnectionSecretToReference = r
 }
 
-// GetCondition of this NetappVolume.
-func (mg *NetappVolume) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
+// GetCondition of this Volume.
+func (mg *Volume) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
 	return mg.Status.GetCondition(ct)
 }
 
-// GetDeletionPolicy of this NetappVolume.
-func (mg *NetappVolume) GetDeletionPolicy() xpv1.DeletionPolicy {
+// GetDeletionPolicy of this Volume.
+func (mg *Volume) GetDeletionPolicy() xpv1.DeletionPolicy {
 	return mg.Spec.DeletionPolicy
 }
 
-// GetProviderConfigReference of this NetappVolume.
-func (mg *NetappVolume) GetProviderConfigReference() *xpv1.Reference {
+// GetProviderConfigReference of this Volume.
+func (mg *Volume) GetProviderConfigReference() *xpv1.Reference {
 	return mg.Spec.ProviderConfigReference
 }
 
 /*
-GetProviderReference of this NetappVolume.
+GetProviderReference of this Volume.
 Deprecated: Use GetProviderConfigReference.
 */
-func (mg *NetappVolume) GetProviderReference() *xpv1.Reference {
+func (mg *Volume) GetProviderReference() *xpv1.Reference {
 	return mg.Spec.ProviderReference
 }
 
-// GetWriteConnectionSecretToReference of this NetappVolume.
-func (mg *NetappVolume) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
+// GetWriteConnectionSecretToReference of this Volume.
+func (mg *Volume) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
 	return mg.Spec.WriteConnectionSecretToReference
 }
 
-// SetConditions of this NetappVolume.
-func (mg *NetappVolume) SetConditions(c ...xpv1.Condition) {
+// SetConditions of this Volume.
+func (mg *Volume) SetConditions(c ...xpv1.Condition) {
 	mg.Status.SetConditions(c...)
 }
 
-// SetDeletionPolicy of this NetappVolume.
-func (mg *NetappVolume) SetDeletionPolicy(r xpv1.DeletionPolicy) {
+// SetDeletionPolicy of this Volume.
+func (mg *Volume) SetDeletionPolicy(r xpv1.DeletionPolicy) {
 	mg.Spec.DeletionPolicy = r
 }
 
-// SetProviderConfigReference of this NetappVolume.
-func (mg *NetappVolume) SetProviderConfigReference(r *xpv1.Reference) {
+// SetProviderConfigReference of this Volume.
+func (mg *Volume) SetProviderConfigReference(r *xpv1.Reference) {
 	mg.Spec.ProviderConfigReference = r
 }
 
 /*
-SetProviderReference of this NetappVolume.
+SetProviderReference of this Volume.
 Deprecated: Use SetProviderConfigReference.
 */
-func (mg *NetappVolume) SetProviderReference(r *xpv1.Reference) {
+func (mg *Volume) SetProviderReference(r *xpv1.Reference) {
 	mg.Spec.ProviderReference = r
 }
 
-// SetWriteConnectionSecretToReference of this NetappVolume.
-func (mg *NetappVolume) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
+// SetWriteConnectionSecretToReference of this Volume.
+func (mg *Volume) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
 	mg.Spec.WriteConnectionSecretToReference = r
 }

@@ -19,114 +19,114 @@ package v1alpha1
 
 import xpv1 "github.com/crossplane/crossplane-runtime/apis/common/v1"
 
-// GetCondition of this LighthouseAssignment.
-func (mg *LighthouseAssignment) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
+// GetCondition of this Assignment.
+func (mg *Assignment) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
 	return mg.Status.GetCondition(ct)
 }
 
-// GetDeletionPolicy of this LighthouseAssignment.
-func (mg *LighthouseAssignment) GetDeletionPolicy() xpv1.DeletionPolicy {
+// GetDeletionPolicy of this Assignment.
+func (mg *Assignment) GetDeletionPolicy() xpv1.DeletionPolicy {
 	return mg.Spec.DeletionPolicy
 }
 
-// GetProviderConfigReference of this LighthouseAssignment.
-func (mg *LighthouseAssignment) GetProviderConfigReference() *xpv1.Reference {
+// GetProviderConfigReference of this Assignment.
+func (mg *Assignment) GetProviderConfigReference() *xpv1.Reference {
 	return mg.Spec.ProviderConfigReference
 }
 
 /*
-GetProviderReference of this LighthouseAssignment.
+GetProviderReference of this Assignment.
 Deprecated: Use GetProviderConfigReference.
 */
-func (mg *LighthouseAssignment) GetProviderReference() *xpv1.Reference {
+func (mg *Assignment) GetProviderReference() *xpv1.Reference {
 	return mg.Spec.ProviderReference
 }
 
-// GetWriteConnectionSecretToReference of this LighthouseAssignment.
-func (mg *LighthouseAssignment) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
+// GetWriteConnectionSecretToReference of this Assignment.
+func (mg *Assignment) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
 	return mg.Spec.WriteConnectionSecretToReference
 }
 
-// SetConditions of this LighthouseAssignment.
-func (mg *LighthouseAssignment) SetConditions(c ...xpv1.Condition) {
+// SetConditions of this Assignment.
+func (mg *Assignment) SetConditions(c ...xpv1.Condition) {
 	mg.Status.SetConditions(c...)
 }
 
-// SetDeletionPolicy of this LighthouseAssignment.
-func (mg *LighthouseAssignment) SetDeletionPolicy(r xpv1.DeletionPolicy) {
+// SetDeletionPolicy of this Assignment.
+func (mg *Assignment) SetDeletionPolicy(r xpv1.DeletionPolicy) {
 	mg.Spec.DeletionPolicy = r
 }
 
-// SetProviderConfigReference of this LighthouseAssignment.
-func (mg *LighthouseAssignment) SetProviderConfigReference(r *xpv1.Reference) {
+// SetProviderConfigReference of this Assignment.
+func (mg *Assignment) SetProviderConfigReference(r *xpv1.Reference) {
 	mg.Spec.ProviderConfigReference = r
 }
 
 /*
-SetProviderReference of this LighthouseAssignment.
+SetProviderReference of this Assignment.
 Deprecated: Use SetProviderConfigReference.
 */
-func (mg *LighthouseAssignment) SetProviderReference(r *xpv1.Reference) {
+func (mg *Assignment) SetProviderReference(r *xpv1.Reference) {
 	mg.Spec.ProviderReference = r
 }
 
-// SetWriteConnectionSecretToReference of this LighthouseAssignment.
-func (mg *LighthouseAssignment) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
+// SetWriteConnectionSecretToReference of this Assignment.
+func (mg *Assignment) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
 	mg.Spec.WriteConnectionSecretToReference = r
 }
 
-// GetCondition of this LighthouseDefinition.
-func (mg *LighthouseDefinition) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
+// GetCondition of this Definition.
+func (mg *Definition) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
 	return mg.Status.GetCondition(ct)
 }
 
-// GetDeletionPolicy of this LighthouseDefinition.
-func (mg *LighthouseDefinition) GetDeletionPolicy() xpv1.DeletionPolicy {
+// GetDeletionPolicy of this Definition.
+func (mg *Definition) GetDeletionPolicy() xpv1.DeletionPolicy {
 	return mg.Spec.DeletionPolicy
 }
 
-// GetProviderConfigReference of this LighthouseDefinition.
-func (mg *LighthouseDefinition) GetProviderConfigReference() *xpv1.Reference {
+// GetProviderConfigReference of this Definition.
+func (mg *Definition) GetProviderConfigReference() *xpv1.Reference {
 	return mg.Spec.ProviderConfigReference
 }
 
 /*
-GetProviderReference of this LighthouseDefinition.
+GetProviderReference of this Definition.
 Deprecated: Use GetProviderConfigReference.
 */
-func (mg *LighthouseDefinition) GetProviderReference() *xpv1.Reference {
+func (mg *Definition) GetProviderReference() *xpv1.Reference {
 	return mg.Spec.ProviderReference
 }
 
-// GetWriteConnectionSecretToReference of this LighthouseDefinition.
-func (mg *LighthouseDefinition) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
+// GetWriteConnectionSecretToReference of this Definition.
+func (mg *Definition) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
 	return mg.Spec.WriteConnectionSecretToReference
 }
 
-// SetConditions of this LighthouseDefinition.
-func (mg *LighthouseDefinition) SetConditions(c ...xpv1.Condition) {
+// SetConditions of this Definition.
+func (mg *Definition) SetConditions(c ...xpv1.Condition) {
 	mg.Status.SetConditions(c...)
 }
 
-// SetDeletionPolicy of this LighthouseDefinition.
-func (mg *LighthouseDefinition) SetDeletionPolicy(r xpv1.DeletionPolicy) {
+// SetDeletionPolicy of this Definition.
+func (mg *Definition) SetDeletionPolicy(r xpv1.DeletionPolicy) {
 	mg.Spec.DeletionPolicy = r
 }
 
-// SetProviderConfigReference of this LighthouseDefinition.
-func (mg *LighthouseDefinition) SetProviderConfigReference(r *xpv1.Reference) {
+// SetProviderConfigReference of this Definition.
+func (mg *Definition) SetProviderConfigReference(r *xpv1.Reference) {
 	mg.Spec.ProviderConfigReference = r
 }
 
 /*
-SetProviderReference of this LighthouseDefinition.
+SetProviderReference of this Definition.
 Deprecated: Use SetProviderConfigReference.
 */
-func (mg *LighthouseDefinition) SetProviderReference(r *xpv1.Reference) {
+func (mg *Definition) SetProviderReference(r *xpv1.Reference) {
 	mg.Spec.ProviderReference = r
 }
 
-// SetWriteConnectionSecretToReference of this LighthouseDefinition.
-func (mg *LighthouseDefinition) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
+// SetWriteConnectionSecretToReference of this Definition.
+func (mg *Definition) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
 	mg.Spec.WriteConnectionSecretToReference = r
 }

@@ -19,8 +19,8 @@ package v1alpha1
 
 import resource "github.com/crossplane/crossplane-runtime/pkg/resource"
 
-// GetItems of this PowerbiEmbeddedList.
-func (l *PowerbiEmbeddedList) GetItems() []resource.Managed {
+// GetItems of this EmbeddedList.
+func (l *EmbeddedList) GetItems() []resource.Managed {
 	items := make([]resource.Managed, len(l.Items))
 	for i := range l.Items {
 		items[i] = &l.Items[i]

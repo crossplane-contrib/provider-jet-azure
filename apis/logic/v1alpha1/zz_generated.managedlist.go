@@ -19,8 +19,8 @@ package v1alpha1
 
 import resource "github.com/crossplane/crossplane-runtime/pkg/resource"
 
-// GetItems of this LogicAppActionCustomList.
-func (l *LogicAppActionCustomList) GetItems() []resource.Managed {
+// GetItems of this AppActionCustomList.
+func (l *AppActionCustomList) GetItems() []resource.Managed {
 	items := make([]resource.Managed, len(l.Items))
 	for i := range l.Items {
 		items[i] = &l.Items[i]
@@ -28,8 +28,8 @@ func (l *LogicAppActionCustomList) GetItems() []resource.Managed {
 	return items
 }
 
-// GetItems of this LogicAppActionHttpList.
-func (l *LogicAppActionHttpList) GetItems() []resource.Managed {
+// GetItems of this AppActionHttpList.
+func (l *AppActionHttpList) GetItems() []resource.Managed {
 	items := make([]resource.Managed, len(l.Items))
 	for i := range l.Items {
 		items[i] = &l.Items[i]
@@ -37,8 +37,8 @@ func (l *LogicAppActionHttpList) GetItems() []resource.Managed {
 	return items
 }
 
-// GetItems of this LogicAppIntegrationAccountAgreementList.
-func (l *LogicAppIntegrationAccountAgreementList) GetItems() []resource.Managed {
+// GetItems of this AppIntegrationAccountAgreementList.
+func (l *AppIntegrationAccountAgreementList) GetItems() []resource.Managed {
 	items := make([]resource.Managed, len(l.Items))
 	for i := range l.Items {
 		items[i] = &l.Items[i]
@@ -46,8 +46,8 @@ func (l *LogicAppIntegrationAccountAgreementList) GetItems() []resource.Managed 
 	return items
 }
 
-// GetItems of this LogicAppIntegrationAccountAssemblyList.
-func (l *LogicAppIntegrationAccountAssemblyList) GetItems() []resource.Managed {
+// GetItems of this AppIntegrationAccountAssemblyList.
+func (l *AppIntegrationAccountAssemblyList) GetItems() []resource.Managed {
 	items := make([]resource.Managed, len(l.Items))
 	for i := range l.Items {
 		items[i] = &l.Items[i]
@@ -55,8 +55,8 @@ func (l *LogicAppIntegrationAccountAssemblyList) GetItems() []resource.Managed {
 	return items
 }
 
-// GetItems of this LogicAppIntegrationAccountBatchConfigurationList.
-func (l *LogicAppIntegrationAccountBatchConfigurationList) GetItems() []resource.Managed {
+// GetItems of this AppIntegrationAccountBatchConfigurationList.
+func (l *AppIntegrationAccountBatchConfigurationList) GetItems() []resource.Managed {
 	items := make([]resource.Managed, len(l.Items))
 	for i := range l.Items {
 		items[i] = &l.Items[i]
@@ -64,8 +64,8 @@ func (l *LogicAppIntegrationAccountBatchConfigurationList) GetItems() []resource
 	return items
 }
 
-// GetItems of this LogicAppIntegrationAccountList.
-func (l *LogicAppIntegrationAccountList) GetItems() []resource.Managed {
+// GetItems of this AppIntegrationAccountList.
+func (l *AppIntegrationAccountList) GetItems() []resource.Managed {
 	items := make([]resource.Managed, len(l.Items))
 	for i := range l.Items {
 		items[i] = &l.Items[i]
@@ -73,8 +73,8 @@ func (l *LogicAppIntegrationAccountList) GetItems() []resource.Managed {
 	return items
 }
 
-// GetItems of this LogicAppIntegrationAccountMapList.
-func (l *LogicAppIntegrationAccountMapList) GetItems() []resource.Managed {
+// GetItems of this AppIntegrationAccountMapList.
+func (l *AppIntegrationAccountMapList) GetItems() []resource.Managed {
 	items := make([]resource.Managed, len(l.Items))
 	for i := range l.Items {
 		items[i] = &l.Items[i]
@@ -82,8 +82,8 @@ func (l *LogicAppIntegrationAccountMapList) GetItems() []resource.Managed {
 	return items
 }
 
-// GetItems of this LogicAppIntegrationAccountPartnerList.
-func (l *LogicAppIntegrationAccountPartnerList) GetItems() []resource.Managed {
+// GetItems of this AppIntegrationAccountPartnerList.
+func (l *AppIntegrationAccountPartnerList) GetItems() []resource.Managed {
 	items := make([]resource.Managed, len(l.Items))
 	for i := range l.Items {
 		items[i] = &l.Items[i]
@@ -91,8 +91,8 @@ func (l *LogicAppIntegrationAccountPartnerList) GetItems() []resource.Managed {
 	return items
 }
 
-// GetItems of this LogicAppIntegrationAccountSchemaList.
-func (l *LogicAppIntegrationAccountSchemaList) GetItems() []resource.Managed {
+// GetItems of this AppIntegrationAccountSchemaList.
+func (l *AppIntegrationAccountSchemaList) GetItems() []resource.Managed {
 	items := make([]resource.Managed, len(l.Items))
 	for i := range l.Items {
 		items[i] = &l.Items[i]
@@ -100,8 +100,8 @@ func (l *LogicAppIntegrationAccountSchemaList) GetItems() []resource.Managed {
 	return items
 }
 
-// GetItems of this LogicAppIntegrationAccountSessionList.
-func (l *LogicAppIntegrationAccountSessionList) GetItems() []resource.Managed {
+// GetItems of this AppIntegrationAccountSessionList.
+func (l *AppIntegrationAccountSessionList) GetItems() []resource.Managed {
 	items := make([]resource.Managed, len(l.Items))
 	for i := range l.Items {
 		items[i] = &l.Items[i]
@@ -109,8 +109,8 @@ func (l *LogicAppIntegrationAccountSessionList) GetItems() []resource.Managed {
 	return items
 }
 
-// GetItems of this LogicAppTriggerCustomList.
-func (l *LogicAppTriggerCustomList) GetItems() []resource.Managed {
+// GetItems of this AppTriggerCustomList.
+func (l *AppTriggerCustomList) GetItems() []resource.Managed {
 	items := make([]resource.Managed, len(l.Items))
 	for i := range l.Items {
 		items[i] = &l.Items[i]
@@ -118,8 +118,8 @@ func (l *LogicAppTriggerCustomList) GetItems() []resource.Managed {
 	return items
 }
 
-// GetItems of this LogicAppTriggerHttpRequestList.
-func (l *LogicAppTriggerHttpRequestList) GetItems() []resource.Managed {
+// GetItems of this AppTriggerHttpRequestList.
+func (l *AppTriggerHttpRequestList) GetItems() []resource.Managed {
 	items := make([]resource.Managed, len(l.Items))
 	for i := range l.Items {
 		items[i] = &l.Items[i]
@@ -127,8 +127,8 @@ func (l *LogicAppTriggerHttpRequestList) GetItems() []resource.Managed {
 	return items
 }
 
-// GetItems of this LogicAppTriggerRecurrenceList.
-func (l *LogicAppTriggerRecurrenceList) GetItems() []resource.Managed {
+// GetItems of this AppTriggerRecurrenceList.
+func (l *AppTriggerRecurrenceList) GetItems() []resource.Managed {
 	items := make([]resource.Managed, len(l.Items))
 	for i := range l.Items {
 		items[i] = &l.Items[i]
@@ -136,8 +136,8 @@ func (l *LogicAppTriggerRecurrenceList) GetItems() []resource.Managed {
 	return items
 }
 
-// GetItems of this LogicAppWorkflowList.
-func (l *LogicAppWorkflowList) GetItems() []resource.Managed {
+// GetItems of this AppWorkflowList.
+func (l *AppWorkflowList) GetItems() []resource.Managed {
 	items := make([]resource.Managed, len(l.Items))
 	for i := range l.Items {
 		items[i] = &l.Items[i]

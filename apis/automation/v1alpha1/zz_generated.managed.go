@@ -19,898 +19,898 @@ package v1alpha1
 
 import xpv1 "github.com/crossplane/crossplane-runtime/apis/common/v1"
 
-// GetCondition of this AutomationAccount.
-func (mg *AutomationAccount) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
+// GetCondition of this Account.
+func (mg *Account) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
 	return mg.Status.GetCondition(ct)
 }
 
-// GetDeletionPolicy of this AutomationAccount.
-func (mg *AutomationAccount) GetDeletionPolicy() xpv1.DeletionPolicy {
+// GetDeletionPolicy of this Account.
+func (mg *Account) GetDeletionPolicy() xpv1.DeletionPolicy {
 	return mg.Spec.DeletionPolicy
 }
 
-// GetProviderConfigReference of this AutomationAccount.
-func (mg *AutomationAccount) GetProviderConfigReference() *xpv1.Reference {
+// GetProviderConfigReference of this Account.
+func (mg *Account) GetProviderConfigReference() *xpv1.Reference {
 	return mg.Spec.ProviderConfigReference
 }
 
 /*
-GetProviderReference of this AutomationAccount.
+GetProviderReference of this Account.
 Deprecated: Use GetProviderConfigReference.
 */
-func (mg *AutomationAccount) GetProviderReference() *xpv1.Reference {
+func (mg *Account) GetProviderReference() *xpv1.Reference {
 	return mg.Spec.ProviderReference
 }
 
-// GetWriteConnectionSecretToReference of this AutomationAccount.
-func (mg *AutomationAccount) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
+// GetWriteConnectionSecretToReference of this Account.
+func (mg *Account) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
 	return mg.Spec.WriteConnectionSecretToReference
 }
 
-// SetConditions of this AutomationAccount.
-func (mg *AutomationAccount) SetConditions(c ...xpv1.Condition) {
+// SetConditions of this Account.
+func (mg *Account) SetConditions(c ...xpv1.Condition) {
 	mg.Status.SetConditions(c...)
 }
 
-// SetDeletionPolicy of this AutomationAccount.
-func (mg *AutomationAccount) SetDeletionPolicy(r xpv1.DeletionPolicy) {
+// SetDeletionPolicy of this Account.
+func (mg *Account) SetDeletionPolicy(r xpv1.DeletionPolicy) {
 	mg.Spec.DeletionPolicy = r
 }
 
-// SetProviderConfigReference of this AutomationAccount.
-func (mg *AutomationAccount) SetProviderConfigReference(r *xpv1.Reference) {
+// SetProviderConfigReference of this Account.
+func (mg *Account) SetProviderConfigReference(r *xpv1.Reference) {
 	mg.Spec.ProviderConfigReference = r
 }
 
 /*
-SetProviderReference of this AutomationAccount.
+SetProviderReference of this Account.
 Deprecated: Use SetProviderConfigReference.
 */
-func (mg *AutomationAccount) SetProviderReference(r *xpv1.Reference) {
+func (mg *Account) SetProviderReference(r *xpv1.Reference) {
 	mg.Spec.ProviderReference = r
 }
 
-// SetWriteConnectionSecretToReference of this AutomationAccount.
-func (mg *AutomationAccount) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
+// SetWriteConnectionSecretToReference of this Account.
+func (mg *Account) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
 	mg.Spec.WriteConnectionSecretToReference = r
 }
 
-// GetCondition of this AutomationCertificate.
-func (mg *AutomationCertificate) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
+// GetCondition of this Certificate.
+func (mg *Certificate) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
 	return mg.Status.GetCondition(ct)
 }
 
-// GetDeletionPolicy of this AutomationCertificate.
-func (mg *AutomationCertificate) GetDeletionPolicy() xpv1.DeletionPolicy {
+// GetDeletionPolicy of this Certificate.
+func (mg *Certificate) GetDeletionPolicy() xpv1.DeletionPolicy {
 	return mg.Spec.DeletionPolicy
 }
 
-// GetProviderConfigReference of this AutomationCertificate.
-func (mg *AutomationCertificate) GetProviderConfigReference() *xpv1.Reference {
+// GetProviderConfigReference of this Certificate.
+func (mg *Certificate) GetProviderConfigReference() *xpv1.Reference {
 	return mg.Spec.ProviderConfigReference
 }
 
 /*
-GetProviderReference of this AutomationCertificate.
+GetProviderReference of this Certificate.
 Deprecated: Use GetProviderConfigReference.
 */
-func (mg *AutomationCertificate) GetProviderReference() *xpv1.Reference {
+func (mg *Certificate) GetProviderReference() *xpv1.Reference {
 	return mg.Spec.ProviderReference
 }
 
-// GetWriteConnectionSecretToReference of this AutomationCertificate.
-func (mg *AutomationCertificate) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
+// GetWriteConnectionSecretToReference of this Certificate.
+func (mg *Certificate) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
 	return mg.Spec.WriteConnectionSecretToReference
 }
 
-// SetConditions of this AutomationCertificate.
-func (mg *AutomationCertificate) SetConditions(c ...xpv1.Condition) {
+// SetConditions of this Certificate.
+func (mg *Certificate) SetConditions(c ...xpv1.Condition) {
 	mg.Status.SetConditions(c...)
 }
 
-// SetDeletionPolicy of this AutomationCertificate.
-func (mg *AutomationCertificate) SetDeletionPolicy(r xpv1.DeletionPolicy) {
+// SetDeletionPolicy of this Certificate.
+func (mg *Certificate) SetDeletionPolicy(r xpv1.DeletionPolicy) {
 	mg.Spec.DeletionPolicy = r
 }
 
-// SetProviderConfigReference of this AutomationCertificate.
-func (mg *AutomationCertificate) SetProviderConfigReference(r *xpv1.Reference) {
+// SetProviderConfigReference of this Certificate.
+func (mg *Certificate) SetProviderConfigReference(r *xpv1.Reference) {
 	mg.Spec.ProviderConfigReference = r
 }
 
 /*
-SetProviderReference of this AutomationCertificate.
+SetProviderReference of this Certificate.
 Deprecated: Use SetProviderConfigReference.
 */
-func (mg *AutomationCertificate) SetProviderReference(r *xpv1.Reference) {
+func (mg *Certificate) SetProviderReference(r *xpv1.Reference) {
 	mg.Spec.ProviderReference = r
 }
 
-// SetWriteConnectionSecretToReference of this AutomationCertificate.
-func (mg *AutomationCertificate) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
+// SetWriteConnectionSecretToReference of this Certificate.
+func (mg *Certificate) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
 	mg.Spec.WriteConnectionSecretToReference = r
 }
 
-// GetCondition of this AutomationConnection.
-func (mg *AutomationConnection) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
+// GetCondition of this Connection.
+func (mg *Connection) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
 	return mg.Status.GetCondition(ct)
 }
 
-// GetDeletionPolicy of this AutomationConnection.
-func (mg *AutomationConnection) GetDeletionPolicy() xpv1.DeletionPolicy {
+// GetDeletionPolicy of this Connection.
+func (mg *Connection) GetDeletionPolicy() xpv1.DeletionPolicy {
 	return mg.Spec.DeletionPolicy
 }
 
-// GetProviderConfigReference of this AutomationConnection.
-func (mg *AutomationConnection) GetProviderConfigReference() *xpv1.Reference {
+// GetProviderConfigReference of this Connection.
+func (mg *Connection) GetProviderConfigReference() *xpv1.Reference {
 	return mg.Spec.ProviderConfigReference
 }
 
 /*
-GetProviderReference of this AutomationConnection.
+GetProviderReference of this Connection.
 Deprecated: Use GetProviderConfigReference.
 */
-func (mg *AutomationConnection) GetProviderReference() *xpv1.Reference {
+func (mg *Connection) GetProviderReference() *xpv1.Reference {
 	return mg.Spec.ProviderReference
 }
 
-// GetWriteConnectionSecretToReference of this AutomationConnection.
-func (mg *AutomationConnection) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
+// GetWriteConnectionSecretToReference of this Connection.
+func (mg *Connection) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
 	return mg.Spec.WriteConnectionSecretToReference
 }
 
-// SetConditions of this AutomationConnection.
-func (mg *AutomationConnection) SetConditions(c ...xpv1.Condition) {
+// SetConditions of this Connection.
+func (mg *Connection) SetConditions(c ...xpv1.Condition) {
 	mg.Status.SetConditions(c...)
 }
 
-// SetDeletionPolicy of this AutomationConnection.
-func (mg *AutomationConnection) SetDeletionPolicy(r xpv1.DeletionPolicy) {
+// SetDeletionPolicy of this Connection.
+func (mg *Connection) SetDeletionPolicy(r xpv1.DeletionPolicy) {
 	mg.Spec.DeletionPolicy = r
 }
 
-// SetProviderConfigReference of this AutomationConnection.
-func (mg *AutomationConnection) SetProviderConfigReference(r *xpv1.Reference) {
+// SetProviderConfigReference of this Connection.
+func (mg *Connection) SetProviderConfigReference(r *xpv1.Reference) {
 	mg.Spec.ProviderConfigReference = r
 }
 
 /*
-SetProviderReference of this AutomationConnection.
+SetProviderReference of this Connection.
 Deprecated: Use SetProviderConfigReference.
 */
-func (mg *AutomationConnection) SetProviderReference(r *xpv1.Reference) {
+func (mg *Connection) SetProviderReference(r *xpv1.Reference) {
 	mg.Spec.ProviderReference = r
 }
 
-// SetWriteConnectionSecretToReference of this AutomationConnection.
-func (mg *AutomationConnection) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
+// SetWriteConnectionSecretToReference of this Connection.
+func (mg *Connection) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
 	mg.Spec.WriteConnectionSecretToReference = r
 }
 
-// GetCondition of this AutomationConnectionCertificate.
-func (mg *AutomationConnectionCertificate) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
+// GetCondition of this ConnectionCertificate.
+func (mg *ConnectionCertificate) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
 	return mg.Status.GetCondition(ct)
 }
 
-// GetDeletionPolicy of this AutomationConnectionCertificate.
-func (mg *AutomationConnectionCertificate) GetDeletionPolicy() xpv1.DeletionPolicy {
+// GetDeletionPolicy of this ConnectionCertificate.
+func (mg *ConnectionCertificate) GetDeletionPolicy() xpv1.DeletionPolicy {
 	return mg.Spec.DeletionPolicy
 }
 
-// GetProviderConfigReference of this AutomationConnectionCertificate.
-func (mg *AutomationConnectionCertificate) GetProviderConfigReference() *xpv1.Reference {
+// GetProviderConfigReference of this ConnectionCertificate.
+func (mg *ConnectionCertificate) GetProviderConfigReference() *xpv1.Reference {
 	return mg.Spec.ProviderConfigReference
 }
 
 /*
-GetProviderReference of this AutomationConnectionCertificate.
+GetProviderReference of this ConnectionCertificate.
 Deprecated: Use GetProviderConfigReference.
 */
-func (mg *AutomationConnectionCertificate) GetProviderReference() *xpv1.Reference {
+func (mg *ConnectionCertificate) GetProviderReference() *xpv1.Reference {
 	return mg.Spec.ProviderReference
 }
 
-// GetWriteConnectionSecretToReference of this AutomationConnectionCertificate.
-func (mg *AutomationConnectionCertificate) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
+// GetWriteConnectionSecretToReference of this ConnectionCertificate.
+func (mg *ConnectionCertificate) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
 	return mg.Spec.WriteConnectionSecretToReference
 }
 
-// SetConditions of this AutomationConnectionCertificate.
-func (mg *AutomationConnectionCertificate) SetConditions(c ...xpv1.Condition) {
+// SetConditions of this ConnectionCertificate.
+func (mg *ConnectionCertificate) SetConditions(c ...xpv1.Condition) {
 	mg.Status.SetConditions(c...)
 }
 
-// SetDeletionPolicy of this AutomationConnectionCertificate.
-func (mg *AutomationConnectionCertificate) SetDeletionPolicy(r xpv1.DeletionPolicy) {
+// SetDeletionPolicy of this ConnectionCertificate.
+func (mg *ConnectionCertificate) SetDeletionPolicy(r xpv1.DeletionPolicy) {
 	mg.Spec.DeletionPolicy = r
 }
 
-// SetProviderConfigReference of this AutomationConnectionCertificate.
-func (mg *AutomationConnectionCertificate) SetProviderConfigReference(r *xpv1.Reference) {
+// SetProviderConfigReference of this ConnectionCertificate.
+func (mg *ConnectionCertificate) SetProviderConfigReference(r *xpv1.Reference) {
 	mg.Spec.ProviderConfigReference = r
 }
 
 /*
-SetProviderReference of this AutomationConnectionCertificate.
+SetProviderReference of this ConnectionCertificate.
 Deprecated: Use SetProviderConfigReference.
 */
-func (mg *AutomationConnectionCertificate) SetProviderReference(r *xpv1.Reference) {
+func (mg *ConnectionCertificate) SetProviderReference(r *xpv1.Reference) {
 	mg.Spec.ProviderReference = r
 }
 
-// SetWriteConnectionSecretToReference of this AutomationConnectionCertificate.
-func (mg *AutomationConnectionCertificate) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
+// SetWriteConnectionSecretToReference of this ConnectionCertificate.
+func (mg *ConnectionCertificate) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
 	mg.Spec.WriteConnectionSecretToReference = r
 }
 
-// GetCondition of this AutomationConnectionClassicCertificate.
-func (mg *AutomationConnectionClassicCertificate) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
+// GetCondition of this ConnectionClassicCertificate.
+func (mg *ConnectionClassicCertificate) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
 	return mg.Status.GetCondition(ct)
 }
 
-// GetDeletionPolicy of this AutomationConnectionClassicCertificate.
-func (mg *AutomationConnectionClassicCertificate) GetDeletionPolicy() xpv1.DeletionPolicy {
+// GetDeletionPolicy of this ConnectionClassicCertificate.
+func (mg *ConnectionClassicCertificate) GetDeletionPolicy() xpv1.DeletionPolicy {
 	return mg.Spec.DeletionPolicy
 }
 
-// GetProviderConfigReference of this AutomationConnectionClassicCertificate.
-func (mg *AutomationConnectionClassicCertificate) GetProviderConfigReference() *xpv1.Reference {
+// GetProviderConfigReference of this ConnectionClassicCertificate.
+func (mg *ConnectionClassicCertificate) GetProviderConfigReference() *xpv1.Reference {
 	return mg.Spec.ProviderConfigReference
 }
 
 /*
-GetProviderReference of this AutomationConnectionClassicCertificate.
+GetProviderReference of this ConnectionClassicCertificate.
 Deprecated: Use GetProviderConfigReference.
 */
-func (mg *AutomationConnectionClassicCertificate) GetProviderReference() *xpv1.Reference {
+func (mg *ConnectionClassicCertificate) GetProviderReference() *xpv1.Reference {
 	return mg.Spec.ProviderReference
 }
 
-// GetWriteConnectionSecretToReference of this AutomationConnectionClassicCertificate.
-func (mg *AutomationConnectionClassicCertificate) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
+// GetWriteConnectionSecretToReference of this ConnectionClassicCertificate.
+func (mg *ConnectionClassicCertificate) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
 	return mg.Spec.WriteConnectionSecretToReference
 }
 
-// SetConditions of this AutomationConnectionClassicCertificate.
-func (mg *AutomationConnectionClassicCertificate) SetConditions(c ...xpv1.Condition) {
+// SetConditions of this ConnectionClassicCertificate.
+func (mg *ConnectionClassicCertificate) SetConditions(c ...xpv1.Condition) {
 	mg.Status.SetConditions(c...)
 }
 
-// SetDeletionPolicy of this AutomationConnectionClassicCertificate.
-func (mg *AutomationConnectionClassicCertificate) SetDeletionPolicy(r xpv1.DeletionPolicy) {
+// SetDeletionPolicy of this ConnectionClassicCertificate.
+func (mg *ConnectionClassicCertificate) SetDeletionPolicy(r xpv1.DeletionPolicy) {
 	mg.Spec.DeletionPolicy = r
 }
 
-// SetProviderConfigReference of this AutomationConnectionClassicCertificate.
-func (mg *AutomationConnectionClassicCertificate) SetProviderConfigReference(r *xpv1.Reference) {
+// SetProviderConfigReference of this ConnectionClassicCertificate.
+func (mg *ConnectionClassicCertificate) SetProviderConfigReference(r *xpv1.Reference) {
 	mg.Spec.ProviderConfigReference = r
 }
 
 /*
-SetProviderReference of this AutomationConnectionClassicCertificate.
+SetProviderReference of this ConnectionClassicCertificate.
 Deprecated: Use SetProviderConfigReference.
 */
-func (mg *AutomationConnectionClassicCertificate) SetProviderReference(r *xpv1.Reference) {
+func (mg *ConnectionClassicCertificate) SetProviderReference(r *xpv1.Reference) {
 	mg.Spec.ProviderReference = r
 }
 
-// SetWriteConnectionSecretToReference of this AutomationConnectionClassicCertificate.
-func (mg *AutomationConnectionClassicCertificate) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
+// SetWriteConnectionSecretToReference of this ConnectionClassicCertificate.
+func (mg *ConnectionClassicCertificate) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
 	mg.Spec.WriteConnectionSecretToReference = r
 }
 
-// GetCondition of this AutomationConnectionServicePrincipal.
-func (mg *AutomationConnectionServicePrincipal) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
+// GetCondition of this ConnectionServicePrincipal.
+func (mg *ConnectionServicePrincipal) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
 	return mg.Status.GetCondition(ct)
 }
 
-// GetDeletionPolicy of this AutomationConnectionServicePrincipal.
-func (mg *AutomationConnectionServicePrincipal) GetDeletionPolicy() xpv1.DeletionPolicy {
+// GetDeletionPolicy of this ConnectionServicePrincipal.
+func (mg *ConnectionServicePrincipal) GetDeletionPolicy() xpv1.DeletionPolicy {
 	return mg.Spec.DeletionPolicy
 }
 
-// GetProviderConfigReference of this AutomationConnectionServicePrincipal.
-func (mg *AutomationConnectionServicePrincipal) GetProviderConfigReference() *xpv1.Reference {
+// GetProviderConfigReference of this ConnectionServicePrincipal.
+func (mg *ConnectionServicePrincipal) GetProviderConfigReference() *xpv1.Reference {
 	return mg.Spec.ProviderConfigReference
 }
 
 /*
-GetProviderReference of this AutomationConnectionServicePrincipal.
+GetProviderReference of this ConnectionServicePrincipal.
 Deprecated: Use GetProviderConfigReference.
 */
-func (mg *AutomationConnectionServicePrincipal) GetProviderReference() *xpv1.Reference {
+func (mg *ConnectionServicePrincipal) GetProviderReference() *xpv1.Reference {
 	return mg.Spec.ProviderReference
 }
 
-// GetWriteConnectionSecretToReference of this AutomationConnectionServicePrincipal.
-func (mg *AutomationConnectionServicePrincipal) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
+// GetWriteConnectionSecretToReference of this ConnectionServicePrincipal.
+func (mg *ConnectionServicePrincipal) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
 	return mg.Spec.WriteConnectionSecretToReference
 }
 
-// SetConditions of this AutomationConnectionServicePrincipal.
-func (mg *AutomationConnectionServicePrincipal) SetConditions(c ...xpv1.Condition) {
+// SetConditions of this ConnectionServicePrincipal.
+func (mg *ConnectionServicePrincipal) SetConditions(c ...xpv1.Condition) {
 	mg.Status.SetConditions(c...)
 }
 
-// SetDeletionPolicy of this AutomationConnectionServicePrincipal.
-func (mg *AutomationConnectionServicePrincipal) SetDeletionPolicy(r xpv1.DeletionPolicy) {
+// SetDeletionPolicy of this ConnectionServicePrincipal.
+func (mg *ConnectionServicePrincipal) SetDeletionPolicy(r xpv1.DeletionPolicy) {
 	mg.Spec.DeletionPolicy = r
 }
 
-// SetProviderConfigReference of this AutomationConnectionServicePrincipal.
-func (mg *AutomationConnectionServicePrincipal) SetProviderConfigReference(r *xpv1.Reference) {
+// SetProviderConfigReference of this ConnectionServicePrincipal.
+func (mg *ConnectionServicePrincipal) SetProviderConfigReference(r *xpv1.Reference) {
 	mg.Spec.ProviderConfigReference = r
 }
 
 /*
-SetProviderReference of this AutomationConnectionServicePrincipal.
+SetProviderReference of this ConnectionServicePrincipal.
 Deprecated: Use SetProviderConfigReference.
 */
-func (mg *AutomationConnectionServicePrincipal) SetProviderReference(r *xpv1.Reference) {
+func (mg *ConnectionServicePrincipal) SetProviderReference(r *xpv1.Reference) {
 	mg.Spec.ProviderReference = r
 }
 
-// SetWriteConnectionSecretToReference of this AutomationConnectionServicePrincipal.
-func (mg *AutomationConnectionServicePrincipal) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
+// SetWriteConnectionSecretToReference of this ConnectionServicePrincipal.
+func (mg *ConnectionServicePrincipal) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
 	mg.Spec.WriteConnectionSecretToReference = r
 }
 
-// GetCondition of this AutomationCredential.
-func (mg *AutomationCredential) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
+// GetCondition of this Credential.
+func (mg *Credential) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
 	return mg.Status.GetCondition(ct)
 }
 
-// GetDeletionPolicy of this AutomationCredential.
-func (mg *AutomationCredential) GetDeletionPolicy() xpv1.DeletionPolicy {
+// GetDeletionPolicy of this Credential.
+func (mg *Credential) GetDeletionPolicy() xpv1.DeletionPolicy {
 	return mg.Spec.DeletionPolicy
 }
 
-// GetProviderConfigReference of this AutomationCredential.
-func (mg *AutomationCredential) GetProviderConfigReference() *xpv1.Reference {
+// GetProviderConfigReference of this Credential.
+func (mg *Credential) GetProviderConfigReference() *xpv1.Reference {
 	return mg.Spec.ProviderConfigReference
 }
 
 /*
-GetProviderReference of this AutomationCredential.
+GetProviderReference of this Credential.
 Deprecated: Use GetProviderConfigReference.
 */
-func (mg *AutomationCredential) GetProviderReference() *xpv1.Reference {
+func (mg *Credential) GetProviderReference() *xpv1.Reference {
 	return mg.Spec.ProviderReference
 }
 
-// GetWriteConnectionSecretToReference of this AutomationCredential.
-func (mg *AutomationCredential) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
+// GetWriteConnectionSecretToReference of this Credential.
+func (mg *Credential) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
 	return mg.Spec.WriteConnectionSecretToReference
 }
 
-// SetConditions of this AutomationCredential.
-func (mg *AutomationCredential) SetConditions(c ...xpv1.Condition) {
+// SetConditions of this Credential.
+func (mg *Credential) SetConditions(c ...xpv1.Condition) {
 	mg.Status.SetConditions(c...)
 }
 
-// SetDeletionPolicy of this AutomationCredential.
-func (mg *AutomationCredential) SetDeletionPolicy(r xpv1.DeletionPolicy) {
+// SetDeletionPolicy of this Credential.
+func (mg *Credential) SetDeletionPolicy(r xpv1.DeletionPolicy) {
 	mg.Spec.DeletionPolicy = r
 }
 
-// SetProviderConfigReference of this AutomationCredential.
-func (mg *AutomationCredential) SetProviderConfigReference(r *xpv1.Reference) {
+// SetProviderConfigReference of this Credential.
+func (mg *Credential) SetProviderConfigReference(r *xpv1.Reference) {
 	mg.Spec.ProviderConfigReference = r
 }
 
 /*
-SetProviderReference of this AutomationCredential.
+SetProviderReference of this Credential.
 Deprecated: Use SetProviderConfigReference.
 */
-func (mg *AutomationCredential) SetProviderReference(r *xpv1.Reference) {
+func (mg *Credential) SetProviderReference(r *xpv1.Reference) {
 	mg.Spec.ProviderReference = r
 }
 
-// SetWriteConnectionSecretToReference of this AutomationCredential.
-func (mg *AutomationCredential) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
+// SetWriteConnectionSecretToReference of this Credential.
+func (mg *Credential) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
 	mg.Spec.WriteConnectionSecretToReference = r
 }
 
-// GetCondition of this AutomationDscNodeconfiguration.
-func (mg *AutomationDscNodeconfiguration) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
+// GetCondition of this DscNodeconfiguration.
+func (mg *DscNodeconfiguration) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
 	return mg.Status.GetCondition(ct)
 }
 
-// GetDeletionPolicy of this AutomationDscNodeconfiguration.
-func (mg *AutomationDscNodeconfiguration) GetDeletionPolicy() xpv1.DeletionPolicy {
+// GetDeletionPolicy of this DscNodeconfiguration.
+func (mg *DscNodeconfiguration) GetDeletionPolicy() xpv1.DeletionPolicy {
 	return mg.Spec.DeletionPolicy
 }
 
-// GetProviderConfigReference of this AutomationDscNodeconfiguration.
-func (mg *AutomationDscNodeconfiguration) GetProviderConfigReference() *xpv1.Reference {
+// GetProviderConfigReference of this DscNodeconfiguration.
+func (mg *DscNodeconfiguration) GetProviderConfigReference() *xpv1.Reference {
 	return mg.Spec.ProviderConfigReference
 }
 
 /*
-GetProviderReference of this AutomationDscNodeconfiguration.
+GetProviderReference of this DscNodeconfiguration.
 Deprecated: Use GetProviderConfigReference.
 */
-func (mg *AutomationDscNodeconfiguration) GetProviderReference() *xpv1.Reference {
+func (mg *DscNodeconfiguration) GetProviderReference() *xpv1.Reference {
 	return mg.Spec.ProviderReference
 }
 
-// GetWriteConnectionSecretToReference of this AutomationDscNodeconfiguration.
-func (mg *AutomationDscNodeconfiguration) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
+// GetWriteConnectionSecretToReference of this DscNodeconfiguration.
+func (mg *DscNodeconfiguration) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
 	return mg.Spec.WriteConnectionSecretToReference
 }
 
-// SetConditions of this AutomationDscNodeconfiguration.
-func (mg *AutomationDscNodeconfiguration) SetConditions(c ...xpv1.Condition) {
+// SetConditions of this DscNodeconfiguration.
+func (mg *DscNodeconfiguration) SetConditions(c ...xpv1.Condition) {
 	mg.Status.SetConditions(c...)
 }
 
-// SetDeletionPolicy of this AutomationDscNodeconfiguration.
-func (mg *AutomationDscNodeconfiguration) SetDeletionPolicy(r xpv1.DeletionPolicy) {
+// SetDeletionPolicy of this DscNodeconfiguration.
+func (mg *DscNodeconfiguration) SetDeletionPolicy(r xpv1.DeletionPolicy) {
 	mg.Spec.DeletionPolicy = r
 }
 
-// SetProviderConfigReference of this AutomationDscNodeconfiguration.
-func (mg *AutomationDscNodeconfiguration) SetProviderConfigReference(r *xpv1.Reference) {
+// SetProviderConfigReference of this DscNodeconfiguration.
+func (mg *DscNodeconfiguration) SetProviderConfigReference(r *xpv1.Reference) {
 	mg.Spec.ProviderConfigReference = r
 }
 
 /*
-SetProviderReference of this AutomationDscNodeconfiguration.
+SetProviderReference of this DscNodeconfiguration.
 Deprecated: Use SetProviderConfigReference.
 */
-func (mg *AutomationDscNodeconfiguration) SetProviderReference(r *xpv1.Reference) {
+func (mg *DscNodeconfiguration) SetProviderReference(r *xpv1.Reference) {
 	mg.Spec.ProviderReference = r
 }
 
-// SetWriteConnectionSecretToReference of this AutomationDscNodeconfiguration.
-func (mg *AutomationDscNodeconfiguration) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
+// SetWriteConnectionSecretToReference of this DscNodeconfiguration.
+func (mg *DscNodeconfiguration) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
 	mg.Spec.WriteConnectionSecretToReference = r
 }
 
-// GetCondition of this AutomationJobSchedule.
-func (mg *AutomationJobSchedule) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
+// GetCondition of this JobSchedule.
+func (mg *JobSchedule) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
 	return mg.Status.GetCondition(ct)
 }
 
-// GetDeletionPolicy of this AutomationJobSchedule.
-func (mg *AutomationJobSchedule) GetDeletionPolicy() xpv1.DeletionPolicy {
+// GetDeletionPolicy of this JobSchedule.
+func (mg *JobSchedule) GetDeletionPolicy() xpv1.DeletionPolicy {
 	return mg.Spec.DeletionPolicy
 }
 
-// GetProviderConfigReference of this AutomationJobSchedule.
-func (mg *AutomationJobSchedule) GetProviderConfigReference() *xpv1.Reference {
+// GetProviderConfigReference of this JobSchedule.
+func (mg *JobSchedule) GetProviderConfigReference() *xpv1.Reference {
 	return mg.Spec.ProviderConfigReference
 }
 
 /*
-GetProviderReference of this AutomationJobSchedule.
+GetProviderReference of this JobSchedule.
 Deprecated: Use GetProviderConfigReference.
 */
-func (mg *AutomationJobSchedule) GetProviderReference() *xpv1.Reference {
+func (mg *JobSchedule) GetProviderReference() *xpv1.Reference {
 	return mg.Spec.ProviderReference
 }
 
-// GetWriteConnectionSecretToReference of this AutomationJobSchedule.
-func (mg *AutomationJobSchedule) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
+// GetWriteConnectionSecretToReference of this JobSchedule.
+func (mg *JobSchedule) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
 	return mg.Spec.WriteConnectionSecretToReference
 }
 
-// SetConditions of this AutomationJobSchedule.
-func (mg *AutomationJobSchedule) SetConditions(c ...xpv1.Condition) {
+// SetConditions of this JobSchedule.
+func (mg *JobSchedule) SetConditions(c ...xpv1.Condition) {
 	mg.Status.SetConditions(c...)
 }
 
-// SetDeletionPolicy of this AutomationJobSchedule.
-func (mg *AutomationJobSchedule) SetDeletionPolicy(r xpv1.DeletionPolicy) {
+// SetDeletionPolicy of this JobSchedule.
+func (mg *JobSchedule) SetDeletionPolicy(r xpv1.DeletionPolicy) {
 	mg.Spec.DeletionPolicy = r
 }
 
-// SetProviderConfigReference of this AutomationJobSchedule.
-func (mg *AutomationJobSchedule) SetProviderConfigReference(r *xpv1.Reference) {
+// SetProviderConfigReference of this JobSchedule.
+func (mg *JobSchedule) SetProviderConfigReference(r *xpv1.Reference) {
 	mg.Spec.ProviderConfigReference = r
 }
 
 /*
-SetProviderReference of this AutomationJobSchedule.
+SetProviderReference of this JobSchedule.
 Deprecated: Use SetProviderConfigReference.
 */
-func (mg *AutomationJobSchedule) SetProviderReference(r *xpv1.Reference) {
+func (mg *JobSchedule) SetProviderReference(r *xpv1.Reference) {
 	mg.Spec.ProviderReference = r
 }
 
-// SetWriteConnectionSecretToReference of this AutomationJobSchedule.
-func (mg *AutomationJobSchedule) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
+// SetWriteConnectionSecretToReference of this JobSchedule.
+func (mg *JobSchedule) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
 	mg.Spec.WriteConnectionSecretToReference = r
 }
 
-// GetCondition of this AutomationModule.
-func (mg *AutomationModule) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
+// GetCondition of this Module.
+func (mg *Module) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
 	return mg.Status.GetCondition(ct)
 }
 
-// GetDeletionPolicy of this AutomationModule.
-func (mg *AutomationModule) GetDeletionPolicy() xpv1.DeletionPolicy {
+// GetDeletionPolicy of this Module.
+func (mg *Module) GetDeletionPolicy() xpv1.DeletionPolicy {
 	return mg.Spec.DeletionPolicy
 }
 
-// GetProviderConfigReference of this AutomationModule.
-func (mg *AutomationModule) GetProviderConfigReference() *xpv1.Reference {
+// GetProviderConfigReference of this Module.
+func (mg *Module) GetProviderConfigReference() *xpv1.Reference {
 	return mg.Spec.ProviderConfigReference
 }
 
 /*
-GetProviderReference of this AutomationModule.
+GetProviderReference of this Module.
 Deprecated: Use GetProviderConfigReference.
 */
-func (mg *AutomationModule) GetProviderReference() *xpv1.Reference {
+func (mg *Module) GetProviderReference() *xpv1.Reference {
 	return mg.Spec.ProviderReference
 }
 
-// GetWriteConnectionSecretToReference of this AutomationModule.
-func (mg *AutomationModule) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
+// GetWriteConnectionSecretToReference of this Module.
+func (mg *Module) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
 	return mg.Spec.WriteConnectionSecretToReference
 }
 
-// SetConditions of this AutomationModule.
-func (mg *AutomationModule) SetConditions(c ...xpv1.Condition) {
+// SetConditions of this Module.
+func (mg *Module) SetConditions(c ...xpv1.Condition) {
 	mg.Status.SetConditions(c...)
 }
 
-// SetDeletionPolicy of this AutomationModule.
-func (mg *AutomationModule) SetDeletionPolicy(r xpv1.DeletionPolicy) {
+// SetDeletionPolicy of this Module.
+func (mg *Module) SetDeletionPolicy(r xpv1.DeletionPolicy) {
 	mg.Spec.DeletionPolicy = r
 }
 
-// SetProviderConfigReference of this AutomationModule.
-func (mg *AutomationModule) SetProviderConfigReference(r *xpv1.Reference) {
+// SetProviderConfigReference of this Module.
+func (mg *Module) SetProviderConfigReference(r *xpv1.Reference) {
 	mg.Spec.ProviderConfigReference = r
 }
 
 /*
-SetProviderReference of this AutomationModule.
+SetProviderReference of this Module.
 Deprecated: Use SetProviderConfigReference.
 */
-func (mg *AutomationModule) SetProviderReference(r *xpv1.Reference) {
+func (mg *Module) SetProviderReference(r *xpv1.Reference) {
 	mg.Spec.ProviderReference = r
 }
 
-// SetWriteConnectionSecretToReference of this AutomationModule.
-func (mg *AutomationModule) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
+// SetWriteConnectionSecretToReference of this Module.
+func (mg *Module) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
 	mg.Spec.WriteConnectionSecretToReference = r
 }
 
-// GetCondition of this AutomationRunbook.
-func (mg *AutomationRunbook) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
+// GetCondition of this Runbook.
+func (mg *Runbook) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
 	return mg.Status.GetCondition(ct)
 }
 
-// GetDeletionPolicy of this AutomationRunbook.
-func (mg *AutomationRunbook) GetDeletionPolicy() xpv1.DeletionPolicy {
+// GetDeletionPolicy of this Runbook.
+func (mg *Runbook) GetDeletionPolicy() xpv1.DeletionPolicy {
 	return mg.Spec.DeletionPolicy
 }
 
-// GetProviderConfigReference of this AutomationRunbook.
-func (mg *AutomationRunbook) GetProviderConfigReference() *xpv1.Reference {
+// GetProviderConfigReference of this Runbook.
+func (mg *Runbook) GetProviderConfigReference() *xpv1.Reference {
 	return mg.Spec.ProviderConfigReference
 }
 
 /*
-GetProviderReference of this AutomationRunbook.
+GetProviderReference of this Runbook.
 Deprecated: Use GetProviderConfigReference.
 */
-func (mg *AutomationRunbook) GetProviderReference() *xpv1.Reference {
+func (mg *Runbook) GetProviderReference() *xpv1.Reference {
 	return mg.Spec.ProviderReference
 }
 
-// GetWriteConnectionSecretToReference of this AutomationRunbook.
-func (mg *AutomationRunbook) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
+// GetWriteConnectionSecretToReference of this Runbook.
+func (mg *Runbook) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
 	return mg.Spec.WriteConnectionSecretToReference
 }
 
-// SetConditions of this AutomationRunbook.
-func (mg *AutomationRunbook) SetConditions(c ...xpv1.Condition) {
+// SetConditions of this Runbook.
+func (mg *Runbook) SetConditions(c ...xpv1.Condition) {
 	mg.Status.SetConditions(c...)
 }
 
-// SetDeletionPolicy of this AutomationRunbook.
-func (mg *AutomationRunbook) SetDeletionPolicy(r xpv1.DeletionPolicy) {
+// SetDeletionPolicy of this Runbook.
+func (mg *Runbook) SetDeletionPolicy(r xpv1.DeletionPolicy) {
 	mg.Spec.DeletionPolicy = r
 }
 
-// SetProviderConfigReference of this AutomationRunbook.
-func (mg *AutomationRunbook) SetProviderConfigReference(r *xpv1.Reference) {
+// SetProviderConfigReference of this Runbook.
+func (mg *Runbook) SetProviderConfigReference(r *xpv1.Reference) {
 	mg.Spec.ProviderConfigReference = r
 }
 
 /*
-SetProviderReference of this AutomationRunbook.
+SetProviderReference of this Runbook.
 Deprecated: Use SetProviderConfigReference.
 */
-func (mg *AutomationRunbook) SetProviderReference(r *xpv1.Reference) {
+func (mg *Runbook) SetProviderReference(r *xpv1.Reference) {
 	mg.Spec.ProviderReference = r
 }
 
-// SetWriteConnectionSecretToReference of this AutomationRunbook.
-func (mg *AutomationRunbook) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
+// SetWriteConnectionSecretToReference of this Runbook.
+func (mg *Runbook) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
 	mg.Spec.WriteConnectionSecretToReference = r
 }
 
-// GetCondition of this AutomationSchedule.
-func (mg *AutomationSchedule) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
+// GetCondition of this Schedule.
+func (mg *Schedule) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
 	return mg.Status.GetCondition(ct)
 }
 
-// GetDeletionPolicy of this AutomationSchedule.
-func (mg *AutomationSchedule) GetDeletionPolicy() xpv1.DeletionPolicy {
+// GetDeletionPolicy of this Schedule.
+func (mg *Schedule) GetDeletionPolicy() xpv1.DeletionPolicy {
 	return mg.Spec.DeletionPolicy
 }
 
-// GetProviderConfigReference of this AutomationSchedule.
-func (mg *AutomationSchedule) GetProviderConfigReference() *xpv1.Reference {
+// GetProviderConfigReference of this Schedule.
+func (mg *Schedule) GetProviderConfigReference() *xpv1.Reference {
 	return mg.Spec.ProviderConfigReference
 }
 
 /*
-GetProviderReference of this AutomationSchedule.
+GetProviderReference of this Schedule.
 Deprecated: Use GetProviderConfigReference.
 */
-func (mg *AutomationSchedule) GetProviderReference() *xpv1.Reference {
+func (mg *Schedule) GetProviderReference() *xpv1.Reference {
 	return mg.Spec.ProviderReference
 }
 
-// GetWriteConnectionSecretToReference of this AutomationSchedule.
-func (mg *AutomationSchedule) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
+// GetWriteConnectionSecretToReference of this Schedule.
+func (mg *Schedule) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
 	return mg.Spec.WriteConnectionSecretToReference
 }
 
-// SetConditions of this AutomationSchedule.
-func (mg *AutomationSchedule) SetConditions(c ...xpv1.Condition) {
+// SetConditions of this Schedule.
+func (mg *Schedule) SetConditions(c ...xpv1.Condition) {
 	mg.Status.SetConditions(c...)
 }
 
-// SetDeletionPolicy of this AutomationSchedule.
-func (mg *AutomationSchedule) SetDeletionPolicy(r xpv1.DeletionPolicy) {
+// SetDeletionPolicy of this Schedule.
+func (mg *Schedule) SetDeletionPolicy(r xpv1.DeletionPolicy) {
 	mg.Spec.DeletionPolicy = r
 }
 
-// SetProviderConfigReference of this AutomationSchedule.
-func (mg *AutomationSchedule) SetProviderConfigReference(r *xpv1.Reference) {
+// SetProviderConfigReference of this Schedule.
+func (mg *Schedule) SetProviderConfigReference(r *xpv1.Reference) {
 	mg.Spec.ProviderConfigReference = r
 }
 
 /*
-SetProviderReference of this AutomationSchedule.
+SetProviderReference of this Schedule.
 Deprecated: Use SetProviderConfigReference.
 */
-func (mg *AutomationSchedule) SetProviderReference(r *xpv1.Reference) {
+func (mg *Schedule) SetProviderReference(r *xpv1.Reference) {
 	mg.Spec.ProviderReference = r
 }
 
-// SetWriteConnectionSecretToReference of this AutomationSchedule.
-func (mg *AutomationSchedule) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
+// SetWriteConnectionSecretToReference of this Schedule.
+func (mg *Schedule) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
 	mg.Spec.WriteConnectionSecretToReference = r
 }
 
-// GetCondition of this AutomationVariableBool.
-func (mg *AutomationVariableBool) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
+// GetCondition of this VariableBool.
+func (mg *VariableBool) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
 	return mg.Status.GetCondition(ct)
 }
 
-// GetDeletionPolicy of this AutomationVariableBool.
-func (mg *AutomationVariableBool) GetDeletionPolicy() xpv1.DeletionPolicy {
+// GetDeletionPolicy of this VariableBool.
+func (mg *VariableBool) GetDeletionPolicy() xpv1.DeletionPolicy {
 	return mg.Spec.DeletionPolicy
 }
 
-// GetProviderConfigReference of this AutomationVariableBool.
-func (mg *AutomationVariableBool) GetProviderConfigReference() *xpv1.Reference {
+// GetProviderConfigReference of this VariableBool.
+func (mg *VariableBool) GetProviderConfigReference() *xpv1.Reference {
 	return mg.Spec.ProviderConfigReference
 }
 
 /*
-GetProviderReference of this AutomationVariableBool.
+GetProviderReference of this VariableBool.
 Deprecated: Use GetProviderConfigReference.
 */
-func (mg *AutomationVariableBool) GetProviderReference() *xpv1.Reference {
+func (mg *VariableBool) GetProviderReference() *xpv1.Reference {
 	return mg.Spec.ProviderReference
 }
 
-// GetWriteConnectionSecretToReference of this AutomationVariableBool.
-func (mg *AutomationVariableBool) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
+// GetWriteConnectionSecretToReference of this VariableBool.
+func (mg *VariableBool) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
 	return mg.Spec.WriteConnectionSecretToReference
 }
 
-// SetConditions of this AutomationVariableBool.
-func (mg *AutomationVariableBool) SetConditions(c ...xpv1.Condition) {
+// SetConditions of this VariableBool.
+func (mg *VariableBool) SetConditions(c ...xpv1.Condition) {
 	mg.Status.SetConditions(c...)
 }
 
-// SetDeletionPolicy of this AutomationVariableBool.
-func (mg *AutomationVariableBool) SetDeletionPolicy(r xpv1.DeletionPolicy) {
+// SetDeletionPolicy of this VariableBool.
+func (mg *VariableBool) SetDeletionPolicy(r xpv1.DeletionPolicy) {
 	mg.Spec.DeletionPolicy = r
 }
 
-// SetProviderConfigReference of this AutomationVariableBool.
-func (mg *AutomationVariableBool) SetProviderConfigReference(r *xpv1.Reference) {
+// SetProviderConfigReference of this VariableBool.
+func (mg *VariableBool) SetProviderConfigReference(r *xpv1.Reference) {
 	mg.Spec.ProviderConfigReference = r
 }
 
 /*
-SetProviderReference of this AutomationVariableBool.
+SetProviderReference of this VariableBool.
 Deprecated: Use SetProviderConfigReference.
 */
-func (mg *AutomationVariableBool) SetProviderReference(r *xpv1.Reference) {
+func (mg *VariableBool) SetProviderReference(r *xpv1.Reference) {
 	mg.Spec.ProviderReference = r
 }
 
-// SetWriteConnectionSecretToReference of this AutomationVariableBool.
-func (mg *AutomationVariableBool) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
+// SetWriteConnectionSecretToReference of this VariableBool.
+func (mg *VariableBool) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
 	mg.Spec.WriteConnectionSecretToReference = r
 }
 
-// GetCondition of this AutomationVariableDatetime.
-func (mg *AutomationVariableDatetime) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
+// GetCondition of this VariableDatetime.
+func (mg *VariableDatetime) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
 	return mg.Status.GetCondition(ct)
 }
 
-// GetDeletionPolicy of this AutomationVariableDatetime.
-func (mg *AutomationVariableDatetime) GetDeletionPolicy() xpv1.DeletionPolicy {
+// GetDeletionPolicy of this VariableDatetime.
+func (mg *VariableDatetime) GetDeletionPolicy() xpv1.DeletionPolicy {
 	return mg.Spec.DeletionPolicy
 }
 
-// GetProviderConfigReference of this AutomationVariableDatetime.
-func (mg *AutomationVariableDatetime) GetProviderConfigReference() *xpv1.Reference {
+// GetProviderConfigReference of this VariableDatetime.
+func (mg *VariableDatetime) GetProviderConfigReference() *xpv1.Reference {
 	return mg.Spec.ProviderConfigReference
 }
 
 /*
-GetProviderReference of this AutomationVariableDatetime.
+GetProviderReference of this VariableDatetime.
 Deprecated: Use GetProviderConfigReference.
 */
-func (mg *AutomationVariableDatetime) GetProviderReference() *xpv1.Reference {
+func (mg *VariableDatetime) GetProviderReference() *xpv1.Reference {
 	return mg.Spec.ProviderReference
 }
 
-// GetWriteConnectionSecretToReference of this AutomationVariableDatetime.
-func (mg *AutomationVariableDatetime) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
+// GetWriteConnectionSecretToReference of this VariableDatetime.
+func (mg *VariableDatetime) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
 	return mg.Spec.WriteConnectionSecretToReference
 }
 
-// SetConditions of this AutomationVariableDatetime.
-func (mg *AutomationVariableDatetime) SetConditions(c ...xpv1.Condition) {
+// SetConditions of this VariableDatetime.
+func (mg *VariableDatetime) SetConditions(c ...xpv1.Condition) {
 	mg.Status.SetConditions(c...)
 }
 
-// SetDeletionPolicy of this AutomationVariableDatetime.
-func (mg *AutomationVariableDatetime) SetDeletionPolicy(r xpv1.DeletionPolicy) {
+// SetDeletionPolicy of this VariableDatetime.
+func (mg *VariableDatetime) SetDeletionPolicy(r xpv1.DeletionPolicy) {
 	mg.Spec.DeletionPolicy = r
 }
 
-// SetProviderConfigReference of this AutomationVariableDatetime.
-func (mg *AutomationVariableDatetime) SetProviderConfigReference(r *xpv1.Reference) {
+// SetProviderConfigReference of this VariableDatetime.
+func (mg *VariableDatetime) SetProviderConfigReference(r *xpv1.Reference) {
 	mg.Spec.ProviderConfigReference = r
 }
 
 /*
-SetProviderReference of this AutomationVariableDatetime.
+SetProviderReference of this VariableDatetime.
 Deprecated: Use SetProviderConfigReference.
 */
-func (mg *AutomationVariableDatetime) SetProviderReference(r *xpv1.Reference) {
+func (mg *VariableDatetime) SetProviderReference(r *xpv1.Reference) {
 	mg.Spec.ProviderReference = r
 }
 
-// SetWriteConnectionSecretToReference of this AutomationVariableDatetime.
-func (mg *AutomationVariableDatetime) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
+// SetWriteConnectionSecretToReference of this VariableDatetime.
+func (mg *VariableDatetime) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
 	mg.Spec.WriteConnectionSecretToReference = r
 }
 
-// GetCondition of this AutomationVariableInt.
-func (mg *AutomationVariableInt) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
+// GetCondition of this VariableInt.
+func (mg *VariableInt) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
 	return mg.Status.GetCondition(ct)
 }
 
-// GetDeletionPolicy of this AutomationVariableInt.
-func (mg *AutomationVariableInt) GetDeletionPolicy() xpv1.DeletionPolicy {
+// GetDeletionPolicy of this VariableInt.
+func (mg *VariableInt) GetDeletionPolicy() xpv1.DeletionPolicy {
 	return mg.Spec.DeletionPolicy
 }
 
-// GetProviderConfigReference of this AutomationVariableInt.
-func (mg *AutomationVariableInt) GetProviderConfigReference() *xpv1.Reference {
+// GetProviderConfigReference of this VariableInt.
+func (mg *VariableInt) GetProviderConfigReference() *xpv1.Reference {
 	return mg.Spec.ProviderConfigReference
 }
 
 /*
-GetProviderReference of this AutomationVariableInt.
+GetProviderReference of this VariableInt.
 Deprecated: Use GetProviderConfigReference.
 */
-func (mg *AutomationVariableInt) GetProviderReference() *xpv1.Reference {
+func (mg *VariableInt) GetProviderReference() *xpv1.Reference {
 	return mg.Spec.ProviderReference
 }
 
-// GetWriteConnectionSecretToReference of this AutomationVariableInt.
-func (mg *AutomationVariableInt) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
+// GetWriteConnectionSecretToReference of this VariableInt.
+func (mg *VariableInt) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
 	return mg.Spec.WriteConnectionSecretToReference
 }
 
-// SetConditions of this AutomationVariableInt.
-func (mg *AutomationVariableInt) SetConditions(c ...xpv1.Condition) {
+// SetConditions of this VariableInt.
+func (mg *VariableInt) SetConditions(c ...xpv1.Condition) {
 	mg.Status.SetConditions(c...)
 }
 
-// SetDeletionPolicy of this AutomationVariableInt.
-func (mg *AutomationVariableInt) SetDeletionPolicy(r xpv1.DeletionPolicy) {
+// SetDeletionPolicy of this VariableInt.
+func (mg *VariableInt) SetDeletionPolicy(r xpv1.DeletionPolicy) {
 	mg.Spec.DeletionPolicy = r
 }
 
-// SetProviderConfigReference of this AutomationVariableInt.
-func (mg *AutomationVariableInt) SetProviderConfigReference(r *xpv1.Reference) {
+// SetProviderConfigReference of this VariableInt.
+func (mg *VariableInt) SetProviderConfigReference(r *xpv1.Reference) {
 	mg.Spec.ProviderConfigReference = r
 }
 
 /*
-SetProviderReference of this AutomationVariableInt.
+SetProviderReference of this VariableInt.
 Deprecated: Use SetProviderConfigReference.
 */
-func (mg *AutomationVariableInt) SetProviderReference(r *xpv1.Reference) {
+func (mg *VariableInt) SetProviderReference(r *xpv1.Reference) {
 	mg.Spec.ProviderReference = r
 }
 
-// SetWriteConnectionSecretToReference of this AutomationVariableInt.
-func (mg *AutomationVariableInt) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
+// SetWriteConnectionSecretToReference of this VariableInt.
+func (mg *VariableInt) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
 	mg.Spec.WriteConnectionSecretToReference = r
 }
 
-// GetCondition of this AutomationVariableString.
-func (mg *AutomationVariableString) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
+// GetCondition of this VariableString.
+func (mg *VariableString) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
 	return mg.Status.GetCondition(ct)
 }
 
-// GetDeletionPolicy of this AutomationVariableString.
-func (mg *AutomationVariableString) GetDeletionPolicy() xpv1.DeletionPolicy {
+// GetDeletionPolicy of this VariableString.
+func (mg *VariableString) GetDeletionPolicy() xpv1.DeletionPolicy {
 	return mg.Spec.DeletionPolicy
 }
 
-// GetProviderConfigReference of this AutomationVariableString.
-func (mg *AutomationVariableString) GetProviderConfigReference() *xpv1.Reference {
+// GetProviderConfigReference of this VariableString.
+func (mg *VariableString) GetProviderConfigReference() *xpv1.Reference {
 	return mg.Spec.ProviderConfigReference
 }
 
 /*
-GetProviderReference of this AutomationVariableString.
+GetProviderReference of this VariableString.
 Deprecated: Use GetProviderConfigReference.
 */
-func (mg *AutomationVariableString) GetProviderReference() *xpv1.Reference {
+func (mg *VariableString) GetProviderReference() *xpv1.Reference {
 	return mg.Spec.ProviderReference
 }
 
-// GetWriteConnectionSecretToReference of this AutomationVariableString.
-func (mg *AutomationVariableString) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
+// GetWriteConnectionSecretToReference of this VariableString.
+func (mg *VariableString) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
 	return mg.Spec.WriteConnectionSecretToReference
 }
 
-// SetConditions of this AutomationVariableString.
-func (mg *AutomationVariableString) SetConditions(c ...xpv1.Condition) {
+// SetConditions of this VariableString.
+func (mg *VariableString) SetConditions(c ...xpv1.Condition) {
 	mg.Status.SetConditions(c...)
 }
 
-// SetDeletionPolicy of this AutomationVariableString.
-func (mg *AutomationVariableString) SetDeletionPolicy(r xpv1.DeletionPolicy) {
+// SetDeletionPolicy of this VariableString.
+func (mg *VariableString) SetDeletionPolicy(r xpv1.DeletionPolicy) {
 	mg.Spec.DeletionPolicy = r
 }
 
-// SetProviderConfigReference of this AutomationVariableString.
-func (mg *AutomationVariableString) SetProviderConfigReference(r *xpv1.Reference) {
+// SetProviderConfigReference of this VariableString.
+func (mg *VariableString) SetProviderConfigReference(r *xpv1.Reference) {
 	mg.Spec.ProviderConfigReference = r
 }
 
 /*
-SetProviderReference of this AutomationVariableString.
+SetProviderReference of this VariableString.
 Deprecated: Use SetProviderConfigReference.
 */
-func (mg *AutomationVariableString) SetProviderReference(r *xpv1.Reference) {
+func (mg *VariableString) SetProviderReference(r *xpv1.Reference) {
 	mg.Spec.ProviderReference = r
 }
 
-// SetWriteConnectionSecretToReference of this AutomationVariableString.
-func (mg *AutomationVariableString) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
+// SetWriteConnectionSecretToReference of this VariableString.
+func (mg *VariableString) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
 	mg.Spec.WriteConnectionSecretToReference = r
 }

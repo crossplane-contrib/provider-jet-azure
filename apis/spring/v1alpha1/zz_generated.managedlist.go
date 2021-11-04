@@ -19,8 +19,8 @@ package v1alpha1
 
 import resource "github.com/crossplane/crossplane-runtime/pkg/resource"
 
-// GetItems of this SpringCloudActiveDeploymentList.
-func (l *SpringCloudActiveDeploymentList) GetItems() []resource.Managed {
+// GetItems of this CloudActiveDeploymentList.
+func (l *CloudActiveDeploymentList) GetItems() []resource.Managed {
 	items := make([]resource.Managed, len(l.Items))
 	for i := range l.Items {
 		items[i] = &l.Items[i]
@@ -28,8 +28,8 @@ func (l *SpringCloudActiveDeploymentList) GetItems() []resource.Managed {
 	return items
 }
 
-// GetItems of this SpringCloudAppCosmosdbAssociationList.
-func (l *SpringCloudAppCosmosdbAssociationList) GetItems() []resource.Managed {
+// GetItems of this CloudAppCosmosdbAssociationList.
+func (l *CloudAppCosmosdbAssociationList) GetItems() []resource.Managed {
 	items := make([]resource.Managed, len(l.Items))
 	for i := range l.Items {
 		items[i] = &l.Items[i]
@@ -37,8 +37,8 @@ func (l *SpringCloudAppCosmosdbAssociationList) GetItems() []resource.Managed {
 	return items
 }
 
-// GetItems of this SpringCloudAppList.
-func (l *SpringCloudAppList) GetItems() []resource.Managed {
+// GetItems of this CloudAppList.
+func (l *CloudAppList) GetItems() []resource.Managed {
 	items := make([]resource.Managed, len(l.Items))
 	for i := range l.Items {
 		items[i] = &l.Items[i]
@@ -46,8 +46,8 @@ func (l *SpringCloudAppList) GetItems() []resource.Managed {
 	return items
 }
 
-// GetItems of this SpringCloudAppMysqlAssociationList.
-func (l *SpringCloudAppMysqlAssociationList) GetItems() []resource.Managed {
+// GetItems of this CloudAppMysqlAssociationList.
+func (l *CloudAppMysqlAssociationList) GetItems() []resource.Managed {
 	items := make([]resource.Managed, len(l.Items))
 	for i := range l.Items {
 		items[i] = &l.Items[i]
@@ -55,8 +55,8 @@ func (l *SpringCloudAppMysqlAssociationList) GetItems() []resource.Managed {
 	return items
 }
 
-// GetItems of this SpringCloudAppRedisAssociationList.
-func (l *SpringCloudAppRedisAssociationList) GetItems() []resource.Managed {
+// GetItems of this CloudAppRedisAssociationList.
+func (l *CloudAppRedisAssociationList) GetItems() []resource.Managed {
 	items := make([]resource.Managed, len(l.Items))
 	for i := range l.Items {
 		items[i] = &l.Items[i]
@@ -64,8 +64,8 @@ func (l *SpringCloudAppRedisAssociationList) GetItems() []resource.Managed {
 	return items
 }
 
-// GetItems of this SpringCloudCertificateList.
-func (l *SpringCloudCertificateList) GetItems() []resource.Managed {
+// GetItems of this CloudCertificateList.
+func (l *CloudCertificateList) GetItems() []resource.Managed {
 	items := make([]resource.Managed, len(l.Items))
 	for i := range l.Items {
 		items[i] = &l.Items[i]
@@ -73,8 +73,8 @@ func (l *SpringCloudCertificateList) GetItems() []resource.Managed {
 	return items
 }
 
-// GetItems of this SpringCloudCustomDomainList.
-func (l *SpringCloudCustomDomainList) GetItems() []resource.Managed {
+// GetItems of this CloudCustomDomainList.
+func (l *CloudCustomDomainList) GetItems() []resource.Managed {
 	items := make([]resource.Managed, len(l.Items))
 	for i := range l.Items {
 		items[i] = &l.Items[i]
@@ -82,8 +82,8 @@ func (l *SpringCloudCustomDomainList) GetItems() []resource.Managed {
 	return items
 }
 
-// GetItems of this SpringCloudJavaDeploymentList.
-func (l *SpringCloudJavaDeploymentList) GetItems() []resource.Managed {
+// GetItems of this CloudJavaDeploymentList.
+func (l *CloudJavaDeploymentList) GetItems() []resource.Managed {
 	items := make([]resource.Managed, len(l.Items))
 	for i := range l.Items {
 		items[i] = &l.Items[i]
@@ -91,8 +91,8 @@ func (l *SpringCloudJavaDeploymentList) GetItems() []resource.Managed {
 	return items
 }
 
-// GetItems of this SpringCloudServiceList.
-func (l *SpringCloudServiceList) GetItems() []resource.Managed {
+// GetItems of this CloudServiceList.
+func (l *CloudServiceList) GetItems() []resource.Managed {
 	items := make([]resource.Managed, len(l.Items))
 	for i := range l.Items {
 		items[i] = &l.Items[i]

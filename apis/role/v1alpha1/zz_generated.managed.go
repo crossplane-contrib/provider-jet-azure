@@ -19,114 +19,114 @@ package v1alpha1
 
 import xpv1 "github.com/crossplane/crossplane-runtime/apis/common/v1"
 
-// GetCondition of this RoleAssignment.
-func (mg *RoleAssignment) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
+// GetCondition of this Assignment.
+func (mg *Assignment) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
 	return mg.Status.GetCondition(ct)
 }
 
-// GetDeletionPolicy of this RoleAssignment.
-func (mg *RoleAssignment) GetDeletionPolicy() xpv1.DeletionPolicy {
+// GetDeletionPolicy of this Assignment.
+func (mg *Assignment) GetDeletionPolicy() xpv1.DeletionPolicy {
 	return mg.Spec.DeletionPolicy
 }
 
-// GetProviderConfigReference of this RoleAssignment.
-func (mg *RoleAssignment) GetProviderConfigReference() *xpv1.Reference {
+// GetProviderConfigReference of this Assignment.
+func (mg *Assignment) GetProviderConfigReference() *xpv1.Reference {
 	return mg.Spec.ProviderConfigReference
 }
 
 /*
-GetProviderReference of this RoleAssignment.
+GetProviderReference of this Assignment.
 Deprecated: Use GetProviderConfigReference.
 */
-func (mg *RoleAssignment) GetProviderReference() *xpv1.Reference {
+func (mg *Assignment) GetProviderReference() *xpv1.Reference {
 	return mg.Spec.ProviderReference
 }
 
-// GetWriteConnectionSecretToReference of this RoleAssignment.
-func (mg *RoleAssignment) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
+// GetWriteConnectionSecretToReference of this Assignment.
+func (mg *Assignment) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
 	return mg.Spec.WriteConnectionSecretToReference
 }
 
-// SetConditions of this RoleAssignment.
-func (mg *RoleAssignment) SetConditions(c ...xpv1.Condition) {
+// SetConditions of this Assignment.
+func (mg *Assignment) SetConditions(c ...xpv1.Condition) {
 	mg.Status.SetConditions(c...)
 }
 
-// SetDeletionPolicy of this RoleAssignment.
-func (mg *RoleAssignment) SetDeletionPolicy(r xpv1.DeletionPolicy) {
+// SetDeletionPolicy of this Assignment.
+func (mg *Assignment) SetDeletionPolicy(r xpv1.DeletionPolicy) {
 	mg.Spec.DeletionPolicy = r
 }
 
-// SetProviderConfigReference of this RoleAssignment.
-func (mg *RoleAssignment) SetProviderConfigReference(r *xpv1.Reference) {
+// SetProviderConfigReference of this Assignment.
+func (mg *Assignment) SetProviderConfigReference(r *xpv1.Reference) {
 	mg.Spec.ProviderConfigReference = r
 }
 
 /*
-SetProviderReference of this RoleAssignment.
+SetProviderReference of this Assignment.
 Deprecated: Use SetProviderConfigReference.
 */
-func (mg *RoleAssignment) SetProviderReference(r *xpv1.Reference) {
+func (mg *Assignment) SetProviderReference(r *xpv1.Reference) {
 	mg.Spec.ProviderReference = r
 }
 
-// SetWriteConnectionSecretToReference of this RoleAssignment.
-func (mg *RoleAssignment) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
+// SetWriteConnectionSecretToReference of this Assignment.
+func (mg *Assignment) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
 	mg.Spec.WriteConnectionSecretToReference = r
 }
 
-// GetCondition of this RoleDefinition.
-func (mg *RoleDefinition) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
+// GetCondition of this Definition.
+func (mg *Definition) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
 	return mg.Status.GetCondition(ct)
 }
 
-// GetDeletionPolicy of this RoleDefinition.
-func (mg *RoleDefinition) GetDeletionPolicy() xpv1.DeletionPolicy {
+// GetDeletionPolicy of this Definition.
+func (mg *Definition) GetDeletionPolicy() xpv1.DeletionPolicy {
 	return mg.Spec.DeletionPolicy
 }
 
-// GetProviderConfigReference of this RoleDefinition.
-func (mg *RoleDefinition) GetProviderConfigReference() *xpv1.Reference {
+// GetProviderConfigReference of this Definition.
+func (mg *Definition) GetProviderConfigReference() *xpv1.Reference {
 	return mg.Spec.ProviderConfigReference
 }
 
 /*
-GetProviderReference of this RoleDefinition.
+GetProviderReference of this Definition.
 Deprecated: Use GetProviderConfigReference.
 */
-func (mg *RoleDefinition) GetProviderReference() *xpv1.Reference {
+func (mg *Definition) GetProviderReference() *xpv1.Reference {
 	return mg.Spec.ProviderReference
 }
 
-// GetWriteConnectionSecretToReference of this RoleDefinition.
-func (mg *RoleDefinition) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
+// GetWriteConnectionSecretToReference of this Definition.
+func (mg *Definition) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
 	return mg.Spec.WriteConnectionSecretToReference
 }
 
-// SetConditions of this RoleDefinition.
-func (mg *RoleDefinition) SetConditions(c ...xpv1.Condition) {
+// SetConditions of this Definition.
+func (mg *Definition) SetConditions(c ...xpv1.Condition) {
 	mg.Status.SetConditions(c...)
 }
 
-// SetDeletionPolicy of this RoleDefinition.
-func (mg *RoleDefinition) SetDeletionPolicy(r xpv1.DeletionPolicy) {
+// SetDeletionPolicy of this Definition.
+func (mg *Definition) SetDeletionPolicy(r xpv1.DeletionPolicy) {
 	mg.Spec.DeletionPolicy = r
 }
 
-// SetProviderConfigReference of this RoleDefinition.
-func (mg *RoleDefinition) SetProviderConfigReference(r *xpv1.Reference) {
+// SetProviderConfigReference of this Definition.
+func (mg *Definition) SetProviderConfigReference(r *xpv1.Reference) {
 	mg.Spec.ProviderConfigReference = r
 }
 
 /*
-SetProviderReference of this RoleDefinition.
+SetProviderReference of this Definition.
 Deprecated: Use SetProviderConfigReference.
 */
-func (mg *RoleDefinition) SetProviderReference(r *xpv1.Reference) {
+func (mg *Definition) SetProviderReference(r *xpv1.Reference) {
 	mg.Spec.ProviderReference = r
 }
 
-// SetWriteConnectionSecretToReference of this RoleDefinition.
-func (mg *RoleDefinition) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
+// SetWriteConnectionSecretToReference of this Definition.
+func (mg *Definition) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
 	mg.Spec.WriteConnectionSecretToReference = r
 }

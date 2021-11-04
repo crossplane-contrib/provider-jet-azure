@@ -19,8 +19,8 @@ package v1alpha1
 
 import resource "github.com/crossplane/crossplane-runtime/pkg/resource"
 
-// GetItems of this ExpressRouteCircuitAuthorizationList.
-func (l *ExpressRouteCircuitAuthorizationList) GetItems() []resource.Managed {
+// GetItems of this RouteCircuitAuthorizationList.
+func (l *RouteCircuitAuthorizationList) GetItems() []resource.Managed {
 	items := make([]resource.Managed, len(l.Items))
 	for i := range l.Items {
 		items[i] = &l.Items[i]
@@ -28,8 +28,8 @@ func (l *ExpressRouteCircuitAuthorizationList) GetItems() []resource.Managed {
 	return items
 }
 
-// GetItems of this ExpressRouteCircuitConnectionList.
-func (l *ExpressRouteCircuitConnectionList) GetItems() []resource.Managed {
+// GetItems of this RouteCircuitConnectionList.
+func (l *RouteCircuitConnectionList) GetItems() []resource.Managed {
 	items := make([]resource.Managed, len(l.Items))
 	for i := range l.Items {
 		items[i] = &l.Items[i]
@@ -37,8 +37,8 @@ func (l *ExpressRouteCircuitConnectionList) GetItems() []resource.Managed {
 	return items
 }
 
-// GetItems of this ExpressRouteCircuitList.
-func (l *ExpressRouteCircuitList) GetItems() []resource.Managed {
+// GetItems of this RouteCircuitList.
+func (l *RouteCircuitList) GetItems() []resource.Managed {
 	items := make([]resource.Managed, len(l.Items))
 	for i := range l.Items {
 		items[i] = &l.Items[i]
@@ -46,8 +46,8 @@ func (l *ExpressRouteCircuitList) GetItems() []resource.Managed {
 	return items
 }
 
-// GetItems of this ExpressRouteCircuitPeeringList.
-func (l *ExpressRouteCircuitPeeringList) GetItems() []resource.Managed {
+// GetItems of this RouteCircuitPeeringList.
+func (l *RouteCircuitPeeringList) GetItems() []resource.Managed {
 	items := make([]resource.Managed, len(l.Items))
 	for i := range l.Items {
 		items[i] = &l.Items[i]
@@ -55,8 +55,8 @@ func (l *ExpressRouteCircuitPeeringList) GetItems() []resource.Managed {
 	return items
 }
 
-// GetItems of this ExpressRouteConnectionList.
-func (l *ExpressRouteConnectionList) GetItems() []resource.Managed {
+// GetItems of this RouteConnectionList.
+func (l *RouteConnectionList) GetItems() []resource.Managed {
 	items := make([]resource.Managed, len(l.Items))
 	for i := range l.Items {
 		items[i] = &l.Items[i]
@@ -64,8 +64,8 @@ func (l *ExpressRouteConnectionList) GetItems() []resource.Managed {
 	return items
 }
 
-// GetItems of this ExpressRouteGatewayList.
-func (l *ExpressRouteGatewayList) GetItems() []resource.Managed {
+// GetItems of this RouteGatewayList.
+func (l *RouteGatewayList) GetItems() []resource.Managed {
 	items := make([]resource.Managed, len(l.Items))
 	for i := range l.Items {
 		items[i] = &l.Items[i]
@@ -73,8 +73,8 @@ func (l *ExpressRouteGatewayList) GetItems() []resource.Managed {
 	return items
 }
 
-// GetItems of this ExpressRoutePortList.
-func (l *ExpressRoutePortList) GetItems() []resource.Managed {
+// GetItems of this RoutePortList.
+func (l *RoutePortList) GetItems() []resource.Managed {
 	items := make([]resource.Managed, len(l.Items))
 	for i := range l.Items {
 		items[i] = &l.Items[i]

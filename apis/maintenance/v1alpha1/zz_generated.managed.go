@@ -19,226 +19,226 @@ package v1alpha1
 
 import xpv1 "github.com/crossplane/crossplane-runtime/apis/common/v1"
 
-// GetCondition of this MaintenanceAssignmentDedicatedHost.
-func (mg *MaintenanceAssignmentDedicatedHost) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
+// GetCondition of this AssignmentDedicatedHost.
+func (mg *AssignmentDedicatedHost) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
 	return mg.Status.GetCondition(ct)
 }
 
-// GetDeletionPolicy of this MaintenanceAssignmentDedicatedHost.
-func (mg *MaintenanceAssignmentDedicatedHost) GetDeletionPolicy() xpv1.DeletionPolicy {
+// GetDeletionPolicy of this AssignmentDedicatedHost.
+func (mg *AssignmentDedicatedHost) GetDeletionPolicy() xpv1.DeletionPolicy {
 	return mg.Spec.DeletionPolicy
 }
 
-// GetProviderConfigReference of this MaintenanceAssignmentDedicatedHost.
-func (mg *MaintenanceAssignmentDedicatedHost) GetProviderConfigReference() *xpv1.Reference {
+// GetProviderConfigReference of this AssignmentDedicatedHost.
+func (mg *AssignmentDedicatedHost) GetProviderConfigReference() *xpv1.Reference {
 	return mg.Spec.ProviderConfigReference
 }
 
 /*
-GetProviderReference of this MaintenanceAssignmentDedicatedHost.
+GetProviderReference of this AssignmentDedicatedHost.
 Deprecated: Use GetProviderConfigReference.
 */
-func (mg *MaintenanceAssignmentDedicatedHost) GetProviderReference() *xpv1.Reference {
+func (mg *AssignmentDedicatedHost) GetProviderReference() *xpv1.Reference {
 	return mg.Spec.ProviderReference
 }
 
-// GetWriteConnectionSecretToReference of this MaintenanceAssignmentDedicatedHost.
-func (mg *MaintenanceAssignmentDedicatedHost) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
+// GetWriteConnectionSecretToReference of this AssignmentDedicatedHost.
+func (mg *AssignmentDedicatedHost) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
 	return mg.Spec.WriteConnectionSecretToReference
 }
 
-// SetConditions of this MaintenanceAssignmentDedicatedHost.
-func (mg *MaintenanceAssignmentDedicatedHost) SetConditions(c ...xpv1.Condition) {
+// SetConditions of this AssignmentDedicatedHost.
+func (mg *AssignmentDedicatedHost) SetConditions(c ...xpv1.Condition) {
 	mg.Status.SetConditions(c...)
 }
 
-// SetDeletionPolicy of this MaintenanceAssignmentDedicatedHost.
-func (mg *MaintenanceAssignmentDedicatedHost) SetDeletionPolicy(r xpv1.DeletionPolicy) {
+// SetDeletionPolicy of this AssignmentDedicatedHost.
+func (mg *AssignmentDedicatedHost) SetDeletionPolicy(r xpv1.DeletionPolicy) {
 	mg.Spec.DeletionPolicy = r
 }
 
-// SetProviderConfigReference of this MaintenanceAssignmentDedicatedHost.
-func (mg *MaintenanceAssignmentDedicatedHost) SetProviderConfigReference(r *xpv1.Reference) {
+// SetProviderConfigReference of this AssignmentDedicatedHost.
+func (mg *AssignmentDedicatedHost) SetProviderConfigReference(r *xpv1.Reference) {
 	mg.Spec.ProviderConfigReference = r
 }
 
 /*
-SetProviderReference of this MaintenanceAssignmentDedicatedHost.
+SetProviderReference of this AssignmentDedicatedHost.
 Deprecated: Use SetProviderConfigReference.
 */
-func (mg *MaintenanceAssignmentDedicatedHost) SetProviderReference(r *xpv1.Reference) {
+func (mg *AssignmentDedicatedHost) SetProviderReference(r *xpv1.Reference) {
 	mg.Spec.ProviderReference = r
 }
 
-// SetWriteConnectionSecretToReference of this MaintenanceAssignmentDedicatedHost.
-func (mg *MaintenanceAssignmentDedicatedHost) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
+// SetWriteConnectionSecretToReference of this AssignmentDedicatedHost.
+func (mg *AssignmentDedicatedHost) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
 	mg.Spec.WriteConnectionSecretToReference = r
 }
 
-// GetCondition of this MaintenanceAssignmentVirtualMachine.
-func (mg *MaintenanceAssignmentVirtualMachine) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
+// GetCondition of this AssignmentVirtualMachine.
+func (mg *AssignmentVirtualMachine) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
 	return mg.Status.GetCondition(ct)
 }
 
-// GetDeletionPolicy of this MaintenanceAssignmentVirtualMachine.
-func (mg *MaintenanceAssignmentVirtualMachine) GetDeletionPolicy() xpv1.DeletionPolicy {
+// GetDeletionPolicy of this AssignmentVirtualMachine.
+func (mg *AssignmentVirtualMachine) GetDeletionPolicy() xpv1.DeletionPolicy {
 	return mg.Spec.DeletionPolicy
 }
 
-// GetProviderConfigReference of this MaintenanceAssignmentVirtualMachine.
-func (mg *MaintenanceAssignmentVirtualMachine) GetProviderConfigReference() *xpv1.Reference {
+// GetProviderConfigReference of this AssignmentVirtualMachine.
+func (mg *AssignmentVirtualMachine) GetProviderConfigReference() *xpv1.Reference {
 	return mg.Spec.ProviderConfigReference
 }
 
 /*
-GetProviderReference of this MaintenanceAssignmentVirtualMachine.
+GetProviderReference of this AssignmentVirtualMachine.
 Deprecated: Use GetProviderConfigReference.
 */
-func (mg *MaintenanceAssignmentVirtualMachine) GetProviderReference() *xpv1.Reference {
+func (mg *AssignmentVirtualMachine) GetProviderReference() *xpv1.Reference {
 	return mg.Spec.ProviderReference
 }
 
-// GetWriteConnectionSecretToReference of this MaintenanceAssignmentVirtualMachine.
-func (mg *MaintenanceAssignmentVirtualMachine) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
+// GetWriteConnectionSecretToReference of this AssignmentVirtualMachine.
+func (mg *AssignmentVirtualMachine) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
 	return mg.Spec.WriteConnectionSecretToReference
 }
 
-// SetConditions of this MaintenanceAssignmentVirtualMachine.
-func (mg *MaintenanceAssignmentVirtualMachine) SetConditions(c ...xpv1.Condition) {
+// SetConditions of this AssignmentVirtualMachine.
+func (mg *AssignmentVirtualMachine) SetConditions(c ...xpv1.Condition) {
 	mg.Status.SetConditions(c...)
 }
 
-// SetDeletionPolicy of this MaintenanceAssignmentVirtualMachine.
-func (mg *MaintenanceAssignmentVirtualMachine) SetDeletionPolicy(r xpv1.DeletionPolicy) {
+// SetDeletionPolicy of this AssignmentVirtualMachine.
+func (mg *AssignmentVirtualMachine) SetDeletionPolicy(r xpv1.DeletionPolicy) {
 	mg.Spec.DeletionPolicy = r
 }
 
-// SetProviderConfigReference of this MaintenanceAssignmentVirtualMachine.
-func (mg *MaintenanceAssignmentVirtualMachine) SetProviderConfigReference(r *xpv1.Reference) {
+// SetProviderConfigReference of this AssignmentVirtualMachine.
+func (mg *AssignmentVirtualMachine) SetProviderConfigReference(r *xpv1.Reference) {
 	mg.Spec.ProviderConfigReference = r
 }
 
 /*
-SetProviderReference of this MaintenanceAssignmentVirtualMachine.
+SetProviderReference of this AssignmentVirtualMachine.
 Deprecated: Use SetProviderConfigReference.
 */
-func (mg *MaintenanceAssignmentVirtualMachine) SetProviderReference(r *xpv1.Reference) {
+func (mg *AssignmentVirtualMachine) SetProviderReference(r *xpv1.Reference) {
 	mg.Spec.ProviderReference = r
 }
 
-// SetWriteConnectionSecretToReference of this MaintenanceAssignmentVirtualMachine.
-func (mg *MaintenanceAssignmentVirtualMachine) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
+// SetWriteConnectionSecretToReference of this AssignmentVirtualMachine.
+func (mg *AssignmentVirtualMachine) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
 	mg.Spec.WriteConnectionSecretToReference = r
 }
 
-// GetCondition of this MaintenanceAssignmentVirtualMachineScaleSet.
-func (mg *MaintenanceAssignmentVirtualMachineScaleSet) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
+// GetCondition of this AssignmentVirtualMachineScaleSet.
+func (mg *AssignmentVirtualMachineScaleSet) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
 	return mg.Status.GetCondition(ct)
 }
 
-// GetDeletionPolicy of this MaintenanceAssignmentVirtualMachineScaleSet.
-func (mg *MaintenanceAssignmentVirtualMachineScaleSet) GetDeletionPolicy() xpv1.DeletionPolicy {
+// GetDeletionPolicy of this AssignmentVirtualMachineScaleSet.
+func (mg *AssignmentVirtualMachineScaleSet) GetDeletionPolicy() xpv1.DeletionPolicy {
 	return mg.Spec.DeletionPolicy
 }
 
-// GetProviderConfigReference of this MaintenanceAssignmentVirtualMachineScaleSet.
-func (mg *MaintenanceAssignmentVirtualMachineScaleSet) GetProviderConfigReference() *xpv1.Reference {
+// GetProviderConfigReference of this AssignmentVirtualMachineScaleSet.
+func (mg *AssignmentVirtualMachineScaleSet) GetProviderConfigReference() *xpv1.Reference {
 	return mg.Spec.ProviderConfigReference
 }
 
 /*
-GetProviderReference of this MaintenanceAssignmentVirtualMachineScaleSet.
+GetProviderReference of this AssignmentVirtualMachineScaleSet.
 Deprecated: Use GetProviderConfigReference.
 */
-func (mg *MaintenanceAssignmentVirtualMachineScaleSet) GetProviderReference() *xpv1.Reference {
+func (mg *AssignmentVirtualMachineScaleSet) GetProviderReference() *xpv1.Reference {
 	return mg.Spec.ProviderReference
 }
 
-// GetWriteConnectionSecretToReference of this MaintenanceAssignmentVirtualMachineScaleSet.
-func (mg *MaintenanceAssignmentVirtualMachineScaleSet) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
+// GetWriteConnectionSecretToReference of this AssignmentVirtualMachineScaleSet.
+func (mg *AssignmentVirtualMachineScaleSet) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
 	return mg.Spec.WriteConnectionSecretToReference
 }
 
-// SetConditions of this MaintenanceAssignmentVirtualMachineScaleSet.
-func (mg *MaintenanceAssignmentVirtualMachineScaleSet) SetConditions(c ...xpv1.Condition) {
+// SetConditions of this AssignmentVirtualMachineScaleSet.
+func (mg *AssignmentVirtualMachineScaleSet) SetConditions(c ...xpv1.Condition) {
 	mg.Status.SetConditions(c...)
 }
 
-// SetDeletionPolicy of this MaintenanceAssignmentVirtualMachineScaleSet.
-func (mg *MaintenanceAssignmentVirtualMachineScaleSet) SetDeletionPolicy(r xpv1.DeletionPolicy) {
+// SetDeletionPolicy of this AssignmentVirtualMachineScaleSet.
+func (mg *AssignmentVirtualMachineScaleSet) SetDeletionPolicy(r xpv1.DeletionPolicy) {
 	mg.Spec.DeletionPolicy = r
 }
 
-// SetProviderConfigReference of this MaintenanceAssignmentVirtualMachineScaleSet.
-func (mg *MaintenanceAssignmentVirtualMachineScaleSet) SetProviderConfigReference(r *xpv1.Reference) {
+// SetProviderConfigReference of this AssignmentVirtualMachineScaleSet.
+func (mg *AssignmentVirtualMachineScaleSet) SetProviderConfigReference(r *xpv1.Reference) {
 	mg.Spec.ProviderConfigReference = r
 }
 
 /*
-SetProviderReference of this MaintenanceAssignmentVirtualMachineScaleSet.
+SetProviderReference of this AssignmentVirtualMachineScaleSet.
 Deprecated: Use SetProviderConfigReference.
 */
-func (mg *MaintenanceAssignmentVirtualMachineScaleSet) SetProviderReference(r *xpv1.Reference) {
+func (mg *AssignmentVirtualMachineScaleSet) SetProviderReference(r *xpv1.Reference) {
 	mg.Spec.ProviderReference = r
 }
 
-// SetWriteConnectionSecretToReference of this MaintenanceAssignmentVirtualMachineScaleSet.
-func (mg *MaintenanceAssignmentVirtualMachineScaleSet) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
+// SetWriteConnectionSecretToReference of this AssignmentVirtualMachineScaleSet.
+func (mg *AssignmentVirtualMachineScaleSet) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
 	mg.Spec.WriteConnectionSecretToReference = r
 }
 
-// GetCondition of this MaintenanceConfiguration.
-func (mg *MaintenanceConfiguration) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
+// GetCondition of this Configuration.
+func (mg *Configuration) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
 	return mg.Status.GetCondition(ct)
 }
 
-// GetDeletionPolicy of this MaintenanceConfiguration.
-func (mg *MaintenanceConfiguration) GetDeletionPolicy() xpv1.DeletionPolicy {
+// GetDeletionPolicy of this Configuration.
+func (mg *Configuration) GetDeletionPolicy() xpv1.DeletionPolicy {
 	return mg.Spec.DeletionPolicy
 }
 
-// GetProviderConfigReference of this MaintenanceConfiguration.
-func (mg *MaintenanceConfiguration) GetProviderConfigReference() *xpv1.Reference {
+// GetProviderConfigReference of this Configuration.
+func (mg *Configuration) GetProviderConfigReference() *xpv1.Reference {
 	return mg.Spec.ProviderConfigReference
 }
 
 /*
-GetProviderReference of this MaintenanceConfiguration.
+GetProviderReference of this Configuration.
 Deprecated: Use GetProviderConfigReference.
 */
-func (mg *MaintenanceConfiguration) GetProviderReference() *xpv1.Reference {
+func (mg *Configuration) GetProviderReference() *xpv1.Reference {
 	return mg.Spec.ProviderReference
 }
 
-// GetWriteConnectionSecretToReference of this MaintenanceConfiguration.
-func (mg *MaintenanceConfiguration) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
+// GetWriteConnectionSecretToReference of this Configuration.
+func (mg *Configuration) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
 	return mg.Spec.WriteConnectionSecretToReference
 }
 
-// SetConditions of this MaintenanceConfiguration.
-func (mg *MaintenanceConfiguration) SetConditions(c ...xpv1.Condition) {
+// SetConditions of this Configuration.
+func (mg *Configuration) SetConditions(c ...xpv1.Condition) {
 	mg.Status.SetConditions(c...)
 }
 
-// SetDeletionPolicy of this MaintenanceConfiguration.
-func (mg *MaintenanceConfiguration) SetDeletionPolicy(r xpv1.DeletionPolicy) {
+// SetDeletionPolicy of this Configuration.
+func (mg *Configuration) SetDeletionPolicy(r xpv1.DeletionPolicy) {
 	mg.Spec.DeletionPolicy = r
 }
 
-// SetProviderConfigReference of this MaintenanceConfiguration.
-func (mg *MaintenanceConfiguration) SetProviderConfigReference(r *xpv1.Reference) {
+// SetProviderConfigReference of this Configuration.
+func (mg *Configuration) SetProviderConfigReference(r *xpv1.Reference) {
 	mg.Spec.ProviderConfigReference = r
 }
 
 /*
-SetProviderReference of this MaintenanceConfiguration.
+SetProviderReference of this Configuration.
 Deprecated: Use SetProviderConfigReference.
 */
-func (mg *MaintenanceConfiguration) SetProviderReference(r *xpv1.Reference) {
+func (mg *Configuration) SetProviderReference(r *xpv1.Reference) {
 	mg.Spec.ProviderReference = r
 }
 
-// SetWriteConnectionSecretToReference of this MaintenanceConfiguration.
-func (mg *MaintenanceConfiguration) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
+// SetWriteConnectionSecretToReference of this Configuration.
+func (mg *Configuration) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
 	mg.Spec.WriteConnectionSecretToReference = r
 }

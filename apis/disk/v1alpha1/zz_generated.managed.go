@@ -19,114 +19,114 @@ package v1alpha1
 
 import xpv1 "github.com/crossplane/crossplane-runtime/apis/common/v1"
 
-// GetCondition of this DiskAccess.
-func (mg *DiskAccess) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
+// GetCondition of this Access.
+func (mg *Access) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
 	return mg.Status.GetCondition(ct)
 }
 
-// GetDeletionPolicy of this DiskAccess.
-func (mg *DiskAccess) GetDeletionPolicy() xpv1.DeletionPolicy {
+// GetDeletionPolicy of this Access.
+func (mg *Access) GetDeletionPolicy() xpv1.DeletionPolicy {
 	return mg.Spec.DeletionPolicy
 }
 
-// GetProviderConfigReference of this DiskAccess.
-func (mg *DiskAccess) GetProviderConfigReference() *xpv1.Reference {
+// GetProviderConfigReference of this Access.
+func (mg *Access) GetProviderConfigReference() *xpv1.Reference {
 	return mg.Spec.ProviderConfigReference
 }
 
 /*
-GetProviderReference of this DiskAccess.
+GetProviderReference of this Access.
 Deprecated: Use GetProviderConfigReference.
 */
-func (mg *DiskAccess) GetProviderReference() *xpv1.Reference {
+func (mg *Access) GetProviderReference() *xpv1.Reference {
 	return mg.Spec.ProviderReference
 }
 
-// GetWriteConnectionSecretToReference of this DiskAccess.
-func (mg *DiskAccess) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
+// GetWriteConnectionSecretToReference of this Access.
+func (mg *Access) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
 	return mg.Spec.WriteConnectionSecretToReference
 }
 
-// SetConditions of this DiskAccess.
-func (mg *DiskAccess) SetConditions(c ...xpv1.Condition) {
+// SetConditions of this Access.
+func (mg *Access) SetConditions(c ...xpv1.Condition) {
 	mg.Status.SetConditions(c...)
 }
 
-// SetDeletionPolicy of this DiskAccess.
-func (mg *DiskAccess) SetDeletionPolicy(r xpv1.DeletionPolicy) {
+// SetDeletionPolicy of this Access.
+func (mg *Access) SetDeletionPolicy(r xpv1.DeletionPolicy) {
 	mg.Spec.DeletionPolicy = r
 }
 
-// SetProviderConfigReference of this DiskAccess.
-func (mg *DiskAccess) SetProviderConfigReference(r *xpv1.Reference) {
+// SetProviderConfigReference of this Access.
+func (mg *Access) SetProviderConfigReference(r *xpv1.Reference) {
 	mg.Spec.ProviderConfigReference = r
 }
 
 /*
-SetProviderReference of this DiskAccess.
+SetProviderReference of this Access.
 Deprecated: Use SetProviderConfigReference.
 */
-func (mg *DiskAccess) SetProviderReference(r *xpv1.Reference) {
+func (mg *Access) SetProviderReference(r *xpv1.Reference) {
 	mg.Spec.ProviderReference = r
 }
 
-// SetWriteConnectionSecretToReference of this DiskAccess.
-func (mg *DiskAccess) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
+// SetWriteConnectionSecretToReference of this Access.
+func (mg *Access) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
 	mg.Spec.WriteConnectionSecretToReference = r
 }
 
-// GetCondition of this DiskEncryptionSet.
-func (mg *DiskEncryptionSet) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
+// GetCondition of this EncryptionSet.
+func (mg *EncryptionSet) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
 	return mg.Status.GetCondition(ct)
 }
 
-// GetDeletionPolicy of this DiskEncryptionSet.
-func (mg *DiskEncryptionSet) GetDeletionPolicy() xpv1.DeletionPolicy {
+// GetDeletionPolicy of this EncryptionSet.
+func (mg *EncryptionSet) GetDeletionPolicy() xpv1.DeletionPolicy {
 	return mg.Spec.DeletionPolicy
 }
 
-// GetProviderConfigReference of this DiskEncryptionSet.
-func (mg *DiskEncryptionSet) GetProviderConfigReference() *xpv1.Reference {
+// GetProviderConfigReference of this EncryptionSet.
+func (mg *EncryptionSet) GetProviderConfigReference() *xpv1.Reference {
 	return mg.Spec.ProviderConfigReference
 }
 
 /*
-GetProviderReference of this DiskEncryptionSet.
+GetProviderReference of this EncryptionSet.
 Deprecated: Use GetProviderConfigReference.
 */
-func (mg *DiskEncryptionSet) GetProviderReference() *xpv1.Reference {
+func (mg *EncryptionSet) GetProviderReference() *xpv1.Reference {
 	return mg.Spec.ProviderReference
 }
 
-// GetWriteConnectionSecretToReference of this DiskEncryptionSet.
-func (mg *DiskEncryptionSet) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
+// GetWriteConnectionSecretToReference of this EncryptionSet.
+func (mg *EncryptionSet) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
 	return mg.Spec.WriteConnectionSecretToReference
 }
 
-// SetConditions of this DiskEncryptionSet.
-func (mg *DiskEncryptionSet) SetConditions(c ...xpv1.Condition) {
+// SetConditions of this EncryptionSet.
+func (mg *EncryptionSet) SetConditions(c ...xpv1.Condition) {
 	mg.Status.SetConditions(c...)
 }
 
-// SetDeletionPolicy of this DiskEncryptionSet.
-func (mg *DiskEncryptionSet) SetDeletionPolicy(r xpv1.DeletionPolicy) {
+// SetDeletionPolicy of this EncryptionSet.
+func (mg *EncryptionSet) SetDeletionPolicy(r xpv1.DeletionPolicy) {
 	mg.Spec.DeletionPolicy = r
 }
 
-// SetProviderConfigReference of this DiskEncryptionSet.
-func (mg *DiskEncryptionSet) SetProviderConfigReference(r *xpv1.Reference) {
+// SetProviderConfigReference of this EncryptionSet.
+func (mg *EncryptionSet) SetProviderConfigReference(r *xpv1.Reference) {
 	mg.Spec.ProviderConfigReference = r
 }
 
 /*
-SetProviderReference of this DiskEncryptionSet.
+SetProviderReference of this EncryptionSet.
 Deprecated: Use SetProviderConfigReference.
 */
-func (mg *DiskEncryptionSet) SetProviderReference(r *xpv1.Reference) {
+func (mg *EncryptionSet) SetProviderReference(r *xpv1.Reference) {
 	mg.Spec.ProviderReference = r
 }
 
-// SetWriteConnectionSecretToReference of this DiskEncryptionSet.
-func (mg *DiskEncryptionSet) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
+// SetWriteConnectionSecretToReference of this EncryptionSet.
+func (mg *EncryptionSet) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
 	mg.Spec.WriteConnectionSecretToReference = r
 }

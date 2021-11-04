@@ -19,8 +19,8 @@ package v1alpha1
 
 import resource "github.com/crossplane/crossplane-runtime/pkg/resource"
 
-// GetItems of this KubernetesClusterList.
-func (l *KubernetesClusterList) GetItems() []resource.Managed {
+// GetItems of this ClusterList.
+func (l *ClusterList) GetItems() []resource.Managed {
 	items := make([]resource.Managed, len(l.Items))
 	for i := range l.Items {
 		items[i] = &l.Items[i]
@@ -28,8 +28,8 @@ func (l *KubernetesClusterList) GetItems() []resource.Managed {
 	return items
 }
 
-// GetItems of this KubernetesClusterNodePoolList.
-func (l *KubernetesClusterNodePoolList) GetItems() []resource.Managed {
+// GetItems of this ClusterNodePoolList.
+func (l *ClusterNodePoolList) GetItems() []resource.Managed {
 	items := make([]resource.Managed, len(l.Items))
 	for i := range l.Items {
 		items[i] = &l.Items[i]

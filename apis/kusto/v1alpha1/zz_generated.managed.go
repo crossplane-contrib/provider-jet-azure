@@ -19,562 +19,562 @@ package v1alpha1
 
 import xpv1 "github.com/crossplane/crossplane-runtime/apis/common/v1"
 
-// GetCondition of this KustoAttachedDatabaseConfiguration.
-func (mg *KustoAttachedDatabaseConfiguration) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
+// GetCondition of this AttachedDatabaseConfiguration.
+func (mg *AttachedDatabaseConfiguration) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
 	return mg.Status.GetCondition(ct)
 }
 
-// GetDeletionPolicy of this KustoAttachedDatabaseConfiguration.
-func (mg *KustoAttachedDatabaseConfiguration) GetDeletionPolicy() xpv1.DeletionPolicy {
+// GetDeletionPolicy of this AttachedDatabaseConfiguration.
+func (mg *AttachedDatabaseConfiguration) GetDeletionPolicy() xpv1.DeletionPolicy {
 	return mg.Spec.DeletionPolicy
 }
 
-// GetProviderConfigReference of this KustoAttachedDatabaseConfiguration.
-func (mg *KustoAttachedDatabaseConfiguration) GetProviderConfigReference() *xpv1.Reference {
+// GetProviderConfigReference of this AttachedDatabaseConfiguration.
+func (mg *AttachedDatabaseConfiguration) GetProviderConfigReference() *xpv1.Reference {
 	return mg.Spec.ProviderConfigReference
 }
 
 /*
-GetProviderReference of this KustoAttachedDatabaseConfiguration.
+GetProviderReference of this AttachedDatabaseConfiguration.
 Deprecated: Use GetProviderConfigReference.
 */
-func (mg *KustoAttachedDatabaseConfiguration) GetProviderReference() *xpv1.Reference {
+func (mg *AttachedDatabaseConfiguration) GetProviderReference() *xpv1.Reference {
 	return mg.Spec.ProviderReference
 }
 
-// GetWriteConnectionSecretToReference of this KustoAttachedDatabaseConfiguration.
-func (mg *KustoAttachedDatabaseConfiguration) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
+// GetWriteConnectionSecretToReference of this AttachedDatabaseConfiguration.
+func (mg *AttachedDatabaseConfiguration) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
 	return mg.Spec.WriteConnectionSecretToReference
 }
 
-// SetConditions of this KustoAttachedDatabaseConfiguration.
-func (mg *KustoAttachedDatabaseConfiguration) SetConditions(c ...xpv1.Condition) {
+// SetConditions of this AttachedDatabaseConfiguration.
+func (mg *AttachedDatabaseConfiguration) SetConditions(c ...xpv1.Condition) {
 	mg.Status.SetConditions(c...)
 }
 
-// SetDeletionPolicy of this KustoAttachedDatabaseConfiguration.
-func (mg *KustoAttachedDatabaseConfiguration) SetDeletionPolicy(r xpv1.DeletionPolicy) {
+// SetDeletionPolicy of this AttachedDatabaseConfiguration.
+func (mg *AttachedDatabaseConfiguration) SetDeletionPolicy(r xpv1.DeletionPolicy) {
 	mg.Spec.DeletionPolicy = r
 }
 
-// SetProviderConfigReference of this KustoAttachedDatabaseConfiguration.
-func (mg *KustoAttachedDatabaseConfiguration) SetProviderConfigReference(r *xpv1.Reference) {
+// SetProviderConfigReference of this AttachedDatabaseConfiguration.
+func (mg *AttachedDatabaseConfiguration) SetProviderConfigReference(r *xpv1.Reference) {
 	mg.Spec.ProviderConfigReference = r
 }
 
 /*
-SetProviderReference of this KustoAttachedDatabaseConfiguration.
+SetProviderReference of this AttachedDatabaseConfiguration.
 Deprecated: Use SetProviderConfigReference.
 */
-func (mg *KustoAttachedDatabaseConfiguration) SetProviderReference(r *xpv1.Reference) {
+func (mg *AttachedDatabaseConfiguration) SetProviderReference(r *xpv1.Reference) {
 	mg.Spec.ProviderReference = r
 }
 
-// SetWriteConnectionSecretToReference of this KustoAttachedDatabaseConfiguration.
-func (mg *KustoAttachedDatabaseConfiguration) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
+// SetWriteConnectionSecretToReference of this AttachedDatabaseConfiguration.
+func (mg *AttachedDatabaseConfiguration) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
 	mg.Spec.WriteConnectionSecretToReference = r
 }
 
-// GetCondition of this KustoCluster.
-func (mg *KustoCluster) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
+// GetCondition of this Cluster.
+func (mg *Cluster) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
 	return mg.Status.GetCondition(ct)
 }
 
-// GetDeletionPolicy of this KustoCluster.
-func (mg *KustoCluster) GetDeletionPolicy() xpv1.DeletionPolicy {
+// GetDeletionPolicy of this Cluster.
+func (mg *Cluster) GetDeletionPolicy() xpv1.DeletionPolicy {
 	return mg.Spec.DeletionPolicy
 }
 
-// GetProviderConfigReference of this KustoCluster.
-func (mg *KustoCluster) GetProviderConfigReference() *xpv1.Reference {
+// GetProviderConfigReference of this Cluster.
+func (mg *Cluster) GetProviderConfigReference() *xpv1.Reference {
 	return mg.Spec.ProviderConfigReference
 }
 
 /*
-GetProviderReference of this KustoCluster.
+GetProviderReference of this Cluster.
 Deprecated: Use GetProviderConfigReference.
 */
-func (mg *KustoCluster) GetProviderReference() *xpv1.Reference {
+func (mg *Cluster) GetProviderReference() *xpv1.Reference {
 	return mg.Spec.ProviderReference
 }
 
-// GetWriteConnectionSecretToReference of this KustoCluster.
-func (mg *KustoCluster) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
+// GetWriteConnectionSecretToReference of this Cluster.
+func (mg *Cluster) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
 	return mg.Spec.WriteConnectionSecretToReference
 }
 
-// SetConditions of this KustoCluster.
-func (mg *KustoCluster) SetConditions(c ...xpv1.Condition) {
+// SetConditions of this Cluster.
+func (mg *Cluster) SetConditions(c ...xpv1.Condition) {
 	mg.Status.SetConditions(c...)
 }
 
-// SetDeletionPolicy of this KustoCluster.
-func (mg *KustoCluster) SetDeletionPolicy(r xpv1.DeletionPolicy) {
+// SetDeletionPolicy of this Cluster.
+func (mg *Cluster) SetDeletionPolicy(r xpv1.DeletionPolicy) {
 	mg.Spec.DeletionPolicy = r
 }
 
-// SetProviderConfigReference of this KustoCluster.
-func (mg *KustoCluster) SetProviderConfigReference(r *xpv1.Reference) {
+// SetProviderConfigReference of this Cluster.
+func (mg *Cluster) SetProviderConfigReference(r *xpv1.Reference) {
 	mg.Spec.ProviderConfigReference = r
 }
 
 /*
-SetProviderReference of this KustoCluster.
+SetProviderReference of this Cluster.
 Deprecated: Use SetProviderConfigReference.
 */
-func (mg *KustoCluster) SetProviderReference(r *xpv1.Reference) {
+func (mg *Cluster) SetProviderReference(r *xpv1.Reference) {
 	mg.Spec.ProviderReference = r
 }
 
-// SetWriteConnectionSecretToReference of this KustoCluster.
-func (mg *KustoCluster) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
+// SetWriteConnectionSecretToReference of this Cluster.
+func (mg *Cluster) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
 	mg.Spec.WriteConnectionSecretToReference = r
 }
 
-// GetCondition of this KustoClusterCustomerManagedKey.
-func (mg *KustoClusterCustomerManagedKey) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
+// GetCondition of this ClusterCustomerManagedKey.
+func (mg *ClusterCustomerManagedKey) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
 	return mg.Status.GetCondition(ct)
 }
 
-// GetDeletionPolicy of this KustoClusterCustomerManagedKey.
-func (mg *KustoClusterCustomerManagedKey) GetDeletionPolicy() xpv1.DeletionPolicy {
+// GetDeletionPolicy of this ClusterCustomerManagedKey.
+func (mg *ClusterCustomerManagedKey) GetDeletionPolicy() xpv1.DeletionPolicy {
 	return mg.Spec.DeletionPolicy
 }
 
-// GetProviderConfigReference of this KustoClusterCustomerManagedKey.
-func (mg *KustoClusterCustomerManagedKey) GetProviderConfigReference() *xpv1.Reference {
+// GetProviderConfigReference of this ClusterCustomerManagedKey.
+func (mg *ClusterCustomerManagedKey) GetProviderConfigReference() *xpv1.Reference {
 	return mg.Spec.ProviderConfigReference
 }
 
 /*
-GetProviderReference of this KustoClusterCustomerManagedKey.
+GetProviderReference of this ClusterCustomerManagedKey.
 Deprecated: Use GetProviderConfigReference.
 */
-func (mg *KustoClusterCustomerManagedKey) GetProviderReference() *xpv1.Reference {
+func (mg *ClusterCustomerManagedKey) GetProviderReference() *xpv1.Reference {
 	return mg.Spec.ProviderReference
 }
 
-// GetWriteConnectionSecretToReference of this KustoClusterCustomerManagedKey.
-func (mg *KustoClusterCustomerManagedKey) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
+// GetWriteConnectionSecretToReference of this ClusterCustomerManagedKey.
+func (mg *ClusterCustomerManagedKey) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
 	return mg.Spec.WriteConnectionSecretToReference
 }
 
-// SetConditions of this KustoClusterCustomerManagedKey.
-func (mg *KustoClusterCustomerManagedKey) SetConditions(c ...xpv1.Condition) {
+// SetConditions of this ClusterCustomerManagedKey.
+func (mg *ClusterCustomerManagedKey) SetConditions(c ...xpv1.Condition) {
 	mg.Status.SetConditions(c...)
 }
 
-// SetDeletionPolicy of this KustoClusterCustomerManagedKey.
-func (mg *KustoClusterCustomerManagedKey) SetDeletionPolicy(r xpv1.DeletionPolicy) {
+// SetDeletionPolicy of this ClusterCustomerManagedKey.
+func (mg *ClusterCustomerManagedKey) SetDeletionPolicy(r xpv1.DeletionPolicy) {
 	mg.Spec.DeletionPolicy = r
 }
 
-// SetProviderConfigReference of this KustoClusterCustomerManagedKey.
-func (mg *KustoClusterCustomerManagedKey) SetProviderConfigReference(r *xpv1.Reference) {
+// SetProviderConfigReference of this ClusterCustomerManagedKey.
+func (mg *ClusterCustomerManagedKey) SetProviderConfigReference(r *xpv1.Reference) {
 	mg.Spec.ProviderConfigReference = r
 }
 
 /*
-SetProviderReference of this KustoClusterCustomerManagedKey.
+SetProviderReference of this ClusterCustomerManagedKey.
 Deprecated: Use SetProviderConfigReference.
 */
-func (mg *KustoClusterCustomerManagedKey) SetProviderReference(r *xpv1.Reference) {
+func (mg *ClusterCustomerManagedKey) SetProviderReference(r *xpv1.Reference) {
 	mg.Spec.ProviderReference = r
 }
 
-// SetWriteConnectionSecretToReference of this KustoClusterCustomerManagedKey.
-func (mg *KustoClusterCustomerManagedKey) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
+// SetWriteConnectionSecretToReference of this ClusterCustomerManagedKey.
+func (mg *ClusterCustomerManagedKey) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
 	mg.Spec.WriteConnectionSecretToReference = r
 }
 
-// GetCondition of this KustoClusterPrincipalAssignment.
-func (mg *KustoClusterPrincipalAssignment) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
+// GetCondition of this ClusterPrincipalAssignment.
+func (mg *ClusterPrincipalAssignment) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
 	return mg.Status.GetCondition(ct)
 }
 
-// GetDeletionPolicy of this KustoClusterPrincipalAssignment.
-func (mg *KustoClusterPrincipalAssignment) GetDeletionPolicy() xpv1.DeletionPolicy {
+// GetDeletionPolicy of this ClusterPrincipalAssignment.
+func (mg *ClusterPrincipalAssignment) GetDeletionPolicy() xpv1.DeletionPolicy {
 	return mg.Spec.DeletionPolicy
 }
 
-// GetProviderConfigReference of this KustoClusterPrincipalAssignment.
-func (mg *KustoClusterPrincipalAssignment) GetProviderConfigReference() *xpv1.Reference {
+// GetProviderConfigReference of this ClusterPrincipalAssignment.
+func (mg *ClusterPrincipalAssignment) GetProviderConfigReference() *xpv1.Reference {
 	return mg.Spec.ProviderConfigReference
 }
 
 /*
-GetProviderReference of this KustoClusterPrincipalAssignment.
+GetProviderReference of this ClusterPrincipalAssignment.
 Deprecated: Use GetProviderConfigReference.
 */
-func (mg *KustoClusterPrincipalAssignment) GetProviderReference() *xpv1.Reference {
+func (mg *ClusterPrincipalAssignment) GetProviderReference() *xpv1.Reference {
 	return mg.Spec.ProviderReference
 }
 
-// GetWriteConnectionSecretToReference of this KustoClusterPrincipalAssignment.
-func (mg *KustoClusterPrincipalAssignment) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
+// GetWriteConnectionSecretToReference of this ClusterPrincipalAssignment.
+func (mg *ClusterPrincipalAssignment) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
 	return mg.Spec.WriteConnectionSecretToReference
 }
 
-// SetConditions of this KustoClusterPrincipalAssignment.
-func (mg *KustoClusterPrincipalAssignment) SetConditions(c ...xpv1.Condition) {
+// SetConditions of this ClusterPrincipalAssignment.
+func (mg *ClusterPrincipalAssignment) SetConditions(c ...xpv1.Condition) {
 	mg.Status.SetConditions(c...)
 }
 
-// SetDeletionPolicy of this KustoClusterPrincipalAssignment.
-func (mg *KustoClusterPrincipalAssignment) SetDeletionPolicy(r xpv1.DeletionPolicy) {
+// SetDeletionPolicy of this ClusterPrincipalAssignment.
+func (mg *ClusterPrincipalAssignment) SetDeletionPolicy(r xpv1.DeletionPolicy) {
 	mg.Spec.DeletionPolicy = r
 }
 
-// SetProviderConfigReference of this KustoClusterPrincipalAssignment.
-func (mg *KustoClusterPrincipalAssignment) SetProviderConfigReference(r *xpv1.Reference) {
+// SetProviderConfigReference of this ClusterPrincipalAssignment.
+func (mg *ClusterPrincipalAssignment) SetProviderConfigReference(r *xpv1.Reference) {
 	mg.Spec.ProviderConfigReference = r
 }
 
 /*
-SetProviderReference of this KustoClusterPrincipalAssignment.
+SetProviderReference of this ClusterPrincipalAssignment.
 Deprecated: Use SetProviderConfigReference.
 */
-func (mg *KustoClusterPrincipalAssignment) SetProviderReference(r *xpv1.Reference) {
+func (mg *ClusterPrincipalAssignment) SetProviderReference(r *xpv1.Reference) {
 	mg.Spec.ProviderReference = r
 }
 
-// SetWriteConnectionSecretToReference of this KustoClusterPrincipalAssignment.
-func (mg *KustoClusterPrincipalAssignment) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
+// SetWriteConnectionSecretToReference of this ClusterPrincipalAssignment.
+func (mg *ClusterPrincipalAssignment) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
 	mg.Spec.WriteConnectionSecretToReference = r
 }
 
-// GetCondition of this KustoDatabase.
-func (mg *KustoDatabase) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
+// GetCondition of this Database.
+func (mg *Database) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
 	return mg.Status.GetCondition(ct)
 }
 
-// GetDeletionPolicy of this KustoDatabase.
-func (mg *KustoDatabase) GetDeletionPolicy() xpv1.DeletionPolicy {
+// GetDeletionPolicy of this Database.
+func (mg *Database) GetDeletionPolicy() xpv1.DeletionPolicy {
 	return mg.Spec.DeletionPolicy
 }
 
-// GetProviderConfigReference of this KustoDatabase.
-func (mg *KustoDatabase) GetProviderConfigReference() *xpv1.Reference {
+// GetProviderConfigReference of this Database.
+func (mg *Database) GetProviderConfigReference() *xpv1.Reference {
 	return mg.Spec.ProviderConfigReference
 }
 
 /*
-GetProviderReference of this KustoDatabase.
+GetProviderReference of this Database.
 Deprecated: Use GetProviderConfigReference.
 */
-func (mg *KustoDatabase) GetProviderReference() *xpv1.Reference {
+func (mg *Database) GetProviderReference() *xpv1.Reference {
 	return mg.Spec.ProviderReference
 }
 
-// GetWriteConnectionSecretToReference of this KustoDatabase.
-func (mg *KustoDatabase) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
+// GetWriteConnectionSecretToReference of this Database.
+func (mg *Database) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
 	return mg.Spec.WriteConnectionSecretToReference
 }
 
-// SetConditions of this KustoDatabase.
-func (mg *KustoDatabase) SetConditions(c ...xpv1.Condition) {
+// SetConditions of this Database.
+func (mg *Database) SetConditions(c ...xpv1.Condition) {
 	mg.Status.SetConditions(c...)
 }
 
-// SetDeletionPolicy of this KustoDatabase.
-func (mg *KustoDatabase) SetDeletionPolicy(r xpv1.DeletionPolicy) {
+// SetDeletionPolicy of this Database.
+func (mg *Database) SetDeletionPolicy(r xpv1.DeletionPolicy) {
 	mg.Spec.DeletionPolicy = r
 }
 
-// SetProviderConfigReference of this KustoDatabase.
-func (mg *KustoDatabase) SetProviderConfigReference(r *xpv1.Reference) {
+// SetProviderConfigReference of this Database.
+func (mg *Database) SetProviderConfigReference(r *xpv1.Reference) {
 	mg.Spec.ProviderConfigReference = r
 }
 
 /*
-SetProviderReference of this KustoDatabase.
+SetProviderReference of this Database.
 Deprecated: Use SetProviderConfigReference.
 */
-func (mg *KustoDatabase) SetProviderReference(r *xpv1.Reference) {
+func (mg *Database) SetProviderReference(r *xpv1.Reference) {
 	mg.Spec.ProviderReference = r
 }
 
-// SetWriteConnectionSecretToReference of this KustoDatabase.
-func (mg *KustoDatabase) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
+// SetWriteConnectionSecretToReference of this Database.
+func (mg *Database) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
 	mg.Spec.WriteConnectionSecretToReference = r
 }
 
-// GetCondition of this KustoDatabasePrincipal.
-func (mg *KustoDatabasePrincipal) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
+// GetCondition of this DatabasePrincipal.
+func (mg *DatabasePrincipal) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
 	return mg.Status.GetCondition(ct)
 }
 
-// GetDeletionPolicy of this KustoDatabasePrincipal.
-func (mg *KustoDatabasePrincipal) GetDeletionPolicy() xpv1.DeletionPolicy {
+// GetDeletionPolicy of this DatabasePrincipal.
+func (mg *DatabasePrincipal) GetDeletionPolicy() xpv1.DeletionPolicy {
 	return mg.Spec.DeletionPolicy
 }
 
-// GetProviderConfigReference of this KustoDatabasePrincipal.
-func (mg *KustoDatabasePrincipal) GetProviderConfigReference() *xpv1.Reference {
+// GetProviderConfigReference of this DatabasePrincipal.
+func (mg *DatabasePrincipal) GetProviderConfigReference() *xpv1.Reference {
 	return mg.Spec.ProviderConfigReference
 }
 
 /*
-GetProviderReference of this KustoDatabasePrincipal.
+GetProviderReference of this DatabasePrincipal.
 Deprecated: Use GetProviderConfigReference.
 */
-func (mg *KustoDatabasePrincipal) GetProviderReference() *xpv1.Reference {
+func (mg *DatabasePrincipal) GetProviderReference() *xpv1.Reference {
 	return mg.Spec.ProviderReference
 }
 
-// GetWriteConnectionSecretToReference of this KustoDatabasePrincipal.
-func (mg *KustoDatabasePrincipal) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
+// GetWriteConnectionSecretToReference of this DatabasePrincipal.
+func (mg *DatabasePrincipal) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
 	return mg.Spec.WriteConnectionSecretToReference
 }
 
-// SetConditions of this KustoDatabasePrincipal.
-func (mg *KustoDatabasePrincipal) SetConditions(c ...xpv1.Condition) {
+// SetConditions of this DatabasePrincipal.
+func (mg *DatabasePrincipal) SetConditions(c ...xpv1.Condition) {
 	mg.Status.SetConditions(c...)
 }
 
-// SetDeletionPolicy of this KustoDatabasePrincipal.
-func (mg *KustoDatabasePrincipal) SetDeletionPolicy(r xpv1.DeletionPolicy) {
+// SetDeletionPolicy of this DatabasePrincipal.
+func (mg *DatabasePrincipal) SetDeletionPolicy(r xpv1.DeletionPolicy) {
 	mg.Spec.DeletionPolicy = r
 }
 
-// SetProviderConfigReference of this KustoDatabasePrincipal.
-func (mg *KustoDatabasePrincipal) SetProviderConfigReference(r *xpv1.Reference) {
+// SetProviderConfigReference of this DatabasePrincipal.
+func (mg *DatabasePrincipal) SetProviderConfigReference(r *xpv1.Reference) {
 	mg.Spec.ProviderConfigReference = r
 }
 
 /*
-SetProviderReference of this KustoDatabasePrincipal.
+SetProviderReference of this DatabasePrincipal.
 Deprecated: Use SetProviderConfigReference.
 */
-func (mg *KustoDatabasePrincipal) SetProviderReference(r *xpv1.Reference) {
+func (mg *DatabasePrincipal) SetProviderReference(r *xpv1.Reference) {
 	mg.Spec.ProviderReference = r
 }
 
-// SetWriteConnectionSecretToReference of this KustoDatabasePrincipal.
-func (mg *KustoDatabasePrincipal) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
+// SetWriteConnectionSecretToReference of this DatabasePrincipal.
+func (mg *DatabasePrincipal) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
 	mg.Spec.WriteConnectionSecretToReference = r
 }
 
-// GetCondition of this KustoDatabasePrincipalAssignment.
-func (mg *KustoDatabasePrincipalAssignment) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
+// GetCondition of this DatabasePrincipalAssignment.
+func (mg *DatabasePrincipalAssignment) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
 	return mg.Status.GetCondition(ct)
 }
 
-// GetDeletionPolicy of this KustoDatabasePrincipalAssignment.
-func (mg *KustoDatabasePrincipalAssignment) GetDeletionPolicy() xpv1.DeletionPolicy {
+// GetDeletionPolicy of this DatabasePrincipalAssignment.
+func (mg *DatabasePrincipalAssignment) GetDeletionPolicy() xpv1.DeletionPolicy {
 	return mg.Spec.DeletionPolicy
 }
 
-// GetProviderConfigReference of this KustoDatabasePrincipalAssignment.
-func (mg *KustoDatabasePrincipalAssignment) GetProviderConfigReference() *xpv1.Reference {
+// GetProviderConfigReference of this DatabasePrincipalAssignment.
+func (mg *DatabasePrincipalAssignment) GetProviderConfigReference() *xpv1.Reference {
 	return mg.Spec.ProviderConfigReference
 }
 
 /*
-GetProviderReference of this KustoDatabasePrincipalAssignment.
+GetProviderReference of this DatabasePrincipalAssignment.
 Deprecated: Use GetProviderConfigReference.
 */
-func (mg *KustoDatabasePrincipalAssignment) GetProviderReference() *xpv1.Reference {
+func (mg *DatabasePrincipalAssignment) GetProviderReference() *xpv1.Reference {
 	return mg.Spec.ProviderReference
 }
 
-// GetWriteConnectionSecretToReference of this KustoDatabasePrincipalAssignment.
-func (mg *KustoDatabasePrincipalAssignment) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
+// GetWriteConnectionSecretToReference of this DatabasePrincipalAssignment.
+func (mg *DatabasePrincipalAssignment) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
 	return mg.Spec.WriteConnectionSecretToReference
 }
 
-// SetConditions of this KustoDatabasePrincipalAssignment.
-func (mg *KustoDatabasePrincipalAssignment) SetConditions(c ...xpv1.Condition) {
+// SetConditions of this DatabasePrincipalAssignment.
+func (mg *DatabasePrincipalAssignment) SetConditions(c ...xpv1.Condition) {
 	mg.Status.SetConditions(c...)
 }
 
-// SetDeletionPolicy of this KustoDatabasePrincipalAssignment.
-func (mg *KustoDatabasePrincipalAssignment) SetDeletionPolicy(r xpv1.DeletionPolicy) {
+// SetDeletionPolicy of this DatabasePrincipalAssignment.
+func (mg *DatabasePrincipalAssignment) SetDeletionPolicy(r xpv1.DeletionPolicy) {
 	mg.Spec.DeletionPolicy = r
 }
 
-// SetProviderConfigReference of this KustoDatabasePrincipalAssignment.
-func (mg *KustoDatabasePrincipalAssignment) SetProviderConfigReference(r *xpv1.Reference) {
+// SetProviderConfigReference of this DatabasePrincipalAssignment.
+func (mg *DatabasePrincipalAssignment) SetProviderConfigReference(r *xpv1.Reference) {
 	mg.Spec.ProviderConfigReference = r
 }
 
 /*
-SetProviderReference of this KustoDatabasePrincipalAssignment.
+SetProviderReference of this DatabasePrincipalAssignment.
 Deprecated: Use SetProviderConfigReference.
 */
-func (mg *KustoDatabasePrincipalAssignment) SetProviderReference(r *xpv1.Reference) {
+func (mg *DatabasePrincipalAssignment) SetProviderReference(r *xpv1.Reference) {
 	mg.Spec.ProviderReference = r
 }
 
-// SetWriteConnectionSecretToReference of this KustoDatabasePrincipalAssignment.
-func (mg *KustoDatabasePrincipalAssignment) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
+// SetWriteConnectionSecretToReference of this DatabasePrincipalAssignment.
+func (mg *DatabasePrincipalAssignment) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
 	mg.Spec.WriteConnectionSecretToReference = r
 }
 
-// GetCondition of this KustoEventgridDataConnection.
-func (mg *KustoEventgridDataConnection) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
+// GetCondition of this EventgridDataConnection.
+func (mg *EventgridDataConnection) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
 	return mg.Status.GetCondition(ct)
 }
 
-// GetDeletionPolicy of this KustoEventgridDataConnection.
-func (mg *KustoEventgridDataConnection) GetDeletionPolicy() xpv1.DeletionPolicy {
+// GetDeletionPolicy of this EventgridDataConnection.
+func (mg *EventgridDataConnection) GetDeletionPolicy() xpv1.DeletionPolicy {
 	return mg.Spec.DeletionPolicy
 }
 
-// GetProviderConfigReference of this KustoEventgridDataConnection.
-func (mg *KustoEventgridDataConnection) GetProviderConfigReference() *xpv1.Reference {
+// GetProviderConfigReference of this EventgridDataConnection.
+func (mg *EventgridDataConnection) GetProviderConfigReference() *xpv1.Reference {
 	return mg.Spec.ProviderConfigReference
 }
 
 /*
-GetProviderReference of this KustoEventgridDataConnection.
+GetProviderReference of this EventgridDataConnection.
 Deprecated: Use GetProviderConfigReference.
 */
-func (mg *KustoEventgridDataConnection) GetProviderReference() *xpv1.Reference {
+func (mg *EventgridDataConnection) GetProviderReference() *xpv1.Reference {
 	return mg.Spec.ProviderReference
 }
 
-// GetWriteConnectionSecretToReference of this KustoEventgridDataConnection.
-func (mg *KustoEventgridDataConnection) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
+// GetWriteConnectionSecretToReference of this EventgridDataConnection.
+func (mg *EventgridDataConnection) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
 	return mg.Spec.WriteConnectionSecretToReference
 }
 
-// SetConditions of this KustoEventgridDataConnection.
-func (mg *KustoEventgridDataConnection) SetConditions(c ...xpv1.Condition) {
+// SetConditions of this EventgridDataConnection.
+func (mg *EventgridDataConnection) SetConditions(c ...xpv1.Condition) {
 	mg.Status.SetConditions(c...)
 }
 
-// SetDeletionPolicy of this KustoEventgridDataConnection.
-func (mg *KustoEventgridDataConnection) SetDeletionPolicy(r xpv1.DeletionPolicy) {
+// SetDeletionPolicy of this EventgridDataConnection.
+func (mg *EventgridDataConnection) SetDeletionPolicy(r xpv1.DeletionPolicy) {
 	mg.Spec.DeletionPolicy = r
 }
 
-// SetProviderConfigReference of this KustoEventgridDataConnection.
-func (mg *KustoEventgridDataConnection) SetProviderConfigReference(r *xpv1.Reference) {
+// SetProviderConfigReference of this EventgridDataConnection.
+func (mg *EventgridDataConnection) SetProviderConfigReference(r *xpv1.Reference) {
 	mg.Spec.ProviderConfigReference = r
 }
 
 /*
-SetProviderReference of this KustoEventgridDataConnection.
+SetProviderReference of this EventgridDataConnection.
 Deprecated: Use SetProviderConfigReference.
 */
-func (mg *KustoEventgridDataConnection) SetProviderReference(r *xpv1.Reference) {
+func (mg *EventgridDataConnection) SetProviderReference(r *xpv1.Reference) {
 	mg.Spec.ProviderReference = r
 }
 
-// SetWriteConnectionSecretToReference of this KustoEventgridDataConnection.
-func (mg *KustoEventgridDataConnection) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
+// SetWriteConnectionSecretToReference of this EventgridDataConnection.
+func (mg *EventgridDataConnection) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
 	mg.Spec.WriteConnectionSecretToReference = r
 }
 
-// GetCondition of this KustoEventhubDataConnection.
-func (mg *KustoEventhubDataConnection) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
+// GetCondition of this EventhubDataConnection.
+func (mg *EventhubDataConnection) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
 	return mg.Status.GetCondition(ct)
 }
 
-// GetDeletionPolicy of this KustoEventhubDataConnection.
-func (mg *KustoEventhubDataConnection) GetDeletionPolicy() xpv1.DeletionPolicy {
+// GetDeletionPolicy of this EventhubDataConnection.
+func (mg *EventhubDataConnection) GetDeletionPolicy() xpv1.DeletionPolicy {
 	return mg.Spec.DeletionPolicy
 }
 
-// GetProviderConfigReference of this KustoEventhubDataConnection.
-func (mg *KustoEventhubDataConnection) GetProviderConfigReference() *xpv1.Reference {
+// GetProviderConfigReference of this EventhubDataConnection.
+func (mg *EventhubDataConnection) GetProviderConfigReference() *xpv1.Reference {
 	return mg.Spec.ProviderConfigReference
 }
 
 /*
-GetProviderReference of this KustoEventhubDataConnection.
+GetProviderReference of this EventhubDataConnection.
 Deprecated: Use GetProviderConfigReference.
 */
-func (mg *KustoEventhubDataConnection) GetProviderReference() *xpv1.Reference {
+func (mg *EventhubDataConnection) GetProviderReference() *xpv1.Reference {
 	return mg.Spec.ProviderReference
 }
 
-// GetWriteConnectionSecretToReference of this KustoEventhubDataConnection.
-func (mg *KustoEventhubDataConnection) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
+// GetWriteConnectionSecretToReference of this EventhubDataConnection.
+func (mg *EventhubDataConnection) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
 	return mg.Spec.WriteConnectionSecretToReference
 }
 
-// SetConditions of this KustoEventhubDataConnection.
-func (mg *KustoEventhubDataConnection) SetConditions(c ...xpv1.Condition) {
+// SetConditions of this EventhubDataConnection.
+func (mg *EventhubDataConnection) SetConditions(c ...xpv1.Condition) {
 	mg.Status.SetConditions(c...)
 }
 
-// SetDeletionPolicy of this KustoEventhubDataConnection.
-func (mg *KustoEventhubDataConnection) SetDeletionPolicy(r xpv1.DeletionPolicy) {
+// SetDeletionPolicy of this EventhubDataConnection.
+func (mg *EventhubDataConnection) SetDeletionPolicy(r xpv1.DeletionPolicy) {
 	mg.Spec.DeletionPolicy = r
 }
 
-// SetProviderConfigReference of this KustoEventhubDataConnection.
-func (mg *KustoEventhubDataConnection) SetProviderConfigReference(r *xpv1.Reference) {
+// SetProviderConfigReference of this EventhubDataConnection.
+func (mg *EventhubDataConnection) SetProviderConfigReference(r *xpv1.Reference) {
 	mg.Spec.ProviderConfigReference = r
 }
 
 /*
-SetProviderReference of this KustoEventhubDataConnection.
+SetProviderReference of this EventhubDataConnection.
 Deprecated: Use SetProviderConfigReference.
 */
-func (mg *KustoEventhubDataConnection) SetProviderReference(r *xpv1.Reference) {
+func (mg *EventhubDataConnection) SetProviderReference(r *xpv1.Reference) {
 	mg.Spec.ProviderReference = r
 }
 
-// SetWriteConnectionSecretToReference of this KustoEventhubDataConnection.
-func (mg *KustoEventhubDataConnection) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
+// SetWriteConnectionSecretToReference of this EventhubDataConnection.
+func (mg *EventhubDataConnection) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
 	mg.Spec.WriteConnectionSecretToReference = r
 }
 
-// GetCondition of this KustoIothubDataConnection.
-func (mg *KustoIothubDataConnection) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
+// GetCondition of this IothubDataConnection.
+func (mg *IothubDataConnection) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
 	return mg.Status.GetCondition(ct)
 }
 
-// GetDeletionPolicy of this KustoIothubDataConnection.
-func (mg *KustoIothubDataConnection) GetDeletionPolicy() xpv1.DeletionPolicy {
+// GetDeletionPolicy of this IothubDataConnection.
+func (mg *IothubDataConnection) GetDeletionPolicy() xpv1.DeletionPolicy {
 	return mg.Spec.DeletionPolicy
 }
 
-// GetProviderConfigReference of this KustoIothubDataConnection.
-func (mg *KustoIothubDataConnection) GetProviderConfigReference() *xpv1.Reference {
+// GetProviderConfigReference of this IothubDataConnection.
+func (mg *IothubDataConnection) GetProviderConfigReference() *xpv1.Reference {
 	return mg.Spec.ProviderConfigReference
 }
 
 /*
-GetProviderReference of this KustoIothubDataConnection.
+GetProviderReference of this IothubDataConnection.
 Deprecated: Use GetProviderConfigReference.
 */
-func (mg *KustoIothubDataConnection) GetProviderReference() *xpv1.Reference {
+func (mg *IothubDataConnection) GetProviderReference() *xpv1.Reference {
 	return mg.Spec.ProviderReference
 }
 
-// GetWriteConnectionSecretToReference of this KustoIothubDataConnection.
-func (mg *KustoIothubDataConnection) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
+// GetWriteConnectionSecretToReference of this IothubDataConnection.
+func (mg *IothubDataConnection) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
 	return mg.Spec.WriteConnectionSecretToReference
 }
 
-// SetConditions of this KustoIothubDataConnection.
-func (mg *KustoIothubDataConnection) SetConditions(c ...xpv1.Condition) {
+// SetConditions of this IothubDataConnection.
+func (mg *IothubDataConnection) SetConditions(c ...xpv1.Condition) {
 	mg.Status.SetConditions(c...)
 }
 
-// SetDeletionPolicy of this KustoIothubDataConnection.
-func (mg *KustoIothubDataConnection) SetDeletionPolicy(r xpv1.DeletionPolicy) {
+// SetDeletionPolicy of this IothubDataConnection.
+func (mg *IothubDataConnection) SetDeletionPolicy(r xpv1.DeletionPolicy) {
 	mg.Spec.DeletionPolicy = r
 }
 
-// SetProviderConfigReference of this KustoIothubDataConnection.
-func (mg *KustoIothubDataConnection) SetProviderConfigReference(r *xpv1.Reference) {
+// SetProviderConfigReference of this IothubDataConnection.
+func (mg *IothubDataConnection) SetProviderConfigReference(r *xpv1.Reference) {
 	mg.Spec.ProviderConfigReference = r
 }
 
 /*
-SetProviderReference of this KustoIothubDataConnection.
+SetProviderReference of this IothubDataConnection.
 Deprecated: Use SetProviderConfigReference.
 */
-func (mg *KustoIothubDataConnection) SetProviderReference(r *xpv1.Reference) {
+func (mg *IothubDataConnection) SetProviderReference(r *xpv1.Reference) {
 	mg.Spec.ProviderReference = r
 }
 
-// SetWriteConnectionSecretToReference of this KustoIothubDataConnection.
-func (mg *KustoIothubDataConnection) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
+// SetWriteConnectionSecretToReference of this IothubDataConnection.
+func (mg *IothubDataConnection) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
 	mg.Spec.WriteConnectionSecretToReference = r
 }

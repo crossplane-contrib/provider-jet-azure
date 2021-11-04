@@ -19,8 +19,8 @@ package v1alpha1
 
 import resource "github.com/crossplane/crossplane-runtime/pkg/resource"
 
-// GetItems of this BotChannelAlexaList.
-func (l *BotChannelAlexaList) GetItems() []resource.Managed {
+// GetItems of this ChannelAlexaList.
+func (l *ChannelAlexaList) GetItems() []resource.Managed {
 	items := make([]resource.Managed, len(l.Items))
 	for i := range l.Items {
 		items[i] = &l.Items[i]
@@ -28,8 +28,8 @@ func (l *BotChannelAlexaList) GetItems() []resource.Managed {
 	return items
 }
 
-// GetItems of this BotChannelDirectLineSpeechList.
-func (l *BotChannelDirectLineSpeechList) GetItems() []resource.Managed {
+// GetItems of this ChannelDirectLineSpeechList.
+func (l *ChannelDirectLineSpeechList) GetItems() []resource.Managed {
 	items := make([]resource.Managed, len(l.Items))
 	for i := range l.Items {
 		items[i] = &l.Items[i]
@@ -37,8 +37,8 @@ func (l *BotChannelDirectLineSpeechList) GetItems() []resource.Managed {
 	return items
 }
 
-// GetItems of this BotChannelDirectlineList.
-func (l *BotChannelDirectlineList) GetItems() []resource.Managed {
+// GetItems of this ChannelDirectlineList.
+func (l *ChannelDirectlineList) GetItems() []resource.Managed {
 	items := make([]resource.Managed, len(l.Items))
 	for i := range l.Items {
 		items[i] = &l.Items[i]
@@ -46,8 +46,8 @@ func (l *BotChannelDirectlineList) GetItems() []resource.Managed {
 	return items
 }
 
-// GetItems of this BotChannelEmailList.
-func (l *BotChannelEmailList) GetItems() []resource.Managed {
+// GetItems of this ChannelEmailList.
+func (l *ChannelEmailList) GetItems() []resource.Managed {
 	items := make([]resource.Managed, len(l.Items))
 	for i := range l.Items {
 		items[i] = &l.Items[i]
@@ -55,8 +55,8 @@ func (l *BotChannelEmailList) GetItems() []resource.Managed {
 	return items
 }
 
-// GetItems of this BotChannelFacebookList.
-func (l *BotChannelFacebookList) GetItems() []resource.Managed {
+// GetItems of this ChannelFacebookList.
+func (l *ChannelFacebookList) GetItems() []resource.Managed {
 	items := make([]resource.Managed, len(l.Items))
 	for i := range l.Items {
 		items[i] = &l.Items[i]
@@ -64,8 +64,8 @@ func (l *BotChannelFacebookList) GetItems() []resource.Managed {
 	return items
 }
 
-// GetItems of this BotChannelLineList.
-func (l *BotChannelLineList) GetItems() []resource.Managed {
+// GetItems of this ChannelLineList.
+func (l *ChannelLineList) GetItems() []resource.Managed {
 	items := make([]resource.Managed, len(l.Items))
 	for i := range l.Items {
 		items[i] = &l.Items[i]
@@ -73,8 +73,8 @@ func (l *BotChannelLineList) GetItems() []resource.Managed {
 	return items
 }
 
-// GetItems of this BotChannelMsTeamsList.
-func (l *BotChannelMsTeamsList) GetItems() []resource.Managed {
+// GetItems of this ChannelMsTeamsList.
+func (l *ChannelMsTeamsList) GetItems() []resource.Managed {
 	items := make([]resource.Managed, len(l.Items))
 	for i := range l.Items {
 		items[i] = &l.Items[i]
@@ -82,8 +82,8 @@ func (l *BotChannelMsTeamsList) GetItems() []resource.Managed {
 	return items
 }
 
-// GetItems of this BotChannelSlackList.
-func (l *BotChannelSlackList) GetItems() []resource.Managed {
+// GetItems of this ChannelSlackList.
+func (l *ChannelSlackList) GetItems() []resource.Managed {
 	items := make([]resource.Managed, len(l.Items))
 	for i := range l.Items {
 		items[i] = &l.Items[i]
@@ -91,8 +91,8 @@ func (l *BotChannelSlackList) GetItems() []resource.Managed {
 	return items
 }
 
-// GetItems of this BotChannelSmsList.
-func (l *BotChannelSmsList) GetItems() []resource.Managed {
+// GetItems of this ChannelSmsList.
+func (l *ChannelSmsList) GetItems() []resource.Managed {
 	items := make([]resource.Managed, len(l.Items))
 	for i := range l.Items {
 		items[i] = &l.Items[i]
@@ -100,8 +100,8 @@ func (l *BotChannelSmsList) GetItems() []resource.Managed {
 	return items
 }
 
-// GetItems of this BotChannelWebChatList.
-func (l *BotChannelWebChatList) GetItems() []resource.Managed {
+// GetItems of this ChannelWebChatList.
+func (l *ChannelWebChatList) GetItems() []resource.Managed {
 	items := make([]resource.Managed, len(l.Items))
 	for i := range l.Items {
 		items[i] = &l.Items[i]
@@ -109,8 +109,8 @@ func (l *BotChannelWebChatList) GetItems() []resource.Managed {
 	return items
 }
 
-// GetItems of this BotChannelsRegistrationList.
-func (l *BotChannelsRegistrationList) GetItems() []resource.Managed {
+// GetItems of this ChannelsRegistrationList.
+func (l *ChannelsRegistrationList) GetItems() []resource.Managed {
 	items := make([]resource.Managed, len(l.Items))
 	for i := range l.Items {
 		items[i] = &l.Items[i]
@@ -118,8 +118,8 @@ func (l *BotChannelsRegistrationList) GetItems() []resource.Managed {
 	return items
 }
 
-// GetItems of this BotConnectionList.
-func (l *BotConnectionList) GetItems() []resource.Managed {
+// GetItems of this ConnectionList.
+func (l *ConnectionList) GetItems() []resource.Managed {
 	items := make([]resource.Managed, len(l.Items))
 	for i := range l.Items {
 		items[i] = &l.Items[i]
@@ -127,8 +127,8 @@ func (l *BotConnectionList) GetItems() []resource.Managed {
 	return items
 }
 
-// GetItems of this BotWebAppList.
-func (l *BotWebAppList) GetItems() []resource.Managed {
+// GetItems of this WebAppList.
+func (l *WebAppList) GetItems() []resource.Managed {
 	items := make([]resource.Managed, len(l.Items))
 	for i := range l.Items {
 		items[i] = &l.Items[i]

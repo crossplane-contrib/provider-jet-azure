@@ -19,226 +19,226 @@ package v1alpha1
 
 import xpv1 "github.com/crossplane/crossplane-runtime/apis/common/v1"
 
-// GetCondition of this VpnGateway.
-func (mg *VpnGateway) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
+// GetCondition of this Gateway.
+func (mg *Gateway) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
 	return mg.Status.GetCondition(ct)
 }
 
-// GetDeletionPolicy of this VpnGateway.
-func (mg *VpnGateway) GetDeletionPolicy() xpv1.DeletionPolicy {
+// GetDeletionPolicy of this Gateway.
+func (mg *Gateway) GetDeletionPolicy() xpv1.DeletionPolicy {
 	return mg.Spec.DeletionPolicy
 }
 
-// GetProviderConfigReference of this VpnGateway.
-func (mg *VpnGateway) GetProviderConfigReference() *xpv1.Reference {
+// GetProviderConfigReference of this Gateway.
+func (mg *Gateway) GetProviderConfigReference() *xpv1.Reference {
 	return mg.Spec.ProviderConfigReference
 }
 
 /*
-GetProviderReference of this VpnGateway.
+GetProviderReference of this Gateway.
 Deprecated: Use GetProviderConfigReference.
 */
-func (mg *VpnGateway) GetProviderReference() *xpv1.Reference {
+func (mg *Gateway) GetProviderReference() *xpv1.Reference {
 	return mg.Spec.ProviderReference
 }
 
-// GetWriteConnectionSecretToReference of this VpnGateway.
-func (mg *VpnGateway) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
+// GetWriteConnectionSecretToReference of this Gateway.
+func (mg *Gateway) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
 	return mg.Spec.WriteConnectionSecretToReference
 }
 
-// SetConditions of this VpnGateway.
-func (mg *VpnGateway) SetConditions(c ...xpv1.Condition) {
+// SetConditions of this Gateway.
+func (mg *Gateway) SetConditions(c ...xpv1.Condition) {
 	mg.Status.SetConditions(c...)
 }
 
-// SetDeletionPolicy of this VpnGateway.
-func (mg *VpnGateway) SetDeletionPolicy(r xpv1.DeletionPolicy) {
+// SetDeletionPolicy of this Gateway.
+func (mg *Gateway) SetDeletionPolicy(r xpv1.DeletionPolicy) {
 	mg.Spec.DeletionPolicy = r
 }
 
-// SetProviderConfigReference of this VpnGateway.
-func (mg *VpnGateway) SetProviderConfigReference(r *xpv1.Reference) {
+// SetProviderConfigReference of this Gateway.
+func (mg *Gateway) SetProviderConfigReference(r *xpv1.Reference) {
 	mg.Spec.ProviderConfigReference = r
 }
 
 /*
-SetProviderReference of this VpnGateway.
+SetProviderReference of this Gateway.
 Deprecated: Use SetProviderConfigReference.
 */
-func (mg *VpnGateway) SetProviderReference(r *xpv1.Reference) {
+func (mg *Gateway) SetProviderReference(r *xpv1.Reference) {
 	mg.Spec.ProviderReference = r
 }
 
-// SetWriteConnectionSecretToReference of this VpnGateway.
-func (mg *VpnGateway) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
+// SetWriteConnectionSecretToReference of this Gateway.
+func (mg *Gateway) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
 	mg.Spec.WriteConnectionSecretToReference = r
 }
 
-// GetCondition of this VpnGatewayConnection.
-func (mg *VpnGatewayConnection) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
+// GetCondition of this GatewayConnection.
+func (mg *GatewayConnection) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
 	return mg.Status.GetCondition(ct)
 }
 
-// GetDeletionPolicy of this VpnGatewayConnection.
-func (mg *VpnGatewayConnection) GetDeletionPolicy() xpv1.DeletionPolicy {
+// GetDeletionPolicy of this GatewayConnection.
+func (mg *GatewayConnection) GetDeletionPolicy() xpv1.DeletionPolicy {
 	return mg.Spec.DeletionPolicy
 }
 
-// GetProviderConfigReference of this VpnGatewayConnection.
-func (mg *VpnGatewayConnection) GetProviderConfigReference() *xpv1.Reference {
+// GetProviderConfigReference of this GatewayConnection.
+func (mg *GatewayConnection) GetProviderConfigReference() *xpv1.Reference {
 	return mg.Spec.ProviderConfigReference
 }
 
 /*
-GetProviderReference of this VpnGatewayConnection.
+GetProviderReference of this GatewayConnection.
 Deprecated: Use GetProviderConfigReference.
 */
-func (mg *VpnGatewayConnection) GetProviderReference() *xpv1.Reference {
+func (mg *GatewayConnection) GetProviderReference() *xpv1.Reference {
 	return mg.Spec.ProviderReference
 }
 
-// GetWriteConnectionSecretToReference of this VpnGatewayConnection.
-func (mg *VpnGatewayConnection) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
+// GetWriteConnectionSecretToReference of this GatewayConnection.
+func (mg *GatewayConnection) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
 	return mg.Spec.WriteConnectionSecretToReference
 }
 
-// SetConditions of this VpnGatewayConnection.
-func (mg *VpnGatewayConnection) SetConditions(c ...xpv1.Condition) {
+// SetConditions of this GatewayConnection.
+func (mg *GatewayConnection) SetConditions(c ...xpv1.Condition) {
 	mg.Status.SetConditions(c...)
 }
 
-// SetDeletionPolicy of this VpnGatewayConnection.
-func (mg *VpnGatewayConnection) SetDeletionPolicy(r xpv1.DeletionPolicy) {
+// SetDeletionPolicy of this GatewayConnection.
+func (mg *GatewayConnection) SetDeletionPolicy(r xpv1.DeletionPolicy) {
 	mg.Spec.DeletionPolicy = r
 }
 
-// SetProviderConfigReference of this VpnGatewayConnection.
-func (mg *VpnGatewayConnection) SetProviderConfigReference(r *xpv1.Reference) {
+// SetProviderConfigReference of this GatewayConnection.
+func (mg *GatewayConnection) SetProviderConfigReference(r *xpv1.Reference) {
 	mg.Spec.ProviderConfigReference = r
 }
 
 /*
-SetProviderReference of this VpnGatewayConnection.
+SetProviderReference of this GatewayConnection.
 Deprecated: Use SetProviderConfigReference.
 */
-func (mg *VpnGatewayConnection) SetProviderReference(r *xpv1.Reference) {
+func (mg *GatewayConnection) SetProviderReference(r *xpv1.Reference) {
 	mg.Spec.ProviderReference = r
 }
 
-// SetWriteConnectionSecretToReference of this VpnGatewayConnection.
-func (mg *VpnGatewayConnection) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
+// SetWriteConnectionSecretToReference of this GatewayConnection.
+func (mg *GatewayConnection) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
 	mg.Spec.WriteConnectionSecretToReference = r
 }
 
-// GetCondition of this VpnServerConfiguration.
-func (mg *VpnServerConfiguration) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
+// GetCondition of this ServerConfiguration.
+func (mg *ServerConfiguration) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
 	return mg.Status.GetCondition(ct)
 }
 
-// GetDeletionPolicy of this VpnServerConfiguration.
-func (mg *VpnServerConfiguration) GetDeletionPolicy() xpv1.DeletionPolicy {
+// GetDeletionPolicy of this ServerConfiguration.
+func (mg *ServerConfiguration) GetDeletionPolicy() xpv1.DeletionPolicy {
 	return mg.Spec.DeletionPolicy
 }
 
-// GetProviderConfigReference of this VpnServerConfiguration.
-func (mg *VpnServerConfiguration) GetProviderConfigReference() *xpv1.Reference {
+// GetProviderConfigReference of this ServerConfiguration.
+func (mg *ServerConfiguration) GetProviderConfigReference() *xpv1.Reference {
 	return mg.Spec.ProviderConfigReference
 }
 
 /*
-GetProviderReference of this VpnServerConfiguration.
+GetProviderReference of this ServerConfiguration.
 Deprecated: Use GetProviderConfigReference.
 */
-func (mg *VpnServerConfiguration) GetProviderReference() *xpv1.Reference {
+func (mg *ServerConfiguration) GetProviderReference() *xpv1.Reference {
 	return mg.Spec.ProviderReference
 }
 
-// GetWriteConnectionSecretToReference of this VpnServerConfiguration.
-func (mg *VpnServerConfiguration) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
+// GetWriteConnectionSecretToReference of this ServerConfiguration.
+func (mg *ServerConfiguration) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
 	return mg.Spec.WriteConnectionSecretToReference
 }
 
-// SetConditions of this VpnServerConfiguration.
-func (mg *VpnServerConfiguration) SetConditions(c ...xpv1.Condition) {
+// SetConditions of this ServerConfiguration.
+func (mg *ServerConfiguration) SetConditions(c ...xpv1.Condition) {
 	mg.Status.SetConditions(c...)
 }
 
-// SetDeletionPolicy of this VpnServerConfiguration.
-func (mg *VpnServerConfiguration) SetDeletionPolicy(r xpv1.DeletionPolicy) {
+// SetDeletionPolicy of this ServerConfiguration.
+func (mg *ServerConfiguration) SetDeletionPolicy(r xpv1.DeletionPolicy) {
 	mg.Spec.DeletionPolicy = r
 }
 
-// SetProviderConfigReference of this VpnServerConfiguration.
-func (mg *VpnServerConfiguration) SetProviderConfigReference(r *xpv1.Reference) {
+// SetProviderConfigReference of this ServerConfiguration.
+func (mg *ServerConfiguration) SetProviderConfigReference(r *xpv1.Reference) {
 	mg.Spec.ProviderConfigReference = r
 }
 
 /*
-SetProviderReference of this VpnServerConfiguration.
+SetProviderReference of this ServerConfiguration.
 Deprecated: Use SetProviderConfigReference.
 */
-func (mg *VpnServerConfiguration) SetProviderReference(r *xpv1.Reference) {
+func (mg *ServerConfiguration) SetProviderReference(r *xpv1.Reference) {
 	mg.Spec.ProviderReference = r
 }
 
-// SetWriteConnectionSecretToReference of this VpnServerConfiguration.
-func (mg *VpnServerConfiguration) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
+// SetWriteConnectionSecretToReference of this ServerConfiguration.
+func (mg *ServerConfiguration) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
 	mg.Spec.WriteConnectionSecretToReference = r
 }
 
-// GetCondition of this VpnSite.
-func (mg *VpnSite) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
+// GetCondition of this Site.
+func (mg *Site) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
 	return mg.Status.GetCondition(ct)
 }
 
-// GetDeletionPolicy of this VpnSite.
-func (mg *VpnSite) GetDeletionPolicy() xpv1.DeletionPolicy {
+// GetDeletionPolicy of this Site.
+func (mg *Site) GetDeletionPolicy() xpv1.DeletionPolicy {
 	return mg.Spec.DeletionPolicy
 }
 
-// GetProviderConfigReference of this VpnSite.
-func (mg *VpnSite) GetProviderConfigReference() *xpv1.Reference {
+// GetProviderConfigReference of this Site.
+func (mg *Site) GetProviderConfigReference() *xpv1.Reference {
 	return mg.Spec.ProviderConfigReference
 }
 
 /*
-GetProviderReference of this VpnSite.
+GetProviderReference of this Site.
 Deprecated: Use GetProviderConfigReference.
 */
-func (mg *VpnSite) GetProviderReference() *xpv1.Reference {
+func (mg *Site) GetProviderReference() *xpv1.Reference {
 	return mg.Spec.ProviderReference
 }
 
-// GetWriteConnectionSecretToReference of this VpnSite.
-func (mg *VpnSite) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
+// GetWriteConnectionSecretToReference of this Site.
+func (mg *Site) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
 	return mg.Spec.WriteConnectionSecretToReference
 }
 
-// SetConditions of this VpnSite.
-func (mg *VpnSite) SetConditions(c ...xpv1.Condition) {
+// SetConditions of this Site.
+func (mg *Site) SetConditions(c ...xpv1.Condition) {
 	mg.Status.SetConditions(c...)
 }
 
-// SetDeletionPolicy of this VpnSite.
-func (mg *VpnSite) SetDeletionPolicy(r xpv1.DeletionPolicy) {
+// SetDeletionPolicy of this Site.
+func (mg *Site) SetDeletionPolicy(r xpv1.DeletionPolicy) {
 	mg.Spec.DeletionPolicy = r
 }
 
-// SetProviderConfigReference of this VpnSite.
-func (mg *VpnSite) SetProviderConfigReference(r *xpv1.Reference) {
+// SetProviderConfigReference of this Site.
+func (mg *Site) SetProviderConfigReference(r *xpv1.Reference) {
 	mg.Spec.ProviderConfigReference = r
 }
 
 /*
-SetProviderReference of this VpnSite.
+SetProviderReference of this Site.
 Deprecated: Use SetProviderConfigReference.
 */
-func (mg *VpnSite) SetProviderReference(r *xpv1.Reference) {
+func (mg *Site) SetProviderReference(r *xpv1.Reference) {
 	mg.Spec.ProviderReference = r
 }
 
-// SetWriteConnectionSecretToReference of this VpnSite.
-func (mg *VpnSite) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
+// SetWriteConnectionSecretToReference of this Site.
+func (mg *Site) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
 	mg.Spec.WriteConnectionSecretToReference = r
 }

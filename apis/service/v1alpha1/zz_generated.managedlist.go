@@ -19,8 +19,8 @@ package v1alpha1
 
 import resource "github.com/crossplane/crossplane-runtime/pkg/resource"
 
-// GetItems of this ServiceFabricClusterList.
-func (l *ServiceFabricClusterList) GetItems() []resource.Managed {
+// GetItems of this FabricClusterList.
+func (l *FabricClusterList) GetItems() []resource.Managed {
 	items := make([]resource.Managed, len(l.Items))
 	for i := range l.Items {
 		items[i] = &l.Items[i]
@@ -28,8 +28,8 @@ func (l *ServiceFabricClusterList) GetItems() []resource.Managed {
 	return items
 }
 
-// GetItems of this ServiceFabricMeshApplicationList.
-func (l *ServiceFabricMeshApplicationList) GetItems() []resource.Managed {
+// GetItems of this FabricMeshApplicationList.
+func (l *FabricMeshApplicationList) GetItems() []resource.Managed {
 	items := make([]resource.Managed, len(l.Items))
 	for i := range l.Items {
 		items[i] = &l.Items[i]
@@ -37,8 +37,8 @@ func (l *ServiceFabricMeshApplicationList) GetItems() []resource.Managed {
 	return items
 }
 
-// GetItems of this ServiceFabricMeshLocalNetworkList.
-func (l *ServiceFabricMeshLocalNetworkList) GetItems() []resource.Managed {
+// GetItems of this FabricMeshLocalNetworkList.
+func (l *FabricMeshLocalNetworkList) GetItems() []resource.Managed {
 	items := make([]resource.Managed, len(l.Items))
 	for i := range l.Items {
 		items[i] = &l.Items[i]
@@ -46,8 +46,8 @@ func (l *ServiceFabricMeshLocalNetworkList) GetItems() []resource.Managed {
 	return items
 }
 
-// GetItems of this ServiceFabricMeshSecretList.
-func (l *ServiceFabricMeshSecretList) GetItems() []resource.Managed {
+// GetItems of this FabricMeshSecretList.
+func (l *FabricMeshSecretList) GetItems() []resource.Managed {
 	items := make([]resource.Managed, len(l.Items))
 	for i := range l.Items {
 		items[i] = &l.Items[i]
@@ -55,8 +55,8 @@ func (l *ServiceFabricMeshSecretList) GetItems() []resource.Managed {
 	return items
 }
 
-// GetItems of this ServiceFabricMeshSecretValueList.
-func (l *ServiceFabricMeshSecretValueList) GetItems() []resource.Managed {
+// GetItems of this FabricMeshSecretValueList.
+func (l *FabricMeshSecretValueList) GetItems() []resource.Managed {
 	items := make([]resource.Managed, len(l.Items))
 	for i := range l.Items {
 		items[i] = &l.Items[i]

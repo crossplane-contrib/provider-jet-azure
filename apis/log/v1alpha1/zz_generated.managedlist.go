@@ -19,8 +19,8 @@ package v1alpha1
 
 import resource "github.com/crossplane/crossplane-runtime/pkg/resource"
 
-// GetItems of this LogAnalyticsClusterCustomerManagedKeyList.
-func (l *LogAnalyticsClusterCustomerManagedKeyList) GetItems() []resource.Managed {
+// GetItems of this AnalyticsClusterCustomerManagedKeyList.
+func (l *AnalyticsClusterCustomerManagedKeyList) GetItems() []resource.Managed {
 	items := make([]resource.Managed, len(l.Items))
 	for i := range l.Items {
 		items[i] = &l.Items[i]
@@ -28,8 +28,8 @@ func (l *LogAnalyticsClusterCustomerManagedKeyList) GetItems() []resource.Manage
 	return items
 }
 
-// GetItems of this LogAnalyticsClusterList.
-func (l *LogAnalyticsClusterList) GetItems() []resource.Managed {
+// GetItems of this AnalyticsClusterList.
+func (l *AnalyticsClusterList) GetItems() []resource.Managed {
 	items := make([]resource.Managed, len(l.Items))
 	for i := range l.Items {
 		items[i] = &l.Items[i]
@@ -37,8 +37,8 @@ func (l *LogAnalyticsClusterList) GetItems() []resource.Managed {
 	return items
 }
 
-// GetItems of this LogAnalyticsDataExportRuleList.
-func (l *LogAnalyticsDataExportRuleList) GetItems() []resource.Managed {
+// GetItems of this AnalyticsDataExportRuleList.
+func (l *AnalyticsDataExportRuleList) GetItems() []resource.Managed {
 	items := make([]resource.Managed, len(l.Items))
 	for i := range l.Items {
 		items[i] = &l.Items[i]
@@ -46,8 +46,8 @@ func (l *LogAnalyticsDataExportRuleList) GetItems() []resource.Managed {
 	return items
 }
 
-// GetItems of this LogAnalyticsDatasourceWindowsEventList.
-func (l *LogAnalyticsDatasourceWindowsEventList) GetItems() []resource.Managed {
+// GetItems of this AnalyticsDatasourceWindowsEventList.
+func (l *AnalyticsDatasourceWindowsEventList) GetItems() []resource.Managed {
 	items := make([]resource.Managed, len(l.Items))
 	for i := range l.Items {
 		items[i] = &l.Items[i]
@@ -55,8 +55,8 @@ func (l *LogAnalyticsDatasourceWindowsEventList) GetItems() []resource.Managed {
 	return items
 }
 
-// GetItems of this LogAnalyticsDatasourceWindowsPerformanceCounterList.
-func (l *LogAnalyticsDatasourceWindowsPerformanceCounterList) GetItems() []resource.Managed {
+// GetItems of this AnalyticsDatasourceWindowsPerformanceCounterList.
+func (l *AnalyticsDatasourceWindowsPerformanceCounterList) GetItems() []resource.Managed {
 	items := make([]resource.Managed, len(l.Items))
 	for i := range l.Items {
 		items[i] = &l.Items[i]
@@ -64,8 +64,8 @@ func (l *LogAnalyticsDatasourceWindowsPerformanceCounterList) GetItems() []resou
 	return items
 }
 
-// GetItems of this LogAnalyticsLinkedServiceList.
-func (l *LogAnalyticsLinkedServiceList) GetItems() []resource.Managed {
+// GetItems of this AnalyticsLinkedServiceList.
+func (l *AnalyticsLinkedServiceList) GetItems() []resource.Managed {
 	items := make([]resource.Managed, len(l.Items))
 	for i := range l.Items {
 		items[i] = &l.Items[i]
@@ -73,8 +73,8 @@ func (l *LogAnalyticsLinkedServiceList) GetItems() []resource.Managed {
 	return items
 }
 
-// GetItems of this LogAnalyticsLinkedStorageAccountList.
-func (l *LogAnalyticsLinkedStorageAccountList) GetItems() []resource.Managed {
+// GetItems of this AnalyticsLinkedStorageAccountList.
+func (l *AnalyticsLinkedStorageAccountList) GetItems() []resource.Managed {
 	items := make([]resource.Managed, len(l.Items))
 	for i := range l.Items {
 		items[i] = &l.Items[i]
@@ -82,8 +82,8 @@ func (l *LogAnalyticsLinkedStorageAccountList) GetItems() []resource.Managed {
 	return items
 }
 
-// GetItems of this LogAnalyticsSavedSearchList.
-func (l *LogAnalyticsSavedSearchList) GetItems() []resource.Managed {
+// GetItems of this AnalyticsSavedSearchList.
+func (l *AnalyticsSavedSearchList) GetItems() []resource.Managed {
 	items := make([]resource.Managed, len(l.Items))
 	for i := range l.Items {
 		items[i] = &l.Items[i]
@@ -91,8 +91,8 @@ func (l *LogAnalyticsSavedSearchList) GetItems() []resource.Managed {
 	return items
 }
 
-// GetItems of this LogAnalyticsSolutionList.
-func (l *LogAnalyticsSolutionList) GetItems() []resource.Managed {
+// GetItems of this AnalyticsSolutionList.
+func (l *AnalyticsSolutionList) GetItems() []resource.Managed {
 	items := make([]resource.Managed, len(l.Items))
 	for i := range l.Items {
 		items[i] = &l.Items[i]
@@ -100,8 +100,8 @@ func (l *LogAnalyticsSolutionList) GetItems() []resource.Managed {
 	return items
 }
 
-// GetItems of this LogAnalyticsWorkspaceList.
-func (l *LogAnalyticsWorkspaceList) GetItems() []resource.Managed {
+// GetItems of this AnalyticsWorkspaceList.
+func (l *AnalyticsWorkspaceList) GetItems() []resource.Managed {
 	items := make([]resource.Managed, len(l.Items))
 	for i := range l.Items {
 		items[i] = &l.Items[i]

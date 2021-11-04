@@ -19,506 +19,506 @@ package v1alpha1
 
 import xpv1 "github.com/crossplane/crossplane-runtime/apis/common/v1"
 
-// GetCondition of this SecurityCenterAssessment.
-func (mg *SecurityCenterAssessment) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
+// GetCondition of this CenterAssessment.
+func (mg *CenterAssessment) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
 	return mg.Status.GetCondition(ct)
 }
 
-// GetDeletionPolicy of this SecurityCenterAssessment.
-func (mg *SecurityCenterAssessment) GetDeletionPolicy() xpv1.DeletionPolicy {
+// GetDeletionPolicy of this CenterAssessment.
+func (mg *CenterAssessment) GetDeletionPolicy() xpv1.DeletionPolicy {
 	return mg.Spec.DeletionPolicy
 }
 
-// GetProviderConfigReference of this SecurityCenterAssessment.
-func (mg *SecurityCenterAssessment) GetProviderConfigReference() *xpv1.Reference {
+// GetProviderConfigReference of this CenterAssessment.
+func (mg *CenterAssessment) GetProviderConfigReference() *xpv1.Reference {
 	return mg.Spec.ProviderConfigReference
 }
 
 /*
-GetProviderReference of this SecurityCenterAssessment.
+GetProviderReference of this CenterAssessment.
 Deprecated: Use GetProviderConfigReference.
 */
-func (mg *SecurityCenterAssessment) GetProviderReference() *xpv1.Reference {
+func (mg *CenterAssessment) GetProviderReference() *xpv1.Reference {
 	return mg.Spec.ProviderReference
 }
 
-// GetWriteConnectionSecretToReference of this SecurityCenterAssessment.
-func (mg *SecurityCenterAssessment) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
+// GetWriteConnectionSecretToReference of this CenterAssessment.
+func (mg *CenterAssessment) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
 	return mg.Spec.WriteConnectionSecretToReference
 }
 
-// SetConditions of this SecurityCenterAssessment.
-func (mg *SecurityCenterAssessment) SetConditions(c ...xpv1.Condition) {
+// SetConditions of this CenterAssessment.
+func (mg *CenterAssessment) SetConditions(c ...xpv1.Condition) {
 	mg.Status.SetConditions(c...)
 }
 
-// SetDeletionPolicy of this SecurityCenterAssessment.
-func (mg *SecurityCenterAssessment) SetDeletionPolicy(r xpv1.DeletionPolicy) {
+// SetDeletionPolicy of this CenterAssessment.
+func (mg *CenterAssessment) SetDeletionPolicy(r xpv1.DeletionPolicy) {
 	mg.Spec.DeletionPolicy = r
 }
 
-// SetProviderConfigReference of this SecurityCenterAssessment.
-func (mg *SecurityCenterAssessment) SetProviderConfigReference(r *xpv1.Reference) {
+// SetProviderConfigReference of this CenterAssessment.
+func (mg *CenterAssessment) SetProviderConfigReference(r *xpv1.Reference) {
 	mg.Spec.ProviderConfigReference = r
 }
 
 /*
-SetProviderReference of this SecurityCenterAssessment.
+SetProviderReference of this CenterAssessment.
 Deprecated: Use SetProviderConfigReference.
 */
-func (mg *SecurityCenterAssessment) SetProviderReference(r *xpv1.Reference) {
+func (mg *CenterAssessment) SetProviderReference(r *xpv1.Reference) {
 	mg.Spec.ProviderReference = r
 }
 
-// SetWriteConnectionSecretToReference of this SecurityCenterAssessment.
-func (mg *SecurityCenterAssessment) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
+// SetWriteConnectionSecretToReference of this CenterAssessment.
+func (mg *CenterAssessment) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
 	mg.Spec.WriteConnectionSecretToReference = r
 }
 
-// GetCondition of this SecurityCenterAssessmentMetadata.
-func (mg *SecurityCenterAssessmentMetadata) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
+// GetCondition of this CenterAssessmentMetadata.
+func (mg *CenterAssessmentMetadata) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
 	return mg.Status.GetCondition(ct)
 }
 
-// GetDeletionPolicy of this SecurityCenterAssessmentMetadata.
-func (mg *SecurityCenterAssessmentMetadata) GetDeletionPolicy() xpv1.DeletionPolicy {
+// GetDeletionPolicy of this CenterAssessmentMetadata.
+func (mg *CenterAssessmentMetadata) GetDeletionPolicy() xpv1.DeletionPolicy {
 	return mg.Spec.DeletionPolicy
 }
 
-// GetProviderConfigReference of this SecurityCenterAssessmentMetadata.
-func (mg *SecurityCenterAssessmentMetadata) GetProviderConfigReference() *xpv1.Reference {
+// GetProviderConfigReference of this CenterAssessmentMetadata.
+func (mg *CenterAssessmentMetadata) GetProviderConfigReference() *xpv1.Reference {
 	return mg.Spec.ProviderConfigReference
 }
 
 /*
-GetProviderReference of this SecurityCenterAssessmentMetadata.
+GetProviderReference of this CenterAssessmentMetadata.
 Deprecated: Use GetProviderConfigReference.
 */
-func (mg *SecurityCenterAssessmentMetadata) GetProviderReference() *xpv1.Reference {
+func (mg *CenterAssessmentMetadata) GetProviderReference() *xpv1.Reference {
 	return mg.Spec.ProviderReference
 }
 
-// GetWriteConnectionSecretToReference of this SecurityCenterAssessmentMetadata.
-func (mg *SecurityCenterAssessmentMetadata) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
+// GetWriteConnectionSecretToReference of this CenterAssessmentMetadata.
+func (mg *CenterAssessmentMetadata) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
 	return mg.Spec.WriteConnectionSecretToReference
 }
 
-// SetConditions of this SecurityCenterAssessmentMetadata.
-func (mg *SecurityCenterAssessmentMetadata) SetConditions(c ...xpv1.Condition) {
+// SetConditions of this CenterAssessmentMetadata.
+func (mg *CenterAssessmentMetadata) SetConditions(c ...xpv1.Condition) {
 	mg.Status.SetConditions(c...)
 }
 
-// SetDeletionPolicy of this SecurityCenterAssessmentMetadata.
-func (mg *SecurityCenterAssessmentMetadata) SetDeletionPolicy(r xpv1.DeletionPolicy) {
+// SetDeletionPolicy of this CenterAssessmentMetadata.
+func (mg *CenterAssessmentMetadata) SetDeletionPolicy(r xpv1.DeletionPolicy) {
 	mg.Spec.DeletionPolicy = r
 }
 
-// SetProviderConfigReference of this SecurityCenterAssessmentMetadata.
-func (mg *SecurityCenterAssessmentMetadata) SetProviderConfigReference(r *xpv1.Reference) {
+// SetProviderConfigReference of this CenterAssessmentMetadata.
+func (mg *CenterAssessmentMetadata) SetProviderConfigReference(r *xpv1.Reference) {
 	mg.Spec.ProviderConfigReference = r
 }
 
 /*
-SetProviderReference of this SecurityCenterAssessmentMetadata.
+SetProviderReference of this CenterAssessmentMetadata.
 Deprecated: Use SetProviderConfigReference.
 */
-func (mg *SecurityCenterAssessmentMetadata) SetProviderReference(r *xpv1.Reference) {
+func (mg *CenterAssessmentMetadata) SetProviderReference(r *xpv1.Reference) {
 	mg.Spec.ProviderReference = r
 }
 
-// SetWriteConnectionSecretToReference of this SecurityCenterAssessmentMetadata.
-func (mg *SecurityCenterAssessmentMetadata) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
+// SetWriteConnectionSecretToReference of this CenterAssessmentMetadata.
+func (mg *CenterAssessmentMetadata) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
 	mg.Spec.WriteConnectionSecretToReference = r
 }
 
-// GetCondition of this SecurityCenterAssessmentPolicy.
-func (mg *SecurityCenterAssessmentPolicy) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
+// GetCondition of this CenterAssessmentPolicy.
+func (mg *CenterAssessmentPolicy) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
 	return mg.Status.GetCondition(ct)
 }
 
-// GetDeletionPolicy of this SecurityCenterAssessmentPolicy.
-func (mg *SecurityCenterAssessmentPolicy) GetDeletionPolicy() xpv1.DeletionPolicy {
+// GetDeletionPolicy of this CenterAssessmentPolicy.
+func (mg *CenterAssessmentPolicy) GetDeletionPolicy() xpv1.DeletionPolicy {
 	return mg.Spec.DeletionPolicy
 }
 
-// GetProviderConfigReference of this SecurityCenterAssessmentPolicy.
-func (mg *SecurityCenterAssessmentPolicy) GetProviderConfigReference() *xpv1.Reference {
+// GetProviderConfigReference of this CenterAssessmentPolicy.
+func (mg *CenterAssessmentPolicy) GetProviderConfigReference() *xpv1.Reference {
 	return mg.Spec.ProviderConfigReference
 }
 
 /*
-GetProviderReference of this SecurityCenterAssessmentPolicy.
+GetProviderReference of this CenterAssessmentPolicy.
 Deprecated: Use GetProviderConfigReference.
 */
-func (mg *SecurityCenterAssessmentPolicy) GetProviderReference() *xpv1.Reference {
+func (mg *CenterAssessmentPolicy) GetProviderReference() *xpv1.Reference {
 	return mg.Spec.ProviderReference
 }
 
-// GetWriteConnectionSecretToReference of this SecurityCenterAssessmentPolicy.
-func (mg *SecurityCenterAssessmentPolicy) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
+// GetWriteConnectionSecretToReference of this CenterAssessmentPolicy.
+func (mg *CenterAssessmentPolicy) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
 	return mg.Spec.WriteConnectionSecretToReference
 }
 
-// SetConditions of this SecurityCenterAssessmentPolicy.
-func (mg *SecurityCenterAssessmentPolicy) SetConditions(c ...xpv1.Condition) {
+// SetConditions of this CenterAssessmentPolicy.
+func (mg *CenterAssessmentPolicy) SetConditions(c ...xpv1.Condition) {
 	mg.Status.SetConditions(c...)
 }
 
-// SetDeletionPolicy of this SecurityCenterAssessmentPolicy.
-func (mg *SecurityCenterAssessmentPolicy) SetDeletionPolicy(r xpv1.DeletionPolicy) {
+// SetDeletionPolicy of this CenterAssessmentPolicy.
+func (mg *CenterAssessmentPolicy) SetDeletionPolicy(r xpv1.DeletionPolicy) {
 	mg.Spec.DeletionPolicy = r
 }
 
-// SetProviderConfigReference of this SecurityCenterAssessmentPolicy.
-func (mg *SecurityCenterAssessmentPolicy) SetProviderConfigReference(r *xpv1.Reference) {
+// SetProviderConfigReference of this CenterAssessmentPolicy.
+func (mg *CenterAssessmentPolicy) SetProviderConfigReference(r *xpv1.Reference) {
 	mg.Spec.ProviderConfigReference = r
 }
 
 /*
-SetProviderReference of this SecurityCenterAssessmentPolicy.
+SetProviderReference of this CenterAssessmentPolicy.
 Deprecated: Use SetProviderConfigReference.
 */
-func (mg *SecurityCenterAssessmentPolicy) SetProviderReference(r *xpv1.Reference) {
+func (mg *CenterAssessmentPolicy) SetProviderReference(r *xpv1.Reference) {
 	mg.Spec.ProviderReference = r
 }
 
-// SetWriteConnectionSecretToReference of this SecurityCenterAssessmentPolicy.
-func (mg *SecurityCenterAssessmentPolicy) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
+// SetWriteConnectionSecretToReference of this CenterAssessmentPolicy.
+func (mg *CenterAssessmentPolicy) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
 	mg.Spec.WriteConnectionSecretToReference = r
 }
 
-// GetCondition of this SecurityCenterAutoProvisioning.
-func (mg *SecurityCenterAutoProvisioning) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
+// GetCondition of this CenterAutoProvisioning.
+func (mg *CenterAutoProvisioning) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
 	return mg.Status.GetCondition(ct)
 }
 
-// GetDeletionPolicy of this SecurityCenterAutoProvisioning.
-func (mg *SecurityCenterAutoProvisioning) GetDeletionPolicy() xpv1.DeletionPolicy {
+// GetDeletionPolicy of this CenterAutoProvisioning.
+func (mg *CenterAutoProvisioning) GetDeletionPolicy() xpv1.DeletionPolicy {
 	return mg.Spec.DeletionPolicy
 }
 
-// GetProviderConfigReference of this SecurityCenterAutoProvisioning.
-func (mg *SecurityCenterAutoProvisioning) GetProviderConfigReference() *xpv1.Reference {
+// GetProviderConfigReference of this CenterAutoProvisioning.
+func (mg *CenterAutoProvisioning) GetProviderConfigReference() *xpv1.Reference {
 	return mg.Spec.ProviderConfigReference
 }
 
 /*
-GetProviderReference of this SecurityCenterAutoProvisioning.
+GetProviderReference of this CenterAutoProvisioning.
 Deprecated: Use GetProviderConfigReference.
 */
-func (mg *SecurityCenterAutoProvisioning) GetProviderReference() *xpv1.Reference {
+func (mg *CenterAutoProvisioning) GetProviderReference() *xpv1.Reference {
 	return mg.Spec.ProviderReference
 }
 
-// GetWriteConnectionSecretToReference of this SecurityCenterAutoProvisioning.
-func (mg *SecurityCenterAutoProvisioning) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
+// GetWriteConnectionSecretToReference of this CenterAutoProvisioning.
+func (mg *CenterAutoProvisioning) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
 	return mg.Spec.WriteConnectionSecretToReference
 }
 
-// SetConditions of this SecurityCenterAutoProvisioning.
-func (mg *SecurityCenterAutoProvisioning) SetConditions(c ...xpv1.Condition) {
+// SetConditions of this CenterAutoProvisioning.
+func (mg *CenterAutoProvisioning) SetConditions(c ...xpv1.Condition) {
 	mg.Status.SetConditions(c...)
 }
 
-// SetDeletionPolicy of this SecurityCenterAutoProvisioning.
-func (mg *SecurityCenterAutoProvisioning) SetDeletionPolicy(r xpv1.DeletionPolicy) {
+// SetDeletionPolicy of this CenterAutoProvisioning.
+func (mg *CenterAutoProvisioning) SetDeletionPolicy(r xpv1.DeletionPolicy) {
 	mg.Spec.DeletionPolicy = r
 }
 
-// SetProviderConfigReference of this SecurityCenterAutoProvisioning.
-func (mg *SecurityCenterAutoProvisioning) SetProviderConfigReference(r *xpv1.Reference) {
+// SetProviderConfigReference of this CenterAutoProvisioning.
+func (mg *CenterAutoProvisioning) SetProviderConfigReference(r *xpv1.Reference) {
 	mg.Spec.ProviderConfigReference = r
 }
 
 /*
-SetProviderReference of this SecurityCenterAutoProvisioning.
+SetProviderReference of this CenterAutoProvisioning.
 Deprecated: Use SetProviderConfigReference.
 */
-func (mg *SecurityCenterAutoProvisioning) SetProviderReference(r *xpv1.Reference) {
+func (mg *CenterAutoProvisioning) SetProviderReference(r *xpv1.Reference) {
 	mg.Spec.ProviderReference = r
 }
 
-// SetWriteConnectionSecretToReference of this SecurityCenterAutoProvisioning.
-func (mg *SecurityCenterAutoProvisioning) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
+// SetWriteConnectionSecretToReference of this CenterAutoProvisioning.
+func (mg *CenterAutoProvisioning) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
 	mg.Spec.WriteConnectionSecretToReference = r
 }
 
-// GetCondition of this SecurityCenterContact.
-func (mg *SecurityCenterContact) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
+// GetCondition of this CenterContact.
+func (mg *CenterContact) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
 	return mg.Status.GetCondition(ct)
 }
 
-// GetDeletionPolicy of this SecurityCenterContact.
-func (mg *SecurityCenterContact) GetDeletionPolicy() xpv1.DeletionPolicy {
+// GetDeletionPolicy of this CenterContact.
+func (mg *CenterContact) GetDeletionPolicy() xpv1.DeletionPolicy {
 	return mg.Spec.DeletionPolicy
 }
 
-// GetProviderConfigReference of this SecurityCenterContact.
-func (mg *SecurityCenterContact) GetProviderConfigReference() *xpv1.Reference {
+// GetProviderConfigReference of this CenterContact.
+func (mg *CenterContact) GetProviderConfigReference() *xpv1.Reference {
 	return mg.Spec.ProviderConfigReference
 }
 
 /*
-GetProviderReference of this SecurityCenterContact.
+GetProviderReference of this CenterContact.
 Deprecated: Use GetProviderConfigReference.
 */
-func (mg *SecurityCenterContact) GetProviderReference() *xpv1.Reference {
+func (mg *CenterContact) GetProviderReference() *xpv1.Reference {
 	return mg.Spec.ProviderReference
 }
 
-// GetWriteConnectionSecretToReference of this SecurityCenterContact.
-func (mg *SecurityCenterContact) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
+// GetWriteConnectionSecretToReference of this CenterContact.
+func (mg *CenterContact) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
 	return mg.Spec.WriteConnectionSecretToReference
 }
 
-// SetConditions of this SecurityCenterContact.
-func (mg *SecurityCenterContact) SetConditions(c ...xpv1.Condition) {
+// SetConditions of this CenterContact.
+func (mg *CenterContact) SetConditions(c ...xpv1.Condition) {
 	mg.Status.SetConditions(c...)
 }
 
-// SetDeletionPolicy of this SecurityCenterContact.
-func (mg *SecurityCenterContact) SetDeletionPolicy(r xpv1.DeletionPolicy) {
+// SetDeletionPolicy of this CenterContact.
+func (mg *CenterContact) SetDeletionPolicy(r xpv1.DeletionPolicy) {
 	mg.Spec.DeletionPolicy = r
 }
 
-// SetProviderConfigReference of this SecurityCenterContact.
-func (mg *SecurityCenterContact) SetProviderConfigReference(r *xpv1.Reference) {
+// SetProviderConfigReference of this CenterContact.
+func (mg *CenterContact) SetProviderConfigReference(r *xpv1.Reference) {
 	mg.Spec.ProviderConfigReference = r
 }
 
 /*
-SetProviderReference of this SecurityCenterContact.
+SetProviderReference of this CenterContact.
 Deprecated: Use SetProviderConfigReference.
 */
-func (mg *SecurityCenterContact) SetProviderReference(r *xpv1.Reference) {
+func (mg *CenterContact) SetProviderReference(r *xpv1.Reference) {
 	mg.Spec.ProviderReference = r
 }
 
-// SetWriteConnectionSecretToReference of this SecurityCenterContact.
-func (mg *SecurityCenterContact) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
+// SetWriteConnectionSecretToReference of this CenterContact.
+func (mg *CenterContact) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
 	mg.Spec.WriteConnectionSecretToReference = r
 }
 
-// GetCondition of this SecurityCenterServerVulnerabilityAssessment.
-func (mg *SecurityCenterServerVulnerabilityAssessment) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
+// GetCondition of this CenterServerVulnerabilityAssessment.
+func (mg *CenterServerVulnerabilityAssessment) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
 	return mg.Status.GetCondition(ct)
 }
 
-// GetDeletionPolicy of this SecurityCenterServerVulnerabilityAssessment.
-func (mg *SecurityCenterServerVulnerabilityAssessment) GetDeletionPolicy() xpv1.DeletionPolicy {
+// GetDeletionPolicy of this CenterServerVulnerabilityAssessment.
+func (mg *CenterServerVulnerabilityAssessment) GetDeletionPolicy() xpv1.DeletionPolicy {
 	return mg.Spec.DeletionPolicy
 }
 
-// GetProviderConfigReference of this SecurityCenterServerVulnerabilityAssessment.
-func (mg *SecurityCenterServerVulnerabilityAssessment) GetProviderConfigReference() *xpv1.Reference {
+// GetProviderConfigReference of this CenterServerVulnerabilityAssessment.
+func (mg *CenterServerVulnerabilityAssessment) GetProviderConfigReference() *xpv1.Reference {
 	return mg.Spec.ProviderConfigReference
 }
 
 /*
-GetProviderReference of this SecurityCenterServerVulnerabilityAssessment.
+GetProviderReference of this CenterServerVulnerabilityAssessment.
 Deprecated: Use GetProviderConfigReference.
 */
-func (mg *SecurityCenterServerVulnerabilityAssessment) GetProviderReference() *xpv1.Reference {
+func (mg *CenterServerVulnerabilityAssessment) GetProviderReference() *xpv1.Reference {
 	return mg.Spec.ProviderReference
 }
 
-// GetWriteConnectionSecretToReference of this SecurityCenterServerVulnerabilityAssessment.
-func (mg *SecurityCenterServerVulnerabilityAssessment) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
+// GetWriteConnectionSecretToReference of this CenterServerVulnerabilityAssessment.
+func (mg *CenterServerVulnerabilityAssessment) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
 	return mg.Spec.WriteConnectionSecretToReference
 }
 
-// SetConditions of this SecurityCenterServerVulnerabilityAssessment.
-func (mg *SecurityCenterServerVulnerabilityAssessment) SetConditions(c ...xpv1.Condition) {
+// SetConditions of this CenterServerVulnerabilityAssessment.
+func (mg *CenterServerVulnerabilityAssessment) SetConditions(c ...xpv1.Condition) {
 	mg.Status.SetConditions(c...)
 }
 
-// SetDeletionPolicy of this SecurityCenterServerVulnerabilityAssessment.
-func (mg *SecurityCenterServerVulnerabilityAssessment) SetDeletionPolicy(r xpv1.DeletionPolicy) {
+// SetDeletionPolicy of this CenterServerVulnerabilityAssessment.
+func (mg *CenterServerVulnerabilityAssessment) SetDeletionPolicy(r xpv1.DeletionPolicy) {
 	mg.Spec.DeletionPolicy = r
 }
 
-// SetProviderConfigReference of this SecurityCenterServerVulnerabilityAssessment.
-func (mg *SecurityCenterServerVulnerabilityAssessment) SetProviderConfigReference(r *xpv1.Reference) {
+// SetProviderConfigReference of this CenterServerVulnerabilityAssessment.
+func (mg *CenterServerVulnerabilityAssessment) SetProviderConfigReference(r *xpv1.Reference) {
 	mg.Spec.ProviderConfigReference = r
 }
 
 /*
-SetProviderReference of this SecurityCenterServerVulnerabilityAssessment.
+SetProviderReference of this CenterServerVulnerabilityAssessment.
 Deprecated: Use SetProviderConfigReference.
 */
-func (mg *SecurityCenterServerVulnerabilityAssessment) SetProviderReference(r *xpv1.Reference) {
+func (mg *CenterServerVulnerabilityAssessment) SetProviderReference(r *xpv1.Reference) {
 	mg.Spec.ProviderReference = r
 }
 
-// SetWriteConnectionSecretToReference of this SecurityCenterServerVulnerabilityAssessment.
-func (mg *SecurityCenterServerVulnerabilityAssessment) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
+// SetWriteConnectionSecretToReference of this CenterServerVulnerabilityAssessment.
+func (mg *CenterServerVulnerabilityAssessment) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
 	mg.Spec.WriteConnectionSecretToReference = r
 }
 
-// GetCondition of this SecurityCenterSetting.
-func (mg *SecurityCenterSetting) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
+// GetCondition of this CenterSetting.
+func (mg *CenterSetting) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
 	return mg.Status.GetCondition(ct)
 }
 
-// GetDeletionPolicy of this SecurityCenterSetting.
-func (mg *SecurityCenterSetting) GetDeletionPolicy() xpv1.DeletionPolicy {
+// GetDeletionPolicy of this CenterSetting.
+func (mg *CenterSetting) GetDeletionPolicy() xpv1.DeletionPolicy {
 	return mg.Spec.DeletionPolicy
 }
 
-// GetProviderConfigReference of this SecurityCenterSetting.
-func (mg *SecurityCenterSetting) GetProviderConfigReference() *xpv1.Reference {
+// GetProviderConfigReference of this CenterSetting.
+func (mg *CenterSetting) GetProviderConfigReference() *xpv1.Reference {
 	return mg.Spec.ProviderConfigReference
 }
 
 /*
-GetProviderReference of this SecurityCenterSetting.
+GetProviderReference of this CenterSetting.
 Deprecated: Use GetProviderConfigReference.
 */
-func (mg *SecurityCenterSetting) GetProviderReference() *xpv1.Reference {
+func (mg *CenterSetting) GetProviderReference() *xpv1.Reference {
 	return mg.Spec.ProviderReference
 }
 
-// GetWriteConnectionSecretToReference of this SecurityCenterSetting.
-func (mg *SecurityCenterSetting) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
+// GetWriteConnectionSecretToReference of this CenterSetting.
+func (mg *CenterSetting) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
 	return mg.Spec.WriteConnectionSecretToReference
 }
 
-// SetConditions of this SecurityCenterSetting.
-func (mg *SecurityCenterSetting) SetConditions(c ...xpv1.Condition) {
+// SetConditions of this CenterSetting.
+func (mg *CenterSetting) SetConditions(c ...xpv1.Condition) {
 	mg.Status.SetConditions(c...)
 }
 
-// SetDeletionPolicy of this SecurityCenterSetting.
-func (mg *SecurityCenterSetting) SetDeletionPolicy(r xpv1.DeletionPolicy) {
+// SetDeletionPolicy of this CenterSetting.
+func (mg *CenterSetting) SetDeletionPolicy(r xpv1.DeletionPolicy) {
 	mg.Spec.DeletionPolicy = r
 }
 
-// SetProviderConfigReference of this SecurityCenterSetting.
-func (mg *SecurityCenterSetting) SetProviderConfigReference(r *xpv1.Reference) {
+// SetProviderConfigReference of this CenterSetting.
+func (mg *CenterSetting) SetProviderConfigReference(r *xpv1.Reference) {
 	mg.Spec.ProviderConfigReference = r
 }
 
 /*
-SetProviderReference of this SecurityCenterSetting.
+SetProviderReference of this CenterSetting.
 Deprecated: Use SetProviderConfigReference.
 */
-func (mg *SecurityCenterSetting) SetProviderReference(r *xpv1.Reference) {
+func (mg *CenterSetting) SetProviderReference(r *xpv1.Reference) {
 	mg.Spec.ProviderReference = r
 }
 
-// SetWriteConnectionSecretToReference of this SecurityCenterSetting.
-func (mg *SecurityCenterSetting) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
+// SetWriteConnectionSecretToReference of this CenterSetting.
+func (mg *CenterSetting) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
 	mg.Spec.WriteConnectionSecretToReference = r
 }
 
-// GetCondition of this SecurityCenterSubscriptionPricing.
-func (mg *SecurityCenterSubscriptionPricing) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
+// GetCondition of this CenterSubscriptionPricing.
+func (mg *CenterSubscriptionPricing) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
 	return mg.Status.GetCondition(ct)
 }
 
-// GetDeletionPolicy of this SecurityCenterSubscriptionPricing.
-func (mg *SecurityCenterSubscriptionPricing) GetDeletionPolicy() xpv1.DeletionPolicy {
+// GetDeletionPolicy of this CenterSubscriptionPricing.
+func (mg *CenterSubscriptionPricing) GetDeletionPolicy() xpv1.DeletionPolicy {
 	return mg.Spec.DeletionPolicy
 }
 
-// GetProviderConfigReference of this SecurityCenterSubscriptionPricing.
-func (mg *SecurityCenterSubscriptionPricing) GetProviderConfigReference() *xpv1.Reference {
+// GetProviderConfigReference of this CenterSubscriptionPricing.
+func (mg *CenterSubscriptionPricing) GetProviderConfigReference() *xpv1.Reference {
 	return mg.Spec.ProviderConfigReference
 }
 
 /*
-GetProviderReference of this SecurityCenterSubscriptionPricing.
+GetProviderReference of this CenterSubscriptionPricing.
 Deprecated: Use GetProviderConfigReference.
 */
-func (mg *SecurityCenterSubscriptionPricing) GetProviderReference() *xpv1.Reference {
+func (mg *CenterSubscriptionPricing) GetProviderReference() *xpv1.Reference {
 	return mg.Spec.ProviderReference
 }
 
-// GetWriteConnectionSecretToReference of this SecurityCenterSubscriptionPricing.
-func (mg *SecurityCenterSubscriptionPricing) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
+// GetWriteConnectionSecretToReference of this CenterSubscriptionPricing.
+func (mg *CenterSubscriptionPricing) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
 	return mg.Spec.WriteConnectionSecretToReference
 }
 
-// SetConditions of this SecurityCenterSubscriptionPricing.
-func (mg *SecurityCenterSubscriptionPricing) SetConditions(c ...xpv1.Condition) {
+// SetConditions of this CenterSubscriptionPricing.
+func (mg *CenterSubscriptionPricing) SetConditions(c ...xpv1.Condition) {
 	mg.Status.SetConditions(c...)
 }
 
-// SetDeletionPolicy of this SecurityCenterSubscriptionPricing.
-func (mg *SecurityCenterSubscriptionPricing) SetDeletionPolicy(r xpv1.DeletionPolicy) {
+// SetDeletionPolicy of this CenterSubscriptionPricing.
+func (mg *CenterSubscriptionPricing) SetDeletionPolicy(r xpv1.DeletionPolicy) {
 	mg.Spec.DeletionPolicy = r
 }
 
-// SetProviderConfigReference of this SecurityCenterSubscriptionPricing.
-func (mg *SecurityCenterSubscriptionPricing) SetProviderConfigReference(r *xpv1.Reference) {
+// SetProviderConfigReference of this CenterSubscriptionPricing.
+func (mg *CenterSubscriptionPricing) SetProviderConfigReference(r *xpv1.Reference) {
 	mg.Spec.ProviderConfigReference = r
 }
 
 /*
-SetProviderReference of this SecurityCenterSubscriptionPricing.
+SetProviderReference of this CenterSubscriptionPricing.
 Deprecated: Use SetProviderConfigReference.
 */
-func (mg *SecurityCenterSubscriptionPricing) SetProviderReference(r *xpv1.Reference) {
+func (mg *CenterSubscriptionPricing) SetProviderReference(r *xpv1.Reference) {
 	mg.Spec.ProviderReference = r
 }
 
-// SetWriteConnectionSecretToReference of this SecurityCenterSubscriptionPricing.
-func (mg *SecurityCenterSubscriptionPricing) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
+// SetWriteConnectionSecretToReference of this CenterSubscriptionPricing.
+func (mg *CenterSubscriptionPricing) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
 	mg.Spec.WriteConnectionSecretToReference = r
 }
 
-// GetCondition of this SecurityCenterWorkspace.
-func (mg *SecurityCenterWorkspace) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
+// GetCondition of this CenterWorkspace.
+func (mg *CenterWorkspace) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
 	return mg.Status.GetCondition(ct)
 }
 
-// GetDeletionPolicy of this SecurityCenterWorkspace.
-func (mg *SecurityCenterWorkspace) GetDeletionPolicy() xpv1.DeletionPolicy {
+// GetDeletionPolicy of this CenterWorkspace.
+func (mg *CenterWorkspace) GetDeletionPolicy() xpv1.DeletionPolicy {
 	return mg.Spec.DeletionPolicy
 }
 
-// GetProviderConfigReference of this SecurityCenterWorkspace.
-func (mg *SecurityCenterWorkspace) GetProviderConfigReference() *xpv1.Reference {
+// GetProviderConfigReference of this CenterWorkspace.
+func (mg *CenterWorkspace) GetProviderConfigReference() *xpv1.Reference {
 	return mg.Spec.ProviderConfigReference
 }
 
 /*
-GetProviderReference of this SecurityCenterWorkspace.
+GetProviderReference of this CenterWorkspace.
 Deprecated: Use GetProviderConfigReference.
 */
-func (mg *SecurityCenterWorkspace) GetProviderReference() *xpv1.Reference {
+func (mg *CenterWorkspace) GetProviderReference() *xpv1.Reference {
 	return mg.Spec.ProviderReference
 }
 
-// GetWriteConnectionSecretToReference of this SecurityCenterWorkspace.
-func (mg *SecurityCenterWorkspace) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
+// GetWriteConnectionSecretToReference of this CenterWorkspace.
+func (mg *CenterWorkspace) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
 	return mg.Spec.WriteConnectionSecretToReference
 }
 
-// SetConditions of this SecurityCenterWorkspace.
-func (mg *SecurityCenterWorkspace) SetConditions(c ...xpv1.Condition) {
+// SetConditions of this CenterWorkspace.
+func (mg *CenterWorkspace) SetConditions(c ...xpv1.Condition) {
 	mg.Status.SetConditions(c...)
 }
 
-// SetDeletionPolicy of this SecurityCenterWorkspace.
-func (mg *SecurityCenterWorkspace) SetDeletionPolicy(r xpv1.DeletionPolicy) {
+// SetDeletionPolicy of this CenterWorkspace.
+func (mg *CenterWorkspace) SetDeletionPolicy(r xpv1.DeletionPolicy) {
 	mg.Spec.DeletionPolicy = r
 }
 
-// SetProviderConfigReference of this SecurityCenterWorkspace.
-func (mg *SecurityCenterWorkspace) SetProviderConfigReference(r *xpv1.Reference) {
+// SetProviderConfigReference of this CenterWorkspace.
+func (mg *CenterWorkspace) SetProviderConfigReference(r *xpv1.Reference) {
 	mg.Spec.ProviderConfigReference = r
 }
 
 /*
-SetProviderReference of this SecurityCenterWorkspace.
+SetProviderReference of this CenterWorkspace.
 Deprecated: Use SetProviderConfigReference.
 */
-func (mg *SecurityCenterWorkspace) SetProviderReference(r *xpv1.Reference) {
+func (mg *CenterWorkspace) SetProviderReference(r *xpv1.Reference) {
 	mg.Spec.ProviderReference = r
 }
 
-// SetWriteConnectionSecretToReference of this SecurityCenterWorkspace.
-func (mg *SecurityCenterWorkspace) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
+// SetWriteConnectionSecretToReference of this CenterWorkspace.
+func (mg *CenterWorkspace) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
 	mg.Spec.WriteConnectionSecretToReference = r
 }

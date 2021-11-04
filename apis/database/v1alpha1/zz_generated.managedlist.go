@@ -19,8 +19,8 @@ package v1alpha1
 
 import resource "github.com/crossplane/crossplane-runtime/pkg/resource"
 
-// GetItems of this DatabaseMigrationProjectList.
-func (l *DatabaseMigrationProjectList) GetItems() []resource.Managed {
+// GetItems of this MigrationProjectList.
+func (l *MigrationProjectList) GetItems() []resource.Managed {
 	items := make([]resource.Managed, len(l.Items))
 	for i := range l.Items {
 		items[i] = &l.Items[i]
@@ -28,8 +28,8 @@ func (l *DatabaseMigrationProjectList) GetItems() []resource.Managed {
 	return items
 }
 
-// GetItems of this DatabaseMigrationServiceList.
-func (l *DatabaseMigrationServiceList) GetItems() []resource.Managed {
+// GetItems of this MigrationServiceList.
+func (l *MigrationServiceList) GetItems() []resource.Managed {
 	items := make([]resource.Managed, len(l.Items))
 	for i := range l.Items {
 		items[i] = &l.Items[i]

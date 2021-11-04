@@ -19,114 +19,114 @@ package v1alpha1
 
 import xpv1 "github.com/crossplane/crossplane-runtime/apis/common/v1"
 
-// GetCondition of this CognitiveAccount.
-func (mg *CognitiveAccount) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
+// GetCondition of this Account.
+func (mg *Account) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
 	return mg.Status.GetCondition(ct)
 }
 
-// GetDeletionPolicy of this CognitiveAccount.
-func (mg *CognitiveAccount) GetDeletionPolicy() xpv1.DeletionPolicy {
+// GetDeletionPolicy of this Account.
+func (mg *Account) GetDeletionPolicy() xpv1.DeletionPolicy {
 	return mg.Spec.DeletionPolicy
 }
 
-// GetProviderConfigReference of this CognitiveAccount.
-func (mg *CognitiveAccount) GetProviderConfigReference() *xpv1.Reference {
+// GetProviderConfigReference of this Account.
+func (mg *Account) GetProviderConfigReference() *xpv1.Reference {
 	return mg.Spec.ProviderConfigReference
 }
 
 /*
-GetProviderReference of this CognitiveAccount.
+GetProviderReference of this Account.
 Deprecated: Use GetProviderConfigReference.
 */
-func (mg *CognitiveAccount) GetProviderReference() *xpv1.Reference {
+func (mg *Account) GetProviderReference() *xpv1.Reference {
 	return mg.Spec.ProviderReference
 }
 
-// GetWriteConnectionSecretToReference of this CognitiveAccount.
-func (mg *CognitiveAccount) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
+// GetWriteConnectionSecretToReference of this Account.
+func (mg *Account) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
 	return mg.Spec.WriteConnectionSecretToReference
 }
 
-// SetConditions of this CognitiveAccount.
-func (mg *CognitiveAccount) SetConditions(c ...xpv1.Condition) {
+// SetConditions of this Account.
+func (mg *Account) SetConditions(c ...xpv1.Condition) {
 	mg.Status.SetConditions(c...)
 }
 
-// SetDeletionPolicy of this CognitiveAccount.
-func (mg *CognitiveAccount) SetDeletionPolicy(r xpv1.DeletionPolicy) {
+// SetDeletionPolicy of this Account.
+func (mg *Account) SetDeletionPolicy(r xpv1.DeletionPolicy) {
 	mg.Spec.DeletionPolicy = r
 }
 
-// SetProviderConfigReference of this CognitiveAccount.
-func (mg *CognitiveAccount) SetProviderConfigReference(r *xpv1.Reference) {
+// SetProviderConfigReference of this Account.
+func (mg *Account) SetProviderConfigReference(r *xpv1.Reference) {
 	mg.Spec.ProviderConfigReference = r
 }
 
 /*
-SetProviderReference of this CognitiveAccount.
+SetProviderReference of this Account.
 Deprecated: Use SetProviderConfigReference.
 */
-func (mg *CognitiveAccount) SetProviderReference(r *xpv1.Reference) {
+func (mg *Account) SetProviderReference(r *xpv1.Reference) {
 	mg.Spec.ProviderReference = r
 }
 
-// SetWriteConnectionSecretToReference of this CognitiveAccount.
-func (mg *CognitiveAccount) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
+// SetWriteConnectionSecretToReference of this Account.
+func (mg *Account) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
 	mg.Spec.WriteConnectionSecretToReference = r
 }
 
-// GetCondition of this CognitiveAccountCustomerManagedKey.
-func (mg *CognitiveAccountCustomerManagedKey) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
+// GetCondition of this AccountCustomerManagedKey.
+func (mg *AccountCustomerManagedKey) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
 	return mg.Status.GetCondition(ct)
 }
 
-// GetDeletionPolicy of this CognitiveAccountCustomerManagedKey.
-func (mg *CognitiveAccountCustomerManagedKey) GetDeletionPolicy() xpv1.DeletionPolicy {
+// GetDeletionPolicy of this AccountCustomerManagedKey.
+func (mg *AccountCustomerManagedKey) GetDeletionPolicy() xpv1.DeletionPolicy {
 	return mg.Spec.DeletionPolicy
 }
 
-// GetProviderConfigReference of this CognitiveAccountCustomerManagedKey.
-func (mg *CognitiveAccountCustomerManagedKey) GetProviderConfigReference() *xpv1.Reference {
+// GetProviderConfigReference of this AccountCustomerManagedKey.
+func (mg *AccountCustomerManagedKey) GetProviderConfigReference() *xpv1.Reference {
 	return mg.Spec.ProviderConfigReference
 }
 
 /*
-GetProviderReference of this CognitiveAccountCustomerManagedKey.
+GetProviderReference of this AccountCustomerManagedKey.
 Deprecated: Use GetProviderConfigReference.
 */
-func (mg *CognitiveAccountCustomerManagedKey) GetProviderReference() *xpv1.Reference {
+func (mg *AccountCustomerManagedKey) GetProviderReference() *xpv1.Reference {
 	return mg.Spec.ProviderReference
 }
 
-// GetWriteConnectionSecretToReference of this CognitiveAccountCustomerManagedKey.
-func (mg *CognitiveAccountCustomerManagedKey) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
+// GetWriteConnectionSecretToReference of this AccountCustomerManagedKey.
+func (mg *AccountCustomerManagedKey) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
 	return mg.Spec.WriteConnectionSecretToReference
 }
 
-// SetConditions of this CognitiveAccountCustomerManagedKey.
-func (mg *CognitiveAccountCustomerManagedKey) SetConditions(c ...xpv1.Condition) {
+// SetConditions of this AccountCustomerManagedKey.
+func (mg *AccountCustomerManagedKey) SetConditions(c ...xpv1.Condition) {
 	mg.Status.SetConditions(c...)
 }
 
-// SetDeletionPolicy of this CognitiveAccountCustomerManagedKey.
-func (mg *CognitiveAccountCustomerManagedKey) SetDeletionPolicy(r xpv1.DeletionPolicy) {
+// SetDeletionPolicy of this AccountCustomerManagedKey.
+func (mg *AccountCustomerManagedKey) SetDeletionPolicy(r xpv1.DeletionPolicy) {
 	mg.Spec.DeletionPolicy = r
 }
 
-// SetProviderConfigReference of this CognitiveAccountCustomerManagedKey.
-func (mg *CognitiveAccountCustomerManagedKey) SetProviderConfigReference(r *xpv1.Reference) {
+// SetProviderConfigReference of this AccountCustomerManagedKey.
+func (mg *AccountCustomerManagedKey) SetProviderConfigReference(r *xpv1.Reference) {
 	mg.Spec.ProviderConfigReference = r
 }
 
 /*
-SetProviderReference of this CognitiveAccountCustomerManagedKey.
+SetProviderReference of this AccountCustomerManagedKey.
 Deprecated: Use SetProviderConfigReference.
 */
-func (mg *CognitiveAccountCustomerManagedKey) SetProviderReference(r *xpv1.Reference) {
+func (mg *AccountCustomerManagedKey) SetProviderReference(r *xpv1.Reference) {
 	mg.Spec.ProviderReference = r
 }
 
-// SetWriteConnectionSecretToReference of this CognitiveAccountCustomerManagedKey.
-func (mg *CognitiveAccountCustomerManagedKey) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
+// SetWriteConnectionSecretToReference of this AccountCustomerManagedKey.
+func (mg *AccountCustomerManagedKey) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
 	mg.Spec.WriteConnectionSecretToReference = r
 }

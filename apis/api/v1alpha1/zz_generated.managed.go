@@ -19,2130 +19,2074 @@ package v1alpha1
 
 import xpv1 "github.com/crossplane/crossplane-runtime/apis/common/v1"
 
-// GetCondition of this ApiManagement.
-func (mg *ApiManagement) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
+// GetCondition of this Management.
+func (mg *Management) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
 	return mg.Status.GetCondition(ct)
 }
 
-// GetDeletionPolicy of this ApiManagement.
-func (mg *ApiManagement) GetDeletionPolicy() xpv1.DeletionPolicy {
+// GetDeletionPolicy of this Management.
+func (mg *Management) GetDeletionPolicy() xpv1.DeletionPolicy {
 	return mg.Spec.DeletionPolicy
 }
 
-// GetProviderConfigReference of this ApiManagement.
-func (mg *ApiManagement) GetProviderConfigReference() *xpv1.Reference {
+// GetProviderConfigReference of this Management.
+func (mg *Management) GetProviderConfigReference() *xpv1.Reference {
 	return mg.Spec.ProviderConfigReference
 }
 
 /*
-GetProviderReference of this ApiManagement.
+GetProviderReference of this Management.
 Deprecated: Use GetProviderConfigReference.
 */
-func (mg *ApiManagement) GetProviderReference() *xpv1.Reference {
+func (mg *Management) GetProviderReference() *xpv1.Reference {
 	return mg.Spec.ProviderReference
 }
 
-// GetWriteConnectionSecretToReference of this ApiManagement.
-func (mg *ApiManagement) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
+// GetWriteConnectionSecretToReference of this Management.
+func (mg *Management) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
 	return mg.Spec.WriteConnectionSecretToReference
 }
 
-// SetConditions of this ApiManagement.
-func (mg *ApiManagement) SetConditions(c ...xpv1.Condition) {
+// SetConditions of this Management.
+func (mg *Management) SetConditions(c ...xpv1.Condition) {
 	mg.Status.SetConditions(c...)
 }
 
-// SetDeletionPolicy of this ApiManagement.
-func (mg *ApiManagement) SetDeletionPolicy(r xpv1.DeletionPolicy) {
+// SetDeletionPolicy of this Management.
+func (mg *Management) SetDeletionPolicy(r xpv1.DeletionPolicy) {
 	mg.Spec.DeletionPolicy = r
 }
 
-// SetProviderConfigReference of this ApiManagement.
-func (mg *ApiManagement) SetProviderConfigReference(r *xpv1.Reference) {
+// SetProviderConfigReference of this Management.
+func (mg *Management) SetProviderConfigReference(r *xpv1.Reference) {
 	mg.Spec.ProviderConfigReference = r
 }
 
 /*
-SetProviderReference of this ApiManagement.
+SetProviderReference of this Management.
 Deprecated: Use SetProviderConfigReference.
 */
-func (mg *ApiManagement) SetProviderReference(r *xpv1.Reference) {
+func (mg *Management) SetProviderReference(r *xpv1.Reference) {
 	mg.Spec.ProviderReference = r
 }
 
-// SetWriteConnectionSecretToReference of this ApiManagement.
-func (mg *ApiManagement) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
+// SetWriteConnectionSecretToReference of this Management.
+func (mg *Management) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
 	mg.Spec.WriteConnectionSecretToReference = r
 }
 
-// GetCondition of this ApiManagementApi.
-func (mg *ApiManagementApi) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
+// GetCondition of this ManagementApi.
+func (mg *ManagementApi) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
 	return mg.Status.GetCondition(ct)
 }
 
-// GetDeletionPolicy of this ApiManagementApi.
-func (mg *ApiManagementApi) GetDeletionPolicy() xpv1.DeletionPolicy {
+// GetDeletionPolicy of this ManagementApi.
+func (mg *ManagementApi) GetDeletionPolicy() xpv1.DeletionPolicy {
 	return mg.Spec.DeletionPolicy
 }
 
-// GetProviderConfigReference of this ApiManagementApi.
-func (mg *ApiManagementApi) GetProviderConfigReference() *xpv1.Reference {
+// GetProviderConfigReference of this ManagementApi.
+func (mg *ManagementApi) GetProviderConfigReference() *xpv1.Reference {
 	return mg.Spec.ProviderConfigReference
 }
 
 /*
-GetProviderReference of this ApiManagementApi.
+GetProviderReference of this ManagementApi.
 Deprecated: Use GetProviderConfigReference.
 */
-func (mg *ApiManagementApi) GetProviderReference() *xpv1.Reference {
+func (mg *ManagementApi) GetProviderReference() *xpv1.Reference {
 	return mg.Spec.ProviderReference
 }
 
-// GetWriteConnectionSecretToReference of this ApiManagementApi.
-func (mg *ApiManagementApi) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
+// GetWriteConnectionSecretToReference of this ManagementApi.
+func (mg *ManagementApi) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
 	return mg.Spec.WriteConnectionSecretToReference
 }
 
-// SetConditions of this ApiManagementApi.
-func (mg *ApiManagementApi) SetConditions(c ...xpv1.Condition) {
+// SetConditions of this ManagementApi.
+func (mg *ManagementApi) SetConditions(c ...xpv1.Condition) {
 	mg.Status.SetConditions(c...)
 }
 
-// SetDeletionPolicy of this ApiManagementApi.
-func (mg *ApiManagementApi) SetDeletionPolicy(r xpv1.DeletionPolicy) {
+// SetDeletionPolicy of this ManagementApi.
+func (mg *ManagementApi) SetDeletionPolicy(r xpv1.DeletionPolicy) {
 	mg.Spec.DeletionPolicy = r
 }
 
-// SetProviderConfigReference of this ApiManagementApi.
-func (mg *ApiManagementApi) SetProviderConfigReference(r *xpv1.Reference) {
+// SetProviderConfigReference of this ManagementApi.
+func (mg *ManagementApi) SetProviderConfigReference(r *xpv1.Reference) {
 	mg.Spec.ProviderConfigReference = r
 }
 
 /*
-SetProviderReference of this ApiManagementApi.
+SetProviderReference of this ManagementApi.
 Deprecated: Use SetProviderConfigReference.
 */
-func (mg *ApiManagementApi) SetProviderReference(r *xpv1.Reference) {
+func (mg *ManagementApi) SetProviderReference(r *xpv1.Reference) {
 	mg.Spec.ProviderReference = r
 }
 
-// SetWriteConnectionSecretToReference of this ApiManagementApi.
-func (mg *ApiManagementApi) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
+// SetWriteConnectionSecretToReference of this ManagementApi.
+func (mg *ManagementApi) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
 	mg.Spec.WriteConnectionSecretToReference = r
 }
 
-// GetCondition of this ApiManagementApiDiagnostic.
-func (mg *ApiManagementApiDiagnostic) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
+// GetCondition of this ManagementApiDiagnostic.
+func (mg *ManagementApiDiagnostic) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
 	return mg.Status.GetCondition(ct)
 }
 
-// GetDeletionPolicy of this ApiManagementApiDiagnostic.
-func (mg *ApiManagementApiDiagnostic) GetDeletionPolicy() xpv1.DeletionPolicy {
+// GetDeletionPolicy of this ManagementApiDiagnostic.
+func (mg *ManagementApiDiagnostic) GetDeletionPolicy() xpv1.DeletionPolicy {
 	return mg.Spec.DeletionPolicy
 }
 
-// GetProviderConfigReference of this ApiManagementApiDiagnostic.
-func (mg *ApiManagementApiDiagnostic) GetProviderConfigReference() *xpv1.Reference {
+// GetProviderConfigReference of this ManagementApiDiagnostic.
+func (mg *ManagementApiDiagnostic) GetProviderConfigReference() *xpv1.Reference {
 	return mg.Spec.ProviderConfigReference
 }
 
 /*
-GetProviderReference of this ApiManagementApiDiagnostic.
+GetProviderReference of this ManagementApiDiagnostic.
 Deprecated: Use GetProviderConfigReference.
 */
-func (mg *ApiManagementApiDiagnostic) GetProviderReference() *xpv1.Reference {
+func (mg *ManagementApiDiagnostic) GetProviderReference() *xpv1.Reference {
 	return mg.Spec.ProviderReference
 }
 
-// GetWriteConnectionSecretToReference of this ApiManagementApiDiagnostic.
-func (mg *ApiManagementApiDiagnostic) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
+// GetWriteConnectionSecretToReference of this ManagementApiDiagnostic.
+func (mg *ManagementApiDiagnostic) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
 	return mg.Spec.WriteConnectionSecretToReference
 }
 
-// SetConditions of this ApiManagementApiDiagnostic.
-func (mg *ApiManagementApiDiagnostic) SetConditions(c ...xpv1.Condition) {
+// SetConditions of this ManagementApiDiagnostic.
+func (mg *ManagementApiDiagnostic) SetConditions(c ...xpv1.Condition) {
 	mg.Status.SetConditions(c...)
 }
 
-// SetDeletionPolicy of this ApiManagementApiDiagnostic.
-func (mg *ApiManagementApiDiagnostic) SetDeletionPolicy(r xpv1.DeletionPolicy) {
+// SetDeletionPolicy of this ManagementApiDiagnostic.
+func (mg *ManagementApiDiagnostic) SetDeletionPolicy(r xpv1.DeletionPolicy) {
 	mg.Spec.DeletionPolicy = r
 }
 
-// SetProviderConfigReference of this ApiManagementApiDiagnostic.
-func (mg *ApiManagementApiDiagnostic) SetProviderConfigReference(r *xpv1.Reference) {
+// SetProviderConfigReference of this ManagementApiDiagnostic.
+func (mg *ManagementApiDiagnostic) SetProviderConfigReference(r *xpv1.Reference) {
 	mg.Spec.ProviderConfigReference = r
 }
 
 /*
-SetProviderReference of this ApiManagementApiDiagnostic.
+SetProviderReference of this ManagementApiDiagnostic.
 Deprecated: Use SetProviderConfigReference.
 */
-func (mg *ApiManagementApiDiagnostic) SetProviderReference(r *xpv1.Reference) {
+func (mg *ManagementApiDiagnostic) SetProviderReference(r *xpv1.Reference) {
 	mg.Spec.ProviderReference = r
 }
 
-// SetWriteConnectionSecretToReference of this ApiManagementApiDiagnostic.
-func (mg *ApiManagementApiDiagnostic) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
+// SetWriteConnectionSecretToReference of this ManagementApiDiagnostic.
+func (mg *ManagementApiDiagnostic) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
 	mg.Spec.WriteConnectionSecretToReference = r
 }
 
-// GetCondition of this ApiManagementApiOperation.
-func (mg *ApiManagementApiOperation) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
+// GetCondition of this ManagementApiOperation.
+func (mg *ManagementApiOperation) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
 	return mg.Status.GetCondition(ct)
 }
 
-// GetDeletionPolicy of this ApiManagementApiOperation.
-func (mg *ApiManagementApiOperation) GetDeletionPolicy() xpv1.DeletionPolicy {
+// GetDeletionPolicy of this ManagementApiOperation.
+func (mg *ManagementApiOperation) GetDeletionPolicy() xpv1.DeletionPolicy {
 	return mg.Spec.DeletionPolicy
 }
 
-// GetProviderConfigReference of this ApiManagementApiOperation.
-func (mg *ApiManagementApiOperation) GetProviderConfigReference() *xpv1.Reference {
+// GetProviderConfigReference of this ManagementApiOperation.
+func (mg *ManagementApiOperation) GetProviderConfigReference() *xpv1.Reference {
 	return mg.Spec.ProviderConfigReference
 }
 
 /*
-GetProviderReference of this ApiManagementApiOperation.
+GetProviderReference of this ManagementApiOperation.
 Deprecated: Use GetProviderConfigReference.
 */
-func (mg *ApiManagementApiOperation) GetProviderReference() *xpv1.Reference {
+func (mg *ManagementApiOperation) GetProviderReference() *xpv1.Reference {
 	return mg.Spec.ProviderReference
 }
 
-// GetWriteConnectionSecretToReference of this ApiManagementApiOperation.
-func (mg *ApiManagementApiOperation) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
+// GetWriteConnectionSecretToReference of this ManagementApiOperation.
+func (mg *ManagementApiOperation) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
 	return mg.Spec.WriteConnectionSecretToReference
 }
 
-// SetConditions of this ApiManagementApiOperation.
-func (mg *ApiManagementApiOperation) SetConditions(c ...xpv1.Condition) {
+// SetConditions of this ManagementApiOperation.
+func (mg *ManagementApiOperation) SetConditions(c ...xpv1.Condition) {
 	mg.Status.SetConditions(c...)
 }
 
-// SetDeletionPolicy of this ApiManagementApiOperation.
-func (mg *ApiManagementApiOperation) SetDeletionPolicy(r xpv1.DeletionPolicy) {
+// SetDeletionPolicy of this ManagementApiOperation.
+func (mg *ManagementApiOperation) SetDeletionPolicy(r xpv1.DeletionPolicy) {
 	mg.Spec.DeletionPolicy = r
 }
 
-// SetProviderConfigReference of this ApiManagementApiOperation.
-func (mg *ApiManagementApiOperation) SetProviderConfigReference(r *xpv1.Reference) {
+// SetProviderConfigReference of this ManagementApiOperation.
+func (mg *ManagementApiOperation) SetProviderConfigReference(r *xpv1.Reference) {
 	mg.Spec.ProviderConfigReference = r
 }
 
 /*
-SetProviderReference of this ApiManagementApiOperation.
+SetProviderReference of this ManagementApiOperation.
 Deprecated: Use SetProviderConfigReference.
 */
-func (mg *ApiManagementApiOperation) SetProviderReference(r *xpv1.Reference) {
+func (mg *ManagementApiOperation) SetProviderReference(r *xpv1.Reference) {
 	mg.Spec.ProviderReference = r
 }
 
-// SetWriteConnectionSecretToReference of this ApiManagementApiOperation.
-func (mg *ApiManagementApiOperation) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
+// SetWriteConnectionSecretToReference of this ManagementApiOperation.
+func (mg *ManagementApiOperation) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
 	mg.Spec.WriteConnectionSecretToReference = r
 }
 
-// GetCondition of this ApiManagementApiOperationPolicy.
-func (mg *ApiManagementApiOperationPolicy) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
+// GetCondition of this ManagementApiOperationPolicy.
+func (mg *ManagementApiOperationPolicy) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
 	return mg.Status.GetCondition(ct)
 }
 
-// GetDeletionPolicy of this ApiManagementApiOperationPolicy.
-func (mg *ApiManagementApiOperationPolicy) GetDeletionPolicy() xpv1.DeletionPolicy {
+// GetDeletionPolicy of this ManagementApiOperationPolicy.
+func (mg *ManagementApiOperationPolicy) GetDeletionPolicy() xpv1.DeletionPolicy {
 	return mg.Spec.DeletionPolicy
 }
 
-// GetProviderConfigReference of this ApiManagementApiOperationPolicy.
-func (mg *ApiManagementApiOperationPolicy) GetProviderConfigReference() *xpv1.Reference {
+// GetProviderConfigReference of this ManagementApiOperationPolicy.
+func (mg *ManagementApiOperationPolicy) GetProviderConfigReference() *xpv1.Reference {
 	return mg.Spec.ProviderConfigReference
 }
 
 /*
-GetProviderReference of this ApiManagementApiOperationPolicy.
+GetProviderReference of this ManagementApiOperationPolicy.
 Deprecated: Use GetProviderConfigReference.
 */
-func (mg *ApiManagementApiOperationPolicy) GetProviderReference() *xpv1.Reference {
+func (mg *ManagementApiOperationPolicy) GetProviderReference() *xpv1.Reference {
 	return mg.Spec.ProviderReference
 }
 
-// GetWriteConnectionSecretToReference of this ApiManagementApiOperationPolicy.
-func (mg *ApiManagementApiOperationPolicy) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
+// GetWriteConnectionSecretToReference of this ManagementApiOperationPolicy.
+func (mg *ManagementApiOperationPolicy) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
 	return mg.Spec.WriteConnectionSecretToReference
 }
 
-// SetConditions of this ApiManagementApiOperationPolicy.
-func (mg *ApiManagementApiOperationPolicy) SetConditions(c ...xpv1.Condition) {
+// SetConditions of this ManagementApiOperationPolicy.
+func (mg *ManagementApiOperationPolicy) SetConditions(c ...xpv1.Condition) {
 	mg.Status.SetConditions(c...)
 }
 
-// SetDeletionPolicy of this ApiManagementApiOperationPolicy.
-func (mg *ApiManagementApiOperationPolicy) SetDeletionPolicy(r xpv1.DeletionPolicy) {
+// SetDeletionPolicy of this ManagementApiOperationPolicy.
+func (mg *ManagementApiOperationPolicy) SetDeletionPolicy(r xpv1.DeletionPolicy) {
 	mg.Spec.DeletionPolicy = r
 }
 
-// SetProviderConfigReference of this ApiManagementApiOperationPolicy.
-func (mg *ApiManagementApiOperationPolicy) SetProviderConfigReference(r *xpv1.Reference) {
+// SetProviderConfigReference of this ManagementApiOperationPolicy.
+func (mg *ManagementApiOperationPolicy) SetProviderConfigReference(r *xpv1.Reference) {
 	mg.Spec.ProviderConfigReference = r
 }
 
 /*
-SetProviderReference of this ApiManagementApiOperationPolicy.
+SetProviderReference of this ManagementApiOperationPolicy.
 Deprecated: Use SetProviderConfigReference.
 */
-func (mg *ApiManagementApiOperationPolicy) SetProviderReference(r *xpv1.Reference) {
+func (mg *ManagementApiOperationPolicy) SetProviderReference(r *xpv1.Reference) {
 	mg.Spec.ProviderReference = r
 }
 
-// SetWriteConnectionSecretToReference of this ApiManagementApiOperationPolicy.
-func (mg *ApiManagementApiOperationPolicy) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
+// SetWriteConnectionSecretToReference of this ManagementApiOperationPolicy.
+func (mg *ManagementApiOperationPolicy) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
 	mg.Spec.WriteConnectionSecretToReference = r
 }
 
-// GetCondition of this ApiManagementApiOperationTag.
-func (mg *ApiManagementApiOperationTag) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
+// GetCondition of this ManagementApiOperationTag.
+func (mg *ManagementApiOperationTag) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
 	return mg.Status.GetCondition(ct)
 }
 
-// GetDeletionPolicy of this ApiManagementApiOperationTag.
-func (mg *ApiManagementApiOperationTag) GetDeletionPolicy() xpv1.DeletionPolicy {
+// GetDeletionPolicy of this ManagementApiOperationTag.
+func (mg *ManagementApiOperationTag) GetDeletionPolicy() xpv1.DeletionPolicy {
 	return mg.Spec.DeletionPolicy
 }
 
-// GetProviderConfigReference of this ApiManagementApiOperationTag.
-func (mg *ApiManagementApiOperationTag) GetProviderConfigReference() *xpv1.Reference {
+// GetProviderConfigReference of this ManagementApiOperationTag.
+func (mg *ManagementApiOperationTag) GetProviderConfigReference() *xpv1.Reference {
 	return mg.Spec.ProviderConfigReference
 }
 
 /*
-GetProviderReference of this ApiManagementApiOperationTag.
+GetProviderReference of this ManagementApiOperationTag.
 Deprecated: Use GetProviderConfigReference.
 */
-func (mg *ApiManagementApiOperationTag) GetProviderReference() *xpv1.Reference {
+func (mg *ManagementApiOperationTag) GetProviderReference() *xpv1.Reference {
 	return mg.Spec.ProviderReference
 }
 
-// GetWriteConnectionSecretToReference of this ApiManagementApiOperationTag.
-func (mg *ApiManagementApiOperationTag) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
+// GetWriteConnectionSecretToReference of this ManagementApiOperationTag.
+func (mg *ManagementApiOperationTag) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
 	return mg.Spec.WriteConnectionSecretToReference
 }
 
-// SetConditions of this ApiManagementApiOperationTag.
-func (mg *ApiManagementApiOperationTag) SetConditions(c ...xpv1.Condition) {
+// SetConditions of this ManagementApiOperationTag.
+func (mg *ManagementApiOperationTag) SetConditions(c ...xpv1.Condition) {
 	mg.Status.SetConditions(c...)
 }
 
-// SetDeletionPolicy of this ApiManagementApiOperationTag.
-func (mg *ApiManagementApiOperationTag) SetDeletionPolicy(r xpv1.DeletionPolicy) {
+// SetDeletionPolicy of this ManagementApiOperationTag.
+func (mg *ManagementApiOperationTag) SetDeletionPolicy(r xpv1.DeletionPolicy) {
 	mg.Spec.DeletionPolicy = r
 }
 
-// SetProviderConfigReference of this ApiManagementApiOperationTag.
-func (mg *ApiManagementApiOperationTag) SetProviderConfigReference(r *xpv1.Reference) {
+// SetProviderConfigReference of this ManagementApiOperationTag.
+func (mg *ManagementApiOperationTag) SetProviderConfigReference(r *xpv1.Reference) {
 	mg.Spec.ProviderConfigReference = r
 }
 
 /*
-SetProviderReference of this ApiManagementApiOperationTag.
+SetProviderReference of this ManagementApiOperationTag.
 Deprecated: Use SetProviderConfigReference.
 */
-func (mg *ApiManagementApiOperationTag) SetProviderReference(r *xpv1.Reference) {
+func (mg *ManagementApiOperationTag) SetProviderReference(r *xpv1.Reference) {
 	mg.Spec.ProviderReference = r
 }
 
-// SetWriteConnectionSecretToReference of this ApiManagementApiOperationTag.
-func (mg *ApiManagementApiOperationTag) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
+// SetWriteConnectionSecretToReference of this ManagementApiOperationTag.
+func (mg *ManagementApiOperationTag) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
 	mg.Spec.WriteConnectionSecretToReference = r
 }
 
-// GetCondition of this ApiManagementApiPolicy.
-func (mg *ApiManagementApiPolicy) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
+// GetCondition of this ManagementApiPolicy.
+func (mg *ManagementApiPolicy) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
 	return mg.Status.GetCondition(ct)
 }
 
-// GetDeletionPolicy of this ApiManagementApiPolicy.
-func (mg *ApiManagementApiPolicy) GetDeletionPolicy() xpv1.DeletionPolicy {
+// GetDeletionPolicy of this ManagementApiPolicy.
+func (mg *ManagementApiPolicy) GetDeletionPolicy() xpv1.DeletionPolicy {
 	return mg.Spec.DeletionPolicy
 }
 
-// GetProviderConfigReference of this ApiManagementApiPolicy.
-func (mg *ApiManagementApiPolicy) GetProviderConfigReference() *xpv1.Reference {
+// GetProviderConfigReference of this ManagementApiPolicy.
+func (mg *ManagementApiPolicy) GetProviderConfigReference() *xpv1.Reference {
 	return mg.Spec.ProviderConfigReference
 }
 
 /*
-GetProviderReference of this ApiManagementApiPolicy.
+GetProviderReference of this ManagementApiPolicy.
 Deprecated: Use GetProviderConfigReference.
 */
-func (mg *ApiManagementApiPolicy) GetProviderReference() *xpv1.Reference {
+func (mg *ManagementApiPolicy) GetProviderReference() *xpv1.Reference {
 	return mg.Spec.ProviderReference
 }
 
-// GetWriteConnectionSecretToReference of this ApiManagementApiPolicy.
-func (mg *ApiManagementApiPolicy) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
+// GetWriteConnectionSecretToReference of this ManagementApiPolicy.
+func (mg *ManagementApiPolicy) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
 	return mg.Spec.WriteConnectionSecretToReference
 }
 
-// SetConditions of this ApiManagementApiPolicy.
-func (mg *ApiManagementApiPolicy) SetConditions(c ...xpv1.Condition) {
+// SetConditions of this ManagementApiPolicy.
+func (mg *ManagementApiPolicy) SetConditions(c ...xpv1.Condition) {
 	mg.Status.SetConditions(c...)
 }
 
-// SetDeletionPolicy of this ApiManagementApiPolicy.
-func (mg *ApiManagementApiPolicy) SetDeletionPolicy(r xpv1.DeletionPolicy) {
+// SetDeletionPolicy of this ManagementApiPolicy.
+func (mg *ManagementApiPolicy) SetDeletionPolicy(r xpv1.DeletionPolicy) {
 	mg.Spec.DeletionPolicy = r
 }
 
-// SetProviderConfigReference of this ApiManagementApiPolicy.
-func (mg *ApiManagementApiPolicy) SetProviderConfigReference(r *xpv1.Reference) {
+// SetProviderConfigReference of this ManagementApiPolicy.
+func (mg *ManagementApiPolicy) SetProviderConfigReference(r *xpv1.Reference) {
 	mg.Spec.ProviderConfigReference = r
 }
 
 /*
-SetProviderReference of this ApiManagementApiPolicy.
+SetProviderReference of this ManagementApiPolicy.
 Deprecated: Use SetProviderConfigReference.
 */
-func (mg *ApiManagementApiPolicy) SetProviderReference(r *xpv1.Reference) {
+func (mg *ManagementApiPolicy) SetProviderReference(r *xpv1.Reference) {
 	mg.Spec.ProviderReference = r
 }
 
-// SetWriteConnectionSecretToReference of this ApiManagementApiPolicy.
-func (mg *ApiManagementApiPolicy) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
+// SetWriteConnectionSecretToReference of this ManagementApiPolicy.
+func (mg *ManagementApiPolicy) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
 	mg.Spec.WriteConnectionSecretToReference = r
 }
 
-// GetCondition of this ApiManagementApiRelease.
-func (mg *ApiManagementApiRelease) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
+// GetCondition of this ManagementApiRelease.
+func (mg *ManagementApiRelease) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
 	return mg.Status.GetCondition(ct)
 }
 
-// GetDeletionPolicy of this ApiManagementApiRelease.
-func (mg *ApiManagementApiRelease) GetDeletionPolicy() xpv1.DeletionPolicy {
+// GetDeletionPolicy of this ManagementApiRelease.
+func (mg *ManagementApiRelease) GetDeletionPolicy() xpv1.DeletionPolicy {
 	return mg.Spec.DeletionPolicy
 }
 
-// GetProviderConfigReference of this ApiManagementApiRelease.
-func (mg *ApiManagementApiRelease) GetProviderConfigReference() *xpv1.Reference {
+// GetProviderConfigReference of this ManagementApiRelease.
+func (mg *ManagementApiRelease) GetProviderConfigReference() *xpv1.Reference {
 	return mg.Spec.ProviderConfigReference
 }
 
 /*
-GetProviderReference of this ApiManagementApiRelease.
+GetProviderReference of this ManagementApiRelease.
 Deprecated: Use GetProviderConfigReference.
 */
-func (mg *ApiManagementApiRelease) GetProviderReference() *xpv1.Reference {
+func (mg *ManagementApiRelease) GetProviderReference() *xpv1.Reference {
 	return mg.Spec.ProviderReference
 }
 
-// GetWriteConnectionSecretToReference of this ApiManagementApiRelease.
-func (mg *ApiManagementApiRelease) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
+// GetWriteConnectionSecretToReference of this ManagementApiRelease.
+func (mg *ManagementApiRelease) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
 	return mg.Spec.WriteConnectionSecretToReference
 }
 
-// SetConditions of this ApiManagementApiRelease.
-func (mg *ApiManagementApiRelease) SetConditions(c ...xpv1.Condition) {
+// SetConditions of this ManagementApiRelease.
+func (mg *ManagementApiRelease) SetConditions(c ...xpv1.Condition) {
 	mg.Status.SetConditions(c...)
 }
 
-// SetDeletionPolicy of this ApiManagementApiRelease.
-func (mg *ApiManagementApiRelease) SetDeletionPolicy(r xpv1.DeletionPolicy) {
+// SetDeletionPolicy of this ManagementApiRelease.
+func (mg *ManagementApiRelease) SetDeletionPolicy(r xpv1.DeletionPolicy) {
 	mg.Spec.DeletionPolicy = r
 }
 
-// SetProviderConfigReference of this ApiManagementApiRelease.
-func (mg *ApiManagementApiRelease) SetProviderConfigReference(r *xpv1.Reference) {
+// SetProviderConfigReference of this ManagementApiRelease.
+func (mg *ManagementApiRelease) SetProviderConfigReference(r *xpv1.Reference) {
 	mg.Spec.ProviderConfigReference = r
 }
 
 /*
-SetProviderReference of this ApiManagementApiRelease.
+SetProviderReference of this ManagementApiRelease.
 Deprecated: Use SetProviderConfigReference.
 */
-func (mg *ApiManagementApiRelease) SetProviderReference(r *xpv1.Reference) {
+func (mg *ManagementApiRelease) SetProviderReference(r *xpv1.Reference) {
 	mg.Spec.ProviderReference = r
 }
 
-// SetWriteConnectionSecretToReference of this ApiManagementApiRelease.
-func (mg *ApiManagementApiRelease) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
+// SetWriteConnectionSecretToReference of this ManagementApiRelease.
+func (mg *ManagementApiRelease) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
 	mg.Spec.WriteConnectionSecretToReference = r
 }
 
-// GetCondition of this ApiManagementApiSchema.
-func (mg *ApiManagementApiSchema) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
+// GetCondition of this ManagementApiSchema.
+func (mg *ManagementApiSchema) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
 	return mg.Status.GetCondition(ct)
 }
 
-// GetDeletionPolicy of this ApiManagementApiSchema.
-func (mg *ApiManagementApiSchema) GetDeletionPolicy() xpv1.DeletionPolicy {
+// GetDeletionPolicy of this ManagementApiSchema.
+func (mg *ManagementApiSchema) GetDeletionPolicy() xpv1.DeletionPolicy {
 	return mg.Spec.DeletionPolicy
 }
 
-// GetProviderConfigReference of this ApiManagementApiSchema.
-func (mg *ApiManagementApiSchema) GetProviderConfigReference() *xpv1.Reference {
+// GetProviderConfigReference of this ManagementApiSchema.
+func (mg *ManagementApiSchema) GetProviderConfigReference() *xpv1.Reference {
 	return mg.Spec.ProviderConfigReference
 }
 
 /*
-GetProviderReference of this ApiManagementApiSchema.
+GetProviderReference of this ManagementApiSchema.
 Deprecated: Use GetProviderConfigReference.
 */
-func (mg *ApiManagementApiSchema) GetProviderReference() *xpv1.Reference {
+func (mg *ManagementApiSchema) GetProviderReference() *xpv1.Reference {
 	return mg.Spec.ProviderReference
 }
 
-// GetWriteConnectionSecretToReference of this ApiManagementApiSchema.
-func (mg *ApiManagementApiSchema) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
+// GetWriteConnectionSecretToReference of this ManagementApiSchema.
+func (mg *ManagementApiSchema) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
 	return mg.Spec.WriteConnectionSecretToReference
 }
 
-// SetConditions of this ApiManagementApiSchema.
-func (mg *ApiManagementApiSchema) SetConditions(c ...xpv1.Condition) {
+// SetConditions of this ManagementApiSchema.
+func (mg *ManagementApiSchema) SetConditions(c ...xpv1.Condition) {
 	mg.Status.SetConditions(c...)
 }
 
-// SetDeletionPolicy of this ApiManagementApiSchema.
-func (mg *ApiManagementApiSchema) SetDeletionPolicy(r xpv1.DeletionPolicy) {
+// SetDeletionPolicy of this ManagementApiSchema.
+func (mg *ManagementApiSchema) SetDeletionPolicy(r xpv1.DeletionPolicy) {
 	mg.Spec.DeletionPolicy = r
 }
 
-// SetProviderConfigReference of this ApiManagementApiSchema.
-func (mg *ApiManagementApiSchema) SetProviderConfigReference(r *xpv1.Reference) {
+// SetProviderConfigReference of this ManagementApiSchema.
+func (mg *ManagementApiSchema) SetProviderConfigReference(r *xpv1.Reference) {
 	mg.Spec.ProviderConfigReference = r
 }
 
 /*
-SetProviderReference of this ApiManagementApiSchema.
+SetProviderReference of this ManagementApiSchema.
 Deprecated: Use SetProviderConfigReference.
 */
-func (mg *ApiManagementApiSchema) SetProviderReference(r *xpv1.Reference) {
+func (mg *ManagementApiSchema) SetProviderReference(r *xpv1.Reference) {
 	mg.Spec.ProviderReference = r
 }
 
-// SetWriteConnectionSecretToReference of this ApiManagementApiSchema.
-func (mg *ApiManagementApiSchema) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
+// SetWriteConnectionSecretToReference of this ManagementApiSchema.
+func (mg *ManagementApiSchema) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
 	mg.Spec.WriteConnectionSecretToReference = r
 }
 
-// GetCondition of this ApiManagementApiVersionSet.
-func (mg *ApiManagementApiVersionSet) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
+// GetCondition of this ManagementApiVersionSet.
+func (mg *ManagementApiVersionSet) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
 	return mg.Status.GetCondition(ct)
 }
 
-// GetDeletionPolicy of this ApiManagementApiVersionSet.
-func (mg *ApiManagementApiVersionSet) GetDeletionPolicy() xpv1.DeletionPolicy {
+// GetDeletionPolicy of this ManagementApiVersionSet.
+func (mg *ManagementApiVersionSet) GetDeletionPolicy() xpv1.DeletionPolicy {
 	return mg.Spec.DeletionPolicy
 }
 
-// GetProviderConfigReference of this ApiManagementApiVersionSet.
-func (mg *ApiManagementApiVersionSet) GetProviderConfigReference() *xpv1.Reference {
+// GetProviderConfigReference of this ManagementApiVersionSet.
+func (mg *ManagementApiVersionSet) GetProviderConfigReference() *xpv1.Reference {
 	return mg.Spec.ProviderConfigReference
 }
 
 /*
-GetProviderReference of this ApiManagementApiVersionSet.
+GetProviderReference of this ManagementApiVersionSet.
 Deprecated: Use GetProviderConfigReference.
 */
-func (mg *ApiManagementApiVersionSet) GetProviderReference() *xpv1.Reference {
+func (mg *ManagementApiVersionSet) GetProviderReference() *xpv1.Reference {
 	return mg.Spec.ProviderReference
 }
 
-// GetWriteConnectionSecretToReference of this ApiManagementApiVersionSet.
-func (mg *ApiManagementApiVersionSet) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
+// GetWriteConnectionSecretToReference of this ManagementApiVersionSet.
+func (mg *ManagementApiVersionSet) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
 	return mg.Spec.WriteConnectionSecretToReference
 }
 
-// SetConditions of this ApiManagementApiVersionSet.
-func (mg *ApiManagementApiVersionSet) SetConditions(c ...xpv1.Condition) {
+// SetConditions of this ManagementApiVersionSet.
+func (mg *ManagementApiVersionSet) SetConditions(c ...xpv1.Condition) {
 	mg.Status.SetConditions(c...)
 }
 
-// SetDeletionPolicy of this ApiManagementApiVersionSet.
-func (mg *ApiManagementApiVersionSet) SetDeletionPolicy(r xpv1.DeletionPolicy) {
+// SetDeletionPolicy of this ManagementApiVersionSet.
+func (mg *ManagementApiVersionSet) SetDeletionPolicy(r xpv1.DeletionPolicy) {
 	mg.Spec.DeletionPolicy = r
 }
 
-// SetProviderConfigReference of this ApiManagementApiVersionSet.
-func (mg *ApiManagementApiVersionSet) SetProviderConfigReference(r *xpv1.Reference) {
+// SetProviderConfigReference of this ManagementApiVersionSet.
+func (mg *ManagementApiVersionSet) SetProviderConfigReference(r *xpv1.Reference) {
 	mg.Spec.ProviderConfigReference = r
 }
 
 /*
-SetProviderReference of this ApiManagementApiVersionSet.
+SetProviderReference of this ManagementApiVersionSet.
 Deprecated: Use SetProviderConfigReference.
 */
-func (mg *ApiManagementApiVersionSet) SetProviderReference(r *xpv1.Reference) {
+func (mg *ManagementApiVersionSet) SetProviderReference(r *xpv1.Reference) {
 	mg.Spec.ProviderReference = r
 }
 
-// SetWriteConnectionSecretToReference of this ApiManagementApiVersionSet.
-func (mg *ApiManagementApiVersionSet) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
+// SetWriteConnectionSecretToReference of this ManagementApiVersionSet.
+func (mg *ManagementApiVersionSet) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
 	mg.Spec.WriteConnectionSecretToReference = r
 }
 
-// GetCondition of this ApiManagementAuthorizationServer.
-func (mg *ApiManagementAuthorizationServer) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
+// GetCondition of this ManagementAuthorizationServer.
+func (mg *ManagementAuthorizationServer) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
 	return mg.Status.GetCondition(ct)
 }
 
-// GetDeletionPolicy of this ApiManagementAuthorizationServer.
-func (mg *ApiManagementAuthorizationServer) GetDeletionPolicy() xpv1.DeletionPolicy {
+// GetDeletionPolicy of this ManagementAuthorizationServer.
+func (mg *ManagementAuthorizationServer) GetDeletionPolicy() xpv1.DeletionPolicy {
 	return mg.Spec.DeletionPolicy
 }
 
-// GetProviderConfigReference of this ApiManagementAuthorizationServer.
-func (mg *ApiManagementAuthorizationServer) GetProviderConfigReference() *xpv1.Reference {
+// GetProviderConfigReference of this ManagementAuthorizationServer.
+func (mg *ManagementAuthorizationServer) GetProviderConfigReference() *xpv1.Reference {
 	return mg.Spec.ProviderConfigReference
 }
 
 /*
-GetProviderReference of this ApiManagementAuthorizationServer.
+GetProviderReference of this ManagementAuthorizationServer.
 Deprecated: Use GetProviderConfigReference.
 */
-func (mg *ApiManagementAuthorizationServer) GetProviderReference() *xpv1.Reference {
+func (mg *ManagementAuthorizationServer) GetProviderReference() *xpv1.Reference {
 	return mg.Spec.ProviderReference
 }
 
-// GetWriteConnectionSecretToReference of this ApiManagementAuthorizationServer.
-func (mg *ApiManagementAuthorizationServer) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
+// GetWriteConnectionSecretToReference of this ManagementAuthorizationServer.
+func (mg *ManagementAuthorizationServer) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
 	return mg.Spec.WriteConnectionSecretToReference
 }
 
-// SetConditions of this ApiManagementAuthorizationServer.
-func (mg *ApiManagementAuthorizationServer) SetConditions(c ...xpv1.Condition) {
+// SetConditions of this ManagementAuthorizationServer.
+func (mg *ManagementAuthorizationServer) SetConditions(c ...xpv1.Condition) {
 	mg.Status.SetConditions(c...)
 }
 
-// SetDeletionPolicy of this ApiManagementAuthorizationServer.
-func (mg *ApiManagementAuthorizationServer) SetDeletionPolicy(r xpv1.DeletionPolicy) {
+// SetDeletionPolicy of this ManagementAuthorizationServer.
+func (mg *ManagementAuthorizationServer) SetDeletionPolicy(r xpv1.DeletionPolicy) {
 	mg.Spec.DeletionPolicy = r
 }
 
-// SetProviderConfigReference of this ApiManagementAuthorizationServer.
-func (mg *ApiManagementAuthorizationServer) SetProviderConfigReference(r *xpv1.Reference) {
+// SetProviderConfigReference of this ManagementAuthorizationServer.
+func (mg *ManagementAuthorizationServer) SetProviderConfigReference(r *xpv1.Reference) {
 	mg.Spec.ProviderConfigReference = r
 }
 
 /*
-SetProviderReference of this ApiManagementAuthorizationServer.
+SetProviderReference of this ManagementAuthorizationServer.
 Deprecated: Use SetProviderConfigReference.
 */
-func (mg *ApiManagementAuthorizationServer) SetProviderReference(r *xpv1.Reference) {
+func (mg *ManagementAuthorizationServer) SetProviderReference(r *xpv1.Reference) {
 	mg.Spec.ProviderReference = r
 }
 
-// SetWriteConnectionSecretToReference of this ApiManagementAuthorizationServer.
-func (mg *ApiManagementAuthorizationServer) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
+// SetWriteConnectionSecretToReference of this ManagementAuthorizationServer.
+func (mg *ManagementAuthorizationServer) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
 	mg.Spec.WriteConnectionSecretToReference = r
 }
 
-// GetCondition of this ApiManagementBackend.
-func (mg *ApiManagementBackend) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
+// GetCondition of this ManagementBackend.
+func (mg *ManagementBackend) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
 	return mg.Status.GetCondition(ct)
 }
 
-// GetDeletionPolicy of this ApiManagementBackend.
-func (mg *ApiManagementBackend) GetDeletionPolicy() xpv1.DeletionPolicy {
+// GetDeletionPolicy of this ManagementBackend.
+func (mg *ManagementBackend) GetDeletionPolicy() xpv1.DeletionPolicy {
 	return mg.Spec.DeletionPolicy
 }
 
-// GetProviderConfigReference of this ApiManagementBackend.
-func (mg *ApiManagementBackend) GetProviderConfigReference() *xpv1.Reference {
+// GetProviderConfigReference of this ManagementBackend.
+func (mg *ManagementBackend) GetProviderConfigReference() *xpv1.Reference {
 	return mg.Spec.ProviderConfigReference
 }
 
 /*
-GetProviderReference of this ApiManagementBackend.
+GetProviderReference of this ManagementBackend.
 Deprecated: Use GetProviderConfigReference.
 */
-func (mg *ApiManagementBackend) GetProviderReference() *xpv1.Reference {
+func (mg *ManagementBackend) GetProviderReference() *xpv1.Reference {
 	return mg.Spec.ProviderReference
 }
 
-// GetWriteConnectionSecretToReference of this ApiManagementBackend.
-func (mg *ApiManagementBackend) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
+// GetWriteConnectionSecretToReference of this ManagementBackend.
+func (mg *ManagementBackend) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
 	return mg.Spec.WriteConnectionSecretToReference
 }
 
-// SetConditions of this ApiManagementBackend.
-func (mg *ApiManagementBackend) SetConditions(c ...xpv1.Condition) {
+// SetConditions of this ManagementBackend.
+func (mg *ManagementBackend) SetConditions(c ...xpv1.Condition) {
 	mg.Status.SetConditions(c...)
 }
 
-// SetDeletionPolicy of this ApiManagementBackend.
-func (mg *ApiManagementBackend) SetDeletionPolicy(r xpv1.DeletionPolicy) {
+// SetDeletionPolicy of this ManagementBackend.
+func (mg *ManagementBackend) SetDeletionPolicy(r xpv1.DeletionPolicy) {
 	mg.Spec.DeletionPolicy = r
 }
 
-// SetProviderConfigReference of this ApiManagementBackend.
-func (mg *ApiManagementBackend) SetProviderConfigReference(r *xpv1.Reference) {
+// SetProviderConfigReference of this ManagementBackend.
+func (mg *ManagementBackend) SetProviderConfigReference(r *xpv1.Reference) {
 	mg.Spec.ProviderConfigReference = r
 }
 
 /*
-SetProviderReference of this ApiManagementBackend.
+SetProviderReference of this ManagementBackend.
 Deprecated: Use SetProviderConfigReference.
 */
-func (mg *ApiManagementBackend) SetProviderReference(r *xpv1.Reference) {
+func (mg *ManagementBackend) SetProviderReference(r *xpv1.Reference) {
 	mg.Spec.ProviderReference = r
 }
 
-// SetWriteConnectionSecretToReference of this ApiManagementBackend.
-func (mg *ApiManagementBackend) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
+// SetWriteConnectionSecretToReference of this ManagementBackend.
+func (mg *ManagementBackend) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
 	mg.Spec.WriteConnectionSecretToReference = r
 }
 
-// GetCondition of this ApiManagementCertificate.
-func (mg *ApiManagementCertificate) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
+// GetCondition of this ManagementCertificate.
+func (mg *ManagementCertificate) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
 	return mg.Status.GetCondition(ct)
 }
 
-// GetDeletionPolicy of this ApiManagementCertificate.
-func (mg *ApiManagementCertificate) GetDeletionPolicy() xpv1.DeletionPolicy {
+// GetDeletionPolicy of this ManagementCertificate.
+func (mg *ManagementCertificate) GetDeletionPolicy() xpv1.DeletionPolicy {
 	return mg.Spec.DeletionPolicy
 }
 
-// GetProviderConfigReference of this ApiManagementCertificate.
-func (mg *ApiManagementCertificate) GetProviderConfigReference() *xpv1.Reference {
+// GetProviderConfigReference of this ManagementCertificate.
+func (mg *ManagementCertificate) GetProviderConfigReference() *xpv1.Reference {
 	return mg.Spec.ProviderConfigReference
 }
 
 /*
-GetProviderReference of this ApiManagementCertificate.
+GetProviderReference of this ManagementCertificate.
 Deprecated: Use GetProviderConfigReference.
 */
-func (mg *ApiManagementCertificate) GetProviderReference() *xpv1.Reference {
+func (mg *ManagementCertificate) GetProviderReference() *xpv1.Reference {
 	return mg.Spec.ProviderReference
 }
 
-// GetWriteConnectionSecretToReference of this ApiManagementCertificate.
-func (mg *ApiManagementCertificate) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
+// GetWriteConnectionSecretToReference of this ManagementCertificate.
+func (mg *ManagementCertificate) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
 	return mg.Spec.WriteConnectionSecretToReference
 }
 
-// SetConditions of this ApiManagementCertificate.
-func (mg *ApiManagementCertificate) SetConditions(c ...xpv1.Condition) {
+// SetConditions of this ManagementCertificate.
+func (mg *ManagementCertificate) SetConditions(c ...xpv1.Condition) {
 	mg.Status.SetConditions(c...)
 }
 
-// SetDeletionPolicy of this ApiManagementCertificate.
-func (mg *ApiManagementCertificate) SetDeletionPolicy(r xpv1.DeletionPolicy) {
+// SetDeletionPolicy of this ManagementCertificate.
+func (mg *ManagementCertificate) SetDeletionPolicy(r xpv1.DeletionPolicy) {
 	mg.Spec.DeletionPolicy = r
 }
 
-// SetProviderConfigReference of this ApiManagementCertificate.
-func (mg *ApiManagementCertificate) SetProviderConfigReference(r *xpv1.Reference) {
+// SetProviderConfigReference of this ManagementCertificate.
+func (mg *ManagementCertificate) SetProviderConfigReference(r *xpv1.Reference) {
 	mg.Spec.ProviderConfigReference = r
 }
 
 /*
-SetProviderReference of this ApiManagementCertificate.
+SetProviderReference of this ManagementCertificate.
 Deprecated: Use SetProviderConfigReference.
 */
-func (mg *ApiManagementCertificate) SetProviderReference(r *xpv1.Reference) {
+func (mg *ManagementCertificate) SetProviderReference(r *xpv1.Reference) {
 	mg.Spec.ProviderReference = r
 }
 
-// SetWriteConnectionSecretToReference of this ApiManagementCertificate.
-func (mg *ApiManagementCertificate) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
+// SetWriteConnectionSecretToReference of this ManagementCertificate.
+func (mg *ManagementCertificate) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
 	mg.Spec.WriteConnectionSecretToReference = r
 }
 
-// GetCondition of this ApiManagementCustomDomain.
-func (mg *ApiManagementCustomDomain) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
+// GetCondition of this ManagementCustomDomain.
+func (mg *ManagementCustomDomain) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
 	return mg.Status.GetCondition(ct)
 }
 
-// GetDeletionPolicy of this ApiManagementCustomDomain.
-func (mg *ApiManagementCustomDomain) GetDeletionPolicy() xpv1.DeletionPolicy {
+// GetDeletionPolicy of this ManagementCustomDomain.
+func (mg *ManagementCustomDomain) GetDeletionPolicy() xpv1.DeletionPolicy {
 	return mg.Spec.DeletionPolicy
 }
 
-// GetProviderConfigReference of this ApiManagementCustomDomain.
-func (mg *ApiManagementCustomDomain) GetProviderConfigReference() *xpv1.Reference {
+// GetProviderConfigReference of this ManagementCustomDomain.
+func (mg *ManagementCustomDomain) GetProviderConfigReference() *xpv1.Reference {
 	return mg.Spec.ProviderConfigReference
 }
 
 /*
-GetProviderReference of this ApiManagementCustomDomain.
+GetProviderReference of this ManagementCustomDomain.
 Deprecated: Use GetProviderConfigReference.
 */
-func (mg *ApiManagementCustomDomain) GetProviderReference() *xpv1.Reference {
+func (mg *ManagementCustomDomain) GetProviderReference() *xpv1.Reference {
 	return mg.Spec.ProviderReference
 }
 
-// GetWriteConnectionSecretToReference of this ApiManagementCustomDomain.
-func (mg *ApiManagementCustomDomain) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
+// GetWriteConnectionSecretToReference of this ManagementCustomDomain.
+func (mg *ManagementCustomDomain) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
 	return mg.Spec.WriteConnectionSecretToReference
 }
 
-// SetConditions of this ApiManagementCustomDomain.
-func (mg *ApiManagementCustomDomain) SetConditions(c ...xpv1.Condition) {
+// SetConditions of this ManagementCustomDomain.
+func (mg *ManagementCustomDomain) SetConditions(c ...xpv1.Condition) {
 	mg.Status.SetConditions(c...)
 }
 
-// SetDeletionPolicy of this ApiManagementCustomDomain.
-func (mg *ApiManagementCustomDomain) SetDeletionPolicy(r xpv1.DeletionPolicy) {
+// SetDeletionPolicy of this ManagementCustomDomain.
+func (mg *ManagementCustomDomain) SetDeletionPolicy(r xpv1.DeletionPolicy) {
 	mg.Spec.DeletionPolicy = r
 }
 
-// SetProviderConfigReference of this ApiManagementCustomDomain.
-func (mg *ApiManagementCustomDomain) SetProviderConfigReference(r *xpv1.Reference) {
+// SetProviderConfigReference of this ManagementCustomDomain.
+func (mg *ManagementCustomDomain) SetProviderConfigReference(r *xpv1.Reference) {
 	mg.Spec.ProviderConfigReference = r
 }
 
 /*
-SetProviderReference of this ApiManagementCustomDomain.
+SetProviderReference of this ManagementCustomDomain.
 Deprecated: Use SetProviderConfigReference.
 */
-func (mg *ApiManagementCustomDomain) SetProviderReference(r *xpv1.Reference) {
+func (mg *ManagementCustomDomain) SetProviderReference(r *xpv1.Reference) {
 	mg.Spec.ProviderReference = r
 }
 
-// SetWriteConnectionSecretToReference of this ApiManagementCustomDomain.
-func (mg *ApiManagementCustomDomain) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
+// SetWriteConnectionSecretToReference of this ManagementCustomDomain.
+func (mg *ManagementCustomDomain) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
 	mg.Spec.WriteConnectionSecretToReference = r
 }
 
-// GetCondition of this ApiManagementDiagnostic.
-func (mg *ApiManagementDiagnostic) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
+// GetCondition of this ManagementDiagnostic.
+func (mg *ManagementDiagnostic) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
 	return mg.Status.GetCondition(ct)
 }
 
-// GetDeletionPolicy of this ApiManagementDiagnostic.
-func (mg *ApiManagementDiagnostic) GetDeletionPolicy() xpv1.DeletionPolicy {
+// GetDeletionPolicy of this ManagementDiagnostic.
+func (mg *ManagementDiagnostic) GetDeletionPolicy() xpv1.DeletionPolicy {
 	return mg.Spec.DeletionPolicy
 }
 
-// GetProviderConfigReference of this ApiManagementDiagnostic.
-func (mg *ApiManagementDiagnostic) GetProviderConfigReference() *xpv1.Reference {
+// GetProviderConfigReference of this ManagementDiagnostic.
+func (mg *ManagementDiagnostic) GetProviderConfigReference() *xpv1.Reference {
 	return mg.Spec.ProviderConfigReference
 }
 
 /*
-GetProviderReference of this ApiManagementDiagnostic.
+GetProviderReference of this ManagementDiagnostic.
 Deprecated: Use GetProviderConfigReference.
 */
-func (mg *ApiManagementDiagnostic) GetProviderReference() *xpv1.Reference {
+func (mg *ManagementDiagnostic) GetProviderReference() *xpv1.Reference {
 	return mg.Spec.ProviderReference
 }
 
-// GetWriteConnectionSecretToReference of this ApiManagementDiagnostic.
-func (mg *ApiManagementDiagnostic) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
+// GetWriteConnectionSecretToReference of this ManagementDiagnostic.
+func (mg *ManagementDiagnostic) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
 	return mg.Spec.WriteConnectionSecretToReference
 }
 
-// SetConditions of this ApiManagementDiagnostic.
-func (mg *ApiManagementDiagnostic) SetConditions(c ...xpv1.Condition) {
+// SetConditions of this ManagementDiagnostic.
+func (mg *ManagementDiagnostic) SetConditions(c ...xpv1.Condition) {
 	mg.Status.SetConditions(c...)
 }
 
-// SetDeletionPolicy of this ApiManagementDiagnostic.
-func (mg *ApiManagementDiagnostic) SetDeletionPolicy(r xpv1.DeletionPolicy) {
+// SetDeletionPolicy of this ManagementDiagnostic.
+func (mg *ManagementDiagnostic) SetDeletionPolicy(r xpv1.DeletionPolicy) {
 	mg.Spec.DeletionPolicy = r
 }
 
-// SetProviderConfigReference of this ApiManagementDiagnostic.
-func (mg *ApiManagementDiagnostic) SetProviderConfigReference(r *xpv1.Reference) {
+// SetProviderConfigReference of this ManagementDiagnostic.
+func (mg *ManagementDiagnostic) SetProviderConfigReference(r *xpv1.Reference) {
 	mg.Spec.ProviderConfigReference = r
 }
 
 /*
-SetProviderReference of this ApiManagementDiagnostic.
+SetProviderReference of this ManagementDiagnostic.
 Deprecated: Use SetProviderConfigReference.
 */
-func (mg *ApiManagementDiagnostic) SetProviderReference(r *xpv1.Reference) {
+func (mg *ManagementDiagnostic) SetProviderReference(r *xpv1.Reference) {
 	mg.Spec.ProviderReference = r
 }
 
-// SetWriteConnectionSecretToReference of this ApiManagementDiagnostic.
-func (mg *ApiManagementDiagnostic) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
+// SetWriteConnectionSecretToReference of this ManagementDiagnostic.
+func (mg *ManagementDiagnostic) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
 	mg.Spec.WriteConnectionSecretToReference = r
 }
 
-// GetCondition of this ApiManagementEmailTemplate.
-func (mg *ApiManagementEmailTemplate) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
+// GetCondition of this ManagementEmailTemplate.
+func (mg *ManagementEmailTemplate) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
 	return mg.Status.GetCondition(ct)
 }
 
-// GetDeletionPolicy of this ApiManagementEmailTemplate.
-func (mg *ApiManagementEmailTemplate) GetDeletionPolicy() xpv1.DeletionPolicy {
+// GetDeletionPolicy of this ManagementEmailTemplate.
+func (mg *ManagementEmailTemplate) GetDeletionPolicy() xpv1.DeletionPolicy {
 	return mg.Spec.DeletionPolicy
 }
 
-// GetProviderConfigReference of this ApiManagementEmailTemplate.
-func (mg *ApiManagementEmailTemplate) GetProviderConfigReference() *xpv1.Reference {
+// GetProviderConfigReference of this ManagementEmailTemplate.
+func (mg *ManagementEmailTemplate) GetProviderConfigReference() *xpv1.Reference {
 	return mg.Spec.ProviderConfigReference
 }
 
 /*
-GetProviderReference of this ApiManagementEmailTemplate.
+GetProviderReference of this ManagementEmailTemplate.
 Deprecated: Use GetProviderConfigReference.
 */
-func (mg *ApiManagementEmailTemplate) GetProviderReference() *xpv1.Reference {
+func (mg *ManagementEmailTemplate) GetProviderReference() *xpv1.Reference {
 	return mg.Spec.ProviderReference
 }
 
-// GetWriteConnectionSecretToReference of this ApiManagementEmailTemplate.
-func (mg *ApiManagementEmailTemplate) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
+// GetWriteConnectionSecretToReference of this ManagementEmailTemplate.
+func (mg *ManagementEmailTemplate) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
 	return mg.Spec.WriteConnectionSecretToReference
 }
 
-// SetConditions of this ApiManagementEmailTemplate.
-func (mg *ApiManagementEmailTemplate) SetConditions(c ...xpv1.Condition) {
+// SetConditions of this ManagementEmailTemplate.
+func (mg *ManagementEmailTemplate) SetConditions(c ...xpv1.Condition) {
 	mg.Status.SetConditions(c...)
 }
 
-// SetDeletionPolicy of this ApiManagementEmailTemplate.
-func (mg *ApiManagementEmailTemplate) SetDeletionPolicy(r xpv1.DeletionPolicy) {
+// SetDeletionPolicy of this ManagementEmailTemplate.
+func (mg *ManagementEmailTemplate) SetDeletionPolicy(r xpv1.DeletionPolicy) {
 	mg.Spec.DeletionPolicy = r
 }
 
-// SetProviderConfigReference of this ApiManagementEmailTemplate.
-func (mg *ApiManagementEmailTemplate) SetProviderConfigReference(r *xpv1.Reference) {
+// SetProviderConfigReference of this ManagementEmailTemplate.
+func (mg *ManagementEmailTemplate) SetProviderConfigReference(r *xpv1.Reference) {
 	mg.Spec.ProviderConfigReference = r
 }
 
 /*
-SetProviderReference of this ApiManagementEmailTemplate.
+SetProviderReference of this ManagementEmailTemplate.
 Deprecated: Use SetProviderConfigReference.
 */
-func (mg *ApiManagementEmailTemplate) SetProviderReference(r *xpv1.Reference) {
+func (mg *ManagementEmailTemplate) SetProviderReference(r *xpv1.Reference) {
 	mg.Spec.ProviderReference = r
 }
 
-// SetWriteConnectionSecretToReference of this ApiManagementEmailTemplate.
-func (mg *ApiManagementEmailTemplate) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
+// SetWriteConnectionSecretToReference of this ManagementEmailTemplate.
+func (mg *ManagementEmailTemplate) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
 	mg.Spec.WriteConnectionSecretToReference = r
 }
 
-// GetCondition of this ApiManagementGateway.
-func (mg *ApiManagementGateway) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
+// GetCondition of this ManagementGateway.
+func (mg *ManagementGateway) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
 	return mg.Status.GetCondition(ct)
 }
 
-// GetDeletionPolicy of this ApiManagementGateway.
-func (mg *ApiManagementGateway) GetDeletionPolicy() xpv1.DeletionPolicy {
+// GetDeletionPolicy of this ManagementGateway.
+func (mg *ManagementGateway) GetDeletionPolicy() xpv1.DeletionPolicy {
 	return mg.Spec.DeletionPolicy
 }
 
-// GetProviderConfigReference of this ApiManagementGateway.
-func (mg *ApiManagementGateway) GetProviderConfigReference() *xpv1.Reference {
+// GetProviderConfigReference of this ManagementGateway.
+func (mg *ManagementGateway) GetProviderConfigReference() *xpv1.Reference {
 	return mg.Spec.ProviderConfigReference
 }
 
 /*
-GetProviderReference of this ApiManagementGateway.
+GetProviderReference of this ManagementGateway.
 Deprecated: Use GetProviderConfigReference.
 */
-func (mg *ApiManagementGateway) GetProviderReference() *xpv1.Reference {
+func (mg *ManagementGateway) GetProviderReference() *xpv1.Reference {
 	return mg.Spec.ProviderReference
 }
 
-// GetWriteConnectionSecretToReference of this ApiManagementGateway.
-func (mg *ApiManagementGateway) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
+// GetWriteConnectionSecretToReference of this ManagementGateway.
+func (mg *ManagementGateway) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
 	return mg.Spec.WriteConnectionSecretToReference
 }
 
-// SetConditions of this ApiManagementGateway.
-func (mg *ApiManagementGateway) SetConditions(c ...xpv1.Condition) {
+// SetConditions of this ManagementGateway.
+func (mg *ManagementGateway) SetConditions(c ...xpv1.Condition) {
 	mg.Status.SetConditions(c...)
 }
 
-// SetDeletionPolicy of this ApiManagementGateway.
-func (mg *ApiManagementGateway) SetDeletionPolicy(r xpv1.DeletionPolicy) {
+// SetDeletionPolicy of this ManagementGateway.
+func (mg *ManagementGateway) SetDeletionPolicy(r xpv1.DeletionPolicy) {
 	mg.Spec.DeletionPolicy = r
 }
 
-// SetProviderConfigReference of this ApiManagementGateway.
-func (mg *ApiManagementGateway) SetProviderConfigReference(r *xpv1.Reference) {
+// SetProviderConfigReference of this ManagementGateway.
+func (mg *ManagementGateway) SetProviderConfigReference(r *xpv1.Reference) {
 	mg.Spec.ProviderConfigReference = r
 }
 
 /*
-SetProviderReference of this ApiManagementGateway.
+SetProviderReference of this ManagementGateway.
 Deprecated: Use SetProviderConfigReference.
 */
-func (mg *ApiManagementGateway) SetProviderReference(r *xpv1.Reference) {
+func (mg *ManagementGateway) SetProviderReference(r *xpv1.Reference) {
 	mg.Spec.ProviderReference = r
 }
 
-// SetWriteConnectionSecretToReference of this ApiManagementGateway.
-func (mg *ApiManagementGateway) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
+// SetWriteConnectionSecretToReference of this ManagementGateway.
+func (mg *ManagementGateway) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
 	mg.Spec.WriteConnectionSecretToReference = r
 }
 
-// GetCondition of this ApiManagementGatewayApi.
-func (mg *ApiManagementGatewayApi) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
+// GetCondition of this ManagementGatewayApi.
+func (mg *ManagementGatewayApi) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
 	return mg.Status.GetCondition(ct)
 }
 
-// GetDeletionPolicy of this ApiManagementGatewayApi.
-func (mg *ApiManagementGatewayApi) GetDeletionPolicy() xpv1.DeletionPolicy {
+// GetDeletionPolicy of this ManagementGatewayApi.
+func (mg *ManagementGatewayApi) GetDeletionPolicy() xpv1.DeletionPolicy {
 	return mg.Spec.DeletionPolicy
 }
 
-// GetProviderConfigReference of this ApiManagementGatewayApi.
-func (mg *ApiManagementGatewayApi) GetProviderConfigReference() *xpv1.Reference {
+// GetProviderConfigReference of this ManagementGatewayApi.
+func (mg *ManagementGatewayApi) GetProviderConfigReference() *xpv1.Reference {
 	return mg.Spec.ProviderConfigReference
 }
 
 /*
-GetProviderReference of this ApiManagementGatewayApi.
+GetProviderReference of this ManagementGatewayApi.
 Deprecated: Use GetProviderConfigReference.
 */
-func (mg *ApiManagementGatewayApi) GetProviderReference() *xpv1.Reference {
+func (mg *ManagementGatewayApi) GetProviderReference() *xpv1.Reference {
 	return mg.Spec.ProviderReference
 }
 
-// GetWriteConnectionSecretToReference of this ApiManagementGatewayApi.
-func (mg *ApiManagementGatewayApi) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
+// GetWriteConnectionSecretToReference of this ManagementGatewayApi.
+func (mg *ManagementGatewayApi) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
 	return mg.Spec.WriteConnectionSecretToReference
 }
 
-// SetConditions of this ApiManagementGatewayApi.
-func (mg *ApiManagementGatewayApi) SetConditions(c ...xpv1.Condition) {
+// SetConditions of this ManagementGatewayApi.
+func (mg *ManagementGatewayApi) SetConditions(c ...xpv1.Condition) {
 	mg.Status.SetConditions(c...)
 }
 
-// SetDeletionPolicy of this ApiManagementGatewayApi.
-func (mg *ApiManagementGatewayApi) SetDeletionPolicy(r xpv1.DeletionPolicy) {
+// SetDeletionPolicy of this ManagementGatewayApi.
+func (mg *ManagementGatewayApi) SetDeletionPolicy(r xpv1.DeletionPolicy) {
 	mg.Spec.DeletionPolicy = r
 }
 
-// SetProviderConfigReference of this ApiManagementGatewayApi.
-func (mg *ApiManagementGatewayApi) SetProviderConfigReference(r *xpv1.Reference) {
+// SetProviderConfigReference of this ManagementGatewayApi.
+func (mg *ManagementGatewayApi) SetProviderConfigReference(r *xpv1.Reference) {
 	mg.Spec.ProviderConfigReference = r
 }
 
 /*
-SetProviderReference of this ApiManagementGatewayApi.
+SetProviderReference of this ManagementGatewayApi.
 Deprecated: Use SetProviderConfigReference.
 */
-func (mg *ApiManagementGatewayApi) SetProviderReference(r *xpv1.Reference) {
+func (mg *ManagementGatewayApi) SetProviderReference(r *xpv1.Reference) {
 	mg.Spec.ProviderReference = r
 }
 
-// SetWriteConnectionSecretToReference of this ApiManagementGatewayApi.
-func (mg *ApiManagementGatewayApi) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
+// SetWriteConnectionSecretToReference of this ManagementGatewayApi.
+func (mg *ManagementGatewayApi) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
 	mg.Spec.WriteConnectionSecretToReference = r
 }
 
-// GetCondition of this ApiManagementGroupUser.
-func (mg *ApiManagementGroupUser) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
+// GetCondition of this ManagementIdentityProviderAad.
+func (mg *ManagementIdentityProviderAad) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
 	return mg.Status.GetCondition(ct)
 }
 
-// GetDeletionPolicy of this ApiManagementGroupUser.
-func (mg *ApiManagementGroupUser) GetDeletionPolicy() xpv1.DeletionPolicy {
+// GetDeletionPolicy of this ManagementIdentityProviderAad.
+func (mg *ManagementIdentityProviderAad) GetDeletionPolicy() xpv1.DeletionPolicy {
 	return mg.Spec.DeletionPolicy
 }
 
-// GetProviderConfigReference of this ApiManagementGroupUser.
-func (mg *ApiManagementGroupUser) GetProviderConfigReference() *xpv1.Reference {
+// GetProviderConfigReference of this ManagementIdentityProviderAad.
+func (mg *ManagementIdentityProviderAad) GetProviderConfigReference() *xpv1.Reference {
 	return mg.Spec.ProviderConfigReference
 }
 
 /*
-GetProviderReference of this ApiManagementGroupUser.
+GetProviderReference of this ManagementIdentityProviderAad.
 Deprecated: Use GetProviderConfigReference.
 */
-func (mg *ApiManagementGroupUser) GetProviderReference() *xpv1.Reference {
+func (mg *ManagementIdentityProviderAad) GetProviderReference() *xpv1.Reference {
 	return mg.Spec.ProviderReference
 }
 
-// GetWriteConnectionSecretToReference of this ApiManagementGroupUser.
-func (mg *ApiManagementGroupUser) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
+// GetWriteConnectionSecretToReference of this ManagementIdentityProviderAad.
+func (mg *ManagementIdentityProviderAad) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
 	return mg.Spec.WriteConnectionSecretToReference
 }
 
-// SetConditions of this ApiManagementGroupUser.
-func (mg *ApiManagementGroupUser) SetConditions(c ...xpv1.Condition) {
+// SetConditions of this ManagementIdentityProviderAad.
+func (mg *ManagementIdentityProviderAad) SetConditions(c ...xpv1.Condition) {
 	mg.Status.SetConditions(c...)
 }
 
-// SetDeletionPolicy of this ApiManagementGroupUser.
-func (mg *ApiManagementGroupUser) SetDeletionPolicy(r xpv1.DeletionPolicy) {
+// SetDeletionPolicy of this ManagementIdentityProviderAad.
+func (mg *ManagementIdentityProviderAad) SetDeletionPolicy(r xpv1.DeletionPolicy) {
 	mg.Spec.DeletionPolicy = r
 }
 
-// SetProviderConfigReference of this ApiManagementGroupUser.
-func (mg *ApiManagementGroupUser) SetProviderConfigReference(r *xpv1.Reference) {
+// SetProviderConfigReference of this ManagementIdentityProviderAad.
+func (mg *ManagementIdentityProviderAad) SetProviderConfigReference(r *xpv1.Reference) {
 	mg.Spec.ProviderConfigReference = r
 }
 
 /*
-SetProviderReference of this ApiManagementGroupUser.
+SetProviderReference of this ManagementIdentityProviderAad.
 Deprecated: Use SetProviderConfigReference.
 */
-func (mg *ApiManagementGroupUser) SetProviderReference(r *xpv1.Reference) {
+func (mg *ManagementIdentityProviderAad) SetProviderReference(r *xpv1.Reference) {
 	mg.Spec.ProviderReference = r
 }
 
-// SetWriteConnectionSecretToReference of this ApiManagementGroupUser.
-func (mg *ApiManagementGroupUser) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
+// SetWriteConnectionSecretToReference of this ManagementIdentityProviderAad.
+func (mg *ManagementIdentityProviderAad) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
 	mg.Spec.WriteConnectionSecretToReference = r
 }
 
-// GetCondition of this ApiManagementIdentityProviderAad.
-func (mg *ApiManagementIdentityProviderAad) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
+// GetCondition of this ManagementIdentityProviderAadb2C.
+func (mg *ManagementIdentityProviderAadb2C) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
 	return mg.Status.GetCondition(ct)
 }
 
-// GetDeletionPolicy of this ApiManagementIdentityProviderAad.
-func (mg *ApiManagementIdentityProviderAad) GetDeletionPolicy() xpv1.DeletionPolicy {
+// GetDeletionPolicy of this ManagementIdentityProviderAadb2C.
+func (mg *ManagementIdentityProviderAadb2C) GetDeletionPolicy() xpv1.DeletionPolicy {
 	return mg.Spec.DeletionPolicy
 }
 
-// GetProviderConfigReference of this ApiManagementIdentityProviderAad.
-func (mg *ApiManagementIdentityProviderAad) GetProviderConfigReference() *xpv1.Reference {
+// GetProviderConfigReference of this ManagementIdentityProviderAadb2C.
+func (mg *ManagementIdentityProviderAadb2C) GetProviderConfigReference() *xpv1.Reference {
 	return mg.Spec.ProviderConfigReference
 }
 
 /*
-GetProviderReference of this ApiManagementIdentityProviderAad.
+GetProviderReference of this ManagementIdentityProviderAadb2C.
 Deprecated: Use GetProviderConfigReference.
 */
-func (mg *ApiManagementIdentityProviderAad) GetProviderReference() *xpv1.Reference {
+func (mg *ManagementIdentityProviderAadb2C) GetProviderReference() *xpv1.Reference {
 	return mg.Spec.ProviderReference
 }
 
-// GetWriteConnectionSecretToReference of this ApiManagementIdentityProviderAad.
-func (mg *ApiManagementIdentityProviderAad) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
+// GetWriteConnectionSecretToReference of this ManagementIdentityProviderAadb2C.
+func (mg *ManagementIdentityProviderAadb2C) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
 	return mg.Spec.WriteConnectionSecretToReference
 }
 
-// SetConditions of this ApiManagementIdentityProviderAad.
-func (mg *ApiManagementIdentityProviderAad) SetConditions(c ...xpv1.Condition) {
+// SetConditions of this ManagementIdentityProviderAadb2C.
+func (mg *ManagementIdentityProviderAadb2C) SetConditions(c ...xpv1.Condition) {
 	mg.Status.SetConditions(c...)
 }
 
-// SetDeletionPolicy of this ApiManagementIdentityProviderAad.
-func (mg *ApiManagementIdentityProviderAad) SetDeletionPolicy(r xpv1.DeletionPolicy) {
+// SetDeletionPolicy of this ManagementIdentityProviderAadb2C.
+func (mg *ManagementIdentityProviderAadb2C) SetDeletionPolicy(r xpv1.DeletionPolicy) {
 	mg.Spec.DeletionPolicy = r
 }
 
-// SetProviderConfigReference of this ApiManagementIdentityProviderAad.
-func (mg *ApiManagementIdentityProviderAad) SetProviderConfigReference(r *xpv1.Reference) {
+// SetProviderConfigReference of this ManagementIdentityProviderAadb2C.
+func (mg *ManagementIdentityProviderAadb2C) SetProviderConfigReference(r *xpv1.Reference) {
 	mg.Spec.ProviderConfigReference = r
 }
 
 /*
-SetProviderReference of this ApiManagementIdentityProviderAad.
+SetProviderReference of this ManagementIdentityProviderAadb2C.
 Deprecated: Use SetProviderConfigReference.
 */
-func (mg *ApiManagementIdentityProviderAad) SetProviderReference(r *xpv1.Reference) {
+func (mg *ManagementIdentityProviderAadb2C) SetProviderReference(r *xpv1.Reference) {
 	mg.Spec.ProviderReference = r
 }
 
-// SetWriteConnectionSecretToReference of this ApiManagementIdentityProviderAad.
-func (mg *ApiManagementIdentityProviderAad) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
+// SetWriteConnectionSecretToReference of this ManagementIdentityProviderAadb2C.
+func (mg *ManagementIdentityProviderAadb2C) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
 	mg.Spec.WriteConnectionSecretToReference = r
 }
 
-// GetCondition of this ApiManagementIdentityProviderAadb2C.
-func (mg *ApiManagementIdentityProviderAadb2C) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
+// GetCondition of this ManagementIdentityProviderFacebook.
+func (mg *ManagementIdentityProviderFacebook) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
 	return mg.Status.GetCondition(ct)
 }
 
-// GetDeletionPolicy of this ApiManagementIdentityProviderAadb2C.
-func (mg *ApiManagementIdentityProviderAadb2C) GetDeletionPolicy() xpv1.DeletionPolicy {
+// GetDeletionPolicy of this ManagementIdentityProviderFacebook.
+func (mg *ManagementIdentityProviderFacebook) GetDeletionPolicy() xpv1.DeletionPolicy {
 	return mg.Spec.DeletionPolicy
 }
 
-// GetProviderConfigReference of this ApiManagementIdentityProviderAadb2C.
-func (mg *ApiManagementIdentityProviderAadb2C) GetProviderConfigReference() *xpv1.Reference {
+// GetProviderConfigReference of this ManagementIdentityProviderFacebook.
+func (mg *ManagementIdentityProviderFacebook) GetProviderConfigReference() *xpv1.Reference {
 	return mg.Spec.ProviderConfigReference
 }
 
 /*
-GetProviderReference of this ApiManagementIdentityProviderAadb2C.
+GetProviderReference of this ManagementIdentityProviderFacebook.
 Deprecated: Use GetProviderConfigReference.
 */
-func (mg *ApiManagementIdentityProviderAadb2C) GetProviderReference() *xpv1.Reference {
+func (mg *ManagementIdentityProviderFacebook) GetProviderReference() *xpv1.Reference {
 	return mg.Spec.ProviderReference
 }
 
-// GetWriteConnectionSecretToReference of this ApiManagementIdentityProviderAadb2C.
-func (mg *ApiManagementIdentityProviderAadb2C) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
+// GetWriteConnectionSecretToReference of this ManagementIdentityProviderFacebook.
+func (mg *ManagementIdentityProviderFacebook) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
 	return mg.Spec.WriteConnectionSecretToReference
 }
 
-// SetConditions of this ApiManagementIdentityProviderAadb2C.
-func (mg *ApiManagementIdentityProviderAadb2C) SetConditions(c ...xpv1.Condition) {
+// SetConditions of this ManagementIdentityProviderFacebook.
+func (mg *ManagementIdentityProviderFacebook) SetConditions(c ...xpv1.Condition) {
 	mg.Status.SetConditions(c...)
 }
 
-// SetDeletionPolicy of this ApiManagementIdentityProviderAadb2C.
-func (mg *ApiManagementIdentityProviderAadb2C) SetDeletionPolicy(r xpv1.DeletionPolicy) {
+// SetDeletionPolicy of this ManagementIdentityProviderFacebook.
+func (mg *ManagementIdentityProviderFacebook) SetDeletionPolicy(r xpv1.DeletionPolicy) {
 	mg.Spec.DeletionPolicy = r
 }
 
-// SetProviderConfigReference of this ApiManagementIdentityProviderAadb2C.
-func (mg *ApiManagementIdentityProviderAadb2C) SetProviderConfigReference(r *xpv1.Reference) {
+// SetProviderConfigReference of this ManagementIdentityProviderFacebook.
+func (mg *ManagementIdentityProviderFacebook) SetProviderConfigReference(r *xpv1.Reference) {
 	mg.Spec.ProviderConfigReference = r
 }
 
 /*
-SetProviderReference of this ApiManagementIdentityProviderAadb2C.
+SetProviderReference of this ManagementIdentityProviderFacebook.
 Deprecated: Use SetProviderConfigReference.
 */
-func (mg *ApiManagementIdentityProviderAadb2C) SetProviderReference(r *xpv1.Reference) {
+func (mg *ManagementIdentityProviderFacebook) SetProviderReference(r *xpv1.Reference) {
 	mg.Spec.ProviderReference = r
 }
 
-// SetWriteConnectionSecretToReference of this ApiManagementIdentityProviderAadb2C.
-func (mg *ApiManagementIdentityProviderAadb2C) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
+// SetWriteConnectionSecretToReference of this ManagementIdentityProviderFacebook.
+func (mg *ManagementIdentityProviderFacebook) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
 	mg.Spec.WriteConnectionSecretToReference = r
 }
 
-// GetCondition of this ApiManagementIdentityProviderFacebook.
-func (mg *ApiManagementIdentityProviderFacebook) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
+// GetCondition of this ManagementIdentityProviderGoogle.
+func (mg *ManagementIdentityProviderGoogle) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
 	return mg.Status.GetCondition(ct)
 }
 
-// GetDeletionPolicy of this ApiManagementIdentityProviderFacebook.
-func (mg *ApiManagementIdentityProviderFacebook) GetDeletionPolicy() xpv1.DeletionPolicy {
+// GetDeletionPolicy of this ManagementIdentityProviderGoogle.
+func (mg *ManagementIdentityProviderGoogle) GetDeletionPolicy() xpv1.DeletionPolicy {
 	return mg.Spec.DeletionPolicy
 }
 
-// GetProviderConfigReference of this ApiManagementIdentityProviderFacebook.
-func (mg *ApiManagementIdentityProviderFacebook) GetProviderConfigReference() *xpv1.Reference {
+// GetProviderConfigReference of this ManagementIdentityProviderGoogle.
+func (mg *ManagementIdentityProviderGoogle) GetProviderConfigReference() *xpv1.Reference {
 	return mg.Spec.ProviderConfigReference
 }
 
 /*
-GetProviderReference of this ApiManagementIdentityProviderFacebook.
+GetProviderReference of this ManagementIdentityProviderGoogle.
 Deprecated: Use GetProviderConfigReference.
 */
-func (mg *ApiManagementIdentityProviderFacebook) GetProviderReference() *xpv1.Reference {
+func (mg *ManagementIdentityProviderGoogle) GetProviderReference() *xpv1.Reference {
 	return mg.Spec.ProviderReference
 }
 
-// GetWriteConnectionSecretToReference of this ApiManagementIdentityProviderFacebook.
-func (mg *ApiManagementIdentityProviderFacebook) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
+// GetWriteConnectionSecretToReference of this ManagementIdentityProviderGoogle.
+func (mg *ManagementIdentityProviderGoogle) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
 	return mg.Spec.WriteConnectionSecretToReference
 }
 
-// SetConditions of this ApiManagementIdentityProviderFacebook.
-func (mg *ApiManagementIdentityProviderFacebook) SetConditions(c ...xpv1.Condition) {
+// SetConditions of this ManagementIdentityProviderGoogle.
+func (mg *ManagementIdentityProviderGoogle) SetConditions(c ...xpv1.Condition) {
 	mg.Status.SetConditions(c...)
 }
 
-// SetDeletionPolicy of this ApiManagementIdentityProviderFacebook.
-func (mg *ApiManagementIdentityProviderFacebook) SetDeletionPolicy(r xpv1.DeletionPolicy) {
+// SetDeletionPolicy of this ManagementIdentityProviderGoogle.
+func (mg *ManagementIdentityProviderGoogle) SetDeletionPolicy(r xpv1.DeletionPolicy) {
 	mg.Spec.DeletionPolicy = r
 }
 
-// SetProviderConfigReference of this ApiManagementIdentityProviderFacebook.
-func (mg *ApiManagementIdentityProviderFacebook) SetProviderConfigReference(r *xpv1.Reference) {
+// SetProviderConfigReference of this ManagementIdentityProviderGoogle.
+func (mg *ManagementIdentityProviderGoogle) SetProviderConfigReference(r *xpv1.Reference) {
 	mg.Spec.ProviderConfigReference = r
 }
 
 /*
-SetProviderReference of this ApiManagementIdentityProviderFacebook.
+SetProviderReference of this ManagementIdentityProviderGoogle.
 Deprecated: Use SetProviderConfigReference.
 */
-func (mg *ApiManagementIdentityProviderFacebook) SetProviderReference(r *xpv1.Reference) {
+func (mg *ManagementIdentityProviderGoogle) SetProviderReference(r *xpv1.Reference) {
 	mg.Spec.ProviderReference = r
 }
 
-// SetWriteConnectionSecretToReference of this ApiManagementIdentityProviderFacebook.
-func (mg *ApiManagementIdentityProviderFacebook) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
+// SetWriteConnectionSecretToReference of this ManagementIdentityProviderGoogle.
+func (mg *ManagementIdentityProviderGoogle) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
 	mg.Spec.WriteConnectionSecretToReference = r
 }
 
-// GetCondition of this ApiManagementIdentityProviderGoogle.
-func (mg *ApiManagementIdentityProviderGoogle) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
+// GetCondition of this ManagementIdentityProviderMicrosoft.
+func (mg *ManagementIdentityProviderMicrosoft) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
 	return mg.Status.GetCondition(ct)
 }
 
-// GetDeletionPolicy of this ApiManagementIdentityProviderGoogle.
-func (mg *ApiManagementIdentityProviderGoogle) GetDeletionPolicy() xpv1.DeletionPolicy {
+// GetDeletionPolicy of this ManagementIdentityProviderMicrosoft.
+func (mg *ManagementIdentityProviderMicrosoft) GetDeletionPolicy() xpv1.DeletionPolicy {
 	return mg.Spec.DeletionPolicy
 }
 
-// GetProviderConfigReference of this ApiManagementIdentityProviderGoogle.
-func (mg *ApiManagementIdentityProviderGoogle) GetProviderConfigReference() *xpv1.Reference {
+// GetProviderConfigReference of this ManagementIdentityProviderMicrosoft.
+func (mg *ManagementIdentityProviderMicrosoft) GetProviderConfigReference() *xpv1.Reference {
 	return mg.Spec.ProviderConfigReference
 }
 
 /*
-GetProviderReference of this ApiManagementIdentityProviderGoogle.
+GetProviderReference of this ManagementIdentityProviderMicrosoft.
 Deprecated: Use GetProviderConfigReference.
 */
-func (mg *ApiManagementIdentityProviderGoogle) GetProviderReference() *xpv1.Reference {
+func (mg *ManagementIdentityProviderMicrosoft) GetProviderReference() *xpv1.Reference {
 	return mg.Spec.ProviderReference
 }
 
-// GetWriteConnectionSecretToReference of this ApiManagementIdentityProviderGoogle.
-func (mg *ApiManagementIdentityProviderGoogle) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
+// GetWriteConnectionSecretToReference of this ManagementIdentityProviderMicrosoft.
+func (mg *ManagementIdentityProviderMicrosoft) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
 	return mg.Spec.WriteConnectionSecretToReference
 }
 
-// SetConditions of this ApiManagementIdentityProviderGoogle.
-func (mg *ApiManagementIdentityProviderGoogle) SetConditions(c ...xpv1.Condition) {
+// SetConditions of this ManagementIdentityProviderMicrosoft.
+func (mg *ManagementIdentityProviderMicrosoft) SetConditions(c ...xpv1.Condition) {
 	mg.Status.SetConditions(c...)
 }
 
-// SetDeletionPolicy of this ApiManagementIdentityProviderGoogle.
-func (mg *ApiManagementIdentityProviderGoogle) SetDeletionPolicy(r xpv1.DeletionPolicy) {
+// SetDeletionPolicy of this ManagementIdentityProviderMicrosoft.
+func (mg *ManagementIdentityProviderMicrosoft) SetDeletionPolicy(r xpv1.DeletionPolicy) {
 	mg.Spec.DeletionPolicy = r
 }
 
-// SetProviderConfigReference of this ApiManagementIdentityProviderGoogle.
-func (mg *ApiManagementIdentityProviderGoogle) SetProviderConfigReference(r *xpv1.Reference) {
+// SetProviderConfigReference of this ManagementIdentityProviderMicrosoft.
+func (mg *ManagementIdentityProviderMicrosoft) SetProviderConfigReference(r *xpv1.Reference) {
 	mg.Spec.ProviderConfigReference = r
 }
 
 /*
-SetProviderReference of this ApiManagementIdentityProviderGoogle.
+SetProviderReference of this ManagementIdentityProviderMicrosoft.
 Deprecated: Use SetProviderConfigReference.
 */
-func (mg *ApiManagementIdentityProviderGoogle) SetProviderReference(r *xpv1.Reference) {
+func (mg *ManagementIdentityProviderMicrosoft) SetProviderReference(r *xpv1.Reference) {
 	mg.Spec.ProviderReference = r
 }
 
-// SetWriteConnectionSecretToReference of this ApiManagementIdentityProviderGoogle.
-func (mg *ApiManagementIdentityProviderGoogle) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
+// SetWriteConnectionSecretToReference of this ManagementIdentityProviderMicrosoft.
+func (mg *ManagementIdentityProviderMicrosoft) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
 	mg.Spec.WriteConnectionSecretToReference = r
 }
 
-// GetCondition of this ApiManagementIdentityProviderMicrosoft.
-func (mg *ApiManagementIdentityProviderMicrosoft) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
+// GetCondition of this ManagementIdentityProviderTwitter.
+func (mg *ManagementIdentityProviderTwitter) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
 	return mg.Status.GetCondition(ct)
 }
 
-// GetDeletionPolicy of this ApiManagementIdentityProviderMicrosoft.
-func (mg *ApiManagementIdentityProviderMicrosoft) GetDeletionPolicy() xpv1.DeletionPolicy {
+// GetDeletionPolicy of this ManagementIdentityProviderTwitter.
+func (mg *ManagementIdentityProviderTwitter) GetDeletionPolicy() xpv1.DeletionPolicy {
 	return mg.Spec.DeletionPolicy
 }
 
-// GetProviderConfigReference of this ApiManagementIdentityProviderMicrosoft.
-func (mg *ApiManagementIdentityProviderMicrosoft) GetProviderConfigReference() *xpv1.Reference {
+// GetProviderConfigReference of this ManagementIdentityProviderTwitter.
+func (mg *ManagementIdentityProviderTwitter) GetProviderConfigReference() *xpv1.Reference {
 	return mg.Spec.ProviderConfigReference
 }
 
 /*
-GetProviderReference of this ApiManagementIdentityProviderMicrosoft.
+GetProviderReference of this ManagementIdentityProviderTwitter.
 Deprecated: Use GetProviderConfigReference.
 */
-func (mg *ApiManagementIdentityProviderMicrosoft) GetProviderReference() *xpv1.Reference {
+func (mg *ManagementIdentityProviderTwitter) GetProviderReference() *xpv1.Reference {
 	return mg.Spec.ProviderReference
 }
 
-// GetWriteConnectionSecretToReference of this ApiManagementIdentityProviderMicrosoft.
-func (mg *ApiManagementIdentityProviderMicrosoft) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
+// GetWriteConnectionSecretToReference of this ManagementIdentityProviderTwitter.
+func (mg *ManagementIdentityProviderTwitter) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
 	return mg.Spec.WriteConnectionSecretToReference
 }
 
-// SetConditions of this ApiManagementIdentityProviderMicrosoft.
-func (mg *ApiManagementIdentityProviderMicrosoft) SetConditions(c ...xpv1.Condition) {
+// SetConditions of this ManagementIdentityProviderTwitter.
+func (mg *ManagementIdentityProviderTwitter) SetConditions(c ...xpv1.Condition) {
 	mg.Status.SetConditions(c...)
 }
 
-// SetDeletionPolicy of this ApiManagementIdentityProviderMicrosoft.
-func (mg *ApiManagementIdentityProviderMicrosoft) SetDeletionPolicy(r xpv1.DeletionPolicy) {
+// SetDeletionPolicy of this ManagementIdentityProviderTwitter.
+func (mg *ManagementIdentityProviderTwitter) SetDeletionPolicy(r xpv1.DeletionPolicy) {
 	mg.Spec.DeletionPolicy = r
 }
 
-// SetProviderConfigReference of this ApiManagementIdentityProviderMicrosoft.
-func (mg *ApiManagementIdentityProviderMicrosoft) SetProviderConfigReference(r *xpv1.Reference) {
+// SetProviderConfigReference of this ManagementIdentityProviderTwitter.
+func (mg *ManagementIdentityProviderTwitter) SetProviderConfigReference(r *xpv1.Reference) {
 	mg.Spec.ProviderConfigReference = r
 }
 
 /*
-SetProviderReference of this ApiManagementIdentityProviderMicrosoft.
+SetProviderReference of this ManagementIdentityProviderTwitter.
 Deprecated: Use SetProviderConfigReference.
 */
-func (mg *ApiManagementIdentityProviderMicrosoft) SetProviderReference(r *xpv1.Reference) {
+func (mg *ManagementIdentityProviderTwitter) SetProviderReference(r *xpv1.Reference) {
 	mg.Spec.ProviderReference = r
 }
 
-// SetWriteConnectionSecretToReference of this ApiManagementIdentityProviderMicrosoft.
-func (mg *ApiManagementIdentityProviderMicrosoft) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
+// SetWriteConnectionSecretToReference of this ManagementIdentityProviderTwitter.
+func (mg *ManagementIdentityProviderTwitter) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
 	mg.Spec.WriteConnectionSecretToReference = r
 }
 
-// GetCondition of this ApiManagementIdentityProviderTwitter.
-func (mg *ApiManagementIdentityProviderTwitter) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
+// GetCondition of this ManagementLogger.
+func (mg *ManagementLogger) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
 	return mg.Status.GetCondition(ct)
 }
 
-// GetDeletionPolicy of this ApiManagementIdentityProviderTwitter.
-func (mg *ApiManagementIdentityProviderTwitter) GetDeletionPolicy() xpv1.DeletionPolicy {
+// GetDeletionPolicy of this ManagementLogger.
+func (mg *ManagementLogger) GetDeletionPolicy() xpv1.DeletionPolicy {
 	return mg.Spec.DeletionPolicy
 }
 
-// GetProviderConfigReference of this ApiManagementIdentityProviderTwitter.
-func (mg *ApiManagementIdentityProviderTwitter) GetProviderConfigReference() *xpv1.Reference {
+// GetProviderConfigReference of this ManagementLogger.
+func (mg *ManagementLogger) GetProviderConfigReference() *xpv1.Reference {
 	return mg.Spec.ProviderConfigReference
 }
 
 /*
-GetProviderReference of this ApiManagementIdentityProviderTwitter.
+GetProviderReference of this ManagementLogger.
 Deprecated: Use GetProviderConfigReference.
 */
-func (mg *ApiManagementIdentityProviderTwitter) GetProviderReference() *xpv1.Reference {
+func (mg *ManagementLogger) GetProviderReference() *xpv1.Reference {
 	return mg.Spec.ProviderReference
 }
 
-// GetWriteConnectionSecretToReference of this ApiManagementIdentityProviderTwitter.
-func (mg *ApiManagementIdentityProviderTwitter) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
+// GetWriteConnectionSecretToReference of this ManagementLogger.
+func (mg *ManagementLogger) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
 	return mg.Spec.WriteConnectionSecretToReference
 }
 
-// SetConditions of this ApiManagementIdentityProviderTwitter.
-func (mg *ApiManagementIdentityProviderTwitter) SetConditions(c ...xpv1.Condition) {
+// SetConditions of this ManagementLogger.
+func (mg *ManagementLogger) SetConditions(c ...xpv1.Condition) {
 	mg.Status.SetConditions(c...)
 }
 
-// SetDeletionPolicy of this ApiManagementIdentityProviderTwitter.
-func (mg *ApiManagementIdentityProviderTwitter) SetDeletionPolicy(r xpv1.DeletionPolicy) {
+// SetDeletionPolicy of this ManagementLogger.
+func (mg *ManagementLogger) SetDeletionPolicy(r xpv1.DeletionPolicy) {
 	mg.Spec.DeletionPolicy = r
 }
 
-// SetProviderConfigReference of this ApiManagementIdentityProviderTwitter.
-func (mg *ApiManagementIdentityProviderTwitter) SetProviderConfigReference(r *xpv1.Reference) {
+// SetProviderConfigReference of this ManagementLogger.
+func (mg *ManagementLogger) SetProviderConfigReference(r *xpv1.Reference) {
 	mg.Spec.ProviderConfigReference = r
 }
 
 /*
-SetProviderReference of this ApiManagementIdentityProviderTwitter.
+SetProviderReference of this ManagementLogger.
 Deprecated: Use SetProviderConfigReference.
 */
-func (mg *ApiManagementIdentityProviderTwitter) SetProviderReference(r *xpv1.Reference) {
+func (mg *ManagementLogger) SetProviderReference(r *xpv1.Reference) {
 	mg.Spec.ProviderReference = r
 }
 
-// SetWriteConnectionSecretToReference of this ApiManagementIdentityProviderTwitter.
-func (mg *ApiManagementIdentityProviderTwitter) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
+// SetWriteConnectionSecretToReference of this ManagementLogger.
+func (mg *ManagementLogger) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
 	mg.Spec.WriteConnectionSecretToReference = r
 }
 
-// GetCondition of this ApiManagementLogger.
-func (mg *ApiManagementLogger) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
+// GetCondition of this ManagementNamedValue.
+func (mg *ManagementNamedValue) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
 	return mg.Status.GetCondition(ct)
 }
 
-// GetDeletionPolicy of this ApiManagementLogger.
-func (mg *ApiManagementLogger) GetDeletionPolicy() xpv1.DeletionPolicy {
+// GetDeletionPolicy of this ManagementNamedValue.
+func (mg *ManagementNamedValue) GetDeletionPolicy() xpv1.DeletionPolicy {
 	return mg.Spec.DeletionPolicy
 }
 
-// GetProviderConfigReference of this ApiManagementLogger.
-func (mg *ApiManagementLogger) GetProviderConfigReference() *xpv1.Reference {
+// GetProviderConfigReference of this ManagementNamedValue.
+func (mg *ManagementNamedValue) GetProviderConfigReference() *xpv1.Reference {
 	return mg.Spec.ProviderConfigReference
 }
 
 /*
-GetProviderReference of this ApiManagementLogger.
+GetProviderReference of this ManagementNamedValue.
 Deprecated: Use GetProviderConfigReference.
 */
-func (mg *ApiManagementLogger) GetProviderReference() *xpv1.Reference {
+func (mg *ManagementNamedValue) GetProviderReference() *xpv1.Reference {
 	return mg.Spec.ProviderReference
 }
 
-// GetWriteConnectionSecretToReference of this ApiManagementLogger.
-func (mg *ApiManagementLogger) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
+// GetWriteConnectionSecretToReference of this ManagementNamedValue.
+func (mg *ManagementNamedValue) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
 	return mg.Spec.WriteConnectionSecretToReference
 }
 
-// SetConditions of this ApiManagementLogger.
-func (mg *ApiManagementLogger) SetConditions(c ...xpv1.Condition) {
+// SetConditions of this ManagementNamedValue.
+func (mg *ManagementNamedValue) SetConditions(c ...xpv1.Condition) {
 	mg.Status.SetConditions(c...)
 }
 
-// SetDeletionPolicy of this ApiManagementLogger.
-func (mg *ApiManagementLogger) SetDeletionPolicy(r xpv1.DeletionPolicy) {
+// SetDeletionPolicy of this ManagementNamedValue.
+func (mg *ManagementNamedValue) SetDeletionPolicy(r xpv1.DeletionPolicy) {
 	mg.Spec.DeletionPolicy = r
 }
 
-// SetProviderConfigReference of this ApiManagementLogger.
-func (mg *ApiManagementLogger) SetProviderConfigReference(r *xpv1.Reference) {
+// SetProviderConfigReference of this ManagementNamedValue.
+func (mg *ManagementNamedValue) SetProviderConfigReference(r *xpv1.Reference) {
 	mg.Spec.ProviderConfigReference = r
 }
 
 /*
-SetProviderReference of this ApiManagementLogger.
+SetProviderReference of this ManagementNamedValue.
 Deprecated: Use SetProviderConfigReference.
 */
-func (mg *ApiManagementLogger) SetProviderReference(r *xpv1.Reference) {
+func (mg *ManagementNamedValue) SetProviderReference(r *xpv1.Reference) {
 	mg.Spec.ProviderReference = r
 }
 
-// SetWriteConnectionSecretToReference of this ApiManagementLogger.
-func (mg *ApiManagementLogger) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
+// SetWriteConnectionSecretToReference of this ManagementNamedValue.
+func (mg *ManagementNamedValue) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
 	mg.Spec.WriteConnectionSecretToReference = r
 }
 
-// GetCondition of this ApiManagementNamedValue.
-func (mg *ApiManagementNamedValue) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
+// GetCondition of this ManagementNotificationRecipientEmail.
+func (mg *ManagementNotificationRecipientEmail) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
 	return mg.Status.GetCondition(ct)
 }
 
-// GetDeletionPolicy of this ApiManagementNamedValue.
-func (mg *ApiManagementNamedValue) GetDeletionPolicy() xpv1.DeletionPolicy {
+// GetDeletionPolicy of this ManagementNotificationRecipientEmail.
+func (mg *ManagementNotificationRecipientEmail) GetDeletionPolicy() xpv1.DeletionPolicy {
 	return mg.Spec.DeletionPolicy
 }
 
-// GetProviderConfigReference of this ApiManagementNamedValue.
-func (mg *ApiManagementNamedValue) GetProviderConfigReference() *xpv1.Reference {
+// GetProviderConfigReference of this ManagementNotificationRecipientEmail.
+func (mg *ManagementNotificationRecipientEmail) GetProviderConfigReference() *xpv1.Reference {
 	return mg.Spec.ProviderConfigReference
 }
 
 /*
-GetProviderReference of this ApiManagementNamedValue.
+GetProviderReference of this ManagementNotificationRecipientEmail.
 Deprecated: Use GetProviderConfigReference.
 */
-func (mg *ApiManagementNamedValue) GetProviderReference() *xpv1.Reference {
+func (mg *ManagementNotificationRecipientEmail) GetProviderReference() *xpv1.Reference {
 	return mg.Spec.ProviderReference
 }
 
-// GetWriteConnectionSecretToReference of this ApiManagementNamedValue.
-func (mg *ApiManagementNamedValue) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
+// GetWriteConnectionSecretToReference of this ManagementNotificationRecipientEmail.
+func (mg *ManagementNotificationRecipientEmail) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
 	return mg.Spec.WriteConnectionSecretToReference
 }
 
-// SetConditions of this ApiManagementNamedValue.
-func (mg *ApiManagementNamedValue) SetConditions(c ...xpv1.Condition) {
+// SetConditions of this ManagementNotificationRecipientEmail.
+func (mg *ManagementNotificationRecipientEmail) SetConditions(c ...xpv1.Condition) {
 	mg.Status.SetConditions(c...)
 }
 
-// SetDeletionPolicy of this ApiManagementNamedValue.
-func (mg *ApiManagementNamedValue) SetDeletionPolicy(r xpv1.DeletionPolicy) {
+// SetDeletionPolicy of this ManagementNotificationRecipientEmail.
+func (mg *ManagementNotificationRecipientEmail) SetDeletionPolicy(r xpv1.DeletionPolicy) {
 	mg.Spec.DeletionPolicy = r
 }
 
-// SetProviderConfigReference of this ApiManagementNamedValue.
-func (mg *ApiManagementNamedValue) SetProviderConfigReference(r *xpv1.Reference) {
+// SetProviderConfigReference of this ManagementNotificationRecipientEmail.
+func (mg *ManagementNotificationRecipientEmail) SetProviderConfigReference(r *xpv1.Reference) {
 	mg.Spec.ProviderConfigReference = r
 }
 
 /*
-SetProviderReference of this ApiManagementNamedValue.
+SetProviderReference of this ManagementNotificationRecipientEmail.
 Deprecated: Use SetProviderConfigReference.
 */
-func (mg *ApiManagementNamedValue) SetProviderReference(r *xpv1.Reference) {
+func (mg *ManagementNotificationRecipientEmail) SetProviderReference(r *xpv1.Reference) {
 	mg.Spec.ProviderReference = r
 }
 
-// SetWriteConnectionSecretToReference of this ApiManagementNamedValue.
-func (mg *ApiManagementNamedValue) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
+// SetWriteConnectionSecretToReference of this ManagementNotificationRecipientEmail.
+func (mg *ManagementNotificationRecipientEmail) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
 	mg.Spec.WriteConnectionSecretToReference = r
 }
 
-// GetCondition of this ApiManagementNotificationRecipientEmail.
-func (mg *ApiManagementNotificationRecipientEmail) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
+// GetCondition of this ManagementOpenidConnectProvider.
+func (mg *ManagementOpenidConnectProvider) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
 	return mg.Status.GetCondition(ct)
 }
 
-// GetDeletionPolicy of this ApiManagementNotificationRecipientEmail.
-func (mg *ApiManagementNotificationRecipientEmail) GetDeletionPolicy() xpv1.DeletionPolicy {
+// GetDeletionPolicy of this ManagementOpenidConnectProvider.
+func (mg *ManagementOpenidConnectProvider) GetDeletionPolicy() xpv1.DeletionPolicy {
 	return mg.Spec.DeletionPolicy
 }
 
-// GetProviderConfigReference of this ApiManagementNotificationRecipientEmail.
-func (mg *ApiManagementNotificationRecipientEmail) GetProviderConfigReference() *xpv1.Reference {
+// GetProviderConfigReference of this ManagementOpenidConnectProvider.
+func (mg *ManagementOpenidConnectProvider) GetProviderConfigReference() *xpv1.Reference {
 	return mg.Spec.ProviderConfigReference
 }
 
 /*
-GetProviderReference of this ApiManagementNotificationRecipientEmail.
+GetProviderReference of this ManagementOpenidConnectProvider.
 Deprecated: Use GetProviderConfigReference.
 */
-func (mg *ApiManagementNotificationRecipientEmail) GetProviderReference() *xpv1.Reference {
+func (mg *ManagementOpenidConnectProvider) GetProviderReference() *xpv1.Reference {
 	return mg.Spec.ProviderReference
 }
 
-// GetWriteConnectionSecretToReference of this ApiManagementNotificationRecipientEmail.
-func (mg *ApiManagementNotificationRecipientEmail) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
+// GetWriteConnectionSecretToReference of this ManagementOpenidConnectProvider.
+func (mg *ManagementOpenidConnectProvider) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
 	return mg.Spec.WriteConnectionSecretToReference
 }
 
-// SetConditions of this ApiManagementNotificationRecipientEmail.
-func (mg *ApiManagementNotificationRecipientEmail) SetConditions(c ...xpv1.Condition) {
+// SetConditions of this ManagementOpenidConnectProvider.
+func (mg *ManagementOpenidConnectProvider) SetConditions(c ...xpv1.Condition) {
 	mg.Status.SetConditions(c...)
 }
 
-// SetDeletionPolicy of this ApiManagementNotificationRecipientEmail.
-func (mg *ApiManagementNotificationRecipientEmail) SetDeletionPolicy(r xpv1.DeletionPolicy) {
+// SetDeletionPolicy of this ManagementOpenidConnectProvider.
+func (mg *ManagementOpenidConnectProvider) SetDeletionPolicy(r xpv1.DeletionPolicy) {
 	mg.Spec.DeletionPolicy = r
 }
 
-// SetProviderConfigReference of this ApiManagementNotificationRecipientEmail.
-func (mg *ApiManagementNotificationRecipientEmail) SetProviderConfigReference(r *xpv1.Reference) {
+// SetProviderConfigReference of this ManagementOpenidConnectProvider.
+func (mg *ManagementOpenidConnectProvider) SetProviderConfigReference(r *xpv1.Reference) {
 	mg.Spec.ProviderConfigReference = r
 }
 
 /*
-SetProviderReference of this ApiManagementNotificationRecipientEmail.
+SetProviderReference of this ManagementOpenidConnectProvider.
 Deprecated: Use SetProviderConfigReference.
 */
-func (mg *ApiManagementNotificationRecipientEmail) SetProviderReference(r *xpv1.Reference) {
+func (mg *ManagementOpenidConnectProvider) SetProviderReference(r *xpv1.Reference) {
 	mg.Spec.ProviderReference = r
 }
 
-// SetWriteConnectionSecretToReference of this ApiManagementNotificationRecipientEmail.
-func (mg *ApiManagementNotificationRecipientEmail) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
+// SetWriteConnectionSecretToReference of this ManagementOpenidConnectProvider.
+func (mg *ManagementOpenidConnectProvider) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
 	mg.Spec.WriteConnectionSecretToReference = r
 }
 
-// GetCondition of this ApiManagementOpenidConnectProvider.
-func (mg *ApiManagementOpenidConnectProvider) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
+// GetCondition of this ManagementPolicy.
+func (mg *ManagementPolicy) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
 	return mg.Status.GetCondition(ct)
 }
 
-// GetDeletionPolicy of this ApiManagementOpenidConnectProvider.
-func (mg *ApiManagementOpenidConnectProvider) GetDeletionPolicy() xpv1.DeletionPolicy {
+// GetDeletionPolicy of this ManagementPolicy.
+func (mg *ManagementPolicy) GetDeletionPolicy() xpv1.DeletionPolicy {
 	return mg.Spec.DeletionPolicy
 }
 
-// GetProviderConfigReference of this ApiManagementOpenidConnectProvider.
-func (mg *ApiManagementOpenidConnectProvider) GetProviderConfigReference() *xpv1.Reference {
+// GetProviderConfigReference of this ManagementPolicy.
+func (mg *ManagementPolicy) GetProviderConfigReference() *xpv1.Reference {
 	return mg.Spec.ProviderConfigReference
 }
 
 /*
-GetProviderReference of this ApiManagementOpenidConnectProvider.
+GetProviderReference of this ManagementPolicy.
 Deprecated: Use GetProviderConfigReference.
 */
-func (mg *ApiManagementOpenidConnectProvider) GetProviderReference() *xpv1.Reference {
+func (mg *ManagementPolicy) GetProviderReference() *xpv1.Reference {
 	return mg.Spec.ProviderReference
 }
 
-// GetWriteConnectionSecretToReference of this ApiManagementOpenidConnectProvider.
-func (mg *ApiManagementOpenidConnectProvider) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
+// GetWriteConnectionSecretToReference of this ManagementPolicy.
+func (mg *ManagementPolicy) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
 	return mg.Spec.WriteConnectionSecretToReference
 }
 
-// SetConditions of this ApiManagementOpenidConnectProvider.
-func (mg *ApiManagementOpenidConnectProvider) SetConditions(c ...xpv1.Condition) {
+// SetConditions of this ManagementPolicy.
+func (mg *ManagementPolicy) SetConditions(c ...xpv1.Condition) {
 	mg.Status.SetConditions(c...)
 }
 
-// SetDeletionPolicy of this ApiManagementOpenidConnectProvider.
-func (mg *ApiManagementOpenidConnectProvider) SetDeletionPolicy(r xpv1.DeletionPolicy) {
+// SetDeletionPolicy of this ManagementPolicy.
+func (mg *ManagementPolicy) SetDeletionPolicy(r xpv1.DeletionPolicy) {
 	mg.Spec.DeletionPolicy = r
 }
 
-// SetProviderConfigReference of this ApiManagementOpenidConnectProvider.
-func (mg *ApiManagementOpenidConnectProvider) SetProviderConfigReference(r *xpv1.Reference) {
+// SetProviderConfigReference of this ManagementPolicy.
+func (mg *ManagementPolicy) SetProviderConfigReference(r *xpv1.Reference) {
 	mg.Spec.ProviderConfigReference = r
 }
 
 /*
-SetProviderReference of this ApiManagementOpenidConnectProvider.
+SetProviderReference of this ManagementPolicy.
 Deprecated: Use SetProviderConfigReference.
 */
-func (mg *ApiManagementOpenidConnectProvider) SetProviderReference(r *xpv1.Reference) {
+func (mg *ManagementPolicy) SetProviderReference(r *xpv1.Reference) {
 	mg.Spec.ProviderReference = r
 }
 
-// SetWriteConnectionSecretToReference of this ApiManagementOpenidConnectProvider.
-func (mg *ApiManagementOpenidConnectProvider) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
+// SetWriteConnectionSecretToReference of this ManagementPolicy.
+func (mg *ManagementPolicy) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
 	mg.Spec.WriteConnectionSecretToReference = r
 }
 
-// GetCondition of this ApiManagementPolicy.
-func (mg *ApiManagementPolicy) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
+// GetCondition of this ManagementProduct.
+func (mg *ManagementProduct) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
 	return mg.Status.GetCondition(ct)
 }
 
-// GetDeletionPolicy of this ApiManagementPolicy.
-func (mg *ApiManagementPolicy) GetDeletionPolicy() xpv1.DeletionPolicy {
+// GetDeletionPolicy of this ManagementProduct.
+func (mg *ManagementProduct) GetDeletionPolicy() xpv1.DeletionPolicy {
 	return mg.Spec.DeletionPolicy
 }
 
-// GetProviderConfigReference of this ApiManagementPolicy.
-func (mg *ApiManagementPolicy) GetProviderConfigReference() *xpv1.Reference {
+// GetProviderConfigReference of this ManagementProduct.
+func (mg *ManagementProduct) GetProviderConfigReference() *xpv1.Reference {
 	return mg.Spec.ProviderConfigReference
 }
 
 /*
-GetProviderReference of this ApiManagementPolicy.
+GetProviderReference of this ManagementProduct.
 Deprecated: Use GetProviderConfigReference.
 */
-func (mg *ApiManagementPolicy) GetProviderReference() *xpv1.Reference {
+func (mg *ManagementProduct) GetProviderReference() *xpv1.Reference {
 	return mg.Spec.ProviderReference
 }
 
-// GetWriteConnectionSecretToReference of this ApiManagementPolicy.
-func (mg *ApiManagementPolicy) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
+// GetWriteConnectionSecretToReference of this ManagementProduct.
+func (mg *ManagementProduct) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
 	return mg.Spec.WriteConnectionSecretToReference
 }
 
-// SetConditions of this ApiManagementPolicy.
-func (mg *ApiManagementPolicy) SetConditions(c ...xpv1.Condition) {
+// SetConditions of this ManagementProduct.
+func (mg *ManagementProduct) SetConditions(c ...xpv1.Condition) {
 	mg.Status.SetConditions(c...)
 }
 
-// SetDeletionPolicy of this ApiManagementPolicy.
-func (mg *ApiManagementPolicy) SetDeletionPolicy(r xpv1.DeletionPolicy) {
+// SetDeletionPolicy of this ManagementProduct.
+func (mg *ManagementProduct) SetDeletionPolicy(r xpv1.DeletionPolicy) {
 	mg.Spec.DeletionPolicy = r
 }
 
-// SetProviderConfigReference of this ApiManagementPolicy.
-func (mg *ApiManagementPolicy) SetProviderConfigReference(r *xpv1.Reference) {
+// SetProviderConfigReference of this ManagementProduct.
+func (mg *ManagementProduct) SetProviderConfigReference(r *xpv1.Reference) {
 	mg.Spec.ProviderConfigReference = r
 }
 
 /*
-SetProviderReference of this ApiManagementPolicy.
+SetProviderReference of this ManagementProduct.
 Deprecated: Use SetProviderConfigReference.
 */
-func (mg *ApiManagementPolicy) SetProviderReference(r *xpv1.Reference) {
+func (mg *ManagementProduct) SetProviderReference(r *xpv1.Reference) {
 	mg.Spec.ProviderReference = r
 }
 
-// SetWriteConnectionSecretToReference of this ApiManagementPolicy.
-func (mg *ApiManagementPolicy) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
+// SetWriteConnectionSecretToReference of this ManagementProduct.
+func (mg *ManagementProduct) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
 	mg.Spec.WriteConnectionSecretToReference = r
 }
 
-// GetCondition of this ApiManagementProduct.
-func (mg *ApiManagementProduct) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
+// GetCondition of this ManagementProductApi.
+func (mg *ManagementProductApi) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
 	return mg.Status.GetCondition(ct)
 }
 
-// GetDeletionPolicy of this ApiManagementProduct.
-func (mg *ApiManagementProduct) GetDeletionPolicy() xpv1.DeletionPolicy {
+// GetDeletionPolicy of this ManagementProductApi.
+func (mg *ManagementProductApi) GetDeletionPolicy() xpv1.DeletionPolicy {
 	return mg.Spec.DeletionPolicy
 }
 
-// GetProviderConfigReference of this ApiManagementProduct.
-func (mg *ApiManagementProduct) GetProviderConfigReference() *xpv1.Reference {
+// GetProviderConfigReference of this ManagementProductApi.
+func (mg *ManagementProductApi) GetProviderConfigReference() *xpv1.Reference {
 	return mg.Spec.ProviderConfigReference
 }
 
 /*
-GetProviderReference of this ApiManagementProduct.
+GetProviderReference of this ManagementProductApi.
 Deprecated: Use GetProviderConfigReference.
 */
-func (mg *ApiManagementProduct) GetProviderReference() *xpv1.Reference {
+func (mg *ManagementProductApi) GetProviderReference() *xpv1.Reference {
 	return mg.Spec.ProviderReference
 }
 
-// GetWriteConnectionSecretToReference of this ApiManagementProduct.
-func (mg *ApiManagementProduct) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
+// GetWriteConnectionSecretToReference of this ManagementProductApi.
+func (mg *ManagementProductApi) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
 	return mg.Spec.WriteConnectionSecretToReference
 }
 
-// SetConditions of this ApiManagementProduct.
-func (mg *ApiManagementProduct) SetConditions(c ...xpv1.Condition) {
+// SetConditions of this ManagementProductApi.
+func (mg *ManagementProductApi) SetConditions(c ...xpv1.Condition) {
 	mg.Status.SetConditions(c...)
 }
 
-// SetDeletionPolicy of this ApiManagementProduct.
-func (mg *ApiManagementProduct) SetDeletionPolicy(r xpv1.DeletionPolicy) {
+// SetDeletionPolicy of this ManagementProductApi.
+func (mg *ManagementProductApi) SetDeletionPolicy(r xpv1.DeletionPolicy) {
 	mg.Spec.DeletionPolicy = r
 }
 
-// SetProviderConfigReference of this ApiManagementProduct.
-func (mg *ApiManagementProduct) SetProviderConfigReference(r *xpv1.Reference) {
+// SetProviderConfigReference of this ManagementProductApi.
+func (mg *ManagementProductApi) SetProviderConfigReference(r *xpv1.Reference) {
 	mg.Spec.ProviderConfigReference = r
 }
 
 /*
-SetProviderReference of this ApiManagementProduct.
+SetProviderReference of this ManagementProductApi.
 Deprecated: Use SetProviderConfigReference.
 */
-func (mg *ApiManagementProduct) SetProviderReference(r *xpv1.Reference) {
+func (mg *ManagementProductApi) SetProviderReference(r *xpv1.Reference) {
 	mg.Spec.ProviderReference = r
 }
 
-// SetWriteConnectionSecretToReference of this ApiManagementProduct.
-func (mg *ApiManagementProduct) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
+// SetWriteConnectionSecretToReference of this ManagementProductApi.
+func (mg *ManagementProductApi) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
 	mg.Spec.WriteConnectionSecretToReference = r
 }
 
-// GetCondition of this ApiManagementProductApi.
-func (mg *ApiManagementProductApi) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
+// GetCondition of this ManagementProductPolicy.
+func (mg *ManagementProductPolicy) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
 	return mg.Status.GetCondition(ct)
 }
 
-// GetDeletionPolicy of this ApiManagementProductApi.
-func (mg *ApiManagementProductApi) GetDeletionPolicy() xpv1.DeletionPolicy {
+// GetDeletionPolicy of this ManagementProductPolicy.
+func (mg *ManagementProductPolicy) GetDeletionPolicy() xpv1.DeletionPolicy {
 	return mg.Spec.DeletionPolicy
 }
 
-// GetProviderConfigReference of this ApiManagementProductApi.
-func (mg *ApiManagementProductApi) GetProviderConfigReference() *xpv1.Reference {
+// GetProviderConfigReference of this ManagementProductPolicy.
+func (mg *ManagementProductPolicy) GetProviderConfigReference() *xpv1.Reference {
 	return mg.Spec.ProviderConfigReference
 }
 
 /*
-GetProviderReference of this ApiManagementProductApi.
+GetProviderReference of this ManagementProductPolicy.
 Deprecated: Use GetProviderConfigReference.
 */
-func (mg *ApiManagementProductApi) GetProviderReference() *xpv1.Reference {
+func (mg *ManagementProductPolicy) GetProviderReference() *xpv1.Reference {
 	return mg.Spec.ProviderReference
 }
 
-// GetWriteConnectionSecretToReference of this ApiManagementProductApi.
-func (mg *ApiManagementProductApi) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
+// GetWriteConnectionSecretToReference of this ManagementProductPolicy.
+func (mg *ManagementProductPolicy) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
 	return mg.Spec.WriteConnectionSecretToReference
 }
 
-// SetConditions of this ApiManagementProductApi.
-func (mg *ApiManagementProductApi) SetConditions(c ...xpv1.Condition) {
+// SetConditions of this ManagementProductPolicy.
+func (mg *ManagementProductPolicy) SetConditions(c ...xpv1.Condition) {
 	mg.Status.SetConditions(c...)
 }
 
-// SetDeletionPolicy of this ApiManagementProductApi.
-func (mg *ApiManagementProductApi) SetDeletionPolicy(r xpv1.DeletionPolicy) {
+// SetDeletionPolicy of this ManagementProductPolicy.
+func (mg *ManagementProductPolicy) SetDeletionPolicy(r xpv1.DeletionPolicy) {
 	mg.Spec.DeletionPolicy = r
 }
 
-// SetProviderConfigReference of this ApiManagementProductApi.
-func (mg *ApiManagementProductApi) SetProviderConfigReference(r *xpv1.Reference) {
+// SetProviderConfigReference of this ManagementProductPolicy.
+func (mg *ManagementProductPolicy) SetProviderConfigReference(r *xpv1.Reference) {
 	mg.Spec.ProviderConfigReference = r
 }
 
 /*
-SetProviderReference of this ApiManagementProductApi.
+SetProviderReference of this ManagementProductPolicy.
 Deprecated: Use SetProviderConfigReference.
 */
-func (mg *ApiManagementProductApi) SetProviderReference(r *xpv1.Reference) {
+func (mg *ManagementProductPolicy) SetProviderReference(r *xpv1.Reference) {
 	mg.Spec.ProviderReference = r
 }
 
-// SetWriteConnectionSecretToReference of this ApiManagementProductApi.
-func (mg *ApiManagementProductApi) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
+// SetWriteConnectionSecretToReference of this ManagementProductPolicy.
+func (mg *ManagementProductPolicy) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
 	mg.Spec.WriteConnectionSecretToReference = r
 }
 
-// GetCondition of this ApiManagementProductPolicy.
-func (mg *ApiManagementProductPolicy) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
+// GetCondition of this ManagementProperty.
+func (mg *ManagementProperty) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
 	return mg.Status.GetCondition(ct)
 }
 
-// GetDeletionPolicy of this ApiManagementProductPolicy.
-func (mg *ApiManagementProductPolicy) GetDeletionPolicy() xpv1.DeletionPolicy {
+// GetDeletionPolicy of this ManagementProperty.
+func (mg *ManagementProperty) GetDeletionPolicy() xpv1.DeletionPolicy {
 	return mg.Spec.DeletionPolicy
 }
 
-// GetProviderConfigReference of this ApiManagementProductPolicy.
-func (mg *ApiManagementProductPolicy) GetProviderConfigReference() *xpv1.Reference {
+// GetProviderConfigReference of this ManagementProperty.
+func (mg *ManagementProperty) GetProviderConfigReference() *xpv1.Reference {
 	return mg.Spec.ProviderConfigReference
 }
 
 /*
-GetProviderReference of this ApiManagementProductPolicy.
+GetProviderReference of this ManagementProperty.
 Deprecated: Use GetProviderConfigReference.
 */
-func (mg *ApiManagementProductPolicy) GetProviderReference() *xpv1.Reference {
+func (mg *ManagementProperty) GetProviderReference() *xpv1.Reference {
 	return mg.Spec.ProviderReference
 }
 
-// GetWriteConnectionSecretToReference of this ApiManagementProductPolicy.
-func (mg *ApiManagementProductPolicy) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
+// GetWriteConnectionSecretToReference of this ManagementProperty.
+func (mg *ManagementProperty) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
 	return mg.Spec.WriteConnectionSecretToReference
 }
 
-// SetConditions of this ApiManagementProductPolicy.
-func (mg *ApiManagementProductPolicy) SetConditions(c ...xpv1.Condition) {
+// SetConditions of this ManagementProperty.
+func (mg *ManagementProperty) SetConditions(c ...xpv1.Condition) {
 	mg.Status.SetConditions(c...)
 }
 
-// SetDeletionPolicy of this ApiManagementProductPolicy.
-func (mg *ApiManagementProductPolicy) SetDeletionPolicy(r xpv1.DeletionPolicy) {
+// SetDeletionPolicy of this ManagementProperty.
+func (mg *ManagementProperty) SetDeletionPolicy(r xpv1.DeletionPolicy) {
 	mg.Spec.DeletionPolicy = r
 }
 
-// SetProviderConfigReference of this ApiManagementProductPolicy.
-func (mg *ApiManagementProductPolicy) SetProviderConfigReference(r *xpv1.Reference) {
+// SetProviderConfigReference of this ManagementProperty.
+func (mg *ManagementProperty) SetProviderConfigReference(r *xpv1.Reference) {
 	mg.Spec.ProviderConfigReference = r
 }
 
 /*
-SetProviderReference of this ApiManagementProductPolicy.
+SetProviderReference of this ManagementProperty.
 Deprecated: Use SetProviderConfigReference.
 */
-func (mg *ApiManagementProductPolicy) SetProviderReference(r *xpv1.Reference) {
+func (mg *ManagementProperty) SetProviderReference(r *xpv1.Reference) {
 	mg.Spec.ProviderReference = r
 }
 
-// SetWriteConnectionSecretToReference of this ApiManagementProductPolicy.
-func (mg *ApiManagementProductPolicy) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
+// SetWriteConnectionSecretToReference of this ManagementProperty.
+func (mg *ManagementProperty) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
 	mg.Spec.WriteConnectionSecretToReference = r
 }
 
-// GetCondition of this ApiManagementProperty.
-func (mg *ApiManagementProperty) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
+// GetCondition of this ManagementRedisCache.
+func (mg *ManagementRedisCache) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
 	return mg.Status.GetCondition(ct)
 }
 
-// GetDeletionPolicy of this ApiManagementProperty.
-func (mg *ApiManagementProperty) GetDeletionPolicy() xpv1.DeletionPolicy {
+// GetDeletionPolicy of this ManagementRedisCache.
+func (mg *ManagementRedisCache) GetDeletionPolicy() xpv1.DeletionPolicy {
 	return mg.Spec.DeletionPolicy
 }
 
-// GetProviderConfigReference of this ApiManagementProperty.
-func (mg *ApiManagementProperty) GetProviderConfigReference() *xpv1.Reference {
+// GetProviderConfigReference of this ManagementRedisCache.
+func (mg *ManagementRedisCache) GetProviderConfigReference() *xpv1.Reference {
 	return mg.Spec.ProviderConfigReference
 }
 
 /*
-GetProviderReference of this ApiManagementProperty.
+GetProviderReference of this ManagementRedisCache.
 Deprecated: Use GetProviderConfigReference.
 */
-func (mg *ApiManagementProperty) GetProviderReference() *xpv1.Reference {
+func (mg *ManagementRedisCache) GetProviderReference() *xpv1.Reference {
 	return mg.Spec.ProviderReference
 }
 
-// GetWriteConnectionSecretToReference of this ApiManagementProperty.
-func (mg *ApiManagementProperty) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
+// GetWriteConnectionSecretToReference of this ManagementRedisCache.
+func (mg *ManagementRedisCache) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
 	return mg.Spec.WriteConnectionSecretToReference
 }
 
-// SetConditions of this ApiManagementProperty.
-func (mg *ApiManagementProperty) SetConditions(c ...xpv1.Condition) {
+// SetConditions of this ManagementRedisCache.
+func (mg *ManagementRedisCache) SetConditions(c ...xpv1.Condition) {
 	mg.Status.SetConditions(c...)
 }
 
-// SetDeletionPolicy of this ApiManagementProperty.
-func (mg *ApiManagementProperty) SetDeletionPolicy(r xpv1.DeletionPolicy) {
+// SetDeletionPolicy of this ManagementRedisCache.
+func (mg *ManagementRedisCache) SetDeletionPolicy(r xpv1.DeletionPolicy) {
 	mg.Spec.DeletionPolicy = r
 }
 
-// SetProviderConfigReference of this ApiManagementProperty.
-func (mg *ApiManagementProperty) SetProviderConfigReference(r *xpv1.Reference) {
+// SetProviderConfigReference of this ManagementRedisCache.
+func (mg *ManagementRedisCache) SetProviderConfigReference(r *xpv1.Reference) {
 	mg.Spec.ProviderConfigReference = r
 }
 
 /*
-SetProviderReference of this ApiManagementProperty.
+SetProviderReference of this ManagementRedisCache.
 Deprecated: Use SetProviderConfigReference.
 */
-func (mg *ApiManagementProperty) SetProviderReference(r *xpv1.Reference) {
+func (mg *ManagementRedisCache) SetProviderReference(r *xpv1.Reference) {
 	mg.Spec.ProviderReference = r
 }
 
-// SetWriteConnectionSecretToReference of this ApiManagementProperty.
-func (mg *ApiManagementProperty) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
+// SetWriteConnectionSecretToReference of this ManagementRedisCache.
+func (mg *ManagementRedisCache) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
 	mg.Spec.WriteConnectionSecretToReference = r
 }
 
-// GetCondition of this ApiManagementRedisCache.
-func (mg *ApiManagementRedisCache) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
+// GetCondition of this ManagementSubscription.
+func (mg *ManagementSubscription) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
 	return mg.Status.GetCondition(ct)
 }
 
-// GetDeletionPolicy of this ApiManagementRedisCache.
-func (mg *ApiManagementRedisCache) GetDeletionPolicy() xpv1.DeletionPolicy {
+// GetDeletionPolicy of this ManagementSubscription.
+func (mg *ManagementSubscription) GetDeletionPolicy() xpv1.DeletionPolicy {
 	return mg.Spec.DeletionPolicy
 }
 
-// GetProviderConfigReference of this ApiManagementRedisCache.
-func (mg *ApiManagementRedisCache) GetProviderConfigReference() *xpv1.Reference {
+// GetProviderConfigReference of this ManagementSubscription.
+func (mg *ManagementSubscription) GetProviderConfigReference() *xpv1.Reference {
 	return mg.Spec.ProviderConfigReference
 }
 
 /*
-GetProviderReference of this ApiManagementRedisCache.
+GetProviderReference of this ManagementSubscription.
 Deprecated: Use GetProviderConfigReference.
 */
-func (mg *ApiManagementRedisCache) GetProviderReference() *xpv1.Reference {
+func (mg *ManagementSubscription) GetProviderReference() *xpv1.Reference {
 	return mg.Spec.ProviderReference
 }
 
-// GetWriteConnectionSecretToReference of this ApiManagementRedisCache.
-func (mg *ApiManagementRedisCache) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
+// GetWriteConnectionSecretToReference of this ManagementSubscription.
+func (mg *ManagementSubscription) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
 	return mg.Spec.WriteConnectionSecretToReference
 }
 
-// SetConditions of this ApiManagementRedisCache.
-func (mg *ApiManagementRedisCache) SetConditions(c ...xpv1.Condition) {
+// SetConditions of this ManagementSubscription.
+func (mg *ManagementSubscription) SetConditions(c ...xpv1.Condition) {
 	mg.Status.SetConditions(c...)
 }
 
-// SetDeletionPolicy of this ApiManagementRedisCache.
-func (mg *ApiManagementRedisCache) SetDeletionPolicy(r xpv1.DeletionPolicy) {
+// SetDeletionPolicy of this ManagementSubscription.
+func (mg *ManagementSubscription) SetDeletionPolicy(r xpv1.DeletionPolicy) {
 	mg.Spec.DeletionPolicy = r
 }
 
-// SetProviderConfigReference of this ApiManagementRedisCache.
-func (mg *ApiManagementRedisCache) SetProviderConfigReference(r *xpv1.Reference) {
+// SetProviderConfigReference of this ManagementSubscription.
+func (mg *ManagementSubscription) SetProviderConfigReference(r *xpv1.Reference) {
 	mg.Spec.ProviderConfigReference = r
 }
 
 /*
-SetProviderReference of this ApiManagementRedisCache.
+SetProviderReference of this ManagementSubscription.
 Deprecated: Use SetProviderConfigReference.
 */
-func (mg *ApiManagementRedisCache) SetProviderReference(r *xpv1.Reference) {
+func (mg *ManagementSubscription) SetProviderReference(r *xpv1.Reference) {
 	mg.Spec.ProviderReference = r
 }
 
-// SetWriteConnectionSecretToReference of this ApiManagementRedisCache.
-func (mg *ApiManagementRedisCache) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
+// SetWriteConnectionSecretToReference of this ManagementSubscription.
+func (mg *ManagementSubscription) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
 	mg.Spec.WriteConnectionSecretToReference = r
 }
 
-// GetCondition of this ApiManagementSubscription.
-func (mg *ApiManagementSubscription) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
+// GetCondition of this ManagementTag.
+func (mg *ManagementTag) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
 	return mg.Status.GetCondition(ct)
 }
 
-// GetDeletionPolicy of this ApiManagementSubscription.
-func (mg *ApiManagementSubscription) GetDeletionPolicy() xpv1.DeletionPolicy {
+// GetDeletionPolicy of this ManagementTag.
+func (mg *ManagementTag) GetDeletionPolicy() xpv1.DeletionPolicy {
 	return mg.Spec.DeletionPolicy
 }
 
-// GetProviderConfigReference of this ApiManagementSubscription.
-func (mg *ApiManagementSubscription) GetProviderConfigReference() *xpv1.Reference {
+// GetProviderConfigReference of this ManagementTag.
+func (mg *ManagementTag) GetProviderConfigReference() *xpv1.Reference {
 	return mg.Spec.ProviderConfigReference
 }
 
 /*
-GetProviderReference of this ApiManagementSubscription.
+GetProviderReference of this ManagementTag.
 Deprecated: Use GetProviderConfigReference.
 */
-func (mg *ApiManagementSubscription) GetProviderReference() *xpv1.Reference {
+func (mg *ManagementTag) GetProviderReference() *xpv1.Reference {
 	return mg.Spec.ProviderReference
 }
 
-// GetWriteConnectionSecretToReference of this ApiManagementSubscription.
-func (mg *ApiManagementSubscription) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
+// GetWriteConnectionSecretToReference of this ManagementTag.
+func (mg *ManagementTag) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
 	return mg.Spec.WriteConnectionSecretToReference
 }
 
-// SetConditions of this ApiManagementSubscription.
-func (mg *ApiManagementSubscription) SetConditions(c ...xpv1.Condition) {
+// SetConditions of this ManagementTag.
+func (mg *ManagementTag) SetConditions(c ...xpv1.Condition) {
 	mg.Status.SetConditions(c...)
 }
 
-// SetDeletionPolicy of this ApiManagementSubscription.
-func (mg *ApiManagementSubscription) SetDeletionPolicy(r xpv1.DeletionPolicy) {
+// SetDeletionPolicy of this ManagementTag.
+func (mg *ManagementTag) SetDeletionPolicy(r xpv1.DeletionPolicy) {
 	mg.Spec.DeletionPolicy = r
 }
 
-// SetProviderConfigReference of this ApiManagementSubscription.
-func (mg *ApiManagementSubscription) SetProviderConfigReference(r *xpv1.Reference) {
+// SetProviderConfigReference of this ManagementTag.
+func (mg *ManagementTag) SetProviderConfigReference(r *xpv1.Reference) {
 	mg.Spec.ProviderConfigReference = r
 }
 
 /*
-SetProviderReference of this ApiManagementSubscription.
+SetProviderReference of this ManagementTag.
 Deprecated: Use SetProviderConfigReference.
 */
-func (mg *ApiManagementSubscription) SetProviderReference(r *xpv1.Reference) {
+func (mg *ManagementTag) SetProviderReference(r *xpv1.Reference) {
 	mg.Spec.ProviderReference = r
 }
 
-// SetWriteConnectionSecretToReference of this ApiManagementSubscription.
-func (mg *ApiManagementSubscription) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
+// SetWriteConnectionSecretToReference of this ManagementTag.
+func (mg *ManagementTag) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
 	mg.Spec.WriteConnectionSecretToReference = r
 }
 
-// GetCondition of this ApiManagementTag.
-func (mg *ApiManagementTag) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
+// GetCondition of this ManagementUser.
+func (mg *ManagementUser) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
 	return mg.Status.GetCondition(ct)
 }
 
-// GetDeletionPolicy of this ApiManagementTag.
-func (mg *ApiManagementTag) GetDeletionPolicy() xpv1.DeletionPolicy {
+// GetDeletionPolicy of this ManagementUser.
+func (mg *ManagementUser) GetDeletionPolicy() xpv1.DeletionPolicy {
 	return mg.Spec.DeletionPolicy
 }
 
-// GetProviderConfigReference of this ApiManagementTag.
-func (mg *ApiManagementTag) GetProviderConfigReference() *xpv1.Reference {
+// GetProviderConfigReference of this ManagementUser.
+func (mg *ManagementUser) GetProviderConfigReference() *xpv1.Reference {
 	return mg.Spec.ProviderConfigReference
 }
 
 /*
-GetProviderReference of this ApiManagementTag.
+GetProviderReference of this ManagementUser.
 Deprecated: Use GetProviderConfigReference.
 */
-func (mg *ApiManagementTag) GetProviderReference() *xpv1.Reference {
+func (mg *ManagementUser) GetProviderReference() *xpv1.Reference {
 	return mg.Spec.ProviderReference
 }
 
-// GetWriteConnectionSecretToReference of this ApiManagementTag.
-func (mg *ApiManagementTag) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
+// GetWriteConnectionSecretToReference of this ManagementUser.
+func (mg *ManagementUser) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
 	return mg.Spec.WriteConnectionSecretToReference
 }
 
-// SetConditions of this ApiManagementTag.
-func (mg *ApiManagementTag) SetConditions(c ...xpv1.Condition) {
+// SetConditions of this ManagementUser.
+func (mg *ManagementUser) SetConditions(c ...xpv1.Condition) {
 	mg.Status.SetConditions(c...)
 }
 
-// SetDeletionPolicy of this ApiManagementTag.
-func (mg *ApiManagementTag) SetDeletionPolicy(r xpv1.DeletionPolicy) {
+// SetDeletionPolicy of this ManagementUser.
+func (mg *ManagementUser) SetDeletionPolicy(r xpv1.DeletionPolicy) {
 	mg.Spec.DeletionPolicy = r
 }
 
-// SetProviderConfigReference of this ApiManagementTag.
-func (mg *ApiManagementTag) SetProviderConfigReference(r *xpv1.Reference) {
+// SetProviderConfigReference of this ManagementUser.
+func (mg *ManagementUser) SetProviderConfigReference(r *xpv1.Reference) {
 	mg.Spec.ProviderConfigReference = r
 }
 
 /*
-SetProviderReference of this ApiManagementTag.
+SetProviderReference of this ManagementUser.
 Deprecated: Use SetProviderConfigReference.
 */
-func (mg *ApiManagementTag) SetProviderReference(r *xpv1.Reference) {
+func (mg *ManagementUser) SetProviderReference(r *xpv1.Reference) {
 	mg.Spec.ProviderReference = r
 }
 
-// SetWriteConnectionSecretToReference of this ApiManagementTag.
-func (mg *ApiManagementTag) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
-	mg.Spec.WriteConnectionSecretToReference = r
-}
-
-// GetCondition of this ApiManagementUser.
-func (mg *ApiManagementUser) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
-	return mg.Status.GetCondition(ct)
-}
-
-// GetDeletionPolicy of this ApiManagementUser.
-func (mg *ApiManagementUser) GetDeletionPolicy() xpv1.DeletionPolicy {
-	return mg.Spec.DeletionPolicy
-}
-
-// GetProviderConfigReference of this ApiManagementUser.
-func (mg *ApiManagementUser) GetProviderConfigReference() *xpv1.Reference {
-	return mg.Spec.ProviderConfigReference
-}
-
-/*
-GetProviderReference of this ApiManagementUser.
-Deprecated: Use GetProviderConfigReference.
-*/
-func (mg *ApiManagementUser) GetProviderReference() *xpv1.Reference {
-	return mg.Spec.ProviderReference
-}
-
-// GetWriteConnectionSecretToReference of this ApiManagementUser.
-func (mg *ApiManagementUser) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
-	return mg.Spec.WriteConnectionSecretToReference
-}
-
-// SetConditions of this ApiManagementUser.
-func (mg *ApiManagementUser) SetConditions(c ...xpv1.Condition) {
-	mg.Status.SetConditions(c...)
-}
-
-// SetDeletionPolicy of this ApiManagementUser.
-func (mg *ApiManagementUser) SetDeletionPolicy(r xpv1.DeletionPolicy) {
-	mg.Spec.DeletionPolicy = r
-}
-
-// SetProviderConfigReference of this ApiManagementUser.
-func (mg *ApiManagementUser) SetProviderConfigReference(r *xpv1.Reference) {
-	mg.Spec.ProviderConfigReference = r
-}
-
-/*
-SetProviderReference of this ApiManagementUser.
-Deprecated: Use SetProviderConfigReference.
-*/
-func (mg *ApiManagementUser) SetProviderReference(r *xpv1.Reference) {
-	mg.Spec.ProviderReference = r
-}
-
-// SetWriteConnectionSecretToReference of this ApiManagementUser.
-func (mg *ApiManagementUser) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
+// SetWriteConnectionSecretToReference of this ManagementUser.
+func (mg *ManagementUser) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
 	mg.Spec.WriteConnectionSecretToReference = r
 }

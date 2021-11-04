@@ -19,8 +19,8 @@ package v1alpha1
 
 import resource "github.com/crossplane/crossplane-runtime/pkg/resource"
 
-// GetItems of this StreamAnalyticsFunctionJavascriptUdfList.
-func (l *StreamAnalyticsFunctionJavascriptUdfList) GetItems() []resource.Managed {
+// GetItems of this AnalyticsFunctionJavascriptUdfList.
+func (l *AnalyticsFunctionJavascriptUdfList) GetItems() []resource.Managed {
 	items := make([]resource.Managed, len(l.Items))
 	for i := range l.Items {
 		items[i] = &l.Items[i]
@@ -28,8 +28,8 @@ func (l *StreamAnalyticsFunctionJavascriptUdfList) GetItems() []resource.Managed
 	return items
 }
 
-// GetItems of this StreamAnalyticsJobList.
-func (l *StreamAnalyticsJobList) GetItems() []resource.Managed {
+// GetItems of this AnalyticsJobList.
+func (l *AnalyticsJobList) GetItems() []resource.Managed {
 	items := make([]resource.Managed, len(l.Items))
 	for i := range l.Items {
 		items[i] = &l.Items[i]
@@ -37,8 +37,8 @@ func (l *StreamAnalyticsJobList) GetItems() []resource.Managed {
 	return items
 }
 
-// GetItems of this StreamAnalyticsOutputBlobList.
-func (l *StreamAnalyticsOutputBlobList) GetItems() []resource.Managed {
+// GetItems of this AnalyticsOutputBlobList.
+func (l *AnalyticsOutputBlobList) GetItems() []resource.Managed {
 	items := make([]resource.Managed, len(l.Items))
 	for i := range l.Items {
 		items[i] = &l.Items[i]
@@ -46,8 +46,8 @@ func (l *StreamAnalyticsOutputBlobList) GetItems() []resource.Managed {
 	return items
 }
 
-// GetItems of this StreamAnalyticsOutputEventhubList.
-func (l *StreamAnalyticsOutputEventhubList) GetItems() []resource.Managed {
+// GetItems of this AnalyticsOutputEventhubList.
+func (l *AnalyticsOutputEventhubList) GetItems() []resource.Managed {
 	items := make([]resource.Managed, len(l.Items))
 	for i := range l.Items {
 		items[i] = &l.Items[i]
@@ -55,8 +55,8 @@ func (l *StreamAnalyticsOutputEventhubList) GetItems() []resource.Managed {
 	return items
 }
 
-// GetItems of this StreamAnalyticsOutputMssqlList.
-func (l *StreamAnalyticsOutputMssqlList) GetItems() []resource.Managed {
+// GetItems of this AnalyticsOutputMssqlList.
+func (l *AnalyticsOutputMssqlList) GetItems() []resource.Managed {
 	items := make([]resource.Managed, len(l.Items))
 	for i := range l.Items {
 		items[i] = &l.Items[i]
@@ -64,8 +64,8 @@ func (l *StreamAnalyticsOutputMssqlList) GetItems() []resource.Managed {
 	return items
 }
 
-// GetItems of this StreamAnalyticsOutputServicebusQueueList.
-func (l *StreamAnalyticsOutputServicebusQueueList) GetItems() []resource.Managed {
+// GetItems of this AnalyticsOutputServicebusQueueList.
+func (l *AnalyticsOutputServicebusQueueList) GetItems() []resource.Managed {
 	items := make([]resource.Managed, len(l.Items))
 	for i := range l.Items {
 		items[i] = &l.Items[i]
@@ -73,8 +73,8 @@ func (l *StreamAnalyticsOutputServicebusQueueList) GetItems() []resource.Managed
 	return items
 }
 
-// GetItems of this StreamAnalyticsOutputServicebusTopicList.
-func (l *StreamAnalyticsOutputServicebusTopicList) GetItems() []resource.Managed {
+// GetItems of this AnalyticsOutputServicebusTopicList.
+func (l *AnalyticsOutputServicebusTopicList) GetItems() []resource.Managed {
 	items := make([]resource.Managed, len(l.Items))
 	for i := range l.Items {
 		items[i] = &l.Items[i]
@@ -82,8 +82,8 @@ func (l *StreamAnalyticsOutputServicebusTopicList) GetItems() []resource.Managed
 	return items
 }
 
-// GetItems of this StreamAnalyticsReferenceInputBlobList.
-func (l *StreamAnalyticsReferenceInputBlobList) GetItems() []resource.Managed {
+// GetItems of this AnalyticsReferenceInputBlobList.
+func (l *AnalyticsReferenceInputBlobList) GetItems() []resource.Managed {
 	items := make([]resource.Managed, len(l.Items))
 	for i := range l.Items {
 		items[i] = &l.Items[i]
@@ -91,8 +91,8 @@ func (l *StreamAnalyticsReferenceInputBlobList) GetItems() []resource.Managed {
 	return items
 }
 
-// GetItems of this StreamAnalyticsStreamInputBlobList.
-func (l *StreamAnalyticsStreamInputBlobList) GetItems() []resource.Managed {
+// GetItems of this AnalyticsStreamInputBlobList.
+func (l *AnalyticsStreamInputBlobList) GetItems() []resource.Managed {
 	items := make([]resource.Managed, len(l.Items))
 	for i := range l.Items {
 		items[i] = &l.Items[i]
@@ -100,8 +100,8 @@ func (l *StreamAnalyticsStreamInputBlobList) GetItems() []resource.Managed {
 	return items
 }
 
-// GetItems of this StreamAnalyticsStreamInputEventhubList.
-func (l *StreamAnalyticsStreamInputEventhubList) GetItems() []resource.Managed {
+// GetItems of this AnalyticsStreamInputEventhubList.
+func (l *AnalyticsStreamInputEventhubList) GetItems() []resource.Managed {
 	items := make([]resource.Managed, len(l.Items))
 	for i := range l.Items {
 		items[i] = &l.Items[i]
@@ -109,8 +109,8 @@ func (l *StreamAnalyticsStreamInputEventhubList) GetItems() []resource.Managed {
 	return items
 }
 
-// GetItems of this StreamAnalyticsStreamInputIothubList.
-func (l *StreamAnalyticsStreamInputIothubList) GetItems() []resource.Managed {
+// GetItems of this AnalyticsStreamInputIothubList.
+func (l *AnalyticsStreamInputIothubList) GetItems() []resource.Managed {
 	items := make([]resource.Managed, len(l.Items))
 	for i := range l.Items {
 		items[i] = &l.Items[i]

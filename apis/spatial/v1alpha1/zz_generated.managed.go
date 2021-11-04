@@ -19,58 +19,58 @@ package v1alpha1
 
 import xpv1 "github.com/crossplane/crossplane-runtime/apis/common/v1"
 
-// GetCondition of this SpatialAnchorsAccount.
-func (mg *SpatialAnchorsAccount) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
+// GetCondition of this AnchorsAccount.
+func (mg *AnchorsAccount) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
 	return mg.Status.GetCondition(ct)
 }
 
-// GetDeletionPolicy of this SpatialAnchorsAccount.
-func (mg *SpatialAnchorsAccount) GetDeletionPolicy() xpv1.DeletionPolicy {
+// GetDeletionPolicy of this AnchorsAccount.
+func (mg *AnchorsAccount) GetDeletionPolicy() xpv1.DeletionPolicy {
 	return mg.Spec.DeletionPolicy
 }
 
-// GetProviderConfigReference of this SpatialAnchorsAccount.
-func (mg *SpatialAnchorsAccount) GetProviderConfigReference() *xpv1.Reference {
+// GetProviderConfigReference of this AnchorsAccount.
+func (mg *AnchorsAccount) GetProviderConfigReference() *xpv1.Reference {
 	return mg.Spec.ProviderConfigReference
 }
 
 /*
-GetProviderReference of this SpatialAnchorsAccount.
+GetProviderReference of this AnchorsAccount.
 Deprecated: Use GetProviderConfigReference.
 */
-func (mg *SpatialAnchorsAccount) GetProviderReference() *xpv1.Reference {
+func (mg *AnchorsAccount) GetProviderReference() *xpv1.Reference {
 	return mg.Spec.ProviderReference
 }
 
-// GetWriteConnectionSecretToReference of this SpatialAnchorsAccount.
-func (mg *SpatialAnchorsAccount) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
+// GetWriteConnectionSecretToReference of this AnchorsAccount.
+func (mg *AnchorsAccount) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
 	return mg.Spec.WriteConnectionSecretToReference
 }
 
-// SetConditions of this SpatialAnchorsAccount.
-func (mg *SpatialAnchorsAccount) SetConditions(c ...xpv1.Condition) {
+// SetConditions of this AnchorsAccount.
+func (mg *AnchorsAccount) SetConditions(c ...xpv1.Condition) {
 	mg.Status.SetConditions(c...)
 }
 
-// SetDeletionPolicy of this SpatialAnchorsAccount.
-func (mg *SpatialAnchorsAccount) SetDeletionPolicy(r xpv1.DeletionPolicy) {
+// SetDeletionPolicy of this AnchorsAccount.
+func (mg *AnchorsAccount) SetDeletionPolicy(r xpv1.DeletionPolicy) {
 	mg.Spec.DeletionPolicy = r
 }
 
-// SetProviderConfigReference of this SpatialAnchorsAccount.
-func (mg *SpatialAnchorsAccount) SetProviderConfigReference(r *xpv1.Reference) {
+// SetProviderConfigReference of this AnchorsAccount.
+func (mg *AnchorsAccount) SetProviderConfigReference(r *xpv1.Reference) {
 	mg.Spec.ProviderConfigReference = r
 }
 
 /*
-SetProviderReference of this SpatialAnchorsAccount.
+SetProviderReference of this AnchorsAccount.
 Deprecated: Use SetProviderConfigReference.
 */
-func (mg *SpatialAnchorsAccount) SetProviderReference(r *xpv1.Reference) {
+func (mg *AnchorsAccount) SetProviderReference(r *xpv1.Reference) {
 	mg.Spec.ProviderReference = r
 }
 
-// SetWriteConnectionSecretToReference of this SpatialAnchorsAccount.
-func (mg *SpatialAnchorsAccount) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
+// SetWriteConnectionSecretToReference of this AnchorsAccount.
+func (mg *AnchorsAccount) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
 	mg.Spec.WriteConnectionSecretToReference = r
 }

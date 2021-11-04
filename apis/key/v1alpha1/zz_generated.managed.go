@@ -19,506 +19,506 @@ package v1alpha1
 
 import xpv1 "github.com/crossplane/crossplane-runtime/apis/common/v1"
 
-// GetCondition of this KeyVault.
-func (mg *KeyVault) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
+// GetCondition of this Vault.
+func (mg *Vault) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
 	return mg.Status.GetCondition(ct)
 }
 
-// GetDeletionPolicy of this KeyVault.
-func (mg *KeyVault) GetDeletionPolicy() xpv1.DeletionPolicy {
+// GetDeletionPolicy of this Vault.
+func (mg *Vault) GetDeletionPolicy() xpv1.DeletionPolicy {
 	return mg.Spec.DeletionPolicy
 }
 
-// GetProviderConfigReference of this KeyVault.
-func (mg *KeyVault) GetProviderConfigReference() *xpv1.Reference {
+// GetProviderConfigReference of this Vault.
+func (mg *Vault) GetProviderConfigReference() *xpv1.Reference {
 	return mg.Spec.ProviderConfigReference
 }
 
 /*
-GetProviderReference of this KeyVault.
+GetProviderReference of this Vault.
 Deprecated: Use GetProviderConfigReference.
 */
-func (mg *KeyVault) GetProviderReference() *xpv1.Reference {
+func (mg *Vault) GetProviderReference() *xpv1.Reference {
 	return mg.Spec.ProviderReference
 }
 
-// GetWriteConnectionSecretToReference of this KeyVault.
-func (mg *KeyVault) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
+// GetWriteConnectionSecretToReference of this Vault.
+func (mg *Vault) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
 	return mg.Spec.WriteConnectionSecretToReference
 }
 
-// SetConditions of this KeyVault.
-func (mg *KeyVault) SetConditions(c ...xpv1.Condition) {
+// SetConditions of this Vault.
+func (mg *Vault) SetConditions(c ...xpv1.Condition) {
 	mg.Status.SetConditions(c...)
 }
 
-// SetDeletionPolicy of this KeyVault.
-func (mg *KeyVault) SetDeletionPolicy(r xpv1.DeletionPolicy) {
+// SetDeletionPolicy of this Vault.
+func (mg *Vault) SetDeletionPolicy(r xpv1.DeletionPolicy) {
 	mg.Spec.DeletionPolicy = r
 }
 
-// SetProviderConfigReference of this KeyVault.
-func (mg *KeyVault) SetProviderConfigReference(r *xpv1.Reference) {
+// SetProviderConfigReference of this Vault.
+func (mg *Vault) SetProviderConfigReference(r *xpv1.Reference) {
 	mg.Spec.ProviderConfigReference = r
 }
 
 /*
-SetProviderReference of this KeyVault.
+SetProviderReference of this Vault.
 Deprecated: Use SetProviderConfigReference.
 */
-func (mg *KeyVault) SetProviderReference(r *xpv1.Reference) {
+func (mg *Vault) SetProviderReference(r *xpv1.Reference) {
 	mg.Spec.ProviderReference = r
 }
 
-// SetWriteConnectionSecretToReference of this KeyVault.
-func (mg *KeyVault) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
+// SetWriteConnectionSecretToReference of this Vault.
+func (mg *Vault) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
 	mg.Spec.WriteConnectionSecretToReference = r
 }
 
-// GetCondition of this KeyVaultAccessPolicy.
-func (mg *KeyVaultAccessPolicy) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
+// GetCondition of this VaultAccessPolicy.
+func (mg *VaultAccessPolicy) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
 	return mg.Status.GetCondition(ct)
 }
 
-// GetDeletionPolicy of this KeyVaultAccessPolicy.
-func (mg *KeyVaultAccessPolicy) GetDeletionPolicy() xpv1.DeletionPolicy {
+// GetDeletionPolicy of this VaultAccessPolicy.
+func (mg *VaultAccessPolicy) GetDeletionPolicy() xpv1.DeletionPolicy {
 	return mg.Spec.DeletionPolicy
 }
 
-// GetProviderConfigReference of this KeyVaultAccessPolicy.
-func (mg *KeyVaultAccessPolicy) GetProviderConfigReference() *xpv1.Reference {
+// GetProviderConfigReference of this VaultAccessPolicy.
+func (mg *VaultAccessPolicy) GetProviderConfigReference() *xpv1.Reference {
 	return mg.Spec.ProviderConfigReference
 }
 
 /*
-GetProviderReference of this KeyVaultAccessPolicy.
+GetProviderReference of this VaultAccessPolicy.
 Deprecated: Use GetProviderConfigReference.
 */
-func (mg *KeyVaultAccessPolicy) GetProviderReference() *xpv1.Reference {
+func (mg *VaultAccessPolicy) GetProviderReference() *xpv1.Reference {
 	return mg.Spec.ProviderReference
 }
 
-// GetWriteConnectionSecretToReference of this KeyVaultAccessPolicy.
-func (mg *KeyVaultAccessPolicy) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
+// GetWriteConnectionSecretToReference of this VaultAccessPolicy.
+func (mg *VaultAccessPolicy) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
 	return mg.Spec.WriteConnectionSecretToReference
 }
 
-// SetConditions of this KeyVaultAccessPolicy.
-func (mg *KeyVaultAccessPolicy) SetConditions(c ...xpv1.Condition) {
+// SetConditions of this VaultAccessPolicy.
+func (mg *VaultAccessPolicy) SetConditions(c ...xpv1.Condition) {
 	mg.Status.SetConditions(c...)
 }
 
-// SetDeletionPolicy of this KeyVaultAccessPolicy.
-func (mg *KeyVaultAccessPolicy) SetDeletionPolicy(r xpv1.DeletionPolicy) {
+// SetDeletionPolicy of this VaultAccessPolicy.
+func (mg *VaultAccessPolicy) SetDeletionPolicy(r xpv1.DeletionPolicy) {
 	mg.Spec.DeletionPolicy = r
 }
 
-// SetProviderConfigReference of this KeyVaultAccessPolicy.
-func (mg *KeyVaultAccessPolicy) SetProviderConfigReference(r *xpv1.Reference) {
+// SetProviderConfigReference of this VaultAccessPolicy.
+func (mg *VaultAccessPolicy) SetProviderConfigReference(r *xpv1.Reference) {
 	mg.Spec.ProviderConfigReference = r
 }
 
 /*
-SetProviderReference of this KeyVaultAccessPolicy.
+SetProviderReference of this VaultAccessPolicy.
 Deprecated: Use SetProviderConfigReference.
 */
-func (mg *KeyVaultAccessPolicy) SetProviderReference(r *xpv1.Reference) {
+func (mg *VaultAccessPolicy) SetProviderReference(r *xpv1.Reference) {
 	mg.Spec.ProviderReference = r
 }
 
-// SetWriteConnectionSecretToReference of this KeyVaultAccessPolicy.
-func (mg *KeyVaultAccessPolicy) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
+// SetWriteConnectionSecretToReference of this VaultAccessPolicy.
+func (mg *VaultAccessPolicy) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
 	mg.Spec.WriteConnectionSecretToReference = r
 }
 
-// GetCondition of this KeyVaultCertificate.
-func (mg *KeyVaultCertificate) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
+// GetCondition of this VaultCertificate.
+func (mg *VaultCertificate) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
 	return mg.Status.GetCondition(ct)
 }
 
-// GetDeletionPolicy of this KeyVaultCertificate.
-func (mg *KeyVaultCertificate) GetDeletionPolicy() xpv1.DeletionPolicy {
+// GetDeletionPolicy of this VaultCertificate.
+func (mg *VaultCertificate) GetDeletionPolicy() xpv1.DeletionPolicy {
 	return mg.Spec.DeletionPolicy
 }
 
-// GetProviderConfigReference of this KeyVaultCertificate.
-func (mg *KeyVaultCertificate) GetProviderConfigReference() *xpv1.Reference {
+// GetProviderConfigReference of this VaultCertificate.
+func (mg *VaultCertificate) GetProviderConfigReference() *xpv1.Reference {
 	return mg.Spec.ProviderConfigReference
 }
 
 /*
-GetProviderReference of this KeyVaultCertificate.
+GetProviderReference of this VaultCertificate.
 Deprecated: Use GetProviderConfigReference.
 */
-func (mg *KeyVaultCertificate) GetProviderReference() *xpv1.Reference {
+func (mg *VaultCertificate) GetProviderReference() *xpv1.Reference {
 	return mg.Spec.ProviderReference
 }
 
-// GetWriteConnectionSecretToReference of this KeyVaultCertificate.
-func (mg *KeyVaultCertificate) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
+// GetWriteConnectionSecretToReference of this VaultCertificate.
+func (mg *VaultCertificate) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
 	return mg.Spec.WriteConnectionSecretToReference
 }
 
-// SetConditions of this KeyVaultCertificate.
-func (mg *KeyVaultCertificate) SetConditions(c ...xpv1.Condition) {
+// SetConditions of this VaultCertificate.
+func (mg *VaultCertificate) SetConditions(c ...xpv1.Condition) {
 	mg.Status.SetConditions(c...)
 }
 
-// SetDeletionPolicy of this KeyVaultCertificate.
-func (mg *KeyVaultCertificate) SetDeletionPolicy(r xpv1.DeletionPolicy) {
+// SetDeletionPolicy of this VaultCertificate.
+func (mg *VaultCertificate) SetDeletionPolicy(r xpv1.DeletionPolicy) {
 	mg.Spec.DeletionPolicy = r
 }
 
-// SetProviderConfigReference of this KeyVaultCertificate.
-func (mg *KeyVaultCertificate) SetProviderConfigReference(r *xpv1.Reference) {
+// SetProviderConfigReference of this VaultCertificate.
+func (mg *VaultCertificate) SetProviderConfigReference(r *xpv1.Reference) {
 	mg.Spec.ProviderConfigReference = r
 }
 
 /*
-SetProviderReference of this KeyVaultCertificate.
+SetProviderReference of this VaultCertificate.
 Deprecated: Use SetProviderConfigReference.
 */
-func (mg *KeyVaultCertificate) SetProviderReference(r *xpv1.Reference) {
+func (mg *VaultCertificate) SetProviderReference(r *xpv1.Reference) {
 	mg.Spec.ProviderReference = r
 }
 
-// SetWriteConnectionSecretToReference of this KeyVaultCertificate.
-func (mg *KeyVaultCertificate) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
+// SetWriteConnectionSecretToReference of this VaultCertificate.
+func (mg *VaultCertificate) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
 	mg.Spec.WriteConnectionSecretToReference = r
 }
 
-// GetCondition of this KeyVaultCertificateIssuer.
-func (mg *KeyVaultCertificateIssuer) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
+// GetCondition of this VaultCertificateIssuer.
+func (mg *VaultCertificateIssuer) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
 	return mg.Status.GetCondition(ct)
 }
 
-// GetDeletionPolicy of this KeyVaultCertificateIssuer.
-func (mg *KeyVaultCertificateIssuer) GetDeletionPolicy() xpv1.DeletionPolicy {
+// GetDeletionPolicy of this VaultCertificateIssuer.
+func (mg *VaultCertificateIssuer) GetDeletionPolicy() xpv1.DeletionPolicy {
 	return mg.Spec.DeletionPolicy
 }
 
-// GetProviderConfigReference of this KeyVaultCertificateIssuer.
-func (mg *KeyVaultCertificateIssuer) GetProviderConfigReference() *xpv1.Reference {
+// GetProviderConfigReference of this VaultCertificateIssuer.
+func (mg *VaultCertificateIssuer) GetProviderConfigReference() *xpv1.Reference {
 	return mg.Spec.ProviderConfigReference
 }
 
 /*
-GetProviderReference of this KeyVaultCertificateIssuer.
+GetProviderReference of this VaultCertificateIssuer.
 Deprecated: Use GetProviderConfigReference.
 */
-func (mg *KeyVaultCertificateIssuer) GetProviderReference() *xpv1.Reference {
+func (mg *VaultCertificateIssuer) GetProviderReference() *xpv1.Reference {
 	return mg.Spec.ProviderReference
 }
 
-// GetWriteConnectionSecretToReference of this KeyVaultCertificateIssuer.
-func (mg *KeyVaultCertificateIssuer) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
+// GetWriteConnectionSecretToReference of this VaultCertificateIssuer.
+func (mg *VaultCertificateIssuer) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
 	return mg.Spec.WriteConnectionSecretToReference
 }
 
-// SetConditions of this KeyVaultCertificateIssuer.
-func (mg *KeyVaultCertificateIssuer) SetConditions(c ...xpv1.Condition) {
+// SetConditions of this VaultCertificateIssuer.
+func (mg *VaultCertificateIssuer) SetConditions(c ...xpv1.Condition) {
 	mg.Status.SetConditions(c...)
 }
 
-// SetDeletionPolicy of this KeyVaultCertificateIssuer.
-func (mg *KeyVaultCertificateIssuer) SetDeletionPolicy(r xpv1.DeletionPolicy) {
+// SetDeletionPolicy of this VaultCertificateIssuer.
+func (mg *VaultCertificateIssuer) SetDeletionPolicy(r xpv1.DeletionPolicy) {
 	mg.Spec.DeletionPolicy = r
 }
 
-// SetProviderConfigReference of this KeyVaultCertificateIssuer.
-func (mg *KeyVaultCertificateIssuer) SetProviderConfigReference(r *xpv1.Reference) {
+// SetProviderConfigReference of this VaultCertificateIssuer.
+func (mg *VaultCertificateIssuer) SetProviderConfigReference(r *xpv1.Reference) {
 	mg.Spec.ProviderConfigReference = r
 }
 
 /*
-SetProviderReference of this KeyVaultCertificateIssuer.
+SetProviderReference of this VaultCertificateIssuer.
 Deprecated: Use SetProviderConfigReference.
 */
-func (mg *KeyVaultCertificateIssuer) SetProviderReference(r *xpv1.Reference) {
+func (mg *VaultCertificateIssuer) SetProviderReference(r *xpv1.Reference) {
 	mg.Spec.ProviderReference = r
 }
 
-// SetWriteConnectionSecretToReference of this KeyVaultCertificateIssuer.
-func (mg *KeyVaultCertificateIssuer) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
+// SetWriteConnectionSecretToReference of this VaultCertificateIssuer.
+func (mg *VaultCertificateIssuer) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
 	mg.Spec.WriteConnectionSecretToReference = r
 }
 
-// GetCondition of this KeyVaultKey.
-func (mg *KeyVaultKey) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
+// GetCondition of this VaultKey.
+func (mg *VaultKey) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
 	return mg.Status.GetCondition(ct)
 }
 
-// GetDeletionPolicy of this KeyVaultKey.
-func (mg *KeyVaultKey) GetDeletionPolicy() xpv1.DeletionPolicy {
+// GetDeletionPolicy of this VaultKey.
+func (mg *VaultKey) GetDeletionPolicy() xpv1.DeletionPolicy {
 	return mg.Spec.DeletionPolicy
 }
 
-// GetProviderConfigReference of this KeyVaultKey.
-func (mg *KeyVaultKey) GetProviderConfigReference() *xpv1.Reference {
+// GetProviderConfigReference of this VaultKey.
+func (mg *VaultKey) GetProviderConfigReference() *xpv1.Reference {
 	return mg.Spec.ProviderConfigReference
 }
 
 /*
-GetProviderReference of this KeyVaultKey.
+GetProviderReference of this VaultKey.
 Deprecated: Use GetProviderConfigReference.
 */
-func (mg *KeyVaultKey) GetProviderReference() *xpv1.Reference {
+func (mg *VaultKey) GetProviderReference() *xpv1.Reference {
 	return mg.Spec.ProviderReference
 }
 
-// GetWriteConnectionSecretToReference of this KeyVaultKey.
-func (mg *KeyVaultKey) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
+// GetWriteConnectionSecretToReference of this VaultKey.
+func (mg *VaultKey) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
 	return mg.Spec.WriteConnectionSecretToReference
 }
 
-// SetConditions of this KeyVaultKey.
-func (mg *KeyVaultKey) SetConditions(c ...xpv1.Condition) {
+// SetConditions of this VaultKey.
+func (mg *VaultKey) SetConditions(c ...xpv1.Condition) {
 	mg.Status.SetConditions(c...)
 }
 
-// SetDeletionPolicy of this KeyVaultKey.
-func (mg *KeyVaultKey) SetDeletionPolicy(r xpv1.DeletionPolicy) {
+// SetDeletionPolicy of this VaultKey.
+func (mg *VaultKey) SetDeletionPolicy(r xpv1.DeletionPolicy) {
 	mg.Spec.DeletionPolicy = r
 }
 
-// SetProviderConfigReference of this KeyVaultKey.
-func (mg *KeyVaultKey) SetProviderConfigReference(r *xpv1.Reference) {
+// SetProviderConfigReference of this VaultKey.
+func (mg *VaultKey) SetProviderConfigReference(r *xpv1.Reference) {
 	mg.Spec.ProviderConfigReference = r
 }
 
 /*
-SetProviderReference of this KeyVaultKey.
+SetProviderReference of this VaultKey.
 Deprecated: Use SetProviderConfigReference.
 */
-func (mg *KeyVaultKey) SetProviderReference(r *xpv1.Reference) {
+func (mg *VaultKey) SetProviderReference(r *xpv1.Reference) {
 	mg.Spec.ProviderReference = r
 }
 
-// SetWriteConnectionSecretToReference of this KeyVaultKey.
-func (mg *KeyVaultKey) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
+// SetWriteConnectionSecretToReference of this VaultKey.
+func (mg *VaultKey) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
 	mg.Spec.WriteConnectionSecretToReference = r
 }
 
-// GetCondition of this KeyVaultManagedHardwareSecurityModule.
-func (mg *KeyVaultManagedHardwareSecurityModule) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
+// GetCondition of this VaultManagedHardwareSecurityModule.
+func (mg *VaultManagedHardwareSecurityModule) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
 	return mg.Status.GetCondition(ct)
 }
 
-// GetDeletionPolicy of this KeyVaultManagedHardwareSecurityModule.
-func (mg *KeyVaultManagedHardwareSecurityModule) GetDeletionPolicy() xpv1.DeletionPolicy {
+// GetDeletionPolicy of this VaultManagedHardwareSecurityModule.
+func (mg *VaultManagedHardwareSecurityModule) GetDeletionPolicy() xpv1.DeletionPolicy {
 	return mg.Spec.DeletionPolicy
 }
 
-// GetProviderConfigReference of this KeyVaultManagedHardwareSecurityModule.
-func (mg *KeyVaultManagedHardwareSecurityModule) GetProviderConfigReference() *xpv1.Reference {
+// GetProviderConfigReference of this VaultManagedHardwareSecurityModule.
+func (mg *VaultManagedHardwareSecurityModule) GetProviderConfigReference() *xpv1.Reference {
 	return mg.Spec.ProviderConfigReference
 }
 
 /*
-GetProviderReference of this KeyVaultManagedHardwareSecurityModule.
+GetProviderReference of this VaultManagedHardwareSecurityModule.
 Deprecated: Use GetProviderConfigReference.
 */
-func (mg *KeyVaultManagedHardwareSecurityModule) GetProviderReference() *xpv1.Reference {
+func (mg *VaultManagedHardwareSecurityModule) GetProviderReference() *xpv1.Reference {
 	return mg.Spec.ProviderReference
 }
 
-// GetWriteConnectionSecretToReference of this KeyVaultManagedHardwareSecurityModule.
-func (mg *KeyVaultManagedHardwareSecurityModule) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
+// GetWriteConnectionSecretToReference of this VaultManagedHardwareSecurityModule.
+func (mg *VaultManagedHardwareSecurityModule) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
 	return mg.Spec.WriteConnectionSecretToReference
 }
 
-// SetConditions of this KeyVaultManagedHardwareSecurityModule.
-func (mg *KeyVaultManagedHardwareSecurityModule) SetConditions(c ...xpv1.Condition) {
+// SetConditions of this VaultManagedHardwareSecurityModule.
+func (mg *VaultManagedHardwareSecurityModule) SetConditions(c ...xpv1.Condition) {
 	mg.Status.SetConditions(c...)
 }
 
-// SetDeletionPolicy of this KeyVaultManagedHardwareSecurityModule.
-func (mg *KeyVaultManagedHardwareSecurityModule) SetDeletionPolicy(r xpv1.DeletionPolicy) {
+// SetDeletionPolicy of this VaultManagedHardwareSecurityModule.
+func (mg *VaultManagedHardwareSecurityModule) SetDeletionPolicy(r xpv1.DeletionPolicy) {
 	mg.Spec.DeletionPolicy = r
 }
 
-// SetProviderConfigReference of this KeyVaultManagedHardwareSecurityModule.
-func (mg *KeyVaultManagedHardwareSecurityModule) SetProviderConfigReference(r *xpv1.Reference) {
+// SetProviderConfigReference of this VaultManagedHardwareSecurityModule.
+func (mg *VaultManagedHardwareSecurityModule) SetProviderConfigReference(r *xpv1.Reference) {
 	mg.Spec.ProviderConfigReference = r
 }
 
 /*
-SetProviderReference of this KeyVaultManagedHardwareSecurityModule.
+SetProviderReference of this VaultManagedHardwareSecurityModule.
 Deprecated: Use SetProviderConfigReference.
 */
-func (mg *KeyVaultManagedHardwareSecurityModule) SetProviderReference(r *xpv1.Reference) {
+func (mg *VaultManagedHardwareSecurityModule) SetProviderReference(r *xpv1.Reference) {
 	mg.Spec.ProviderReference = r
 }
 
-// SetWriteConnectionSecretToReference of this KeyVaultManagedHardwareSecurityModule.
-func (mg *KeyVaultManagedHardwareSecurityModule) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
+// SetWriteConnectionSecretToReference of this VaultManagedHardwareSecurityModule.
+func (mg *VaultManagedHardwareSecurityModule) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
 	mg.Spec.WriteConnectionSecretToReference = r
 }
 
-// GetCondition of this KeyVaultManagedStorageAccount.
-func (mg *KeyVaultManagedStorageAccount) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
+// GetCondition of this VaultManagedStorageAccount.
+func (mg *VaultManagedStorageAccount) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
 	return mg.Status.GetCondition(ct)
 }
 
-// GetDeletionPolicy of this KeyVaultManagedStorageAccount.
-func (mg *KeyVaultManagedStorageAccount) GetDeletionPolicy() xpv1.DeletionPolicy {
+// GetDeletionPolicy of this VaultManagedStorageAccount.
+func (mg *VaultManagedStorageAccount) GetDeletionPolicy() xpv1.DeletionPolicy {
 	return mg.Spec.DeletionPolicy
 }
 
-// GetProviderConfigReference of this KeyVaultManagedStorageAccount.
-func (mg *KeyVaultManagedStorageAccount) GetProviderConfigReference() *xpv1.Reference {
+// GetProviderConfigReference of this VaultManagedStorageAccount.
+func (mg *VaultManagedStorageAccount) GetProviderConfigReference() *xpv1.Reference {
 	return mg.Spec.ProviderConfigReference
 }
 
 /*
-GetProviderReference of this KeyVaultManagedStorageAccount.
+GetProviderReference of this VaultManagedStorageAccount.
 Deprecated: Use GetProviderConfigReference.
 */
-func (mg *KeyVaultManagedStorageAccount) GetProviderReference() *xpv1.Reference {
+func (mg *VaultManagedStorageAccount) GetProviderReference() *xpv1.Reference {
 	return mg.Spec.ProviderReference
 }
 
-// GetWriteConnectionSecretToReference of this KeyVaultManagedStorageAccount.
-func (mg *KeyVaultManagedStorageAccount) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
+// GetWriteConnectionSecretToReference of this VaultManagedStorageAccount.
+func (mg *VaultManagedStorageAccount) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
 	return mg.Spec.WriteConnectionSecretToReference
 }
 
-// SetConditions of this KeyVaultManagedStorageAccount.
-func (mg *KeyVaultManagedStorageAccount) SetConditions(c ...xpv1.Condition) {
+// SetConditions of this VaultManagedStorageAccount.
+func (mg *VaultManagedStorageAccount) SetConditions(c ...xpv1.Condition) {
 	mg.Status.SetConditions(c...)
 }
 
-// SetDeletionPolicy of this KeyVaultManagedStorageAccount.
-func (mg *KeyVaultManagedStorageAccount) SetDeletionPolicy(r xpv1.DeletionPolicy) {
+// SetDeletionPolicy of this VaultManagedStorageAccount.
+func (mg *VaultManagedStorageAccount) SetDeletionPolicy(r xpv1.DeletionPolicy) {
 	mg.Spec.DeletionPolicy = r
 }
 
-// SetProviderConfigReference of this KeyVaultManagedStorageAccount.
-func (mg *KeyVaultManagedStorageAccount) SetProviderConfigReference(r *xpv1.Reference) {
+// SetProviderConfigReference of this VaultManagedStorageAccount.
+func (mg *VaultManagedStorageAccount) SetProviderConfigReference(r *xpv1.Reference) {
 	mg.Spec.ProviderConfigReference = r
 }
 
 /*
-SetProviderReference of this KeyVaultManagedStorageAccount.
+SetProviderReference of this VaultManagedStorageAccount.
 Deprecated: Use SetProviderConfigReference.
 */
-func (mg *KeyVaultManagedStorageAccount) SetProviderReference(r *xpv1.Reference) {
+func (mg *VaultManagedStorageAccount) SetProviderReference(r *xpv1.Reference) {
 	mg.Spec.ProviderReference = r
 }
 
-// SetWriteConnectionSecretToReference of this KeyVaultManagedStorageAccount.
-func (mg *KeyVaultManagedStorageAccount) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
+// SetWriteConnectionSecretToReference of this VaultManagedStorageAccount.
+func (mg *VaultManagedStorageAccount) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
 	mg.Spec.WriteConnectionSecretToReference = r
 }
 
-// GetCondition of this KeyVaultManagedStorageAccountSasTokenDefinition.
-func (mg *KeyVaultManagedStorageAccountSasTokenDefinition) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
+// GetCondition of this VaultManagedStorageAccountSasTokenDefinition.
+func (mg *VaultManagedStorageAccountSasTokenDefinition) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
 	return mg.Status.GetCondition(ct)
 }
 
-// GetDeletionPolicy of this KeyVaultManagedStorageAccountSasTokenDefinition.
-func (mg *KeyVaultManagedStorageAccountSasTokenDefinition) GetDeletionPolicy() xpv1.DeletionPolicy {
+// GetDeletionPolicy of this VaultManagedStorageAccountSasTokenDefinition.
+func (mg *VaultManagedStorageAccountSasTokenDefinition) GetDeletionPolicy() xpv1.DeletionPolicy {
 	return mg.Spec.DeletionPolicy
 }
 
-// GetProviderConfigReference of this KeyVaultManagedStorageAccountSasTokenDefinition.
-func (mg *KeyVaultManagedStorageAccountSasTokenDefinition) GetProviderConfigReference() *xpv1.Reference {
+// GetProviderConfigReference of this VaultManagedStorageAccountSasTokenDefinition.
+func (mg *VaultManagedStorageAccountSasTokenDefinition) GetProviderConfigReference() *xpv1.Reference {
 	return mg.Spec.ProviderConfigReference
 }
 
 /*
-GetProviderReference of this KeyVaultManagedStorageAccountSasTokenDefinition.
+GetProviderReference of this VaultManagedStorageAccountSasTokenDefinition.
 Deprecated: Use GetProviderConfigReference.
 */
-func (mg *KeyVaultManagedStorageAccountSasTokenDefinition) GetProviderReference() *xpv1.Reference {
+func (mg *VaultManagedStorageAccountSasTokenDefinition) GetProviderReference() *xpv1.Reference {
 	return mg.Spec.ProviderReference
 }
 
-// GetWriteConnectionSecretToReference of this KeyVaultManagedStorageAccountSasTokenDefinition.
-func (mg *KeyVaultManagedStorageAccountSasTokenDefinition) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
+// GetWriteConnectionSecretToReference of this VaultManagedStorageAccountSasTokenDefinition.
+func (mg *VaultManagedStorageAccountSasTokenDefinition) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
 	return mg.Spec.WriteConnectionSecretToReference
 }
 
-// SetConditions of this KeyVaultManagedStorageAccountSasTokenDefinition.
-func (mg *KeyVaultManagedStorageAccountSasTokenDefinition) SetConditions(c ...xpv1.Condition) {
+// SetConditions of this VaultManagedStorageAccountSasTokenDefinition.
+func (mg *VaultManagedStorageAccountSasTokenDefinition) SetConditions(c ...xpv1.Condition) {
 	mg.Status.SetConditions(c...)
 }
 
-// SetDeletionPolicy of this KeyVaultManagedStorageAccountSasTokenDefinition.
-func (mg *KeyVaultManagedStorageAccountSasTokenDefinition) SetDeletionPolicy(r xpv1.DeletionPolicy) {
+// SetDeletionPolicy of this VaultManagedStorageAccountSasTokenDefinition.
+func (mg *VaultManagedStorageAccountSasTokenDefinition) SetDeletionPolicy(r xpv1.DeletionPolicy) {
 	mg.Spec.DeletionPolicy = r
 }
 
-// SetProviderConfigReference of this KeyVaultManagedStorageAccountSasTokenDefinition.
-func (mg *KeyVaultManagedStorageAccountSasTokenDefinition) SetProviderConfigReference(r *xpv1.Reference) {
+// SetProviderConfigReference of this VaultManagedStorageAccountSasTokenDefinition.
+func (mg *VaultManagedStorageAccountSasTokenDefinition) SetProviderConfigReference(r *xpv1.Reference) {
 	mg.Spec.ProviderConfigReference = r
 }
 
 /*
-SetProviderReference of this KeyVaultManagedStorageAccountSasTokenDefinition.
+SetProviderReference of this VaultManagedStorageAccountSasTokenDefinition.
 Deprecated: Use SetProviderConfigReference.
 */
-func (mg *KeyVaultManagedStorageAccountSasTokenDefinition) SetProviderReference(r *xpv1.Reference) {
+func (mg *VaultManagedStorageAccountSasTokenDefinition) SetProviderReference(r *xpv1.Reference) {
 	mg.Spec.ProviderReference = r
 }
 
-// SetWriteConnectionSecretToReference of this KeyVaultManagedStorageAccountSasTokenDefinition.
-func (mg *KeyVaultManagedStorageAccountSasTokenDefinition) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
+// SetWriteConnectionSecretToReference of this VaultManagedStorageAccountSasTokenDefinition.
+func (mg *VaultManagedStorageAccountSasTokenDefinition) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
 	mg.Spec.WriteConnectionSecretToReference = r
 }
 
-// GetCondition of this KeyVaultSecret.
-func (mg *KeyVaultSecret) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
+// GetCondition of this VaultSecret.
+func (mg *VaultSecret) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
 	return mg.Status.GetCondition(ct)
 }
 
-// GetDeletionPolicy of this KeyVaultSecret.
-func (mg *KeyVaultSecret) GetDeletionPolicy() xpv1.DeletionPolicy {
+// GetDeletionPolicy of this VaultSecret.
+func (mg *VaultSecret) GetDeletionPolicy() xpv1.DeletionPolicy {
 	return mg.Spec.DeletionPolicy
 }
 
-// GetProviderConfigReference of this KeyVaultSecret.
-func (mg *KeyVaultSecret) GetProviderConfigReference() *xpv1.Reference {
+// GetProviderConfigReference of this VaultSecret.
+func (mg *VaultSecret) GetProviderConfigReference() *xpv1.Reference {
 	return mg.Spec.ProviderConfigReference
 }
 
 /*
-GetProviderReference of this KeyVaultSecret.
+GetProviderReference of this VaultSecret.
 Deprecated: Use GetProviderConfigReference.
 */
-func (mg *KeyVaultSecret) GetProviderReference() *xpv1.Reference {
+func (mg *VaultSecret) GetProviderReference() *xpv1.Reference {
 	return mg.Spec.ProviderReference
 }
 
-// GetWriteConnectionSecretToReference of this KeyVaultSecret.
-func (mg *KeyVaultSecret) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
+// GetWriteConnectionSecretToReference of this VaultSecret.
+func (mg *VaultSecret) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
 	return mg.Spec.WriteConnectionSecretToReference
 }
 
-// SetConditions of this KeyVaultSecret.
-func (mg *KeyVaultSecret) SetConditions(c ...xpv1.Condition) {
+// SetConditions of this VaultSecret.
+func (mg *VaultSecret) SetConditions(c ...xpv1.Condition) {
 	mg.Status.SetConditions(c...)
 }
 
-// SetDeletionPolicy of this KeyVaultSecret.
-func (mg *KeyVaultSecret) SetDeletionPolicy(r xpv1.DeletionPolicy) {
+// SetDeletionPolicy of this VaultSecret.
+func (mg *VaultSecret) SetDeletionPolicy(r xpv1.DeletionPolicy) {
 	mg.Spec.DeletionPolicy = r
 }
 
-// SetProviderConfigReference of this KeyVaultSecret.
-func (mg *KeyVaultSecret) SetProviderConfigReference(r *xpv1.Reference) {
+// SetProviderConfigReference of this VaultSecret.
+func (mg *VaultSecret) SetProviderConfigReference(r *xpv1.Reference) {
 	mg.Spec.ProviderConfigReference = r
 }
 
 /*
-SetProviderReference of this KeyVaultSecret.
+SetProviderReference of this VaultSecret.
 Deprecated: Use SetProviderConfigReference.
 */
-func (mg *KeyVaultSecret) SetProviderReference(r *xpv1.Reference) {
+func (mg *VaultSecret) SetProviderReference(r *xpv1.Reference) {
 	mg.Spec.ProviderReference = r
 }
 
-// SetWriteConnectionSecretToReference of this KeyVaultSecret.
-func (mg *KeyVaultSecret) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
+// SetWriteConnectionSecretToReference of this VaultSecret.
+func (mg *VaultSecret) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
 	mg.Spec.WriteConnectionSecretToReference = r
 }

@@ -19,8 +19,8 @@ package v1alpha1
 
 import resource "github.com/crossplane/crossplane-runtime/pkg/resource"
 
-// GetItems of this DataFactoryCustomDatasetList.
-func (l *DataFactoryCustomDatasetList) GetItems() []resource.Managed {
+// GetItems of this FactoryCustomDatasetList.
+func (l *FactoryCustomDatasetList) GetItems() []resource.Managed {
 	items := make([]resource.Managed, len(l.Items))
 	for i := range l.Items {
 		items[i] = &l.Items[i]
@@ -28,8 +28,8 @@ func (l *DataFactoryCustomDatasetList) GetItems() []resource.Managed {
 	return items
 }
 
-// GetItems of this DataFactoryDataFlowList.
-func (l *DataFactoryDataFlowList) GetItems() []resource.Managed {
+// GetItems of this FactoryDataFlowList.
+func (l *FactoryDataFlowList) GetItems() []resource.Managed {
 	items := make([]resource.Managed, len(l.Items))
 	for i := range l.Items {
 		items[i] = &l.Items[i]
@@ -37,8 +37,8 @@ func (l *DataFactoryDataFlowList) GetItems() []resource.Managed {
 	return items
 }
 
-// GetItems of this DataFactoryDatasetAzureBlobList.
-func (l *DataFactoryDatasetAzureBlobList) GetItems() []resource.Managed {
+// GetItems of this FactoryDatasetAzureBlobList.
+func (l *FactoryDatasetAzureBlobList) GetItems() []resource.Managed {
 	items := make([]resource.Managed, len(l.Items))
 	for i := range l.Items {
 		items[i] = &l.Items[i]
@@ -46,8 +46,8 @@ func (l *DataFactoryDatasetAzureBlobList) GetItems() []resource.Managed {
 	return items
 }
 
-// GetItems of this DataFactoryDatasetBinaryList.
-func (l *DataFactoryDatasetBinaryList) GetItems() []resource.Managed {
+// GetItems of this FactoryDatasetBinaryList.
+func (l *FactoryDatasetBinaryList) GetItems() []resource.Managed {
 	items := make([]resource.Managed, len(l.Items))
 	for i := range l.Items {
 		items[i] = &l.Items[i]
@@ -55,8 +55,8 @@ func (l *DataFactoryDatasetBinaryList) GetItems() []resource.Managed {
 	return items
 }
 
-// GetItems of this DataFactoryDatasetCosmosdbSqlapiList.
-func (l *DataFactoryDatasetCosmosdbSqlapiList) GetItems() []resource.Managed {
+// GetItems of this FactoryDatasetCosmosdbSqlapiList.
+func (l *FactoryDatasetCosmosdbSqlapiList) GetItems() []resource.Managed {
 	items := make([]resource.Managed, len(l.Items))
 	for i := range l.Items {
 		items[i] = &l.Items[i]
@@ -64,8 +64,8 @@ func (l *DataFactoryDatasetCosmosdbSqlapiList) GetItems() []resource.Managed {
 	return items
 }
 
-// GetItems of this DataFactoryDatasetDelimitedTextList.
-func (l *DataFactoryDatasetDelimitedTextList) GetItems() []resource.Managed {
+// GetItems of this FactoryDatasetDelimitedTextList.
+func (l *FactoryDatasetDelimitedTextList) GetItems() []resource.Managed {
 	items := make([]resource.Managed, len(l.Items))
 	for i := range l.Items {
 		items[i] = &l.Items[i]
@@ -73,8 +73,8 @@ func (l *DataFactoryDatasetDelimitedTextList) GetItems() []resource.Managed {
 	return items
 }
 
-// GetItems of this DataFactoryDatasetHttpList.
-func (l *DataFactoryDatasetHttpList) GetItems() []resource.Managed {
+// GetItems of this FactoryDatasetHttpList.
+func (l *FactoryDatasetHttpList) GetItems() []resource.Managed {
 	items := make([]resource.Managed, len(l.Items))
 	for i := range l.Items {
 		items[i] = &l.Items[i]
@@ -82,8 +82,8 @@ func (l *DataFactoryDatasetHttpList) GetItems() []resource.Managed {
 	return items
 }
 
-// GetItems of this DataFactoryDatasetJsonList.
-func (l *DataFactoryDatasetJsonList) GetItems() []resource.Managed {
+// GetItems of this FactoryDatasetJsonList.
+func (l *FactoryDatasetJsonList) GetItems() []resource.Managed {
 	items := make([]resource.Managed, len(l.Items))
 	for i := range l.Items {
 		items[i] = &l.Items[i]
@@ -91,8 +91,8 @@ func (l *DataFactoryDatasetJsonList) GetItems() []resource.Managed {
 	return items
 }
 
-// GetItems of this DataFactoryDatasetMysqlList.
-func (l *DataFactoryDatasetMysqlList) GetItems() []resource.Managed {
+// GetItems of this FactoryDatasetMysqlList.
+func (l *FactoryDatasetMysqlList) GetItems() []resource.Managed {
 	items := make([]resource.Managed, len(l.Items))
 	for i := range l.Items {
 		items[i] = &l.Items[i]
@@ -100,8 +100,8 @@ func (l *DataFactoryDatasetMysqlList) GetItems() []resource.Managed {
 	return items
 }
 
-// GetItems of this DataFactoryDatasetParquetList.
-func (l *DataFactoryDatasetParquetList) GetItems() []resource.Managed {
+// GetItems of this FactoryDatasetParquetList.
+func (l *FactoryDatasetParquetList) GetItems() []resource.Managed {
 	items := make([]resource.Managed, len(l.Items))
 	for i := range l.Items {
 		items[i] = &l.Items[i]
@@ -109,8 +109,8 @@ func (l *DataFactoryDatasetParquetList) GetItems() []resource.Managed {
 	return items
 }
 
-// GetItems of this DataFactoryDatasetPostgresqlList.
-func (l *DataFactoryDatasetPostgresqlList) GetItems() []resource.Managed {
+// GetItems of this FactoryDatasetPostgresqlList.
+func (l *FactoryDatasetPostgresqlList) GetItems() []resource.Managed {
 	items := make([]resource.Managed, len(l.Items))
 	for i := range l.Items {
 		items[i] = &l.Items[i]
@@ -118,8 +118,8 @@ func (l *DataFactoryDatasetPostgresqlList) GetItems() []resource.Managed {
 	return items
 }
 
-// GetItems of this DataFactoryDatasetSnowflakeList.
-func (l *DataFactoryDatasetSnowflakeList) GetItems() []resource.Managed {
+// GetItems of this FactoryDatasetSnowflakeList.
+func (l *FactoryDatasetSnowflakeList) GetItems() []resource.Managed {
 	items := make([]resource.Managed, len(l.Items))
 	for i := range l.Items {
 		items[i] = &l.Items[i]
@@ -127,8 +127,8 @@ func (l *DataFactoryDatasetSnowflakeList) GetItems() []resource.Managed {
 	return items
 }
 
-// GetItems of this DataFactoryDatasetSqlServerTableList.
-func (l *DataFactoryDatasetSqlServerTableList) GetItems() []resource.Managed {
+// GetItems of this FactoryDatasetSqlServerTableList.
+func (l *FactoryDatasetSqlServerTableList) GetItems() []resource.Managed {
 	items := make([]resource.Managed, len(l.Items))
 	for i := range l.Items {
 		items[i] = &l.Items[i]
@@ -136,8 +136,8 @@ func (l *DataFactoryDatasetSqlServerTableList) GetItems() []resource.Managed {
 	return items
 }
 
-// GetItems of this DataFactoryIntegrationRuntimeAzureList.
-func (l *DataFactoryIntegrationRuntimeAzureList) GetItems() []resource.Managed {
+// GetItems of this FactoryIntegrationRuntimeAzureList.
+func (l *FactoryIntegrationRuntimeAzureList) GetItems() []resource.Managed {
 	items := make([]resource.Managed, len(l.Items))
 	for i := range l.Items {
 		items[i] = &l.Items[i]
@@ -145,8 +145,8 @@ func (l *DataFactoryIntegrationRuntimeAzureList) GetItems() []resource.Managed {
 	return items
 }
 
-// GetItems of this DataFactoryIntegrationRuntimeAzureSsisList.
-func (l *DataFactoryIntegrationRuntimeAzureSsisList) GetItems() []resource.Managed {
+// GetItems of this FactoryIntegrationRuntimeAzureSsisList.
+func (l *FactoryIntegrationRuntimeAzureSsisList) GetItems() []resource.Managed {
 	items := make([]resource.Managed, len(l.Items))
 	for i := range l.Items {
 		items[i] = &l.Items[i]
@@ -154,8 +154,8 @@ func (l *DataFactoryIntegrationRuntimeAzureSsisList) GetItems() []resource.Manag
 	return items
 }
 
-// GetItems of this DataFactoryIntegrationRuntimeManagedList.
-func (l *DataFactoryIntegrationRuntimeManagedList) GetItems() []resource.Managed {
+// GetItems of this FactoryIntegrationRuntimeManagedList.
+func (l *FactoryIntegrationRuntimeManagedList) GetItems() []resource.Managed {
 	items := make([]resource.Managed, len(l.Items))
 	for i := range l.Items {
 		items[i] = &l.Items[i]
@@ -163,8 +163,8 @@ func (l *DataFactoryIntegrationRuntimeManagedList) GetItems() []resource.Managed
 	return items
 }
 
-// GetItems of this DataFactoryIntegrationRuntimeSelfHostedList.
-func (l *DataFactoryIntegrationRuntimeSelfHostedList) GetItems() []resource.Managed {
+// GetItems of this FactoryIntegrationRuntimeSelfHostedList.
+func (l *FactoryIntegrationRuntimeSelfHostedList) GetItems() []resource.Managed {
 	items := make([]resource.Managed, len(l.Items))
 	for i := range l.Items {
 		items[i] = &l.Items[i]
@@ -172,8 +172,8 @@ func (l *DataFactoryIntegrationRuntimeSelfHostedList) GetItems() []resource.Mana
 	return items
 }
 
-// GetItems of this DataFactoryLinkedCustomServiceList.
-func (l *DataFactoryLinkedCustomServiceList) GetItems() []resource.Managed {
+// GetItems of this FactoryLinkedCustomServiceList.
+func (l *FactoryLinkedCustomServiceList) GetItems() []resource.Managed {
 	items := make([]resource.Managed, len(l.Items))
 	for i := range l.Items {
 		items[i] = &l.Items[i]
@@ -181,8 +181,8 @@ func (l *DataFactoryLinkedCustomServiceList) GetItems() []resource.Managed {
 	return items
 }
 
-// GetItems of this DataFactoryLinkedServiceAzureBlobStorageList.
-func (l *DataFactoryLinkedServiceAzureBlobStorageList) GetItems() []resource.Managed {
+// GetItems of this FactoryLinkedServiceAzureBlobStorageList.
+func (l *FactoryLinkedServiceAzureBlobStorageList) GetItems() []resource.Managed {
 	items := make([]resource.Managed, len(l.Items))
 	for i := range l.Items {
 		items[i] = &l.Items[i]
@@ -190,8 +190,8 @@ func (l *DataFactoryLinkedServiceAzureBlobStorageList) GetItems() []resource.Man
 	return items
 }
 
-// GetItems of this DataFactoryLinkedServiceAzureDatabricksList.
-func (l *DataFactoryLinkedServiceAzureDatabricksList) GetItems() []resource.Managed {
+// GetItems of this FactoryLinkedServiceAzureDatabricksList.
+func (l *FactoryLinkedServiceAzureDatabricksList) GetItems() []resource.Managed {
 	items := make([]resource.Managed, len(l.Items))
 	for i := range l.Items {
 		items[i] = &l.Items[i]
@@ -199,8 +199,8 @@ func (l *DataFactoryLinkedServiceAzureDatabricksList) GetItems() []resource.Mana
 	return items
 }
 
-// GetItems of this DataFactoryLinkedServiceAzureFileStorageList.
-func (l *DataFactoryLinkedServiceAzureFileStorageList) GetItems() []resource.Managed {
+// GetItems of this FactoryLinkedServiceAzureFileStorageList.
+func (l *FactoryLinkedServiceAzureFileStorageList) GetItems() []resource.Managed {
 	items := make([]resource.Managed, len(l.Items))
 	for i := range l.Items {
 		items[i] = &l.Items[i]
@@ -208,8 +208,8 @@ func (l *DataFactoryLinkedServiceAzureFileStorageList) GetItems() []resource.Man
 	return items
 }
 
-// GetItems of this DataFactoryLinkedServiceAzureFunctionList.
-func (l *DataFactoryLinkedServiceAzureFunctionList) GetItems() []resource.Managed {
+// GetItems of this FactoryLinkedServiceAzureFunctionList.
+func (l *FactoryLinkedServiceAzureFunctionList) GetItems() []resource.Managed {
 	items := make([]resource.Managed, len(l.Items))
 	for i := range l.Items {
 		items[i] = &l.Items[i]
@@ -217,8 +217,8 @@ func (l *DataFactoryLinkedServiceAzureFunctionList) GetItems() []resource.Manage
 	return items
 }
 
-// GetItems of this DataFactoryLinkedServiceAzureSearchList.
-func (l *DataFactoryLinkedServiceAzureSearchList) GetItems() []resource.Managed {
+// GetItems of this FactoryLinkedServiceAzureSearchList.
+func (l *FactoryLinkedServiceAzureSearchList) GetItems() []resource.Managed {
 	items := make([]resource.Managed, len(l.Items))
 	for i := range l.Items {
 		items[i] = &l.Items[i]
@@ -226,8 +226,8 @@ func (l *DataFactoryLinkedServiceAzureSearchList) GetItems() []resource.Managed 
 	return items
 }
 
-// GetItems of this DataFactoryLinkedServiceAzureSqlDatabaseList.
-func (l *DataFactoryLinkedServiceAzureSqlDatabaseList) GetItems() []resource.Managed {
+// GetItems of this FactoryLinkedServiceAzureSqlDatabaseList.
+func (l *FactoryLinkedServiceAzureSqlDatabaseList) GetItems() []resource.Managed {
 	items := make([]resource.Managed, len(l.Items))
 	for i := range l.Items {
 		items[i] = &l.Items[i]
@@ -235,8 +235,8 @@ func (l *DataFactoryLinkedServiceAzureSqlDatabaseList) GetItems() []resource.Man
 	return items
 }
 
-// GetItems of this DataFactoryLinkedServiceAzureTableStorageList.
-func (l *DataFactoryLinkedServiceAzureTableStorageList) GetItems() []resource.Managed {
+// GetItems of this FactoryLinkedServiceAzureTableStorageList.
+func (l *FactoryLinkedServiceAzureTableStorageList) GetItems() []resource.Managed {
 	items := make([]resource.Managed, len(l.Items))
 	for i := range l.Items {
 		items[i] = &l.Items[i]
@@ -244,8 +244,8 @@ func (l *DataFactoryLinkedServiceAzureTableStorageList) GetItems() []resource.Ma
 	return items
 }
 
-// GetItems of this DataFactoryLinkedServiceCosmosdbList.
-func (l *DataFactoryLinkedServiceCosmosdbList) GetItems() []resource.Managed {
+// GetItems of this FactoryLinkedServiceCosmosdbList.
+func (l *FactoryLinkedServiceCosmosdbList) GetItems() []resource.Managed {
 	items := make([]resource.Managed, len(l.Items))
 	for i := range l.Items {
 		items[i] = &l.Items[i]
@@ -253,8 +253,8 @@ func (l *DataFactoryLinkedServiceCosmosdbList) GetItems() []resource.Managed {
 	return items
 }
 
-// GetItems of this DataFactoryLinkedServiceDataLakeStorageGen2List.
-func (l *DataFactoryLinkedServiceDataLakeStorageGen2List) GetItems() []resource.Managed {
+// GetItems of this FactoryLinkedServiceDataLakeStorageGen2List.
+func (l *FactoryLinkedServiceDataLakeStorageGen2List) GetItems() []resource.Managed {
 	items := make([]resource.Managed, len(l.Items))
 	for i := range l.Items {
 		items[i] = &l.Items[i]
@@ -262,8 +262,8 @@ func (l *DataFactoryLinkedServiceDataLakeStorageGen2List) GetItems() []resource.
 	return items
 }
 
-// GetItems of this DataFactoryLinkedServiceKeyVaultList.
-func (l *DataFactoryLinkedServiceKeyVaultList) GetItems() []resource.Managed {
+// GetItems of this FactoryLinkedServiceKeyVaultList.
+func (l *FactoryLinkedServiceKeyVaultList) GetItems() []resource.Managed {
 	items := make([]resource.Managed, len(l.Items))
 	for i := range l.Items {
 		items[i] = &l.Items[i]
@@ -271,8 +271,8 @@ func (l *DataFactoryLinkedServiceKeyVaultList) GetItems() []resource.Managed {
 	return items
 }
 
-// GetItems of this DataFactoryLinkedServiceKustoList.
-func (l *DataFactoryLinkedServiceKustoList) GetItems() []resource.Managed {
+// GetItems of this FactoryLinkedServiceKustoList.
+func (l *FactoryLinkedServiceKustoList) GetItems() []resource.Managed {
 	items := make([]resource.Managed, len(l.Items))
 	for i := range l.Items {
 		items[i] = &l.Items[i]
@@ -280,8 +280,8 @@ func (l *DataFactoryLinkedServiceKustoList) GetItems() []resource.Managed {
 	return items
 }
 
-// GetItems of this DataFactoryLinkedServiceMysqlList.
-func (l *DataFactoryLinkedServiceMysqlList) GetItems() []resource.Managed {
+// GetItems of this FactoryLinkedServiceMysqlList.
+func (l *FactoryLinkedServiceMysqlList) GetItems() []resource.Managed {
 	items := make([]resource.Managed, len(l.Items))
 	for i := range l.Items {
 		items[i] = &l.Items[i]
@@ -289,8 +289,8 @@ func (l *DataFactoryLinkedServiceMysqlList) GetItems() []resource.Managed {
 	return items
 }
 
-// GetItems of this DataFactoryLinkedServiceOdataList.
-func (l *DataFactoryLinkedServiceOdataList) GetItems() []resource.Managed {
+// GetItems of this FactoryLinkedServiceOdataList.
+func (l *FactoryLinkedServiceOdataList) GetItems() []resource.Managed {
 	items := make([]resource.Managed, len(l.Items))
 	for i := range l.Items {
 		items[i] = &l.Items[i]
@@ -298,8 +298,8 @@ func (l *DataFactoryLinkedServiceOdataList) GetItems() []resource.Managed {
 	return items
 }
 
-// GetItems of this DataFactoryLinkedServicePostgresqlList.
-func (l *DataFactoryLinkedServicePostgresqlList) GetItems() []resource.Managed {
+// GetItems of this FactoryLinkedServicePostgresqlList.
+func (l *FactoryLinkedServicePostgresqlList) GetItems() []resource.Managed {
 	items := make([]resource.Managed, len(l.Items))
 	for i := range l.Items {
 		items[i] = &l.Items[i]
@@ -307,8 +307,8 @@ func (l *DataFactoryLinkedServicePostgresqlList) GetItems() []resource.Managed {
 	return items
 }
 
-// GetItems of this DataFactoryLinkedServiceSftpList.
-func (l *DataFactoryLinkedServiceSftpList) GetItems() []resource.Managed {
+// GetItems of this FactoryLinkedServiceSftpList.
+func (l *FactoryLinkedServiceSftpList) GetItems() []resource.Managed {
 	items := make([]resource.Managed, len(l.Items))
 	for i := range l.Items {
 		items[i] = &l.Items[i]
@@ -316,8 +316,8 @@ func (l *DataFactoryLinkedServiceSftpList) GetItems() []resource.Managed {
 	return items
 }
 
-// GetItems of this DataFactoryLinkedServiceSnowflakeList.
-func (l *DataFactoryLinkedServiceSnowflakeList) GetItems() []resource.Managed {
+// GetItems of this FactoryLinkedServiceSnowflakeList.
+func (l *FactoryLinkedServiceSnowflakeList) GetItems() []resource.Managed {
 	items := make([]resource.Managed, len(l.Items))
 	for i := range l.Items {
 		items[i] = &l.Items[i]
@@ -325,8 +325,8 @@ func (l *DataFactoryLinkedServiceSnowflakeList) GetItems() []resource.Managed {
 	return items
 }
 
-// GetItems of this DataFactoryLinkedServiceSqlServerList.
-func (l *DataFactoryLinkedServiceSqlServerList) GetItems() []resource.Managed {
+// GetItems of this FactoryLinkedServiceSqlServerList.
+func (l *FactoryLinkedServiceSqlServerList) GetItems() []resource.Managed {
 	items := make([]resource.Managed, len(l.Items))
 	for i := range l.Items {
 		items[i] = &l.Items[i]
@@ -334,8 +334,8 @@ func (l *DataFactoryLinkedServiceSqlServerList) GetItems() []resource.Managed {
 	return items
 }
 
-// GetItems of this DataFactoryLinkedServiceSynapseList.
-func (l *DataFactoryLinkedServiceSynapseList) GetItems() []resource.Managed {
+// GetItems of this FactoryLinkedServiceSynapseList.
+func (l *FactoryLinkedServiceSynapseList) GetItems() []resource.Managed {
 	items := make([]resource.Managed, len(l.Items))
 	for i := range l.Items {
 		items[i] = &l.Items[i]
@@ -343,8 +343,8 @@ func (l *DataFactoryLinkedServiceSynapseList) GetItems() []resource.Managed {
 	return items
 }
 
-// GetItems of this DataFactoryLinkedServiceWebList.
-func (l *DataFactoryLinkedServiceWebList) GetItems() []resource.Managed {
+// GetItems of this FactoryLinkedServiceWebList.
+func (l *FactoryLinkedServiceWebList) GetItems() []resource.Managed {
 	items := make([]resource.Managed, len(l.Items))
 	for i := range l.Items {
 		items[i] = &l.Items[i]
@@ -352,8 +352,8 @@ func (l *DataFactoryLinkedServiceWebList) GetItems() []resource.Managed {
 	return items
 }
 
-// GetItems of this DataFactoryList.
-func (l *DataFactoryList) GetItems() []resource.Managed {
+// GetItems of this FactoryList.
+func (l *FactoryList) GetItems() []resource.Managed {
 	items := make([]resource.Managed, len(l.Items))
 	for i := range l.Items {
 		items[i] = &l.Items[i]
@@ -361,8 +361,8 @@ func (l *DataFactoryList) GetItems() []resource.Managed {
 	return items
 }
 
-// GetItems of this DataFactoryManagedPrivateEndpointList.
-func (l *DataFactoryManagedPrivateEndpointList) GetItems() []resource.Managed {
+// GetItems of this FactoryManagedPrivateEndpointList.
+func (l *FactoryManagedPrivateEndpointList) GetItems() []resource.Managed {
 	items := make([]resource.Managed, len(l.Items))
 	for i := range l.Items {
 		items[i] = &l.Items[i]
@@ -370,8 +370,8 @@ func (l *DataFactoryManagedPrivateEndpointList) GetItems() []resource.Managed {
 	return items
 }
 
-// GetItems of this DataFactoryPipelineList.
-func (l *DataFactoryPipelineList) GetItems() []resource.Managed {
+// GetItems of this FactoryPipelineList.
+func (l *FactoryPipelineList) GetItems() []resource.Managed {
 	items := make([]resource.Managed, len(l.Items))
 	for i := range l.Items {
 		items[i] = &l.Items[i]
@@ -379,8 +379,8 @@ func (l *DataFactoryPipelineList) GetItems() []resource.Managed {
 	return items
 }
 
-// GetItems of this DataFactoryTriggerBlobEventList.
-func (l *DataFactoryTriggerBlobEventList) GetItems() []resource.Managed {
+// GetItems of this FactoryTriggerBlobEventList.
+func (l *FactoryTriggerBlobEventList) GetItems() []resource.Managed {
 	items := make([]resource.Managed, len(l.Items))
 	for i := range l.Items {
 		items[i] = &l.Items[i]
@@ -388,8 +388,8 @@ func (l *DataFactoryTriggerBlobEventList) GetItems() []resource.Managed {
 	return items
 }
 
-// GetItems of this DataFactoryTriggerCustomEventList.
-func (l *DataFactoryTriggerCustomEventList) GetItems() []resource.Managed {
+// GetItems of this FactoryTriggerCustomEventList.
+func (l *FactoryTriggerCustomEventList) GetItems() []resource.Managed {
 	items := make([]resource.Managed, len(l.Items))
 	for i := range l.Items {
 		items[i] = &l.Items[i]
@@ -397,8 +397,8 @@ func (l *DataFactoryTriggerCustomEventList) GetItems() []resource.Managed {
 	return items
 }
 
-// GetItems of this DataFactoryTriggerScheduleList.
-func (l *DataFactoryTriggerScheduleList) GetItems() []resource.Managed {
+// GetItems of this FactoryTriggerScheduleList.
+func (l *FactoryTriggerScheduleList) GetItems() []resource.Managed {
 	items := make([]resource.Managed, len(l.Items))
 	for i := range l.Items {
 		items[i] = &l.Items[i]
@@ -406,8 +406,8 @@ func (l *DataFactoryTriggerScheduleList) GetItems() []resource.Managed {
 	return items
 }
 
-// GetItems of this DataLakeAnalyticsFirewallRuleList.
-func (l *DataLakeAnalyticsFirewallRuleList) GetItems() []resource.Managed {
+// GetItems of this LakeAnalyticsFirewallRuleList.
+func (l *LakeAnalyticsFirewallRuleList) GetItems() []resource.Managed {
 	items := make([]resource.Managed, len(l.Items))
 	for i := range l.Items {
 		items[i] = &l.Items[i]
@@ -415,8 +415,8 @@ func (l *DataLakeAnalyticsFirewallRuleList) GetItems() []resource.Managed {
 	return items
 }
 
-// GetItems of this DataLakeStoreFileList.
-func (l *DataLakeStoreFileList) GetItems() []resource.Managed {
+// GetItems of this LakeStoreFileList.
+func (l *LakeStoreFileList) GetItems() []resource.Managed {
 	items := make([]resource.Managed, len(l.Items))
 	for i := range l.Items {
 		items[i] = &l.Items[i]
@@ -424,8 +424,8 @@ func (l *DataLakeStoreFileList) GetItems() []resource.Managed {
 	return items
 }
 
-// GetItems of this DataLakeStoreFirewallRuleList.
-func (l *DataLakeStoreFirewallRuleList) GetItems() []resource.Managed {
+// GetItems of this LakeStoreFirewallRuleList.
+func (l *LakeStoreFirewallRuleList) GetItems() []resource.Managed {
 	items := make([]resource.Managed, len(l.Items))
 	for i := range l.Items {
 		items[i] = &l.Items[i]
@@ -433,8 +433,8 @@ func (l *DataLakeStoreFirewallRuleList) GetItems() []resource.Managed {
 	return items
 }
 
-// GetItems of this DataLakeStoreList.
-func (l *DataLakeStoreList) GetItems() []resource.Managed {
+// GetItems of this LakeStoreList.
+func (l *LakeStoreList) GetItems() []resource.Managed {
 	items := make([]resource.Managed, len(l.Items))
 	for i := range l.Items {
 		items[i] = &l.Items[i]
@@ -442,8 +442,8 @@ func (l *DataLakeStoreList) GetItems() []resource.Managed {
 	return items
 }
 
-// GetItems of this DataLakeStoreVirtualNetworkRuleList.
-func (l *DataLakeStoreVirtualNetworkRuleList) GetItems() []resource.Managed {
+// GetItems of this LakeStoreVirtualNetworkRuleList.
+func (l *LakeStoreVirtualNetworkRuleList) GetItems() []resource.Managed {
 	items := make([]resource.Managed, len(l.Items))
 	for i := range l.Items {
 		items[i] = &l.Items[i]
@@ -451,8 +451,8 @@ func (l *DataLakeStoreVirtualNetworkRuleList) GetItems() []resource.Managed {
 	return items
 }
 
-// GetItems of this DataProtectionBackupInstanceBlobStorageList.
-func (l *DataProtectionBackupInstanceBlobStorageList) GetItems() []resource.Managed {
+// GetItems of this ProtectionBackupInstanceBlobStorageList.
+func (l *ProtectionBackupInstanceBlobStorageList) GetItems() []resource.Managed {
 	items := make([]resource.Managed, len(l.Items))
 	for i := range l.Items {
 		items[i] = &l.Items[i]
@@ -460,8 +460,8 @@ func (l *DataProtectionBackupInstanceBlobStorageList) GetItems() []resource.Mana
 	return items
 }
 
-// GetItems of this DataProtectionBackupInstanceDiskList.
-func (l *DataProtectionBackupInstanceDiskList) GetItems() []resource.Managed {
+// GetItems of this ProtectionBackupInstanceDiskList.
+func (l *ProtectionBackupInstanceDiskList) GetItems() []resource.Managed {
 	items := make([]resource.Managed, len(l.Items))
 	for i := range l.Items {
 		items[i] = &l.Items[i]
@@ -469,8 +469,8 @@ func (l *DataProtectionBackupInstanceDiskList) GetItems() []resource.Managed {
 	return items
 }
 
-// GetItems of this DataProtectionBackupInstancePostgresqlList.
-func (l *DataProtectionBackupInstancePostgresqlList) GetItems() []resource.Managed {
+// GetItems of this ProtectionBackupInstancePostgresqlList.
+func (l *ProtectionBackupInstancePostgresqlList) GetItems() []resource.Managed {
 	items := make([]resource.Managed, len(l.Items))
 	for i := range l.Items {
 		items[i] = &l.Items[i]
@@ -478,8 +478,8 @@ func (l *DataProtectionBackupInstancePostgresqlList) GetItems() []resource.Manag
 	return items
 }
 
-// GetItems of this DataProtectionBackupPolicyBlobStorageList.
-func (l *DataProtectionBackupPolicyBlobStorageList) GetItems() []resource.Managed {
+// GetItems of this ProtectionBackupPolicyBlobStorageList.
+func (l *ProtectionBackupPolicyBlobStorageList) GetItems() []resource.Managed {
 	items := make([]resource.Managed, len(l.Items))
 	for i := range l.Items {
 		items[i] = &l.Items[i]
@@ -487,8 +487,8 @@ func (l *DataProtectionBackupPolicyBlobStorageList) GetItems() []resource.Manage
 	return items
 }
 
-// GetItems of this DataProtectionBackupPolicyDiskList.
-func (l *DataProtectionBackupPolicyDiskList) GetItems() []resource.Managed {
+// GetItems of this ProtectionBackupPolicyDiskList.
+func (l *ProtectionBackupPolicyDiskList) GetItems() []resource.Managed {
 	items := make([]resource.Managed, len(l.Items))
 	for i := range l.Items {
 		items[i] = &l.Items[i]
@@ -496,8 +496,8 @@ func (l *DataProtectionBackupPolicyDiskList) GetItems() []resource.Managed {
 	return items
 }
 
-// GetItems of this DataProtectionBackupPolicyPostgresqlList.
-func (l *DataProtectionBackupPolicyPostgresqlList) GetItems() []resource.Managed {
+// GetItems of this ProtectionBackupPolicyPostgresqlList.
+func (l *ProtectionBackupPolicyPostgresqlList) GetItems() []resource.Managed {
 	items := make([]resource.Managed, len(l.Items))
 	for i := range l.Items {
 		items[i] = &l.Items[i]
@@ -505,8 +505,8 @@ func (l *DataProtectionBackupPolicyPostgresqlList) GetItems() []resource.Managed
 	return items
 }
 
-// GetItems of this DataProtectionBackupVaultList.
-func (l *DataProtectionBackupVaultList) GetItems() []resource.Managed {
+// GetItems of this ProtectionBackupVaultList.
+func (l *ProtectionBackupVaultList) GetItems() []resource.Managed {
 	items := make([]resource.Managed, len(l.Items))
 	for i := range l.Items {
 		items[i] = &l.Items[i]
@@ -514,8 +514,8 @@ func (l *DataProtectionBackupVaultList) GetItems() []resource.Managed {
 	return items
 }
 
-// GetItems of this DataShareAccountList.
-func (l *DataShareAccountList) GetItems() []resource.Managed {
+// GetItems of this ShareAccountList.
+func (l *ShareAccountList) GetItems() []resource.Managed {
 	items := make([]resource.Managed, len(l.Items))
 	for i := range l.Items {
 		items[i] = &l.Items[i]
@@ -523,8 +523,8 @@ func (l *DataShareAccountList) GetItems() []resource.Managed {
 	return items
 }
 
-// GetItems of this DataShareDatasetBlobStorageList.
-func (l *DataShareDatasetBlobStorageList) GetItems() []resource.Managed {
+// GetItems of this ShareDatasetBlobStorageList.
+func (l *ShareDatasetBlobStorageList) GetItems() []resource.Managed {
 	items := make([]resource.Managed, len(l.Items))
 	for i := range l.Items {
 		items[i] = &l.Items[i]
@@ -532,8 +532,8 @@ func (l *DataShareDatasetBlobStorageList) GetItems() []resource.Managed {
 	return items
 }
 
-// GetItems of this DataShareDatasetDataLakeGen1List.
-func (l *DataShareDatasetDataLakeGen1List) GetItems() []resource.Managed {
+// GetItems of this ShareDatasetDataLakeGen1List.
+func (l *ShareDatasetDataLakeGen1List) GetItems() []resource.Managed {
 	items := make([]resource.Managed, len(l.Items))
 	for i := range l.Items {
 		items[i] = &l.Items[i]
@@ -541,8 +541,8 @@ func (l *DataShareDatasetDataLakeGen1List) GetItems() []resource.Managed {
 	return items
 }
 
-// GetItems of this DataShareDatasetDataLakeGen2List.
-func (l *DataShareDatasetDataLakeGen2List) GetItems() []resource.Managed {
+// GetItems of this ShareDatasetDataLakeGen2List.
+func (l *ShareDatasetDataLakeGen2List) GetItems() []resource.Managed {
 	items := make([]resource.Managed, len(l.Items))
 	for i := range l.Items {
 		items[i] = &l.Items[i]
@@ -550,8 +550,8 @@ func (l *DataShareDatasetDataLakeGen2List) GetItems() []resource.Managed {
 	return items
 }
 
-// GetItems of this DataShareDatasetKustoClusterList.
-func (l *DataShareDatasetKustoClusterList) GetItems() []resource.Managed {
+// GetItems of this ShareDatasetKustoClusterList.
+func (l *ShareDatasetKustoClusterList) GetItems() []resource.Managed {
 	items := make([]resource.Managed, len(l.Items))
 	for i := range l.Items {
 		items[i] = &l.Items[i]
@@ -559,8 +559,8 @@ func (l *DataShareDatasetKustoClusterList) GetItems() []resource.Managed {
 	return items
 }
 
-// GetItems of this DataShareDatasetKustoDatabaseList.
-func (l *DataShareDatasetKustoDatabaseList) GetItems() []resource.Managed {
+// GetItems of this ShareDatasetKustoDatabaseList.
+func (l *ShareDatasetKustoDatabaseList) GetItems() []resource.Managed {
 	items := make([]resource.Managed, len(l.Items))
 	for i := range l.Items {
 		items[i] = &l.Items[i]
@@ -568,8 +568,8 @@ func (l *DataShareDatasetKustoDatabaseList) GetItems() []resource.Managed {
 	return items
 }
 
-// GetItems of this DataShareList.
-func (l *DataShareList) GetItems() []resource.Managed {
+// GetItems of this ShareList.
+func (l *ShareList) GetItems() []resource.Managed {
 	items := make([]resource.Managed, len(l.Items))
 	for i := range l.Items {
 		items[i] = &l.Items[i]

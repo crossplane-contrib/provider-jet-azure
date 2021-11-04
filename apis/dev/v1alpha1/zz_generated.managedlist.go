@@ -19,8 +19,8 @@ package v1alpha1
 
 import resource "github.com/crossplane/crossplane-runtime/pkg/resource"
 
-// GetItems of this DevTestGlobalVmShutdownScheduleList.
-func (l *DevTestGlobalVmShutdownScheduleList) GetItems() []resource.Managed {
+// GetItems of this TestGlobalVmShutdownScheduleList.
+func (l *TestGlobalVmShutdownScheduleList) GetItems() []resource.Managed {
 	items := make([]resource.Managed, len(l.Items))
 	for i := range l.Items {
 		items[i] = &l.Items[i]
@@ -28,8 +28,8 @@ func (l *DevTestGlobalVmShutdownScheduleList) GetItems() []resource.Managed {
 	return items
 }
 
-// GetItems of this DevTestLabList.
-func (l *DevTestLabList) GetItems() []resource.Managed {
+// GetItems of this TestLabList.
+func (l *TestLabList) GetItems() []resource.Managed {
 	items := make([]resource.Managed, len(l.Items))
 	for i := range l.Items {
 		items[i] = &l.Items[i]
@@ -37,8 +37,8 @@ func (l *DevTestLabList) GetItems() []resource.Managed {
 	return items
 }
 
-// GetItems of this DevTestLinuxVirtualMachineList.
-func (l *DevTestLinuxVirtualMachineList) GetItems() []resource.Managed {
+// GetItems of this TestLinuxVirtualMachineList.
+func (l *TestLinuxVirtualMachineList) GetItems() []resource.Managed {
 	items := make([]resource.Managed, len(l.Items))
 	for i := range l.Items {
 		items[i] = &l.Items[i]
@@ -46,8 +46,8 @@ func (l *DevTestLinuxVirtualMachineList) GetItems() []resource.Managed {
 	return items
 }
 
-// GetItems of this DevTestPolicyList.
-func (l *DevTestPolicyList) GetItems() []resource.Managed {
+// GetItems of this TestPolicyList.
+func (l *TestPolicyList) GetItems() []resource.Managed {
 	items := make([]resource.Managed, len(l.Items))
 	for i := range l.Items {
 		items[i] = &l.Items[i]
@@ -55,8 +55,8 @@ func (l *DevTestPolicyList) GetItems() []resource.Managed {
 	return items
 }
 
-// GetItems of this DevTestScheduleList.
-func (l *DevTestScheduleList) GetItems() []resource.Managed {
+// GetItems of this TestScheduleList.
+func (l *TestScheduleList) GetItems() []resource.Managed {
 	items := make([]resource.Managed, len(l.Items))
 	for i := range l.Items {
 		items[i] = &l.Items[i]
@@ -64,8 +64,8 @@ func (l *DevTestScheduleList) GetItems() []resource.Managed {
 	return items
 }
 
-// GetItems of this DevTestVirtualNetworkList.
-func (l *DevTestVirtualNetworkList) GetItems() []resource.Managed {
+// GetItems of this TestVirtualNetworkList.
+func (l *TestVirtualNetworkList) GetItems() []resource.Managed {
 	items := make([]resource.Managed, len(l.Items))
 	for i := range l.Items {
 		items[i] = &l.Items[i]
@@ -73,8 +73,8 @@ func (l *DevTestVirtualNetworkList) GetItems() []resource.Managed {
 	return items
 }
 
-// GetItems of this DevTestWindowsVirtualMachineList.
-func (l *DevTestWindowsVirtualMachineList) GetItems() []resource.Managed {
+// GetItems of this TestWindowsVirtualMachineList.
+func (l *TestWindowsVirtualMachineList) GetItems() []resource.Managed {
 	items := make([]resource.Managed, len(l.Items))
 	for i := range l.Items {
 		items[i] = &l.Items[i]

@@ -19,58 +19,58 @@ package v1alpha1
 
 import xpv1 "github.com/crossplane/crossplane-runtime/apis/common/v1"
 
-// GetCondition of this CostManagementExportResourceGroup.
-func (mg *CostManagementExportResourceGroup) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
+// GetCondition of this ManagementExportResourceGroup.
+func (mg *ManagementExportResourceGroup) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
 	return mg.Status.GetCondition(ct)
 }
 
-// GetDeletionPolicy of this CostManagementExportResourceGroup.
-func (mg *CostManagementExportResourceGroup) GetDeletionPolicy() xpv1.DeletionPolicy {
+// GetDeletionPolicy of this ManagementExportResourceGroup.
+func (mg *ManagementExportResourceGroup) GetDeletionPolicy() xpv1.DeletionPolicy {
 	return mg.Spec.DeletionPolicy
 }
 
-// GetProviderConfigReference of this CostManagementExportResourceGroup.
-func (mg *CostManagementExportResourceGroup) GetProviderConfigReference() *xpv1.Reference {
+// GetProviderConfigReference of this ManagementExportResourceGroup.
+func (mg *ManagementExportResourceGroup) GetProviderConfigReference() *xpv1.Reference {
 	return mg.Spec.ProviderConfigReference
 }
 
 /*
-GetProviderReference of this CostManagementExportResourceGroup.
+GetProviderReference of this ManagementExportResourceGroup.
 Deprecated: Use GetProviderConfigReference.
 */
-func (mg *CostManagementExportResourceGroup) GetProviderReference() *xpv1.Reference {
+func (mg *ManagementExportResourceGroup) GetProviderReference() *xpv1.Reference {
 	return mg.Spec.ProviderReference
 }
 
-// GetWriteConnectionSecretToReference of this CostManagementExportResourceGroup.
-func (mg *CostManagementExportResourceGroup) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
+// GetWriteConnectionSecretToReference of this ManagementExportResourceGroup.
+func (mg *ManagementExportResourceGroup) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
 	return mg.Spec.WriteConnectionSecretToReference
 }
 
-// SetConditions of this CostManagementExportResourceGroup.
-func (mg *CostManagementExportResourceGroup) SetConditions(c ...xpv1.Condition) {
+// SetConditions of this ManagementExportResourceGroup.
+func (mg *ManagementExportResourceGroup) SetConditions(c ...xpv1.Condition) {
 	mg.Status.SetConditions(c...)
 }
 
-// SetDeletionPolicy of this CostManagementExportResourceGroup.
-func (mg *CostManagementExportResourceGroup) SetDeletionPolicy(r xpv1.DeletionPolicy) {
+// SetDeletionPolicy of this ManagementExportResourceGroup.
+func (mg *ManagementExportResourceGroup) SetDeletionPolicy(r xpv1.DeletionPolicy) {
 	mg.Spec.DeletionPolicy = r
 }
 
-// SetProviderConfigReference of this CostManagementExportResourceGroup.
-func (mg *CostManagementExportResourceGroup) SetProviderConfigReference(r *xpv1.Reference) {
+// SetProviderConfigReference of this ManagementExportResourceGroup.
+func (mg *ManagementExportResourceGroup) SetProviderConfigReference(r *xpv1.Reference) {
 	mg.Spec.ProviderConfigReference = r
 }
 
 /*
-SetProviderReference of this CostManagementExportResourceGroup.
+SetProviderReference of this ManagementExportResourceGroup.
 Deprecated: Use SetProviderConfigReference.
 */
-func (mg *CostManagementExportResourceGroup) SetProviderReference(r *xpv1.Reference) {
+func (mg *ManagementExportResourceGroup) SetProviderReference(r *xpv1.Reference) {
 	mg.Spec.ProviderReference = r
 }
 
-// SetWriteConnectionSecretToReference of this CostManagementExportResourceGroup.
-func (mg *CostManagementExportResourceGroup) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
+// SetWriteConnectionSecretToReference of this ManagementExportResourceGroup.
+func (mg *ManagementExportResourceGroup) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
 	mg.Spec.WriteConnectionSecretToReference = r
 }

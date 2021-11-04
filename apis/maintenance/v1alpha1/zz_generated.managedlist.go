@@ -19,8 +19,8 @@ package v1alpha1
 
 import resource "github.com/crossplane/crossplane-runtime/pkg/resource"
 
-// GetItems of this MaintenanceAssignmentDedicatedHostList.
-func (l *MaintenanceAssignmentDedicatedHostList) GetItems() []resource.Managed {
+// GetItems of this AssignmentDedicatedHostList.
+func (l *AssignmentDedicatedHostList) GetItems() []resource.Managed {
 	items := make([]resource.Managed, len(l.Items))
 	for i := range l.Items {
 		items[i] = &l.Items[i]
@@ -28,8 +28,8 @@ func (l *MaintenanceAssignmentDedicatedHostList) GetItems() []resource.Managed {
 	return items
 }
 
-// GetItems of this MaintenanceAssignmentVirtualMachineList.
-func (l *MaintenanceAssignmentVirtualMachineList) GetItems() []resource.Managed {
+// GetItems of this AssignmentVirtualMachineList.
+func (l *AssignmentVirtualMachineList) GetItems() []resource.Managed {
 	items := make([]resource.Managed, len(l.Items))
 	for i := range l.Items {
 		items[i] = &l.Items[i]
@@ -37,8 +37,8 @@ func (l *MaintenanceAssignmentVirtualMachineList) GetItems() []resource.Managed 
 	return items
 }
 
-// GetItems of this MaintenanceAssignmentVirtualMachineScaleSetList.
-func (l *MaintenanceAssignmentVirtualMachineScaleSetList) GetItems() []resource.Managed {
+// GetItems of this AssignmentVirtualMachineScaleSetList.
+func (l *AssignmentVirtualMachineScaleSetList) GetItems() []resource.Managed {
 	items := make([]resource.Managed, len(l.Items))
 	for i := range l.Items {
 		items[i] = &l.Items[i]
@@ -46,8 +46,8 @@ func (l *MaintenanceAssignmentVirtualMachineScaleSetList) GetItems() []resource.
 	return items
 }
 
-// GetItems of this MaintenanceConfigurationList.
-func (l *MaintenanceConfigurationList) GetItems() []resource.Managed {
+// GetItems of this ConfigurationList.
+func (l *ConfigurationList) GetItems() []resource.Managed {
 	items := make([]resource.Managed, len(l.Items))
 	for i := range l.Items {
 		items[i] = &l.Items[i]

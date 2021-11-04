@@ -19,58 +19,58 @@ package v1alpha1
 
 import xpv1 "github.com/crossplane/crossplane-runtime/apis/common/v1"
 
-// GetCondition of this AttestationProvider.
-func (mg *AttestationProvider) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
+// GetCondition of this Provider.
+func (mg *Provider) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
 	return mg.Status.GetCondition(ct)
 }
 
-// GetDeletionPolicy of this AttestationProvider.
-func (mg *AttestationProvider) GetDeletionPolicy() xpv1.DeletionPolicy {
+// GetDeletionPolicy of this Provider.
+func (mg *Provider) GetDeletionPolicy() xpv1.DeletionPolicy {
 	return mg.Spec.DeletionPolicy
 }
 
-// GetProviderConfigReference of this AttestationProvider.
-func (mg *AttestationProvider) GetProviderConfigReference() *xpv1.Reference {
+// GetProviderConfigReference of this Provider.
+func (mg *Provider) GetProviderConfigReference() *xpv1.Reference {
 	return mg.Spec.ProviderConfigReference
 }
 
 /*
-GetProviderReference of this AttestationProvider.
+GetProviderReference of this Provider.
 Deprecated: Use GetProviderConfigReference.
 */
-func (mg *AttestationProvider) GetProviderReference() *xpv1.Reference {
+func (mg *Provider) GetProviderReference() *xpv1.Reference {
 	return mg.Spec.ProviderReference
 }
 
-// GetWriteConnectionSecretToReference of this AttestationProvider.
-func (mg *AttestationProvider) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
+// GetWriteConnectionSecretToReference of this Provider.
+func (mg *Provider) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
 	return mg.Spec.WriteConnectionSecretToReference
 }
 
-// SetConditions of this AttestationProvider.
-func (mg *AttestationProvider) SetConditions(c ...xpv1.Condition) {
+// SetConditions of this Provider.
+func (mg *Provider) SetConditions(c ...xpv1.Condition) {
 	mg.Status.SetConditions(c...)
 }
 
-// SetDeletionPolicy of this AttestationProvider.
-func (mg *AttestationProvider) SetDeletionPolicy(r xpv1.DeletionPolicy) {
+// SetDeletionPolicy of this Provider.
+func (mg *Provider) SetDeletionPolicy(r xpv1.DeletionPolicy) {
 	mg.Spec.DeletionPolicy = r
 }
 
-// SetProviderConfigReference of this AttestationProvider.
-func (mg *AttestationProvider) SetProviderConfigReference(r *xpv1.Reference) {
+// SetProviderConfigReference of this Provider.
+func (mg *Provider) SetProviderConfigReference(r *xpv1.Reference) {
 	mg.Spec.ProviderConfigReference = r
 }
 
 /*
-SetProviderReference of this AttestationProvider.
+SetProviderReference of this Provider.
 Deprecated: Use SetProviderConfigReference.
 */
-func (mg *AttestationProvider) SetProviderReference(r *xpv1.Reference) {
+func (mg *Provider) SetProviderReference(r *xpv1.Reference) {
 	mg.Spec.ProviderReference = r
 }
 
-// SetWriteConnectionSecretToReference of this AttestationProvider.
-func (mg *AttestationProvider) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
+// SetWriteConnectionSecretToReference of this Provider.
+func (mg *Provider) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
 	mg.Spec.WriteConnectionSecretToReference = r
 }

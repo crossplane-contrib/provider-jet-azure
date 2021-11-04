@@ -19,58 +19,58 @@ package v1alpha1
 
 import xpv1 "github.com/crossplane/crossplane-runtime/apis/common/v1"
 
-// GetCondition of this PurviewAccount.
-func (mg *PurviewAccount) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
+// GetCondition of this Account.
+func (mg *Account) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
 	return mg.Status.GetCondition(ct)
 }
 
-// GetDeletionPolicy of this PurviewAccount.
-func (mg *PurviewAccount) GetDeletionPolicy() xpv1.DeletionPolicy {
+// GetDeletionPolicy of this Account.
+func (mg *Account) GetDeletionPolicy() xpv1.DeletionPolicy {
 	return mg.Spec.DeletionPolicy
 }
 
-// GetProviderConfigReference of this PurviewAccount.
-func (mg *PurviewAccount) GetProviderConfigReference() *xpv1.Reference {
+// GetProviderConfigReference of this Account.
+func (mg *Account) GetProviderConfigReference() *xpv1.Reference {
 	return mg.Spec.ProviderConfigReference
 }
 
 /*
-GetProviderReference of this PurviewAccount.
+GetProviderReference of this Account.
 Deprecated: Use GetProviderConfigReference.
 */
-func (mg *PurviewAccount) GetProviderReference() *xpv1.Reference {
+func (mg *Account) GetProviderReference() *xpv1.Reference {
 	return mg.Spec.ProviderReference
 }
 
-// GetWriteConnectionSecretToReference of this PurviewAccount.
-func (mg *PurviewAccount) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
+// GetWriteConnectionSecretToReference of this Account.
+func (mg *Account) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
 	return mg.Spec.WriteConnectionSecretToReference
 }
 
-// SetConditions of this PurviewAccount.
-func (mg *PurviewAccount) SetConditions(c ...xpv1.Condition) {
+// SetConditions of this Account.
+func (mg *Account) SetConditions(c ...xpv1.Condition) {
 	mg.Status.SetConditions(c...)
 }
 
-// SetDeletionPolicy of this PurviewAccount.
-func (mg *PurviewAccount) SetDeletionPolicy(r xpv1.DeletionPolicy) {
+// SetDeletionPolicy of this Account.
+func (mg *Account) SetDeletionPolicy(r xpv1.DeletionPolicy) {
 	mg.Spec.DeletionPolicy = r
 }
 
-// SetProviderConfigReference of this PurviewAccount.
-func (mg *PurviewAccount) SetProviderConfigReference(r *xpv1.Reference) {
+// SetProviderConfigReference of this Account.
+func (mg *Account) SetProviderConfigReference(r *xpv1.Reference) {
 	mg.Spec.ProviderConfigReference = r
 }
 
 /*
-SetProviderReference of this PurviewAccount.
+SetProviderReference of this Account.
 Deprecated: Use SetProviderConfigReference.
 */
-func (mg *PurviewAccount) SetProviderReference(r *xpv1.Reference) {
+func (mg *Account) SetProviderReference(r *xpv1.Reference) {
 	mg.Spec.ProviderReference = r
 }
 
-// SetWriteConnectionSecretToReference of this PurviewAccount.
-func (mg *PurviewAccount) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
+// SetWriteConnectionSecretToReference of this Account.
+func (mg *Account) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
 	mg.Spec.WriteConnectionSecretToReference = r
 }

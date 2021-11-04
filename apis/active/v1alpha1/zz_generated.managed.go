@@ -19,114 +19,114 @@ package v1alpha1
 
 import xpv1 "github.com/crossplane/crossplane-runtime/apis/common/v1"
 
-// GetCondition of this ActiveDirectoryDomainService.
-func (mg *ActiveDirectoryDomainService) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
+// GetCondition of this DirectoryDomainService.
+func (mg *DirectoryDomainService) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
 	return mg.Status.GetCondition(ct)
 }
 
-// GetDeletionPolicy of this ActiveDirectoryDomainService.
-func (mg *ActiveDirectoryDomainService) GetDeletionPolicy() xpv1.DeletionPolicy {
+// GetDeletionPolicy of this DirectoryDomainService.
+func (mg *DirectoryDomainService) GetDeletionPolicy() xpv1.DeletionPolicy {
 	return mg.Spec.DeletionPolicy
 }
 
-// GetProviderConfigReference of this ActiveDirectoryDomainService.
-func (mg *ActiveDirectoryDomainService) GetProviderConfigReference() *xpv1.Reference {
+// GetProviderConfigReference of this DirectoryDomainService.
+func (mg *DirectoryDomainService) GetProviderConfigReference() *xpv1.Reference {
 	return mg.Spec.ProviderConfigReference
 }
 
 /*
-GetProviderReference of this ActiveDirectoryDomainService.
+GetProviderReference of this DirectoryDomainService.
 Deprecated: Use GetProviderConfigReference.
 */
-func (mg *ActiveDirectoryDomainService) GetProviderReference() *xpv1.Reference {
+func (mg *DirectoryDomainService) GetProviderReference() *xpv1.Reference {
 	return mg.Spec.ProviderReference
 }
 
-// GetWriteConnectionSecretToReference of this ActiveDirectoryDomainService.
-func (mg *ActiveDirectoryDomainService) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
+// GetWriteConnectionSecretToReference of this DirectoryDomainService.
+func (mg *DirectoryDomainService) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
 	return mg.Spec.WriteConnectionSecretToReference
 }
 
-// SetConditions of this ActiveDirectoryDomainService.
-func (mg *ActiveDirectoryDomainService) SetConditions(c ...xpv1.Condition) {
+// SetConditions of this DirectoryDomainService.
+func (mg *DirectoryDomainService) SetConditions(c ...xpv1.Condition) {
 	mg.Status.SetConditions(c...)
 }
 
-// SetDeletionPolicy of this ActiveDirectoryDomainService.
-func (mg *ActiveDirectoryDomainService) SetDeletionPolicy(r xpv1.DeletionPolicy) {
+// SetDeletionPolicy of this DirectoryDomainService.
+func (mg *DirectoryDomainService) SetDeletionPolicy(r xpv1.DeletionPolicy) {
 	mg.Spec.DeletionPolicy = r
 }
 
-// SetProviderConfigReference of this ActiveDirectoryDomainService.
-func (mg *ActiveDirectoryDomainService) SetProviderConfigReference(r *xpv1.Reference) {
+// SetProviderConfigReference of this DirectoryDomainService.
+func (mg *DirectoryDomainService) SetProviderConfigReference(r *xpv1.Reference) {
 	mg.Spec.ProviderConfigReference = r
 }
 
 /*
-SetProviderReference of this ActiveDirectoryDomainService.
+SetProviderReference of this DirectoryDomainService.
 Deprecated: Use SetProviderConfigReference.
 */
-func (mg *ActiveDirectoryDomainService) SetProviderReference(r *xpv1.Reference) {
+func (mg *DirectoryDomainService) SetProviderReference(r *xpv1.Reference) {
 	mg.Spec.ProviderReference = r
 }
 
-// SetWriteConnectionSecretToReference of this ActiveDirectoryDomainService.
-func (mg *ActiveDirectoryDomainService) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
+// SetWriteConnectionSecretToReference of this DirectoryDomainService.
+func (mg *DirectoryDomainService) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
 	mg.Spec.WriteConnectionSecretToReference = r
 }
 
-// GetCondition of this ActiveDirectoryDomainServiceReplicaSet.
-func (mg *ActiveDirectoryDomainServiceReplicaSet) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
+// GetCondition of this DirectoryDomainServiceReplicaSet.
+func (mg *DirectoryDomainServiceReplicaSet) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
 	return mg.Status.GetCondition(ct)
 }
 
-// GetDeletionPolicy of this ActiveDirectoryDomainServiceReplicaSet.
-func (mg *ActiveDirectoryDomainServiceReplicaSet) GetDeletionPolicy() xpv1.DeletionPolicy {
+// GetDeletionPolicy of this DirectoryDomainServiceReplicaSet.
+func (mg *DirectoryDomainServiceReplicaSet) GetDeletionPolicy() xpv1.DeletionPolicy {
 	return mg.Spec.DeletionPolicy
 }
 
-// GetProviderConfigReference of this ActiveDirectoryDomainServiceReplicaSet.
-func (mg *ActiveDirectoryDomainServiceReplicaSet) GetProviderConfigReference() *xpv1.Reference {
+// GetProviderConfigReference of this DirectoryDomainServiceReplicaSet.
+func (mg *DirectoryDomainServiceReplicaSet) GetProviderConfigReference() *xpv1.Reference {
 	return mg.Spec.ProviderConfigReference
 }
 
 /*
-GetProviderReference of this ActiveDirectoryDomainServiceReplicaSet.
+GetProviderReference of this DirectoryDomainServiceReplicaSet.
 Deprecated: Use GetProviderConfigReference.
 */
-func (mg *ActiveDirectoryDomainServiceReplicaSet) GetProviderReference() *xpv1.Reference {
+func (mg *DirectoryDomainServiceReplicaSet) GetProviderReference() *xpv1.Reference {
 	return mg.Spec.ProviderReference
 }
 
-// GetWriteConnectionSecretToReference of this ActiveDirectoryDomainServiceReplicaSet.
-func (mg *ActiveDirectoryDomainServiceReplicaSet) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
+// GetWriteConnectionSecretToReference of this DirectoryDomainServiceReplicaSet.
+func (mg *DirectoryDomainServiceReplicaSet) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
 	return mg.Spec.WriteConnectionSecretToReference
 }
 
-// SetConditions of this ActiveDirectoryDomainServiceReplicaSet.
-func (mg *ActiveDirectoryDomainServiceReplicaSet) SetConditions(c ...xpv1.Condition) {
+// SetConditions of this DirectoryDomainServiceReplicaSet.
+func (mg *DirectoryDomainServiceReplicaSet) SetConditions(c ...xpv1.Condition) {
 	mg.Status.SetConditions(c...)
 }
 
-// SetDeletionPolicy of this ActiveDirectoryDomainServiceReplicaSet.
-func (mg *ActiveDirectoryDomainServiceReplicaSet) SetDeletionPolicy(r xpv1.DeletionPolicy) {
+// SetDeletionPolicy of this DirectoryDomainServiceReplicaSet.
+func (mg *DirectoryDomainServiceReplicaSet) SetDeletionPolicy(r xpv1.DeletionPolicy) {
 	mg.Spec.DeletionPolicy = r
 }
 
-// SetProviderConfigReference of this ActiveDirectoryDomainServiceReplicaSet.
-func (mg *ActiveDirectoryDomainServiceReplicaSet) SetProviderConfigReference(r *xpv1.Reference) {
+// SetProviderConfigReference of this DirectoryDomainServiceReplicaSet.
+func (mg *DirectoryDomainServiceReplicaSet) SetProviderConfigReference(r *xpv1.Reference) {
 	mg.Spec.ProviderConfigReference = r
 }
 
 /*
-SetProviderReference of this ActiveDirectoryDomainServiceReplicaSet.
+SetProviderReference of this DirectoryDomainServiceReplicaSet.
 Deprecated: Use SetProviderConfigReference.
 */
-func (mg *ActiveDirectoryDomainServiceReplicaSet) SetProviderReference(r *xpv1.Reference) {
+func (mg *DirectoryDomainServiceReplicaSet) SetProviderReference(r *xpv1.Reference) {
 	mg.Spec.ProviderReference = r
 }
 
-// SetWriteConnectionSecretToReference of this ActiveDirectoryDomainServiceReplicaSet.
-func (mg *ActiveDirectoryDomainServiceReplicaSet) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
+// SetWriteConnectionSecretToReference of this DirectoryDomainServiceReplicaSet.
+func (mg *DirectoryDomainServiceReplicaSet) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
 	mg.Spec.WriteConnectionSecretToReference = r
 }

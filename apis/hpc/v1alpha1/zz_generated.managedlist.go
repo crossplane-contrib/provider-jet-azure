@@ -19,8 +19,8 @@ package v1alpha1
 
 import resource "github.com/crossplane/crossplane-runtime/pkg/resource"
 
-// GetItems of this HpcCacheAccessPolicyList.
-func (l *HpcCacheAccessPolicyList) GetItems() []resource.Managed {
+// GetItems of this CacheAccessPolicyList.
+func (l *CacheAccessPolicyList) GetItems() []resource.Managed {
 	items := make([]resource.Managed, len(l.Items))
 	for i := range l.Items {
 		items[i] = &l.Items[i]
@@ -28,8 +28,8 @@ func (l *HpcCacheAccessPolicyList) GetItems() []resource.Managed {
 	return items
 }
 
-// GetItems of this HpcCacheBlobNfsTargetList.
-func (l *HpcCacheBlobNfsTargetList) GetItems() []resource.Managed {
+// GetItems of this CacheBlobNfsTargetList.
+func (l *CacheBlobNfsTargetList) GetItems() []resource.Managed {
 	items := make([]resource.Managed, len(l.Items))
 	for i := range l.Items {
 		items[i] = &l.Items[i]
@@ -37,8 +37,8 @@ func (l *HpcCacheBlobNfsTargetList) GetItems() []resource.Managed {
 	return items
 }
 
-// GetItems of this HpcCacheBlobTargetList.
-func (l *HpcCacheBlobTargetList) GetItems() []resource.Managed {
+// GetItems of this CacheBlobTargetList.
+func (l *CacheBlobTargetList) GetItems() []resource.Managed {
 	items := make([]resource.Managed, len(l.Items))
 	for i := range l.Items {
 		items[i] = &l.Items[i]
@@ -46,8 +46,8 @@ func (l *HpcCacheBlobTargetList) GetItems() []resource.Managed {
 	return items
 }
 
-// GetItems of this HpcCacheList.
-func (l *HpcCacheList) GetItems() []resource.Managed {
+// GetItems of this CacheList.
+func (l *CacheList) GetItems() []resource.Managed {
 	items := make([]resource.Managed, len(l.Items))
 	for i := range l.Items {
 		items[i] = &l.Items[i]
@@ -55,8 +55,8 @@ func (l *HpcCacheList) GetItems() []resource.Managed {
 	return items
 }
 
-// GetItems of this HpcCacheNfsTargetList.
-func (l *HpcCacheNfsTargetList) GetItems() []resource.Managed {
+// GetItems of this CacheNfsTargetList.
+func (l *CacheNfsTargetList) GetItems() []resource.Managed {
 	items := make([]resource.Managed, len(l.Items))
 	for i := range l.Items {
 		items[i] = &l.Items[i]

@@ -19,8 +19,8 @@ package v1alpha1
 
 import resource "github.com/crossplane/crossplane-runtime/pkg/resource"
 
-// GetItems of this IotSecurityDeviceGroupList.
-func (l *IotSecurityDeviceGroupList) GetItems() []resource.Managed {
+// GetItems of this SecurityDeviceGroupList.
+func (l *SecurityDeviceGroupList) GetItems() []resource.Managed {
 	items := make([]resource.Managed, len(l.Items))
 	for i := range l.Items {
 		items[i] = &l.Items[i]
@@ -28,8 +28,8 @@ func (l *IotSecurityDeviceGroupList) GetItems() []resource.Managed {
 	return items
 }
 
-// GetItems of this IotSecuritySolutionList.
-func (l *IotSecuritySolutionList) GetItems() []resource.Managed {
+// GetItems of this SecuritySolutionList.
+func (l *SecuritySolutionList) GetItems() []resource.Managed {
 	items := make([]resource.Managed, len(l.Items))
 	for i := range l.Items {
 		items[i] = &l.Items[i]
@@ -37,8 +37,8 @@ func (l *IotSecuritySolutionList) GetItems() []resource.Managed {
 	return items
 }
 
-// GetItems of this IotTimeSeriesInsightsAccessPolicyList.
-func (l *IotTimeSeriesInsightsAccessPolicyList) GetItems() []resource.Managed {
+// GetItems of this TimeSeriesInsightsAccessPolicyList.
+func (l *TimeSeriesInsightsAccessPolicyList) GetItems() []resource.Managed {
 	items := make([]resource.Managed, len(l.Items))
 	for i := range l.Items {
 		items[i] = &l.Items[i]
@@ -46,8 +46,8 @@ func (l *IotTimeSeriesInsightsAccessPolicyList) GetItems() []resource.Managed {
 	return items
 }
 
-// GetItems of this IotTimeSeriesInsightsEventSourceIothubList.
-func (l *IotTimeSeriesInsightsEventSourceIothubList) GetItems() []resource.Managed {
+// GetItems of this TimeSeriesInsightsEventSourceIothubList.
+func (l *TimeSeriesInsightsEventSourceIothubList) GetItems() []resource.Managed {
 	items := make([]resource.Managed, len(l.Items))
 	for i := range l.Items {
 		items[i] = &l.Items[i]
@@ -55,8 +55,8 @@ func (l *IotTimeSeriesInsightsEventSourceIothubList) GetItems() []resource.Manag
 	return items
 }
 
-// GetItems of this IotTimeSeriesInsightsGen2EnvironmentList.
-func (l *IotTimeSeriesInsightsGen2EnvironmentList) GetItems() []resource.Managed {
+// GetItems of this TimeSeriesInsightsGen2EnvironmentList.
+func (l *TimeSeriesInsightsGen2EnvironmentList) GetItems() []resource.Managed {
 	items := make([]resource.Managed, len(l.Items))
 	for i := range l.Items {
 		items[i] = &l.Items[i]
@@ -64,8 +64,8 @@ func (l *IotTimeSeriesInsightsGen2EnvironmentList) GetItems() []resource.Managed
 	return items
 }
 
-// GetItems of this IotTimeSeriesInsightsReferenceDataSetList.
-func (l *IotTimeSeriesInsightsReferenceDataSetList) GetItems() []resource.Managed {
+// GetItems of this TimeSeriesInsightsReferenceDataSetList.
+func (l *TimeSeriesInsightsReferenceDataSetList) GetItems() []resource.Managed {
 	items := make([]resource.Managed, len(l.Items))
 	for i := range l.Items {
 		items[i] = &l.Items[i]
@@ -73,8 +73,8 @@ func (l *IotTimeSeriesInsightsReferenceDataSetList) GetItems() []resource.Manage
 	return items
 }
 
-// GetItems of this IotTimeSeriesInsightsStandardEnvironmentList.
-func (l *IotTimeSeriesInsightsStandardEnvironmentList) GetItems() []resource.Managed {
+// GetItems of this TimeSeriesInsightsStandardEnvironmentList.
+func (l *TimeSeriesInsightsStandardEnvironmentList) GetItems() []resource.Managed {
 	items := make([]resource.Managed, len(l.Items))
 	for i := range l.Items {
 		items[i] = &l.Items[i]

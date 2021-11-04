@@ -19,338 +19,338 @@ package v1alpha1
 
 import xpv1 "github.com/crossplane/crossplane-runtime/apis/common/v1"
 
-// GetCondition of this EventgridDomain.
-func (mg *EventgridDomain) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
+// GetCondition of this Domain.
+func (mg *Domain) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
 	return mg.Status.GetCondition(ct)
 }
 
-// GetDeletionPolicy of this EventgridDomain.
-func (mg *EventgridDomain) GetDeletionPolicy() xpv1.DeletionPolicy {
+// GetDeletionPolicy of this Domain.
+func (mg *Domain) GetDeletionPolicy() xpv1.DeletionPolicy {
 	return mg.Spec.DeletionPolicy
 }
 
-// GetProviderConfigReference of this EventgridDomain.
-func (mg *EventgridDomain) GetProviderConfigReference() *xpv1.Reference {
+// GetProviderConfigReference of this Domain.
+func (mg *Domain) GetProviderConfigReference() *xpv1.Reference {
 	return mg.Spec.ProviderConfigReference
 }
 
 /*
-GetProviderReference of this EventgridDomain.
+GetProviderReference of this Domain.
 Deprecated: Use GetProviderConfigReference.
 */
-func (mg *EventgridDomain) GetProviderReference() *xpv1.Reference {
+func (mg *Domain) GetProviderReference() *xpv1.Reference {
 	return mg.Spec.ProviderReference
 }
 
-// GetWriteConnectionSecretToReference of this EventgridDomain.
-func (mg *EventgridDomain) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
+// GetWriteConnectionSecretToReference of this Domain.
+func (mg *Domain) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
 	return mg.Spec.WriteConnectionSecretToReference
 }
 
-// SetConditions of this EventgridDomain.
-func (mg *EventgridDomain) SetConditions(c ...xpv1.Condition) {
+// SetConditions of this Domain.
+func (mg *Domain) SetConditions(c ...xpv1.Condition) {
 	mg.Status.SetConditions(c...)
 }
 
-// SetDeletionPolicy of this EventgridDomain.
-func (mg *EventgridDomain) SetDeletionPolicy(r xpv1.DeletionPolicy) {
+// SetDeletionPolicy of this Domain.
+func (mg *Domain) SetDeletionPolicy(r xpv1.DeletionPolicy) {
 	mg.Spec.DeletionPolicy = r
 }
 
-// SetProviderConfigReference of this EventgridDomain.
-func (mg *EventgridDomain) SetProviderConfigReference(r *xpv1.Reference) {
+// SetProviderConfigReference of this Domain.
+func (mg *Domain) SetProviderConfigReference(r *xpv1.Reference) {
 	mg.Spec.ProviderConfigReference = r
 }
 
 /*
-SetProviderReference of this EventgridDomain.
+SetProviderReference of this Domain.
 Deprecated: Use SetProviderConfigReference.
 */
-func (mg *EventgridDomain) SetProviderReference(r *xpv1.Reference) {
+func (mg *Domain) SetProviderReference(r *xpv1.Reference) {
 	mg.Spec.ProviderReference = r
 }
 
-// SetWriteConnectionSecretToReference of this EventgridDomain.
-func (mg *EventgridDomain) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
+// SetWriteConnectionSecretToReference of this Domain.
+func (mg *Domain) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
 	mg.Spec.WriteConnectionSecretToReference = r
 }
 
-// GetCondition of this EventgridDomainTopic.
-func (mg *EventgridDomainTopic) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
+// GetCondition of this DomainTopic.
+func (mg *DomainTopic) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
 	return mg.Status.GetCondition(ct)
 }
 
-// GetDeletionPolicy of this EventgridDomainTopic.
-func (mg *EventgridDomainTopic) GetDeletionPolicy() xpv1.DeletionPolicy {
+// GetDeletionPolicy of this DomainTopic.
+func (mg *DomainTopic) GetDeletionPolicy() xpv1.DeletionPolicy {
 	return mg.Spec.DeletionPolicy
 }
 
-// GetProviderConfigReference of this EventgridDomainTopic.
-func (mg *EventgridDomainTopic) GetProviderConfigReference() *xpv1.Reference {
+// GetProviderConfigReference of this DomainTopic.
+func (mg *DomainTopic) GetProviderConfigReference() *xpv1.Reference {
 	return mg.Spec.ProviderConfigReference
 }
 
 /*
-GetProviderReference of this EventgridDomainTopic.
+GetProviderReference of this DomainTopic.
 Deprecated: Use GetProviderConfigReference.
 */
-func (mg *EventgridDomainTopic) GetProviderReference() *xpv1.Reference {
+func (mg *DomainTopic) GetProviderReference() *xpv1.Reference {
 	return mg.Spec.ProviderReference
 }
 
-// GetWriteConnectionSecretToReference of this EventgridDomainTopic.
-func (mg *EventgridDomainTopic) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
+// GetWriteConnectionSecretToReference of this DomainTopic.
+func (mg *DomainTopic) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
 	return mg.Spec.WriteConnectionSecretToReference
 }
 
-// SetConditions of this EventgridDomainTopic.
-func (mg *EventgridDomainTopic) SetConditions(c ...xpv1.Condition) {
+// SetConditions of this DomainTopic.
+func (mg *DomainTopic) SetConditions(c ...xpv1.Condition) {
 	mg.Status.SetConditions(c...)
 }
 
-// SetDeletionPolicy of this EventgridDomainTopic.
-func (mg *EventgridDomainTopic) SetDeletionPolicy(r xpv1.DeletionPolicy) {
+// SetDeletionPolicy of this DomainTopic.
+func (mg *DomainTopic) SetDeletionPolicy(r xpv1.DeletionPolicy) {
 	mg.Spec.DeletionPolicy = r
 }
 
-// SetProviderConfigReference of this EventgridDomainTopic.
-func (mg *EventgridDomainTopic) SetProviderConfigReference(r *xpv1.Reference) {
+// SetProviderConfigReference of this DomainTopic.
+func (mg *DomainTopic) SetProviderConfigReference(r *xpv1.Reference) {
 	mg.Spec.ProviderConfigReference = r
 }
 
 /*
-SetProviderReference of this EventgridDomainTopic.
+SetProviderReference of this DomainTopic.
 Deprecated: Use SetProviderConfigReference.
 */
-func (mg *EventgridDomainTopic) SetProviderReference(r *xpv1.Reference) {
+func (mg *DomainTopic) SetProviderReference(r *xpv1.Reference) {
 	mg.Spec.ProviderReference = r
 }
 
-// SetWriteConnectionSecretToReference of this EventgridDomainTopic.
-func (mg *EventgridDomainTopic) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
+// SetWriteConnectionSecretToReference of this DomainTopic.
+func (mg *DomainTopic) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
 	mg.Spec.WriteConnectionSecretToReference = r
 }
 
-// GetCondition of this EventgridEventSubscription.
-func (mg *EventgridEventSubscription) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
+// GetCondition of this EventSubscription.
+func (mg *EventSubscription) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
 	return mg.Status.GetCondition(ct)
 }
 
-// GetDeletionPolicy of this EventgridEventSubscription.
-func (mg *EventgridEventSubscription) GetDeletionPolicy() xpv1.DeletionPolicy {
+// GetDeletionPolicy of this EventSubscription.
+func (mg *EventSubscription) GetDeletionPolicy() xpv1.DeletionPolicy {
 	return mg.Spec.DeletionPolicy
 }
 
-// GetProviderConfigReference of this EventgridEventSubscription.
-func (mg *EventgridEventSubscription) GetProviderConfigReference() *xpv1.Reference {
+// GetProviderConfigReference of this EventSubscription.
+func (mg *EventSubscription) GetProviderConfigReference() *xpv1.Reference {
 	return mg.Spec.ProviderConfigReference
 }
 
 /*
-GetProviderReference of this EventgridEventSubscription.
+GetProviderReference of this EventSubscription.
 Deprecated: Use GetProviderConfigReference.
 */
-func (mg *EventgridEventSubscription) GetProviderReference() *xpv1.Reference {
+func (mg *EventSubscription) GetProviderReference() *xpv1.Reference {
 	return mg.Spec.ProviderReference
 }
 
-// GetWriteConnectionSecretToReference of this EventgridEventSubscription.
-func (mg *EventgridEventSubscription) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
+// GetWriteConnectionSecretToReference of this EventSubscription.
+func (mg *EventSubscription) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
 	return mg.Spec.WriteConnectionSecretToReference
 }
 
-// SetConditions of this EventgridEventSubscription.
-func (mg *EventgridEventSubscription) SetConditions(c ...xpv1.Condition) {
+// SetConditions of this EventSubscription.
+func (mg *EventSubscription) SetConditions(c ...xpv1.Condition) {
 	mg.Status.SetConditions(c...)
 }
 
-// SetDeletionPolicy of this EventgridEventSubscription.
-func (mg *EventgridEventSubscription) SetDeletionPolicy(r xpv1.DeletionPolicy) {
+// SetDeletionPolicy of this EventSubscription.
+func (mg *EventSubscription) SetDeletionPolicy(r xpv1.DeletionPolicy) {
 	mg.Spec.DeletionPolicy = r
 }
 
-// SetProviderConfigReference of this EventgridEventSubscription.
-func (mg *EventgridEventSubscription) SetProviderConfigReference(r *xpv1.Reference) {
+// SetProviderConfigReference of this EventSubscription.
+func (mg *EventSubscription) SetProviderConfigReference(r *xpv1.Reference) {
 	mg.Spec.ProviderConfigReference = r
 }
 
 /*
-SetProviderReference of this EventgridEventSubscription.
+SetProviderReference of this EventSubscription.
 Deprecated: Use SetProviderConfigReference.
 */
-func (mg *EventgridEventSubscription) SetProviderReference(r *xpv1.Reference) {
+func (mg *EventSubscription) SetProviderReference(r *xpv1.Reference) {
 	mg.Spec.ProviderReference = r
 }
 
-// SetWriteConnectionSecretToReference of this EventgridEventSubscription.
-func (mg *EventgridEventSubscription) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
+// SetWriteConnectionSecretToReference of this EventSubscription.
+func (mg *EventSubscription) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
 	mg.Spec.WriteConnectionSecretToReference = r
 }
 
-// GetCondition of this EventgridSystemTopic.
-func (mg *EventgridSystemTopic) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
+// GetCondition of this SystemTopic.
+func (mg *SystemTopic) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
 	return mg.Status.GetCondition(ct)
 }
 
-// GetDeletionPolicy of this EventgridSystemTopic.
-func (mg *EventgridSystemTopic) GetDeletionPolicy() xpv1.DeletionPolicy {
+// GetDeletionPolicy of this SystemTopic.
+func (mg *SystemTopic) GetDeletionPolicy() xpv1.DeletionPolicy {
 	return mg.Spec.DeletionPolicy
 }
 
-// GetProviderConfigReference of this EventgridSystemTopic.
-func (mg *EventgridSystemTopic) GetProviderConfigReference() *xpv1.Reference {
+// GetProviderConfigReference of this SystemTopic.
+func (mg *SystemTopic) GetProviderConfigReference() *xpv1.Reference {
 	return mg.Spec.ProviderConfigReference
 }
 
 /*
-GetProviderReference of this EventgridSystemTopic.
+GetProviderReference of this SystemTopic.
 Deprecated: Use GetProviderConfigReference.
 */
-func (mg *EventgridSystemTopic) GetProviderReference() *xpv1.Reference {
+func (mg *SystemTopic) GetProviderReference() *xpv1.Reference {
 	return mg.Spec.ProviderReference
 }
 
-// GetWriteConnectionSecretToReference of this EventgridSystemTopic.
-func (mg *EventgridSystemTopic) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
+// GetWriteConnectionSecretToReference of this SystemTopic.
+func (mg *SystemTopic) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
 	return mg.Spec.WriteConnectionSecretToReference
 }
 
-// SetConditions of this EventgridSystemTopic.
-func (mg *EventgridSystemTopic) SetConditions(c ...xpv1.Condition) {
+// SetConditions of this SystemTopic.
+func (mg *SystemTopic) SetConditions(c ...xpv1.Condition) {
 	mg.Status.SetConditions(c...)
 }
 
-// SetDeletionPolicy of this EventgridSystemTopic.
-func (mg *EventgridSystemTopic) SetDeletionPolicy(r xpv1.DeletionPolicy) {
+// SetDeletionPolicy of this SystemTopic.
+func (mg *SystemTopic) SetDeletionPolicy(r xpv1.DeletionPolicy) {
 	mg.Spec.DeletionPolicy = r
 }
 
-// SetProviderConfigReference of this EventgridSystemTopic.
-func (mg *EventgridSystemTopic) SetProviderConfigReference(r *xpv1.Reference) {
+// SetProviderConfigReference of this SystemTopic.
+func (mg *SystemTopic) SetProviderConfigReference(r *xpv1.Reference) {
 	mg.Spec.ProviderConfigReference = r
 }
 
 /*
-SetProviderReference of this EventgridSystemTopic.
+SetProviderReference of this SystemTopic.
 Deprecated: Use SetProviderConfigReference.
 */
-func (mg *EventgridSystemTopic) SetProviderReference(r *xpv1.Reference) {
+func (mg *SystemTopic) SetProviderReference(r *xpv1.Reference) {
 	mg.Spec.ProviderReference = r
 }
 
-// SetWriteConnectionSecretToReference of this EventgridSystemTopic.
-func (mg *EventgridSystemTopic) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
+// SetWriteConnectionSecretToReference of this SystemTopic.
+func (mg *SystemTopic) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
 	mg.Spec.WriteConnectionSecretToReference = r
 }
 
-// GetCondition of this EventgridSystemTopicEventSubscription.
-func (mg *EventgridSystemTopicEventSubscription) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
+// GetCondition of this SystemTopicEventSubscription.
+func (mg *SystemTopicEventSubscription) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
 	return mg.Status.GetCondition(ct)
 }
 
-// GetDeletionPolicy of this EventgridSystemTopicEventSubscription.
-func (mg *EventgridSystemTopicEventSubscription) GetDeletionPolicy() xpv1.DeletionPolicy {
+// GetDeletionPolicy of this SystemTopicEventSubscription.
+func (mg *SystemTopicEventSubscription) GetDeletionPolicy() xpv1.DeletionPolicy {
 	return mg.Spec.DeletionPolicy
 }
 
-// GetProviderConfigReference of this EventgridSystemTopicEventSubscription.
-func (mg *EventgridSystemTopicEventSubscription) GetProviderConfigReference() *xpv1.Reference {
+// GetProviderConfigReference of this SystemTopicEventSubscription.
+func (mg *SystemTopicEventSubscription) GetProviderConfigReference() *xpv1.Reference {
 	return mg.Spec.ProviderConfigReference
 }
 
 /*
-GetProviderReference of this EventgridSystemTopicEventSubscription.
+GetProviderReference of this SystemTopicEventSubscription.
 Deprecated: Use GetProviderConfigReference.
 */
-func (mg *EventgridSystemTopicEventSubscription) GetProviderReference() *xpv1.Reference {
+func (mg *SystemTopicEventSubscription) GetProviderReference() *xpv1.Reference {
 	return mg.Spec.ProviderReference
 }
 
-// GetWriteConnectionSecretToReference of this EventgridSystemTopicEventSubscription.
-func (mg *EventgridSystemTopicEventSubscription) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
+// GetWriteConnectionSecretToReference of this SystemTopicEventSubscription.
+func (mg *SystemTopicEventSubscription) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
 	return mg.Spec.WriteConnectionSecretToReference
 }
 
-// SetConditions of this EventgridSystemTopicEventSubscription.
-func (mg *EventgridSystemTopicEventSubscription) SetConditions(c ...xpv1.Condition) {
+// SetConditions of this SystemTopicEventSubscription.
+func (mg *SystemTopicEventSubscription) SetConditions(c ...xpv1.Condition) {
 	mg.Status.SetConditions(c...)
 }
 
-// SetDeletionPolicy of this EventgridSystemTopicEventSubscription.
-func (mg *EventgridSystemTopicEventSubscription) SetDeletionPolicy(r xpv1.DeletionPolicy) {
+// SetDeletionPolicy of this SystemTopicEventSubscription.
+func (mg *SystemTopicEventSubscription) SetDeletionPolicy(r xpv1.DeletionPolicy) {
 	mg.Spec.DeletionPolicy = r
 }
 
-// SetProviderConfigReference of this EventgridSystemTopicEventSubscription.
-func (mg *EventgridSystemTopicEventSubscription) SetProviderConfigReference(r *xpv1.Reference) {
+// SetProviderConfigReference of this SystemTopicEventSubscription.
+func (mg *SystemTopicEventSubscription) SetProviderConfigReference(r *xpv1.Reference) {
 	mg.Spec.ProviderConfigReference = r
 }
 
 /*
-SetProviderReference of this EventgridSystemTopicEventSubscription.
+SetProviderReference of this SystemTopicEventSubscription.
 Deprecated: Use SetProviderConfigReference.
 */
-func (mg *EventgridSystemTopicEventSubscription) SetProviderReference(r *xpv1.Reference) {
+func (mg *SystemTopicEventSubscription) SetProviderReference(r *xpv1.Reference) {
 	mg.Spec.ProviderReference = r
 }
 
-// SetWriteConnectionSecretToReference of this EventgridSystemTopicEventSubscription.
-func (mg *EventgridSystemTopicEventSubscription) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
+// SetWriteConnectionSecretToReference of this SystemTopicEventSubscription.
+func (mg *SystemTopicEventSubscription) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
 	mg.Spec.WriteConnectionSecretToReference = r
 }
 
-// GetCondition of this EventgridTopic.
-func (mg *EventgridTopic) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
+// GetCondition of this Topic.
+func (mg *Topic) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
 	return mg.Status.GetCondition(ct)
 }
 
-// GetDeletionPolicy of this EventgridTopic.
-func (mg *EventgridTopic) GetDeletionPolicy() xpv1.DeletionPolicy {
+// GetDeletionPolicy of this Topic.
+func (mg *Topic) GetDeletionPolicy() xpv1.DeletionPolicy {
 	return mg.Spec.DeletionPolicy
 }
 
-// GetProviderConfigReference of this EventgridTopic.
-func (mg *EventgridTopic) GetProviderConfigReference() *xpv1.Reference {
+// GetProviderConfigReference of this Topic.
+func (mg *Topic) GetProviderConfigReference() *xpv1.Reference {
 	return mg.Spec.ProviderConfigReference
 }
 
 /*
-GetProviderReference of this EventgridTopic.
+GetProviderReference of this Topic.
 Deprecated: Use GetProviderConfigReference.
 */
-func (mg *EventgridTopic) GetProviderReference() *xpv1.Reference {
+func (mg *Topic) GetProviderReference() *xpv1.Reference {
 	return mg.Spec.ProviderReference
 }
 
-// GetWriteConnectionSecretToReference of this EventgridTopic.
-func (mg *EventgridTopic) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
+// GetWriteConnectionSecretToReference of this Topic.
+func (mg *Topic) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
 	return mg.Spec.WriteConnectionSecretToReference
 }
 
-// SetConditions of this EventgridTopic.
-func (mg *EventgridTopic) SetConditions(c ...xpv1.Condition) {
+// SetConditions of this Topic.
+func (mg *Topic) SetConditions(c ...xpv1.Condition) {
 	mg.Status.SetConditions(c...)
 }
 
-// SetDeletionPolicy of this EventgridTopic.
-func (mg *EventgridTopic) SetDeletionPolicy(r xpv1.DeletionPolicy) {
+// SetDeletionPolicy of this Topic.
+func (mg *Topic) SetDeletionPolicy(r xpv1.DeletionPolicy) {
 	mg.Spec.DeletionPolicy = r
 }
 
-// SetProviderConfigReference of this EventgridTopic.
-func (mg *EventgridTopic) SetProviderConfigReference(r *xpv1.Reference) {
+// SetProviderConfigReference of this Topic.
+func (mg *Topic) SetProviderConfigReference(r *xpv1.Reference) {
 	mg.Spec.ProviderConfigReference = r
 }
 
 /*
-SetProviderReference of this EventgridTopic.
+SetProviderReference of this Topic.
 Deprecated: Use SetProviderConfigReference.
 */
-func (mg *EventgridTopic) SetProviderReference(r *xpv1.Reference) {
+func (mg *Topic) SetProviderReference(r *xpv1.Reference) {
 	mg.Spec.ProviderReference = r
 }
 
-// SetWriteConnectionSecretToReference of this EventgridTopic.
-func (mg *EventgridTopic) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
+// SetWriteConnectionSecretToReference of this Topic.
+func (mg *Topic) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
 	mg.Spec.WriteConnectionSecretToReference = r
 }

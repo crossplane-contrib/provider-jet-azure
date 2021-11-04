@@ -19,8 +19,8 @@ package v1alpha1
 
 import resource "github.com/crossplane/crossplane-runtime/pkg/resource"
 
-// GetItems of this SubscriptionList.
-func (l *SubscriptionList) GetItems() []resource.Managed {
+// GetItems of this PolicyAssignmentList.
+func (l *PolicyAssignmentList) GetItems() []resource.Managed {
 	items := make([]resource.Managed, len(l.Items))
 	for i := range l.Items {
 		items[i] = &l.Items[i]
@@ -28,17 +28,8 @@ func (l *SubscriptionList) GetItems() []resource.Managed {
 	return items
 }
 
-// GetItems of this SubscriptionPolicyAssignmentList.
-func (l *SubscriptionPolicyAssignmentList) GetItems() []resource.Managed {
-	items := make([]resource.Managed, len(l.Items))
-	for i := range l.Items {
-		items[i] = &l.Items[i]
-	}
-	return items
-}
-
-// GetItems of this SubscriptionTemplateDeploymentList.
-func (l *SubscriptionTemplateDeploymentList) GetItems() []resource.Managed {
+// GetItems of this TemplateDeploymentList.
+func (l *TemplateDeploymentList) GetItems() []resource.Managed {
 	items := make([]resource.Managed, len(l.Items))
 	for i := range l.Items {
 		items[i] = &l.Items[i]

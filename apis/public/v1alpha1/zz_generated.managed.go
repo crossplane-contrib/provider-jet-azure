@@ -19,114 +19,114 @@ package v1alpha1
 
 import xpv1 "github.com/crossplane/crossplane-runtime/apis/common/v1"
 
-// GetCondition of this PublicIp.
-func (mg *PublicIp) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
+// GetCondition of this Ip.
+func (mg *Ip) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
 	return mg.Status.GetCondition(ct)
 }
 
-// GetDeletionPolicy of this PublicIp.
-func (mg *PublicIp) GetDeletionPolicy() xpv1.DeletionPolicy {
+// GetDeletionPolicy of this Ip.
+func (mg *Ip) GetDeletionPolicy() xpv1.DeletionPolicy {
 	return mg.Spec.DeletionPolicy
 }
 
-// GetProviderConfigReference of this PublicIp.
-func (mg *PublicIp) GetProviderConfigReference() *xpv1.Reference {
+// GetProviderConfigReference of this Ip.
+func (mg *Ip) GetProviderConfigReference() *xpv1.Reference {
 	return mg.Spec.ProviderConfigReference
 }
 
 /*
-GetProviderReference of this PublicIp.
+GetProviderReference of this Ip.
 Deprecated: Use GetProviderConfigReference.
 */
-func (mg *PublicIp) GetProviderReference() *xpv1.Reference {
+func (mg *Ip) GetProviderReference() *xpv1.Reference {
 	return mg.Spec.ProviderReference
 }
 
-// GetWriteConnectionSecretToReference of this PublicIp.
-func (mg *PublicIp) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
+// GetWriteConnectionSecretToReference of this Ip.
+func (mg *Ip) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
 	return mg.Spec.WriteConnectionSecretToReference
 }
 
-// SetConditions of this PublicIp.
-func (mg *PublicIp) SetConditions(c ...xpv1.Condition) {
+// SetConditions of this Ip.
+func (mg *Ip) SetConditions(c ...xpv1.Condition) {
 	mg.Status.SetConditions(c...)
 }
 
-// SetDeletionPolicy of this PublicIp.
-func (mg *PublicIp) SetDeletionPolicy(r xpv1.DeletionPolicy) {
+// SetDeletionPolicy of this Ip.
+func (mg *Ip) SetDeletionPolicy(r xpv1.DeletionPolicy) {
 	mg.Spec.DeletionPolicy = r
 }
 
-// SetProviderConfigReference of this PublicIp.
-func (mg *PublicIp) SetProviderConfigReference(r *xpv1.Reference) {
+// SetProviderConfigReference of this Ip.
+func (mg *Ip) SetProviderConfigReference(r *xpv1.Reference) {
 	mg.Spec.ProviderConfigReference = r
 }
 
 /*
-SetProviderReference of this PublicIp.
+SetProviderReference of this Ip.
 Deprecated: Use SetProviderConfigReference.
 */
-func (mg *PublicIp) SetProviderReference(r *xpv1.Reference) {
+func (mg *Ip) SetProviderReference(r *xpv1.Reference) {
 	mg.Spec.ProviderReference = r
 }
 
-// SetWriteConnectionSecretToReference of this PublicIp.
-func (mg *PublicIp) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
+// SetWriteConnectionSecretToReference of this Ip.
+func (mg *Ip) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
 	mg.Spec.WriteConnectionSecretToReference = r
 }
 
-// GetCondition of this PublicIpPrefix.
-func (mg *PublicIpPrefix) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
+// GetCondition of this IpPrefix.
+func (mg *IpPrefix) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
 	return mg.Status.GetCondition(ct)
 }
 
-// GetDeletionPolicy of this PublicIpPrefix.
-func (mg *PublicIpPrefix) GetDeletionPolicy() xpv1.DeletionPolicy {
+// GetDeletionPolicy of this IpPrefix.
+func (mg *IpPrefix) GetDeletionPolicy() xpv1.DeletionPolicy {
 	return mg.Spec.DeletionPolicy
 }
 
-// GetProviderConfigReference of this PublicIpPrefix.
-func (mg *PublicIpPrefix) GetProviderConfigReference() *xpv1.Reference {
+// GetProviderConfigReference of this IpPrefix.
+func (mg *IpPrefix) GetProviderConfigReference() *xpv1.Reference {
 	return mg.Spec.ProviderConfigReference
 }
 
 /*
-GetProviderReference of this PublicIpPrefix.
+GetProviderReference of this IpPrefix.
 Deprecated: Use GetProviderConfigReference.
 */
-func (mg *PublicIpPrefix) GetProviderReference() *xpv1.Reference {
+func (mg *IpPrefix) GetProviderReference() *xpv1.Reference {
 	return mg.Spec.ProviderReference
 }
 
-// GetWriteConnectionSecretToReference of this PublicIpPrefix.
-func (mg *PublicIpPrefix) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
+// GetWriteConnectionSecretToReference of this IpPrefix.
+func (mg *IpPrefix) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
 	return mg.Spec.WriteConnectionSecretToReference
 }
 
-// SetConditions of this PublicIpPrefix.
-func (mg *PublicIpPrefix) SetConditions(c ...xpv1.Condition) {
+// SetConditions of this IpPrefix.
+func (mg *IpPrefix) SetConditions(c ...xpv1.Condition) {
 	mg.Status.SetConditions(c...)
 }
 
-// SetDeletionPolicy of this PublicIpPrefix.
-func (mg *PublicIpPrefix) SetDeletionPolicy(r xpv1.DeletionPolicy) {
+// SetDeletionPolicy of this IpPrefix.
+func (mg *IpPrefix) SetDeletionPolicy(r xpv1.DeletionPolicy) {
 	mg.Spec.DeletionPolicy = r
 }
 
-// SetProviderConfigReference of this PublicIpPrefix.
-func (mg *PublicIpPrefix) SetProviderConfigReference(r *xpv1.Reference) {
+// SetProviderConfigReference of this IpPrefix.
+func (mg *IpPrefix) SetProviderConfigReference(r *xpv1.Reference) {
 	mg.Spec.ProviderConfigReference = r
 }
 
 /*
-SetProviderReference of this PublicIpPrefix.
+SetProviderReference of this IpPrefix.
 Deprecated: Use SetProviderConfigReference.
 */
-func (mg *PublicIpPrefix) SetProviderReference(r *xpv1.Reference) {
+func (mg *IpPrefix) SetProviderReference(r *xpv1.Reference) {
 	mg.Spec.ProviderReference = r
 }
 
-// SetWriteConnectionSecretToReference of this PublicIpPrefix.
-func (mg *PublicIpPrefix) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
+// SetWriteConnectionSecretToReference of this IpPrefix.
+func (mg *IpPrefix) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
 	mg.Spec.WriteConnectionSecretToReference = r
 }

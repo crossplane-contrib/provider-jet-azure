@@ -19,58 +19,58 @@ package v1alpha1
 
 import xpv1 "github.com/crossplane/crossplane-runtime/apis/common/v1"
 
-// GetCondition of this LocalNetworkGateway.
-func (mg *LocalNetworkGateway) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
+// GetCondition of this NetworkGateway.
+func (mg *NetworkGateway) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
 	return mg.Status.GetCondition(ct)
 }
 
-// GetDeletionPolicy of this LocalNetworkGateway.
-func (mg *LocalNetworkGateway) GetDeletionPolicy() xpv1.DeletionPolicy {
+// GetDeletionPolicy of this NetworkGateway.
+func (mg *NetworkGateway) GetDeletionPolicy() xpv1.DeletionPolicy {
 	return mg.Spec.DeletionPolicy
 }
 
-// GetProviderConfigReference of this LocalNetworkGateway.
-func (mg *LocalNetworkGateway) GetProviderConfigReference() *xpv1.Reference {
+// GetProviderConfigReference of this NetworkGateway.
+func (mg *NetworkGateway) GetProviderConfigReference() *xpv1.Reference {
 	return mg.Spec.ProviderConfigReference
 }
 
 /*
-GetProviderReference of this LocalNetworkGateway.
+GetProviderReference of this NetworkGateway.
 Deprecated: Use GetProviderConfigReference.
 */
-func (mg *LocalNetworkGateway) GetProviderReference() *xpv1.Reference {
+func (mg *NetworkGateway) GetProviderReference() *xpv1.Reference {
 	return mg.Spec.ProviderReference
 }
 
-// GetWriteConnectionSecretToReference of this LocalNetworkGateway.
-func (mg *LocalNetworkGateway) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
+// GetWriteConnectionSecretToReference of this NetworkGateway.
+func (mg *NetworkGateway) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
 	return mg.Spec.WriteConnectionSecretToReference
 }
 
-// SetConditions of this LocalNetworkGateway.
-func (mg *LocalNetworkGateway) SetConditions(c ...xpv1.Condition) {
+// SetConditions of this NetworkGateway.
+func (mg *NetworkGateway) SetConditions(c ...xpv1.Condition) {
 	mg.Status.SetConditions(c...)
 }
 
-// SetDeletionPolicy of this LocalNetworkGateway.
-func (mg *LocalNetworkGateway) SetDeletionPolicy(r xpv1.DeletionPolicy) {
+// SetDeletionPolicy of this NetworkGateway.
+func (mg *NetworkGateway) SetDeletionPolicy(r xpv1.DeletionPolicy) {
 	mg.Spec.DeletionPolicy = r
 }
 
-// SetProviderConfigReference of this LocalNetworkGateway.
-func (mg *LocalNetworkGateway) SetProviderConfigReference(r *xpv1.Reference) {
+// SetProviderConfigReference of this NetworkGateway.
+func (mg *NetworkGateway) SetProviderConfigReference(r *xpv1.Reference) {
 	mg.Spec.ProviderConfigReference = r
 }
 
 /*
-SetProviderReference of this LocalNetworkGateway.
+SetProviderReference of this NetworkGateway.
 Deprecated: Use SetProviderConfigReference.
 */
-func (mg *LocalNetworkGateway) SetProviderReference(r *xpv1.Reference) {
+func (mg *NetworkGateway) SetProviderReference(r *xpv1.Reference) {
 	mg.Spec.ProviderReference = r
 }
 
-// SetWriteConnectionSecretToReference of this LocalNetworkGateway.
-func (mg *LocalNetworkGateway) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
+// SetWriteConnectionSecretToReference of this NetworkGateway.
+func (mg *NetworkGateway) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
 	mg.Spec.WriteConnectionSecretToReference = r
 }

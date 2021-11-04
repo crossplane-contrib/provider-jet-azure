@@ -19,8 +19,8 @@ package v1alpha1
 
 import resource "github.com/crossplane/crossplane-runtime/pkg/resource"
 
-// GetItems of this LbBackendAddressPoolAddressList.
-func (l *LbBackendAddressPoolAddressList) GetItems() []resource.Managed {
+// GetItems of this BackendAddressPoolAddressList.
+func (l *BackendAddressPoolAddressList) GetItems() []resource.Managed {
 	items := make([]resource.Managed, len(l.Items))
 	for i := range l.Items {
 		items[i] = &l.Items[i]
@@ -28,8 +28,8 @@ func (l *LbBackendAddressPoolAddressList) GetItems() []resource.Managed {
 	return items
 }
 
-// GetItems of this LbBackendAddressPoolList.
-func (l *LbBackendAddressPoolList) GetItems() []resource.Managed {
+// GetItems of this BackendAddressPoolList.
+func (l *BackendAddressPoolList) GetItems() []resource.Managed {
 	items := make([]resource.Managed, len(l.Items))
 	for i := range l.Items {
 		items[i] = &l.Items[i]
@@ -37,8 +37,8 @@ func (l *LbBackendAddressPoolList) GetItems() []resource.Managed {
 	return items
 }
 
-// GetItems of this LbNatPoolList.
-func (l *LbNatPoolList) GetItems() []resource.Managed {
+// GetItems of this NatPoolList.
+func (l *NatPoolList) GetItems() []resource.Managed {
 	items := make([]resource.Managed, len(l.Items))
 	for i := range l.Items {
 		items[i] = &l.Items[i]
@@ -46,8 +46,8 @@ func (l *LbNatPoolList) GetItems() []resource.Managed {
 	return items
 }
 
-// GetItems of this LbNatRuleList.
-func (l *LbNatRuleList) GetItems() []resource.Managed {
+// GetItems of this NatRuleList.
+func (l *NatRuleList) GetItems() []resource.Managed {
 	items := make([]resource.Managed, len(l.Items))
 	for i := range l.Items {
 		items[i] = &l.Items[i]
@@ -55,8 +55,8 @@ func (l *LbNatRuleList) GetItems() []resource.Managed {
 	return items
 }
 
-// GetItems of this LbOutboundRuleList.
-func (l *LbOutboundRuleList) GetItems() []resource.Managed {
+// GetItems of this OutboundRuleList.
+func (l *OutboundRuleList) GetItems() []resource.Managed {
 	items := make([]resource.Managed, len(l.Items))
 	for i := range l.Items {
 		items[i] = &l.Items[i]
@@ -64,8 +64,8 @@ func (l *LbOutboundRuleList) GetItems() []resource.Managed {
 	return items
 }
 
-// GetItems of this LbProbeList.
-func (l *LbProbeList) GetItems() []resource.Managed {
+// GetItems of this ProbeList.
+func (l *ProbeList) GetItems() []resource.Managed {
 	items := make([]resource.Managed, len(l.Items))
 	for i := range l.Items {
 		items[i] = &l.Items[i]
@@ -73,17 +73,8 @@ func (l *LbProbeList) GetItems() []resource.Managed {
 	return items
 }
 
-// GetItems of this LbRuleList.
-func (l *LbRuleList) GetItems() []resource.Managed {
-	items := make([]resource.Managed, len(l.Items))
-	for i := range l.Items {
-		items[i] = &l.Items[i]
-	}
-	return items
-}
-
-// GetItems of this LoadBalancerList.
-func (l *LoadBalancerList) GetItems() []resource.Managed {
+// GetItems of this RuleList.
+func (l *RuleList) GetItems() []resource.Managed {
 	items := make([]resource.Managed, len(l.Items))
 	for i := range l.Items {
 		items[i] = &l.Items[i]

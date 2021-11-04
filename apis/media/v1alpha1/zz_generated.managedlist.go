@@ -19,8 +19,8 @@ package v1alpha1
 
 import resource "github.com/crossplane/crossplane-runtime/pkg/resource"
 
-// GetItems of this MediaAssetFilterList.
-func (l *MediaAssetFilterList) GetItems() []resource.Managed {
+// GetItems of this AssetFilterList.
+func (l *AssetFilterList) GetItems() []resource.Managed {
 	items := make([]resource.Managed, len(l.Items))
 	for i := range l.Items {
 		items[i] = &l.Items[i]
@@ -28,8 +28,8 @@ func (l *MediaAssetFilterList) GetItems() []resource.Managed {
 	return items
 }
 
-// GetItems of this MediaAssetList.
-func (l *MediaAssetList) GetItems() []resource.Managed {
+// GetItems of this AssetList.
+func (l *AssetList) GetItems() []resource.Managed {
 	items := make([]resource.Managed, len(l.Items))
 	for i := range l.Items {
 		items[i] = &l.Items[i]
@@ -37,8 +37,8 @@ func (l *MediaAssetList) GetItems() []resource.Managed {
 	return items
 }
 
-// GetItems of this MediaContentKeyPolicyList.
-func (l *MediaContentKeyPolicyList) GetItems() []resource.Managed {
+// GetItems of this ContentKeyPolicyList.
+func (l *ContentKeyPolicyList) GetItems() []resource.Managed {
 	items := make([]resource.Managed, len(l.Items))
 	for i := range l.Items {
 		items[i] = &l.Items[i]
@@ -46,8 +46,8 @@ func (l *MediaContentKeyPolicyList) GetItems() []resource.Managed {
 	return items
 }
 
-// GetItems of this MediaJobList.
-func (l *MediaJobList) GetItems() []resource.Managed {
+// GetItems of this JobList.
+func (l *JobList) GetItems() []resource.Managed {
 	items := make([]resource.Managed, len(l.Items))
 	for i := range l.Items {
 		items[i] = &l.Items[i]
@@ -55,8 +55,8 @@ func (l *MediaJobList) GetItems() []resource.Managed {
 	return items
 }
 
-// GetItems of this MediaLiveEventList.
-func (l *MediaLiveEventList) GetItems() []resource.Managed {
+// GetItems of this LiveEventList.
+func (l *LiveEventList) GetItems() []resource.Managed {
 	items := make([]resource.Managed, len(l.Items))
 	for i := range l.Items {
 		items[i] = &l.Items[i]
@@ -64,8 +64,8 @@ func (l *MediaLiveEventList) GetItems() []resource.Managed {
 	return items
 }
 
-// GetItems of this MediaLiveEventOutputList.
-func (l *MediaLiveEventOutputList) GetItems() []resource.Managed {
+// GetItems of this LiveEventOutputList.
+func (l *LiveEventOutputList) GetItems() []resource.Managed {
 	items := make([]resource.Managed, len(l.Items))
 	for i := range l.Items {
 		items[i] = &l.Items[i]
@@ -73,8 +73,8 @@ func (l *MediaLiveEventOutputList) GetItems() []resource.Managed {
 	return items
 }
 
-// GetItems of this MediaServicesAccountList.
-func (l *MediaServicesAccountList) GetItems() []resource.Managed {
+// GetItems of this ServicesAccountList.
+func (l *ServicesAccountList) GetItems() []resource.Managed {
 	items := make([]resource.Managed, len(l.Items))
 	for i := range l.Items {
 		items[i] = &l.Items[i]
@@ -82,8 +82,8 @@ func (l *MediaServicesAccountList) GetItems() []resource.Managed {
 	return items
 }
 
-// GetItems of this MediaStreamingEndpointList.
-func (l *MediaStreamingEndpointList) GetItems() []resource.Managed {
+// GetItems of this StreamingEndpointList.
+func (l *StreamingEndpointList) GetItems() []resource.Managed {
 	items := make([]resource.Managed, len(l.Items))
 	for i := range l.Items {
 		items[i] = &l.Items[i]
@@ -91,8 +91,8 @@ func (l *MediaStreamingEndpointList) GetItems() []resource.Managed {
 	return items
 }
 
-// GetItems of this MediaStreamingLocatorList.
-func (l *MediaStreamingLocatorList) GetItems() []resource.Managed {
+// GetItems of this StreamingLocatorList.
+func (l *StreamingLocatorList) GetItems() []resource.Managed {
 	items := make([]resource.Managed, len(l.Items))
 	for i := range l.Items {
 		items[i] = &l.Items[i]
@@ -100,8 +100,8 @@ func (l *MediaStreamingLocatorList) GetItems() []resource.Managed {
 	return items
 }
 
-// GetItems of this MediaStreamingPolicyList.
-func (l *MediaStreamingPolicyList) GetItems() []resource.Managed {
+// GetItems of this StreamingPolicyList.
+func (l *StreamingPolicyList) GetItems() []resource.Managed {
 	items := make([]resource.Managed, len(l.Items))
 	for i := range l.Items {
 		items[i] = &l.Items[i]
@@ -109,8 +109,8 @@ func (l *MediaStreamingPolicyList) GetItems() []resource.Managed {
 	return items
 }
 
-// GetItems of this MediaTransformList.
-func (l *MediaTransformList) GetItems() []resource.Managed {
+// GetItems of this TransformList.
+func (l *TransformList) GetItems() []resource.Managed {
 	items := make([]resource.Managed, len(l.Items))
 	for i := range l.Items {
 		items[i] = &l.Items[i]

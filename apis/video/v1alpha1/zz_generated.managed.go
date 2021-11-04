@@ -19,114 +19,114 @@ package v1alpha1
 
 import xpv1 "github.com/crossplane/crossplane-runtime/apis/common/v1"
 
-// GetCondition of this VideoAnalyzer.
-func (mg *VideoAnalyzer) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
+// GetCondition of this Analyzer.
+func (mg *Analyzer) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
 	return mg.Status.GetCondition(ct)
 }
 
-// GetDeletionPolicy of this VideoAnalyzer.
-func (mg *VideoAnalyzer) GetDeletionPolicy() xpv1.DeletionPolicy {
+// GetDeletionPolicy of this Analyzer.
+func (mg *Analyzer) GetDeletionPolicy() xpv1.DeletionPolicy {
 	return mg.Spec.DeletionPolicy
 }
 
-// GetProviderConfigReference of this VideoAnalyzer.
-func (mg *VideoAnalyzer) GetProviderConfigReference() *xpv1.Reference {
+// GetProviderConfigReference of this Analyzer.
+func (mg *Analyzer) GetProviderConfigReference() *xpv1.Reference {
 	return mg.Spec.ProviderConfigReference
 }
 
 /*
-GetProviderReference of this VideoAnalyzer.
+GetProviderReference of this Analyzer.
 Deprecated: Use GetProviderConfigReference.
 */
-func (mg *VideoAnalyzer) GetProviderReference() *xpv1.Reference {
+func (mg *Analyzer) GetProviderReference() *xpv1.Reference {
 	return mg.Spec.ProviderReference
 }
 
-// GetWriteConnectionSecretToReference of this VideoAnalyzer.
-func (mg *VideoAnalyzer) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
+// GetWriteConnectionSecretToReference of this Analyzer.
+func (mg *Analyzer) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
 	return mg.Spec.WriteConnectionSecretToReference
 }
 
-// SetConditions of this VideoAnalyzer.
-func (mg *VideoAnalyzer) SetConditions(c ...xpv1.Condition) {
+// SetConditions of this Analyzer.
+func (mg *Analyzer) SetConditions(c ...xpv1.Condition) {
 	mg.Status.SetConditions(c...)
 }
 
-// SetDeletionPolicy of this VideoAnalyzer.
-func (mg *VideoAnalyzer) SetDeletionPolicy(r xpv1.DeletionPolicy) {
+// SetDeletionPolicy of this Analyzer.
+func (mg *Analyzer) SetDeletionPolicy(r xpv1.DeletionPolicy) {
 	mg.Spec.DeletionPolicy = r
 }
 
-// SetProviderConfigReference of this VideoAnalyzer.
-func (mg *VideoAnalyzer) SetProviderConfigReference(r *xpv1.Reference) {
+// SetProviderConfigReference of this Analyzer.
+func (mg *Analyzer) SetProviderConfigReference(r *xpv1.Reference) {
 	mg.Spec.ProviderConfigReference = r
 }
 
 /*
-SetProviderReference of this VideoAnalyzer.
+SetProviderReference of this Analyzer.
 Deprecated: Use SetProviderConfigReference.
 */
-func (mg *VideoAnalyzer) SetProviderReference(r *xpv1.Reference) {
+func (mg *Analyzer) SetProviderReference(r *xpv1.Reference) {
 	mg.Spec.ProviderReference = r
 }
 
-// SetWriteConnectionSecretToReference of this VideoAnalyzer.
-func (mg *VideoAnalyzer) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
+// SetWriteConnectionSecretToReference of this Analyzer.
+func (mg *Analyzer) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
 	mg.Spec.WriteConnectionSecretToReference = r
 }
 
-// GetCondition of this VideoAnalyzerEdgeModule.
-func (mg *VideoAnalyzerEdgeModule) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
+// GetCondition of this AnalyzerEdgeModule.
+func (mg *AnalyzerEdgeModule) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
 	return mg.Status.GetCondition(ct)
 }
 
-// GetDeletionPolicy of this VideoAnalyzerEdgeModule.
-func (mg *VideoAnalyzerEdgeModule) GetDeletionPolicy() xpv1.DeletionPolicy {
+// GetDeletionPolicy of this AnalyzerEdgeModule.
+func (mg *AnalyzerEdgeModule) GetDeletionPolicy() xpv1.DeletionPolicy {
 	return mg.Spec.DeletionPolicy
 }
 
-// GetProviderConfigReference of this VideoAnalyzerEdgeModule.
-func (mg *VideoAnalyzerEdgeModule) GetProviderConfigReference() *xpv1.Reference {
+// GetProviderConfigReference of this AnalyzerEdgeModule.
+func (mg *AnalyzerEdgeModule) GetProviderConfigReference() *xpv1.Reference {
 	return mg.Spec.ProviderConfigReference
 }
 
 /*
-GetProviderReference of this VideoAnalyzerEdgeModule.
+GetProviderReference of this AnalyzerEdgeModule.
 Deprecated: Use GetProviderConfigReference.
 */
-func (mg *VideoAnalyzerEdgeModule) GetProviderReference() *xpv1.Reference {
+func (mg *AnalyzerEdgeModule) GetProviderReference() *xpv1.Reference {
 	return mg.Spec.ProviderReference
 }
 
-// GetWriteConnectionSecretToReference of this VideoAnalyzerEdgeModule.
-func (mg *VideoAnalyzerEdgeModule) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
+// GetWriteConnectionSecretToReference of this AnalyzerEdgeModule.
+func (mg *AnalyzerEdgeModule) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
 	return mg.Spec.WriteConnectionSecretToReference
 }
 
-// SetConditions of this VideoAnalyzerEdgeModule.
-func (mg *VideoAnalyzerEdgeModule) SetConditions(c ...xpv1.Condition) {
+// SetConditions of this AnalyzerEdgeModule.
+func (mg *AnalyzerEdgeModule) SetConditions(c ...xpv1.Condition) {
 	mg.Status.SetConditions(c...)
 }
 
-// SetDeletionPolicy of this VideoAnalyzerEdgeModule.
-func (mg *VideoAnalyzerEdgeModule) SetDeletionPolicy(r xpv1.DeletionPolicy) {
+// SetDeletionPolicy of this AnalyzerEdgeModule.
+func (mg *AnalyzerEdgeModule) SetDeletionPolicy(r xpv1.DeletionPolicy) {
 	mg.Spec.DeletionPolicy = r
 }
 
-// SetProviderConfigReference of this VideoAnalyzerEdgeModule.
-func (mg *VideoAnalyzerEdgeModule) SetProviderConfigReference(r *xpv1.Reference) {
+// SetProviderConfigReference of this AnalyzerEdgeModule.
+func (mg *AnalyzerEdgeModule) SetProviderConfigReference(r *xpv1.Reference) {
 	mg.Spec.ProviderConfigReference = r
 }
 
 /*
-SetProviderReference of this VideoAnalyzerEdgeModule.
+SetProviderReference of this AnalyzerEdgeModule.
 Deprecated: Use SetProviderConfigReference.
 */
-func (mg *VideoAnalyzerEdgeModule) SetProviderReference(r *xpv1.Reference) {
+func (mg *AnalyzerEdgeModule) SetProviderReference(r *xpv1.Reference) {
 	mg.Spec.ProviderReference = r
 }
 
-// SetWriteConnectionSecretToReference of this VideoAnalyzerEdgeModule.
-func (mg *VideoAnalyzerEdgeModule) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
+// SetWriteConnectionSecretToReference of this AnalyzerEdgeModule.
+func (mg *AnalyzerEdgeModule) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
 	mg.Spec.WriteConnectionSecretToReference = r
 }

@@ -19,954 +19,954 @@ package v1alpha1
 
 import xpv1 "github.com/crossplane/crossplane-runtime/apis/common/v1"
 
-// GetCondition of this SynapseFirewallRule.
-func (mg *SynapseFirewallRule) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
+// GetCondition of this FirewallRule.
+func (mg *FirewallRule) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
 	return mg.Status.GetCondition(ct)
 }
 
-// GetDeletionPolicy of this SynapseFirewallRule.
-func (mg *SynapseFirewallRule) GetDeletionPolicy() xpv1.DeletionPolicy {
+// GetDeletionPolicy of this FirewallRule.
+func (mg *FirewallRule) GetDeletionPolicy() xpv1.DeletionPolicy {
 	return mg.Spec.DeletionPolicy
 }
 
-// GetProviderConfigReference of this SynapseFirewallRule.
-func (mg *SynapseFirewallRule) GetProviderConfigReference() *xpv1.Reference {
+// GetProviderConfigReference of this FirewallRule.
+func (mg *FirewallRule) GetProviderConfigReference() *xpv1.Reference {
 	return mg.Spec.ProviderConfigReference
 }
 
 /*
-GetProviderReference of this SynapseFirewallRule.
+GetProviderReference of this FirewallRule.
 Deprecated: Use GetProviderConfigReference.
 */
-func (mg *SynapseFirewallRule) GetProviderReference() *xpv1.Reference {
+func (mg *FirewallRule) GetProviderReference() *xpv1.Reference {
 	return mg.Spec.ProviderReference
 }
 
-// GetWriteConnectionSecretToReference of this SynapseFirewallRule.
-func (mg *SynapseFirewallRule) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
+// GetWriteConnectionSecretToReference of this FirewallRule.
+func (mg *FirewallRule) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
 	return mg.Spec.WriteConnectionSecretToReference
 }
 
-// SetConditions of this SynapseFirewallRule.
-func (mg *SynapseFirewallRule) SetConditions(c ...xpv1.Condition) {
+// SetConditions of this FirewallRule.
+func (mg *FirewallRule) SetConditions(c ...xpv1.Condition) {
 	mg.Status.SetConditions(c...)
 }
 
-// SetDeletionPolicy of this SynapseFirewallRule.
-func (mg *SynapseFirewallRule) SetDeletionPolicy(r xpv1.DeletionPolicy) {
+// SetDeletionPolicy of this FirewallRule.
+func (mg *FirewallRule) SetDeletionPolicy(r xpv1.DeletionPolicy) {
 	mg.Spec.DeletionPolicy = r
 }
 
-// SetProviderConfigReference of this SynapseFirewallRule.
-func (mg *SynapseFirewallRule) SetProviderConfigReference(r *xpv1.Reference) {
+// SetProviderConfigReference of this FirewallRule.
+func (mg *FirewallRule) SetProviderConfigReference(r *xpv1.Reference) {
 	mg.Spec.ProviderConfigReference = r
 }
 
 /*
-SetProviderReference of this SynapseFirewallRule.
+SetProviderReference of this FirewallRule.
 Deprecated: Use SetProviderConfigReference.
 */
-func (mg *SynapseFirewallRule) SetProviderReference(r *xpv1.Reference) {
+func (mg *FirewallRule) SetProviderReference(r *xpv1.Reference) {
 	mg.Spec.ProviderReference = r
 }
 
-// SetWriteConnectionSecretToReference of this SynapseFirewallRule.
-func (mg *SynapseFirewallRule) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
+// SetWriteConnectionSecretToReference of this FirewallRule.
+func (mg *FirewallRule) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
 	mg.Spec.WriteConnectionSecretToReference = r
 }
 
-// GetCondition of this SynapseIntegrationRuntimeAzure.
-func (mg *SynapseIntegrationRuntimeAzure) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
+// GetCondition of this IntegrationRuntimeAzure.
+func (mg *IntegrationRuntimeAzure) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
 	return mg.Status.GetCondition(ct)
 }
 
-// GetDeletionPolicy of this SynapseIntegrationRuntimeAzure.
-func (mg *SynapseIntegrationRuntimeAzure) GetDeletionPolicy() xpv1.DeletionPolicy {
+// GetDeletionPolicy of this IntegrationRuntimeAzure.
+func (mg *IntegrationRuntimeAzure) GetDeletionPolicy() xpv1.DeletionPolicy {
 	return mg.Spec.DeletionPolicy
 }
 
-// GetProviderConfigReference of this SynapseIntegrationRuntimeAzure.
-func (mg *SynapseIntegrationRuntimeAzure) GetProviderConfigReference() *xpv1.Reference {
+// GetProviderConfigReference of this IntegrationRuntimeAzure.
+func (mg *IntegrationRuntimeAzure) GetProviderConfigReference() *xpv1.Reference {
 	return mg.Spec.ProviderConfigReference
 }
 
 /*
-GetProviderReference of this SynapseIntegrationRuntimeAzure.
+GetProviderReference of this IntegrationRuntimeAzure.
 Deprecated: Use GetProviderConfigReference.
 */
-func (mg *SynapseIntegrationRuntimeAzure) GetProviderReference() *xpv1.Reference {
+func (mg *IntegrationRuntimeAzure) GetProviderReference() *xpv1.Reference {
 	return mg.Spec.ProviderReference
 }
 
-// GetWriteConnectionSecretToReference of this SynapseIntegrationRuntimeAzure.
-func (mg *SynapseIntegrationRuntimeAzure) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
+// GetWriteConnectionSecretToReference of this IntegrationRuntimeAzure.
+func (mg *IntegrationRuntimeAzure) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
 	return mg.Spec.WriteConnectionSecretToReference
 }
 
-// SetConditions of this SynapseIntegrationRuntimeAzure.
-func (mg *SynapseIntegrationRuntimeAzure) SetConditions(c ...xpv1.Condition) {
+// SetConditions of this IntegrationRuntimeAzure.
+func (mg *IntegrationRuntimeAzure) SetConditions(c ...xpv1.Condition) {
 	mg.Status.SetConditions(c...)
 }
 
-// SetDeletionPolicy of this SynapseIntegrationRuntimeAzure.
-func (mg *SynapseIntegrationRuntimeAzure) SetDeletionPolicy(r xpv1.DeletionPolicy) {
+// SetDeletionPolicy of this IntegrationRuntimeAzure.
+func (mg *IntegrationRuntimeAzure) SetDeletionPolicy(r xpv1.DeletionPolicy) {
 	mg.Spec.DeletionPolicy = r
 }
 
-// SetProviderConfigReference of this SynapseIntegrationRuntimeAzure.
-func (mg *SynapseIntegrationRuntimeAzure) SetProviderConfigReference(r *xpv1.Reference) {
+// SetProviderConfigReference of this IntegrationRuntimeAzure.
+func (mg *IntegrationRuntimeAzure) SetProviderConfigReference(r *xpv1.Reference) {
 	mg.Spec.ProviderConfigReference = r
 }
 
 /*
-SetProviderReference of this SynapseIntegrationRuntimeAzure.
+SetProviderReference of this IntegrationRuntimeAzure.
 Deprecated: Use SetProviderConfigReference.
 */
-func (mg *SynapseIntegrationRuntimeAzure) SetProviderReference(r *xpv1.Reference) {
+func (mg *IntegrationRuntimeAzure) SetProviderReference(r *xpv1.Reference) {
 	mg.Spec.ProviderReference = r
 }
 
-// SetWriteConnectionSecretToReference of this SynapseIntegrationRuntimeAzure.
-func (mg *SynapseIntegrationRuntimeAzure) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
+// SetWriteConnectionSecretToReference of this IntegrationRuntimeAzure.
+func (mg *IntegrationRuntimeAzure) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
 	mg.Spec.WriteConnectionSecretToReference = r
 }
 
-// GetCondition of this SynapseIntegrationRuntimeSelfHosted.
-func (mg *SynapseIntegrationRuntimeSelfHosted) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
+// GetCondition of this IntegrationRuntimeSelfHosted.
+func (mg *IntegrationRuntimeSelfHosted) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
 	return mg.Status.GetCondition(ct)
 }
 
-// GetDeletionPolicy of this SynapseIntegrationRuntimeSelfHosted.
-func (mg *SynapseIntegrationRuntimeSelfHosted) GetDeletionPolicy() xpv1.DeletionPolicy {
+// GetDeletionPolicy of this IntegrationRuntimeSelfHosted.
+func (mg *IntegrationRuntimeSelfHosted) GetDeletionPolicy() xpv1.DeletionPolicy {
 	return mg.Spec.DeletionPolicy
 }
 
-// GetProviderConfigReference of this SynapseIntegrationRuntimeSelfHosted.
-func (mg *SynapseIntegrationRuntimeSelfHosted) GetProviderConfigReference() *xpv1.Reference {
+// GetProviderConfigReference of this IntegrationRuntimeSelfHosted.
+func (mg *IntegrationRuntimeSelfHosted) GetProviderConfigReference() *xpv1.Reference {
 	return mg.Spec.ProviderConfigReference
 }
 
 /*
-GetProviderReference of this SynapseIntegrationRuntimeSelfHosted.
+GetProviderReference of this IntegrationRuntimeSelfHosted.
 Deprecated: Use GetProviderConfigReference.
 */
-func (mg *SynapseIntegrationRuntimeSelfHosted) GetProviderReference() *xpv1.Reference {
+func (mg *IntegrationRuntimeSelfHosted) GetProviderReference() *xpv1.Reference {
 	return mg.Spec.ProviderReference
 }
 
-// GetWriteConnectionSecretToReference of this SynapseIntegrationRuntimeSelfHosted.
-func (mg *SynapseIntegrationRuntimeSelfHosted) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
+// GetWriteConnectionSecretToReference of this IntegrationRuntimeSelfHosted.
+func (mg *IntegrationRuntimeSelfHosted) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
 	return mg.Spec.WriteConnectionSecretToReference
 }
 
-// SetConditions of this SynapseIntegrationRuntimeSelfHosted.
-func (mg *SynapseIntegrationRuntimeSelfHosted) SetConditions(c ...xpv1.Condition) {
+// SetConditions of this IntegrationRuntimeSelfHosted.
+func (mg *IntegrationRuntimeSelfHosted) SetConditions(c ...xpv1.Condition) {
 	mg.Status.SetConditions(c...)
 }
 
-// SetDeletionPolicy of this SynapseIntegrationRuntimeSelfHosted.
-func (mg *SynapseIntegrationRuntimeSelfHosted) SetDeletionPolicy(r xpv1.DeletionPolicy) {
+// SetDeletionPolicy of this IntegrationRuntimeSelfHosted.
+func (mg *IntegrationRuntimeSelfHosted) SetDeletionPolicy(r xpv1.DeletionPolicy) {
 	mg.Spec.DeletionPolicy = r
 }
 
-// SetProviderConfigReference of this SynapseIntegrationRuntimeSelfHosted.
-func (mg *SynapseIntegrationRuntimeSelfHosted) SetProviderConfigReference(r *xpv1.Reference) {
+// SetProviderConfigReference of this IntegrationRuntimeSelfHosted.
+func (mg *IntegrationRuntimeSelfHosted) SetProviderConfigReference(r *xpv1.Reference) {
 	mg.Spec.ProviderConfigReference = r
 }
 
 /*
-SetProviderReference of this SynapseIntegrationRuntimeSelfHosted.
+SetProviderReference of this IntegrationRuntimeSelfHosted.
 Deprecated: Use SetProviderConfigReference.
 */
-func (mg *SynapseIntegrationRuntimeSelfHosted) SetProviderReference(r *xpv1.Reference) {
+func (mg *IntegrationRuntimeSelfHosted) SetProviderReference(r *xpv1.Reference) {
 	mg.Spec.ProviderReference = r
 }
 
-// SetWriteConnectionSecretToReference of this SynapseIntegrationRuntimeSelfHosted.
-func (mg *SynapseIntegrationRuntimeSelfHosted) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
+// SetWriteConnectionSecretToReference of this IntegrationRuntimeSelfHosted.
+func (mg *IntegrationRuntimeSelfHosted) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
 	mg.Spec.WriteConnectionSecretToReference = r
 }
 
-// GetCondition of this SynapseLinkedService.
-func (mg *SynapseLinkedService) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
+// GetCondition of this LinkedService.
+func (mg *LinkedService) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
 	return mg.Status.GetCondition(ct)
 }
 
-// GetDeletionPolicy of this SynapseLinkedService.
-func (mg *SynapseLinkedService) GetDeletionPolicy() xpv1.DeletionPolicy {
+// GetDeletionPolicy of this LinkedService.
+func (mg *LinkedService) GetDeletionPolicy() xpv1.DeletionPolicy {
 	return mg.Spec.DeletionPolicy
 }
 
-// GetProviderConfigReference of this SynapseLinkedService.
-func (mg *SynapseLinkedService) GetProviderConfigReference() *xpv1.Reference {
+// GetProviderConfigReference of this LinkedService.
+func (mg *LinkedService) GetProviderConfigReference() *xpv1.Reference {
 	return mg.Spec.ProviderConfigReference
 }
 
 /*
-GetProviderReference of this SynapseLinkedService.
+GetProviderReference of this LinkedService.
 Deprecated: Use GetProviderConfigReference.
 */
-func (mg *SynapseLinkedService) GetProviderReference() *xpv1.Reference {
+func (mg *LinkedService) GetProviderReference() *xpv1.Reference {
 	return mg.Spec.ProviderReference
 }
 
-// GetWriteConnectionSecretToReference of this SynapseLinkedService.
-func (mg *SynapseLinkedService) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
+// GetWriteConnectionSecretToReference of this LinkedService.
+func (mg *LinkedService) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
 	return mg.Spec.WriteConnectionSecretToReference
 }
 
-// SetConditions of this SynapseLinkedService.
-func (mg *SynapseLinkedService) SetConditions(c ...xpv1.Condition) {
+// SetConditions of this LinkedService.
+func (mg *LinkedService) SetConditions(c ...xpv1.Condition) {
 	mg.Status.SetConditions(c...)
 }
 
-// SetDeletionPolicy of this SynapseLinkedService.
-func (mg *SynapseLinkedService) SetDeletionPolicy(r xpv1.DeletionPolicy) {
+// SetDeletionPolicy of this LinkedService.
+func (mg *LinkedService) SetDeletionPolicy(r xpv1.DeletionPolicy) {
 	mg.Spec.DeletionPolicy = r
 }
 
-// SetProviderConfigReference of this SynapseLinkedService.
-func (mg *SynapseLinkedService) SetProviderConfigReference(r *xpv1.Reference) {
+// SetProviderConfigReference of this LinkedService.
+func (mg *LinkedService) SetProviderConfigReference(r *xpv1.Reference) {
 	mg.Spec.ProviderConfigReference = r
 }
 
 /*
-SetProviderReference of this SynapseLinkedService.
+SetProviderReference of this LinkedService.
 Deprecated: Use SetProviderConfigReference.
 */
-func (mg *SynapseLinkedService) SetProviderReference(r *xpv1.Reference) {
+func (mg *LinkedService) SetProviderReference(r *xpv1.Reference) {
 	mg.Spec.ProviderReference = r
 }
 
-// SetWriteConnectionSecretToReference of this SynapseLinkedService.
-func (mg *SynapseLinkedService) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
+// SetWriteConnectionSecretToReference of this LinkedService.
+func (mg *LinkedService) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
 	mg.Spec.WriteConnectionSecretToReference = r
 }
 
-// GetCondition of this SynapseManagedPrivateEndpoint.
-func (mg *SynapseManagedPrivateEndpoint) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
+// GetCondition of this ManagedPrivateEndpoint.
+func (mg *ManagedPrivateEndpoint) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
 	return mg.Status.GetCondition(ct)
 }
 
-// GetDeletionPolicy of this SynapseManagedPrivateEndpoint.
-func (mg *SynapseManagedPrivateEndpoint) GetDeletionPolicy() xpv1.DeletionPolicy {
+// GetDeletionPolicy of this ManagedPrivateEndpoint.
+func (mg *ManagedPrivateEndpoint) GetDeletionPolicy() xpv1.DeletionPolicy {
 	return mg.Spec.DeletionPolicy
 }
 
-// GetProviderConfigReference of this SynapseManagedPrivateEndpoint.
-func (mg *SynapseManagedPrivateEndpoint) GetProviderConfigReference() *xpv1.Reference {
+// GetProviderConfigReference of this ManagedPrivateEndpoint.
+func (mg *ManagedPrivateEndpoint) GetProviderConfigReference() *xpv1.Reference {
 	return mg.Spec.ProviderConfigReference
 }
 
 /*
-GetProviderReference of this SynapseManagedPrivateEndpoint.
+GetProviderReference of this ManagedPrivateEndpoint.
 Deprecated: Use GetProviderConfigReference.
 */
-func (mg *SynapseManagedPrivateEndpoint) GetProviderReference() *xpv1.Reference {
+func (mg *ManagedPrivateEndpoint) GetProviderReference() *xpv1.Reference {
 	return mg.Spec.ProviderReference
 }
 
-// GetWriteConnectionSecretToReference of this SynapseManagedPrivateEndpoint.
-func (mg *SynapseManagedPrivateEndpoint) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
+// GetWriteConnectionSecretToReference of this ManagedPrivateEndpoint.
+func (mg *ManagedPrivateEndpoint) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
 	return mg.Spec.WriteConnectionSecretToReference
 }
 
-// SetConditions of this SynapseManagedPrivateEndpoint.
-func (mg *SynapseManagedPrivateEndpoint) SetConditions(c ...xpv1.Condition) {
+// SetConditions of this ManagedPrivateEndpoint.
+func (mg *ManagedPrivateEndpoint) SetConditions(c ...xpv1.Condition) {
 	mg.Status.SetConditions(c...)
 }
 
-// SetDeletionPolicy of this SynapseManagedPrivateEndpoint.
-func (mg *SynapseManagedPrivateEndpoint) SetDeletionPolicy(r xpv1.DeletionPolicy) {
+// SetDeletionPolicy of this ManagedPrivateEndpoint.
+func (mg *ManagedPrivateEndpoint) SetDeletionPolicy(r xpv1.DeletionPolicy) {
 	mg.Spec.DeletionPolicy = r
 }
 
-// SetProviderConfigReference of this SynapseManagedPrivateEndpoint.
-func (mg *SynapseManagedPrivateEndpoint) SetProviderConfigReference(r *xpv1.Reference) {
+// SetProviderConfigReference of this ManagedPrivateEndpoint.
+func (mg *ManagedPrivateEndpoint) SetProviderConfigReference(r *xpv1.Reference) {
 	mg.Spec.ProviderConfigReference = r
 }
 
 /*
-SetProviderReference of this SynapseManagedPrivateEndpoint.
+SetProviderReference of this ManagedPrivateEndpoint.
 Deprecated: Use SetProviderConfigReference.
 */
-func (mg *SynapseManagedPrivateEndpoint) SetProviderReference(r *xpv1.Reference) {
+func (mg *ManagedPrivateEndpoint) SetProviderReference(r *xpv1.Reference) {
 	mg.Spec.ProviderReference = r
 }
 
-// SetWriteConnectionSecretToReference of this SynapseManagedPrivateEndpoint.
-func (mg *SynapseManagedPrivateEndpoint) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
+// SetWriteConnectionSecretToReference of this ManagedPrivateEndpoint.
+func (mg *ManagedPrivateEndpoint) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
 	mg.Spec.WriteConnectionSecretToReference = r
 }
 
-// GetCondition of this SynapsePrivateLinkHub.
-func (mg *SynapsePrivateLinkHub) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
+// GetCondition of this PrivateLinkHub.
+func (mg *PrivateLinkHub) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
 	return mg.Status.GetCondition(ct)
 }
 
-// GetDeletionPolicy of this SynapsePrivateLinkHub.
-func (mg *SynapsePrivateLinkHub) GetDeletionPolicy() xpv1.DeletionPolicy {
+// GetDeletionPolicy of this PrivateLinkHub.
+func (mg *PrivateLinkHub) GetDeletionPolicy() xpv1.DeletionPolicy {
 	return mg.Spec.DeletionPolicy
 }
 
-// GetProviderConfigReference of this SynapsePrivateLinkHub.
-func (mg *SynapsePrivateLinkHub) GetProviderConfigReference() *xpv1.Reference {
+// GetProviderConfigReference of this PrivateLinkHub.
+func (mg *PrivateLinkHub) GetProviderConfigReference() *xpv1.Reference {
 	return mg.Spec.ProviderConfigReference
 }
 
 /*
-GetProviderReference of this SynapsePrivateLinkHub.
+GetProviderReference of this PrivateLinkHub.
 Deprecated: Use GetProviderConfigReference.
 */
-func (mg *SynapsePrivateLinkHub) GetProviderReference() *xpv1.Reference {
+func (mg *PrivateLinkHub) GetProviderReference() *xpv1.Reference {
 	return mg.Spec.ProviderReference
 }
 
-// GetWriteConnectionSecretToReference of this SynapsePrivateLinkHub.
-func (mg *SynapsePrivateLinkHub) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
+// GetWriteConnectionSecretToReference of this PrivateLinkHub.
+func (mg *PrivateLinkHub) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
 	return mg.Spec.WriteConnectionSecretToReference
 }
 
-// SetConditions of this SynapsePrivateLinkHub.
-func (mg *SynapsePrivateLinkHub) SetConditions(c ...xpv1.Condition) {
+// SetConditions of this PrivateLinkHub.
+func (mg *PrivateLinkHub) SetConditions(c ...xpv1.Condition) {
 	mg.Status.SetConditions(c...)
 }
 
-// SetDeletionPolicy of this SynapsePrivateLinkHub.
-func (mg *SynapsePrivateLinkHub) SetDeletionPolicy(r xpv1.DeletionPolicy) {
+// SetDeletionPolicy of this PrivateLinkHub.
+func (mg *PrivateLinkHub) SetDeletionPolicy(r xpv1.DeletionPolicy) {
 	mg.Spec.DeletionPolicy = r
 }
 
-// SetProviderConfigReference of this SynapsePrivateLinkHub.
-func (mg *SynapsePrivateLinkHub) SetProviderConfigReference(r *xpv1.Reference) {
+// SetProviderConfigReference of this PrivateLinkHub.
+func (mg *PrivateLinkHub) SetProviderConfigReference(r *xpv1.Reference) {
 	mg.Spec.ProviderConfigReference = r
 }
 
 /*
-SetProviderReference of this SynapsePrivateLinkHub.
+SetProviderReference of this PrivateLinkHub.
 Deprecated: Use SetProviderConfigReference.
 */
-func (mg *SynapsePrivateLinkHub) SetProviderReference(r *xpv1.Reference) {
+func (mg *PrivateLinkHub) SetProviderReference(r *xpv1.Reference) {
 	mg.Spec.ProviderReference = r
 }
 
-// SetWriteConnectionSecretToReference of this SynapsePrivateLinkHub.
-func (mg *SynapsePrivateLinkHub) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
+// SetWriteConnectionSecretToReference of this PrivateLinkHub.
+func (mg *PrivateLinkHub) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
 	mg.Spec.WriteConnectionSecretToReference = r
 }
 
-// GetCondition of this SynapseRoleAssignment.
-func (mg *SynapseRoleAssignment) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
+// GetCondition of this RoleAssignment.
+func (mg *RoleAssignment) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
 	return mg.Status.GetCondition(ct)
 }
 
-// GetDeletionPolicy of this SynapseRoleAssignment.
-func (mg *SynapseRoleAssignment) GetDeletionPolicy() xpv1.DeletionPolicy {
+// GetDeletionPolicy of this RoleAssignment.
+func (mg *RoleAssignment) GetDeletionPolicy() xpv1.DeletionPolicy {
 	return mg.Spec.DeletionPolicy
 }
 
-// GetProviderConfigReference of this SynapseRoleAssignment.
-func (mg *SynapseRoleAssignment) GetProviderConfigReference() *xpv1.Reference {
+// GetProviderConfigReference of this RoleAssignment.
+func (mg *RoleAssignment) GetProviderConfigReference() *xpv1.Reference {
 	return mg.Spec.ProviderConfigReference
 }
 
 /*
-GetProviderReference of this SynapseRoleAssignment.
+GetProviderReference of this RoleAssignment.
 Deprecated: Use GetProviderConfigReference.
 */
-func (mg *SynapseRoleAssignment) GetProviderReference() *xpv1.Reference {
+func (mg *RoleAssignment) GetProviderReference() *xpv1.Reference {
 	return mg.Spec.ProviderReference
 }
 
-// GetWriteConnectionSecretToReference of this SynapseRoleAssignment.
-func (mg *SynapseRoleAssignment) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
+// GetWriteConnectionSecretToReference of this RoleAssignment.
+func (mg *RoleAssignment) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
 	return mg.Spec.WriteConnectionSecretToReference
 }
 
-// SetConditions of this SynapseRoleAssignment.
-func (mg *SynapseRoleAssignment) SetConditions(c ...xpv1.Condition) {
+// SetConditions of this RoleAssignment.
+func (mg *RoleAssignment) SetConditions(c ...xpv1.Condition) {
 	mg.Status.SetConditions(c...)
 }
 
-// SetDeletionPolicy of this SynapseRoleAssignment.
-func (mg *SynapseRoleAssignment) SetDeletionPolicy(r xpv1.DeletionPolicy) {
+// SetDeletionPolicy of this RoleAssignment.
+func (mg *RoleAssignment) SetDeletionPolicy(r xpv1.DeletionPolicy) {
 	mg.Spec.DeletionPolicy = r
 }
 
-// SetProviderConfigReference of this SynapseRoleAssignment.
-func (mg *SynapseRoleAssignment) SetProviderConfigReference(r *xpv1.Reference) {
+// SetProviderConfigReference of this RoleAssignment.
+func (mg *RoleAssignment) SetProviderConfigReference(r *xpv1.Reference) {
 	mg.Spec.ProviderConfigReference = r
 }
 
 /*
-SetProviderReference of this SynapseRoleAssignment.
+SetProviderReference of this RoleAssignment.
 Deprecated: Use SetProviderConfigReference.
 */
-func (mg *SynapseRoleAssignment) SetProviderReference(r *xpv1.Reference) {
+func (mg *RoleAssignment) SetProviderReference(r *xpv1.Reference) {
 	mg.Spec.ProviderReference = r
 }
 
-// SetWriteConnectionSecretToReference of this SynapseRoleAssignment.
-func (mg *SynapseRoleAssignment) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
+// SetWriteConnectionSecretToReference of this RoleAssignment.
+func (mg *RoleAssignment) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
 	mg.Spec.WriteConnectionSecretToReference = r
 }
 
-// GetCondition of this SynapseSparkPool.
-func (mg *SynapseSparkPool) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
+// GetCondition of this SparkPool.
+func (mg *SparkPool) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
 	return mg.Status.GetCondition(ct)
 }
 
-// GetDeletionPolicy of this SynapseSparkPool.
-func (mg *SynapseSparkPool) GetDeletionPolicy() xpv1.DeletionPolicy {
+// GetDeletionPolicy of this SparkPool.
+func (mg *SparkPool) GetDeletionPolicy() xpv1.DeletionPolicy {
 	return mg.Spec.DeletionPolicy
 }
 
-// GetProviderConfigReference of this SynapseSparkPool.
-func (mg *SynapseSparkPool) GetProviderConfigReference() *xpv1.Reference {
+// GetProviderConfigReference of this SparkPool.
+func (mg *SparkPool) GetProviderConfigReference() *xpv1.Reference {
 	return mg.Spec.ProviderConfigReference
 }
 
 /*
-GetProviderReference of this SynapseSparkPool.
+GetProviderReference of this SparkPool.
 Deprecated: Use GetProviderConfigReference.
 */
-func (mg *SynapseSparkPool) GetProviderReference() *xpv1.Reference {
+func (mg *SparkPool) GetProviderReference() *xpv1.Reference {
 	return mg.Spec.ProviderReference
 }
 
-// GetWriteConnectionSecretToReference of this SynapseSparkPool.
-func (mg *SynapseSparkPool) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
+// GetWriteConnectionSecretToReference of this SparkPool.
+func (mg *SparkPool) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
 	return mg.Spec.WriteConnectionSecretToReference
 }
 
-// SetConditions of this SynapseSparkPool.
-func (mg *SynapseSparkPool) SetConditions(c ...xpv1.Condition) {
+// SetConditions of this SparkPool.
+func (mg *SparkPool) SetConditions(c ...xpv1.Condition) {
 	mg.Status.SetConditions(c...)
 }
 
-// SetDeletionPolicy of this SynapseSparkPool.
-func (mg *SynapseSparkPool) SetDeletionPolicy(r xpv1.DeletionPolicy) {
+// SetDeletionPolicy of this SparkPool.
+func (mg *SparkPool) SetDeletionPolicy(r xpv1.DeletionPolicy) {
 	mg.Spec.DeletionPolicy = r
 }
 
-// SetProviderConfigReference of this SynapseSparkPool.
-func (mg *SynapseSparkPool) SetProviderConfigReference(r *xpv1.Reference) {
+// SetProviderConfigReference of this SparkPool.
+func (mg *SparkPool) SetProviderConfigReference(r *xpv1.Reference) {
 	mg.Spec.ProviderConfigReference = r
 }
 
 /*
-SetProviderReference of this SynapseSparkPool.
+SetProviderReference of this SparkPool.
 Deprecated: Use SetProviderConfigReference.
 */
-func (mg *SynapseSparkPool) SetProviderReference(r *xpv1.Reference) {
+func (mg *SparkPool) SetProviderReference(r *xpv1.Reference) {
 	mg.Spec.ProviderReference = r
 }
 
-// SetWriteConnectionSecretToReference of this SynapseSparkPool.
-func (mg *SynapseSparkPool) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
+// SetWriteConnectionSecretToReference of this SparkPool.
+func (mg *SparkPool) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
 	mg.Spec.WriteConnectionSecretToReference = r
 }
 
-// GetCondition of this SynapseSqlPool.
-func (mg *SynapseSqlPool) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
+// GetCondition of this SqlPool.
+func (mg *SqlPool) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
 	return mg.Status.GetCondition(ct)
 }
 
-// GetDeletionPolicy of this SynapseSqlPool.
-func (mg *SynapseSqlPool) GetDeletionPolicy() xpv1.DeletionPolicy {
+// GetDeletionPolicy of this SqlPool.
+func (mg *SqlPool) GetDeletionPolicy() xpv1.DeletionPolicy {
 	return mg.Spec.DeletionPolicy
 }
 
-// GetProviderConfigReference of this SynapseSqlPool.
-func (mg *SynapseSqlPool) GetProviderConfigReference() *xpv1.Reference {
+// GetProviderConfigReference of this SqlPool.
+func (mg *SqlPool) GetProviderConfigReference() *xpv1.Reference {
 	return mg.Spec.ProviderConfigReference
 }
 
 /*
-GetProviderReference of this SynapseSqlPool.
+GetProviderReference of this SqlPool.
 Deprecated: Use GetProviderConfigReference.
 */
-func (mg *SynapseSqlPool) GetProviderReference() *xpv1.Reference {
+func (mg *SqlPool) GetProviderReference() *xpv1.Reference {
 	return mg.Spec.ProviderReference
 }
 
-// GetWriteConnectionSecretToReference of this SynapseSqlPool.
-func (mg *SynapseSqlPool) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
+// GetWriteConnectionSecretToReference of this SqlPool.
+func (mg *SqlPool) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
 	return mg.Spec.WriteConnectionSecretToReference
 }
 
-// SetConditions of this SynapseSqlPool.
-func (mg *SynapseSqlPool) SetConditions(c ...xpv1.Condition) {
+// SetConditions of this SqlPool.
+func (mg *SqlPool) SetConditions(c ...xpv1.Condition) {
 	mg.Status.SetConditions(c...)
 }
 
-// SetDeletionPolicy of this SynapseSqlPool.
-func (mg *SynapseSqlPool) SetDeletionPolicy(r xpv1.DeletionPolicy) {
+// SetDeletionPolicy of this SqlPool.
+func (mg *SqlPool) SetDeletionPolicy(r xpv1.DeletionPolicy) {
 	mg.Spec.DeletionPolicy = r
 }
 
-// SetProviderConfigReference of this SynapseSqlPool.
-func (mg *SynapseSqlPool) SetProviderConfigReference(r *xpv1.Reference) {
+// SetProviderConfigReference of this SqlPool.
+func (mg *SqlPool) SetProviderConfigReference(r *xpv1.Reference) {
 	mg.Spec.ProviderConfigReference = r
 }
 
 /*
-SetProviderReference of this SynapseSqlPool.
+SetProviderReference of this SqlPool.
 Deprecated: Use SetProviderConfigReference.
 */
-func (mg *SynapseSqlPool) SetProviderReference(r *xpv1.Reference) {
+func (mg *SqlPool) SetProviderReference(r *xpv1.Reference) {
 	mg.Spec.ProviderReference = r
 }
 
-// SetWriteConnectionSecretToReference of this SynapseSqlPool.
-func (mg *SynapseSqlPool) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
+// SetWriteConnectionSecretToReference of this SqlPool.
+func (mg *SqlPool) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
 	mg.Spec.WriteConnectionSecretToReference = r
 }
 
-// GetCondition of this SynapseSqlPoolExtendedAuditingPolicy.
-func (mg *SynapseSqlPoolExtendedAuditingPolicy) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
+// GetCondition of this SqlPoolExtendedAuditingPolicy.
+func (mg *SqlPoolExtendedAuditingPolicy) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
 	return mg.Status.GetCondition(ct)
 }
 
-// GetDeletionPolicy of this SynapseSqlPoolExtendedAuditingPolicy.
-func (mg *SynapseSqlPoolExtendedAuditingPolicy) GetDeletionPolicy() xpv1.DeletionPolicy {
+// GetDeletionPolicy of this SqlPoolExtendedAuditingPolicy.
+func (mg *SqlPoolExtendedAuditingPolicy) GetDeletionPolicy() xpv1.DeletionPolicy {
 	return mg.Spec.DeletionPolicy
 }
 
-// GetProviderConfigReference of this SynapseSqlPoolExtendedAuditingPolicy.
-func (mg *SynapseSqlPoolExtendedAuditingPolicy) GetProviderConfigReference() *xpv1.Reference {
+// GetProviderConfigReference of this SqlPoolExtendedAuditingPolicy.
+func (mg *SqlPoolExtendedAuditingPolicy) GetProviderConfigReference() *xpv1.Reference {
 	return mg.Spec.ProviderConfigReference
 }
 
 /*
-GetProviderReference of this SynapseSqlPoolExtendedAuditingPolicy.
+GetProviderReference of this SqlPoolExtendedAuditingPolicy.
 Deprecated: Use GetProviderConfigReference.
 */
-func (mg *SynapseSqlPoolExtendedAuditingPolicy) GetProviderReference() *xpv1.Reference {
+func (mg *SqlPoolExtendedAuditingPolicy) GetProviderReference() *xpv1.Reference {
 	return mg.Spec.ProviderReference
 }
 
-// GetWriteConnectionSecretToReference of this SynapseSqlPoolExtendedAuditingPolicy.
-func (mg *SynapseSqlPoolExtendedAuditingPolicy) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
+// GetWriteConnectionSecretToReference of this SqlPoolExtendedAuditingPolicy.
+func (mg *SqlPoolExtendedAuditingPolicy) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
 	return mg.Spec.WriteConnectionSecretToReference
 }
 
-// SetConditions of this SynapseSqlPoolExtendedAuditingPolicy.
-func (mg *SynapseSqlPoolExtendedAuditingPolicy) SetConditions(c ...xpv1.Condition) {
+// SetConditions of this SqlPoolExtendedAuditingPolicy.
+func (mg *SqlPoolExtendedAuditingPolicy) SetConditions(c ...xpv1.Condition) {
 	mg.Status.SetConditions(c...)
 }
 
-// SetDeletionPolicy of this SynapseSqlPoolExtendedAuditingPolicy.
-func (mg *SynapseSqlPoolExtendedAuditingPolicy) SetDeletionPolicy(r xpv1.DeletionPolicy) {
+// SetDeletionPolicy of this SqlPoolExtendedAuditingPolicy.
+func (mg *SqlPoolExtendedAuditingPolicy) SetDeletionPolicy(r xpv1.DeletionPolicy) {
 	mg.Spec.DeletionPolicy = r
 }
 
-// SetProviderConfigReference of this SynapseSqlPoolExtendedAuditingPolicy.
-func (mg *SynapseSqlPoolExtendedAuditingPolicy) SetProviderConfigReference(r *xpv1.Reference) {
+// SetProviderConfigReference of this SqlPoolExtendedAuditingPolicy.
+func (mg *SqlPoolExtendedAuditingPolicy) SetProviderConfigReference(r *xpv1.Reference) {
 	mg.Spec.ProviderConfigReference = r
 }
 
 /*
-SetProviderReference of this SynapseSqlPoolExtendedAuditingPolicy.
+SetProviderReference of this SqlPoolExtendedAuditingPolicy.
 Deprecated: Use SetProviderConfigReference.
 */
-func (mg *SynapseSqlPoolExtendedAuditingPolicy) SetProviderReference(r *xpv1.Reference) {
+func (mg *SqlPoolExtendedAuditingPolicy) SetProviderReference(r *xpv1.Reference) {
 	mg.Spec.ProviderReference = r
 }
 
-// SetWriteConnectionSecretToReference of this SynapseSqlPoolExtendedAuditingPolicy.
-func (mg *SynapseSqlPoolExtendedAuditingPolicy) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
+// SetWriteConnectionSecretToReference of this SqlPoolExtendedAuditingPolicy.
+func (mg *SqlPoolExtendedAuditingPolicy) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
 	mg.Spec.WriteConnectionSecretToReference = r
 }
 
-// GetCondition of this SynapseSqlPoolSecurityAlertPolicy.
-func (mg *SynapseSqlPoolSecurityAlertPolicy) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
+// GetCondition of this SqlPoolSecurityAlertPolicy.
+func (mg *SqlPoolSecurityAlertPolicy) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
 	return mg.Status.GetCondition(ct)
 }
 
-// GetDeletionPolicy of this SynapseSqlPoolSecurityAlertPolicy.
-func (mg *SynapseSqlPoolSecurityAlertPolicy) GetDeletionPolicy() xpv1.DeletionPolicy {
+// GetDeletionPolicy of this SqlPoolSecurityAlertPolicy.
+func (mg *SqlPoolSecurityAlertPolicy) GetDeletionPolicy() xpv1.DeletionPolicy {
 	return mg.Spec.DeletionPolicy
 }
 
-// GetProviderConfigReference of this SynapseSqlPoolSecurityAlertPolicy.
-func (mg *SynapseSqlPoolSecurityAlertPolicy) GetProviderConfigReference() *xpv1.Reference {
+// GetProviderConfigReference of this SqlPoolSecurityAlertPolicy.
+func (mg *SqlPoolSecurityAlertPolicy) GetProviderConfigReference() *xpv1.Reference {
 	return mg.Spec.ProviderConfigReference
 }
 
 /*
-GetProviderReference of this SynapseSqlPoolSecurityAlertPolicy.
+GetProviderReference of this SqlPoolSecurityAlertPolicy.
 Deprecated: Use GetProviderConfigReference.
 */
-func (mg *SynapseSqlPoolSecurityAlertPolicy) GetProviderReference() *xpv1.Reference {
+func (mg *SqlPoolSecurityAlertPolicy) GetProviderReference() *xpv1.Reference {
 	return mg.Spec.ProviderReference
 }
 
-// GetWriteConnectionSecretToReference of this SynapseSqlPoolSecurityAlertPolicy.
-func (mg *SynapseSqlPoolSecurityAlertPolicy) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
+// GetWriteConnectionSecretToReference of this SqlPoolSecurityAlertPolicy.
+func (mg *SqlPoolSecurityAlertPolicy) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
 	return mg.Spec.WriteConnectionSecretToReference
 }
 
-// SetConditions of this SynapseSqlPoolSecurityAlertPolicy.
-func (mg *SynapseSqlPoolSecurityAlertPolicy) SetConditions(c ...xpv1.Condition) {
+// SetConditions of this SqlPoolSecurityAlertPolicy.
+func (mg *SqlPoolSecurityAlertPolicy) SetConditions(c ...xpv1.Condition) {
 	mg.Status.SetConditions(c...)
 }
 
-// SetDeletionPolicy of this SynapseSqlPoolSecurityAlertPolicy.
-func (mg *SynapseSqlPoolSecurityAlertPolicy) SetDeletionPolicy(r xpv1.DeletionPolicy) {
+// SetDeletionPolicy of this SqlPoolSecurityAlertPolicy.
+func (mg *SqlPoolSecurityAlertPolicy) SetDeletionPolicy(r xpv1.DeletionPolicy) {
 	mg.Spec.DeletionPolicy = r
 }
 
-// SetProviderConfigReference of this SynapseSqlPoolSecurityAlertPolicy.
-func (mg *SynapseSqlPoolSecurityAlertPolicy) SetProviderConfigReference(r *xpv1.Reference) {
+// SetProviderConfigReference of this SqlPoolSecurityAlertPolicy.
+func (mg *SqlPoolSecurityAlertPolicy) SetProviderConfigReference(r *xpv1.Reference) {
 	mg.Spec.ProviderConfigReference = r
 }
 
 /*
-SetProviderReference of this SynapseSqlPoolSecurityAlertPolicy.
+SetProviderReference of this SqlPoolSecurityAlertPolicy.
 Deprecated: Use SetProviderConfigReference.
 */
-func (mg *SynapseSqlPoolSecurityAlertPolicy) SetProviderReference(r *xpv1.Reference) {
+func (mg *SqlPoolSecurityAlertPolicy) SetProviderReference(r *xpv1.Reference) {
 	mg.Spec.ProviderReference = r
 }
 
-// SetWriteConnectionSecretToReference of this SynapseSqlPoolSecurityAlertPolicy.
-func (mg *SynapseSqlPoolSecurityAlertPolicy) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
+// SetWriteConnectionSecretToReference of this SqlPoolSecurityAlertPolicy.
+func (mg *SqlPoolSecurityAlertPolicy) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
 	mg.Spec.WriteConnectionSecretToReference = r
 }
 
-// GetCondition of this SynapseSqlPoolVulnerabilityAssessment.
-func (mg *SynapseSqlPoolVulnerabilityAssessment) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
+// GetCondition of this SqlPoolVulnerabilityAssessment.
+func (mg *SqlPoolVulnerabilityAssessment) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
 	return mg.Status.GetCondition(ct)
 }
 
-// GetDeletionPolicy of this SynapseSqlPoolVulnerabilityAssessment.
-func (mg *SynapseSqlPoolVulnerabilityAssessment) GetDeletionPolicy() xpv1.DeletionPolicy {
+// GetDeletionPolicy of this SqlPoolVulnerabilityAssessment.
+func (mg *SqlPoolVulnerabilityAssessment) GetDeletionPolicy() xpv1.DeletionPolicy {
 	return mg.Spec.DeletionPolicy
 }
 
-// GetProviderConfigReference of this SynapseSqlPoolVulnerabilityAssessment.
-func (mg *SynapseSqlPoolVulnerabilityAssessment) GetProviderConfigReference() *xpv1.Reference {
+// GetProviderConfigReference of this SqlPoolVulnerabilityAssessment.
+func (mg *SqlPoolVulnerabilityAssessment) GetProviderConfigReference() *xpv1.Reference {
 	return mg.Spec.ProviderConfigReference
 }
 
 /*
-GetProviderReference of this SynapseSqlPoolVulnerabilityAssessment.
+GetProviderReference of this SqlPoolVulnerabilityAssessment.
 Deprecated: Use GetProviderConfigReference.
 */
-func (mg *SynapseSqlPoolVulnerabilityAssessment) GetProviderReference() *xpv1.Reference {
+func (mg *SqlPoolVulnerabilityAssessment) GetProviderReference() *xpv1.Reference {
 	return mg.Spec.ProviderReference
 }
 
-// GetWriteConnectionSecretToReference of this SynapseSqlPoolVulnerabilityAssessment.
-func (mg *SynapseSqlPoolVulnerabilityAssessment) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
+// GetWriteConnectionSecretToReference of this SqlPoolVulnerabilityAssessment.
+func (mg *SqlPoolVulnerabilityAssessment) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
 	return mg.Spec.WriteConnectionSecretToReference
 }
 
-// SetConditions of this SynapseSqlPoolVulnerabilityAssessment.
-func (mg *SynapseSqlPoolVulnerabilityAssessment) SetConditions(c ...xpv1.Condition) {
+// SetConditions of this SqlPoolVulnerabilityAssessment.
+func (mg *SqlPoolVulnerabilityAssessment) SetConditions(c ...xpv1.Condition) {
 	mg.Status.SetConditions(c...)
 }
 
-// SetDeletionPolicy of this SynapseSqlPoolVulnerabilityAssessment.
-func (mg *SynapseSqlPoolVulnerabilityAssessment) SetDeletionPolicy(r xpv1.DeletionPolicy) {
+// SetDeletionPolicy of this SqlPoolVulnerabilityAssessment.
+func (mg *SqlPoolVulnerabilityAssessment) SetDeletionPolicy(r xpv1.DeletionPolicy) {
 	mg.Spec.DeletionPolicy = r
 }
 
-// SetProviderConfigReference of this SynapseSqlPoolVulnerabilityAssessment.
-func (mg *SynapseSqlPoolVulnerabilityAssessment) SetProviderConfigReference(r *xpv1.Reference) {
+// SetProviderConfigReference of this SqlPoolVulnerabilityAssessment.
+func (mg *SqlPoolVulnerabilityAssessment) SetProviderConfigReference(r *xpv1.Reference) {
 	mg.Spec.ProviderConfigReference = r
 }
 
 /*
-SetProviderReference of this SynapseSqlPoolVulnerabilityAssessment.
+SetProviderReference of this SqlPoolVulnerabilityAssessment.
 Deprecated: Use SetProviderConfigReference.
 */
-func (mg *SynapseSqlPoolVulnerabilityAssessment) SetProviderReference(r *xpv1.Reference) {
+func (mg *SqlPoolVulnerabilityAssessment) SetProviderReference(r *xpv1.Reference) {
 	mg.Spec.ProviderReference = r
 }
 
-// SetWriteConnectionSecretToReference of this SynapseSqlPoolVulnerabilityAssessment.
-func (mg *SynapseSqlPoolVulnerabilityAssessment) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
+// SetWriteConnectionSecretToReference of this SqlPoolVulnerabilityAssessment.
+func (mg *SqlPoolVulnerabilityAssessment) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
 	mg.Spec.WriteConnectionSecretToReference = r
 }
 
-// GetCondition of this SynapseWorkspace.
-func (mg *SynapseWorkspace) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
+// GetCondition of this Workspace.
+func (mg *Workspace) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
 	return mg.Status.GetCondition(ct)
 }
 
-// GetDeletionPolicy of this SynapseWorkspace.
-func (mg *SynapseWorkspace) GetDeletionPolicy() xpv1.DeletionPolicy {
+// GetDeletionPolicy of this Workspace.
+func (mg *Workspace) GetDeletionPolicy() xpv1.DeletionPolicy {
 	return mg.Spec.DeletionPolicy
 }
 
-// GetProviderConfigReference of this SynapseWorkspace.
-func (mg *SynapseWorkspace) GetProviderConfigReference() *xpv1.Reference {
+// GetProviderConfigReference of this Workspace.
+func (mg *Workspace) GetProviderConfigReference() *xpv1.Reference {
 	return mg.Spec.ProviderConfigReference
 }
 
 /*
-GetProviderReference of this SynapseWorkspace.
+GetProviderReference of this Workspace.
 Deprecated: Use GetProviderConfigReference.
 */
-func (mg *SynapseWorkspace) GetProviderReference() *xpv1.Reference {
+func (mg *Workspace) GetProviderReference() *xpv1.Reference {
 	return mg.Spec.ProviderReference
 }
 
-// GetWriteConnectionSecretToReference of this SynapseWorkspace.
-func (mg *SynapseWorkspace) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
+// GetWriteConnectionSecretToReference of this Workspace.
+func (mg *Workspace) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
 	return mg.Spec.WriteConnectionSecretToReference
 }
 
-// SetConditions of this SynapseWorkspace.
-func (mg *SynapseWorkspace) SetConditions(c ...xpv1.Condition) {
+// SetConditions of this Workspace.
+func (mg *Workspace) SetConditions(c ...xpv1.Condition) {
 	mg.Status.SetConditions(c...)
 }
 
-// SetDeletionPolicy of this SynapseWorkspace.
-func (mg *SynapseWorkspace) SetDeletionPolicy(r xpv1.DeletionPolicy) {
+// SetDeletionPolicy of this Workspace.
+func (mg *Workspace) SetDeletionPolicy(r xpv1.DeletionPolicy) {
 	mg.Spec.DeletionPolicy = r
 }
 
-// SetProviderConfigReference of this SynapseWorkspace.
-func (mg *SynapseWorkspace) SetProviderConfigReference(r *xpv1.Reference) {
+// SetProviderConfigReference of this Workspace.
+func (mg *Workspace) SetProviderConfigReference(r *xpv1.Reference) {
 	mg.Spec.ProviderConfigReference = r
 }
 
 /*
-SetProviderReference of this SynapseWorkspace.
+SetProviderReference of this Workspace.
 Deprecated: Use SetProviderConfigReference.
 */
-func (mg *SynapseWorkspace) SetProviderReference(r *xpv1.Reference) {
+func (mg *Workspace) SetProviderReference(r *xpv1.Reference) {
 	mg.Spec.ProviderReference = r
 }
 
-// SetWriteConnectionSecretToReference of this SynapseWorkspace.
-func (mg *SynapseWorkspace) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
+// SetWriteConnectionSecretToReference of this Workspace.
+func (mg *Workspace) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
 	mg.Spec.WriteConnectionSecretToReference = r
 }
 
-// GetCondition of this SynapseWorkspaceExtendedAuditingPolicy.
-func (mg *SynapseWorkspaceExtendedAuditingPolicy) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
+// GetCondition of this WorkspaceExtendedAuditingPolicy.
+func (mg *WorkspaceExtendedAuditingPolicy) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
 	return mg.Status.GetCondition(ct)
 }
 
-// GetDeletionPolicy of this SynapseWorkspaceExtendedAuditingPolicy.
-func (mg *SynapseWorkspaceExtendedAuditingPolicy) GetDeletionPolicy() xpv1.DeletionPolicy {
+// GetDeletionPolicy of this WorkspaceExtendedAuditingPolicy.
+func (mg *WorkspaceExtendedAuditingPolicy) GetDeletionPolicy() xpv1.DeletionPolicy {
 	return mg.Spec.DeletionPolicy
 }
 
-// GetProviderConfigReference of this SynapseWorkspaceExtendedAuditingPolicy.
-func (mg *SynapseWorkspaceExtendedAuditingPolicy) GetProviderConfigReference() *xpv1.Reference {
+// GetProviderConfigReference of this WorkspaceExtendedAuditingPolicy.
+func (mg *WorkspaceExtendedAuditingPolicy) GetProviderConfigReference() *xpv1.Reference {
 	return mg.Spec.ProviderConfigReference
 }
 
 /*
-GetProviderReference of this SynapseWorkspaceExtendedAuditingPolicy.
+GetProviderReference of this WorkspaceExtendedAuditingPolicy.
 Deprecated: Use GetProviderConfigReference.
 */
-func (mg *SynapseWorkspaceExtendedAuditingPolicy) GetProviderReference() *xpv1.Reference {
+func (mg *WorkspaceExtendedAuditingPolicy) GetProviderReference() *xpv1.Reference {
 	return mg.Spec.ProviderReference
 }
 
-// GetWriteConnectionSecretToReference of this SynapseWorkspaceExtendedAuditingPolicy.
-func (mg *SynapseWorkspaceExtendedAuditingPolicy) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
+// GetWriteConnectionSecretToReference of this WorkspaceExtendedAuditingPolicy.
+func (mg *WorkspaceExtendedAuditingPolicy) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
 	return mg.Spec.WriteConnectionSecretToReference
 }
 
-// SetConditions of this SynapseWorkspaceExtendedAuditingPolicy.
-func (mg *SynapseWorkspaceExtendedAuditingPolicy) SetConditions(c ...xpv1.Condition) {
+// SetConditions of this WorkspaceExtendedAuditingPolicy.
+func (mg *WorkspaceExtendedAuditingPolicy) SetConditions(c ...xpv1.Condition) {
 	mg.Status.SetConditions(c...)
 }
 
-// SetDeletionPolicy of this SynapseWorkspaceExtendedAuditingPolicy.
-func (mg *SynapseWorkspaceExtendedAuditingPolicy) SetDeletionPolicy(r xpv1.DeletionPolicy) {
+// SetDeletionPolicy of this WorkspaceExtendedAuditingPolicy.
+func (mg *WorkspaceExtendedAuditingPolicy) SetDeletionPolicy(r xpv1.DeletionPolicy) {
 	mg.Spec.DeletionPolicy = r
 }
 
-// SetProviderConfigReference of this SynapseWorkspaceExtendedAuditingPolicy.
-func (mg *SynapseWorkspaceExtendedAuditingPolicy) SetProviderConfigReference(r *xpv1.Reference) {
+// SetProviderConfigReference of this WorkspaceExtendedAuditingPolicy.
+func (mg *WorkspaceExtendedAuditingPolicy) SetProviderConfigReference(r *xpv1.Reference) {
 	mg.Spec.ProviderConfigReference = r
 }
 
 /*
-SetProviderReference of this SynapseWorkspaceExtendedAuditingPolicy.
+SetProviderReference of this WorkspaceExtendedAuditingPolicy.
 Deprecated: Use SetProviderConfigReference.
 */
-func (mg *SynapseWorkspaceExtendedAuditingPolicy) SetProviderReference(r *xpv1.Reference) {
+func (mg *WorkspaceExtendedAuditingPolicy) SetProviderReference(r *xpv1.Reference) {
 	mg.Spec.ProviderReference = r
 }
 
-// SetWriteConnectionSecretToReference of this SynapseWorkspaceExtendedAuditingPolicy.
-func (mg *SynapseWorkspaceExtendedAuditingPolicy) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
+// SetWriteConnectionSecretToReference of this WorkspaceExtendedAuditingPolicy.
+func (mg *WorkspaceExtendedAuditingPolicy) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
 	mg.Spec.WriteConnectionSecretToReference = r
 }
 
-// GetCondition of this SynapseWorkspaceKey.
-func (mg *SynapseWorkspaceKey) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
+// GetCondition of this WorkspaceKey.
+func (mg *WorkspaceKey) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
 	return mg.Status.GetCondition(ct)
 }
 
-// GetDeletionPolicy of this SynapseWorkspaceKey.
-func (mg *SynapseWorkspaceKey) GetDeletionPolicy() xpv1.DeletionPolicy {
+// GetDeletionPolicy of this WorkspaceKey.
+func (mg *WorkspaceKey) GetDeletionPolicy() xpv1.DeletionPolicy {
 	return mg.Spec.DeletionPolicy
 }
 
-// GetProviderConfigReference of this SynapseWorkspaceKey.
-func (mg *SynapseWorkspaceKey) GetProviderConfigReference() *xpv1.Reference {
+// GetProviderConfigReference of this WorkspaceKey.
+func (mg *WorkspaceKey) GetProviderConfigReference() *xpv1.Reference {
 	return mg.Spec.ProviderConfigReference
 }
 
 /*
-GetProviderReference of this SynapseWorkspaceKey.
+GetProviderReference of this WorkspaceKey.
 Deprecated: Use GetProviderConfigReference.
 */
-func (mg *SynapseWorkspaceKey) GetProviderReference() *xpv1.Reference {
+func (mg *WorkspaceKey) GetProviderReference() *xpv1.Reference {
 	return mg.Spec.ProviderReference
 }
 
-// GetWriteConnectionSecretToReference of this SynapseWorkspaceKey.
-func (mg *SynapseWorkspaceKey) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
+// GetWriteConnectionSecretToReference of this WorkspaceKey.
+func (mg *WorkspaceKey) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
 	return mg.Spec.WriteConnectionSecretToReference
 }
 
-// SetConditions of this SynapseWorkspaceKey.
-func (mg *SynapseWorkspaceKey) SetConditions(c ...xpv1.Condition) {
+// SetConditions of this WorkspaceKey.
+func (mg *WorkspaceKey) SetConditions(c ...xpv1.Condition) {
 	mg.Status.SetConditions(c...)
 }
 
-// SetDeletionPolicy of this SynapseWorkspaceKey.
-func (mg *SynapseWorkspaceKey) SetDeletionPolicy(r xpv1.DeletionPolicy) {
+// SetDeletionPolicy of this WorkspaceKey.
+func (mg *WorkspaceKey) SetDeletionPolicy(r xpv1.DeletionPolicy) {
 	mg.Spec.DeletionPolicy = r
 }
 
-// SetProviderConfigReference of this SynapseWorkspaceKey.
-func (mg *SynapseWorkspaceKey) SetProviderConfigReference(r *xpv1.Reference) {
+// SetProviderConfigReference of this WorkspaceKey.
+func (mg *WorkspaceKey) SetProviderConfigReference(r *xpv1.Reference) {
 	mg.Spec.ProviderConfigReference = r
 }
 
 /*
-SetProviderReference of this SynapseWorkspaceKey.
+SetProviderReference of this WorkspaceKey.
 Deprecated: Use SetProviderConfigReference.
 */
-func (mg *SynapseWorkspaceKey) SetProviderReference(r *xpv1.Reference) {
+func (mg *WorkspaceKey) SetProviderReference(r *xpv1.Reference) {
 	mg.Spec.ProviderReference = r
 }
 
-// SetWriteConnectionSecretToReference of this SynapseWorkspaceKey.
-func (mg *SynapseWorkspaceKey) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
+// SetWriteConnectionSecretToReference of this WorkspaceKey.
+func (mg *WorkspaceKey) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
 	mg.Spec.WriteConnectionSecretToReference = r
 }
 
-// GetCondition of this SynapseWorkspaceSecurityAlertPolicy.
-func (mg *SynapseWorkspaceSecurityAlertPolicy) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
+// GetCondition of this WorkspaceSecurityAlertPolicy.
+func (mg *WorkspaceSecurityAlertPolicy) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
 	return mg.Status.GetCondition(ct)
 }
 
-// GetDeletionPolicy of this SynapseWorkspaceSecurityAlertPolicy.
-func (mg *SynapseWorkspaceSecurityAlertPolicy) GetDeletionPolicy() xpv1.DeletionPolicy {
+// GetDeletionPolicy of this WorkspaceSecurityAlertPolicy.
+func (mg *WorkspaceSecurityAlertPolicy) GetDeletionPolicy() xpv1.DeletionPolicy {
 	return mg.Spec.DeletionPolicy
 }
 
-// GetProviderConfigReference of this SynapseWorkspaceSecurityAlertPolicy.
-func (mg *SynapseWorkspaceSecurityAlertPolicy) GetProviderConfigReference() *xpv1.Reference {
+// GetProviderConfigReference of this WorkspaceSecurityAlertPolicy.
+func (mg *WorkspaceSecurityAlertPolicy) GetProviderConfigReference() *xpv1.Reference {
 	return mg.Spec.ProviderConfigReference
 }
 
 /*
-GetProviderReference of this SynapseWorkspaceSecurityAlertPolicy.
+GetProviderReference of this WorkspaceSecurityAlertPolicy.
 Deprecated: Use GetProviderConfigReference.
 */
-func (mg *SynapseWorkspaceSecurityAlertPolicy) GetProviderReference() *xpv1.Reference {
+func (mg *WorkspaceSecurityAlertPolicy) GetProviderReference() *xpv1.Reference {
 	return mg.Spec.ProviderReference
 }
 
-// GetWriteConnectionSecretToReference of this SynapseWorkspaceSecurityAlertPolicy.
-func (mg *SynapseWorkspaceSecurityAlertPolicy) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
+// GetWriteConnectionSecretToReference of this WorkspaceSecurityAlertPolicy.
+func (mg *WorkspaceSecurityAlertPolicy) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
 	return mg.Spec.WriteConnectionSecretToReference
 }
 
-// SetConditions of this SynapseWorkspaceSecurityAlertPolicy.
-func (mg *SynapseWorkspaceSecurityAlertPolicy) SetConditions(c ...xpv1.Condition) {
+// SetConditions of this WorkspaceSecurityAlertPolicy.
+func (mg *WorkspaceSecurityAlertPolicy) SetConditions(c ...xpv1.Condition) {
 	mg.Status.SetConditions(c...)
 }
 
-// SetDeletionPolicy of this SynapseWorkspaceSecurityAlertPolicy.
-func (mg *SynapseWorkspaceSecurityAlertPolicy) SetDeletionPolicy(r xpv1.DeletionPolicy) {
+// SetDeletionPolicy of this WorkspaceSecurityAlertPolicy.
+func (mg *WorkspaceSecurityAlertPolicy) SetDeletionPolicy(r xpv1.DeletionPolicy) {
 	mg.Spec.DeletionPolicy = r
 }
 
-// SetProviderConfigReference of this SynapseWorkspaceSecurityAlertPolicy.
-func (mg *SynapseWorkspaceSecurityAlertPolicy) SetProviderConfigReference(r *xpv1.Reference) {
+// SetProviderConfigReference of this WorkspaceSecurityAlertPolicy.
+func (mg *WorkspaceSecurityAlertPolicy) SetProviderConfigReference(r *xpv1.Reference) {
 	mg.Spec.ProviderConfigReference = r
 }
 
 /*
-SetProviderReference of this SynapseWorkspaceSecurityAlertPolicy.
+SetProviderReference of this WorkspaceSecurityAlertPolicy.
 Deprecated: Use SetProviderConfigReference.
 */
-func (mg *SynapseWorkspaceSecurityAlertPolicy) SetProviderReference(r *xpv1.Reference) {
+func (mg *WorkspaceSecurityAlertPolicy) SetProviderReference(r *xpv1.Reference) {
 	mg.Spec.ProviderReference = r
 }
 
-// SetWriteConnectionSecretToReference of this SynapseWorkspaceSecurityAlertPolicy.
-func (mg *SynapseWorkspaceSecurityAlertPolicy) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
+// SetWriteConnectionSecretToReference of this WorkspaceSecurityAlertPolicy.
+func (mg *WorkspaceSecurityAlertPolicy) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
 	mg.Spec.WriteConnectionSecretToReference = r
 }
 
-// GetCondition of this SynapseWorkspaceVulnerabilityAssessment.
-func (mg *SynapseWorkspaceVulnerabilityAssessment) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
+// GetCondition of this WorkspaceVulnerabilityAssessment.
+func (mg *WorkspaceVulnerabilityAssessment) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
 	return mg.Status.GetCondition(ct)
 }
 
-// GetDeletionPolicy of this SynapseWorkspaceVulnerabilityAssessment.
-func (mg *SynapseWorkspaceVulnerabilityAssessment) GetDeletionPolicy() xpv1.DeletionPolicy {
+// GetDeletionPolicy of this WorkspaceVulnerabilityAssessment.
+func (mg *WorkspaceVulnerabilityAssessment) GetDeletionPolicy() xpv1.DeletionPolicy {
 	return mg.Spec.DeletionPolicy
 }
 
-// GetProviderConfigReference of this SynapseWorkspaceVulnerabilityAssessment.
-func (mg *SynapseWorkspaceVulnerabilityAssessment) GetProviderConfigReference() *xpv1.Reference {
+// GetProviderConfigReference of this WorkspaceVulnerabilityAssessment.
+func (mg *WorkspaceVulnerabilityAssessment) GetProviderConfigReference() *xpv1.Reference {
 	return mg.Spec.ProviderConfigReference
 }
 
 /*
-GetProviderReference of this SynapseWorkspaceVulnerabilityAssessment.
+GetProviderReference of this WorkspaceVulnerabilityAssessment.
 Deprecated: Use GetProviderConfigReference.
 */
-func (mg *SynapseWorkspaceVulnerabilityAssessment) GetProviderReference() *xpv1.Reference {
+func (mg *WorkspaceVulnerabilityAssessment) GetProviderReference() *xpv1.Reference {
 	return mg.Spec.ProviderReference
 }
 
-// GetWriteConnectionSecretToReference of this SynapseWorkspaceVulnerabilityAssessment.
-func (mg *SynapseWorkspaceVulnerabilityAssessment) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
+// GetWriteConnectionSecretToReference of this WorkspaceVulnerabilityAssessment.
+func (mg *WorkspaceVulnerabilityAssessment) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
 	return mg.Spec.WriteConnectionSecretToReference
 }
 
-// SetConditions of this SynapseWorkspaceVulnerabilityAssessment.
-func (mg *SynapseWorkspaceVulnerabilityAssessment) SetConditions(c ...xpv1.Condition) {
+// SetConditions of this WorkspaceVulnerabilityAssessment.
+func (mg *WorkspaceVulnerabilityAssessment) SetConditions(c ...xpv1.Condition) {
 	mg.Status.SetConditions(c...)
 }
 
-// SetDeletionPolicy of this SynapseWorkspaceVulnerabilityAssessment.
-func (mg *SynapseWorkspaceVulnerabilityAssessment) SetDeletionPolicy(r xpv1.DeletionPolicy) {
+// SetDeletionPolicy of this WorkspaceVulnerabilityAssessment.
+func (mg *WorkspaceVulnerabilityAssessment) SetDeletionPolicy(r xpv1.DeletionPolicy) {
 	mg.Spec.DeletionPolicy = r
 }
 
-// SetProviderConfigReference of this SynapseWorkspaceVulnerabilityAssessment.
-func (mg *SynapseWorkspaceVulnerabilityAssessment) SetProviderConfigReference(r *xpv1.Reference) {
+// SetProviderConfigReference of this WorkspaceVulnerabilityAssessment.
+func (mg *WorkspaceVulnerabilityAssessment) SetProviderConfigReference(r *xpv1.Reference) {
 	mg.Spec.ProviderConfigReference = r
 }
 
 /*
-SetProviderReference of this SynapseWorkspaceVulnerabilityAssessment.
+SetProviderReference of this WorkspaceVulnerabilityAssessment.
 Deprecated: Use SetProviderConfigReference.
 */
-func (mg *SynapseWorkspaceVulnerabilityAssessment) SetProviderReference(r *xpv1.Reference) {
+func (mg *WorkspaceVulnerabilityAssessment) SetProviderReference(r *xpv1.Reference) {
 	mg.Spec.ProviderReference = r
 }
 
-// SetWriteConnectionSecretToReference of this SynapseWorkspaceVulnerabilityAssessment.
-func (mg *SynapseWorkspaceVulnerabilityAssessment) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
+// SetWriteConnectionSecretToReference of this WorkspaceVulnerabilityAssessment.
+func (mg *WorkspaceVulnerabilityAssessment) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
 	mg.Spec.WriteConnectionSecretToReference = r
 }

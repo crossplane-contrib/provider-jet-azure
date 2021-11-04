@@ -19,8 +19,8 @@ package v1alpha1
 
 import resource "github.com/crossplane/crossplane-runtime/pkg/resource"
 
-// GetItems of this SpatialAnchorsAccountList.
-func (l *SpatialAnchorsAccountList) GetItems() []resource.Managed {
+// GetItems of this AnchorsAccountList.
+func (l *AnchorsAccountList) GetItems() []resource.Managed {
 	items := make([]resource.Managed, len(l.Items))
 	for i := range l.Items {
 		items[i] = &l.Items[i]

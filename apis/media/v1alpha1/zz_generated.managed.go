@@ -19,618 +19,618 @@ package v1alpha1
 
 import xpv1 "github.com/crossplane/crossplane-runtime/apis/common/v1"
 
-// GetCondition of this MediaAsset.
-func (mg *MediaAsset) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
+// GetCondition of this Asset.
+func (mg *Asset) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
 	return mg.Status.GetCondition(ct)
 }
 
-// GetDeletionPolicy of this MediaAsset.
-func (mg *MediaAsset) GetDeletionPolicy() xpv1.DeletionPolicy {
+// GetDeletionPolicy of this Asset.
+func (mg *Asset) GetDeletionPolicy() xpv1.DeletionPolicy {
 	return mg.Spec.DeletionPolicy
 }
 
-// GetProviderConfigReference of this MediaAsset.
-func (mg *MediaAsset) GetProviderConfigReference() *xpv1.Reference {
+// GetProviderConfigReference of this Asset.
+func (mg *Asset) GetProviderConfigReference() *xpv1.Reference {
 	return mg.Spec.ProviderConfigReference
 }
 
 /*
-GetProviderReference of this MediaAsset.
+GetProviderReference of this Asset.
 Deprecated: Use GetProviderConfigReference.
 */
-func (mg *MediaAsset) GetProviderReference() *xpv1.Reference {
+func (mg *Asset) GetProviderReference() *xpv1.Reference {
 	return mg.Spec.ProviderReference
 }
 
-// GetWriteConnectionSecretToReference of this MediaAsset.
-func (mg *MediaAsset) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
+// GetWriteConnectionSecretToReference of this Asset.
+func (mg *Asset) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
 	return mg.Spec.WriteConnectionSecretToReference
 }
 
-// SetConditions of this MediaAsset.
-func (mg *MediaAsset) SetConditions(c ...xpv1.Condition) {
+// SetConditions of this Asset.
+func (mg *Asset) SetConditions(c ...xpv1.Condition) {
 	mg.Status.SetConditions(c...)
 }
 
-// SetDeletionPolicy of this MediaAsset.
-func (mg *MediaAsset) SetDeletionPolicy(r xpv1.DeletionPolicy) {
+// SetDeletionPolicy of this Asset.
+func (mg *Asset) SetDeletionPolicy(r xpv1.DeletionPolicy) {
 	mg.Spec.DeletionPolicy = r
 }
 
-// SetProviderConfigReference of this MediaAsset.
-func (mg *MediaAsset) SetProviderConfigReference(r *xpv1.Reference) {
+// SetProviderConfigReference of this Asset.
+func (mg *Asset) SetProviderConfigReference(r *xpv1.Reference) {
 	mg.Spec.ProviderConfigReference = r
 }
 
 /*
-SetProviderReference of this MediaAsset.
+SetProviderReference of this Asset.
 Deprecated: Use SetProviderConfigReference.
 */
-func (mg *MediaAsset) SetProviderReference(r *xpv1.Reference) {
+func (mg *Asset) SetProviderReference(r *xpv1.Reference) {
 	mg.Spec.ProviderReference = r
 }
 
-// SetWriteConnectionSecretToReference of this MediaAsset.
-func (mg *MediaAsset) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
+// SetWriteConnectionSecretToReference of this Asset.
+func (mg *Asset) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
 	mg.Spec.WriteConnectionSecretToReference = r
 }
 
-// GetCondition of this MediaAssetFilter.
-func (mg *MediaAssetFilter) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
+// GetCondition of this AssetFilter.
+func (mg *AssetFilter) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
 	return mg.Status.GetCondition(ct)
 }
 
-// GetDeletionPolicy of this MediaAssetFilter.
-func (mg *MediaAssetFilter) GetDeletionPolicy() xpv1.DeletionPolicy {
+// GetDeletionPolicy of this AssetFilter.
+func (mg *AssetFilter) GetDeletionPolicy() xpv1.DeletionPolicy {
 	return mg.Spec.DeletionPolicy
 }
 
-// GetProviderConfigReference of this MediaAssetFilter.
-func (mg *MediaAssetFilter) GetProviderConfigReference() *xpv1.Reference {
+// GetProviderConfigReference of this AssetFilter.
+func (mg *AssetFilter) GetProviderConfigReference() *xpv1.Reference {
 	return mg.Spec.ProviderConfigReference
 }
 
 /*
-GetProviderReference of this MediaAssetFilter.
+GetProviderReference of this AssetFilter.
 Deprecated: Use GetProviderConfigReference.
 */
-func (mg *MediaAssetFilter) GetProviderReference() *xpv1.Reference {
+func (mg *AssetFilter) GetProviderReference() *xpv1.Reference {
 	return mg.Spec.ProviderReference
 }
 
-// GetWriteConnectionSecretToReference of this MediaAssetFilter.
-func (mg *MediaAssetFilter) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
+// GetWriteConnectionSecretToReference of this AssetFilter.
+func (mg *AssetFilter) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
 	return mg.Spec.WriteConnectionSecretToReference
 }
 
-// SetConditions of this MediaAssetFilter.
-func (mg *MediaAssetFilter) SetConditions(c ...xpv1.Condition) {
+// SetConditions of this AssetFilter.
+func (mg *AssetFilter) SetConditions(c ...xpv1.Condition) {
 	mg.Status.SetConditions(c...)
 }
 
-// SetDeletionPolicy of this MediaAssetFilter.
-func (mg *MediaAssetFilter) SetDeletionPolicy(r xpv1.DeletionPolicy) {
+// SetDeletionPolicy of this AssetFilter.
+func (mg *AssetFilter) SetDeletionPolicy(r xpv1.DeletionPolicy) {
 	mg.Spec.DeletionPolicy = r
 }
 
-// SetProviderConfigReference of this MediaAssetFilter.
-func (mg *MediaAssetFilter) SetProviderConfigReference(r *xpv1.Reference) {
+// SetProviderConfigReference of this AssetFilter.
+func (mg *AssetFilter) SetProviderConfigReference(r *xpv1.Reference) {
 	mg.Spec.ProviderConfigReference = r
 }
 
 /*
-SetProviderReference of this MediaAssetFilter.
+SetProviderReference of this AssetFilter.
 Deprecated: Use SetProviderConfigReference.
 */
-func (mg *MediaAssetFilter) SetProviderReference(r *xpv1.Reference) {
+func (mg *AssetFilter) SetProviderReference(r *xpv1.Reference) {
 	mg.Spec.ProviderReference = r
 }
 
-// SetWriteConnectionSecretToReference of this MediaAssetFilter.
-func (mg *MediaAssetFilter) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
+// SetWriteConnectionSecretToReference of this AssetFilter.
+func (mg *AssetFilter) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
 	mg.Spec.WriteConnectionSecretToReference = r
 }
 
-// GetCondition of this MediaContentKeyPolicy.
-func (mg *MediaContentKeyPolicy) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
+// GetCondition of this ContentKeyPolicy.
+func (mg *ContentKeyPolicy) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
 	return mg.Status.GetCondition(ct)
 }
 
-// GetDeletionPolicy of this MediaContentKeyPolicy.
-func (mg *MediaContentKeyPolicy) GetDeletionPolicy() xpv1.DeletionPolicy {
+// GetDeletionPolicy of this ContentKeyPolicy.
+func (mg *ContentKeyPolicy) GetDeletionPolicy() xpv1.DeletionPolicy {
 	return mg.Spec.DeletionPolicy
 }
 
-// GetProviderConfigReference of this MediaContentKeyPolicy.
-func (mg *MediaContentKeyPolicy) GetProviderConfigReference() *xpv1.Reference {
+// GetProviderConfigReference of this ContentKeyPolicy.
+func (mg *ContentKeyPolicy) GetProviderConfigReference() *xpv1.Reference {
 	return mg.Spec.ProviderConfigReference
 }
 
 /*
-GetProviderReference of this MediaContentKeyPolicy.
+GetProviderReference of this ContentKeyPolicy.
 Deprecated: Use GetProviderConfigReference.
 */
-func (mg *MediaContentKeyPolicy) GetProviderReference() *xpv1.Reference {
+func (mg *ContentKeyPolicy) GetProviderReference() *xpv1.Reference {
 	return mg.Spec.ProviderReference
 }
 
-// GetWriteConnectionSecretToReference of this MediaContentKeyPolicy.
-func (mg *MediaContentKeyPolicy) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
+// GetWriteConnectionSecretToReference of this ContentKeyPolicy.
+func (mg *ContentKeyPolicy) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
 	return mg.Spec.WriteConnectionSecretToReference
 }
 
-// SetConditions of this MediaContentKeyPolicy.
-func (mg *MediaContentKeyPolicy) SetConditions(c ...xpv1.Condition) {
+// SetConditions of this ContentKeyPolicy.
+func (mg *ContentKeyPolicy) SetConditions(c ...xpv1.Condition) {
 	mg.Status.SetConditions(c...)
 }
 
-// SetDeletionPolicy of this MediaContentKeyPolicy.
-func (mg *MediaContentKeyPolicy) SetDeletionPolicy(r xpv1.DeletionPolicy) {
+// SetDeletionPolicy of this ContentKeyPolicy.
+func (mg *ContentKeyPolicy) SetDeletionPolicy(r xpv1.DeletionPolicy) {
 	mg.Spec.DeletionPolicy = r
 }
 
-// SetProviderConfigReference of this MediaContentKeyPolicy.
-func (mg *MediaContentKeyPolicy) SetProviderConfigReference(r *xpv1.Reference) {
+// SetProviderConfigReference of this ContentKeyPolicy.
+func (mg *ContentKeyPolicy) SetProviderConfigReference(r *xpv1.Reference) {
 	mg.Spec.ProviderConfigReference = r
 }
 
 /*
-SetProviderReference of this MediaContentKeyPolicy.
+SetProviderReference of this ContentKeyPolicy.
 Deprecated: Use SetProviderConfigReference.
 */
-func (mg *MediaContentKeyPolicy) SetProviderReference(r *xpv1.Reference) {
+func (mg *ContentKeyPolicy) SetProviderReference(r *xpv1.Reference) {
 	mg.Spec.ProviderReference = r
 }
 
-// SetWriteConnectionSecretToReference of this MediaContentKeyPolicy.
-func (mg *MediaContentKeyPolicy) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
+// SetWriteConnectionSecretToReference of this ContentKeyPolicy.
+func (mg *ContentKeyPolicy) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
 	mg.Spec.WriteConnectionSecretToReference = r
 }
 
-// GetCondition of this MediaJob.
-func (mg *MediaJob) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
+// GetCondition of this Job.
+func (mg *Job) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
 	return mg.Status.GetCondition(ct)
 }
 
-// GetDeletionPolicy of this MediaJob.
-func (mg *MediaJob) GetDeletionPolicy() xpv1.DeletionPolicy {
+// GetDeletionPolicy of this Job.
+func (mg *Job) GetDeletionPolicy() xpv1.DeletionPolicy {
 	return mg.Spec.DeletionPolicy
 }
 
-// GetProviderConfigReference of this MediaJob.
-func (mg *MediaJob) GetProviderConfigReference() *xpv1.Reference {
+// GetProviderConfigReference of this Job.
+func (mg *Job) GetProviderConfigReference() *xpv1.Reference {
 	return mg.Spec.ProviderConfigReference
 }
 
 /*
-GetProviderReference of this MediaJob.
+GetProviderReference of this Job.
 Deprecated: Use GetProviderConfigReference.
 */
-func (mg *MediaJob) GetProviderReference() *xpv1.Reference {
+func (mg *Job) GetProviderReference() *xpv1.Reference {
 	return mg.Spec.ProviderReference
 }
 
-// GetWriteConnectionSecretToReference of this MediaJob.
-func (mg *MediaJob) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
+// GetWriteConnectionSecretToReference of this Job.
+func (mg *Job) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
 	return mg.Spec.WriteConnectionSecretToReference
 }
 
-// SetConditions of this MediaJob.
-func (mg *MediaJob) SetConditions(c ...xpv1.Condition) {
+// SetConditions of this Job.
+func (mg *Job) SetConditions(c ...xpv1.Condition) {
 	mg.Status.SetConditions(c...)
 }
 
-// SetDeletionPolicy of this MediaJob.
-func (mg *MediaJob) SetDeletionPolicy(r xpv1.DeletionPolicy) {
+// SetDeletionPolicy of this Job.
+func (mg *Job) SetDeletionPolicy(r xpv1.DeletionPolicy) {
 	mg.Spec.DeletionPolicy = r
 }
 
-// SetProviderConfigReference of this MediaJob.
-func (mg *MediaJob) SetProviderConfigReference(r *xpv1.Reference) {
+// SetProviderConfigReference of this Job.
+func (mg *Job) SetProviderConfigReference(r *xpv1.Reference) {
 	mg.Spec.ProviderConfigReference = r
 }
 
 /*
-SetProviderReference of this MediaJob.
+SetProviderReference of this Job.
 Deprecated: Use SetProviderConfigReference.
 */
-func (mg *MediaJob) SetProviderReference(r *xpv1.Reference) {
+func (mg *Job) SetProviderReference(r *xpv1.Reference) {
 	mg.Spec.ProviderReference = r
 }
 
-// SetWriteConnectionSecretToReference of this MediaJob.
-func (mg *MediaJob) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
+// SetWriteConnectionSecretToReference of this Job.
+func (mg *Job) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
 	mg.Spec.WriteConnectionSecretToReference = r
 }
 
-// GetCondition of this MediaLiveEvent.
-func (mg *MediaLiveEvent) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
+// GetCondition of this LiveEvent.
+func (mg *LiveEvent) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
 	return mg.Status.GetCondition(ct)
 }
 
-// GetDeletionPolicy of this MediaLiveEvent.
-func (mg *MediaLiveEvent) GetDeletionPolicy() xpv1.DeletionPolicy {
+// GetDeletionPolicy of this LiveEvent.
+func (mg *LiveEvent) GetDeletionPolicy() xpv1.DeletionPolicy {
 	return mg.Spec.DeletionPolicy
 }
 
-// GetProviderConfigReference of this MediaLiveEvent.
-func (mg *MediaLiveEvent) GetProviderConfigReference() *xpv1.Reference {
+// GetProviderConfigReference of this LiveEvent.
+func (mg *LiveEvent) GetProviderConfigReference() *xpv1.Reference {
 	return mg.Spec.ProviderConfigReference
 }
 
 /*
-GetProviderReference of this MediaLiveEvent.
+GetProviderReference of this LiveEvent.
 Deprecated: Use GetProviderConfigReference.
 */
-func (mg *MediaLiveEvent) GetProviderReference() *xpv1.Reference {
+func (mg *LiveEvent) GetProviderReference() *xpv1.Reference {
 	return mg.Spec.ProviderReference
 }
 
-// GetWriteConnectionSecretToReference of this MediaLiveEvent.
-func (mg *MediaLiveEvent) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
+// GetWriteConnectionSecretToReference of this LiveEvent.
+func (mg *LiveEvent) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
 	return mg.Spec.WriteConnectionSecretToReference
 }
 
-// SetConditions of this MediaLiveEvent.
-func (mg *MediaLiveEvent) SetConditions(c ...xpv1.Condition) {
+// SetConditions of this LiveEvent.
+func (mg *LiveEvent) SetConditions(c ...xpv1.Condition) {
 	mg.Status.SetConditions(c...)
 }
 
-// SetDeletionPolicy of this MediaLiveEvent.
-func (mg *MediaLiveEvent) SetDeletionPolicy(r xpv1.DeletionPolicy) {
+// SetDeletionPolicy of this LiveEvent.
+func (mg *LiveEvent) SetDeletionPolicy(r xpv1.DeletionPolicy) {
 	mg.Spec.DeletionPolicy = r
 }
 
-// SetProviderConfigReference of this MediaLiveEvent.
-func (mg *MediaLiveEvent) SetProviderConfigReference(r *xpv1.Reference) {
+// SetProviderConfigReference of this LiveEvent.
+func (mg *LiveEvent) SetProviderConfigReference(r *xpv1.Reference) {
 	mg.Spec.ProviderConfigReference = r
 }
 
 /*
-SetProviderReference of this MediaLiveEvent.
+SetProviderReference of this LiveEvent.
 Deprecated: Use SetProviderConfigReference.
 */
-func (mg *MediaLiveEvent) SetProviderReference(r *xpv1.Reference) {
+func (mg *LiveEvent) SetProviderReference(r *xpv1.Reference) {
 	mg.Spec.ProviderReference = r
 }
 
-// SetWriteConnectionSecretToReference of this MediaLiveEvent.
-func (mg *MediaLiveEvent) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
+// SetWriteConnectionSecretToReference of this LiveEvent.
+func (mg *LiveEvent) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
 	mg.Spec.WriteConnectionSecretToReference = r
 }
 
-// GetCondition of this MediaLiveEventOutput.
-func (mg *MediaLiveEventOutput) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
+// GetCondition of this LiveEventOutput.
+func (mg *LiveEventOutput) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
 	return mg.Status.GetCondition(ct)
 }
 
-// GetDeletionPolicy of this MediaLiveEventOutput.
-func (mg *MediaLiveEventOutput) GetDeletionPolicy() xpv1.DeletionPolicy {
+// GetDeletionPolicy of this LiveEventOutput.
+func (mg *LiveEventOutput) GetDeletionPolicy() xpv1.DeletionPolicy {
 	return mg.Spec.DeletionPolicy
 }
 
-// GetProviderConfigReference of this MediaLiveEventOutput.
-func (mg *MediaLiveEventOutput) GetProviderConfigReference() *xpv1.Reference {
+// GetProviderConfigReference of this LiveEventOutput.
+func (mg *LiveEventOutput) GetProviderConfigReference() *xpv1.Reference {
 	return mg.Spec.ProviderConfigReference
 }
 
 /*
-GetProviderReference of this MediaLiveEventOutput.
+GetProviderReference of this LiveEventOutput.
 Deprecated: Use GetProviderConfigReference.
 */
-func (mg *MediaLiveEventOutput) GetProviderReference() *xpv1.Reference {
+func (mg *LiveEventOutput) GetProviderReference() *xpv1.Reference {
 	return mg.Spec.ProviderReference
 }
 
-// GetWriteConnectionSecretToReference of this MediaLiveEventOutput.
-func (mg *MediaLiveEventOutput) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
+// GetWriteConnectionSecretToReference of this LiveEventOutput.
+func (mg *LiveEventOutput) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
 	return mg.Spec.WriteConnectionSecretToReference
 }
 
-// SetConditions of this MediaLiveEventOutput.
-func (mg *MediaLiveEventOutput) SetConditions(c ...xpv1.Condition) {
+// SetConditions of this LiveEventOutput.
+func (mg *LiveEventOutput) SetConditions(c ...xpv1.Condition) {
 	mg.Status.SetConditions(c...)
 }
 
-// SetDeletionPolicy of this MediaLiveEventOutput.
-func (mg *MediaLiveEventOutput) SetDeletionPolicy(r xpv1.DeletionPolicy) {
+// SetDeletionPolicy of this LiveEventOutput.
+func (mg *LiveEventOutput) SetDeletionPolicy(r xpv1.DeletionPolicy) {
 	mg.Spec.DeletionPolicy = r
 }
 
-// SetProviderConfigReference of this MediaLiveEventOutput.
-func (mg *MediaLiveEventOutput) SetProviderConfigReference(r *xpv1.Reference) {
+// SetProviderConfigReference of this LiveEventOutput.
+func (mg *LiveEventOutput) SetProviderConfigReference(r *xpv1.Reference) {
 	mg.Spec.ProviderConfigReference = r
 }
 
 /*
-SetProviderReference of this MediaLiveEventOutput.
+SetProviderReference of this LiveEventOutput.
 Deprecated: Use SetProviderConfigReference.
 */
-func (mg *MediaLiveEventOutput) SetProviderReference(r *xpv1.Reference) {
+func (mg *LiveEventOutput) SetProviderReference(r *xpv1.Reference) {
 	mg.Spec.ProviderReference = r
 }
 
-// SetWriteConnectionSecretToReference of this MediaLiveEventOutput.
-func (mg *MediaLiveEventOutput) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
+// SetWriteConnectionSecretToReference of this LiveEventOutput.
+func (mg *LiveEventOutput) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
 	mg.Spec.WriteConnectionSecretToReference = r
 }
 
-// GetCondition of this MediaServicesAccount.
-func (mg *MediaServicesAccount) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
+// GetCondition of this ServicesAccount.
+func (mg *ServicesAccount) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
 	return mg.Status.GetCondition(ct)
 }
 
-// GetDeletionPolicy of this MediaServicesAccount.
-func (mg *MediaServicesAccount) GetDeletionPolicy() xpv1.DeletionPolicy {
+// GetDeletionPolicy of this ServicesAccount.
+func (mg *ServicesAccount) GetDeletionPolicy() xpv1.DeletionPolicy {
 	return mg.Spec.DeletionPolicy
 }
 
-// GetProviderConfigReference of this MediaServicesAccount.
-func (mg *MediaServicesAccount) GetProviderConfigReference() *xpv1.Reference {
+// GetProviderConfigReference of this ServicesAccount.
+func (mg *ServicesAccount) GetProviderConfigReference() *xpv1.Reference {
 	return mg.Spec.ProviderConfigReference
 }
 
 /*
-GetProviderReference of this MediaServicesAccount.
+GetProviderReference of this ServicesAccount.
 Deprecated: Use GetProviderConfigReference.
 */
-func (mg *MediaServicesAccount) GetProviderReference() *xpv1.Reference {
+func (mg *ServicesAccount) GetProviderReference() *xpv1.Reference {
 	return mg.Spec.ProviderReference
 }
 
-// GetWriteConnectionSecretToReference of this MediaServicesAccount.
-func (mg *MediaServicesAccount) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
+// GetWriteConnectionSecretToReference of this ServicesAccount.
+func (mg *ServicesAccount) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
 	return mg.Spec.WriteConnectionSecretToReference
 }
 
-// SetConditions of this MediaServicesAccount.
-func (mg *MediaServicesAccount) SetConditions(c ...xpv1.Condition) {
+// SetConditions of this ServicesAccount.
+func (mg *ServicesAccount) SetConditions(c ...xpv1.Condition) {
 	mg.Status.SetConditions(c...)
 }
 
-// SetDeletionPolicy of this MediaServicesAccount.
-func (mg *MediaServicesAccount) SetDeletionPolicy(r xpv1.DeletionPolicy) {
+// SetDeletionPolicy of this ServicesAccount.
+func (mg *ServicesAccount) SetDeletionPolicy(r xpv1.DeletionPolicy) {
 	mg.Spec.DeletionPolicy = r
 }
 
-// SetProviderConfigReference of this MediaServicesAccount.
-func (mg *MediaServicesAccount) SetProviderConfigReference(r *xpv1.Reference) {
+// SetProviderConfigReference of this ServicesAccount.
+func (mg *ServicesAccount) SetProviderConfigReference(r *xpv1.Reference) {
 	mg.Spec.ProviderConfigReference = r
 }
 
 /*
-SetProviderReference of this MediaServicesAccount.
+SetProviderReference of this ServicesAccount.
 Deprecated: Use SetProviderConfigReference.
 */
-func (mg *MediaServicesAccount) SetProviderReference(r *xpv1.Reference) {
+func (mg *ServicesAccount) SetProviderReference(r *xpv1.Reference) {
 	mg.Spec.ProviderReference = r
 }
 
-// SetWriteConnectionSecretToReference of this MediaServicesAccount.
-func (mg *MediaServicesAccount) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
+// SetWriteConnectionSecretToReference of this ServicesAccount.
+func (mg *ServicesAccount) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
 	mg.Spec.WriteConnectionSecretToReference = r
 }
 
-// GetCondition of this MediaStreamingEndpoint.
-func (mg *MediaStreamingEndpoint) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
+// GetCondition of this StreamingEndpoint.
+func (mg *StreamingEndpoint) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
 	return mg.Status.GetCondition(ct)
 }
 
-// GetDeletionPolicy of this MediaStreamingEndpoint.
-func (mg *MediaStreamingEndpoint) GetDeletionPolicy() xpv1.DeletionPolicy {
+// GetDeletionPolicy of this StreamingEndpoint.
+func (mg *StreamingEndpoint) GetDeletionPolicy() xpv1.DeletionPolicy {
 	return mg.Spec.DeletionPolicy
 }
 
-// GetProviderConfigReference of this MediaStreamingEndpoint.
-func (mg *MediaStreamingEndpoint) GetProviderConfigReference() *xpv1.Reference {
+// GetProviderConfigReference of this StreamingEndpoint.
+func (mg *StreamingEndpoint) GetProviderConfigReference() *xpv1.Reference {
 	return mg.Spec.ProviderConfigReference
 }
 
 /*
-GetProviderReference of this MediaStreamingEndpoint.
+GetProviderReference of this StreamingEndpoint.
 Deprecated: Use GetProviderConfigReference.
 */
-func (mg *MediaStreamingEndpoint) GetProviderReference() *xpv1.Reference {
+func (mg *StreamingEndpoint) GetProviderReference() *xpv1.Reference {
 	return mg.Spec.ProviderReference
 }
 
-// GetWriteConnectionSecretToReference of this MediaStreamingEndpoint.
-func (mg *MediaStreamingEndpoint) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
+// GetWriteConnectionSecretToReference of this StreamingEndpoint.
+func (mg *StreamingEndpoint) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
 	return mg.Spec.WriteConnectionSecretToReference
 }
 
-// SetConditions of this MediaStreamingEndpoint.
-func (mg *MediaStreamingEndpoint) SetConditions(c ...xpv1.Condition) {
+// SetConditions of this StreamingEndpoint.
+func (mg *StreamingEndpoint) SetConditions(c ...xpv1.Condition) {
 	mg.Status.SetConditions(c...)
 }
 
-// SetDeletionPolicy of this MediaStreamingEndpoint.
-func (mg *MediaStreamingEndpoint) SetDeletionPolicy(r xpv1.DeletionPolicy) {
+// SetDeletionPolicy of this StreamingEndpoint.
+func (mg *StreamingEndpoint) SetDeletionPolicy(r xpv1.DeletionPolicy) {
 	mg.Spec.DeletionPolicy = r
 }
 
-// SetProviderConfigReference of this MediaStreamingEndpoint.
-func (mg *MediaStreamingEndpoint) SetProviderConfigReference(r *xpv1.Reference) {
+// SetProviderConfigReference of this StreamingEndpoint.
+func (mg *StreamingEndpoint) SetProviderConfigReference(r *xpv1.Reference) {
 	mg.Spec.ProviderConfigReference = r
 }
 
 /*
-SetProviderReference of this MediaStreamingEndpoint.
+SetProviderReference of this StreamingEndpoint.
 Deprecated: Use SetProviderConfigReference.
 */
-func (mg *MediaStreamingEndpoint) SetProviderReference(r *xpv1.Reference) {
+func (mg *StreamingEndpoint) SetProviderReference(r *xpv1.Reference) {
 	mg.Spec.ProviderReference = r
 }
 
-// SetWriteConnectionSecretToReference of this MediaStreamingEndpoint.
-func (mg *MediaStreamingEndpoint) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
+// SetWriteConnectionSecretToReference of this StreamingEndpoint.
+func (mg *StreamingEndpoint) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
 	mg.Spec.WriteConnectionSecretToReference = r
 }
 
-// GetCondition of this MediaStreamingLocator.
-func (mg *MediaStreamingLocator) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
+// GetCondition of this StreamingLocator.
+func (mg *StreamingLocator) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
 	return mg.Status.GetCondition(ct)
 }
 
-// GetDeletionPolicy of this MediaStreamingLocator.
-func (mg *MediaStreamingLocator) GetDeletionPolicy() xpv1.DeletionPolicy {
+// GetDeletionPolicy of this StreamingLocator.
+func (mg *StreamingLocator) GetDeletionPolicy() xpv1.DeletionPolicy {
 	return mg.Spec.DeletionPolicy
 }
 
-// GetProviderConfigReference of this MediaStreamingLocator.
-func (mg *MediaStreamingLocator) GetProviderConfigReference() *xpv1.Reference {
+// GetProviderConfigReference of this StreamingLocator.
+func (mg *StreamingLocator) GetProviderConfigReference() *xpv1.Reference {
 	return mg.Spec.ProviderConfigReference
 }
 
 /*
-GetProviderReference of this MediaStreamingLocator.
+GetProviderReference of this StreamingLocator.
 Deprecated: Use GetProviderConfigReference.
 */
-func (mg *MediaStreamingLocator) GetProviderReference() *xpv1.Reference {
+func (mg *StreamingLocator) GetProviderReference() *xpv1.Reference {
 	return mg.Spec.ProviderReference
 }
 
-// GetWriteConnectionSecretToReference of this MediaStreamingLocator.
-func (mg *MediaStreamingLocator) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
+// GetWriteConnectionSecretToReference of this StreamingLocator.
+func (mg *StreamingLocator) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
 	return mg.Spec.WriteConnectionSecretToReference
 }
 
-// SetConditions of this MediaStreamingLocator.
-func (mg *MediaStreamingLocator) SetConditions(c ...xpv1.Condition) {
+// SetConditions of this StreamingLocator.
+func (mg *StreamingLocator) SetConditions(c ...xpv1.Condition) {
 	mg.Status.SetConditions(c...)
 }
 
-// SetDeletionPolicy of this MediaStreamingLocator.
-func (mg *MediaStreamingLocator) SetDeletionPolicy(r xpv1.DeletionPolicy) {
+// SetDeletionPolicy of this StreamingLocator.
+func (mg *StreamingLocator) SetDeletionPolicy(r xpv1.DeletionPolicy) {
 	mg.Spec.DeletionPolicy = r
 }
 
-// SetProviderConfigReference of this MediaStreamingLocator.
-func (mg *MediaStreamingLocator) SetProviderConfigReference(r *xpv1.Reference) {
+// SetProviderConfigReference of this StreamingLocator.
+func (mg *StreamingLocator) SetProviderConfigReference(r *xpv1.Reference) {
 	mg.Spec.ProviderConfigReference = r
 }
 
 /*
-SetProviderReference of this MediaStreamingLocator.
+SetProviderReference of this StreamingLocator.
 Deprecated: Use SetProviderConfigReference.
 */
-func (mg *MediaStreamingLocator) SetProviderReference(r *xpv1.Reference) {
+func (mg *StreamingLocator) SetProviderReference(r *xpv1.Reference) {
 	mg.Spec.ProviderReference = r
 }
 
-// SetWriteConnectionSecretToReference of this MediaStreamingLocator.
-func (mg *MediaStreamingLocator) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
+// SetWriteConnectionSecretToReference of this StreamingLocator.
+func (mg *StreamingLocator) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
 	mg.Spec.WriteConnectionSecretToReference = r
 }
 
-// GetCondition of this MediaStreamingPolicy.
-func (mg *MediaStreamingPolicy) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
+// GetCondition of this StreamingPolicy.
+func (mg *StreamingPolicy) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
 	return mg.Status.GetCondition(ct)
 }
 
-// GetDeletionPolicy of this MediaStreamingPolicy.
-func (mg *MediaStreamingPolicy) GetDeletionPolicy() xpv1.DeletionPolicy {
+// GetDeletionPolicy of this StreamingPolicy.
+func (mg *StreamingPolicy) GetDeletionPolicy() xpv1.DeletionPolicy {
 	return mg.Spec.DeletionPolicy
 }
 
-// GetProviderConfigReference of this MediaStreamingPolicy.
-func (mg *MediaStreamingPolicy) GetProviderConfigReference() *xpv1.Reference {
+// GetProviderConfigReference of this StreamingPolicy.
+func (mg *StreamingPolicy) GetProviderConfigReference() *xpv1.Reference {
 	return mg.Spec.ProviderConfigReference
 }
 
 /*
-GetProviderReference of this MediaStreamingPolicy.
+GetProviderReference of this StreamingPolicy.
 Deprecated: Use GetProviderConfigReference.
 */
-func (mg *MediaStreamingPolicy) GetProviderReference() *xpv1.Reference {
+func (mg *StreamingPolicy) GetProviderReference() *xpv1.Reference {
 	return mg.Spec.ProviderReference
 }
 
-// GetWriteConnectionSecretToReference of this MediaStreamingPolicy.
-func (mg *MediaStreamingPolicy) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
+// GetWriteConnectionSecretToReference of this StreamingPolicy.
+func (mg *StreamingPolicy) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
 	return mg.Spec.WriteConnectionSecretToReference
 }
 
-// SetConditions of this MediaStreamingPolicy.
-func (mg *MediaStreamingPolicy) SetConditions(c ...xpv1.Condition) {
+// SetConditions of this StreamingPolicy.
+func (mg *StreamingPolicy) SetConditions(c ...xpv1.Condition) {
 	mg.Status.SetConditions(c...)
 }
 
-// SetDeletionPolicy of this MediaStreamingPolicy.
-func (mg *MediaStreamingPolicy) SetDeletionPolicy(r xpv1.DeletionPolicy) {
+// SetDeletionPolicy of this StreamingPolicy.
+func (mg *StreamingPolicy) SetDeletionPolicy(r xpv1.DeletionPolicy) {
 	mg.Spec.DeletionPolicy = r
 }
 
-// SetProviderConfigReference of this MediaStreamingPolicy.
-func (mg *MediaStreamingPolicy) SetProviderConfigReference(r *xpv1.Reference) {
+// SetProviderConfigReference of this StreamingPolicy.
+func (mg *StreamingPolicy) SetProviderConfigReference(r *xpv1.Reference) {
 	mg.Spec.ProviderConfigReference = r
 }
 
 /*
-SetProviderReference of this MediaStreamingPolicy.
+SetProviderReference of this StreamingPolicy.
 Deprecated: Use SetProviderConfigReference.
 */
-func (mg *MediaStreamingPolicy) SetProviderReference(r *xpv1.Reference) {
+func (mg *StreamingPolicy) SetProviderReference(r *xpv1.Reference) {
 	mg.Spec.ProviderReference = r
 }
 
-// SetWriteConnectionSecretToReference of this MediaStreamingPolicy.
-func (mg *MediaStreamingPolicy) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
+// SetWriteConnectionSecretToReference of this StreamingPolicy.
+func (mg *StreamingPolicy) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
 	mg.Spec.WriteConnectionSecretToReference = r
 }
 
-// GetCondition of this MediaTransform.
-func (mg *MediaTransform) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
+// GetCondition of this Transform.
+func (mg *Transform) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
 	return mg.Status.GetCondition(ct)
 }
 
-// GetDeletionPolicy of this MediaTransform.
-func (mg *MediaTransform) GetDeletionPolicy() xpv1.DeletionPolicy {
+// GetDeletionPolicy of this Transform.
+func (mg *Transform) GetDeletionPolicy() xpv1.DeletionPolicy {
 	return mg.Spec.DeletionPolicy
 }
 
-// GetProviderConfigReference of this MediaTransform.
-func (mg *MediaTransform) GetProviderConfigReference() *xpv1.Reference {
+// GetProviderConfigReference of this Transform.
+func (mg *Transform) GetProviderConfigReference() *xpv1.Reference {
 	return mg.Spec.ProviderConfigReference
 }
 
 /*
-GetProviderReference of this MediaTransform.
+GetProviderReference of this Transform.
 Deprecated: Use GetProviderConfigReference.
 */
-func (mg *MediaTransform) GetProviderReference() *xpv1.Reference {
+func (mg *Transform) GetProviderReference() *xpv1.Reference {
 	return mg.Spec.ProviderReference
 }
 
-// GetWriteConnectionSecretToReference of this MediaTransform.
-func (mg *MediaTransform) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
+// GetWriteConnectionSecretToReference of this Transform.
+func (mg *Transform) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
 	return mg.Spec.WriteConnectionSecretToReference
 }
 
-// SetConditions of this MediaTransform.
-func (mg *MediaTransform) SetConditions(c ...xpv1.Condition) {
+// SetConditions of this Transform.
+func (mg *Transform) SetConditions(c ...xpv1.Condition) {
 	mg.Status.SetConditions(c...)
 }
 
-// SetDeletionPolicy of this MediaTransform.
-func (mg *MediaTransform) SetDeletionPolicy(r xpv1.DeletionPolicy) {
+// SetDeletionPolicy of this Transform.
+func (mg *Transform) SetDeletionPolicy(r xpv1.DeletionPolicy) {
 	mg.Spec.DeletionPolicy = r
 }
 
-// SetProviderConfigReference of this MediaTransform.
-func (mg *MediaTransform) SetProviderConfigReference(r *xpv1.Reference) {
+// SetProviderConfigReference of this Transform.
+func (mg *Transform) SetProviderConfigReference(r *xpv1.Reference) {
 	mg.Spec.ProviderConfigReference = r
 }
 
 /*
-SetProviderReference of this MediaTransform.
+SetProviderReference of this Transform.
 Deprecated: Use SetProviderConfigReference.
 */
-func (mg *MediaTransform) SetProviderReference(r *xpv1.Reference) {
+func (mg *Transform) SetProviderReference(r *xpv1.Reference) {
 	mg.Spec.ProviderReference = r
 }
 
-// SetWriteConnectionSecretToReference of this MediaTransform.
-func (mg *MediaTransform) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
+// SetWriteConnectionSecretToReference of this Transform.
+func (mg *Transform) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
 	mg.Spec.WriteConnectionSecretToReference = r
 }

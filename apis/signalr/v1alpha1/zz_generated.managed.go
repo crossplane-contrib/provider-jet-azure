@@ -19,114 +19,114 @@ package v1alpha1
 
 import xpv1 "github.com/crossplane/crossplane-runtime/apis/common/v1"
 
-// GetCondition of this SignalrService.
-func (mg *SignalrService) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
+// GetCondition of this Service.
+func (mg *Service) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
 	return mg.Status.GetCondition(ct)
 }
 
-// GetDeletionPolicy of this SignalrService.
-func (mg *SignalrService) GetDeletionPolicy() xpv1.DeletionPolicy {
+// GetDeletionPolicy of this Service.
+func (mg *Service) GetDeletionPolicy() xpv1.DeletionPolicy {
 	return mg.Spec.DeletionPolicy
 }
 
-// GetProviderConfigReference of this SignalrService.
-func (mg *SignalrService) GetProviderConfigReference() *xpv1.Reference {
+// GetProviderConfigReference of this Service.
+func (mg *Service) GetProviderConfigReference() *xpv1.Reference {
 	return mg.Spec.ProviderConfigReference
 }
 
 /*
-GetProviderReference of this SignalrService.
+GetProviderReference of this Service.
 Deprecated: Use GetProviderConfigReference.
 */
-func (mg *SignalrService) GetProviderReference() *xpv1.Reference {
+func (mg *Service) GetProviderReference() *xpv1.Reference {
 	return mg.Spec.ProviderReference
 }
 
-// GetWriteConnectionSecretToReference of this SignalrService.
-func (mg *SignalrService) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
+// GetWriteConnectionSecretToReference of this Service.
+func (mg *Service) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
 	return mg.Spec.WriteConnectionSecretToReference
 }
 
-// SetConditions of this SignalrService.
-func (mg *SignalrService) SetConditions(c ...xpv1.Condition) {
+// SetConditions of this Service.
+func (mg *Service) SetConditions(c ...xpv1.Condition) {
 	mg.Status.SetConditions(c...)
 }
 
-// SetDeletionPolicy of this SignalrService.
-func (mg *SignalrService) SetDeletionPolicy(r xpv1.DeletionPolicy) {
+// SetDeletionPolicy of this Service.
+func (mg *Service) SetDeletionPolicy(r xpv1.DeletionPolicy) {
 	mg.Spec.DeletionPolicy = r
 }
 
-// SetProviderConfigReference of this SignalrService.
-func (mg *SignalrService) SetProviderConfigReference(r *xpv1.Reference) {
+// SetProviderConfigReference of this Service.
+func (mg *Service) SetProviderConfigReference(r *xpv1.Reference) {
 	mg.Spec.ProviderConfigReference = r
 }
 
 /*
-SetProviderReference of this SignalrService.
+SetProviderReference of this Service.
 Deprecated: Use SetProviderConfigReference.
 */
-func (mg *SignalrService) SetProviderReference(r *xpv1.Reference) {
+func (mg *Service) SetProviderReference(r *xpv1.Reference) {
 	mg.Spec.ProviderReference = r
 }
 
-// SetWriteConnectionSecretToReference of this SignalrService.
-func (mg *SignalrService) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
+// SetWriteConnectionSecretToReference of this Service.
+func (mg *Service) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
 	mg.Spec.WriteConnectionSecretToReference = r
 }
 
-// GetCondition of this SignalrServiceNetworkAcl.
-func (mg *SignalrServiceNetworkAcl) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
+// GetCondition of this ServiceNetworkAcl.
+func (mg *ServiceNetworkAcl) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
 	return mg.Status.GetCondition(ct)
 }
 
-// GetDeletionPolicy of this SignalrServiceNetworkAcl.
-func (mg *SignalrServiceNetworkAcl) GetDeletionPolicy() xpv1.DeletionPolicy {
+// GetDeletionPolicy of this ServiceNetworkAcl.
+func (mg *ServiceNetworkAcl) GetDeletionPolicy() xpv1.DeletionPolicy {
 	return mg.Spec.DeletionPolicy
 }
 
-// GetProviderConfigReference of this SignalrServiceNetworkAcl.
-func (mg *SignalrServiceNetworkAcl) GetProviderConfigReference() *xpv1.Reference {
+// GetProviderConfigReference of this ServiceNetworkAcl.
+func (mg *ServiceNetworkAcl) GetProviderConfigReference() *xpv1.Reference {
 	return mg.Spec.ProviderConfigReference
 }
 
 /*
-GetProviderReference of this SignalrServiceNetworkAcl.
+GetProviderReference of this ServiceNetworkAcl.
 Deprecated: Use GetProviderConfigReference.
 */
-func (mg *SignalrServiceNetworkAcl) GetProviderReference() *xpv1.Reference {
+func (mg *ServiceNetworkAcl) GetProviderReference() *xpv1.Reference {
 	return mg.Spec.ProviderReference
 }
 
-// GetWriteConnectionSecretToReference of this SignalrServiceNetworkAcl.
-func (mg *SignalrServiceNetworkAcl) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
+// GetWriteConnectionSecretToReference of this ServiceNetworkAcl.
+func (mg *ServiceNetworkAcl) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
 	return mg.Spec.WriteConnectionSecretToReference
 }
 
-// SetConditions of this SignalrServiceNetworkAcl.
-func (mg *SignalrServiceNetworkAcl) SetConditions(c ...xpv1.Condition) {
+// SetConditions of this ServiceNetworkAcl.
+func (mg *ServiceNetworkAcl) SetConditions(c ...xpv1.Condition) {
 	mg.Status.SetConditions(c...)
 }
 
-// SetDeletionPolicy of this SignalrServiceNetworkAcl.
-func (mg *SignalrServiceNetworkAcl) SetDeletionPolicy(r xpv1.DeletionPolicy) {
+// SetDeletionPolicy of this ServiceNetworkAcl.
+func (mg *ServiceNetworkAcl) SetDeletionPolicy(r xpv1.DeletionPolicy) {
 	mg.Spec.DeletionPolicy = r
 }
 
-// SetProviderConfigReference of this SignalrServiceNetworkAcl.
-func (mg *SignalrServiceNetworkAcl) SetProviderConfigReference(r *xpv1.Reference) {
+// SetProviderConfigReference of this ServiceNetworkAcl.
+func (mg *ServiceNetworkAcl) SetProviderConfigReference(r *xpv1.Reference) {
 	mg.Spec.ProviderConfigReference = r
 }
 
 /*
-SetProviderReference of this SignalrServiceNetworkAcl.
+SetProviderReference of this ServiceNetworkAcl.
 Deprecated: Use SetProviderConfigReference.
 */
-func (mg *SignalrServiceNetworkAcl) SetProviderReference(r *xpv1.Reference) {
+func (mg *ServiceNetworkAcl) SetProviderReference(r *xpv1.Reference) {
 	mg.Spec.ProviderReference = r
 }
 
-// SetWriteConnectionSecretToReference of this SignalrServiceNetworkAcl.
-func (mg *SignalrServiceNetworkAcl) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
+// SetWriteConnectionSecretToReference of this ServiceNetworkAcl.
+func (mg *ServiceNetworkAcl) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
 	mg.Spec.WriteConnectionSecretToReference = r
 }

@@ -19,58 +19,58 @@ package v1alpha1
 
 import xpv1 "github.com/crossplane/crossplane-runtime/apis/common/v1"
 
-// GetCondition of this DevspaceController.
-func (mg *DevspaceController) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
+// GetCondition of this Controller.
+func (mg *Controller) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
 	return mg.Status.GetCondition(ct)
 }
 
-// GetDeletionPolicy of this DevspaceController.
-func (mg *DevspaceController) GetDeletionPolicy() xpv1.DeletionPolicy {
+// GetDeletionPolicy of this Controller.
+func (mg *Controller) GetDeletionPolicy() xpv1.DeletionPolicy {
 	return mg.Spec.DeletionPolicy
 }
 
-// GetProviderConfigReference of this DevspaceController.
-func (mg *DevspaceController) GetProviderConfigReference() *xpv1.Reference {
+// GetProviderConfigReference of this Controller.
+func (mg *Controller) GetProviderConfigReference() *xpv1.Reference {
 	return mg.Spec.ProviderConfigReference
 }
 
 /*
-GetProviderReference of this DevspaceController.
+GetProviderReference of this Controller.
 Deprecated: Use GetProviderConfigReference.
 */
-func (mg *DevspaceController) GetProviderReference() *xpv1.Reference {
+func (mg *Controller) GetProviderReference() *xpv1.Reference {
 	return mg.Spec.ProviderReference
 }
 
-// GetWriteConnectionSecretToReference of this DevspaceController.
-func (mg *DevspaceController) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
+// GetWriteConnectionSecretToReference of this Controller.
+func (mg *Controller) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
 	return mg.Spec.WriteConnectionSecretToReference
 }
 
-// SetConditions of this DevspaceController.
-func (mg *DevspaceController) SetConditions(c ...xpv1.Condition) {
+// SetConditions of this Controller.
+func (mg *Controller) SetConditions(c ...xpv1.Condition) {
 	mg.Status.SetConditions(c...)
 }
 
-// SetDeletionPolicy of this DevspaceController.
-func (mg *DevspaceController) SetDeletionPolicy(r xpv1.DeletionPolicy) {
+// SetDeletionPolicy of this Controller.
+func (mg *Controller) SetDeletionPolicy(r xpv1.DeletionPolicy) {
 	mg.Spec.DeletionPolicy = r
 }
 
-// SetProviderConfigReference of this DevspaceController.
-func (mg *DevspaceController) SetProviderConfigReference(r *xpv1.Reference) {
+// SetProviderConfigReference of this Controller.
+func (mg *Controller) SetProviderConfigReference(r *xpv1.Reference) {
 	mg.Spec.ProviderConfigReference = r
 }
 
 /*
-SetProviderReference of this DevspaceController.
+SetProviderReference of this Controller.
 Deprecated: Use SetProviderConfigReference.
 */
-func (mg *DevspaceController) SetProviderReference(r *xpv1.Reference) {
+func (mg *Controller) SetProviderReference(r *xpv1.Reference) {
 	mg.Spec.ProviderReference = r
 }
 
-// SetWriteConnectionSecretToReference of this DevspaceController.
-func (mg *DevspaceController) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
+// SetWriteConnectionSecretToReference of this Controller.
+func (mg *Controller) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
 	mg.Spec.WriteConnectionSecretToReference = r
 }

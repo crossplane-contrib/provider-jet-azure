@@ -19,8 +19,8 @@ package v1alpha1
 
 import resource "github.com/crossplane/crossplane-runtime/pkg/resource"
 
-// GetItems of this DnsARecordList.
-func (l *DnsARecordList) GetItems() []resource.Managed {
+// GetItems of this ARecordList.
+func (l *ARecordList) GetItems() []resource.Managed {
 	items := make([]resource.Managed, len(l.Items))
 	for i := range l.Items {
 		items[i] = &l.Items[i]
@@ -28,8 +28,8 @@ func (l *DnsARecordList) GetItems() []resource.Managed {
 	return items
 }
 
-// GetItems of this DnsAaaaRecordList.
-func (l *DnsAaaaRecordList) GetItems() []resource.Managed {
+// GetItems of this AaaaRecordList.
+func (l *AaaaRecordList) GetItems() []resource.Managed {
 	items := make([]resource.Managed, len(l.Items))
 	for i := range l.Items {
 		items[i] = &l.Items[i]
@@ -37,8 +37,8 @@ func (l *DnsAaaaRecordList) GetItems() []resource.Managed {
 	return items
 }
 
-// GetItems of this DnsCaaRecordList.
-func (l *DnsCaaRecordList) GetItems() []resource.Managed {
+// GetItems of this CaaRecordList.
+func (l *CaaRecordList) GetItems() []resource.Managed {
 	items := make([]resource.Managed, len(l.Items))
 	for i := range l.Items {
 		items[i] = &l.Items[i]
@@ -46,8 +46,8 @@ func (l *DnsCaaRecordList) GetItems() []resource.Managed {
 	return items
 }
 
-// GetItems of this DnsCnameRecordList.
-func (l *DnsCnameRecordList) GetItems() []resource.Managed {
+// GetItems of this CnameRecordList.
+func (l *CnameRecordList) GetItems() []resource.Managed {
 	items := make([]resource.Managed, len(l.Items))
 	for i := range l.Items {
 		items[i] = &l.Items[i]
@@ -55,8 +55,8 @@ func (l *DnsCnameRecordList) GetItems() []resource.Managed {
 	return items
 }
 
-// GetItems of this DnsMxRecordList.
-func (l *DnsMxRecordList) GetItems() []resource.Managed {
+// GetItems of this MxRecordList.
+func (l *MxRecordList) GetItems() []resource.Managed {
 	items := make([]resource.Managed, len(l.Items))
 	for i := range l.Items {
 		items[i] = &l.Items[i]
@@ -64,8 +64,8 @@ func (l *DnsMxRecordList) GetItems() []resource.Managed {
 	return items
 }
 
-// GetItems of this DnsNsRecordList.
-func (l *DnsNsRecordList) GetItems() []resource.Managed {
+// GetItems of this NsRecordList.
+func (l *NsRecordList) GetItems() []resource.Managed {
 	items := make([]resource.Managed, len(l.Items))
 	for i := range l.Items {
 		items[i] = &l.Items[i]
@@ -73,8 +73,8 @@ func (l *DnsNsRecordList) GetItems() []resource.Managed {
 	return items
 }
 
-// GetItems of this DnsPtrRecordList.
-func (l *DnsPtrRecordList) GetItems() []resource.Managed {
+// GetItems of this PtrRecordList.
+func (l *PtrRecordList) GetItems() []resource.Managed {
 	items := make([]resource.Managed, len(l.Items))
 	for i := range l.Items {
 		items[i] = &l.Items[i]
@@ -82,8 +82,8 @@ func (l *DnsPtrRecordList) GetItems() []resource.Managed {
 	return items
 }
 
-// GetItems of this DnsSrvRecordList.
-func (l *DnsSrvRecordList) GetItems() []resource.Managed {
+// GetItems of this SrvRecordList.
+func (l *SrvRecordList) GetItems() []resource.Managed {
 	items := make([]resource.Managed, len(l.Items))
 	for i := range l.Items {
 		items[i] = &l.Items[i]
@@ -91,8 +91,8 @@ func (l *DnsSrvRecordList) GetItems() []resource.Managed {
 	return items
 }
 
-// GetItems of this DnsTxtRecordList.
-func (l *DnsTxtRecordList) GetItems() []resource.Managed {
+// GetItems of this TxtRecordList.
+func (l *TxtRecordList) GetItems() []resource.Managed {
 	items := make([]resource.Managed, len(l.Items))
 	for i := range l.Items {
 		items[i] = &l.Items[i]
@@ -100,8 +100,8 @@ func (l *DnsTxtRecordList) GetItems() []resource.Managed {
 	return items
 }
 
-// GetItems of this DnsZoneList.
-func (l *DnsZoneList) GetItems() []resource.Managed {
+// GetItems of this ZoneList.
+func (l *ZoneList) GetItems() []resource.Managed {
 	items := make([]resource.Managed, len(l.Items))
 	for i := range l.Items {
 		items[i] = &l.Items[i]

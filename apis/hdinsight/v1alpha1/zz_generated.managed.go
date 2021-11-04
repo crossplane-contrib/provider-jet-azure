@@ -19,450 +19,450 @@ package v1alpha1
 
 import xpv1 "github.com/crossplane/crossplane-runtime/apis/common/v1"
 
-// GetCondition of this HdinsightHadoopCluster.
-func (mg *HdinsightHadoopCluster) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
+// GetCondition of this HadoopCluster.
+func (mg *HadoopCluster) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
 	return mg.Status.GetCondition(ct)
 }
 
-// GetDeletionPolicy of this HdinsightHadoopCluster.
-func (mg *HdinsightHadoopCluster) GetDeletionPolicy() xpv1.DeletionPolicy {
+// GetDeletionPolicy of this HadoopCluster.
+func (mg *HadoopCluster) GetDeletionPolicy() xpv1.DeletionPolicy {
 	return mg.Spec.DeletionPolicy
 }
 
-// GetProviderConfigReference of this HdinsightHadoopCluster.
-func (mg *HdinsightHadoopCluster) GetProviderConfigReference() *xpv1.Reference {
+// GetProviderConfigReference of this HadoopCluster.
+func (mg *HadoopCluster) GetProviderConfigReference() *xpv1.Reference {
 	return mg.Spec.ProviderConfigReference
 }
 
 /*
-GetProviderReference of this HdinsightHadoopCluster.
+GetProviderReference of this HadoopCluster.
 Deprecated: Use GetProviderConfigReference.
 */
-func (mg *HdinsightHadoopCluster) GetProviderReference() *xpv1.Reference {
+func (mg *HadoopCluster) GetProviderReference() *xpv1.Reference {
 	return mg.Spec.ProviderReference
 }
 
-// GetWriteConnectionSecretToReference of this HdinsightHadoopCluster.
-func (mg *HdinsightHadoopCluster) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
+// GetWriteConnectionSecretToReference of this HadoopCluster.
+func (mg *HadoopCluster) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
 	return mg.Spec.WriteConnectionSecretToReference
 }
 
-// SetConditions of this HdinsightHadoopCluster.
-func (mg *HdinsightHadoopCluster) SetConditions(c ...xpv1.Condition) {
+// SetConditions of this HadoopCluster.
+func (mg *HadoopCluster) SetConditions(c ...xpv1.Condition) {
 	mg.Status.SetConditions(c...)
 }
 
-// SetDeletionPolicy of this HdinsightHadoopCluster.
-func (mg *HdinsightHadoopCluster) SetDeletionPolicy(r xpv1.DeletionPolicy) {
+// SetDeletionPolicy of this HadoopCluster.
+func (mg *HadoopCluster) SetDeletionPolicy(r xpv1.DeletionPolicy) {
 	mg.Spec.DeletionPolicy = r
 }
 
-// SetProviderConfigReference of this HdinsightHadoopCluster.
-func (mg *HdinsightHadoopCluster) SetProviderConfigReference(r *xpv1.Reference) {
+// SetProviderConfigReference of this HadoopCluster.
+func (mg *HadoopCluster) SetProviderConfigReference(r *xpv1.Reference) {
 	mg.Spec.ProviderConfigReference = r
 }
 
 /*
-SetProviderReference of this HdinsightHadoopCluster.
+SetProviderReference of this HadoopCluster.
 Deprecated: Use SetProviderConfigReference.
 */
-func (mg *HdinsightHadoopCluster) SetProviderReference(r *xpv1.Reference) {
+func (mg *HadoopCluster) SetProviderReference(r *xpv1.Reference) {
 	mg.Spec.ProviderReference = r
 }
 
-// SetWriteConnectionSecretToReference of this HdinsightHadoopCluster.
-func (mg *HdinsightHadoopCluster) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
+// SetWriteConnectionSecretToReference of this HadoopCluster.
+func (mg *HadoopCluster) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
 	mg.Spec.WriteConnectionSecretToReference = r
 }
 
-// GetCondition of this HdinsightHbaseCluster.
-func (mg *HdinsightHbaseCluster) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
+// GetCondition of this HbaseCluster.
+func (mg *HbaseCluster) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
 	return mg.Status.GetCondition(ct)
 }
 
-// GetDeletionPolicy of this HdinsightHbaseCluster.
-func (mg *HdinsightHbaseCluster) GetDeletionPolicy() xpv1.DeletionPolicy {
+// GetDeletionPolicy of this HbaseCluster.
+func (mg *HbaseCluster) GetDeletionPolicy() xpv1.DeletionPolicy {
 	return mg.Spec.DeletionPolicy
 }
 
-// GetProviderConfigReference of this HdinsightHbaseCluster.
-func (mg *HdinsightHbaseCluster) GetProviderConfigReference() *xpv1.Reference {
+// GetProviderConfigReference of this HbaseCluster.
+func (mg *HbaseCluster) GetProviderConfigReference() *xpv1.Reference {
 	return mg.Spec.ProviderConfigReference
 }
 
 /*
-GetProviderReference of this HdinsightHbaseCluster.
+GetProviderReference of this HbaseCluster.
 Deprecated: Use GetProviderConfigReference.
 */
-func (mg *HdinsightHbaseCluster) GetProviderReference() *xpv1.Reference {
+func (mg *HbaseCluster) GetProviderReference() *xpv1.Reference {
 	return mg.Spec.ProviderReference
 }
 
-// GetWriteConnectionSecretToReference of this HdinsightHbaseCluster.
-func (mg *HdinsightHbaseCluster) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
+// GetWriteConnectionSecretToReference of this HbaseCluster.
+func (mg *HbaseCluster) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
 	return mg.Spec.WriteConnectionSecretToReference
 }
 
-// SetConditions of this HdinsightHbaseCluster.
-func (mg *HdinsightHbaseCluster) SetConditions(c ...xpv1.Condition) {
+// SetConditions of this HbaseCluster.
+func (mg *HbaseCluster) SetConditions(c ...xpv1.Condition) {
 	mg.Status.SetConditions(c...)
 }
 
-// SetDeletionPolicy of this HdinsightHbaseCluster.
-func (mg *HdinsightHbaseCluster) SetDeletionPolicy(r xpv1.DeletionPolicy) {
+// SetDeletionPolicy of this HbaseCluster.
+func (mg *HbaseCluster) SetDeletionPolicy(r xpv1.DeletionPolicy) {
 	mg.Spec.DeletionPolicy = r
 }
 
-// SetProviderConfigReference of this HdinsightHbaseCluster.
-func (mg *HdinsightHbaseCluster) SetProviderConfigReference(r *xpv1.Reference) {
+// SetProviderConfigReference of this HbaseCluster.
+func (mg *HbaseCluster) SetProviderConfigReference(r *xpv1.Reference) {
 	mg.Spec.ProviderConfigReference = r
 }
 
 /*
-SetProviderReference of this HdinsightHbaseCluster.
+SetProviderReference of this HbaseCluster.
 Deprecated: Use SetProviderConfigReference.
 */
-func (mg *HdinsightHbaseCluster) SetProviderReference(r *xpv1.Reference) {
+func (mg *HbaseCluster) SetProviderReference(r *xpv1.Reference) {
 	mg.Spec.ProviderReference = r
 }
 
-// SetWriteConnectionSecretToReference of this HdinsightHbaseCluster.
-func (mg *HdinsightHbaseCluster) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
+// SetWriteConnectionSecretToReference of this HbaseCluster.
+func (mg *HbaseCluster) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
 	mg.Spec.WriteConnectionSecretToReference = r
 }
 
-// GetCondition of this HdinsightInteractiveQueryCluster.
-func (mg *HdinsightInteractiveQueryCluster) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
+// GetCondition of this InteractiveQueryCluster.
+func (mg *InteractiveQueryCluster) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
 	return mg.Status.GetCondition(ct)
 }
 
-// GetDeletionPolicy of this HdinsightInteractiveQueryCluster.
-func (mg *HdinsightInteractiveQueryCluster) GetDeletionPolicy() xpv1.DeletionPolicy {
+// GetDeletionPolicy of this InteractiveQueryCluster.
+func (mg *InteractiveQueryCluster) GetDeletionPolicy() xpv1.DeletionPolicy {
 	return mg.Spec.DeletionPolicy
 }
 
-// GetProviderConfigReference of this HdinsightInteractiveQueryCluster.
-func (mg *HdinsightInteractiveQueryCluster) GetProviderConfigReference() *xpv1.Reference {
+// GetProviderConfigReference of this InteractiveQueryCluster.
+func (mg *InteractiveQueryCluster) GetProviderConfigReference() *xpv1.Reference {
 	return mg.Spec.ProviderConfigReference
 }
 
 /*
-GetProviderReference of this HdinsightInteractiveQueryCluster.
+GetProviderReference of this InteractiveQueryCluster.
 Deprecated: Use GetProviderConfigReference.
 */
-func (mg *HdinsightInteractiveQueryCluster) GetProviderReference() *xpv1.Reference {
+func (mg *InteractiveQueryCluster) GetProviderReference() *xpv1.Reference {
 	return mg.Spec.ProviderReference
 }
 
-// GetWriteConnectionSecretToReference of this HdinsightInteractiveQueryCluster.
-func (mg *HdinsightInteractiveQueryCluster) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
+// GetWriteConnectionSecretToReference of this InteractiveQueryCluster.
+func (mg *InteractiveQueryCluster) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
 	return mg.Spec.WriteConnectionSecretToReference
 }
 
-// SetConditions of this HdinsightInteractiveQueryCluster.
-func (mg *HdinsightInteractiveQueryCluster) SetConditions(c ...xpv1.Condition) {
+// SetConditions of this InteractiveQueryCluster.
+func (mg *InteractiveQueryCluster) SetConditions(c ...xpv1.Condition) {
 	mg.Status.SetConditions(c...)
 }
 
-// SetDeletionPolicy of this HdinsightInteractiveQueryCluster.
-func (mg *HdinsightInteractiveQueryCluster) SetDeletionPolicy(r xpv1.DeletionPolicy) {
+// SetDeletionPolicy of this InteractiveQueryCluster.
+func (mg *InteractiveQueryCluster) SetDeletionPolicy(r xpv1.DeletionPolicy) {
 	mg.Spec.DeletionPolicy = r
 }
 
-// SetProviderConfigReference of this HdinsightInteractiveQueryCluster.
-func (mg *HdinsightInteractiveQueryCluster) SetProviderConfigReference(r *xpv1.Reference) {
+// SetProviderConfigReference of this InteractiveQueryCluster.
+func (mg *InteractiveQueryCluster) SetProviderConfigReference(r *xpv1.Reference) {
 	mg.Spec.ProviderConfigReference = r
 }
 
 /*
-SetProviderReference of this HdinsightInteractiveQueryCluster.
+SetProviderReference of this InteractiveQueryCluster.
 Deprecated: Use SetProviderConfigReference.
 */
-func (mg *HdinsightInteractiveQueryCluster) SetProviderReference(r *xpv1.Reference) {
+func (mg *InteractiveQueryCluster) SetProviderReference(r *xpv1.Reference) {
 	mg.Spec.ProviderReference = r
 }
 
-// SetWriteConnectionSecretToReference of this HdinsightInteractiveQueryCluster.
-func (mg *HdinsightInteractiveQueryCluster) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
+// SetWriteConnectionSecretToReference of this InteractiveQueryCluster.
+func (mg *InteractiveQueryCluster) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
 	mg.Spec.WriteConnectionSecretToReference = r
 }
 
-// GetCondition of this HdinsightKafkaCluster.
-func (mg *HdinsightKafkaCluster) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
+// GetCondition of this KafkaCluster.
+func (mg *KafkaCluster) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
 	return mg.Status.GetCondition(ct)
 }
 
-// GetDeletionPolicy of this HdinsightKafkaCluster.
-func (mg *HdinsightKafkaCluster) GetDeletionPolicy() xpv1.DeletionPolicy {
+// GetDeletionPolicy of this KafkaCluster.
+func (mg *KafkaCluster) GetDeletionPolicy() xpv1.DeletionPolicy {
 	return mg.Spec.DeletionPolicy
 }
 
-// GetProviderConfigReference of this HdinsightKafkaCluster.
-func (mg *HdinsightKafkaCluster) GetProviderConfigReference() *xpv1.Reference {
+// GetProviderConfigReference of this KafkaCluster.
+func (mg *KafkaCluster) GetProviderConfigReference() *xpv1.Reference {
 	return mg.Spec.ProviderConfigReference
 }
 
 /*
-GetProviderReference of this HdinsightKafkaCluster.
+GetProviderReference of this KafkaCluster.
 Deprecated: Use GetProviderConfigReference.
 */
-func (mg *HdinsightKafkaCluster) GetProviderReference() *xpv1.Reference {
+func (mg *KafkaCluster) GetProviderReference() *xpv1.Reference {
 	return mg.Spec.ProviderReference
 }
 
-// GetWriteConnectionSecretToReference of this HdinsightKafkaCluster.
-func (mg *HdinsightKafkaCluster) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
+// GetWriteConnectionSecretToReference of this KafkaCluster.
+func (mg *KafkaCluster) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
 	return mg.Spec.WriteConnectionSecretToReference
 }
 
-// SetConditions of this HdinsightKafkaCluster.
-func (mg *HdinsightKafkaCluster) SetConditions(c ...xpv1.Condition) {
+// SetConditions of this KafkaCluster.
+func (mg *KafkaCluster) SetConditions(c ...xpv1.Condition) {
 	mg.Status.SetConditions(c...)
 }
 
-// SetDeletionPolicy of this HdinsightKafkaCluster.
-func (mg *HdinsightKafkaCluster) SetDeletionPolicy(r xpv1.DeletionPolicy) {
+// SetDeletionPolicy of this KafkaCluster.
+func (mg *KafkaCluster) SetDeletionPolicy(r xpv1.DeletionPolicy) {
 	mg.Spec.DeletionPolicy = r
 }
 
-// SetProviderConfigReference of this HdinsightKafkaCluster.
-func (mg *HdinsightKafkaCluster) SetProviderConfigReference(r *xpv1.Reference) {
+// SetProviderConfigReference of this KafkaCluster.
+func (mg *KafkaCluster) SetProviderConfigReference(r *xpv1.Reference) {
 	mg.Spec.ProviderConfigReference = r
 }
 
 /*
-SetProviderReference of this HdinsightKafkaCluster.
+SetProviderReference of this KafkaCluster.
 Deprecated: Use SetProviderConfigReference.
 */
-func (mg *HdinsightKafkaCluster) SetProviderReference(r *xpv1.Reference) {
+func (mg *KafkaCluster) SetProviderReference(r *xpv1.Reference) {
 	mg.Spec.ProviderReference = r
 }
 
-// SetWriteConnectionSecretToReference of this HdinsightKafkaCluster.
-func (mg *HdinsightKafkaCluster) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
+// SetWriteConnectionSecretToReference of this KafkaCluster.
+func (mg *KafkaCluster) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
 	mg.Spec.WriteConnectionSecretToReference = r
 }
 
-// GetCondition of this HdinsightMlServicesCluster.
-func (mg *HdinsightMlServicesCluster) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
+// GetCondition of this MlServicesCluster.
+func (mg *MlServicesCluster) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
 	return mg.Status.GetCondition(ct)
 }
 
-// GetDeletionPolicy of this HdinsightMlServicesCluster.
-func (mg *HdinsightMlServicesCluster) GetDeletionPolicy() xpv1.DeletionPolicy {
+// GetDeletionPolicy of this MlServicesCluster.
+func (mg *MlServicesCluster) GetDeletionPolicy() xpv1.DeletionPolicy {
 	return mg.Spec.DeletionPolicy
 }
 
-// GetProviderConfigReference of this HdinsightMlServicesCluster.
-func (mg *HdinsightMlServicesCluster) GetProviderConfigReference() *xpv1.Reference {
+// GetProviderConfigReference of this MlServicesCluster.
+func (mg *MlServicesCluster) GetProviderConfigReference() *xpv1.Reference {
 	return mg.Spec.ProviderConfigReference
 }
 
 /*
-GetProviderReference of this HdinsightMlServicesCluster.
+GetProviderReference of this MlServicesCluster.
 Deprecated: Use GetProviderConfigReference.
 */
-func (mg *HdinsightMlServicesCluster) GetProviderReference() *xpv1.Reference {
+func (mg *MlServicesCluster) GetProviderReference() *xpv1.Reference {
 	return mg.Spec.ProviderReference
 }
 
-// GetWriteConnectionSecretToReference of this HdinsightMlServicesCluster.
-func (mg *HdinsightMlServicesCluster) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
+// GetWriteConnectionSecretToReference of this MlServicesCluster.
+func (mg *MlServicesCluster) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
 	return mg.Spec.WriteConnectionSecretToReference
 }
 
-// SetConditions of this HdinsightMlServicesCluster.
-func (mg *HdinsightMlServicesCluster) SetConditions(c ...xpv1.Condition) {
+// SetConditions of this MlServicesCluster.
+func (mg *MlServicesCluster) SetConditions(c ...xpv1.Condition) {
 	mg.Status.SetConditions(c...)
 }
 
-// SetDeletionPolicy of this HdinsightMlServicesCluster.
-func (mg *HdinsightMlServicesCluster) SetDeletionPolicy(r xpv1.DeletionPolicy) {
+// SetDeletionPolicy of this MlServicesCluster.
+func (mg *MlServicesCluster) SetDeletionPolicy(r xpv1.DeletionPolicy) {
 	mg.Spec.DeletionPolicy = r
 }
 
-// SetProviderConfigReference of this HdinsightMlServicesCluster.
-func (mg *HdinsightMlServicesCluster) SetProviderConfigReference(r *xpv1.Reference) {
+// SetProviderConfigReference of this MlServicesCluster.
+func (mg *MlServicesCluster) SetProviderConfigReference(r *xpv1.Reference) {
 	mg.Spec.ProviderConfigReference = r
 }
 
 /*
-SetProviderReference of this HdinsightMlServicesCluster.
+SetProviderReference of this MlServicesCluster.
 Deprecated: Use SetProviderConfigReference.
 */
-func (mg *HdinsightMlServicesCluster) SetProviderReference(r *xpv1.Reference) {
+func (mg *MlServicesCluster) SetProviderReference(r *xpv1.Reference) {
 	mg.Spec.ProviderReference = r
 }
 
-// SetWriteConnectionSecretToReference of this HdinsightMlServicesCluster.
-func (mg *HdinsightMlServicesCluster) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
+// SetWriteConnectionSecretToReference of this MlServicesCluster.
+func (mg *MlServicesCluster) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
 	mg.Spec.WriteConnectionSecretToReference = r
 }
 
-// GetCondition of this HdinsightRserverCluster.
-func (mg *HdinsightRserverCluster) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
+// GetCondition of this RserverCluster.
+func (mg *RserverCluster) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
 	return mg.Status.GetCondition(ct)
 }
 
-// GetDeletionPolicy of this HdinsightRserverCluster.
-func (mg *HdinsightRserverCluster) GetDeletionPolicy() xpv1.DeletionPolicy {
+// GetDeletionPolicy of this RserverCluster.
+func (mg *RserverCluster) GetDeletionPolicy() xpv1.DeletionPolicy {
 	return mg.Spec.DeletionPolicy
 }
 
-// GetProviderConfigReference of this HdinsightRserverCluster.
-func (mg *HdinsightRserverCluster) GetProviderConfigReference() *xpv1.Reference {
+// GetProviderConfigReference of this RserverCluster.
+func (mg *RserverCluster) GetProviderConfigReference() *xpv1.Reference {
 	return mg.Spec.ProviderConfigReference
 }
 
 /*
-GetProviderReference of this HdinsightRserverCluster.
+GetProviderReference of this RserverCluster.
 Deprecated: Use GetProviderConfigReference.
 */
-func (mg *HdinsightRserverCluster) GetProviderReference() *xpv1.Reference {
+func (mg *RserverCluster) GetProviderReference() *xpv1.Reference {
 	return mg.Spec.ProviderReference
 }
 
-// GetWriteConnectionSecretToReference of this HdinsightRserverCluster.
-func (mg *HdinsightRserverCluster) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
+// GetWriteConnectionSecretToReference of this RserverCluster.
+func (mg *RserverCluster) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
 	return mg.Spec.WriteConnectionSecretToReference
 }
 
-// SetConditions of this HdinsightRserverCluster.
-func (mg *HdinsightRserverCluster) SetConditions(c ...xpv1.Condition) {
+// SetConditions of this RserverCluster.
+func (mg *RserverCluster) SetConditions(c ...xpv1.Condition) {
 	mg.Status.SetConditions(c...)
 }
 
-// SetDeletionPolicy of this HdinsightRserverCluster.
-func (mg *HdinsightRserverCluster) SetDeletionPolicy(r xpv1.DeletionPolicy) {
+// SetDeletionPolicy of this RserverCluster.
+func (mg *RserverCluster) SetDeletionPolicy(r xpv1.DeletionPolicy) {
 	mg.Spec.DeletionPolicy = r
 }
 
-// SetProviderConfigReference of this HdinsightRserverCluster.
-func (mg *HdinsightRserverCluster) SetProviderConfigReference(r *xpv1.Reference) {
+// SetProviderConfigReference of this RserverCluster.
+func (mg *RserverCluster) SetProviderConfigReference(r *xpv1.Reference) {
 	mg.Spec.ProviderConfigReference = r
 }
 
 /*
-SetProviderReference of this HdinsightRserverCluster.
+SetProviderReference of this RserverCluster.
 Deprecated: Use SetProviderConfigReference.
 */
-func (mg *HdinsightRserverCluster) SetProviderReference(r *xpv1.Reference) {
+func (mg *RserverCluster) SetProviderReference(r *xpv1.Reference) {
 	mg.Spec.ProviderReference = r
 }
 
-// SetWriteConnectionSecretToReference of this HdinsightRserverCluster.
-func (mg *HdinsightRserverCluster) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
+// SetWriteConnectionSecretToReference of this RserverCluster.
+func (mg *RserverCluster) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
 	mg.Spec.WriteConnectionSecretToReference = r
 }
 
-// GetCondition of this HdinsightSparkCluster.
-func (mg *HdinsightSparkCluster) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
+// GetCondition of this SparkCluster.
+func (mg *SparkCluster) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
 	return mg.Status.GetCondition(ct)
 }
 
-// GetDeletionPolicy of this HdinsightSparkCluster.
-func (mg *HdinsightSparkCluster) GetDeletionPolicy() xpv1.DeletionPolicy {
+// GetDeletionPolicy of this SparkCluster.
+func (mg *SparkCluster) GetDeletionPolicy() xpv1.DeletionPolicy {
 	return mg.Spec.DeletionPolicy
 }
 
-// GetProviderConfigReference of this HdinsightSparkCluster.
-func (mg *HdinsightSparkCluster) GetProviderConfigReference() *xpv1.Reference {
+// GetProviderConfigReference of this SparkCluster.
+func (mg *SparkCluster) GetProviderConfigReference() *xpv1.Reference {
 	return mg.Spec.ProviderConfigReference
 }
 
 /*
-GetProviderReference of this HdinsightSparkCluster.
+GetProviderReference of this SparkCluster.
 Deprecated: Use GetProviderConfigReference.
 */
-func (mg *HdinsightSparkCluster) GetProviderReference() *xpv1.Reference {
+func (mg *SparkCluster) GetProviderReference() *xpv1.Reference {
 	return mg.Spec.ProviderReference
 }
 
-// GetWriteConnectionSecretToReference of this HdinsightSparkCluster.
-func (mg *HdinsightSparkCluster) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
+// GetWriteConnectionSecretToReference of this SparkCluster.
+func (mg *SparkCluster) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
 	return mg.Spec.WriteConnectionSecretToReference
 }
 
-// SetConditions of this HdinsightSparkCluster.
-func (mg *HdinsightSparkCluster) SetConditions(c ...xpv1.Condition) {
+// SetConditions of this SparkCluster.
+func (mg *SparkCluster) SetConditions(c ...xpv1.Condition) {
 	mg.Status.SetConditions(c...)
 }
 
-// SetDeletionPolicy of this HdinsightSparkCluster.
-func (mg *HdinsightSparkCluster) SetDeletionPolicy(r xpv1.DeletionPolicy) {
+// SetDeletionPolicy of this SparkCluster.
+func (mg *SparkCluster) SetDeletionPolicy(r xpv1.DeletionPolicy) {
 	mg.Spec.DeletionPolicy = r
 }
 
-// SetProviderConfigReference of this HdinsightSparkCluster.
-func (mg *HdinsightSparkCluster) SetProviderConfigReference(r *xpv1.Reference) {
+// SetProviderConfigReference of this SparkCluster.
+func (mg *SparkCluster) SetProviderConfigReference(r *xpv1.Reference) {
 	mg.Spec.ProviderConfigReference = r
 }
 
 /*
-SetProviderReference of this HdinsightSparkCluster.
+SetProviderReference of this SparkCluster.
 Deprecated: Use SetProviderConfigReference.
 */
-func (mg *HdinsightSparkCluster) SetProviderReference(r *xpv1.Reference) {
+func (mg *SparkCluster) SetProviderReference(r *xpv1.Reference) {
 	mg.Spec.ProviderReference = r
 }
 
-// SetWriteConnectionSecretToReference of this HdinsightSparkCluster.
-func (mg *HdinsightSparkCluster) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
+// SetWriteConnectionSecretToReference of this SparkCluster.
+func (mg *SparkCluster) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
 	mg.Spec.WriteConnectionSecretToReference = r
 }
 
-// GetCondition of this HdinsightStormCluster.
-func (mg *HdinsightStormCluster) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
+// GetCondition of this StormCluster.
+func (mg *StormCluster) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
 	return mg.Status.GetCondition(ct)
 }
 
-// GetDeletionPolicy of this HdinsightStormCluster.
-func (mg *HdinsightStormCluster) GetDeletionPolicy() xpv1.DeletionPolicy {
+// GetDeletionPolicy of this StormCluster.
+func (mg *StormCluster) GetDeletionPolicy() xpv1.DeletionPolicy {
 	return mg.Spec.DeletionPolicy
 }
 
-// GetProviderConfigReference of this HdinsightStormCluster.
-func (mg *HdinsightStormCluster) GetProviderConfigReference() *xpv1.Reference {
+// GetProviderConfigReference of this StormCluster.
+func (mg *StormCluster) GetProviderConfigReference() *xpv1.Reference {
 	return mg.Spec.ProviderConfigReference
 }
 
 /*
-GetProviderReference of this HdinsightStormCluster.
+GetProviderReference of this StormCluster.
 Deprecated: Use GetProviderConfigReference.
 */
-func (mg *HdinsightStormCluster) GetProviderReference() *xpv1.Reference {
+func (mg *StormCluster) GetProviderReference() *xpv1.Reference {
 	return mg.Spec.ProviderReference
 }
 
-// GetWriteConnectionSecretToReference of this HdinsightStormCluster.
-func (mg *HdinsightStormCluster) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
+// GetWriteConnectionSecretToReference of this StormCluster.
+func (mg *StormCluster) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
 	return mg.Spec.WriteConnectionSecretToReference
 }
 
-// SetConditions of this HdinsightStormCluster.
-func (mg *HdinsightStormCluster) SetConditions(c ...xpv1.Condition) {
+// SetConditions of this StormCluster.
+func (mg *StormCluster) SetConditions(c ...xpv1.Condition) {
 	mg.Status.SetConditions(c...)
 }
 
-// SetDeletionPolicy of this HdinsightStormCluster.
-func (mg *HdinsightStormCluster) SetDeletionPolicy(r xpv1.DeletionPolicy) {
+// SetDeletionPolicy of this StormCluster.
+func (mg *StormCluster) SetDeletionPolicy(r xpv1.DeletionPolicy) {
 	mg.Spec.DeletionPolicy = r
 }
 
-// SetProviderConfigReference of this HdinsightStormCluster.
-func (mg *HdinsightStormCluster) SetProviderConfigReference(r *xpv1.Reference) {
+// SetProviderConfigReference of this StormCluster.
+func (mg *StormCluster) SetProviderConfigReference(r *xpv1.Reference) {
 	mg.Spec.ProviderConfigReference = r
 }
 
 /*
-SetProviderReference of this HdinsightStormCluster.
+SetProviderReference of this StormCluster.
 Deprecated: Use SetProviderConfigReference.
 */
-func (mg *HdinsightStormCluster) SetProviderReference(r *xpv1.Reference) {
+func (mg *StormCluster) SetProviderReference(r *xpv1.Reference) {
 	mg.Spec.ProviderReference = r
 }
 
-// SetWriteConnectionSecretToReference of this HdinsightStormCluster.
-func (mg *HdinsightStormCluster) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
+// SetWriteConnectionSecretToReference of this StormCluster.
+func (mg *StormCluster) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
 	mg.Spec.WriteConnectionSecretToReference = r
 }

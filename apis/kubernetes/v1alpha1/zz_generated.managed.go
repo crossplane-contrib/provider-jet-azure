@@ -19,114 +19,114 @@ package v1alpha1
 
 import xpv1 "github.com/crossplane/crossplane-runtime/apis/common/v1"
 
-// GetCondition of this KubernetesCluster.
-func (mg *KubernetesCluster) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
+// GetCondition of this Cluster.
+func (mg *Cluster) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
 	return mg.Status.GetCondition(ct)
 }
 
-// GetDeletionPolicy of this KubernetesCluster.
-func (mg *KubernetesCluster) GetDeletionPolicy() xpv1.DeletionPolicy {
+// GetDeletionPolicy of this Cluster.
+func (mg *Cluster) GetDeletionPolicy() xpv1.DeletionPolicy {
 	return mg.Spec.DeletionPolicy
 }
 
-// GetProviderConfigReference of this KubernetesCluster.
-func (mg *KubernetesCluster) GetProviderConfigReference() *xpv1.Reference {
+// GetProviderConfigReference of this Cluster.
+func (mg *Cluster) GetProviderConfigReference() *xpv1.Reference {
 	return mg.Spec.ProviderConfigReference
 }
 
 /*
-GetProviderReference of this KubernetesCluster.
+GetProviderReference of this Cluster.
 Deprecated: Use GetProviderConfigReference.
 */
-func (mg *KubernetesCluster) GetProviderReference() *xpv1.Reference {
+func (mg *Cluster) GetProviderReference() *xpv1.Reference {
 	return mg.Spec.ProviderReference
 }
 
-// GetWriteConnectionSecretToReference of this KubernetesCluster.
-func (mg *KubernetesCluster) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
+// GetWriteConnectionSecretToReference of this Cluster.
+func (mg *Cluster) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
 	return mg.Spec.WriteConnectionSecretToReference
 }
 
-// SetConditions of this KubernetesCluster.
-func (mg *KubernetesCluster) SetConditions(c ...xpv1.Condition) {
+// SetConditions of this Cluster.
+func (mg *Cluster) SetConditions(c ...xpv1.Condition) {
 	mg.Status.SetConditions(c...)
 }
 
-// SetDeletionPolicy of this KubernetesCluster.
-func (mg *KubernetesCluster) SetDeletionPolicy(r xpv1.DeletionPolicy) {
+// SetDeletionPolicy of this Cluster.
+func (mg *Cluster) SetDeletionPolicy(r xpv1.DeletionPolicy) {
 	mg.Spec.DeletionPolicy = r
 }
 
-// SetProviderConfigReference of this KubernetesCluster.
-func (mg *KubernetesCluster) SetProviderConfigReference(r *xpv1.Reference) {
+// SetProviderConfigReference of this Cluster.
+func (mg *Cluster) SetProviderConfigReference(r *xpv1.Reference) {
 	mg.Spec.ProviderConfigReference = r
 }
 
 /*
-SetProviderReference of this KubernetesCluster.
+SetProviderReference of this Cluster.
 Deprecated: Use SetProviderConfigReference.
 */
-func (mg *KubernetesCluster) SetProviderReference(r *xpv1.Reference) {
+func (mg *Cluster) SetProviderReference(r *xpv1.Reference) {
 	mg.Spec.ProviderReference = r
 }
 
-// SetWriteConnectionSecretToReference of this KubernetesCluster.
-func (mg *KubernetesCluster) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
+// SetWriteConnectionSecretToReference of this Cluster.
+func (mg *Cluster) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
 	mg.Spec.WriteConnectionSecretToReference = r
 }
 
-// GetCondition of this KubernetesClusterNodePool.
-func (mg *KubernetesClusterNodePool) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
+// GetCondition of this ClusterNodePool.
+func (mg *ClusterNodePool) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
 	return mg.Status.GetCondition(ct)
 }
 
-// GetDeletionPolicy of this KubernetesClusterNodePool.
-func (mg *KubernetesClusterNodePool) GetDeletionPolicy() xpv1.DeletionPolicy {
+// GetDeletionPolicy of this ClusterNodePool.
+func (mg *ClusterNodePool) GetDeletionPolicy() xpv1.DeletionPolicy {
 	return mg.Spec.DeletionPolicy
 }
 
-// GetProviderConfigReference of this KubernetesClusterNodePool.
-func (mg *KubernetesClusterNodePool) GetProviderConfigReference() *xpv1.Reference {
+// GetProviderConfigReference of this ClusterNodePool.
+func (mg *ClusterNodePool) GetProviderConfigReference() *xpv1.Reference {
 	return mg.Spec.ProviderConfigReference
 }
 
 /*
-GetProviderReference of this KubernetesClusterNodePool.
+GetProviderReference of this ClusterNodePool.
 Deprecated: Use GetProviderConfigReference.
 */
-func (mg *KubernetesClusterNodePool) GetProviderReference() *xpv1.Reference {
+func (mg *ClusterNodePool) GetProviderReference() *xpv1.Reference {
 	return mg.Spec.ProviderReference
 }
 
-// GetWriteConnectionSecretToReference of this KubernetesClusterNodePool.
-func (mg *KubernetesClusterNodePool) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
+// GetWriteConnectionSecretToReference of this ClusterNodePool.
+func (mg *ClusterNodePool) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
 	return mg.Spec.WriteConnectionSecretToReference
 }
 
-// SetConditions of this KubernetesClusterNodePool.
-func (mg *KubernetesClusterNodePool) SetConditions(c ...xpv1.Condition) {
+// SetConditions of this ClusterNodePool.
+func (mg *ClusterNodePool) SetConditions(c ...xpv1.Condition) {
 	mg.Status.SetConditions(c...)
 }
 
-// SetDeletionPolicy of this KubernetesClusterNodePool.
-func (mg *KubernetesClusterNodePool) SetDeletionPolicy(r xpv1.DeletionPolicy) {
+// SetDeletionPolicy of this ClusterNodePool.
+func (mg *ClusterNodePool) SetDeletionPolicy(r xpv1.DeletionPolicy) {
 	mg.Spec.DeletionPolicy = r
 }
 
-// SetProviderConfigReference of this KubernetesClusterNodePool.
-func (mg *KubernetesClusterNodePool) SetProviderConfigReference(r *xpv1.Reference) {
+// SetProviderConfigReference of this ClusterNodePool.
+func (mg *ClusterNodePool) SetProviderConfigReference(r *xpv1.Reference) {
 	mg.Spec.ProviderConfigReference = r
 }
 
 /*
-SetProviderReference of this KubernetesClusterNodePool.
+SetProviderReference of this ClusterNodePool.
 Deprecated: Use SetProviderConfigReference.
 */
-func (mg *KubernetesClusterNodePool) SetProviderReference(r *xpv1.Reference) {
+func (mg *ClusterNodePool) SetProviderReference(r *xpv1.Reference) {
 	mg.Spec.ProviderReference = r
 }
 
-// SetWriteConnectionSecretToReference of this KubernetesClusterNodePool.
-func (mg *KubernetesClusterNodePool) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
+// SetWriteConnectionSecretToReference of this ClusterNodePool.
+func (mg *ClusterNodePool) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
 	mg.Spec.WriteConnectionSecretToReference = r
 }

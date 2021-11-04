@@ -19,8 +19,8 @@ package v1alpha1
 
 import resource "github.com/crossplane/crossplane-runtime/pkg/resource"
 
-// GetItems of this VirtualDesktopApplicationList.
-func (l *VirtualDesktopApplicationList) GetItems() []resource.Managed {
+// GetItems of this DesktopApplicationList.
+func (l *DesktopApplicationList) GetItems() []resource.Managed {
 	items := make([]resource.Managed, len(l.Items))
 	for i := range l.Items {
 		items[i] = &l.Items[i]
@@ -28,8 +28,8 @@ func (l *VirtualDesktopApplicationList) GetItems() []resource.Managed {
 	return items
 }
 
-// GetItems of this VirtualDesktopHostPoolList.
-func (l *VirtualDesktopHostPoolList) GetItems() []resource.Managed {
+// GetItems of this DesktopHostPoolList.
+func (l *DesktopHostPoolList) GetItems() []resource.Managed {
 	items := make([]resource.Managed, len(l.Items))
 	for i := range l.Items {
 		items[i] = &l.Items[i]
@@ -37,8 +37,8 @@ func (l *VirtualDesktopHostPoolList) GetItems() []resource.Managed {
 	return items
 }
 
-// GetItems of this VirtualHubConnectionList.
-func (l *VirtualHubConnectionList) GetItems() []resource.Managed {
+// GetItems of this NetworkGatewayConnectionList.
+func (l *NetworkGatewayConnectionList) GetItems() []resource.Managed {
 	items := make([]resource.Managed, len(l.Items))
 	for i := range l.Items {
 		items[i] = &l.Items[i]
@@ -46,8 +46,8 @@ func (l *VirtualHubConnectionList) GetItems() []resource.Managed {
 	return items
 }
 
-// GetItems of this VirtualHubIpList.
-func (l *VirtualHubIpList) GetItems() []resource.Managed {
+// GetItems of this NetworkGatewayList.
+func (l *NetworkGatewayList) GetItems() []resource.Managed {
 	items := make([]resource.Managed, len(l.Items))
 	for i := range l.Items {
 		items[i] = &l.Items[i]
@@ -55,8 +55,8 @@ func (l *VirtualHubIpList) GetItems() []resource.Managed {
 	return items
 }
 
-// GetItems of this VirtualHubRouteTableList.
-func (l *VirtualHubRouteTableList) GetItems() []resource.Managed {
+// GetItems of this NetworkList.
+func (l *NetworkList) GetItems() []resource.Managed {
 	items := make([]resource.Managed, len(l.Items))
 	for i := range l.Items {
 		items[i] = &l.Items[i]
@@ -64,8 +64,8 @@ func (l *VirtualHubRouteTableList) GetItems() []resource.Managed {
 	return items
 }
 
-// GetItems of this VirtualHubSecurityPartnerProviderList.
-func (l *VirtualHubSecurityPartnerProviderList) GetItems() []resource.Managed {
+// GetItems of this NetworkPeeringList.
+func (l *NetworkPeeringList) GetItems() []resource.Managed {
 	items := make([]resource.Managed, len(l.Items))
 	for i := range l.Items {
 		items[i] = &l.Items[i]
@@ -73,44 +73,8 @@ func (l *VirtualHubSecurityPartnerProviderList) GetItems() []resource.Managed {
 	return items
 }
 
-// GetItems of this VirtualNetworkGatewayConnectionList.
-func (l *VirtualNetworkGatewayConnectionList) GetItems() []resource.Managed {
-	items := make([]resource.Managed, len(l.Items))
-	for i := range l.Items {
-		items[i] = &l.Items[i]
-	}
-	return items
-}
-
-// GetItems of this VirtualNetworkGatewayList.
-func (l *VirtualNetworkGatewayList) GetItems() []resource.Managed {
-	items := make([]resource.Managed, len(l.Items))
-	for i := range l.Items {
-		items[i] = &l.Items[i]
-	}
-	return items
-}
-
-// GetItems of this VirtualNetworkList.
-func (l *VirtualNetworkList) GetItems() []resource.Managed {
-	items := make([]resource.Managed, len(l.Items))
-	for i := range l.Items {
-		items[i] = &l.Items[i]
-	}
-	return items
-}
-
-// GetItems of this VirtualNetworkPeeringList.
-func (l *VirtualNetworkPeeringList) GetItems() []resource.Managed {
-	items := make([]resource.Managed, len(l.Items))
-	for i := range l.Items {
-		items[i] = &l.Items[i]
-	}
-	return items
-}
-
-// GetItems of this VirtualWanList.
-func (l *VirtualWanList) GetItems() []resource.Managed {
+// GetItems of this WanList.
+func (l *WanList) GetItems() []resource.Managed {
 	items := make([]resource.Managed, len(l.Items))
 	for i := range l.Items {
 		items[i] = &l.Items[i]

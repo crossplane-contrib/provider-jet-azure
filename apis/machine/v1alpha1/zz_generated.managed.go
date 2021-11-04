@@ -19,226 +19,226 @@ package v1alpha1
 
 import xpv1 "github.com/crossplane/crossplane-runtime/apis/common/v1"
 
-// GetCondition of this MachineLearningComputeCluster.
-func (mg *MachineLearningComputeCluster) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
+// GetCondition of this LearningComputeCluster.
+func (mg *LearningComputeCluster) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
 	return mg.Status.GetCondition(ct)
 }
 
-// GetDeletionPolicy of this MachineLearningComputeCluster.
-func (mg *MachineLearningComputeCluster) GetDeletionPolicy() xpv1.DeletionPolicy {
+// GetDeletionPolicy of this LearningComputeCluster.
+func (mg *LearningComputeCluster) GetDeletionPolicy() xpv1.DeletionPolicy {
 	return mg.Spec.DeletionPolicy
 }
 
-// GetProviderConfigReference of this MachineLearningComputeCluster.
-func (mg *MachineLearningComputeCluster) GetProviderConfigReference() *xpv1.Reference {
+// GetProviderConfigReference of this LearningComputeCluster.
+func (mg *LearningComputeCluster) GetProviderConfigReference() *xpv1.Reference {
 	return mg.Spec.ProviderConfigReference
 }
 
 /*
-GetProviderReference of this MachineLearningComputeCluster.
+GetProviderReference of this LearningComputeCluster.
 Deprecated: Use GetProviderConfigReference.
 */
-func (mg *MachineLearningComputeCluster) GetProviderReference() *xpv1.Reference {
+func (mg *LearningComputeCluster) GetProviderReference() *xpv1.Reference {
 	return mg.Spec.ProviderReference
 }
 
-// GetWriteConnectionSecretToReference of this MachineLearningComputeCluster.
-func (mg *MachineLearningComputeCluster) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
+// GetWriteConnectionSecretToReference of this LearningComputeCluster.
+func (mg *LearningComputeCluster) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
 	return mg.Spec.WriteConnectionSecretToReference
 }
 
-// SetConditions of this MachineLearningComputeCluster.
-func (mg *MachineLearningComputeCluster) SetConditions(c ...xpv1.Condition) {
+// SetConditions of this LearningComputeCluster.
+func (mg *LearningComputeCluster) SetConditions(c ...xpv1.Condition) {
 	mg.Status.SetConditions(c...)
 }
 
-// SetDeletionPolicy of this MachineLearningComputeCluster.
-func (mg *MachineLearningComputeCluster) SetDeletionPolicy(r xpv1.DeletionPolicy) {
+// SetDeletionPolicy of this LearningComputeCluster.
+func (mg *LearningComputeCluster) SetDeletionPolicy(r xpv1.DeletionPolicy) {
 	mg.Spec.DeletionPolicy = r
 }
 
-// SetProviderConfigReference of this MachineLearningComputeCluster.
-func (mg *MachineLearningComputeCluster) SetProviderConfigReference(r *xpv1.Reference) {
+// SetProviderConfigReference of this LearningComputeCluster.
+func (mg *LearningComputeCluster) SetProviderConfigReference(r *xpv1.Reference) {
 	mg.Spec.ProviderConfigReference = r
 }
 
 /*
-SetProviderReference of this MachineLearningComputeCluster.
+SetProviderReference of this LearningComputeCluster.
 Deprecated: Use SetProviderConfigReference.
 */
-func (mg *MachineLearningComputeCluster) SetProviderReference(r *xpv1.Reference) {
+func (mg *LearningComputeCluster) SetProviderReference(r *xpv1.Reference) {
 	mg.Spec.ProviderReference = r
 }
 
-// SetWriteConnectionSecretToReference of this MachineLearningComputeCluster.
-func (mg *MachineLearningComputeCluster) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
+// SetWriteConnectionSecretToReference of this LearningComputeCluster.
+func (mg *LearningComputeCluster) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
 	mg.Spec.WriteConnectionSecretToReference = r
 }
 
-// GetCondition of this MachineLearningComputeInstance.
-func (mg *MachineLearningComputeInstance) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
+// GetCondition of this LearningComputeInstance.
+func (mg *LearningComputeInstance) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
 	return mg.Status.GetCondition(ct)
 }
 
-// GetDeletionPolicy of this MachineLearningComputeInstance.
-func (mg *MachineLearningComputeInstance) GetDeletionPolicy() xpv1.DeletionPolicy {
+// GetDeletionPolicy of this LearningComputeInstance.
+func (mg *LearningComputeInstance) GetDeletionPolicy() xpv1.DeletionPolicy {
 	return mg.Spec.DeletionPolicy
 }
 
-// GetProviderConfigReference of this MachineLearningComputeInstance.
-func (mg *MachineLearningComputeInstance) GetProviderConfigReference() *xpv1.Reference {
+// GetProviderConfigReference of this LearningComputeInstance.
+func (mg *LearningComputeInstance) GetProviderConfigReference() *xpv1.Reference {
 	return mg.Spec.ProviderConfigReference
 }
 
 /*
-GetProviderReference of this MachineLearningComputeInstance.
+GetProviderReference of this LearningComputeInstance.
 Deprecated: Use GetProviderConfigReference.
 */
-func (mg *MachineLearningComputeInstance) GetProviderReference() *xpv1.Reference {
+func (mg *LearningComputeInstance) GetProviderReference() *xpv1.Reference {
 	return mg.Spec.ProviderReference
 }
 
-// GetWriteConnectionSecretToReference of this MachineLearningComputeInstance.
-func (mg *MachineLearningComputeInstance) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
+// GetWriteConnectionSecretToReference of this LearningComputeInstance.
+func (mg *LearningComputeInstance) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
 	return mg.Spec.WriteConnectionSecretToReference
 }
 
-// SetConditions of this MachineLearningComputeInstance.
-func (mg *MachineLearningComputeInstance) SetConditions(c ...xpv1.Condition) {
+// SetConditions of this LearningComputeInstance.
+func (mg *LearningComputeInstance) SetConditions(c ...xpv1.Condition) {
 	mg.Status.SetConditions(c...)
 }
 
-// SetDeletionPolicy of this MachineLearningComputeInstance.
-func (mg *MachineLearningComputeInstance) SetDeletionPolicy(r xpv1.DeletionPolicy) {
+// SetDeletionPolicy of this LearningComputeInstance.
+func (mg *LearningComputeInstance) SetDeletionPolicy(r xpv1.DeletionPolicy) {
 	mg.Spec.DeletionPolicy = r
 }
 
-// SetProviderConfigReference of this MachineLearningComputeInstance.
-func (mg *MachineLearningComputeInstance) SetProviderConfigReference(r *xpv1.Reference) {
+// SetProviderConfigReference of this LearningComputeInstance.
+func (mg *LearningComputeInstance) SetProviderConfigReference(r *xpv1.Reference) {
 	mg.Spec.ProviderConfigReference = r
 }
 
 /*
-SetProviderReference of this MachineLearningComputeInstance.
+SetProviderReference of this LearningComputeInstance.
 Deprecated: Use SetProviderConfigReference.
 */
-func (mg *MachineLearningComputeInstance) SetProviderReference(r *xpv1.Reference) {
+func (mg *LearningComputeInstance) SetProviderReference(r *xpv1.Reference) {
 	mg.Spec.ProviderReference = r
 }
 
-// SetWriteConnectionSecretToReference of this MachineLearningComputeInstance.
-func (mg *MachineLearningComputeInstance) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
+// SetWriteConnectionSecretToReference of this LearningComputeInstance.
+func (mg *LearningComputeInstance) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
 	mg.Spec.WriteConnectionSecretToReference = r
 }
 
-// GetCondition of this MachineLearningSynapseSpark.
-func (mg *MachineLearningSynapseSpark) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
+// GetCondition of this LearningSynapseSpark.
+func (mg *LearningSynapseSpark) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
 	return mg.Status.GetCondition(ct)
 }
 
-// GetDeletionPolicy of this MachineLearningSynapseSpark.
-func (mg *MachineLearningSynapseSpark) GetDeletionPolicy() xpv1.DeletionPolicy {
+// GetDeletionPolicy of this LearningSynapseSpark.
+func (mg *LearningSynapseSpark) GetDeletionPolicy() xpv1.DeletionPolicy {
 	return mg.Spec.DeletionPolicy
 }
 
-// GetProviderConfigReference of this MachineLearningSynapseSpark.
-func (mg *MachineLearningSynapseSpark) GetProviderConfigReference() *xpv1.Reference {
+// GetProviderConfigReference of this LearningSynapseSpark.
+func (mg *LearningSynapseSpark) GetProviderConfigReference() *xpv1.Reference {
 	return mg.Spec.ProviderConfigReference
 }
 
 /*
-GetProviderReference of this MachineLearningSynapseSpark.
+GetProviderReference of this LearningSynapseSpark.
 Deprecated: Use GetProviderConfigReference.
 */
-func (mg *MachineLearningSynapseSpark) GetProviderReference() *xpv1.Reference {
+func (mg *LearningSynapseSpark) GetProviderReference() *xpv1.Reference {
 	return mg.Spec.ProviderReference
 }
 
-// GetWriteConnectionSecretToReference of this MachineLearningSynapseSpark.
-func (mg *MachineLearningSynapseSpark) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
+// GetWriteConnectionSecretToReference of this LearningSynapseSpark.
+func (mg *LearningSynapseSpark) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
 	return mg.Spec.WriteConnectionSecretToReference
 }
 
-// SetConditions of this MachineLearningSynapseSpark.
-func (mg *MachineLearningSynapseSpark) SetConditions(c ...xpv1.Condition) {
+// SetConditions of this LearningSynapseSpark.
+func (mg *LearningSynapseSpark) SetConditions(c ...xpv1.Condition) {
 	mg.Status.SetConditions(c...)
 }
 
-// SetDeletionPolicy of this MachineLearningSynapseSpark.
-func (mg *MachineLearningSynapseSpark) SetDeletionPolicy(r xpv1.DeletionPolicy) {
+// SetDeletionPolicy of this LearningSynapseSpark.
+func (mg *LearningSynapseSpark) SetDeletionPolicy(r xpv1.DeletionPolicy) {
 	mg.Spec.DeletionPolicy = r
 }
 
-// SetProviderConfigReference of this MachineLearningSynapseSpark.
-func (mg *MachineLearningSynapseSpark) SetProviderConfigReference(r *xpv1.Reference) {
+// SetProviderConfigReference of this LearningSynapseSpark.
+func (mg *LearningSynapseSpark) SetProviderConfigReference(r *xpv1.Reference) {
 	mg.Spec.ProviderConfigReference = r
 }
 
 /*
-SetProviderReference of this MachineLearningSynapseSpark.
+SetProviderReference of this LearningSynapseSpark.
 Deprecated: Use SetProviderConfigReference.
 */
-func (mg *MachineLearningSynapseSpark) SetProviderReference(r *xpv1.Reference) {
+func (mg *LearningSynapseSpark) SetProviderReference(r *xpv1.Reference) {
 	mg.Spec.ProviderReference = r
 }
 
-// SetWriteConnectionSecretToReference of this MachineLearningSynapseSpark.
-func (mg *MachineLearningSynapseSpark) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
+// SetWriteConnectionSecretToReference of this LearningSynapseSpark.
+func (mg *LearningSynapseSpark) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
 	mg.Spec.WriteConnectionSecretToReference = r
 }
 
-// GetCondition of this MachineLearningWorkspace.
-func (mg *MachineLearningWorkspace) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
+// GetCondition of this LearningWorkspace.
+func (mg *LearningWorkspace) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
 	return mg.Status.GetCondition(ct)
 }
 
-// GetDeletionPolicy of this MachineLearningWorkspace.
-func (mg *MachineLearningWorkspace) GetDeletionPolicy() xpv1.DeletionPolicy {
+// GetDeletionPolicy of this LearningWorkspace.
+func (mg *LearningWorkspace) GetDeletionPolicy() xpv1.DeletionPolicy {
 	return mg.Spec.DeletionPolicy
 }
 
-// GetProviderConfigReference of this MachineLearningWorkspace.
-func (mg *MachineLearningWorkspace) GetProviderConfigReference() *xpv1.Reference {
+// GetProviderConfigReference of this LearningWorkspace.
+func (mg *LearningWorkspace) GetProviderConfigReference() *xpv1.Reference {
 	return mg.Spec.ProviderConfigReference
 }
 
 /*
-GetProviderReference of this MachineLearningWorkspace.
+GetProviderReference of this LearningWorkspace.
 Deprecated: Use GetProviderConfigReference.
 */
-func (mg *MachineLearningWorkspace) GetProviderReference() *xpv1.Reference {
+func (mg *LearningWorkspace) GetProviderReference() *xpv1.Reference {
 	return mg.Spec.ProviderReference
 }
 
-// GetWriteConnectionSecretToReference of this MachineLearningWorkspace.
-func (mg *MachineLearningWorkspace) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
+// GetWriteConnectionSecretToReference of this LearningWorkspace.
+func (mg *LearningWorkspace) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
 	return mg.Spec.WriteConnectionSecretToReference
 }
 
-// SetConditions of this MachineLearningWorkspace.
-func (mg *MachineLearningWorkspace) SetConditions(c ...xpv1.Condition) {
+// SetConditions of this LearningWorkspace.
+func (mg *LearningWorkspace) SetConditions(c ...xpv1.Condition) {
 	mg.Status.SetConditions(c...)
 }
 
-// SetDeletionPolicy of this MachineLearningWorkspace.
-func (mg *MachineLearningWorkspace) SetDeletionPolicy(r xpv1.DeletionPolicy) {
+// SetDeletionPolicy of this LearningWorkspace.
+func (mg *LearningWorkspace) SetDeletionPolicy(r xpv1.DeletionPolicy) {
 	mg.Spec.DeletionPolicy = r
 }
 
-// SetProviderConfigReference of this MachineLearningWorkspace.
-func (mg *MachineLearningWorkspace) SetProviderConfigReference(r *xpv1.Reference) {
+// SetProviderConfigReference of this LearningWorkspace.
+func (mg *LearningWorkspace) SetProviderConfigReference(r *xpv1.Reference) {
 	mg.Spec.ProviderConfigReference = r
 }
 
 /*
-SetProviderReference of this MachineLearningWorkspace.
+SetProviderReference of this LearningWorkspace.
 Deprecated: Use SetProviderConfigReference.
 */
-func (mg *MachineLearningWorkspace) SetProviderReference(r *xpv1.Reference) {
+func (mg *LearningWorkspace) SetProviderReference(r *xpv1.Reference) {
 	mg.Spec.ProviderReference = r
 }
 
-// SetWriteConnectionSecretToReference of this MachineLearningWorkspace.
-func (mg *MachineLearningWorkspace) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
+// SetWriteConnectionSecretToReference of this LearningWorkspace.
+func (mg *LearningWorkspace) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
 	mg.Spec.WriteConnectionSecretToReference = r
 }

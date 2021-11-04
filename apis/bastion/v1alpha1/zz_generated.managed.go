@@ -19,58 +19,58 @@ package v1alpha1
 
 import xpv1 "github.com/crossplane/crossplane-runtime/apis/common/v1"
 
-// GetCondition of this BastionHost.
-func (mg *BastionHost) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
+// GetCondition of this Host.
+func (mg *Host) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
 	return mg.Status.GetCondition(ct)
 }
 
-// GetDeletionPolicy of this BastionHost.
-func (mg *BastionHost) GetDeletionPolicy() xpv1.DeletionPolicy {
+// GetDeletionPolicy of this Host.
+func (mg *Host) GetDeletionPolicy() xpv1.DeletionPolicy {
 	return mg.Spec.DeletionPolicy
 }
 
-// GetProviderConfigReference of this BastionHost.
-func (mg *BastionHost) GetProviderConfigReference() *xpv1.Reference {
+// GetProviderConfigReference of this Host.
+func (mg *Host) GetProviderConfigReference() *xpv1.Reference {
 	return mg.Spec.ProviderConfigReference
 }
 
 /*
-GetProviderReference of this BastionHost.
+GetProviderReference of this Host.
 Deprecated: Use GetProviderConfigReference.
 */
-func (mg *BastionHost) GetProviderReference() *xpv1.Reference {
+func (mg *Host) GetProviderReference() *xpv1.Reference {
 	return mg.Spec.ProviderReference
 }
 
-// GetWriteConnectionSecretToReference of this BastionHost.
-func (mg *BastionHost) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
+// GetWriteConnectionSecretToReference of this Host.
+func (mg *Host) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
 	return mg.Spec.WriteConnectionSecretToReference
 }
 
-// SetConditions of this BastionHost.
-func (mg *BastionHost) SetConditions(c ...xpv1.Condition) {
+// SetConditions of this Host.
+func (mg *Host) SetConditions(c ...xpv1.Condition) {
 	mg.Status.SetConditions(c...)
 }
 
-// SetDeletionPolicy of this BastionHost.
-func (mg *BastionHost) SetDeletionPolicy(r xpv1.DeletionPolicy) {
+// SetDeletionPolicy of this Host.
+func (mg *Host) SetDeletionPolicy(r xpv1.DeletionPolicy) {
 	mg.Spec.DeletionPolicy = r
 }
 
-// SetProviderConfigReference of this BastionHost.
-func (mg *BastionHost) SetProviderConfigReference(r *xpv1.Reference) {
+// SetProviderConfigReference of this Host.
+func (mg *Host) SetProviderConfigReference(r *xpv1.Reference) {
 	mg.Spec.ProviderConfigReference = r
 }
 
 /*
-SetProviderReference of this BastionHost.
+SetProviderReference of this Host.
 Deprecated: Use SetProviderConfigReference.
 */
-func (mg *BastionHost) SetProviderReference(r *xpv1.Reference) {
+func (mg *Host) SetProviderReference(r *xpv1.Reference) {
 	mg.Spec.ProviderReference = r
 }
 
-// SetWriteConnectionSecretToReference of this BastionHost.
-func (mg *BastionHost) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
+// SetWriteConnectionSecretToReference of this Host.
+func (mg *Host) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
 	mg.Spec.WriteConnectionSecretToReference = r
 }

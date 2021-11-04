@@ -19,8 +19,8 @@ package v1alpha1
 
 import resource "github.com/crossplane/crossplane-runtime/pkg/resource"
 
-// GetItems of this FrontdoorCustomHttpsConfigurationList.
-func (l *FrontdoorCustomHttpsConfigurationList) GetItems() []resource.Managed {
+// GetItems of this CustomHttpsConfigurationList.
+func (l *CustomHttpsConfigurationList) GetItems() []resource.Managed {
 	items := make([]resource.Managed, len(l.Items))
 	for i := range l.Items {
 		items[i] = &l.Items[i]
@@ -28,8 +28,8 @@ func (l *FrontdoorCustomHttpsConfigurationList) GetItems() []resource.Managed {
 	return items
 }
 
-// GetItems of this FrontdoorFirewallPolicyList.
-func (l *FrontdoorFirewallPolicyList) GetItems() []resource.Managed {
+// GetItems of this FirewallPolicyList.
+func (l *FirewallPolicyList) GetItems() []resource.Managed {
 	items := make([]resource.Managed, len(l.Items))
 	for i := range l.Items {
 		items[i] = &l.Items[i]
@@ -37,17 +37,8 @@ func (l *FrontdoorFirewallPolicyList) GetItems() []resource.Managed {
 	return items
 }
 
-// GetItems of this FrontdoorList.
-func (l *FrontdoorList) GetItems() []resource.Managed {
-	items := make([]resource.Managed, len(l.Items))
-	for i := range l.Items {
-		items[i] = &l.Items[i]
-	}
-	return items
-}
-
-// GetItems of this FrontdoorRulesEngineList.
-func (l *FrontdoorRulesEngineList) GetItems() []resource.Managed {
+// GetItems of this RulesEngineList.
+func (l *RulesEngineList) GetItems() []resource.Managed {
 	items := make([]resource.Managed, len(l.Items))
 	for i := range l.Items {
 		items[i] = &l.Items[i]

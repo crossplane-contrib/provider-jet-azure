@@ -19,58 +19,58 @@ package v1alpha1
 
 import xpv1 "github.com/crossplane/crossplane-runtime/apis/common/v1"
 
-// GetCondition of this PacketCapture.
-func (mg *PacketCapture) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
+// GetCondition of this Capture.
+func (mg *Capture) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
 	return mg.Status.GetCondition(ct)
 }
 
-// GetDeletionPolicy of this PacketCapture.
-func (mg *PacketCapture) GetDeletionPolicy() xpv1.DeletionPolicy {
+// GetDeletionPolicy of this Capture.
+func (mg *Capture) GetDeletionPolicy() xpv1.DeletionPolicy {
 	return mg.Spec.DeletionPolicy
 }
 
-// GetProviderConfigReference of this PacketCapture.
-func (mg *PacketCapture) GetProviderConfigReference() *xpv1.Reference {
+// GetProviderConfigReference of this Capture.
+func (mg *Capture) GetProviderConfigReference() *xpv1.Reference {
 	return mg.Spec.ProviderConfigReference
 }
 
 /*
-GetProviderReference of this PacketCapture.
+GetProviderReference of this Capture.
 Deprecated: Use GetProviderConfigReference.
 */
-func (mg *PacketCapture) GetProviderReference() *xpv1.Reference {
+func (mg *Capture) GetProviderReference() *xpv1.Reference {
 	return mg.Spec.ProviderReference
 }
 
-// GetWriteConnectionSecretToReference of this PacketCapture.
-func (mg *PacketCapture) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
+// GetWriteConnectionSecretToReference of this Capture.
+func (mg *Capture) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
 	return mg.Spec.WriteConnectionSecretToReference
 }
 
-// SetConditions of this PacketCapture.
-func (mg *PacketCapture) SetConditions(c ...xpv1.Condition) {
+// SetConditions of this Capture.
+func (mg *Capture) SetConditions(c ...xpv1.Condition) {
 	mg.Status.SetConditions(c...)
 }
 
-// SetDeletionPolicy of this PacketCapture.
-func (mg *PacketCapture) SetDeletionPolicy(r xpv1.DeletionPolicy) {
+// SetDeletionPolicy of this Capture.
+func (mg *Capture) SetDeletionPolicy(r xpv1.DeletionPolicy) {
 	mg.Spec.DeletionPolicy = r
 }
 
-// SetProviderConfigReference of this PacketCapture.
-func (mg *PacketCapture) SetProviderConfigReference(r *xpv1.Reference) {
+// SetProviderConfigReference of this Capture.
+func (mg *Capture) SetProviderConfigReference(r *xpv1.Reference) {
 	mg.Spec.ProviderConfigReference = r
 }
 
 /*
-SetProviderReference of this PacketCapture.
+SetProviderReference of this Capture.
 Deprecated: Use SetProviderConfigReference.
 */
-func (mg *PacketCapture) SetProviderReference(r *xpv1.Reference) {
+func (mg *Capture) SetProviderReference(r *xpv1.Reference) {
 	mg.Spec.ProviderReference = r
 }
 
-// SetWriteConnectionSecretToReference of this PacketCapture.
-func (mg *PacketCapture) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
+// SetWriteConnectionSecretToReference of this Capture.
+func (mg *Capture) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
 	mg.Spec.WriteConnectionSecretToReference = r
 }

@@ -19,58 +19,58 @@ package v1alpha1
 
 import xpv1 "github.com/crossplane/crossplane-runtime/apis/common/v1"
 
-// GetCondition of this IotcentralApplication.
-func (mg *IotcentralApplication) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
+// GetCondition of this Application.
+func (mg *Application) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
 	return mg.Status.GetCondition(ct)
 }
 
-// GetDeletionPolicy of this IotcentralApplication.
-func (mg *IotcentralApplication) GetDeletionPolicy() xpv1.DeletionPolicy {
+// GetDeletionPolicy of this Application.
+func (mg *Application) GetDeletionPolicy() xpv1.DeletionPolicy {
 	return mg.Spec.DeletionPolicy
 }
 
-// GetProviderConfigReference of this IotcentralApplication.
-func (mg *IotcentralApplication) GetProviderConfigReference() *xpv1.Reference {
+// GetProviderConfigReference of this Application.
+func (mg *Application) GetProviderConfigReference() *xpv1.Reference {
 	return mg.Spec.ProviderConfigReference
 }
 
 /*
-GetProviderReference of this IotcentralApplication.
+GetProviderReference of this Application.
 Deprecated: Use GetProviderConfigReference.
 */
-func (mg *IotcentralApplication) GetProviderReference() *xpv1.Reference {
+func (mg *Application) GetProviderReference() *xpv1.Reference {
 	return mg.Spec.ProviderReference
 }
 
-// GetWriteConnectionSecretToReference of this IotcentralApplication.
-func (mg *IotcentralApplication) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
+// GetWriteConnectionSecretToReference of this Application.
+func (mg *Application) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
 	return mg.Spec.WriteConnectionSecretToReference
 }
 
-// SetConditions of this IotcentralApplication.
-func (mg *IotcentralApplication) SetConditions(c ...xpv1.Condition) {
+// SetConditions of this Application.
+func (mg *Application) SetConditions(c ...xpv1.Condition) {
 	mg.Status.SetConditions(c...)
 }
 
-// SetDeletionPolicy of this IotcentralApplication.
-func (mg *IotcentralApplication) SetDeletionPolicy(r xpv1.DeletionPolicy) {
+// SetDeletionPolicy of this Application.
+func (mg *Application) SetDeletionPolicy(r xpv1.DeletionPolicy) {
 	mg.Spec.DeletionPolicy = r
 }
 
-// SetProviderConfigReference of this IotcentralApplication.
-func (mg *IotcentralApplication) SetProviderConfigReference(r *xpv1.Reference) {
+// SetProviderConfigReference of this Application.
+func (mg *Application) SetProviderConfigReference(r *xpv1.Reference) {
 	mg.Spec.ProviderConfigReference = r
 }
 
 /*
-SetProviderReference of this IotcentralApplication.
+SetProviderReference of this Application.
 Deprecated: Use SetProviderConfigReference.
 */
-func (mg *IotcentralApplication) SetProviderReference(r *xpv1.Reference) {
+func (mg *Application) SetProviderReference(r *xpv1.Reference) {
 	mg.Spec.ProviderReference = r
 }
 
-// SetWriteConnectionSecretToReference of this IotcentralApplication.
-func (mg *IotcentralApplication) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
+// SetWriteConnectionSecretToReference of this Application.
+func (mg *Application) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
 	mg.Spec.WriteConnectionSecretToReference = r
 }

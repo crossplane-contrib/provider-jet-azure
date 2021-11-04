@@ -19,8 +19,8 @@ package v1alpha1
 
 import resource "github.com/crossplane/crossplane-runtime/pkg/resource"
 
-// GetItems of this MariadbConfigurationList.
-func (l *MariadbConfigurationList) GetItems() []resource.Managed {
+// GetItems of this ConfigurationList.
+func (l *ConfigurationList) GetItems() []resource.Managed {
 	items := make([]resource.Managed, len(l.Items))
 	for i := range l.Items {
 		items[i] = &l.Items[i]
@@ -28,8 +28,8 @@ func (l *MariadbConfigurationList) GetItems() []resource.Managed {
 	return items
 }
 
-// GetItems of this MariadbDatabaseList.
-func (l *MariadbDatabaseList) GetItems() []resource.Managed {
+// GetItems of this DatabaseList.
+func (l *DatabaseList) GetItems() []resource.Managed {
 	items := make([]resource.Managed, len(l.Items))
 	for i := range l.Items {
 		items[i] = &l.Items[i]
@@ -37,8 +37,8 @@ func (l *MariadbDatabaseList) GetItems() []resource.Managed {
 	return items
 }
 
-// GetItems of this MariadbFirewallRuleList.
-func (l *MariadbFirewallRuleList) GetItems() []resource.Managed {
+// GetItems of this FirewallRuleList.
+func (l *FirewallRuleList) GetItems() []resource.Managed {
 	items := make([]resource.Managed, len(l.Items))
 	for i := range l.Items {
 		items[i] = &l.Items[i]
@@ -46,8 +46,8 @@ func (l *MariadbFirewallRuleList) GetItems() []resource.Managed {
 	return items
 }
 
-// GetItems of this MariadbServerList.
-func (l *MariadbServerList) GetItems() []resource.Managed {
+// GetItems of this ServerList.
+func (l *ServerList) GetItems() []resource.Managed {
 	items := make([]resource.Managed, len(l.Items))
 	for i := range l.Items {
 		items[i] = &l.Items[i]
@@ -55,8 +55,8 @@ func (l *MariadbServerList) GetItems() []resource.Managed {
 	return items
 }
 
-// GetItems of this MariadbVirtualNetworkRuleList.
-func (l *MariadbVirtualNetworkRuleList) GetItems() []resource.Managed {
+// GetItems of this VirtualNetworkRuleList.
+func (l *VirtualNetworkRuleList) GetItems() []resource.Managed {
 	items := make([]resource.Managed, len(l.Items))
 	for i := range l.Items {
 		items[i] = &l.Items[i]

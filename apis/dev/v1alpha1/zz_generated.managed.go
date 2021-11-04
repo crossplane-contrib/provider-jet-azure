@@ -19,394 +19,394 @@ package v1alpha1
 
 import xpv1 "github.com/crossplane/crossplane-runtime/apis/common/v1"
 
-// GetCondition of this DevTestGlobalVmShutdownSchedule.
-func (mg *DevTestGlobalVmShutdownSchedule) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
+// GetCondition of this TestGlobalVmShutdownSchedule.
+func (mg *TestGlobalVmShutdownSchedule) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
 	return mg.Status.GetCondition(ct)
 }
 
-// GetDeletionPolicy of this DevTestGlobalVmShutdownSchedule.
-func (mg *DevTestGlobalVmShutdownSchedule) GetDeletionPolicy() xpv1.DeletionPolicy {
+// GetDeletionPolicy of this TestGlobalVmShutdownSchedule.
+func (mg *TestGlobalVmShutdownSchedule) GetDeletionPolicy() xpv1.DeletionPolicy {
 	return mg.Spec.DeletionPolicy
 }
 
-// GetProviderConfigReference of this DevTestGlobalVmShutdownSchedule.
-func (mg *DevTestGlobalVmShutdownSchedule) GetProviderConfigReference() *xpv1.Reference {
+// GetProviderConfigReference of this TestGlobalVmShutdownSchedule.
+func (mg *TestGlobalVmShutdownSchedule) GetProviderConfigReference() *xpv1.Reference {
 	return mg.Spec.ProviderConfigReference
 }
 
 /*
-GetProviderReference of this DevTestGlobalVmShutdownSchedule.
+GetProviderReference of this TestGlobalVmShutdownSchedule.
 Deprecated: Use GetProviderConfigReference.
 */
-func (mg *DevTestGlobalVmShutdownSchedule) GetProviderReference() *xpv1.Reference {
+func (mg *TestGlobalVmShutdownSchedule) GetProviderReference() *xpv1.Reference {
 	return mg.Spec.ProviderReference
 }
 
-// GetWriteConnectionSecretToReference of this DevTestGlobalVmShutdownSchedule.
-func (mg *DevTestGlobalVmShutdownSchedule) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
+// GetWriteConnectionSecretToReference of this TestGlobalVmShutdownSchedule.
+func (mg *TestGlobalVmShutdownSchedule) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
 	return mg.Spec.WriteConnectionSecretToReference
 }
 
-// SetConditions of this DevTestGlobalVmShutdownSchedule.
-func (mg *DevTestGlobalVmShutdownSchedule) SetConditions(c ...xpv1.Condition) {
+// SetConditions of this TestGlobalVmShutdownSchedule.
+func (mg *TestGlobalVmShutdownSchedule) SetConditions(c ...xpv1.Condition) {
 	mg.Status.SetConditions(c...)
 }
 
-// SetDeletionPolicy of this DevTestGlobalVmShutdownSchedule.
-func (mg *DevTestGlobalVmShutdownSchedule) SetDeletionPolicy(r xpv1.DeletionPolicy) {
+// SetDeletionPolicy of this TestGlobalVmShutdownSchedule.
+func (mg *TestGlobalVmShutdownSchedule) SetDeletionPolicy(r xpv1.DeletionPolicy) {
 	mg.Spec.DeletionPolicy = r
 }
 
-// SetProviderConfigReference of this DevTestGlobalVmShutdownSchedule.
-func (mg *DevTestGlobalVmShutdownSchedule) SetProviderConfigReference(r *xpv1.Reference) {
+// SetProviderConfigReference of this TestGlobalVmShutdownSchedule.
+func (mg *TestGlobalVmShutdownSchedule) SetProviderConfigReference(r *xpv1.Reference) {
 	mg.Spec.ProviderConfigReference = r
 }
 
 /*
-SetProviderReference of this DevTestGlobalVmShutdownSchedule.
+SetProviderReference of this TestGlobalVmShutdownSchedule.
 Deprecated: Use SetProviderConfigReference.
 */
-func (mg *DevTestGlobalVmShutdownSchedule) SetProviderReference(r *xpv1.Reference) {
+func (mg *TestGlobalVmShutdownSchedule) SetProviderReference(r *xpv1.Reference) {
 	mg.Spec.ProviderReference = r
 }
 
-// SetWriteConnectionSecretToReference of this DevTestGlobalVmShutdownSchedule.
-func (mg *DevTestGlobalVmShutdownSchedule) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
+// SetWriteConnectionSecretToReference of this TestGlobalVmShutdownSchedule.
+func (mg *TestGlobalVmShutdownSchedule) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
 	mg.Spec.WriteConnectionSecretToReference = r
 }
 
-// GetCondition of this DevTestLab.
-func (mg *DevTestLab) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
+// GetCondition of this TestLab.
+func (mg *TestLab) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
 	return mg.Status.GetCondition(ct)
 }
 
-// GetDeletionPolicy of this DevTestLab.
-func (mg *DevTestLab) GetDeletionPolicy() xpv1.DeletionPolicy {
+// GetDeletionPolicy of this TestLab.
+func (mg *TestLab) GetDeletionPolicy() xpv1.DeletionPolicy {
 	return mg.Spec.DeletionPolicy
 }
 
-// GetProviderConfigReference of this DevTestLab.
-func (mg *DevTestLab) GetProviderConfigReference() *xpv1.Reference {
+// GetProviderConfigReference of this TestLab.
+func (mg *TestLab) GetProviderConfigReference() *xpv1.Reference {
 	return mg.Spec.ProviderConfigReference
 }
 
 /*
-GetProviderReference of this DevTestLab.
+GetProviderReference of this TestLab.
 Deprecated: Use GetProviderConfigReference.
 */
-func (mg *DevTestLab) GetProviderReference() *xpv1.Reference {
+func (mg *TestLab) GetProviderReference() *xpv1.Reference {
 	return mg.Spec.ProviderReference
 }
 
-// GetWriteConnectionSecretToReference of this DevTestLab.
-func (mg *DevTestLab) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
+// GetWriteConnectionSecretToReference of this TestLab.
+func (mg *TestLab) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
 	return mg.Spec.WriteConnectionSecretToReference
 }
 
-// SetConditions of this DevTestLab.
-func (mg *DevTestLab) SetConditions(c ...xpv1.Condition) {
+// SetConditions of this TestLab.
+func (mg *TestLab) SetConditions(c ...xpv1.Condition) {
 	mg.Status.SetConditions(c...)
 }
 
-// SetDeletionPolicy of this DevTestLab.
-func (mg *DevTestLab) SetDeletionPolicy(r xpv1.DeletionPolicy) {
+// SetDeletionPolicy of this TestLab.
+func (mg *TestLab) SetDeletionPolicy(r xpv1.DeletionPolicy) {
 	mg.Spec.DeletionPolicy = r
 }
 
-// SetProviderConfigReference of this DevTestLab.
-func (mg *DevTestLab) SetProviderConfigReference(r *xpv1.Reference) {
+// SetProviderConfigReference of this TestLab.
+func (mg *TestLab) SetProviderConfigReference(r *xpv1.Reference) {
 	mg.Spec.ProviderConfigReference = r
 }
 
 /*
-SetProviderReference of this DevTestLab.
+SetProviderReference of this TestLab.
 Deprecated: Use SetProviderConfigReference.
 */
-func (mg *DevTestLab) SetProviderReference(r *xpv1.Reference) {
+func (mg *TestLab) SetProviderReference(r *xpv1.Reference) {
 	mg.Spec.ProviderReference = r
 }
 
-// SetWriteConnectionSecretToReference of this DevTestLab.
-func (mg *DevTestLab) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
+// SetWriteConnectionSecretToReference of this TestLab.
+func (mg *TestLab) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
 	mg.Spec.WriteConnectionSecretToReference = r
 }
 
-// GetCondition of this DevTestLinuxVirtualMachine.
-func (mg *DevTestLinuxVirtualMachine) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
+// GetCondition of this TestLinuxVirtualMachine.
+func (mg *TestLinuxVirtualMachine) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
 	return mg.Status.GetCondition(ct)
 }
 
-// GetDeletionPolicy of this DevTestLinuxVirtualMachine.
-func (mg *DevTestLinuxVirtualMachine) GetDeletionPolicy() xpv1.DeletionPolicy {
+// GetDeletionPolicy of this TestLinuxVirtualMachine.
+func (mg *TestLinuxVirtualMachine) GetDeletionPolicy() xpv1.DeletionPolicy {
 	return mg.Spec.DeletionPolicy
 }
 
-// GetProviderConfigReference of this DevTestLinuxVirtualMachine.
-func (mg *DevTestLinuxVirtualMachine) GetProviderConfigReference() *xpv1.Reference {
+// GetProviderConfigReference of this TestLinuxVirtualMachine.
+func (mg *TestLinuxVirtualMachine) GetProviderConfigReference() *xpv1.Reference {
 	return mg.Spec.ProviderConfigReference
 }
 
 /*
-GetProviderReference of this DevTestLinuxVirtualMachine.
+GetProviderReference of this TestLinuxVirtualMachine.
 Deprecated: Use GetProviderConfigReference.
 */
-func (mg *DevTestLinuxVirtualMachine) GetProviderReference() *xpv1.Reference {
+func (mg *TestLinuxVirtualMachine) GetProviderReference() *xpv1.Reference {
 	return mg.Spec.ProviderReference
 }
 
-// GetWriteConnectionSecretToReference of this DevTestLinuxVirtualMachine.
-func (mg *DevTestLinuxVirtualMachine) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
+// GetWriteConnectionSecretToReference of this TestLinuxVirtualMachine.
+func (mg *TestLinuxVirtualMachine) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
 	return mg.Spec.WriteConnectionSecretToReference
 }
 
-// SetConditions of this DevTestLinuxVirtualMachine.
-func (mg *DevTestLinuxVirtualMachine) SetConditions(c ...xpv1.Condition) {
+// SetConditions of this TestLinuxVirtualMachine.
+func (mg *TestLinuxVirtualMachine) SetConditions(c ...xpv1.Condition) {
 	mg.Status.SetConditions(c...)
 }
 
-// SetDeletionPolicy of this DevTestLinuxVirtualMachine.
-func (mg *DevTestLinuxVirtualMachine) SetDeletionPolicy(r xpv1.DeletionPolicy) {
+// SetDeletionPolicy of this TestLinuxVirtualMachine.
+func (mg *TestLinuxVirtualMachine) SetDeletionPolicy(r xpv1.DeletionPolicy) {
 	mg.Spec.DeletionPolicy = r
 }
 
-// SetProviderConfigReference of this DevTestLinuxVirtualMachine.
-func (mg *DevTestLinuxVirtualMachine) SetProviderConfigReference(r *xpv1.Reference) {
+// SetProviderConfigReference of this TestLinuxVirtualMachine.
+func (mg *TestLinuxVirtualMachine) SetProviderConfigReference(r *xpv1.Reference) {
 	mg.Spec.ProviderConfigReference = r
 }
 
 /*
-SetProviderReference of this DevTestLinuxVirtualMachine.
+SetProviderReference of this TestLinuxVirtualMachine.
 Deprecated: Use SetProviderConfigReference.
 */
-func (mg *DevTestLinuxVirtualMachine) SetProviderReference(r *xpv1.Reference) {
+func (mg *TestLinuxVirtualMachine) SetProviderReference(r *xpv1.Reference) {
 	mg.Spec.ProviderReference = r
 }
 
-// SetWriteConnectionSecretToReference of this DevTestLinuxVirtualMachine.
-func (mg *DevTestLinuxVirtualMachine) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
+// SetWriteConnectionSecretToReference of this TestLinuxVirtualMachine.
+func (mg *TestLinuxVirtualMachine) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
 	mg.Spec.WriteConnectionSecretToReference = r
 }
 
-// GetCondition of this DevTestPolicy.
-func (mg *DevTestPolicy) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
+// GetCondition of this TestPolicy.
+func (mg *TestPolicy) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
 	return mg.Status.GetCondition(ct)
 }
 
-// GetDeletionPolicy of this DevTestPolicy.
-func (mg *DevTestPolicy) GetDeletionPolicy() xpv1.DeletionPolicy {
+// GetDeletionPolicy of this TestPolicy.
+func (mg *TestPolicy) GetDeletionPolicy() xpv1.DeletionPolicy {
 	return mg.Spec.DeletionPolicy
 }
 
-// GetProviderConfigReference of this DevTestPolicy.
-func (mg *DevTestPolicy) GetProviderConfigReference() *xpv1.Reference {
+// GetProviderConfigReference of this TestPolicy.
+func (mg *TestPolicy) GetProviderConfigReference() *xpv1.Reference {
 	return mg.Spec.ProviderConfigReference
 }
 
 /*
-GetProviderReference of this DevTestPolicy.
+GetProviderReference of this TestPolicy.
 Deprecated: Use GetProviderConfigReference.
 */
-func (mg *DevTestPolicy) GetProviderReference() *xpv1.Reference {
+func (mg *TestPolicy) GetProviderReference() *xpv1.Reference {
 	return mg.Spec.ProviderReference
 }
 
-// GetWriteConnectionSecretToReference of this DevTestPolicy.
-func (mg *DevTestPolicy) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
+// GetWriteConnectionSecretToReference of this TestPolicy.
+func (mg *TestPolicy) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
 	return mg.Spec.WriteConnectionSecretToReference
 }
 
-// SetConditions of this DevTestPolicy.
-func (mg *DevTestPolicy) SetConditions(c ...xpv1.Condition) {
+// SetConditions of this TestPolicy.
+func (mg *TestPolicy) SetConditions(c ...xpv1.Condition) {
 	mg.Status.SetConditions(c...)
 }
 
-// SetDeletionPolicy of this DevTestPolicy.
-func (mg *DevTestPolicy) SetDeletionPolicy(r xpv1.DeletionPolicy) {
+// SetDeletionPolicy of this TestPolicy.
+func (mg *TestPolicy) SetDeletionPolicy(r xpv1.DeletionPolicy) {
 	mg.Spec.DeletionPolicy = r
 }
 
-// SetProviderConfigReference of this DevTestPolicy.
-func (mg *DevTestPolicy) SetProviderConfigReference(r *xpv1.Reference) {
+// SetProviderConfigReference of this TestPolicy.
+func (mg *TestPolicy) SetProviderConfigReference(r *xpv1.Reference) {
 	mg.Spec.ProviderConfigReference = r
 }
 
 /*
-SetProviderReference of this DevTestPolicy.
+SetProviderReference of this TestPolicy.
 Deprecated: Use SetProviderConfigReference.
 */
-func (mg *DevTestPolicy) SetProviderReference(r *xpv1.Reference) {
+func (mg *TestPolicy) SetProviderReference(r *xpv1.Reference) {
 	mg.Spec.ProviderReference = r
 }
 
-// SetWriteConnectionSecretToReference of this DevTestPolicy.
-func (mg *DevTestPolicy) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
+// SetWriteConnectionSecretToReference of this TestPolicy.
+func (mg *TestPolicy) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
 	mg.Spec.WriteConnectionSecretToReference = r
 }
 
-// GetCondition of this DevTestSchedule.
-func (mg *DevTestSchedule) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
+// GetCondition of this TestSchedule.
+func (mg *TestSchedule) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
 	return mg.Status.GetCondition(ct)
 }
 
-// GetDeletionPolicy of this DevTestSchedule.
-func (mg *DevTestSchedule) GetDeletionPolicy() xpv1.DeletionPolicy {
+// GetDeletionPolicy of this TestSchedule.
+func (mg *TestSchedule) GetDeletionPolicy() xpv1.DeletionPolicy {
 	return mg.Spec.DeletionPolicy
 }
 
-// GetProviderConfigReference of this DevTestSchedule.
-func (mg *DevTestSchedule) GetProviderConfigReference() *xpv1.Reference {
+// GetProviderConfigReference of this TestSchedule.
+func (mg *TestSchedule) GetProviderConfigReference() *xpv1.Reference {
 	return mg.Spec.ProviderConfigReference
 }
 
 /*
-GetProviderReference of this DevTestSchedule.
+GetProviderReference of this TestSchedule.
 Deprecated: Use GetProviderConfigReference.
 */
-func (mg *DevTestSchedule) GetProviderReference() *xpv1.Reference {
+func (mg *TestSchedule) GetProviderReference() *xpv1.Reference {
 	return mg.Spec.ProviderReference
 }
 
-// GetWriteConnectionSecretToReference of this DevTestSchedule.
-func (mg *DevTestSchedule) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
+// GetWriteConnectionSecretToReference of this TestSchedule.
+func (mg *TestSchedule) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
 	return mg.Spec.WriteConnectionSecretToReference
 }
 
-// SetConditions of this DevTestSchedule.
-func (mg *DevTestSchedule) SetConditions(c ...xpv1.Condition) {
+// SetConditions of this TestSchedule.
+func (mg *TestSchedule) SetConditions(c ...xpv1.Condition) {
 	mg.Status.SetConditions(c...)
 }
 
-// SetDeletionPolicy of this DevTestSchedule.
-func (mg *DevTestSchedule) SetDeletionPolicy(r xpv1.DeletionPolicy) {
+// SetDeletionPolicy of this TestSchedule.
+func (mg *TestSchedule) SetDeletionPolicy(r xpv1.DeletionPolicy) {
 	mg.Spec.DeletionPolicy = r
 }
 
-// SetProviderConfigReference of this DevTestSchedule.
-func (mg *DevTestSchedule) SetProviderConfigReference(r *xpv1.Reference) {
+// SetProviderConfigReference of this TestSchedule.
+func (mg *TestSchedule) SetProviderConfigReference(r *xpv1.Reference) {
 	mg.Spec.ProviderConfigReference = r
 }
 
 /*
-SetProviderReference of this DevTestSchedule.
+SetProviderReference of this TestSchedule.
 Deprecated: Use SetProviderConfigReference.
 */
-func (mg *DevTestSchedule) SetProviderReference(r *xpv1.Reference) {
+func (mg *TestSchedule) SetProviderReference(r *xpv1.Reference) {
 	mg.Spec.ProviderReference = r
 }
 
-// SetWriteConnectionSecretToReference of this DevTestSchedule.
-func (mg *DevTestSchedule) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
+// SetWriteConnectionSecretToReference of this TestSchedule.
+func (mg *TestSchedule) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
 	mg.Spec.WriteConnectionSecretToReference = r
 }
 
-// GetCondition of this DevTestVirtualNetwork.
-func (mg *DevTestVirtualNetwork) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
+// GetCondition of this TestVirtualNetwork.
+func (mg *TestVirtualNetwork) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
 	return mg.Status.GetCondition(ct)
 }
 
-// GetDeletionPolicy of this DevTestVirtualNetwork.
-func (mg *DevTestVirtualNetwork) GetDeletionPolicy() xpv1.DeletionPolicy {
+// GetDeletionPolicy of this TestVirtualNetwork.
+func (mg *TestVirtualNetwork) GetDeletionPolicy() xpv1.DeletionPolicy {
 	return mg.Spec.DeletionPolicy
 }
 
-// GetProviderConfigReference of this DevTestVirtualNetwork.
-func (mg *DevTestVirtualNetwork) GetProviderConfigReference() *xpv1.Reference {
+// GetProviderConfigReference of this TestVirtualNetwork.
+func (mg *TestVirtualNetwork) GetProviderConfigReference() *xpv1.Reference {
 	return mg.Spec.ProviderConfigReference
 }
 
 /*
-GetProviderReference of this DevTestVirtualNetwork.
+GetProviderReference of this TestVirtualNetwork.
 Deprecated: Use GetProviderConfigReference.
 */
-func (mg *DevTestVirtualNetwork) GetProviderReference() *xpv1.Reference {
+func (mg *TestVirtualNetwork) GetProviderReference() *xpv1.Reference {
 	return mg.Spec.ProviderReference
 }
 
-// GetWriteConnectionSecretToReference of this DevTestVirtualNetwork.
-func (mg *DevTestVirtualNetwork) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
+// GetWriteConnectionSecretToReference of this TestVirtualNetwork.
+func (mg *TestVirtualNetwork) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
 	return mg.Spec.WriteConnectionSecretToReference
 }
 
-// SetConditions of this DevTestVirtualNetwork.
-func (mg *DevTestVirtualNetwork) SetConditions(c ...xpv1.Condition) {
+// SetConditions of this TestVirtualNetwork.
+func (mg *TestVirtualNetwork) SetConditions(c ...xpv1.Condition) {
 	mg.Status.SetConditions(c...)
 }
 
-// SetDeletionPolicy of this DevTestVirtualNetwork.
-func (mg *DevTestVirtualNetwork) SetDeletionPolicy(r xpv1.DeletionPolicy) {
+// SetDeletionPolicy of this TestVirtualNetwork.
+func (mg *TestVirtualNetwork) SetDeletionPolicy(r xpv1.DeletionPolicy) {
 	mg.Spec.DeletionPolicy = r
 }
 
-// SetProviderConfigReference of this DevTestVirtualNetwork.
-func (mg *DevTestVirtualNetwork) SetProviderConfigReference(r *xpv1.Reference) {
+// SetProviderConfigReference of this TestVirtualNetwork.
+func (mg *TestVirtualNetwork) SetProviderConfigReference(r *xpv1.Reference) {
 	mg.Spec.ProviderConfigReference = r
 }
 
 /*
-SetProviderReference of this DevTestVirtualNetwork.
+SetProviderReference of this TestVirtualNetwork.
 Deprecated: Use SetProviderConfigReference.
 */
-func (mg *DevTestVirtualNetwork) SetProviderReference(r *xpv1.Reference) {
+func (mg *TestVirtualNetwork) SetProviderReference(r *xpv1.Reference) {
 	mg.Spec.ProviderReference = r
 }
 
-// SetWriteConnectionSecretToReference of this DevTestVirtualNetwork.
-func (mg *DevTestVirtualNetwork) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
+// SetWriteConnectionSecretToReference of this TestVirtualNetwork.
+func (mg *TestVirtualNetwork) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
 	mg.Spec.WriteConnectionSecretToReference = r
 }
 
-// GetCondition of this DevTestWindowsVirtualMachine.
-func (mg *DevTestWindowsVirtualMachine) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
+// GetCondition of this TestWindowsVirtualMachine.
+func (mg *TestWindowsVirtualMachine) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
 	return mg.Status.GetCondition(ct)
 }
 
-// GetDeletionPolicy of this DevTestWindowsVirtualMachine.
-func (mg *DevTestWindowsVirtualMachine) GetDeletionPolicy() xpv1.DeletionPolicy {
+// GetDeletionPolicy of this TestWindowsVirtualMachine.
+func (mg *TestWindowsVirtualMachine) GetDeletionPolicy() xpv1.DeletionPolicy {
 	return mg.Spec.DeletionPolicy
 }
 
-// GetProviderConfigReference of this DevTestWindowsVirtualMachine.
-func (mg *DevTestWindowsVirtualMachine) GetProviderConfigReference() *xpv1.Reference {
+// GetProviderConfigReference of this TestWindowsVirtualMachine.
+func (mg *TestWindowsVirtualMachine) GetProviderConfigReference() *xpv1.Reference {
 	return mg.Spec.ProviderConfigReference
 }
 
 /*
-GetProviderReference of this DevTestWindowsVirtualMachine.
+GetProviderReference of this TestWindowsVirtualMachine.
 Deprecated: Use GetProviderConfigReference.
 */
-func (mg *DevTestWindowsVirtualMachine) GetProviderReference() *xpv1.Reference {
+func (mg *TestWindowsVirtualMachine) GetProviderReference() *xpv1.Reference {
 	return mg.Spec.ProviderReference
 }
 
-// GetWriteConnectionSecretToReference of this DevTestWindowsVirtualMachine.
-func (mg *DevTestWindowsVirtualMachine) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
+// GetWriteConnectionSecretToReference of this TestWindowsVirtualMachine.
+func (mg *TestWindowsVirtualMachine) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
 	return mg.Spec.WriteConnectionSecretToReference
 }
 
-// SetConditions of this DevTestWindowsVirtualMachine.
-func (mg *DevTestWindowsVirtualMachine) SetConditions(c ...xpv1.Condition) {
+// SetConditions of this TestWindowsVirtualMachine.
+func (mg *TestWindowsVirtualMachine) SetConditions(c ...xpv1.Condition) {
 	mg.Status.SetConditions(c...)
 }
 
-// SetDeletionPolicy of this DevTestWindowsVirtualMachine.
-func (mg *DevTestWindowsVirtualMachine) SetDeletionPolicy(r xpv1.DeletionPolicy) {
+// SetDeletionPolicy of this TestWindowsVirtualMachine.
+func (mg *TestWindowsVirtualMachine) SetDeletionPolicy(r xpv1.DeletionPolicy) {
 	mg.Spec.DeletionPolicy = r
 }
 
-// SetProviderConfigReference of this DevTestWindowsVirtualMachine.
-func (mg *DevTestWindowsVirtualMachine) SetProviderConfigReference(r *xpv1.Reference) {
+// SetProviderConfigReference of this TestWindowsVirtualMachine.
+func (mg *TestWindowsVirtualMachine) SetProviderConfigReference(r *xpv1.Reference) {
 	mg.Spec.ProviderConfigReference = r
 }
 
 /*
-SetProviderReference of this DevTestWindowsVirtualMachine.
+SetProviderReference of this TestWindowsVirtualMachine.
 Deprecated: Use SetProviderConfigReference.
 */
-func (mg *DevTestWindowsVirtualMachine) SetProviderReference(r *xpv1.Reference) {
+func (mg *TestWindowsVirtualMachine) SetProviderReference(r *xpv1.Reference) {
 	mg.Spec.ProviderReference = r
 }
 
-// SetWriteConnectionSecretToReference of this DevTestWindowsVirtualMachine.
-func (mg *DevTestWindowsVirtualMachine) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
+// SetWriteConnectionSecretToReference of this TestWindowsVirtualMachine.
+func (mg *TestWindowsVirtualMachine) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
 	mg.Spec.WriteConnectionSecretToReference = r
 }

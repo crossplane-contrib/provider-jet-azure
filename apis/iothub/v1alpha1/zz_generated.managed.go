@@ -19,730 +19,674 @@ package v1alpha1
 
 import xpv1 "github.com/crossplane/crossplane-runtime/apis/common/v1"
 
-// GetCondition of this Iothub.
-func (mg *Iothub) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
+// GetCondition of this ConsumerGroup.
+func (mg *ConsumerGroup) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
 	return mg.Status.GetCondition(ct)
 }
 
-// GetDeletionPolicy of this Iothub.
-func (mg *Iothub) GetDeletionPolicy() xpv1.DeletionPolicy {
+// GetDeletionPolicy of this ConsumerGroup.
+func (mg *ConsumerGroup) GetDeletionPolicy() xpv1.DeletionPolicy {
 	return mg.Spec.DeletionPolicy
 }
 
-// GetProviderConfigReference of this Iothub.
-func (mg *Iothub) GetProviderConfigReference() *xpv1.Reference {
+// GetProviderConfigReference of this ConsumerGroup.
+func (mg *ConsumerGroup) GetProviderConfigReference() *xpv1.Reference {
 	return mg.Spec.ProviderConfigReference
 }
 
 /*
-GetProviderReference of this Iothub.
+GetProviderReference of this ConsumerGroup.
 Deprecated: Use GetProviderConfigReference.
 */
-func (mg *Iothub) GetProviderReference() *xpv1.Reference {
+func (mg *ConsumerGroup) GetProviderReference() *xpv1.Reference {
 	return mg.Spec.ProviderReference
 }
 
-// GetWriteConnectionSecretToReference of this Iothub.
-func (mg *Iothub) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
+// GetWriteConnectionSecretToReference of this ConsumerGroup.
+func (mg *ConsumerGroup) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
 	return mg.Spec.WriteConnectionSecretToReference
 }
 
-// SetConditions of this Iothub.
-func (mg *Iothub) SetConditions(c ...xpv1.Condition) {
+// SetConditions of this ConsumerGroup.
+func (mg *ConsumerGroup) SetConditions(c ...xpv1.Condition) {
 	mg.Status.SetConditions(c...)
 }
 
-// SetDeletionPolicy of this Iothub.
-func (mg *Iothub) SetDeletionPolicy(r xpv1.DeletionPolicy) {
+// SetDeletionPolicy of this ConsumerGroup.
+func (mg *ConsumerGroup) SetDeletionPolicy(r xpv1.DeletionPolicy) {
 	mg.Spec.DeletionPolicy = r
 }
 
-// SetProviderConfigReference of this Iothub.
-func (mg *Iothub) SetProviderConfigReference(r *xpv1.Reference) {
+// SetProviderConfigReference of this ConsumerGroup.
+func (mg *ConsumerGroup) SetProviderConfigReference(r *xpv1.Reference) {
 	mg.Spec.ProviderConfigReference = r
 }
 
 /*
-SetProviderReference of this Iothub.
+SetProviderReference of this ConsumerGroup.
 Deprecated: Use SetProviderConfigReference.
 */
-func (mg *Iothub) SetProviderReference(r *xpv1.Reference) {
+func (mg *ConsumerGroup) SetProviderReference(r *xpv1.Reference) {
 	mg.Spec.ProviderReference = r
 }
 
-// SetWriteConnectionSecretToReference of this Iothub.
-func (mg *Iothub) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
+// SetWriteConnectionSecretToReference of this ConsumerGroup.
+func (mg *ConsumerGroup) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
 	mg.Spec.WriteConnectionSecretToReference = r
 }
 
-// GetCondition of this IothubConsumerGroup.
-func (mg *IothubConsumerGroup) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
+// GetCondition of this Dps.
+func (mg *Dps) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
 	return mg.Status.GetCondition(ct)
 }
 
-// GetDeletionPolicy of this IothubConsumerGroup.
-func (mg *IothubConsumerGroup) GetDeletionPolicy() xpv1.DeletionPolicy {
+// GetDeletionPolicy of this Dps.
+func (mg *Dps) GetDeletionPolicy() xpv1.DeletionPolicy {
 	return mg.Spec.DeletionPolicy
 }
 
-// GetProviderConfigReference of this IothubConsumerGroup.
-func (mg *IothubConsumerGroup) GetProviderConfigReference() *xpv1.Reference {
+// GetProviderConfigReference of this Dps.
+func (mg *Dps) GetProviderConfigReference() *xpv1.Reference {
 	return mg.Spec.ProviderConfigReference
 }
 
 /*
-GetProviderReference of this IothubConsumerGroup.
+GetProviderReference of this Dps.
 Deprecated: Use GetProviderConfigReference.
 */
-func (mg *IothubConsumerGroup) GetProviderReference() *xpv1.Reference {
+func (mg *Dps) GetProviderReference() *xpv1.Reference {
 	return mg.Spec.ProviderReference
 }
 
-// GetWriteConnectionSecretToReference of this IothubConsumerGroup.
-func (mg *IothubConsumerGroup) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
+// GetWriteConnectionSecretToReference of this Dps.
+func (mg *Dps) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
 	return mg.Spec.WriteConnectionSecretToReference
 }
 
-// SetConditions of this IothubConsumerGroup.
-func (mg *IothubConsumerGroup) SetConditions(c ...xpv1.Condition) {
+// SetConditions of this Dps.
+func (mg *Dps) SetConditions(c ...xpv1.Condition) {
 	mg.Status.SetConditions(c...)
 }
 
-// SetDeletionPolicy of this IothubConsumerGroup.
-func (mg *IothubConsumerGroup) SetDeletionPolicy(r xpv1.DeletionPolicy) {
+// SetDeletionPolicy of this Dps.
+func (mg *Dps) SetDeletionPolicy(r xpv1.DeletionPolicy) {
 	mg.Spec.DeletionPolicy = r
 }
 
-// SetProviderConfigReference of this IothubConsumerGroup.
-func (mg *IothubConsumerGroup) SetProviderConfigReference(r *xpv1.Reference) {
+// SetProviderConfigReference of this Dps.
+func (mg *Dps) SetProviderConfigReference(r *xpv1.Reference) {
 	mg.Spec.ProviderConfigReference = r
 }
 
 /*
-SetProviderReference of this IothubConsumerGroup.
+SetProviderReference of this Dps.
 Deprecated: Use SetProviderConfigReference.
 */
-func (mg *IothubConsumerGroup) SetProviderReference(r *xpv1.Reference) {
+func (mg *Dps) SetProviderReference(r *xpv1.Reference) {
 	mg.Spec.ProviderReference = r
 }
 
-// SetWriteConnectionSecretToReference of this IothubConsumerGroup.
-func (mg *IothubConsumerGroup) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
+// SetWriteConnectionSecretToReference of this Dps.
+func (mg *Dps) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
 	mg.Spec.WriteConnectionSecretToReference = r
 }
 
-// GetCondition of this IothubDps.
-func (mg *IothubDps) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
+// GetCondition of this DpsCertificate.
+func (mg *DpsCertificate) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
 	return mg.Status.GetCondition(ct)
 }
 
-// GetDeletionPolicy of this IothubDps.
-func (mg *IothubDps) GetDeletionPolicy() xpv1.DeletionPolicy {
+// GetDeletionPolicy of this DpsCertificate.
+func (mg *DpsCertificate) GetDeletionPolicy() xpv1.DeletionPolicy {
 	return mg.Spec.DeletionPolicy
 }
 
-// GetProviderConfigReference of this IothubDps.
-func (mg *IothubDps) GetProviderConfigReference() *xpv1.Reference {
+// GetProviderConfigReference of this DpsCertificate.
+func (mg *DpsCertificate) GetProviderConfigReference() *xpv1.Reference {
 	return mg.Spec.ProviderConfigReference
 }
 
 /*
-GetProviderReference of this IothubDps.
+GetProviderReference of this DpsCertificate.
 Deprecated: Use GetProviderConfigReference.
 */
-func (mg *IothubDps) GetProviderReference() *xpv1.Reference {
+func (mg *DpsCertificate) GetProviderReference() *xpv1.Reference {
 	return mg.Spec.ProviderReference
 }
 
-// GetWriteConnectionSecretToReference of this IothubDps.
-func (mg *IothubDps) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
+// GetWriteConnectionSecretToReference of this DpsCertificate.
+func (mg *DpsCertificate) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
 	return mg.Spec.WriteConnectionSecretToReference
 }
 
-// SetConditions of this IothubDps.
-func (mg *IothubDps) SetConditions(c ...xpv1.Condition) {
+// SetConditions of this DpsCertificate.
+func (mg *DpsCertificate) SetConditions(c ...xpv1.Condition) {
 	mg.Status.SetConditions(c...)
 }
 
-// SetDeletionPolicy of this IothubDps.
-func (mg *IothubDps) SetDeletionPolicy(r xpv1.DeletionPolicy) {
+// SetDeletionPolicy of this DpsCertificate.
+func (mg *DpsCertificate) SetDeletionPolicy(r xpv1.DeletionPolicy) {
 	mg.Spec.DeletionPolicy = r
 }
 
-// SetProviderConfigReference of this IothubDps.
-func (mg *IothubDps) SetProviderConfigReference(r *xpv1.Reference) {
+// SetProviderConfigReference of this DpsCertificate.
+func (mg *DpsCertificate) SetProviderConfigReference(r *xpv1.Reference) {
 	mg.Spec.ProviderConfigReference = r
 }
 
 /*
-SetProviderReference of this IothubDps.
+SetProviderReference of this DpsCertificate.
 Deprecated: Use SetProviderConfigReference.
 */
-func (mg *IothubDps) SetProviderReference(r *xpv1.Reference) {
+func (mg *DpsCertificate) SetProviderReference(r *xpv1.Reference) {
 	mg.Spec.ProviderReference = r
 }
 
-// SetWriteConnectionSecretToReference of this IothubDps.
-func (mg *IothubDps) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
+// SetWriteConnectionSecretToReference of this DpsCertificate.
+func (mg *DpsCertificate) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
 	mg.Spec.WriteConnectionSecretToReference = r
 }
 
-// GetCondition of this IothubDpsCertificate.
-func (mg *IothubDpsCertificate) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
+// GetCondition of this DpsSharedAccessPolicy.
+func (mg *DpsSharedAccessPolicy) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
 	return mg.Status.GetCondition(ct)
 }
 
-// GetDeletionPolicy of this IothubDpsCertificate.
-func (mg *IothubDpsCertificate) GetDeletionPolicy() xpv1.DeletionPolicy {
+// GetDeletionPolicy of this DpsSharedAccessPolicy.
+func (mg *DpsSharedAccessPolicy) GetDeletionPolicy() xpv1.DeletionPolicy {
 	return mg.Spec.DeletionPolicy
 }
 
-// GetProviderConfigReference of this IothubDpsCertificate.
-func (mg *IothubDpsCertificate) GetProviderConfigReference() *xpv1.Reference {
+// GetProviderConfigReference of this DpsSharedAccessPolicy.
+func (mg *DpsSharedAccessPolicy) GetProviderConfigReference() *xpv1.Reference {
 	return mg.Spec.ProviderConfigReference
 }
 
 /*
-GetProviderReference of this IothubDpsCertificate.
+GetProviderReference of this DpsSharedAccessPolicy.
 Deprecated: Use GetProviderConfigReference.
 */
-func (mg *IothubDpsCertificate) GetProviderReference() *xpv1.Reference {
+func (mg *DpsSharedAccessPolicy) GetProviderReference() *xpv1.Reference {
 	return mg.Spec.ProviderReference
 }
 
-// GetWriteConnectionSecretToReference of this IothubDpsCertificate.
-func (mg *IothubDpsCertificate) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
+// GetWriteConnectionSecretToReference of this DpsSharedAccessPolicy.
+func (mg *DpsSharedAccessPolicy) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
 	return mg.Spec.WriteConnectionSecretToReference
 }
 
-// SetConditions of this IothubDpsCertificate.
-func (mg *IothubDpsCertificate) SetConditions(c ...xpv1.Condition) {
+// SetConditions of this DpsSharedAccessPolicy.
+func (mg *DpsSharedAccessPolicy) SetConditions(c ...xpv1.Condition) {
 	mg.Status.SetConditions(c...)
 }
 
-// SetDeletionPolicy of this IothubDpsCertificate.
-func (mg *IothubDpsCertificate) SetDeletionPolicy(r xpv1.DeletionPolicy) {
+// SetDeletionPolicy of this DpsSharedAccessPolicy.
+func (mg *DpsSharedAccessPolicy) SetDeletionPolicy(r xpv1.DeletionPolicy) {
 	mg.Spec.DeletionPolicy = r
 }
 
-// SetProviderConfigReference of this IothubDpsCertificate.
-func (mg *IothubDpsCertificate) SetProviderConfigReference(r *xpv1.Reference) {
+// SetProviderConfigReference of this DpsSharedAccessPolicy.
+func (mg *DpsSharedAccessPolicy) SetProviderConfigReference(r *xpv1.Reference) {
 	mg.Spec.ProviderConfigReference = r
 }
 
 /*
-SetProviderReference of this IothubDpsCertificate.
+SetProviderReference of this DpsSharedAccessPolicy.
 Deprecated: Use SetProviderConfigReference.
 */
-func (mg *IothubDpsCertificate) SetProviderReference(r *xpv1.Reference) {
+func (mg *DpsSharedAccessPolicy) SetProviderReference(r *xpv1.Reference) {
 	mg.Spec.ProviderReference = r
 }
 
-// SetWriteConnectionSecretToReference of this IothubDpsCertificate.
-func (mg *IothubDpsCertificate) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
+// SetWriteConnectionSecretToReference of this DpsSharedAccessPolicy.
+func (mg *DpsSharedAccessPolicy) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
 	mg.Spec.WriteConnectionSecretToReference = r
 }
 
-// GetCondition of this IothubDpsSharedAccessPolicy.
-func (mg *IothubDpsSharedAccessPolicy) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
+// GetCondition of this EndpointEventhub.
+func (mg *EndpointEventhub) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
 	return mg.Status.GetCondition(ct)
 }
 
-// GetDeletionPolicy of this IothubDpsSharedAccessPolicy.
-func (mg *IothubDpsSharedAccessPolicy) GetDeletionPolicy() xpv1.DeletionPolicy {
+// GetDeletionPolicy of this EndpointEventhub.
+func (mg *EndpointEventhub) GetDeletionPolicy() xpv1.DeletionPolicy {
 	return mg.Spec.DeletionPolicy
 }
 
-// GetProviderConfigReference of this IothubDpsSharedAccessPolicy.
-func (mg *IothubDpsSharedAccessPolicy) GetProviderConfigReference() *xpv1.Reference {
+// GetProviderConfigReference of this EndpointEventhub.
+func (mg *EndpointEventhub) GetProviderConfigReference() *xpv1.Reference {
 	return mg.Spec.ProviderConfigReference
 }
 
 /*
-GetProviderReference of this IothubDpsSharedAccessPolicy.
+GetProviderReference of this EndpointEventhub.
 Deprecated: Use GetProviderConfigReference.
 */
-func (mg *IothubDpsSharedAccessPolicy) GetProviderReference() *xpv1.Reference {
+func (mg *EndpointEventhub) GetProviderReference() *xpv1.Reference {
 	return mg.Spec.ProviderReference
 }
 
-// GetWriteConnectionSecretToReference of this IothubDpsSharedAccessPolicy.
-func (mg *IothubDpsSharedAccessPolicy) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
+// GetWriteConnectionSecretToReference of this EndpointEventhub.
+func (mg *EndpointEventhub) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
 	return mg.Spec.WriteConnectionSecretToReference
 }
 
-// SetConditions of this IothubDpsSharedAccessPolicy.
-func (mg *IothubDpsSharedAccessPolicy) SetConditions(c ...xpv1.Condition) {
+// SetConditions of this EndpointEventhub.
+func (mg *EndpointEventhub) SetConditions(c ...xpv1.Condition) {
 	mg.Status.SetConditions(c...)
 }
 
-// SetDeletionPolicy of this IothubDpsSharedAccessPolicy.
-func (mg *IothubDpsSharedAccessPolicy) SetDeletionPolicy(r xpv1.DeletionPolicy) {
+// SetDeletionPolicy of this EndpointEventhub.
+func (mg *EndpointEventhub) SetDeletionPolicy(r xpv1.DeletionPolicy) {
 	mg.Spec.DeletionPolicy = r
 }
 
-// SetProviderConfigReference of this IothubDpsSharedAccessPolicy.
-func (mg *IothubDpsSharedAccessPolicy) SetProviderConfigReference(r *xpv1.Reference) {
+// SetProviderConfigReference of this EndpointEventhub.
+func (mg *EndpointEventhub) SetProviderConfigReference(r *xpv1.Reference) {
 	mg.Spec.ProviderConfigReference = r
 }
 
 /*
-SetProviderReference of this IothubDpsSharedAccessPolicy.
+SetProviderReference of this EndpointEventhub.
 Deprecated: Use SetProviderConfigReference.
 */
-func (mg *IothubDpsSharedAccessPolicy) SetProviderReference(r *xpv1.Reference) {
+func (mg *EndpointEventhub) SetProviderReference(r *xpv1.Reference) {
 	mg.Spec.ProviderReference = r
 }
 
-// SetWriteConnectionSecretToReference of this IothubDpsSharedAccessPolicy.
-func (mg *IothubDpsSharedAccessPolicy) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
+// SetWriteConnectionSecretToReference of this EndpointEventhub.
+func (mg *EndpointEventhub) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
 	mg.Spec.WriteConnectionSecretToReference = r
 }
 
-// GetCondition of this IothubEndpointEventhub.
-func (mg *IothubEndpointEventhub) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
+// GetCondition of this EndpointServicebusQueue.
+func (mg *EndpointServicebusQueue) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
 	return mg.Status.GetCondition(ct)
 }
 
-// GetDeletionPolicy of this IothubEndpointEventhub.
-func (mg *IothubEndpointEventhub) GetDeletionPolicy() xpv1.DeletionPolicy {
+// GetDeletionPolicy of this EndpointServicebusQueue.
+func (mg *EndpointServicebusQueue) GetDeletionPolicy() xpv1.DeletionPolicy {
 	return mg.Spec.DeletionPolicy
 }
 
-// GetProviderConfigReference of this IothubEndpointEventhub.
-func (mg *IothubEndpointEventhub) GetProviderConfigReference() *xpv1.Reference {
+// GetProviderConfigReference of this EndpointServicebusQueue.
+func (mg *EndpointServicebusQueue) GetProviderConfigReference() *xpv1.Reference {
 	return mg.Spec.ProviderConfigReference
 }
 
 /*
-GetProviderReference of this IothubEndpointEventhub.
+GetProviderReference of this EndpointServicebusQueue.
 Deprecated: Use GetProviderConfigReference.
 */
-func (mg *IothubEndpointEventhub) GetProviderReference() *xpv1.Reference {
+func (mg *EndpointServicebusQueue) GetProviderReference() *xpv1.Reference {
 	return mg.Spec.ProviderReference
 }
 
-// GetWriteConnectionSecretToReference of this IothubEndpointEventhub.
-func (mg *IothubEndpointEventhub) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
+// GetWriteConnectionSecretToReference of this EndpointServicebusQueue.
+func (mg *EndpointServicebusQueue) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
 	return mg.Spec.WriteConnectionSecretToReference
 }
 
-// SetConditions of this IothubEndpointEventhub.
-func (mg *IothubEndpointEventhub) SetConditions(c ...xpv1.Condition) {
+// SetConditions of this EndpointServicebusQueue.
+func (mg *EndpointServicebusQueue) SetConditions(c ...xpv1.Condition) {
 	mg.Status.SetConditions(c...)
 }
 
-// SetDeletionPolicy of this IothubEndpointEventhub.
-func (mg *IothubEndpointEventhub) SetDeletionPolicy(r xpv1.DeletionPolicy) {
+// SetDeletionPolicy of this EndpointServicebusQueue.
+func (mg *EndpointServicebusQueue) SetDeletionPolicy(r xpv1.DeletionPolicy) {
 	mg.Spec.DeletionPolicy = r
 }
 
-// SetProviderConfigReference of this IothubEndpointEventhub.
-func (mg *IothubEndpointEventhub) SetProviderConfigReference(r *xpv1.Reference) {
+// SetProviderConfigReference of this EndpointServicebusQueue.
+func (mg *EndpointServicebusQueue) SetProviderConfigReference(r *xpv1.Reference) {
 	mg.Spec.ProviderConfigReference = r
 }
 
 /*
-SetProviderReference of this IothubEndpointEventhub.
+SetProviderReference of this EndpointServicebusQueue.
 Deprecated: Use SetProviderConfigReference.
 */
-func (mg *IothubEndpointEventhub) SetProviderReference(r *xpv1.Reference) {
+func (mg *EndpointServicebusQueue) SetProviderReference(r *xpv1.Reference) {
 	mg.Spec.ProviderReference = r
 }
 
-// SetWriteConnectionSecretToReference of this IothubEndpointEventhub.
-func (mg *IothubEndpointEventhub) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
+// SetWriteConnectionSecretToReference of this EndpointServicebusQueue.
+func (mg *EndpointServicebusQueue) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
 	mg.Spec.WriteConnectionSecretToReference = r
 }
 
-// GetCondition of this IothubEndpointServicebusQueue.
-func (mg *IothubEndpointServicebusQueue) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
+// GetCondition of this EndpointServicebusTopic.
+func (mg *EndpointServicebusTopic) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
 	return mg.Status.GetCondition(ct)
 }
 
-// GetDeletionPolicy of this IothubEndpointServicebusQueue.
-func (mg *IothubEndpointServicebusQueue) GetDeletionPolicy() xpv1.DeletionPolicy {
+// GetDeletionPolicy of this EndpointServicebusTopic.
+func (mg *EndpointServicebusTopic) GetDeletionPolicy() xpv1.DeletionPolicy {
 	return mg.Spec.DeletionPolicy
 }
 
-// GetProviderConfigReference of this IothubEndpointServicebusQueue.
-func (mg *IothubEndpointServicebusQueue) GetProviderConfigReference() *xpv1.Reference {
+// GetProviderConfigReference of this EndpointServicebusTopic.
+func (mg *EndpointServicebusTopic) GetProviderConfigReference() *xpv1.Reference {
 	return mg.Spec.ProviderConfigReference
 }
 
 /*
-GetProviderReference of this IothubEndpointServicebusQueue.
+GetProviderReference of this EndpointServicebusTopic.
 Deprecated: Use GetProviderConfigReference.
 */
-func (mg *IothubEndpointServicebusQueue) GetProviderReference() *xpv1.Reference {
+func (mg *EndpointServicebusTopic) GetProviderReference() *xpv1.Reference {
 	return mg.Spec.ProviderReference
 }
 
-// GetWriteConnectionSecretToReference of this IothubEndpointServicebusQueue.
-func (mg *IothubEndpointServicebusQueue) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
+// GetWriteConnectionSecretToReference of this EndpointServicebusTopic.
+func (mg *EndpointServicebusTopic) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
 	return mg.Spec.WriteConnectionSecretToReference
 }
 
-// SetConditions of this IothubEndpointServicebusQueue.
-func (mg *IothubEndpointServicebusQueue) SetConditions(c ...xpv1.Condition) {
+// SetConditions of this EndpointServicebusTopic.
+func (mg *EndpointServicebusTopic) SetConditions(c ...xpv1.Condition) {
 	mg.Status.SetConditions(c...)
 }
 
-// SetDeletionPolicy of this IothubEndpointServicebusQueue.
-func (mg *IothubEndpointServicebusQueue) SetDeletionPolicy(r xpv1.DeletionPolicy) {
+// SetDeletionPolicy of this EndpointServicebusTopic.
+func (mg *EndpointServicebusTopic) SetDeletionPolicy(r xpv1.DeletionPolicy) {
 	mg.Spec.DeletionPolicy = r
 }
 
-// SetProviderConfigReference of this IothubEndpointServicebusQueue.
-func (mg *IothubEndpointServicebusQueue) SetProviderConfigReference(r *xpv1.Reference) {
+// SetProviderConfigReference of this EndpointServicebusTopic.
+func (mg *EndpointServicebusTopic) SetProviderConfigReference(r *xpv1.Reference) {
 	mg.Spec.ProviderConfigReference = r
 }
 
 /*
-SetProviderReference of this IothubEndpointServicebusQueue.
+SetProviderReference of this EndpointServicebusTopic.
 Deprecated: Use SetProviderConfigReference.
 */
-func (mg *IothubEndpointServicebusQueue) SetProviderReference(r *xpv1.Reference) {
+func (mg *EndpointServicebusTopic) SetProviderReference(r *xpv1.Reference) {
 	mg.Spec.ProviderReference = r
 }
 
-// SetWriteConnectionSecretToReference of this IothubEndpointServicebusQueue.
-func (mg *IothubEndpointServicebusQueue) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
+// SetWriteConnectionSecretToReference of this EndpointServicebusTopic.
+func (mg *EndpointServicebusTopic) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
 	mg.Spec.WriteConnectionSecretToReference = r
 }
 
-// GetCondition of this IothubEndpointServicebusTopic.
-func (mg *IothubEndpointServicebusTopic) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
+// GetCondition of this EndpointStorageContainer.
+func (mg *EndpointStorageContainer) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
 	return mg.Status.GetCondition(ct)
 }
 
-// GetDeletionPolicy of this IothubEndpointServicebusTopic.
-func (mg *IothubEndpointServicebusTopic) GetDeletionPolicy() xpv1.DeletionPolicy {
+// GetDeletionPolicy of this EndpointStorageContainer.
+func (mg *EndpointStorageContainer) GetDeletionPolicy() xpv1.DeletionPolicy {
 	return mg.Spec.DeletionPolicy
 }
 
-// GetProviderConfigReference of this IothubEndpointServicebusTopic.
-func (mg *IothubEndpointServicebusTopic) GetProviderConfigReference() *xpv1.Reference {
+// GetProviderConfigReference of this EndpointStorageContainer.
+func (mg *EndpointStorageContainer) GetProviderConfigReference() *xpv1.Reference {
 	return mg.Spec.ProviderConfigReference
 }
 
 /*
-GetProviderReference of this IothubEndpointServicebusTopic.
+GetProviderReference of this EndpointStorageContainer.
 Deprecated: Use GetProviderConfigReference.
 */
-func (mg *IothubEndpointServicebusTopic) GetProviderReference() *xpv1.Reference {
+func (mg *EndpointStorageContainer) GetProviderReference() *xpv1.Reference {
 	return mg.Spec.ProviderReference
 }
 
-// GetWriteConnectionSecretToReference of this IothubEndpointServicebusTopic.
-func (mg *IothubEndpointServicebusTopic) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
+// GetWriteConnectionSecretToReference of this EndpointStorageContainer.
+func (mg *EndpointStorageContainer) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
 	return mg.Spec.WriteConnectionSecretToReference
 }
 
-// SetConditions of this IothubEndpointServicebusTopic.
-func (mg *IothubEndpointServicebusTopic) SetConditions(c ...xpv1.Condition) {
+// SetConditions of this EndpointStorageContainer.
+func (mg *EndpointStorageContainer) SetConditions(c ...xpv1.Condition) {
 	mg.Status.SetConditions(c...)
 }
 
-// SetDeletionPolicy of this IothubEndpointServicebusTopic.
-func (mg *IothubEndpointServicebusTopic) SetDeletionPolicy(r xpv1.DeletionPolicy) {
+// SetDeletionPolicy of this EndpointStorageContainer.
+func (mg *EndpointStorageContainer) SetDeletionPolicy(r xpv1.DeletionPolicy) {
 	mg.Spec.DeletionPolicy = r
 }
 
-// SetProviderConfigReference of this IothubEndpointServicebusTopic.
-func (mg *IothubEndpointServicebusTopic) SetProviderConfigReference(r *xpv1.Reference) {
+// SetProviderConfigReference of this EndpointStorageContainer.
+func (mg *EndpointStorageContainer) SetProviderConfigReference(r *xpv1.Reference) {
 	mg.Spec.ProviderConfigReference = r
 }
 
 /*
-SetProviderReference of this IothubEndpointServicebusTopic.
+SetProviderReference of this EndpointStorageContainer.
 Deprecated: Use SetProviderConfigReference.
 */
-func (mg *IothubEndpointServicebusTopic) SetProviderReference(r *xpv1.Reference) {
+func (mg *EndpointStorageContainer) SetProviderReference(r *xpv1.Reference) {
 	mg.Spec.ProviderReference = r
 }
 
-// SetWriteConnectionSecretToReference of this IothubEndpointServicebusTopic.
-func (mg *IothubEndpointServicebusTopic) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
+// SetWriteConnectionSecretToReference of this EndpointStorageContainer.
+func (mg *EndpointStorageContainer) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
 	mg.Spec.WriteConnectionSecretToReference = r
 }
 
-// GetCondition of this IothubEndpointStorageContainer.
-func (mg *IothubEndpointStorageContainer) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
+// GetCondition of this Enrichment.
+func (mg *Enrichment) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
 	return mg.Status.GetCondition(ct)
 }
 
-// GetDeletionPolicy of this IothubEndpointStorageContainer.
-func (mg *IothubEndpointStorageContainer) GetDeletionPolicy() xpv1.DeletionPolicy {
+// GetDeletionPolicy of this Enrichment.
+func (mg *Enrichment) GetDeletionPolicy() xpv1.DeletionPolicy {
 	return mg.Spec.DeletionPolicy
 }
 
-// GetProviderConfigReference of this IothubEndpointStorageContainer.
-func (mg *IothubEndpointStorageContainer) GetProviderConfigReference() *xpv1.Reference {
+// GetProviderConfigReference of this Enrichment.
+func (mg *Enrichment) GetProviderConfigReference() *xpv1.Reference {
 	return mg.Spec.ProviderConfigReference
 }
 
 /*
-GetProviderReference of this IothubEndpointStorageContainer.
+GetProviderReference of this Enrichment.
 Deprecated: Use GetProviderConfigReference.
 */
-func (mg *IothubEndpointStorageContainer) GetProviderReference() *xpv1.Reference {
+func (mg *Enrichment) GetProviderReference() *xpv1.Reference {
 	return mg.Spec.ProviderReference
 }
 
-// GetWriteConnectionSecretToReference of this IothubEndpointStorageContainer.
-func (mg *IothubEndpointStorageContainer) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
+// GetWriteConnectionSecretToReference of this Enrichment.
+func (mg *Enrichment) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
 	return mg.Spec.WriteConnectionSecretToReference
 }
 
-// SetConditions of this IothubEndpointStorageContainer.
-func (mg *IothubEndpointStorageContainer) SetConditions(c ...xpv1.Condition) {
+// SetConditions of this Enrichment.
+func (mg *Enrichment) SetConditions(c ...xpv1.Condition) {
 	mg.Status.SetConditions(c...)
 }
 
-// SetDeletionPolicy of this IothubEndpointStorageContainer.
-func (mg *IothubEndpointStorageContainer) SetDeletionPolicy(r xpv1.DeletionPolicy) {
+// SetDeletionPolicy of this Enrichment.
+func (mg *Enrichment) SetDeletionPolicy(r xpv1.DeletionPolicy) {
 	mg.Spec.DeletionPolicy = r
 }
 
-// SetProviderConfigReference of this IothubEndpointStorageContainer.
-func (mg *IothubEndpointStorageContainer) SetProviderConfigReference(r *xpv1.Reference) {
+// SetProviderConfigReference of this Enrichment.
+func (mg *Enrichment) SetProviderConfigReference(r *xpv1.Reference) {
 	mg.Spec.ProviderConfigReference = r
 }
 
 /*
-SetProviderReference of this IothubEndpointStorageContainer.
+SetProviderReference of this Enrichment.
 Deprecated: Use SetProviderConfigReference.
 */
-func (mg *IothubEndpointStorageContainer) SetProviderReference(r *xpv1.Reference) {
+func (mg *Enrichment) SetProviderReference(r *xpv1.Reference) {
 	mg.Spec.ProviderReference = r
 }
 
-// SetWriteConnectionSecretToReference of this IothubEndpointStorageContainer.
-func (mg *IothubEndpointStorageContainer) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
+// SetWriteConnectionSecretToReference of this Enrichment.
+func (mg *Enrichment) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
 	mg.Spec.WriteConnectionSecretToReference = r
 }
 
-// GetCondition of this IothubEnrichment.
-func (mg *IothubEnrichment) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
+// GetCondition of this FallbackRoute.
+func (mg *FallbackRoute) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
 	return mg.Status.GetCondition(ct)
 }
 
-// GetDeletionPolicy of this IothubEnrichment.
-func (mg *IothubEnrichment) GetDeletionPolicy() xpv1.DeletionPolicy {
+// GetDeletionPolicy of this FallbackRoute.
+func (mg *FallbackRoute) GetDeletionPolicy() xpv1.DeletionPolicy {
 	return mg.Spec.DeletionPolicy
 }
 
-// GetProviderConfigReference of this IothubEnrichment.
-func (mg *IothubEnrichment) GetProviderConfigReference() *xpv1.Reference {
+// GetProviderConfigReference of this FallbackRoute.
+func (mg *FallbackRoute) GetProviderConfigReference() *xpv1.Reference {
 	return mg.Spec.ProviderConfigReference
 }
 
 /*
-GetProviderReference of this IothubEnrichment.
+GetProviderReference of this FallbackRoute.
 Deprecated: Use GetProviderConfigReference.
 */
-func (mg *IothubEnrichment) GetProviderReference() *xpv1.Reference {
+func (mg *FallbackRoute) GetProviderReference() *xpv1.Reference {
 	return mg.Spec.ProviderReference
 }
 
-// GetWriteConnectionSecretToReference of this IothubEnrichment.
-func (mg *IothubEnrichment) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
+// GetWriteConnectionSecretToReference of this FallbackRoute.
+func (mg *FallbackRoute) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
 	return mg.Spec.WriteConnectionSecretToReference
 }
 
-// SetConditions of this IothubEnrichment.
-func (mg *IothubEnrichment) SetConditions(c ...xpv1.Condition) {
+// SetConditions of this FallbackRoute.
+func (mg *FallbackRoute) SetConditions(c ...xpv1.Condition) {
 	mg.Status.SetConditions(c...)
 }
 
-// SetDeletionPolicy of this IothubEnrichment.
-func (mg *IothubEnrichment) SetDeletionPolicy(r xpv1.DeletionPolicy) {
+// SetDeletionPolicy of this FallbackRoute.
+func (mg *FallbackRoute) SetDeletionPolicy(r xpv1.DeletionPolicy) {
 	mg.Spec.DeletionPolicy = r
 }
 
-// SetProviderConfigReference of this IothubEnrichment.
-func (mg *IothubEnrichment) SetProviderConfigReference(r *xpv1.Reference) {
+// SetProviderConfigReference of this FallbackRoute.
+func (mg *FallbackRoute) SetProviderConfigReference(r *xpv1.Reference) {
 	mg.Spec.ProviderConfigReference = r
 }
 
 /*
-SetProviderReference of this IothubEnrichment.
+SetProviderReference of this FallbackRoute.
 Deprecated: Use SetProviderConfigReference.
 */
-func (mg *IothubEnrichment) SetProviderReference(r *xpv1.Reference) {
+func (mg *FallbackRoute) SetProviderReference(r *xpv1.Reference) {
 	mg.Spec.ProviderReference = r
 }
 
-// SetWriteConnectionSecretToReference of this IothubEnrichment.
-func (mg *IothubEnrichment) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
+// SetWriteConnectionSecretToReference of this FallbackRoute.
+func (mg *FallbackRoute) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
 	mg.Spec.WriteConnectionSecretToReference = r
 }
 
-// GetCondition of this IothubFallbackRoute.
-func (mg *IothubFallbackRoute) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
+// GetCondition of this Route.
+func (mg *Route) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
 	return mg.Status.GetCondition(ct)
 }
 
-// GetDeletionPolicy of this IothubFallbackRoute.
-func (mg *IothubFallbackRoute) GetDeletionPolicy() xpv1.DeletionPolicy {
+// GetDeletionPolicy of this Route.
+func (mg *Route) GetDeletionPolicy() xpv1.DeletionPolicy {
 	return mg.Spec.DeletionPolicy
 }
 
-// GetProviderConfigReference of this IothubFallbackRoute.
-func (mg *IothubFallbackRoute) GetProviderConfigReference() *xpv1.Reference {
+// GetProviderConfigReference of this Route.
+func (mg *Route) GetProviderConfigReference() *xpv1.Reference {
 	return mg.Spec.ProviderConfigReference
 }
 
 /*
-GetProviderReference of this IothubFallbackRoute.
+GetProviderReference of this Route.
 Deprecated: Use GetProviderConfigReference.
 */
-func (mg *IothubFallbackRoute) GetProviderReference() *xpv1.Reference {
+func (mg *Route) GetProviderReference() *xpv1.Reference {
 	return mg.Spec.ProviderReference
 }
 
-// GetWriteConnectionSecretToReference of this IothubFallbackRoute.
-func (mg *IothubFallbackRoute) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
+// GetWriteConnectionSecretToReference of this Route.
+func (mg *Route) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
 	return mg.Spec.WriteConnectionSecretToReference
 }
 
-// SetConditions of this IothubFallbackRoute.
-func (mg *IothubFallbackRoute) SetConditions(c ...xpv1.Condition) {
+// SetConditions of this Route.
+func (mg *Route) SetConditions(c ...xpv1.Condition) {
 	mg.Status.SetConditions(c...)
 }
 
-// SetDeletionPolicy of this IothubFallbackRoute.
-func (mg *IothubFallbackRoute) SetDeletionPolicy(r xpv1.DeletionPolicy) {
+// SetDeletionPolicy of this Route.
+func (mg *Route) SetDeletionPolicy(r xpv1.DeletionPolicy) {
 	mg.Spec.DeletionPolicy = r
 }
 
-// SetProviderConfigReference of this IothubFallbackRoute.
-func (mg *IothubFallbackRoute) SetProviderConfigReference(r *xpv1.Reference) {
+// SetProviderConfigReference of this Route.
+func (mg *Route) SetProviderConfigReference(r *xpv1.Reference) {
 	mg.Spec.ProviderConfigReference = r
 }
 
 /*
-SetProviderReference of this IothubFallbackRoute.
+SetProviderReference of this Route.
 Deprecated: Use SetProviderConfigReference.
 */
-func (mg *IothubFallbackRoute) SetProviderReference(r *xpv1.Reference) {
+func (mg *Route) SetProviderReference(r *xpv1.Reference) {
 	mg.Spec.ProviderReference = r
 }
 
-// SetWriteConnectionSecretToReference of this IothubFallbackRoute.
-func (mg *IothubFallbackRoute) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
+// SetWriteConnectionSecretToReference of this Route.
+func (mg *Route) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
 	mg.Spec.WriteConnectionSecretToReference = r
 }
 
-// GetCondition of this IothubRoute.
-func (mg *IothubRoute) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
+// GetCondition of this SharedAccessPolicy.
+func (mg *SharedAccessPolicy) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
 	return mg.Status.GetCondition(ct)
 }
 
-// GetDeletionPolicy of this IothubRoute.
-func (mg *IothubRoute) GetDeletionPolicy() xpv1.DeletionPolicy {
+// GetDeletionPolicy of this SharedAccessPolicy.
+func (mg *SharedAccessPolicy) GetDeletionPolicy() xpv1.DeletionPolicy {
 	return mg.Spec.DeletionPolicy
 }
 
-// GetProviderConfigReference of this IothubRoute.
-func (mg *IothubRoute) GetProviderConfigReference() *xpv1.Reference {
+// GetProviderConfigReference of this SharedAccessPolicy.
+func (mg *SharedAccessPolicy) GetProviderConfigReference() *xpv1.Reference {
 	return mg.Spec.ProviderConfigReference
 }
 
 /*
-GetProviderReference of this IothubRoute.
+GetProviderReference of this SharedAccessPolicy.
 Deprecated: Use GetProviderConfigReference.
 */
-func (mg *IothubRoute) GetProviderReference() *xpv1.Reference {
+func (mg *SharedAccessPolicy) GetProviderReference() *xpv1.Reference {
 	return mg.Spec.ProviderReference
 }
 
-// GetWriteConnectionSecretToReference of this IothubRoute.
-func (mg *IothubRoute) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
+// GetWriteConnectionSecretToReference of this SharedAccessPolicy.
+func (mg *SharedAccessPolicy) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
 	return mg.Spec.WriteConnectionSecretToReference
 }
 
-// SetConditions of this IothubRoute.
-func (mg *IothubRoute) SetConditions(c ...xpv1.Condition) {
+// SetConditions of this SharedAccessPolicy.
+func (mg *SharedAccessPolicy) SetConditions(c ...xpv1.Condition) {
 	mg.Status.SetConditions(c...)
 }
 
-// SetDeletionPolicy of this IothubRoute.
-func (mg *IothubRoute) SetDeletionPolicy(r xpv1.DeletionPolicy) {
+// SetDeletionPolicy of this SharedAccessPolicy.
+func (mg *SharedAccessPolicy) SetDeletionPolicy(r xpv1.DeletionPolicy) {
 	mg.Spec.DeletionPolicy = r
 }
 
-// SetProviderConfigReference of this IothubRoute.
-func (mg *IothubRoute) SetProviderConfigReference(r *xpv1.Reference) {
+// SetProviderConfigReference of this SharedAccessPolicy.
+func (mg *SharedAccessPolicy) SetProviderConfigReference(r *xpv1.Reference) {
 	mg.Spec.ProviderConfigReference = r
 }
 
 /*
-SetProviderReference of this IothubRoute.
+SetProviderReference of this SharedAccessPolicy.
 Deprecated: Use SetProviderConfigReference.
 */
-func (mg *IothubRoute) SetProviderReference(r *xpv1.Reference) {
+func (mg *SharedAccessPolicy) SetProviderReference(r *xpv1.Reference) {
 	mg.Spec.ProviderReference = r
 }
 
-// SetWriteConnectionSecretToReference of this IothubRoute.
-func (mg *IothubRoute) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
-	mg.Spec.WriteConnectionSecretToReference = r
-}
-
-// GetCondition of this IothubSharedAccessPolicy.
-func (mg *IothubSharedAccessPolicy) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
-	return mg.Status.GetCondition(ct)
-}
-
-// GetDeletionPolicy of this IothubSharedAccessPolicy.
-func (mg *IothubSharedAccessPolicy) GetDeletionPolicy() xpv1.DeletionPolicy {
-	return mg.Spec.DeletionPolicy
-}
-
-// GetProviderConfigReference of this IothubSharedAccessPolicy.
-func (mg *IothubSharedAccessPolicy) GetProviderConfigReference() *xpv1.Reference {
-	return mg.Spec.ProviderConfigReference
-}
-
-/*
-GetProviderReference of this IothubSharedAccessPolicy.
-Deprecated: Use GetProviderConfigReference.
-*/
-func (mg *IothubSharedAccessPolicy) GetProviderReference() *xpv1.Reference {
-	return mg.Spec.ProviderReference
-}
-
-// GetWriteConnectionSecretToReference of this IothubSharedAccessPolicy.
-func (mg *IothubSharedAccessPolicy) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
-	return mg.Spec.WriteConnectionSecretToReference
-}
-
-// SetConditions of this IothubSharedAccessPolicy.
-func (mg *IothubSharedAccessPolicy) SetConditions(c ...xpv1.Condition) {
-	mg.Status.SetConditions(c...)
-}
-
-// SetDeletionPolicy of this IothubSharedAccessPolicy.
-func (mg *IothubSharedAccessPolicy) SetDeletionPolicy(r xpv1.DeletionPolicy) {
-	mg.Spec.DeletionPolicy = r
-}
-
-// SetProviderConfigReference of this IothubSharedAccessPolicy.
-func (mg *IothubSharedAccessPolicy) SetProviderConfigReference(r *xpv1.Reference) {
-	mg.Spec.ProviderConfigReference = r
-}
-
-/*
-SetProviderReference of this IothubSharedAccessPolicy.
-Deprecated: Use SetProviderConfigReference.
-*/
-func (mg *IothubSharedAccessPolicy) SetProviderReference(r *xpv1.Reference) {
-	mg.Spec.ProviderReference = r
-}
-
-// SetWriteConnectionSecretToReference of this IothubSharedAccessPolicy.
-func (mg *IothubSharedAccessPolicy) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
+// SetWriteConnectionSecretToReference of this SharedAccessPolicy.
+func (mg *SharedAccessPolicy) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
 	mg.Spec.WriteConnectionSecretToReference = r
 }

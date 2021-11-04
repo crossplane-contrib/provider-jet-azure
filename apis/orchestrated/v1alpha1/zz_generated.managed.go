@@ -19,58 +19,58 @@ package v1alpha1
 
 import xpv1 "github.com/crossplane/crossplane-runtime/apis/common/v1"
 
-// GetCondition of this OrchestratedVirtualMachineScaleSet.
-func (mg *OrchestratedVirtualMachineScaleSet) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
+// GetCondition of this VirtualMachineScaleSet.
+func (mg *VirtualMachineScaleSet) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
 	return mg.Status.GetCondition(ct)
 }
 
-// GetDeletionPolicy of this OrchestratedVirtualMachineScaleSet.
-func (mg *OrchestratedVirtualMachineScaleSet) GetDeletionPolicy() xpv1.DeletionPolicy {
+// GetDeletionPolicy of this VirtualMachineScaleSet.
+func (mg *VirtualMachineScaleSet) GetDeletionPolicy() xpv1.DeletionPolicy {
 	return mg.Spec.DeletionPolicy
 }
 
-// GetProviderConfigReference of this OrchestratedVirtualMachineScaleSet.
-func (mg *OrchestratedVirtualMachineScaleSet) GetProviderConfigReference() *xpv1.Reference {
+// GetProviderConfigReference of this VirtualMachineScaleSet.
+func (mg *VirtualMachineScaleSet) GetProviderConfigReference() *xpv1.Reference {
 	return mg.Spec.ProviderConfigReference
 }
 
 /*
-GetProviderReference of this OrchestratedVirtualMachineScaleSet.
+GetProviderReference of this VirtualMachineScaleSet.
 Deprecated: Use GetProviderConfigReference.
 */
-func (mg *OrchestratedVirtualMachineScaleSet) GetProviderReference() *xpv1.Reference {
+func (mg *VirtualMachineScaleSet) GetProviderReference() *xpv1.Reference {
 	return mg.Spec.ProviderReference
 }
 
-// GetWriteConnectionSecretToReference of this OrchestratedVirtualMachineScaleSet.
-func (mg *OrchestratedVirtualMachineScaleSet) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
+// GetWriteConnectionSecretToReference of this VirtualMachineScaleSet.
+func (mg *VirtualMachineScaleSet) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
 	return mg.Spec.WriteConnectionSecretToReference
 }
 
-// SetConditions of this OrchestratedVirtualMachineScaleSet.
-func (mg *OrchestratedVirtualMachineScaleSet) SetConditions(c ...xpv1.Condition) {
+// SetConditions of this VirtualMachineScaleSet.
+func (mg *VirtualMachineScaleSet) SetConditions(c ...xpv1.Condition) {
 	mg.Status.SetConditions(c...)
 }
 
-// SetDeletionPolicy of this OrchestratedVirtualMachineScaleSet.
-func (mg *OrchestratedVirtualMachineScaleSet) SetDeletionPolicy(r xpv1.DeletionPolicy) {
+// SetDeletionPolicy of this VirtualMachineScaleSet.
+func (mg *VirtualMachineScaleSet) SetDeletionPolicy(r xpv1.DeletionPolicy) {
 	mg.Spec.DeletionPolicy = r
 }
 
-// SetProviderConfigReference of this OrchestratedVirtualMachineScaleSet.
-func (mg *OrchestratedVirtualMachineScaleSet) SetProviderConfigReference(r *xpv1.Reference) {
+// SetProviderConfigReference of this VirtualMachineScaleSet.
+func (mg *VirtualMachineScaleSet) SetProviderConfigReference(r *xpv1.Reference) {
 	mg.Spec.ProviderConfigReference = r
 }
 
 /*
-SetProviderReference of this OrchestratedVirtualMachineScaleSet.
+SetProviderReference of this VirtualMachineScaleSet.
 Deprecated: Use SetProviderConfigReference.
 */
-func (mg *OrchestratedVirtualMachineScaleSet) SetProviderReference(r *xpv1.Reference) {
+func (mg *VirtualMachineScaleSet) SetProviderReference(r *xpv1.Reference) {
 	mg.Spec.ProviderReference = r
 }
 
-// SetWriteConnectionSecretToReference of this OrchestratedVirtualMachineScaleSet.
-func (mg *OrchestratedVirtualMachineScaleSet) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
+// SetWriteConnectionSecretToReference of this VirtualMachineScaleSet.
+func (mg *VirtualMachineScaleSet) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
 	mg.Spec.WriteConnectionSecretToReference = r
 }

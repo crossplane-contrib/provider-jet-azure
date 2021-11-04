@@ -19,226 +19,226 @@ package v1alpha1
 
 import xpv1 "github.com/crossplane/crossplane-runtime/apis/common/v1"
 
-// GetCondition of this DigitalTwinsEndpointEventgrid.
-func (mg *DigitalTwinsEndpointEventgrid) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
+// GetCondition of this TwinsEndpointEventgrid.
+func (mg *TwinsEndpointEventgrid) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
 	return mg.Status.GetCondition(ct)
 }
 
-// GetDeletionPolicy of this DigitalTwinsEndpointEventgrid.
-func (mg *DigitalTwinsEndpointEventgrid) GetDeletionPolicy() xpv1.DeletionPolicy {
+// GetDeletionPolicy of this TwinsEndpointEventgrid.
+func (mg *TwinsEndpointEventgrid) GetDeletionPolicy() xpv1.DeletionPolicy {
 	return mg.Spec.DeletionPolicy
 }
 
-// GetProviderConfigReference of this DigitalTwinsEndpointEventgrid.
-func (mg *DigitalTwinsEndpointEventgrid) GetProviderConfigReference() *xpv1.Reference {
+// GetProviderConfigReference of this TwinsEndpointEventgrid.
+func (mg *TwinsEndpointEventgrid) GetProviderConfigReference() *xpv1.Reference {
 	return mg.Spec.ProviderConfigReference
 }
 
 /*
-GetProviderReference of this DigitalTwinsEndpointEventgrid.
+GetProviderReference of this TwinsEndpointEventgrid.
 Deprecated: Use GetProviderConfigReference.
 */
-func (mg *DigitalTwinsEndpointEventgrid) GetProviderReference() *xpv1.Reference {
+func (mg *TwinsEndpointEventgrid) GetProviderReference() *xpv1.Reference {
 	return mg.Spec.ProviderReference
 }
 
-// GetWriteConnectionSecretToReference of this DigitalTwinsEndpointEventgrid.
-func (mg *DigitalTwinsEndpointEventgrid) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
+// GetWriteConnectionSecretToReference of this TwinsEndpointEventgrid.
+func (mg *TwinsEndpointEventgrid) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
 	return mg.Spec.WriteConnectionSecretToReference
 }
 
-// SetConditions of this DigitalTwinsEndpointEventgrid.
-func (mg *DigitalTwinsEndpointEventgrid) SetConditions(c ...xpv1.Condition) {
+// SetConditions of this TwinsEndpointEventgrid.
+func (mg *TwinsEndpointEventgrid) SetConditions(c ...xpv1.Condition) {
 	mg.Status.SetConditions(c...)
 }
 
-// SetDeletionPolicy of this DigitalTwinsEndpointEventgrid.
-func (mg *DigitalTwinsEndpointEventgrid) SetDeletionPolicy(r xpv1.DeletionPolicy) {
+// SetDeletionPolicy of this TwinsEndpointEventgrid.
+func (mg *TwinsEndpointEventgrid) SetDeletionPolicy(r xpv1.DeletionPolicy) {
 	mg.Spec.DeletionPolicy = r
 }
 
-// SetProviderConfigReference of this DigitalTwinsEndpointEventgrid.
-func (mg *DigitalTwinsEndpointEventgrid) SetProviderConfigReference(r *xpv1.Reference) {
+// SetProviderConfigReference of this TwinsEndpointEventgrid.
+func (mg *TwinsEndpointEventgrid) SetProviderConfigReference(r *xpv1.Reference) {
 	mg.Spec.ProviderConfigReference = r
 }
 
 /*
-SetProviderReference of this DigitalTwinsEndpointEventgrid.
+SetProviderReference of this TwinsEndpointEventgrid.
 Deprecated: Use SetProviderConfigReference.
 */
-func (mg *DigitalTwinsEndpointEventgrid) SetProviderReference(r *xpv1.Reference) {
+func (mg *TwinsEndpointEventgrid) SetProviderReference(r *xpv1.Reference) {
 	mg.Spec.ProviderReference = r
 }
 
-// SetWriteConnectionSecretToReference of this DigitalTwinsEndpointEventgrid.
-func (mg *DigitalTwinsEndpointEventgrid) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
+// SetWriteConnectionSecretToReference of this TwinsEndpointEventgrid.
+func (mg *TwinsEndpointEventgrid) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
 	mg.Spec.WriteConnectionSecretToReference = r
 }
 
-// GetCondition of this DigitalTwinsEndpointEventhub.
-func (mg *DigitalTwinsEndpointEventhub) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
+// GetCondition of this TwinsEndpointEventhub.
+func (mg *TwinsEndpointEventhub) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
 	return mg.Status.GetCondition(ct)
 }
 
-// GetDeletionPolicy of this DigitalTwinsEndpointEventhub.
-func (mg *DigitalTwinsEndpointEventhub) GetDeletionPolicy() xpv1.DeletionPolicy {
+// GetDeletionPolicy of this TwinsEndpointEventhub.
+func (mg *TwinsEndpointEventhub) GetDeletionPolicy() xpv1.DeletionPolicy {
 	return mg.Spec.DeletionPolicy
 }
 
-// GetProviderConfigReference of this DigitalTwinsEndpointEventhub.
-func (mg *DigitalTwinsEndpointEventhub) GetProviderConfigReference() *xpv1.Reference {
+// GetProviderConfigReference of this TwinsEndpointEventhub.
+func (mg *TwinsEndpointEventhub) GetProviderConfigReference() *xpv1.Reference {
 	return mg.Spec.ProviderConfigReference
 }
 
 /*
-GetProviderReference of this DigitalTwinsEndpointEventhub.
+GetProviderReference of this TwinsEndpointEventhub.
 Deprecated: Use GetProviderConfigReference.
 */
-func (mg *DigitalTwinsEndpointEventhub) GetProviderReference() *xpv1.Reference {
+func (mg *TwinsEndpointEventhub) GetProviderReference() *xpv1.Reference {
 	return mg.Spec.ProviderReference
 }
 
-// GetWriteConnectionSecretToReference of this DigitalTwinsEndpointEventhub.
-func (mg *DigitalTwinsEndpointEventhub) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
+// GetWriteConnectionSecretToReference of this TwinsEndpointEventhub.
+func (mg *TwinsEndpointEventhub) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
 	return mg.Spec.WriteConnectionSecretToReference
 }
 
-// SetConditions of this DigitalTwinsEndpointEventhub.
-func (mg *DigitalTwinsEndpointEventhub) SetConditions(c ...xpv1.Condition) {
+// SetConditions of this TwinsEndpointEventhub.
+func (mg *TwinsEndpointEventhub) SetConditions(c ...xpv1.Condition) {
 	mg.Status.SetConditions(c...)
 }
 
-// SetDeletionPolicy of this DigitalTwinsEndpointEventhub.
-func (mg *DigitalTwinsEndpointEventhub) SetDeletionPolicy(r xpv1.DeletionPolicy) {
+// SetDeletionPolicy of this TwinsEndpointEventhub.
+func (mg *TwinsEndpointEventhub) SetDeletionPolicy(r xpv1.DeletionPolicy) {
 	mg.Spec.DeletionPolicy = r
 }
 
-// SetProviderConfigReference of this DigitalTwinsEndpointEventhub.
-func (mg *DigitalTwinsEndpointEventhub) SetProviderConfigReference(r *xpv1.Reference) {
+// SetProviderConfigReference of this TwinsEndpointEventhub.
+func (mg *TwinsEndpointEventhub) SetProviderConfigReference(r *xpv1.Reference) {
 	mg.Spec.ProviderConfigReference = r
 }
 
 /*
-SetProviderReference of this DigitalTwinsEndpointEventhub.
+SetProviderReference of this TwinsEndpointEventhub.
 Deprecated: Use SetProviderConfigReference.
 */
-func (mg *DigitalTwinsEndpointEventhub) SetProviderReference(r *xpv1.Reference) {
+func (mg *TwinsEndpointEventhub) SetProviderReference(r *xpv1.Reference) {
 	mg.Spec.ProviderReference = r
 }
 
-// SetWriteConnectionSecretToReference of this DigitalTwinsEndpointEventhub.
-func (mg *DigitalTwinsEndpointEventhub) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
+// SetWriteConnectionSecretToReference of this TwinsEndpointEventhub.
+func (mg *TwinsEndpointEventhub) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
 	mg.Spec.WriteConnectionSecretToReference = r
 }
 
-// GetCondition of this DigitalTwinsEndpointServicebus.
-func (mg *DigitalTwinsEndpointServicebus) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
+// GetCondition of this TwinsEndpointServicebus.
+func (mg *TwinsEndpointServicebus) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
 	return mg.Status.GetCondition(ct)
 }
 
-// GetDeletionPolicy of this DigitalTwinsEndpointServicebus.
-func (mg *DigitalTwinsEndpointServicebus) GetDeletionPolicy() xpv1.DeletionPolicy {
+// GetDeletionPolicy of this TwinsEndpointServicebus.
+func (mg *TwinsEndpointServicebus) GetDeletionPolicy() xpv1.DeletionPolicy {
 	return mg.Spec.DeletionPolicy
 }
 
-// GetProviderConfigReference of this DigitalTwinsEndpointServicebus.
-func (mg *DigitalTwinsEndpointServicebus) GetProviderConfigReference() *xpv1.Reference {
+// GetProviderConfigReference of this TwinsEndpointServicebus.
+func (mg *TwinsEndpointServicebus) GetProviderConfigReference() *xpv1.Reference {
 	return mg.Spec.ProviderConfigReference
 }
 
 /*
-GetProviderReference of this DigitalTwinsEndpointServicebus.
+GetProviderReference of this TwinsEndpointServicebus.
 Deprecated: Use GetProviderConfigReference.
 */
-func (mg *DigitalTwinsEndpointServicebus) GetProviderReference() *xpv1.Reference {
+func (mg *TwinsEndpointServicebus) GetProviderReference() *xpv1.Reference {
 	return mg.Spec.ProviderReference
 }
 
-// GetWriteConnectionSecretToReference of this DigitalTwinsEndpointServicebus.
-func (mg *DigitalTwinsEndpointServicebus) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
+// GetWriteConnectionSecretToReference of this TwinsEndpointServicebus.
+func (mg *TwinsEndpointServicebus) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
 	return mg.Spec.WriteConnectionSecretToReference
 }
 
-// SetConditions of this DigitalTwinsEndpointServicebus.
-func (mg *DigitalTwinsEndpointServicebus) SetConditions(c ...xpv1.Condition) {
+// SetConditions of this TwinsEndpointServicebus.
+func (mg *TwinsEndpointServicebus) SetConditions(c ...xpv1.Condition) {
 	mg.Status.SetConditions(c...)
 }
 
-// SetDeletionPolicy of this DigitalTwinsEndpointServicebus.
-func (mg *DigitalTwinsEndpointServicebus) SetDeletionPolicy(r xpv1.DeletionPolicy) {
+// SetDeletionPolicy of this TwinsEndpointServicebus.
+func (mg *TwinsEndpointServicebus) SetDeletionPolicy(r xpv1.DeletionPolicy) {
 	mg.Spec.DeletionPolicy = r
 }
 
-// SetProviderConfigReference of this DigitalTwinsEndpointServicebus.
-func (mg *DigitalTwinsEndpointServicebus) SetProviderConfigReference(r *xpv1.Reference) {
+// SetProviderConfigReference of this TwinsEndpointServicebus.
+func (mg *TwinsEndpointServicebus) SetProviderConfigReference(r *xpv1.Reference) {
 	mg.Spec.ProviderConfigReference = r
 }
 
 /*
-SetProviderReference of this DigitalTwinsEndpointServicebus.
+SetProviderReference of this TwinsEndpointServicebus.
 Deprecated: Use SetProviderConfigReference.
 */
-func (mg *DigitalTwinsEndpointServicebus) SetProviderReference(r *xpv1.Reference) {
+func (mg *TwinsEndpointServicebus) SetProviderReference(r *xpv1.Reference) {
 	mg.Spec.ProviderReference = r
 }
 
-// SetWriteConnectionSecretToReference of this DigitalTwinsEndpointServicebus.
-func (mg *DigitalTwinsEndpointServicebus) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
+// SetWriteConnectionSecretToReference of this TwinsEndpointServicebus.
+func (mg *TwinsEndpointServicebus) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
 	mg.Spec.WriteConnectionSecretToReference = r
 }
 
-// GetCondition of this DigitalTwinsInstance.
-func (mg *DigitalTwinsInstance) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
+// GetCondition of this TwinsInstance.
+func (mg *TwinsInstance) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
 	return mg.Status.GetCondition(ct)
 }
 
-// GetDeletionPolicy of this DigitalTwinsInstance.
-func (mg *DigitalTwinsInstance) GetDeletionPolicy() xpv1.DeletionPolicy {
+// GetDeletionPolicy of this TwinsInstance.
+func (mg *TwinsInstance) GetDeletionPolicy() xpv1.DeletionPolicy {
 	return mg.Spec.DeletionPolicy
 }
 
-// GetProviderConfigReference of this DigitalTwinsInstance.
-func (mg *DigitalTwinsInstance) GetProviderConfigReference() *xpv1.Reference {
+// GetProviderConfigReference of this TwinsInstance.
+func (mg *TwinsInstance) GetProviderConfigReference() *xpv1.Reference {
 	return mg.Spec.ProviderConfigReference
 }
 
 /*
-GetProviderReference of this DigitalTwinsInstance.
+GetProviderReference of this TwinsInstance.
 Deprecated: Use GetProviderConfigReference.
 */
-func (mg *DigitalTwinsInstance) GetProviderReference() *xpv1.Reference {
+func (mg *TwinsInstance) GetProviderReference() *xpv1.Reference {
 	return mg.Spec.ProviderReference
 }
 
-// GetWriteConnectionSecretToReference of this DigitalTwinsInstance.
-func (mg *DigitalTwinsInstance) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
+// GetWriteConnectionSecretToReference of this TwinsInstance.
+func (mg *TwinsInstance) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
 	return mg.Spec.WriteConnectionSecretToReference
 }
 
-// SetConditions of this DigitalTwinsInstance.
-func (mg *DigitalTwinsInstance) SetConditions(c ...xpv1.Condition) {
+// SetConditions of this TwinsInstance.
+func (mg *TwinsInstance) SetConditions(c ...xpv1.Condition) {
 	mg.Status.SetConditions(c...)
 }
 
-// SetDeletionPolicy of this DigitalTwinsInstance.
-func (mg *DigitalTwinsInstance) SetDeletionPolicy(r xpv1.DeletionPolicy) {
+// SetDeletionPolicy of this TwinsInstance.
+func (mg *TwinsInstance) SetDeletionPolicy(r xpv1.DeletionPolicy) {
 	mg.Spec.DeletionPolicy = r
 }
 
-// SetProviderConfigReference of this DigitalTwinsInstance.
-func (mg *DigitalTwinsInstance) SetProviderConfigReference(r *xpv1.Reference) {
+// SetProviderConfigReference of this TwinsInstance.
+func (mg *TwinsInstance) SetProviderConfigReference(r *xpv1.Reference) {
 	mg.Spec.ProviderConfigReference = r
 }
 
 /*
-SetProviderReference of this DigitalTwinsInstance.
+SetProviderReference of this TwinsInstance.
 Deprecated: Use SetProviderConfigReference.
 */
-func (mg *DigitalTwinsInstance) SetProviderReference(r *xpv1.Reference) {
+func (mg *TwinsInstance) SetProviderReference(r *xpv1.Reference) {
 	mg.Spec.ProviderReference = r
 }
 
-// SetWriteConnectionSecretToReference of this DigitalTwinsInstance.
-func (mg *DigitalTwinsInstance) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
+// SetWriteConnectionSecretToReference of this TwinsInstance.
+func (mg *TwinsInstance) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
 	mg.Spec.WriteConnectionSecretToReference = r
 }

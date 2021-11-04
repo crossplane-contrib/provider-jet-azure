@@ -19,114 +19,114 @@ package v1alpha1
 
 import xpv1 "github.com/crossplane/crossplane-runtime/apis/common/v1"
 
-// GetCondition of this ConsumptionBudgetResourceGroup.
-func (mg *ConsumptionBudgetResourceGroup) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
+// GetCondition of this BudgetResourceGroup.
+func (mg *BudgetResourceGroup) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
 	return mg.Status.GetCondition(ct)
 }
 
-// GetDeletionPolicy of this ConsumptionBudgetResourceGroup.
-func (mg *ConsumptionBudgetResourceGroup) GetDeletionPolicy() xpv1.DeletionPolicy {
+// GetDeletionPolicy of this BudgetResourceGroup.
+func (mg *BudgetResourceGroup) GetDeletionPolicy() xpv1.DeletionPolicy {
 	return mg.Spec.DeletionPolicy
 }
 
-// GetProviderConfigReference of this ConsumptionBudgetResourceGroup.
-func (mg *ConsumptionBudgetResourceGroup) GetProviderConfigReference() *xpv1.Reference {
+// GetProviderConfigReference of this BudgetResourceGroup.
+func (mg *BudgetResourceGroup) GetProviderConfigReference() *xpv1.Reference {
 	return mg.Spec.ProviderConfigReference
 }
 
 /*
-GetProviderReference of this ConsumptionBudgetResourceGroup.
+GetProviderReference of this BudgetResourceGroup.
 Deprecated: Use GetProviderConfigReference.
 */
-func (mg *ConsumptionBudgetResourceGroup) GetProviderReference() *xpv1.Reference {
+func (mg *BudgetResourceGroup) GetProviderReference() *xpv1.Reference {
 	return mg.Spec.ProviderReference
 }
 
-// GetWriteConnectionSecretToReference of this ConsumptionBudgetResourceGroup.
-func (mg *ConsumptionBudgetResourceGroup) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
+// GetWriteConnectionSecretToReference of this BudgetResourceGroup.
+func (mg *BudgetResourceGroup) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
 	return mg.Spec.WriteConnectionSecretToReference
 }
 
-// SetConditions of this ConsumptionBudgetResourceGroup.
-func (mg *ConsumptionBudgetResourceGroup) SetConditions(c ...xpv1.Condition) {
+// SetConditions of this BudgetResourceGroup.
+func (mg *BudgetResourceGroup) SetConditions(c ...xpv1.Condition) {
 	mg.Status.SetConditions(c...)
 }
 
-// SetDeletionPolicy of this ConsumptionBudgetResourceGroup.
-func (mg *ConsumptionBudgetResourceGroup) SetDeletionPolicy(r xpv1.DeletionPolicy) {
+// SetDeletionPolicy of this BudgetResourceGroup.
+func (mg *BudgetResourceGroup) SetDeletionPolicy(r xpv1.DeletionPolicy) {
 	mg.Spec.DeletionPolicy = r
 }
 
-// SetProviderConfigReference of this ConsumptionBudgetResourceGroup.
-func (mg *ConsumptionBudgetResourceGroup) SetProviderConfigReference(r *xpv1.Reference) {
+// SetProviderConfigReference of this BudgetResourceGroup.
+func (mg *BudgetResourceGroup) SetProviderConfigReference(r *xpv1.Reference) {
 	mg.Spec.ProviderConfigReference = r
 }
 
 /*
-SetProviderReference of this ConsumptionBudgetResourceGroup.
+SetProviderReference of this BudgetResourceGroup.
 Deprecated: Use SetProviderConfigReference.
 */
-func (mg *ConsumptionBudgetResourceGroup) SetProviderReference(r *xpv1.Reference) {
+func (mg *BudgetResourceGroup) SetProviderReference(r *xpv1.Reference) {
 	mg.Spec.ProviderReference = r
 }
 
-// SetWriteConnectionSecretToReference of this ConsumptionBudgetResourceGroup.
-func (mg *ConsumptionBudgetResourceGroup) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
+// SetWriteConnectionSecretToReference of this BudgetResourceGroup.
+func (mg *BudgetResourceGroup) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
 	mg.Spec.WriteConnectionSecretToReference = r
 }
 
-// GetCondition of this ConsumptionBudgetSubscription.
-func (mg *ConsumptionBudgetSubscription) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
+// GetCondition of this BudgetSubscription.
+func (mg *BudgetSubscription) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
 	return mg.Status.GetCondition(ct)
 }
 
-// GetDeletionPolicy of this ConsumptionBudgetSubscription.
-func (mg *ConsumptionBudgetSubscription) GetDeletionPolicy() xpv1.DeletionPolicy {
+// GetDeletionPolicy of this BudgetSubscription.
+func (mg *BudgetSubscription) GetDeletionPolicy() xpv1.DeletionPolicy {
 	return mg.Spec.DeletionPolicy
 }
 
-// GetProviderConfigReference of this ConsumptionBudgetSubscription.
-func (mg *ConsumptionBudgetSubscription) GetProviderConfigReference() *xpv1.Reference {
+// GetProviderConfigReference of this BudgetSubscription.
+func (mg *BudgetSubscription) GetProviderConfigReference() *xpv1.Reference {
 	return mg.Spec.ProviderConfigReference
 }
 
 /*
-GetProviderReference of this ConsumptionBudgetSubscription.
+GetProviderReference of this BudgetSubscription.
 Deprecated: Use GetProviderConfigReference.
 */
-func (mg *ConsumptionBudgetSubscription) GetProviderReference() *xpv1.Reference {
+func (mg *BudgetSubscription) GetProviderReference() *xpv1.Reference {
 	return mg.Spec.ProviderReference
 }
 
-// GetWriteConnectionSecretToReference of this ConsumptionBudgetSubscription.
-func (mg *ConsumptionBudgetSubscription) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
+// GetWriteConnectionSecretToReference of this BudgetSubscription.
+func (mg *BudgetSubscription) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
 	return mg.Spec.WriteConnectionSecretToReference
 }
 
-// SetConditions of this ConsumptionBudgetSubscription.
-func (mg *ConsumptionBudgetSubscription) SetConditions(c ...xpv1.Condition) {
+// SetConditions of this BudgetSubscription.
+func (mg *BudgetSubscription) SetConditions(c ...xpv1.Condition) {
 	mg.Status.SetConditions(c...)
 }
 
-// SetDeletionPolicy of this ConsumptionBudgetSubscription.
-func (mg *ConsumptionBudgetSubscription) SetDeletionPolicy(r xpv1.DeletionPolicy) {
+// SetDeletionPolicy of this BudgetSubscription.
+func (mg *BudgetSubscription) SetDeletionPolicy(r xpv1.DeletionPolicy) {
 	mg.Spec.DeletionPolicy = r
 }
 
-// SetProviderConfigReference of this ConsumptionBudgetSubscription.
-func (mg *ConsumptionBudgetSubscription) SetProviderConfigReference(r *xpv1.Reference) {
+// SetProviderConfigReference of this BudgetSubscription.
+func (mg *BudgetSubscription) SetProviderConfigReference(r *xpv1.Reference) {
 	mg.Spec.ProviderConfigReference = r
 }
 
 /*
-SetProviderReference of this ConsumptionBudgetSubscription.
+SetProviderReference of this BudgetSubscription.
 Deprecated: Use SetProviderConfigReference.
 */
-func (mg *ConsumptionBudgetSubscription) SetProviderReference(r *xpv1.Reference) {
+func (mg *BudgetSubscription) SetProviderReference(r *xpv1.Reference) {
 	mg.Spec.ProviderReference = r
 }
 
-// SetWriteConnectionSecretToReference of this ConsumptionBudgetSubscription.
-func (mg *ConsumptionBudgetSubscription) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
+// SetWriteConnectionSecretToReference of this BudgetSubscription.
+func (mg *BudgetSubscription) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
 	mg.Spec.WriteConnectionSecretToReference = r
 }

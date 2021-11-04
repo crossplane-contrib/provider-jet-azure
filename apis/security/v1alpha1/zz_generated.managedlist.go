@@ -19,8 +19,8 @@ package v1alpha1
 
 import resource "github.com/crossplane/crossplane-runtime/pkg/resource"
 
-// GetItems of this SecurityCenterAssessmentList.
-func (l *SecurityCenterAssessmentList) GetItems() []resource.Managed {
+// GetItems of this CenterAssessmentList.
+func (l *CenterAssessmentList) GetItems() []resource.Managed {
 	items := make([]resource.Managed, len(l.Items))
 	for i := range l.Items {
 		items[i] = &l.Items[i]
@@ -28,8 +28,8 @@ func (l *SecurityCenterAssessmentList) GetItems() []resource.Managed {
 	return items
 }
 
-// GetItems of this SecurityCenterAssessmentMetadataList.
-func (l *SecurityCenterAssessmentMetadataList) GetItems() []resource.Managed {
+// GetItems of this CenterAssessmentMetadataList.
+func (l *CenterAssessmentMetadataList) GetItems() []resource.Managed {
 	items := make([]resource.Managed, len(l.Items))
 	for i := range l.Items {
 		items[i] = &l.Items[i]
@@ -37,8 +37,8 @@ func (l *SecurityCenterAssessmentMetadataList) GetItems() []resource.Managed {
 	return items
 }
 
-// GetItems of this SecurityCenterAssessmentPolicyList.
-func (l *SecurityCenterAssessmentPolicyList) GetItems() []resource.Managed {
+// GetItems of this CenterAssessmentPolicyList.
+func (l *CenterAssessmentPolicyList) GetItems() []resource.Managed {
 	items := make([]resource.Managed, len(l.Items))
 	for i := range l.Items {
 		items[i] = &l.Items[i]
@@ -46,8 +46,8 @@ func (l *SecurityCenterAssessmentPolicyList) GetItems() []resource.Managed {
 	return items
 }
 
-// GetItems of this SecurityCenterAutoProvisioningList.
-func (l *SecurityCenterAutoProvisioningList) GetItems() []resource.Managed {
+// GetItems of this CenterAutoProvisioningList.
+func (l *CenterAutoProvisioningList) GetItems() []resource.Managed {
 	items := make([]resource.Managed, len(l.Items))
 	for i := range l.Items {
 		items[i] = &l.Items[i]
@@ -55,8 +55,8 @@ func (l *SecurityCenterAutoProvisioningList) GetItems() []resource.Managed {
 	return items
 }
 
-// GetItems of this SecurityCenterContactList.
-func (l *SecurityCenterContactList) GetItems() []resource.Managed {
+// GetItems of this CenterContactList.
+func (l *CenterContactList) GetItems() []resource.Managed {
 	items := make([]resource.Managed, len(l.Items))
 	for i := range l.Items {
 		items[i] = &l.Items[i]
@@ -64,8 +64,8 @@ func (l *SecurityCenterContactList) GetItems() []resource.Managed {
 	return items
 }
 
-// GetItems of this SecurityCenterServerVulnerabilityAssessmentList.
-func (l *SecurityCenterServerVulnerabilityAssessmentList) GetItems() []resource.Managed {
+// GetItems of this CenterServerVulnerabilityAssessmentList.
+func (l *CenterServerVulnerabilityAssessmentList) GetItems() []resource.Managed {
 	items := make([]resource.Managed, len(l.Items))
 	for i := range l.Items {
 		items[i] = &l.Items[i]
@@ -73,8 +73,8 @@ func (l *SecurityCenterServerVulnerabilityAssessmentList) GetItems() []resource.
 	return items
 }
 
-// GetItems of this SecurityCenterSettingList.
-func (l *SecurityCenterSettingList) GetItems() []resource.Managed {
+// GetItems of this CenterSettingList.
+func (l *CenterSettingList) GetItems() []resource.Managed {
 	items := make([]resource.Managed, len(l.Items))
 	for i := range l.Items {
 		items[i] = &l.Items[i]
@@ -82,8 +82,8 @@ func (l *SecurityCenterSettingList) GetItems() []resource.Managed {
 	return items
 }
 
-// GetItems of this SecurityCenterSubscriptionPricingList.
-func (l *SecurityCenterSubscriptionPricingList) GetItems() []resource.Managed {
+// GetItems of this CenterSubscriptionPricingList.
+func (l *CenterSubscriptionPricingList) GetItems() []resource.Managed {
 	items := make([]resource.Managed, len(l.Items))
 	for i := range l.Items {
 		items[i] = &l.Items[i]
@@ -91,8 +91,8 @@ func (l *SecurityCenterSubscriptionPricingList) GetItems() []resource.Managed {
 	return items
 }
 
-// GetItems of this SecurityCenterWorkspaceList.
-func (l *SecurityCenterWorkspaceList) GetItems() []resource.Managed {
+// GetItems of this CenterWorkspaceList.
+func (l *CenterWorkspaceList) GetItems() []resource.Managed {
 	items := make([]resource.Managed, len(l.Items))
 	for i := range l.Items {
 		items[i] = &l.Items[i]

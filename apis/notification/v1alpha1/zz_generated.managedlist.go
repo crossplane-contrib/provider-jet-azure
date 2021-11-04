@@ -19,8 +19,8 @@ package v1alpha1
 
 import resource "github.com/crossplane/crossplane-runtime/pkg/resource"
 
-// GetItems of this NotificationHubAuthorizationRuleList.
-func (l *NotificationHubAuthorizationRuleList) GetItems() []resource.Managed {
+// GetItems of this HubAuthorizationRuleList.
+func (l *HubAuthorizationRuleList) GetItems() []resource.Managed {
 	items := make([]resource.Managed, len(l.Items))
 	for i := range l.Items {
 		items[i] = &l.Items[i]
@@ -28,8 +28,8 @@ func (l *NotificationHubAuthorizationRuleList) GetItems() []resource.Managed {
 	return items
 }
 
-// GetItems of this NotificationHubList.
-func (l *NotificationHubList) GetItems() []resource.Managed {
+// GetItems of this HubList.
+func (l *HubList) GetItems() []resource.Managed {
 	items := make([]resource.Managed, len(l.Items))
 	for i := range l.Items {
 		items[i] = &l.Items[i]
@@ -37,8 +37,8 @@ func (l *NotificationHubList) GetItems() []resource.Managed {
 	return items
 }
 
-// GetItems of this NotificationHubNamespaceList.
-func (l *NotificationHubNamespaceList) GetItems() []resource.Managed {
+// GetItems of this HubNamespaceList.
+func (l *HubNamespaceList) GetItems() []resource.Managed {
 	items := make([]resource.Managed, len(l.Items))
 	for i := range l.Items {
 		items[i] = &l.Items[i]

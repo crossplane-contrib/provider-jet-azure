@@ -19,282 +19,282 @@ package v1alpha1
 
 import xpv1 "github.com/crossplane/crossplane-runtime/apis/common/v1"
 
-// GetCondition of this ServiceFabricCluster.
-func (mg *ServiceFabricCluster) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
+// GetCondition of this FabricCluster.
+func (mg *FabricCluster) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
 	return mg.Status.GetCondition(ct)
 }
 
-// GetDeletionPolicy of this ServiceFabricCluster.
-func (mg *ServiceFabricCluster) GetDeletionPolicy() xpv1.DeletionPolicy {
+// GetDeletionPolicy of this FabricCluster.
+func (mg *FabricCluster) GetDeletionPolicy() xpv1.DeletionPolicy {
 	return mg.Spec.DeletionPolicy
 }
 
-// GetProviderConfigReference of this ServiceFabricCluster.
-func (mg *ServiceFabricCluster) GetProviderConfigReference() *xpv1.Reference {
+// GetProviderConfigReference of this FabricCluster.
+func (mg *FabricCluster) GetProviderConfigReference() *xpv1.Reference {
 	return mg.Spec.ProviderConfigReference
 }
 
 /*
-GetProviderReference of this ServiceFabricCluster.
+GetProviderReference of this FabricCluster.
 Deprecated: Use GetProviderConfigReference.
 */
-func (mg *ServiceFabricCluster) GetProviderReference() *xpv1.Reference {
+func (mg *FabricCluster) GetProviderReference() *xpv1.Reference {
 	return mg.Spec.ProviderReference
 }
 
-// GetWriteConnectionSecretToReference of this ServiceFabricCluster.
-func (mg *ServiceFabricCluster) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
+// GetWriteConnectionSecretToReference of this FabricCluster.
+func (mg *FabricCluster) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
 	return mg.Spec.WriteConnectionSecretToReference
 }
 
-// SetConditions of this ServiceFabricCluster.
-func (mg *ServiceFabricCluster) SetConditions(c ...xpv1.Condition) {
+// SetConditions of this FabricCluster.
+func (mg *FabricCluster) SetConditions(c ...xpv1.Condition) {
 	mg.Status.SetConditions(c...)
 }
 
-// SetDeletionPolicy of this ServiceFabricCluster.
-func (mg *ServiceFabricCluster) SetDeletionPolicy(r xpv1.DeletionPolicy) {
+// SetDeletionPolicy of this FabricCluster.
+func (mg *FabricCluster) SetDeletionPolicy(r xpv1.DeletionPolicy) {
 	mg.Spec.DeletionPolicy = r
 }
 
-// SetProviderConfigReference of this ServiceFabricCluster.
-func (mg *ServiceFabricCluster) SetProviderConfigReference(r *xpv1.Reference) {
+// SetProviderConfigReference of this FabricCluster.
+func (mg *FabricCluster) SetProviderConfigReference(r *xpv1.Reference) {
 	mg.Spec.ProviderConfigReference = r
 }
 
 /*
-SetProviderReference of this ServiceFabricCluster.
+SetProviderReference of this FabricCluster.
 Deprecated: Use SetProviderConfigReference.
 */
-func (mg *ServiceFabricCluster) SetProviderReference(r *xpv1.Reference) {
+func (mg *FabricCluster) SetProviderReference(r *xpv1.Reference) {
 	mg.Spec.ProviderReference = r
 }
 
-// SetWriteConnectionSecretToReference of this ServiceFabricCluster.
-func (mg *ServiceFabricCluster) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
+// SetWriteConnectionSecretToReference of this FabricCluster.
+func (mg *FabricCluster) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
 	mg.Spec.WriteConnectionSecretToReference = r
 }
 
-// GetCondition of this ServiceFabricMeshApplication.
-func (mg *ServiceFabricMeshApplication) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
+// GetCondition of this FabricMeshApplication.
+func (mg *FabricMeshApplication) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
 	return mg.Status.GetCondition(ct)
 }
 
-// GetDeletionPolicy of this ServiceFabricMeshApplication.
-func (mg *ServiceFabricMeshApplication) GetDeletionPolicy() xpv1.DeletionPolicy {
+// GetDeletionPolicy of this FabricMeshApplication.
+func (mg *FabricMeshApplication) GetDeletionPolicy() xpv1.DeletionPolicy {
 	return mg.Spec.DeletionPolicy
 }
 
-// GetProviderConfigReference of this ServiceFabricMeshApplication.
-func (mg *ServiceFabricMeshApplication) GetProviderConfigReference() *xpv1.Reference {
+// GetProviderConfigReference of this FabricMeshApplication.
+func (mg *FabricMeshApplication) GetProviderConfigReference() *xpv1.Reference {
 	return mg.Spec.ProviderConfigReference
 }
 
 /*
-GetProviderReference of this ServiceFabricMeshApplication.
+GetProviderReference of this FabricMeshApplication.
 Deprecated: Use GetProviderConfigReference.
 */
-func (mg *ServiceFabricMeshApplication) GetProviderReference() *xpv1.Reference {
+func (mg *FabricMeshApplication) GetProviderReference() *xpv1.Reference {
 	return mg.Spec.ProviderReference
 }
 
-// GetWriteConnectionSecretToReference of this ServiceFabricMeshApplication.
-func (mg *ServiceFabricMeshApplication) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
+// GetWriteConnectionSecretToReference of this FabricMeshApplication.
+func (mg *FabricMeshApplication) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
 	return mg.Spec.WriteConnectionSecretToReference
 }
 
-// SetConditions of this ServiceFabricMeshApplication.
-func (mg *ServiceFabricMeshApplication) SetConditions(c ...xpv1.Condition) {
+// SetConditions of this FabricMeshApplication.
+func (mg *FabricMeshApplication) SetConditions(c ...xpv1.Condition) {
 	mg.Status.SetConditions(c...)
 }
 
-// SetDeletionPolicy of this ServiceFabricMeshApplication.
-func (mg *ServiceFabricMeshApplication) SetDeletionPolicy(r xpv1.DeletionPolicy) {
+// SetDeletionPolicy of this FabricMeshApplication.
+func (mg *FabricMeshApplication) SetDeletionPolicy(r xpv1.DeletionPolicy) {
 	mg.Spec.DeletionPolicy = r
 }
 
-// SetProviderConfigReference of this ServiceFabricMeshApplication.
-func (mg *ServiceFabricMeshApplication) SetProviderConfigReference(r *xpv1.Reference) {
+// SetProviderConfigReference of this FabricMeshApplication.
+func (mg *FabricMeshApplication) SetProviderConfigReference(r *xpv1.Reference) {
 	mg.Spec.ProviderConfigReference = r
 }
 
 /*
-SetProviderReference of this ServiceFabricMeshApplication.
+SetProviderReference of this FabricMeshApplication.
 Deprecated: Use SetProviderConfigReference.
 */
-func (mg *ServiceFabricMeshApplication) SetProviderReference(r *xpv1.Reference) {
+func (mg *FabricMeshApplication) SetProviderReference(r *xpv1.Reference) {
 	mg.Spec.ProviderReference = r
 }
 
-// SetWriteConnectionSecretToReference of this ServiceFabricMeshApplication.
-func (mg *ServiceFabricMeshApplication) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
+// SetWriteConnectionSecretToReference of this FabricMeshApplication.
+func (mg *FabricMeshApplication) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
 	mg.Spec.WriteConnectionSecretToReference = r
 }
 
-// GetCondition of this ServiceFabricMeshLocalNetwork.
-func (mg *ServiceFabricMeshLocalNetwork) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
+// GetCondition of this FabricMeshLocalNetwork.
+func (mg *FabricMeshLocalNetwork) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
 	return mg.Status.GetCondition(ct)
 }
 
-// GetDeletionPolicy of this ServiceFabricMeshLocalNetwork.
-func (mg *ServiceFabricMeshLocalNetwork) GetDeletionPolicy() xpv1.DeletionPolicy {
+// GetDeletionPolicy of this FabricMeshLocalNetwork.
+func (mg *FabricMeshLocalNetwork) GetDeletionPolicy() xpv1.DeletionPolicy {
 	return mg.Spec.DeletionPolicy
 }
 
-// GetProviderConfigReference of this ServiceFabricMeshLocalNetwork.
-func (mg *ServiceFabricMeshLocalNetwork) GetProviderConfigReference() *xpv1.Reference {
+// GetProviderConfigReference of this FabricMeshLocalNetwork.
+func (mg *FabricMeshLocalNetwork) GetProviderConfigReference() *xpv1.Reference {
 	return mg.Spec.ProviderConfigReference
 }
 
 /*
-GetProviderReference of this ServiceFabricMeshLocalNetwork.
+GetProviderReference of this FabricMeshLocalNetwork.
 Deprecated: Use GetProviderConfigReference.
 */
-func (mg *ServiceFabricMeshLocalNetwork) GetProviderReference() *xpv1.Reference {
+func (mg *FabricMeshLocalNetwork) GetProviderReference() *xpv1.Reference {
 	return mg.Spec.ProviderReference
 }
 
-// GetWriteConnectionSecretToReference of this ServiceFabricMeshLocalNetwork.
-func (mg *ServiceFabricMeshLocalNetwork) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
+// GetWriteConnectionSecretToReference of this FabricMeshLocalNetwork.
+func (mg *FabricMeshLocalNetwork) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
 	return mg.Spec.WriteConnectionSecretToReference
 }
 
-// SetConditions of this ServiceFabricMeshLocalNetwork.
-func (mg *ServiceFabricMeshLocalNetwork) SetConditions(c ...xpv1.Condition) {
+// SetConditions of this FabricMeshLocalNetwork.
+func (mg *FabricMeshLocalNetwork) SetConditions(c ...xpv1.Condition) {
 	mg.Status.SetConditions(c...)
 }
 
-// SetDeletionPolicy of this ServiceFabricMeshLocalNetwork.
-func (mg *ServiceFabricMeshLocalNetwork) SetDeletionPolicy(r xpv1.DeletionPolicy) {
+// SetDeletionPolicy of this FabricMeshLocalNetwork.
+func (mg *FabricMeshLocalNetwork) SetDeletionPolicy(r xpv1.DeletionPolicy) {
 	mg.Spec.DeletionPolicy = r
 }
 
-// SetProviderConfigReference of this ServiceFabricMeshLocalNetwork.
-func (mg *ServiceFabricMeshLocalNetwork) SetProviderConfigReference(r *xpv1.Reference) {
+// SetProviderConfigReference of this FabricMeshLocalNetwork.
+func (mg *FabricMeshLocalNetwork) SetProviderConfigReference(r *xpv1.Reference) {
 	mg.Spec.ProviderConfigReference = r
 }
 
 /*
-SetProviderReference of this ServiceFabricMeshLocalNetwork.
+SetProviderReference of this FabricMeshLocalNetwork.
 Deprecated: Use SetProviderConfigReference.
 */
-func (mg *ServiceFabricMeshLocalNetwork) SetProviderReference(r *xpv1.Reference) {
+func (mg *FabricMeshLocalNetwork) SetProviderReference(r *xpv1.Reference) {
 	mg.Spec.ProviderReference = r
 }
 
-// SetWriteConnectionSecretToReference of this ServiceFabricMeshLocalNetwork.
-func (mg *ServiceFabricMeshLocalNetwork) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
+// SetWriteConnectionSecretToReference of this FabricMeshLocalNetwork.
+func (mg *FabricMeshLocalNetwork) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
 	mg.Spec.WriteConnectionSecretToReference = r
 }
 
-// GetCondition of this ServiceFabricMeshSecret.
-func (mg *ServiceFabricMeshSecret) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
+// GetCondition of this FabricMeshSecret.
+func (mg *FabricMeshSecret) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
 	return mg.Status.GetCondition(ct)
 }
 
-// GetDeletionPolicy of this ServiceFabricMeshSecret.
-func (mg *ServiceFabricMeshSecret) GetDeletionPolicy() xpv1.DeletionPolicy {
+// GetDeletionPolicy of this FabricMeshSecret.
+func (mg *FabricMeshSecret) GetDeletionPolicy() xpv1.DeletionPolicy {
 	return mg.Spec.DeletionPolicy
 }
 
-// GetProviderConfigReference of this ServiceFabricMeshSecret.
-func (mg *ServiceFabricMeshSecret) GetProviderConfigReference() *xpv1.Reference {
+// GetProviderConfigReference of this FabricMeshSecret.
+func (mg *FabricMeshSecret) GetProviderConfigReference() *xpv1.Reference {
 	return mg.Spec.ProviderConfigReference
 }
 
 /*
-GetProviderReference of this ServiceFabricMeshSecret.
+GetProviderReference of this FabricMeshSecret.
 Deprecated: Use GetProviderConfigReference.
 */
-func (mg *ServiceFabricMeshSecret) GetProviderReference() *xpv1.Reference {
+func (mg *FabricMeshSecret) GetProviderReference() *xpv1.Reference {
 	return mg.Spec.ProviderReference
 }
 
-// GetWriteConnectionSecretToReference of this ServiceFabricMeshSecret.
-func (mg *ServiceFabricMeshSecret) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
+// GetWriteConnectionSecretToReference of this FabricMeshSecret.
+func (mg *FabricMeshSecret) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
 	return mg.Spec.WriteConnectionSecretToReference
 }
 
-// SetConditions of this ServiceFabricMeshSecret.
-func (mg *ServiceFabricMeshSecret) SetConditions(c ...xpv1.Condition) {
+// SetConditions of this FabricMeshSecret.
+func (mg *FabricMeshSecret) SetConditions(c ...xpv1.Condition) {
 	mg.Status.SetConditions(c...)
 }
 
-// SetDeletionPolicy of this ServiceFabricMeshSecret.
-func (mg *ServiceFabricMeshSecret) SetDeletionPolicy(r xpv1.DeletionPolicy) {
+// SetDeletionPolicy of this FabricMeshSecret.
+func (mg *FabricMeshSecret) SetDeletionPolicy(r xpv1.DeletionPolicy) {
 	mg.Spec.DeletionPolicy = r
 }
 
-// SetProviderConfigReference of this ServiceFabricMeshSecret.
-func (mg *ServiceFabricMeshSecret) SetProviderConfigReference(r *xpv1.Reference) {
+// SetProviderConfigReference of this FabricMeshSecret.
+func (mg *FabricMeshSecret) SetProviderConfigReference(r *xpv1.Reference) {
 	mg.Spec.ProviderConfigReference = r
 }
 
 /*
-SetProviderReference of this ServiceFabricMeshSecret.
+SetProviderReference of this FabricMeshSecret.
 Deprecated: Use SetProviderConfigReference.
 */
-func (mg *ServiceFabricMeshSecret) SetProviderReference(r *xpv1.Reference) {
+func (mg *FabricMeshSecret) SetProviderReference(r *xpv1.Reference) {
 	mg.Spec.ProviderReference = r
 }
 
-// SetWriteConnectionSecretToReference of this ServiceFabricMeshSecret.
-func (mg *ServiceFabricMeshSecret) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
+// SetWriteConnectionSecretToReference of this FabricMeshSecret.
+func (mg *FabricMeshSecret) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
 	mg.Spec.WriteConnectionSecretToReference = r
 }
 
-// GetCondition of this ServiceFabricMeshSecretValue.
-func (mg *ServiceFabricMeshSecretValue) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
+// GetCondition of this FabricMeshSecretValue.
+func (mg *FabricMeshSecretValue) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
 	return mg.Status.GetCondition(ct)
 }
 
-// GetDeletionPolicy of this ServiceFabricMeshSecretValue.
-func (mg *ServiceFabricMeshSecretValue) GetDeletionPolicy() xpv1.DeletionPolicy {
+// GetDeletionPolicy of this FabricMeshSecretValue.
+func (mg *FabricMeshSecretValue) GetDeletionPolicy() xpv1.DeletionPolicy {
 	return mg.Spec.DeletionPolicy
 }
 
-// GetProviderConfigReference of this ServiceFabricMeshSecretValue.
-func (mg *ServiceFabricMeshSecretValue) GetProviderConfigReference() *xpv1.Reference {
+// GetProviderConfigReference of this FabricMeshSecretValue.
+func (mg *FabricMeshSecretValue) GetProviderConfigReference() *xpv1.Reference {
 	return mg.Spec.ProviderConfigReference
 }
 
 /*
-GetProviderReference of this ServiceFabricMeshSecretValue.
+GetProviderReference of this FabricMeshSecretValue.
 Deprecated: Use GetProviderConfigReference.
 */
-func (mg *ServiceFabricMeshSecretValue) GetProviderReference() *xpv1.Reference {
+func (mg *FabricMeshSecretValue) GetProviderReference() *xpv1.Reference {
 	return mg.Spec.ProviderReference
 }
 
-// GetWriteConnectionSecretToReference of this ServiceFabricMeshSecretValue.
-func (mg *ServiceFabricMeshSecretValue) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
+// GetWriteConnectionSecretToReference of this FabricMeshSecretValue.
+func (mg *FabricMeshSecretValue) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
 	return mg.Spec.WriteConnectionSecretToReference
 }
 
-// SetConditions of this ServiceFabricMeshSecretValue.
-func (mg *ServiceFabricMeshSecretValue) SetConditions(c ...xpv1.Condition) {
+// SetConditions of this FabricMeshSecretValue.
+func (mg *FabricMeshSecretValue) SetConditions(c ...xpv1.Condition) {
 	mg.Status.SetConditions(c...)
 }
 
-// SetDeletionPolicy of this ServiceFabricMeshSecretValue.
-func (mg *ServiceFabricMeshSecretValue) SetDeletionPolicy(r xpv1.DeletionPolicy) {
+// SetDeletionPolicy of this FabricMeshSecretValue.
+func (mg *FabricMeshSecretValue) SetDeletionPolicy(r xpv1.DeletionPolicy) {
 	mg.Spec.DeletionPolicy = r
 }
 
-// SetProviderConfigReference of this ServiceFabricMeshSecretValue.
-func (mg *ServiceFabricMeshSecretValue) SetProviderConfigReference(r *xpv1.Reference) {
+// SetProviderConfigReference of this FabricMeshSecretValue.
+func (mg *FabricMeshSecretValue) SetProviderConfigReference(r *xpv1.Reference) {
 	mg.Spec.ProviderConfigReference = r
 }
 
 /*
-SetProviderReference of this ServiceFabricMeshSecretValue.
+SetProviderReference of this FabricMeshSecretValue.
 Deprecated: Use SetProviderConfigReference.
 */
-func (mg *ServiceFabricMeshSecretValue) SetProviderReference(r *xpv1.Reference) {
+func (mg *FabricMeshSecretValue) SetProviderReference(r *xpv1.Reference) {
 	mg.Spec.ProviderReference = r
 }
 
-// SetWriteConnectionSecretToReference of this ServiceFabricMeshSecretValue.
-func (mg *ServiceFabricMeshSecretValue) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
+// SetWriteConnectionSecretToReference of this FabricMeshSecretValue.
+func (mg *FabricMeshSecretValue) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
 	mg.Spec.WriteConnectionSecretToReference = r
 }

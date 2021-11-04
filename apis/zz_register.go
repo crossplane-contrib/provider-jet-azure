@@ -31,6 +31,7 @@ import (
 	v1alpha1attestation "github.com/crossplane-contrib/provider-tf-azure/apis/attestation/v1alpha1"
 	v1alpha1automation "github.com/crossplane-contrib/provider-tf-azure/apis/automation/v1alpha1"
 	v1alpha1availability "github.com/crossplane-contrib/provider-tf-azure/apis/availability/v1alpha1"
+	v1alpha1azurerm "github.com/crossplane-contrib/provider-tf-azure/apis/azurerm/v1alpha1"
 	v1alpha1backup "github.com/crossplane-contrib/provider-tf-azure/apis/backup/v1alpha1"
 	v1alpha1bastion "github.com/crossplane-contrib/provider-tf-azure/apis/bastion/v1alpha1"
 	v1alpha1batch "github.com/crossplane-contrib/provider-tf-azure/apis/batch/v1alpha1"
@@ -44,7 +45,6 @@ import (
 	v1alpha1cosmosdb "github.com/crossplane-contrib/provider-tf-azure/apis/cosmosdb/v1alpha1"
 	v1alpha1cost "github.com/crossplane-contrib/provider-tf-azure/apis/cost/v1alpha1"
 	v1alpha1custom "github.com/crossplane-contrib/provider-tf-azure/apis/custom/v1alpha1"
-	v1alpha1dashboard "github.com/crossplane-contrib/provider-tf-azure/apis/dashboard/v1alpha1"
 	v1alpha1data "github.com/crossplane-contrib/provider-tf-azure/apis/data/v1alpha1"
 	v1alpha1database "github.com/crossplane-contrib/provider-tf-azure/apis/database/v1alpha1"
 	v1alpha1databox "github.com/crossplane-contrib/provider-tf-azure/apis/databox/v1alpha1"
@@ -62,10 +62,8 @@ import (
 	v1alpha1frontdoor "github.com/crossplane-contrib/provider-tf-azure/apis/frontdoor/v1alpha1"
 	v1alpha1function "github.com/crossplane-contrib/provider-tf-azure/apis/function/v1alpha1"
 	v1alpha1hdinsight "github.com/crossplane-contrib/provider-tf-azure/apis/hdinsight/v1alpha1"
-	v1alpha1healthbot "github.com/crossplane-contrib/provider-tf-azure/apis/healthbot/v1alpha1"
 	v1alpha1healthcare "github.com/crossplane-contrib/provider-tf-azure/apis/healthcare/v1alpha1"
 	v1alpha1hpc "github.com/crossplane-contrib/provider-tf-azure/apis/hpc/v1alpha1"
-	v1alpha1image "github.com/crossplane-contrib/provider-tf-azure/apis/image/v1alpha1"
 	v1alpha1integration "github.com/crossplane-contrib/provider-tf-azure/apis/integration/v1alpha1"
 	v1alpha1iot "github.com/crossplane-contrib/provider-tf-azure/apis/iot/v1alpha1"
 	v1alpha1iotcentral "github.com/crossplane-contrib/provider-tf-azure/apis/iotcentral/v1alpha1"
@@ -111,7 +109,6 @@ import (
 	v1alpha1relay "github.com/crossplane-contrib/provider-tf-azure/apis/relay/v1alpha1"
 	v1alpha1resource "github.com/crossplane-contrib/provider-tf-azure/apis/resource/v1alpha1"
 	v1alpha1role "github.com/crossplane-contrib/provider-tf-azure/apis/role/v1alpha1"
-	v1alpha1route "github.com/crossplane-contrib/provider-tf-azure/apis/route/v1alpha1"
 	v1alpha1search "github.com/crossplane-contrib/provider-tf-azure/apis/search/v1alpha1"
 	v1alpha1security "github.com/crossplane-contrib/provider-tf-azure/apis/security/v1alpha1"
 	v1alpha1sentinel "github.com/crossplane-contrib/provider-tf-azure/apis/sentinel/v1alpha1"
@@ -120,7 +117,6 @@ import (
 	v1alpha1shared "github.com/crossplane-contrib/provider-tf-azure/apis/shared/v1alpha1"
 	v1alpha1signalr "github.com/crossplane-contrib/provider-tf-azure/apis/signalr/v1alpha1"
 	v1alpha1site "github.com/crossplane-contrib/provider-tf-azure/apis/site/v1alpha1"
-	v1alpha1snapshot "github.com/crossplane-contrib/provider-tf-azure/apis/snapshot/v1alpha1"
 	v1alpha1spatial "github.com/crossplane-contrib/provider-tf-azure/apis/spatial/v1alpha1"
 	v1alpha1spring "github.com/crossplane-contrib/provider-tf-azure/apis/spring/v1alpha1"
 	v1alpha1sql "github.com/crossplane-contrib/provider-tf-azure/apis/sql/v1alpha1"
@@ -158,6 +154,7 @@ func init() {
 		v1alpha1attestation.SchemeBuilder.AddToScheme,
 		v1alpha1automation.SchemeBuilder.AddToScheme,
 		v1alpha1availability.SchemeBuilder.AddToScheme,
+		v1alpha1azurerm.SchemeBuilder.AddToScheme,
 		v1alpha1backup.SchemeBuilder.AddToScheme,
 		v1alpha1bastion.SchemeBuilder.AddToScheme,
 		v1alpha1batch.SchemeBuilder.AddToScheme,
@@ -171,7 +168,6 @@ func init() {
 		v1alpha1cosmosdb.SchemeBuilder.AddToScheme,
 		v1alpha1cost.SchemeBuilder.AddToScheme,
 		v1alpha1custom.SchemeBuilder.AddToScheme,
-		v1alpha1dashboard.SchemeBuilder.AddToScheme,
 		v1alpha1data.SchemeBuilder.AddToScheme,
 		v1alpha1database.SchemeBuilder.AddToScheme,
 		v1alpha1databox.SchemeBuilder.AddToScheme,
@@ -189,10 +185,8 @@ func init() {
 		v1alpha1frontdoor.SchemeBuilder.AddToScheme,
 		v1alpha1function.SchemeBuilder.AddToScheme,
 		v1alpha1hdinsight.SchemeBuilder.AddToScheme,
-		v1alpha1healthbot.SchemeBuilder.AddToScheme,
 		v1alpha1healthcare.SchemeBuilder.AddToScheme,
 		v1alpha1hpc.SchemeBuilder.AddToScheme,
-		v1alpha1image.SchemeBuilder.AddToScheme,
 		v1alpha1integration.SchemeBuilder.AddToScheme,
 		v1alpha1iot.SchemeBuilder.AddToScheme,
 		v1alpha1iotcentral.SchemeBuilder.AddToScheme,
@@ -238,7 +232,6 @@ func init() {
 		v1alpha1relay.SchemeBuilder.AddToScheme,
 		v1alpha1resource.SchemeBuilder.AddToScheme,
 		v1alpha1role.SchemeBuilder.AddToScheme,
-		v1alpha1route.SchemeBuilder.AddToScheme,
 		v1alpha1search.SchemeBuilder.AddToScheme,
 		v1alpha1security.SchemeBuilder.AddToScheme,
 		v1alpha1sentinel.SchemeBuilder.AddToScheme,
@@ -247,7 +240,6 @@ func init() {
 		v1alpha1shared.SchemeBuilder.AddToScheme,
 		v1alpha1signalr.SchemeBuilder.AddToScheme,
 		v1alpha1site.SchemeBuilder.AddToScheme,
-		v1alpha1snapshot.SchemeBuilder.AddToScheme,
 		v1alpha1spatial.SchemeBuilder.AddToScheme,
 		v1alpha1spring.SchemeBuilder.AddToScheme,
 		v1alpha1sql.SchemeBuilder.AddToScheme,

@@ -19,8 +19,8 @@ package v1alpha1
 
 import resource "github.com/crossplane/crossplane-runtime/pkg/resource"
 
-// GetItems of this SubnetList.
-func (l *SubnetList) GetItems() []resource.Managed {
+// GetItems of this NatGatewayAssociationList.
+func (l *NatGatewayAssociationList) GetItems() []resource.Managed {
 	items := make([]resource.Managed, len(l.Items))
 	for i := range l.Items {
 		items[i] = &l.Items[i]
@@ -28,8 +28,8 @@ func (l *SubnetList) GetItems() []resource.Managed {
 	return items
 }
 
-// GetItems of this SubnetNatGatewayAssociationList.
-func (l *SubnetNatGatewayAssociationList) GetItems() []resource.Managed {
+// GetItems of this NetworkSecurityGroupAssociationList.
+func (l *NetworkSecurityGroupAssociationList) GetItems() []resource.Managed {
 	items := make([]resource.Managed, len(l.Items))
 	for i := range l.Items {
 		items[i] = &l.Items[i]
@@ -37,8 +37,8 @@ func (l *SubnetNatGatewayAssociationList) GetItems() []resource.Managed {
 	return items
 }
 
-// GetItems of this SubnetNetworkSecurityGroupAssociationList.
-func (l *SubnetNetworkSecurityGroupAssociationList) GetItems() []resource.Managed {
+// GetItems of this RouteTableAssociationList.
+func (l *RouteTableAssociationList) GetItems() []resource.Managed {
 	items := make([]resource.Managed, len(l.Items))
 	for i := range l.Items {
 		items[i] = &l.Items[i]
@@ -46,17 +46,8 @@ func (l *SubnetNetworkSecurityGroupAssociationList) GetItems() []resource.Manage
 	return items
 }
 
-// GetItems of this SubnetRouteTableAssociationList.
-func (l *SubnetRouteTableAssociationList) GetItems() []resource.Managed {
-	items := make([]resource.Managed, len(l.Items))
-	for i := range l.Items {
-		items[i] = &l.Items[i]
-	}
-	return items
-}
-
-// GetItems of this SubnetServiceEndpointStoragePolicyList.
-func (l *SubnetServiceEndpointStoragePolicyList) GetItems() []resource.Managed {
+// GetItems of this ServiceEndpointStoragePolicyList.
+func (l *ServiceEndpointStoragePolicyList) GetItems() []resource.Managed {
 	items := make([]resource.Managed, len(l.Items))
 	for i := range l.Items {
 		items[i] = &l.Items[i]

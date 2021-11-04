@@ -19,8 +19,8 @@ package v1alpha1
 
 import resource "github.com/crossplane/crossplane-runtime/pkg/resource"
 
-// GetItems of this MssqlDatabaseExtendedAuditingPolicyList.
-func (l *MssqlDatabaseExtendedAuditingPolicyList) GetItems() []resource.Managed {
+// GetItems of this DatabaseExtendedAuditingPolicyList.
+func (l *DatabaseExtendedAuditingPolicyList) GetItems() []resource.Managed {
 	items := make([]resource.Managed, len(l.Items))
 	for i := range l.Items {
 		items[i] = &l.Items[i]
@@ -28,8 +28,8 @@ func (l *MssqlDatabaseExtendedAuditingPolicyList) GetItems() []resource.Managed 
 	return items
 }
 
-// GetItems of this MssqlDatabaseList.
-func (l *MssqlDatabaseList) GetItems() []resource.Managed {
+// GetItems of this DatabaseList.
+func (l *DatabaseList) GetItems() []resource.Managed {
 	items := make([]resource.Managed, len(l.Items))
 	for i := range l.Items {
 		items[i] = &l.Items[i]
@@ -37,8 +37,8 @@ func (l *MssqlDatabaseList) GetItems() []resource.Managed {
 	return items
 }
 
-// GetItems of this MssqlDatabaseVulnerabilityAssessmentRuleBaselineList.
-func (l *MssqlDatabaseVulnerabilityAssessmentRuleBaselineList) GetItems() []resource.Managed {
+// GetItems of this DatabaseVulnerabilityAssessmentRuleBaselineList.
+func (l *DatabaseVulnerabilityAssessmentRuleBaselineList) GetItems() []resource.Managed {
 	items := make([]resource.Managed, len(l.Items))
 	for i := range l.Items {
 		items[i] = &l.Items[i]
@@ -46,8 +46,8 @@ func (l *MssqlDatabaseVulnerabilityAssessmentRuleBaselineList) GetItems() []reso
 	return items
 }
 
-// GetItems of this MssqlElasticpoolList.
-func (l *MssqlElasticpoolList) GetItems() []resource.Managed {
+// GetItems of this ElasticpoolList.
+func (l *ElasticpoolList) GetItems() []resource.Managed {
 	items := make([]resource.Managed, len(l.Items))
 	for i := range l.Items {
 		items[i] = &l.Items[i]
@@ -55,8 +55,8 @@ func (l *MssqlElasticpoolList) GetItems() []resource.Managed {
 	return items
 }
 
-// GetItems of this MssqlFailoverGroupList.
-func (l *MssqlFailoverGroupList) GetItems() []resource.Managed {
+// GetItems of this FailoverGroupList.
+func (l *FailoverGroupList) GetItems() []resource.Managed {
 	items := make([]resource.Managed, len(l.Items))
 	for i := range l.Items {
 		items[i] = &l.Items[i]
@@ -64,8 +64,8 @@ func (l *MssqlFailoverGroupList) GetItems() []resource.Managed {
 	return items
 }
 
-// GetItems of this MssqlFirewallRuleList.
-func (l *MssqlFirewallRuleList) GetItems() []resource.Managed {
+// GetItems of this FirewallRuleList.
+func (l *FirewallRuleList) GetItems() []resource.Managed {
 	items := make([]resource.Managed, len(l.Items))
 	for i := range l.Items {
 		items[i] = &l.Items[i]
@@ -73,8 +73,8 @@ func (l *MssqlFirewallRuleList) GetItems() []resource.Managed {
 	return items
 }
 
-// GetItems of this MssqlJobAgentList.
-func (l *MssqlJobAgentList) GetItems() []resource.Managed {
+// GetItems of this JobAgentList.
+func (l *JobAgentList) GetItems() []resource.Managed {
 	items := make([]resource.Managed, len(l.Items))
 	for i := range l.Items {
 		items[i] = &l.Items[i]
@@ -82,8 +82,8 @@ func (l *MssqlJobAgentList) GetItems() []resource.Managed {
 	return items
 }
 
-// GetItems of this MssqlJobCredentialList.
-func (l *MssqlJobCredentialList) GetItems() []resource.Managed {
+// GetItems of this JobCredentialList.
+func (l *JobCredentialList) GetItems() []resource.Managed {
 	items := make([]resource.Managed, len(l.Items))
 	for i := range l.Items {
 		items[i] = &l.Items[i]
@@ -91,8 +91,8 @@ func (l *MssqlJobCredentialList) GetItems() []resource.Managed {
 	return items
 }
 
-// GetItems of this MssqlServerList.
-func (l *MssqlServerList) GetItems() []resource.Managed {
+// GetItems of this ServerList.
+func (l *ServerList) GetItems() []resource.Managed {
 	items := make([]resource.Managed, len(l.Items))
 	for i := range l.Items {
 		items[i] = &l.Items[i]
@@ -100,8 +100,8 @@ func (l *MssqlServerList) GetItems() []resource.Managed {
 	return items
 }
 
-// GetItems of this MssqlServerSecurityAlertPolicyList.
-func (l *MssqlServerSecurityAlertPolicyList) GetItems() []resource.Managed {
+// GetItems of this ServerSecurityAlertPolicyList.
+func (l *ServerSecurityAlertPolicyList) GetItems() []resource.Managed {
 	items := make([]resource.Managed, len(l.Items))
 	for i := range l.Items {
 		items[i] = &l.Items[i]
@@ -109,8 +109,8 @@ func (l *MssqlServerSecurityAlertPolicyList) GetItems() []resource.Managed {
 	return items
 }
 
-// GetItems of this MssqlServerTransparentDataEncryptionList.
-func (l *MssqlServerTransparentDataEncryptionList) GetItems() []resource.Managed {
+// GetItems of this ServerTransparentDataEncryptionList.
+func (l *ServerTransparentDataEncryptionList) GetItems() []resource.Managed {
 	items := make([]resource.Managed, len(l.Items))
 	for i := range l.Items {
 		items[i] = &l.Items[i]
@@ -118,8 +118,8 @@ func (l *MssqlServerTransparentDataEncryptionList) GetItems() []resource.Managed
 	return items
 }
 
-// GetItems of this MssqlServerVulnerabilityAssessmentList.
-func (l *MssqlServerVulnerabilityAssessmentList) GetItems() []resource.Managed {
+// GetItems of this ServerVulnerabilityAssessmentList.
+func (l *ServerVulnerabilityAssessmentList) GetItems() []resource.Managed {
 	items := make([]resource.Managed, len(l.Items))
 	for i := range l.Items {
 		items[i] = &l.Items[i]
@@ -127,8 +127,8 @@ func (l *MssqlServerVulnerabilityAssessmentList) GetItems() []resource.Managed {
 	return items
 }
 
-// GetItems of this MssqlVirtualMachineList.
-func (l *MssqlVirtualMachineList) GetItems() []resource.Managed {
+// GetItems of this VirtualMachineList.
+func (l *VirtualMachineList) GetItems() []resource.Managed {
 	items := make([]resource.Managed, len(l.Items))
 	for i := range l.Items {
 		items[i] = &l.Items[i]
@@ -136,8 +136,8 @@ func (l *MssqlVirtualMachineList) GetItems() []resource.Managed {
 	return items
 }
 
-// GetItems of this MssqlVirtualNetworkRuleList.
-func (l *MssqlVirtualNetworkRuleList) GetItems() []resource.Managed {
+// GetItems of this VirtualNetworkRuleList.
+func (l *VirtualNetworkRuleList) GetItems() []resource.Managed {
 	items := make([]resource.Managed, len(l.Items))
 	for i := range l.Items {
 		items[i] = &l.Items[i]

@@ -19,8 +19,8 @@ package v1alpha1
 
 import resource "github.com/crossplane/crossplane-runtime/pkg/resource"
 
-// GetItems of this ApplicationGatewayList.
-func (l *ApplicationGatewayList) GetItems() []resource.Managed {
+// GetItems of this GatewayList.
+func (l *GatewayList) GetItems() []resource.Managed {
 	items := make([]resource.Managed, len(l.Items))
 	for i := range l.Items {
 		items[i] = &l.Items[i]
@@ -28,8 +28,8 @@ func (l *ApplicationGatewayList) GetItems() []resource.Managed {
 	return items
 }
 
-// GetItems of this ApplicationInsightsAnalyticsItemList.
-func (l *ApplicationInsightsAnalyticsItemList) GetItems() []resource.Managed {
+// GetItems of this InsightsAnalyticsItemList.
+func (l *InsightsAnalyticsItemList) GetItems() []resource.Managed {
 	items := make([]resource.Managed, len(l.Items))
 	for i := range l.Items {
 		items[i] = &l.Items[i]
@@ -37,8 +37,8 @@ func (l *ApplicationInsightsAnalyticsItemList) GetItems() []resource.Managed {
 	return items
 }
 
-// GetItems of this ApplicationInsightsApiKeyList.
-func (l *ApplicationInsightsApiKeyList) GetItems() []resource.Managed {
+// GetItems of this InsightsApiKeyList.
+func (l *InsightsApiKeyList) GetItems() []resource.Managed {
 	items := make([]resource.Managed, len(l.Items))
 	for i := range l.Items {
 		items[i] = &l.Items[i]
@@ -46,8 +46,8 @@ func (l *ApplicationInsightsApiKeyList) GetItems() []resource.Managed {
 	return items
 }
 
-// GetItems of this ApplicationInsightsList.
-func (l *ApplicationInsightsList) GetItems() []resource.Managed {
+// GetItems of this InsightsList.
+func (l *InsightsList) GetItems() []resource.Managed {
 	items := make([]resource.Managed, len(l.Items))
 	for i := range l.Items {
 		items[i] = &l.Items[i]
@@ -55,8 +55,8 @@ func (l *ApplicationInsightsList) GetItems() []resource.Managed {
 	return items
 }
 
-// GetItems of this ApplicationInsightsSmartDetectionRuleList.
-func (l *ApplicationInsightsSmartDetectionRuleList) GetItems() []resource.Managed {
+// GetItems of this InsightsSmartDetectionRuleList.
+func (l *InsightsSmartDetectionRuleList) GetItems() []resource.Managed {
 	items := make([]resource.Managed, len(l.Items))
 	for i := range l.Items {
 		items[i] = &l.Items[i]
@@ -64,8 +64,8 @@ func (l *ApplicationInsightsSmartDetectionRuleList) GetItems() []resource.Manage
 	return items
 }
 
-// GetItems of this ApplicationInsightsWebTestList.
-func (l *ApplicationInsightsWebTestList) GetItems() []resource.Managed {
+// GetItems of this InsightsWebTestList.
+func (l *InsightsWebTestList) GetItems() []resource.Managed {
 	items := make([]resource.Managed, len(l.Items))
 	for i := range l.Items {
 		items[i] = &l.Items[i]
@@ -73,8 +73,8 @@ func (l *ApplicationInsightsWebTestList) GetItems() []resource.Managed {
 	return items
 }
 
-// GetItems of this ApplicationSecurityGroupList.
-func (l *ApplicationSecurityGroupList) GetItems() []resource.Managed {
+// GetItems of this SecurityGroupList.
+func (l *SecurityGroupList) GetItems() []resource.Managed {
 	items := make([]resource.Managed, len(l.Items))
 	for i := range l.Items {
 		items[i] = &l.Items[i]

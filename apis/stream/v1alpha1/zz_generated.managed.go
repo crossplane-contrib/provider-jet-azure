@@ -19,618 +19,618 @@ package v1alpha1
 
 import xpv1 "github.com/crossplane/crossplane-runtime/apis/common/v1"
 
-// GetCondition of this StreamAnalyticsFunctionJavascriptUdf.
-func (mg *StreamAnalyticsFunctionJavascriptUdf) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
+// GetCondition of this AnalyticsFunctionJavascriptUdf.
+func (mg *AnalyticsFunctionJavascriptUdf) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
 	return mg.Status.GetCondition(ct)
 }
 
-// GetDeletionPolicy of this StreamAnalyticsFunctionJavascriptUdf.
-func (mg *StreamAnalyticsFunctionJavascriptUdf) GetDeletionPolicy() xpv1.DeletionPolicy {
+// GetDeletionPolicy of this AnalyticsFunctionJavascriptUdf.
+func (mg *AnalyticsFunctionJavascriptUdf) GetDeletionPolicy() xpv1.DeletionPolicy {
 	return mg.Spec.DeletionPolicy
 }
 
-// GetProviderConfigReference of this StreamAnalyticsFunctionJavascriptUdf.
-func (mg *StreamAnalyticsFunctionJavascriptUdf) GetProviderConfigReference() *xpv1.Reference {
+// GetProviderConfigReference of this AnalyticsFunctionJavascriptUdf.
+func (mg *AnalyticsFunctionJavascriptUdf) GetProviderConfigReference() *xpv1.Reference {
 	return mg.Spec.ProviderConfigReference
 }
 
 /*
-GetProviderReference of this StreamAnalyticsFunctionJavascriptUdf.
+GetProviderReference of this AnalyticsFunctionJavascriptUdf.
 Deprecated: Use GetProviderConfigReference.
 */
-func (mg *StreamAnalyticsFunctionJavascriptUdf) GetProviderReference() *xpv1.Reference {
+func (mg *AnalyticsFunctionJavascriptUdf) GetProviderReference() *xpv1.Reference {
 	return mg.Spec.ProviderReference
 }
 
-// GetWriteConnectionSecretToReference of this StreamAnalyticsFunctionJavascriptUdf.
-func (mg *StreamAnalyticsFunctionJavascriptUdf) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
+// GetWriteConnectionSecretToReference of this AnalyticsFunctionJavascriptUdf.
+func (mg *AnalyticsFunctionJavascriptUdf) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
 	return mg.Spec.WriteConnectionSecretToReference
 }
 
-// SetConditions of this StreamAnalyticsFunctionJavascriptUdf.
-func (mg *StreamAnalyticsFunctionJavascriptUdf) SetConditions(c ...xpv1.Condition) {
+// SetConditions of this AnalyticsFunctionJavascriptUdf.
+func (mg *AnalyticsFunctionJavascriptUdf) SetConditions(c ...xpv1.Condition) {
 	mg.Status.SetConditions(c...)
 }
 
-// SetDeletionPolicy of this StreamAnalyticsFunctionJavascriptUdf.
-func (mg *StreamAnalyticsFunctionJavascriptUdf) SetDeletionPolicy(r xpv1.DeletionPolicy) {
+// SetDeletionPolicy of this AnalyticsFunctionJavascriptUdf.
+func (mg *AnalyticsFunctionJavascriptUdf) SetDeletionPolicy(r xpv1.DeletionPolicy) {
 	mg.Spec.DeletionPolicy = r
 }
 
-// SetProviderConfigReference of this StreamAnalyticsFunctionJavascriptUdf.
-func (mg *StreamAnalyticsFunctionJavascriptUdf) SetProviderConfigReference(r *xpv1.Reference) {
+// SetProviderConfigReference of this AnalyticsFunctionJavascriptUdf.
+func (mg *AnalyticsFunctionJavascriptUdf) SetProviderConfigReference(r *xpv1.Reference) {
 	mg.Spec.ProviderConfigReference = r
 }
 
 /*
-SetProviderReference of this StreamAnalyticsFunctionJavascriptUdf.
+SetProviderReference of this AnalyticsFunctionJavascriptUdf.
 Deprecated: Use SetProviderConfigReference.
 */
-func (mg *StreamAnalyticsFunctionJavascriptUdf) SetProviderReference(r *xpv1.Reference) {
+func (mg *AnalyticsFunctionJavascriptUdf) SetProviderReference(r *xpv1.Reference) {
 	mg.Spec.ProviderReference = r
 }
 
-// SetWriteConnectionSecretToReference of this StreamAnalyticsFunctionJavascriptUdf.
-func (mg *StreamAnalyticsFunctionJavascriptUdf) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
+// SetWriteConnectionSecretToReference of this AnalyticsFunctionJavascriptUdf.
+func (mg *AnalyticsFunctionJavascriptUdf) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
 	mg.Spec.WriteConnectionSecretToReference = r
 }
 
-// GetCondition of this StreamAnalyticsJob.
-func (mg *StreamAnalyticsJob) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
+// GetCondition of this AnalyticsJob.
+func (mg *AnalyticsJob) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
 	return mg.Status.GetCondition(ct)
 }
 
-// GetDeletionPolicy of this StreamAnalyticsJob.
-func (mg *StreamAnalyticsJob) GetDeletionPolicy() xpv1.DeletionPolicy {
+// GetDeletionPolicy of this AnalyticsJob.
+func (mg *AnalyticsJob) GetDeletionPolicy() xpv1.DeletionPolicy {
 	return mg.Spec.DeletionPolicy
 }
 
-// GetProviderConfigReference of this StreamAnalyticsJob.
-func (mg *StreamAnalyticsJob) GetProviderConfigReference() *xpv1.Reference {
+// GetProviderConfigReference of this AnalyticsJob.
+func (mg *AnalyticsJob) GetProviderConfigReference() *xpv1.Reference {
 	return mg.Spec.ProviderConfigReference
 }
 
 /*
-GetProviderReference of this StreamAnalyticsJob.
+GetProviderReference of this AnalyticsJob.
 Deprecated: Use GetProviderConfigReference.
 */
-func (mg *StreamAnalyticsJob) GetProviderReference() *xpv1.Reference {
+func (mg *AnalyticsJob) GetProviderReference() *xpv1.Reference {
 	return mg.Spec.ProviderReference
 }
 
-// GetWriteConnectionSecretToReference of this StreamAnalyticsJob.
-func (mg *StreamAnalyticsJob) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
+// GetWriteConnectionSecretToReference of this AnalyticsJob.
+func (mg *AnalyticsJob) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
 	return mg.Spec.WriteConnectionSecretToReference
 }
 
-// SetConditions of this StreamAnalyticsJob.
-func (mg *StreamAnalyticsJob) SetConditions(c ...xpv1.Condition) {
+// SetConditions of this AnalyticsJob.
+func (mg *AnalyticsJob) SetConditions(c ...xpv1.Condition) {
 	mg.Status.SetConditions(c...)
 }
 
-// SetDeletionPolicy of this StreamAnalyticsJob.
-func (mg *StreamAnalyticsJob) SetDeletionPolicy(r xpv1.DeletionPolicy) {
+// SetDeletionPolicy of this AnalyticsJob.
+func (mg *AnalyticsJob) SetDeletionPolicy(r xpv1.DeletionPolicy) {
 	mg.Spec.DeletionPolicy = r
 }
 
-// SetProviderConfigReference of this StreamAnalyticsJob.
-func (mg *StreamAnalyticsJob) SetProviderConfigReference(r *xpv1.Reference) {
+// SetProviderConfigReference of this AnalyticsJob.
+func (mg *AnalyticsJob) SetProviderConfigReference(r *xpv1.Reference) {
 	mg.Spec.ProviderConfigReference = r
 }
 
 /*
-SetProviderReference of this StreamAnalyticsJob.
+SetProviderReference of this AnalyticsJob.
 Deprecated: Use SetProviderConfigReference.
 */
-func (mg *StreamAnalyticsJob) SetProviderReference(r *xpv1.Reference) {
+func (mg *AnalyticsJob) SetProviderReference(r *xpv1.Reference) {
 	mg.Spec.ProviderReference = r
 }
 
-// SetWriteConnectionSecretToReference of this StreamAnalyticsJob.
-func (mg *StreamAnalyticsJob) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
+// SetWriteConnectionSecretToReference of this AnalyticsJob.
+func (mg *AnalyticsJob) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
 	mg.Spec.WriteConnectionSecretToReference = r
 }
 
-// GetCondition of this StreamAnalyticsOutputBlob.
-func (mg *StreamAnalyticsOutputBlob) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
+// GetCondition of this AnalyticsOutputBlob.
+func (mg *AnalyticsOutputBlob) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
 	return mg.Status.GetCondition(ct)
 }
 
-// GetDeletionPolicy of this StreamAnalyticsOutputBlob.
-func (mg *StreamAnalyticsOutputBlob) GetDeletionPolicy() xpv1.DeletionPolicy {
+// GetDeletionPolicy of this AnalyticsOutputBlob.
+func (mg *AnalyticsOutputBlob) GetDeletionPolicy() xpv1.DeletionPolicy {
 	return mg.Spec.DeletionPolicy
 }
 
-// GetProviderConfigReference of this StreamAnalyticsOutputBlob.
-func (mg *StreamAnalyticsOutputBlob) GetProviderConfigReference() *xpv1.Reference {
+// GetProviderConfigReference of this AnalyticsOutputBlob.
+func (mg *AnalyticsOutputBlob) GetProviderConfigReference() *xpv1.Reference {
 	return mg.Spec.ProviderConfigReference
 }
 
 /*
-GetProviderReference of this StreamAnalyticsOutputBlob.
+GetProviderReference of this AnalyticsOutputBlob.
 Deprecated: Use GetProviderConfigReference.
 */
-func (mg *StreamAnalyticsOutputBlob) GetProviderReference() *xpv1.Reference {
+func (mg *AnalyticsOutputBlob) GetProviderReference() *xpv1.Reference {
 	return mg.Spec.ProviderReference
 }
 
-// GetWriteConnectionSecretToReference of this StreamAnalyticsOutputBlob.
-func (mg *StreamAnalyticsOutputBlob) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
+// GetWriteConnectionSecretToReference of this AnalyticsOutputBlob.
+func (mg *AnalyticsOutputBlob) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
 	return mg.Spec.WriteConnectionSecretToReference
 }
 
-// SetConditions of this StreamAnalyticsOutputBlob.
-func (mg *StreamAnalyticsOutputBlob) SetConditions(c ...xpv1.Condition) {
+// SetConditions of this AnalyticsOutputBlob.
+func (mg *AnalyticsOutputBlob) SetConditions(c ...xpv1.Condition) {
 	mg.Status.SetConditions(c...)
 }
 
-// SetDeletionPolicy of this StreamAnalyticsOutputBlob.
-func (mg *StreamAnalyticsOutputBlob) SetDeletionPolicy(r xpv1.DeletionPolicy) {
+// SetDeletionPolicy of this AnalyticsOutputBlob.
+func (mg *AnalyticsOutputBlob) SetDeletionPolicy(r xpv1.DeletionPolicy) {
 	mg.Spec.DeletionPolicy = r
 }
 
-// SetProviderConfigReference of this StreamAnalyticsOutputBlob.
-func (mg *StreamAnalyticsOutputBlob) SetProviderConfigReference(r *xpv1.Reference) {
+// SetProviderConfigReference of this AnalyticsOutputBlob.
+func (mg *AnalyticsOutputBlob) SetProviderConfigReference(r *xpv1.Reference) {
 	mg.Spec.ProviderConfigReference = r
 }
 
 /*
-SetProviderReference of this StreamAnalyticsOutputBlob.
+SetProviderReference of this AnalyticsOutputBlob.
 Deprecated: Use SetProviderConfigReference.
 */
-func (mg *StreamAnalyticsOutputBlob) SetProviderReference(r *xpv1.Reference) {
+func (mg *AnalyticsOutputBlob) SetProviderReference(r *xpv1.Reference) {
 	mg.Spec.ProviderReference = r
 }
 
-// SetWriteConnectionSecretToReference of this StreamAnalyticsOutputBlob.
-func (mg *StreamAnalyticsOutputBlob) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
+// SetWriteConnectionSecretToReference of this AnalyticsOutputBlob.
+func (mg *AnalyticsOutputBlob) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
 	mg.Spec.WriteConnectionSecretToReference = r
 }
 
-// GetCondition of this StreamAnalyticsOutputEventhub.
-func (mg *StreamAnalyticsOutputEventhub) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
+// GetCondition of this AnalyticsOutputEventhub.
+func (mg *AnalyticsOutputEventhub) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
 	return mg.Status.GetCondition(ct)
 }
 
-// GetDeletionPolicy of this StreamAnalyticsOutputEventhub.
-func (mg *StreamAnalyticsOutputEventhub) GetDeletionPolicy() xpv1.DeletionPolicy {
+// GetDeletionPolicy of this AnalyticsOutputEventhub.
+func (mg *AnalyticsOutputEventhub) GetDeletionPolicy() xpv1.DeletionPolicy {
 	return mg.Spec.DeletionPolicy
 }
 
-// GetProviderConfigReference of this StreamAnalyticsOutputEventhub.
-func (mg *StreamAnalyticsOutputEventhub) GetProviderConfigReference() *xpv1.Reference {
+// GetProviderConfigReference of this AnalyticsOutputEventhub.
+func (mg *AnalyticsOutputEventhub) GetProviderConfigReference() *xpv1.Reference {
 	return mg.Spec.ProviderConfigReference
 }
 
 /*
-GetProviderReference of this StreamAnalyticsOutputEventhub.
+GetProviderReference of this AnalyticsOutputEventhub.
 Deprecated: Use GetProviderConfigReference.
 */
-func (mg *StreamAnalyticsOutputEventhub) GetProviderReference() *xpv1.Reference {
+func (mg *AnalyticsOutputEventhub) GetProviderReference() *xpv1.Reference {
 	return mg.Spec.ProviderReference
 }
 
-// GetWriteConnectionSecretToReference of this StreamAnalyticsOutputEventhub.
-func (mg *StreamAnalyticsOutputEventhub) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
+// GetWriteConnectionSecretToReference of this AnalyticsOutputEventhub.
+func (mg *AnalyticsOutputEventhub) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
 	return mg.Spec.WriteConnectionSecretToReference
 }
 
-// SetConditions of this StreamAnalyticsOutputEventhub.
-func (mg *StreamAnalyticsOutputEventhub) SetConditions(c ...xpv1.Condition) {
+// SetConditions of this AnalyticsOutputEventhub.
+func (mg *AnalyticsOutputEventhub) SetConditions(c ...xpv1.Condition) {
 	mg.Status.SetConditions(c...)
 }
 
-// SetDeletionPolicy of this StreamAnalyticsOutputEventhub.
-func (mg *StreamAnalyticsOutputEventhub) SetDeletionPolicy(r xpv1.DeletionPolicy) {
+// SetDeletionPolicy of this AnalyticsOutputEventhub.
+func (mg *AnalyticsOutputEventhub) SetDeletionPolicy(r xpv1.DeletionPolicy) {
 	mg.Spec.DeletionPolicy = r
 }
 
-// SetProviderConfigReference of this StreamAnalyticsOutputEventhub.
-func (mg *StreamAnalyticsOutputEventhub) SetProviderConfigReference(r *xpv1.Reference) {
+// SetProviderConfigReference of this AnalyticsOutputEventhub.
+func (mg *AnalyticsOutputEventhub) SetProviderConfigReference(r *xpv1.Reference) {
 	mg.Spec.ProviderConfigReference = r
 }
 
 /*
-SetProviderReference of this StreamAnalyticsOutputEventhub.
+SetProviderReference of this AnalyticsOutputEventhub.
 Deprecated: Use SetProviderConfigReference.
 */
-func (mg *StreamAnalyticsOutputEventhub) SetProviderReference(r *xpv1.Reference) {
+func (mg *AnalyticsOutputEventhub) SetProviderReference(r *xpv1.Reference) {
 	mg.Spec.ProviderReference = r
 }
 
-// SetWriteConnectionSecretToReference of this StreamAnalyticsOutputEventhub.
-func (mg *StreamAnalyticsOutputEventhub) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
+// SetWriteConnectionSecretToReference of this AnalyticsOutputEventhub.
+func (mg *AnalyticsOutputEventhub) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
 	mg.Spec.WriteConnectionSecretToReference = r
 }
 
-// GetCondition of this StreamAnalyticsOutputMssql.
-func (mg *StreamAnalyticsOutputMssql) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
+// GetCondition of this AnalyticsOutputMssql.
+func (mg *AnalyticsOutputMssql) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
 	return mg.Status.GetCondition(ct)
 }
 
-// GetDeletionPolicy of this StreamAnalyticsOutputMssql.
-func (mg *StreamAnalyticsOutputMssql) GetDeletionPolicy() xpv1.DeletionPolicy {
+// GetDeletionPolicy of this AnalyticsOutputMssql.
+func (mg *AnalyticsOutputMssql) GetDeletionPolicy() xpv1.DeletionPolicy {
 	return mg.Spec.DeletionPolicy
 }
 
-// GetProviderConfigReference of this StreamAnalyticsOutputMssql.
-func (mg *StreamAnalyticsOutputMssql) GetProviderConfigReference() *xpv1.Reference {
+// GetProviderConfigReference of this AnalyticsOutputMssql.
+func (mg *AnalyticsOutputMssql) GetProviderConfigReference() *xpv1.Reference {
 	return mg.Spec.ProviderConfigReference
 }
 
 /*
-GetProviderReference of this StreamAnalyticsOutputMssql.
+GetProviderReference of this AnalyticsOutputMssql.
 Deprecated: Use GetProviderConfigReference.
 */
-func (mg *StreamAnalyticsOutputMssql) GetProviderReference() *xpv1.Reference {
+func (mg *AnalyticsOutputMssql) GetProviderReference() *xpv1.Reference {
 	return mg.Spec.ProviderReference
 }
 
-// GetWriteConnectionSecretToReference of this StreamAnalyticsOutputMssql.
-func (mg *StreamAnalyticsOutputMssql) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
+// GetWriteConnectionSecretToReference of this AnalyticsOutputMssql.
+func (mg *AnalyticsOutputMssql) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
 	return mg.Spec.WriteConnectionSecretToReference
 }
 
-// SetConditions of this StreamAnalyticsOutputMssql.
-func (mg *StreamAnalyticsOutputMssql) SetConditions(c ...xpv1.Condition) {
+// SetConditions of this AnalyticsOutputMssql.
+func (mg *AnalyticsOutputMssql) SetConditions(c ...xpv1.Condition) {
 	mg.Status.SetConditions(c...)
 }
 
-// SetDeletionPolicy of this StreamAnalyticsOutputMssql.
-func (mg *StreamAnalyticsOutputMssql) SetDeletionPolicy(r xpv1.DeletionPolicy) {
+// SetDeletionPolicy of this AnalyticsOutputMssql.
+func (mg *AnalyticsOutputMssql) SetDeletionPolicy(r xpv1.DeletionPolicy) {
 	mg.Spec.DeletionPolicy = r
 }
 
-// SetProviderConfigReference of this StreamAnalyticsOutputMssql.
-func (mg *StreamAnalyticsOutputMssql) SetProviderConfigReference(r *xpv1.Reference) {
+// SetProviderConfigReference of this AnalyticsOutputMssql.
+func (mg *AnalyticsOutputMssql) SetProviderConfigReference(r *xpv1.Reference) {
 	mg.Spec.ProviderConfigReference = r
 }
 
 /*
-SetProviderReference of this StreamAnalyticsOutputMssql.
+SetProviderReference of this AnalyticsOutputMssql.
 Deprecated: Use SetProviderConfigReference.
 */
-func (mg *StreamAnalyticsOutputMssql) SetProviderReference(r *xpv1.Reference) {
+func (mg *AnalyticsOutputMssql) SetProviderReference(r *xpv1.Reference) {
 	mg.Spec.ProviderReference = r
 }
 
-// SetWriteConnectionSecretToReference of this StreamAnalyticsOutputMssql.
-func (mg *StreamAnalyticsOutputMssql) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
+// SetWriteConnectionSecretToReference of this AnalyticsOutputMssql.
+func (mg *AnalyticsOutputMssql) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
 	mg.Spec.WriteConnectionSecretToReference = r
 }
 
-// GetCondition of this StreamAnalyticsOutputServicebusQueue.
-func (mg *StreamAnalyticsOutputServicebusQueue) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
+// GetCondition of this AnalyticsOutputServicebusQueue.
+func (mg *AnalyticsOutputServicebusQueue) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
 	return mg.Status.GetCondition(ct)
 }
 
-// GetDeletionPolicy of this StreamAnalyticsOutputServicebusQueue.
-func (mg *StreamAnalyticsOutputServicebusQueue) GetDeletionPolicy() xpv1.DeletionPolicy {
+// GetDeletionPolicy of this AnalyticsOutputServicebusQueue.
+func (mg *AnalyticsOutputServicebusQueue) GetDeletionPolicy() xpv1.DeletionPolicy {
 	return mg.Spec.DeletionPolicy
 }
 
-// GetProviderConfigReference of this StreamAnalyticsOutputServicebusQueue.
-func (mg *StreamAnalyticsOutputServicebusQueue) GetProviderConfigReference() *xpv1.Reference {
+// GetProviderConfigReference of this AnalyticsOutputServicebusQueue.
+func (mg *AnalyticsOutputServicebusQueue) GetProviderConfigReference() *xpv1.Reference {
 	return mg.Spec.ProviderConfigReference
 }
 
 /*
-GetProviderReference of this StreamAnalyticsOutputServicebusQueue.
+GetProviderReference of this AnalyticsOutputServicebusQueue.
 Deprecated: Use GetProviderConfigReference.
 */
-func (mg *StreamAnalyticsOutputServicebusQueue) GetProviderReference() *xpv1.Reference {
+func (mg *AnalyticsOutputServicebusQueue) GetProviderReference() *xpv1.Reference {
 	return mg.Spec.ProviderReference
 }
 
-// GetWriteConnectionSecretToReference of this StreamAnalyticsOutputServicebusQueue.
-func (mg *StreamAnalyticsOutputServicebusQueue) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
+// GetWriteConnectionSecretToReference of this AnalyticsOutputServicebusQueue.
+func (mg *AnalyticsOutputServicebusQueue) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
 	return mg.Spec.WriteConnectionSecretToReference
 }
 
-// SetConditions of this StreamAnalyticsOutputServicebusQueue.
-func (mg *StreamAnalyticsOutputServicebusQueue) SetConditions(c ...xpv1.Condition) {
+// SetConditions of this AnalyticsOutputServicebusQueue.
+func (mg *AnalyticsOutputServicebusQueue) SetConditions(c ...xpv1.Condition) {
 	mg.Status.SetConditions(c...)
 }
 
-// SetDeletionPolicy of this StreamAnalyticsOutputServicebusQueue.
-func (mg *StreamAnalyticsOutputServicebusQueue) SetDeletionPolicy(r xpv1.DeletionPolicy) {
+// SetDeletionPolicy of this AnalyticsOutputServicebusQueue.
+func (mg *AnalyticsOutputServicebusQueue) SetDeletionPolicy(r xpv1.DeletionPolicy) {
 	mg.Spec.DeletionPolicy = r
 }
 
-// SetProviderConfigReference of this StreamAnalyticsOutputServicebusQueue.
-func (mg *StreamAnalyticsOutputServicebusQueue) SetProviderConfigReference(r *xpv1.Reference) {
+// SetProviderConfigReference of this AnalyticsOutputServicebusQueue.
+func (mg *AnalyticsOutputServicebusQueue) SetProviderConfigReference(r *xpv1.Reference) {
 	mg.Spec.ProviderConfigReference = r
 }
 
 /*
-SetProviderReference of this StreamAnalyticsOutputServicebusQueue.
+SetProviderReference of this AnalyticsOutputServicebusQueue.
 Deprecated: Use SetProviderConfigReference.
 */
-func (mg *StreamAnalyticsOutputServicebusQueue) SetProviderReference(r *xpv1.Reference) {
+func (mg *AnalyticsOutputServicebusQueue) SetProviderReference(r *xpv1.Reference) {
 	mg.Spec.ProviderReference = r
 }
 
-// SetWriteConnectionSecretToReference of this StreamAnalyticsOutputServicebusQueue.
-func (mg *StreamAnalyticsOutputServicebusQueue) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
+// SetWriteConnectionSecretToReference of this AnalyticsOutputServicebusQueue.
+func (mg *AnalyticsOutputServicebusQueue) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
 	mg.Spec.WriteConnectionSecretToReference = r
 }
 
-// GetCondition of this StreamAnalyticsOutputServicebusTopic.
-func (mg *StreamAnalyticsOutputServicebusTopic) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
+// GetCondition of this AnalyticsOutputServicebusTopic.
+func (mg *AnalyticsOutputServicebusTopic) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
 	return mg.Status.GetCondition(ct)
 }
 
-// GetDeletionPolicy of this StreamAnalyticsOutputServicebusTopic.
-func (mg *StreamAnalyticsOutputServicebusTopic) GetDeletionPolicy() xpv1.DeletionPolicy {
+// GetDeletionPolicy of this AnalyticsOutputServicebusTopic.
+func (mg *AnalyticsOutputServicebusTopic) GetDeletionPolicy() xpv1.DeletionPolicy {
 	return mg.Spec.DeletionPolicy
 }
 
-// GetProviderConfigReference of this StreamAnalyticsOutputServicebusTopic.
-func (mg *StreamAnalyticsOutputServicebusTopic) GetProviderConfigReference() *xpv1.Reference {
+// GetProviderConfigReference of this AnalyticsOutputServicebusTopic.
+func (mg *AnalyticsOutputServicebusTopic) GetProviderConfigReference() *xpv1.Reference {
 	return mg.Spec.ProviderConfigReference
 }
 
 /*
-GetProviderReference of this StreamAnalyticsOutputServicebusTopic.
+GetProviderReference of this AnalyticsOutputServicebusTopic.
 Deprecated: Use GetProviderConfigReference.
 */
-func (mg *StreamAnalyticsOutputServicebusTopic) GetProviderReference() *xpv1.Reference {
+func (mg *AnalyticsOutputServicebusTopic) GetProviderReference() *xpv1.Reference {
 	return mg.Spec.ProviderReference
 }
 
-// GetWriteConnectionSecretToReference of this StreamAnalyticsOutputServicebusTopic.
-func (mg *StreamAnalyticsOutputServicebusTopic) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
+// GetWriteConnectionSecretToReference of this AnalyticsOutputServicebusTopic.
+func (mg *AnalyticsOutputServicebusTopic) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
 	return mg.Spec.WriteConnectionSecretToReference
 }
 
-// SetConditions of this StreamAnalyticsOutputServicebusTopic.
-func (mg *StreamAnalyticsOutputServicebusTopic) SetConditions(c ...xpv1.Condition) {
+// SetConditions of this AnalyticsOutputServicebusTopic.
+func (mg *AnalyticsOutputServicebusTopic) SetConditions(c ...xpv1.Condition) {
 	mg.Status.SetConditions(c...)
 }
 
-// SetDeletionPolicy of this StreamAnalyticsOutputServicebusTopic.
-func (mg *StreamAnalyticsOutputServicebusTopic) SetDeletionPolicy(r xpv1.DeletionPolicy) {
+// SetDeletionPolicy of this AnalyticsOutputServicebusTopic.
+func (mg *AnalyticsOutputServicebusTopic) SetDeletionPolicy(r xpv1.DeletionPolicy) {
 	mg.Spec.DeletionPolicy = r
 }
 
-// SetProviderConfigReference of this StreamAnalyticsOutputServicebusTopic.
-func (mg *StreamAnalyticsOutputServicebusTopic) SetProviderConfigReference(r *xpv1.Reference) {
+// SetProviderConfigReference of this AnalyticsOutputServicebusTopic.
+func (mg *AnalyticsOutputServicebusTopic) SetProviderConfigReference(r *xpv1.Reference) {
 	mg.Spec.ProviderConfigReference = r
 }
 
 /*
-SetProviderReference of this StreamAnalyticsOutputServicebusTopic.
+SetProviderReference of this AnalyticsOutputServicebusTopic.
 Deprecated: Use SetProviderConfigReference.
 */
-func (mg *StreamAnalyticsOutputServicebusTopic) SetProviderReference(r *xpv1.Reference) {
+func (mg *AnalyticsOutputServicebusTopic) SetProviderReference(r *xpv1.Reference) {
 	mg.Spec.ProviderReference = r
 }
 
-// SetWriteConnectionSecretToReference of this StreamAnalyticsOutputServicebusTopic.
-func (mg *StreamAnalyticsOutputServicebusTopic) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
+// SetWriteConnectionSecretToReference of this AnalyticsOutputServicebusTopic.
+func (mg *AnalyticsOutputServicebusTopic) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
 	mg.Spec.WriteConnectionSecretToReference = r
 }
 
-// GetCondition of this StreamAnalyticsReferenceInputBlob.
-func (mg *StreamAnalyticsReferenceInputBlob) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
+// GetCondition of this AnalyticsReferenceInputBlob.
+func (mg *AnalyticsReferenceInputBlob) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
 	return mg.Status.GetCondition(ct)
 }
 
-// GetDeletionPolicy of this StreamAnalyticsReferenceInputBlob.
-func (mg *StreamAnalyticsReferenceInputBlob) GetDeletionPolicy() xpv1.DeletionPolicy {
+// GetDeletionPolicy of this AnalyticsReferenceInputBlob.
+func (mg *AnalyticsReferenceInputBlob) GetDeletionPolicy() xpv1.DeletionPolicy {
 	return mg.Spec.DeletionPolicy
 }
 
-// GetProviderConfigReference of this StreamAnalyticsReferenceInputBlob.
-func (mg *StreamAnalyticsReferenceInputBlob) GetProviderConfigReference() *xpv1.Reference {
+// GetProviderConfigReference of this AnalyticsReferenceInputBlob.
+func (mg *AnalyticsReferenceInputBlob) GetProviderConfigReference() *xpv1.Reference {
 	return mg.Spec.ProviderConfigReference
 }
 
 /*
-GetProviderReference of this StreamAnalyticsReferenceInputBlob.
+GetProviderReference of this AnalyticsReferenceInputBlob.
 Deprecated: Use GetProviderConfigReference.
 */
-func (mg *StreamAnalyticsReferenceInputBlob) GetProviderReference() *xpv1.Reference {
+func (mg *AnalyticsReferenceInputBlob) GetProviderReference() *xpv1.Reference {
 	return mg.Spec.ProviderReference
 }
 
-// GetWriteConnectionSecretToReference of this StreamAnalyticsReferenceInputBlob.
-func (mg *StreamAnalyticsReferenceInputBlob) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
+// GetWriteConnectionSecretToReference of this AnalyticsReferenceInputBlob.
+func (mg *AnalyticsReferenceInputBlob) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
 	return mg.Spec.WriteConnectionSecretToReference
 }
 
-// SetConditions of this StreamAnalyticsReferenceInputBlob.
-func (mg *StreamAnalyticsReferenceInputBlob) SetConditions(c ...xpv1.Condition) {
+// SetConditions of this AnalyticsReferenceInputBlob.
+func (mg *AnalyticsReferenceInputBlob) SetConditions(c ...xpv1.Condition) {
 	mg.Status.SetConditions(c...)
 }
 
-// SetDeletionPolicy of this StreamAnalyticsReferenceInputBlob.
-func (mg *StreamAnalyticsReferenceInputBlob) SetDeletionPolicy(r xpv1.DeletionPolicy) {
+// SetDeletionPolicy of this AnalyticsReferenceInputBlob.
+func (mg *AnalyticsReferenceInputBlob) SetDeletionPolicy(r xpv1.DeletionPolicy) {
 	mg.Spec.DeletionPolicy = r
 }
 
-// SetProviderConfigReference of this StreamAnalyticsReferenceInputBlob.
-func (mg *StreamAnalyticsReferenceInputBlob) SetProviderConfigReference(r *xpv1.Reference) {
+// SetProviderConfigReference of this AnalyticsReferenceInputBlob.
+func (mg *AnalyticsReferenceInputBlob) SetProviderConfigReference(r *xpv1.Reference) {
 	mg.Spec.ProviderConfigReference = r
 }
 
 /*
-SetProviderReference of this StreamAnalyticsReferenceInputBlob.
+SetProviderReference of this AnalyticsReferenceInputBlob.
 Deprecated: Use SetProviderConfigReference.
 */
-func (mg *StreamAnalyticsReferenceInputBlob) SetProviderReference(r *xpv1.Reference) {
+func (mg *AnalyticsReferenceInputBlob) SetProviderReference(r *xpv1.Reference) {
 	mg.Spec.ProviderReference = r
 }
 
-// SetWriteConnectionSecretToReference of this StreamAnalyticsReferenceInputBlob.
-func (mg *StreamAnalyticsReferenceInputBlob) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
+// SetWriteConnectionSecretToReference of this AnalyticsReferenceInputBlob.
+func (mg *AnalyticsReferenceInputBlob) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
 	mg.Spec.WriteConnectionSecretToReference = r
 }
 
-// GetCondition of this StreamAnalyticsStreamInputBlob.
-func (mg *StreamAnalyticsStreamInputBlob) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
+// GetCondition of this AnalyticsStreamInputBlob.
+func (mg *AnalyticsStreamInputBlob) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
 	return mg.Status.GetCondition(ct)
 }
 
-// GetDeletionPolicy of this StreamAnalyticsStreamInputBlob.
-func (mg *StreamAnalyticsStreamInputBlob) GetDeletionPolicy() xpv1.DeletionPolicy {
+// GetDeletionPolicy of this AnalyticsStreamInputBlob.
+func (mg *AnalyticsStreamInputBlob) GetDeletionPolicy() xpv1.DeletionPolicy {
 	return mg.Spec.DeletionPolicy
 }
 
-// GetProviderConfigReference of this StreamAnalyticsStreamInputBlob.
-func (mg *StreamAnalyticsStreamInputBlob) GetProviderConfigReference() *xpv1.Reference {
+// GetProviderConfigReference of this AnalyticsStreamInputBlob.
+func (mg *AnalyticsStreamInputBlob) GetProviderConfigReference() *xpv1.Reference {
 	return mg.Spec.ProviderConfigReference
 }
 
 /*
-GetProviderReference of this StreamAnalyticsStreamInputBlob.
+GetProviderReference of this AnalyticsStreamInputBlob.
 Deprecated: Use GetProviderConfigReference.
 */
-func (mg *StreamAnalyticsStreamInputBlob) GetProviderReference() *xpv1.Reference {
+func (mg *AnalyticsStreamInputBlob) GetProviderReference() *xpv1.Reference {
 	return mg.Spec.ProviderReference
 }
 
-// GetWriteConnectionSecretToReference of this StreamAnalyticsStreamInputBlob.
-func (mg *StreamAnalyticsStreamInputBlob) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
+// GetWriteConnectionSecretToReference of this AnalyticsStreamInputBlob.
+func (mg *AnalyticsStreamInputBlob) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
 	return mg.Spec.WriteConnectionSecretToReference
 }
 
-// SetConditions of this StreamAnalyticsStreamInputBlob.
-func (mg *StreamAnalyticsStreamInputBlob) SetConditions(c ...xpv1.Condition) {
+// SetConditions of this AnalyticsStreamInputBlob.
+func (mg *AnalyticsStreamInputBlob) SetConditions(c ...xpv1.Condition) {
 	mg.Status.SetConditions(c...)
 }
 
-// SetDeletionPolicy of this StreamAnalyticsStreamInputBlob.
-func (mg *StreamAnalyticsStreamInputBlob) SetDeletionPolicy(r xpv1.DeletionPolicy) {
+// SetDeletionPolicy of this AnalyticsStreamInputBlob.
+func (mg *AnalyticsStreamInputBlob) SetDeletionPolicy(r xpv1.DeletionPolicy) {
 	mg.Spec.DeletionPolicy = r
 }
 
-// SetProviderConfigReference of this StreamAnalyticsStreamInputBlob.
-func (mg *StreamAnalyticsStreamInputBlob) SetProviderConfigReference(r *xpv1.Reference) {
+// SetProviderConfigReference of this AnalyticsStreamInputBlob.
+func (mg *AnalyticsStreamInputBlob) SetProviderConfigReference(r *xpv1.Reference) {
 	mg.Spec.ProviderConfigReference = r
 }
 
 /*
-SetProviderReference of this StreamAnalyticsStreamInputBlob.
+SetProviderReference of this AnalyticsStreamInputBlob.
 Deprecated: Use SetProviderConfigReference.
 */
-func (mg *StreamAnalyticsStreamInputBlob) SetProviderReference(r *xpv1.Reference) {
+func (mg *AnalyticsStreamInputBlob) SetProviderReference(r *xpv1.Reference) {
 	mg.Spec.ProviderReference = r
 }
 
-// SetWriteConnectionSecretToReference of this StreamAnalyticsStreamInputBlob.
-func (mg *StreamAnalyticsStreamInputBlob) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
+// SetWriteConnectionSecretToReference of this AnalyticsStreamInputBlob.
+func (mg *AnalyticsStreamInputBlob) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
 	mg.Spec.WriteConnectionSecretToReference = r
 }
 
-// GetCondition of this StreamAnalyticsStreamInputEventhub.
-func (mg *StreamAnalyticsStreamInputEventhub) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
+// GetCondition of this AnalyticsStreamInputEventhub.
+func (mg *AnalyticsStreamInputEventhub) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
 	return mg.Status.GetCondition(ct)
 }
 
-// GetDeletionPolicy of this StreamAnalyticsStreamInputEventhub.
-func (mg *StreamAnalyticsStreamInputEventhub) GetDeletionPolicy() xpv1.DeletionPolicy {
+// GetDeletionPolicy of this AnalyticsStreamInputEventhub.
+func (mg *AnalyticsStreamInputEventhub) GetDeletionPolicy() xpv1.DeletionPolicy {
 	return mg.Spec.DeletionPolicy
 }
 
-// GetProviderConfigReference of this StreamAnalyticsStreamInputEventhub.
-func (mg *StreamAnalyticsStreamInputEventhub) GetProviderConfigReference() *xpv1.Reference {
+// GetProviderConfigReference of this AnalyticsStreamInputEventhub.
+func (mg *AnalyticsStreamInputEventhub) GetProviderConfigReference() *xpv1.Reference {
 	return mg.Spec.ProviderConfigReference
 }
 
 /*
-GetProviderReference of this StreamAnalyticsStreamInputEventhub.
+GetProviderReference of this AnalyticsStreamInputEventhub.
 Deprecated: Use GetProviderConfigReference.
 */
-func (mg *StreamAnalyticsStreamInputEventhub) GetProviderReference() *xpv1.Reference {
+func (mg *AnalyticsStreamInputEventhub) GetProviderReference() *xpv1.Reference {
 	return mg.Spec.ProviderReference
 }
 
-// GetWriteConnectionSecretToReference of this StreamAnalyticsStreamInputEventhub.
-func (mg *StreamAnalyticsStreamInputEventhub) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
+// GetWriteConnectionSecretToReference of this AnalyticsStreamInputEventhub.
+func (mg *AnalyticsStreamInputEventhub) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
 	return mg.Spec.WriteConnectionSecretToReference
 }
 
-// SetConditions of this StreamAnalyticsStreamInputEventhub.
-func (mg *StreamAnalyticsStreamInputEventhub) SetConditions(c ...xpv1.Condition) {
+// SetConditions of this AnalyticsStreamInputEventhub.
+func (mg *AnalyticsStreamInputEventhub) SetConditions(c ...xpv1.Condition) {
 	mg.Status.SetConditions(c...)
 }
 
-// SetDeletionPolicy of this StreamAnalyticsStreamInputEventhub.
-func (mg *StreamAnalyticsStreamInputEventhub) SetDeletionPolicy(r xpv1.DeletionPolicy) {
+// SetDeletionPolicy of this AnalyticsStreamInputEventhub.
+func (mg *AnalyticsStreamInputEventhub) SetDeletionPolicy(r xpv1.DeletionPolicy) {
 	mg.Spec.DeletionPolicy = r
 }
 
-// SetProviderConfigReference of this StreamAnalyticsStreamInputEventhub.
-func (mg *StreamAnalyticsStreamInputEventhub) SetProviderConfigReference(r *xpv1.Reference) {
+// SetProviderConfigReference of this AnalyticsStreamInputEventhub.
+func (mg *AnalyticsStreamInputEventhub) SetProviderConfigReference(r *xpv1.Reference) {
 	mg.Spec.ProviderConfigReference = r
 }
 
 /*
-SetProviderReference of this StreamAnalyticsStreamInputEventhub.
+SetProviderReference of this AnalyticsStreamInputEventhub.
 Deprecated: Use SetProviderConfigReference.
 */
-func (mg *StreamAnalyticsStreamInputEventhub) SetProviderReference(r *xpv1.Reference) {
+func (mg *AnalyticsStreamInputEventhub) SetProviderReference(r *xpv1.Reference) {
 	mg.Spec.ProviderReference = r
 }
 
-// SetWriteConnectionSecretToReference of this StreamAnalyticsStreamInputEventhub.
-func (mg *StreamAnalyticsStreamInputEventhub) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
+// SetWriteConnectionSecretToReference of this AnalyticsStreamInputEventhub.
+func (mg *AnalyticsStreamInputEventhub) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
 	mg.Spec.WriteConnectionSecretToReference = r
 }
 
-// GetCondition of this StreamAnalyticsStreamInputIothub.
-func (mg *StreamAnalyticsStreamInputIothub) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
+// GetCondition of this AnalyticsStreamInputIothub.
+func (mg *AnalyticsStreamInputIothub) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
 	return mg.Status.GetCondition(ct)
 }
 
-// GetDeletionPolicy of this StreamAnalyticsStreamInputIothub.
-func (mg *StreamAnalyticsStreamInputIothub) GetDeletionPolicy() xpv1.DeletionPolicy {
+// GetDeletionPolicy of this AnalyticsStreamInputIothub.
+func (mg *AnalyticsStreamInputIothub) GetDeletionPolicy() xpv1.DeletionPolicy {
 	return mg.Spec.DeletionPolicy
 }
 
-// GetProviderConfigReference of this StreamAnalyticsStreamInputIothub.
-func (mg *StreamAnalyticsStreamInputIothub) GetProviderConfigReference() *xpv1.Reference {
+// GetProviderConfigReference of this AnalyticsStreamInputIothub.
+func (mg *AnalyticsStreamInputIothub) GetProviderConfigReference() *xpv1.Reference {
 	return mg.Spec.ProviderConfigReference
 }
 
 /*
-GetProviderReference of this StreamAnalyticsStreamInputIothub.
+GetProviderReference of this AnalyticsStreamInputIothub.
 Deprecated: Use GetProviderConfigReference.
 */
-func (mg *StreamAnalyticsStreamInputIothub) GetProviderReference() *xpv1.Reference {
+func (mg *AnalyticsStreamInputIothub) GetProviderReference() *xpv1.Reference {
 	return mg.Spec.ProviderReference
 }
 
-// GetWriteConnectionSecretToReference of this StreamAnalyticsStreamInputIothub.
-func (mg *StreamAnalyticsStreamInputIothub) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
+// GetWriteConnectionSecretToReference of this AnalyticsStreamInputIothub.
+func (mg *AnalyticsStreamInputIothub) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
 	return mg.Spec.WriteConnectionSecretToReference
 }
 
-// SetConditions of this StreamAnalyticsStreamInputIothub.
-func (mg *StreamAnalyticsStreamInputIothub) SetConditions(c ...xpv1.Condition) {
+// SetConditions of this AnalyticsStreamInputIothub.
+func (mg *AnalyticsStreamInputIothub) SetConditions(c ...xpv1.Condition) {
 	mg.Status.SetConditions(c...)
 }
 
-// SetDeletionPolicy of this StreamAnalyticsStreamInputIothub.
-func (mg *StreamAnalyticsStreamInputIothub) SetDeletionPolicy(r xpv1.DeletionPolicy) {
+// SetDeletionPolicy of this AnalyticsStreamInputIothub.
+func (mg *AnalyticsStreamInputIothub) SetDeletionPolicy(r xpv1.DeletionPolicy) {
 	mg.Spec.DeletionPolicy = r
 }
 
-// SetProviderConfigReference of this StreamAnalyticsStreamInputIothub.
-func (mg *StreamAnalyticsStreamInputIothub) SetProviderConfigReference(r *xpv1.Reference) {
+// SetProviderConfigReference of this AnalyticsStreamInputIothub.
+func (mg *AnalyticsStreamInputIothub) SetProviderConfigReference(r *xpv1.Reference) {
 	mg.Spec.ProviderConfigReference = r
 }
 
 /*
-SetProviderReference of this StreamAnalyticsStreamInputIothub.
+SetProviderReference of this AnalyticsStreamInputIothub.
 Deprecated: Use SetProviderConfigReference.
 */
-func (mg *StreamAnalyticsStreamInputIothub) SetProviderReference(r *xpv1.Reference) {
+func (mg *AnalyticsStreamInputIothub) SetProviderReference(r *xpv1.Reference) {
 	mg.Spec.ProviderReference = r
 }
 
-// SetWriteConnectionSecretToReference of this StreamAnalyticsStreamInputIothub.
-func (mg *StreamAnalyticsStreamInputIothub) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
+// SetWriteConnectionSecretToReference of this AnalyticsStreamInputIothub.
+func (mg *AnalyticsStreamInputIothub) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
 	mg.Spec.WriteConnectionSecretToReference = r
 }

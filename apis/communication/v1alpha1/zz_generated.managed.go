@@ -19,58 +19,58 @@ package v1alpha1
 
 import xpv1 "github.com/crossplane/crossplane-runtime/apis/common/v1"
 
-// GetCondition of this CommunicationService.
-func (mg *CommunicationService) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
+// GetCondition of this Service.
+func (mg *Service) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
 	return mg.Status.GetCondition(ct)
 }
 
-// GetDeletionPolicy of this CommunicationService.
-func (mg *CommunicationService) GetDeletionPolicy() xpv1.DeletionPolicy {
+// GetDeletionPolicy of this Service.
+func (mg *Service) GetDeletionPolicy() xpv1.DeletionPolicy {
 	return mg.Spec.DeletionPolicy
 }
 
-// GetProviderConfigReference of this CommunicationService.
-func (mg *CommunicationService) GetProviderConfigReference() *xpv1.Reference {
+// GetProviderConfigReference of this Service.
+func (mg *Service) GetProviderConfigReference() *xpv1.Reference {
 	return mg.Spec.ProviderConfigReference
 }
 
 /*
-GetProviderReference of this CommunicationService.
+GetProviderReference of this Service.
 Deprecated: Use GetProviderConfigReference.
 */
-func (mg *CommunicationService) GetProviderReference() *xpv1.Reference {
+func (mg *Service) GetProviderReference() *xpv1.Reference {
 	return mg.Spec.ProviderReference
 }
 
-// GetWriteConnectionSecretToReference of this CommunicationService.
-func (mg *CommunicationService) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
+// GetWriteConnectionSecretToReference of this Service.
+func (mg *Service) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
 	return mg.Spec.WriteConnectionSecretToReference
 }
 
-// SetConditions of this CommunicationService.
-func (mg *CommunicationService) SetConditions(c ...xpv1.Condition) {
+// SetConditions of this Service.
+func (mg *Service) SetConditions(c ...xpv1.Condition) {
 	mg.Status.SetConditions(c...)
 }
 
-// SetDeletionPolicy of this CommunicationService.
-func (mg *CommunicationService) SetDeletionPolicy(r xpv1.DeletionPolicy) {
+// SetDeletionPolicy of this Service.
+func (mg *Service) SetDeletionPolicy(r xpv1.DeletionPolicy) {
 	mg.Spec.DeletionPolicy = r
 }
 
-// SetProviderConfigReference of this CommunicationService.
-func (mg *CommunicationService) SetProviderConfigReference(r *xpv1.Reference) {
+// SetProviderConfigReference of this Service.
+func (mg *Service) SetProviderConfigReference(r *xpv1.Reference) {
 	mg.Spec.ProviderConfigReference = r
 }
 
 /*
-SetProviderReference of this CommunicationService.
+SetProviderReference of this Service.
 Deprecated: Use SetProviderConfigReference.
 */
-func (mg *CommunicationService) SetProviderReference(r *xpv1.Reference) {
+func (mg *Service) SetProviderReference(r *xpv1.Reference) {
 	mg.Spec.ProviderReference = r
 }
 
-// SetWriteConnectionSecretToReference of this CommunicationService.
-func (mg *CommunicationService) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
+// SetWriteConnectionSecretToReference of this Service.
+func (mg *Service) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
 	mg.Spec.WriteConnectionSecretToReference = r
 }

@@ -19,8 +19,8 @@ package v1alpha1
 
 import resource "github.com/crossplane/crossplane-runtime/pkg/resource"
 
-// GetItems of this NatGatewayList.
-func (l *NatGatewayList) GetItems() []resource.Managed {
+// GetItems of this GatewayList.
+func (l *GatewayList) GetItems() []resource.Managed {
 	items := make([]resource.Managed, len(l.Items))
 	for i := range l.Items {
 		items[i] = &l.Items[i]
@@ -28,8 +28,8 @@ func (l *NatGatewayList) GetItems() []resource.Managed {
 	return items
 }
 
-// GetItems of this NatGatewayPublicIpAssociationList.
-func (l *NatGatewayPublicIpAssociationList) GetItems() []resource.Managed {
+// GetItems of this GatewayPublicIpAssociationList.
+func (l *GatewayPublicIpAssociationList) GetItems() []resource.Managed {
 	items := make([]resource.Managed, len(l.Items))
 	for i := range l.Items {
 		items[i] = &l.Items[i]
@@ -37,8 +37,8 @@ func (l *NatGatewayPublicIpAssociationList) GetItems() []resource.Managed {
 	return items
 }
 
-// GetItems of this NatGatewayPublicIpPrefixAssociationList.
-func (l *NatGatewayPublicIpPrefixAssociationList) GetItems() []resource.Managed {
+// GetItems of this GatewayPublicIpPrefixAssociationList.
+func (l *GatewayPublicIpPrefixAssociationList) GetItems() []resource.Managed {
 	items := make([]resource.Managed, len(l.Items))
 	for i := range l.Items {
 		items[i] = &l.Items[i]

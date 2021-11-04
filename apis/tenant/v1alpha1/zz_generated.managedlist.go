@@ -19,8 +19,8 @@ package v1alpha1
 
 import resource "github.com/crossplane/crossplane-runtime/pkg/resource"
 
-// GetItems of this TenantTemplateDeploymentList.
-func (l *TenantTemplateDeploymentList) GetItems() []resource.Managed {
+// GetItems of this TemplateDeploymentList.
+func (l *TemplateDeploymentList) GetItems() []resource.Managed {
 	items := make([]resource.Managed, len(l.Items))
 	for i := range l.Items {
 		items[i] = &l.Items[i]

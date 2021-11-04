@@ -19,618 +19,618 @@ package v1alpha1
 
 import xpv1 "github.com/crossplane/crossplane-runtime/apis/common/v1"
 
-// GetCondition of this PrivateDnsARecord.
-func (mg *PrivateDnsARecord) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
+// GetCondition of this DnsARecord.
+func (mg *DnsARecord) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
 	return mg.Status.GetCondition(ct)
 }
 
-// GetDeletionPolicy of this PrivateDnsARecord.
-func (mg *PrivateDnsARecord) GetDeletionPolicy() xpv1.DeletionPolicy {
+// GetDeletionPolicy of this DnsARecord.
+func (mg *DnsARecord) GetDeletionPolicy() xpv1.DeletionPolicy {
 	return mg.Spec.DeletionPolicy
 }
 
-// GetProviderConfigReference of this PrivateDnsARecord.
-func (mg *PrivateDnsARecord) GetProviderConfigReference() *xpv1.Reference {
+// GetProviderConfigReference of this DnsARecord.
+func (mg *DnsARecord) GetProviderConfigReference() *xpv1.Reference {
 	return mg.Spec.ProviderConfigReference
 }
 
 /*
-GetProviderReference of this PrivateDnsARecord.
+GetProviderReference of this DnsARecord.
 Deprecated: Use GetProviderConfigReference.
 */
-func (mg *PrivateDnsARecord) GetProviderReference() *xpv1.Reference {
+func (mg *DnsARecord) GetProviderReference() *xpv1.Reference {
 	return mg.Spec.ProviderReference
 }
 
-// GetWriteConnectionSecretToReference of this PrivateDnsARecord.
-func (mg *PrivateDnsARecord) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
+// GetWriteConnectionSecretToReference of this DnsARecord.
+func (mg *DnsARecord) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
 	return mg.Spec.WriteConnectionSecretToReference
 }
 
-// SetConditions of this PrivateDnsARecord.
-func (mg *PrivateDnsARecord) SetConditions(c ...xpv1.Condition) {
+// SetConditions of this DnsARecord.
+func (mg *DnsARecord) SetConditions(c ...xpv1.Condition) {
 	mg.Status.SetConditions(c...)
 }
 
-// SetDeletionPolicy of this PrivateDnsARecord.
-func (mg *PrivateDnsARecord) SetDeletionPolicy(r xpv1.DeletionPolicy) {
+// SetDeletionPolicy of this DnsARecord.
+func (mg *DnsARecord) SetDeletionPolicy(r xpv1.DeletionPolicy) {
 	mg.Spec.DeletionPolicy = r
 }
 
-// SetProviderConfigReference of this PrivateDnsARecord.
-func (mg *PrivateDnsARecord) SetProviderConfigReference(r *xpv1.Reference) {
+// SetProviderConfigReference of this DnsARecord.
+func (mg *DnsARecord) SetProviderConfigReference(r *xpv1.Reference) {
 	mg.Spec.ProviderConfigReference = r
 }
 
 /*
-SetProviderReference of this PrivateDnsARecord.
+SetProviderReference of this DnsARecord.
 Deprecated: Use SetProviderConfigReference.
 */
-func (mg *PrivateDnsARecord) SetProviderReference(r *xpv1.Reference) {
+func (mg *DnsARecord) SetProviderReference(r *xpv1.Reference) {
 	mg.Spec.ProviderReference = r
 }
 
-// SetWriteConnectionSecretToReference of this PrivateDnsARecord.
-func (mg *PrivateDnsARecord) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
+// SetWriteConnectionSecretToReference of this DnsARecord.
+func (mg *DnsARecord) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
 	mg.Spec.WriteConnectionSecretToReference = r
 }
 
-// GetCondition of this PrivateDnsAaaaRecord.
-func (mg *PrivateDnsAaaaRecord) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
+// GetCondition of this DnsAaaaRecord.
+func (mg *DnsAaaaRecord) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
 	return mg.Status.GetCondition(ct)
 }
 
-// GetDeletionPolicy of this PrivateDnsAaaaRecord.
-func (mg *PrivateDnsAaaaRecord) GetDeletionPolicy() xpv1.DeletionPolicy {
+// GetDeletionPolicy of this DnsAaaaRecord.
+func (mg *DnsAaaaRecord) GetDeletionPolicy() xpv1.DeletionPolicy {
 	return mg.Spec.DeletionPolicy
 }
 
-// GetProviderConfigReference of this PrivateDnsAaaaRecord.
-func (mg *PrivateDnsAaaaRecord) GetProviderConfigReference() *xpv1.Reference {
+// GetProviderConfigReference of this DnsAaaaRecord.
+func (mg *DnsAaaaRecord) GetProviderConfigReference() *xpv1.Reference {
 	return mg.Spec.ProviderConfigReference
 }
 
 /*
-GetProviderReference of this PrivateDnsAaaaRecord.
+GetProviderReference of this DnsAaaaRecord.
 Deprecated: Use GetProviderConfigReference.
 */
-func (mg *PrivateDnsAaaaRecord) GetProviderReference() *xpv1.Reference {
+func (mg *DnsAaaaRecord) GetProviderReference() *xpv1.Reference {
 	return mg.Spec.ProviderReference
 }
 
-// GetWriteConnectionSecretToReference of this PrivateDnsAaaaRecord.
-func (mg *PrivateDnsAaaaRecord) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
+// GetWriteConnectionSecretToReference of this DnsAaaaRecord.
+func (mg *DnsAaaaRecord) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
 	return mg.Spec.WriteConnectionSecretToReference
 }
 
-// SetConditions of this PrivateDnsAaaaRecord.
-func (mg *PrivateDnsAaaaRecord) SetConditions(c ...xpv1.Condition) {
+// SetConditions of this DnsAaaaRecord.
+func (mg *DnsAaaaRecord) SetConditions(c ...xpv1.Condition) {
 	mg.Status.SetConditions(c...)
 }
 
-// SetDeletionPolicy of this PrivateDnsAaaaRecord.
-func (mg *PrivateDnsAaaaRecord) SetDeletionPolicy(r xpv1.DeletionPolicy) {
+// SetDeletionPolicy of this DnsAaaaRecord.
+func (mg *DnsAaaaRecord) SetDeletionPolicy(r xpv1.DeletionPolicy) {
 	mg.Spec.DeletionPolicy = r
 }
 
-// SetProviderConfigReference of this PrivateDnsAaaaRecord.
-func (mg *PrivateDnsAaaaRecord) SetProviderConfigReference(r *xpv1.Reference) {
+// SetProviderConfigReference of this DnsAaaaRecord.
+func (mg *DnsAaaaRecord) SetProviderConfigReference(r *xpv1.Reference) {
 	mg.Spec.ProviderConfigReference = r
 }
 
 /*
-SetProviderReference of this PrivateDnsAaaaRecord.
+SetProviderReference of this DnsAaaaRecord.
 Deprecated: Use SetProviderConfigReference.
 */
-func (mg *PrivateDnsAaaaRecord) SetProviderReference(r *xpv1.Reference) {
+func (mg *DnsAaaaRecord) SetProviderReference(r *xpv1.Reference) {
 	mg.Spec.ProviderReference = r
 }
 
-// SetWriteConnectionSecretToReference of this PrivateDnsAaaaRecord.
-func (mg *PrivateDnsAaaaRecord) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
+// SetWriteConnectionSecretToReference of this DnsAaaaRecord.
+func (mg *DnsAaaaRecord) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
 	mg.Spec.WriteConnectionSecretToReference = r
 }
 
-// GetCondition of this PrivateDnsCnameRecord.
-func (mg *PrivateDnsCnameRecord) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
+// GetCondition of this DnsCnameRecord.
+func (mg *DnsCnameRecord) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
 	return mg.Status.GetCondition(ct)
 }
 
-// GetDeletionPolicy of this PrivateDnsCnameRecord.
-func (mg *PrivateDnsCnameRecord) GetDeletionPolicy() xpv1.DeletionPolicy {
+// GetDeletionPolicy of this DnsCnameRecord.
+func (mg *DnsCnameRecord) GetDeletionPolicy() xpv1.DeletionPolicy {
 	return mg.Spec.DeletionPolicy
 }
 
-// GetProviderConfigReference of this PrivateDnsCnameRecord.
-func (mg *PrivateDnsCnameRecord) GetProviderConfigReference() *xpv1.Reference {
+// GetProviderConfigReference of this DnsCnameRecord.
+func (mg *DnsCnameRecord) GetProviderConfigReference() *xpv1.Reference {
 	return mg.Spec.ProviderConfigReference
 }
 
 /*
-GetProviderReference of this PrivateDnsCnameRecord.
+GetProviderReference of this DnsCnameRecord.
 Deprecated: Use GetProviderConfigReference.
 */
-func (mg *PrivateDnsCnameRecord) GetProviderReference() *xpv1.Reference {
+func (mg *DnsCnameRecord) GetProviderReference() *xpv1.Reference {
 	return mg.Spec.ProviderReference
 }
 
-// GetWriteConnectionSecretToReference of this PrivateDnsCnameRecord.
-func (mg *PrivateDnsCnameRecord) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
+// GetWriteConnectionSecretToReference of this DnsCnameRecord.
+func (mg *DnsCnameRecord) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
 	return mg.Spec.WriteConnectionSecretToReference
 }
 
-// SetConditions of this PrivateDnsCnameRecord.
-func (mg *PrivateDnsCnameRecord) SetConditions(c ...xpv1.Condition) {
+// SetConditions of this DnsCnameRecord.
+func (mg *DnsCnameRecord) SetConditions(c ...xpv1.Condition) {
 	mg.Status.SetConditions(c...)
 }
 
-// SetDeletionPolicy of this PrivateDnsCnameRecord.
-func (mg *PrivateDnsCnameRecord) SetDeletionPolicy(r xpv1.DeletionPolicy) {
+// SetDeletionPolicy of this DnsCnameRecord.
+func (mg *DnsCnameRecord) SetDeletionPolicy(r xpv1.DeletionPolicy) {
 	mg.Spec.DeletionPolicy = r
 }
 
-// SetProviderConfigReference of this PrivateDnsCnameRecord.
-func (mg *PrivateDnsCnameRecord) SetProviderConfigReference(r *xpv1.Reference) {
+// SetProviderConfigReference of this DnsCnameRecord.
+func (mg *DnsCnameRecord) SetProviderConfigReference(r *xpv1.Reference) {
 	mg.Spec.ProviderConfigReference = r
 }
 
 /*
-SetProviderReference of this PrivateDnsCnameRecord.
+SetProviderReference of this DnsCnameRecord.
 Deprecated: Use SetProviderConfigReference.
 */
-func (mg *PrivateDnsCnameRecord) SetProviderReference(r *xpv1.Reference) {
+func (mg *DnsCnameRecord) SetProviderReference(r *xpv1.Reference) {
 	mg.Spec.ProviderReference = r
 }
 
-// SetWriteConnectionSecretToReference of this PrivateDnsCnameRecord.
-func (mg *PrivateDnsCnameRecord) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
+// SetWriteConnectionSecretToReference of this DnsCnameRecord.
+func (mg *DnsCnameRecord) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
 	mg.Spec.WriteConnectionSecretToReference = r
 }
 
-// GetCondition of this PrivateDnsMxRecord.
-func (mg *PrivateDnsMxRecord) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
+// GetCondition of this DnsMxRecord.
+func (mg *DnsMxRecord) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
 	return mg.Status.GetCondition(ct)
 }
 
-// GetDeletionPolicy of this PrivateDnsMxRecord.
-func (mg *PrivateDnsMxRecord) GetDeletionPolicy() xpv1.DeletionPolicy {
+// GetDeletionPolicy of this DnsMxRecord.
+func (mg *DnsMxRecord) GetDeletionPolicy() xpv1.DeletionPolicy {
 	return mg.Spec.DeletionPolicy
 }
 
-// GetProviderConfigReference of this PrivateDnsMxRecord.
-func (mg *PrivateDnsMxRecord) GetProviderConfigReference() *xpv1.Reference {
+// GetProviderConfigReference of this DnsMxRecord.
+func (mg *DnsMxRecord) GetProviderConfigReference() *xpv1.Reference {
 	return mg.Spec.ProviderConfigReference
 }
 
 /*
-GetProviderReference of this PrivateDnsMxRecord.
+GetProviderReference of this DnsMxRecord.
 Deprecated: Use GetProviderConfigReference.
 */
-func (mg *PrivateDnsMxRecord) GetProviderReference() *xpv1.Reference {
+func (mg *DnsMxRecord) GetProviderReference() *xpv1.Reference {
 	return mg.Spec.ProviderReference
 }
 
-// GetWriteConnectionSecretToReference of this PrivateDnsMxRecord.
-func (mg *PrivateDnsMxRecord) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
+// GetWriteConnectionSecretToReference of this DnsMxRecord.
+func (mg *DnsMxRecord) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
 	return mg.Spec.WriteConnectionSecretToReference
 }
 
-// SetConditions of this PrivateDnsMxRecord.
-func (mg *PrivateDnsMxRecord) SetConditions(c ...xpv1.Condition) {
+// SetConditions of this DnsMxRecord.
+func (mg *DnsMxRecord) SetConditions(c ...xpv1.Condition) {
 	mg.Status.SetConditions(c...)
 }
 
-// SetDeletionPolicy of this PrivateDnsMxRecord.
-func (mg *PrivateDnsMxRecord) SetDeletionPolicy(r xpv1.DeletionPolicy) {
+// SetDeletionPolicy of this DnsMxRecord.
+func (mg *DnsMxRecord) SetDeletionPolicy(r xpv1.DeletionPolicy) {
 	mg.Spec.DeletionPolicy = r
 }
 
-// SetProviderConfigReference of this PrivateDnsMxRecord.
-func (mg *PrivateDnsMxRecord) SetProviderConfigReference(r *xpv1.Reference) {
+// SetProviderConfigReference of this DnsMxRecord.
+func (mg *DnsMxRecord) SetProviderConfigReference(r *xpv1.Reference) {
 	mg.Spec.ProviderConfigReference = r
 }
 
 /*
-SetProviderReference of this PrivateDnsMxRecord.
+SetProviderReference of this DnsMxRecord.
 Deprecated: Use SetProviderConfigReference.
 */
-func (mg *PrivateDnsMxRecord) SetProviderReference(r *xpv1.Reference) {
+func (mg *DnsMxRecord) SetProviderReference(r *xpv1.Reference) {
 	mg.Spec.ProviderReference = r
 }
 
-// SetWriteConnectionSecretToReference of this PrivateDnsMxRecord.
-func (mg *PrivateDnsMxRecord) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
+// SetWriteConnectionSecretToReference of this DnsMxRecord.
+func (mg *DnsMxRecord) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
 	mg.Spec.WriteConnectionSecretToReference = r
 }
 
-// GetCondition of this PrivateDnsPtrRecord.
-func (mg *PrivateDnsPtrRecord) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
+// GetCondition of this DnsPtrRecord.
+func (mg *DnsPtrRecord) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
 	return mg.Status.GetCondition(ct)
 }
 
-// GetDeletionPolicy of this PrivateDnsPtrRecord.
-func (mg *PrivateDnsPtrRecord) GetDeletionPolicy() xpv1.DeletionPolicy {
+// GetDeletionPolicy of this DnsPtrRecord.
+func (mg *DnsPtrRecord) GetDeletionPolicy() xpv1.DeletionPolicy {
 	return mg.Spec.DeletionPolicy
 }
 
-// GetProviderConfigReference of this PrivateDnsPtrRecord.
-func (mg *PrivateDnsPtrRecord) GetProviderConfigReference() *xpv1.Reference {
+// GetProviderConfigReference of this DnsPtrRecord.
+func (mg *DnsPtrRecord) GetProviderConfigReference() *xpv1.Reference {
 	return mg.Spec.ProviderConfigReference
 }
 
 /*
-GetProviderReference of this PrivateDnsPtrRecord.
+GetProviderReference of this DnsPtrRecord.
 Deprecated: Use GetProviderConfigReference.
 */
-func (mg *PrivateDnsPtrRecord) GetProviderReference() *xpv1.Reference {
+func (mg *DnsPtrRecord) GetProviderReference() *xpv1.Reference {
 	return mg.Spec.ProviderReference
 }
 
-// GetWriteConnectionSecretToReference of this PrivateDnsPtrRecord.
-func (mg *PrivateDnsPtrRecord) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
+// GetWriteConnectionSecretToReference of this DnsPtrRecord.
+func (mg *DnsPtrRecord) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
 	return mg.Spec.WriteConnectionSecretToReference
 }
 
-// SetConditions of this PrivateDnsPtrRecord.
-func (mg *PrivateDnsPtrRecord) SetConditions(c ...xpv1.Condition) {
+// SetConditions of this DnsPtrRecord.
+func (mg *DnsPtrRecord) SetConditions(c ...xpv1.Condition) {
 	mg.Status.SetConditions(c...)
 }
 
-// SetDeletionPolicy of this PrivateDnsPtrRecord.
-func (mg *PrivateDnsPtrRecord) SetDeletionPolicy(r xpv1.DeletionPolicy) {
+// SetDeletionPolicy of this DnsPtrRecord.
+func (mg *DnsPtrRecord) SetDeletionPolicy(r xpv1.DeletionPolicy) {
 	mg.Spec.DeletionPolicy = r
 }
 
-// SetProviderConfigReference of this PrivateDnsPtrRecord.
-func (mg *PrivateDnsPtrRecord) SetProviderConfigReference(r *xpv1.Reference) {
+// SetProviderConfigReference of this DnsPtrRecord.
+func (mg *DnsPtrRecord) SetProviderConfigReference(r *xpv1.Reference) {
 	mg.Spec.ProviderConfigReference = r
 }
 
 /*
-SetProviderReference of this PrivateDnsPtrRecord.
+SetProviderReference of this DnsPtrRecord.
 Deprecated: Use SetProviderConfigReference.
 */
-func (mg *PrivateDnsPtrRecord) SetProviderReference(r *xpv1.Reference) {
+func (mg *DnsPtrRecord) SetProviderReference(r *xpv1.Reference) {
 	mg.Spec.ProviderReference = r
 }
 
-// SetWriteConnectionSecretToReference of this PrivateDnsPtrRecord.
-func (mg *PrivateDnsPtrRecord) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
+// SetWriteConnectionSecretToReference of this DnsPtrRecord.
+func (mg *DnsPtrRecord) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
 	mg.Spec.WriteConnectionSecretToReference = r
 }
 
-// GetCondition of this PrivateDnsSrvRecord.
-func (mg *PrivateDnsSrvRecord) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
+// GetCondition of this DnsSrvRecord.
+func (mg *DnsSrvRecord) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
 	return mg.Status.GetCondition(ct)
 }
 
-// GetDeletionPolicy of this PrivateDnsSrvRecord.
-func (mg *PrivateDnsSrvRecord) GetDeletionPolicy() xpv1.DeletionPolicy {
+// GetDeletionPolicy of this DnsSrvRecord.
+func (mg *DnsSrvRecord) GetDeletionPolicy() xpv1.DeletionPolicy {
 	return mg.Spec.DeletionPolicy
 }
 
-// GetProviderConfigReference of this PrivateDnsSrvRecord.
-func (mg *PrivateDnsSrvRecord) GetProviderConfigReference() *xpv1.Reference {
+// GetProviderConfigReference of this DnsSrvRecord.
+func (mg *DnsSrvRecord) GetProviderConfigReference() *xpv1.Reference {
 	return mg.Spec.ProviderConfigReference
 }
 
 /*
-GetProviderReference of this PrivateDnsSrvRecord.
+GetProviderReference of this DnsSrvRecord.
 Deprecated: Use GetProviderConfigReference.
 */
-func (mg *PrivateDnsSrvRecord) GetProviderReference() *xpv1.Reference {
+func (mg *DnsSrvRecord) GetProviderReference() *xpv1.Reference {
 	return mg.Spec.ProviderReference
 }
 
-// GetWriteConnectionSecretToReference of this PrivateDnsSrvRecord.
-func (mg *PrivateDnsSrvRecord) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
+// GetWriteConnectionSecretToReference of this DnsSrvRecord.
+func (mg *DnsSrvRecord) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
 	return mg.Spec.WriteConnectionSecretToReference
 }
 
-// SetConditions of this PrivateDnsSrvRecord.
-func (mg *PrivateDnsSrvRecord) SetConditions(c ...xpv1.Condition) {
+// SetConditions of this DnsSrvRecord.
+func (mg *DnsSrvRecord) SetConditions(c ...xpv1.Condition) {
 	mg.Status.SetConditions(c...)
 }
 
-// SetDeletionPolicy of this PrivateDnsSrvRecord.
-func (mg *PrivateDnsSrvRecord) SetDeletionPolicy(r xpv1.DeletionPolicy) {
+// SetDeletionPolicy of this DnsSrvRecord.
+func (mg *DnsSrvRecord) SetDeletionPolicy(r xpv1.DeletionPolicy) {
 	mg.Spec.DeletionPolicy = r
 }
 
-// SetProviderConfigReference of this PrivateDnsSrvRecord.
-func (mg *PrivateDnsSrvRecord) SetProviderConfigReference(r *xpv1.Reference) {
+// SetProviderConfigReference of this DnsSrvRecord.
+func (mg *DnsSrvRecord) SetProviderConfigReference(r *xpv1.Reference) {
 	mg.Spec.ProviderConfigReference = r
 }
 
 /*
-SetProviderReference of this PrivateDnsSrvRecord.
+SetProviderReference of this DnsSrvRecord.
 Deprecated: Use SetProviderConfigReference.
 */
-func (mg *PrivateDnsSrvRecord) SetProviderReference(r *xpv1.Reference) {
+func (mg *DnsSrvRecord) SetProviderReference(r *xpv1.Reference) {
 	mg.Spec.ProviderReference = r
 }
 
-// SetWriteConnectionSecretToReference of this PrivateDnsSrvRecord.
-func (mg *PrivateDnsSrvRecord) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
+// SetWriteConnectionSecretToReference of this DnsSrvRecord.
+func (mg *DnsSrvRecord) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
 	mg.Spec.WriteConnectionSecretToReference = r
 }
 
-// GetCondition of this PrivateDnsTxtRecord.
-func (mg *PrivateDnsTxtRecord) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
+// GetCondition of this DnsTxtRecord.
+func (mg *DnsTxtRecord) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
 	return mg.Status.GetCondition(ct)
 }
 
-// GetDeletionPolicy of this PrivateDnsTxtRecord.
-func (mg *PrivateDnsTxtRecord) GetDeletionPolicy() xpv1.DeletionPolicy {
+// GetDeletionPolicy of this DnsTxtRecord.
+func (mg *DnsTxtRecord) GetDeletionPolicy() xpv1.DeletionPolicy {
 	return mg.Spec.DeletionPolicy
 }
 
-// GetProviderConfigReference of this PrivateDnsTxtRecord.
-func (mg *PrivateDnsTxtRecord) GetProviderConfigReference() *xpv1.Reference {
+// GetProviderConfigReference of this DnsTxtRecord.
+func (mg *DnsTxtRecord) GetProviderConfigReference() *xpv1.Reference {
 	return mg.Spec.ProviderConfigReference
 }
 
 /*
-GetProviderReference of this PrivateDnsTxtRecord.
+GetProviderReference of this DnsTxtRecord.
 Deprecated: Use GetProviderConfigReference.
 */
-func (mg *PrivateDnsTxtRecord) GetProviderReference() *xpv1.Reference {
+func (mg *DnsTxtRecord) GetProviderReference() *xpv1.Reference {
 	return mg.Spec.ProviderReference
 }
 
-// GetWriteConnectionSecretToReference of this PrivateDnsTxtRecord.
-func (mg *PrivateDnsTxtRecord) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
+// GetWriteConnectionSecretToReference of this DnsTxtRecord.
+func (mg *DnsTxtRecord) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
 	return mg.Spec.WriteConnectionSecretToReference
 }
 
-// SetConditions of this PrivateDnsTxtRecord.
-func (mg *PrivateDnsTxtRecord) SetConditions(c ...xpv1.Condition) {
+// SetConditions of this DnsTxtRecord.
+func (mg *DnsTxtRecord) SetConditions(c ...xpv1.Condition) {
 	mg.Status.SetConditions(c...)
 }
 
-// SetDeletionPolicy of this PrivateDnsTxtRecord.
-func (mg *PrivateDnsTxtRecord) SetDeletionPolicy(r xpv1.DeletionPolicy) {
+// SetDeletionPolicy of this DnsTxtRecord.
+func (mg *DnsTxtRecord) SetDeletionPolicy(r xpv1.DeletionPolicy) {
 	mg.Spec.DeletionPolicy = r
 }
 
-// SetProviderConfigReference of this PrivateDnsTxtRecord.
-func (mg *PrivateDnsTxtRecord) SetProviderConfigReference(r *xpv1.Reference) {
+// SetProviderConfigReference of this DnsTxtRecord.
+func (mg *DnsTxtRecord) SetProviderConfigReference(r *xpv1.Reference) {
 	mg.Spec.ProviderConfigReference = r
 }
 
 /*
-SetProviderReference of this PrivateDnsTxtRecord.
+SetProviderReference of this DnsTxtRecord.
 Deprecated: Use SetProviderConfigReference.
 */
-func (mg *PrivateDnsTxtRecord) SetProviderReference(r *xpv1.Reference) {
+func (mg *DnsTxtRecord) SetProviderReference(r *xpv1.Reference) {
 	mg.Spec.ProviderReference = r
 }
 
-// SetWriteConnectionSecretToReference of this PrivateDnsTxtRecord.
-func (mg *PrivateDnsTxtRecord) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
+// SetWriteConnectionSecretToReference of this DnsTxtRecord.
+func (mg *DnsTxtRecord) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
 	mg.Spec.WriteConnectionSecretToReference = r
 }
 
-// GetCondition of this PrivateDnsZone.
-func (mg *PrivateDnsZone) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
+// GetCondition of this DnsZone.
+func (mg *DnsZone) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
 	return mg.Status.GetCondition(ct)
 }
 
-// GetDeletionPolicy of this PrivateDnsZone.
-func (mg *PrivateDnsZone) GetDeletionPolicy() xpv1.DeletionPolicy {
+// GetDeletionPolicy of this DnsZone.
+func (mg *DnsZone) GetDeletionPolicy() xpv1.DeletionPolicy {
 	return mg.Spec.DeletionPolicy
 }
 
-// GetProviderConfigReference of this PrivateDnsZone.
-func (mg *PrivateDnsZone) GetProviderConfigReference() *xpv1.Reference {
+// GetProviderConfigReference of this DnsZone.
+func (mg *DnsZone) GetProviderConfigReference() *xpv1.Reference {
 	return mg.Spec.ProviderConfigReference
 }
 
 /*
-GetProviderReference of this PrivateDnsZone.
+GetProviderReference of this DnsZone.
 Deprecated: Use GetProviderConfigReference.
 */
-func (mg *PrivateDnsZone) GetProviderReference() *xpv1.Reference {
+func (mg *DnsZone) GetProviderReference() *xpv1.Reference {
 	return mg.Spec.ProviderReference
 }
 
-// GetWriteConnectionSecretToReference of this PrivateDnsZone.
-func (mg *PrivateDnsZone) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
+// GetWriteConnectionSecretToReference of this DnsZone.
+func (mg *DnsZone) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
 	return mg.Spec.WriteConnectionSecretToReference
 }
 
-// SetConditions of this PrivateDnsZone.
-func (mg *PrivateDnsZone) SetConditions(c ...xpv1.Condition) {
+// SetConditions of this DnsZone.
+func (mg *DnsZone) SetConditions(c ...xpv1.Condition) {
 	mg.Status.SetConditions(c...)
 }
 
-// SetDeletionPolicy of this PrivateDnsZone.
-func (mg *PrivateDnsZone) SetDeletionPolicy(r xpv1.DeletionPolicy) {
+// SetDeletionPolicy of this DnsZone.
+func (mg *DnsZone) SetDeletionPolicy(r xpv1.DeletionPolicy) {
 	mg.Spec.DeletionPolicy = r
 }
 
-// SetProviderConfigReference of this PrivateDnsZone.
-func (mg *PrivateDnsZone) SetProviderConfigReference(r *xpv1.Reference) {
+// SetProviderConfigReference of this DnsZone.
+func (mg *DnsZone) SetProviderConfigReference(r *xpv1.Reference) {
 	mg.Spec.ProviderConfigReference = r
 }
 
 /*
-SetProviderReference of this PrivateDnsZone.
+SetProviderReference of this DnsZone.
 Deprecated: Use SetProviderConfigReference.
 */
-func (mg *PrivateDnsZone) SetProviderReference(r *xpv1.Reference) {
+func (mg *DnsZone) SetProviderReference(r *xpv1.Reference) {
 	mg.Spec.ProviderReference = r
 }
 
-// SetWriteConnectionSecretToReference of this PrivateDnsZone.
-func (mg *PrivateDnsZone) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
+// SetWriteConnectionSecretToReference of this DnsZone.
+func (mg *DnsZone) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
 	mg.Spec.WriteConnectionSecretToReference = r
 }
 
-// GetCondition of this PrivateDnsZoneVirtualNetworkLink.
-func (mg *PrivateDnsZoneVirtualNetworkLink) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
+// GetCondition of this DnsZoneVirtualNetworkLink.
+func (mg *DnsZoneVirtualNetworkLink) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
 	return mg.Status.GetCondition(ct)
 }
 
-// GetDeletionPolicy of this PrivateDnsZoneVirtualNetworkLink.
-func (mg *PrivateDnsZoneVirtualNetworkLink) GetDeletionPolicy() xpv1.DeletionPolicy {
+// GetDeletionPolicy of this DnsZoneVirtualNetworkLink.
+func (mg *DnsZoneVirtualNetworkLink) GetDeletionPolicy() xpv1.DeletionPolicy {
 	return mg.Spec.DeletionPolicy
 }
 
-// GetProviderConfigReference of this PrivateDnsZoneVirtualNetworkLink.
-func (mg *PrivateDnsZoneVirtualNetworkLink) GetProviderConfigReference() *xpv1.Reference {
+// GetProviderConfigReference of this DnsZoneVirtualNetworkLink.
+func (mg *DnsZoneVirtualNetworkLink) GetProviderConfigReference() *xpv1.Reference {
 	return mg.Spec.ProviderConfigReference
 }
 
 /*
-GetProviderReference of this PrivateDnsZoneVirtualNetworkLink.
+GetProviderReference of this DnsZoneVirtualNetworkLink.
 Deprecated: Use GetProviderConfigReference.
 */
-func (mg *PrivateDnsZoneVirtualNetworkLink) GetProviderReference() *xpv1.Reference {
+func (mg *DnsZoneVirtualNetworkLink) GetProviderReference() *xpv1.Reference {
 	return mg.Spec.ProviderReference
 }
 
-// GetWriteConnectionSecretToReference of this PrivateDnsZoneVirtualNetworkLink.
-func (mg *PrivateDnsZoneVirtualNetworkLink) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
+// GetWriteConnectionSecretToReference of this DnsZoneVirtualNetworkLink.
+func (mg *DnsZoneVirtualNetworkLink) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
 	return mg.Spec.WriteConnectionSecretToReference
 }
 
-// SetConditions of this PrivateDnsZoneVirtualNetworkLink.
-func (mg *PrivateDnsZoneVirtualNetworkLink) SetConditions(c ...xpv1.Condition) {
+// SetConditions of this DnsZoneVirtualNetworkLink.
+func (mg *DnsZoneVirtualNetworkLink) SetConditions(c ...xpv1.Condition) {
 	mg.Status.SetConditions(c...)
 }
 
-// SetDeletionPolicy of this PrivateDnsZoneVirtualNetworkLink.
-func (mg *PrivateDnsZoneVirtualNetworkLink) SetDeletionPolicy(r xpv1.DeletionPolicy) {
+// SetDeletionPolicy of this DnsZoneVirtualNetworkLink.
+func (mg *DnsZoneVirtualNetworkLink) SetDeletionPolicy(r xpv1.DeletionPolicy) {
 	mg.Spec.DeletionPolicy = r
 }
 
-// SetProviderConfigReference of this PrivateDnsZoneVirtualNetworkLink.
-func (mg *PrivateDnsZoneVirtualNetworkLink) SetProviderConfigReference(r *xpv1.Reference) {
+// SetProviderConfigReference of this DnsZoneVirtualNetworkLink.
+func (mg *DnsZoneVirtualNetworkLink) SetProviderConfigReference(r *xpv1.Reference) {
 	mg.Spec.ProviderConfigReference = r
 }
 
 /*
-SetProviderReference of this PrivateDnsZoneVirtualNetworkLink.
+SetProviderReference of this DnsZoneVirtualNetworkLink.
 Deprecated: Use SetProviderConfigReference.
 */
-func (mg *PrivateDnsZoneVirtualNetworkLink) SetProviderReference(r *xpv1.Reference) {
+func (mg *DnsZoneVirtualNetworkLink) SetProviderReference(r *xpv1.Reference) {
 	mg.Spec.ProviderReference = r
 }
 
-// SetWriteConnectionSecretToReference of this PrivateDnsZoneVirtualNetworkLink.
-func (mg *PrivateDnsZoneVirtualNetworkLink) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
+// SetWriteConnectionSecretToReference of this DnsZoneVirtualNetworkLink.
+func (mg *DnsZoneVirtualNetworkLink) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
 	mg.Spec.WriteConnectionSecretToReference = r
 }
 
-// GetCondition of this PrivateEndpoint.
-func (mg *PrivateEndpoint) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
+// GetCondition of this Endpoint.
+func (mg *Endpoint) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
 	return mg.Status.GetCondition(ct)
 }
 
-// GetDeletionPolicy of this PrivateEndpoint.
-func (mg *PrivateEndpoint) GetDeletionPolicy() xpv1.DeletionPolicy {
+// GetDeletionPolicy of this Endpoint.
+func (mg *Endpoint) GetDeletionPolicy() xpv1.DeletionPolicy {
 	return mg.Spec.DeletionPolicy
 }
 
-// GetProviderConfigReference of this PrivateEndpoint.
-func (mg *PrivateEndpoint) GetProviderConfigReference() *xpv1.Reference {
+// GetProviderConfigReference of this Endpoint.
+func (mg *Endpoint) GetProviderConfigReference() *xpv1.Reference {
 	return mg.Spec.ProviderConfigReference
 }
 
 /*
-GetProviderReference of this PrivateEndpoint.
+GetProviderReference of this Endpoint.
 Deprecated: Use GetProviderConfigReference.
 */
-func (mg *PrivateEndpoint) GetProviderReference() *xpv1.Reference {
+func (mg *Endpoint) GetProviderReference() *xpv1.Reference {
 	return mg.Spec.ProviderReference
 }
 
-// GetWriteConnectionSecretToReference of this PrivateEndpoint.
-func (mg *PrivateEndpoint) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
+// GetWriteConnectionSecretToReference of this Endpoint.
+func (mg *Endpoint) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
 	return mg.Spec.WriteConnectionSecretToReference
 }
 
-// SetConditions of this PrivateEndpoint.
-func (mg *PrivateEndpoint) SetConditions(c ...xpv1.Condition) {
+// SetConditions of this Endpoint.
+func (mg *Endpoint) SetConditions(c ...xpv1.Condition) {
 	mg.Status.SetConditions(c...)
 }
 
-// SetDeletionPolicy of this PrivateEndpoint.
-func (mg *PrivateEndpoint) SetDeletionPolicy(r xpv1.DeletionPolicy) {
+// SetDeletionPolicy of this Endpoint.
+func (mg *Endpoint) SetDeletionPolicy(r xpv1.DeletionPolicy) {
 	mg.Spec.DeletionPolicy = r
 }
 
-// SetProviderConfigReference of this PrivateEndpoint.
-func (mg *PrivateEndpoint) SetProviderConfigReference(r *xpv1.Reference) {
+// SetProviderConfigReference of this Endpoint.
+func (mg *Endpoint) SetProviderConfigReference(r *xpv1.Reference) {
 	mg.Spec.ProviderConfigReference = r
 }
 
 /*
-SetProviderReference of this PrivateEndpoint.
+SetProviderReference of this Endpoint.
 Deprecated: Use SetProviderConfigReference.
 */
-func (mg *PrivateEndpoint) SetProviderReference(r *xpv1.Reference) {
+func (mg *Endpoint) SetProviderReference(r *xpv1.Reference) {
 	mg.Spec.ProviderReference = r
 }
 
-// SetWriteConnectionSecretToReference of this PrivateEndpoint.
-func (mg *PrivateEndpoint) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
+// SetWriteConnectionSecretToReference of this Endpoint.
+func (mg *Endpoint) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
 	mg.Spec.WriteConnectionSecretToReference = r
 }
 
-// GetCondition of this PrivateLinkService.
-func (mg *PrivateLinkService) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
+// GetCondition of this LinkService.
+func (mg *LinkService) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
 	return mg.Status.GetCondition(ct)
 }
 
-// GetDeletionPolicy of this PrivateLinkService.
-func (mg *PrivateLinkService) GetDeletionPolicy() xpv1.DeletionPolicy {
+// GetDeletionPolicy of this LinkService.
+func (mg *LinkService) GetDeletionPolicy() xpv1.DeletionPolicy {
 	return mg.Spec.DeletionPolicy
 }
 
-// GetProviderConfigReference of this PrivateLinkService.
-func (mg *PrivateLinkService) GetProviderConfigReference() *xpv1.Reference {
+// GetProviderConfigReference of this LinkService.
+func (mg *LinkService) GetProviderConfigReference() *xpv1.Reference {
 	return mg.Spec.ProviderConfigReference
 }
 
 /*
-GetProviderReference of this PrivateLinkService.
+GetProviderReference of this LinkService.
 Deprecated: Use GetProviderConfigReference.
 */
-func (mg *PrivateLinkService) GetProviderReference() *xpv1.Reference {
+func (mg *LinkService) GetProviderReference() *xpv1.Reference {
 	return mg.Spec.ProviderReference
 }
 
-// GetWriteConnectionSecretToReference of this PrivateLinkService.
-func (mg *PrivateLinkService) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
+// GetWriteConnectionSecretToReference of this LinkService.
+func (mg *LinkService) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
 	return mg.Spec.WriteConnectionSecretToReference
 }
 
-// SetConditions of this PrivateLinkService.
-func (mg *PrivateLinkService) SetConditions(c ...xpv1.Condition) {
+// SetConditions of this LinkService.
+func (mg *LinkService) SetConditions(c ...xpv1.Condition) {
 	mg.Status.SetConditions(c...)
 }
 
-// SetDeletionPolicy of this PrivateLinkService.
-func (mg *PrivateLinkService) SetDeletionPolicy(r xpv1.DeletionPolicy) {
+// SetDeletionPolicy of this LinkService.
+func (mg *LinkService) SetDeletionPolicy(r xpv1.DeletionPolicy) {
 	mg.Spec.DeletionPolicy = r
 }
 
-// SetProviderConfigReference of this PrivateLinkService.
-func (mg *PrivateLinkService) SetProviderConfigReference(r *xpv1.Reference) {
+// SetProviderConfigReference of this LinkService.
+func (mg *LinkService) SetProviderConfigReference(r *xpv1.Reference) {
 	mg.Spec.ProviderConfigReference = r
 }
 
 /*
-SetProviderReference of this PrivateLinkService.
+SetProviderReference of this LinkService.
 Deprecated: Use SetProviderConfigReference.
 */
-func (mg *PrivateLinkService) SetProviderReference(r *xpv1.Reference) {
+func (mg *LinkService) SetProviderReference(r *xpv1.Reference) {
 	mg.Spec.ProviderReference = r
 }
 
-// SetWriteConnectionSecretToReference of this PrivateLinkService.
-func (mg *PrivateLinkService) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
+// SetWriteConnectionSecretToReference of this LinkService.
+func (mg *LinkService) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
 	mg.Spec.WriteConnectionSecretToReference = r
 }

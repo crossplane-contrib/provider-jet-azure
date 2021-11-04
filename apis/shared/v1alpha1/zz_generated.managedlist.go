@@ -19,8 +19,8 @@ package v1alpha1
 
 import resource "github.com/crossplane/crossplane-runtime/pkg/resource"
 
-// GetItems of this SharedImageGalleryList.
-func (l *SharedImageGalleryList) GetItems() []resource.Managed {
+// GetItems of this ImageGalleryList.
+func (l *ImageGalleryList) GetItems() []resource.Managed {
 	items := make([]resource.Managed, len(l.Items))
 	for i := range l.Items {
 		items[i] = &l.Items[i]
@@ -28,8 +28,8 @@ func (l *SharedImageGalleryList) GetItems() []resource.Managed {
 	return items
 }
 
-// GetItems of this SharedImageList.
-func (l *SharedImageList) GetItems() []resource.Managed {
+// GetItems of this ImageList.
+func (l *ImageList) GetItems() []resource.Managed {
 	items := make([]resource.Managed, len(l.Items))
 	for i := range l.Items {
 		items[i] = &l.Items[i]
@@ -37,8 +37,8 @@ func (l *SharedImageList) GetItems() []resource.Managed {
 	return items
 }
 
-// GetItems of this SharedImageVersionList.
-func (l *SharedImageVersionList) GetItems() []resource.Managed {
+// GetItems of this ImageVersionList.
+func (l *ImageVersionList) GetItems() []resource.Managed {
 	items := make([]resource.Managed, len(l.Items))
 	for i := range l.Items {
 		items[i] = &l.Items[i]

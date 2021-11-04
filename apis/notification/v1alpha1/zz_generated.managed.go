@@ -19,170 +19,170 @@ package v1alpha1
 
 import xpv1 "github.com/crossplane/crossplane-runtime/apis/common/v1"
 
-// GetCondition of this NotificationHub.
-func (mg *NotificationHub) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
+// GetCondition of this Hub.
+func (mg *Hub) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
 	return mg.Status.GetCondition(ct)
 }
 
-// GetDeletionPolicy of this NotificationHub.
-func (mg *NotificationHub) GetDeletionPolicy() xpv1.DeletionPolicy {
+// GetDeletionPolicy of this Hub.
+func (mg *Hub) GetDeletionPolicy() xpv1.DeletionPolicy {
 	return mg.Spec.DeletionPolicy
 }
 
-// GetProviderConfigReference of this NotificationHub.
-func (mg *NotificationHub) GetProviderConfigReference() *xpv1.Reference {
+// GetProviderConfigReference of this Hub.
+func (mg *Hub) GetProviderConfigReference() *xpv1.Reference {
 	return mg.Spec.ProviderConfigReference
 }
 
 /*
-GetProviderReference of this NotificationHub.
+GetProviderReference of this Hub.
 Deprecated: Use GetProviderConfigReference.
 */
-func (mg *NotificationHub) GetProviderReference() *xpv1.Reference {
+func (mg *Hub) GetProviderReference() *xpv1.Reference {
 	return mg.Spec.ProviderReference
 }
 
-// GetWriteConnectionSecretToReference of this NotificationHub.
-func (mg *NotificationHub) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
+// GetWriteConnectionSecretToReference of this Hub.
+func (mg *Hub) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
 	return mg.Spec.WriteConnectionSecretToReference
 }
 
-// SetConditions of this NotificationHub.
-func (mg *NotificationHub) SetConditions(c ...xpv1.Condition) {
+// SetConditions of this Hub.
+func (mg *Hub) SetConditions(c ...xpv1.Condition) {
 	mg.Status.SetConditions(c...)
 }
 
-// SetDeletionPolicy of this NotificationHub.
-func (mg *NotificationHub) SetDeletionPolicy(r xpv1.DeletionPolicy) {
+// SetDeletionPolicy of this Hub.
+func (mg *Hub) SetDeletionPolicy(r xpv1.DeletionPolicy) {
 	mg.Spec.DeletionPolicy = r
 }
 
-// SetProviderConfigReference of this NotificationHub.
-func (mg *NotificationHub) SetProviderConfigReference(r *xpv1.Reference) {
+// SetProviderConfigReference of this Hub.
+func (mg *Hub) SetProviderConfigReference(r *xpv1.Reference) {
 	mg.Spec.ProviderConfigReference = r
 }
 
 /*
-SetProviderReference of this NotificationHub.
+SetProviderReference of this Hub.
 Deprecated: Use SetProviderConfigReference.
 */
-func (mg *NotificationHub) SetProviderReference(r *xpv1.Reference) {
+func (mg *Hub) SetProviderReference(r *xpv1.Reference) {
 	mg.Spec.ProviderReference = r
 }
 
-// SetWriteConnectionSecretToReference of this NotificationHub.
-func (mg *NotificationHub) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
+// SetWriteConnectionSecretToReference of this Hub.
+func (mg *Hub) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
 	mg.Spec.WriteConnectionSecretToReference = r
 }
 
-// GetCondition of this NotificationHubAuthorizationRule.
-func (mg *NotificationHubAuthorizationRule) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
+// GetCondition of this HubAuthorizationRule.
+func (mg *HubAuthorizationRule) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
 	return mg.Status.GetCondition(ct)
 }
 
-// GetDeletionPolicy of this NotificationHubAuthorizationRule.
-func (mg *NotificationHubAuthorizationRule) GetDeletionPolicy() xpv1.DeletionPolicy {
+// GetDeletionPolicy of this HubAuthorizationRule.
+func (mg *HubAuthorizationRule) GetDeletionPolicy() xpv1.DeletionPolicy {
 	return mg.Spec.DeletionPolicy
 }
 
-// GetProviderConfigReference of this NotificationHubAuthorizationRule.
-func (mg *NotificationHubAuthorizationRule) GetProviderConfigReference() *xpv1.Reference {
+// GetProviderConfigReference of this HubAuthorizationRule.
+func (mg *HubAuthorizationRule) GetProviderConfigReference() *xpv1.Reference {
 	return mg.Spec.ProviderConfigReference
 }
 
 /*
-GetProviderReference of this NotificationHubAuthorizationRule.
+GetProviderReference of this HubAuthorizationRule.
 Deprecated: Use GetProviderConfigReference.
 */
-func (mg *NotificationHubAuthorizationRule) GetProviderReference() *xpv1.Reference {
+func (mg *HubAuthorizationRule) GetProviderReference() *xpv1.Reference {
 	return mg.Spec.ProviderReference
 }
 
-// GetWriteConnectionSecretToReference of this NotificationHubAuthorizationRule.
-func (mg *NotificationHubAuthorizationRule) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
+// GetWriteConnectionSecretToReference of this HubAuthorizationRule.
+func (mg *HubAuthorizationRule) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
 	return mg.Spec.WriteConnectionSecretToReference
 }
 
-// SetConditions of this NotificationHubAuthorizationRule.
-func (mg *NotificationHubAuthorizationRule) SetConditions(c ...xpv1.Condition) {
+// SetConditions of this HubAuthorizationRule.
+func (mg *HubAuthorizationRule) SetConditions(c ...xpv1.Condition) {
 	mg.Status.SetConditions(c...)
 }
 
-// SetDeletionPolicy of this NotificationHubAuthorizationRule.
-func (mg *NotificationHubAuthorizationRule) SetDeletionPolicy(r xpv1.DeletionPolicy) {
+// SetDeletionPolicy of this HubAuthorizationRule.
+func (mg *HubAuthorizationRule) SetDeletionPolicy(r xpv1.DeletionPolicy) {
 	mg.Spec.DeletionPolicy = r
 }
 
-// SetProviderConfigReference of this NotificationHubAuthorizationRule.
-func (mg *NotificationHubAuthorizationRule) SetProviderConfigReference(r *xpv1.Reference) {
+// SetProviderConfigReference of this HubAuthorizationRule.
+func (mg *HubAuthorizationRule) SetProviderConfigReference(r *xpv1.Reference) {
 	mg.Spec.ProviderConfigReference = r
 }
 
 /*
-SetProviderReference of this NotificationHubAuthorizationRule.
+SetProviderReference of this HubAuthorizationRule.
 Deprecated: Use SetProviderConfigReference.
 */
-func (mg *NotificationHubAuthorizationRule) SetProviderReference(r *xpv1.Reference) {
+func (mg *HubAuthorizationRule) SetProviderReference(r *xpv1.Reference) {
 	mg.Spec.ProviderReference = r
 }
 
-// SetWriteConnectionSecretToReference of this NotificationHubAuthorizationRule.
-func (mg *NotificationHubAuthorizationRule) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
+// SetWriteConnectionSecretToReference of this HubAuthorizationRule.
+func (mg *HubAuthorizationRule) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
 	mg.Spec.WriteConnectionSecretToReference = r
 }
 
-// GetCondition of this NotificationHubNamespace.
-func (mg *NotificationHubNamespace) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
+// GetCondition of this HubNamespace.
+func (mg *HubNamespace) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
 	return mg.Status.GetCondition(ct)
 }
 
-// GetDeletionPolicy of this NotificationHubNamespace.
-func (mg *NotificationHubNamespace) GetDeletionPolicy() xpv1.DeletionPolicy {
+// GetDeletionPolicy of this HubNamespace.
+func (mg *HubNamespace) GetDeletionPolicy() xpv1.DeletionPolicy {
 	return mg.Spec.DeletionPolicy
 }
 
-// GetProviderConfigReference of this NotificationHubNamespace.
-func (mg *NotificationHubNamespace) GetProviderConfigReference() *xpv1.Reference {
+// GetProviderConfigReference of this HubNamespace.
+func (mg *HubNamespace) GetProviderConfigReference() *xpv1.Reference {
 	return mg.Spec.ProviderConfigReference
 }
 
 /*
-GetProviderReference of this NotificationHubNamespace.
+GetProviderReference of this HubNamespace.
 Deprecated: Use GetProviderConfigReference.
 */
-func (mg *NotificationHubNamespace) GetProviderReference() *xpv1.Reference {
+func (mg *HubNamespace) GetProviderReference() *xpv1.Reference {
 	return mg.Spec.ProviderReference
 }
 
-// GetWriteConnectionSecretToReference of this NotificationHubNamespace.
-func (mg *NotificationHubNamespace) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
+// GetWriteConnectionSecretToReference of this HubNamespace.
+func (mg *HubNamespace) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
 	return mg.Spec.WriteConnectionSecretToReference
 }
 
-// SetConditions of this NotificationHubNamespace.
-func (mg *NotificationHubNamespace) SetConditions(c ...xpv1.Condition) {
+// SetConditions of this HubNamespace.
+func (mg *HubNamespace) SetConditions(c ...xpv1.Condition) {
 	mg.Status.SetConditions(c...)
 }
 
-// SetDeletionPolicy of this NotificationHubNamespace.
-func (mg *NotificationHubNamespace) SetDeletionPolicy(r xpv1.DeletionPolicy) {
+// SetDeletionPolicy of this HubNamespace.
+func (mg *HubNamespace) SetDeletionPolicy(r xpv1.DeletionPolicy) {
 	mg.Spec.DeletionPolicy = r
 }
 
-// SetProviderConfigReference of this NotificationHubNamespace.
-func (mg *NotificationHubNamespace) SetProviderConfigReference(r *xpv1.Reference) {
+// SetProviderConfigReference of this HubNamespace.
+func (mg *HubNamespace) SetProviderConfigReference(r *xpv1.Reference) {
 	mg.Spec.ProviderConfigReference = r
 }
 
 /*
-SetProviderReference of this NotificationHubNamespace.
+SetProviderReference of this HubNamespace.
 Deprecated: Use SetProviderConfigReference.
 */
-func (mg *NotificationHubNamespace) SetProviderReference(r *xpv1.Reference) {
+func (mg *HubNamespace) SetProviderReference(r *xpv1.Reference) {
 	mg.Spec.ProviderReference = r
 }
 
-// SetWriteConnectionSecretToReference of this NotificationHubNamespace.
-func (mg *NotificationHubNamespace) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
+// SetWriteConnectionSecretToReference of this HubNamespace.
+func (mg *HubNamespace) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
 	mg.Spec.WriteConnectionSecretToReference = r
 }

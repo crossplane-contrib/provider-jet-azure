@@ -19,170 +19,170 @@ package v1alpha1
 
 import xpv1 "github.com/crossplane/crossplane-runtime/apis/common/v1"
 
-// GetCondition of this NatGateway.
-func (mg *NatGateway) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
+// GetCondition of this Gateway.
+func (mg *Gateway) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
 	return mg.Status.GetCondition(ct)
 }
 
-// GetDeletionPolicy of this NatGateway.
-func (mg *NatGateway) GetDeletionPolicy() xpv1.DeletionPolicy {
+// GetDeletionPolicy of this Gateway.
+func (mg *Gateway) GetDeletionPolicy() xpv1.DeletionPolicy {
 	return mg.Spec.DeletionPolicy
 }
 
-// GetProviderConfigReference of this NatGateway.
-func (mg *NatGateway) GetProviderConfigReference() *xpv1.Reference {
+// GetProviderConfigReference of this Gateway.
+func (mg *Gateway) GetProviderConfigReference() *xpv1.Reference {
 	return mg.Spec.ProviderConfigReference
 }
 
 /*
-GetProviderReference of this NatGateway.
+GetProviderReference of this Gateway.
 Deprecated: Use GetProviderConfigReference.
 */
-func (mg *NatGateway) GetProviderReference() *xpv1.Reference {
+func (mg *Gateway) GetProviderReference() *xpv1.Reference {
 	return mg.Spec.ProviderReference
 }
 
-// GetWriteConnectionSecretToReference of this NatGateway.
-func (mg *NatGateway) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
+// GetWriteConnectionSecretToReference of this Gateway.
+func (mg *Gateway) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
 	return mg.Spec.WriteConnectionSecretToReference
 }
 
-// SetConditions of this NatGateway.
-func (mg *NatGateway) SetConditions(c ...xpv1.Condition) {
+// SetConditions of this Gateway.
+func (mg *Gateway) SetConditions(c ...xpv1.Condition) {
 	mg.Status.SetConditions(c...)
 }
 
-// SetDeletionPolicy of this NatGateway.
-func (mg *NatGateway) SetDeletionPolicy(r xpv1.DeletionPolicy) {
+// SetDeletionPolicy of this Gateway.
+func (mg *Gateway) SetDeletionPolicy(r xpv1.DeletionPolicy) {
 	mg.Spec.DeletionPolicy = r
 }
 
-// SetProviderConfigReference of this NatGateway.
-func (mg *NatGateway) SetProviderConfigReference(r *xpv1.Reference) {
+// SetProviderConfigReference of this Gateway.
+func (mg *Gateway) SetProviderConfigReference(r *xpv1.Reference) {
 	mg.Spec.ProviderConfigReference = r
 }
 
 /*
-SetProviderReference of this NatGateway.
+SetProviderReference of this Gateway.
 Deprecated: Use SetProviderConfigReference.
 */
-func (mg *NatGateway) SetProviderReference(r *xpv1.Reference) {
+func (mg *Gateway) SetProviderReference(r *xpv1.Reference) {
 	mg.Spec.ProviderReference = r
 }
 
-// SetWriteConnectionSecretToReference of this NatGateway.
-func (mg *NatGateway) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
+// SetWriteConnectionSecretToReference of this Gateway.
+func (mg *Gateway) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
 	mg.Spec.WriteConnectionSecretToReference = r
 }
 
-// GetCondition of this NatGatewayPublicIpAssociation.
-func (mg *NatGatewayPublicIpAssociation) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
+// GetCondition of this GatewayPublicIpAssociation.
+func (mg *GatewayPublicIpAssociation) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
 	return mg.Status.GetCondition(ct)
 }
 
-// GetDeletionPolicy of this NatGatewayPublicIpAssociation.
-func (mg *NatGatewayPublicIpAssociation) GetDeletionPolicy() xpv1.DeletionPolicy {
+// GetDeletionPolicy of this GatewayPublicIpAssociation.
+func (mg *GatewayPublicIpAssociation) GetDeletionPolicy() xpv1.DeletionPolicy {
 	return mg.Spec.DeletionPolicy
 }
 
-// GetProviderConfigReference of this NatGatewayPublicIpAssociation.
-func (mg *NatGatewayPublicIpAssociation) GetProviderConfigReference() *xpv1.Reference {
+// GetProviderConfigReference of this GatewayPublicIpAssociation.
+func (mg *GatewayPublicIpAssociation) GetProviderConfigReference() *xpv1.Reference {
 	return mg.Spec.ProviderConfigReference
 }
 
 /*
-GetProviderReference of this NatGatewayPublicIpAssociation.
+GetProviderReference of this GatewayPublicIpAssociation.
 Deprecated: Use GetProviderConfigReference.
 */
-func (mg *NatGatewayPublicIpAssociation) GetProviderReference() *xpv1.Reference {
+func (mg *GatewayPublicIpAssociation) GetProviderReference() *xpv1.Reference {
 	return mg.Spec.ProviderReference
 }
 
-// GetWriteConnectionSecretToReference of this NatGatewayPublicIpAssociation.
-func (mg *NatGatewayPublicIpAssociation) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
+// GetWriteConnectionSecretToReference of this GatewayPublicIpAssociation.
+func (mg *GatewayPublicIpAssociation) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
 	return mg.Spec.WriteConnectionSecretToReference
 }
 
-// SetConditions of this NatGatewayPublicIpAssociation.
-func (mg *NatGatewayPublicIpAssociation) SetConditions(c ...xpv1.Condition) {
+// SetConditions of this GatewayPublicIpAssociation.
+func (mg *GatewayPublicIpAssociation) SetConditions(c ...xpv1.Condition) {
 	mg.Status.SetConditions(c...)
 }
 
-// SetDeletionPolicy of this NatGatewayPublicIpAssociation.
-func (mg *NatGatewayPublicIpAssociation) SetDeletionPolicy(r xpv1.DeletionPolicy) {
+// SetDeletionPolicy of this GatewayPublicIpAssociation.
+func (mg *GatewayPublicIpAssociation) SetDeletionPolicy(r xpv1.DeletionPolicy) {
 	mg.Spec.DeletionPolicy = r
 }
 
-// SetProviderConfigReference of this NatGatewayPublicIpAssociation.
-func (mg *NatGatewayPublicIpAssociation) SetProviderConfigReference(r *xpv1.Reference) {
+// SetProviderConfigReference of this GatewayPublicIpAssociation.
+func (mg *GatewayPublicIpAssociation) SetProviderConfigReference(r *xpv1.Reference) {
 	mg.Spec.ProviderConfigReference = r
 }
 
 /*
-SetProviderReference of this NatGatewayPublicIpAssociation.
+SetProviderReference of this GatewayPublicIpAssociation.
 Deprecated: Use SetProviderConfigReference.
 */
-func (mg *NatGatewayPublicIpAssociation) SetProviderReference(r *xpv1.Reference) {
+func (mg *GatewayPublicIpAssociation) SetProviderReference(r *xpv1.Reference) {
 	mg.Spec.ProviderReference = r
 }
 
-// SetWriteConnectionSecretToReference of this NatGatewayPublicIpAssociation.
-func (mg *NatGatewayPublicIpAssociation) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
+// SetWriteConnectionSecretToReference of this GatewayPublicIpAssociation.
+func (mg *GatewayPublicIpAssociation) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
 	mg.Spec.WriteConnectionSecretToReference = r
 }
 
-// GetCondition of this NatGatewayPublicIpPrefixAssociation.
-func (mg *NatGatewayPublicIpPrefixAssociation) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
+// GetCondition of this GatewayPublicIpPrefixAssociation.
+func (mg *GatewayPublicIpPrefixAssociation) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
 	return mg.Status.GetCondition(ct)
 }
 
-// GetDeletionPolicy of this NatGatewayPublicIpPrefixAssociation.
-func (mg *NatGatewayPublicIpPrefixAssociation) GetDeletionPolicy() xpv1.DeletionPolicy {
+// GetDeletionPolicy of this GatewayPublicIpPrefixAssociation.
+func (mg *GatewayPublicIpPrefixAssociation) GetDeletionPolicy() xpv1.DeletionPolicy {
 	return mg.Spec.DeletionPolicy
 }
 
-// GetProviderConfigReference of this NatGatewayPublicIpPrefixAssociation.
-func (mg *NatGatewayPublicIpPrefixAssociation) GetProviderConfigReference() *xpv1.Reference {
+// GetProviderConfigReference of this GatewayPublicIpPrefixAssociation.
+func (mg *GatewayPublicIpPrefixAssociation) GetProviderConfigReference() *xpv1.Reference {
 	return mg.Spec.ProviderConfigReference
 }
 
 /*
-GetProviderReference of this NatGatewayPublicIpPrefixAssociation.
+GetProviderReference of this GatewayPublicIpPrefixAssociation.
 Deprecated: Use GetProviderConfigReference.
 */
-func (mg *NatGatewayPublicIpPrefixAssociation) GetProviderReference() *xpv1.Reference {
+func (mg *GatewayPublicIpPrefixAssociation) GetProviderReference() *xpv1.Reference {
 	return mg.Spec.ProviderReference
 }
 
-// GetWriteConnectionSecretToReference of this NatGatewayPublicIpPrefixAssociation.
-func (mg *NatGatewayPublicIpPrefixAssociation) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
+// GetWriteConnectionSecretToReference of this GatewayPublicIpPrefixAssociation.
+func (mg *GatewayPublicIpPrefixAssociation) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
 	return mg.Spec.WriteConnectionSecretToReference
 }
 
-// SetConditions of this NatGatewayPublicIpPrefixAssociation.
-func (mg *NatGatewayPublicIpPrefixAssociation) SetConditions(c ...xpv1.Condition) {
+// SetConditions of this GatewayPublicIpPrefixAssociation.
+func (mg *GatewayPublicIpPrefixAssociation) SetConditions(c ...xpv1.Condition) {
 	mg.Status.SetConditions(c...)
 }
 
-// SetDeletionPolicy of this NatGatewayPublicIpPrefixAssociation.
-func (mg *NatGatewayPublicIpPrefixAssociation) SetDeletionPolicy(r xpv1.DeletionPolicy) {
+// SetDeletionPolicy of this GatewayPublicIpPrefixAssociation.
+func (mg *GatewayPublicIpPrefixAssociation) SetDeletionPolicy(r xpv1.DeletionPolicy) {
 	mg.Spec.DeletionPolicy = r
 }
 
-// SetProviderConfigReference of this NatGatewayPublicIpPrefixAssociation.
-func (mg *NatGatewayPublicIpPrefixAssociation) SetProviderConfigReference(r *xpv1.Reference) {
+// SetProviderConfigReference of this GatewayPublicIpPrefixAssociation.
+func (mg *GatewayPublicIpPrefixAssociation) SetProviderConfigReference(r *xpv1.Reference) {
 	mg.Spec.ProviderConfigReference = r
 }
 
 /*
-SetProviderReference of this NatGatewayPublicIpPrefixAssociation.
+SetProviderReference of this GatewayPublicIpPrefixAssociation.
 Deprecated: Use SetProviderConfigReference.
 */
-func (mg *NatGatewayPublicIpPrefixAssociation) SetProviderReference(r *xpv1.Reference) {
+func (mg *GatewayPublicIpPrefixAssociation) SetProviderReference(r *xpv1.Reference) {
 	mg.Spec.ProviderReference = r
 }
 
-// SetWriteConnectionSecretToReference of this NatGatewayPublicIpPrefixAssociation.
-func (mg *NatGatewayPublicIpPrefixAssociation) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
+// SetWriteConnectionSecretToReference of this GatewayPublicIpPrefixAssociation.
+func (mg *GatewayPublicIpPrefixAssociation) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
 	mg.Spec.WriteConnectionSecretToReference = r
 }

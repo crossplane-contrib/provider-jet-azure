@@ -19,114 +19,114 @@ package v1alpha1
 
 import xpv1 "github.com/crossplane/crossplane-runtime/apis/common/v1"
 
-// GetCondition of this FunctionApp.
-func (mg *FunctionApp) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
+// GetCondition of this App.
+func (mg *App) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
 	return mg.Status.GetCondition(ct)
 }
 
-// GetDeletionPolicy of this FunctionApp.
-func (mg *FunctionApp) GetDeletionPolicy() xpv1.DeletionPolicy {
+// GetDeletionPolicy of this App.
+func (mg *App) GetDeletionPolicy() xpv1.DeletionPolicy {
 	return mg.Spec.DeletionPolicy
 }
 
-// GetProviderConfigReference of this FunctionApp.
-func (mg *FunctionApp) GetProviderConfigReference() *xpv1.Reference {
+// GetProviderConfigReference of this App.
+func (mg *App) GetProviderConfigReference() *xpv1.Reference {
 	return mg.Spec.ProviderConfigReference
 }
 
 /*
-GetProviderReference of this FunctionApp.
+GetProviderReference of this App.
 Deprecated: Use GetProviderConfigReference.
 */
-func (mg *FunctionApp) GetProviderReference() *xpv1.Reference {
+func (mg *App) GetProviderReference() *xpv1.Reference {
 	return mg.Spec.ProviderReference
 }
 
-// GetWriteConnectionSecretToReference of this FunctionApp.
-func (mg *FunctionApp) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
+// GetWriteConnectionSecretToReference of this App.
+func (mg *App) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
 	return mg.Spec.WriteConnectionSecretToReference
 }
 
-// SetConditions of this FunctionApp.
-func (mg *FunctionApp) SetConditions(c ...xpv1.Condition) {
+// SetConditions of this App.
+func (mg *App) SetConditions(c ...xpv1.Condition) {
 	mg.Status.SetConditions(c...)
 }
 
-// SetDeletionPolicy of this FunctionApp.
-func (mg *FunctionApp) SetDeletionPolicy(r xpv1.DeletionPolicy) {
+// SetDeletionPolicy of this App.
+func (mg *App) SetDeletionPolicy(r xpv1.DeletionPolicy) {
 	mg.Spec.DeletionPolicy = r
 }
 
-// SetProviderConfigReference of this FunctionApp.
-func (mg *FunctionApp) SetProviderConfigReference(r *xpv1.Reference) {
+// SetProviderConfigReference of this App.
+func (mg *App) SetProviderConfigReference(r *xpv1.Reference) {
 	mg.Spec.ProviderConfigReference = r
 }
 
 /*
-SetProviderReference of this FunctionApp.
+SetProviderReference of this App.
 Deprecated: Use SetProviderConfigReference.
 */
-func (mg *FunctionApp) SetProviderReference(r *xpv1.Reference) {
+func (mg *App) SetProviderReference(r *xpv1.Reference) {
 	mg.Spec.ProviderReference = r
 }
 
-// SetWriteConnectionSecretToReference of this FunctionApp.
-func (mg *FunctionApp) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
+// SetWriteConnectionSecretToReference of this App.
+func (mg *App) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
 	mg.Spec.WriteConnectionSecretToReference = r
 }
 
-// GetCondition of this FunctionAppSlot.
-func (mg *FunctionAppSlot) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
+// GetCondition of this AppSlot.
+func (mg *AppSlot) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
 	return mg.Status.GetCondition(ct)
 }
 
-// GetDeletionPolicy of this FunctionAppSlot.
-func (mg *FunctionAppSlot) GetDeletionPolicy() xpv1.DeletionPolicy {
+// GetDeletionPolicy of this AppSlot.
+func (mg *AppSlot) GetDeletionPolicy() xpv1.DeletionPolicy {
 	return mg.Spec.DeletionPolicy
 }
 
-// GetProviderConfigReference of this FunctionAppSlot.
-func (mg *FunctionAppSlot) GetProviderConfigReference() *xpv1.Reference {
+// GetProviderConfigReference of this AppSlot.
+func (mg *AppSlot) GetProviderConfigReference() *xpv1.Reference {
 	return mg.Spec.ProviderConfigReference
 }
 
 /*
-GetProviderReference of this FunctionAppSlot.
+GetProviderReference of this AppSlot.
 Deprecated: Use GetProviderConfigReference.
 */
-func (mg *FunctionAppSlot) GetProviderReference() *xpv1.Reference {
+func (mg *AppSlot) GetProviderReference() *xpv1.Reference {
 	return mg.Spec.ProviderReference
 }
 
-// GetWriteConnectionSecretToReference of this FunctionAppSlot.
-func (mg *FunctionAppSlot) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
+// GetWriteConnectionSecretToReference of this AppSlot.
+func (mg *AppSlot) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
 	return mg.Spec.WriteConnectionSecretToReference
 }
 
-// SetConditions of this FunctionAppSlot.
-func (mg *FunctionAppSlot) SetConditions(c ...xpv1.Condition) {
+// SetConditions of this AppSlot.
+func (mg *AppSlot) SetConditions(c ...xpv1.Condition) {
 	mg.Status.SetConditions(c...)
 }
 
-// SetDeletionPolicy of this FunctionAppSlot.
-func (mg *FunctionAppSlot) SetDeletionPolicy(r xpv1.DeletionPolicy) {
+// SetDeletionPolicy of this AppSlot.
+func (mg *AppSlot) SetDeletionPolicy(r xpv1.DeletionPolicy) {
 	mg.Spec.DeletionPolicy = r
 }
 
-// SetProviderConfigReference of this FunctionAppSlot.
-func (mg *FunctionAppSlot) SetProviderConfigReference(r *xpv1.Reference) {
+// SetProviderConfigReference of this AppSlot.
+func (mg *AppSlot) SetProviderConfigReference(r *xpv1.Reference) {
 	mg.Spec.ProviderConfigReference = r
 }
 
 /*
-SetProviderReference of this FunctionAppSlot.
+SetProviderReference of this AppSlot.
 Deprecated: Use SetProviderConfigReference.
 */
-func (mg *FunctionAppSlot) SetProviderReference(r *xpv1.Reference) {
+func (mg *AppSlot) SetProviderReference(r *xpv1.Reference) {
 	mg.Spec.ProviderReference = r
 }
 
-// SetWriteConnectionSecretToReference of this FunctionAppSlot.
-func (mg *FunctionAppSlot) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
+// SetWriteConnectionSecretToReference of this AppSlot.
+func (mg *AppSlot) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
 	mg.Spec.WriteConnectionSecretToReference = r
 }

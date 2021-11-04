@@ -19,114 +19,114 @@ package v1alpha1
 
 import xpv1 "github.com/crossplane/crossplane-runtime/apis/common/v1"
 
-// GetCondition of this DataboxEdgeDevice.
-func (mg *DataboxEdgeDevice) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
+// GetCondition of this EdgeDevice.
+func (mg *EdgeDevice) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
 	return mg.Status.GetCondition(ct)
 }
 
-// GetDeletionPolicy of this DataboxEdgeDevice.
-func (mg *DataboxEdgeDevice) GetDeletionPolicy() xpv1.DeletionPolicy {
+// GetDeletionPolicy of this EdgeDevice.
+func (mg *EdgeDevice) GetDeletionPolicy() xpv1.DeletionPolicy {
 	return mg.Spec.DeletionPolicy
 }
 
-// GetProviderConfigReference of this DataboxEdgeDevice.
-func (mg *DataboxEdgeDevice) GetProviderConfigReference() *xpv1.Reference {
+// GetProviderConfigReference of this EdgeDevice.
+func (mg *EdgeDevice) GetProviderConfigReference() *xpv1.Reference {
 	return mg.Spec.ProviderConfigReference
 }
 
 /*
-GetProviderReference of this DataboxEdgeDevice.
+GetProviderReference of this EdgeDevice.
 Deprecated: Use GetProviderConfigReference.
 */
-func (mg *DataboxEdgeDevice) GetProviderReference() *xpv1.Reference {
+func (mg *EdgeDevice) GetProviderReference() *xpv1.Reference {
 	return mg.Spec.ProviderReference
 }
 
-// GetWriteConnectionSecretToReference of this DataboxEdgeDevice.
-func (mg *DataboxEdgeDevice) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
+// GetWriteConnectionSecretToReference of this EdgeDevice.
+func (mg *EdgeDevice) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
 	return mg.Spec.WriteConnectionSecretToReference
 }
 
-// SetConditions of this DataboxEdgeDevice.
-func (mg *DataboxEdgeDevice) SetConditions(c ...xpv1.Condition) {
+// SetConditions of this EdgeDevice.
+func (mg *EdgeDevice) SetConditions(c ...xpv1.Condition) {
 	mg.Status.SetConditions(c...)
 }
 
-// SetDeletionPolicy of this DataboxEdgeDevice.
-func (mg *DataboxEdgeDevice) SetDeletionPolicy(r xpv1.DeletionPolicy) {
+// SetDeletionPolicy of this EdgeDevice.
+func (mg *EdgeDevice) SetDeletionPolicy(r xpv1.DeletionPolicy) {
 	mg.Spec.DeletionPolicy = r
 }
 
-// SetProviderConfigReference of this DataboxEdgeDevice.
-func (mg *DataboxEdgeDevice) SetProviderConfigReference(r *xpv1.Reference) {
+// SetProviderConfigReference of this EdgeDevice.
+func (mg *EdgeDevice) SetProviderConfigReference(r *xpv1.Reference) {
 	mg.Spec.ProviderConfigReference = r
 }
 
 /*
-SetProviderReference of this DataboxEdgeDevice.
+SetProviderReference of this EdgeDevice.
 Deprecated: Use SetProviderConfigReference.
 */
-func (mg *DataboxEdgeDevice) SetProviderReference(r *xpv1.Reference) {
+func (mg *EdgeDevice) SetProviderReference(r *xpv1.Reference) {
 	mg.Spec.ProviderReference = r
 }
 
-// SetWriteConnectionSecretToReference of this DataboxEdgeDevice.
-func (mg *DataboxEdgeDevice) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
+// SetWriteConnectionSecretToReference of this EdgeDevice.
+func (mg *EdgeDevice) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
 	mg.Spec.WriteConnectionSecretToReference = r
 }
 
-// GetCondition of this DataboxEdgeOrder.
-func (mg *DataboxEdgeOrder) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
+// GetCondition of this EdgeOrder.
+func (mg *EdgeOrder) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
 	return mg.Status.GetCondition(ct)
 }
 
-// GetDeletionPolicy of this DataboxEdgeOrder.
-func (mg *DataboxEdgeOrder) GetDeletionPolicy() xpv1.DeletionPolicy {
+// GetDeletionPolicy of this EdgeOrder.
+func (mg *EdgeOrder) GetDeletionPolicy() xpv1.DeletionPolicy {
 	return mg.Spec.DeletionPolicy
 }
 
-// GetProviderConfigReference of this DataboxEdgeOrder.
-func (mg *DataboxEdgeOrder) GetProviderConfigReference() *xpv1.Reference {
+// GetProviderConfigReference of this EdgeOrder.
+func (mg *EdgeOrder) GetProviderConfigReference() *xpv1.Reference {
 	return mg.Spec.ProviderConfigReference
 }
 
 /*
-GetProviderReference of this DataboxEdgeOrder.
+GetProviderReference of this EdgeOrder.
 Deprecated: Use GetProviderConfigReference.
 */
-func (mg *DataboxEdgeOrder) GetProviderReference() *xpv1.Reference {
+func (mg *EdgeOrder) GetProviderReference() *xpv1.Reference {
 	return mg.Spec.ProviderReference
 }
 
-// GetWriteConnectionSecretToReference of this DataboxEdgeOrder.
-func (mg *DataboxEdgeOrder) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
+// GetWriteConnectionSecretToReference of this EdgeOrder.
+func (mg *EdgeOrder) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
 	return mg.Spec.WriteConnectionSecretToReference
 }
 
-// SetConditions of this DataboxEdgeOrder.
-func (mg *DataboxEdgeOrder) SetConditions(c ...xpv1.Condition) {
+// SetConditions of this EdgeOrder.
+func (mg *EdgeOrder) SetConditions(c ...xpv1.Condition) {
 	mg.Status.SetConditions(c...)
 }
 
-// SetDeletionPolicy of this DataboxEdgeOrder.
-func (mg *DataboxEdgeOrder) SetDeletionPolicy(r xpv1.DeletionPolicy) {
+// SetDeletionPolicy of this EdgeOrder.
+func (mg *EdgeOrder) SetDeletionPolicy(r xpv1.DeletionPolicy) {
 	mg.Spec.DeletionPolicy = r
 }
 
-// SetProviderConfigReference of this DataboxEdgeOrder.
-func (mg *DataboxEdgeOrder) SetProviderConfigReference(r *xpv1.Reference) {
+// SetProviderConfigReference of this EdgeOrder.
+func (mg *EdgeOrder) SetProviderConfigReference(r *xpv1.Reference) {
 	mg.Spec.ProviderConfigReference = r
 }
 
 /*
-SetProviderReference of this DataboxEdgeOrder.
+SetProviderReference of this EdgeOrder.
 Deprecated: Use SetProviderConfigReference.
 */
-func (mg *DataboxEdgeOrder) SetProviderReference(r *xpv1.Reference) {
+func (mg *EdgeOrder) SetProviderReference(r *xpv1.Reference) {
 	mg.Spec.ProviderReference = r
 }
 
-// SetWriteConnectionSecretToReference of this DataboxEdgeOrder.
-func (mg *DataboxEdgeOrder) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
+// SetWriteConnectionSecretToReference of this EdgeOrder.
+func (mg *EdgeOrder) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
 	mg.Spec.WriteConnectionSecretToReference = r
 }

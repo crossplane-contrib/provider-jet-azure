@@ -19,114 +19,114 @@ package v1alpha1
 
 import xpv1 "github.com/crossplane/crossplane-runtime/apis/common/v1"
 
-// GetCondition of this TrafficManagerEndpoint.
-func (mg *TrafficManagerEndpoint) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
+// GetCondition of this ManagerEndpoint.
+func (mg *ManagerEndpoint) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
 	return mg.Status.GetCondition(ct)
 }
 
-// GetDeletionPolicy of this TrafficManagerEndpoint.
-func (mg *TrafficManagerEndpoint) GetDeletionPolicy() xpv1.DeletionPolicy {
+// GetDeletionPolicy of this ManagerEndpoint.
+func (mg *ManagerEndpoint) GetDeletionPolicy() xpv1.DeletionPolicy {
 	return mg.Spec.DeletionPolicy
 }
 
-// GetProviderConfigReference of this TrafficManagerEndpoint.
-func (mg *TrafficManagerEndpoint) GetProviderConfigReference() *xpv1.Reference {
+// GetProviderConfigReference of this ManagerEndpoint.
+func (mg *ManagerEndpoint) GetProviderConfigReference() *xpv1.Reference {
 	return mg.Spec.ProviderConfigReference
 }
 
 /*
-GetProviderReference of this TrafficManagerEndpoint.
+GetProviderReference of this ManagerEndpoint.
 Deprecated: Use GetProviderConfigReference.
 */
-func (mg *TrafficManagerEndpoint) GetProviderReference() *xpv1.Reference {
+func (mg *ManagerEndpoint) GetProviderReference() *xpv1.Reference {
 	return mg.Spec.ProviderReference
 }
 
-// GetWriteConnectionSecretToReference of this TrafficManagerEndpoint.
-func (mg *TrafficManagerEndpoint) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
+// GetWriteConnectionSecretToReference of this ManagerEndpoint.
+func (mg *ManagerEndpoint) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
 	return mg.Spec.WriteConnectionSecretToReference
 }
 
-// SetConditions of this TrafficManagerEndpoint.
-func (mg *TrafficManagerEndpoint) SetConditions(c ...xpv1.Condition) {
+// SetConditions of this ManagerEndpoint.
+func (mg *ManagerEndpoint) SetConditions(c ...xpv1.Condition) {
 	mg.Status.SetConditions(c...)
 }
 
-// SetDeletionPolicy of this TrafficManagerEndpoint.
-func (mg *TrafficManagerEndpoint) SetDeletionPolicy(r xpv1.DeletionPolicy) {
+// SetDeletionPolicy of this ManagerEndpoint.
+func (mg *ManagerEndpoint) SetDeletionPolicy(r xpv1.DeletionPolicy) {
 	mg.Spec.DeletionPolicy = r
 }
 
-// SetProviderConfigReference of this TrafficManagerEndpoint.
-func (mg *TrafficManagerEndpoint) SetProviderConfigReference(r *xpv1.Reference) {
+// SetProviderConfigReference of this ManagerEndpoint.
+func (mg *ManagerEndpoint) SetProviderConfigReference(r *xpv1.Reference) {
 	mg.Spec.ProviderConfigReference = r
 }
 
 /*
-SetProviderReference of this TrafficManagerEndpoint.
+SetProviderReference of this ManagerEndpoint.
 Deprecated: Use SetProviderConfigReference.
 */
-func (mg *TrafficManagerEndpoint) SetProviderReference(r *xpv1.Reference) {
+func (mg *ManagerEndpoint) SetProviderReference(r *xpv1.Reference) {
 	mg.Spec.ProviderReference = r
 }
 
-// SetWriteConnectionSecretToReference of this TrafficManagerEndpoint.
-func (mg *TrafficManagerEndpoint) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
+// SetWriteConnectionSecretToReference of this ManagerEndpoint.
+func (mg *ManagerEndpoint) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
 	mg.Spec.WriteConnectionSecretToReference = r
 }
 
-// GetCondition of this TrafficManagerProfile.
-func (mg *TrafficManagerProfile) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
+// GetCondition of this ManagerProfile.
+func (mg *ManagerProfile) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
 	return mg.Status.GetCondition(ct)
 }
 
-// GetDeletionPolicy of this TrafficManagerProfile.
-func (mg *TrafficManagerProfile) GetDeletionPolicy() xpv1.DeletionPolicy {
+// GetDeletionPolicy of this ManagerProfile.
+func (mg *ManagerProfile) GetDeletionPolicy() xpv1.DeletionPolicy {
 	return mg.Spec.DeletionPolicy
 }
 
-// GetProviderConfigReference of this TrafficManagerProfile.
-func (mg *TrafficManagerProfile) GetProviderConfigReference() *xpv1.Reference {
+// GetProviderConfigReference of this ManagerProfile.
+func (mg *ManagerProfile) GetProviderConfigReference() *xpv1.Reference {
 	return mg.Spec.ProviderConfigReference
 }
 
 /*
-GetProviderReference of this TrafficManagerProfile.
+GetProviderReference of this ManagerProfile.
 Deprecated: Use GetProviderConfigReference.
 */
-func (mg *TrafficManagerProfile) GetProviderReference() *xpv1.Reference {
+func (mg *ManagerProfile) GetProviderReference() *xpv1.Reference {
 	return mg.Spec.ProviderReference
 }
 
-// GetWriteConnectionSecretToReference of this TrafficManagerProfile.
-func (mg *TrafficManagerProfile) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
+// GetWriteConnectionSecretToReference of this ManagerProfile.
+func (mg *ManagerProfile) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
 	return mg.Spec.WriteConnectionSecretToReference
 }
 
-// SetConditions of this TrafficManagerProfile.
-func (mg *TrafficManagerProfile) SetConditions(c ...xpv1.Condition) {
+// SetConditions of this ManagerProfile.
+func (mg *ManagerProfile) SetConditions(c ...xpv1.Condition) {
 	mg.Status.SetConditions(c...)
 }
 
-// SetDeletionPolicy of this TrafficManagerProfile.
-func (mg *TrafficManagerProfile) SetDeletionPolicy(r xpv1.DeletionPolicy) {
+// SetDeletionPolicy of this ManagerProfile.
+func (mg *ManagerProfile) SetDeletionPolicy(r xpv1.DeletionPolicy) {
 	mg.Spec.DeletionPolicy = r
 }
 
-// SetProviderConfigReference of this TrafficManagerProfile.
-func (mg *TrafficManagerProfile) SetProviderConfigReference(r *xpv1.Reference) {
+// SetProviderConfigReference of this ManagerProfile.
+func (mg *ManagerProfile) SetProviderConfigReference(r *xpv1.Reference) {
 	mg.Spec.ProviderConfigReference = r
 }
 
 /*
-SetProviderReference of this TrafficManagerProfile.
+SetProviderReference of this ManagerProfile.
 Deprecated: Use SetProviderConfigReference.
 */
-func (mg *TrafficManagerProfile) SetProviderReference(r *xpv1.Reference) {
+func (mg *ManagerProfile) SetProviderReference(r *xpv1.Reference) {
 	mg.Spec.ProviderReference = r
 }
 
-// SetWriteConnectionSecretToReference of this TrafficManagerProfile.
-func (mg *TrafficManagerProfile) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
+// SetWriteConnectionSecretToReference of this ManagerProfile.
+func (mg *ManagerProfile) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
 	mg.Spec.WriteConnectionSecretToReference = r
 }

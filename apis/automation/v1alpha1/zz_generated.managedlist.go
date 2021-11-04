@@ -19,8 +19,8 @@ package v1alpha1
 
 import resource "github.com/crossplane/crossplane-runtime/pkg/resource"
 
-// GetItems of this AutomationAccountList.
-func (l *AutomationAccountList) GetItems() []resource.Managed {
+// GetItems of this AccountList.
+func (l *AccountList) GetItems() []resource.Managed {
 	items := make([]resource.Managed, len(l.Items))
 	for i := range l.Items {
 		items[i] = &l.Items[i]
@@ -28,8 +28,8 @@ func (l *AutomationAccountList) GetItems() []resource.Managed {
 	return items
 }
 
-// GetItems of this AutomationCertificateList.
-func (l *AutomationCertificateList) GetItems() []resource.Managed {
+// GetItems of this CertificateList.
+func (l *CertificateList) GetItems() []resource.Managed {
 	items := make([]resource.Managed, len(l.Items))
 	for i := range l.Items {
 		items[i] = &l.Items[i]
@@ -37,8 +37,8 @@ func (l *AutomationCertificateList) GetItems() []resource.Managed {
 	return items
 }
 
-// GetItems of this AutomationConnectionCertificateList.
-func (l *AutomationConnectionCertificateList) GetItems() []resource.Managed {
+// GetItems of this ConnectionCertificateList.
+func (l *ConnectionCertificateList) GetItems() []resource.Managed {
 	items := make([]resource.Managed, len(l.Items))
 	for i := range l.Items {
 		items[i] = &l.Items[i]
@@ -46,8 +46,8 @@ func (l *AutomationConnectionCertificateList) GetItems() []resource.Managed {
 	return items
 }
 
-// GetItems of this AutomationConnectionClassicCertificateList.
-func (l *AutomationConnectionClassicCertificateList) GetItems() []resource.Managed {
+// GetItems of this ConnectionClassicCertificateList.
+func (l *ConnectionClassicCertificateList) GetItems() []resource.Managed {
 	items := make([]resource.Managed, len(l.Items))
 	for i := range l.Items {
 		items[i] = &l.Items[i]
@@ -55,8 +55,8 @@ func (l *AutomationConnectionClassicCertificateList) GetItems() []resource.Manag
 	return items
 }
 
-// GetItems of this AutomationConnectionList.
-func (l *AutomationConnectionList) GetItems() []resource.Managed {
+// GetItems of this ConnectionList.
+func (l *ConnectionList) GetItems() []resource.Managed {
 	items := make([]resource.Managed, len(l.Items))
 	for i := range l.Items {
 		items[i] = &l.Items[i]
@@ -64,8 +64,8 @@ func (l *AutomationConnectionList) GetItems() []resource.Managed {
 	return items
 }
 
-// GetItems of this AutomationConnectionServicePrincipalList.
-func (l *AutomationConnectionServicePrincipalList) GetItems() []resource.Managed {
+// GetItems of this ConnectionServicePrincipalList.
+func (l *ConnectionServicePrincipalList) GetItems() []resource.Managed {
 	items := make([]resource.Managed, len(l.Items))
 	for i := range l.Items {
 		items[i] = &l.Items[i]
@@ -73,8 +73,8 @@ func (l *AutomationConnectionServicePrincipalList) GetItems() []resource.Managed
 	return items
 }
 
-// GetItems of this AutomationCredentialList.
-func (l *AutomationCredentialList) GetItems() []resource.Managed {
+// GetItems of this CredentialList.
+func (l *CredentialList) GetItems() []resource.Managed {
 	items := make([]resource.Managed, len(l.Items))
 	for i := range l.Items {
 		items[i] = &l.Items[i]
@@ -82,8 +82,8 @@ func (l *AutomationCredentialList) GetItems() []resource.Managed {
 	return items
 }
 
-// GetItems of this AutomationDscNodeconfigurationList.
-func (l *AutomationDscNodeconfigurationList) GetItems() []resource.Managed {
+// GetItems of this DscNodeconfigurationList.
+func (l *DscNodeconfigurationList) GetItems() []resource.Managed {
 	items := make([]resource.Managed, len(l.Items))
 	for i := range l.Items {
 		items[i] = &l.Items[i]
@@ -91,8 +91,8 @@ func (l *AutomationDscNodeconfigurationList) GetItems() []resource.Managed {
 	return items
 }
 
-// GetItems of this AutomationJobScheduleList.
-func (l *AutomationJobScheduleList) GetItems() []resource.Managed {
+// GetItems of this JobScheduleList.
+func (l *JobScheduleList) GetItems() []resource.Managed {
 	items := make([]resource.Managed, len(l.Items))
 	for i := range l.Items {
 		items[i] = &l.Items[i]
@@ -100,8 +100,8 @@ func (l *AutomationJobScheduleList) GetItems() []resource.Managed {
 	return items
 }
 
-// GetItems of this AutomationModuleList.
-func (l *AutomationModuleList) GetItems() []resource.Managed {
+// GetItems of this ModuleList.
+func (l *ModuleList) GetItems() []resource.Managed {
 	items := make([]resource.Managed, len(l.Items))
 	for i := range l.Items {
 		items[i] = &l.Items[i]
@@ -109,8 +109,8 @@ func (l *AutomationModuleList) GetItems() []resource.Managed {
 	return items
 }
 
-// GetItems of this AutomationRunbookList.
-func (l *AutomationRunbookList) GetItems() []resource.Managed {
+// GetItems of this RunbookList.
+func (l *RunbookList) GetItems() []resource.Managed {
 	items := make([]resource.Managed, len(l.Items))
 	for i := range l.Items {
 		items[i] = &l.Items[i]
@@ -118,8 +118,8 @@ func (l *AutomationRunbookList) GetItems() []resource.Managed {
 	return items
 }
 
-// GetItems of this AutomationScheduleList.
-func (l *AutomationScheduleList) GetItems() []resource.Managed {
+// GetItems of this ScheduleList.
+func (l *ScheduleList) GetItems() []resource.Managed {
 	items := make([]resource.Managed, len(l.Items))
 	for i := range l.Items {
 		items[i] = &l.Items[i]
@@ -127,8 +127,8 @@ func (l *AutomationScheduleList) GetItems() []resource.Managed {
 	return items
 }
 
-// GetItems of this AutomationVariableBoolList.
-func (l *AutomationVariableBoolList) GetItems() []resource.Managed {
+// GetItems of this VariableBoolList.
+func (l *VariableBoolList) GetItems() []resource.Managed {
 	items := make([]resource.Managed, len(l.Items))
 	for i := range l.Items {
 		items[i] = &l.Items[i]
@@ -136,8 +136,8 @@ func (l *AutomationVariableBoolList) GetItems() []resource.Managed {
 	return items
 }
 
-// GetItems of this AutomationVariableDatetimeList.
-func (l *AutomationVariableDatetimeList) GetItems() []resource.Managed {
+// GetItems of this VariableDatetimeList.
+func (l *VariableDatetimeList) GetItems() []resource.Managed {
 	items := make([]resource.Managed, len(l.Items))
 	for i := range l.Items {
 		items[i] = &l.Items[i]
@@ -145,8 +145,8 @@ func (l *AutomationVariableDatetimeList) GetItems() []resource.Managed {
 	return items
 }
 
-// GetItems of this AutomationVariableIntList.
-func (l *AutomationVariableIntList) GetItems() []resource.Managed {
+// GetItems of this VariableIntList.
+func (l *VariableIntList) GetItems() []resource.Managed {
 	items := make([]resource.Managed, len(l.Items))
 	for i := range l.Items {
 		items[i] = &l.Items[i]
@@ -154,8 +154,8 @@ func (l *AutomationVariableIntList) GetItems() []resource.Managed {
 	return items
 }
 
-// GetItems of this AutomationVariableStringList.
-func (l *AutomationVariableStringList) GetItems() []resource.Managed {
+// GetItems of this VariableStringList.
+func (l *VariableStringList) GetItems() []resource.Managed {
 	items := make([]resource.Managed, len(l.Items))
 	for i := range l.Items {
 		items[i] = &l.Items[i]

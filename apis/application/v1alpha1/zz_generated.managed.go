@@ -19,394 +19,394 @@ package v1alpha1
 
 import xpv1 "github.com/crossplane/crossplane-runtime/apis/common/v1"
 
-// GetCondition of this ApplicationGateway.
-func (mg *ApplicationGateway) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
+// GetCondition of this Gateway.
+func (mg *Gateway) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
 	return mg.Status.GetCondition(ct)
 }
 
-// GetDeletionPolicy of this ApplicationGateway.
-func (mg *ApplicationGateway) GetDeletionPolicy() xpv1.DeletionPolicy {
+// GetDeletionPolicy of this Gateway.
+func (mg *Gateway) GetDeletionPolicy() xpv1.DeletionPolicy {
 	return mg.Spec.DeletionPolicy
 }
 
-// GetProviderConfigReference of this ApplicationGateway.
-func (mg *ApplicationGateway) GetProviderConfigReference() *xpv1.Reference {
+// GetProviderConfigReference of this Gateway.
+func (mg *Gateway) GetProviderConfigReference() *xpv1.Reference {
 	return mg.Spec.ProviderConfigReference
 }
 
 /*
-GetProviderReference of this ApplicationGateway.
+GetProviderReference of this Gateway.
 Deprecated: Use GetProviderConfigReference.
 */
-func (mg *ApplicationGateway) GetProviderReference() *xpv1.Reference {
+func (mg *Gateway) GetProviderReference() *xpv1.Reference {
 	return mg.Spec.ProviderReference
 }
 
-// GetWriteConnectionSecretToReference of this ApplicationGateway.
-func (mg *ApplicationGateway) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
+// GetWriteConnectionSecretToReference of this Gateway.
+func (mg *Gateway) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
 	return mg.Spec.WriteConnectionSecretToReference
 }
 
-// SetConditions of this ApplicationGateway.
-func (mg *ApplicationGateway) SetConditions(c ...xpv1.Condition) {
+// SetConditions of this Gateway.
+func (mg *Gateway) SetConditions(c ...xpv1.Condition) {
 	mg.Status.SetConditions(c...)
 }
 
-// SetDeletionPolicy of this ApplicationGateway.
-func (mg *ApplicationGateway) SetDeletionPolicy(r xpv1.DeletionPolicy) {
+// SetDeletionPolicy of this Gateway.
+func (mg *Gateway) SetDeletionPolicy(r xpv1.DeletionPolicy) {
 	mg.Spec.DeletionPolicy = r
 }
 
-// SetProviderConfigReference of this ApplicationGateway.
-func (mg *ApplicationGateway) SetProviderConfigReference(r *xpv1.Reference) {
+// SetProviderConfigReference of this Gateway.
+func (mg *Gateway) SetProviderConfigReference(r *xpv1.Reference) {
 	mg.Spec.ProviderConfigReference = r
 }
 
 /*
-SetProviderReference of this ApplicationGateway.
+SetProviderReference of this Gateway.
 Deprecated: Use SetProviderConfigReference.
 */
-func (mg *ApplicationGateway) SetProviderReference(r *xpv1.Reference) {
+func (mg *Gateway) SetProviderReference(r *xpv1.Reference) {
 	mg.Spec.ProviderReference = r
 }
 
-// SetWriteConnectionSecretToReference of this ApplicationGateway.
-func (mg *ApplicationGateway) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
+// SetWriteConnectionSecretToReference of this Gateway.
+func (mg *Gateway) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
 	mg.Spec.WriteConnectionSecretToReference = r
 }
 
-// GetCondition of this ApplicationInsights.
-func (mg *ApplicationInsights) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
+// GetCondition of this Insights.
+func (mg *Insights) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
 	return mg.Status.GetCondition(ct)
 }
 
-// GetDeletionPolicy of this ApplicationInsights.
-func (mg *ApplicationInsights) GetDeletionPolicy() xpv1.DeletionPolicy {
+// GetDeletionPolicy of this Insights.
+func (mg *Insights) GetDeletionPolicy() xpv1.DeletionPolicy {
 	return mg.Spec.DeletionPolicy
 }
 
-// GetProviderConfigReference of this ApplicationInsights.
-func (mg *ApplicationInsights) GetProviderConfigReference() *xpv1.Reference {
+// GetProviderConfigReference of this Insights.
+func (mg *Insights) GetProviderConfigReference() *xpv1.Reference {
 	return mg.Spec.ProviderConfigReference
 }
 
 /*
-GetProviderReference of this ApplicationInsights.
+GetProviderReference of this Insights.
 Deprecated: Use GetProviderConfigReference.
 */
-func (mg *ApplicationInsights) GetProviderReference() *xpv1.Reference {
+func (mg *Insights) GetProviderReference() *xpv1.Reference {
 	return mg.Spec.ProviderReference
 }
 
-// GetWriteConnectionSecretToReference of this ApplicationInsights.
-func (mg *ApplicationInsights) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
+// GetWriteConnectionSecretToReference of this Insights.
+func (mg *Insights) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
 	return mg.Spec.WriteConnectionSecretToReference
 }
 
-// SetConditions of this ApplicationInsights.
-func (mg *ApplicationInsights) SetConditions(c ...xpv1.Condition) {
+// SetConditions of this Insights.
+func (mg *Insights) SetConditions(c ...xpv1.Condition) {
 	mg.Status.SetConditions(c...)
 }
 
-// SetDeletionPolicy of this ApplicationInsights.
-func (mg *ApplicationInsights) SetDeletionPolicy(r xpv1.DeletionPolicy) {
+// SetDeletionPolicy of this Insights.
+func (mg *Insights) SetDeletionPolicy(r xpv1.DeletionPolicy) {
 	mg.Spec.DeletionPolicy = r
 }
 
-// SetProviderConfigReference of this ApplicationInsights.
-func (mg *ApplicationInsights) SetProviderConfigReference(r *xpv1.Reference) {
+// SetProviderConfigReference of this Insights.
+func (mg *Insights) SetProviderConfigReference(r *xpv1.Reference) {
 	mg.Spec.ProviderConfigReference = r
 }
 
 /*
-SetProviderReference of this ApplicationInsights.
+SetProviderReference of this Insights.
 Deprecated: Use SetProviderConfigReference.
 */
-func (mg *ApplicationInsights) SetProviderReference(r *xpv1.Reference) {
+func (mg *Insights) SetProviderReference(r *xpv1.Reference) {
 	mg.Spec.ProviderReference = r
 }
 
-// SetWriteConnectionSecretToReference of this ApplicationInsights.
-func (mg *ApplicationInsights) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
+// SetWriteConnectionSecretToReference of this Insights.
+func (mg *Insights) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
 	mg.Spec.WriteConnectionSecretToReference = r
 }
 
-// GetCondition of this ApplicationInsightsAnalyticsItem.
-func (mg *ApplicationInsightsAnalyticsItem) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
+// GetCondition of this InsightsAnalyticsItem.
+func (mg *InsightsAnalyticsItem) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
 	return mg.Status.GetCondition(ct)
 }
 
-// GetDeletionPolicy of this ApplicationInsightsAnalyticsItem.
-func (mg *ApplicationInsightsAnalyticsItem) GetDeletionPolicy() xpv1.DeletionPolicy {
+// GetDeletionPolicy of this InsightsAnalyticsItem.
+func (mg *InsightsAnalyticsItem) GetDeletionPolicy() xpv1.DeletionPolicy {
 	return mg.Spec.DeletionPolicy
 }
 
-// GetProviderConfigReference of this ApplicationInsightsAnalyticsItem.
-func (mg *ApplicationInsightsAnalyticsItem) GetProviderConfigReference() *xpv1.Reference {
+// GetProviderConfigReference of this InsightsAnalyticsItem.
+func (mg *InsightsAnalyticsItem) GetProviderConfigReference() *xpv1.Reference {
 	return mg.Spec.ProviderConfigReference
 }
 
 /*
-GetProviderReference of this ApplicationInsightsAnalyticsItem.
+GetProviderReference of this InsightsAnalyticsItem.
 Deprecated: Use GetProviderConfigReference.
 */
-func (mg *ApplicationInsightsAnalyticsItem) GetProviderReference() *xpv1.Reference {
+func (mg *InsightsAnalyticsItem) GetProviderReference() *xpv1.Reference {
 	return mg.Spec.ProviderReference
 }
 
-// GetWriteConnectionSecretToReference of this ApplicationInsightsAnalyticsItem.
-func (mg *ApplicationInsightsAnalyticsItem) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
+// GetWriteConnectionSecretToReference of this InsightsAnalyticsItem.
+func (mg *InsightsAnalyticsItem) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
 	return mg.Spec.WriteConnectionSecretToReference
 }
 
-// SetConditions of this ApplicationInsightsAnalyticsItem.
-func (mg *ApplicationInsightsAnalyticsItem) SetConditions(c ...xpv1.Condition) {
+// SetConditions of this InsightsAnalyticsItem.
+func (mg *InsightsAnalyticsItem) SetConditions(c ...xpv1.Condition) {
 	mg.Status.SetConditions(c...)
 }
 
-// SetDeletionPolicy of this ApplicationInsightsAnalyticsItem.
-func (mg *ApplicationInsightsAnalyticsItem) SetDeletionPolicy(r xpv1.DeletionPolicy) {
+// SetDeletionPolicy of this InsightsAnalyticsItem.
+func (mg *InsightsAnalyticsItem) SetDeletionPolicy(r xpv1.DeletionPolicy) {
 	mg.Spec.DeletionPolicy = r
 }
 
-// SetProviderConfigReference of this ApplicationInsightsAnalyticsItem.
-func (mg *ApplicationInsightsAnalyticsItem) SetProviderConfigReference(r *xpv1.Reference) {
+// SetProviderConfigReference of this InsightsAnalyticsItem.
+func (mg *InsightsAnalyticsItem) SetProviderConfigReference(r *xpv1.Reference) {
 	mg.Spec.ProviderConfigReference = r
 }
 
 /*
-SetProviderReference of this ApplicationInsightsAnalyticsItem.
+SetProviderReference of this InsightsAnalyticsItem.
 Deprecated: Use SetProviderConfigReference.
 */
-func (mg *ApplicationInsightsAnalyticsItem) SetProviderReference(r *xpv1.Reference) {
+func (mg *InsightsAnalyticsItem) SetProviderReference(r *xpv1.Reference) {
 	mg.Spec.ProviderReference = r
 }
 
-// SetWriteConnectionSecretToReference of this ApplicationInsightsAnalyticsItem.
-func (mg *ApplicationInsightsAnalyticsItem) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
+// SetWriteConnectionSecretToReference of this InsightsAnalyticsItem.
+func (mg *InsightsAnalyticsItem) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
 	mg.Spec.WriteConnectionSecretToReference = r
 }
 
-// GetCondition of this ApplicationInsightsApiKey.
-func (mg *ApplicationInsightsApiKey) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
+// GetCondition of this InsightsApiKey.
+func (mg *InsightsApiKey) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
 	return mg.Status.GetCondition(ct)
 }
 
-// GetDeletionPolicy of this ApplicationInsightsApiKey.
-func (mg *ApplicationInsightsApiKey) GetDeletionPolicy() xpv1.DeletionPolicy {
+// GetDeletionPolicy of this InsightsApiKey.
+func (mg *InsightsApiKey) GetDeletionPolicy() xpv1.DeletionPolicy {
 	return mg.Spec.DeletionPolicy
 }
 
-// GetProviderConfigReference of this ApplicationInsightsApiKey.
-func (mg *ApplicationInsightsApiKey) GetProviderConfigReference() *xpv1.Reference {
+// GetProviderConfigReference of this InsightsApiKey.
+func (mg *InsightsApiKey) GetProviderConfigReference() *xpv1.Reference {
 	return mg.Spec.ProviderConfigReference
 }
 
 /*
-GetProviderReference of this ApplicationInsightsApiKey.
+GetProviderReference of this InsightsApiKey.
 Deprecated: Use GetProviderConfigReference.
 */
-func (mg *ApplicationInsightsApiKey) GetProviderReference() *xpv1.Reference {
+func (mg *InsightsApiKey) GetProviderReference() *xpv1.Reference {
 	return mg.Spec.ProviderReference
 }
 
-// GetWriteConnectionSecretToReference of this ApplicationInsightsApiKey.
-func (mg *ApplicationInsightsApiKey) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
+// GetWriteConnectionSecretToReference of this InsightsApiKey.
+func (mg *InsightsApiKey) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
 	return mg.Spec.WriteConnectionSecretToReference
 }
 
-// SetConditions of this ApplicationInsightsApiKey.
-func (mg *ApplicationInsightsApiKey) SetConditions(c ...xpv1.Condition) {
+// SetConditions of this InsightsApiKey.
+func (mg *InsightsApiKey) SetConditions(c ...xpv1.Condition) {
 	mg.Status.SetConditions(c...)
 }
 
-// SetDeletionPolicy of this ApplicationInsightsApiKey.
-func (mg *ApplicationInsightsApiKey) SetDeletionPolicy(r xpv1.DeletionPolicy) {
+// SetDeletionPolicy of this InsightsApiKey.
+func (mg *InsightsApiKey) SetDeletionPolicy(r xpv1.DeletionPolicy) {
 	mg.Spec.DeletionPolicy = r
 }
 
-// SetProviderConfigReference of this ApplicationInsightsApiKey.
-func (mg *ApplicationInsightsApiKey) SetProviderConfigReference(r *xpv1.Reference) {
+// SetProviderConfigReference of this InsightsApiKey.
+func (mg *InsightsApiKey) SetProviderConfigReference(r *xpv1.Reference) {
 	mg.Spec.ProviderConfigReference = r
 }
 
 /*
-SetProviderReference of this ApplicationInsightsApiKey.
+SetProviderReference of this InsightsApiKey.
 Deprecated: Use SetProviderConfigReference.
 */
-func (mg *ApplicationInsightsApiKey) SetProviderReference(r *xpv1.Reference) {
+func (mg *InsightsApiKey) SetProviderReference(r *xpv1.Reference) {
 	mg.Spec.ProviderReference = r
 }
 
-// SetWriteConnectionSecretToReference of this ApplicationInsightsApiKey.
-func (mg *ApplicationInsightsApiKey) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
+// SetWriteConnectionSecretToReference of this InsightsApiKey.
+func (mg *InsightsApiKey) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
 	mg.Spec.WriteConnectionSecretToReference = r
 }
 
-// GetCondition of this ApplicationInsightsSmartDetectionRule.
-func (mg *ApplicationInsightsSmartDetectionRule) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
+// GetCondition of this InsightsSmartDetectionRule.
+func (mg *InsightsSmartDetectionRule) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
 	return mg.Status.GetCondition(ct)
 }
 
-// GetDeletionPolicy of this ApplicationInsightsSmartDetectionRule.
-func (mg *ApplicationInsightsSmartDetectionRule) GetDeletionPolicy() xpv1.DeletionPolicy {
+// GetDeletionPolicy of this InsightsSmartDetectionRule.
+func (mg *InsightsSmartDetectionRule) GetDeletionPolicy() xpv1.DeletionPolicy {
 	return mg.Spec.DeletionPolicy
 }
 
-// GetProviderConfigReference of this ApplicationInsightsSmartDetectionRule.
-func (mg *ApplicationInsightsSmartDetectionRule) GetProviderConfigReference() *xpv1.Reference {
+// GetProviderConfigReference of this InsightsSmartDetectionRule.
+func (mg *InsightsSmartDetectionRule) GetProviderConfigReference() *xpv1.Reference {
 	return mg.Spec.ProviderConfigReference
 }
 
 /*
-GetProviderReference of this ApplicationInsightsSmartDetectionRule.
+GetProviderReference of this InsightsSmartDetectionRule.
 Deprecated: Use GetProviderConfigReference.
 */
-func (mg *ApplicationInsightsSmartDetectionRule) GetProviderReference() *xpv1.Reference {
+func (mg *InsightsSmartDetectionRule) GetProviderReference() *xpv1.Reference {
 	return mg.Spec.ProviderReference
 }
 
-// GetWriteConnectionSecretToReference of this ApplicationInsightsSmartDetectionRule.
-func (mg *ApplicationInsightsSmartDetectionRule) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
+// GetWriteConnectionSecretToReference of this InsightsSmartDetectionRule.
+func (mg *InsightsSmartDetectionRule) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
 	return mg.Spec.WriteConnectionSecretToReference
 }
 
-// SetConditions of this ApplicationInsightsSmartDetectionRule.
-func (mg *ApplicationInsightsSmartDetectionRule) SetConditions(c ...xpv1.Condition) {
+// SetConditions of this InsightsSmartDetectionRule.
+func (mg *InsightsSmartDetectionRule) SetConditions(c ...xpv1.Condition) {
 	mg.Status.SetConditions(c...)
 }
 
-// SetDeletionPolicy of this ApplicationInsightsSmartDetectionRule.
-func (mg *ApplicationInsightsSmartDetectionRule) SetDeletionPolicy(r xpv1.DeletionPolicy) {
+// SetDeletionPolicy of this InsightsSmartDetectionRule.
+func (mg *InsightsSmartDetectionRule) SetDeletionPolicy(r xpv1.DeletionPolicy) {
 	mg.Spec.DeletionPolicy = r
 }
 
-// SetProviderConfigReference of this ApplicationInsightsSmartDetectionRule.
-func (mg *ApplicationInsightsSmartDetectionRule) SetProviderConfigReference(r *xpv1.Reference) {
+// SetProviderConfigReference of this InsightsSmartDetectionRule.
+func (mg *InsightsSmartDetectionRule) SetProviderConfigReference(r *xpv1.Reference) {
 	mg.Spec.ProviderConfigReference = r
 }
 
 /*
-SetProviderReference of this ApplicationInsightsSmartDetectionRule.
+SetProviderReference of this InsightsSmartDetectionRule.
 Deprecated: Use SetProviderConfigReference.
 */
-func (mg *ApplicationInsightsSmartDetectionRule) SetProviderReference(r *xpv1.Reference) {
+func (mg *InsightsSmartDetectionRule) SetProviderReference(r *xpv1.Reference) {
 	mg.Spec.ProviderReference = r
 }
 
-// SetWriteConnectionSecretToReference of this ApplicationInsightsSmartDetectionRule.
-func (mg *ApplicationInsightsSmartDetectionRule) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
+// SetWriteConnectionSecretToReference of this InsightsSmartDetectionRule.
+func (mg *InsightsSmartDetectionRule) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
 	mg.Spec.WriteConnectionSecretToReference = r
 }
 
-// GetCondition of this ApplicationInsightsWebTest.
-func (mg *ApplicationInsightsWebTest) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
+// GetCondition of this InsightsWebTest.
+func (mg *InsightsWebTest) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
 	return mg.Status.GetCondition(ct)
 }
 
-// GetDeletionPolicy of this ApplicationInsightsWebTest.
-func (mg *ApplicationInsightsWebTest) GetDeletionPolicy() xpv1.DeletionPolicy {
+// GetDeletionPolicy of this InsightsWebTest.
+func (mg *InsightsWebTest) GetDeletionPolicy() xpv1.DeletionPolicy {
 	return mg.Spec.DeletionPolicy
 }
 
-// GetProviderConfigReference of this ApplicationInsightsWebTest.
-func (mg *ApplicationInsightsWebTest) GetProviderConfigReference() *xpv1.Reference {
+// GetProviderConfigReference of this InsightsWebTest.
+func (mg *InsightsWebTest) GetProviderConfigReference() *xpv1.Reference {
 	return mg.Spec.ProviderConfigReference
 }
 
 /*
-GetProviderReference of this ApplicationInsightsWebTest.
+GetProviderReference of this InsightsWebTest.
 Deprecated: Use GetProviderConfigReference.
 */
-func (mg *ApplicationInsightsWebTest) GetProviderReference() *xpv1.Reference {
+func (mg *InsightsWebTest) GetProviderReference() *xpv1.Reference {
 	return mg.Spec.ProviderReference
 }
 
-// GetWriteConnectionSecretToReference of this ApplicationInsightsWebTest.
-func (mg *ApplicationInsightsWebTest) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
+// GetWriteConnectionSecretToReference of this InsightsWebTest.
+func (mg *InsightsWebTest) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
 	return mg.Spec.WriteConnectionSecretToReference
 }
 
-// SetConditions of this ApplicationInsightsWebTest.
-func (mg *ApplicationInsightsWebTest) SetConditions(c ...xpv1.Condition) {
+// SetConditions of this InsightsWebTest.
+func (mg *InsightsWebTest) SetConditions(c ...xpv1.Condition) {
 	mg.Status.SetConditions(c...)
 }
 
-// SetDeletionPolicy of this ApplicationInsightsWebTest.
-func (mg *ApplicationInsightsWebTest) SetDeletionPolicy(r xpv1.DeletionPolicy) {
+// SetDeletionPolicy of this InsightsWebTest.
+func (mg *InsightsWebTest) SetDeletionPolicy(r xpv1.DeletionPolicy) {
 	mg.Spec.DeletionPolicy = r
 }
 
-// SetProviderConfigReference of this ApplicationInsightsWebTest.
-func (mg *ApplicationInsightsWebTest) SetProviderConfigReference(r *xpv1.Reference) {
+// SetProviderConfigReference of this InsightsWebTest.
+func (mg *InsightsWebTest) SetProviderConfigReference(r *xpv1.Reference) {
 	mg.Spec.ProviderConfigReference = r
 }
 
 /*
-SetProviderReference of this ApplicationInsightsWebTest.
+SetProviderReference of this InsightsWebTest.
 Deprecated: Use SetProviderConfigReference.
 */
-func (mg *ApplicationInsightsWebTest) SetProviderReference(r *xpv1.Reference) {
+func (mg *InsightsWebTest) SetProviderReference(r *xpv1.Reference) {
 	mg.Spec.ProviderReference = r
 }
 
-// SetWriteConnectionSecretToReference of this ApplicationInsightsWebTest.
-func (mg *ApplicationInsightsWebTest) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
+// SetWriteConnectionSecretToReference of this InsightsWebTest.
+func (mg *InsightsWebTest) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
 	mg.Spec.WriteConnectionSecretToReference = r
 }
 
-// GetCondition of this ApplicationSecurityGroup.
-func (mg *ApplicationSecurityGroup) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
+// GetCondition of this SecurityGroup.
+func (mg *SecurityGroup) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
 	return mg.Status.GetCondition(ct)
 }
 
-// GetDeletionPolicy of this ApplicationSecurityGroup.
-func (mg *ApplicationSecurityGroup) GetDeletionPolicy() xpv1.DeletionPolicy {
+// GetDeletionPolicy of this SecurityGroup.
+func (mg *SecurityGroup) GetDeletionPolicy() xpv1.DeletionPolicy {
 	return mg.Spec.DeletionPolicy
 }
 
-// GetProviderConfigReference of this ApplicationSecurityGroup.
-func (mg *ApplicationSecurityGroup) GetProviderConfigReference() *xpv1.Reference {
+// GetProviderConfigReference of this SecurityGroup.
+func (mg *SecurityGroup) GetProviderConfigReference() *xpv1.Reference {
 	return mg.Spec.ProviderConfigReference
 }
 
 /*
-GetProviderReference of this ApplicationSecurityGroup.
+GetProviderReference of this SecurityGroup.
 Deprecated: Use GetProviderConfigReference.
 */
-func (mg *ApplicationSecurityGroup) GetProviderReference() *xpv1.Reference {
+func (mg *SecurityGroup) GetProviderReference() *xpv1.Reference {
 	return mg.Spec.ProviderReference
 }
 
-// GetWriteConnectionSecretToReference of this ApplicationSecurityGroup.
-func (mg *ApplicationSecurityGroup) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
+// GetWriteConnectionSecretToReference of this SecurityGroup.
+func (mg *SecurityGroup) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
 	return mg.Spec.WriteConnectionSecretToReference
 }
 
-// SetConditions of this ApplicationSecurityGroup.
-func (mg *ApplicationSecurityGroup) SetConditions(c ...xpv1.Condition) {
+// SetConditions of this SecurityGroup.
+func (mg *SecurityGroup) SetConditions(c ...xpv1.Condition) {
 	mg.Status.SetConditions(c...)
 }
 
-// SetDeletionPolicy of this ApplicationSecurityGroup.
-func (mg *ApplicationSecurityGroup) SetDeletionPolicy(r xpv1.DeletionPolicy) {
+// SetDeletionPolicy of this SecurityGroup.
+func (mg *SecurityGroup) SetDeletionPolicy(r xpv1.DeletionPolicy) {
 	mg.Spec.DeletionPolicy = r
 }
 
-// SetProviderConfigReference of this ApplicationSecurityGroup.
-func (mg *ApplicationSecurityGroup) SetProviderConfigReference(r *xpv1.Reference) {
+// SetProviderConfigReference of this SecurityGroup.
+func (mg *SecurityGroup) SetProviderConfigReference(r *xpv1.Reference) {
 	mg.Spec.ProviderConfigReference = r
 }
 
 /*
-SetProviderReference of this ApplicationSecurityGroup.
+SetProviderReference of this SecurityGroup.
 Deprecated: Use SetProviderConfigReference.
 */
-func (mg *ApplicationSecurityGroup) SetProviderReference(r *xpv1.Reference) {
+func (mg *SecurityGroup) SetProviderReference(r *xpv1.Reference) {
 	mg.Spec.ProviderReference = r
 }
 
-// SetWriteConnectionSecretToReference of this ApplicationSecurityGroup.
-func (mg *ApplicationSecurityGroup) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
+// SetWriteConnectionSecretToReference of this SecurityGroup.
+func (mg *SecurityGroup) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
 	mg.Spec.WriteConnectionSecretToReference = r
 }

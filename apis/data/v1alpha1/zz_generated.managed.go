@@ -19,3474 +19,3474 @@ package v1alpha1
 
 import xpv1 "github.com/crossplane/crossplane-runtime/apis/common/v1"
 
-// GetCondition of this DataFactory.
-func (mg *DataFactory) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
+// GetCondition of this Factory.
+func (mg *Factory) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
 	return mg.Status.GetCondition(ct)
 }
 
-// GetDeletionPolicy of this DataFactory.
-func (mg *DataFactory) GetDeletionPolicy() xpv1.DeletionPolicy {
+// GetDeletionPolicy of this Factory.
+func (mg *Factory) GetDeletionPolicy() xpv1.DeletionPolicy {
 	return mg.Spec.DeletionPolicy
 }
 
-// GetProviderConfigReference of this DataFactory.
-func (mg *DataFactory) GetProviderConfigReference() *xpv1.Reference {
+// GetProviderConfigReference of this Factory.
+func (mg *Factory) GetProviderConfigReference() *xpv1.Reference {
 	return mg.Spec.ProviderConfigReference
 }
 
 /*
-GetProviderReference of this DataFactory.
+GetProviderReference of this Factory.
 Deprecated: Use GetProviderConfigReference.
 */
-func (mg *DataFactory) GetProviderReference() *xpv1.Reference {
+func (mg *Factory) GetProviderReference() *xpv1.Reference {
 	return mg.Spec.ProviderReference
 }
 
-// GetWriteConnectionSecretToReference of this DataFactory.
-func (mg *DataFactory) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
+// GetWriteConnectionSecretToReference of this Factory.
+func (mg *Factory) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
 	return mg.Spec.WriteConnectionSecretToReference
 }
 
-// SetConditions of this DataFactory.
-func (mg *DataFactory) SetConditions(c ...xpv1.Condition) {
+// SetConditions of this Factory.
+func (mg *Factory) SetConditions(c ...xpv1.Condition) {
 	mg.Status.SetConditions(c...)
 }
 
-// SetDeletionPolicy of this DataFactory.
-func (mg *DataFactory) SetDeletionPolicy(r xpv1.DeletionPolicy) {
+// SetDeletionPolicy of this Factory.
+func (mg *Factory) SetDeletionPolicy(r xpv1.DeletionPolicy) {
 	mg.Spec.DeletionPolicy = r
 }
 
-// SetProviderConfigReference of this DataFactory.
-func (mg *DataFactory) SetProviderConfigReference(r *xpv1.Reference) {
+// SetProviderConfigReference of this Factory.
+func (mg *Factory) SetProviderConfigReference(r *xpv1.Reference) {
 	mg.Spec.ProviderConfigReference = r
 }
 
 /*
-SetProviderReference of this DataFactory.
+SetProviderReference of this Factory.
 Deprecated: Use SetProviderConfigReference.
 */
-func (mg *DataFactory) SetProviderReference(r *xpv1.Reference) {
+func (mg *Factory) SetProviderReference(r *xpv1.Reference) {
 	mg.Spec.ProviderReference = r
 }
 
-// SetWriteConnectionSecretToReference of this DataFactory.
-func (mg *DataFactory) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
+// SetWriteConnectionSecretToReference of this Factory.
+func (mg *Factory) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
 	mg.Spec.WriteConnectionSecretToReference = r
 }
 
-// GetCondition of this DataFactoryCustomDataset.
-func (mg *DataFactoryCustomDataset) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
+// GetCondition of this FactoryCustomDataset.
+func (mg *FactoryCustomDataset) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
 	return mg.Status.GetCondition(ct)
 }
 
-// GetDeletionPolicy of this DataFactoryCustomDataset.
-func (mg *DataFactoryCustomDataset) GetDeletionPolicy() xpv1.DeletionPolicy {
+// GetDeletionPolicy of this FactoryCustomDataset.
+func (mg *FactoryCustomDataset) GetDeletionPolicy() xpv1.DeletionPolicy {
 	return mg.Spec.DeletionPolicy
 }
 
-// GetProviderConfigReference of this DataFactoryCustomDataset.
-func (mg *DataFactoryCustomDataset) GetProviderConfigReference() *xpv1.Reference {
+// GetProviderConfigReference of this FactoryCustomDataset.
+func (mg *FactoryCustomDataset) GetProviderConfigReference() *xpv1.Reference {
 	return mg.Spec.ProviderConfigReference
 }
 
 /*
-GetProviderReference of this DataFactoryCustomDataset.
+GetProviderReference of this FactoryCustomDataset.
 Deprecated: Use GetProviderConfigReference.
 */
-func (mg *DataFactoryCustomDataset) GetProviderReference() *xpv1.Reference {
+func (mg *FactoryCustomDataset) GetProviderReference() *xpv1.Reference {
 	return mg.Spec.ProviderReference
 }
 
-// GetWriteConnectionSecretToReference of this DataFactoryCustomDataset.
-func (mg *DataFactoryCustomDataset) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
+// GetWriteConnectionSecretToReference of this FactoryCustomDataset.
+func (mg *FactoryCustomDataset) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
 	return mg.Spec.WriteConnectionSecretToReference
 }
 
-// SetConditions of this DataFactoryCustomDataset.
-func (mg *DataFactoryCustomDataset) SetConditions(c ...xpv1.Condition) {
+// SetConditions of this FactoryCustomDataset.
+func (mg *FactoryCustomDataset) SetConditions(c ...xpv1.Condition) {
 	mg.Status.SetConditions(c...)
 }
 
-// SetDeletionPolicy of this DataFactoryCustomDataset.
-func (mg *DataFactoryCustomDataset) SetDeletionPolicy(r xpv1.DeletionPolicy) {
+// SetDeletionPolicy of this FactoryCustomDataset.
+func (mg *FactoryCustomDataset) SetDeletionPolicy(r xpv1.DeletionPolicy) {
 	mg.Spec.DeletionPolicy = r
 }
 
-// SetProviderConfigReference of this DataFactoryCustomDataset.
-func (mg *DataFactoryCustomDataset) SetProviderConfigReference(r *xpv1.Reference) {
+// SetProviderConfigReference of this FactoryCustomDataset.
+func (mg *FactoryCustomDataset) SetProviderConfigReference(r *xpv1.Reference) {
 	mg.Spec.ProviderConfigReference = r
 }
 
 /*
-SetProviderReference of this DataFactoryCustomDataset.
+SetProviderReference of this FactoryCustomDataset.
 Deprecated: Use SetProviderConfigReference.
 */
-func (mg *DataFactoryCustomDataset) SetProviderReference(r *xpv1.Reference) {
+func (mg *FactoryCustomDataset) SetProviderReference(r *xpv1.Reference) {
 	mg.Spec.ProviderReference = r
 }
 
-// SetWriteConnectionSecretToReference of this DataFactoryCustomDataset.
-func (mg *DataFactoryCustomDataset) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
+// SetWriteConnectionSecretToReference of this FactoryCustomDataset.
+func (mg *FactoryCustomDataset) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
 	mg.Spec.WriteConnectionSecretToReference = r
 }
 
-// GetCondition of this DataFactoryDataFlow.
-func (mg *DataFactoryDataFlow) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
+// GetCondition of this FactoryDataFlow.
+func (mg *FactoryDataFlow) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
 	return mg.Status.GetCondition(ct)
 }
 
-// GetDeletionPolicy of this DataFactoryDataFlow.
-func (mg *DataFactoryDataFlow) GetDeletionPolicy() xpv1.DeletionPolicy {
+// GetDeletionPolicy of this FactoryDataFlow.
+func (mg *FactoryDataFlow) GetDeletionPolicy() xpv1.DeletionPolicy {
 	return mg.Spec.DeletionPolicy
 }
 
-// GetProviderConfigReference of this DataFactoryDataFlow.
-func (mg *DataFactoryDataFlow) GetProviderConfigReference() *xpv1.Reference {
+// GetProviderConfigReference of this FactoryDataFlow.
+func (mg *FactoryDataFlow) GetProviderConfigReference() *xpv1.Reference {
 	return mg.Spec.ProviderConfigReference
 }
 
 /*
-GetProviderReference of this DataFactoryDataFlow.
+GetProviderReference of this FactoryDataFlow.
 Deprecated: Use GetProviderConfigReference.
 */
-func (mg *DataFactoryDataFlow) GetProviderReference() *xpv1.Reference {
+func (mg *FactoryDataFlow) GetProviderReference() *xpv1.Reference {
 	return mg.Spec.ProviderReference
 }
 
-// GetWriteConnectionSecretToReference of this DataFactoryDataFlow.
-func (mg *DataFactoryDataFlow) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
+// GetWriteConnectionSecretToReference of this FactoryDataFlow.
+func (mg *FactoryDataFlow) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
 	return mg.Spec.WriteConnectionSecretToReference
 }
 
-// SetConditions of this DataFactoryDataFlow.
-func (mg *DataFactoryDataFlow) SetConditions(c ...xpv1.Condition) {
+// SetConditions of this FactoryDataFlow.
+func (mg *FactoryDataFlow) SetConditions(c ...xpv1.Condition) {
 	mg.Status.SetConditions(c...)
 }
 
-// SetDeletionPolicy of this DataFactoryDataFlow.
-func (mg *DataFactoryDataFlow) SetDeletionPolicy(r xpv1.DeletionPolicy) {
+// SetDeletionPolicy of this FactoryDataFlow.
+func (mg *FactoryDataFlow) SetDeletionPolicy(r xpv1.DeletionPolicy) {
 	mg.Spec.DeletionPolicy = r
 }
 
-// SetProviderConfigReference of this DataFactoryDataFlow.
-func (mg *DataFactoryDataFlow) SetProviderConfigReference(r *xpv1.Reference) {
+// SetProviderConfigReference of this FactoryDataFlow.
+func (mg *FactoryDataFlow) SetProviderConfigReference(r *xpv1.Reference) {
 	mg.Spec.ProviderConfigReference = r
 }
 
 /*
-SetProviderReference of this DataFactoryDataFlow.
+SetProviderReference of this FactoryDataFlow.
 Deprecated: Use SetProviderConfigReference.
 */
-func (mg *DataFactoryDataFlow) SetProviderReference(r *xpv1.Reference) {
+func (mg *FactoryDataFlow) SetProviderReference(r *xpv1.Reference) {
 	mg.Spec.ProviderReference = r
 }
 
-// SetWriteConnectionSecretToReference of this DataFactoryDataFlow.
-func (mg *DataFactoryDataFlow) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
+// SetWriteConnectionSecretToReference of this FactoryDataFlow.
+func (mg *FactoryDataFlow) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
 	mg.Spec.WriteConnectionSecretToReference = r
 }
 
-// GetCondition of this DataFactoryDatasetAzureBlob.
-func (mg *DataFactoryDatasetAzureBlob) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
+// GetCondition of this FactoryDatasetAzureBlob.
+func (mg *FactoryDatasetAzureBlob) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
 	return mg.Status.GetCondition(ct)
 }
 
-// GetDeletionPolicy of this DataFactoryDatasetAzureBlob.
-func (mg *DataFactoryDatasetAzureBlob) GetDeletionPolicy() xpv1.DeletionPolicy {
+// GetDeletionPolicy of this FactoryDatasetAzureBlob.
+func (mg *FactoryDatasetAzureBlob) GetDeletionPolicy() xpv1.DeletionPolicy {
 	return mg.Spec.DeletionPolicy
 }
 
-// GetProviderConfigReference of this DataFactoryDatasetAzureBlob.
-func (mg *DataFactoryDatasetAzureBlob) GetProviderConfigReference() *xpv1.Reference {
+// GetProviderConfigReference of this FactoryDatasetAzureBlob.
+func (mg *FactoryDatasetAzureBlob) GetProviderConfigReference() *xpv1.Reference {
 	return mg.Spec.ProviderConfigReference
 }
 
 /*
-GetProviderReference of this DataFactoryDatasetAzureBlob.
+GetProviderReference of this FactoryDatasetAzureBlob.
 Deprecated: Use GetProviderConfigReference.
 */
-func (mg *DataFactoryDatasetAzureBlob) GetProviderReference() *xpv1.Reference {
+func (mg *FactoryDatasetAzureBlob) GetProviderReference() *xpv1.Reference {
 	return mg.Spec.ProviderReference
 }
 
-// GetWriteConnectionSecretToReference of this DataFactoryDatasetAzureBlob.
-func (mg *DataFactoryDatasetAzureBlob) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
+// GetWriteConnectionSecretToReference of this FactoryDatasetAzureBlob.
+func (mg *FactoryDatasetAzureBlob) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
 	return mg.Spec.WriteConnectionSecretToReference
 }
 
-// SetConditions of this DataFactoryDatasetAzureBlob.
-func (mg *DataFactoryDatasetAzureBlob) SetConditions(c ...xpv1.Condition) {
+// SetConditions of this FactoryDatasetAzureBlob.
+func (mg *FactoryDatasetAzureBlob) SetConditions(c ...xpv1.Condition) {
 	mg.Status.SetConditions(c...)
 }
 
-// SetDeletionPolicy of this DataFactoryDatasetAzureBlob.
-func (mg *DataFactoryDatasetAzureBlob) SetDeletionPolicy(r xpv1.DeletionPolicy) {
+// SetDeletionPolicy of this FactoryDatasetAzureBlob.
+func (mg *FactoryDatasetAzureBlob) SetDeletionPolicy(r xpv1.DeletionPolicy) {
 	mg.Spec.DeletionPolicy = r
 }
 
-// SetProviderConfigReference of this DataFactoryDatasetAzureBlob.
-func (mg *DataFactoryDatasetAzureBlob) SetProviderConfigReference(r *xpv1.Reference) {
+// SetProviderConfigReference of this FactoryDatasetAzureBlob.
+func (mg *FactoryDatasetAzureBlob) SetProviderConfigReference(r *xpv1.Reference) {
 	mg.Spec.ProviderConfigReference = r
 }
 
 /*
-SetProviderReference of this DataFactoryDatasetAzureBlob.
+SetProviderReference of this FactoryDatasetAzureBlob.
 Deprecated: Use SetProviderConfigReference.
 */
-func (mg *DataFactoryDatasetAzureBlob) SetProviderReference(r *xpv1.Reference) {
+func (mg *FactoryDatasetAzureBlob) SetProviderReference(r *xpv1.Reference) {
 	mg.Spec.ProviderReference = r
 }
 
-// SetWriteConnectionSecretToReference of this DataFactoryDatasetAzureBlob.
-func (mg *DataFactoryDatasetAzureBlob) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
+// SetWriteConnectionSecretToReference of this FactoryDatasetAzureBlob.
+func (mg *FactoryDatasetAzureBlob) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
 	mg.Spec.WriteConnectionSecretToReference = r
 }
 
-// GetCondition of this DataFactoryDatasetBinary.
-func (mg *DataFactoryDatasetBinary) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
+// GetCondition of this FactoryDatasetBinary.
+func (mg *FactoryDatasetBinary) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
 	return mg.Status.GetCondition(ct)
 }
 
-// GetDeletionPolicy of this DataFactoryDatasetBinary.
-func (mg *DataFactoryDatasetBinary) GetDeletionPolicy() xpv1.DeletionPolicy {
+// GetDeletionPolicy of this FactoryDatasetBinary.
+func (mg *FactoryDatasetBinary) GetDeletionPolicy() xpv1.DeletionPolicy {
 	return mg.Spec.DeletionPolicy
 }
 
-// GetProviderConfigReference of this DataFactoryDatasetBinary.
-func (mg *DataFactoryDatasetBinary) GetProviderConfigReference() *xpv1.Reference {
+// GetProviderConfigReference of this FactoryDatasetBinary.
+func (mg *FactoryDatasetBinary) GetProviderConfigReference() *xpv1.Reference {
 	return mg.Spec.ProviderConfigReference
 }
 
 /*
-GetProviderReference of this DataFactoryDatasetBinary.
+GetProviderReference of this FactoryDatasetBinary.
 Deprecated: Use GetProviderConfigReference.
 */
-func (mg *DataFactoryDatasetBinary) GetProviderReference() *xpv1.Reference {
+func (mg *FactoryDatasetBinary) GetProviderReference() *xpv1.Reference {
 	return mg.Spec.ProviderReference
 }
 
-// GetWriteConnectionSecretToReference of this DataFactoryDatasetBinary.
-func (mg *DataFactoryDatasetBinary) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
+// GetWriteConnectionSecretToReference of this FactoryDatasetBinary.
+func (mg *FactoryDatasetBinary) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
 	return mg.Spec.WriteConnectionSecretToReference
 }
 
-// SetConditions of this DataFactoryDatasetBinary.
-func (mg *DataFactoryDatasetBinary) SetConditions(c ...xpv1.Condition) {
+// SetConditions of this FactoryDatasetBinary.
+func (mg *FactoryDatasetBinary) SetConditions(c ...xpv1.Condition) {
 	mg.Status.SetConditions(c...)
 }
 
-// SetDeletionPolicy of this DataFactoryDatasetBinary.
-func (mg *DataFactoryDatasetBinary) SetDeletionPolicy(r xpv1.DeletionPolicy) {
+// SetDeletionPolicy of this FactoryDatasetBinary.
+func (mg *FactoryDatasetBinary) SetDeletionPolicy(r xpv1.DeletionPolicy) {
 	mg.Spec.DeletionPolicy = r
 }
 
-// SetProviderConfigReference of this DataFactoryDatasetBinary.
-func (mg *DataFactoryDatasetBinary) SetProviderConfigReference(r *xpv1.Reference) {
+// SetProviderConfigReference of this FactoryDatasetBinary.
+func (mg *FactoryDatasetBinary) SetProviderConfigReference(r *xpv1.Reference) {
 	mg.Spec.ProviderConfigReference = r
 }
 
 /*
-SetProviderReference of this DataFactoryDatasetBinary.
+SetProviderReference of this FactoryDatasetBinary.
 Deprecated: Use SetProviderConfigReference.
 */
-func (mg *DataFactoryDatasetBinary) SetProviderReference(r *xpv1.Reference) {
+func (mg *FactoryDatasetBinary) SetProviderReference(r *xpv1.Reference) {
 	mg.Spec.ProviderReference = r
 }
 
-// SetWriteConnectionSecretToReference of this DataFactoryDatasetBinary.
-func (mg *DataFactoryDatasetBinary) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
+// SetWriteConnectionSecretToReference of this FactoryDatasetBinary.
+func (mg *FactoryDatasetBinary) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
 	mg.Spec.WriteConnectionSecretToReference = r
 }
 
-// GetCondition of this DataFactoryDatasetCosmosdbSqlapi.
-func (mg *DataFactoryDatasetCosmosdbSqlapi) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
+// GetCondition of this FactoryDatasetCosmosdbSqlapi.
+func (mg *FactoryDatasetCosmosdbSqlapi) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
 	return mg.Status.GetCondition(ct)
 }
 
-// GetDeletionPolicy of this DataFactoryDatasetCosmosdbSqlapi.
-func (mg *DataFactoryDatasetCosmosdbSqlapi) GetDeletionPolicy() xpv1.DeletionPolicy {
+// GetDeletionPolicy of this FactoryDatasetCosmosdbSqlapi.
+func (mg *FactoryDatasetCosmosdbSqlapi) GetDeletionPolicy() xpv1.DeletionPolicy {
 	return mg.Spec.DeletionPolicy
 }
 
-// GetProviderConfigReference of this DataFactoryDatasetCosmosdbSqlapi.
-func (mg *DataFactoryDatasetCosmosdbSqlapi) GetProviderConfigReference() *xpv1.Reference {
+// GetProviderConfigReference of this FactoryDatasetCosmosdbSqlapi.
+func (mg *FactoryDatasetCosmosdbSqlapi) GetProviderConfigReference() *xpv1.Reference {
 	return mg.Spec.ProviderConfigReference
 }
 
 /*
-GetProviderReference of this DataFactoryDatasetCosmosdbSqlapi.
+GetProviderReference of this FactoryDatasetCosmosdbSqlapi.
 Deprecated: Use GetProviderConfigReference.
 */
-func (mg *DataFactoryDatasetCosmosdbSqlapi) GetProviderReference() *xpv1.Reference {
+func (mg *FactoryDatasetCosmosdbSqlapi) GetProviderReference() *xpv1.Reference {
 	return mg.Spec.ProviderReference
 }
 
-// GetWriteConnectionSecretToReference of this DataFactoryDatasetCosmosdbSqlapi.
-func (mg *DataFactoryDatasetCosmosdbSqlapi) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
+// GetWriteConnectionSecretToReference of this FactoryDatasetCosmosdbSqlapi.
+func (mg *FactoryDatasetCosmosdbSqlapi) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
 	return mg.Spec.WriteConnectionSecretToReference
 }
 
-// SetConditions of this DataFactoryDatasetCosmosdbSqlapi.
-func (mg *DataFactoryDatasetCosmosdbSqlapi) SetConditions(c ...xpv1.Condition) {
+// SetConditions of this FactoryDatasetCosmosdbSqlapi.
+func (mg *FactoryDatasetCosmosdbSqlapi) SetConditions(c ...xpv1.Condition) {
 	mg.Status.SetConditions(c...)
 }
 
-// SetDeletionPolicy of this DataFactoryDatasetCosmosdbSqlapi.
-func (mg *DataFactoryDatasetCosmosdbSqlapi) SetDeletionPolicy(r xpv1.DeletionPolicy) {
+// SetDeletionPolicy of this FactoryDatasetCosmosdbSqlapi.
+func (mg *FactoryDatasetCosmosdbSqlapi) SetDeletionPolicy(r xpv1.DeletionPolicy) {
 	mg.Spec.DeletionPolicy = r
 }
 
-// SetProviderConfigReference of this DataFactoryDatasetCosmosdbSqlapi.
-func (mg *DataFactoryDatasetCosmosdbSqlapi) SetProviderConfigReference(r *xpv1.Reference) {
+// SetProviderConfigReference of this FactoryDatasetCosmosdbSqlapi.
+func (mg *FactoryDatasetCosmosdbSqlapi) SetProviderConfigReference(r *xpv1.Reference) {
 	mg.Spec.ProviderConfigReference = r
 }
 
 /*
-SetProviderReference of this DataFactoryDatasetCosmosdbSqlapi.
+SetProviderReference of this FactoryDatasetCosmosdbSqlapi.
 Deprecated: Use SetProviderConfigReference.
 */
-func (mg *DataFactoryDatasetCosmosdbSqlapi) SetProviderReference(r *xpv1.Reference) {
+func (mg *FactoryDatasetCosmosdbSqlapi) SetProviderReference(r *xpv1.Reference) {
 	mg.Spec.ProviderReference = r
 }
 
-// SetWriteConnectionSecretToReference of this DataFactoryDatasetCosmosdbSqlapi.
-func (mg *DataFactoryDatasetCosmosdbSqlapi) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
+// SetWriteConnectionSecretToReference of this FactoryDatasetCosmosdbSqlapi.
+func (mg *FactoryDatasetCosmosdbSqlapi) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
 	mg.Spec.WriteConnectionSecretToReference = r
 }
 
-// GetCondition of this DataFactoryDatasetDelimitedText.
-func (mg *DataFactoryDatasetDelimitedText) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
+// GetCondition of this FactoryDatasetDelimitedText.
+func (mg *FactoryDatasetDelimitedText) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
 	return mg.Status.GetCondition(ct)
 }
 
-// GetDeletionPolicy of this DataFactoryDatasetDelimitedText.
-func (mg *DataFactoryDatasetDelimitedText) GetDeletionPolicy() xpv1.DeletionPolicy {
+// GetDeletionPolicy of this FactoryDatasetDelimitedText.
+func (mg *FactoryDatasetDelimitedText) GetDeletionPolicy() xpv1.DeletionPolicy {
 	return mg.Spec.DeletionPolicy
 }
 
-// GetProviderConfigReference of this DataFactoryDatasetDelimitedText.
-func (mg *DataFactoryDatasetDelimitedText) GetProviderConfigReference() *xpv1.Reference {
+// GetProviderConfigReference of this FactoryDatasetDelimitedText.
+func (mg *FactoryDatasetDelimitedText) GetProviderConfigReference() *xpv1.Reference {
 	return mg.Spec.ProviderConfigReference
 }
 
 /*
-GetProviderReference of this DataFactoryDatasetDelimitedText.
+GetProviderReference of this FactoryDatasetDelimitedText.
 Deprecated: Use GetProviderConfigReference.
 */
-func (mg *DataFactoryDatasetDelimitedText) GetProviderReference() *xpv1.Reference {
+func (mg *FactoryDatasetDelimitedText) GetProviderReference() *xpv1.Reference {
 	return mg.Spec.ProviderReference
 }
 
-// GetWriteConnectionSecretToReference of this DataFactoryDatasetDelimitedText.
-func (mg *DataFactoryDatasetDelimitedText) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
+// GetWriteConnectionSecretToReference of this FactoryDatasetDelimitedText.
+func (mg *FactoryDatasetDelimitedText) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
 	return mg.Spec.WriteConnectionSecretToReference
 }
 
-// SetConditions of this DataFactoryDatasetDelimitedText.
-func (mg *DataFactoryDatasetDelimitedText) SetConditions(c ...xpv1.Condition) {
+// SetConditions of this FactoryDatasetDelimitedText.
+func (mg *FactoryDatasetDelimitedText) SetConditions(c ...xpv1.Condition) {
 	mg.Status.SetConditions(c...)
 }
 
-// SetDeletionPolicy of this DataFactoryDatasetDelimitedText.
-func (mg *DataFactoryDatasetDelimitedText) SetDeletionPolicy(r xpv1.DeletionPolicy) {
+// SetDeletionPolicy of this FactoryDatasetDelimitedText.
+func (mg *FactoryDatasetDelimitedText) SetDeletionPolicy(r xpv1.DeletionPolicy) {
 	mg.Spec.DeletionPolicy = r
 }
 
-// SetProviderConfigReference of this DataFactoryDatasetDelimitedText.
-func (mg *DataFactoryDatasetDelimitedText) SetProviderConfigReference(r *xpv1.Reference) {
+// SetProviderConfigReference of this FactoryDatasetDelimitedText.
+func (mg *FactoryDatasetDelimitedText) SetProviderConfigReference(r *xpv1.Reference) {
 	mg.Spec.ProviderConfigReference = r
 }
 
 /*
-SetProviderReference of this DataFactoryDatasetDelimitedText.
+SetProviderReference of this FactoryDatasetDelimitedText.
 Deprecated: Use SetProviderConfigReference.
 */
-func (mg *DataFactoryDatasetDelimitedText) SetProviderReference(r *xpv1.Reference) {
+func (mg *FactoryDatasetDelimitedText) SetProviderReference(r *xpv1.Reference) {
 	mg.Spec.ProviderReference = r
 }
 
-// SetWriteConnectionSecretToReference of this DataFactoryDatasetDelimitedText.
-func (mg *DataFactoryDatasetDelimitedText) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
+// SetWriteConnectionSecretToReference of this FactoryDatasetDelimitedText.
+func (mg *FactoryDatasetDelimitedText) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
 	mg.Spec.WriteConnectionSecretToReference = r
 }
 
-// GetCondition of this DataFactoryDatasetHttp.
-func (mg *DataFactoryDatasetHttp) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
+// GetCondition of this FactoryDatasetHttp.
+func (mg *FactoryDatasetHttp) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
 	return mg.Status.GetCondition(ct)
 }
 
-// GetDeletionPolicy of this DataFactoryDatasetHttp.
-func (mg *DataFactoryDatasetHttp) GetDeletionPolicy() xpv1.DeletionPolicy {
+// GetDeletionPolicy of this FactoryDatasetHttp.
+func (mg *FactoryDatasetHttp) GetDeletionPolicy() xpv1.DeletionPolicy {
 	return mg.Spec.DeletionPolicy
 }
 
-// GetProviderConfigReference of this DataFactoryDatasetHttp.
-func (mg *DataFactoryDatasetHttp) GetProviderConfigReference() *xpv1.Reference {
+// GetProviderConfigReference of this FactoryDatasetHttp.
+func (mg *FactoryDatasetHttp) GetProviderConfigReference() *xpv1.Reference {
 	return mg.Spec.ProviderConfigReference
 }
 
 /*
-GetProviderReference of this DataFactoryDatasetHttp.
+GetProviderReference of this FactoryDatasetHttp.
 Deprecated: Use GetProviderConfigReference.
 */
-func (mg *DataFactoryDatasetHttp) GetProviderReference() *xpv1.Reference {
+func (mg *FactoryDatasetHttp) GetProviderReference() *xpv1.Reference {
 	return mg.Spec.ProviderReference
 }
 
-// GetWriteConnectionSecretToReference of this DataFactoryDatasetHttp.
-func (mg *DataFactoryDatasetHttp) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
+// GetWriteConnectionSecretToReference of this FactoryDatasetHttp.
+func (mg *FactoryDatasetHttp) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
 	return mg.Spec.WriteConnectionSecretToReference
 }
 
-// SetConditions of this DataFactoryDatasetHttp.
-func (mg *DataFactoryDatasetHttp) SetConditions(c ...xpv1.Condition) {
+// SetConditions of this FactoryDatasetHttp.
+func (mg *FactoryDatasetHttp) SetConditions(c ...xpv1.Condition) {
 	mg.Status.SetConditions(c...)
 }
 
-// SetDeletionPolicy of this DataFactoryDatasetHttp.
-func (mg *DataFactoryDatasetHttp) SetDeletionPolicy(r xpv1.DeletionPolicy) {
+// SetDeletionPolicy of this FactoryDatasetHttp.
+func (mg *FactoryDatasetHttp) SetDeletionPolicy(r xpv1.DeletionPolicy) {
 	mg.Spec.DeletionPolicy = r
 }
 
-// SetProviderConfigReference of this DataFactoryDatasetHttp.
-func (mg *DataFactoryDatasetHttp) SetProviderConfigReference(r *xpv1.Reference) {
+// SetProviderConfigReference of this FactoryDatasetHttp.
+func (mg *FactoryDatasetHttp) SetProviderConfigReference(r *xpv1.Reference) {
 	mg.Spec.ProviderConfigReference = r
 }
 
 /*
-SetProviderReference of this DataFactoryDatasetHttp.
+SetProviderReference of this FactoryDatasetHttp.
 Deprecated: Use SetProviderConfigReference.
 */
-func (mg *DataFactoryDatasetHttp) SetProviderReference(r *xpv1.Reference) {
+func (mg *FactoryDatasetHttp) SetProviderReference(r *xpv1.Reference) {
 	mg.Spec.ProviderReference = r
 }
 
-// SetWriteConnectionSecretToReference of this DataFactoryDatasetHttp.
-func (mg *DataFactoryDatasetHttp) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
+// SetWriteConnectionSecretToReference of this FactoryDatasetHttp.
+func (mg *FactoryDatasetHttp) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
 	mg.Spec.WriteConnectionSecretToReference = r
 }
 
-// GetCondition of this DataFactoryDatasetJson.
-func (mg *DataFactoryDatasetJson) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
+// GetCondition of this FactoryDatasetJson.
+func (mg *FactoryDatasetJson) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
 	return mg.Status.GetCondition(ct)
 }
 
-// GetDeletionPolicy of this DataFactoryDatasetJson.
-func (mg *DataFactoryDatasetJson) GetDeletionPolicy() xpv1.DeletionPolicy {
+// GetDeletionPolicy of this FactoryDatasetJson.
+func (mg *FactoryDatasetJson) GetDeletionPolicy() xpv1.DeletionPolicy {
 	return mg.Spec.DeletionPolicy
 }
 
-// GetProviderConfigReference of this DataFactoryDatasetJson.
-func (mg *DataFactoryDatasetJson) GetProviderConfigReference() *xpv1.Reference {
+// GetProviderConfigReference of this FactoryDatasetJson.
+func (mg *FactoryDatasetJson) GetProviderConfigReference() *xpv1.Reference {
 	return mg.Spec.ProviderConfigReference
 }
 
 /*
-GetProviderReference of this DataFactoryDatasetJson.
+GetProviderReference of this FactoryDatasetJson.
 Deprecated: Use GetProviderConfigReference.
 */
-func (mg *DataFactoryDatasetJson) GetProviderReference() *xpv1.Reference {
+func (mg *FactoryDatasetJson) GetProviderReference() *xpv1.Reference {
 	return mg.Spec.ProviderReference
 }
 
-// GetWriteConnectionSecretToReference of this DataFactoryDatasetJson.
-func (mg *DataFactoryDatasetJson) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
+// GetWriteConnectionSecretToReference of this FactoryDatasetJson.
+func (mg *FactoryDatasetJson) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
 	return mg.Spec.WriteConnectionSecretToReference
 }
 
-// SetConditions of this DataFactoryDatasetJson.
-func (mg *DataFactoryDatasetJson) SetConditions(c ...xpv1.Condition) {
+// SetConditions of this FactoryDatasetJson.
+func (mg *FactoryDatasetJson) SetConditions(c ...xpv1.Condition) {
 	mg.Status.SetConditions(c...)
 }
 
-// SetDeletionPolicy of this DataFactoryDatasetJson.
-func (mg *DataFactoryDatasetJson) SetDeletionPolicy(r xpv1.DeletionPolicy) {
+// SetDeletionPolicy of this FactoryDatasetJson.
+func (mg *FactoryDatasetJson) SetDeletionPolicy(r xpv1.DeletionPolicy) {
 	mg.Spec.DeletionPolicy = r
 }
 
-// SetProviderConfigReference of this DataFactoryDatasetJson.
-func (mg *DataFactoryDatasetJson) SetProviderConfigReference(r *xpv1.Reference) {
+// SetProviderConfigReference of this FactoryDatasetJson.
+func (mg *FactoryDatasetJson) SetProviderConfigReference(r *xpv1.Reference) {
 	mg.Spec.ProviderConfigReference = r
 }
 
 /*
-SetProviderReference of this DataFactoryDatasetJson.
+SetProviderReference of this FactoryDatasetJson.
 Deprecated: Use SetProviderConfigReference.
 */
-func (mg *DataFactoryDatasetJson) SetProviderReference(r *xpv1.Reference) {
+func (mg *FactoryDatasetJson) SetProviderReference(r *xpv1.Reference) {
 	mg.Spec.ProviderReference = r
 }
 
-// SetWriteConnectionSecretToReference of this DataFactoryDatasetJson.
-func (mg *DataFactoryDatasetJson) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
+// SetWriteConnectionSecretToReference of this FactoryDatasetJson.
+func (mg *FactoryDatasetJson) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
 	mg.Spec.WriteConnectionSecretToReference = r
 }
 
-// GetCondition of this DataFactoryDatasetMysql.
-func (mg *DataFactoryDatasetMysql) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
+// GetCondition of this FactoryDatasetMysql.
+func (mg *FactoryDatasetMysql) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
 	return mg.Status.GetCondition(ct)
 }
 
-// GetDeletionPolicy of this DataFactoryDatasetMysql.
-func (mg *DataFactoryDatasetMysql) GetDeletionPolicy() xpv1.DeletionPolicy {
+// GetDeletionPolicy of this FactoryDatasetMysql.
+func (mg *FactoryDatasetMysql) GetDeletionPolicy() xpv1.DeletionPolicy {
 	return mg.Spec.DeletionPolicy
 }
 
-// GetProviderConfigReference of this DataFactoryDatasetMysql.
-func (mg *DataFactoryDatasetMysql) GetProviderConfigReference() *xpv1.Reference {
+// GetProviderConfigReference of this FactoryDatasetMysql.
+func (mg *FactoryDatasetMysql) GetProviderConfigReference() *xpv1.Reference {
 	return mg.Spec.ProviderConfigReference
 }
 
 /*
-GetProviderReference of this DataFactoryDatasetMysql.
+GetProviderReference of this FactoryDatasetMysql.
 Deprecated: Use GetProviderConfigReference.
 */
-func (mg *DataFactoryDatasetMysql) GetProviderReference() *xpv1.Reference {
+func (mg *FactoryDatasetMysql) GetProviderReference() *xpv1.Reference {
 	return mg.Spec.ProviderReference
 }
 
-// GetWriteConnectionSecretToReference of this DataFactoryDatasetMysql.
-func (mg *DataFactoryDatasetMysql) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
+// GetWriteConnectionSecretToReference of this FactoryDatasetMysql.
+func (mg *FactoryDatasetMysql) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
 	return mg.Spec.WriteConnectionSecretToReference
 }
 
-// SetConditions of this DataFactoryDatasetMysql.
-func (mg *DataFactoryDatasetMysql) SetConditions(c ...xpv1.Condition) {
+// SetConditions of this FactoryDatasetMysql.
+func (mg *FactoryDatasetMysql) SetConditions(c ...xpv1.Condition) {
 	mg.Status.SetConditions(c...)
 }
 
-// SetDeletionPolicy of this DataFactoryDatasetMysql.
-func (mg *DataFactoryDatasetMysql) SetDeletionPolicy(r xpv1.DeletionPolicy) {
+// SetDeletionPolicy of this FactoryDatasetMysql.
+func (mg *FactoryDatasetMysql) SetDeletionPolicy(r xpv1.DeletionPolicy) {
 	mg.Spec.DeletionPolicy = r
 }
 
-// SetProviderConfigReference of this DataFactoryDatasetMysql.
-func (mg *DataFactoryDatasetMysql) SetProviderConfigReference(r *xpv1.Reference) {
+// SetProviderConfigReference of this FactoryDatasetMysql.
+func (mg *FactoryDatasetMysql) SetProviderConfigReference(r *xpv1.Reference) {
 	mg.Spec.ProviderConfigReference = r
 }
 
 /*
-SetProviderReference of this DataFactoryDatasetMysql.
+SetProviderReference of this FactoryDatasetMysql.
 Deprecated: Use SetProviderConfigReference.
 */
-func (mg *DataFactoryDatasetMysql) SetProviderReference(r *xpv1.Reference) {
+func (mg *FactoryDatasetMysql) SetProviderReference(r *xpv1.Reference) {
 	mg.Spec.ProviderReference = r
 }
 
-// SetWriteConnectionSecretToReference of this DataFactoryDatasetMysql.
-func (mg *DataFactoryDatasetMysql) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
+// SetWriteConnectionSecretToReference of this FactoryDatasetMysql.
+func (mg *FactoryDatasetMysql) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
 	mg.Spec.WriteConnectionSecretToReference = r
 }
 
-// GetCondition of this DataFactoryDatasetParquet.
-func (mg *DataFactoryDatasetParquet) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
+// GetCondition of this FactoryDatasetParquet.
+func (mg *FactoryDatasetParquet) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
 	return mg.Status.GetCondition(ct)
 }
 
-// GetDeletionPolicy of this DataFactoryDatasetParquet.
-func (mg *DataFactoryDatasetParquet) GetDeletionPolicy() xpv1.DeletionPolicy {
+// GetDeletionPolicy of this FactoryDatasetParquet.
+func (mg *FactoryDatasetParquet) GetDeletionPolicy() xpv1.DeletionPolicy {
 	return mg.Spec.DeletionPolicy
 }
 
-// GetProviderConfigReference of this DataFactoryDatasetParquet.
-func (mg *DataFactoryDatasetParquet) GetProviderConfigReference() *xpv1.Reference {
+// GetProviderConfigReference of this FactoryDatasetParquet.
+func (mg *FactoryDatasetParquet) GetProviderConfigReference() *xpv1.Reference {
 	return mg.Spec.ProviderConfigReference
 }
 
 /*
-GetProviderReference of this DataFactoryDatasetParquet.
+GetProviderReference of this FactoryDatasetParquet.
 Deprecated: Use GetProviderConfigReference.
 */
-func (mg *DataFactoryDatasetParquet) GetProviderReference() *xpv1.Reference {
+func (mg *FactoryDatasetParquet) GetProviderReference() *xpv1.Reference {
 	return mg.Spec.ProviderReference
 }
 
-// GetWriteConnectionSecretToReference of this DataFactoryDatasetParquet.
-func (mg *DataFactoryDatasetParquet) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
+// GetWriteConnectionSecretToReference of this FactoryDatasetParquet.
+func (mg *FactoryDatasetParquet) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
 	return mg.Spec.WriteConnectionSecretToReference
 }
 
-// SetConditions of this DataFactoryDatasetParquet.
-func (mg *DataFactoryDatasetParquet) SetConditions(c ...xpv1.Condition) {
+// SetConditions of this FactoryDatasetParquet.
+func (mg *FactoryDatasetParquet) SetConditions(c ...xpv1.Condition) {
 	mg.Status.SetConditions(c...)
 }
 
-// SetDeletionPolicy of this DataFactoryDatasetParquet.
-func (mg *DataFactoryDatasetParquet) SetDeletionPolicy(r xpv1.DeletionPolicy) {
+// SetDeletionPolicy of this FactoryDatasetParquet.
+func (mg *FactoryDatasetParquet) SetDeletionPolicy(r xpv1.DeletionPolicy) {
 	mg.Spec.DeletionPolicy = r
 }
 
-// SetProviderConfigReference of this DataFactoryDatasetParquet.
-func (mg *DataFactoryDatasetParquet) SetProviderConfigReference(r *xpv1.Reference) {
+// SetProviderConfigReference of this FactoryDatasetParquet.
+func (mg *FactoryDatasetParquet) SetProviderConfigReference(r *xpv1.Reference) {
 	mg.Spec.ProviderConfigReference = r
 }
 
 /*
-SetProviderReference of this DataFactoryDatasetParquet.
+SetProviderReference of this FactoryDatasetParquet.
 Deprecated: Use SetProviderConfigReference.
 */
-func (mg *DataFactoryDatasetParquet) SetProviderReference(r *xpv1.Reference) {
+func (mg *FactoryDatasetParquet) SetProviderReference(r *xpv1.Reference) {
 	mg.Spec.ProviderReference = r
 }
 
-// SetWriteConnectionSecretToReference of this DataFactoryDatasetParquet.
-func (mg *DataFactoryDatasetParquet) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
+// SetWriteConnectionSecretToReference of this FactoryDatasetParquet.
+func (mg *FactoryDatasetParquet) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
 	mg.Spec.WriteConnectionSecretToReference = r
 }
 
-// GetCondition of this DataFactoryDatasetPostgresql.
-func (mg *DataFactoryDatasetPostgresql) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
+// GetCondition of this FactoryDatasetPostgresql.
+func (mg *FactoryDatasetPostgresql) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
 	return mg.Status.GetCondition(ct)
 }
 
-// GetDeletionPolicy of this DataFactoryDatasetPostgresql.
-func (mg *DataFactoryDatasetPostgresql) GetDeletionPolicy() xpv1.DeletionPolicy {
+// GetDeletionPolicy of this FactoryDatasetPostgresql.
+func (mg *FactoryDatasetPostgresql) GetDeletionPolicy() xpv1.DeletionPolicy {
 	return mg.Spec.DeletionPolicy
 }
 
-// GetProviderConfigReference of this DataFactoryDatasetPostgresql.
-func (mg *DataFactoryDatasetPostgresql) GetProviderConfigReference() *xpv1.Reference {
+// GetProviderConfigReference of this FactoryDatasetPostgresql.
+func (mg *FactoryDatasetPostgresql) GetProviderConfigReference() *xpv1.Reference {
 	return mg.Spec.ProviderConfigReference
 }
 
 /*
-GetProviderReference of this DataFactoryDatasetPostgresql.
+GetProviderReference of this FactoryDatasetPostgresql.
 Deprecated: Use GetProviderConfigReference.
 */
-func (mg *DataFactoryDatasetPostgresql) GetProviderReference() *xpv1.Reference {
+func (mg *FactoryDatasetPostgresql) GetProviderReference() *xpv1.Reference {
 	return mg.Spec.ProviderReference
 }
 
-// GetWriteConnectionSecretToReference of this DataFactoryDatasetPostgresql.
-func (mg *DataFactoryDatasetPostgresql) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
+// GetWriteConnectionSecretToReference of this FactoryDatasetPostgresql.
+func (mg *FactoryDatasetPostgresql) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
 	return mg.Spec.WriteConnectionSecretToReference
 }
 
-// SetConditions of this DataFactoryDatasetPostgresql.
-func (mg *DataFactoryDatasetPostgresql) SetConditions(c ...xpv1.Condition) {
+// SetConditions of this FactoryDatasetPostgresql.
+func (mg *FactoryDatasetPostgresql) SetConditions(c ...xpv1.Condition) {
 	mg.Status.SetConditions(c...)
 }
 
-// SetDeletionPolicy of this DataFactoryDatasetPostgresql.
-func (mg *DataFactoryDatasetPostgresql) SetDeletionPolicy(r xpv1.DeletionPolicy) {
+// SetDeletionPolicy of this FactoryDatasetPostgresql.
+func (mg *FactoryDatasetPostgresql) SetDeletionPolicy(r xpv1.DeletionPolicy) {
 	mg.Spec.DeletionPolicy = r
 }
 
-// SetProviderConfigReference of this DataFactoryDatasetPostgresql.
-func (mg *DataFactoryDatasetPostgresql) SetProviderConfigReference(r *xpv1.Reference) {
+// SetProviderConfigReference of this FactoryDatasetPostgresql.
+func (mg *FactoryDatasetPostgresql) SetProviderConfigReference(r *xpv1.Reference) {
 	mg.Spec.ProviderConfigReference = r
 }
 
 /*
-SetProviderReference of this DataFactoryDatasetPostgresql.
+SetProviderReference of this FactoryDatasetPostgresql.
 Deprecated: Use SetProviderConfigReference.
 */
-func (mg *DataFactoryDatasetPostgresql) SetProviderReference(r *xpv1.Reference) {
+func (mg *FactoryDatasetPostgresql) SetProviderReference(r *xpv1.Reference) {
 	mg.Spec.ProviderReference = r
 }
 
-// SetWriteConnectionSecretToReference of this DataFactoryDatasetPostgresql.
-func (mg *DataFactoryDatasetPostgresql) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
+// SetWriteConnectionSecretToReference of this FactoryDatasetPostgresql.
+func (mg *FactoryDatasetPostgresql) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
 	mg.Spec.WriteConnectionSecretToReference = r
 }
 
-// GetCondition of this DataFactoryDatasetSnowflake.
-func (mg *DataFactoryDatasetSnowflake) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
+// GetCondition of this FactoryDatasetSnowflake.
+func (mg *FactoryDatasetSnowflake) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
 	return mg.Status.GetCondition(ct)
 }
 
-// GetDeletionPolicy of this DataFactoryDatasetSnowflake.
-func (mg *DataFactoryDatasetSnowflake) GetDeletionPolicy() xpv1.DeletionPolicy {
+// GetDeletionPolicy of this FactoryDatasetSnowflake.
+func (mg *FactoryDatasetSnowflake) GetDeletionPolicy() xpv1.DeletionPolicy {
 	return mg.Spec.DeletionPolicy
 }
 
-// GetProviderConfigReference of this DataFactoryDatasetSnowflake.
-func (mg *DataFactoryDatasetSnowflake) GetProviderConfigReference() *xpv1.Reference {
+// GetProviderConfigReference of this FactoryDatasetSnowflake.
+func (mg *FactoryDatasetSnowflake) GetProviderConfigReference() *xpv1.Reference {
 	return mg.Spec.ProviderConfigReference
 }
 
 /*
-GetProviderReference of this DataFactoryDatasetSnowflake.
+GetProviderReference of this FactoryDatasetSnowflake.
 Deprecated: Use GetProviderConfigReference.
 */
-func (mg *DataFactoryDatasetSnowflake) GetProviderReference() *xpv1.Reference {
+func (mg *FactoryDatasetSnowflake) GetProviderReference() *xpv1.Reference {
 	return mg.Spec.ProviderReference
 }
 
-// GetWriteConnectionSecretToReference of this DataFactoryDatasetSnowflake.
-func (mg *DataFactoryDatasetSnowflake) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
+// GetWriteConnectionSecretToReference of this FactoryDatasetSnowflake.
+func (mg *FactoryDatasetSnowflake) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
 	return mg.Spec.WriteConnectionSecretToReference
 }
 
-// SetConditions of this DataFactoryDatasetSnowflake.
-func (mg *DataFactoryDatasetSnowflake) SetConditions(c ...xpv1.Condition) {
+// SetConditions of this FactoryDatasetSnowflake.
+func (mg *FactoryDatasetSnowflake) SetConditions(c ...xpv1.Condition) {
 	mg.Status.SetConditions(c...)
 }
 
-// SetDeletionPolicy of this DataFactoryDatasetSnowflake.
-func (mg *DataFactoryDatasetSnowflake) SetDeletionPolicy(r xpv1.DeletionPolicy) {
+// SetDeletionPolicy of this FactoryDatasetSnowflake.
+func (mg *FactoryDatasetSnowflake) SetDeletionPolicy(r xpv1.DeletionPolicy) {
 	mg.Spec.DeletionPolicy = r
 }
 
-// SetProviderConfigReference of this DataFactoryDatasetSnowflake.
-func (mg *DataFactoryDatasetSnowflake) SetProviderConfigReference(r *xpv1.Reference) {
+// SetProviderConfigReference of this FactoryDatasetSnowflake.
+func (mg *FactoryDatasetSnowflake) SetProviderConfigReference(r *xpv1.Reference) {
 	mg.Spec.ProviderConfigReference = r
 }
 
 /*
-SetProviderReference of this DataFactoryDatasetSnowflake.
+SetProviderReference of this FactoryDatasetSnowflake.
 Deprecated: Use SetProviderConfigReference.
 */
-func (mg *DataFactoryDatasetSnowflake) SetProviderReference(r *xpv1.Reference) {
+func (mg *FactoryDatasetSnowflake) SetProviderReference(r *xpv1.Reference) {
 	mg.Spec.ProviderReference = r
 }
 
-// SetWriteConnectionSecretToReference of this DataFactoryDatasetSnowflake.
-func (mg *DataFactoryDatasetSnowflake) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
+// SetWriteConnectionSecretToReference of this FactoryDatasetSnowflake.
+func (mg *FactoryDatasetSnowflake) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
 	mg.Spec.WriteConnectionSecretToReference = r
 }
 
-// GetCondition of this DataFactoryDatasetSqlServerTable.
-func (mg *DataFactoryDatasetSqlServerTable) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
+// GetCondition of this FactoryDatasetSqlServerTable.
+func (mg *FactoryDatasetSqlServerTable) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
 	return mg.Status.GetCondition(ct)
 }
 
-// GetDeletionPolicy of this DataFactoryDatasetSqlServerTable.
-func (mg *DataFactoryDatasetSqlServerTable) GetDeletionPolicy() xpv1.DeletionPolicy {
+// GetDeletionPolicy of this FactoryDatasetSqlServerTable.
+func (mg *FactoryDatasetSqlServerTable) GetDeletionPolicy() xpv1.DeletionPolicy {
 	return mg.Spec.DeletionPolicy
 }
 
-// GetProviderConfigReference of this DataFactoryDatasetSqlServerTable.
-func (mg *DataFactoryDatasetSqlServerTable) GetProviderConfigReference() *xpv1.Reference {
+// GetProviderConfigReference of this FactoryDatasetSqlServerTable.
+func (mg *FactoryDatasetSqlServerTable) GetProviderConfigReference() *xpv1.Reference {
 	return mg.Spec.ProviderConfigReference
 }
 
 /*
-GetProviderReference of this DataFactoryDatasetSqlServerTable.
+GetProviderReference of this FactoryDatasetSqlServerTable.
 Deprecated: Use GetProviderConfigReference.
 */
-func (mg *DataFactoryDatasetSqlServerTable) GetProviderReference() *xpv1.Reference {
+func (mg *FactoryDatasetSqlServerTable) GetProviderReference() *xpv1.Reference {
 	return mg.Spec.ProviderReference
 }
 
-// GetWriteConnectionSecretToReference of this DataFactoryDatasetSqlServerTable.
-func (mg *DataFactoryDatasetSqlServerTable) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
+// GetWriteConnectionSecretToReference of this FactoryDatasetSqlServerTable.
+func (mg *FactoryDatasetSqlServerTable) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
 	return mg.Spec.WriteConnectionSecretToReference
 }
 
-// SetConditions of this DataFactoryDatasetSqlServerTable.
-func (mg *DataFactoryDatasetSqlServerTable) SetConditions(c ...xpv1.Condition) {
+// SetConditions of this FactoryDatasetSqlServerTable.
+func (mg *FactoryDatasetSqlServerTable) SetConditions(c ...xpv1.Condition) {
 	mg.Status.SetConditions(c...)
 }
 
-// SetDeletionPolicy of this DataFactoryDatasetSqlServerTable.
-func (mg *DataFactoryDatasetSqlServerTable) SetDeletionPolicy(r xpv1.DeletionPolicy) {
+// SetDeletionPolicy of this FactoryDatasetSqlServerTable.
+func (mg *FactoryDatasetSqlServerTable) SetDeletionPolicy(r xpv1.DeletionPolicy) {
 	mg.Spec.DeletionPolicy = r
 }
 
-// SetProviderConfigReference of this DataFactoryDatasetSqlServerTable.
-func (mg *DataFactoryDatasetSqlServerTable) SetProviderConfigReference(r *xpv1.Reference) {
+// SetProviderConfigReference of this FactoryDatasetSqlServerTable.
+func (mg *FactoryDatasetSqlServerTable) SetProviderConfigReference(r *xpv1.Reference) {
 	mg.Spec.ProviderConfigReference = r
 }
 
 /*
-SetProviderReference of this DataFactoryDatasetSqlServerTable.
+SetProviderReference of this FactoryDatasetSqlServerTable.
 Deprecated: Use SetProviderConfigReference.
 */
-func (mg *DataFactoryDatasetSqlServerTable) SetProviderReference(r *xpv1.Reference) {
+func (mg *FactoryDatasetSqlServerTable) SetProviderReference(r *xpv1.Reference) {
 	mg.Spec.ProviderReference = r
 }
 
-// SetWriteConnectionSecretToReference of this DataFactoryDatasetSqlServerTable.
-func (mg *DataFactoryDatasetSqlServerTable) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
+// SetWriteConnectionSecretToReference of this FactoryDatasetSqlServerTable.
+func (mg *FactoryDatasetSqlServerTable) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
 	mg.Spec.WriteConnectionSecretToReference = r
 }
 
-// GetCondition of this DataFactoryIntegrationRuntimeAzure.
-func (mg *DataFactoryIntegrationRuntimeAzure) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
+// GetCondition of this FactoryIntegrationRuntimeAzure.
+func (mg *FactoryIntegrationRuntimeAzure) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
 	return mg.Status.GetCondition(ct)
 }
 
-// GetDeletionPolicy of this DataFactoryIntegrationRuntimeAzure.
-func (mg *DataFactoryIntegrationRuntimeAzure) GetDeletionPolicy() xpv1.DeletionPolicy {
+// GetDeletionPolicy of this FactoryIntegrationRuntimeAzure.
+func (mg *FactoryIntegrationRuntimeAzure) GetDeletionPolicy() xpv1.DeletionPolicy {
 	return mg.Spec.DeletionPolicy
 }
 
-// GetProviderConfigReference of this DataFactoryIntegrationRuntimeAzure.
-func (mg *DataFactoryIntegrationRuntimeAzure) GetProviderConfigReference() *xpv1.Reference {
+// GetProviderConfigReference of this FactoryIntegrationRuntimeAzure.
+func (mg *FactoryIntegrationRuntimeAzure) GetProviderConfigReference() *xpv1.Reference {
 	return mg.Spec.ProviderConfigReference
 }
 
 /*
-GetProviderReference of this DataFactoryIntegrationRuntimeAzure.
+GetProviderReference of this FactoryIntegrationRuntimeAzure.
 Deprecated: Use GetProviderConfigReference.
 */
-func (mg *DataFactoryIntegrationRuntimeAzure) GetProviderReference() *xpv1.Reference {
+func (mg *FactoryIntegrationRuntimeAzure) GetProviderReference() *xpv1.Reference {
 	return mg.Spec.ProviderReference
 }
 
-// GetWriteConnectionSecretToReference of this DataFactoryIntegrationRuntimeAzure.
-func (mg *DataFactoryIntegrationRuntimeAzure) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
+// GetWriteConnectionSecretToReference of this FactoryIntegrationRuntimeAzure.
+func (mg *FactoryIntegrationRuntimeAzure) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
 	return mg.Spec.WriteConnectionSecretToReference
 }
 
-// SetConditions of this DataFactoryIntegrationRuntimeAzure.
-func (mg *DataFactoryIntegrationRuntimeAzure) SetConditions(c ...xpv1.Condition) {
+// SetConditions of this FactoryIntegrationRuntimeAzure.
+func (mg *FactoryIntegrationRuntimeAzure) SetConditions(c ...xpv1.Condition) {
 	mg.Status.SetConditions(c...)
 }
 
-// SetDeletionPolicy of this DataFactoryIntegrationRuntimeAzure.
-func (mg *DataFactoryIntegrationRuntimeAzure) SetDeletionPolicy(r xpv1.DeletionPolicy) {
+// SetDeletionPolicy of this FactoryIntegrationRuntimeAzure.
+func (mg *FactoryIntegrationRuntimeAzure) SetDeletionPolicy(r xpv1.DeletionPolicy) {
 	mg.Spec.DeletionPolicy = r
 }
 
-// SetProviderConfigReference of this DataFactoryIntegrationRuntimeAzure.
-func (mg *DataFactoryIntegrationRuntimeAzure) SetProviderConfigReference(r *xpv1.Reference) {
+// SetProviderConfigReference of this FactoryIntegrationRuntimeAzure.
+func (mg *FactoryIntegrationRuntimeAzure) SetProviderConfigReference(r *xpv1.Reference) {
 	mg.Spec.ProviderConfigReference = r
 }
 
 /*
-SetProviderReference of this DataFactoryIntegrationRuntimeAzure.
+SetProviderReference of this FactoryIntegrationRuntimeAzure.
 Deprecated: Use SetProviderConfigReference.
 */
-func (mg *DataFactoryIntegrationRuntimeAzure) SetProviderReference(r *xpv1.Reference) {
+func (mg *FactoryIntegrationRuntimeAzure) SetProviderReference(r *xpv1.Reference) {
 	mg.Spec.ProviderReference = r
 }
 
-// SetWriteConnectionSecretToReference of this DataFactoryIntegrationRuntimeAzure.
-func (mg *DataFactoryIntegrationRuntimeAzure) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
+// SetWriteConnectionSecretToReference of this FactoryIntegrationRuntimeAzure.
+func (mg *FactoryIntegrationRuntimeAzure) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
 	mg.Spec.WriteConnectionSecretToReference = r
 }
 
-// GetCondition of this DataFactoryIntegrationRuntimeAzureSsis.
-func (mg *DataFactoryIntegrationRuntimeAzureSsis) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
+// GetCondition of this FactoryIntegrationRuntimeAzureSsis.
+func (mg *FactoryIntegrationRuntimeAzureSsis) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
 	return mg.Status.GetCondition(ct)
 }
 
-// GetDeletionPolicy of this DataFactoryIntegrationRuntimeAzureSsis.
-func (mg *DataFactoryIntegrationRuntimeAzureSsis) GetDeletionPolicy() xpv1.DeletionPolicy {
+// GetDeletionPolicy of this FactoryIntegrationRuntimeAzureSsis.
+func (mg *FactoryIntegrationRuntimeAzureSsis) GetDeletionPolicy() xpv1.DeletionPolicy {
 	return mg.Spec.DeletionPolicy
 }
 
-// GetProviderConfigReference of this DataFactoryIntegrationRuntimeAzureSsis.
-func (mg *DataFactoryIntegrationRuntimeAzureSsis) GetProviderConfigReference() *xpv1.Reference {
+// GetProviderConfigReference of this FactoryIntegrationRuntimeAzureSsis.
+func (mg *FactoryIntegrationRuntimeAzureSsis) GetProviderConfigReference() *xpv1.Reference {
 	return mg.Spec.ProviderConfigReference
 }
 
 /*
-GetProviderReference of this DataFactoryIntegrationRuntimeAzureSsis.
+GetProviderReference of this FactoryIntegrationRuntimeAzureSsis.
 Deprecated: Use GetProviderConfigReference.
 */
-func (mg *DataFactoryIntegrationRuntimeAzureSsis) GetProviderReference() *xpv1.Reference {
+func (mg *FactoryIntegrationRuntimeAzureSsis) GetProviderReference() *xpv1.Reference {
 	return mg.Spec.ProviderReference
 }
 
-// GetWriteConnectionSecretToReference of this DataFactoryIntegrationRuntimeAzureSsis.
-func (mg *DataFactoryIntegrationRuntimeAzureSsis) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
+// GetWriteConnectionSecretToReference of this FactoryIntegrationRuntimeAzureSsis.
+func (mg *FactoryIntegrationRuntimeAzureSsis) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
 	return mg.Spec.WriteConnectionSecretToReference
 }
 
-// SetConditions of this DataFactoryIntegrationRuntimeAzureSsis.
-func (mg *DataFactoryIntegrationRuntimeAzureSsis) SetConditions(c ...xpv1.Condition) {
+// SetConditions of this FactoryIntegrationRuntimeAzureSsis.
+func (mg *FactoryIntegrationRuntimeAzureSsis) SetConditions(c ...xpv1.Condition) {
 	mg.Status.SetConditions(c...)
 }
 
-// SetDeletionPolicy of this DataFactoryIntegrationRuntimeAzureSsis.
-func (mg *DataFactoryIntegrationRuntimeAzureSsis) SetDeletionPolicy(r xpv1.DeletionPolicy) {
+// SetDeletionPolicy of this FactoryIntegrationRuntimeAzureSsis.
+func (mg *FactoryIntegrationRuntimeAzureSsis) SetDeletionPolicy(r xpv1.DeletionPolicy) {
 	mg.Spec.DeletionPolicy = r
 }
 
-// SetProviderConfigReference of this DataFactoryIntegrationRuntimeAzureSsis.
-func (mg *DataFactoryIntegrationRuntimeAzureSsis) SetProviderConfigReference(r *xpv1.Reference) {
+// SetProviderConfigReference of this FactoryIntegrationRuntimeAzureSsis.
+func (mg *FactoryIntegrationRuntimeAzureSsis) SetProviderConfigReference(r *xpv1.Reference) {
 	mg.Spec.ProviderConfigReference = r
 }
 
 /*
-SetProviderReference of this DataFactoryIntegrationRuntimeAzureSsis.
+SetProviderReference of this FactoryIntegrationRuntimeAzureSsis.
 Deprecated: Use SetProviderConfigReference.
 */
-func (mg *DataFactoryIntegrationRuntimeAzureSsis) SetProviderReference(r *xpv1.Reference) {
+func (mg *FactoryIntegrationRuntimeAzureSsis) SetProviderReference(r *xpv1.Reference) {
 	mg.Spec.ProviderReference = r
 }
 
-// SetWriteConnectionSecretToReference of this DataFactoryIntegrationRuntimeAzureSsis.
-func (mg *DataFactoryIntegrationRuntimeAzureSsis) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
+// SetWriteConnectionSecretToReference of this FactoryIntegrationRuntimeAzureSsis.
+func (mg *FactoryIntegrationRuntimeAzureSsis) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
 	mg.Spec.WriteConnectionSecretToReference = r
 }
 
-// GetCondition of this DataFactoryIntegrationRuntimeManaged.
-func (mg *DataFactoryIntegrationRuntimeManaged) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
+// GetCondition of this FactoryIntegrationRuntimeManaged.
+func (mg *FactoryIntegrationRuntimeManaged) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
 	return mg.Status.GetCondition(ct)
 }
 
-// GetDeletionPolicy of this DataFactoryIntegrationRuntimeManaged.
-func (mg *DataFactoryIntegrationRuntimeManaged) GetDeletionPolicy() xpv1.DeletionPolicy {
+// GetDeletionPolicy of this FactoryIntegrationRuntimeManaged.
+func (mg *FactoryIntegrationRuntimeManaged) GetDeletionPolicy() xpv1.DeletionPolicy {
 	return mg.Spec.DeletionPolicy
 }
 
-// GetProviderConfigReference of this DataFactoryIntegrationRuntimeManaged.
-func (mg *DataFactoryIntegrationRuntimeManaged) GetProviderConfigReference() *xpv1.Reference {
+// GetProviderConfigReference of this FactoryIntegrationRuntimeManaged.
+func (mg *FactoryIntegrationRuntimeManaged) GetProviderConfigReference() *xpv1.Reference {
 	return mg.Spec.ProviderConfigReference
 }
 
 /*
-GetProviderReference of this DataFactoryIntegrationRuntimeManaged.
+GetProviderReference of this FactoryIntegrationRuntimeManaged.
 Deprecated: Use GetProviderConfigReference.
 */
-func (mg *DataFactoryIntegrationRuntimeManaged) GetProviderReference() *xpv1.Reference {
+func (mg *FactoryIntegrationRuntimeManaged) GetProviderReference() *xpv1.Reference {
 	return mg.Spec.ProviderReference
 }
 
-// GetWriteConnectionSecretToReference of this DataFactoryIntegrationRuntimeManaged.
-func (mg *DataFactoryIntegrationRuntimeManaged) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
+// GetWriteConnectionSecretToReference of this FactoryIntegrationRuntimeManaged.
+func (mg *FactoryIntegrationRuntimeManaged) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
 	return mg.Spec.WriteConnectionSecretToReference
 }
 
-// SetConditions of this DataFactoryIntegrationRuntimeManaged.
-func (mg *DataFactoryIntegrationRuntimeManaged) SetConditions(c ...xpv1.Condition) {
+// SetConditions of this FactoryIntegrationRuntimeManaged.
+func (mg *FactoryIntegrationRuntimeManaged) SetConditions(c ...xpv1.Condition) {
 	mg.Status.SetConditions(c...)
 }
 
-// SetDeletionPolicy of this DataFactoryIntegrationRuntimeManaged.
-func (mg *DataFactoryIntegrationRuntimeManaged) SetDeletionPolicy(r xpv1.DeletionPolicy) {
+// SetDeletionPolicy of this FactoryIntegrationRuntimeManaged.
+func (mg *FactoryIntegrationRuntimeManaged) SetDeletionPolicy(r xpv1.DeletionPolicy) {
 	mg.Spec.DeletionPolicy = r
 }
 
-// SetProviderConfigReference of this DataFactoryIntegrationRuntimeManaged.
-func (mg *DataFactoryIntegrationRuntimeManaged) SetProviderConfigReference(r *xpv1.Reference) {
+// SetProviderConfigReference of this FactoryIntegrationRuntimeManaged.
+func (mg *FactoryIntegrationRuntimeManaged) SetProviderConfigReference(r *xpv1.Reference) {
 	mg.Spec.ProviderConfigReference = r
 }
 
 /*
-SetProviderReference of this DataFactoryIntegrationRuntimeManaged.
+SetProviderReference of this FactoryIntegrationRuntimeManaged.
 Deprecated: Use SetProviderConfigReference.
 */
-func (mg *DataFactoryIntegrationRuntimeManaged) SetProviderReference(r *xpv1.Reference) {
+func (mg *FactoryIntegrationRuntimeManaged) SetProviderReference(r *xpv1.Reference) {
 	mg.Spec.ProviderReference = r
 }
 
-// SetWriteConnectionSecretToReference of this DataFactoryIntegrationRuntimeManaged.
-func (mg *DataFactoryIntegrationRuntimeManaged) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
+// SetWriteConnectionSecretToReference of this FactoryIntegrationRuntimeManaged.
+func (mg *FactoryIntegrationRuntimeManaged) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
 	mg.Spec.WriteConnectionSecretToReference = r
 }
 
-// GetCondition of this DataFactoryIntegrationRuntimeSelfHosted.
-func (mg *DataFactoryIntegrationRuntimeSelfHosted) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
+// GetCondition of this FactoryIntegrationRuntimeSelfHosted.
+func (mg *FactoryIntegrationRuntimeSelfHosted) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
 	return mg.Status.GetCondition(ct)
 }
 
-// GetDeletionPolicy of this DataFactoryIntegrationRuntimeSelfHosted.
-func (mg *DataFactoryIntegrationRuntimeSelfHosted) GetDeletionPolicy() xpv1.DeletionPolicy {
+// GetDeletionPolicy of this FactoryIntegrationRuntimeSelfHosted.
+func (mg *FactoryIntegrationRuntimeSelfHosted) GetDeletionPolicy() xpv1.DeletionPolicy {
 	return mg.Spec.DeletionPolicy
 }
 
-// GetProviderConfigReference of this DataFactoryIntegrationRuntimeSelfHosted.
-func (mg *DataFactoryIntegrationRuntimeSelfHosted) GetProviderConfigReference() *xpv1.Reference {
+// GetProviderConfigReference of this FactoryIntegrationRuntimeSelfHosted.
+func (mg *FactoryIntegrationRuntimeSelfHosted) GetProviderConfigReference() *xpv1.Reference {
 	return mg.Spec.ProviderConfigReference
 }
 
 /*
-GetProviderReference of this DataFactoryIntegrationRuntimeSelfHosted.
+GetProviderReference of this FactoryIntegrationRuntimeSelfHosted.
 Deprecated: Use GetProviderConfigReference.
 */
-func (mg *DataFactoryIntegrationRuntimeSelfHosted) GetProviderReference() *xpv1.Reference {
+func (mg *FactoryIntegrationRuntimeSelfHosted) GetProviderReference() *xpv1.Reference {
 	return mg.Spec.ProviderReference
 }
 
-// GetWriteConnectionSecretToReference of this DataFactoryIntegrationRuntimeSelfHosted.
-func (mg *DataFactoryIntegrationRuntimeSelfHosted) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
+// GetWriteConnectionSecretToReference of this FactoryIntegrationRuntimeSelfHosted.
+func (mg *FactoryIntegrationRuntimeSelfHosted) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
 	return mg.Spec.WriteConnectionSecretToReference
 }
 
-// SetConditions of this DataFactoryIntegrationRuntimeSelfHosted.
-func (mg *DataFactoryIntegrationRuntimeSelfHosted) SetConditions(c ...xpv1.Condition) {
+// SetConditions of this FactoryIntegrationRuntimeSelfHosted.
+func (mg *FactoryIntegrationRuntimeSelfHosted) SetConditions(c ...xpv1.Condition) {
 	mg.Status.SetConditions(c...)
 }
 
-// SetDeletionPolicy of this DataFactoryIntegrationRuntimeSelfHosted.
-func (mg *DataFactoryIntegrationRuntimeSelfHosted) SetDeletionPolicy(r xpv1.DeletionPolicy) {
+// SetDeletionPolicy of this FactoryIntegrationRuntimeSelfHosted.
+func (mg *FactoryIntegrationRuntimeSelfHosted) SetDeletionPolicy(r xpv1.DeletionPolicy) {
 	mg.Spec.DeletionPolicy = r
 }
 
-// SetProviderConfigReference of this DataFactoryIntegrationRuntimeSelfHosted.
-func (mg *DataFactoryIntegrationRuntimeSelfHosted) SetProviderConfigReference(r *xpv1.Reference) {
+// SetProviderConfigReference of this FactoryIntegrationRuntimeSelfHosted.
+func (mg *FactoryIntegrationRuntimeSelfHosted) SetProviderConfigReference(r *xpv1.Reference) {
 	mg.Spec.ProviderConfigReference = r
 }
 
 /*
-SetProviderReference of this DataFactoryIntegrationRuntimeSelfHosted.
+SetProviderReference of this FactoryIntegrationRuntimeSelfHosted.
 Deprecated: Use SetProviderConfigReference.
 */
-func (mg *DataFactoryIntegrationRuntimeSelfHosted) SetProviderReference(r *xpv1.Reference) {
+func (mg *FactoryIntegrationRuntimeSelfHosted) SetProviderReference(r *xpv1.Reference) {
 	mg.Spec.ProviderReference = r
 }
 
-// SetWriteConnectionSecretToReference of this DataFactoryIntegrationRuntimeSelfHosted.
-func (mg *DataFactoryIntegrationRuntimeSelfHosted) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
+// SetWriteConnectionSecretToReference of this FactoryIntegrationRuntimeSelfHosted.
+func (mg *FactoryIntegrationRuntimeSelfHosted) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
 	mg.Spec.WriteConnectionSecretToReference = r
 }
 
-// GetCondition of this DataFactoryLinkedCustomService.
-func (mg *DataFactoryLinkedCustomService) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
+// GetCondition of this FactoryLinkedCustomService.
+func (mg *FactoryLinkedCustomService) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
 	return mg.Status.GetCondition(ct)
 }
 
-// GetDeletionPolicy of this DataFactoryLinkedCustomService.
-func (mg *DataFactoryLinkedCustomService) GetDeletionPolicy() xpv1.DeletionPolicy {
+// GetDeletionPolicy of this FactoryLinkedCustomService.
+func (mg *FactoryLinkedCustomService) GetDeletionPolicy() xpv1.DeletionPolicy {
 	return mg.Spec.DeletionPolicy
 }
 
-// GetProviderConfigReference of this DataFactoryLinkedCustomService.
-func (mg *DataFactoryLinkedCustomService) GetProviderConfigReference() *xpv1.Reference {
+// GetProviderConfigReference of this FactoryLinkedCustomService.
+func (mg *FactoryLinkedCustomService) GetProviderConfigReference() *xpv1.Reference {
 	return mg.Spec.ProviderConfigReference
 }
 
 /*
-GetProviderReference of this DataFactoryLinkedCustomService.
+GetProviderReference of this FactoryLinkedCustomService.
 Deprecated: Use GetProviderConfigReference.
 */
-func (mg *DataFactoryLinkedCustomService) GetProviderReference() *xpv1.Reference {
+func (mg *FactoryLinkedCustomService) GetProviderReference() *xpv1.Reference {
 	return mg.Spec.ProviderReference
 }
 
-// GetWriteConnectionSecretToReference of this DataFactoryLinkedCustomService.
-func (mg *DataFactoryLinkedCustomService) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
+// GetWriteConnectionSecretToReference of this FactoryLinkedCustomService.
+func (mg *FactoryLinkedCustomService) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
 	return mg.Spec.WriteConnectionSecretToReference
 }
 
-// SetConditions of this DataFactoryLinkedCustomService.
-func (mg *DataFactoryLinkedCustomService) SetConditions(c ...xpv1.Condition) {
+// SetConditions of this FactoryLinkedCustomService.
+func (mg *FactoryLinkedCustomService) SetConditions(c ...xpv1.Condition) {
 	mg.Status.SetConditions(c...)
 }
 
-// SetDeletionPolicy of this DataFactoryLinkedCustomService.
-func (mg *DataFactoryLinkedCustomService) SetDeletionPolicy(r xpv1.DeletionPolicy) {
+// SetDeletionPolicy of this FactoryLinkedCustomService.
+func (mg *FactoryLinkedCustomService) SetDeletionPolicy(r xpv1.DeletionPolicy) {
 	mg.Spec.DeletionPolicy = r
 }
 
-// SetProviderConfigReference of this DataFactoryLinkedCustomService.
-func (mg *DataFactoryLinkedCustomService) SetProviderConfigReference(r *xpv1.Reference) {
+// SetProviderConfigReference of this FactoryLinkedCustomService.
+func (mg *FactoryLinkedCustomService) SetProviderConfigReference(r *xpv1.Reference) {
 	mg.Spec.ProviderConfigReference = r
 }
 
 /*
-SetProviderReference of this DataFactoryLinkedCustomService.
+SetProviderReference of this FactoryLinkedCustomService.
 Deprecated: Use SetProviderConfigReference.
 */
-func (mg *DataFactoryLinkedCustomService) SetProviderReference(r *xpv1.Reference) {
+func (mg *FactoryLinkedCustomService) SetProviderReference(r *xpv1.Reference) {
 	mg.Spec.ProviderReference = r
 }
 
-// SetWriteConnectionSecretToReference of this DataFactoryLinkedCustomService.
-func (mg *DataFactoryLinkedCustomService) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
+// SetWriteConnectionSecretToReference of this FactoryLinkedCustomService.
+func (mg *FactoryLinkedCustomService) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
 	mg.Spec.WriteConnectionSecretToReference = r
 }
 
-// GetCondition of this DataFactoryLinkedServiceAzureBlobStorage.
-func (mg *DataFactoryLinkedServiceAzureBlobStorage) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
+// GetCondition of this FactoryLinkedServiceAzureBlobStorage.
+func (mg *FactoryLinkedServiceAzureBlobStorage) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
 	return mg.Status.GetCondition(ct)
 }
 
-// GetDeletionPolicy of this DataFactoryLinkedServiceAzureBlobStorage.
-func (mg *DataFactoryLinkedServiceAzureBlobStorage) GetDeletionPolicy() xpv1.DeletionPolicy {
+// GetDeletionPolicy of this FactoryLinkedServiceAzureBlobStorage.
+func (mg *FactoryLinkedServiceAzureBlobStorage) GetDeletionPolicy() xpv1.DeletionPolicy {
 	return mg.Spec.DeletionPolicy
 }
 
-// GetProviderConfigReference of this DataFactoryLinkedServiceAzureBlobStorage.
-func (mg *DataFactoryLinkedServiceAzureBlobStorage) GetProviderConfigReference() *xpv1.Reference {
+// GetProviderConfigReference of this FactoryLinkedServiceAzureBlobStorage.
+func (mg *FactoryLinkedServiceAzureBlobStorage) GetProviderConfigReference() *xpv1.Reference {
 	return mg.Spec.ProviderConfigReference
 }
 
 /*
-GetProviderReference of this DataFactoryLinkedServiceAzureBlobStorage.
+GetProviderReference of this FactoryLinkedServiceAzureBlobStorage.
 Deprecated: Use GetProviderConfigReference.
 */
-func (mg *DataFactoryLinkedServiceAzureBlobStorage) GetProviderReference() *xpv1.Reference {
+func (mg *FactoryLinkedServiceAzureBlobStorage) GetProviderReference() *xpv1.Reference {
 	return mg.Spec.ProviderReference
 }
 
-// GetWriteConnectionSecretToReference of this DataFactoryLinkedServiceAzureBlobStorage.
-func (mg *DataFactoryLinkedServiceAzureBlobStorage) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
+// GetWriteConnectionSecretToReference of this FactoryLinkedServiceAzureBlobStorage.
+func (mg *FactoryLinkedServiceAzureBlobStorage) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
 	return mg.Spec.WriteConnectionSecretToReference
 }
 
-// SetConditions of this DataFactoryLinkedServiceAzureBlobStorage.
-func (mg *DataFactoryLinkedServiceAzureBlobStorage) SetConditions(c ...xpv1.Condition) {
+// SetConditions of this FactoryLinkedServiceAzureBlobStorage.
+func (mg *FactoryLinkedServiceAzureBlobStorage) SetConditions(c ...xpv1.Condition) {
 	mg.Status.SetConditions(c...)
 }
 
-// SetDeletionPolicy of this DataFactoryLinkedServiceAzureBlobStorage.
-func (mg *DataFactoryLinkedServiceAzureBlobStorage) SetDeletionPolicy(r xpv1.DeletionPolicy) {
+// SetDeletionPolicy of this FactoryLinkedServiceAzureBlobStorage.
+func (mg *FactoryLinkedServiceAzureBlobStorage) SetDeletionPolicy(r xpv1.DeletionPolicy) {
 	mg.Spec.DeletionPolicy = r
 }
 
-// SetProviderConfigReference of this DataFactoryLinkedServiceAzureBlobStorage.
-func (mg *DataFactoryLinkedServiceAzureBlobStorage) SetProviderConfigReference(r *xpv1.Reference) {
+// SetProviderConfigReference of this FactoryLinkedServiceAzureBlobStorage.
+func (mg *FactoryLinkedServiceAzureBlobStorage) SetProviderConfigReference(r *xpv1.Reference) {
 	mg.Spec.ProviderConfigReference = r
 }
 
 /*
-SetProviderReference of this DataFactoryLinkedServiceAzureBlobStorage.
+SetProviderReference of this FactoryLinkedServiceAzureBlobStorage.
 Deprecated: Use SetProviderConfigReference.
 */
-func (mg *DataFactoryLinkedServiceAzureBlobStorage) SetProviderReference(r *xpv1.Reference) {
+func (mg *FactoryLinkedServiceAzureBlobStorage) SetProviderReference(r *xpv1.Reference) {
 	mg.Spec.ProviderReference = r
 }
 
-// SetWriteConnectionSecretToReference of this DataFactoryLinkedServiceAzureBlobStorage.
-func (mg *DataFactoryLinkedServiceAzureBlobStorage) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
+// SetWriteConnectionSecretToReference of this FactoryLinkedServiceAzureBlobStorage.
+func (mg *FactoryLinkedServiceAzureBlobStorage) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
 	mg.Spec.WriteConnectionSecretToReference = r
 }
 
-// GetCondition of this DataFactoryLinkedServiceAzureDatabricks.
-func (mg *DataFactoryLinkedServiceAzureDatabricks) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
+// GetCondition of this FactoryLinkedServiceAzureDatabricks.
+func (mg *FactoryLinkedServiceAzureDatabricks) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
 	return mg.Status.GetCondition(ct)
 }
 
-// GetDeletionPolicy of this DataFactoryLinkedServiceAzureDatabricks.
-func (mg *DataFactoryLinkedServiceAzureDatabricks) GetDeletionPolicy() xpv1.DeletionPolicy {
+// GetDeletionPolicy of this FactoryLinkedServiceAzureDatabricks.
+func (mg *FactoryLinkedServiceAzureDatabricks) GetDeletionPolicy() xpv1.DeletionPolicy {
 	return mg.Spec.DeletionPolicy
 }
 
-// GetProviderConfigReference of this DataFactoryLinkedServiceAzureDatabricks.
-func (mg *DataFactoryLinkedServiceAzureDatabricks) GetProviderConfigReference() *xpv1.Reference {
+// GetProviderConfigReference of this FactoryLinkedServiceAzureDatabricks.
+func (mg *FactoryLinkedServiceAzureDatabricks) GetProviderConfigReference() *xpv1.Reference {
 	return mg.Spec.ProviderConfigReference
 }
 
 /*
-GetProviderReference of this DataFactoryLinkedServiceAzureDatabricks.
+GetProviderReference of this FactoryLinkedServiceAzureDatabricks.
 Deprecated: Use GetProviderConfigReference.
 */
-func (mg *DataFactoryLinkedServiceAzureDatabricks) GetProviderReference() *xpv1.Reference {
+func (mg *FactoryLinkedServiceAzureDatabricks) GetProviderReference() *xpv1.Reference {
 	return mg.Spec.ProviderReference
 }
 
-// GetWriteConnectionSecretToReference of this DataFactoryLinkedServiceAzureDatabricks.
-func (mg *DataFactoryLinkedServiceAzureDatabricks) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
+// GetWriteConnectionSecretToReference of this FactoryLinkedServiceAzureDatabricks.
+func (mg *FactoryLinkedServiceAzureDatabricks) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
 	return mg.Spec.WriteConnectionSecretToReference
 }
 
-// SetConditions of this DataFactoryLinkedServiceAzureDatabricks.
-func (mg *DataFactoryLinkedServiceAzureDatabricks) SetConditions(c ...xpv1.Condition) {
+// SetConditions of this FactoryLinkedServiceAzureDatabricks.
+func (mg *FactoryLinkedServiceAzureDatabricks) SetConditions(c ...xpv1.Condition) {
 	mg.Status.SetConditions(c...)
 }
 
-// SetDeletionPolicy of this DataFactoryLinkedServiceAzureDatabricks.
-func (mg *DataFactoryLinkedServiceAzureDatabricks) SetDeletionPolicy(r xpv1.DeletionPolicy) {
+// SetDeletionPolicy of this FactoryLinkedServiceAzureDatabricks.
+func (mg *FactoryLinkedServiceAzureDatabricks) SetDeletionPolicy(r xpv1.DeletionPolicy) {
 	mg.Spec.DeletionPolicy = r
 }
 
-// SetProviderConfigReference of this DataFactoryLinkedServiceAzureDatabricks.
-func (mg *DataFactoryLinkedServiceAzureDatabricks) SetProviderConfigReference(r *xpv1.Reference) {
+// SetProviderConfigReference of this FactoryLinkedServiceAzureDatabricks.
+func (mg *FactoryLinkedServiceAzureDatabricks) SetProviderConfigReference(r *xpv1.Reference) {
 	mg.Spec.ProviderConfigReference = r
 }
 
 /*
-SetProviderReference of this DataFactoryLinkedServiceAzureDatabricks.
+SetProviderReference of this FactoryLinkedServiceAzureDatabricks.
 Deprecated: Use SetProviderConfigReference.
 */
-func (mg *DataFactoryLinkedServiceAzureDatabricks) SetProviderReference(r *xpv1.Reference) {
+func (mg *FactoryLinkedServiceAzureDatabricks) SetProviderReference(r *xpv1.Reference) {
 	mg.Spec.ProviderReference = r
 }
 
-// SetWriteConnectionSecretToReference of this DataFactoryLinkedServiceAzureDatabricks.
-func (mg *DataFactoryLinkedServiceAzureDatabricks) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
+// SetWriteConnectionSecretToReference of this FactoryLinkedServiceAzureDatabricks.
+func (mg *FactoryLinkedServiceAzureDatabricks) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
 	mg.Spec.WriteConnectionSecretToReference = r
 }
 
-// GetCondition of this DataFactoryLinkedServiceAzureFileStorage.
-func (mg *DataFactoryLinkedServiceAzureFileStorage) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
+// GetCondition of this FactoryLinkedServiceAzureFileStorage.
+func (mg *FactoryLinkedServiceAzureFileStorage) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
 	return mg.Status.GetCondition(ct)
 }
 
-// GetDeletionPolicy of this DataFactoryLinkedServiceAzureFileStorage.
-func (mg *DataFactoryLinkedServiceAzureFileStorage) GetDeletionPolicy() xpv1.DeletionPolicy {
+// GetDeletionPolicy of this FactoryLinkedServiceAzureFileStorage.
+func (mg *FactoryLinkedServiceAzureFileStorage) GetDeletionPolicy() xpv1.DeletionPolicy {
 	return mg.Spec.DeletionPolicy
 }
 
-// GetProviderConfigReference of this DataFactoryLinkedServiceAzureFileStorage.
-func (mg *DataFactoryLinkedServiceAzureFileStorage) GetProviderConfigReference() *xpv1.Reference {
+// GetProviderConfigReference of this FactoryLinkedServiceAzureFileStorage.
+func (mg *FactoryLinkedServiceAzureFileStorage) GetProviderConfigReference() *xpv1.Reference {
 	return mg.Spec.ProviderConfigReference
 }
 
 /*
-GetProviderReference of this DataFactoryLinkedServiceAzureFileStorage.
+GetProviderReference of this FactoryLinkedServiceAzureFileStorage.
 Deprecated: Use GetProviderConfigReference.
 */
-func (mg *DataFactoryLinkedServiceAzureFileStorage) GetProviderReference() *xpv1.Reference {
+func (mg *FactoryLinkedServiceAzureFileStorage) GetProviderReference() *xpv1.Reference {
 	return mg.Spec.ProviderReference
 }
 
-// GetWriteConnectionSecretToReference of this DataFactoryLinkedServiceAzureFileStorage.
-func (mg *DataFactoryLinkedServiceAzureFileStorage) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
+// GetWriteConnectionSecretToReference of this FactoryLinkedServiceAzureFileStorage.
+func (mg *FactoryLinkedServiceAzureFileStorage) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
 	return mg.Spec.WriteConnectionSecretToReference
 }
 
-// SetConditions of this DataFactoryLinkedServiceAzureFileStorage.
-func (mg *DataFactoryLinkedServiceAzureFileStorage) SetConditions(c ...xpv1.Condition) {
+// SetConditions of this FactoryLinkedServiceAzureFileStorage.
+func (mg *FactoryLinkedServiceAzureFileStorage) SetConditions(c ...xpv1.Condition) {
 	mg.Status.SetConditions(c...)
 }
 
-// SetDeletionPolicy of this DataFactoryLinkedServiceAzureFileStorage.
-func (mg *DataFactoryLinkedServiceAzureFileStorage) SetDeletionPolicy(r xpv1.DeletionPolicy) {
+// SetDeletionPolicy of this FactoryLinkedServiceAzureFileStorage.
+func (mg *FactoryLinkedServiceAzureFileStorage) SetDeletionPolicy(r xpv1.DeletionPolicy) {
 	mg.Spec.DeletionPolicy = r
 }
 
-// SetProviderConfigReference of this DataFactoryLinkedServiceAzureFileStorage.
-func (mg *DataFactoryLinkedServiceAzureFileStorage) SetProviderConfigReference(r *xpv1.Reference) {
+// SetProviderConfigReference of this FactoryLinkedServiceAzureFileStorage.
+func (mg *FactoryLinkedServiceAzureFileStorage) SetProviderConfigReference(r *xpv1.Reference) {
 	mg.Spec.ProviderConfigReference = r
 }
 
 /*
-SetProviderReference of this DataFactoryLinkedServiceAzureFileStorage.
+SetProviderReference of this FactoryLinkedServiceAzureFileStorage.
 Deprecated: Use SetProviderConfigReference.
 */
-func (mg *DataFactoryLinkedServiceAzureFileStorage) SetProviderReference(r *xpv1.Reference) {
+func (mg *FactoryLinkedServiceAzureFileStorage) SetProviderReference(r *xpv1.Reference) {
 	mg.Spec.ProviderReference = r
 }
 
-// SetWriteConnectionSecretToReference of this DataFactoryLinkedServiceAzureFileStorage.
-func (mg *DataFactoryLinkedServiceAzureFileStorage) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
+// SetWriteConnectionSecretToReference of this FactoryLinkedServiceAzureFileStorage.
+func (mg *FactoryLinkedServiceAzureFileStorage) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
 	mg.Spec.WriteConnectionSecretToReference = r
 }
 
-// GetCondition of this DataFactoryLinkedServiceAzureFunction.
-func (mg *DataFactoryLinkedServiceAzureFunction) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
+// GetCondition of this FactoryLinkedServiceAzureFunction.
+func (mg *FactoryLinkedServiceAzureFunction) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
 	return mg.Status.GetCondition(ct)
 }
 
-// GetDeletionPolicy of this DataFactoryLinkedServiceAzureFunction.
-func (mg *DataFactoryLinkedServiceAzureFunction) GetDeletionPolicy() xpv1.DeletionPolicy {
+// GetDeletionPolicy of this FactoryLinkedServiceAzureFunction.
+func (mg *FactoryLinkedServiceAzureFunction) GetDeletionPolicy() xpv1.DeletionPolicy {
 	return mg.Spec.DeletionPolicy
 }
 
-// GetProviderConfigReference of this DataFactoryLinkedServiceAzureFunction.
-func (mg *DataFactoryLinkedServiceAzureFunction) GetProviderConfigReference() *xpv1.Reference {
+// GetProviderConfigReference of this FactoryLinkedServiceAzureFunction.
+func (mg *FactoryLinkedServiceAzureFunction) GetProviderConfigReference() *xpv1.Reference {
 	return mg.Spec.ProviderConfigReference
 }
 
 /*
-GetProviderReference of this DataFactoryLinkedServiceAzureFunction.
+GetProviderReference of this FactoryLinkedServiceAzureFunction.
 Deprecated: Use GetProviderConfigReference.
 */
-func (mg *DataFactoryLinkedServiceAzureFunction) GetProviderReference() *xpv1.Reference {
+func (mg *FactoryLinkedServiceAzureFunction) GetProviderReference() *xpv1.Reference {
 	return mg.Spec.ProviderReference
 }
 
-// GetWriteConnectionSecretToReference of this DataFactoryLinkedServiceAzureFunction.
-func (mg *DataFactoryLinkedServiceAzureFunction) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
+// GetWriteConnectionSecretToReference of this FactoryLinkedServiceAzureFunction.
+func (mg *FactoryLinkedServiceAzureFunction) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
 	return mg.Spec.WriteConnectionSecretToReference
 }
 
-// SetConditions of this DataFactoryLinkedServiceAzureFunction.
-func (mg *DataFactoryLinkedServiceAzureFunction) SetConditions(c ...xpv1.Condition) {
+// SetConditions of this FactoryLinkedServiceAzureFunction.
+func (mg *FactoryLinkedServiceAzureFunction) SetConditions(c ...xpv1.Condition) {
 	mg.Status.SetConditions(c...)
 }
 
-// SetDeletionPolicy of this DataFactoryLinkedServiceAzureFunction.
-func (mg *DataFactoryLinkedServiceAzureFunction) SetDeletionPolicy(r xpv1.DeletionPolicy) {
+// SetDeletionPolicy of this FactoryLinkedServiceAzureFunction.
+func (mg *FactoryLinkedServiceAzureFunction) SetDeletionPolicy(r xpv1.DeletionPolicy) {
 	mg.Spec.DeletionPolicy = r
 }
 
-// SetProviderConfigReference of this DataFactoryLinkedServiceAzureFunction.
-func (mg *DataFactoryLinkedServiceAzureFunction) SetProviderConfigReference(r *xpv1.Reference) {
+// SetProviderConfigReference of this FactoryLinkedServiceAzureFunction.
+func (mg *FactoryLinkedServiceAzureFunction) SetProviderConfigReference(r *xpv1.Reference) {
 	mg.Spec.ProviderConfigReference = r
 }
 
 /*
-SetProviderReference of this DataFactoryLinkedServiceAzureFunction.
+SetProviderReference of this FactoryLinkedServiceAzureFunction.
 Deprecated: Use SetProviderConfigReference.
 */
-func (mg *DataFactoryLinkedServiceAzureFunction) SetProviderReference(r *xpv1.Reference) {
+func (mg *FactoryLinkedServiceAzureFunction) SetProviderReference(r *xpv1.Reference) {
 	mg.Spec.ProviderReference = r
 }
 
-// SetWriteConnectionSecretToReference of this DataFactoryLinkedServiceAzureFunction.
-func (mg *DataFactoryLinkedServiceAzureFunction) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
+// SetWriteConnectionSecretToReference of this FactoryLinkedServiceAzureFunction.
+func (mg *FactoryLinkedServiceAzureFunction) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
 	mg.Spec.WriteConnectionSecretToReference = r
 }
 
-// GetCondition of this DataFactoryLinkedServiceAzureSearch.
-func (mg *DataFactoryLinkedServiceAzureSearch) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
+// GetCondition of this FactoryLinkedServiceAzureSearch.
+func (mg *FactoryLinkedServiceAzureSearch) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
 	return mg.Status.GetCondition(ct)
 }
 
-// GetDeletionPolicy of this DataFactoryLinkedServiceAzureSearch.
-func (mg *DataFactoryLinkedServiceAzureSearch) GetDeletionPolicy() xpv1.DeletionPolicy {
+// GetDeletionPolicy of this FactoryLinkedServiceAzureSearch.
+func (mg *FactoryLinkedServiceAzureSearch) GetDeletionPolicy() xpv1.DeletionPolicy {
 	return mg.Spec.DeletionPolicy
 }
 
-// GetProviderConfigReference of this DataFactoryLinkedServiceAzureSearch.
-func (mg *DataFactoryLinkedServiceAzureSearch) GetProviderConfigReference() *xpv1.Reference {
+// GetProviderConfigReference of this FactoryLinkedServiceAzureSearch.
+func (mg *FactoryLinkedServiceAzureSearch) GetProviderConfigReference() *xpv1.Reference {
 	return mg.Spec.ProviderConfigReference
 }
 
 /*
-GetProviderReference of this DataFactoryLinkedServiceAzureSearch.
+GetProviderReference of this FactoryLinkedServiceAzureSearch.
 Deprecated: Use GetProviderConfigReference.
 */
-func (mg *DataFactoryLinkedServiceAzureSearch) GetProviderReference() *xpv1.Reference {
+func (mg *FactoryLinkedServiceAzureSearch) GetProviderReference() *xpv1.Reference {
 	return mg.Spec.ProviderReference
 }
 
-// GetWriteConnectionSecretToReference of this DataFactoryLinkedServiceAzureSearch.
-func (mg *DataFactoryLinkedServiceAzureSearch) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
+// GetWriteConnectionSecretToReference of this FactoryLinkedServiceAzureSearch.
+func (mg *FactoryLinkedServiceAzureSearch) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
 	return mg.Spec.WriteConnectionSecretToReference
 }
 
-// SetConditions of this DataFactoryLinkedServiceAzureSearch.
-func (mg *DataFactoryLinkedServiceAzureSearch) SetConditions(c ...xpv1.Condition) {
+// SetConditions of this FactoryLinkedServiceAzureSearch.
+func (mg *FactoryLinkedServiceAzureSearch) SetConditions(c ...xpv1.Condition) {
 	mg.Status.SetConditions(c...)
 }
 
-// SetDeletionPolicy of this DataFactoryLinkedServiceAzureSearch.
-func (mg *DataFactoryLinkedServiceAzureSearch) SetDeletionPolicy(r xpv1.DeletionPolicy) {
+// SetDeletionPolicy of this FactoryLinkedServiceAzureSearch.
+func (mg *FactoryLinkedServiceAzureSearch) SetDeletionPolicy(r xpv1.DeletionPolicy) {
 	mg.Spec.DeletionPolicy = r
 }
 
-// SetProviderConfigReference of this DataFactoryLinkedServiceAzureSearch.
-func (mg *DataFactoryLinkedServiceAzureSearch) SetProviderConfigReference(r *xpv1.Reference) {
+// SetProviderConfigReference of this FactoryLinkedServiceAzureSearch.
+func (mg *FactoryLinkedServiceAzureSearch) SetProviderConfigReference(r *xpv1.Reference) {
 	mg.Spec.ProviderConfigReference = r
 }
 
 /*
-SetProviderReference of this DataFactoryLinkedServiceAzureSearch.
+SetProviderReference of this FactoryLinkedServiceAzureSearch.
 Deprecated: Use SetProviderConfigReference.
 */
-func (mg *DataFactoryLinkedServiceAzureSearch) SetProviderReference(r *xpv1.Reference) {
+func (mg *FactoryLinkedServiceAzureSearch) SetProviderReference(r *xpv1.Reference) {
 	mg.Spec.ProviderReference = r
 }
 
-// SetWriteConnectionSecretToReference of this DataFactoryLinkedServiceAzureSearch.
-func (mg *DataFactoryLinkedServiceAzureSearch) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
+// SetWriteConnectionSecretToReference of this FactoryLinkedServiceAzureSearch.
+func (mg *FactoryLinkedServiceAzureSearch) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
 	mg.Spec.WriteConnectionSecretToReference = r
 }
 
-// GetCondition of this DataFactoryLinkedServiceAzureSqlDatabase.
-func (mg *DataFactoryLinkedServiceAzureSqlDatabase) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
+// GetCondition of this FactoryLinkedServiceAzureSqlDatabase.
+func (mg *FactoryLinkedServiceAzureSqlDatabase) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
 	return mg.Status.GetCondition(ct)
 }
 
-// GetDeletionPolicy of this DataFactoryLinkedServiceAzureSqlDatabase.
-func (mg *DataFactoryLinkedServiceAzureSqlDatabase) GetDeletionPolicy() xpv1.DeletionPolicy {
+// GetDeletionPolicy of this FactoryLinkedServiceAzureSqlDatabase.
+func (mg *FactoryLinkedServiceAzureSqlDatabase) GetDeletionPolicy() xpv1.DeletionPolicy {
 	return mg.Spec.DeletionPolicy
 }
 
-// GetProviderConfigReference of this DataFactoryLinkedServiceAzureSqlDatabase.
-func (mg *DataFactoryLinkedServiceAzureSqlDatabase) GetProviderConfigReference() *xpv1.Reference {
+// GetProviderConfigReference of this FactoryLinkedServiceAzureSqlDatabase.
+func (mg *FactoryLinkedServiceAzureSqlDatabase) GetProviderConfigReference() *xpv1.Reference {
 	return mg.Spec.ProviderConfigReference
 }
 
 /*
-GetProviderReference of this DataFactoryLinkedServiceAzureSqlDatabase.
+GetProviderReference of this FactoryLinkedServiceAzureSqlDatabase.
 Deprecated: Use GetProviderConfigReference.
 */
-func (mg *DataFactoryLinkedServiceAzureSqlDatabase) GetProviderReference() *xpv1.Reference {
+func (mg *FactoryLinkedServiceAzureSqlDatabase) GetProviderReference() *xpv1.Reference {
 	return mg.Spec.ProviderReference
 }
 
-// GetWriteConnectionSecretToReference of this DataFactoryLinkedServiceAzureSqlDatabase.
-func (mg *DataFactoryLinkedServiceAzureSqlDatabase) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
+// GetWriteConnectionSecretToReference of this FactoryLinkedServiceAzureSqlDatabase.
+func (mg *FactoryLinkedServiceAzureSqlDatabase) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
 	return mg.Spec.WriteConnectionSecretToReference
 }
 
-// SetConditions of this DataFactoryLinkedServiceAzureSqlDatabase.
-func (mg *DataFactoryLinkedServiceAzureSqlDatabase) SetConditions(c ...xpv1.Condition) {
+// SetConditions of this FactoryLinkedServiceAzureSqlDatabase.
+func (mg *FactoryLinkedServiceAzureSqlDatabase) SetConditions(c ...xpv1.Condition) {
 	mg.Status.SetConditions(c...)
 }
 
-// SetDeletionPolicy of this DataFactoryLinkedServiceAzureSqlDatabase.
-func (mg *DataFactoryLinkedServiceAzureSqlDatabase) SetDeletionPolicy(r xpv1.DeletionPolicy) {
+// SetDeletionPolicy of this FactoryLinkedServiceAzureSqlDatabase.
+func (mg *FactoryLinkedServiceAzureSqlDatabase) SetDeletionPolicy(r xpv1.DeletionPolicy) {
 	mg.Spec.DeletionPolicy = r
 }
 
-// SetProviderConfigReference of this DataFactoryLinkedServiceAzureSqlDatabase.
-func (mg *DataFactoryLinkedServiceAzureSqlDatabase) SetProviderConfigReference(r *xpv1.Reference) {
+// SetProviderConfigReference of this FactoryLinkedServiceAzureSqlDatabase.
+func (mg *FactoryLinkedServiceAzureSqlDatabase) SetProviderConfigReference(r *xpv1.Reference) {
 	mg.Spec.ProviderConfigReference = r
 }
 
 /*
-SetProviderReference of this DataFactoryLinkedServiceAzureSqlDatabase.
+SetProviderReference of this FactoryLinkedServiceAzureSqlDatabase.
 Deprecated: Use SetProviderConfigReference.
 */
-func (mg *DataFactoryLinkedServiceAzureSqlDatabase) SetProviderReference(r *xpv1.Reference) {
+func (mg *FactoryLinkedServiceAzureSqlDatabase) SetProviderReference(r *xpv1.Reference) {
 	mg.Spec.ProviderReference = r
 }
 
-// SetWriteConnectionSecretToReference of this DataFactoryLinkedServiceAzureSqlDatabase.
-func (mg *DataFactoryLinkedServiceAzureSqlDatabase) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
+// SetWriteConnectionSecretToReference of this FactoryLinkedServiceAzureSqlDatabase.
+func (mg *FactoryLinkedServiceAzureSqlDatabase) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
 	mg.Spec.WriteConnectionSecretToReference = r
 }
 
-// GetCondition of this DataFactoryLinkedServiceAzureTableStorage.
-func (mg *DataFactoryLinkedServiceAzureTableStorage) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
+// GetCondition of this FactoryLinkedServiceAzureTableStorage.
+func (mg *FactoryLinkedServiceAzureTableStorage) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
 	return mg.Status.GetCondition(ct)
 }
 
-// GetDeletionPolicy of this DataFactoryLinkedServiceAzureTableStorage.
-func (mg *DataFactoryLinkedServiceAzureTableStorage) GetDeletionPolicy() xpv1.DeletionPolicy {
+// GetDeletionPolicy of this FactoryLinkedServiceAzureTableStorage.
+func (mg *FactoryLinkedServiceAzureTableStorage) GetDeletionPolicy() xpv1.DeletionPolicy {
 	return mg.Spec.DeletionPolicy
 }
 
-// GetProviderConfigReference of this DataFactoryLinkedServiceAzureTableStorage.
-func (mg *DataFactoryLinkedServiceAzureTableStorage) GetProviderConfigReference() *xpv1.Reference {
+// GetProviderConfigReference of this FactoryLinkedServiceAzureTableStorage.
+func (mg *FactoryLinkedServiceAzureTableStorage) GetProviderConfigReference() *xpv1.Reference {
 	return mg.Spec.ProviderConfigReference
 }
 
 /*
-GetProviderReference of this DataFactoryLinkedServiceAzureTableStorage.
+GetProviderReference of this FactoryLinkedServiceAzureTableStorage.
 Deprecated: Use GetProviderConfigReference.
 */
-func (mg *DataFactoryLinkedServiceAzureTableStorage) GetProviderReference() *xpv1.Reference {
+func (mg *FactoryLinkedServiceAzureTableStorage) GetProviderReference() *xpv1.Reference {
 	return mg.Spec.ProviderReference
 }
 
-// GetWriteConnectionSecretToReference of this DataFactoryLinkedServiceAzureTableStorage.
-func (mg *DataFactoryLinkedServiceAzureTableStorage) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
+// GetWriteConnectionSecretToReference of this FactoryLinkedServiceAzureTableStorage.
+func (mg *FactoryLinkedServiceAzureTableStorage) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
 	return mg.Spec.WriteConnectionSecretToReference
 }
 
-// SetConditions of this DataFactoryLinkedServiceAzureTableStorage.
-func (mg *DataFactoryLinkedServiceAzureTableStorage) SetConditions(c ...xpv1.Condition) {
+// SetConditions of this FactoryLinkedServiceAzureTableStorage.
+func (mg *FactoryLinkedServiceAzureTableStorage) SetConditions(c ...xpv1.Condition) {
 	mg.Status.SetConditions(c...)
 }
 
-// SetDeletionPolicy of this DataFactoryLinkedServiceAzureTableStorage.
-func (mg *DataFactoryLinkedServiceAzureTableStorage) SetDeletionPolicy(r xpv1.DeletionPolicy) {
+// SetDeletionPolicy of this FactoryLinkedServiceAzureTableStorage.
+func (mg *FactoryLinkedServiceAzureTableStorage) SetDeletionPolicy(r xpv1.DeletionPolicy) {
 	mg.Spec.DeletionPolicy = r
 }
 
-// SetProviderConfigReference of this DataFactoryLinkedServiceAzureTableStorage.
-func (mg *DataFactoryLinkedServiceAzureTableStorage) SetProviderConfigReference(r *xpv1.Reference) {
+// SetProviderConfigReference of this FactoryLinkedServiceAzureTableStorage.
+func (mg *FactoryLinkedServiceAzureTableStorage) SetProviderConfigReference(r *xpv1.Reference) {
 	mg.Spec.ProviderConfigReference = r
 }
 
 /*
-SetProviderReference of this DataFactoryLinkedServiceAzureTableStorage.
+SetProviderReference of this FactoryLinkedServiceAzureTableStorage.
 Deprecated: Use SetProviderConfigReference.
 */
-func (mg *DataFactoryLinkedServiceAzureTableStorage) SetProviderReference(r *xpv1.Reference) {
+func (mg *FactoryLinkedServiceAzureTableStorage) SetProviderReference(r *xpv1.Reference) {
 	mg.Spec.ProviderReference = r
 }
 
-// SetWriteConnectionSecretToReference of this DataFactoryLinkedServiceAzureTableStorage.
-func (mg *DataFactoryLinkedServiceAzureTableStorage) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
+// SetWriteConnectionSecretToReference of this FactoryLinkedServiceAzureTableStorage.
+func (mg *FactoryLinkedServiceAzureTableStorage) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
 	mg.Spec.WriteConnectionSecretToReference = r
 }
 
-// GetCondition of this DataFactoryLinkedServiceCosmosdb.
-func (mg *DataFactoryLinkedServiceCosmosdb) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
+// GetCondition of this FactoryLinkedServiceCosmosdb.
+func (mg *FactoryLinkedServiceCosmosdb) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
 	return mg.Status.GetCondition(ct)
 }
 
-// GetDeletionPolicy of this DataFactoryLinkedServiceCosmosdb.
-func (mg *DataFactoryLinkedServiceCosmosdb) GetDeletionPolicy() xpv1.DeletionPolicy {
+// GetDeletionPolicy of this FactoryLinkedServiceCosmosdb.
+func (mg *FactoryLinkedServiceCosmosdb) GetDeletionPolicy() xpv1.DeletionPolicy {
 	return mg.Spec.DeletionPolicy
 }
 
-// GetProviderConfigReference of this DataFactoryLinkedServiceCosmosdb.
-func (mg *DataFactoryLinkedServiceCosmosdb) GetProviderConfigReference() *xpv1.Reference {
+// GetProviderConfigReference of this FactoryLinkedServiceCosmosdb.
+func (mg *FactoryLinkedServiceCosmosdb) GetProviderConfigReference() *xpv1.Reference {
 	return mg.Spec.ProviderConfigReference
 }
 
 /*
-GetProviderReference of this DataFactoryLinkedServiceCosmosdb.
+GetProviderReference of this FactoryLinkedServiceCosmosdb.
 Deprecated: Use GetProviderConfigReference.
 */
-func (mg *DataFactoryLinkedServiceCosmosdb) GetProviderReference() *xpv1.Reference {
+func (mg *FactoryLinkedServiceCosmosdb) GetProviderReference() *xpv1.Reference {
 	return mg.Spec.ProviderReference
 }
 
-// GetWriteConnectionSecretToReference of this DataFactoryLinkedServiceCosmosdb.
-func (mg *DataFactoryLinkedServiceCosmosdb) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
+// GetWriteConnectionSecretToReference of this FactoryLinkedServiceCosmosdb.
+func (mg *FactoryLinkedServiceCosmosdb) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
 	return mg.Spec.WriteConnectionSecretToReference
 }
 
-// SetConditions of this DataFactoryLinkedServiceCosmosdb.
-func (mg *DataFactoryLinkedServiceCosmosdb) SetConditions(c ...xpv1.Condition) {
+// SetConditions of this FactoryLinkedServiceCosmosdb.
+func (mg *FactoryLinkedServiceCosmosdb) SetConditions(c ...xpv1.Condition) {
 	mg.Status.SetConditions(c...)
 }
 
-// SetDeletionPolicy of this DataFactoryLinkedServiceCosmosdb.
-func (mg *DataFactoryLinkedServiceCosmosdb) SetDeletionPolicy(r xpv1.DeletionPolicy) {
+// SetDeletionPolicy of this FactoryLinkedServiceCosmosdb.
+func (mg *FactoryLinkedServiceCosmosdb) SetDeletionPolicy(r xpv1.DeletionPolicy) {
 	mg.Spec.DeletionPolicy = r
 }
 
-// SetProviderConfigReference of this DataFactoryLinkedServiceCosmosdb.
-func (mg *DataFactoryLinkedServiceCosmosdb) SetProviderConfigReference(r *xpv1.Reference) {
+// SetProviderConfigReference of this FactoryLinkedServiceCosmosdb.
+func (mg *FactoryLinkedServiceCosmosdb) SetProviderConfigReference(r *xpv1.Reference) {
 	mg.Spec.ProviderConfigReference = r
 }
 
 /*
-SetProviderReference of this DataFactoryLinkedServiceCosmosdb.
+SetProviderReference of this FactoryLinkedServiceCosmosdb.
 Deprecated: Use SetProviderConfigReference.
 */
-func (mg *DataFactoryLinkedServiceCosmosdb) SetProviderReference(r *xpv1.Reference) {
+func (mg *FactoryLinkedServiceCosmosdb) SetProviderReference(r *xpv1.Reference) {
 	mg.Spec.ProviderReference = r
 }
 
-// SetWriteConnectionSecretToReference of this DataFactoryLinkedServiceCosmosdb.
-func (mg *DataFactoryLinkedServiceCosmosdb) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
+// SetWriteConnectionSecretToReference of this FactoryLinkedServiceCosmosdb.
+func (mg *FactoryLinkedServiceCosmosdb) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
 	mg.Spec.WriteConnectionSecretToReference = r
 }
 
-// GetCondition of this DataFactoryLinkedServiceDataLakeStorageGen2.
-func (mg *DataFactoryLinkedServiceDataLakeStorageGen2) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
+// GetCondition of this FactoryLinkedServiceDataLakeStorageGen2.
+func (mg *FactoryLinkedServiceDataLakeStorageGen2) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
 	return mg.Status.GetCondition(ct)
 }
 
-// GetDeletionPolicy of this DataFactoryLinkedServiceDataLakeStorageGen2.
-func (mg *DataFactoryLinkedServiceDataLakeStorageGen2) GetDeletionPolicy() xpv1.DeletionPolicy {
+// GetDeletionPolicy of this FactoryLinkedServiceDataLakeStorageGen2.
+func (mg *FactoryLinkedServiceDataLakeStorageGen2) GetDeletionPolicy() xpv1.DeletionPolicy {
 	return mg.Spec.DeletionPolicy
 }
 
-// GetProviderConfigReference of this DataFactoryLinkedServiceDataLakeStorageGen2.
-func (mg *DataFactoryLinkedServiceDataLakeStorageGen2) GetProviderConfigReference() *xpv1.Reference {
+// GetProviderConfigReference of this FactoryLinkedServiceDataLakeStorageGen2.
+func (mg *FactoryLinkedServiceDataLakeStorageGen2) GetProviderConfigReference() *xpv1.Reference {
 	return mg.Spec.ProviderConfigReference
 }
 
 /*
-GetProviderReference of this DataFactoryLinkedServiceDataLakeStorageGen2.
+GetProviderReference of this FactoryLinkedServiceDataLakeStorageGen2.
 Deprecated: Use GetProviderConfigReference.
 */
-func (mg *DataFactoryLinkedServiceDataLakeStorageGen2) GetProviderReference() *xpv1.Reference {
+func (mg *FactoryLinkedServiceDataLakeStorageGen2) GetProviderReference() *xpv1.Reference {
 	return mg.Spec.ProviderReference
 }
 
-// GetWriteConnectionSecretToReference of this DataFactoryLinkedServiceDataLakeStorageGen2.
-func (mg *DataFactoryLinkedServiceDataLakeStorageGen2) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
+// GetWriteConnectionSecretToReference of this FactoryLinkedServiceDataLakeStorageGen2.
+func (mg *FactoryLinkedServiceDataLakeStorageGen2) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
 	return mg.Spec.WriteConnectionSecretToReference
 }
 
-// SetConditions of this DataFactoryLinkedServiceDataLakeStorageGen2.
-func (mg *DataFactoryLinkedServiceDataLakeStorageGen2) SetConditions(c ...xpv1.Condition) {
+// SetConditions of this FactoryLinkedServiceDataLakeStorageGen2.
+func (mg *FactoryLinkedServiceDataLakeStorageGen2) SetConditions(c ...xpv1.Condition) {
 	mg.Status.SetConditions(c...)
 }
 
-// SetDeletionPolicy of this DataFactoryLinkedServiceDataLakeStorageGen2.
-func (mg *DataFactoryLinkedServiceDataLakeStorageGen2) SetDeletionPolicy(r xpv1.DeletionPolicy) {
+// SetDeletionPolicy of this FactoryLinkedServiceDataLakeStorageGen2.
+func (mg *FactoryLinkedServiceDataLakeStorageGen2) SetDeletionPolicy(r xpv1.DeletionPolicy) {
 	mg.Spec.DeletionPolicy = r
 }
 
-// SetProviderConfigReference of this DataFactoryLinkedServiceDataLakeStorageGen2.
-func (mg *DataFactoryLinkedServiceDataLakeStorageGen2) SetProviderConfigReference(r *xpv1.Reference) {
+// SetProviderConfigReference of this FactoryLinkedServiceDataLakeStorageGen2.
+func (mg *FactoryLinkedServiceDataLakeStorageGen2) SetProviderConfigReference(r *xpv1.Reference) {
 	mg.Spec.ProviderConfigReference = r
 }
 
 /*
-SetProviderReference of this DataFactoryLinkedServiceDataLakeStorageGen2.
+SetProviderReference of this FactoryLinkedServiceDataLakeStorageGen2.
 Deprecated: Use SetProviderConfigReference.
 */
-func (mg *DataFactoryLinkedServiceDataLakeStorageGen2) SetProviderReference(r *xpv1.Reference) {
+func (mg *FactoryLinkedServiceDataLakeStorageGen2) SetProviderReference(r *xpv1.Reference) {
 	mg.Spec.ProviderReference = r
 }
 
-// SetWriteConnectionSecretToReference of this DataFactoryLinkedServiceDataLakeStorageGen2.
-func (mg *DataFactoryLinkedServiceDataLakeStorageGen2) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
+// SetWriteConnectionSecretToReference of this FactoryLinkedServiceDataLakeStorageGen2.
+func (mg *FactoryLinkedServiceDataLakeStorageGen2) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
 	mg.Spec.WriteConnectionSecretToReference = r
 }
 
-// GetCondition of this DataFactoryLinkedServiceKeyVault.
-func (mg *DataFactoryLinkedServiceKeyVault) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
+// GetCondition of this FactoryLinkedServiceKeyVault.
+func (mg *FactoryLinkedServiceKeyVault) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
 	return mg.Status.GetCondition(ct)
 }
 
-// GetDeletionPolicy of this DataFactoryLinkedServiceKeyVault.
-func (mg *DataFactoryLinkedServiceKeyVault) GetDeletionPolicy() xpv1.DeletionPolicy {
+// GetDeletionPolicy of this FactoryLinkedServiceKeyVault.
+func (mg *FactoryLinkedServiceKeyVault) GetDeletionPolicy() xpv1.DeletionPolicy {
 	return mg.Spec.DeletionPolicy
 }
 
-// GetProviderConfigReference of this DataFactoryLinkedServiceKeyVault.
-func (mg *DataFactoryLinkedServiceKeyVault) GetProviderConfigReference() *xpv1.Reference {
+// GetProviderConfigReference of this FactoryLinkedServiceKeyVault.
+func (mg *FactoryLinkedServiceKeyVault) GetProviderConfigReference() *xpv1.Reference {
 	return mg.Spec.ProviderConfigReference
 }
 
 /*
-GetProviderReference of this DataFactoryLinkedServiceKeyVault.
+GetProviderReference of this FactoryLinkedServiceKeyVault.
 Deprecated: Use GetProviderConfigReference.
 */
-func (mg *DataFactoryLinkedServiceKeyVault) GetProviderReference() *xpv1.Reference {
+func (mg *FactoryLinkedServiceKeyVault) GetProviderReference() *xpv1.Reference {
 	return mg.Spec.ProviderReference
 }
 
-// GetWriteConnectionSecretToReference of this DataFactoryLinkedServiceKeyVault.
-func (mg *DataFactoryLinkedServiceKeyVault) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
+// GetWriteConnectionSecretToReference of this FactoryLinkedServiceKeyVault.
+func (mg *FactoryLinkedServiceKeyVault) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
 	return mg.Spec.WriteConnectionSecretToReference
 }
 
-// SetConditions of this DataFactoryLinkedServiceKeyVault.
-func (mg *DataFactoryLinkedServiceKeyVault) SetConditions(c ...xpv1.Condition) {
+// SetConditions of this FactoryLinkedServiceKeyVault.
+func (mg *FactoryLinkedServiceKeyVault) SetConditions(c ...xpv1.Condition) {
 	mg.Status.SetConditions(c...)
 }
 
-// SetDeletionPolicy of this DataFactoryLinkedServiceKeyVault.
-func (mg *DataFactoryLinkedServiceKeyVault) SetDeletionPolicy(r xpv1.DeletionPolicy) {
+// SetDeletionPolicy of this FactoryLinkedServiceKeyVault.
+func (mg *FactoryLinkedServiceKeyVault) SetDeletionPolicy(r xpv1.DeletionPolicy) {
 	mg.Spec.DeletionPolicy = r
 }
 
-// SetProviderConfigReference of this DataFactoryLinkedServiceKeyVault.
-func (mg *DataFactoryLinkedServiceKeyVault) SetProviderConfigReference(r *xpv1.Reference) {
+// SetProviderConfigReference of this FactoryLinkedServiceKeyVault.
+func (mg *FactoryLinkedServiceKeyVault) SetProviderConfigReference(r *xpv1.Reference) {
 	mg.Spec.ProviderConfigReference = r
 }
 
 /*
-SetProviderReference of this DataFactoryLinkedServiceKeyVault.
+SetProviderReference of this FactoryLinkedServiceKeyVault.
 Deprecated: Use SetProviderConfigReference.
 */
-func (mg *DataFactoryLinkedServiceKeyVault) SetProviderReference(r *xpv1.Reference) {
+func (mg *FactoryLinkedServiceKeyVault) SetProviderReference(r *xpv1.Reference) {
 	mg.Spec.ProviderReference = r
 }
 
-// SetWriteConnectionSecretToReference of this DataFactoryLinkedServiceKeyVault.
-func (mg *DataFactoryLinkedServiceKeyVault) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
+// SetWriteConnectionSecretToReference of this FactoryLinkedServiceKeyVault.
+func (mg *FactoryLinkedServiceKeyVault) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
 	mg.Spec.WriteConnectionSecretToReference = r
 }
 
-// GetCondition of this DataFactoryLinkedServiceKusto.
-func (mg *DataFactoryLinkedServiceKusto) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
+// GetCondition of this FactoryLinkedServiceKusto.
+func (mg *FactoryLinkedServiceKusto) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
 	return mg.Status.GetCondition(ct)
 }
 
-// GetDeletionPolicy of this DataFactoryLinkedServiceKusto.
-func (mg *DataFactoryLinkedServiceKusto) GetDeletionPolicy() xpv1.DeletionPolicy {
+// GetDeletionPolicy of this FactoryLinkedServiceKusto.
+func (mg *FactoryLinkedServiceKusto) GetDeletionPolicy() xpv1.DeletionPolicy {
 	return mg.Spec.DeletionPolicy
 }
 
-// GetProviderConfigReference of this DataFactoryLinkedServiceKusto.
-func (mg *DataFactoryLinkedServiceKusto) GetProviderConfigReference() *xpv1.Reference {
+// GetProviderConfigReference of this FactoryLinkedServiceKusto.
+func (mg *FactoryLinkedServiceKusto) GetProviderConfigReference() *xpv1.Reference {
 	return mg.Spec.ProviderConfigReference
 }
 
 /*
-GetProviderReference of this DataFactoryLinkedServiceKusto.
+GetProviderReference of this FactoryLinkedServiceKusto.
 Deprecated: Use GetProviderConfigReference.
 */
-func (mg *DataFactoryLinkedServiceKusto) GetProviderReference() *xpv1.Reference {
+func (mg *FactoryLinkedServiceKusto) GetProviderReference() *xpv1.Reference {
 	return mg.Spec.ProviderReference
 }
 
-// GetWriteConnectionSecretToReference of this DataFactoryLinkedServiceKusto.
-func (mg *DataFactoryLinkedServiceKusto) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
+// GetWriteConnectionSecretToReference of this FactoryLinkedServiceKusto.
+func (mg *FactoryLinkedServiceKusto) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
 	return mg.Spec.WriteConnectionSecretToReference
 }
 
-// SetConditions of this DataFactoryLinkedServiceKusto.
-func (mg *DataFactoryLinkedServiceKusto) SetConditions(c ...xpv1.Condition) {
+// SetConditions of this FactoryLinkedServiceKusto.
+func (mg *FactoryLinkedServiceKusto) SetConditions(c ...xpv1.Condition) {
 	mg.Status.SetConditions(c...)
 }
 
-// SetDeletionPolicy of this DataFactoryLinkedServiceKusto.
-func (mg *DataFactoryLinkedServiceKusto) SetDeletionPolicy(r xpv1.DeletionPolicy) {
+// SetDeletionPolicy of this FactoryLinkedServiceKusto.
+func (mg *FactoryLinkedServiceKusto) SetDeletionPolicy(r xpv1.DeletionPolicy) {
 	mg.Spec.DeletionPolicy = r
 }
 
-// SetProviderConfigReference of this DataFactoryLinkedServiceKusto.
-func (mg *DataFactoryLinkedServiceKusto) SetProviderConfigReference(r *xpv1.Reference) {
+// SetProviderConfigReference of this FactoryLinkedServiceKusto.
+func (mg *FactoryLinkedServiceKusto) SetProviderConfigReference(r *xpv1.Reference) {
 	mg.Spec.ProviderConfigReference = r
 }
 
 /*
-SetProviderReference of this DataFactoryLinkedServiceKusto.
+SetProviderReference of this FactoryLinkedServiceKusto.
 Deprecated: Use SetProviderConfigReference.
 */
-func (mg *DataFactoryLinkedServiceKusto) SetProviderReference(r *xpv1.Reference) {
+func (mg *FactoryLinkedServiceKusto) SetProviderReference(r *xpv1.Reference) {
 	mg.Spec.ProviderReference = r
 }
 
-// SetWriteConnectionSecretToReference of this DataFactoryLinkedServiceKusto.
-func (mg *DataFactoryLinkedServiceKusto) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
+// SetWriteConnectionSecretToReference of this FactoryLinkedServiceKusto.
+func (mg *FactoryLinkedServiceKusto) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
 	mg.Spec.WriteConnectionSecretToReference = r
 }
 
-// GetCondition of this DataFactoryLinkedServiceMysql.
-func (mg *DataFactoryLinkedServiceMysql) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
+// GetCondition of this FactoryLinkedServiceMysql.
+func (mg *FactoryLinkedServiceMysql) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
 	return mg.Status.GetCondition(ct)
 }
 
-// GetDeletionPolicy of this DataFactoryLinkedServiceMysql.
-func (mg *DataFactoryLinkedServiceMysql) GetDeletionPolicy() xpv1.DeletionPolicy {
+// GetDeletionPolicy of this FactoryLinkedServiceMysql.
+func (mg *FactoryLinkedServiceMysql) GetDeletionPolicy() xpv1.DeletionPolicy {
 	return mg.Spec.DeletionPolicy
 }
 
-// GetProviderConfigReference of this DataFactoryLinkedServiceMysql.
-func (mg *DataFactoryLinkedServiceMysql) GetProviderConfigReference() *xpv1.Reference {
+// GetProviderConfigReference of this FactoryLinkedServiceMysql.
+func (mg *FactoryLinkedServiceMysql) GetProviderConfigReference() *xpv1.Reference {
 	return mg.Spec.ProviderConfigReference
 }
 
 /*
-GetProviderReference of this DataFactoryLinkedServiceMysql.
+GetProviderReference of this FactoryLinkedServiceMysql.
 Deprecated: Use GetProviderConfigReference.
 */
-func (mg *DataFactoryLinkedServiceMysql) GetProviderReference() *xpv1.Reference {
+func (mg *FactoryLinkedServiceMysql) GetProviderReference() *xpv1.Reference {
 	return mg.Spec.ProviderReference
 }
 
-// GetWriteConnectionSecretToReference of this DataFactoryLinkedServiceMysql.
-func (mg *DataFactoryLinkedServiceMysql) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
+// GetWriteConnectionSecretToReference of this FactoryLinkedServiceMysql.
+func (mg *FactoryLinkedServiceMysql) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
 	return mg.Spec.WriteConnectionSecretToReference
 }
 
-// SetConditions of this DataFactoryLinkedServiceMysql.
-func (mg *DataFactoryLinkedServiceMysql) SetConditions(c ...xpv1.Condition) {
+// SetConditions of this FactoryLinkedServiceMysql.
+func (mg *FactoryLinkedServiceMysql) SetConditions(c ...xpv1.Condition) {
 	mg.Status.SetConditions(c...)
 }
 
-// SetDeletionPolicy of this DataFactoryLinkedServiceMysql.
-func (mg *DataFactoryLinkedServiceMysql) SetDeletionPolicy(r xpv1.DeletionPolicy) {
+// SetDeletionPolicy of this FactoryLinkedServiceMysql.
+func (mg *FactoryLinkedServiceMysql) SetDeletionPolicy(r xpv1.DeletionPolicy) {
 	mg.Spec.DeletionPolicy = r
 }
 
-// SetProviderConfigReference of this DataFactoryLinkedServiceMysql.
-func (mg *DataFactoryLinkedServiceMysql) SetProviderConfigReference(r *xpv1.Reference) {
+// SetProviderConfigReference of this FactoryLinkedServiceMysql.
+func (mg *FactoryLinkedServiceMysql) SetProviderConfigReference(r *xpv1.Reference) {
 	mg.Spec.ProviderConfigReference = r
 }
 
 /*
-SetProviderReference of this DataFactoryLinkedServiceMysql.
+SetProviderReference of this FactoryLinkedServiceMysql.
 Deprecated: Use SetProviderConfigReference.
 */
-func (mg *DataFactoryLinkedServiceMysql) SetProviderReference(r *xpv1.Reference) {
+func (mg *FactoryLinkedServiceMysql) SetProviderReference(r *xpv1.Reference) {
 	mg.Spec.ProviderReference = r
 }
 
-// SetWriteConnectionSecretToReference of this DataFactoryLinkedServiceMysql.
-func (mg *DataFactoryLinkedServiceMysql) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
+// SetWriteConnectionSecretToReference of this FactoryLinkedServiceMysql.
+func (mg *FactoryLinkedServiceMysql) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
 	mg.Spec.WriteConnectionSecretToReference = r
 }
 
-// GetCondition of this DataFactoryLinkedServiceOdata.
-func (mg *DataFactoryLinkedServiceOdata) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
+// GetCondition of this FactoryLinkedServiceOdata.
+func (mg *FactoryLinkedServiceOdata) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
 	return mg.Status.GetCondition(ct)
 }
 
-// GetDeletionPolicy of this DataFactoryLinkedServiceOdata.
-func (mg *DataFactoryLinkedServiceOdata) GetDeletionPolicy() xpv1.DeletionPolicy {
+// GetDeletionPolicy of this FactoryLinkedServiceOdata.
+func (mg *FactoryLinkedServiceOdata) GetDeletionPolicy() xpv1.DeletionPolicy {
 	return mg.Spec.DeletionPolicy
 }
 
-// GetProviderConfigReference of this DataFactoryLinkedServiceOdata.
-func (mg *DataFactoryLinkedServiceOdata) GetProviderConfigReference() *xpv1.Reference {
+// GetProviderConfigReference of this FactoryLinkedServiceOdata.
+func (mg *FactoryLinkedServiceOdata) GetProviderConfigReference() *xpv1.Reference {
 	return mg.Spec.ProviderConfigReference
 }
 
 /*
-GetProviderReference of this DataFactoryLinkedServiceOdata.
+GetProviderReference of this FactoryLinkedServiceOdata.
 Deprecated: Use GetProviderConfigReference.
 */
-func (mg *DataFactoryLinkedServiceOdata) GetProviderReference() *xpv1.Reference {
+func (mg *FactoryLinkedServiceOdata) GetProviderReference() *xpv1.Reference {
 	return mg.Spec.ProviderReference
 }
 
-// GetWriteConnectionSecretToReference of this DataFactoryLinkedServiceOdata.
-func (mg *DataFactoryLinkedServiceOdata) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
+// GetWriteConnectionSecretToReference of this FactoryLinkedServiceOdata.
+func (mg *FactoryLinkedServiceOdata) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
 	return mg.Spec.WriteConnectionSecretToReference
 }
 
-// SetConditions of this DataFactoryLinkedServiceOdata.
-func (mg *DataFactoryLinkedServiceOdata) SetConditions(c ...xpv1.Condition) {
+// SetConditions of this FactoryLinkedServiceOdata.
+func (mg *FactoryLinkedServiceOdata) SetConditions(c ...xpv1.Condition) {
 	mg.Status.SetConditions(c...)
 }
 
-// SetDeletionPolicy of this DataFactoryLinkedServiceOdata.
-func (mg *DataFactoryLinkedServiceOdata) SetDeletionPolicy(r xpv1.DeletionPolicy) {
+// SetDeletionPolicy of this FactoryLinkedServiceOdata.
+func (mg *FactoryLinkedServiceOdata) SetDeletionPolicy(r xpv1.DeletionPolicy) {
 	mg.Spec.DeletionPolicy = r
 }
 
-// SetProviderConfigReference of this DataFactoryLinkedServiceOdata.
-func (mg *DataFactoryLinkedServiceOdata) SetProviderConfigReference(r *xpv1.Reference) {
+// SetProviderConfigReference of this FactoryLinkedServiceOdata.
+func (mg *FactoryLinkedServiceOdata) SetProviderConfigReference(r *xpv1.Reference) {
 	mg.Spec.ProviderConfigReference = r
 }
 
 /*
-SetProviderReference of this DataFactoryLinkedServiceOdata.
+SetProviderReference of this FactoryLinkedServiceOdata.
 Deprecated: Use SetProviderConfigReference.
 */
-func (mg *DataFactoryLinkedServiceOdata) SetProviderReference(r *xpv1.Reference) {
+func (mg *FactoryLinkedServiceOdata) SetProviderReference(r *xpv1.Reference) {
 	mg.Spec.ProviderReference = r
 }
 
-// SetWriteConnectionSecretToReference of this DataFactoryLinkedServiceOdata.
-func (mg *DataFactoryLinkedServiceOdata) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
+// SetWriteConnectionSecretToReference of this FactoryLinkedServiceOdata.
+func (mg *FactoryLinkedServiceOdata) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
 	mg.Spec.WriteConnectionSecretToReference = r
 }
 
-// GetCondition of this DataFactoryLinkedServicePostgresql.
-func (mg *DataFactoryLinkedServicePostgresql) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
+// GetCondition of this FactoryLinkedServicePostgresql.
+func (mg *FactoryLinkedServicePostgresql) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
 	return mg.Status.GetCondition(ct)
 }
 
-// GetDeletionPolicy of this DataFactoryLinkedServicePostgresql.
-func (mg *DataFactoryLinkedServicePostgresql) GetDeletionPolicy() xpv1.DeletionPolicy {
+// GetDeletionPolicy of this FactoryLinkedServicePostgresql.
+func (mg *FactoryLinkedServicePostgresql) GetDeletionPolicy() xpv1.DeletionPolicy {
 	return mg.Spec.DeletionPolicy
 }
 
-// GetProviderConfigReference of this DataFactoryLinkedServicePostgresql.
-func (mg *DataFactoryLinkedServicePostgresql) GetProviderConfigReference() *xpv1.Reference {
+// GetProviderConfigReference of this FactoryLinkedServicePostgresql.
+func (mg *FactoryLinkedServicePostgresql) GetProviderConfigReference() *xpv1.Reference {
 	return mg.Spec.ProviderConfigReference
 }
 
 /*
-GetProviderReference of this DataFactoryLinkedServicePostgresql.
+GetProviderReference of this FactoryLinkedServicePostgresql.
 Deprecated: Use GetProviderConfigReference.
 */
-func (mg *DataFactoryLinkedServicePostgresql) GetProviderReference() *xpv1.Reference {
+func (mg *FactoryLinkedServicePostgresql) GetProviderReference() *xpv1.Reference {
 	return mg.Spec.ProviderReference
 }
 
-// GetWriteConnectionSecretToReference of this DataFactoryLinkedServicePostgresql.
-func (mg *DataFactoryLinkedServicePostgresql) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
+// GetWriteConnectionSecretToReference of this FactoryLinkedServicePostgresql.
+func (mg *FactoryLinkedServicePostgresql) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
 	return mg.Spec.WriteConnectionSecretToReference
 }
 
-// SetConditions of this DataFactoryLinkedServicePostgresql.
-func (mg *DataFactoryLinkedServicePostgresql) SetConditions(c ...xpv1.Condition) {
+// SetConditions of this FactoryLinkedServicePostgresql.
+func (mg *FactoryLinkedServicePostgresql) SetConditions(c ...xpv1.Condition) {
 	mg.Status.SetConditions(c...)
 }
 
-// SetDeletionPolicy of this DataFactoryLinkedServicePostgresql.
-func (mg *DataFactoryLinkedServicePostgresql) SetDeletionPolicy(r xpv1.DeletionPolicy) {
+// SetDeletionPolicy of this FactoryLinkedServicePostgresql.
+func (mg *FactoryLinkedServicePostgresql) SetDeletionPolicy(r xpv1.DeletionPolicy) {
 	mg.Spec.DeletionPolicy = r
 }
 
-// SetProviderConfigReference of this DataFactoryLinkedServicePostgresql.
-func (mg *DataFactoryLinkedServicePostgresql) SetProviderConfigReference(r *xpv1.Reference) {
+// SetProviderConfigReference of this FactoryLinkedServicePostgresql.
+func (mg *FactoryLinkedServicePostgresql) SetProviderConfigReference(r *xpv1.Reference) {
 	mg.Spec.ProviderConfigReference = r
 }
 
 /*
-SetProviderReference of this DataFactoryLinkedServicePostgresql.
+SetProviderReference of this FactoryLinkedServicePostgresql.
 Deprecated: Use SetProviderConfigReference.
 */
-func (mg *DataFactoryLinkedServicePostgresql) SetProviderReference(r *xpv1.Reference) {
+func (mg *FactoryLinkedServicePostgresql) SetProviderReference(r *xpv1.Reference) {
 	mg.Spec.ProviderReference = r
 }
 
-// SetWriteConnectionSecretToReference of this DataFactoryLinkedServicePostgresql.
-func (mg *DataFactoryLinkedServicePostgresql) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
+// SetWriteConnectionSecretToReference of this FactoryLinkedServicePostgresql.
+func (mg *FactoryLinkedServicePostgresql) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
 	mg.Spec.WriteConnectionSecretToReference = r
 }
 
-// GetCondition of this DataFactoryLinkedServiceSftp.
-func (mg *DataFactoryLinkedServiceSftp) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
+// GetCondition of this FactoryLinkedServiceSftp.
+func (mg *FactoryLinkedServiceSftp) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
 	return mg.Status.GetCondition(ct)
 }
 
-// GetDeletionPolicy of this DataFactoryLinkedServiceSftp.
-func (mg *DataFactoryLinkedServiceSftp) GetDeletionPolicy() xpv1.DeletionPolicy {
+// GetDeletionPolicy of this FactoryLinkedServiceSftp.
+func (mg *FactoryLinkedServiceSftp) GetDeletionPolicy() xpv1.DeletionPolicy {
 	return mg.Spec.DeletionPolicy
 }
 
-// GetProviderConfigReference of this DataFactoryLinkedServiceSftp.
-func (mg *DataFactoryLinkedServiceSftp) GetProviderConfigReference() *xpv1.Reference {
+// GetProviderConfigReference of this FactoryLinkedServiceSftp.
+func (mg *FactoryLinkedServiceSftp) GetProviderConfigReference() *xpv1.Reference {
 	return mg.Spec.ProviderConfigReference
 }
 
 /*
-GetProviderReference of this DataFactoryLinkedServiceSftp.
+GetProviderReference of this FactoryLinkedServiceSftp.
 Deprecated: Use GetProviderConfigReference.
 */
-func (mg *DataFactoryLinkedServiceSftp) GetProviderReference() *xpv1.Reference {
+func (mg *FactoryLinkedServiceSftp) GetProviderReference() *xpv1.Reference {
 	return mg.Spec.ProviderReference
 }
 
-// GetWriteConnectionSecretToReference of this DataFactoryLinkedServiceSftp.
-func (mg *DataFactoryLinkedServiceSftp) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
+// GetWriteConnectionSecretToReference of this FactoryLinkedServiceSftp.
+func (mg *FactoryLinkedServiceSftp) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
 	return mg.Spec.WriteConnectionSecretToReference
 }
 
-// SetConditions of this DataFactoryLinkedServiceSftp.
-func (mg *DataFactoryLinkedServiceSftp) SetConditions(c ...xpv1.Condition) {
+// SetConditions of this FactoryLinkedServiceSftp.
+func (mg *FactoryLinkedServiceSftp) SetConditions(c ...xpv1.Condition) {
 	mg.Status.SetConditions(c...)
 }
 
-// SetDeletionPolicy of this DataFactoryLinkedServiceSftp.
-func (mg *DataFactoryLinkedServiceSftp) SetDeletionPolicy(r xpv1.DeletionPolicy) {
+// SetDeletionPolicy of this FactoryLinkedServiceSftp.
+func (mg *FactoryLinkedServiceSftp) SetDeletionPolicy(r xpv1.DeletionPolicy) {
 	mg.Spec.DeletionPolicy = r
 }
 
-// SetProviderConfigReference of this DataFactoryLinkedServiceSftp.
-func (mg *DataFactoryLinkedServiceSftp) SetProviderConfigReference(r *xpv1.Reference) {
+// SetProviderConfigReference of this FactoryLinkedServiceSftp.
+func (mg *FactoryLinkedServiceSftp) SetProviderConfigReference(r *xpv1.Reference) {
 	mg.Spec.ProviderConfigReference = r
 }
 
 /*
-SetProviderReference of this DataFactoryLinkedServiceSftp.
+SetProviderReference of this FactoryLinkedServiceSftp.
 Deprecated: Use SetProviderConfigReference.
 */
-func (mg *DataFactoryLinkedServiceSftp) SetProviderReference(r *xpv1.Reference) {
+func (mg *FactoryLinkedServiceSftp) SetProviderReference(r *xpv1.Reference) {
 	mg.Spec.ProviderReference = r
 }
 
-// SetWriteConnectionSecretToReference of this DataFactoryLinkedServiceSftp.
-func (mg *DataFactoryLinkedServiceSftp) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
+// SetWriteConnectionSecretToReference of this FactoryLinkedServiceSftp.
+func (mg *FactoryLinkedServiceSftp) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
 	mg.Spec.WriteConnectionSecretToReference = r
 }
 
-// GetCondition of this DataFactoryLinkedServiceSnowflake.
-func (mg *DataFactoryLinkedServiceSnowflake) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
+// GetCondition of this FactoryLinkedServiceSnowflake.
+func (mg *FactoryLinkedServiceSnowflake) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
 	return mg.Status.GetCondition(ct)
 }
 
-// GetDeletionPolicy of this DataFactoryLinkedServiceSnowflake.
-func (mg *DataFactoryLinkedServiceSnowflake) GetDeletionPolicy() xpv1.DeletionPolicy {
+// GetDeletionPolicy of this FactoryLinkedServiceSnowflake.
+func (mg *FactoryLinkedServiceSnowflake) GetDeletionPolicy() xpv1.DeletionPolicy {
 	return mg.Spec.DeletionPolicy
 }
 
-// GetProviderConfigReference of this DataFactoryLinkedServiceSnowflake.
-func (mg *DataFactoryLinkedServiceSnowflake) GetProviderConfigReference() *xpv1.Reference {
+// GetProviderConfigReference of this FactoryLinkedServiceSnowflake.
+func (mg *FactoryLinkedServiceSnowflake) GetProviderConfigReference() *xpv1.Reference {
 	return mg.Spec.ProviderConfigReference
 }
 
 /*
-GetProviderReference of this DataFactoryLinkedServiceSnowflake.
+GetProviderReference of this FactoryLinkedServiceSnowflake.
 Deprecated: Use GetProviderConfigReference.
 */
-func (mg *DataFactoryLinkedServiceSnowflake) GetProviderReference() *xpv1.Reference {
+func (mg *FactoryLinkedServiceSnowflake) GetProviderReference() *xpv1.Reference {
 	return mg.Spec.ProviderReference
 }
 
-// GetWriteConnectionSecretToReference of this DataFactoryLinkedServiceSnowflake.
-func (mg *DataFactoryLinkedServiceSnowflake) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
+// GetWriteConnectionSecretToReference of this FactoryLinkedServiceSnowflake.
+func (mg *FactoryLinkedServiceSnowflake) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
 	return mg.Spec.WriteConnectionSecretToReference
 }
 
-// SetConditions of this DataFactoryLinkedServiceSnowflake.
-func (mg *DataFactoryLinkedServiceSnowflake) SetConditions(c ...xpv1.Condition) {
+// SetConditions of this FactoryLinkedServiceSnowflake.
+func (mg *FactoryLinkedServiceSnowflake) SetConditions(c ...xpv1.Condition) {
 	mg.Status.SetConditions(c...)
 }
 
-// SetDeletionPolicy of this DataFactoryLinkedServiceSnowflake.
-func (mg *DataFactoryLinkedServiceSnowflake) SetDeletionPolicy(r xpv1.DeletionPolicy) {
+// SetDeletionPolicy of this FactoryLinkedServiceSnowflake.
+func (mg *FactoryLinkedServiceSnowflake) SetDeletionPolicy(r xpv1.DeletionPolicy) {
 	mg.Spec.DeletionPolicy = r
 }
 
-// SetProviderConfigReference of this DataFactoryLinkedServiceSnowflake.
-func (mg *DataFactoryLinkedServiceSnowflake) SetProviderConfigReference(r *xpv1.Reference) {
+// SetProviderConfigReference of this FactoryLinkedServiceSnowflake.
+func (mg *FactoryLinkedServiceSnowflake) SetProviderConfigReference(r *xpv1.Reference) {
 	mg.Spec.ProviderConfigReference = r
 }
 
 /*
-SetProviderReference of this DataFactoryLinkedServiceSnowflake.
+SetProviderReference of this FactoryLinkedServiceSnowflake.
 Deprecated: Use SetProviderConfigReference.
 */
-func (mg *DataFactoryLinkedServiceSnowflake) SetProviderReference(r *xpv1.Reference) {
+func (mg *FactoryLinkedServiceSnowflake) SetProviderReference(r *xpv1.Reference) {
 	mg.Spec.ProviderReference = r
 }
 
-// SetWriteConnectionSecretToReference of this DataFactoryLinkedServiceSnowflake.
-func (mg *DataFactoryLinkedServiceSnowflake) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
+// SetWriteConnectionSecretToReference of this FactoryLinkedServiceSnowflake.
+func (mg *FactoryLinkedServiceSnowflake) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
 	mg.Spec.WriteConnectionSecretToReference = r
 }
 
-// GetCondition of this DataFactoryLinkedServiceSqlServer.
-func (mg *DataFactoryLinkedServiceSqlServer) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
+// GetCondition of this FactoryLinkedServiceSqlServer.
+func (mg *FactoryLinkedServiceSqlServer) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
 	return mg.Status.GetCondition(ct)
 }
 
-// GetDeletionPolicy of this DataFactoryLinkedServiceSqlServer.
-func (mg *DataFactoryLinkedServiceSqlServer) GetDeletionPolicy() xpv1.DeletionPolicy {
+// GetDeletionPolicy of this FactoryLinkedServiceSqlServer.
+func (mg *FactoryLinkedServiceSqlServer) GetDeletionPolicy() xpv1.DeletionPolicy {
 	return mg.Spec.DeletionPolicy
 }
 
-// GetProviderConfigReference of this DataFactoryLinkedServiceSqlServer.
-func (mg *DataFactoryLinkedServiceSqlServer) GetProviderConfigReference() *xpv1.Reference {
+// GetProviderConfigReference of this FactoryLinkedServiceSqlServer.
+func (mg *FactoryLinkedServiceSqlServer) GetProviderConfigReference() *xpv1.Reference {
 	return mg.Spec.ProviderConfigReference
 }
 
 /*
-GetProviderReference of this DataFactoryLinkedServiceSqlServer.
+GetProviderReference of this FactoryLinkedServiceSqlServer.
 Deprecated: Use GetProviderConfigReference.
 */
-func (mg *DataFactoryLinkedServiceSqlServer) GetProviderReference() *xpv1.Reference {
+func (mg *FactoryLinkedServiceSqlServer) GetProviderReference() *xpv1.Reference {
 	return mg.Spec.ProviderReference
 }
 
-// GetWriteConnectionSecretToReference of this DataFactoryLinkedServiceSqlServer.
-func (mg *DataFactoryLinkedServiceSqlServer) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
+// GetWriteConnectionSecretToReference of this FactoryLinkedServiceSqlServer.
+func (mg *FactoryLinkedServiceSqlServer) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
 	return mg.Spec.WriteConnectionSecretToReference
 }
 
-// SetConditions of this DataFactoryLinkedServiceSqlServer.
-func (mg *DataFactoryLinkedServiceSqlServer) SetConditions(c ...xpv1.Condition) {
+// SetConditions of this FactoryLinkedServiceSqlServer.
+func (mg *FactoryLinkedServiceSqlServer) SetConditions(c ...xpv1.Condition) {
 	mg.Status.SetConditions(c...)
 }
 
-// SetDeletionPolicy of this DataFactoryLinkedServiceSqlServer.
-func (mg *DataFactoryLinkedServiceSqlServer) SetDeletionPolicy(r xpv1.DeletionPolicy) {
+// SetDeletionPolicy of this FactoryLinkedServiceSqlServer.
+func (mg *FactoryLinkedServiceSqlServer) SetDeletionPolicy(r xpv1.DeletionPolicy) {
 	mg.Spec.DeletionPolicy = r
 }
 
-// SetProviderConfigReference of this DataFactoryLinkedServiceSqlServer.
-func (mg *DataFactoryLinkedServiceSqlServer) SetProviderConfigReference(r *xpv1.Reference) {
+// SetProviderConfigReference of this FactoryLinkedServiceSqlServer.
+func (mg *FactoryLinkedServiceSqlServer) SetProviderConfigReference(r *xpv1.Reference) {
 	mg.Spec.ProviderConfigReference = r
 }
 
 /*
-SetProviderReference of this DataFactoryLinkedServiceSqlServer.
+SetProviderReference of this FactoryLinkedServiceSqlServer.
 Deprecated: Use SetProviderConfigReference.
 */
-func (mg *DataFactoryLinkedServiceSqlServer) SetProviderReference(r *xpv1.Reference) {
+func (mg *FactoryLinkedServiceSqlServer) SetProviderReference(r *xpv1.Reference) {
 	mg.Spec.ProviderReference = r
 }
 
-// SetWriteConnectionSecretToReference of this DataFactoryLinkedServiceSqlServer.
-func (mg *DataFactoryLinkedServiceSqlServer) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
+// SetWriteConnectionSecretToReference of this FactoryLinkedServiceSqlServer.
+func (mg *FactoryLinkedServiceSqlServer) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
 	mg.Spec.WriteConnectionSecretToReference = r
 }
 
-// GetCondition of this DataFactoryLinkedServiceSynapse.
-func (mg *DataFactoryLinkedServiceSynapse) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
+// GetCondition of this FactoryLinkedServiceSynapse.
+func (mg *FactoryLinkedServiceSynapse) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
 	return mg.Status.GetCondition(ct)
 }
 
-// GetDeletionPolicy of this DataFactoryLinkedServiceSynapse.
-func (mg *DataFactoryLinkedServiceSynapse) GetDeletionPolicy() xpv1.DeletionPolicy {
+// GetDeletionPolicy of this FactoryLinkedServiceSynapse.
+func (mg *FactoryLinkedServiceSynapse) GetDeletionPolicy() xpv1.DeletionPolicy {
 	return mg.Spec.DeletionPolicy
 }
 
-// GetProviderConfigReference of this DataFactoryLinkedServiceSynapse.
-func (mg *DataFactoryLinkedServiceSynapse) GetProviderConfigReference() *xpv1.Reference {
+// GetProviderConfigReference of this FactoryLinkedServiceSynapse.
+func (mg *FactoryLinkedServiceSynapse) GetProviderConfigReference() *xpv1.Reference {
 	return mg.Spec.ProviderConfigReference
 }
 
 /*
-GetProviderReference of this DataFactoryLinkedServiceSynapse.
+GetProviderReference of this FactoryLinkedServiceSynapse.
 Deprecated: Use GetProviderConfigReference.
 */
-func (mg *DataFactoryLinkedServiceSynapse) GetProviderReference() *xpv1.Reference {
+func (mg *FactoryLinkedServiceSynapse) GetProviderReference() *xpv1.Reference {
 	return mg.Spec.ProviderReference
 }
 
-// GetWriteConnectionSecretToReference of this DataFactoryLinkedServiceSynapse.
-func (mg *DataFactoryLinkedServiceSynapse) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
+// GetWriteConnectionSecretToReference of this FactoryLinkedServiceSynapse.
+func (mg *FactoryLinkedServiceSynapse) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
 	return mg.Spec.WriteConnectionSecretToReference
 }
 
-// SetConditions of this DataFactoryLinkedServiceSynapse.
-func (mg *DataFactoryLinkedServiceSynapse) SetConditions(c ...xpv1.Condition) {
+// SetConditions of this FactoryLinkedServiceSynapse.
+func (mg *FactoryLinkedServiceSynapse) SetConditions(c ...xpv1.Condition) {
 	mg.Status.SetConditions(c...)
 }
 
-// SetDeletionPolicy of this DataFactoryLinkedServiceSynapse.
-func (mg *DataFactoryLinkedServiceSynapse) SetDeletionPolicy(r xpv1.DeletionPolicy) {
+// SetDeletionPolicy of this FactoryLinkedServiceSynapse.
+func (mg *FactoryLinkedServiceSynapse) SetDeletionPolicy(r xpv1.DeletionPolicy) {
 	mg.Spec.DeletionPolicy = r
 }
 
-// SetProviderConfigReference of this DataFactoryLinkedServiceSynapse.
-func (mg *DataFactoryLinkedServiceSynapse) SetProviderConfigReference(r *xpv1.Reference) {
+// SetProviderConfigReference of this FactoryLinkedServiceSynapse.
+func (mg *FactoryLinkedServiceSynapse) SetProviderConfigReference(r *xpv1.Reference) {
 	mg.Spec.ProviderConfigReference = r
 }
 
 /*
-SetProviderReference of this DataFactoryLinkedServiceSynapse.
+SetProviderReference of this FactoryLinkedServiceSynapse.
 Deprecated: Use SetProviderConfigReference.
 */
-func (mg *DataFactoryLinkedServiceSynapse) SetProviderReference(r *xpv1.Reference) {
+func (mg *FactoryLinkedServiceSynapse) SetProviderReference(r *xpv1.Reference) {
 	mg.Spec.ProviderReference = r
 }
 
-// SetWriteConnectionSecretToReference of this DataFactoryLinkedServiceSynapse.
-func (mg *DataFactoryLinkedServiceSynapse) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
+// SetWriteConnectionSecretToReference of this FactoryLinkedServiceSynapse.
+func (mg *FactoryLinkedServiceSynapse) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
 	mg.Spec.WriteConnectionSecretToReference = r
 }
 
-// GetCondition of this DataFactoryLinkedServiceWeb.
-func (mg *DataFactoryLinkedServiceWeb) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
+// GetCondition of this FactoryLinkedServiceWeb.
+func (mg *FactoryLinkedServiceWeb) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
 	return mg.Status.GetCondition(ct)
 }
 
-// GetDeletionPolicy of this DataFactoryLinkedServiceWeb.
-func (mg *DataFactoryLinkedServiceWeb) GetDeletionPolicy() xpv1.DeletionPolicy {
+// GetDeletionPolicy of this FactoryLinkedServiceWeb.
+func (mg *FactoryLinkedServiceWeb) GetDeletionPolicy() xpv1.DeletionPolicy {
 	return mg.Spec.DeletionPolicy
 }
 
-// GetProviderConfigReference of this DataFactoryLinkedServiceWeb.
-func (mg *DataFactoryLinkedServiceWeb) GetProviderConfigReference() *xpv1.Reference {
+// GetProviderConfigReference of this FactoryLinkedServiceWeb.
+func (mg *FactoryLinkedServiceWeb) GetProviderConfigReference() *xpv1.Reference {
 	return mg.Spec.ProviderConfigReference
 }
 
 /*
-GetProviderReference of this DataFactoryLinkedServiceWeb.
+GetProviderReference of this FactoryLinkedServiceWeb.
 Deprecated: Use GetProviderConfigReference.
 */
-func (mg *DataFactoryLinkedServiceWeb) GetProviderReference() *xpv1.Reference {
+func (mg *FactoryLinkedServiceWeb) GetProviderReference() *xpv1.Reference {
 	return mg.Spec.ProviderReference
 }
 
-// GetWriteConnectionSecretToReference of this DataFactoryLinkedServiceWeb.
-func (mg *DataFactoryLinkedServiceWeb) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
+// GetWriteConnectionSecretToReference of this FactoryLinkedServiceWeb.
+func (mg *FactoryLinkedServiceWeb) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
 	return mg.Spec.WriteConnectionSecretToReference
 }
 
-// SetConditions of this DataFactoryLinkedServiceWeb.
-func (mg *DataFactoryLinkedServiceWeb) SetConditions(c ...xpv1.Condition) {
+// SetConditions of this FactoryLinkedServiceWeb.
+func (mg *FactoryLinkedServiceWeb) SetConditions(c ...xpv1.Condition) {
 	mg.Status.SetConditions(c...)
 }
 
-// SetDeletionPolicy of this DataFactoryLinkedServiceWeb.
-func (mg *DataFactoryLinkedServiceWeb) SetDeletionPolicy(r xpv1.DeletionPolicy) {
+// SetDeletionPolicy of this FactoryLinkedServiceWeb.
+func (mg *FactoryLinkedServiceWeb) SetDeletionPolicy(r xpv1.DeletionPolicy) {
 	mg.Spec.DeletionPolicy = r
 }
 
-// SetProviderConfigReference of this DataFactoryLinkedServiceWeb.
-func (mg *DataFactoryLinkedServiceWeb) SetProviderConfigReference(r *xpv1.Reference) {
+// SetProviderConfigReference of this FactoryLinkedServiceWeb.
+func (mg *FactoryLinkedServiceWeb) SetProviderConfigReference(r *xpv1.Reference) {
 	mg.Spec.ProviderConfigReference = r
 }
 
 /*
-SetProviderReference of this DataFactoryLinkedServiceWeb.
+SetProviderReference of this FactoryLinkedServiceWeb.
 Deprecated: Use SetProviderConfigReference.
 */
-func (mg *DataFactoryLinkedServiceWeb) SetProviderReference(r *xpv1.Reference) {
+func (mg *FactoryLinkedServiceWeb) SetProviderReference(r *xpv1.Reference) {
 	mg.Spec.ProviderReference = r
 }
 
-// SetWriteConnectionSecretToReference of this DataFactoryLinkedServiceWeb.
-func (mg *DataFactoryLinkedServiceWeb) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
+// SetWriteConnectionSecretToReference of this FactoryLinkedServiceWeb.
+func (mg *FactoryLinkedServiceWeb) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
 	mg.Spec.WriteConnectionSecretToReference = r
 }
 
-// GetCondition of this DataFactoryManagedPrivateEndpoint.
-func (mg *DataFactoryManagedPrivateEndpoint) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
+// GetCondition of this FactoryManagedPrivateEndpoint.
+func (mg *FactoryManagedPrivateEndpoint) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
 	return mg.Status.GetCondition(ct)
 }
 
-// GetDeletionPolicy of this DataFactoryManagedPrivateEndpoint.
-func (mg *DataFactoryManagedPrivateEndpoint) GetDeletionPolicy() xpv1.DeletionPolicy {
+// GetDeletionPolicy of this FactoryManagedPrivateEndpoint.
+func (mg *FactoryManagedPrivateEndpoint) GetDeletionPolicy() xpv1.DeletionPolicy {
 	return mg.Spec.DeletionPolicy
 }
 
-// GetProviderConfigReference of this DataFactoryManagedPrivateEndpoint.
-func (mg *DataFactoryManagedPrivateEndpoint) GetProviderConfigReference() *xpv1.Reference {
+// GetProviderConfigReference of this FactoryManagedPrivateEndpoint.
+func (mg *FactoryManagedPrivateEndpoint) GetProviderConfigReference() *xpv1.Reference {
 	return mg.Spec.ProviderConfigReference
 }
 
 /*
-GetProviderReference of this DataFactoryManagedPrivateEndpoint.
+GetProviderReference of this FactoryManagedPrivateEndpoint.
 Deprecated: Use GetProviderConfigReference.
 */
-func (mg *DataFactoryManagedPrivateEndpoint) GetProviderReference() *xpv1.Reference {
+func (mg *FactoryManagedPrivateEndpoint) GetProviderReference() *xpv1.Reference {
 	return mg.Spec.ProviderReference
 }
 
-// GetWriteConnectionSecretToReference of this DataFactoryManagedPrivateEndpoint.
-func (mg *DataFactoryManagedPrivateEndpoint) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
+// GetWriteConnectionSecretToReference of this FactoryManagedPrivateEndpoint.
+func (mg *FactoryManagedPrivateEndpoint) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
 	return mg.Spec.WriteConnectionSecretToReference
 }
 
-// SetConditions of this DataFactoryManagedPrivateEndpoint.
-func (mg *DataFactoryManagedPrivateEndpoint) SetConditions(c ...xpv1.Condition) {
+// SetConditions of this FactoryManagedPrivateEndpoint.
+func (mg *FactoryManagedPrivateEndpoint) SetConditions(c ...xpv1.Condition) {
 	mg.Status.SetConditions(c...)
 }
 
-// SetDeletionPolicy of this DataFactoryManagedPrivateEndpoint.
-func (mg *DataFactoryManagedPrivateEndpoint) SetDeletionPolicy(r xpv1.DeletionPolicy) {
+// SetDeletionPolicy of this FactoryManagedPrivateEndpoint.
+func (mg *FactoryManagedPrivateEndpoint) SetDeletionPolicy(r xpv1.DeletionPolicy) {
 	mg.Spec.DeletionPolicy = r
 }
 
-// SetProviderConfigReference of this DataFactoryManagedPrivateEndpoint.
-func (mg *DataFactoryManagedPrivateEndpoint) SetProviderConfigReference(r *xpv1.Reference) {
+// SetProviderConfigReference of this FactoryManagedPrivateEndpoint.
+func (mg *FactoryManagedPrivateEndpoint) SetProviderConfigReference(r *xpv1.Reference) {
 	mg.Spec.ProviderConfigReference = r
 }
 
 /*
-SetProviderReference of this DataFactoryManagedPrivateEndpoint.
+SetProviderReference of this FactoryManagedPrivateEndpoint.
 Deprecated: Use SetProviderConfigReference.
 */
-func (mg *DataFactoryManagedPrivateEndpoint) SetProviderReference(r *xpv1.Reference) {
+func (mg *FactoryManagedPrivateEndpoint) SetProviderReference(r *xpv1.Reference) {
 	mg.Spec.ProviderReference = r
 }
 
-// SetWriteConnectionSecretToReference of this DataFactoryManagedPrivateEndpoint.
-func (mg *DataFactoryManagedPrivateEndpoint) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
+// SetWriteConnectionSecretToReference of this FactoryManagedPrivateEndpoint.
+func (mg *FactoryManagedPrivateEndpoint) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
 	mg.Spec.WriteConnectionSecretToReference = r
 }
 
-// GetCondition of this DataFactoryPipeline.
-func (mg *DataFactoryPipeline) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
+// GetCondition of this FactoryPipeline.
+func (mg *FactoryPipeline) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
 	return mg.Status.GetCondition(ct)
 }
 
-// GetDeletionPolicy of this DataFactoryPipeline.
-func (mg *DataFactoryPipeline) GetDeletionPolicy() xpv1.DeletionPolicy {
+// GetDeletionPolicy of this FactoryPipeline.
+func (mg *FactoryPipeline) GetDeletionPolicy() xpv1.DeletionPolicy {
 	return mg.Spec.DeletionPolicy
 }
 
-// GetProviderConfigReference of this DataFactoryPipeline.
-func (mg *DataFactoryPipeline) GetProviderConfigReference() *xpv1.Reference {
+// GetProviderConfigReference of this FactoryPipeline.
+func (mg *FactoryPipeline) GetProviderConfigReference() *xpv1.Reference {
 	return mg.Spec.ProviderConfigReference
 }
 
 /*
-GetProviderReference of this DataFactoryPipeline.
+GetProviderReference of this FactoryPipeline.
 Deprecated: Use GetProviderConfigReference.
 */
-func (mg *DataFactoryPipeline) GetProviderReference() *xpv1.Reference {
+func (mg *FactoryPipeline) GetProviderReference() *xpv1.Reference {
 	return mg.Spec.ProviderReference
 }
 
-// GetWriteConnectionSecretToReference of this DataFactoryPipeline.
-func (mg *DataFactoryPipeline) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
+// GetWriteConnectionSecretToReference of this FactoryPipeline.
+func (mg *FactoryPipeline) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
 	return mg.Spec.WriteConnectionSecretToReference
 }
 
-// SetConditions of this DataFactoryPipeline.
-func (mg *DataFactoryPipeline) SetConditions(c ...xpv1.Condition) {
+// SetConditions of this FactoryPipeline.
+func (mg *FactoryPipeline) SetConditions(c ...xpv1.Condition) {
 	mg.Status.SetConditions(c...)
 }
 
-// SetDeletionPolicy of this DataFactoryPipeline.
-func (mg *DataFactoryPipeline) SetDeletionPolicy(r xpv1.DeletionPolicy) {
+// SetDeletionPolicy of this FactoryPipeline.
+func (mg *FactoryPipeline) SetDeletionPolicy(r xpv1.DeletionPolicy) {
 	mg.Spec.DeletionPolicy = r
 }
 
-// SetProviderConfigReference of this DataFactoryPipeline.
-func (mg *DataFactoryPipeline) SetProviderConfigReference(r *xpv1.Reference) {
+// SetProviderConfigReference of this FactoryPipeline.
+func (mg *FactoryPipeline) SetProviderConfigReference(r *xpv1.Reference) {
 	mg.Spec.ProviderConfigReference = r
 }
 
 /*
-SetProviderReference of this DataFactoryPipeline.
+SetProviderReference of this FactoryPipeline.
 Deprecated: Use SetProviderConfigReference.
 */
-func (mg *DataFactoryPipeline) SetProviderReference(r *xpv1.Reference) {
+func (mg *FactoryPipeline) SetProviderReference(r *xpv1.Reference) {
 	mg.Spec.ProviderReference = r
 }
 
-// SetWriteConnectionSecretToReference of this DataFactoryPipeline.
-func (mg *DataFactoryPipeline) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
+// SetWriteConnectionSecretToReference of this FactoryPipeline.
+func (mg *FactoryPipeline) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
 	mg.Spec.WriteConnectionSecretToReference = r
 }
 
-// GetCondition of this DataFactoryTriggerBlobEvent.
-func (mg *DataFactoryTriggerBlobEvent) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
+// GetCondition of this FactoryTriggerBlobEvent.
+func (mg *FactoryTriggerBlobEvent) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
 	return mg.Status.GetCondition(ct)
 }
 
-// GetDeletionPolicy of this DataFactoryTriggerBlobEvent.
-func (mg *DataFactoryTriggerBlobEvent) GetDeletionPolicy() xpv1.DeletionPolicy {
+// GetDeletionPolicy of this FactoryTriggerBlobEvent.
+func (mg *FactoryTriggerBlobEvent) GetDeletionPolicy() xpv1.DeletionPolicy {
 	return mg.Spec.DeletionPolicy
 }
 
-// GetProviderConfigReference of this DataFactoryTriggerBlobEvent.
-func (mg *DataFactoryTriggerBlobEvent) GetProviderConfigReference() *xpv1.Reference {
+// GetProviderConfigReference of this FactoryTriggerBlobEvent.
+func (mg *FactoryTriggerBlobEvent) GetProviderConfigReference() *xpv1.Reference {
 	return mg.Spec.ProviderConfigReference
 }
 
 /*
-GetProviderReference of this DataFactoryTriggerBlobEvent.
+GetProviderReference of this FactoryTriggerBlobEvent.
 Deprecated: Use GetProviderConfigReference.
 */
-func (mg *DataFactoryTriggerBlobEvent) GetProviderReference() *xpv1.Reference {
+func (mg *FactoryTriggerBlobEvent) GetProviderReference() *xpv1.Reference {
 	return mg.Spec.ProviderReference
 }
 
-// GetWriteConnectionSecretToReference of this DataFactoryTriggerBlobEvent.
-func (mg *DataFactoryTriggerBlobEvent) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
+// GetWriteConnectionSecretToReference of this FactoryTriggerBlobEvent.
+func (mg *FactoryTriggerBlobEvent) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
 	return mg.Spec.WriteConnectionSecretToReference
 }
 
-// SetConditions of this DataFactoryTriggerBlobEvent.
-func (mg *DataFactoryTriggerBlobEvent) SetConditions(c ...xpv1.Condition) {
+// SetConditions of this FactoryTriggerBlobEvent.
+func (mg *FactoryTriggerBlobEvent) SetConditions(c ...xpv1.Condition) {
 	mg.Status.SetConditions(c...)
 }
 
-// SetDeletionPolicy of this DataFactoryTriggerBlobEvent.
-func (mg *DataFactoryTriggerBlobEvent) SetDeletionPolicy(r xpv1.DeletionPolicy) {
+// SetDeletionPolicy of this FactoryTriggerBlobEvent.
+func (mg *FactoryTriggerBlobEvent) SetDeletionPolicy(r xpv1.DeletionPolicy) {
 	mg.Spec.DeletionPolicy = r
 }
 
-// SetProviderConfigReference of this DataFactoryTriggerBlobEvent.
-func (mg *DataFactoryTriggerBlobEvent) SetProviderConfigReference(r *xpv1.Reference) {
+// SetProviderConfigReference of this FactoryTriggerBlobEvent.
+func (mg *FactoryTriggerBlobEvent) SetProviderConfigReference(r *xpv1.Reference) {
 	mg.Spec.ProviderConfigReference = r
 }
 
 /*
-SetProviderReference of this DataFactoryTriggerBlobEvent.
+SetProviderReference of this FactoryTriggerBlobEvent.
 Deprecated: Use SetProviderConfigReference.
 */
-func (mg *DataFactoryTriggerBlobEvent) SetProviderReference(r *xpv1.Reference) {
+func (mg *FactoryTriggerBlobEvent) SetProviderReference(r *xpv1.Reference) {
 	mg.Spec.ProviderReference = r
 }
 
-// SetWriteConnectionSecretToReference of this DataFactoryTriggerBlobEvent.
-func (mg *DataFactoryTriggerBlobEvent) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
+// SetWriteConnectionSecretToReference of this FactoryTriggerBlobEvent.
+func (mg *FactoryTriggerBlobEvent) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
 	mg.Spec.WriteConnectionSecretToReference = r
 }
 
-// GetCondition of this DataFactoryTriggerCustomEvent.
-func (mg *DataFactoryTriggerCustomEvent) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
+// GetCondition of this FactoryTriggerCustomEvent.
+func (mg *FactoryTriggerCustomEvent) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
 	return mg.Status.GetCondition(ct)
 }
 
-// GetDeletionPolicy of this DataFactoryTriggerCustomEvent.
-func (mg *DataFactoryTriggerCustomEvent) GetDeletionPolicy() xpv1.DeletionPolicy {
+// GetDeletionPolicy of this FactoryTriggerCustomEvent.
+func (mg *FactoryTriggerCustomEvent) GetDeletionPolicy() xpv1.DeletionPolicy {
 	return mg.Spec.DeletionPolicy
 }
 
-// GetProviderConfigReference of this DataFactoryTriggerCustomEvent.
-func (mg *DataFactoryTriggerCustomEvent) GetProviderConfigReference() *xpv1.Reference {
+// GetProviderConfigReference of this FactoryTriggerCustomEvent.
+func (mg *FactoryTriggerCustomEvent) GetProviderConfigReference() *xpv1.Reference {
 	return mg.Spec.ProviderConfigReference
 }
 
 /*
-GetProviderReference of this DataFactoryTriggerCustomEvent.
+GetProviderReference of this FactoryTriggerCustomEvent.
 Deprecated: Use GetProviderConfigReference.
 */
-func (mg *DataFactoryTriggerCustomEvent) GetProviderReference() *xpv1.Reference {
+func (mg *FactoryTriggerCustomEvent) GetProviderReference() *xpv1.Reference {
 	return mg.Spec.ProviderReference
 }
 
-// GetWriteConnectionSecretToReference of this DataFactoryTriggerCustomEvent.
-func (mg *DataFactoryTriggerCustomEvent) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
+// GetWriteConnectionSecretToReference of this FactoryTriggerCustomEvent.
+func (mg *FactoryTriggerCustomEvent) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
 	return mg.Spec.WriteConnectionSecretToReference
 }
 
-// SetConditions of this DataFactoryTriggerCustomEvent.
-func (mg *DataFactoryTriggerCustomEvent) SetConditions(c ...xpv1.Condition) {
+// SetConditions of this FactoryTriggerCustomEvent.
+func (mg *FactoryTriggerCustomEvent) SetConditions(c ...xpv1.Condition) {
 	mg.Status.SetConditions(c...)
 }
 
-// SetDeletionPolicy of this DataFactoryTriggerCustomEvent.
-func (mg *DataFactoryTriggerCustomEvent) SetDeletionPolicy(r xpv1.DeletionPolicy) {
+// SetDeletionPolicy of this FactoryTriggerCustomEvent.
+func (mg *FactoryTriggerCustomEvent) SetDeletionPolicy(r xpv1.DeletionPolicy) {
 	mg.Spec.DeletionPolicy = r
 }
 
-// SetProviderConfigReference of this DataFactoryTriggerCustomEvent.
-func (mg *DataFactoryTriggerCustomEvent) SetProviderConfigReference(r *xpv1.Reference) {
+// SetProviderConfigReference of this FactoryTriggerCustomEvent.
+func (mg *FactoryTriggerCustomEvent) SetProviderConfigReference(r *xpv1.Reference) {
 	mg.Spec.ProviderConfigReference = r
 }
 
 /*
-SetProviderReference of this DataFactoryTriggerCustomEvent.
+SetProviderReference of this FactoryTriggerCustomEvent.
 Deprecated: Use SetProviderConfigReference.
 */
-func (mg *DataFactoryTriggerCustomEvent) SetProviderReference(r *xpv1.Reference) {
+func (mg *FactoryTriggerCustomEvent) SetProviderReference(r *xpv1.Reference) {
 	mg.Spec.ProviderReference = r
 }
 
-// SetWriteConnectionSecretToReference of this DataFactoryTriggerCustomEvent.
-func (mg *DataFactoryTriggerCustomEvent) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
+// SetWriteConnectionSecretToReference of this FactoryTriggerCustomEvent.
+func (mg *FactoryTriggerCustomEvent) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
 	mg.Spec.WriteConnectionSecretToReference = r
 }
 
-// GetCondition of this DataFactoryTriggerSchedule.
-func (mg *DataFactoryTriggerSchedule) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
+// GetCondition of this FactoryTriggerSchedule.
+func (mg *FactoryTriggerSchedule) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
 	return mg.Status.GetCondition(ct)
 }
 
-// GetDeletionPolicy of this DataFactoryTriggerSchedule.
-func (mg *DataFactoryTriggerSchedule) GetDeletionPolicy() xpv1.DeletionPolicy {
+// GetDeletionPolicy of this FactoryTriggerSchedule.
+func (mg *FactoryTriggerSchedule) GetDeletionPolicy() xpv1.DeletionPolicy {
 	return mg.Spec.DeletionPolicy
 }
 
-// GetProviderConfigReference of this DataFactoryTriggerSchedule.
-func (mg *DataFactoryTriggerSchedule) GetProviderConfigReference() *xpv1.Reference {
+// GetProviderConfigReference of this FactoryTriggerSchedule.
+func (mg *FactoryTriggerSchedule) GetProviderConfigReference() *xpv1.Reference {
 	return mg.Spec.ProviderConfigReference
 }
 
 /*
-GetProviderReference of this DataFactoryTriggerSchedule.
+GetProviderReference of this FactoryTriggerSchedule.
 Deprecated: Use GetProviderConfigReference.
 */
-func (mg *DataFactoryTriggerSchedule) GetProviderReference() *xpv1.Reference {
+func (mg *FactoryTriggerSchedule) GetProviderReference() *xpv1.Reference {
 	return mg.Spec.ProviderReference
 }
 
-// GetWriteConnectionSecretToReference of this DataFactoryTriggerSchedule.
-func (mg *DataFactoryTriggerSchedule) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
+// GetWriteConnectionSecretToReference of this FactoryTriggerSchedule.
+func (mg *FactoryTriggerSchedule) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
 	return mg.Spec.WriteConnectionSecretToReference
 }
 
-// SetConditions of this DataFactoryTriggerSchedule.
-func (mg *DataFactoryTriggerSchedule) SetConditions(c ...xpv1.Condition) {
+// SetConditions of this FactoryTriggerSchedule.
+func (mg *FactoryTriggerSchedule) SetConditions(c ...xpv1.Condition) {
 	mg.Status.SetConditions(c...)
 }
 
-// SetDeletionPolicy of this DataFactoryTriggerSchedule.
-func (mg *DataFactoryTriggerSchedule) SetDeletionPolicy(r xpv1.DeletionPolicy) {
+// SetDeletionPolicy of this FactoryTriggerSchedule.
+func (mg *FactoryTriggerSchedule) SetDeletionPolicy(r xpv1.DeletionPolicy) {
 	mg.Spec.DeletionPolicy = r
 }
 
-// SetProviderConfigReference of this DataFactoryTriggerSchedule.
-func (mg *DataFactoryTriggerSchedule) SetProviderConfigReference(r *xpv1.Reference) {
+// SetProviderConfigReference of this FactoryTriggerSchedule.
+func (mg *FactoryTriggerSchedule) SetProviderConfigReference(r *xpv1.Reference) {
 	mg.Spec.ProviderConfigReference = r
 }
 
 /*
-SetProviderReference of this DataFactoryTriggerSchedule.
+SetProviderReference of this FactoryTriggerSchedule.
 Deprecated: Use SetProviderConfigReference.
 */
-func (mg *DataFactoryTriggerSchedule) SetProviderReference(r *xpv1.Reference) {
+func (mg *FactoryTriggerSchedule) SetProviderReference(r *xpv1.Reference) {
 	mg.Spec.ProviderReference = r
 }
 
-// SetWriteConnectionSecretToReference of this DataFactoryTriggerSchedule.
-func (mg *DataFactoryTriggerSchedule) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
+// SetWriteConnectionSecretToReference of this FactoryTriggerSchedule.
+func (mg *FactoryTriggerSchedule) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
 	mg.Spec.WriteConnectionSecretToReference = r
 }
 
-// GetCondition of this DataLakeAnalyticsFirewallRule.
-func (mg *DataLakeAnalyticsFirewallRule) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
+// GetCondition of this LakeAnalyticsFirewallRule.
+func (mg *LakeAnalyticsFirewallRule) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
 	return mg.Status.GetCondition(ct)
 }
 
-// GetDeletionPolicy of this DataLakeAnalyticsFirewallRule.
-func (mg *DataLakeAnalyticsFirewallRule) GetDeletionPolicy() xpv1.DeletionPolicy {
+// GetDeletionPolicy of this LakeAnalyticsFirewallRule.
+func (mg *LakeAnalyticsFirewallRule) GetDeletionPolicy() xpv1.DeletionPolicy {
 	return mg.Spec.DeletionPolicy
 }
 
-// GetProviderConfigReference of this DataLakeAnalyticsFirewallRule.
-func (mg *DataLakeAnalyticsFirewallRule) GetProviderConfigReference() *xpv1.Reference {
+// GetProviderConfigReference of this LakeAnalyticsFirewallRule.
+func (mg *LakeAnalyticsFirewallRule) GetProviderConfigReference() *xpv1.Reference {
 	return mg.Spec.ProviderConfigReference
 }
 
 /*
-GetProviderReference of this DataLakeAnalyticsFirewallRule.
+GetProviderReference of this LakeAnalyticsFirewallRule.
 Deprecated: Use GetProviderConfigReference.
 */
-func (mg *DataLakeAnalyticsFirewallRule) GetProviderReference() *xpv1.Reference {
+func (mg *LakeAnalyticsFirewallRule) GetProviderReference() *xpv1.Reference {
 	return mg.Spec.ProviderReference
 }
 
-// GetWriteConnectionSecretToReference of this DataLakeAnalyticsFirewallRule.
-func (mg *DataLakeAnalyticsFirewallRule) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
+// GetWriteConnectionSecretToReference of this LakeAnalyticsFirewallRule.
+func (mg *LakeAnalyticsFirewallRule) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
 	return mg.Spec.WriteConnectionSecretToReference
 }
 
-// SetConditions of this DataLakeAnalyticsFirewallRule.
-func (mg *DataLakeAnalyticsFirewallRule) SetConditions(c ...xpv1.Condition) {
+// SetConditions of this LakeAnalyticsFirewallRule.
+func (mg *LakeAnalyticsFirewallRule) SetConditions(c ...xpv1.Condition) {
 	mg.Status.SetConditions(c...)
 }
 
-// SetDeletionPolicy of this DataLakeAnalyticsFirewallRule.
-func (mg *DataLakeAnalyticsFirewallRule) SetDeletionPolicy(r xpv1.DeletionPolicy) {
+// SetDeletionPolicy of this LakeAnalyticsFirewallRule.
+func (mg *LakeAnalyticsFirewallRule) SetDeletionPolicy(r xpv1.DeletionPolicy) {
 	mg.Spec.DeletionPolicy = r
 }
 
-// SetProviderConfigReference of this DataLakeAnalyticsFirewallRule.
-func (mg *DataLakeAnalyticsFirewallRule) SetProviderConfigReference(r *xpv1.Reference) {
+// SetProviderConfigReference of this LakeAnalyticsFirewallRule.
+func (mg *LakeAnalyticsFirewallRule) SetProviderConfigReference(r *xpv1.Reference) {
 	mg.Spec.ProviderConfigReference = r
 }
 
 /*
-SetProviderReference of this DataLakeAnalyticsFirewallRule.
+SetProviderReference of this LakeAnalyticsFirewallRule.
 Deprecated: Use SetProviderConfigReference.
 */
-func (mg *DataLakeAnalyticsFirewallRule) SetProviderReference(r *xpv1.Reference) {
+func (mg *LakeAnalyticsFirewallRule) SetProviderReference(r *xpv1.Reference) {
 	mg.Spec.ProviderReference = r
 }
 
-// SetWriteConnectionSecretToReference of this DataLakeAnalyticsFirewallRule.
-func (mg *DataLakeAnalyticsFirewallRule) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
+// SetWriteConnectionSecretToReference of this LakeAnalyticsFirewallRule.
+func (mg *LakeAnalyticsFirewallRule) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
 	mg.Spec.WriteConnectionSecretToReference = r
 }
 
-// GetCondition of this DataLakeStore.
-func (mg *DataLakeStore) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
+// GetCondition of this LakeStore.
+func (mg *LakeStore) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
 	return mg.Status.GetCondition(ct)
 }
 
-// GetDeletionPolicy of this DataLakeStore.
-func (mg *DataLakeStore) GetDeletionPolicy() xpv1.DeletionPolicy {
+// GetDeletionPolicy of this LakeStore.
+func (mg *LakeStore) GetDeletionPolicy() xpv1.DeletionPolicy {
 	return mg.Spec.DeletionPolicy
 }
 
-// GetProviderConfigReference of this DataLakeStore.
-func (mg *DataLakeStore) GetProviderConfigReference() *xpv1.Reference {
+// GetProviderConfigReference of this LakeStore.
+func (mg *LakeStore) GetProviderConfigReference() *xpv1.Reference {
 	return mg.Spec.ProviderConfigReference
 }
 
 /*
-GetProviderReference of this DataLakeStore.
+GetProviderReference of this LakeStore.
 Deprecated: Use GetProviderConfigReference.
 */
-func (mg *DataLakeStore) GetProviderReference() *xpv1.Reference {
+func (mg *LakeStore) GetProviderReference() *xpv1.Reference {
 	return mg.Spec.ProviderReference
 }
 
-// GetWriteConnectionSecretToReference of this DataLakeStore.
-func (mg *DataLakeStore) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
+// GetWriteConnectionSecretToReference of this LakeStore.
+func (mg *LakeStore) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
 	return mg.Spec.WriteConnectionSecretToReference
 }
 
-// SetConditions of this DataLakeStore.
-func (mg *DataLakeStore) SetConditions(c ...xpv1.Condition) {
+// SetConditions of this LakeStore.
+func (mg *LakeStore) SetConditions(c ...xpv1.Condition) {
 	mg.Status.SetConditions(c...)
 }
 
-// SetDeletionPolicy of this DataLakeStore.
-func (mg *DataLakeStore) SetDeletionPolicy(r xpv1.DeletionPolicy) {
+// SetDeletionPolicy of this LakeStore.
+func (mg *LakeStore) SetDeletionPolicy(r xpv1.DeletionPolicy) {
 	mg.Spec.DeletionPolicy = r
 }
 
-// SetProviderConfigReference of this DataLakeStore.
-func (mg *DataLakeStore) SetProviderConfigReference(r *xpv1.Reference) {
+// SetProviderConfigReference of this LakeStore.
+func (mg *LakeStore) SetProviderConfigReference(r *xpv1.Reference) {
 	mg.Spec.ProviderConfigReference = r
 }
 
 /*
-SetProviderReference of this DataLakeStore.
+SetProviderReference of this LakeStore.
 Deprecated: Use SetProviderConfigReference.
 */
-func (mg *DataLakeStore) SetProviderReference(r *xpv1.Reference) {
+func (mg *LakeStore) SetProviderReference(r *xpv1.Reference) {
 	mg.Spec.ProviderReference = r
 }
 
-// SetWriteConnectionSecretToReference of this DataLakeStore.
-func (mg *DataLakeStore) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
+// SetWriteConnectionSecretToReference of this LakeStore.
+func (mg *LakeStore) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
 	mg.Spec.WriteConnectionSecretToReference = r
 }
 
-// GetCondition of this DataLakeStoreFile.
-func (mg *DataLakeStoreFile) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
+// GetCondition of this LakeStoreFile.
+func (mg *LakeStoreFile) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
 	return mg.Status.GetCondition(ct)
 }
 
-// GetDeletionPolicy of this DataLakeStoreFile.
-func (mg *DataLakeStoreFile) GetDeletionPolicy() xpv1.DeletionPolicy {
+// GetDeletionPolicy of this LakeStoreFile.
+func (mg *LakeStoreFile) GetDeletionPolicy() xpv1.DeletionPolicy {
 	return mg.Spec.DeletionPolicy
 }
 
-// GetProviderConfigReference of this DataLakeStoreFile.
-func (mg *DataLakeStoreFile) GetProviderConfigReference() *xpv1.Reference {
+// GetProviderConfigReference of this LakeStoreFile.
+func (mg *LakeStoreFile) GetProviderConfigReference() *xpv1.Reference {
 	return mg.Spec.ProviderConfigReference
 }
 
 /*
-GetProviderReference of this DataLakeStoreFile.
+GetProviderReference of this LakeStoreFile.
 Deprecated: Use GetProviderConfigReference.
 */
-func (mg *DataLakeStoreFile) GetProviderReference() *xpv1.Reference {
+func (mg *LakeStoreFile) GetProviderReference() *xpv1.Reference {
 	return mg.Spec.ProviderReference
 }
 
-// GetWriteConnectionSecretToReference of this DataLakeStoreFile.
-func (mg *DataLakeStoreFile) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
+// GetWriteConnectionSecretToReference of this LakeStoreFile.
+func (mg *LakeStoreFile) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
 	return mg.Spec.WriteConnectionSecretToReference
 }
 
-// SetConditions of this DataLakeStoreFile.
-func (mg *DataLakeStoreFile) SetConditions(c ...xpv1.Condition) {
+// SetConditions of this LakeStoreFile.
+func (mg *LakeStoreFile) SetConditions(c ...xpv1.Condition) {
 	mg.Status.SetConditions(c...)
 }
 
-// SetDeletionPolicy of this DataLakeStoreFile.
-func (mg *DataLakeStoreFile) SetDeletionPolicy(r xpv1.DeletionPolicy) {
+// SetDeletionPolicy of this LakeStoreFile.
+func (mg *LakeStoreFile) SetDeletionPolicy(r xpv1.DeletionPolicy) {
 	mg.Spec.DeletionPolicy = r
 }
 
-// SetProviderConfigReference of this DataLakeStoreFile.
-func (mg *DataLakeStoreFile) SetProviderConfigReference(r *xpv1.Reference) {
+// SetProviderConfigReference of this LakeStoreFile.
+func (mg *LakeStoreFile) SetProviderConfigReference(r *xpv1.Reference) {
 	mg.Spec.ProviderConfigReference = r
 }
 
 /*
-SetProviderReference of this DataLakeStoreFile.
+SetProviderReference of this LakeStoreFile.
 Deprecated: Use SetProviderConfigReference.
 */
-func (mg *DataLakeStoreFile) SetProviderReference(r *xpv1.Reference) {
+func (mg *LakeStoreFile) SetProviderReference(r *xpv1.Reference) {
 	mg.Spec.ProviderReference = r
 }
 
-// SetWriteConnectionSecretToReference of this DataLakeStoreFile.
-func (mg *DataLakeStoreFile) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
+// SetWriteConnectionSecretToReference of this LakeStoreFile.
+func (mg *LakeStoreFile) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
 	mg.Spec.WriteConnectionSecretToReference = r
 }
 
-// GetCondition of this DataLakeStoreFirewallRule.
-func (mg *DataLakeStoreFirewallRule) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
+// GetCondition of this LakeStoreFirewallRule.
+func (mg *LakeStoreFirewallRule) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
 	return mg.Status.GetCondition(ct)
 }
 
-// GetDeletionPolicy of this DataLakeStoreFirewallRule.
-func (mg *DataLakeStoreFirewallRule) GetDeletionPolicy() xpv1.DeletionPolicy {
+// GetDeletionPolicy of this LakeStoreFirewallRule.
+func (mg *LakeStoreFirewallRule) GetDeletionPolicy() xpv1.DeletionPolicy {
 	return mg.Spec.DeletionPolicy
 }
 
-// GetProviderConfigReference of this DataLakeStoreFirewallRule.
-func (mg *DataLakeStoreFirewallRule) GetProviderConfigReference() *xpv1.Reference {
+// GetProviderConfigReference of this LakeStoreFirewallRule.
+func (mg *LakeStoreFirewallRule) GetProviderConfigReference() *xpv1.Reference {
 	return mg.Spec.ProviderConfigReference
 }
 
 /*
-GetProviderReference of this DataLakeStoreFirewallRule.
+GetProviderReference of this LakeStoreFirewallRule.
 Deprecated: Use GetProviderConfigReference.
 */
-func (mg *DataLakeStoreFirewallRule) GetProviderReference() *xpv1.Reference {
+func (mg *LakeStoreFirewallRule) GetProviderReference() *xpv1.Reference {
 	return mg.Spec.ProviderReference
 }
 
-// GetWriteConnectionSecretToReference of this DataLakeStoreFirewallRule.
-func (mg *DataLakeStoreFirewallRule) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
+// GetWriteConnectionSecretToReference of this LakeStoreFirewallRule.
+func (mg *LakeStoreFirewallRule) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
 	return mg.Spec.WriteConnectionSecretToReference
 }
 
-// SetConditions of this DataLakeStoreFirewallRule.
-func (mg *DataLakeStoreFirewallRule) SetConditions(c ...xpv1.Condition) {
+// SetConditions of this LakeStoreFirewallRule.
+func (mg *LakeStoreFirewallRule) SetConditions(c ...xpv1.Condition) {
 	mg.Status.SetConditions(c...)
 }
 
-// SetDeletionPolicy of this DataLakeStoreFirewallRule.
-func (mg *DataLakeStoreFirewallRule) SetDeletionPolicy(r xpv1.DeletionPolicy) {
+// SetDeletionPolicy of this LakeStoreFirewallRule.
+func (mg *LakeStoreFirewallRule) SetDeletionPolicy(r xpv1.DeletionPolicy) {
 	mg.Spec.DeletionPolicy = r
 }
 
-// SetProviderConfigReference of this DataLakeStoreFirewallRule.
-func (mg *DataLakeStoreFirewallRule) SetProviderConfigReference(r *xpv1.Reference) {
+// SetProviderConfigReference of this LakeStoreFirewallRule.
+func (mg *LakeStoreFirewallRule) SetProviderConfigReference(r *xpv1.Reference) {
 	mg.Spec.ProviderConfigReference = r
 }
 
 /*
-SetProviderReference of this DataLakeStoreFirewallRule.
+SetProviderReference of this LakeStoreFirewallRule.
 Deprecated: Use SetProviderConfigReference.
 */
-func (mg *DataLakeStoreFirewallRule) SetProviderReference(r *xpv1.Reference) {
+func (mg *LakeStoreFirewallRule) SetProviderReference(r *xpv1.Reference) {
 	mg.Spec.ProviderReference = r
 }
 
-// SetWriteConnectionSecretToReference of this DataLakeStoreFirewallRule.
-func (mg *DataLakeStoreFirewallRule) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
+// SetWriteConnectionSecretToReference of this LakeStoreFirewallRule.
+func (mg *LakeStoreFirewallRule) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
 	mg.Spec.WriteConnectionSecretToReference = r
 }
 
-// GetCondition of this DataLakeStoreVirtualNetworkRule.
-func (mg *DataLakeStoreVirtualNetworkRule) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
+// GetCondition of this LakeStoreVirtualNetworkRule.
+func (mg *LakeStoreVirtualNetworkRule) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
 	return mg.Status.GetCondition(ct)
 }
 
-// GetDeletionPolicy of this DataLakeStoreVirtualNetworkRule.
-func (mg *DataLakeStoreVirtualNetworkRule) GetDeletionPolicy() xpv1.DeletionPolicy {
+// GetDeletionPolicy of this LakeStoreVirtualNetworkRule.
+func (mg *LakeStoreVirtualNetworkRule) GetDeletionPolicy() xpv1.DeletionPolicy {
 	return mg.Spec.DeletionPolicy
 }
 
-// GetProviderConfigReference of this DataLakeStoreVirtualNetworkRule.
-func (mg *DataLakeStoreVirtualNetworkRule) GetProviderConfigReference() *xpv1.Reference {
+// GetProviderConfigReference of this LakeStoreVirtualNetworkRule.
+func (mg *LakeStoreVirtualNetworkRule) GetProviderConfigReference() *xpv1.Reference {
 	return mg.Spec.ProviderConfigReference
 }
 
 /*
-GetProviderReference of this DataLakeStoreVirtualNetworkRule.
+GetProviderReference of this LakeStoreVirtualNetworkRule.
 Deprecated: Use GetProviderConfigReference.
 */
-func (mg *DataLakeStoreVirtualNetworkRule) GetProviderReference() *xpv1.Reference {
+func (mg *LakeStoreVirtualNetworkRule) GetProviderReference() *xpv1.Reference {
 	return mg.Spec.ProviderReference
 }
 
-// GetWriteConnectionSecretToReference of this DataLakeStoreVirtualNetworkRule.
-func (mg *DataLakeStoreVirtualNetworkRule) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
+// GetWriteConnectionSecretToReference of this LakeStoreVirtualNetworkRule.
+func (mg *LakeStoreVirtualNetworkRule) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
 	return mg.Spec.WriteConnectionSecretToReference
 }
 
-// SetConditions of this DataLakeStoreVirtualNetworkRule.
-func (mg *DataLakeStoreVirtualNetworkRule) SetConditions(c ...xpv1.Condition) {
+// SetConditions of this LakeStoreVirtualNetworkRule.
+func (mg *LakeStoreVirtualNetworkRule) SetConditions(c ...xpv1.Condition) {
 	mg.Status.SetConditions(c...)
 }
 
-// SetDeletionPolicy of this DataLakeStoreVirtualNetworkRule.
-func (mg *DataLakeStoreVirtualNetworkRule) SetDeletionPolicy(r xpv1.DeletionPolicy) {
+// SetDeletionPolicy of this LakeStoreVirtualNetworkRule.
+func (mg *LakeStoreVirtualNetworkRule) SetDeletionPolicy(r xpv1.DeletionPolicy) {
 	mg.Spec.DeletionPolicy = r
 }
 
-// SetProviderConfigReference of this DataLakeStoreVirtualNetworkRule.
-func (mg *DataLakeStoreVirtualNetworkRule) SetProviderConfigReference(r *xpv1.Reference) {
+// SetProviderConfigReference of this LakeStoreVirtualNetworkRule.
+func (mg *LakeStoreVirtualNetworkRule) SetProviderConfigReference(r *xpv1.Reference) {
 	mg.Spec.ProviderConfigReference = r
 }
 
 /*
-SetProviderReference of this DataLakeStoreVirtualNetworkRule.
+SetProviderReference of this LakeStoreVirtualNetworkRule.
 Deprecated: Use SetProviderConfigReference.
 */
-func (mg *DataLakeStoreVirtualNetworkRule) SetProviderReference(r *xpv1.Reference) {
+func (mg *LakeStoreVirtualNetworkRule) SetProviderReference(r *xpv1.Reference) {
 	mg.Spec.ProviderReference = r
 }
 
-// SetWriteConnectionSecretToReference of this DataLakeStoreVirtualNetworkRule.
-func (mg *DataLakeStoreVirtualNetworkRule) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
+// SetWriteConnectionSecretToReference of this LakeStoreVirtualNetworkRule.
+func (mg *LakeStoreVirtualNetworkRule) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
 	mg.Spec.WriteConnectionSecretToReference = r
 }
 
-// GetCondition of this DataProtectionBackupInstanceBlobStorage.
-func (mg *DataProtectionBackupInstanceBlobStorage) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
+// GetCondition of this ProtectionBackupInstanceBlobStorage.
+func (mg *ProtectionBackupInstanceBlobStorage) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
 	return mg.Status.GetCondition(ct)
 }
 
-// GetDeletionPolicy of this DataProtectionBackupInstanceBlobStorage.
-func (mg *DataProtectionBackupInstanceBlobStorage) GetDeletionPolicy() xpv1.DeletionPolicy {
+// GetDeletionPolicy of this ProtectionBackupInstanceBlobStorage.
+func (mg *ProtectionBackupInstanceBlobStorage) GetDeletionPolicy() xpv1.DeletionPolicy {
 	return mg.Spec.DeletionPolicy
 }
 
-// GetProviderConfigReference of this DataProtectionBackupInstanceBlobStorage.
-func (mg *DataProtectionBackupInstanceBlobStorage) GetProviderConfigReference() *xpv1.Reference {
+// GetProviderConfigReference of this ProtectionBackupInstanceBlobStorage.
+func (mg *ProtectionBackupInstanceBlobStorage) GetProviderConfigReference() *xpv1.Reference {
 	return mg.Spec.ProviderConfigReference
 }
 
 /*
-GetProviderReference of this DataProtectionBackupInstanceBlobStorage.
+GetProviderReference of this ProtectionBackupInstanceBlobStorage.
 Deprecated: Use GetProviderConfigReference.
 */
-func (mg *DataProtectionBackupInstanceBlobStorage) GetProviderReference() *xpv1.Reference {
+func (mg *ProtectionBackupInstanceBlobStorage) GetProviderReference() *xpv1.Reference {
 	return mg.Spec.ProviderReference
 }
 
-// GetWriteConnectionSecretToReference of this DataProtectionBackupInstanceBlobStorage.
-func (mg *DataProtectionBackupInstanceBlobStorage) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
+// GetWriteConnectionSecretToReference of this ProtectionBackupInstanceBlobStorage.
+func (mg *ProtectionBackupInstanceBlobStorage) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
 	return mg.Spec.WriteConnectionSecretToReference
 }
 
-// SetConditions of this DataProtectionBackupInstanceBlobStorage.
-func (mg *DataProtectionBackupInstanceBlobStorage) SetConditions(c ...xpv1.Condition) {
+// SetConditions of this ProtectionBackupInstanceBlobStorage.
+func (mg *ProtectionBackupInstanceBlobStorage) SetConditions(c ...xpv1.Condition) {
 	mg.Status.SetConditions(c...)
 }
 
-// SetDeletionPolicy of this DataProtectionBackupInstanceBlobStorage.
-func (mg *DataProtectionBackupInstanceBlobStorage) SetDeletionPolicy(r xpv1.DeletionPolicy) {
+// SetDeletionPolicy of this ProtectionBackupInstanceBlobStorage.
+func (mg *ProtectionBackupInstanceBlobStorage) SetDeletionPolicy(r xpv1.DeletionPolicy) {
 	mg.Spec.DeletionPolicy = r
 }
 
-// SetProviderConfigReference of this DataProtectionBackupInstanceBlobStorage.
-func (mg *DataProtectionBackupInstanceBlobStorage) SetProviderConfigReference(r *xpv1.Reference) {
+// SetProviderConfigReference of this ProtectionBackupInstanceBlobStorage.
+func (mg *ProtectionBackupInstanceBlobStorage) SetProviderConfigReference(r *xpv1.Reference) {
 	mg.Spec.ProviderConfigReference = r
 }
 
 /*
-SetProviderReference of this DataProtectionBackupInstanceBlobStorage.
+SetProviderReference of this ProtectionBackupInstanceBlobStorage.
 Deprecated: Use SetProviderConfigReference.
 */
-func (mg *DataProtectionBackupInstanceBlobStorage) SetProviderReference(r *xpv1.Reference) {
+func (mg *ProtectionBackupInstanceBlobStorage) SetProviderReference(r *xpv1.Reference) {
 	mg.Spec.ProviderReference = r
 }
 
-// SetWriteConnectionSecretToReference of this DataProtectionBackupInstanceBlobStorage.
-func (mg *DataProtectionBackupInstanceBlobStorage) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
+// SetWriteConnectionSecretToReference of this ProtectionBackupInstanceBlobStorage.
+func (mg *ProtectionBackupInstanceBlobStorage) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
 	mg.Spec.WriteConnectionSecretToReference = r
 }
 
-// GetCondition of this DataProtectionBackupInstanceDisk.
-func (mg *DataProtectionBackupInstanceDisk) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
+// GetCondition of this ProtectionBackupInstanceDisk.
+func (mg *ProtectionBackupInstanceDisk) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
 	return mg.Status.GetCondition(ct)
 }
 
-// GetDeletionPolicy of this DataProtectionBackupInstanceDisk.
-func (mg *DataProtectionBackupInstanceDisk) GetDeletionPolicy() xpv1.DeletionPolicy {
+// GetDeletionPolicy of this ProtectionBackupInstanceDisk.
+func (mg *ProtectionBackupInstanceDisk) GetDeletionPolicy() xpv1.DeletionPolicy {
 	return mg.Spec.DeletionPolicy
 }
 
-// GetProviderConfigReference of this DataProtectionBackupInstanceDisk.
-func (mg *DataProtectionBackupInstanceDisk) GetProviderConfigReference() *xpv1.Reference {
+// GetProviderConfigReference of this ProtectionBackupInstanceDisk.
+func (mg *ProtectionBackupInstanceDisk) GetProviderConfigReference() *xpv1.Reference {
 	return mg.Spec.ProviderConfigReference
 }
 
 /*
-GetProviderReference of this DataProtectionBackupInstanceDisk.
+GetProviderReference of this ProtectionBackupInstanceDisk.
 Deprecated: Use GetProviderConfigReference.
 */
-func (mg *DataProtectionBackupInstanceDisk) GetProviderReference() *xpv1.Reference {
+func (mg *ProtectionBackupInstanceDisk) GetProviderReference() *xpv1.Reference {
 	return mg.Spec.ProviderReference
 }
 
-// GetWriteConnectionSecretToReference of this DataProtectionBackupInstanceDisk.
-func (mg *DataProtectionBackupInstanceDisk) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
+// GetWriteConnectionSecretToReference of this ProtectionBackupInstanceDisk.
+func (mg *ProtectionBackupInstanceDisk) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
 	return mg.Spec.WriteConnectionSecretToReference
 }
 
-// SetConditions of this DataProtectionBackupInstanceDisk.
-func (mg *DataProtectionBackupInstanceDisk) SetConditions(c ...xpv1.Condition) {
+// SetConditions of this ProtectionBackupInstanceDisk.
+func (mg *ProtectionBackupInstanceDisk) SetConditions(c ...xpv1.Condition) {
 	mg.Status.SetConditions(c...)
 }
 
-// SetDeletionPolicy of this DataProtectionBackupInstanceDisk.
-func (mg *DataProtectionBackupInstanceDisk) SetDeletionPolicy(r xpv1.DeletionPolicy) {
+// SetDeletionPolicy of this ProtectionBackupInstanceDisk.
+func (mg *ProtectionBackupInstanceDisk) SetDeletionPolicy(r xpv1.DeletionPolicy) {
 	mg.Spec.DeletionPolicy = r
 }
 
-// SetProviderConfigReference of this DataProtectionBackupInstanceDisk.
-func (mg *DataProtectionBackupInstanceDisk) SetProviderConfigReference(r *xpv1.Reference) {
+// SetProviderConfigReference of this ProtectionBackupInstanceDisk.
+func (mg *ProtectionBackupInstanceDisk) SetProviderConfigReference(r *xpv1.Reference) {
 	mg.Spec.ProviderConfigReference = r
 }
 
 /*
-SetProviderReference of this DataProtectionBackupInstanceDisk.
+SetProviderReference of this ProtectionBackupInstanceDisk.
 Deprecated: Use SetProviderConfigReference.
 */
-func (mg *DataProtectionBackupInstanceDisk) SetProviderReference(r *xpv1.Reference) {
+func (mg *ProtectionBackupInstanceDisk) SetProviderReference(r *xpv1.Reference) {
 	mg.Spec.ProviderReference = r
 }
 
-// SetWriteConnectionSecretToReference of this DataProtectionBackupInstanceDisk.
-func (mg *DataProtectionBackupInstanceDisk) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
+// SetWriteConnectionSecretToReference of this ProtectionBackupInstanceDisk.
+func (mg *ProtectionBackupInstanceDisk) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
 	mg.Spec.WriteConnectionSecretToReference = r
 }
 
-// GetCondition of this DataProtectionBackupInstancePostgresql.
-func (mg *DataProtectionBackupInstancePostgresql) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
+// GetCondition of this ProtectionBackupInstancePostgresql.
+func (mg *ProtectionBackupInstancePostgresql) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
 	return mg.Status.GetCondition(ct)
 }
 
-// GetDeletionPolicy of this DataProtectionBackupInstancePostgresql.
-func (mg *DataProtectionBackupInstancePostgresql) GetDeletionPolicy() xpv1.DeletionPolicy {
+// GetDeletionPolicy of this ProtectionBackupInstancePostgresql.
+func (mg *ProtectionBackupInstancePostgresql) GetDeletionPolicy() xpv1.DeletionPolicy {
 	return mg.Spec.DeletionPolicy
 }
 
-// GetProviderConfigReference of this DataProtectionBackupInstancePostgresql.
-func (mg *DataProtectionBackupInstancePostgresql) GetProviderConfigReference() *xpv1.Reference {
+// GetProviderConfigReference of this ProtectionBackupInstancePostgresql.
+func (mg *ProtectionBackupInstancePostgresql) GetProviderConfigReference() *xpv1.Reference {
 	return mg.Spec.ProviderConfigReference
 }
 
 /*
-GetProviderReference of this DataProtectionBackupInstancePostgresql.
+GetProviderReference of this ProtectionBackupInstancePostgresql.
 Deprecated: Use GetProviderConfigReference.
 */
-func (mg *DataProtectionBackupInstancePostgresql) GetProviderReference() *xpv1.Reference {
+func (mg *ProtectionBackupInstancePostgresql) GetProviderReference() *xpv1.Reference {
 	return mg.Spec.ProviderReference
 }
 
-// GetWriteConnectionSecretToReference of this DataProtectionBackupInstancePostgresql.
-func (mg *DataProtectionBackupInstancePostgresql) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
+// GetWriteConnectionSecretToReference of this ProtectionBackupInstancePostgresql.
+func (mg *ProtectionBackupInstancePostgresql) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
 	return mg.Spec.WriteConnectionSecretToReference
 }
 
-// SetConditions of this DataProtectionBackupInstancePostgresql.
-func (mg *DataProtectionBackupInstancePostgresql) SetConditions(c ...xpv1.Condition) {
+// SetConditions of this ProtectionBackupInstancePostgresql.
+func (mg *ProtectionBackupInstancePostgresql) SetConditions(c ...xpv1.Condition) {
 	mg.Status.SetConditions(c...)
 }
 
-// SetDeletionPolicy of this DataProtectionBackupInstancePostgresql.
-func (mg *DataProtectionBackupInstancePostgresql) SetDeletionPolicy(r xpv1.DeletionPolicy) {
+// SetDeletionPolicy of this ProtectionBackupInstancePostgresql.
+func (mg *ProtectionBackupInstancePostgresql) SetDeletionPolicy(r xpv1.DeletionPolicy) {
 	mg.Spec.DeletionPolicy = r
 }
 
-// SetProviderConfigReference of this DataProtectionBackupInstancePostgresql.
-func (mg *DataProtectionBackupInstancePostgresql) SetProviderConfigReference(r *xpv1.Reference) {
+// SetProviderConfigReference of this ProtectionBackupInstancePostgresql.
+func (mg *ProtectionBackupInstancePostgresql) SetProviderConfigReference(r *xpv1.Reference) {
 	mg.Spec.ProviderConfigReference = r
 }
 
 /*
-SetProviderReference of this DataProtectionBackupInstancePostgresql.
+SetProviderReference of this ProtectionBackupInstancePostgresql.
 Deprecated: Use SetProviderConfigReference.
 */
-func (mg *DataProtectionBackupInstancePostgresql) SetProviderReference(r *xpv1.Reference) {
+func (mg *ProtectionBackupInstancePostgresql) SetProviderReference(r *xpv1.Reference) {
 	mg.Spec.ProviderReference = r
 }
 
-// SetWriteConnectionSecretToReference of this DataProtectionBackupInstancePostgresql.
-func (mg *DataProtectionBackupInstancePostgresql) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
+// SetWriteConnectionSecretToReference of this ProtectionBackupInstancePostgresql.
+func (mg *ProtectionBackupInstancePostgresql) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
 	mg.Spec.WriteConnectionSecretToReference = r
 }
 
-// GetCondition of this DataProtectionBackupPolicyBlobStorage.
-func (mg *DataProtectionBackupPolicyBlobStorage) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
+// GetCondition of this ProtectionBackupPolicyBlobStorage.
+func (mg *ProtectionBackupPolicyBlobStorage) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
 	return mg.Status.GetCondition(ct)
 }
 
-// GetDeletionPolicy of this DataProtectionBackupPolicyBlobStorage.
-func (mg *DataProtectionBackupPolicyBlobStorage) GetDeletionPolicy() xpv1.DeletionPolicy {
+// GetDeletionPolicy of this ProtectionBackupPolicyBlobStorage.
+func (mg *ProtectionBackupPolicyBlobStorage) GetDeletionPolicy() xpv1.DeletionPolicy {
 	return mg.Spec.DeletionPolicy
 }
 
-// GetProviderConfigReference of this DataProtectionBackupPolicyBlobStorage.
-func (mg *DataProtectionBackupPolicyBlobStorage) GetProviderConfigReference() *xpv1.Reference {
+// GetProviderConfigReference of this ProtectionBackupPolicyBlobStorage.
+func (mg *ProtectionBackupPolicyBlobStorage) GetProviderConfigReference() *xpv1.Reference {
 	return mg.Spec.ProviderConfigReference
 }
 
 /*
-GetProviderReference of this DataProtectionBackupPolicyBlobStorage.
+GetProviderReference of this ProtectionBackupPolicyBlobStorage.
 Deprecated: Use GetProviderConfigReference.
 */
-func (mg *DataProtectionBackupPolicyBlobStorage) GetProviderReference() *xpv1.Reference {
+func (mg *ProtectionBackupPolicyBlobStorage) GetProviderReference() *xpv1.Reference {
 	return mg.Spec.ProviderReference
 }
 
-// GetWriteConnectionSecretToReference of this DataProtectionBackupPolicyBlobStorage.
-func (mg *DataProtectionBackupPolicyBlobStorage) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
+// GetWriteConnectionSecretToReference of this ProtectionBackupPolicyBlobStorage.
+func (mg *ProtectionBackupPolicyBlobStorage) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
 	return mg.Spec.WriteConnectionSecretToReference
 }
 
-// SetConditions of this DataProtectionBackupPolicyBlobStorage.
-func (mg *DataProtectionBackupPolicyBlobStorage) SetConditions(c ...xpv1.Condition) {
+// SetConditions of this ProtectionBackupPolicyBlobStorage.
+func (mg *ProtectionBackupPolicyBlobStorage) SetConditions(c ...xpv1.Condition) {
 	mg.Status.SetConditions(c...)
 }
 
-// SetDeletionPolicy of this DataProtectionBackupPolicyBlobStorage.
-func (mg *DataProtectionBackupPolicyBlobStorage) SetDeletionPolicy(r xpv1.DeletionPolicy) {
+// SetDeletionPolicy of this ProtectionBackupPolicyBlobStorage.
+func (mg *ProtectionBackupPolicyBlobStorage) SetDeletionPolicy(r xpv1.DeletionPolicy) {
 	mg.Spec.DeletionPolicy = r
 }
 
-// SetProviderConfigReference of this DataProtectionBackupPolicyBlobStorage.
-func (mg *DataProtectionBackupPolicyBlobStorage) SetProviderConfigReference(r *xpv1.Reference) {
+// SetProviderConfigReference of this ProtectionBackupPolicyBlobStorage.
+func (mg *ProtectionBackupPolicyBlobStorage) SetProviderConfigReference(r *xpv1.Reference) {
 	mg.Spec.ProviderConfigReference = r
 }
 
 /*
-SetProviderReference of this DataProtectionBackupPolicyBlobStorage.
+SetProviderReference of this ProtectionBackupPolicyBlobStorage.
 Deprecated: Use SetProviderConfigReference.
 */
-func (mg *DataProtectionBackupPolicyBlobStorage) SetProviderReference(r *xpv1.Reference) {
+func (mg *ProtectionBackupPolicyBlobStorage) SetProviderReference(r *xpv1.Reference) {
 	mg.Spec.ProviderReference = r
 }
 
-// SetWriteConnectionSecretToReference of this DataProtectionBackupPolicyBlobStorage.
-func (mg *DataProtectionBackupPolicyBlobStorage) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
+// SetWriteConnectionSecretToReference of this ProtectionBackupPolicyBlobStorage.
+func (mg *ProtectionBackupPolicyBlobStorage) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
 	mg.Spec.WriteConnectionSecretToReference = r
 }
 
-// GetCondition of this DataProtectionBackupPolicyDisk.
-func (mg *DataProtectionBackupPolicyDisk) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
+// GetCondition of this ProtectionBackupPolicyDisk.
+func (mg *ProtectionBackupPolicyDisk) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
 	return mg.Status.GetCondition(ct)
 }
 
-// GetDeletionPolicy of this DataProtectionBackupPolicyDisk.
-func (mg *DataProtectionBackupPolicyDisk) GetDeletionPolicy() xpv1.DeletionPolicy {
+// GetDeletionPolicy of this ProtectionBackupPolicyDisk.
+func (mg *ProtectionBackupPolicyDisk) GetDeletionPolicy() xpv1.DeletionPolicy {
 	return mg.Spec.DeletionPolicy
 }
 
-// GetProviderConfigReference of this DataProtectionBackupPolicyDisk.
-func (mg *DataProtectionBackupPolicyDisk) GetProviderConfigReference() *xpv1.Reference {
+// GetProviderConfigReference of this ProtectionBackupPolicyDisk.
+func (mg *ProtectionBackupPolicyDisk) GetProviderConfigReference() *xpv1.Reference {
 	return mg.Spec.ProviderConfigReference
 }
 
 /*
-GetProviderReference of this DataProtectionBackupPolicyDisk.
+GetProviderReference of this ProtectionBackupPolicyDisk.
 Deprecated: Use GetProviderConfigReference.
 */
-func (mg *DataProtectionBackupPolicyDisk) GetProviderReference() *xpv1.Reference {
+func (mg *ProtectionBackupPolicyDisk) GetProviderReference() *xpv1.Reference {
 	return mg.Spec.ProviderReference
 }
 
-// GetWriteConnectionSecretToReference of this DataProtectionBackupPolicyDisk.
-func (mg *DataProtectionBackupPolicyDisk) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
+// GetWriteConnectionSecretToReference of this ProtectionBackupPolicyDisk.
+func (mg *ProtectionBackupPolicyDisk) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
 	return mg.Spec.WriteConnectionSecretToReference
 }
 
-// SetConditions of this DataProtectionBackupPolicyDisk.
-func (mg *DataProtectionBackupPolicyDisk) SetConditions(c ...xpv1.Condition) {
+// SetConditions of this ProtectionBackupPolicyDisk.
+func (mg *ProtectionBackupPolicyDisk) SetConditions(c ...xpv1.Condition) {
 	mg.Status.SetConditions(c...)
 }
 
-// SetDeletionPolicy of this DataProtectionBackupPolicyDisk.
-func (mg *DataProtectionBackupPolicyDisk) SetDeletionPolicy(r xpv1.DeletionPolicy) {
+// SetDeletionPolicy of this ProtectionBackupPolicyDisk.
+func (mg *ProtectionBackupPolicyDisk) SetDeletionPolicy(r xpv1.DeletionPolicy) {
 	mg.Spec.DeletionPolicy = r
 }
 
-// SetProviderConfigReference of this DataProtectionBackupPolicyDisk.
-func (mg *DataProtectionBackupPolicyDisk) SetProviderConfigReference(r *xpv1.Reference) {
+// SetProviderConfigReference of this ProtectionBackupPolicyDisk.
+func (mg *ProtectionBackupPolicyDisk) SetProviderConfigReference(r *xpv1.Reference) {
 	mg.Spec.ProviderConfigReference = r
 }
 
 /*
-SetProviderReference of this DataProtectionBackupPolicyDisk.
+SetProviderReference of this ProtectionBackupPolicyDisk.
 Deprecated: Use SetProviderConfigReference.
 */
-func (mg *DataProtectionBackupPolicyDisk) SetProviderReference(r *xpv1.Reference) {
+func (mg *ProtectionBackupPolicyDisk) SetProviderReference(r *xpv1.Reference) {
 	mg.Spec.ProviderReference = r
 }
 
-// SetWriteConnectionSecretToReference of this DataProtectionBackupPolicyDisk.
-func (mg *DataProtectionBackupPolicyDisk) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
+// SetWriteConnectionSecretToReference of this ProtectionBackupPolicyDisk.
+func (mg *ProtectionBackupPolicyDisk) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
 	mg.Spec.WriteConnectionSecretToReference = r
 }
 
-// GetCondition of this DataProtectionBackupPolicyPostgresql.
-func (mg *DataProtectionBackupPolicyPostgresql) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
+// GetCondition of this ProtectionBackupPolicyPostgresql.
+func (mg *ProtectionBackupPolicyPostgresql) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
 	return mg.Status.GetCondition(ct)
 }
 
-// GetDeletionPolicy of this DataProtectionBackupPolicyPostgresql.
-func (mg *DataProtectionBackupPolicyPostgresql) GetDeletionPolicy() xpv1.DeletionPolicy {
+// GetDeletionPolicy of this ProtectionBackupPolicyPostgresql.
+func (mg *ProtectionBackupPolicyPostgresql) GetDeletionPolicy() xpv1.DeletionPolicy {
 	return mg.Spec.DeletionPolicy
 }
 
-// GetProviderConfigReference of this DataProtectionBackupPolicyPostgresql.
-func (mg *DataProtectionBackupPolicyPostgresql) GetProviderConfigReference() *xpv1.Reference {
+// GetProviderConfigReference of this ProtectionBackupPolicyPostgresql.
+func (mg *ProtectionBackupPolicyPostgresql) GetProviderConfigReference() *xpv1.Reference {
 	return mg.Spec.ProviderConfigReference
 }
 
 /*
-GetProviderReference of this DataProtectionBackupPolicyPostgresql.
+GetProviderReference of this ProtectionBackupPolicyPostgresql.
 Deprecated: Use GetProviderConfigReference.
 */
-func (mg *DataProtectionBackupPolicyPostgresql) GetProviderReference() *xpv1.Reference {
+func (mg *ProtectionBackupPolicyPostgresql) GetProviderReference() *xpv1.Reference {
 	return mg.Spec.ProviderReference
 }
 
-// GetWriteConnectionSecretToReference of this DataProtectionBackupPolicyPostgresql.
-func (mg *DataProtectionBackupPolicyPostgresql) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
+// GetWriteConnectionSecretToReference of this ProtectionBackupPolicyPostgresql.
+func (mg *ProtectionBackupPolicyPostgresql) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
 	return mg.Spec.WriteConnectionSecretToReference
 }
 
-// SetConditions of this DataProtectionBackupPolicyPostgresql.
-func (mg *DataProtectionBackupPolicyPostgresql) SetConditions(c ...xpv1.Condition) {
+// SetConditions of this ProtectionBackupPolicyPostgresql.
+func (mg *ProtectionBackupPolicyPostgresql) SetConditions(c ...xpv1.Condition) {
 	mg.Status.SetConditions(c...)
 }
 
-// SetDeletionPolicy of this DataProtectionBackupPolicyPostgresql.
-func (mg *DataProtectionBackupPolicyPostgresql) SetDeletionPolicy(r xpv1.DeletionPolicy) {
+// SetDeletionPolicy of this ProtectionBackupPolicyPostgresql.
+func (mg *ProtectionBackupPolicyPostgresql) SetDeletionPolicy(r xpv1.DeletionPolicy) {
 	mg.Spec.DeletionPolicy = r
 }
 
-// SetProviderConfigReference of this DataProtectionBackupPolicyPostgresql.
-func (mg *DataProtectionBackupPolicyPostgresql) SetProviderConfigReference(r *xpv1.Reference) {
+// SetProviderConfigReference of this ProtectionBackupPolicyPostgresql.
+func (mg *ProtectionBackupPolicyPostgresql) SetProviderConfigReference(r *xpv1.Reference) {
 	mg.Spec.ProviderConfigReference = r
 }
 
 /*
-SetProviderReference of this DataProtectionBackupPolicyPostgresql.
+SetProviderReference of this ProtectionBackupPolicyPostgresql.
 Deprecated: Use SetProviderConfigReference.
 */
-func (mg *DataProtectionBackupPolicyPostgresql) SetProviderReference(r *xpv1.Reference) {
+func (mg *ProtectionBackupPolicyPostgresql) SetProviderReference(r *xpv1.Reference) {
 	mg.Spec.ProviderReference = r
 }
 
-// SetWriteConnectionSecretToReference of this DataProtectionBackupPolicyPostgresql.
-func (mg *DataProtectionBackupPolicyPostgresql) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
+// SetWriteConnectionSecretToReference of this ProtectionBackupPolicyPostgresql.
+func (mg *ProtectionBackupPolicyPostgresql) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
 	mg.Spec.WriteConnectionSecretToReference = r
 }
 
-// GetCondition of this DataProtectionBackupVault.
-func (mg *DataProtectionBackupVault) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
+// GetCondition of this ProtectionBackupVault.
+func (mg *ProtectionBackupVault) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
 	return mg.Status.GetCondition(ct)
 }
 
-// GetDeletionPolicy of this DataProtectionBackupVault.
-func (mg *DataProtectionBackupVault) GetDeletionPolicy() xpv1.DeletionPolicy {
+// GetDeletionPolicy of this ProtectionBackupVault.
+func (mg *ProtectionBackupVault) GetDeletionPolicy() xpv1.DeletionPolicy {
 	return mg.Spec.DeletionPolicy
 }
 
-// GetProviderConfigReference of this DataProtectionBackupVault.
-func (mg *DataProtectionBackupVault) GetProviderConfigReference() *xpv1.Reference {
+// GetProviderConfigReference of this ProtectionBackupVault.
+func (mg *ProtectionBackupVault) GetProviderConfigReference() *xpv1.Reference {
 	return mg.Spec.ProviderConfigReference
 }
 
 /*
-GetProviderReference of this DataProtectionBackupVault.
+GetProviderReference of this ProtectionBackupVault.
 Deprecated: Use GetProviderConfigReference.
 */
-func (mg *DataProtectionBackupVault) GetProviderReference() *xpv1.Reference {
+func (mg *ProtectionBackupVault) GetProviderReference() *xpv1.Reference {
 	return mg.Spec.ProviderReference
 }
 
-// GetWriteConnectionSecretToReference of this DataProtectionBackupVault.
-func (mg *DataProtectionBackupVault) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
+// GetWriteConnectionSecretToReference of this ProtectionBackupVault.
+func (mg *ProtectionBackupVault) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
 	return mg.Spec.WriteConnectionSecretToReference
 }
 
-// SetConditions of this DataProtectionBackupVault.
-func (mg *DataProtectionBackupVault) SetConditions(c ...xpv1.Condition) {
+// SetConditions of this ProtectionBackupVault.
+func (mg *ProtectionBackupVault) SetConditions(c ...xpv1.Condition) {
 	mg.Status.SetConditions(c...)
 }
 
-// SetDeletionPolicy of this DataProtectionBackupVault.
-func (mg *DataProtectionBackupVault) SetDeletionPolicy(r xpv1.DeletionPolicy) {
+// SetDeletionPolicy of this ProtectionBackupVault.
+func (mg *ProtectionBackupVault) SetDeletionPolicy(r xpv1.DeletionPolicy) {
 	mg.Spec.DeletionPolicy = r
 }
 
-// SetProviderConfigReference of this DataProtectionBackupVault.
-func (mg *DataProtectionBackupVault) SetProviderConfigReference(r *xpv1.Reference) {
+// SetProviderConfigReference of this ProtectionBackupVault.
+func (mg *ProtectionBackupVault) SetProviderConfigReference(r *xpv1.Reference) {
 	mg.Spec.ProviderConfigReference = r
 }
 
 /*
-SetProviderReference of this DataProtectionBackupVault.
+SetProviderReference of this ProtectionBackupVault.
 Deprecated: Use SetProviderConfigReference.
 */
-func (mg *DataProtectionBackupVault) SetProviderReference(r *xpv1.Reference) {
+func (mg *ProtectionBackupVault) SetProviderReference(r *xpv1.Reference) {
 	mg.Spec.ProviderReference = r
 }
 
-// SetWriteConnectionSecretToReference of this DataProtectionBackupVault.
-func (mg *DataProtectionBackupVault) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
+// SetWriteConnectionSecretToReference of this ProtectionBackupVault.
+func (mg *ProtectionBackupVault) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
 	mg.Spec.WriteConnectionSecretToReference = r
 }
 
-// GetCondition of this DataShare.
-func (mg *DataShare) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
+// GetCondition of this Share.
+func (mg *Share) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
 	return mg.Status.GetCondition(ct)
 }
 
-// GetDeletionPolicy of this DataShare.
-func (mg *DataShare) GetDeletionPolicy() xpv1.DeletionPolicy {
+// GetDeletionPolicy of this Share.
+func (mg *Share) GetDeletionPolicy() xpv1.DeletionPolicy {
 	return mg.Spec.DeletionPolicy
 }
 
-// GetProviderConfigReference of this DataShare.
-func (mg *DataShare) GetProviderConfigReference() *xpv1.Reference {
+// GetProviderConfigReference of this Share.
+func (mg *Share) GetProviderConfigReference() *xpv1.Reference {
 	return mg.Spec.ProviderConfigReference
 }
 
 /*
-GetProviderReference of this DataShare.
+GetProviderReference of this Share.
 Deprecated: Use GetProviderConfigReference.
 */
-func (mg *DataShare) GetProviderReference() *xpv1.Reference {
+func (mg *Share) GetProviderReference() *xpv1.Reference {
 	return mg.Spec.ProviderReference
 }
 
-// GetWriteConnectionSecretToReference of this DataShare.
-func (mg *DataShare) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
+// GetWriteConnectionSecretToReference of this Share.
+func (mg *Share) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
 	return mg.Spec.WriteConnectionSecretToReference
 }
 
-// SetConditions of this DataShare.
-func (mg *DataShare) SetConditions(c ...xpv1.Condition) {
+// SetConditions of this Share.
+func (mg *Share) SetConditions(c ...xpv1.Condition) {
 	mg.Status.SetConditions(c...)
 }
 
-// SetDeletionPolicy of this DataShare.
-func (mg *DataShare) SetDeletionPolicy(r xpv1.DeletionPolicy) {
+// SetDeletionPolicy of this Share.
+func (mg *Share) SetDeletionPolicy(r xpv1.DeletionPolicy) {
 	mg.Spec.DeletionPolicy = r
 }
 
-// SetProviderConfigReference of this DataShare.
-func (mg *DataShare) SetProviderConfigReference(r *xpv1.Reference) {
+// SetProviderConfigReference of this Share.
+func (mg *Share) SetProviderConfigReference(r *xpv1.Reference) {
 	mg.Spec.ProviderConfigReference = r
 }
 
 /*
-SetProviderReference of this DataShare.
+SetProviderReference of this Share.
 Deprecated: Use SetProviderConfigReference.
 */
-func (mg *DataShare) SetProviderReference(r *xpv1.Reference) {
+func (mg *Share) SetProviderReference(r *xpv1.Reference) {
 	mg.Spec.ProviderReference = r
 }
 
-// SetWriteConnectionSecretToReference of this DataShare.
-func (mg *DataShare) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
+// SetWriteConnectionSecretToReference of this Share.
+func (mg *Share) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
 	mg.Spec.WriteConnectionSecretToReference = r
 }
 
-// GetCondition of this DataShareAccount.
-func (mg *DataShareAccount) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
+// GetCondition of this ShareAccount.
+func (mg *ShareAccount) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
 	return mg.Status.GetCondition(ct)
 }
 
-// GetDeletionPolicy of this DataShareAccount.
-func (mg *DataShareAccount) GetDeletionPolicy() xpv1.DeletionPolicy {
+// GetDeletionPolicy of this ShareAccount.
+func (mg *ShareAccount) GetDeletionPolicy() xpv1.DeletionPolicy {
 	return mg.Spec.DeletionPolicy
 }
 
-// GetProviderConfigReference of this DataShareAccount.
-func (mg *DataShareAccount) GetProviderConfigReference() *xpv1.Reference {
+// GetProviderConfigReference of this ShareAccount.
+func (mg *ShareAccount) GetProviderConfigReference() *xpv1.Reference {
 	return mg.Spec.ProviderConfigReference
 }
 
 /*
-GetProviderReference of this DataShareAccount.
+GetProviderReference of this ShareAccount.
 Deprecated: Use GetProviderConfigReference.
 */
-func (mg *DataShareAccount) GetProviderReference() *xpv1.Reference {
+func (mg *ShareAccount) GetProviderReference() *xpv1.Reference {
 	return mg.Spec.ProviderReference
 }
 
-// GetWriteConnectionSecretToReference of this DataShareAccount.
-func (mg *DataShareAccount) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
+// GetWriteConnectionSecretToReference of this ShareAccount.
+func (mg *ShareAccount) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
 	return mg.Spec.WriteConnectionSecretToReference
 }
 
-// SetConditions of this DataShareAccount.
-func (mg *DataShareAccount) SetConditions(c ...xpv1.Condition) {
+// SetConditions of this ShareAccount.
+func (mg *ShareAccount) SetConditions(c ...xpv1.Condition) {
 	mg.Status.SetConditions(c...)
 }
 
-// SetDeletionPolicy of this DataShareAccount.
-func (mg *DataShareAccount) SetDeletionPolicy(r xpv1.DeletionPolicy) {
+// SetDeletionPolicy of this ShareAccount.
+func (mg *ShareAccount) SetDeletionPolicy(r xpv1.DeletionPolicy) {
 	mg.Spec.DeletionPolicy = r
 }
 
-// SetProviderConfigReference of this DataShareAccount.
-func (mg *DataShareAccount) SetProviderConfigReference(r *xpv1.Reference) {
+// SetProviderConfigReference of this ShareAccount.
+func (mg *ShareAccount) SetProviderConfigReference(r *xpv1.Reference) {
 	mg.Spec.ProviderConfigReference = r
 }
 
 /*
-SetProviderReference of this DataShareAccount.
+SetProviderReference of this ShareAccount.
 Deprecated: Use SetProviderConfigReference.
 */
-func (mg *DataShareAccount) SetProviderReference(r *xpv1.Reference) {
+func (mg *ShareAccount) SetProviderReference(r *xpv1.Reference) {
 	mg.Spec.ProviderReference = r
 }
 
-// SetWriteConnectionSecretToReference of this DataShareAccount.
-func (mg *DataShareAccount) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
+// SetWriteConnectionSecretToReference of this ShareAccount.
+func (mg *ShareAccount) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
 	mg.Spec.WriteConnectionSecretToReference = r
 }
 
-// GetCondition of this DataShareDatasetBlobStorage.
-func (mg *DataShareDatasetBlobStorage) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
+// GetCondition of this ShareDatasetBlobStorage.
+func (mg *ShareDatasetBlobStorage) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
 	return mg.Status.GetCondition(ct)
 }
 
-// GetDeletionPolicy of this DataShareDatasetBlobStorage.
-func (mg *DataShareDatasetBlobStorage) GetDeletionPolicy() xpv1.DeletionPolicy {
+// GetDeletionPolicy of this ShareDatasetBlobStorage.
+func (mg *ShareDatasetBlobStorage) GetDeletionPolicy() xpv1.DeletionPolicy {
 	return mg.Spec.DeletionPolicy
 }
 
-// GetProviderConfigReference of this DataShareDatasetBlobStorage.
-func (mg *DataShareDatasetBlobStorage) GetProviderConfigReference() *xpv1.Reference {
+// GetProviderConfigReference of this ShareDatasetBlobStorage.
+func (mg *ShareDatasetBlobStorage) GetProviderConfigReference() *xpv1.Reference {
 	return mg.Spec.ProviderConfigReference
 }
 
 /*
-GetProviderReference of this DataShareDatasetBlobStorage.
+GetProviderReference of this ShareDatasetBlobStorage.
 Deprecated: Use GetProviderConfigReference.
 */
-func (mg *DataShareDatasetBlobStorage) GetProviderReference() *xpv1.Reference {
+func (mg *ShareDatasetBlobStorage) GetProviderReference() *xpv1.Reference {
 	return mg.Spec.ProviderReference
 }
 
-// GetWriteConnectionSecretToReference of this DataShareDatasetBlobStorage.
-func (mg *DataShareDatasetBlobStorage) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
+// GetWriteConnectionSecretToReference of this ShareDatasetBlobStorage.
+func (mg *ShareDatasetBlobStorage) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
 	return mg.Spec.WriteConnectionSecretToReference
 }
 
-// SetConditions of this DataShareDatasetBlobStorage.
-func (mg *DataShareDatasetBlobStorage) SetConditions(c ...xpv1.Condition) {
+// SetConditions of this ShareDatasetBlobStorage.
+func (mg *ShareDatasetBlobStorage) SetConditions(c ...xpv1.Condition) {
 	mg.Status.SetConditions(c...)
 }
 
-// SetDeletionPolicy of this DataShareDatasetBlobStorage.
-func (mg *DataShareDatasetBlobStorage) SetDeletionPolicy(r xpv1.DeletionPolicy) {
+// SetDeletionPolicy of this ShareDatasetBlobStorage.
+func (mg *ShareDatasetBlobStorage) SetDeletionPolicy(r xpv1.DeletionPolicy) {
 	mg.Spec.DeletionPolicy = r
 }
 
-// SetProviderConfigReference of this DataShareDatasetBlobStorage.
-func (mg *DataShareDatasetBlobStorage) SetProviderConfigReference(r *xpv1.Reference) {
+// SetProviderConfigReference of this ShareDatasetBlobStorage.
+func (mg *ShareDatasetBlobStorage) SetProviderConfigReference(r *xpv1.Reference) {
 	mg.Spec.ProviderConfigReference = r
 }
 
 /*
-SetProviderReference of this DataShareDatasetBlobStorage.
+SetProviderReference of this ShareDatasetBlobStorage.
 Deprecated: Use SetProviderConfigReference.
 */
-func (mg *DataShareDatasetBlobStorage) SetProviderReference(r *xpv1.Reference) {
+func (mg *ShareDatasetBlobStorage) SetProviderReference(r *xpv1.Reference) {
 	mg.Spec.ProviderReference = r
 }
 
-// SetWriteConnectionSecretToReference of this DataShareDatasetBlobStorage.
-func (mg *DataShareDatasetBlobStorage) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
+// SetWriteConnectionSecretToReference of this ShareDatasetBlobStorage.
+func (mg *ShareDatasetBlobStorage) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
 	mg.Spec.WriteConnectionSecretToReference = r
 }
 
-// GetCondition of this DataShareDatasetDataLakeGen1.
-func (mg *DataShareDatasetDataLakeGen1) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
+// GetCondition of this ShareDatasetDataLakeGen1.
+func (mg *ShareDatasetDataLakeGen1) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
 	return mg.Status.GetCondition(ct)
 }
 
-// GetDeletionPolicy of this DataShareDatasetDataLakeGen1.
-func (mg *DataShareDatasetDataLakeGen1) GetDeletionPolicy() xpv1.DeletionPolicy {
+// GetDeletionPolicy of this ShareDatasetDataLakeGen1.
+func (mg *ShareDatasetDataLakeGen1) GetDeletionPolicy() xpv1.DeletionPolicy {
 	return mg.Spec.DeletionPolicy
 }
 
-// GetProviderConfigReference of this DataShareDatasetDataLakeGen1.
-func (mg *DataShareDatasetDataLakeGen1) GetProviderConfigReference() *xpv1.Reference {
+// GetProviderConfigReference of this ShareDatasetDataLakeGen1.
+func (mg *ShareDatasetDataLakeGen1) GetProviderConfigReference() *xpv1.Reference {
 	return mg.Spec.ProviderConfigReference
 }
 
 /*
-GetProviderReference of this DataShareDatasetDataLakeGen1.
+GetProviderReference of this ShareDatasetDataLakeGen1.
 Deprecated: Use GetProviderConfigReference.
 */
-func (mg *DataShareDatasetDataLakeGen1) GetProviderReference() *xpv1.Reference {
+func (mg *ShareDatasetDataLakeGen1) GetProviderReference() *xpv1.Reference {
 	return mg.Spec.ProviderReference
 }
 
-// GetWriteConnectionSecretToReference of this DataShareDatasetDataLakeGen1.
-func (mg *DataShareDatasetDataLakeGen1) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
+// GetWriteConnectionSecretToReference of this ShareDatasetDataLakeGen1.
+func (mg *ShareDatasetDataLakeGen1) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
 	return mg.Spec.WriteConnectionSecretToReference
 }
 
-// SetConditions of this DataShareDatasetDataLakeGen1.
-func (mg *DataShareDatasetDataLakeGen1) SetConditions(c ...xpv1.Condition) {
+// SetConditions of this ShareDatasetDataLakeGen1.
+func (mg *ShareDatasetDataLakeGen1) SetConditions(c ...xpv1.Condition) {
 	mg.Status.SetConditions(c...)
 }
 
-// SetDeletionPolicy of this DataShareDatasetDataLakeGen1.
-func (mg *DataShareDatasetDataLakeGen1) SetDeletionPolicy(r xpv1.DeletionPolicy) {
+// SetDeletionPolicy of this ShareDatasetDataLakeGen1.
+func (mg *ShareDatasetDataLakeGen1) SetDeletionPolicy(r xpv1.DeletionPolicy) {
 	mg.Spec.DeletionPolicy = r
 }
 
-// SetProviderConfigReference of this DataShareDatasetDataLakeGen1.
-func (mg *DataShareDatasetDataLakeGen1) SetProviderConfigReference(r *xpv1.Reference) {
+// SetProviderConfigReference of this ShareDatasetDataLakeGen1.
+func (mg *ShareDatasetDataLakeGen1) SetProviderConfigReference(r *xpv1.Reference) {
 	mg.Spec.ProviderConfigReference = r
 }
 
 /*
-SetProviderReference of this DataShareDatasetDataLakeGen1.
+SetProviderReference of this ShareDatasetDataLakeGen1.
 Deprecated: Use SetProviderConfigReference.
 */
-func (mg *DataShareDatasetDataLakeGen1) SetProviderReference(r *xpv1.Reference) {
+func (mg *ShareDatasetDataLakeGen1) SetProviderReference(r *xpv1.Reference) {
 	mg.Spec.ProviderReference = r
 }
 
-// SetWriteConnectionSecretToReference of this DataShareDatasetDataLakeGen1.
-func (mg *DataShareDatasetDataLakeGen1) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
+// SetWriteConnectionSecretToReference of this ShareDatasetDataLakeGen1.
+func (mg *ShareDatasetDataLakeGen1) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
 	mg.Spec.WriteConnectionSecretToReference = r
 }
 
-// GetCondition of this DataShareDatasetDataLakeGen2.
-func (mg *DataShareDatasetDataLakeGen2) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
+// GetCondition of this ShareDatasetDataLakeGen2.
+func (mg *ShareDatasetDataLakeGen2) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
 	return mg.Status.GetCondition(ct)
 }
 
-// GetDeletionPolicy of this DataShareDatasetDataLakeGen2.
-func (mg *DataShareDatasetDataLakeGen2) GetDeletionPolicy() xpv1.DeletionPolicy {
+// GetDeletionPolicy of this ShareDatasetDataLakeGen2.
+func (mg *ShareDatasetDataLakeGen2) GetDeletionPolicy() xpv1.DeletionPolicy {
 	return mg.Spec.DeletionPolicy
 }
 
-// GetProviderConfigReference of this DataShareDatasetDataLakeGen2.
-func (mg *DataShareDatasetDataLakeGen2) GetProviderConfigReference() *xpv1.Reference {
+// GetProviderConfigReference of this ShareDatasetDataLakeGen2.
+func (mg *ShareDatasetDataLakeGen2) GetProviderConfigReference() *xpv1.Reference {
 	return mg.Spec.ProviderConfigReference
 }
 
 /*
-GetProviderReference of this DataShareDatasetDataLakeGen2.
+GetProviderReference of this ShareDatasetDataLakeGen2.
 Deprecated: Use GetProviderConfigReference.
 */
-func (mg *DataShareDatasetDataLakeGen2) GetProviderReference() *xpv1.Reference {
+func (mg *ShareDatasetDataLakeGen2) GetProviderReference() *xpv1.Reference {
 	return mg.Spec.ProviderReference
 }
 
-// GetWriteConnectionSecretToReference of this DataShareDatasetDataLakeGen2.
-func (mg *DataShareDatasetDataLakeGen2) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
+// GetWriteConnectionSecretToReference of this ShareDatasetDataLakeGen2.
+func (mg *ShareDatasetDataLakeGen2) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
 	return mg.Spec.WriteConnectionSecretToReference
 }
 
-// SetConditions of this DataShareDatasetDataLakeGen2.
-func (mg *DataShareDatasetDataLakeGen2) SetConditions(c ...xpv1.Condition) {
+// SetConditions of this ShareDatasetDataLakeGen2.
+func (mg *ShareDatasetDataLakeGen2) SetConditions(c ...xpv1.Condition) {
 	mg.Status.SetConditions(c...)
 }
 
-// SetDeletionPolicy of this DataShareDatasetDataLakeGen2.
-func (mg *DataShareDatasetDataLakeGen2) SetDeletionPolicy(r xpv1.DeletionPolicy) {
+// SetDeletionPolicy of this ShareDatasetDataLakeGen2.
+func (mg *ShareDatasetDataLakeGen2) SetDeletionPolicy(r xpv1.DeletionPolicy) {
 	mg.Spec.DeletionPolicy = r
 }
 
-// SetProviderConfigReference of this DataShareDatasetDataLakeGen2.
-func (mg *DataShareDatasetDataLakeGen2) SetProviderConfigReference(r *xpv1.Reference) {
+// SetProviderConfigReference of this ShareDatasetDataLakeGen2.
+func (mg *ShareDatasetDataLakeGen2) SetProviderConfigReference(r *xpv1.Reference) {
 	mg.Spec.ProviderConfigReference = r
 }
 
 /*
-SetProviderReference of this DataShareDatasetDataLakeGen2.
+SetProviderReference of this ShareDatasetDataLakeGen2.
 Deprecated: Use SetProviderConfigReference.
 */
-func (mg *DataShareDatasetDataLakeGen2) SetProviderReference(r *xpv1.Reference) {
+func (mg *ShareDatasetDataLakeGen2) SetProviderReference(r *xpv1.Reference) {
 	mg.Spec.ProviderReference = r
 }
 
-// SetWriteConnectionSecretToReference of this DataShareDatasetDataLakeGen2.
-func (mg *DataShareDatasetDataLakeGen2) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
+// SetWriteConnectionSecretToReference of this ShareDatasetDataLakeGen2.
+func (mg *ShareDatasetDataLakeGen2) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
 	mg.Spec.WriteConnectionSecretToReference = r
 }
 
-// GetCondition of this DataShareDatasetKustoCluster.
-func (mg *DataShareDatasetKustoCluster) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
+// GetCondition of this ShareDatasetKustoCluster.
+func (mg *ShareDatasetKustoCluster) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
 	return mg.Status.GetCondition(ct)
 }
 
-// GetDeletionPolicy of this DataShareDatasetKustoCluster.
-func (mg *DataShareDatasetKustoCluster) GetDeletionPolicy() xpv1.DeletionPolicy {
+// GetDeletionPolicy of this ShareDatasetKustoCluster.
+func (mg *ShareDatasetKustoCluster) GetDeletionPolicy() xpv1.DeletionPolicy {
 	return mg.Spec.DeletionPolicy
 }
 
-// GetProviderConfigReference of this DataShareDatasetKustoCluster.
-func (mg *DataShareDatasetKustoCluster) GetProviderConfigReference() *xpv1.Reference {
+// GetProviderConfigReference of this ShareDatasetKustoCluster.
+func (mg *ShareDatasetKustoCluster) GetProviderConfigReference() *xpv1.Reference {
 	return mg.Spec.ProviderConfigReference
 }
 
 /*
-GetProviderReference of this DataShareDatasetKustoCluster.
+GetProviderReference of this ShareDatasetKustoCluster.
 Deprecated: Use GetProviderConfigReference.
 */
-func (mg *DataShareDatasetKustoCluster) GetProviderReference() *xpv1.Reference {
+func (mg *ShareDatasetKustoCluster) GetProviderReference() *xpv1.Reference {
 	return mg.Spec.ProviderReference
 }
 
-// GetWriteConnectionSecretToReference of this DataShareDatasetKustoCluster.
-func (mg *DataShareDatasetKustoCluster) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
+// GetWriteConnectionSecretToReference of this ShareDatasetKustoCluster.
+func (mg *ShareDatasetKustoCluster) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
 	return mg.Spec.WriteConnectionSecretToReference
 }
 
-// SetConditions of this DataShareDatasetKustoCluster.
-func (mg *DataShareDatasetKustoCluster) SetConditions(c ...xpv1.Condition) {
+// SetConditions of this ShareDatasetKustoCluster.
+func (mg *ShareDatasetKustoCluster) SetConditions(c ...xpv1.Condition) {
 	mg.Status.SetConditions(c...)
 }
 
-// SetDeletionPolicy of this DataShareDatasetKustoCluster.
-func (mg *DataShareDatasetKustoCluster) SetDeletionPolicy(r xpv1.DeletionPolicy) {
+// SetDeletionPolicy of this ShareDatasetKustoCluster.
+func (mg *ShareDatasetKustoCluster) SetDeletionPolicy(r xpv1.DeletionPolicy) {
 	mg.Spec.DeletionPolicy = r
 }
 
-// SetProviderConfigReference of this DataShareDatasetKustoCluster.
-func (mg *DataShareDatasetKustoCluster) SetProviderConfigReference(r *xpv1.Reference) {
+// SetProviderConfigReference of this ShareDatasetKustoCluster.
+func (mg *ShareDatasetKustoCluster) SetProviderConfigReference(r *xpv1.Reference) {
 	mg.Spec.ProviderConfigReference = r
 }
 
 /*
-SetProviderReference of this DataShareDatasetKustoCluster.
+SetProviderReference of this ShareDatasetKustoCluster.
 Deprecated: Use SetProviderConfigReference.
 */
-func (mg *DataShareDatasetKustoCluster) SetProviderReference(r *xpv1.Reference) {
+func (mg *ShareDatasetKustoCluster) SetProviderReference(r *xpv1.Reference) {
 	mg.Spec.ProviderReference = r
 }
 
-// SetWriteConnectionSecretToReference of this DataShareDatasetKustoCluster.
-func (mg *DataShareDatasetKustoCluster) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
+// SetWriteConnectionSecretToReference of this ShareDatasetKustoCluster.
+func (mg *ShareDatasetKustoCluster) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
 	mg.Spec.WriteConnectionSecretToReference = r
 }
 
-// GetCondition of this DataShareDatasetKustoDatabase.
-func (mg *DataShareDatasetKustoDatabase) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
+// GetCondition of this ShareDatasetKustoDatabase.
+func (mg *ShareDatasetKustoDatabase) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
 	return mg.Status.GetCondition(ct)
 }
 
-// GetDeletionPolicy of this DataShareDatasetKustoDatabase.
-func (mg *DataShareDatasetKustoDatabase) GetDeletionPolicy() xpv1.DeletionPolicy {
+// GetDeletionPolicy of this ShareDatasetKustoDatabase.
+func (mg *ShareDatasetKustoDatabase) GetDeletionPolicy() xpv1.DeletionPolicy {
 	return mg.Spec.DeletionPolicy
 }
 
-// GetProviderConfigReference of this DataShareDatasetKustoDatabase.
-func (mg *DataShareDatasetKustoDatabase) GetProviderConfigReference() *xpv1.Reference {
+// GetProviderConfigReference of this ShareDatasetKustoDatabase.
+func (mg *ShareDatasetKustoDatabase) GetProviderConfigReference() *xpv1.Reference {
 	return mg.Spec.ProviderConfigReference
 }
 
 /*
-GetProviderReference of this DataShareDatasetKustoDatabase.
+GetProviderReference of this ShareDatasetKustoDatabase.
 Deprecated: Use GetProviderConfigReference.
 */
-func (mg *DataShareDatasetKustoDatabase) GetProviderReference() *xpv1.Reference {
+func (mg *ShareDatasetKustoDatabase) GetProviderReference() *xpv1.Reference {
 	return mg.Spec.ProviderReference
 }
 
-// GetWriteConnectionSecretToReference of this DataShareDatasetKustoDatabase.
-func (mg *DataShareDatasetKustoDatabase) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
+// GetWriteConnectionSecretToReference of this ShareDatasetKustoDatabase.
+func (mg *ShareDatasetKustoDatabase) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
 	return mg.Spec.WriteConnectionSecretToReference
 }
 
-// SetConditions of this DataShareDatasetKustoDatabase.
-func (mg *DataShareDatasetKustoDatabase) SetConditions(c ...xpv1.Condition) {
+// SetConditions of this ShareDatasetKustoDatabase.
+func (mg *ShareDatasetKustoDatabase) SetConditions(c ...xpv1.Condition) {
 	mg.Status.SetConditions(c...)
 }
 
-// SetDeletionPolicy of this DataShareDatasetKustoDatabase.
-func (mg *DataShareDatasetKustoDatabase) SetDeletionPolicy(r xpv1.DeletionPolicy) {
+// SetDeletionPolicy of this ShareDatasetKustoDatabase.
+func (mg *ShareDatasetKustoDatabase) SetDeletionPolicy(r xpv1.DeletionPolicy) {
 	mg.Spec.DeletionPolicy = r
 }
 
-// SetProviderConfigReference of this DataShareDatasetKustoDatabase.
-func (mg *DataShareDatasetKustoDatabase) SetProviderConfigReference(r *xpv1.Reference) {
+// SetProviderConfigReference of this ShareDatasetKustoDatabase.
+func (mg *ShareDatasetKustoDatabase) SetProviderConfigReference(r *xpv1.Reference) {
 	mg.Spec.ProviderConfigReference = r
 }
 
 /*
-SetProviderReference of this DataShareDatasetKustoDatabase.
+SetProviderReference of this ShareDatasetKustoDatabase.
 Deprecated: Use SetProviderConfigReference.
 */
-func (mg *DataShareDatasetKustoDatabase) SetProviderReference(r *xpv1.Reference) {
+func (mg *ShareDatasetKustoDatabase) SetProviderReference(r *xpv1.Reference) {
 	mg.Spec.ProviderReference = r
 }
 
-// SetWriteConnectionSecretToReference of this DataShareDatasetKustoDatabase.
-func (mg *DataShareDatasetKustoDatabase) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
+// SetWriteConnectionSecretToReference of this ShareDatasetKustoDatabase.
+func (mg *ShareDatasetKustoDatabase) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
 	mg.Spec.WriteConnectionSecretToReference = r
 }

@@ -19,8 +19,8 @@ package v1alpha1
 
 import resource "github.com/crossplane/crossplane-runtime/pkg/resource"
 
-// GetItems of this CdnEndpointCustomDomainList.
-func (l *CdnEndpointCustomDomainList) GetItems() []resource.Managed {
+// GetItems of this EndpointCustomDomainList.
+func (l *EndpointCustomDomainList) GetItems() []resource.Managed {
 	items := make([]resource.Managed, len(l.Items))
 	for i := range l.Items {
 		items[i] = &l.Items[i]
@@ -28,8 +28,8 @@ func (l *CdnEndpointCustomDomainList) GetItems() []resource.Managed {
 	return items
 }
 
-// GetItems of this CdnEndpointList.
-func (l *CdnEndpointList) GetItems() []resource.Managed {
+// GetItems of this EndpointList.
+func (l *EndpointList) GetItems() []resource.Managed {
 	items := make([]resource.Managed, len(l.Items))
 	for i := range l.Items {
 		items[i] = &l.Items[i]
@@ -37,8 +37,8 @@ func (l *CdnEndpointList) GetItems() []resource.Managed {
 	return items
 }
 
-// GetItems of this CdnProfileList.
-func (l *CdnProfileList) GetItems() []resource.Managed {
+// GetItems of this ProfileList.
+func (l *ProfileList) GetItems() []resource.Managed {
 	items := make([]resource.Managed, len(l.Items))
 	for i := range l.Items {
 		items[i] = &l.Items[i]

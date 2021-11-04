@@ -19,8 +19,8 @@ package v1alpha1
 
 import resource "github.com/crossplane/crossplane-runtime/pkg/resource"
 
-// GetItems of this RelayHybridConnectionAuthorizationRuleList.
-func (l *RelayHybridConnectionAuthorizationRuleList) GetItems() []resource.Managed {
+// GetItems of this HybridConnectionAuthorizationRuleList.
+func (l *HybridConnectionAuthorizationRuleList) GetItems() []resource.Managed {
 	items := make([]resource.Managed, len(l.Items))
 	for i := range l.Items {
 		items[i] = &l.Items[i]
@@ -28,8 +28,8 @@ func (l *RelayHybridConnectionAuthorizationRuleList) GetItems() []resource.Manag
 	return items
 }
 
-// GetItems of this RelayHybridConnectionList.
-func (l *RelayHybridConnectionList) GetItems() []resource.Managed {
+// GetItems of this HybridConnectionList.
+func (l *HybridConnectionList) GetItems() []resource.Managed {
 	items := make([]resource.Managed, len(l.Items))
 	for i := range l.Items {
 		items[i] = &l.Items[i]
@@ -37,8 +37,8 @@ func (l *RelayHybridConnectionList) GetItems() []resource.Managed {
 	return items
 }
 
-// GetItems of this RelayNamespaceAuthorizationRuleList.
-func (l *RelayNamespaceAuthorizationRuleList) GetItems() []resource.Managed {
+// GetItems of this NamespaceAuthorizationRuleList.
+func (l *NamespaceAuthorizationRuleList) GetItems() []resource.Managed {
 	items := make([]resource.Managed, len(l.Items))
 	for i := range l.Items {
 		items[i] = &l.Items[i]
@@ -46,8 +46,8 @@ func (l *RelayNamespaceAuthorizationRuleList) GetItems() []resource.Managed {
 	return items
 }
 
-// GetItems of this RelayNamespaceList.
-func (l *RelayNamespaceList) GetItems() []resource.Managed {
+// GetItems of this NamespaceList.
+func (l *NamespaceList) GetItems() []resource.Managed {
 	items := make([]resource.Managed, len(l.Items))
 	for i := range l.Items {
 		items[i] = &l.Items[i]

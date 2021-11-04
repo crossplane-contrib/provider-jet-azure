@@ -19,58 +19,58 @@ package v1alpha1
 
 import xpv1 "github.com/crossplane/crossplane-runtime/apis/common/v1"
 
-// GetCondition of this UserAssignedIdentity.
-func (mg *UserAssignedIdentity) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
+// GetCondition of this AssignedIdentity.
+func (mg *AssignedIdentity) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
 	return mg.Status.GetCondition(ct)
 }
 
-// GetDeletionPolicy of this UserAssignedIdentity.
-func (mg *UserAssignedIdentity) GetDeletionPolicy() xpv1.DeletionPolicy {
+// GetDeletionPolicy of this AssignedIdentity.
+func (mg *AssignedIdentity) GetDeletionPolicy() xpv1.DeletionPolicy {
 	return mg.Spec.DeletionPolicy
 }
 
-// GetProviderConfigReference of this UserAssignedIdentity.
-func (mg *UserAssignedIdentity) GetProviderConfigReference() *xpv1.Reference {
+// GetProviderConfigReference of this AssignedIdentity.
+func (mg *AssignedIdentity) GetProviderConfigReference() *xpv1.Reference {
 	return mg.Spec.ProviderConfigReference
 }
 
 /*
-GetProviderReference of this UserAssignedIdentity.
+GetProviderReference of this AssignedIdentity.
 Deprecated: Use GetProviderConfigReference.
 */
-func (mg *UserAssignedIdentity) GetProviderReference() *xpv1.Reference {
+func (mg *AssignedIdentity) GetProviderReference() *xpv1.Reference {
 	return mg.Spec.ProviderReference
 }
 
-// GetWriteConnectionSecretToReference of this UserAssignedIdentity.
-func (mg *UserAssignedIdentity) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
+// GetWriteConnectionSecretToReference of this AssignedIdentity.
+func (mg *AssignedIdentity) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
 	return mg.Spec.WriteConnectionSecretToReference
 }
 
-// SetConditions of this UserAssignedIdentity.
-func (mg *UserAssignedIdentity) SetConditions(c ...xpv1.Condition) {
+// SetConditions of this AssignedIdentity.
+func (mg *AssignedIdentity) SetConditions(c ...xpv1.Condition) {
 	mg.Status.SetConditions(c...)
 }
 
-// SetDeletionPolicy of this UserAssignedIdentity.
-func (mg *UserAssignedIdentity) SetDeletionPolicy(r xpv1.DeletionPolicy) {
+// SetDeletionPolicy of this AssignedIdentity.
+func (mg *AssignedIdentity) SetDeletionPolicy(r xpv1.DeletionPolicy) {
 	mg.Spec.DeletionPolicy = r
 }
 
-// SetProviderConfigReference of this UserAssignedIdentity.
-func (mg *UserAssignedIdentity) SetProviderConfigReference(r *xpv1.Reference) {
+// SetProviderConfigReference of this AssignedIdentity.
+func (mg *AssignedIdentity) SetProviderConfigReference(r *xpv1.Reference) {
 	mg.Spec.ProviderConfigReference = r
 }
 
 /*
-SetProviderReference of this UserAssignedIdentity.
+SetProviderReference of this AssignedIdentity.
 Deprecated: Use SetProviderConfigReference.
 */
-func (mg *UserAssignedIdentity) SetProviderReference(r *xpv1.Reference) {
+func (mg *AssignedIdentity) SetProviderReference(r *xpv1.Reference) {
 	mg.Spec.ProviderReference = r
 }
 
-// SetWriteConnectionSecretToReference of this UserAssignedIdentity.
-func (mg *UserAssignedIdentity) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
+// SetWriteConnectionSecretToReference of this AssignedIdentity.
+func (mg *AssignedIdentity) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
 	mg.Spec.WriteConnectionSecretToReference = r
 }

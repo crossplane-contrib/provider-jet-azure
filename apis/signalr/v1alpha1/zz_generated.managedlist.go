@@ -19,8 +19,8 @@ package v1alpha1
 
 import resource "github.com/crossplane/crossplane-runtime/pkg/resource"
 
-// GetItems of this SignalrServiceList.
-func (l *SignalrServiceList) GetItems() []resource.Managed {
+// GetItems of this ServiceList.
+func (l *ServiceList) GetItems() []resource.Managed {
 	items := make([]resource.Managed, len(l.Items))
 	for i := range l.Items {
 		items[i] = &l.Items[i]
@@ -28,8 +28,8 @@ func (l *SignalrServiceList) GetItems() []resource.Managed {
 	return items
 }
 
-// GetItems of this SignalrServiceNetworkAclList.
-func (l *SignalrServiceNetworkAclList) GetItems() []resource.Managed {
+// GetItems of this ServiceNetworkAclList.
+func (l *ServiceNetworkAclList) GetItems() []resource.Managed {
 	items := make([]resource.Managed, len(l.Items))
 	for i := range l.Items {
 		items[i] = &l.Items[i]

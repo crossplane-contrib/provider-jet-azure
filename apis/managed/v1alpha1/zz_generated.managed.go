@@ -19,170 +19,170 @@ package v1alpha1
 
 import xpv1 "github.com/crossplane/crossplane-runtime/apis/common/v1"
 
-// GetCondition of this ManagedApplication.
-func (mg *ManagedApplication) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
+// GetCondition of this Application.
+func (mg *Application) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
 	return mg.Status.GetCondition(ct)
 }
 
-// GetDeletionPolicy of this ManagedApplication.
-func (mg *ManagedApplication) GetDeletionPolicy() xpv1.DeletionPolicy {
+// GetDeletionPolicy of this Application.
+func (mg *Application) GetDeletionPolicy() xpv1.DeletionPolicy {
 	return mg.Spec.DeletionPolicy
 }
 
-// GetProviderConfigReference of this ManagedApplication.
-func (mg *ManagedApplication) GetProviderConfigReference() *xpv1.Reference {
+// GetProviderConfigReference of this Application.
+func (mg *Application) GetProviderConfigReference() *xpv1.Reference {
 	return mg.Spec.ProviderConfigReference
 }
 
 /*
-GetProviderReference of this ManagedApplication.
+GetProviderReference of this Application.
 Deprecated: Use GetProviderConfigReference.
 */
-func (mg *ManagedApplication) GetProviderReference() *xpv1.Reference {
+func (mg *Application) GetProviderReference() *xpv1.Reference {
 	return mg.Spec.ProviderReference
 }
 
-// GetWriteConnectionSecretToReference of this ManagedApplication.
-func (mg *ManagedApplication) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
+// GetWriteConnectionSecretToReference of this Application.
+func (mg *Application) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
 	return mg.Spec.WriteConnectionSecretToReference
 }
 
-// SetConditions of this ManagedApplication.
-func (mg *ManagedApplication) SetConditions(c ...xpv1.Condition) {
+// SetConditions of this Application.
+func (mg *Application) SetConditions(c ...xpv1.Condition) {
 	mg.Status.SetConditions(c...)
 }
 
-// SetDeletionPolicy of this ManagedApplication.
-func (mg *ManagedApplication) SetDeletionPolicy(r xpv1.DeletionPolicy) {
+// SetDeletionPolicy of this Application.
+func (mg *Application) SetDeletionPolicy(r xpv1.DeletionPolicy) {
 	mg.Spec.DeletionPolicy = r
 }
 
-// SetProviderConfigReference of this ManagedApplication.
-func (mg *ManagedApplication) SetProviderConfigReference(r *xpv1.Reference) {
+// SetProviderConfigReference of this Application.
+func (mg *Application) SetProviderConfigReference(r *xpv1.Reference) {
 	mg.Spec.ProviderConfigReference = r
 }
 
 /*
-SetProviderReference of this ManagedApplication.
+SetProviderReference of this Application.
 Deprecated: Use SetProviderConfigReference.
 */
-func (mg *ManagedApplication) SetProviderReference(r *xpv1.Reference) {
+func (mg *Application) SetProviderReference(r *xpv1.Reference) {
 	mg.Spec.ProviderReference = r
 }
 
-// SetWriteConnectionSecretToReference of this ManagedApplication.
-func (mg *ManagedApplication) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
+// SetWriteConnectionSecretToReference of this Application.
+func (mg *Application) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
 	mg.Spec.WriteConnectionSecretToReference = r
 }
 
-// GetCondition of this ManagedApplicationDefinition.
-func (mg *ManagedApplicationDefinition) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
+// GetCondition of this ApplicationDefinition.
+func (mg *ApplicationDefinition) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
 	return mg.Status.GetCondition(ct)
 }
 
-// GetDeletionPolicy of this ManagedApplicationDefinition.
-func (mg *ManagedApplicationDefinition) GetDeletionPolicy() xpv1.DeletionPolicy {
+// GetDeletionPolicy of this ApplicationDefinition.
+func (mg *ApplicationDefinition) GetDeletionPolicy() xpv1.DeletionPolicy {
 	return mg.Spec.DeletionPolicy
 }
 
-// GetProviderConfigReference of this ManagedApplicationDefinition.
-func (mg *ManagedApplicationDefinition) GetProviderConfigReference() *xpv1.Reference {
+// GetProviderConfigReference of this ApplicationDefinition.
+func (mg *ApplicationDefinition) GetProviderConfigReference() *xpv1.Reference {
 	return mg.Spec.ProviderConfigReference
 }
 
 /*
-GetProviderReference of this ManagedApplicationDefinition.
+GetProviderReference of this ApplicationDefinition.
 Deprecated: Use GetProviderConfigReference.
 */
-func (mg *ManagedApplicationDefinition) GetProviderReference() *xpv1.Reference {
+func (mg *ApplicationDefinition) GetProviderReference() *xpv1.Reference {
 	return mg.Spec.ProviderReference
 }
 
-// GetWriteConnectionSecretToReference of this ManagedApplicationDefinition.
-func (mg *ManagedApplicationDefinition) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
+// GetWriteConnectionSecretToReference of this ApplicationDefinition.
+func (mg *ApplicationDefinition) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
 	return mg.Spec.WriteConnectionSecretToReference
 }
 
-// SetConditions of this ManagedApplicationDefinition.
-func (mg *ManagedApplicationDefinition) SetConditions(c ...xpv1.Condition) {
+// SetConditions of this ApplicationDefinition.
+func (mg *ApplicationDefinition) SetConditions(c ...xpv1.Condition) {
 	mg.Status.SetConditions(c...)
 }
 
-// SetDeletionPolicy of this ManagedApplicationDefinition.
-func (mg *ManagedApplicationDefinition) SetDeletionPolicy(r xpv1.DeletionPolicy) {
+// SetDeletionPolicy of this ApplicationDefinition.
+func (mg *ApplicationDefinition) SetDeletionPolicy(r xpv1.DeletionPolicy) {
 	mg.Spec.DeletionPolicy = r
 }
 
-// SetProviderConfigReference of this ManagedApplicationDefinition.
-func (mg *ManagedApplicationDefinition) SetProviderConfigReference(r *xpv1.Reference) {
+// SetProviderConfigReference of this ApplicationDefinition.
+func (mg *ApplicationDefinition) SetProviderConfigReference(r *xpv1.Reference) {
 	mg.Spec.ProviderConfigReference = r
 }
 
 /*
-SetProviderReference of this ManagedApplicationDefinition.
+SetProviderReference of this ApplicationDefinition.
 Deprecated: Use SetProviderConfigReference.
 */
-func (mg *ManagedApplicationDefinition) SetProviderReference(r *xpv1.Reference) {
+func (mg *ApplicationDefinition) SetProviderReference(r *xpv1.Reference) {
 	mg.Spec.ProviderReference = r
 }
 
-// SetWriteConnectionSecretToReference of this ManagedApplicationDefinition.
-func (mg *ManagedApplicationDefinition) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
+// SetWriteConnectionSecretToReference of this ApplicationDefinition.
+func (mg *ApplicationDefinition) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
 	mg.Spec.WriteConnectionSecretToReference = r
 }
 
-// GetCondition of this ManagedDisk.
-func (mg *ManagedDisk) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
+// GetCondition of this Disk.
+func (mg *Disk) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
 	return mg.Status.GetCondition(ct)
 }
 
-// GetDeletionPolicy of this ManagedDisk.
-func (mg *ManagedDisk) GetDeletionPolicy() xpv1.DeletionPolicy {
+// GetDeletionPolicy of this Disk.
+func (mg *Disk) GetDeletionPolicy() xpv1.DeletionPolicy {
 	return mg.Spec.DeletionPolicy
 }
 
-// GetProviderConfigReference of this ManagedDisk.
-func (mg *ManagedDisk) GetProviderConfigReference() *xpv1.Reference {
+// GetProviderConfigReference of this Disk.
+func (mg *Disk) GetProviderConfigReference() *xpv1.Reference {
 	return mg.Spec.ProviderConfigReference
 }
 
 /*
-GetProviderReference of this ManagedDisk.
+GetProviderReference of this Disk.
 Deprecated: Use GetProviderConfigReference.
 */
-func (mg *ManagedDisk) GetProviderReference() *xpv1.Reference {
+func (mg *Disk) GetProviderReference() *xpv1.Reference {
 	return mg.Spec.ProviderReference
 }
 
-// GetWriteConnectionSecretToReference of this ManagedDisk.
-func (mg *ManagedDisk) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
+// GetWriteConnectionSecretToReference of this Disk.
+func (mg *Disk) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
 	return mg.Spec.WriteConnectionSecretToReference
 }
 
-// SetConditions of this ManagedDisk.
-func (mg *ManagedDisk) SetConditions(c ...xpv1.Condition) {
+// SetConditions of this Disk.
+func (mg *Disk) SetConditions(c ...xpv1.Condition) {
 	mg.Status.SetConditions(c...)
 }
 
-// SetDeletionPolicy of this ManagedDisk.
-func (mg *ManagedDisk) SetDeletionPolicy(r xpv1.DeletionPolicy) {
+// SetDeletionPolicy of this Disk.
+func (mg *Disk) SetDeletionPolicy(r xpv1.DeletionPolicy) {
 	mg.Spec.DeletionPolicy = r
 }
 
-// SetProviderConfigReference of this ManagedDisk.
-func (mg *ManagedDisk) SetProviderConfigReference(r *xpv1.Reference) {
+// SetProviderConfigReference of this Disk.
+func (mg *Disk) SetProviderConfigReference(r *xpv1.Reference) {
 	mg.Spec.ProviderConfigReference = r
 }
 
 /*
-SetProviderReference of this ManagedDisk.
+SetProviderReference of this Disk.
 Deprecated: Use SetProviderConfigReference.
 */
-func (mg *ManagedDisk) SetProviderReference(r *xpv1.Reference) {
+func (mg *Disk) SetProviderReference(r *xpv1.Reference) {
 	mg.Spec.ProviderReference = r
 }
 
-// SetWriteConnectionSecretToReference of this ManagedDisk.
-func (mg *ManagedDisk) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
+// SetWriteConnectionSecretToReference of this Disk.
+func (mg *Disk) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
 	mg.Spec.WriteConnectionSecretToReference = r
 }

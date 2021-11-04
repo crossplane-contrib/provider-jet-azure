@@ -19,8 +19,8 @@ package v1alpha1
 
 import resource "github.com/crossplane/crossplane-runtime/pkg/resource"
 
-// GetItems of this KeyVaultAccessPolicyList.
-func (l *KeyVaultAccessPolicyList) GetItems() []resource.Managed {
+// GetItems of this VaultAccessPolicyList.
+func (l *VaultAccessPolicyList) GetItems() []resource.Managed {
 	items := make([]resource.Managed, len(l.Items))
 	for i := range l.Items {
 		items[i] = &l.Items[i]
@@ -28,8 +28,8 @@ func (l *KeyVaultAccessPolicyList) GetItems() []resource.Managed {
 	return items
 }
 
-// GetItems of this KeyVaultCertificateIssuerList.
-func (l *KeyVaultCertificateIssuerList) GetItems() []resource.Managed {
+// GetItems of this VaultCertificateIssuerList.
+func (l *VaultCertificateIssuerList) GetItems() []resource.Managed {
 	items := make([]resource.Managed, len(l.Items))
 	for i := range l.Items {
 		items[i] = &l.Items[i]
@@ -37,8 +37,8 @@ func (l *KeyVaultCertificateIssuerList) GetItems() []resource.Managed {
 	return items
 }
 
-// GetItems of this KeyVaultCertificateList.
-func (l *KeyVaultCertificateList) GetItems() []resource.Managed {
+// GetItems of this VaultCertificateList.
+func (l *VaultCertificateList) GetItems() []resource.Managed {
 	items := make([]resource.Managed, len(l.Items))
 	for i := range l.Items {
 		items[i] = &l.Items[i]
@@ -46,8 +46,8 @@ func (l *KeyVaultCertificateList) GetItems() []resource.Managed {
 	return items
 }
 
-// GetItems of this KeyVaultKeyList.
-func (l *KeyVaultKeyList) GetItems() []resource.Managed {
+// GetItems of this VaultKeyList.
+func (l *VaultKeyList) GetItems() []resource.Managed {
 	items := make([]resource.Managed, len(l.Items))
 	for i := range l.Items {
 		items[i] = &l.Items[i]
@@ -55,8 +55,8 @@ func (l *KeyVaultKeyList) GetItems() []resource.Managed {
 	return items
 }
 
-// GetItems of this KeyVaultList.
-func (l *KeyVaultList) GetItems() []resource.Managed {
+// GetItems of this VaultList.
+func (l *VaultList) GetItems() []resource.Managed {
 	items := make([]resource.Managed, len(l.Items))
 	for i := range l.Items {
 		items[i] = &l.Items[i]
@@ -64,8 +64,8 @@ func (l *KeyVaultList) GetItems() []resource.Managed {
 	return items
 }
 
-// GetItems of this KeyVaultManagedHardwareSecurityModuleList.
-func (l *KeyVaultManagedHardwareSecurityModuleList) GetItems() []resource.Managed {
+// GetItems of this VaultManagedHardwareSecurityModuleList.
+func (l *VaultManagedHardwareSecurityModuleList) GetItems() []resource.Managed {
 	items := make([]resource.Managed, len(l.Items))
 	for i := range l.Items {
 		items[i] = &l.Items[i]
@@ -73,8 +73,8 @@ func (l *KeyVaultManagedHardwareSecurityModuleList) GetItems() []resource.Manage
 	return items
 }
 
-// GetItems of this KeyVaultManagedStorageAccountList.
-func (l *KeyVaultManagedStorageAccountList) GetItems() []resource.Managed {
+// GetItems of this VaultManagedStorageAccountList.
+func (l *VaultManagedStorageAccountList) GetItems() []resource.Managed {
 	items := make([]resource.Managed, len(l.Items))
 	for i := range l.Items {
 		items[i] = &l.Items[i]
@@ -82,8 +82,8 @@ func (l *KeyVaultManagedStorageAccountList) GetItems() []resource.Managed {
 	return items
 }
 
-// GetItems of this KeyVaultManagedStorageAccountSasTokenDefinitionList.
-func (l *KeyVaultManagedStorageAccountSasTokenDefinitionList) GetItems() []resource.Managed {
+// GetItems of this VaultManagedStorageAccountSasTokenDefinitionList.
+func (l *VaultManagedStorageAccountSasTokenDefinitionList) GetItems() []resource.Managed {
 	items := make([]resource.Managed, len(l.Items))
 	for i := range l.Items {
 		items[i] = &l.Items[i]
@@ -91,8 +91,8 @@ func (l *KeyVaultManagedStorageAccountSasTokenDefinitionList) GetItems() []resou
 	return items
 }
 
-// GetItems of this KeyVaultSecretList.
-func (l *KeyVaultSecretList) GetItems() []resource.Managed {
+// GetItems of this VaultSecretList.
+func (l *VaultSecretList) GetItems() []resource.Managed {
 	items := make([]resource.Managed, len(l.Items))
 	for i := range l.Items {
 		items[i] = &l.Items[i]

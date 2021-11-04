@@ -19,282 +19,282 @@ package v1alpha1
 
 import xpv1 "github.com/crossplane/crossplane-runtime/apis/common/v1"
 
-// GetCondition of this HpcCache.
-func (mg *HpcCache) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
+// GetCondition of this Cache.
+func (mg *Cache) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
 	return mg.Status.GetCondition(ct)
 }
 
-// GetDeletionPolicy of this HpcCache.
-func (mg *HpcCache) GetDeletionPolicy() xpv1.DeletionPolicy {
+// GetDeletionPolicy of this Cache.
+func (mg *Cache) GetDeletionPolicy() xpv1.DeletionPolicy {
 	return mg.Spec.DeletionPolicy
 }
 
-// GetProviderConfigReference of this HpcCache.
-func (mg *HpcCache) GetProviderConfigReference() *xpv1.Reference {
+// GetProviderConfigReference of this Cache.
+func (mg *Cache) GetProviderConfigReference() *xpv1.Reference {
 	return mg.Spec.ProviderConfigReference
 }
 
 /*
-GetProviderReference of this HpcCache.
+GetProviderReference of this Cache.
 Deprecated: Use GetProviderConfigReference.
 */
-func (mg *HpcCache) GetProviderReference() *xpv1.Reference {
+func (mg *Cache) GetProviderReference() *xpv1.Reference {
 	return mg.Spec.ProviderReference
 }
 
-// GetWriteConnectionSecretToReference of this HpcCache.
-func (mg *HpcCache) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
+// GetWriteConnectionSecretToReference of this Cache.
+func (mg *Cache) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
 	return mg.Spec.WriteConnectionSecretToReference
 }
 
-// SetConditions of this HpcCache.
-func (mg *HpcCache) SetConditions(c ...xpv1.Condition) {
+// SetConditions of this Cache.
+func (mg *Cache) SetConditions(c ...xpv1.Condition) {
 	mg.Status.SetConditions(c...)
 }
 
-// SetDeletionPolicy of this HpcCache.
-func (mg *HpcCache) SetDeletionPolicy(r xpv1.DeletionPolicy) {
+// SetDeletionPolicy of this Cache.
+func (mg *Cache) SetDeletionPolicy(r xpv1.DeletionPolicy) {
 	mg.Spec.DeletionPolicy = r
 }
 
-// SetProviderConfigReference of this HpcCache.
-func (mg *HpcCache) SetProviderConfigReference(r *xpv1.Reference) {
+// SetProviderConfigReference of this Cache.
+func (mg *Cache) SetProviderConfigReference(r *xpv1.Reference) {
 	mg.Spec.ProviderConfigReference = r
 }
 
 /*
-SetProviderReference of this HpcCache.
+SetProviderReference of this Cache.
 Deprecated: Use SetProviderConfigReference.
 */
-func (mg *HpcCache) SetProviderReference(r *xpv1.Reference) {
+func (mg *Cache) SetProviderReference(r *xpv1.Reference) {
 	mg.Spec.ProviderReference = r
 }
 
-// SetWriteConnectionSecretToReference of this HpcCache.
-func (mg *HpcCache) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
+// SetWriteConnectionSecretToReference of this Cache.
+func (mg *Cache) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
 	mg.Spec.WriteConnectionSecretToReference = r
 }
 
-// GetCondition of this HpcCacheAccessPolicy.
-func (mg *HpcCacheAccessPolicy) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
+// GetCondition of this CacheAccessPolicy.
+func (mg *CacheAccessPolicy) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
 	return mg.Status.GetCondition(ct)
 }
 
-// GetDeletionPolicy of this HpcCacheAccessPolicy.
-func (mg *HpcCacheAccessPolicy) GetDeletionPolicy() xpv1.DeletionPolicy {
+// GetDeletionPolicy of this CacheAccessPolicy.
+func (mg *CacheAccessPolicy) GetDeletionPolicy() xpv1.DeletionPolicy {
 	return mg.Spec.DeletionPolicy
 }
 
-// GetProviderConfigReference of this HpcCacheAccessPolicy.
-func (mg *HpcCacheAccessPolicy) GetProviderConfigReference() *xpv1.Reference {
+// GetProviderConfigReference of this CacheAccessPolicy.
+func (mg *CacheAccessPolicy) GetProviderConfigReference() *xpv1.Reference {
 	return mg.Spec.ProviderConfigReference
 }
 
 /*
-GetProviderReference of this HpcCacheAccessPolicy.
+GetProviderReference of this CacheAccessPolicy.
 Deprecated: Use GetProviderConfigReference.
 */
-func (mg *HpcCacheAccessPolicy) GetProviderReference() *xpv1.Reference {
+func (mg *CacheAccessPolicy) GetProviderReference() *xpv1.Reference {
 	return mg.Spec.ProviderReference
 }
 
-// GetWriteConnectionSecretToReference of this HpcCacheAccessPolicy.
-func (mg *HpcCacheAccessPolicy) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
+// GetWriteConnectionSecretToReference of this CacheAccessPolicy.
+func (mg *CacheAccessPolicy) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
 	return mg.Spec.WriteConnectionSecretToReference
 }
 
-// SetConditions of this HpcCacheAccessPolicy.
-func (mg *HpcCacheAccessPolicy) SetConditions(c ...xpv1.Condition) {
+// SetConditions of this CacheAccessPolicy.
+func (mg *CacheAccessPolicy) SetConditions(c ...xpv1.Condition) {
 	mg.Status.SetConditions(c...)
 }
 
-// SetDeletionPolicy of this HpcCacheAccessPolicy.
-func (mg *HpcCacheAccessPolicy) SetDeletionPolicy(r xpv1.DeletionPolicy) {
+// SetDeletionPolicy of this CacheAccessPolicy.
+func (mg *CacheAccessPolicy) SetDeletionPolicy(r xpv1.DeletionPolicy) {
 	mg.Spec.DeletionPolicy = r
 }
 
-// SetProviderConfigReference of this HpcCacheAccessPolicy.
-func (mg *HpcCacheAccessPolicy) SetProviderConfigReference(r *xpv1.Reference) {
+// SetProviderConfigReference of this CacheAccessPolicy.
+func (mg *CacheAccessPolicy) SetProviderConfigReference(r *xpv1.Reference) {
 	mg.Spec.ProviderConfigReference = r
 }
 
 /*
-SetProviderReference of this HpcCacheAccessPolicy.
+SetProviderReference of this CacheAccessPolicy.
 Deprecated: Use SetProviderConfigReference.
 */
-func (mg *HpcCacheAccessPolicy) SetProviderReference(r *xpv1.Reference) {
+func (mg *CacheAccessPolicy) SetProviderReference(r *xpv1.Reference) {
 	mg.Spec.ProviderReference = r
 }
 
-// SetWriteConnectionSecretToReference of this HpcCacheAccessPolicy.
-func (mg *HpcCacheAccessPolicy) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
+// SetWriteConnectionSecretToReference of this CacheAccessPolicy.
+func (mg *CacheAccessPolicy) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
 	mg.Spec.WriteConnectionSecretToReference = r
 }
 
-// GetCondition of this HpcCacheBlobNfsTarget.
-func (mg *HpcCacheBlobNfsTarget) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
+// GetCondition of this CacheBlobNfsTarget.
+func (mg *CacheBlobNfsTarget) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
 	return mg.Status.GetCondition(ct)
 }
 
-// GetDeletionPolicy of this HpcCacheBlobNfsTarget.
-func (mg *HpcCacheBlobNfsTarget) GetDeletionPolicy() xpv1.DeletionPolicy {
+// GetDeletionPolicy of this CacheBlobNfsTarget.
+func (mg *CacheBlobNfsTarget) GetDeletionPolicy() xpv1.DeletionPolicy {
 	return mg.Spec.DeletionPolicy
 }
 
-// GetProviderConfigReference of this HpcCacheBlobNfsTarget.
-func (mg *HpcCacheBlobNfsTarget) GetProviderConfigReference() *xpv1.Reference {
+// GetProviderConfigReference of this CacheBlobNfsTarget.
+func (mg *CacheBlobNfsTarget) GetProviderConfigReference() *xpv1.Reference {
 	return mg.Spec.ProviderConfigReference
 }
 
 /*
-GetProviderReference of this HpcCacheBlobNfsTarget.
+GetProviderReference of this CacheBlobNfsTarget.
 Deprecated: Use GetProviderConfigReference.
 */
-func (mg *HpcCacheBlobNfsTarget) GetProviderReference() *xpv1.Reference {
+func (mg *CacheBlobNfsTarget) GetProviderReference() *xpv1.Reference {
 	return mg.Spec.ProviderReference
 }
 
-// GetWriteConnectionSecretToReference of this HpcCacheBlobNfsTarget.
-func (mg *HpcCacheBlobNfsTarget) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
+// GetWriteConnectionSecretToReference of this CacheBlobNfsTarget.
+func (mg *CacheBlobNfsTarget) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
 	return mg.Spec.WriteConnectionSecretToReference
 }
 
-// SetConditions of this HpcCacheBlobNfsTarget.
-func (mg *HpcCacheBlobNfsTarget) SetConditions(c ...xpv1.Condition) {
+// SetConditions of this CacheBlobNfsTarget.
+func (mg *CacheBlobNfsTarget) SetConditions(c ...xpv1.Condition) {
 	mg.Status.SetConditions(c...)
 }
 
-// SetDeletionPolicy of this HpcCacheBlobNfsTarget.
-func (mg *HpcCacheBlobNfsTarget) SetDeletionPolicy(r xpv1.DeletionPolicy) {
+// SetDeletionPolicy of this CacheBlobNfsTarget.
+func (mg *CacheBlobNfsTarget) SetDeletionPolicy(r xpv1.DeletionPolicy) {
 	mg.Spec.DeletionPolicy = r
 }
 
-// SetProviderConfigReference of this HpcCacheBlobNfsTarget.
-func (mg *HpcCacheBlobNfsTarget) SetProviderConfigReference(r *xpv1.Reference) {
+// SetProviderConfigReference of this CacheBlobNfsTarget.
+func (mg *CacheBlobNfsTarget) SetProviderConfigReference(r *xpv1.Reference) {
 	mg.Spec.ProviderConfigReference = r
 }
 
 /*
-SetProviderReference of this HpcCacheBlobNfsTarget.
+SetProviderReference of this CacheBlobNfsTarget.
 Deprecated: Use SetProviderConfigReference.
 */
-func (mg *HpcCacheBlobNfsTarget) SetProviderReference(r *xpv1.Reference) {
+func (mg *CacheBlobNfsTarget) SetProviderReference(r *xpv1.Reference) {
 	mg.Spec.ProviderReference = r
 }
 
-// SetWriteConnectionSecretToReference of this HpcCacheBlobNfsTarget.
-func (mg *HpcCacheBlobNfsTarget) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
+// SetWriteConnectionSecretToReference of this CacheBlobNfsTarget.
+func (mg *CacheBlobNfsTarget) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
 	mg.Spec.WriteConnectionSecretToReference = r
 }
 
-// GetCondition of this HpcCacheBlobTarget.
-func (mg *HpcCacheBlobTarget) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
+// GetCondition of this CacheBlobTarget.
+func (mg *CacheBlobTarget) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
 	return mg.Status.GetCondition(ct)
 }
 
-// GetDeletionPolicy of this HpcCacheBlobTarget.
-func (mg *HpcCacheBlobTarget) GetDeletionPolicy() xpv1.DeletionPolicy {
+// GetDeletionPolicy of this CacheBlobTarget.
+func (mg *CacheBlobTarget) GetDeletionPolicy() xpv1.DeletionPolicy {
 	return mg.Spec.DeletionPolicy
 }
 
-// GetProviderConfigReference of this HpcCacheBlobTarget.
-func (mg *HpcCacheBlobTarget) GetProviderConfigReference() *xpv1.Reference {
+// GetProviderConfigReference of this CacheBlobTarget.
+func (mg *CacheBlobTarget) GetProviderConfigReference() *xpv1.Reference {
 	return mg.Spec.ProviderConfigReference
 }
 
 /*
-GetProviderReference of this HpcCacheBlobTarget.
+GetProviderReference of this CacheBlobTarget.
 Deprecated: Use GetProviderConfigReference.
 */
-func (mg *HpcCacheBlobTarget) GetProviderReference() *xpv1.Reference {
+func (mg *CacheBlobTarget) GetProviderReference() *xpv1.Reference {
 	return mg.Spec.ProviderReference
 }
 
-// GetWriteConnectionSecretToReference of this HpcCacheBlobTarget.
-func (mg *HpcCacheBlobTarget) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
+// GetWriteConnectionSecretToReference of this CacheBlobTarget.
+func (mg *CacheBlobTarget) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
 	return mg.Spec.WriteConnectionSecretToReference
 }
 
-// SetConditions of this HpcCacheBlobTarget.
-func (mg *HpcCacheBlobTarget) SetConditions(c ...xpv1.Condition) {
+// SetConditions of this CacheBlobTarget.
+func (mg *CacheBlobTarget) SetConditions(c ...xpv1.Condition) {
 	mg.Status.SetConditions(c...)
 }
 
-// SetDeletionPolicy of this HpcCacheBlobTarget.
-func (mg *HpcCacheBlobTarget) SetDeletionPolicy(r xpv1.DeletionPolicy) {
+// SetDeletionPolicy of this CacheBlobTarget.
+func (mg *CacheBlobTarget) SetDeletionPolicy(r xpv1.DeletionPolicy) {
 	mg.Spec.DeletionPolicy = r
 }
 
-// SetProviderConfigReference of this HpcCacheBlobTarget.
-func (mg *HpcCacheBlobTarget) SetProviderConfigReference(r *xpv1.Reference) {
+// SetProviderConfigReference of this CacheBlobTarget.
+func (mg *CacheBlobTarget) SetProviderConfigReference(r *xpv1.Reference) {
 	mg.Spec.ProviderConfigReference = r
 }
 
 /*
-SetProviderReference of this HpcCacheBlobTarget.
+SetProviderReference of this CacheBlobTarget.
 Deprecated: Use SetProviderConfigReference.
 */
-func (mg *HpcCacheBlobTarget) SetProviderReference(r *xpv1.Reference) {
+func (mg *CacheBlobTarget) SetProviderReference(r *xpv1.Reference) {
 	mg.Spec.ProviderReference = r
 }
 
-// SetWriteConnectionSecretToReference of this HpcCacheBlobTarget.
-func (mg *HpcCacheBlobTarget) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
+// SetWriteConnectionSecretToReference of this CacheBlobTarget.
+func (mg *CacheBlobTarget) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
 	mg.Spec.WriteConnectionSecretToReference = r
 }
 
-// GetCondition of this HpcCacheNfsTarget.
-func (mg *HpcCacheNfsTarget) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
+// GetCondition of this CacheNfsTarget.
+func (mg *CacheNfsTarget) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
 	return mg.Status.GetCondition(ct)
 }
 
-// GetDeletionPolicy of this HpcCacheNfsTarget.
-func (mg *HpcCacheNfsTarget) GetDeletionPolicy() xpv1.DeletionPolicy {
+// GetDeletionPolicy of this CacheNfsTarget.
+func (mg *CacheNfsTarget) GetDeletionPolicy() xpv1.DeletionPolicy {
 	return mg.Spec.DeletionPolicy
 }
 
-// GetProviderConfigReference of this HpcCacheNfsTarget.
-func (mg *HpcCacheNfsTarget) GetProviderConfigReference() *xpv1.Reference {
+// GetProviderConfigReference of this CacheNfsTarget.
+func (mg *CacheNfsTarget) GetProviderConfigReference() *xpv1.Reference {
 	return mg.Spec.ProviderConfigReference
 }
 
 /*
-GetProviderReference of this HpcCacheNfsTarget.
+GetProviderReference of this CacheNfsTarget.
 Deprecated: Use GetProviderConfigReference.
 */
-func (mg *HpcCacheNfsTarget) GetProviderReference() *xpv1.Reference {
+func (mg *CacheNfsTarget) GetProviderReference() *xpv1.Reference {
 	return mg.Spec.ProviderReference
 }
 
-// GetWriteConnectionSecretToReference of this HpcCacheNfsTarget.
-func (mg *HpcCacheNfsTarget) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
+// GetWriteConnectionSecretToReference of this CacheNfsTarget.
+func (mg *CacheNfsTarget) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
 	return mg.Spec.WriteConnectionSecretToReference
 }
 
-// SetConditions of this HpcCacheNfsTarget.
-func (mg *HpcCacheNfsTarget) SetConditions(c ...xpv1.Condition) {
+// SetConditions of this CacheNfsTarget.
+func (mg *CacheNfsTarget) SetConditions(c ...xpv1.Condition) {
 	mg.Status.SetConditions(c...)
 }
 
-// SetDeletionPolicy of this HpcCacheNfsTarget.
-func (mg *HpcCacheNfsTarget) SetDeletionPolicy(r xpv1.DeletionPolicy) {
+// SetDeletionPolicy of this CacheNfsTarget.
+func (mg *CacheNfsTarget) SetDeletionPolicy(r xpv1.DeletionPolicy) {
 	mg.Spec.DeletionPolicy = r
 }
 
-// SetProviderConfigReference of this HpcCacheNfsTarget.
-func (mg *HpcCacheNfsTarget) SetProviderConfigReference(r *xpv1.Reference) {
+// SetProviderConfigReference of this CacheNfsTarget.
+func (mg *CacheNfsTarget) SetProviderConfigReference(r *xpv1.Reference) {
 	mg.Spec.ProviderConfigReference = r
 }
 
 /*
-SetProviderReference of this HpcCacheNfsTarget.
+SetProviderReference of this CacheNfsTarget.
 Deprecated: Use SetProviderConfigReference.
 */
-func (mg *HpcCacheNfsTarget) SetProviderReference(r *xpv1.Reference) {
+func (mg *CacheNfsTarget) SetProviderReference(r *xpv1.Reference) {
 	mg.Spec.ProviderReference = r
 }
 
-// SetWriteConnectionSecretToReference of this HpcCacheNfsTarget.
-func (mg *HpcCacheNfsTarget) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
+// SetWriteConnectionSecretToReference of this CacheNfsTarget.
+func (mg *CacheNfsTarget) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
 	mg.Spec.WriteConnectionSecretToReference = r
 }

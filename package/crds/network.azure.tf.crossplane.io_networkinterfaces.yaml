@@ -11,7 +11,7 @@ spec:
     categories:
     - crossplane
     - managed
-    - azure
+    - tfazure
     kind: NetworkInterface
     listKind: NetworkInterfaceList
     plural: networkinterfaces

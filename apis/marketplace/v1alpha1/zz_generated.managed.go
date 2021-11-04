@@ -19,58 +19,58 @@ package v1alpha1
 
 import xpv1 "github.com/crossplane/crossplane-runtime/apis/common/v1"
 
-// GetCondition of this MarketplaceAgreement.
-func (mg *MarketplaceAgreement) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
+// GetCondition of this Agreement.
+func (mg *Agreement) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
 	return mg.Status.GetCondition(ct)
 }
 
-// GetDeletionPolicy of this MarketplaceAgreement.
-func (mg *MarketplaceAgreement) GetDeletionPolicy() xpv1.DeletionPolicy {
+// GetDeletionPolicy of this Agreement.
+func (mg *Agreement) GetDeletionPolicy() xpv1.DeletionPolicy {
 	return mg.Spec.DeletionPolicy
 }
 
-// GetProviderConfigReference of this MarketplaceAgreement.
-func (mg *MarketplaceAgreement) GetProviderConfigReference() *xpv1.Reference {
+// GetProviderConfigReference of this Agreement.
+func (mg *Agreement) GetProviderConfigReference() *xpv1.Reference {
 	return mg.Spec.ProviderConfigReference
 }
 
 /*
-GetProviderReference of this MarketplaceAgreement.
+GetProviderReference of this Agreement.
 Deprecated: Use GetProviderConfigReference.
 */
-func (mg *MarketplaceAgreement) GetProviderReference() *xpv1.Reference {
+func (mg *Agreement) GetProviderReference() *xpv1.Reference {
 	return mg.Spec.ProviderReference
 }
 
-// GetWriteConnectionSecretToReference of this MarketplaceAgreement.
-func (mg *MarketplaceAgreement) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
+// GetWriteConnectionSecretToReference of this Agreement.
+func (mg *Agreement) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
 	return mg.Spec.WriteConnectionSecretToReference
 }
 
-// SetConditions of this MarketplaceAgreement.
-func (mg *MarketplaceAgreement) SetConditions(c ...xpv1.Condition) {
+// SetConditions of this Agreement.
+func (mg *Agreement) SetConditions(c ...xpv1.Condition) {
 	mg.Status.SetConditions(c...)
 }
 
-// SetDeletionPolicy of this MarketplaceAgreement.
-func (mg *MarketplaceAgreement) SetDeletionPolicy(r xpv1.DeletionPolicy) {
+// SetDeletionPolicy of this Agreement.
+func (mg *Agreement) SetDeletionPolicy(r xpv1.DeletionPolicy) {
 	mg.Spec.DeletionPolicy = r
 }
 
-// SetProviderConfigReference of this MarketplaceAgreement.
-func (mg *MarketplaceAgreement) SetProviderConfigReference(r *xpv1.Reference) {
+// SetProviderConfigReference of this Agreement.
+func (mg *Agreement) SetProviderConfigReference(r *xpv1.Reference) {
 	mg.Spec.ProviderConfigReference = r
 }
 
 /*
-SetProviderReference of this MarketplaceAgreement.
+SetProviderReference of this Agreement.
 Deprecated: Use SetProviderConfigReference.
 */
-func (mg *MarketplaceAgreement) SetProviderReference(r *xpv1.Reference) {
+func (mg *Agreement) SetProviderReference(r *xpv1.Reference) {
 	mg.Spec.ProviderReference = r
 }
 
-// SetWriteConnectionSecretToReference of this MarketplaceAgreement.
-func (mg *MarketplaceAgreement) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
+// SetWriteConnectionSecretToReference of this Agreement.
+func (mg *Agreement) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
 	mg.Spec.WriteConnectionSecretToReference = r
 }

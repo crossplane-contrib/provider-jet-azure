@@ -19,450 +19,394 @@ package v1alpha1
 
 import xpv1 "github.com/crossplane/crossplane-runtime/apis/common/v1"
 
-// GetCondition of this LbBackendAddressPool.
-func (mg *LbBackendAddressPool) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
+// GetCondition of this BackendAddressPool.
+func (mg *BackendAddressPool) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
 	return mg.Status.GetCondition(ct)
 }
 
-// GetDeletionPolicy of this LbBackendAddressPool.
-func (mg *LbBackendAddressPool) GetDeletionPolicy() xpv1.DeletionPolicy {
+// GetDeletionPolicy of this BackendAddressPool.
+func (mg *BackendAddressPool) GetDeletionPolicy() xpv1.DeletionPolicy {
 	return mg.Spec.DeletionPolicy
 }
 
-// GetProviderConfigReference of this LbBackendAddressPool.
-func (mg *LbBackendAddressPool) GetProviderConfigReference() *xpv1.Reference {
+// GetProviderConfigReference of this BackendAddressPool.
+func (mg *BackendAddressPool) GetProviderConfigReference() *xpv1.Reference {
 	return mg.Spec.ProviderConfigReference
 }
 
 /*
-GetProviderReference of this LbBackendAddressPool.
+GetProviderReference of this BackendAddressPool.
 Deprecated: Use GetProviderConfigReference.
 */
-func (mg *LbBackendAddressPool) GetProviderReference() *xpv1.Reference {
+func (mg *BackendAddressPool) GetProviderReference() *xpv1.Reference {
 	return mg.Spec.ProviderReference
 }
 
-// GetWriteConnectionSecretToReference of this LbBackendAddressPool.
-func (mg *LbBackendAddressPool) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
+// GetWriteConnectionSecretToReference of this BackendAddressPool.
+func (mg *BackendAddressPool) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
 	return mg.Spec.WriteConnectionSecretToReference
 }
 
-// SetConditions of this LbBackendAddressPool.
-func (mg *LbBackendAddressPool) SetConditions(c ...xpv1.Condition) {
+// SetConditions of this BackendAddressPool.
+func (mg *BackendAddressPool) SetConditions(c ...xpv1.Condition) {
 	mg.Status.SetConditions(c...)
 }
 
-// SetDeletionPolicy of this LbBackendAddressPool.
-func (mg *LbBackendAddressPool) SetDeletionPolicy(r xpv1.DeletionPolicy) {
+// SetDeletionPolicy of this BackendAddressPool.
+func (mg *BackendAddressPool) SetDeletionPolicy(r xpv1.DeletionPolicy) {
 	mg.Spec.DeletionPolicy = r
 }
 
-// SetProviderConfigReference of this LbBackendAddressPool.
-func (mg *LbBackendAddressPool) SetProviderConfigReference(r *xpv1.Reference) {
+// SetProviderConfigReference of this BackendAddressPool.
+func (mg *BackendAddressPool) SetProviderConfigReference(r *xpv1.Reference) {
 	mg.Spec.ProviderConfigReference = r
 }
 
 /*
-SetProviderReference of this LbBackendAddressPool.
+SetProviderReference of this BackendAddressPool.
 Deprecated: Use SetProviderConfigReference.
 */
-func (mg *LbBackendAddressPool) SetProviderReference(r *xpv1.Reference) {
+func (mg *BackendAddressPool) SetProviderReference(r *xpv1.Reference) {
 	mg.Spec.ProviderReference = r
 }
 
-// SetWriteConnectionSecretToReference of this LbBackendAddressPool.
-func (mg *LbBackendAddressPool) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
+// SetWriteConnectionSecretToReference of this BackendAddressPool.
+func (mg *BackendAddressPool) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
 	mg.Spec.WriteConnectionSecretToReference = r
 }
 
-// GetCondition of this LbBackendAddressPoolAddress.
-func (mg *LbBackendAddressPoolAddress) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
+// GetCondition of this BackendAddressPoolAddress.
+func (mg *BackendAddressPoolAddress) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
 	return mg.Status.GetCondition(ct)
 }
 
-// GetDeletionPolicy of this LbBackendAddressPoolAddress.
-func (mg *LbBackendAddressPoolAddress) GetDeletionPolicy() xpv1.DeletionPolicy {
+// GetDeletionPolicy of this BackendAddressPoolAddress.
+func (mg *BackendAddressPoolAddress) GetDeletionPolicy() xpv1.DeletionPolicy {
 	return mg.Spec.DeletionPolicy
 }
 
-// GetProviderConfigReference of this LbBackendAddressPoolAddress.
-func (mg *LbBackendAddressPoolAddress) GetProviderConfigReference() *xpv1.Reference {
+// GetProviderConfigReference of this BackendAddressPoolAddress.
+func (mg *BackendAddressPoolAddress) GetProviderConfigReference() *xpv1.Reference {
 	return mg.Spec.ProviderConfigReference
 }
 
 /*
-GetProviderReference of this LbBackendAddressPoolAddress.
+GetProviderReference of this BackendAddressPoolAddress.
 Deprecated: Use GetProviderConfigReference.
 */
-func (mg *LbBackendAddressPoolAddress) GetProviderReference() *xpv1.Reference {
+func (mg *BackendAddressPoolAddress) GetProviderReference() *xpv1.Reference {
 	return mg.Spec.ProviderReference
 }
 
-// GetWriteConnectionSecretToReference of this LbBackendAddressPoolAddress.
-func (mg *LbBackendAddressPoolAddress) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
+// GetWriteConnectionSecretToReference of this BackendAddressPoolAddress.
+func (mg *BackendAddressPoolAddress) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
 	return mg.Spec.WriteConnectionSecretToReference
 }
 
-// SetConditions of this LbBackendAddressPoolAddress.
-func (mg *LbBackendAddressPoolAddress) SetConditions(c ...xpv1.Condition) {
+// SetConditions of this BackendAddressPoolAddress.
+func (mg *BackendAddressPoolAddress) SetConditions(c ...xpv1.Condition) {
 	mg.Status.SetConditions(c...)
 }
 
-// SetDeletionPolicy of this LbBackendAddressPoolAddress.
-func (mg *LbBackendAddressPoolAddress) SetDeletionPolicy(r xpv1.DeletionPolicy) {
+// SetDeletionPolicy of this BackendAddressPoolAddress.
+func (mg *BackendAddressPoolAddress) SetDeletionPolicy(r xpv1.DeletionPolicy) {
 	mg.Spec.DeletionPolicy = r
 }
 
-// SetProviderConfigReference of this LbBackendAddressPoolAddress.
-func (mg *LbBackendAddressPoolAddress) SetProviderConfigReference(r *xpv1.Reference) {
+// SetProviderConfigReference of this BackendAddressPoolAddress.
+func (mg *BackendAddressPoolAddress) SetProviderConfigReference(r *xpv1.Reference) {
 	mg.Spec.ProviderConfigReference = r
 }
 
 /*
-SetProviderReference of this LbBackendAddressPoolAddress.
+SetProviderReference of this BackendAddressPoolAddress.
 Deprecated: Use SetProviderConfigReference.
 */
-func (mg *LbBackendAddressPoolAddress) SetProviderReference(r *xpv1.Reference) {
+func (mg *BackendAddressPoolAddress) SetProviderReference(r *xpv1.Reference) {
 	mg.Spec.ProviderReference = r
 }
 
-// SetWriteConnectionSecretToReference of this LbBackendAddressPoolAddress.
-func (mg *LbBackendAddressPoolAddress) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
+// SetWriteConnectionSecretToReference of this BackendAddressPoolAddress.
+func (mg *BackendAddressPoolAddress) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
 	mg.Spec.WriteConnectionSecretToReference = r
 }
 
-// GetCondition of this LbNatPool.
-func (mg *LbNatPool) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
+// GetCondition of this NatPool.
+func (mg *NatPool) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
 	return mg.Status.GetCondition(ct)
 }
 
-// GetDeletionPolicy of this LbNatPool.
-func (mg *LbNatPool) GetDeletionPolicy() xpv1.DeletionPolicy {
+// GetDeletionPolicy of this NatPool.
+func (mg *NatPool) GetDeletionPolicy() xpv1.DeletionPolicy {
 	return mg.Spec.DeletionPolicy
 }
 
-// GetProviderConfigReference of this LbNatPool.
-func (mg *LbNatPool) GetProviderConfigReference() *xpv1.Reference {
+// GetProviderConfigReference of this NatPool.
+func (mg *NatPool) GetProviderConfigReference() *xpv1.Reference {
 	return mg.Spec.ProviderConfigReference
 }
 
 /*
-GetProviderReference of this LbNatPool.
+GetProviderReference of this NatPool.
 Deprecated: Use GetProviderConfigReference.
 */
-func (mg *LbNatPool) GetProviderReference() *xpv1.Reference {
+func (mg *NatPool) GetProviderReference() *xpv1.Reference {
 	return mg.Spec.ProviderReference
 }
 
-// GetWriteConnectionSecretToReference of this LbNatPool.
-func (mg *LbNatPool) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
+// GetWriteConnectionSecretToReference of this NatPool.
+func (mg *NatPool) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
 	return mg.Spec.WriteConnectionSecretToReference
 }
 
-// SetConditions of this LbNatPool.
-func (mg *LbNatPool) SetConditions(c ...xpv1.Condition) {
+// SetConditions of this NatPool.
+func (mg *NatPool) SetConditions(c ...xpv1.Condition) {
 	mg.Status.SetConditions(c...)
 }
 
-// SetDeletionPolicy of this LbNatPool.
-func (mg *LbNatPool) SetDeletionPolicy(r xpv1.DeletionPolicy) {
+// SetDeletionPolicy of this NatPool.
+func (mg *NatPool) SetDeletionPolicy(r xpv1.DeletionPolicy) {
 	mg.Spec.DeletionPolicy = r
 }
 
-// SetProviderConfigReference of this LbNatPool.
-func (mg *LbNatPool) SetProviderConfigReference(r *xpv1.Reference) {
+// SetProviderConfigReference of this NatPool.
+func (mg *NatPool) SetProviderConfigReference(r *xpv1.Reference) {
 	mg.Spec.ProviderConfigReference = r
 }
 
 /*
-SetProviderReference of this LbNatPool.
+SetProviderReference of this NatPool.
 Deprecated: Use SetProviderConfigReference.
 */
-func (mg *LbNatPool) SetProviderReference(r *xpv1.Reference) {
+func (mg *NatPool) SetProviderReference(r *xpv1.Reference) {
 	mg.Spec.ProviderReference = r
 }
 
-// SetWriteConnectionSecretToReference of this LbNatPool.
-func (mg *LbNatPool) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
+// SetWriteConnectionSecretToReference of this NatPool.
+func (mg *NatPool) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
 	mg.Spec.WriteConnectionSecretToReference = r
 }
 
-// GetCondition of this LbNatRule.
-func (mg *LbNatRule) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
+// GetCondition of this NatRule.
+func (mg *NatRule) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
 	return mg.Status.GetCondition(ct)
 }
 
-// GetDeletionPolicy of this LbNatRule.
-func (mg *LbNatRule) GetDeletionPolicy() xpv1.DeletionPolicy {
+// GetDeletionPolicy of this NatRule.
+func (mg *NatRule) GetDeletionPolicy() xpv1.DeletionPolicy {
 	return mg.Spec.DeletionPolicy
 }
 
-// GetProviderConfigReference of this LbNatRule.
-func (mg *LbNatRule) GetProviderConfigReference() *xpv1.Reference {
+// GetProviderConfigReference of this NatRule.
+func (mg *NatRule) GetProviderConfigReference() *xpv1.Reference {
 	return mg.Spec.ProviderConfigReference
 }
 
 /*
-GetProviderReference of this LbNatRule.
+GetProviderReference of this NatRule.
 Deprecated: Use GetProviderConfigReference.
 */
-func (mg *LbNatRule) GetProviderReference() *xpv1.Reference {
+func (mg *NatRule) GetProviderReference() *xpv1.Reference {
 	return mg.Spec.ProviderReference
 }
 
-// GetWriteConnectionSecretToReference of this LbNatRule.
-func (mg *LbNatRule) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
+// GetWriteConnectionSecretToReference of this NatRule.
+func (mg *NatRule) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
 	return mg.Spec.WriteConnectionSecretToReference
 }
 
-// SetConditions of this LbNatRule.
-func (mg *LbNatRule) SetConditions(c ...xpv1.Condition) {
+// SetConditions of this NatRule.
+func (mg *NatRule) SetConditions(c ...xpv1.Condition) {
 	mg.Status.SetConditions(c...)
 }
 
-// SetDeletionPolicy of this LbNatRule.
-func (mg *LbNatRule) SetDeletionPolicy(r xpv1.DeletionPolicy) {
+// SetDeletionPolicy of this NatRule.
+func (mg *NatRule) SetDeletionPolicy(r xpv1.DeletionPolicy) {
 	mg.Spec.DeletionPolicy = r
 }
 
-// SetProviderConfigReference of this LbNatRule.
-func (mg *LbNatRule) SetProviderConfigReference(r *xpv1.Reference) {
+// SetProviderConfigReference of this NatRule.
+func (mg *NatRule) SetProviderConfigReference(r *xpv1.Reference) {
 	mg.Spec.ProviderConfigReference = r
 }
 
 /*
-SetProviderReference of this LbNatRule.
+SetProviderReference of this NatRule.
 Deprecated: Use SetProviderConfigReference.
 */
-func (mg *LbNatRule) SetProviderReference(r *xpv1.Reference) {
+func (mg *NatRule) SetProviderReference(r *xpv1.Reference) {
 	mg.Spec.ProviderReference = r
 }
 
-// SetWriteConnectionSecretToReference of this LbNatRule.
-func (mg *LbNatRule) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
+// SetWriteConnectionSecretToReference of this NatRule.
+func (mg *NatRule) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
 	mg.Spec.WriteConnectionSecretToReference = r
 }
 
-// GetCondition of this LbOutboundRule.
-func (mg *LbOutboundRule) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
+// GetCondition of this OutboundRule.
+func (mg *OutboundRule) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
 	return mg.Status.GetCondition(ct)
 }
 
-// GetDeletionPolicy of this LbOutboundRule.
-func (mg *LbOutboundRule) GetDeletionPolicy() xpv1.DeletionPolicy {
+// GetDeletionPolicy of this OutboundRule.
+func (mg *OutboundRule) GetDeletionPolicy() xpv1.DeletionPolicy {
 	return mg.Spec.DeletionPolicy
 }
 
-// GetProviderConfigReference of this LbOutboundRule.
-func (mg *LbOutboundRule) GetProviderConfigReference() *xpv1.Reference {
+// GetProviderConfigReference of this OutboundRule.
+func (mg *OutboundRule) GetProviderConfigReference() *xpv1.Reference {
 	return mg.Spec.ProviderConfigReference
 }
 
 /*
-GetProviderReference of this LbOutboundRule.
+GetProviderReference of this OutboundRule.
 Deprecated: Use GetProviderConfigReference.
 */
-func (mg *LbOutboundRule) GetProviderReference() *xpv1.Reference {
+func (mg *OutboundRule) GetProviderReference() *xpv1.Reference {
 	return mg.Spec.ProviderReference
 }
 
-// GetWriteConnectionSecretToReference of this LbOutboundRule.
-func (mg *LbOutboundRule) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
+// GetWriteConnectionSecretToReference of this OutboundRule.
+func (mg *OutboundRule) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
 	return mg.Spec.WriteConnectionSecretToReference
 }
 
-// SetConditions of this LbOutboundRule.
-func (mg *LbOutboundRule) SetConditions(c ...xpv1.Condition) {
+// SetConditions of this OutboundRule.
+func (mg *OutboundRule) SetConditions(c ...xpv1.Condition) {
 	mg.Status.SetConditions(c...)
 }
 
-// SetDeletionPolicy of this LbOutboundRule.
-func (mg *LbOutboundRule) SetDeletionPolicy(r xpv1.DeletionPolicy) {
+// SetDeletionPolicy of this OutboundRule.
+func (mg *OutboundRule) SetDeletionPolicy(r xpv1.DeletionPolicy) {
 	mg.Spec.DeletionPolicy = r
 }
 
-// SetProviderConfigReference of this LbOutboundRule.
-func (mg *LbOutboundRule) SetProviderConfigReference(r *xpv1.Reference) {
+// SetProviderConfigReference of this OutboundRule.
+func (mg *OutboundRule) SetProviderConfigReference(r *xpv1.Reference) {
 	mg.Spec.ProviderConfigReference = r
 }
 
 /*
-SetProviderReference of this LbOutboundRule.
+SetProviderReference of this OutboundRule.
 Deprecated: Use SetProviderConfigReference.
 */
-func (mg *LbOutboundRule) SetProviderReference(r *xpv1.Reference) {
+func (mg *OutboundRule) SetProviderReference(r *xpv1.Reference) {
 	mg.Spec.ProviderReference = r
 }
 
-// SetWriteConnectionSecretToReference of this LbOutboundRule.
-func (mg *LbOutboundRule) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
+// SetWriteConnectionSecretToReference of this OutboundRule.
+func (mg *OutboundRule) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
 	mg.Spec.WriteConnectionSecretToReference = r
 }
 
-// GetCondition of this LbProbe.
-func (mg *LbProbe) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
+// GetCondition of this Probe.
+func (mg *Probe) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
 	return mg.Status.GetCondition(ct)
 }
 
-// GetDeletionPolicy of this LbProbe.
-func (mg *LbProbe) GetDeletionPolicy() xpv1.DeletionPolicy {
+// GetDeletionPolicy of this Probe.
+func (mg *Probe) GetDeletionPolicy() xpv1.DeletionPolicy {
 	return mg.Spec.DeletionPolicy
 }
 
-// GetProviderConfigReference of this LbProbe.
-func (mg *LbProbe) GetProviderConfigReference() *xpv1.Reference {
+// GetProviderConfigReference of this Probe.
+func (mg *Probe) GetProviderConfigReference() *xpv1.Reference {
 	return mg.Spec.ProviderConfigReference
 }
 
 /*
-GetProviderReference of this LbProbe.
+GetProviderReference of this Probe.
 Deprecated: Use GetProviderConfigReference.
 */
-func (mg *LbProbe) GetProviderReference() *xpv1.Reference {
+func (mg *Probe) GetProviderReference() *xpv1.Reference {
 	return mg.Spec.ProviderReference
 }
 
-// GetWriteConnectionSecretToReference of this LbProbe.
-func (mg *LbProbe) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
+// GetWriteConnectionSecretToReference of this Probe.
+func (mg *Probe) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
 	return mg.Spec.WriteConnectionSecretToReference
 }
 
-// SetConditions of this LbProbe.
-func (mg *LbProbe) SetConditions(c ...xpv1.Condition) {
+// SetConditions of this Probe.
+func (mg *Probe) SetConditions(c ...xpv1.Condition) {
 	mg.Status.SetConditions(c...)
 }
 
-// SetDeletionPolicy of this LbProbe.
-func (mg *LbProbe) SetDeletionPolicy(r xpv1.DeletionPolicy) {
+// SetDeletionPolicy of this Probe.
+func (mg *Probe) SetDeletionPolicy(r xpv1.DeletionPolicy) {
 	mg.Spec.DeletionPolicy = r
 }
 
-// SetProviderConfigReference of this LbProbe.
-func (mg *LbProbe) SetProviderConfigReference(r *xpv1.Reference) {
+// SetProviderConfigReference of this Probe.
+func (mg *Probe) SetProviderConfigReference(r *xpv1.Reference) {
 	mg.Spec.ProviderConfigReference = r
 }
 
 /*
-SetProviderReference of this LbProbe.
+SetProviderReference of this Probe.
 Deprecated: Use SetProviderConfigReference.
 */
-func (mg *LbProbe) SetProviderReference(r *xpv1.Reference) {
+func (mg *Probe) SetProviderReference(r *xpv1.Reference) {
 	mg.Spec.ProviderReference = r
 }
 
-// SetWriteConnectionSecretToReference of this LbProbe.
-func (mg *LbProbe) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
+// SetWriteConnectionSecretToReference of this Probe.
+func (mg *Probe) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
 	mg.Spec.WriteConnectionSecretToReference = r
 }
 
-// GetCondition of this LbRule.
-func (mg *LbRule) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
+// GetCondition of this Rule.
+func (mg *Rule) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
 	return mg.Status.GetCondition(ct)
 }
 
-// GetDeletionPolicy of this LbRule.
-func (mg *LbRule) GetDeletionPolicy() xpv1.DeletionPolicy {
+// GetDeletionPolicy of this Rule.
+func (mg *Rule) GetDeletionPolicy() xpv1.DeletionPolicy {
 	return mg.Spec.DeletionPolicy
 }
 
-// GetProviderConfigReference of this LbRule.
-func (mg *LbRule) GetProviderConfigReference() *xpv1.Reference {
+// GetProviderConfigReference of this Rule.
+func (mg *Rule) GetProviderConfigReference() *xpv1.Reference {
 	return mg.Spec.ProviderConfigReference
 }
 
 /*
-GetProviderReference of this LbRule.
+GetProviderReference of this Rule.
 Deprecated: Use GetProviderConfigReference.
 */
-func (mg *LbRule) GetProviderReference() *xpv1.Reference {
+func (mg *Rule) GetProviderReference() *xpv1.Reference {
 	return mg.Spec.ProviderReference
 }
 
-// GetWriteConnectionSecretToReference of this LbRule.
-func (mg *LbRule) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
+// GetWriteConnectionSecretToReference of this Rule.
+func (mg *Rule) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
 	return mg.Spec.WriteConnectionSecretToReference
 }
 
-// SetConditions of this LbRule.
-func (mg *LbRule) SetConditions(c ...xpv1.Condition) {
+// SetConditions of this Rule.
+func (mg *Rule) SetConditions(c ...xpv1.Condition) {
 	mg.Status.SetConditions(c...)
 }
 
-// SetDeletionPolicy of this LbRule.
-func (mg *LbRule) SetDeletionPolicy(r xpv1.DeletionPolicy) {
+// SetDeletionPolicy of this Rule.
+func (mg *Rule) SetDeletionPolicy(r xpv1.DeletionPolicy) {
 	mg.Spec.DeletionPolicy = r
 }
 
-// SetProviderConfigReference of this LbRule.
-func (mg *LbRule) SetProviderConfigReference(r *xpv1.Reference) {
+// SetProviderConfigReference of this Rule.
+func (mg *Rule) SetProviderConfigReference(r *xpv1.Reference) {
 	mg.Spec.ProviderConfigReference = r
 }
 
 /*
-SetProviderReference of this LbRule.
+SetProviderReference of this Rule.
 Deprecated: Use SetProviderConfigReference.
 */
-func (mg *LbRule) SetProviderReference(r *xpv1.Reference) {
+func (mg *Rule) SetProviderReference(r *xpv1.Reference) {
 	mg.Spec.ProviderReference = r
 }
 
-// SetWriteConnectionSecretToReference of this LbRule.
-func (mg *LbRule) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
-	mg.Spec.WriteConnectionSecretToReference = r
-}
-
-// GetCondition of this LoadBalancer.
-func (mg *LoadBalancer) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
-	return mg.Status.GetCondition(ct)
-}
-
-// GetDeletionPolicy of this LoadBalancer.
-func (mg *LoadBalancer) GetDeletionPolicy() xpv1.DeletionPolicy {
-	return mg.Spec.DeletionPolicy
-}
-
-// GetProviderConfigReference of this LoadBalancer.
-func (mg *LoadBalancer) GetProviderConfigReference() *xpv1.Reference {
-	return mg.Spec.ProviderConfigReference
-}
-
-/*
-GetProviderReference of this LoadBalancer.
-Deprecated: Use GetProviderConfigReference.
-*/
-func (mg *LoadBalancer) GetProviderReference() *xpv1.Reference {
-	return mg.Spec.ProviderReference
-}
-
-// GetWriteConnectionSecretToReference of this LoadBalancer.
-func (mg *LoadBalancer) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
-	return mg.Spec.WriteConnectionSecretToReference
-}
-
-// SetConditions of this LoadBalancer.
-func (mg *LoadBalancer) SetConditions(c ...xpv1.Condition) {
-	mg.Status.SetConditions(c...)
-}
-
-// SetDeletionPolicy of this LoadBalancer.
-func (mg *LoadBalancer) SetDeletionPolicy(r xpv1.DeletionPolicy) {
-	mg.Spec.DeletionPolicy = r
-}
-
-// SetProviderConfigReference of this LoadBalancer.
-func (mg *LoadBalancer) SetProviderConfigReference(r *xpv1.Reference) {
-	mg.Spec.ProviderConfigReference = r
-}
-
-/*
-SetProviderReference of this LoadBalancer.
-Deprecated: Use SetProviderConfigReference.
-*/
-func (mg *LoadBalancer) SetProviderReference(r *xpv1.Reference) {
-	mg.Spec.ProviderReference = r
-}
-
-// SetWriteConnectionSecretToReference of this LoadBalancer.
-func (mg *LoadBalancer) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
+// SetWriteConnectionSecretToReference of this Rule.
+func (mg *Rule) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
 	mg.Spec.WriteConnectionSecretToReference = r
 }

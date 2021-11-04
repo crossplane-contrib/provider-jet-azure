@@ -19,8 +19,8 @@ package v1alpha1
 
 import resource "github.com/crossplane/crossplane-runtime/pkg/resource"
 
-// GetItems of this RedisCacheList.
-func (l *RedisCacheList) GetItems() []resource.Managed {
+// GetItems of this CacheList.
+func (l *CacheList) GetItems() []resource.Managed {
 	items := make([]resource.Managed, len(l.Items))
 	for i := range l.Items {
 		items[i] = &l.Items[i]
@@ -28,8 +28,8 @@ func (l *RedisCacheList) GetItems() []resource.Managed {
 	return items
 }
 
-// GetItems of this RedisEnterpriseClusterList.
-func (l *RedisEnterpriseClusterList) GetItems() []resource.Managed {
+// GetItems of this EnterpriseClusterList.
+func (l *EnterpriseClusterList) GetItems() []resource.Managed {
 	items := make([]resource.Managed, len(l.Items))
 	for i := range l.Items {
 		items[i] = &l.Items[i]
@@ -37,8 +37,8 @@ func (l *RedisEnterpriseClusterList) GetItems() []resource.Managed {
 	return items
 }
 
-// GetItems of this RedisEnterpriseDatabaseList.
-func (l *RedisEnterpriseDatabaseList) GetItems() []resource.Managed {
+// GetItems of this EnterpriseDatabaseList.
+func (l *EnterpriseDatabaseList) GetItems() []resource.Managed {
 	items := make([]resource.Managed, len(l.Items))
 	for i := range l.Items {
 		items[i] = &l.Items[i]
@@ -46,8 +46,8 @@ func (l *RedisEnterpriseDatabaseList) GetItems() []resource.Managed {
 	return items
 }
 
-// GetItems of this RedisFirewallRuleList.
-func (l *RedisFirewallRuleList) GetItems() []resource.Managed {
+// GetItems of this FirewallRuleList.
+func (l *FirewallRuleList) GetItems() []resource.Managed {
 	items := make([]resource.Managed, len(l.Items))
 	for i := range l.Items {
 		items[i] = &l.Items[i]
@@ -55,8 +55,8 @@ func (l *RedisFirewallRuleList) GetItems() []resource.Managed {
 	return items
 }
 
-// GetItems of this RedisLinkedServerList.
-func (l *RedisLinkedServerList) GetItems() []resource.Managed {
+// GetItems of this LinkedServerList.
+func (l *LinkedServerList) GetItems() []resource.Managed {
 	items := make([]resource.Managed, len(l.Items))
 	for i := range l.Items {
 		items[i] = &l.Items[i]

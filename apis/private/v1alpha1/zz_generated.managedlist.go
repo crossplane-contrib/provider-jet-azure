@@ -19,8 +19,8 @@ package v1alpha1
 
 import resource "github.com/crossplane/crossplane-runtime/pkg/resource"
 
-// GetItems of this PrivateDnsARecordList.
-func (l *PrivateDnsARecordList) GetItems() []resource.Managed {
+// GetItems of this DnsARecordList.
+func (l *DnsARecordList) GetItems() []resource.Managed {
 	items := make([]resource.Managed, len(l.Items))
 	for i := range l.Items {
 		items[i] = &l.Items[i]
@@ -28,8 +28,8 @@ func (l *PrivateDnsARecordList) GetItems() []resource.Managed {
 	return items
 }
 
-// GetItems of this PrivateDnsAaaaRecordList.
-func (l *PrivateDnsAaaaRecordList) GetItems() []resource.Managed {
+// GetItems of this DnsAaaaRecordList.
+func (l *DnsAaaaRecordList) GetItems() []resource.Managed {
 	items := make([]resource.Managed, len(l.Items))
 	for i := range l.Items {
 		items[i] = &l.Items[i]
@@ -37,8 +37,8 @@ func (l *PrivateDnsAaaaRecordList) GetItems() []resource.Managed {
 	return items
 }
 
-// GetItems of this PrivateDnsCnameRecordList.
-func (l *PrivateDnsCnameRecordList) GetItems() []resource.Managed {
+// GetItems of this DnsCnameRecordList.
+func (l *DnsCnameRecordList) GetItems() []resource.Managed {
 	items := make([]resource.Managed, len(l.Items))
 	for i := range l.Items {
 		items[i] = &l.Items[i]
@@ -46,8 +46,8 @@ func (l *PrivateDnsCnameRecordList) GetItems() []resource.Managed {
 	return items
 }
 
-// GetItems of this PrivateDnsMxRecordList.
-func (l *PrivateDnsMxRecordList) GetItems() []resource.Managed {
+// GetItems of this DnsMxRecordList.
+func (l *DnsMxRecordList) GetItems() []resource.Managed {
 	items := make([]resource.Managed, len(l.Items))
 	for i := range l.Items {
 		items[i] = &l.Items[i]
@@ -55,8 +55,8 @@ func (l *PrivateDnsMxRecordList) GetItems() []resource.Managed {
 	return items
 }
 
-// GetItems of this PrivateDnsPtrRecordList.
-func (l *PrivateDnsPtrRecordList) GetItems() []resource.Managed {
+// GetItems of this DnsPtrRecordList.
+func (l *DnsPtrRecordList) GetItems() []resource.Managed {
 	items := make([]resource.Managed, len(l.Items))
 	for i := range l.Items {
 		items[i] = &l.Items[i]
@@ -64,8 +64,8 @@ func (l *PrivateDnsPtrRecordList) GetItems() []resource.Managed {
 	return items
 }
 
-// GetItems of this PrivateDnsSrvRecordList.
-func (l *PrivateDnsSrvRecordList) GetItems() []resource.Managed {
+// GetItems of this DnsSrvRecordList.
+func (l *DnsSrvRecordList) GetItems() []resource.Managed {
 	items := make([]resource.Managed, len(l.Items))
 	for i := range l.Items {
 		items[i] = &l.Items[i]
@@ -73,8 +73,8 @@ func (l *PrivateDnsSrvRecordList) GetItems() []resource.Managed {
 	return items
 }
 
-// GetItems of this PrivateDnsTxtRecordList.
-func (l *PrivateDnsTxtRecordList) GetItems() []resource.Managed {
+// GetItems of this DnsTxtRecordList.
+func (l *DnsTxtRecordList) GetItems() []resource.Managed {
 	items := make([]resource.Managed, len(l.Items))
 	for i := range l.Items {
 		items[i] = &l.Items[i]
@@ -82,8 +82,8 @@ func (l *PrivateDnsTxtRecordList) GetItems() []resource.Managed {
 	return items
 }
 
-// GetItems of this PrivateDnsZoneList.
-func (l *PrivateDnsZoneList) GetItems() []resource.Managed {
+// GetItems of this DnsZoneList.
+func (l *DnsZoneList) GetItems() []resource.Managed {
 	items := make([]resource.Managed, len(l.Items))
 	for i := range l.Items {
 		items[i] = &l.Items[i]
@@ -91,8 +91,8 @@ func (l *PrivateDnsZoneList) GetItems() []resource.Managed {
 	return items
 }
 
-// GetItems of this PrivateDnsZoneVirtualNetworkLinkList.
-func (l *PrivateDnsZoneVirtualNetworkLinkList) GetItems() []resource.Managed {
+// GetItems of this DnsZoneVirtualNetworkLinkList.
+func (l *DnsZoneVirtualNetworkLinkList) GetItems() []resource.Managed {
 	items := make([]resource.Managed, len(l.Items))
 	for i := range l.Items {
 		items[i] = &l.Items[i]
@@ -100,8 +100,8 @@ func (l *PrivateDnsZoneVirtualNetworkLinkList) GetItems() []resource.Managed {
 	return items
 }
 
-// GetItems of this PrivateEndpointList.
-func (l *PrivateEndpointList) GetItems() []resource.Managed {
+// GetItems of this EndpointList.
+func (l *EndpointList) GetItems() []resource.Managed {
 	items := make([]resource.Managed, len(l.Items))
 	for i := range l.Items {
 		items[i] = &l.Items[i]
@@ -109,8 +109,8 @@ func (l *PrivateEndpointList) GetItems() []resource.Managed {
 	return items
 }
 
-// GetItems of this PrivateLinkServiceList.
-func (l *PrivateLinkServiceList) GetItems() []resource.Managed {
+// GetItems of this LinkServiceList.
+func (l *LinkServiceList) GetItems() []resource.Managed {
 	items := make([]resource.Managed, len(l.Items))
 	for i := range l.Items {
 		items[i] = &l.Items[i]

@@ -19,58 +19,58 @@ package v1alpha1
 
 import xpv1 "github.com/crossplane/crossplane-runtime/apis/common/v1"
 
-// GetCondition of this StaticSite.
-func (mg *StaticSite) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
+// GetCondition of this Site.
+func (mg *Site) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
 	return mg.Status.GetCondition(ct)
 }
 
-// GetDeletionPolicy of this StaticSite.
-func (mg *StaticSite) GetDeletionPolicy() xpv1.DeletionPolicy {
+// GetDeletionPolicy of this Site.
+func (mg *Site) GetDeletionPolicy() xpv1.DeletionPolicy {
 	return mg.Spec.DeletionPolicy
 }
 
-// GetProviderConfigReference of this StaticSite.
-func (mg *StaticSite) GetProviderConfigReference() *xpv1.Reference {
+// GetProviderConfigReference of this Site.
+func (mg *Site) GetProviderConfigReference() *xpv1.Reference {
 	return mg.Spec.ProviderConfigReference
 }
 
 /*
-GetProviderReference of this StaticSite.
+GetProviderReference of this Site.
 Deprecated: Use GetProviderConfigReference.
 */
-func (mg *StaticSite) GetProviderReference() *xpv1.Reference {
+func (mg *Site) GetProviderReference() *xpv1.Reference {
 	return mg.Spec.ProviderReference
 }
 
-// GetWriteConnectionSecretToReference of this StaticSite.
-func (mg *StaticSite) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
+// GetWriteConnectionSecretToReference of this Site.
+func (mg *Site) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
 	return mg.Spec.WriteConnectionSecretToReference
 }
 
-// SetConditions of this StaticSite.
-func (mg *StaticSite) SetConditions(c ...xpv1.Condition) {
+// SetConditions of this Site.
+func (mg *Site) SetConditions(c ...xpv1.Condition) {
 	mg.Status.SetConditions(c...)
 }
 
-// SetDeletionPolicy of this StaticSite.
-func (mg *StaticSite) SetDeletionPolicy(r xpv1.DeletionPolicy) {
+// SetDeletionPolicy of this Site.
+func (mg *Site) SetDeletionPolicy(r xpv1.DeletionPolicy) {
 	mg.Spec.DeletionPolicy = r
 }
 
-// SetProviderConfigReference of this StaticSite.
-func (mg *StaticSite) SetProviderConfigReference(r *xpv1.Reference) {
+// SetProviderConfigReference of this Site.
+func (mg *Site) SetProviderConfigReference(r *xpv1.Reference) {
 	mg.Spec.ProviderConfigReference = r
 }
 
 /*
-SetProviderReference of this StaticSite.
+SetProviderReference of this Site.
 Deprecated: Use SetProviderConfigReference.
 */
-func (mg *StaticSite) SetProviderReference(r *xpv1.Reference) {
+func (mg *Site) SetProviderReference(r *xpv1.Reference) {
 	mg.Spec.ProviderReference = r
 }
 
-// SetWriteConnectionSecretToReference of this StaticSite.
-func (mg *StaticSite) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
+// SetWriteConnectionSecretToReference of this Site.
+func (mg *Site) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
 	mg.Spec.WriteConnectionSecretToReference = r
 }

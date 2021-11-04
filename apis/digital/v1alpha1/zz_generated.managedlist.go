@@ -19,8 +19,8 @@ package v1alpha1
 
 import resource "github.com/crossplane/crossplane-runtime/pkg/resource"
 
-// GetItems of this DigitalTwinsEndpointEventgridList.
-func (l *DigitalTwinsEndpointEventgridList) GetItems() []resource.Managed {
+// GetItems of this TwinsEndpointEventgridList.
+func (l *TwinsEndpointEventgridList) GetItems() []resource.Managed {
 	items := make([]resource.Managed, len(l.Items))
 	for i := range l.Items {
 		items[i] = &l.Items[i]
@@ -28,8 +28,8 @@ func (l *DigitalTwinsEndpointEventgridList) GetItems() []resource.Managed {
 	return items
 }
 
-// GetItems of this DigitalTwinsEndpointEventhubList.
-func (l *DigitalTwinsEndpointEventhubList) GetItems() []resource.Managed {
+// GetItems of this TwinsEndpointEventhubList.
+func (l *TwinsEndpointEventhubList) GetItems() []resource.Managed {
 	items := make([]resource.Managed, len(l.Items))
 	for i := range l.Items {
 		items[i] = &l.Items[i]
@@ -37,8 +37,8 @@ func (l *DigitalTwinsEndpointEventhubList) GetItems() []resource.Managed {
 	return items
 }
 
-// GetItems of this DigitalTwinsEndpointServicebusList.
-func (l *DigitalTwinsEndpointServicebusList) GetItems() []resource.Managed {
+// GetItems of this TwinsEndpointServicebusList.
+func (l *TwinsEndpointServicebusList) GetItems() []resource.Managed {
 	items := make([]resource.Managed, len(l.Items))
 	for i := range l.Items {
 		items[i] = &l.Items[i]
@@ -46,8 +46,8 @@ func (l *DigitalTwinsEndpointServicebusList) GetItems() []resource.Managed {
 	return items
 }
 
-// GetItems of this DigitalTwinsInstanceList.
-func (l *DigitalTwinsInstanceList) GetItems() []resource.Managed {
+// GetItems of this TwinsInstanceList.
+func (l *TwinsInstanceList) GetItems() []resource.Managed {
 	items := make([]resource.Managed, len(l.Items))
 	for i := range l.Items {
 		items[i] = &l.Items[i]

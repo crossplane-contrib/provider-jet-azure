@@ -19,282 +19,226 @@ package v1alpha1
 
 import xpv1 "github.com/crossplane/crossplane-runtime/apis/common/v1"
 
-// GetCondition of this Subnet.
-func (mg *Subnet) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
+// GetCondition of this NatGatewayAssociation.
+func (mg *NatGatewayAssociation) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
 	return mg.Status.GetCondition(ct)
 }
 
-// GetDeletionPolicy of this Subnet.
-func (mg *Subnet) GetDeletionPolicy() xpv1.DeletionPolicy {
+// GetDeletionPolicy of this NatGatewayAssociation.
+func (mg *NatGatewayAssociation) GetDeletionPolicy() xpv1.DeletionPolicy {
 	return mg.Spec.DeletionPolicy
 }
 
-// GetProviderConfigReference of this Subnet.
-func (mg *Subnet) GetProviderConfigReference() *xpv1.Reference {
+// GetProviderConfigReference of this NatGatewayAssociation.
+func (mg *NatGatewayAssociation) GetProviderConfigReference() *xpv1.Reference {
 	return mg.Spec.ProviderConfigReference
 }
 
 /*
-GetProviderReference of this Subnet.
+GetProviderReference of this NatGatewayAssociation.
 Deprecated: Use GetProviderConfigReference.
 */
-func (mg *Subnet) GetProviderReference() *xpv1.Reference {
+func (mg *NatGatewayAssociation) GetProviderReference() *xpv1.Reference {
 	return mg.Spec.ProviderReference
 }
 
-// GetWriteConnectionSecretToReference of this Subnet.
-func (mg *Subnet) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
+// GetWriteConnectionSecretToReference of this NatGatewayAssociation.
+func (mg *NatGatewayAssociation) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
 	return mg.Spec.WriteConnectionSecretToReference
 }
 
-// SetConditions of this Subnet.
-func (mg *Subnet) SetConditions(c ...xpv1.Condition) {
+// SetConditions of this NatGatewayAssociation.
+func (mg *NatGatewayAssociation) SetConditions(c ...xpv1.Condition) {
 	mg.Status.SetConditions(c...)
 }
 
-// SetDeletionPolicy of this Subnet.
-func (mg *Subnet) SetDeletionPolicy(r xpv1.DeletionPolicy) {
+// SetDeletionPolicy of this NatGatewayAssociation.
+func (mg *NatGatewayAssociation) SetDeletionPolicy(r xpv1.DeletionPolicy) {
 	mg.Spec.DeletionPolicy = r
 }
 
-// SetProviderConfigReference of this Subnet.
-func (mg *Subnet) SetProviderConfigReference(r *xpv1.Reference) {
+// SetProviderConfigReference of this NatGatewayAssociation.
+func (mg *NatGatewayAssociation) SetProviderConfigReference(r *xpv1.Reference) {
 	mg.Spec.ProviderConfigReference = r
 }
 
 /*
-SetProviderReference of this Subnet.
+SetProviderReference of this NatGatewayAssociation.
 Deprecated: Use SetProviderConfigReference.
 */
-func (mg *Subnet) SetProviderReference(r *xpv1.Reference) {
+func (mg *NatGatewayAssociation) SetProviderReference(r *xpv1.Reference) {
 	mg.Spec.ProviderReference = r
 }
 
-// SetWriteConnectionSecretToReference of this Subnet.
-func (mg *Subnet) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
+// SetWriteConnectionSecretToReference of this NatGatewayAssociation.
+func (mg *NatGatewayAssociation) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
 	mg.Spec.WriteConnectionSecretToReference = r
 }
 
-// GetCondition of this SubnetNatGatewayAssociation.
-func (mg *SubnetNatGatewayAssociation) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
+// GetCondition of this NetworkSecurityGroupAssociation.
+func (mg *NetworkSecurityGroupAssociation) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
 	return mg.Status.GetCondition(ct)
 }
 
-// GetDeletionPolicy of this SubnetNatGatewayAssociation.
-func (mg *SubnetNatGatewayAssociation) GetDeletionPolicy() xpv1.DeletionPolicy {
+// GetDeletionPolicy of this NetworkSecurityGroupAssociation.
+func (mg *NetworkSecurityGroupAssociation) GetDeletionPolicy() xpv1.DeletionPolicy {
 	return mg.Spec.DeletionPolicy
 }
 
-// GetProviderConfigReference of this SubnetNatGatewayAssociation.
-func (mg *SubnetNatGatewayAssociation) GetProviderConfigReference() *xpv1.Reference {
+// GetProviderConfigReference of this NetworkSecurityGroupAssociation.
+func (mg *NetworkSecurityGroupAssociation) GetProviderConfigReference() *xpv1.Reference {
 	return mg.Spec.ProviderConfigReference
 }
 
 /*
-GetProviderReference of this SubnetNatGatewayAssociation.
+GetProviderReference of this NetworkSecurityGroupAssociation.
 Deprecated: Use GetProviderConfigReference.
 */
-func (mg *SubnetNatGatewayAssociation) GetProviderReference() *xpv1.Reference {
+func (mg *NetworkSecurityGroupAssociation) GetProviderReference() *xpv1.Reference {
 	return mg.Spec.ProviderReference
 }
 
-// GetWriteConnectionSecretToReference of this SubnetNatGatewayAssociation.
-func (mg *SubnetNatGatewayAssociation) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
+// GetWriteConnectionSecretToReference of this NetworkSecurityGroupAssociation.
+func (mg *NetworkSecurityGroupAssociation) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
 	return mg.Spec.WriteConnectionSecretToReference
 }
 
-// SetConditions of this SubnetNatGatewayAssociation.
-func (mg *SubnetNatGatewayAssociation) SetConditions(c ...xpv1.Condition) {
+// SetConditions of this NetworkSecurityGroupAssociation.
+func (mg *NetworkSecurityGroupAssociation) SetConditions(c ...xpv1.Condition) {
 	mg.Status.SetConditions(c...)
 }
 
-// SetDeletionPolicy of this SubnetNatGatewayAssociation.
-func (mg *SubnetNatGatewayAssociation) SetDeletionPolicy(r xpv1.DeletionPolicy) {
+// SetDeletionPolicy of this NetworkSecurityGroupAssociation.
+func (mg *NetworkSecurityGroupAssociation) SetDeletionPolicy(r xpv1.DeletionPolicy) {
 	mg.Spec.DeletionPolicy = r
 }
 
-// SetProviderConfigReference of this SubnetNatGatewayAssociation.
-func (mg *SubnetNatGatewayAssociation) SetProviderConfigReference(r *xpv1.Reference) {
+// SetProviderConfigReference of this NetworkSecurityGroupAssociation.
+func (mg *NetworkSecurityGroupAssociation) SetProviderConfigReference(r *xpv1.Reference) {
 	mg.Spec.ProviderConfigReference = r
 }
 
 /*
-SetProviderReference of this SubnetNatGatewayAssociation.
+SetProviderReference of this NetworkSecurityGroupAssociation.
 Deprecated: Use SetProviderConfigReference.
 */
-func (mg *SubnetNatGatewayAssociation) SetProviderReference(r *xpv1.Reference) {
+func (mg *NetworkSecurityGroupAssociation) SetProviderReference(r *xpv1.Reference) {
 	mg.Spec.ProviderReference = r
 }
 
-// SetWriteConnectionSecretToReference of this SubnetNatGatewayAssociation.
-func (mg *SubnetNatGatewayAssociation) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
+// SetWriteConnectionSecretToReference of this NetworkSecurityGroupAssociation.
+func (mg *NetworkSecurityGroupAssociation) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
 	mg.Spec.WriteConnectionSecretToReference = r
 }
 
-// GetCondition of this SubnetNetworkSecurityGroupAssociation.
-func (mg *SubnetNetworkSecurityGroupAssociation) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
+// GetCondition of this RouteTableAssociation.
+func (mg *RouteTableAssociation) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
 	return mg.Status.GetCondition(ct)
 }
 
-// GetDeletionPolicy of this SubnetNetworkSecurityGroupAssociation.
-func (mg *SubnetNetworkSecurityGroupAssociation) GetDeletionPolicy() xpv1.DeletionPolicy {
+// GetDeletionPolicy of this RouteTableAssociation.
+func (mg *RouteTableAssociation) GetDeletionPolicy() xpv1.DeletionPolicy {
 	return mg.Spec.DeletionPolicy
 }
 
-// GetProviderConfigReference of this SubnetNetworkSecurityGroupAssociation.
-func (mg *SubnetNetworkSecurityGroupAssociation) GetProviderConfigReference() *xpv1.Reference {
+// GetProviderConfigReference of this RouteTableAssociation.
+func (mg *RouteTableAssociation) GetProviderConfigReference() *xpv1.Reference {
 	return mg.Spec.ProviderConfigReference
 }
 
 /*
-GetProviderReference of this SubnetNetworkSecurityGroupAssociation.
+GetProviderReference of this RouteTableAssociation.
 Deprecated: Use GetProviderConfigReference.
 */
-func (mg *SubnetNetworkSecurityGroupAssociation) GetProviderReference() *xpv1.Reference {
+func (mg *RouteTableAssociation) GetProviderReference() *xpv1.Reference {
 	return mg.Spec.ProviderReference
 }
 
-// GetWriteConnectionSecretToReference of this SubnetNetworkSecurityGroupAssociation.
-func (mg *SubnetNetworkSecurityGroupAssociation) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
+// GetWriteConnectionSecretToReference of this RouteTableAssociation.
+func (mg *RouteTableAssociation) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
 	return mg.Spec.WriteConnectionSecretToReference
 }
 
-// SetConditions of this SubnetNetworkSecurityGroupAssociation.
-func (mg *SubnetNetworkSecurityGroupAssociation) SetConditions(c ...xpv1.Condition) {
+// SetConditions of this RouteTableAssociation.
+func (mg *RouteTableAssociation) SetConditions(c ...xpv1.Condition) {
 	mg.Status.SetConditions(c...)
 }
 
-// SetDeletionPolicy of this SubnetNetworkSecurityGroupAssociation.
-func (mg *SubnetNetworkSecurityGroupAssociation) SetDeletionPolicy(r xpv1.DeletionPolicy) {
+// SetDeletionPolicy of this RouteTableAssociation.
+func (mg *RouteTableAssociation) SetDeletionPolicy(r xpv1.DeletionPolicy) {
 	mg.Spec.DeletionPolicy = r
 }
 
-// SetProviderConfigReference of this SubnetNetworkSecurityGroupAssociation.
-func (mg *SubnetNetworkSecurityGroupAssociation) SetProviderConfigReference(r *xpv1.Reference) {
+// SetProviderConfigReference of this RouteTableAssociation.
+func (mg *RouteTableAssociation) SetProviderConfigReference(r *xpv1.Reference) {
 	mg.Spec.ProviderConfigReference = r
 }
 
 /*
-SetProviderReference of this SubnetNetworkSecurityGroupAssociation.
+SetProviderReference of this RouteTableAssociation.
 Deprecated: Use SetProviderConfigReference.
 */
-func (mg *SubnetNetworkSecurityGroupAssociation) SetProviderReference(r *xpv1.Reference) {
+func (mg *RouteTableAssociation) SetProviderReference(r *xpv1.Reference) {
 	mg.Spec.ProviderReference = r
 }
 
-// SetWriteConnectionSecretToReference of this SubnetNetworkSecurityGroupAssociation.
-func (mg *SubnetNetworkSecurityGroupAssociation) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
+// SetWriteConnectionSecretToReference of this RouteTableAssociation.
+func (mg *RouteTableAssociation) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
 	mg.Spec.WriteConnectionSecretToReference = r
 }
 
-// GetCondition of this SubnetRouteTableAssociation.
-func (mg *SubnetRouteTableAssociation) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
+// GetCondition of this ServiceEndpointStoragePolicy.
+func (mg *ServiceEndpointStoragePolicy) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
 	return mg.Status.GetCondition(ct)
 }
 
-// GetDeletionPolicy of this SubnetRouteTableAssociation.
-func (mg *SubnetRouteTableAssociation) GetDeletionPolicy() xpv1.DeletionPolicy {
+// GetDeletionPolicy of this ServiceEndpointStoragePolicy.
+func (mg *ServiceEndpointStoragePolicy) GetDeletionPolicy() xpv1.DeletionPolicy {
 	return mg.Spec.DeletionPolicy
 }
 
-// GetProviderConfigReference of this SubnetRouteTableAssociation.
-func (mg *SubnetRouteTableAssociation) GetProviderConfigReference() *xpv1.Reference {
+// GetProviderConfigReference of this ServiceEndpointStoragePolicy.
+func (mg *ServiceEndpointStoragePolicy) GetProviderConfigReference() *xpv1.Reference {
 	return mg.Spec.ProviderConfigReference
 }
 
 /*
-GetProviderReference of this SubnetRouteTableAssociation.
+GetProviderReference of this ServiceEndpointStoragePolicy.
 Deprecated: Use GetProviderConfigReference.
 */
-func (mg *SubnetRouteTableAssociation) GetProviderReference() *xpv1.Reference {
+func (mg *ServiceEndpointStoragePolicy) GetProviderReference() *xpv1.Reference {
 	return mg.Spec.ProviderReference
 }
 
-// GetWriteConnectionSecretToReference of this SubnetRouteTableAssociation.
-func (mg *SubnetRouteTableAssociation) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
+// GetWriteConnectionSecretToReference of this ServiceEndpointStoragePolicy.
+func (mg *ServiceEndpointStoragePolicy) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
 	return mg.Spec.WriteConnectionSecretToReference
 }
 
-// SetConditions of this SubnetRouteTableAssociation.
-func (mg *SubnetRouteTableAssociation) SetConditions(c ...xpv1.Condition) {
+// SetConditions of this ServiceEndpointStoragePolicy.
+func (mg *ServiceEndpointStoragePolicy) SetConditions(c ...xpv1.Condition) {
 	mg.Status.SetConditions(c...)
 }
 
-// SetDeletionPolicy of this SubnetRouteTableAssociation.
-func (mg *SubnetRouteTableAssociation) SetDeletionPolicy(r xpv1.DeletionPolicy) {
+// SetDeletionPolicy of this ServiceEndpointStoragePolicy.
+func (mg *ServiceEndpointStoragePolicy) SetDeletionPolicy(r xpv1.DeletionPolicy) {
 	mg.Spec.DeletionPolicy = r
 }
 
-// SetProviderConfigReference of this SubnetRouteTableAssociation.
-func (mg *SubnetRouteTableAssociation) SetProviderConfigReference(r *xpv1.Reference) {
+// SetProviderConfigReference of this ServiceEndpointStoragePolicy.
+func (mg *ServiceEndpointStoragePolicy) SetProviderConfigReference(r *xpv1.Reference) {
 	mg.Spec.ProviderConfigReference = r
 }
 
 /*
-SetProviderReference of this SubnetRouteTableAssociation.
+SetProviderReference of this ServiceEndpointStoragePolicy.
 Deprecated: Use SetProviderConfigReference.
 */
-func (mg *SubnetRouteTableAssociation) SetProviderReference(r *xpv1.Reference) {
+func (mg *ServiceEndpointStoragePolicy) SetProviderReference(r *xpv1.Reference) {
 	mg.Spec.ProviderReference = r
 }
 
-// SetWriteConnectionSecretToReference of this SubnetRouteTableAssociation.
-func (mg *SubnetRouteTableAssociation) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
-	mg.Spec.WriteConnectionSecretToReference = r
-}
-
-// GetCondition of this SubnetServiceEndpointStoragePolicy.
-func (mg *SubnetServiceEndpointStoragePolicy) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
-	return mg.Status.GetCondition(ct)
-}
-
-// GetDeletionPolicy of this SubnetServiceEndpointStoragePolicy.
-func (mg *SubnetServiceEndpointStoragePolicy) GetDeletionPolicy() xpv1.DeletionPolicy {
-	return mg.Spec.DeletionPolicy
-}
-
-// GetProviderConfigReference of this SubnetServiceEndpointStoragePolicy.
-func (mg *SubnetServiceEndpointStoragePolicy) GetProviderConfigReference() *xpv1.Reference {
-	return mg.Spec.ProviderConfigReference
-}
-
-/*
-GetProviderReference of this SubnetServiceEndpointStoragePolicy.
-Deprecated: Use GetProviderConfigReference.
-*/
-func (mg *SubnetServiceEndpointStoragePolicy) GetProviderReference() *xpv1.Reference {
-	return mg.Spec.ProviderReference
-}
-
-// GetWriteConnectionSecretToReference of this SubnetServiceEndpointStoragePolicy.
-func (mg *SubnetServiceEndpointStoragePolicy) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
-	return mg.Spec.WriteConnectionSecretToReference
-}
-
-// SetConditions of this SubnetServiceEndpointStoragePolicy.
-func (mg *SubnetServiceEndpointStoragePolicy) SetConditions(c ...xpv1.Condition) {
-	mg.Status.SetConditions(c...)
-}
-
-// SetDeletionPolicy of this SubnetServiceEndpointStoragePolicy.
-func (mg *SubnetServiceEndpointStoragePolicy) SetDeletionPolicy(r xpv1.DeletionPolicy) {
-	mg.Spec.DeletionPolicy = r
-}
-
-// SetProviderConfigReference of this SubnetServiceEndpointStoragePolicy.
-func (mg *SubnetServiceEndpointStoragePolicy) SetProviderConfigReference(r *xpv1.Reference) {
-	mg.Spec.ProviderConfigReference = r
-}
-
-/*
-SetProviderReference of this SubnetServiceEndpointStoragePolicy.
-Deprecated: Use SetProviderConfigReference.
-*/
-func (mg *SubnetServiceEndpointStoragePolicy) SetProviderReference(r *xpv1.Reference) {
-	mg.Spec.ProviderReference = r
-}
-
-// SetWriteConnectionSecretToReference of this SubnetServiceEndpointStoragePolicy.
-func (mg *SubnetServiceEndpointStoragePolicy) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
+// SetWriteConnectionSecretToReference of this ServiceEndpointStoragePolicy.
+func (mg *ServiceEndpointStoragePolicy) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
 	mg.Spec.WriteConnectionSecretToReference = r
 }

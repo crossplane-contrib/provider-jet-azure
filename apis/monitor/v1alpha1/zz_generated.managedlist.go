@@ -19,8 +19,8 @@ package v1alpha1
 
 import resource "github.com/crossplane/crossplane-runtime/pkg/resource"
 
-// GetItems of this MonitorAadDiagnosticSettingList.
-func (l *MonitorAadDiagnosticSettingList) GetItems() []resource.Managed {
+// GetItems of this AadDiagnosticSettingList.
+func (l *AadDiagnosticSettingList) GetItems() []resource.Managed {
 	items := make([]resource.Managed, len(l.Items))
 	for i := range l.Items {
 		items[i] = &l.Items[i]
@@ -28,8 +28,8 @@ func (l *MonitorAadDiagnosticSettingList) GetItems() []resource.Managed {
 	return items
 }
 
-// GetItems of this MonitorActionGroupList.
-func (l *MonitorActionGroupList) GetItems() []resource.Managed {
+// GetItems of this ActionGroupList.
+func (l *ActionGroupList) GetItems() []resource.Managed {
 	items := make([]resource.Managed, len(l.Items))
 	for i := range l.Items {
 		items[i] = &l.Items[i]
@@ -37,8 +37,8 @@ func (l *MonitorActionGroupList) GetItems() []resource.Managed {
 	return items
 }
 
-// GetItems of this MonitorActionRuleActionGroupList.
-func (l *MonitorActionRuleActionGroupList) GetItems() []resource.Managed {
+// GetItems of this ActionRuleActionGroupList.
+func (l *ActionRuleActionGroupList) GetItems() []resource.Managed {
 	items := make([]resource.Managed, len(l.Items))
 	for i := range l.Items {
 		items[i] = &l.Items[i]
@@ -46,8 +46,8 @@ func (l *MonitorActionRuleActionGroupList) GetItems() []resource.Managed {
 	return items
 }
 
-// GetItems of this MonitorActionRuleSuppressionList.
-func (l *MonitorActionRuleSuppressionList) GetItems() []resource.Managed {
+// GetItems of this ActionRuleSuppressionList.
+func (l *ActionRuleSuppressionList) GetItems() []resource.Managed {
 	items := make([]resource.Managed, len(l.Items))
 	for i := range l.Items {
 		items[i] = &l.Items[i]
@@ -55,8 +55,8 @@ func (l *MonitorActionRuleSuppressionList) GetItems() []resource.Managed {
 	return items
 }
 
-// GetItems of this MonitorActivityLogAlertList.
-func (l *MonitorActivityLogAlertList) GetItems() []resource.Managed {
+// GetItems of this ActivityLogAlertList.
+func (l *ActivityLogAlertList) GetItems() []resource.Managed {
 	items := make([]resource.Managed, len(l.Items))
 	for i := range l.Items {
 		items[i] = &l.Items[i]
@@ -64,8 +64,8 @@ func (l *MonitorActivityLogAlertList) GetItems() []resource.Managed {
 	return items
 }
 
-// GetItems of this MonitorAutoscaleSettingList.
-func (l *MonitorAutoscaleSettingList) GetItems() []resource.Managed {
+// GetItems of this AutoscaleSettingList.
+func (l *AutoscaleSettingList) GetItems() []resource.Managed {
 	items := make([]resource.Managed, len(l.Items))
 	for i := range l.Items {
 		items[i] = &l.Items[i]
@@ -73,8 +73,8 @@ func (l *MonitorAutoscaleSettingList) GetItems() []resource.Managed {
 	return items
 }
 
-// GetItems of this MonitorDiagnosticSettingList.
-func (l *MonitorDiagnosticSettingList) GetItems() []resource.Managed {
+// GetItems of this DiagnosticSettingList.
+func (l *DiagnosticSettingList) GetItems() []resource.Managed {
 	items := make([]resource.Managed, len(l.Items))
 	for i := range l.Items {
 		items[i] = &l.Items[i]
@@ -82,8 +82,8 @@ func (l *MonitorDiagnosticSettingList) GetItems() []resource.Managed {
 	return items
 }
 
-// GetItems of this MonitorMetricAlertList.
-func (l *MonitorMetricAlertList) GetItems() []resource.Managed {
+// GetItems of this MetricAlertList.
+func (l *MetricAlertList) GetItems() []resource.Managed {
 	items := make([]resource.Managed, len(l.Items))
 	for i := range l.Items {
 		items[i] = &l.Items[i]
@@ -91,8 +91,8 @@ func (l *MonitorMetricAlertList) GetItems() []resource.Managed {
 	return items
 }
 
-// GetItems of this MonitorScheduledQueryRulesAlertList.
-func (l *MonitorScheduledQueryRulesAlertList) GetItems() []resource.Managed {
+// GetItems of this ScheduledQueryRulesAlertList.
+func (l *ScheduledQueryRulesAlertList) GetItems() []resource.Managed {
 	items := make([]resource.Managed, len(l.Items))
 	for i := range l.Items {
 		items[i] = &l.Items[i]
@@ -100,8 +100,8 @@ func (l *MonitorScheduledQueryRulesAlertList) GetItems() []resource.Managed {
 	return items
 }
 
-// GetItems of this MonitorScheduledQueryRulesLogList.
-func (l *MonitorScheduledQueryRulesLogList) GetItems() []resource.Managed {
+// GetItems of this ScheduledQueryRulesLogList.
+func (l *ScheduledQueryRulesLogList) GetItems() []resource.Managed {
 	items := make([]resource.Managed, len(l.Items))
 	for i := range l.Items {
 		items[i] = &l.Items[i]
@@ -109,8 +109,8 @@ func (l *MonitorScheduledQueryRulesLogList) GetItems() []resource.Managed {
 	return items
 }
 
-// GetItems of this MonitorSmartDetectorAlertRuleList.
-func (l *MonitorSmartDetectorAlertRuleList) GetItems() []resource.Managed {
+// GetItems of this SmartDetectorAlertRuleList.
+func (l *SmartDetectorAlertRuleList) GetItems() []resource.Managed {
 	items := make([]resource.Managed, len(l.Items))
 	for i := range l.Items {
 		items[i] = &l.Items[i]

@@ -19,506 +19,506 @@ package v1alpha1
 
 import xpv1 "github.com/crossplane/crossplane-runtime/apis/common/v1"
 
-// GetCondition of this SpringCloudActiveDeployment.
-func (mg *SpringCloudActiveDeployment) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
+// GetCondition of this CloudActiveDeployment.
+func (mg *CloudActiveDeployment) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
 	return mg.Status.GetCondition(ct)
 }
 
-// GetDeletionPolicy of this SpringCloudActiveDeployment.
-func (mg *SpringCloudActiveDeployment) GetDeletionPolicy() xpv1.DeletionPolicy {
+// GetDeletionPolicy of this CloudActiveDeployment.
+func (mg *CloudActiveDeployment) GetDeletionPolicy() xpv1.DeletionPolicy {
 	return mg.Spec.DeletionPolicy
 }
 
-// GetProviderConfigReference of this SpringCloudActiveDeployment.
-func (mg *SpringCloudActiveDeployment) GetProviderConfigReference() *xpv1.Reference {
+// GetProviderConfigReference of this CloudActiveDeployment.
+func (mg *CloudActiveDeployment) GetProviderConfigReference() *xpv1.Reference {
 	return mg.Spec.ProviderConfigReference
 }
 
 /*
-GetProviderReference of this SpringCloudActiveDeployment.
+GetProviderReference of this CloudActiveDeployment.
 Deprecated: Use GetProviderConfigReference.
 */
-func (mg *SpringCloudActiveDeployment) GetProviderReference() *xpv1.Reference {
+func (mg *CloudActiveDeployment) GetProviderReference() *xpv1.Reference {
 	return mg.Spec.ProviderReference
 }
 
-// GetWriteConnectionSecretToReference of this SpringCloudActiveDeployment.
-func (mg *SpringCloudActiveDeployment) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
+// GetWriteConnectionSecretToReference of this CloudActiveDeployment.
+func (mg *CloudActiveDeployment) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
 	return mg.Spec.WriteConnectionSecretToReference
 }
 
-// SetConditions of this SpringCloudActiveDeployment.
-func (mg *SpringCloudActiveDeployment) SetConditions(c ...xpv1.Condition) {
+// SetConditions of this CloudActiveDeployment.
+func (mg *CloudActiveDeployment) SetConditions(c ...xpv1.Condition) {
 	mg.Status.SetConditions(c...)
 }
 
-// SetDeletionPolicy of this SpringCloudActiveDeployment.
-func (mg *SpringCloudActiveDeployment) SetDeletionPolicy(r xpv1.DeletionPolicy) {
+// SetDeletionPolicy of this CloudActiveDeployment.
+func (mg *CloudActiveDeployment) SetDeletionPolicy(r xpv1.DeletionPolicy) {
 	mg.Spec.DeletionPolicy = r
 }
 
-// SetProviderConfigReference of this SpringCloudActiveDeployment.
-func (mg *SpringCloudActiveDeployment) SetProviderConfigReference(r *xpv1.Reference) {
+// SetProviderConfigReference of this CloudActiveDeployment.
+func (mg *CloudActiveDeployment) SetProviderConfigReference(r *xpv1.Reference) {
 	mg.Spec.ProviderConfigReference = r
 }
 
 /*
-SetProviderReference of this SpringCloudActiveDeployment.
+SetProviderReference of this CloudActiveDeployment.
 Deprecated: Use SetProviderConfigReference.
 */
-func (mg *SpringCloudActiveDeployment) SetProviderReference(r *xpv1.Reference) {
+func (mg *CloudActiveDeployment) SetProviderReference(r *xpv1.Reference) {
 	mg.Spec.ProviderReference = r
 }
 
-// SetWriteConnectionSecretToReference of this SpringCloudActiveDeployment.
-func (mg *SpringCloudActiveDeployment) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
+// SetWriteConnectionSecretToReference of this CloudActiveDeployment.
+func (mg *CloudActiveDeployment) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
 	mg.Spec.WriteConnectionSecretToReference = r
 }
 
-// GetCondition of this SpringCloudApp.
-func (mg *SpringCloudApp) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
+// GetCondition of this CloudApp.
+func (mg *CloudApp) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
 	return mg.Status.GetCondition(ct)
 }
 
-// GetDeletionPolicy of this SpringCloudApp.
-func (mg *SpringCloudApp) GetDeletionPolicy() xpv1.DeletionPolicy {
+// GetDeletionPolicy of this CloudApp.
+func (mg *CloudApp) GetDeletionPolicy() xpv1.DeletionPolicy {
 	return mg.Spec.DeletionPolicy
 }
 
-// GetProviderConfigReference of this SpringCloudApp.
-func (mg *SpringCloudApp) GetProviderConfigReference() *xpv1.Reference {
+// GetProviderConfigReference of this CloudApp.
+func (mg *CloudApp) GetProviderConfigReference() *xpv1.Reference {
 	return mg.Spec.ProviderConfigReference
 }
 
 /*
-GetProviderReference of this SpringCloudApp.
+GetProviderReference of this CloudApp.
 Deprecated: Use GetProviderConfigReference.
 */
-func (mg *SpringCloudApp) GetProviderReference() *xpv1.Reference {
+func (mg *CloudApp) GetProviderReference() *xpv1.Reference {
 	return mg.Spec.ProviderReference
 }
 
-// GetWriteConnectionSecretToReference of this SpringCloudApp.
-func (mg *SpringCloudApp) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
+// GetWriteConnectionSecretToReference of this CloudApp.
+func (mg *CloudApp) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
 	return mg.Spec.WriteConnectionSecretToReference
 }
 
-// SetConditions of this SpringCloudApp.
-func (mg *SpringCloudApp) SetConditions(c ...xpv1.Condition) {
+// SetConditions of this CloudApp.
+func (mg *CloudApp) SetConditions(c ...xpv1.Condition) {
 	mg.Status.SetConditions(c...)
 }
 
-// SetDeletionPolicy of this SpringCloudApp.
-func (mg *SpringCloudApp) SetDeletionPolicy(r xpv1.DeletionPolicy) {
+// SetDeletionPolicy of this CloudApp.
+func (mg *CloudApp) SetDeletionPolicy(r xpv1.DeletionPolicy) {
 	mg.Spec.DeletionPolicy = r
 }
 
-// SetProviderConfigReference of this SpringCloudApp.
-func (mg *SpringCloudApp) SetProviderConfigReference(r *xpv1.Reference) {
+// SetProviderConfigReference of this CloudApp.
+func (mg *CloudApp) SetProviderConfigReference(r *xpv1.Reference) {
 	mg.Spec.ProviderConfigReference = r
 }
 
 /*
-SetProviderReference of this SpringCloudApp.
+SetProviderReference of this CloudApp.
 Deprecated: Use SetProviderConfigReference.
 */
-func (mg *SpringCloudApp) SetProviderReference(r *xpv1.Reference) {
+func (mg *CloudApp) SetProviderReference(r *xpv1.Reference) {
 	mg.Spec.ProviderReference = r
 }
 
-// SetWriteConnectionSecretToReference of this SpringCloudApp.
-func (mg *SpringCloudApp) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
+// SetWriteConnectionSecretToReference of this CloudApp.
+func (mg *CloudApp) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
 	mg.Spec.WriteConnectionSecretToReference = r
 }
 
-// GetCondition of this SpringCloudAppCosmosdbAssociation.
-func (mg *SpringCloudAppCosmosdbAssociation) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
+// GetCondition of this CloudAppCosmosdbAssociation.
+func (mg *CloudAppCosmosdbAssociation) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
 	return mg.Status.GetCondition(ct)
 }
 
-// GetDeletionPolicy of this SpringCloudAppCosmosdbAssociation.
-func (mg *SpringCloudAppCosmosdbAssociation) GetDeletionPolicy() xpv1.DeletionPolicy {
+// GetDeletionPolicy of this CloudAppCosmosdbAssociation.
+func (mg *CloudAppCosmosdbAssociation) GetDeletionPolicy() xpv1.DeletionPolicy {
 	return mg.Spec.DeletionPolicy
 }
 
-// GetProviderConfigReference of this SpringCloudAppCosmosdbAssociation.
-func (mg *SpringCloudAppCosmosdbAssociation) GetProviderConfigReference() *xpv1.Reference {
+// GetProviderConfigReference of this CloudAppCosmosdbAssociation.
+func (mg *CloudAppCosmosdbAssociation) GetProviderConfigReference() *xpv1.Reference {
 	return mg.Spec.ProviderConfigReference
 }
 
 /*
-GetProviderReference of this SpringCloudAppCosmosdbAssociation.
+GetProviderReference of this CloudAppCosmosdbAssociation.
 Deprecated: Use GetProviderConfigReference.
 */
-func (mg *SpringCloudAppCosmosdbAssociation) GetProviderReference() *xpv1.Reference {
+func (mg *CloudAppCosmosdbAssociation) GetProviderReference() *xpv1.Reference {
 	return mg.Spec.ProviderReference
 }
 
-// GetWriteConnectionSecretToReference of this SpringCloudAppCosmosdbAssociation.
-func (mg *SpringCloudAppCosmosdbAssociation) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
+// GetWriteConnectionSecretToReference of this CloudAppCosmosdbAssociation.
+func (mg *CloudAppCosmosdbAssociation) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
 	return mg.Spec.WriteConnectionSecretToReference
 }
 
-// SetConditions of this SpringCloudAppCosmosdbAssociation.
-func (mg *SpringCloudAppCosmosdbAssociation) SetConditions(c ...xpv1.Condition) {
+// SetConditions of this CloudAppCosmosdbAssociation.
+func (mg *CloudAppCosmosdbAssociation) SetConditions(c ...xpv1.Condition) {
 	mg.Status.SetConditions(c...)
 }
 
-// SetDeletionPolicy of this SpringCloudAppCosmosdbAssociation.
-func (mg *SpringCloudAppCosmosdbAssociation) SetDeletionPolicy(r xpv1.DeletionPolicy) {
+// SetDeletionPolicy of this CloudAppCosmosdbAssociation.
+func (mg *CloudAppCosmosdbAssociation) SetDeletionPolicy(r xpv1.DeletionPolicy) {
 	mg.Spec.DeletionPolicy = r
 }
 
-// SetProviderConfigReference of this SpringCloudAppCosmosdbAssociation.
-func (mg *SpringCloudAppCosmosdbAssociation) SetProviderConfigReference(r *xpv1.Reference) {
+// SetProviderConfigReference of this CloudAppCosmosdbAssociation.
+func (mg *CloudAppCosmosdbAssociation) SetProviderConfigReference(r *xpv1.Reference) {
 	mg.Spec.ProviderConfigReference = r
 }
 
 /*
-SetProviderReference of this SpringCloudAppCosmosdbAssociation.
+SetProviderReference of this CloudAppCosmosdbAssociation.
 Deprecated: Use SetProviderConfigReference.
 */
-func (mg *SpringCloudAppCosmosdbAssociation) SetProviderReference(r *xpv1.Reference) {
+func (mg *CloudAppCosmosdbAssociation) SetProviderReference(r *xpv1.Reference) {
 	mg.Spec.ProviderReference = r
 }
 
-// SetWriteConnectionSecretToReference of this SpringCloudAppCosmosdbAssociation.
-func (mg *SpringCloudAppCosmosdbAssociation) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
+// SetWriteConnectionSecretToReference of this CloudAppCosmosdbAssociation.
+func (mg *CloudAppCosmosdbAssociation) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
 	mg.Spec.WriteConnectionSecretToReference = r
 }
 
-// GetCondition of this SpringCloudAppMysqlAssociation.
-func (mg *SpringCloudAppMysqlAssociation) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
+// GetCondition of this CloudAppMysqlAssociation.
+func (mg *CloudAppMysqlAssociation) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
 	return mg.Status.GetCondition(ct)
 }
 
-// GetDeletionPolicy of this SpringCloudAppMysqlAssociation.
-func (mg *SpringCloudAppMysqlAssociation) GetDeletionPolicy() xpv1.DeletionPolicy {
+// GetDeletionPolicy of this CloudAppMysqlAssociation.
+func (mg *CloudAppMysqlAssociation) GetDeletionPolicy() xpv1.DeletionPolicy {
 	return mg.Spec.DeletionPolicy
 }
 
-// GetProviderConfigReference of this SpringCloudAppMysqlAssociation.
-func (mg *SpringCloudAppMysqlAssociation) GetProviderConfigReference() *xpv1.Reference {
+// GetProviderConfigReference of this CloudAppMysqlAssociation.
+func (mg *CloudAppMysqlAssociation) GetProviderConfigReference() *xpv1.Reference {
 	return mg.Spec.ProviderConfigReference
 }
 
 /*
-GetProviderReference of this SpringCloudAppMysqlAssociation.
+GetProviderReference of this CloudAppMysqlAssociation.
 Deprecated: Use GetProviderConfigReference.
 */
-func (mg *SpringCloudAppMysqlAssociation) GetProviderReference() *xpv1.Reference {
+func (mg *CloudAppMysqlAssociation) GetProviderReference() *xpv1.Reference {
 	return mg.Spec.ProviderReference
 }
 
-// GetWriteConnectionSecretToReference of this SpringCloudAppMysqlAssociation.
-func (mg *SpringCloudAppMysqlAssociation) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
+// GetWriteConnectionSecretToReference of this CloudAppMysqlAssociation.
+func (mg *CloudAppMysqlAssociation) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
 	return mg.Spec.WriteConnectionSecretToReference
 }
 
-// SetConditions of this SpringCloudAppMysqlAssociation.
-func (mg *SpringCloudAppMysqlAssociation) SetConditions(c ...xpv1.Condition) {
+// SetConditions of this CloudAppMysqlAssociation.
+func (mg *CloudAppMysqlAssociation) SetConditions(c ...xpv1.Condition) {
 	mg.Status.SetConditions(c...)
 }
 
-// SetDeletionPolicy of this SpringCloudAppMysqlAssociation.
-func (mg *SpringCloudAppMysqlAssociation) SetDeletionPolicy(r xpv1.DeletionPolicy) {
+// SetDeletionPolicy of this CloudAppMysqlAssociation.
+func (mg *CloudAppMysqlAssociation) SetDeletionPolicy(r xpv1.DeletionPolicy) {
 	mg.Spec.DeletionPolicy = r
 }
 
-// SetProviderConfigReference of this SpringCloudAppMysqlAssociation.
-func (mg *SpringCloudAppMysqlAssociation) SetProviderConfigReference(r *xpv1.Reference) {
+// SetProviderConfigReference of this CloudAppMysqlAssociation.
+func (mg *CloudAppMysqlAssociation) SetProviderConfigReference(r *xpv1.Reference) {
 	mg.Spec.ProviderConfigReference = r
 }
 
 /*
-SetProviderReference of this SpringCloudAppMysqlAssociation.
+SetProviderReference of this CloudAppMysqlAssociation.
 Deprecated: Use SetProviderConfigReference.
 */
-func (mg *SpringCloudAppMysqlAssociation) SetProviderReference(r *xpv1.Reference) {
+func (mg *CloudAppMysqlAssociation) SetProviderReference(r *xpv1.Reference) {
 	mg.Spec.ProviderReference = r
 }
 
-// SetWriteConnectionSecretToReference of this SpringCloudAppMysqlAssociation.
-func (mg *SpringCloudAppMysqlAssociation) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
+// SetWriteConnectionSecretToReference of this CloudAppMysqlAssociation.
+func (mg *CloudAppMysqlAssociation) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
 	mg.Spec.WriteConnectionSecretToReference = r
 }
 
-// GetCondition of this SpringCloudAppRedisAssociation.
-func (mg *SpringCloudAppRedisAssociation) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
+// GetCondition of this CloudAppRedisAssociation.
+func (mg *CloudAppRedisAssociation) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
 	return mg.Status.GetCondition(ct)
 }
 
-// GetDeletionPolicy of this SpringCloudAppRedisAssociation.
-func (mg *SpringCloudAppRedisAssociation) GetDeletionPolicy() xpv1.DeletionPolicy {
+// GetDeletionPolicy of this CloudAppRedisAssociation.
+func (mg *CloudAppRedisAssociation) GetDeletionPolicy() xpv1.DeletionPolicy {
 	return mg.Spec.DeletionPolicy
 }
 
-// GetProviderConfigReference of this SpringCloudAppRedisAssociation.
-func (mg *SpringCloudAppRedisAssociation) GetProviderConfigReference() *xpv1.Reference {
+// GetProviderConfigReference of this CloudAppRedisAssociation.
+func (mg *CloudAppRedisAssociation) GetProviderConfigReference() *xpv1.Reference {
 	return mg.Spec.ProviderConfigReference
 }
 
 /*
-GetProviderReference of this SpringCloudAppRedisAssociation.
+GetProviderReference of this CloudAppRedisAssociation.
 Deprecated: Use GetProviderConfigReference.
 */
-func (mg *SpringCloudAppRedisAssociation) GetProviderReference() *xpv1.Reference {
+func (mg *CloudAppRedisAssociation) GetProviderReference() *xpv1.Reference {
 	return mg.Spec.ProviderReference
 }
 
-// GetWriteConnectionSecretToReference of this SpringCloudAppRedisAssociation.
-func (mg *SpringCloudAppRedisAssociation) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
+// GetWriteConnectionSecretToReference of this CloudAppRedisAssociation.
+func (mg *CloudAppRedisAssociation) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
 	return mg.Spec.WriteConnectionSecretToReference
 }
 
-// SetConditions of this SpringCloudAppRedisAssociation.
-func (mg *SpringCloudAppRedisAssociation) SetConditions(c ...xpv1.Condition) {
+// SetConditions of this CloudAppRedisAssociation.
+func (mg *CloudAppRedisAssociation) SetConditions(c ...xpv1.Condition) {
 	mg.Status.SetConditions(c...)
 }
 
-// SetDeletionPolicy of this SpringCloudAppRedisAssociation.
-func (mg *SpringCloudAppRedisAssociation) SetDeletionPolicy(r xpv1.DeletionPolicy) {
+// SetDeletionPolicy of this CloudAppRedisAssociation.
+func (mg *CloudAppRedisAssociation) SetDeletionPolicy(r xpv1.DeletionPolicy) {
 	mg.Spec.DeletionPolicy = r
 }
 
-// SetProviderConfigReference of this SpringCloudAppRedisAssociation.
-func (mg *SpringCloudAppRedisAssociation) SetProviderConfigReference(r *xpv1.Reference) {
+// SetProviderConfigReference of this CloudAppRedisAssociation.
+func (mg *CloudAppRedisAssociation) SetProviderConfigReference(r *xpv1.Reference) {
 	mg.Spec.ProviderConfigReference = r
 }
 
 /*
-SetProviderReference of this SpringCloudAppRedisAssociation.
+SetProviderReference of this CloudAppRedisAssociation.
 Deprecated: Use SetProviderConfigReference.
 */
-func (mg *SpringCloudAppRedisAssociation) SetProviderReference(r *xpv1.Reference) {
+func (mg *CloudAppRedisAssociation) SetProviderReference(r *xpv1.Reference) {
 	mg.Spec.ProviderReference = r
 }
 
-// SetWriteConnectionSecretToReference of this SpringCloudAppRedisAssociation.
-func (mg *SpringCloudAppRedisAssociation) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
+// SetWriteConnectionSecretToReference of this CloudAppRedisAssociation.
+func (mg *CloudAppRedisAssociation) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
 	mg.Spec.WriteConnectionSecretToReference = r
 }
 
-// GetCondition of this SpringCloudCertificate.
-func (mg *SpringCloudCertificate) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
+// GetCondition of this CloudCertificate.
+func (mg *CloudCertificate) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
 	return mg.Status.GetCondition(ct)
 }
 
-// GetDeletionPolicy of this SpringCloudCertificate.
-func (mg *SpringCloudCertificate) GetDeletionPolicy() xpv1.DeletionPolicy {
+// GetDeletionPolicy of this CloudCertificate.
+func (mg *CloudCertificate) GetDeletionPolicy() xpv1.DeletionPolicy {
 	return mg.Spec.DeletionPolicy
 }
 
-// GetProviderConfigReference of this SpringCloudCertificate.
-func (mg *SpringCloudCertificate) GetProviderConfigReference() *xpv1.Reference {
+// GetProviderConfigReference of this CloudCertificate.
+func (mg *CloudCertificate) GetProviderConfigReference() *xpv1.Reference {
 	return mg.Spec.ProviderConfigReference
 }
 
 /*
-GetProviderReference of this SpringCloudCertificate.
+GetProviderReference of this CloudCertificate.
 Deprecated: Use GetProviderConfigReference.
 */
-func (mg *SpringCloudCertificate) GetProviderReference() *xpv1.Reference {
+func (mg *CloudCertificate) GetProviderReference() *xpv1.Reference {
 	return mg.Spec.ProviderReference
 }
 
-// GetWriteConnectionSecretToReference of this SpringCloudCertificate.
-func (mg *SpringCloudCertificate) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
+// GetWriteConnectionSecretToReference of this CloudCertificate.
+func (mg *CloudCertificate) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
 	return mg.Spec.WriteConnectionSecretToReference
 }
 
-// SetConditions of this SpringCloudCertificate.
-func (mg *SpringCloudCertificate) SetConditions(c ...xpv1.Condition) {
+// SetConditions of this CloudCertificate.
+func (mg *CloudCertificate) SetConditions(c ...xpv1.Condition) {
 	mg.Status.SetConditions(c...)
 }
 
-// SetDeletionPolicy of this SpringCloudCertificate.
-func (mg *SpringCloudCertificate) SetDeletionPolicy(r xpv1.DeletionPolicy) {
+// SetDeletionPolicy of this CloudCertificate.
+func (mg *CloudCertificate) SetDeletionPolicy(r xpv1.DeletionPolicy) {
 	mg.Spec.DeletionPolicy = r
 }
 
-// SetProviderConfigReference of this SpringCloudCertificate.
-func (mg *SpringCloudCertificate) SetProviderConfigReference(r *xpv1.Reference) {
+// SetProviderConfigReference of this CloudCertificate.
+func (mg *CloudCertificate) SetProviderConfigReference(r *xpv1.Reference) {
 	mg.Spec.ProviderConfigReference = r
 }
 
 /*
-SetProviderReference of this SpringCloudCertificate.
+SetProviderReference of this CloudCertificate.
 Deprecated: Use SetProviderConfigReference.
 */
-func (mg *SpringCloudCertificate) SetProviderReference(r *xpv1.Reference) {
+func (mg *CloudCertificate) SetProviderReference(r *xpv1.Reference) {
 	mg.Spec.ProviderReference = r
 }
 
-// SetWriteConnectionSecretToReference of this SpringCloudCertificate.
-func (mg *SpringCloudCertificate) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
+// SetWriteConnectionSecretToReference of this CloudCertificate.
+func (mg *CloudCertificate) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
 	mg.Spec.WriteConnectionSecretToReference = r
 }
 
-// GetCondition of this SpringCloudCustomDomain.
-func (mg *SpringCloudCustomDomain) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
+// GetCondition of this CloudCustomDomain.
+func (mg *CloudCustomDomain) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
 	return mg.Status.GetCondition(ct)
 }
 
-// GetDeletionPolicy of this SpringCloudCustomDomain.
-func (mg *SpringCloudCustomDomain) GetDeletionPolicy() xpv1.DeletionPolicy {
+// GetDeletionPolicy of this CloudCustomDomain.
+func (mg *CloudCustomDomain) GetDeletionPolicy() xpv1.DeletionPolicy {
 	return mg.Spec.DeletionPolicy
 }
 
-// GetProviderConfigReference of this SpringCloudCustomDomain.
-func (mg *SpringCloudCustomDomain) GetProviderConfigReference() *xpv1.Reference {
+// GetProviderConfigReference of this CloudCustomDomain.
+func (mg *CloudCustomDomain) GetProviderConfigReference() *xpv1.Reference {
 	return mg.Spec.ProviderConfigReference
 }
 
 /*
-GetProviderReference of this SpringCloudCustomDomain.
+GetProviderReference of this CloudCustomDomain.
 Deprecated: Use GetProviderConfigReference.
 */
-func (mg *SpringCloudCustomDomain) GetProviderReference() *xpv1.Reference {
+func (mg *CloudCustomDomain) GetProviderReference() *xpv1.Reference {
 	return mg.Spec.ProviderReference
 }
 
-// GetWriteConnectionSecretToReference of this SpringCloudCustomDomain.
-func (mg *SpringCloudCustomDomain) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
+// GetWriteConnectionSecretToReference of this CloudCustomDomain.
+func (mg *CloudCustomDomain) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
 	return mg.Spec.WriteConnectionSecretToReference
 }
 
-// SetConditions of this SpringCloudCustomDomain.
-func (mg *SpringCloudCustomDomain) SetConditions(c ...xpv1.Condition) {
+// SetConditions of this CloudCustomDomain.
+func (mg *CloudCustomDomain) SetConditions(c ...xpv1.Condition) {
 	mg.Status.SetConditions(c...)
 }
 
-// SetDeletionPolicy of this SpringCloudCustomDomain.
-func (mg *SpringCloudCustomDomain) SetDeletionPolicy(r xpv1.DeletionPolicy) {
+// SetDeletionPolicy of this CloudCustomDomain.
+func (mg *CloudCustomDomain) SetDeletionPolicy(r xpv1.DeletionPolicy) {
 	mg.Spec.DeletionPolicy = r
 }
 
-// SetProviderConfigReference of this SpringCloudCustomDomain.
-func (mg *SpringCloudCustomDomain) SetProviderConfigReference(r *xpv1.Reference) {
+// SetProviderConfigReference of this CloudCustomDomain.
+func (mg *CloudCustomDomain) SetProviderConfigReference(r *xpv1.Reference) {
 	mg.Spec.ProviderConfigReference = r
 }
 
 /*
-SetProviderReference of this SpringCloudCustomDomain.
+SetProviderReference of this CloudCustomDomain.
 Deprecated: Use SetProviderConfigReference.
 */
-func (mg *SpringCloudCustomDomain) SetProviderReference(r *xpv1.Reference) {
+func (mg *CloudCustomDomain) SetProviderReference(r *xpv1.Reference) {
 	mg.Spec.ProviderReference = r
 }
 
-// SetWriteConnectionSecretToReference of this SpringCloudCustomDomain.
-func (mg *SpringCloudCustomDomain) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
+// SetWriteConnectionSecretToReference of this CloudCustomDomain.
+func (mg *CloudCustomDomain) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
 	mg.Spec.WriteConnectionSecretToReference = r
 }
 
-// GetCondition of this SpringCloudJavaDeployment.
-func (mg *SpringCloudJavaDeployment) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
+// GetCondition of this CloudJavaDeployment.
+func (mg *CloudJavaDeployment) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
 	return mg.Status.GetCondition(ct)
 }
 
-// GetDeletionPolicy of this SpringCloudJavaDeployment.
-func (mg *SpringCloudJavaDeployment) GetDeletionPolicy() xpv1.DeletionPolicy {
+// GetDeletionPolicy of this CloudJavaDeployment.
+func (mg *CloudJavaDeployment) GetDeletionPolicy() xpv1.DeletionPolicy {
 	return mg.Spec.DeletionPolicy
 }
 
-// GetProviderConfigReference of this SpringCloudJavaDeployment.
-func (mg *SpringCloudJavaDeployment) GetProviderConfigReference() *xpv1.Reference {
+// GetProviderConfigReference of this CloudJavaDeployment.
+func (mg *CloudJavaDeployment) GetProviderConfigReference() *xpv1.Reference {
 	return mg.Spec.ProviderConfigReference
 }
 
 /*
-GetProviderReference of this SpringCloudJavaDeployment.
+GetProviderReference of this CloudJavaDeployment.
 Deprecated: Use GetProviderConfigReference.
 */
-func (mg *SpringCloudJavaDeployment) GetProviderReference() *xpv1.Reference {
+func (mg *CloudJavaDeployment) GetProviderReference() *xpv1.Reference {
 	return mg.Spec.ProviderReference
 }
 
-// GetWriteConnectionSecretToReference of this SpringCloudJavaDeployment.
-func (mg *SpringCloudJavaDeployment) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
+// GetWriteConnectionSecretToReference of this CloudJavaDeployment.
+func (mg *CloudJavaDeployment) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
 	return mg.Spec.WriteConnectionSecretToReference
 }
 
-// SetConditions of this SpringCloudJavaDeployment.
-func (mg *SpringCloudJavaDeployment) SetConditions(c ...xpv1.Condition) {
+// SetConditions of this CloudJavaDeployment.
+func (mg *CloudJavaDeployment) SetConditions(c ...xpv1.Condition) {
 	mg.Status.SetConditions(c...)
 }
 
-// SetDeletionPolicy of this SpringCloudJavaDeployment.
-func (mg *SpringCloudJavaDeployment) SetDeletionPolicy(r xpv1.DeletionPolicy) {
+// SetDeletionPolicy of this CloudJavaDeployment.
+func (mg *CloudJavaDeployment) SetDeletionPolicy(r xpv1.DeletionPolicy) {
 	mg.Spec.DeletionPolicy = r
 }
 
-// SetProviderConfigReference of this SpringCloudJavaDeployment.
-func (mg *SpringCloudJavaDeployment) SetProviderConfigReference(r *xpv1.Reference) {
+// SetProviderConfigReference of this CloudJavaDeployment.
+func (mg *CloudJavaDeployment) SetProviderConfigReference(r *xpv1.Reference) {
 	mg.Spec.ProviderConfigReference = r
 }
 
 /*
-SetProviderReference of this SpringCloudJavaDeployment.
+SetProviderReference of this CloudJavaDeployment.
 Deprecated: Use SetProviderConfigReference.
 */
-func (mg *SpringCloudJavaDeployment) SetProviderReference(r *xpv1.Reference) {
+func (mg *CloudJavaDeployment) SetProviderReference(r *xpv1.Reference) {
 	mg.Spec.ProviderReference = r
 }
 
-// SetWriteConnectionSecretToReference of this SpringCloudJavaDeployment.
-func (mg *SpringCloudJavaDeployment) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
+// SetWriteConnectionSecretToReference of this CloudJavaDeployment.
+func (mg *CloudJavaDeployment) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
 	mg.Spec.WriteConnectionSecretToReference = r
 }
 
-// GetCondition of this SpringCloudService.
-func (mg *SpringCloudService) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
+// GetCondition of this CloudService.
+func (mg *CloudService) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
 	return mg.Status.GetCondition(ct)
 }
 
-// GetDeletionPolicy of this SpringCloudService.
-func (mg *SpringCloudService) GetDeletionPolicy() xpv1.DeletionPolicy {
+// GetDeletionPolicy of this CloudService.
+func (mg *CloudService) GetDeletionPolicy() xpv1.DeletionPolicy {
 	return mg.Spec.DeletionPolicy
 }
 
-// GetProviderConfigReference of this SpringCloudService.
-func (mg *SpringCloudService) GetProviderConfigReference() *xpv1.Reference {
+// GetProviderConfigReference of this CloudService.
+func (mg *CloudService) GetProviderConfigReference() *xpv1.Reference {
 	return mg.Spec.ProviderConfigReference
 }
 
 /*
-GetProviderReference of this SpringCloudService.
+GetProviderReference of this CloudService.
 Deprecated: Use GetProviderConfigReference.
 */
-func (mg *SpringCloudService) GetProviderReference() *xpv1.Reference {
+func (mg *CloudService) GetProviderReference() *xpv1.Reference {
 	return mg.Spec.ProviderReference
 }
 
-// GetWriteConnectionSecretToReference of this SpringCloudService.
-func (mg *SpringCloudService) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
+// GetWriteConnectionSecretToReference of this CloudService.
+func (mg *CloudService) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
 	return mg.Spec.WriteConnectionSecretToReference
 }
 
-// SetConditions of this SpringCloudService.
-func (mg *SpringCloudService) SetConditions(c ...xpv1.Condition) {
+// SetConditions of this CloudService.
+func (mg *CloudService) SetConditions(c ...xpv1.Condition) {
 	mg.Status.SetConditions(c...)
 }
 
-// SetDeletionPolicy of this SpringCloudService.
-func (mg *SpringCloudService) SetDeletionPolicy(r xpv1.DeletionPolicy) {
+// SetDeletionPolicy of this CloudService.
+func (mg *CloudService) SetDeletionPolicy(r xpv1.DeletionPolicy) {
 	mg.Spec.DeletionPolicy = r
 }
 
-// SetProviderConfigReference of this SpringCloudService.
-func (mg *SpringCloudService) SetProviderConfigReference(r *xpv1.Reference) {
+// SetProviderConfigReference of this CloudService.
+func (mg *CloudService) SetProviderConfigReference(r *xpv1.Reference) {
 	mg.Spec.ProviderConfigReference = r
 }
 
 /*
-SetProviderReference of this SpringCloudService.
+SetProviderReference of this CloudService.
 Deprecated: Use SetProviderConfigReference.
 */
-func (mg *SpringCloudService) SetProviderReference(r *xpv1.Reference) {
+func (mg *CloudService) SetProviderReference(r *xpv1.Reference) {
 	mg.Spec.ProviderReference = r
 }
 
-// SetWriteConnectionSecretToReference of this SpringCloudService.
-func (mg *SpringCloudService) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
+// SetWriteConnectionSecretToReference of this CloudService.
+func (mg *CloudService) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
 	mg.Spec.WriteConnectionSecretToReference = r
 }

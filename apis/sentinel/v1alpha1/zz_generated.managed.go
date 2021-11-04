@@ -19,618 +19,618 @@ package v1alpha1
 
 import xpv1 "github.com/crossplane/crossplane-runtime/apis/common/v1"
 
-// GetCondition of this SentinelAlertRuleFusion.
-func (mg *SentinelAlertRuleFusion) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
+// GetCondition of this AlertRuleFusion.
+func (mg *AlertRuleFusion) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
 	return mg.Status.GetCondition(ct)
 }
 
-// GetDeletionPolicy of this SentinelAlertRuleFusion.
-func (mg *SentinelAlertRuleFusion) GetDeletionPolicy() xpv1.DeletionPolicy {
+// GetDeletionPolicy of this AlertRuleFusion.
+func (mg *AlertRuleFusion) GetDeletionPolicy() xpv1.DeletionPolicy {
 	return mg.Spec.DeletionPolicy
 }
 
-// GetProviderConfigReference of this SentinelAlertRuleFusion.
-func (mg *SentinelAlertRuleFusion) GetProviderConfigReference() *xpv1.Reference {
+// GetProviderConfigReference of this AlertRuleFusion.
+func (mg *AlertRuleFusion) GetProviderConfigReference() *xpv1.Reference {
 	return mg.Spec.ProviderConfigReference
 }
 
 /*
-GetProviderReference of this SentinelAlertRuleFusion.
+GetProviderReference of this AlertRuleFusion.
 Deprecated: Use GetProviderConfigReference.
 */
-func (mg *SentinelAlertRuleFusion) GetProviderReference() *xpv1.Reference {
+func (mg *AlertRuleFusion) GetProviderReference() *xpv1.Reference {
 	return mg.Spec.ProviderReference
 }
 
-// GetWriteConnectionSecretToReference of this SentinelAlertRuleFusion.
-func (mg *SentinelAlertRuleFusion) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
+// GetWriteConnectionSecretToReference of this AlertRuleFusion.
+func (mg *AlertRuleFusion) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
 	return mg.Spec.WriteConnectionSecretToReference
 }
 
-// SetConditions of this SentinelAlertRuleFusion.
-func (mg *SentinelAlertRuleFusion) SetConditions(c ...xpv1.Condition) {
+// SetConditions of this AlertRuleFusion.
+func (mg *AlertRuleFusion) SetConditions(c ...xpv1.Condition) {
 	mg.Status.SetConditions(c...)
 }
 
-// SetDeletionPolicy of this SentinelAlertRuleFusion.
-func (mg *SentinelAlertRuleFusion) SetDeletionPolicy(r xpv1.DeletionPolicy) {
+// SetDeletionPolicy of this AlertRuleFusion.
+func (mg *AlertRuleFusion) SetDeletionPolicy(r xpv1.DeletionPolicy) {
 	mg.Spec.DeletionPolicy = r
 }
 
-// SetProviderConfigReference of this SentinelAlertRuleFusion.
-func (mg *SentinelAlertRuleFusion) SetProviderConfigReference(r *xpv1.Reference) {
+// SetProviderConfigReference of this AlertRuleFusion.
+func (mg *AlertRuleFusion) SetProviderConfigReference(r *xpv1.Reference) {
 	mg.Spec.ProviderConfigReference = r
 }
 
 /*
-SetProviderReference of this SentinelAlertRuleFusion.
+SetProviderReference of this AlertRuleFusion.
 Deprecated: Use SetProviderConfigReference.
 */
-func (mg *SentinelAlertRuleFusion) SetProviderReference(r *xpv1.Reference) {
+func (mg *AlertRuleFusion) SetProviderReference(r *xpv1.Reference) {
 	mg.Spec.ProviderReference = r
 }
 
-// SetWriteConnectionSecretToReference of this SentinelAlertRuleFusion.
-func (mg *SentinelAlertRuleFusion) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
+// SetWriteConnectionSecretToReference of this AlertRuleFusion.
+func (mg *AlertRuleFusion) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
 	mg.Spec.WriteConnectionSecretToReference = r
 }
 
-// GetCondition of this SentinelAlertRuleMachineLearningBehaviorAnalytics.
-func (mg *SentinelAlertRuleMachineLearningBehaviorAnalytics) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
+// GetCondition of this AlertRuleMachineLearningBehaviorAnalytics.
+func (mg *AlertRuleMachineLearningBehaviorAnalytics) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
 	return mg.Status.GetCondition(ct)
 }
 
-// GetDeletionPolicy of this SentinelAlertRuleMachineLearningBehaviorAnalytics.
-func (mg *SentinelAlertRuleMachineLearningBehaviorAnalytics) GetDeletionPolicy() xpv1.DeletionPolicy {
+// GetDeletionPolicy of this AlertRuleMachineLearningBehaviorAnalytics.
+func (mg *AlertRuleMachineLearningBehaviorAnalytics) GetDeletionPolicy() xpv1.DeletionPolicy {
 	return mg.Spec.DeletionPolicy
 }
 
-// GetProviderConfigReference of this SentinelAlertRuleMachineLearningBehaviorAnalytics.
-func (mg *SentinelAlertRuleMachineLearningBehaviorAnalytics) GetProviderConfigReference() *xpv1.Reference {
+// GetProviderConfigReference of this AlertRuleMachineLearningBehaviorAnalytics.
+func (mg *AlertRuleMachineLearningBehaviorAnalytics) GetProviderConfigReference() *xpv1.Reference {
 	return mg.Spec.ProviderConfigReference
 }
 
 /*
-GetProviderReference of this SentinelAlertRuleMachineLearningBehaviorAnalytics.
+GetProviderReference of this AlertRuleMachineLearningBehaviorAnalytics.
 Deprecated: Use GetProviderConfigReference.
 */
-func (mg *SentinelAlertRuleMachineLearningBehaviorAnalytics) GetProviderReference() *xpv1.Reference {
+func (mg *AlertRuleMachineLearningBehaviorAnalytics) GetProviderReference() *xpv1.Reference {
 	return mg.Spec.ProviderReference
 }
 
-// GetWriteConnectionSecretToReference of this SentinelAlertRuleMachineLearningBehaviorAnalytics.
-func (mg *SentinelAlertRuleMachineLearningBehaviorAnalytics) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
+// GetWriteConnectionSecretToReference of this AlertRuleMachineLearningBehaviorAnalytics.
+func (mg *AlertRuleMachineLearningBehaviorAnalytics) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
 	return mg.Spec.WriteConnectionSecretToReference
 }
 
-// SetConditions of this SentinelAlertRuleMachineLearningBehaviorAnalytics.
-func (mg *SentinelAlertRuleMachineLearningBehaviorAnalytics) SetConditions(c ...xpv1.Condition) {
+// SetConditions of this AlertRuleMachineLearningBehaviorAnalytics.
+func (mg *AlertRuleMachineLearningBehaviorAnalytics) SetConditions(c ...xpv1.Condition) {
 	mg.Status.SetConditions(c...)
 }
 
-// SetDeletionPolicy of this SentinelAlertRuleMachineLearningBehaviorAnalytics.
-func (mg *SentinelAlertRuleMachineLearningBehaviorAnalytics) SetDeletionPolicy(r xpv1.DeletionPolicy) {
+// SetDeletionPolicy of this AlertRuleMachineLearningBehaviorAnalytics.
+func (mg *AlertRuleMachineLearningBehaviorAnalytics) SetDeletionPolicy(r xpv1.DeletionPolicy) {
 	mg.Spec.DeletionPolicy = r
 }
 
-// SetProviderConfigReference of this SentinelAlertRuleMachineLearningBehaviorAnalytics.
-func (mg *SentinelAlertRuleMachineLearningBehaviorAnalytics) SetProviderConfigReference(r *xpv1.Reference) {
+// SetProviderConfigReference of this AlertRuleMachineLearningBehaviorAnalytics.
+func (mg *AlertRuleMachineLearningBehaviorAnalytics) SetProviderConfigReference(r *xpv1.Reference) {
 	mg.Spec.ProviderConfigReference = r
 }
 
 /*
-SetProviderReference of this SentinelAlertRuleMachineLearningBehaviorAnalytics.
+SetProviderReference of this AlertRuleMachineLearningBehaviorAnalytics.
 Deprecated: Use SetProviderConfigReference.
 */
-func (mg *SentinelAlertRuleMachineLearningBehaviorAnalytics) SetProviderReference(r *xpv1.Reference) {
+func (mg *AlertRuleMachineLearningBehaviorAnalytics) SetProviderReference(r *xpv1.Reference) {
 	mg.Spec.ProviderReference = r
 }
 
-// SetWriteConnectionSecretToReference of this SentinelAlertRuleMachineLearningBehaviorAnalytics.
-func (mg *SentinelAlertRuleMachineLearningBehaviorAnalytics) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
+// SetWriteConnectionSecretToReference of this AlertRuleMachineLearningBehaviorAnalytics.
+func (mg *AlertRuleMachineLearningBehaviorAnalytics) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
 	mg.Spec.WriteConnectionSecretToReference = r
 }
 
-// GetCondition of this SentinelAlertRuleMsSecurityIncident.
-func (mg *SentinelAlertRuleMsSecurityIncident) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
+// GetCondition of this AlertRuleMsSecurityIncident.
+func (mg *AlertRuleMsSecurityIncident) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
 	return mg.Status.GetCondition(ct)
 }
 
-// GetDeletionPolicy of this SentinelAlertRuleMsSecurityIncident.
-func (mg *SentinelAlertRuleMsSecurityIncident) GetDeletionPolicy() xpv1.DeletionPolicy {
+// GetDeletionPolicy of this AlertRuleMsSecurityIncident.
+func (mg *AlertRuleMsSecurityIncident) GetDeletionPolicy() xpv1.DeletionPolicy {
 	return mg.Spec.DeletionPolicy
 }
 
-// GetProviderConfigReference of this SentinelAlertRuleMsSecurityIncident.
-func (mg *SentinelAlertRuleMsSecurityIncident) GetProviderConfigReference() *xpv1.Reference {
+// GetProviderConfigReference of this AlertRuleMsSecurityIncident.
+func (mg *AlertRuleMsSecurityIncident) GetProviderConfigReference() *xpv1.Reference {
 	return mg.Spec.ProviderConfigReference
 }
 
 /*
-GetProviderReference of this SentinelAlertRuleMsSecurityIncident.
+GetProviderReference of this AlertRuleMsSecurityIncident.
 Deprecated: Use GetProviderConfigReference.
 */
-func (mg *SentinelAlertRuleMsSecurityIncident) GetProviderReference() *xpv1.Reference {
+func (mg *AlertRuleMsSecurityIncident) GetProviderReference() *xpv1.Reference {
 	return mg.Spec.ProviderReference
 }
 
-// GetWriteConnectionSecretToReference of this SentinelAlertRuleMsSecurityIncident.
-func (mg *SentinelAlertRuleMsSecurityIncident) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
+// GetWriteConnectionSecretToReference of this AlertRuleMsSecurityIncident.
+func (mg *AlertRuleMsSecurityIncident) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
 	return mg.Spec.WriteConnectionSecretToReference
 }
 
-// SetConditions of this SentinelAlertRuleMsSecurityIncident.
-func (mg *SentinelAlertRuleMsSecurityIncident) SetConditions(c ...xpv1.Condition) {
+// SetConditions of this AlertRuleMsSecurityIncident.
+func (mg *AlertRuleMsSecurityIncident) SetConditions(c ...xpv1.Condition) {
 	mg.Status.SetConditions(c...)
 }
 
-// SetDeletionPolicy of this SentinelAlertRuleMsSecurityIncident.
-func (mg *SentinelAlertRuleMsSecurityIncident) SetDeletionPolicy(r xpv1.DeletionPolicy) {
+// SetDeletionPolicy of this AlertRuleMsSecurityIncident.
+func (mg *AlertRuleMsSecurityIncident) SetDeletionPolicy(r xpv1.DeletionPolicy) {
 	mg.Spec.DeletionPolicy = r
 }
 
-// SetProviderConfigReference of this SentinelAlertRuleMsSecurityIncident.
-func (mg *SentinelAlertRuleMsSecurityIncident) SetProviderConfigReference(r *xpv1.Reference) {
+// SetProviderConfigReference of this AlertRuleMsSecurityIncident.
+func (mg *AlertRuleMsSecurityIncident) SetProviderConfigReference(r *xpv1.Reference) {
 	mg.Spec.ProviderConfigReference = r
 }
 
 /*
-SetProviderReference of this SentinelAlertRuleMsSecurityIncident.
+SetProviderReference of this AlertRuleMsSecurityIncident.
 Deprecated: Use SetProviderConfigReference.
 */
-func (mg *SentinelAlertRuleMsSecurityIncident) SetProviderReference(r *xpv1.Reference) {
+func (mg *AlertRuleMsSecurityIncident) SetProviderReference(r *xpv1.Reference) {
 	mg.Spec.ProviderReference = r
 }
 
-// SetWriteConnectionSecretToReference of this SentinelAlertRuleMsSecurityIncident.
-func (mg *SentinelAlertRuleMsSecurityIncident) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
+// SetWriteConnectionSecretToReference of this AlertRuleMsSecurityIncident.
+func (mg *AlertRuleMsSecurityIncident) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
 	mg.Spec.WriteConnectionSecretToReference = r
 }
 
-// GetCondition of this SentinelAlertRuleScheduled.
-func (mg *SentinelAlertRuleScheduled) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
+// GetCondition of this AlertRuleScheduled.
+func (mg *AlertRuleScheduled) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
 	return mg.Status.GetCondition(ct)
 }
 
-// GetDeletionPolicy of this SentinelAlertRuleScheduled.
-func (mg *SentinelAlertRuleScheduled) GetDeletionPolicy() xpv1.DeletionPolicy {
+// GetDeletionPolicy of this AlertRuleScheduled.
+func (mg *AlertRuleScheduled) GetDeletionPolicy() xpv1.DeletionPolicy {
 	return mg.Spec.DeletionPolicy
 }
 
-// GetProviderConfigReference of this SentinelAlertRuleScheduled.
-func (mg *SentinelAlertRuleScheduled) GetProviderConfigReference() *xpv1.Reference {
+// GetProviderConfigReference of this AlertRuleScheduled.
+func (mg *AlertRuleScheduled) GetProviderConfigReference() *xpv1.Reference {
 	return mg.Spec.ProviderConfigReference
 }
 
 /*
-GetProviderReference of this SentinelAlertRuleScheduled.
+GetProviderReference of this AlertRuleScheduled.
 Deprecated: Use GetProviderConfigReference.
 */
-func (mg *SentinelAlertRuleScheduled) GetProviderReference() *xpv1.Reference {
+func (mg *AlertRuleScheduled) GetProviderReference() *xpv1.Reference {
 	return mg.Spec.ProviderReference
 }
 
-// GetWriteConnectionSecretToReference of this SentinelAlertRuleScheduled.
-func (mg *SentinelAlertRuleScheduled) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
+// GetWriteConnectionSecretToReference of this AlertRuleScheduled.
+func (mg *AlertRuleScheduled) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
 	return mg.Spec.WriteConnectionSecretToReference
 }
 
-// SetConditions of this SentinelAlertRuleScheduled.
-func (mg *SentinelAlertRuleScheduled) SetConditions(c ...xpv1.Condition) {
+// SetConditions of this AlertRuleScheduled.
+func (mg *AlertRuleScheduled) SetConditions(c ...xpv1.Condition) {
 	mg.Status.SetConditions(c...)
 }
 
-// SetDeletionPolicy of this SentinelAlertRuleScheduled.
-func (mg *SentinelAlertRuleScheduled) SetDeletionPolicy(r xpv1.DeletionPolicy) {
+// SetDeletionPolicy of this AlertRuleScheduled.
+func (mg *AlertRuleScheduled) SetDeletionPolicy(r xpv1.DeletionPolicy) {
 	mg.Spec.DeletionPolicy = r
 }
 
-// SetProviderConfigReference of this SentinelAlertRuleScheduled.
-func (mg *SentinelAlertRuleScheduled) SetProviderConfigReference(r *xpv1.Reference) {
+// SetProviderConfigReference of this AlertRuleScheduled.
+func (mg *AlertRuleScheduled) SetProviderConfigReference(r *xpv1.Reference) {
 	mg.Spec.ProviderConfigReference = r
 }
 
 /*
-SetProviderReference of this SentinelAlertRuleScheduled.
+SetProviderReference of this AlertRuleScheduled.
 Deprecated: Use SetProviderConfigReference.
 */
-func (mg *SentinelAlertRuleScheduled) SetProviderReference(r *xpv1.Reference) {
+func (mg *AlertRuleScheduled) SetProviderReference(r *xpv1.Reference) {
 	mg.Spec.ProviderReference = r
 }
 
-// SetWriteConnectionSecretToReference of this SentinelAlertRuleScheduled.
-func (mg *SentinelAlertRuleScheduled) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
+// SetWriteConnectionSecretToReference of this AlertRuleScheduled.
+func (mg *AlertRuleScheduled) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
 	mg.Spec.WriteConnectionSecretToReference = r
 }
 
-// GetCondition of this SentinelDataConnectorAwsCloudTrail.
-func (mg *SentinelDataConnectorAwsCloudTrail) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
+// GetCondition of this DataConnectorAwsCloudTrail.
+func (mg *DataConnectorAwsCloudTrail) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
 	return mg.Status.GetCondition(ct)
 }
 
-// GetDeletionPolicy of this SentinelDataConnectorAwsCloudTrail.
-func (mg *SentinelDataConnectorAwsCloudTrail) GetDeletionPolicy() xpv1.DeletionPolicy {
+// GetDeletionPolicy of this DataConnectorAwsCloudTrail.
+func (mg *DataConnectorAwsCloudTrail) GetDeletionPolicy() xpv1.DeletionPolicy {
 	return mg.Spec.DeletionPolicy
 }
 
-// GetProviderConfigReference of this SentinelDataConnectorAwsCloudTrail.
-func (mg *SentinelDataConnectorAwsCloudTrail) GetProviderConfigReference() *xpv1.Reference {
+// GetProviderConfigReference of this DataConnectorAwsCloudTrail.
+func (mg *DataConnectorAwsCloudTrail) GetProviderConfigReference() *xpv1.Reference {
 	return mg.Spec.ProviderConfigReference
 }
 
 /*
-GetProviderReference of this SentinelDataConnectorAwsCloudTrail.
+GetProviderReference of this DataConnectorAwsCloudTrail.
 Deprecated: Use GetProviderConfigReference.
 */
-func (mg *SentinelDataConnectorAwsCloudTrail) GetProviderReference() *xpv1.Reference {
+func (mg *DataConnectorAwsCloudTrail) GetProviderReference() *xpv1.Reference {
 	return mg.Spec.ProviderReference
 }
 
-// GetWriteConnectionSecretToReference of this SentinelDataConnectorAwsCloudTrail.
-func (mg *SentinelDataConnectorAwsCloudTrail) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
+// GetWriteConnectionSecretToReference of this DataConnectorAwsCloudTrail.
+func (mg *DataConnectorAwsCloudTrail) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
 	return mg.Spec.WriteConnectionSecretToReference
 }
 
-// SetConditions of this SentinelDataConnectorAwsCloudTrail.
-func (mg *SentinelDataConnectorAwsCloudTrail) SetConditions(c ...xpv1.Condition) {
+// SetConditions of this DataConnectorAwsCloudTrail.
+func (mg *DataConnectorAwsCloudTrail) SetConditions(c ...xpv1.Condition) {
 	mg.Status.SetConditions(c...)
 }
 
-// SetDeletionPolicy of this SentinelDataConnectorAwsCloudTrail.
-func (mg *SentinelDataConnectorAwsCloudTrail) SetDeletionPolicy(r xpv1.DeletionPolicy) {
+// SetDeletionPolicy of this DataConnectorAwsCloudTrail.
+func (mg *DataConnectorAwsCloudTrail) SetDeletionPolicy(r xpv1.DeletionPolicy) {
 	mg.Spec.DeletionPolicy = r
 }
 
-// SetProviderConfigReference of this SentinelDataConnectorAwsCloudTrail.
-func (mg *SentinelDataConnectorAwsCloudTrail) SetProviderConfigReference(r *xpv1.Reference) {
+// SetProviderConfigReference of this DataConnectorAwsCloudTrail.
+func (mg *DataConnectorAwsCloudTrail) SetProviderConfigReference(r *xpv1.Reference) {
 	mg.Spec.ProviderConfigReference = r
 }
 
 /*
-SetProviderReference of this SentinelDataConnectorAwsCloudTrail.
+SetProviderReference of this DataConnectorAwsCloudTrail.
 Deprecated: Use SetProviderConfigReference.
 */
-func (mg *SentinelDataConnectorAwsCloudTrail) SetProviderReference(r *xpv1.Reference) {
+func (mg *DataConnectorAwsCloudTrail) SetProviderReference(r *xpv1.Reference) {
 	mg.Spec.ProviderReference = r
 }
 
-// SetWriteConnectionSecretToReference of this SentinelDataConnectorAwsCloudTrail.
-func (mg *SentinelDataConnectorAwsCloudTrail) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
+// SetWriteConnectionSecretToReference of this DataConnectorAwsCloudTrail.
+func (mg *DataConnectorAwsCloudTrail) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
 	mg.Spec.WriteConnectionSecretToReference = r
 }
 
-// GetCondition of this SentinelDataConnectorAzureActiveDirectory.
-func (mg *SentinelDataConnectorAzureActiveDirectory) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
+// GetCondition of this DataConnectorAzureActiveDirectory.
+func (mg *DataConnectorAzureActiveDirectory) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
 	return mg.Status.GetCondition(ct)
 }
 
-// GetDeletionPolicy of this SentinelDataConnectorAzureActiveDirectory.
-func (mg *SentinelDataConnectorAzureActiveDirectory) GetDeletionPolicy() xpv1.DeletionPolicy {
+// GetDeletionPolicy of this DataConnectorAzureActiveDirectory.
+func (mg *DataConnectorAzureActiveDirectory) GetDeletionPolicy() xpv1.DeletionPolicy {
 	return mg.Spec.DeletionPolicy
 }
 
-// GetProviderConfigReference of this SentinelDataConnectorAzureActiveDirectory.
-func (mg *SentinelDataConnectorAzureActiveDirectory) GetProviderConfigReference() *xpv1.Reference {
+// GetProviderConfigReference of this DataConnectorAzureActiveDirectory.
+func (mg *DataConnectorAzureActiveDirectory) GetProviderConfigReference() *xpv1.Reference {
 	return mg.Spec.ProviderConfigReference
 }
 
 /*
-GetProviderReference of this SentinelDataConnectorAzureActiveDirectory.
+GetProviderReference of this DataConnectorAzureActiveDirectory.
 Deprecated: Use GetProviderConfigReference.
 */
-func (mg *SentinelDataConnectorAzureActiveDirectory) GetProviderReference() *xpv1.Reference {
+func (mg *DataConnectorAzureActiveDirectory) GetProviderReference() *xpv1.Reference {
 	return mg.Spec.ProviderReference
 }
 
-// GetWriteConnectionSecretToReference of this SentinelDataConnectorAzureActiveDirectory.
-func (mg *SentinelDataConnectorAzureActiveDirectory) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
+// GetWriteConnectionSecretToReference of this DataConnectorAzureActiveDirectory.
+func (mg *DataConnectorAzureActiveDirectory) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
 	return mg.Spec.WriteConnectionSecretToReference
 }
 
-// SetConditions of this SentinelDataConnectorAzureActiveDirectory.
-func (mg *SentinelDataConnectorAzureActiveDirectory) SetConditions(c ...xpv1.Condition) {
+// SetConditions of this DataConnectorAzureActiveDirectory.
+func (mg *DataConnectorAzureActiveDirectory) SetConditions(c ...xpv1.Condition) {
 	mg.Status.SetConditions(c...)
 }
 
-// SetDeletionPolicy of this SentinelDataConnectorAzureActiveDirectory.
-func (mg *SentinelDataConnectorAzureActiveDirectory) SetDeletionPolicy(r xpv1.DeletionPolicy) {
+// SetDeletionPolicy of this DataConnectorAzureActiveDirectory.
+func (mg *DataConnectorAzureActiveDirectory) SetDeletionPolicy(r xpv1.DeletionPolicy) {
 	mg.Spec.DeletionPolicy = r
 }
 
-// SetProviderConfigReference of this SentinelDataConnectorAzureActiveDirectory.
-func (mg *SentinelDataConnectorAzureActiveDirectory) SetProviderConfigReference(r *xpv1.Reference) {
+// SetProviderConfigReference of this DataConnectorAzureActiveDirectory.
+func (mg *DataConnectorAzureActiveDirectory) SetProviderConfigReference(r *xpv1.Reference) {
 	mg.Spec.ProviderConfigReference = r
 }
 
 /*
-SetProviderReference of this SentinelDataConnectorAzureActiveDirectory.
+SetProviderReference of this DataConnectorAzureActiveDirectory.
 Deprecated: Use SetProviderConfigReference.
 */
-func (mg *SentinelDataConnectorAzureActiveDirectory) SetProviderReference(r *xpv1.Reference) {
+func (mg *DataConnectorAzureActiveDirectory) SetProviderReference(r *xpv1.Reference) {
 	mg.Spec.ProviderReference = r
 }
 
-// SetWriteConnectionSecretToReference of this SentinelDataConnectorAzureActiveDirectory.
-func (mg *SentinelDataConnectorAzureActiveDirectory) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
+// SetWriteConnectionSecretToReference of this DataConnectorAzureActiveDirectory.
+func (mg *DataConnectorAzureActiveDirectory) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
 	mg.Spec.WriteConnectionSecretToReference = r
 }
 
-// GetCondition of this SentinelDataConnectorAzureAdvancedThreatProtection.
-func (mg *SentinelDataConnectorAzureAdvancedThreatProtection) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
+// GetCondition of this DataConnectorAzureAdvancedThreatProtection.
+func (mg *DataConnectorAzureAdvancedThreatProtection) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
 	return mg.Status.GetCondition(ct)
 }
 
-// GetDeletionPolicy of this SentinelDataConnectorAzureAdvancedThreatProtection.
-func (mg *SentinelDataConnectorAzureAdvancedThreatProtection) GetDeletionPolicy() xpv1.DeletionPolicy {
+// GetDeletionPolicy of this DataConnectorAzureAdvancedThreatProtection.
+func (mg *DataConnectorAzureAdvancedThreatProtection) GetDeletionPolicy() xpv1.DeletionPolicy {
 	return mg.Spec.DeletionPolicy
 }
 
-// GetProviderConfigReference of this SentinelDataConnectorAzureAdvancedThreatProtection.
-func (mg *SentinelDataConnectorAzureAdvancedThreatProtection) GetProviderConfigReference() *xpv1.Reference {
+// GetProviderConfigReference of this DataConnectorAzureAdvancedThreatProtection.
+func (mg *DataConnectorAzureAdvancedThreatProtection) GetProviderConfigReference() *xpv1.Reference {
 	return mg.Spec.ProviderConfigReference
 }
 
 /*
-GetProviderReference of this SentinelDataConnectorAzureAdvancedThreatProtection.
+GetProviderReference of this DataConnectorAzureAdvancedThreatProtection.
 Deprecated: Use GetProviderConfigReference.
 */
-func (mg *SentinelDataConnectorAzureAdvancedThreatProtection) GetProviderReference() *xpv1.Reference {
+func (mg *DataConnectorAzureAdvancedThreatProtection) GetProviderReference() *xpv1.Reference {
 	return mg.Spec.ProviderReference
 }
 
-// GetWriteConnectionSecretToReference of this SentinelDataConnectorAzureAdvancedThreatProtection.
-func (mg *SentinelDataConnectorAzureAdvancedThreatProtection) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
+// GetWriteConnectionSecretToReference of this DataConnectorAzureAdvancedThreatProtection.
+func (mg *DataConnectorAzureAdvancedThreatProtection) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
 	return mg.Spec.WriteConnectionSecretToReference
 }
 
-// SetConditions of this SentinelDataConnectorAzureAdvancedThreatProtection.
-func (mg *SentinelDataConnectorAzureAdvancedThreatProtection) SetConditions(c ...xpv1.Condition) {
+// SetConditions of this DataConnectorAzureAdvancedThreatProtection.
+func (mg *DataConnectorAzureAdvancedThreatProtection) SetConditions(c ...xpv1.Condition) {
 	mg.Status.SetConditions(c...)
 }
 
-// SetDeletionPolicy of this SentinelDataConnectorAzureAdvancedThreatProtection.
-func (mg *SentinelDataConnectorAzureAdvancedThreatProtection) SetDeletionPolicy(r xpv1.DeletionPolicy) {
+// SetDeletionPolicy of this DataConnectorAzureAdvancedThreatProtection.
+func (mg *DataConnectorAzureAdvancedThreatProtection) SetDeletionPolicy(r xpv1.DeletionPolicy) {
 	mg.Spec.DeletionPolicy = r
 }
 
-// SetProviderConfigReference of this SentinelDataConnectorAzureAdvancedThreatProtection.
-func (mg *SentinelDataConnectorAzureAdvancedThreatProtection) SetProviderConfigReference(r *xpv1.Reference) {
+// SetProviderConfigReference of this DataConnectorAzureAdvancedThreatProtection.
+func (mg *DataConnectorAzureAdvancedThreatProtection) SetProviderConfigReference(r *xpv1.Reference) {
 	mg.Spec.ProviderConfigReference = r
 }
 
 /*
-SetProviderReference of this SentinelDataConnectorAzureAdvancedThreatProtection.
+SetProviderReference of this DataConnectorAzureAdvancedThreatProtection.
 Deprecated: Use SetProviderConfigReference.
 */
-func (mg *SentinelDataConnectorAzureAdvancedThreatProtection) SetProviderReference(r *xpv1.Reference) {
+func (mg *DataConnectorAzureAdvancedThreatProtection) SetProviderReference(r *xpv1.Reference) {
 	mg.Spec.ProviderReference = r
 }
 
-// SetWriteConnectionSecretToReference of this SentinelDataConnectorAzureAdvancedThreatProtection.
-func (mg *SentinelDataConnectorAzureAdvancedThreatProtection) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
+// SetWriteConnectionSecretToReference of this DataConnectorAzureAdvancedThreatProtection.
+func (mg *DataConnectorAzureAdvancedThreatProtection) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
 	mg.Spec.WriteConnectionSecretToReference = r
 }
 
-// GetCondition of this SentinelDataConnectorAzureSecurityCenter.
-func (mg *SentinelDataConnectorAzureSecurityCenter) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
+// GetCondition of this DataConnectorAzureSecurityCenter.
+func (mg *DataConnectorAzureSecurityCenter) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
 	return mg.Status.GetCondition(ct)
 }
 
-// GetDeletionPolicy of this SentinelDataConnectorAzureSecurityCenter.
-func (mg *SentinelDataConnectorAzureSecurityCenter) GetDeletionPolicy() xpv1.DeletionPolicy {
+// GetDeletionPolicy of this DataConnectorAzureSecurityCenter.
+func (mg *DataConnectorAzureSecurityCenter) GetDeletionPolicy() xpv1.DeletionPolicy {
 	return mg.Spec.DeletionPolicy
 }
 
-// GetProviderConfigReference of this SentinelDataConnectorAzureSecurityCenter.
-func (mg *SentinelDataConnectorAzureSecurityCenter) GetProviderConfigReference() *xpv1.Reference {
+// GetProviderConfigReference of this DataConnectorAzureSecurityCenter.
+func (mg *DataConnectorAzureSecurityCenter) GetProviderConfigReference() *xpv1.Reference {
 	return mg.Spec.ProviderConfigReference
 }
 
 /*
-GetProviderReference of this SentinelDataConnectorAzureSecurityCenter.
+GetProviderReference of this DataConnectorAzureSecurityCenter.
 Deprecated: Use GetProviderConfigReference.
 */
-func (mg *SentinelDataConnectorAzureSecurityCenter) GetProviderReference() *xpv1.Reference {
+func (mg *DataConnectorAzureSecurityCenter) GetProviderReference() *xpv1.Reference {
 	return mg.Spec.ProviderReference
 }
 
-// GetWriteConnectionSecretToReference of this SentinelDataConnectorAzureSecurityCenter.
-func (mg *SentinelDataConnectorAzureSecurityCenter) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
+// GetWriteConnectionSecretToReference of this DataConnectorAzureSecurityCenter.
+func (mg *DataConnectorAzureSecurityCenter) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
 	return mg.Spec.WriteConnectionSecretToReference
 }
 
-// SetConditions of this SentinelDataConnectorAzureSecurityCenter.
-func (mg *SentinelDataConnectorAzureSecurityCenter) SetConditions(c ...xpv1.Condition) {
+// SetConditions of this DataConnectorAzureSecurityCenter.
+func (mg *DataConnectorAzureSecurityCenter) SetConditions(c ...xpv1.Condition) {
 	mg.Status.SetConditions(c...)
 }
 
-// SetDeletionPolicy of this SentinelDataConnectorAzureSecurityCenter.
-func (mg *SentinelDataConnectorAzureSecurityCenter) SetDeletionPolicy(r xpv1.DeletionPolicy) {
+// SetDeletionPolicy of this DataConnectorAzureSecurityCenter.
+func (mg *DataConnectorAzureSecurityCenter) SetDeletionPolicy(r xpv1.DeletionPolicy) {
 	mg.Spec.DeletionPolicy = r
 }
 
-// SetProviderConfigReference of this SentinelDataConnectorAzureSecurityCenter.
-func (mg *SentinelDataConnectorAzureSecurityCenter) SetProviderConfigReference(r *xpv1.Reference) {
+// SetProviderConfigReference of this DataConnectorAzureSecurityCenter.
+func (mg *DataConnectorAzureSecurityCenter) SetProviderConfigReference(r *xpv1.Reference) {
 	mg.Spec.ProviderConfigReference = r
 }
 
 /*
-SetProviderReference of this SentinelDataConnectorAzureSecurityCenter.
+SetProviderReference of this DataConnectorAzureSecurityCenter.
 Deprecated: Use SetProviderConfigReference.
 */
-func (mg *SentinelDataConnectorAzureSecurityCenter) SetProviderReference(r *xpv1.Reference) {
+func (mg *DataConnectorAzureSecurityCenter) SetProviderReference(r *xpv1.Reference) {
 	mg.Spec.ProviderReference = r
 }
 
-// SetWriteConnectionSecretToReference of this SentinelDataConnectorAzureSecurityCenter.
-func (mg *SentinelDataConnectorAzureSecurityCenter) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
+// SetWriteConnectionSecretToReference of this DataConnectorAzureSecurityCenter.
+func (mg *DataConnectorAzureSecurityCenter) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
 	mg.Spec.WriteConnectionSecretToReference = r
 }
 
-// GetCondition of this SentinelDataConnectorMicrosoftCloudAppSecurity.
-func (mg *SentinelDataConnectorMicrosoftCloudAppSecurity) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
+// GetCondition of this DataConnectorMicrosoftCloudAppSecurity.
+func (mg *DataConnectorMicrosoftCloudAppSecurity) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
 	return mg.Status.GetCondition(ct)
 }
 
-// GetDeletionPolicy of this SentinelDataConnectorMicrosoftCloudAppSecurity.
-func (mg *SentinelDataConnectorMicrosoftCloudAppSecurity) GetDeletionPolicy() xpv1.DeletionPolicy {
+// GetDeletionPolicy of this DataConnectorMicrosoftCloudAppSecurity.
+func (mg *DataConnectorMicrosoftCloudAppSecurity) GetDeletionPolicy() xpv1.DeletionPolicy {
 	return mg.Spec.DeletionPolicy
 }
 
-// GetProviderConfigReference of this SentinelDataConnectorMicrosoftCloudAppSecurity.
-func (mg *SentinelDataConnectorMicrosoftCloudAppSecurity) GetProviderConfigReference() *xpv1.Reference {
+// GetProviderConfigReference of this DataConnectorMicrosoftCloudAppSecurity.
+func (mg *DataConnectorMicrosoftCloudAppSecurity) GetProviderConfigReference() *xpv1.Reference {
 	return mg.Spec.ProviderConfigReference
 }
 
 /*
-GetProviderReference of this SentinelDataConnectorMicrosoftCloudAppSecurity.
+GetProviderReference of this DataConnectorMicrosoftCloudAppSecurity.
 Deprecated: Use GetProviderConfigReference.
 */
-func (mg *SentinelDataConnectorMicrosoftCloudAppSecurity) GetProviderReference() *xpv1.Reference {
+func (mg *DataConnectorMicrosoftCloudAppSecurity) GetProviderReference() *xpv1.Reference {
 	return mg.Spec.ProviderReference
 }
 
-// GetWriteConnectionSecretToReference of this SentinelDataConnectorMicrosoftCloudAppSecurity.
-func (mg *SentinelDataConnectorMicrosoftCloudAppSecurity) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
+// GetWriteConnectionSecretToReference of this DataConnectorMicrosoftCloudAppSecurity.
+func (mg *DataConnectorMicrosoftCloudAppSecurity) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
 	return mg.Spec.WriteConnectionSecretToReference
 }
 
-// SetConditions of this SentinelDataConnectorMicrosoftCloudAppSecurity.
-func (mg *SentinelDataConnectorMicrosoftCloudAppSecurity) SetConditions(c ...xpv1.Condition) {
+// SetConditions of this DataConnectorMicrosoftCloudAppSecurity.
+func (mg *DataConnectorMicrosoftCloudAppSecurity) SetConditions(c ...xpv1.Condition) {
 	mg.Status.SetConditions(c...)
 }
 
-// SetDeletionPolicy of this SentinelDataConnectorMicrosoftCloudAppSecurity.
-func (mg *SentinelDataConnectorMicrosoftCloudAppSecurity) SetDeletionPolicy(r xpv1.DeletionPolicy) {
+// SetDeletionPolicy of this DataConnectorMicrosoftCloudAppSecurity.
+func (mg *DataConnectorMicrosoftCloudAppSecurity) SetDeletionPolicy(r xpv1.DeletionPolicy) {
 	mg.Spec.DeletionPolicy = r
 }
 
-// SetProviderConfigReference of this SentinelDataConnectorMicrosoftCloudAppSecurity.
-func (mg *SentinelDataConnectorMicrosoftCloudAppSecurity) SetProviderConfigReference(r *xpv1.Reference) {
+// SetProviderConfigReference of this DataConnectorMicrosoftCloudAppSecurity.
+func (mg *DataConnectorMicrosoftCloudAppSecurity) SetProviderConfigReference(r *xpv1.Reference) {
 	mg.Spec.ProviderConfigReference = r
 }
 
 /*
-SetProviderReference of this SentinelDataConnectorMicrosoftCloudAppSecurity.
+SetProviderReference of this DataConnectorMicrosoftCloudAppSecurity.
 Deprecated: Use SetProviderConfigReference.
 */
-func (mg *SentinelDataConnectorMicrosoftCloudAppSecurity) SetProviderReference(r *xpv1.Reference) {
+func (mg *DataConnectorMicrosoftCloudAppSecurity) SetProviderReference(r *xpv1.Reference) {
 	mg.Spec.ProviderReference = r
 }
 
-// SetWriteConnectionSecretToReference of this SentinelDataConnectorMicrosoftCloudAppSecurity.
-func (mg *SentinelDataConnectorMicrosoftCloudAppSecurity) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
+// SetWriteConnectionSecretToReference of this DataConnectorMicrosoftCloudAppSecurity.
+func (mg *DataConnectorMicrosoftCloudAppSecurity) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
 	mg.Spec.WriteConnectionSecretToReference = r
 }
 
-// GetCondition of this SentinelDataConnectorOffice365.
-func (mg *SentinelDataConnectorOffice365) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
+// GetCondition of this DataConnectorOffice365.
+func (mg *DataConnectorOffice365) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
 	return mg.Status.GetCondition(ct)
 }
 
-// GetDeletionPolicy of this SentinelDataConnectorOffice365.
-func (mg *SentinelDataConnectorOffice365) GetDeletionPolicy() xpv1.DeletionPolicy {
+// GetDeletionPolicy of this DataConnectorOffice365.
+func (mg *DataConnectorOffice365) GetDeletionPolicy() xpv1.DeletionPolicy {
 	return mg.Spec.DeletionPolicy
 }
 
-// GetProviderConfigReference of this SentinelDataConnectorOffice365.
-func (mg *SentinelDataConnectorOffice365) GetProviderConfigReference() *xpv1.Reference {
+// GetProviderConfigReference of this DataConnectorOffice365.
+func (mg *DataConnectorOffice365) GetProviderConfigReference() *xpv1.Reference {
 	return mg.Spec.ProviderConfigReference
 }
 
 /*
-GetProviderReference of this SentinelDataConnectorOffice365.
+GetProviderReference of this DataConnectorOffice365.
 Deprecated: Use GetProviderConfigReference.
 */
-func (mg *SentinelDataConnectorOffice365) GetProviderReference() *xpv1.Reference {
+func (mg *DataConnectorOffice365) GetProviderReference() *xpv1.Reference {
 	return mg.Spec.ProviderReference
 }
 
-// GetWriteConnectionSecretToReference of this SentinelDataConnectorOffice365.
-func (mg *SentinelDataConnectorOffice365) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
+// GetWriteConnectionSecretToReference of this DataConnectorOffice365.
+func (mg *DataConnectorOffice365) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
 	return mg.Spec.WriteConnectionSecretToReference
 }
 
-// SetConditions of this SentinelDataConnectorOffice365.
-func (mg *SentinelDataConnectorOffice365) SetConditions(c ...xpv1.Condition) {
+// SetConditions of this DataConnectorOffice365.
+func (mg *DataConnectorOffice365) SetConditions(c ...xpv1.Condition) {
 	mg.Status.SetConditions(c...)
 }
 
-// SetDeletionPolicy of this SentinelDataConnectorOffice365.
-func (mg *SentinelDataConnectorOffice365) SetDeletionPolicy(r xpv1.DeletionPolicy) {
+// SetDeletionPolicy of this DataConnectorOffice365.
+func (mg *DataConnectorOffice365) SetDeletionPolicy(r xpv1.DeletionPolicy) {
 	mg.Spec.DeletionPolicy = r
 }
 
-// SetProviderConfigReference of this SentinelDataConnectorOffice365.
-func (mg *SentinelDataConnectorOffice365) SetProviderConfigReference(r *xpv1.Reference) {
+// SetProviderConfigReference of this DataConnectorOffice365.
+func (mg *DataConnectorOffice365) SetProviderConfigReference(r *xpv1.Reference) {
 	mg.Spec.ProviderConfigReference = r
 }
 
 /*
-SetProviderReference of this SentinelDataConnectorOffice365.
+SetProviderReference of this DataConnectorOffice365.
 Deprecated: Use SetProviderConfigReference.
 */
-func (mg *SentinelDataConnectorOffice365) SetProviderReference(r *xpv1.Reference) {
+func (mg *DataConnectorOffice365) SetProviderReference(r *xpv1.Reference) {
 	mg.Spec.ProviderReference = r
 }
 
-// SetWriteConnectionSecretToReference of this SentinelDataConnectorOffice365.
-func (mg *SentinelDataConnectorOffice365) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
+// SetWriteConnectionSecretToReference of this DataConnectorOffice365.
+func (mg *DataConnectorOffice365) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
 	mg.Spec.WriteConnectionSecretToReference = r
 }
 
-// GetCondition of this SentinelDataConnectorThreatIntelligence.
-func (mg *SentinelDataConnectorThreatIntelligence) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
+// GetCondition of this DataConnectorThreatIntelligence.
+func (mg *DataConnectorThreatIntelligence) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
 	return mg.Status.GetCondition(ct)
 }
 
-// GetDeletionPolicy of this SentinelDataConnectorThreatIntelligence.
-func (mg *SentinelDataConnectorThreatIntelligence) GetDeletionPolicy() xpv1.DeletionPolicy {
+// GetDeletionPolicy of this DataConnectorThreatIntelligence.
+func (mg *DataConnectorThreatIntelligence) GetDeletionPolicy() xpv1.DeletionPolicy {
 	return mg.Spec.DeletionPolicy
 }
 
-// GetProviderConfigReference of this SentinelDataConnectorThreatIntelligence.
-func (mg *SentinelDataConnectorThreatIntelligence) GetProviderConfigReference() *xpv1.Reference {
+// GetProviderConfigReference of this DataConnectorThreatIntelligence.
+func (mg *DataConnectorThreatIntelligence) GetProviderConfigReference() *xpv1.Reference {
 	return mg.Spec.ProviderConfigReference
 }
 
 /*
-GetProviderReference of this SentinelDataConnectorThreatIntelligence.
+GetProviderReference of this DataConnectorThreatIntelligence.
 Deprecated: Use GetProviderConfigReference.
 */
-func (mg *SentinelDataConnectorThreatIntelligence) GetProviderReference() *xpv1.Reference {
+func (mg *DataConnectorThreatIntelligence) GetProviderReference() *xpv1.Reference {
 	return mg.Spec.ProviderReference
 }
 
-// GetWriteConnectionSecretToReference of this SentinelDataConnectorThreatIntelligence.
-func (mg *SentinelDataConnectorThreatIntelligence) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
+// GetWriteConnectionSecretToReference of this DataConnectorThreatIntelligence.
+func (mg *DataConnectorThreatIntelligence) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
 	return mg.Spec.WriteConnectionSecretToReference
 }
 
-// SetConditions of this SentinelDataConnectorThreatIntelligence.
-func (mg *SentinelDataConnectorThreatIntelligence) SetConditions(c ...xpv1.Condition) {
+// SetConditions of this DataConnectorThreatIntelligence.
+func (mg *DataConnectorThreatIntelligence) SetConditions(c ...xpv1.Condition) {
 	mg.Status.SetConditions(c...)
 }
 
-// SetDeletionPolicy of this SentinelDataConnectorThreatIntelligence.
-func (mg *SentinelDataConnectorThreatIntelligence) SetDeletionPolicy(r xpv1.DeletionPolicy) {
+// SetDeletionPolicy of this DataConnectorThreatIntelligence.
+func (mg *DataConnectorThreatIntelligence) SetDeletionPolicy(r xpv1.DeletionPolicy) {
 	mg.Spec.DeletionPolicy = r
 }
 
-// SetProviderConfigReference of this SentinelDataConnectorThreatIntelligence.
-func (mg *SentinelDataConnectorThreatIntelligence) SetProviderConfigReference(r *xpv1.Reference) {
+// SetProviderConfigReference of this DataConnectorThreatIntelligence.
+func (mg *DataConnectorThreatIntelligence) SetProviderConfigReference(r *xpv1.Reference) {
 	mg.Spec.ProviderConfigReference = r
 }
 
 /*
-SetProviderReference of this SentinelDataConnectorThreatIntelligence.
+SetProviderReference of this DataConnectorThreatIntelligence.
 Deprecated: Use SetProviderConfigReference.
 */
-func (mg *SentinelDataConnectorThreatIntelligence) SetProviderReference(r *xpv1.Reference) {
+func (mg *DataConnectorThreatIntelligence) SetProviderReference(r *xpv1.Reference) {
 	mg.Spec.ProviderReference = r
 }
 
-// SetWriteConnectionSecretToReference of this SentinelDataConnectorThreatIntelligence.
-func (mg *SentinelDataConnectorThreatIntelligence) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
+// SetWriteConnectionSecretToReference of this DataConnectorThreatIntelligence.
+func (mg *DataConnectorThreatIntelligence) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
 	mg.Spec.WriteConnectionSecretToReference = r
 }

@@ -19,8 +19,8 @@ package v1alpha1
 
 import resource "github.com/crossplane/crossplane-runtime/pkg/resource"
 
-// GetItems of this AppConfigurationKeyList.
-func (l *AppConfigurationKeyList) GetItems() []resource.Managed {
+// GetItems of this ConfigurationKeyList.
+func (l *ConfigurationKeyList) GetItems() []resource.Managed {
 	items := make([]resource.Managed, len(l.Items))
 	for i := range l.Items {
 		items[i] = &l.Items[i]
@@ -28,8 +28,8 @@ func (l *AppConfigurationKeyList) GetItems() []resource.Managed {
 	return items
 }
 
-// GetItems of this AppConfigurationList.
-func (l *AppConfigurationList) GetItems() []resource.Managed {
+// GetItems of this ConfigurationList.
+func (l *ConfigurationList) GetItems() []resource.Managed {
 	items := make([]resource.Managed, len(l.Items))
 	for i := range l.Items {
 		items[i] = &l.Items[i]
@@ -37,8 +37,8 @@ func (l *AppConfigurationList) GetItems() []resource.Managed {
 	return items
 }
 
-// GetItems of this AppServiceActiveSlotList.
-func (l *AppServiceActiveSlotList) GetItems() []resource.Managed {
+// GetItems of this ServiceActiveSlotList.
+func (l *ServiceActiveSlotList) GetItems() []resource.Managed {
 	items := make([]resource.Managed, len(l.Items))
 	for i := range l.Items {
 		items[i] = &l.Items[i]
@@ -46,8 +46,8 @@ func (l *AppServiceActiveSlotList) GetItems() []resource.Managed {
 	return items
 }
 
-// GetItems of this AppServiceCertificateBindingList.
-func (l *AppServiceCertificateBindingList) GetItems() []resource.Managed {
+// GetItems of this ServiceCertificateBindingList.
+func (l *ServiceCertificateBindingList) GetItems() []resource.Managed {
 	items := make([]resource.Managed, len(l.Items))
 	for i := range l.Items {
 		items[i] = &l.Items[i]
@@ -55,8 +55,8 @@ func (l *AppServiceCertificateBindingList) GetItems() []resource.Managed {
 	return items
 }
 
-// GetItems of this AppServiceCertificateList.
-func (l *AppServiceCertificateList) GetItems() []resource.Managed {
+// GetItems of this ServiceCertificateList.
+func (l *ServiceCertificateList) GetItems() []resource.Managed {
 	items := make([]resource.Managed, len(l.Items))
 	for i := range l.Items {
 		items[i] = &l.Items[i]
@@ -64,8 +64,8 @@ func (l *AppServiceCertificateList) GetItems() []resource.Managed {
 	return items
 }
 
-// GetItems of this AppServiceCertificateOrderList.
-func (l *AppServiceCertificateOrderList) GetItems() []resource.Managed {
+// GetItems of this ServiceCertificateOrderList.
+func (l *ServiceCertificateOrderList) GetItems() []resource.Managed {
 	items := make([]resource.Managed, len(l.Items))
 	for i := range l.Items {
 		items[i] = &l.Items[i]
@@ -73,8 +73,8 @@ func (l *AppServiceCertificateOrderList) GetItems() []resource.Managed {
 	return items
 }
 
-// GetItems of this AppServiceCustomHostnameBindingList.
-func (l *AppServiceCustomHostnameBindingList) GetItems() []resource.Managed {
+// GetItems of this ServiceCustomHostnameBindingList.
+func (l *ServiceCustomHostnameBindingList) GetItems() []resource.Managed {
 	items := make([]resource.Managed, len(l.Items))
 	for i := range l.Items {
 		items[i] = &l.Items[i]
@@ -82,8 +82,8 @@ func (l *AppServiceCustomHostnameBindingList) GetItems() []resource.Managed {
 	return items
 }
 
-// GetItems of this AppServiceEnvironmentList.
-func (l *AppServiceEnvironmentList) GetItems() []resource.Managed {
+// GetItems of this ServiceEnvironmentList.
+func (l *ServiceEnvironmentList) GetItems() []resource.Managed {
 	items := make([]resource.Managed, len(l.Items))
 	for i := range l.Items {
 		items[i] = &l.Items[i]
@@ -91,8 +91,8 @@ func (l *AppServiceEnvironmentList) GetItems() []resource.Managed {
 	return items
 }
 
-// GetItems of this AppServiceEnvironmentV3List.
-func (l *AppServiceEnvironmentV3List) GetItems() []resource.Managed {
+// GetItems of this ServiceEnvironmentV3List.
+func (l *ServiceEnvironmentV3List) GetItems() []resource.Managed {
 	items := make([]resource.Managed, len(l.Items))
 	for i := range l.Items {
 		items[i] = &l.Items[i]
@@ -100,8 +100,8 @@ func (l *AppServiceEnvironmentV3List) GetItems() []resource.Managed {
 	return items
 }
 
-// GetItems of this AppServiceHybridConnectionList.
-func (l *AppServiceHybridConnectionList) GetItems() []resource.Managed {
+// GetItems of this ServiceHybridConnectionList.
+func (l *ServiceHybridConnectionList) GetItems() []resource.Managed {
 	items := make([]resource.Managed, len(l.Items))
 	for i := range l.Items {
 		items[i] = &l.Items[i]
@@ -109,8 +109,8 @@ func (l *AppServiceHybridConnectionList) GetItems() []resource.Managed {
 	return items
 }
 
-// GetItems of this AppServiceList.
-func (l *AppServiceList) GetItems() []resource.Managed {
+// GetItems of this ServiceList.
+func (l *ServiceList) GetItems() []resource.Managed {
 	items := make([]resource.Managed, len(l.Items))
 	for i := range l.Items {
 		items[i] = &l.Items[i]
@@ -118,8 +118,8 @@ func (l *AppServiceList) GetItems() []resource.Managed {
 	return items
 }
 
-// GetItems of this AppServiceManagedCertificateList.
-func (l *AppServiceManagedCertificateList) GetItems() []resource.Managed {
+// GetItems of this ServiceManagedCertificateList.
+func (l *ServiceManagedCertificateList) GetItems() []resource.Managed {
 	items := make([]resource.Managed, len(l.Items))
 	for i := range l.Items {
 		items[i] = &l.Items[i]
@@ -127,8 +127,8 @@ func (l *AppServiceManagedCertificateList) GetItems() []resource.Managed {
 	return items
 }
 
-// GetItems of this AppServicePlanList.
-func (l *AppServicePlanList) GetItems() []resource.Managed {
+// GetItems of this ServicePlanList.
+func (l *ServicePlanList) GetItems() []resource.Managed {
 	items := make([]resource.Managed, len(l.Items))
 	for i := range l.Items {
 		items[i] = &l.Items[i]
@@ -136,8 +136,8 @@ func (l *AppServicePlanList) GetItems() []resource.Managed {
 	return items
 }
 
-// GetItems of this AppServiceSlotList.
-func (l *AppServiceSlotList) GetItems() []resource.Managed {
+// GetItems of this ServiceSlotList.
+func (l *ServiceSlotList) GetItems() []resource.Managed {
 	items := make([]resource.Managed, len(l.Items))
 	for i := range l.Items {
 		items[i] = &l.Items[i]
@@ -145,8 +145,8 @@ func (l *AppServiceSlotList) GetItems() []resource.Managed {
 	return items
 }
 
-// GetItems of this AppServiceSlotVirtualNetworkSwiftConnectionList.
-func (l *AppServiceSlotVirtualNetworkSwiftConnectionList) GetItems() []resource.Managed {
+// GetItems of this ServiceSlotVirtualNetworkSwiftConnectionList.
+func (l *ServiceSlotVirtualNetworkSwiftConnectionList) GetItems() []resource.Managed {
 	items := make([]resource.Managed, len(l.Items))
 	for i := range l.Items {
 		items[i] = &l.Items[i]
@@ -154,8 +154,8 @@ func (l *AppServiceSlotVirtualNetworkSwiftConnectionList) GetItems() []resource.
 	return items
 }
 
-// GetItems of this AppServiceSourceControlTokenList.
-func (l *AppServiceSourceControlTokenList) GetItems() []resource.Managed {
+// GetItems of this ServiceSourceControlTokenList.
+func (l *ServiceSourceControlTokenList) GetItems() []resource.Managed {
 	items := make([]resource.Managed, len(l.Items))
 	for i := range l.Items {
 		items[i] = &l.Items[i]
@@ -163,8 +163,8 @@ func (l *AppServiceSourceControlTokenList) GetItems() []resource.Managed {
 	return items
 }
 
-// GetItems of this AppServiceVirtualNetworkSwiftConnectionList.
-func (l *AppServiceVirtualNetworkSwiftConnectionList) GetItems() []resource.Managed {
+// GetItems of this ServiceVirtualNetworkSwiftConnectionList.
+func (l *ServiceVirtualNetworkSwiftConnectionList) GetItems() []resource.Managed {
 	items := make([]resource.Managed, len(l.Items))
 	for i := range l.Items {
 		items[i] = &l.Items[i]

@@ -19,8 +19,8 @@ package v1alpha1
 
 import resource "github.com/crossplane/crossplane-runtime/pkg/resource"
 
-// GetItems of this ServicebusNamespaceAuthorizationRuleList.
-func (l *ServicebusNamespaceAuthorizationRuleList) GetItems() []resource.Managed {
+// GetItems of this NamespaceAuthorizationRuleList.
+func (l *NamespaceAuthorizationRuleList) GetItems() []resource.Managed {
 	items := make([]resource.Managed, len(l.Items))
 	for i := range l.Items {
 		items[i] = &l.Items[i]
@@ -28,8 +28,8 @@ func (l *ServicebusNamespaceAuthorizationRuleList) GetItems() []resource.Managed
 	return items
 }
 
-// GetItems of this ServicebusNamespaceDisasterRecoveryConfigList.
-func (l *ServicebusNamespaceDisasterRecoveryConfigList) GetItems() []resource.Managed {
+// GetItems of this NamespaceDisasterRecoveryConfigList.
+func (l *NamespaceDisasterRecoveryConfigList) GetItems() []resource.Managed {
 	items := make([]resource.Managed, len(l.Items))
 	for i := range l.Items {
 		items[i] = &l.Items[i]
@@ -37,8 +37,8 @@ func (l *ServicebusNamespaceDisasterRecoveryConfigList) GetItems() []resource.Ma
 	return items
 }
 
-// GetItems of this ServicebusNamespaceList.
-func (l *ServicebusNamespaceList) GetItems() []resource.Managed {
+// GetItems of this NamespaceList.
+func (l *NamespaceList) GetItems() []resource.Managed {
 	items := make([]resource.Managed, len(l.Items))
 	for i := range l.Items {
 		items[i] = &l.Items[i]
@@ -46,8 +46,8 @@ func (l *ServicebusNamespaceList) GetItems() []resource.Managed {
 	return items
 }
 
-// GetItems of this ServicebusNamespaceNetworkRuleSetList.
-func (l *ServicebusNamespaceNetworkRuleSetList) GetItems() []resource.Managed {
+// GetItems of this NamespaceNetworkRuleSetList.
+func (l *NamespaceNetworkRuleSetList) GetItems() []resource.Managed {
 	items := make([]resource.Managed, len(l.Items))
 	for i := range l.Items {
 		items[i] = &l.Items[i]
@@ -55,8 +55,8 @@ func (l *ServicebusNamespaceNetworkRuleSetList) GetItems() []resource.Managed {
 	return items
 }
 
-// GetItems of this ServicebusQueueAuthorizationRuleList.
-func (l *ServicebusQueueAuthorizationRuleList) GetItems() []resource.Managed {
+// GetItems of this QueueAuthorizationRuleList.
+func (l *QueueAuthorizationRuleList) GetItems() []resource.Managed {
 	items := make([]resource.Managed, len(l.Items))
 	for i := range l.Items {
 		items[i] = &l.Items[i]
@@ -64,8 +64,8 @@ func (l *ServicebusQueueAuthorizationRuleList) GetItems() []resource.Managed {
 	return items
 }
 
-// GetItems of this ServicebusQueueList.
-func (l *ServicebusQueueList) GetItems() []resource.Managed {
+// GetItems of this QueueList.
+func (l *QueueList) GetItems() []resource.Managed {
 	items := make([]resource.Managed, len(l.Items))
 	for i := range l.Items {
 		items[i] = &l.Items[i]
@@ -73,8 +73,8 @@ func (l *ServicebusQueueList) GetItems() []resource.Managed {
 	return items
 }
 
-// GetItems of this ServicebusSubscriptionList.
-func (l *ServicebusSubscriptionList) GetItems() []resource.Managed {
+// GetItems of this SubscriptionList.
+func (l *SubscriptionList) GetItems() []resource.Managed {
 	items := make([]resource.Managed, len(l.Items))
 	for i := range l.Items {
 		items[i] = &l.Items[i]
@@ -82,8 +82,8 @@ func (l *ServicebusSubscriptionList) GetItems() []resource.Managed {
 	return items
 }
 
-// GetItems of this ServicebusSubscriptionRuleList.
-func (l *ServicebusSubscriptionRuleList) GetItems() []resource.Managed {
+// GetItems of this SubscriptionRuleList.
+func (l *SubscriptionRuleList) GetItems() []resource.Managed {
 	items := make([]resource.Managed, len(l.Items))
 	for i := range l.Items {
 		items[i] = &l.Items[i]
@@ -91,8 +91,8 @@ func (l *ServicebusSubscriptionRuleList) GetItems() []resource.Managed {
 	return items
 }
 
-// GetItems of this ServicebusTopicAuthorizationRuleList.
-func (l *ServicebusTopicAuthorizationRuleList) GetItems() []resource.Managed {
+// GetItems of this TopicAuthorizationRuleList.
+func (l *TopicAuthorizationRuleList) GetItems() []resource.Managed {
 	items := make([]resource.Managed, len(l.Items))
 	for i := range l.Items {
 		items[i] = &l.Items[i]
@@ -100,8 +100,8 @@ func (l *ServicebusTopicAuthorizationRuleList) GetItems() []resource.Managed {
 	return items
 }
 
-// GetItems of this ServicebusTopicList.
-func (l *ServicebusTopicList) GetItems() []resource.Managed {
+// GetItems of this TopicList.
+func (l *TopicList) GetItems() []resource.Managed {
 	items := make([]resource.Managed, len(l.Items))
 	for i := range l.Items {
 		items[i] = &l.Items[i]

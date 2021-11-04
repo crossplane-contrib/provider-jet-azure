@@ -19,562 +19,562 @@ package v1alpha1
 
 import xpv1 "github.com/crossplane/crossplane-runtime/apis/common/v1"
 
-// GetCondition of this PostgresqlActiveDirectoryAdministrator.
-func (mg *PostgresqlActiveDirectoryAdministrator) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
+// GetCondition of this ActiveDirectoryAdministrator.
+func (mg *ActiveDirectoryAdministrator) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
 	return mg.Status.GetCondition(ct)
 }
 
-// GetDeletionPolicy of this PostgresqlActiveDirectoryAdministrator.
-func (mg *PostgresqlActiveDirectoryAdministrator) GetDeletionPolicy() xpv1.DeletionPolicy {
+// GetDeletionPolicy of this ActiveDirectoryAdministrator.
+func (mg *ActiveDirectoryAdministrator) GetDeletionPolicy() xpv1.DeletionPolicy {
 	return mg.Spec.DeletionPolicy
 }
 
-// GetProviderConfigReference of this PostgresqlActiveDirectoryAdministrator.
-func (mg *PostgresqlActiveDirectoryAdministrator) GetProviderConfigReference() *xpv1.Reference {
+// GetProviderConfigReference of this ActiveDirectoryAdministrator.
+func (mg *ActiveDirectoryAdministrator) GetProviderConfigReference() *xpv1.Reference {
 	return mg.Spec.ProviderConfigReference
 }
 
 /*
-GetProviderReference of this PostgresqlActiveDirectoryAdministrator.
+GetProviderReference of this ActiveDirectoryAdministrator.
 Deprecated: Use GetProviderConfigReference.
 */
-func (mg *PostgresqlActiveDirectoryAdministrator) GetProviderReference() *xpv1.Reference {
+func (mg *ActiveDirectoryAdministrator) GetProviderReference() *xpv1.Reference {
 	return mg.Spec.ProviderReference
 }
 
-// GetWriteConnectionSecretToReference of this PostgresqlActiveDirectoryAdministrator.
-func (mg *PostgresqlActiveDirectoryAdministrator) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
+// GetWriteConnectionSecretToReference of this ActiveDirectoryAdministrator.
+func (mg *ActiveDirectoryAdministrator) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
 	return mg.Spec.WriteConnectionSecretToReference
 }
 
-// SetConditions of this PostgresqlActiveDirectoryAdministrator.
-func (mg *PostgresqlActiveDirectoryAdministrator) SetConditions(c ...xpv1.Condition) {
+// SetConditions of this ActiveDirectoryAdministrator.
+func (mg *ActiveDirectoryAdministrator) SetConditions(c ...xpv1.Condition) {
 	mg.Status.SetConditions(c...)
 }
 
-// SetDeletionPolicy of this PostgresqlActiveDirectoryAdministrator.
-func (mg *PostgresqlActiveDirectoryAdministrator) SetDeletionPolicy(r xpv1.DeletionPolicy) {
+// SetDeletionPolicy of this ActiveDirectoryAdministrator.
+func (mg *ActiveDirectoryAdministrator) SetDeletionPolicy(r xpv1.DeletionPolicy) {
 	mg.Spec.DeletionPolicy = r
 }
 
-// SetProviderConfigReference of this PostgresqlActiveDirectoryAdministrator.
-func (mg *PostgresqlActiveDirectoryAdministrator) SetProviderConfigReference(r *xpv1.Reference) {
+// SetProviderConfigReference of this ActiveDirectoryAdministrator.
+func (mg *ActiveDirectoryAdministrator) SetProviderConfigReference(r *xpv1.Reference) {
 	mg.Spec.ProviderConfigReference = r
 }
 
 /*
-SetProviderReference of this PostgresqlActiveDirectoryAdministrator.
+SetProviderReference of this ActiveDirectoryAdministrator.
 Deprecated: Use SetProviderConfigReference.
 */
-func (mg *PostgresqlActiveDirectoryAdministrator) SetProviderReference(r *xpv1.Reference) {
+func (mg *ActiveDirectoryAdministrator) SetProviderReference(r *xpv1.Reference) {
 	mg.Spec.ProviderReference = r
 }
 
-// SetWriteConnectionSecretToReference of this PostgresqlActiveDirectoryAdministrator.
-func (mg *PostgresqlActiveDirectoryAdministrator) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
+// SetWriteConnectionSecretToReference of this ActiveDirectoryAdministrator.
+func (mg *ActiveDirectoryAdministrator) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
 	mg.Spec.WriteConnectionSecretToReference = r
 }
 
-// GetCondition of this PostgresqlConfiguration.
-func (mg *PostgresqlConfiguration) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
+// GetCondition of this Configuration.
+func (mg *Configuration) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
 	return mg.Status.GetCondition(ct)
 }
 
-// GetDeletionPolicy of this PostgresqlConfiguration.
-func (mg *PostgresqlConfiguration) GetDeletionPolicy() xpv1.DeletionPolicy {
+// GetDeletionPolicy of this Configuration.
+func (mg *Configuration) GetDeletionPolicy() xpv1.DeletionPolicy {
 	return mg.Spec.DeletionPolicy
 }
 
-// GetProviderConfigReference of this PostgresqlConfiguration.
-func (mg *PostgresqlConfiguration) GetProviderConfigReference() *xpv1.Reference {
+// GetProviderConfigReference of this Configuration.
+func (mg *Configuration) GetProviderConfigReference() *xpv1.Reference {
 	return mg.Spec.ProviderConfigReference
 }
 
 /*
-GetProviderReference of this PostgresqlConfiguration.
+GetProviderReference of this Configuration.
 Deprecated: Use GetProviderConfigReference.
 */
-func (mg *PostgresqlConfiguration) GetProviderReference() *xpv1.Reference {
+func (mg *Configuration) GetProviderReference() *xpv1.Reference {
 	return mg.Spec.ProviderReference
 }
 
-// GetWriteConnectionSecretToReference of this PostgresqlConfiguration.
-func (mg *PostgresqlConfiguration) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
+// GetWriteConnectionSecretToReference of this Configuration.
+func (mg *Configuration) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
 	return mg.Spec.WriteConnectionSecretToReference
 }
 
-// SetConditions of this PostgresqlConfiguration.
-func (mg *PostgresqlConfiguration) SetConditions(c ...xpv1.Condition) {
+// SetConditions of this Configuration.
+func (mg *Configuration) SetConditions(c ...xpv1.Condition) {
 	mg.Status.SetConditions(c...)
 }
 
-// SetDeletionPolicy of this PostgresqlConfiguration.
-func (mg *PostgresqlConfiguration) SetDeletionPolicy(r xpv1.DeletionPolicy) {
+// SetDeletionPolicy of this Configuration.
+func (mg *Configuration) SetDeletionPolicy(r xpv1.DeletionPolicy) {
 	mg.Spec.DeletionPolicy = r
 }
 
-// SetProviderConfigReference of this PostgresqlConfiguration.
-func (mg *PostgresqlConfiguration) SetProviderConfigReference(r *xpv1.Reference) {
+// SetProviderConfigReference of this Configuration.
+func (mg *Configuration) SetProviderConfigReference(r *xpv1.Reference) {
 	mg.Spec.ProviderConfigReference = r
 }
 
 /*
-SetProviderReference of this PostgresqlConfiguration.
+SetProviderReference of this Configuration.
 Deprecated: Use SetProviderConfigReference.
 */
-func (mg *PostgresqlConfiguration) SetProviderReference(r *xpv1.Reference) {
+func (mg *Configuration) SetProviderReference(r *xpv1.Reference) {
 	mg.Spec.ProviderReference = r
 }
 
-// SetWriteConnectionSecretToReference of this PostgresqlConfiguration.
-func (mg *PostgresqlConfiguration) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
+// SetWriteConnectionSecretToReference of this Configuration.
+func (mg *Configuration) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
 	mg.Spec.WriteConnectionSecretToReference = r
 }
 
-// GetCondition of this PostgresqlDatabase.
-func (mg *PostgresqlDatabase) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
+// GetCondition of this Database.
+func (mg *Database) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
 	return mg.Status.GetCondition(ct)
 }
 
-// GetDeletionPolicy of this PostgresqlDatabase.
-func (mg *PostgresqlDatabase) GetDeletionPolicy() xpv1.DeletionPolicy {
+// GetDeletionPolicy of this Database.
+func (mg *Database) GetDeletionPolicy() xpv1.DeletionPolicy {
 	return mg.Spec.DeletionPolicy
 }
 
-// GetProviderConfigReference of this PostgresqlDatabase.
-func (mg *PostgresqlDatabase) GetProviderConfigReference() *xpv1.Reference {
+// GetProviderConfigReference of this Database.
+func (mg *Database) GetProviderConfigReference() *xpv1.Reference {
 	return mg.Spec.ProviderConfigReference
 }
 
 /*
-GetProviderReference of this PostgresqlDatabase.
+GetProviderReference of this Database.
 Deprecated: Use GetProviderConfigReference.
 */
-func (mg *PostgresqlDatabase) GetProviderReference() *xpv1.Reference {
+func (mg *Database) GetProviderReference() *xpv1.Reference {
 	return mg.Spec.ProviderReference
 }
 
-// GetWriteConnectionSecretToReference of this PostgresqlDatabase.
-func (mg *PostgresqlDatabase) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
+// GetWriteConnectionSecretToReference of this Database.
+func (mg *Database) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
 	return mg.Spec.WriteConnectionSecretToReference
 }
 
-// SetConditions of this PostgresqlDatabase.
-func (mg *PostgresqlDatabase) SetConditions(c ...xpv1.Condition) {
+// SetConditions of this Database.
+func (mg *Database) SetConditions(c ...xpv1.Condition) {
 	mg.Status.SetConditions(c...)
 }
 
-// SetDeletionPolicy of this PostgresqlDatabase.
-func (mg *PostgresqlDatabase) SetDeletionPolicy(r xpv1.DeletionPolicy) {
+// SetDeletionPolicy of this Database.
+func (mg *Database) SetDeletionPolicy(r xpv1.DeletionPolicy) {
 	mg.Spec.DeletionPolicy = r
 }
 
-// SetProviderConfigReference of this PostgresqlDatabase.
-func (mg *PostgresqlDatabase) SetProviderConfigReference(r *xpv1.Reference) {
+// SetProviderConfigReference of this Database.
+func (mg *Database) SetProviderConfigReference(r *xpv1.Reference) {
 	mg.Spec.ProviderConfigReference = r
 }
 
 /*
-SetProviderReference of this PostgresqlDatabase.
+SetProviderReference of this Database.
 Deprecated: Use SetProviderConfigReference.
 */
-func (mg *PostgresqlDatabase) SetProviderReference(r *xpv1.Reference) {
+func (mg *Database) SetProviderReference(r *xpv1.Reference) {
 	mg.Spec.ProviderReference = r
 }
 
-// SetWriteConnectionSecretToReference of this PostgresqlDatabase.
-func (mg *PostgresqlDatabase) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
+// SetWriteConnectionSecretToReference of this Database.
+func (mg *Database) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
 	mg.Spec.WriteConnectionSecretToReference = r
 }
 
-// GetCondition of this PostgresqlFirewallRule.
-func (mg *PostgresqlFirewallRule) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
+// GetCondition of this FirewallRule.
+func (mg *FirewallRule) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
 	return mg.Status.GetCondition(ct)
 }
 
-// GetDeletionPolicy of this PostgresqlFirewallRule.
-func (mg *PostgresqlFirewallRule) GetDeletionPolicy() xpv1.DeletionPolicy {
+// GetDeletionPolicy of this FirewallRule.
+func (mg *FirewallRule) GetDeletionPolicy() xpv1.DeletionPolicy {
 	return mg.Spec.DeletionPolicy
 }
 
-// GetProviderConfigReference of this PostgresqlFirewallRule.
-func (mg *PostgresqlFirewallRule) GetProviderConfigReference() *xpv1.Reference {
+// GetProviderConfigReference of this FirewallRule.
+func (mg *FirewallRule) GetProviderConfigReference() *xpv1.Reference {
 	return mg.Spec.ProviderConfigReference
 }
 
 /*
-GetProviderReference of this PostgresqlFirewallRule.
+GetProviderReference of this FirewallRule.
 Deprecated: Use GetProviderConfigReference.
 */
-func (mg *PostgresqlFirewallRule) GetProviderReference() *xpv1.Reference {
+func (mg *FirewallRule) GetProviderReference() *xpv1.Reference {
 	return mg.Spec.ProviderReference
 }
 
-// GetWriteConnectionSecretToReference of this PostgresqlFirewallRule.
-func (mg *PostgresqlFirewallRule) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
+// GetWriteConnectionSecretToReference of this FirewallRule.
+func (mg *FirewallRule) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
 	return mg.Spec.WriteConnectionSecretToReference
 }
 
-// SetConditions of this PostgresqlFirewallRule.
-func (mg *PostgresqlFirewallRule) SetConditions(c ...xpv1.Condition) {
+// SetConditions of this FirewallRule.
+func (mg *FirewallRule) SetConditions(c ...xpv1.Condition) {
 	mg.Status.SetConditions(c...)
 }
 
-// SetDeletionPolicy of this PostgresqlFirewallRule.
-func (mg *PostgresqlFirewallRule) SetDeletionPolicy(r xpv1.DeletionPolicy) {
+// SetDeletionPolicy of this FirewallRule.
+func (mg *FirewallRule) SetDeletionPolicy(r xpv1.DeletionPolicy) {
 	mg.Spec.DeletionPolicy = r
 }
 
-// SetProviderConfigReference of this PostgresqlFirewallRule.
-func (mg *PostgresqlFirewallRule) SetProviderConfigReference(r *xpv1.Reference) {
+// SetProviderConfigReference of this FirewallRule.
+func (mg *FirewallRule) SetProviderConfigReference(r *xpv1.Reference) {
 	mg.Spec.ProviderConfigReference = r
 }
 
 /*
-SetProviderReference of this PostgresqlFirewallRule.
+SetProviderReference of this FirewallRule.
 Deprecated: Use SetProviderConfigReference.
 */
-func (mg *PostgresqlFirewallRule) SetProviderReference(r *xpv1.Reference) {
+func (mg *FirewallRule) SetProviderReference(r *xpv1.Reference) {
 	mg.Spec.ProviderReference = r
 }
 
-// SetWriteConnectionSecretToReference of this PostgresqlFirewallRule.
-func (mg *PostgresqlFirewallRule) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
+// SetWriteConnectionSecretToReference of this FirewallRule.
+func (mg *FirewallRule) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
 	mg.Spec.WriteConnectionSecretToReference = r
 }
 
-// GetCondition of this PostgresqlFlexibleServer.
-func (mg *PostgresqlFlexibleServer) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
+// GetCondition of this FlexibleServer.
+func (mg *FlexibleServer) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
 	return mg.Status.GetCondition(ct)
 }
 
-// GetDeletionPolicy of this PostgresqlFlexibleServer.
-func (mg *PostgresqlFlexibleServer) GetDeletionPolicy() xpv1.DeletionPolicy {
+// GetDeletionPolicy of this FlexibleServer.
+func (mg *FlexibleServer) GetDeletionPolicy() xpv1.DeletionPolicy {
 	return mg.Spec.DeletionPolicy
 }
 
-// GetProviderConfigReference of this PostgresqlFlexibleServer.
-func (mg *PostgresqlFlexibleServer) GetProviderConfigReference() *xpv1.Reference {
+// GetProviderConfigReference of this FlexibleServer.
+func (mg *FlexibleServer) GetProviderConfigReference() *xpv1.Reference {
 	return mg.Spec.ProviderConfigReference
 }
 
 /*
-GetProviderReference of this PostgresqlFlexibleServer.
+GetProviderReference of this FlexibleServer.
 Deprecated: Use GetProviderConfigReference.
 */
-func (mg *PostgresqlFlexibleServer) GetProviderReference() *xpv1.Reference {
+func (mg *FlexibleServer) GetProviderReference() *xpv1.Reference {
 	return mg.Spec.ProviderReference
 }
 
-// GetWriteConnectionSecretToReference of this PostgresqlFlexibleServer.
-func (mg *PostgresqlFlexibleServer) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
+// GetWriteConnectionSecretToReference of this FlexibleServer.
+func (mg *FlexibleServer) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
 	return mg.Spec.WriteConnectionSecretToReference
 }
 
-// SetConditions of this PostgresqlFlexibleServer.
-func (mg *PostgresqlFlexibleServer) SetConditions(c ...xpv1.Condition) {
+// SetConditions of this FlexibleServer.
+func (mg *FlexibleServer) SetConditions(c ...xpv1.Condition) {
 	mg.Status.SetConditions(c...)
 }
 
-// SetDeletionPolicy of this PostgresqlFlexibleServer.
-func (mg *PostgresqlFlexibleServer) SetDeletionPolicy(r xpv1.DeletionPolicy) {
+// SetDeletionPolicy of this FlexibleServer.
+func (mg *FlexibleServer) SetDeletionPolicy(r xpv1.DeletionPolicy) {
 	mg.Spec.DeletionPolicy = r
 }
 
-// SetProviderConfigReference of this PostgresqlFlexibleServer.
-func (mg *PostgresqlFlexibleServer) SetProviderConfigReference(r *xpv1.Reference) {
+// SetProviderConfigReference of this FlexibleServer.
+func (mg *FlexibleServer) SetProviderConfigReference(r *xpv1.Reference) {
 	mg.Spec.ProviderConfigReference = r
 }
 
 /*
-SetProviderReference of this PostgresqlFlexibleServer.
+SetProviderReference of this FlexibleServer.
 Deprecated: Use SetProviderConfigReference.
 */
-func (mg *PostgresqlFlexibleServer) SetProviderReference(r *xpv1.Reference) {
+func (mg *FlexibleServer) SetProviderReference(r *xpv1.Reference) {
 	mg.Spec.ProviderReference = r
 }
 
-// SetWriteConnectionSecretToReference of this PostgresqlFlexibleServer.
-func (mg *PostgresqlFlexibleServer) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
+// SetWriteConnectionSecretToReference of this FlexibleServer.
+func (mg *FlexibleServer) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
 	mg.Spec.WriteConnectionSecretToReference = r
 }
 
-// GetCondition of this PostgresqlFlexibleServerConfiguration.
-func (mg *PostgresqlFlexibleServerConfiguration) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
+// GetCondition of this FlexibleServerConfiguration.
+func (mg *FlexibleServerConfiguration) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
 	return mg.Status.GetCondition(ct)
 }
 
-// GetDeletionPolicy of this PostgresqlFlexibleServerConfiguration.
-func (mg *PostgresqlFlexibleServerConfiguration) GetDeletionPolicy() xpv1.DeletionPolicy {
+// GetDeletionPolicy of this FlexibleServerConfiguration.
+func (mg *FlexibleServerConfiguration) GetDeletionPolicy() xpv1.DeletionPolicy {
 	return mg.Spec.DeletionPolicy
 }
 
-// GetProviderConfigReference of this PostgresqlFlexibleServerConfiguration.
-func (mg *PostgresqlFlexibleServerConfiguration) GetProviderConfigReference() *xpv1.Reference {
+// GetProviderConfigReference of this FlexibleServerConfiguration.
+func (mg *FlexibleServerConfiguration) GetProviderConfigReference() *xpv1.Reference {
 	return mg.Spec.ProviderConfigReference
 }
 
 /*
-GetProviderReference of this PostgresqlFlexibleServerConfiguration.
+GetProviderReference of this FlexibleServerConfiguration.
 Deprecated: Use GetProviderConfigReference.
 */
-func (mg *PostgresqlFlexibleServerConfiguration) GetProviderReference() *xpv1.Reference {
+func (mg *FlexibleServerConfiguration) GetProviderReference() *xpv1.Reference {
 	return mg.Spec.ProviderReference
 }
 
-// GetWriteConnectionSecretToReference of this PostgresqlFlexibleServerConfiguration.
-func (mg *PostgresqlFlexibleServerConfiguration) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
+// GetWriteConnectionSecretToReference of this FlexibleServerConfiguration.
+func (mg *FlexibleServerConfiguration) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
 	return mg.Spec.WriteConnectionSecretToReference
 }
 
-// SetConditions of this PostgresqlFlexibleServerConfiguration.
-func (mg *PostgresqlFlexibleServerConfiguration) SetConditions(c ...xpv1.Condition) {
+// SetConditions of this FlexibleServerConfiguration.
+func (mg *FlexibleServerConfiguration) SetConditions(c ...xpv1.Condition) {
 	mg.Status.SetConditions(c...)
 }
 
-// SetDeletionPolicy of this PostgresqlFlexibleServerConfiguration.
-func (mg *PostgresqlFlexibleServerConfiguration) SetDeletionPolicy(r xpv1.DeletionPolicy) {
+// SetDeletionPolicy of this FlexibleServerConfiguration.
+func (mg *FlexibleServerConfiguration) SetDeletionPolicy(r xpv1.DeletionPolicy) {
 	mg.Spec.DeletionPolicy = r
 }
 
-// SetProviderConfigReference of this PostgresqlFlexibleServerConfiguration.
-func (mg *PostgresqlFlexibleServerConfiguration) SetProviderConfigReference(r *xpv1.Reference) {
+// SetProviderConfigReference of this FlexibleServerConfiguration.
+func (mg *FlexibleServerConfiguration) SetProviderConfigReference(r *xpv1.Reference) {
 	mg.Spec.ProviderConfigReference = r
 }
 
 /*
-SetProviderReference of this PostgresqlFlexibleServerConfiguration.
+SetProviderReference of this FlexibleServerConfiguration.
 Deprecated: Use SetProviderConfigReference.
 */
-func (mg *PostgresqlFlexibleServerConfiguration) SetProviderReference(r *xpv1.Reference) {
+func (mg *FlexibleServerConfiguration) SetProviderReference(r *xpv1.Reference) {
 	mg.Spec.ProviderReference = r
 }
 
-// SetWriteConnectionSecretToReference of this PostgresqlFlexibleServerConfiguration.
-func (mg *PostgresqlFlexibleServerConfiguration) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
+// SetWriteConnectionSecretToReference of this FlexibleServerConfiguration.
+func (mg *FlexibleServerConfiguration) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
 	mg.Spec.WriteConnectionSecretToReference = r
 }
 
-// GetCondition of this PostgresqlFlexibleServerDatabase.
-func (mg *PostgresqlFlexibleServerDatabase) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
+// GetCondition of this FlexibleServerDatabase.
+func (mg *FlexibleServerDatabase) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
 	return mg.Status.GetCondition(ct)
 }
 
-// GetDeletionPolicy of this PostgresqlFlexibleServerDatabase.
-func (mg *PostgresqlFlexibleServerDatabase) GetDeletionPolicy() xpv1.DeletionPolicy {
+// GetDeletionPolicy of this FlexibleServerDatabase.
+func (mg *FlexibleServerDatabase) GetDeletionPolicy() xpv1.DeletionPolicy {
 	return mg.Spec.DeletionPolicy
 }
 
-// GetProviderConfigReference of this PostgresqlFlexibleServerDatabase.
-func (mg *PostgresqlFlexibleServerDatabase) GetProviderConfigReference() *xpv1.Reference {
+// GetProviderConfigReference of this FlexibleServerDatabase.
+func (mg *FlexibleServerDatabase) GetProviderConfigReference() *xpv1.Reference {
 	return mg.Spec.ProviderConfigReference
 }
 
 /*
-GetProviderReference of this PostgresqlFlexibleServerDatabase.
+GetProviderReference of this FlexibleServerDatabase.
 Deprecated: Use GetProviderConfigReference.
 */
-func (mg *PostgresqlFlexibleServerDatabase) GetProviderReference() *xpv1.Reference {
+func (mg *FlexibleServerDatabase) GetProviderReference() *xpv1.Reference {
 	return mg.Spec.ProviderReference
 }
 
-// GetWriteConnectionSecretToReference of this PostgresqlFlexibleServerDatabase.
-func (mg *PostgresqlFlexibleServerDatabase) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
+// GetWriteConnectionSecretToReference of this FlexibleServerDatabase.
+func (mg *FlexibleServerDatabase) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
 	return mg.Spec.WriteConnectionSecretToReference
 }
 
-// SetConditions of this PostgresqlFlexibleServerDatabase.
-func (mg *PostgresqlFlexibleServerDatabase) SetConditions(c ...xpv1.Condition) {
+// SetConditions of this FlexibleServerDatabase.
+func (mg *FlexibleServerDatabase) SetConditions(c ...xpv1.Condition) {
 	mg.Status.SetConditions(c...)
 }
 
-// SetDeletionPolicy of this PostgresqlFlexibleServerDatabase.
-func (mg *PostgresqlFlexibleServerDatabase) SetDeletionPolicy(r xpv1.DeletionPolicy) {
+// SetDeletionPolicy of this FlexibleServerDatabase.
+func (mg *FlexibleServerDatabase) SetDeletionPolicy(r xpv1.DeletionPolicy) {
 	mg.Spec.DeletionPolicy = r
 }
 
-// SetProviderConfigReference of this PostgresqlFlexibleServerDatabase.
-func (mg *PostgresqlFlexibleServerDatabase) SetProviderConfigReference(r *xpv1.Reference) {
+// SetProviderConfigReference of this FlexibleServerDatabase.
+func (mg *FlexibleServerDatabase) SetProviderConfigReference(r *xpv1.Reference) {
 	mg.Spec.ProviderConfigReference = r
 }
 
 /*
-SetProviderReference of this PostgresqlFlexibleServerDatabase.
+SetProviderReference of this FlexibleServerDatabase.
 Deprecated: Use SetProviderConfigReference.
 */
-func (mg *PostgresqlFlexibleServerDatabase) SetProviderReference(r *xpv1.Reference) {
+func (mg *FlexibleServerDatabase) SetProviderReference(r *xpv1.Reference) {
 	mg.Spec.ProviderReference = r
 }
 
-// SetWriteConnectionSecretToReference of this PostgresqlFlexibleServerDatabase.
-func (mg *PostgresqlFlexibleServerDatabase) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
+// SetWriteConnectionSecretToReference of this FlexibleServerDatabase.
+func (mg *FlexibleServerDatabase) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
 	mg.Spec.WriteConnectionSecretToReference = r
 }
 
-// GetCondition of this PostgresqlFlexibleServerFirewallRule.
-func (mg *PostgresqlFlexibleServerFirewallRule) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
+// GetCondition of this FlexibleServerFirewallRule.
+func (mg *FlexibleServerFirewallRule) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
 	return mg.Status.GetCondition(ct)
 }
 
-// GetDeletionPolicy of this PostgresqlFlexibleServerFirewallRule.
-func (mg *PostgresqlFlexibleServerFirewallRule) GetDeletionPolicy() xpv1.DeletionPolicy {
+// GetDeletionPolicy of this FlexibleServerFirewallRule.
+func (mg *FlexibleServerFirewallRule) GetDeletionPolicy() xpv1.DeletionPolicy {
 	return mg.Spec.DeletionPolicy
 }
 
-// GetProviderConfigReference of this PostgresqlFlexibleServerFirewallRule.
-func (mg *PostgresqlFlexibleServerFirewallRule) GetProviderConfigReference() *xpv1.Reference {
+// GetProviderConfigReference of this FlexibleServerFirewallRule.
+func (mg *FlexibleServerFirewallRule) GetProviderConfigReference() *xpv1.Reference {
 	return mg.Spec.ProviderConfigReference
 }
 
 /*
-GetProviderReference of this PostgresqlFlexibleServerFirewallRule.
+GetProviderReference of this FlexibleServerFirewallRule.
 Deprecated: Use GetProviderConfigReference.
 */
-func (mg *PostgresqlFlexibleServerFirewallRule) GetProviderReference() *xpv1.Reference {
+func (mg *FlexibleServerFirewallRule) GetProviderReference() *xpv1.Reference {
 	return mg.Spec.ProviderReference
 }
 
-// GetWriteConnectionSecretToReference of this PostgresqlFlexibleServerFirewallRule.
-func (mg *PostgresqlFlexibleServerFirewallRule) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
+// GetWriteConnectionSecretToReference of this FlexibleServerFirewallRule.
+func (mg *FlexibleServerFirewallRule) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
 	return mg.Spec.WriteConnectionSecretToReference
 }
 
-// SetConditions of this PostgresqlFlexibleServerFirewallRule.
-func (mg *PostgresqlFlexibleServerFirewallRule) SetConditions(c ...xpv1.Condition) {
+// SetConditions of this FlexibleServerFirewallRule.
+func (mg *FlexibleServerFirewallRule) SetConditions(c ...xpv1.Condition) {
 	mg.Status.SetConditions(c...)
 }
 
-// SetDeletionPolicy of this PostgresqlFlexibleServerFirewallRule.
-func (mg *PostgresqlFlexibleServerFirewallRule) SetDeletionPolicy(r xpv1.DeletionPolicy) {
+// SetDeletionPolicy of this FlexibleServerFirewallRule.
+func (mg *FlexibleServerFirewallRule) SetDeletionPolicy(r xpv1.DeletionPolicy) {
 	mg.Spec.DeletionPolicy = r
 }
 
-// SetProviderConfigReference of this PostgresqlFlexibleServerFirewallRule.
-func (mg *PostgresqlFlexibleServerFirewallRule) SetProviderConfigReference(r *xpv1.Reference) {
+// SetProviderConfigReference of this FlexibleServerFirewallRule.
+func (mg *FlexibleServerFirewallRule) SetProviderConfigReference(r *xpv1.Reference) {
 	mg.Spec.ProviderConfigReference = r
 }
 
 /*
-SetProviderReference of this PostgresqlFlexibleServerFirewallRule.
+SetProviderReference of this FlexibleServerFirewallRule.
 Deprecated: Use SetProviderConfigReference.
 */
-func (mg *PostgresqlFlexibleServerFirewallRule) SetProviderReference(r *xpv1.Reference) {
+func (mg *FlexibleServerFirewallRule) SetProviderReference(r *xpv1.Reference) {
 	mg.Spec.ProviderReference = r
 }
 
-// SetWriteConnectionSecretToReference of this PostgresqlFlexibleServerFirewallRule.
-func (mg *PostgresqlFlexibleServerFirewallRule) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
+// SetWriteConnectionSecretToReference of this FlexibleServerFirewallRule.
+func (mg *FlexibleServerFirewallRule) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
 	mg.Spec.WriteConnectionSecretToReference = r
 }
 
-// GetCondition of this PostgresqlServer.
-func (mg *PostgresqlServer) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
+// GetCondition of this Server.
+func (mg *Server) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
 	return mg.Status.GetCondition(ct)
 }
 
-// GetDeletionPolicy of this PostgresqlServer.
-func (mg *PostgresqlServer) GetDeletionPolicy() xpv1.DeletionPolicy {
+// GetDeletionPolicy of this Server.
+func (mg *Server) GetDeletionPolicy() xpv1.DeletionPolicy {
 	return mg.Spec.DeletionPolicy
 }
 
-// GetProviderConfigReference of this PostgresqlServer.
-func (mg *PostgresqlServer) GetProviderConfigReference() *xpv1.Reference {
+// GetProviderConfigReference of this Server.
+func (mg *Server) GetProviderConfigReference() *xpv1.Reference {
 	return mg.Spec.ProviderConfigReference
 }
 
 /*
-GetProviderReference of this PostgresqlServer.
+GetProviderReference of this Server.
 Deprecated: Use GetProviderConfigReference.
 */
-func (mg *PostgresqlServer) GetProviderReference() *xpv1.Reference {
+func (mg *Server) GetProviderReference() *xpv1.Reference {
 	return mg.Spec.ProviderReference
 }
 
-// GetWriteConnectionSecretToReference of this PostgresqlServer.
-func (mg *PostgresqlServer) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
+// GetWriteConnectionSecretToReference of this Server.
+func (mg *Server) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
 	return mg.Spec.WriteConnectionSecretToReference
 }
 
-// SetConditions of this PostgresqlServer.
-func (mg *PostgresqlServer) SetConditions(c ...xpv1.Condition) {
+// SetConditions of this Server.
+func (mg *Server) SetConditions(c ...xpv1.Condition) {
 	mg.Status.SetConditions(c...)
 }
 
-// SetDeletionPolicy of this PostgresqlServer.
-func (mg *PostgresqlServer) SetDeletionPolicy(r xpv1.DeletionPolicy) {
+// SetDeletionPolicy of this Server.
+func (mg *Server) SetDeletionPolicy(r xpv1.DeletionPolicy) {
 	mg.Spec.DeletionPolicy = r
 }
 
-// SetProviderConfigReference of this PostgresqlServer.
-func (mg *PostgresqlServer) SetProviderConfigReference(r *xpv1.Reference) {
+// SetProviderConfigReference of this Server.
+func (mg *Server) SetProviderConfigReference(r *xpv1.Reference) {
 	mg.Spec.ProviderConfigReference = r
 }
 
 /*
-SetProviderReference of this PostgresqlServer.
+SetProviderReference of this Server.
 Deprecated: Use SetProviderConfigReference.
 */
-func (mg *PostgresqlServer) SetProviderReference(r *xpv1.Reference) {
+func (mg *Server) SetProviderReference(r *xpv1.Reference) {
 	mg.Spec.ProviderReference = r
 }
 
-// SetWriteConnectionSecretToReference of this PostgresqlServer.
-func (mg *PostgresqlServer) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
+// SetWriteConnectionSecretToReference of this Server.
+func (mg *Server) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
 	mg.Spec.WriteConnectionSecretToReference = r
 }
 
-// GetCondition of this PostgresqlVirtualNetworkRule.
-func (mg *PostgresqlVirtualNetworkRule) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
+// GetCondition of this VirtualNetworkRule.
+func (mg *VirtualNetworkRule) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
 	return mg.Status.GetCondition(ct)
 }
 
-// GetDeletionPolicy of this PostgresqlVirtualNetworkRule.
-func (mg *PostgresqlVirtualNetworkRule) GetDeletionPolicy() xpv1.DeletionPolicy {
+// GetDeletionPolicy of this VirtualNetworkRule.
+func (mg *VirtualNetworkRule) GetDeletionPolicy() xpv1.DeletionPolicy {
 	return mg.Spec.DeletionPolicy
 }
 
-// GetProviderConfigReference of this PostgresqlVirtualNetworkRule.
-func (mg *PostgresqlVirtualNetworkRule) GetProviderConfigReference() *xpv1.Reference {
+// GetProviderConfigReference of this VirtualNetworkRule.
+func (mg *VirtualNetworkRule) GetProviderConfigReference() *xpv1.Reference {
 	return mg.Spec.ProviderConfigReference
 }
 
 /*
-GetProviderReference of this PostgresqlVirtualNetworkRule.
+GetProviderReference of this VirtualNetworkRule.
 Deprecated: Use GetProviderConfigReference.
 */
-func (mg *PostgresqlVirtualNetworkRule) GetProviderReference() *xpv1.Reference {
+func (mg *VirtualNetworkRule) GetProviderReference() *xpv1.Reference {
 	return mg.Spec.ProviderReference
 }
 
-// GetWriteConnectionSecretToReference of this PostgresqlVirtualNetworkRule.
-func (mg *PostgresqlVirtualNetworkRule) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
+// GetWriteConnectionSecretToReference of this VirtualNetworkRule.
+func (mg *VirtualNetworkRule) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
 	return mg.Spec.WriteConnectionSecretToReference
 }
 
-// SetConditions of this PostgresqlVirtualNetworkRule.
-func (mg *PostgresqlVirtualNetworkRule) SetConditions(c ...xpv1.Condition) {
+// SetConditions of this VirtualNetworkRule.
+func (mg *VirtualNetworkRule) SetConditions(c ...xpv1.Condition) {
 	mg.Status.SetConditions(c...)
 }
 
-// SetDeletionPolicy of this PostgresqlVirtualNetworkRule.
-func (mg *PostgresqlVirtualNetworkRule) SetDeletionPolicy(r xpv1.DeletionPolicy) {
+// SetDeletionPolicy of this VirtualNetworkRule.
+func (mg *VirtualNetworkRule) SetDeletionPolicy(r xpv1.DeletionPolicy) {
 	mg.Spec.DeletionPolicy = r
 }
 
-// SetProviderConfigReference of this PostgresqlVirtualNetworkRule.
-func (mg *PostgresqlVirtualNetworkRule) SetProviderConfigReference(r *xpv1.Reference) {
+// SetProviderConfigReference of this VirtualNetworkRule.
+func (mg *VirtualNetworkRule) SetProviderConfigReference(r *xpv1.Reference) {
 	mg.Spec.ProviderConfigReference = r
 }
 
 /*
-SetProviderReference of this PostgresqlVirtualNetworkRule.
+SetProviderReference of this VirtualNetworkRule.
 Deprecated: Use SetProviderConfigReference.
 */
-func (mg *PostgresqlVirtualNetworkRule) SetProviderReference(r *xpv1.Reference) {
+func (mg *VirtualNetworkRule) SetProviderReference(r *xpv1.Reference) {
 	mg.Spec.ProviderReference = r
 }
 
-// SetWriteConnectionSecretToReference of this PostgresqlVirtualNetworkRule.
-func (mg *PostgresqlVirtualNetworkRule) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
+// SetWriteConnectionSecretToReference of this VirtualNetworkRule.
+func (mg *VirtualNetworkRule) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
 	mg.Spec.WriteConnectionSecretToReference = r
 }

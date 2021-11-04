@@ -19,8 +19,8 @@ package v1alpha1
 
 import resource "github.com/crossplane/crossplane-runtime/pkg/resource"
 
-// GetItems of this KustoAttachedDatabaseConfigurationList.
-func (l *KustoAttachedDatabaseConfigurationList) GetItems() []resource.Managed {
+// GetItems of this AttachedDatabaseConfigurationList.
+func (l *AttachedDatabaseConfigurationList) GetItems() []resource.Managed {
 	items := make([]resource.Managed, len(l.Items))
 	for i := range l.Items {
 		items[i] = &l.Items[i]
@@ -28,8 +28,8 @@ func (l *KustoAttachedDatabaseConfigurationList) GetItems() []resource.Managed {
 	return items
 }
 
-// GetItems of this KustoClusterCustomerManagedKeyList.
-func (l *KustoClusterCustomerManagedKeyList) GetItems() []resource.Managed {
+// GetItems of this ClusterCustomerManagedKeyList.
+func (l *ClusterCustomerManagedKeyList) GetItems() []resource.Managed {
 	items := make([]resource.Managed, len(l.Items))
 	for i := range l.Items {
 		items[i] = &l.Items[i]
@@ -37,8 +37,8 @@ func (l *KustoClusterCustomerManagedKeyList) GetItems() []resource.Managed {
 	return items
 }
 
-// GetItems of this KustoClusterList.
-func (l *KustoClusterList) GetItems() []resource.Managed {
+// GetItems of this ClusterList.
+func (l *ClusterList) GetItems() []resource.Managed {
 	items := make([]resource.Managed, len(l.Items))
 	for i := range l.Items {
 		items[i] = &l.Items[i]
@@ -46,8 +46,8 @@ func (l *KustoClusterList) GetItems() []resource.Managed {
 	return items
 }
 
-// GetItems of this KustoClusterPrincipalAssignmentList.
-func (l *KustoClusterPrincipalAssignmentList) GetItems() []resource.Managed {
+// GetItems of this ClusterPrincipalAssignmentList.
+func (l *ClusterPrincipalAssignmentList) GetItems() []resource.Managed {
 	items := make([]resource.Managed, len(l.Items))
 	for i := range l.Items {
 		items[i] = &l.Items[i]
@@ -55,8 +55,8 @@ func (l *KustoClusterPrincipalAssignmentList) GetItems() []resource.Managed {
 	return items
 }
 
-// GetItems of this KustoDatabaseList.
-func (l *KustoDatabaseList) GetItems() []resource.Managed {
+// GetItems of this DatabaseList.
+func (l *DatabaseList) GetItems() []resource.Managed {
 	items := make([]resource.Managed, len(l.Items))
 	for i := range l.Items {
 		items[i] = &l.Items[i]
@@ -64,8 +64,8 @@ func (l *KustoDatabaseList) GetItems() []resource.Managed {
 	return items
 }
 
-// GetItems of this KustoDatabasePrincipalAssignmentList.
-func (l *KustoDatabasePrincipalAssignmentList) GetItems() []resource.Managed {
+// GetItems of this DatabasePrincipalAssignmentList.
+func (l *DatabasePrincipalAssignmentList) GetItems() []resource.Managed {
 	items := make([]resource.Managed, len(l.Items))
 	for i := range l.Items {
 		items[i] = &l.Items[i]
@@ -73,8 +73,8 @@ func (l *KustoDatabasePrincipalAssignmentList) GetItems() []resource.Managed {
 	return items
 }
 
-// GetItems of this KustoDatabasePrincipalList.
-func (l *KustoDatabasePrincipalList) GetItems() []resource.Managed {
+// GetItems of this DatabasePrincipalList.
+func (l *DatabasePrincipalList) GetItems() []resource.Managed {
 	items := make([]resource.Managed, len(l.Items))
 	for i := range l.Items {
 		items[i] = &l.Items[i]
@@ -82,8 +82,8 @@ func (l *KustoDatabasePrincipalList) GetItems() []resource.Managed {
 	return items
 }
 
-// GetItems of this KustoEventgridDataConnectionList.
-func (l *KustoEventgridDataConnectionList) GetItems() []resource.Managed {
+// GetItems of this EventgridDataConnectionList.
+func (l *EventgridDataConnectionList) GetItems() []resource.Managed {
 	items := make([]resource.Managed, len(l.Items))
 	for i := range l.Items {
 		items[i] = &l.Items[i]
@@ -91,8 +91,8 @@ func (l *KustoEventgridDataConnectionList) GetItems() []resource.Managed {
 	return items
 }
 
-// GetItems of this KustoEventhubDataConnectionList.
-func (l *KustoEventhubDataConnectionList) GetItems() []resource.Managed {
+// GetItems of this EventhubDataConnectionList.
+func (l *EventhubDataConnectionList) GetItems() []resource.Managed {
 	items := make([]resource.Managed, len(l.Items))
 	for i := range l.Items {
 		items[i] = &l.Items[i]
@@ -100,8 +100,8 @@ func (l *KustoEventhubDataConnectionList) GetItems() []resource.Managed {
 	return items
 }
 
-// GetItems of this KustoIothubDataConnectionList.
-func (l *KustoIothubDataConnectionList) GetItems() []resource.Managed {
+// GetItems of this IothubDataConnectionList.
+func (l *IothubDataConnectionList) GetItems() []resource.Managed {
 	items := make([]resource.Managed, len(l.Items))
 	for i := range l.Items {
 		items[i] = &l.Items[i]

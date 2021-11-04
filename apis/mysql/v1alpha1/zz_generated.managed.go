@@ -19,394 +19,394 @@ package v1alpha1
 
 import xpv1 "github.com/crossplane/crossplane-runtime/apis/common/v1"
 
-// GetCondition of this MysqlActiveDirectoryAdministrator.
-func (mg *MysqlActiveDirectoryAdministrator) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
+// GetCondition of this ActiveDirectoryAdministrator.
+func (mg *ActiveDirectoryAdministrator) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
 	return mg.Status.GetCondition(ct)
 }
 
-// GetDeletionPolicy of this MysqlActiveDirectoryAdministrator.
-func (mg *MysqlActiveDirectoryAdministrator) GetDeletionPolicy() xpv1.DeletionPolicy {
+// GetDeletionPolicy of this ActiveDirectoryAdministrator.
+func (mg *ActiveDirectoryAdministrator) GetDeletionPolicy() xpv1.DeletionPolicy {
 	return mg.Spec.DeletionPolicy
 }
 
-// GetProviderConfigReference of this MysqlActiveDirectoryAdministrator.
-func (mg *MysqlActiveDirectoryAdministrator) GetProviderConfigReference() *xpv1.Reference {
+// GetProviderConfigReference of this ActiveDirectoryAdministrator.
+func (mg *ActiveDirectoryAdministrator) GetProviderConfigReference() *xpv1.Reference {
 	return mg.Spec.ProviderConfigReference
 }
 
 /*
-GetProviderReference of this MysqlActiveDirectoryAdministrator.
+GetProviderReference of this ActiveDirectoryAdministrator.
 Deprecated: Use GetProviderConfigReference.
 */
-func (mg *MysqlActiveDirectoryAdministrator) GetProviderReference() *xpv1.Reference {
+func (mg *ActiveDirectoryAdministrator) GetProviderReference() *xpv1.Reference {
 	return mg.Spec.ProviderReference
 }
 
-// GetWriteConnectionSecretToReference of this MysqlActiveDirectoryAdministrator.
-func (mg *MysqlActiveDirectoryAdministrator) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
+// GetWriteConnectionSecretToReference of this ActiveDirectoryAdministrator.
+func (mg *ActiveDirectoryAdministrator) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
 	return mg.Spec.WriteConnectionSecretToReference
 }
 
-// SetConditions of this MysqlActiveDirectoryAdministrator.
-func (mg *MysqlActiveDirectoryAdministrator) SetConditions(c ...xpv1.Condition) {
+// SetConditions of this ActiveDirectoryAdministrator.
+func (mg *ActiveDirectoryAdministrator) SetConditions(c ...xpv1.Condition) {
 	mg.Status.SetConditions(c...)
 }
 
-// SetDeletionPolicy of this MysqlActiveDirectoryAdministrator.
-func (mg *MysqlActiveDirectoryAdministrator) SetDeletionPolicy(r xpv1.DeletionPolicy) {
+// SetDeletionPolicy of this ActiveDirectoryAdministrator.
+func (mg *ActiveDirectoryAdministrator) SetDeletionPolicy(r xpv1.DeletionPolicy) {
 	mg.Spec.DeletionPolicy = r
 }
 
-// SetProviderConfigReference of this MysqlActiveDirectoryAdministrator.
-func (mg *MysqlActiveDirectoryAdministrator) SetProviderConfigReference(r *xpv1.Reference) {
+// SetProviderConfigReference of this ActiveDirectoryAdministrator.
+func (mg *ActiveDirectoryAdministrator) SetProviderConfigReference(r *xpv1.Reference) {
 	mg.Spec.ProviderConfigReference = r
 }
 
 /*
-SetProviderReference of this MysqlActiveDirectoryAdministrator.
+SetProviderReference of this ActiveDirectoryAdministrator.
 Deprecated: Use SetProviderConfigReference.
 */
-func (mg *MysqlActiveDirectoryAdministrator) SetProviderReference(r *xpv1.Reference) {
+func (mg *ActiveDirectoryAdministrator) SetProviderReference(r *xpv1.Reference) {
 	mg.Spec.ProviderReference = r
 }
 
-// SetWriteConnectionSecretToReference of this MysqlActiveDirectoryAdministrator.
-func (mg *MysqlActiveDirectoryAdministrator) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
+// SetWriteConnectionSecretToReference of this ActiveDirectoryAdministrator.
+func (mg *ActiveDirectoryAdministrator) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
 	mg.Spec.WriteConnectionSecretToReference = r
 }
 
-// GetCondition of this MysqlConfiguration.
-func (mg *MysqlConfiguration) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
+// GetCondition of this Configuration.
+func (mg *Configuration) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
 	return mg.Status.GetCondition(ct)
 }
 
-// GetDeletionPolicy of this MysqlConfiguration.
-func (mg *MysqlConfiguration) GetDeletionPolicy() xpv1.DeletionPolicy {
+// GetDeletionPolicy of this Configuration.
+func (mg *Configuration) GetDeletionPolicy() xpv1.DeletionPolicy {
 	return mg.Spec.DeletionPolicy
 }
 
-// GetProviderConfigReference of this MysqlConfiguration.
-func (mg *MysqlConfiguration) GetProviderConfigReference() *xpv1.Reference {
+// GetProviderConfigReference of this Configuration.
+func (mg *Configuration) GetProviderConfigReference() *xpv1.Reference {
 	return mg.Spec.ProviderConfigReference
 }
 
 /*
-GetProviderReference of this MysqlConfiguration.
+GetProviderReference of this Configuration.
 Deprecated: Use GetProviderConfigReference.
 */
-func (mg *MysqlConfiguration) GetProviderReference() *xpv1.Reference {
+func (mg *Configuration) GetProviderReference() *xpv1.Reference {
 	return mg.Spec.ProviderReference
 }
 
-// GetWriteConnectionSecretToReference of this MysqlConfiguration.
-func (mg *MysqlConfiguration) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
+// GetWriteConnectionSecretToReference of this Configuration.
+func (mg *Configuration) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
 	return mg.Spec.WriteConnectionSecretToReference
 }
 
-// SetConditions of this MysqlConfiguration.
-func (mg *MysqlConfiguration) SetConditions(c ...xpv1.Condition) {
+// SetConditions of this Configuration.
+func (mg *Configuration) SetConditions(c ...xpv1.Condition) {
 	mg.Status.SetConditions(c...)
 }
 
-// SetDeletionPolicy of this MysqlConfiguration.
-func (mg *MysqlConfiguration) SetDeletionPolicy(r xpv1.DeletionPolicy) {
+// SetDeletionPolicy of this Configuration.
+func (mg *Configuration) SetDeletionPolicy(r xpv1.DeletionPolicy) {
 	mg.Spec.DeletionPolicy = r
 }
 
-// SetProviderConfigReference of this MysqlConfiguration.
-func (mg *MysqlConfiguration) SetProviderConfigReference(r *xpv1.Reference) {
+// SetProviderConfigReference of this Configuration.
+func (mg *Configuration) SetProviderConfigReference(r *xpv1.Reference) {
 	mg.Spec.ProviderConfigReference = r
 }
 
 /*
-SetProviderReference of this MysqlConfiguration.
+SetProviderReference of this Configuration.
 Deprecated: Use SetProviderConfigReference.
 */
-func (mg *MysqlConfiguration) SetProviderReference(r *xpv1.Reference) {
+func (mg *Configuration) SetProviderReference(r *xpv1.Reference) {
 	mg.Spec.ProviderReference = r
 }
 
-// SetWriteConnectionSecretToReference of this MysqlConfiguration.
-func (mg *MysqlConfiguration) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
+// SetWriteConnectionSecretToReference of this Configuration.
+func (mg *Configuration) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
 	mg.Spec.WriteConnectionSecretToReference = r
 }
 
-// GetCondition of this MysqlDatabase.
-func (mg *MysqlDatabase) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
+// GetCondition of this Database.
+func (mg *Database) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
 	return mg.Status.GetCondition(ct)
 }
 
-// GetDeletionPolicy of this MysqlDatabase.
-func (mg *MysqlDatabase) GetDeletionPolicy() xpv1.DeletionPolicy {
+// GetDeletionPolicy of this Database.
+func (mg *Database) GetDeletionPolicy() xpv1.DeletionPolicy {
 	return mg.Spec.DeletionPolicy
 }
 
-// GetProviderConfigReference of this MysqlDatabase.
-func (mg *MysqlDatabase) GetProviderConfigReference() *xpv1.Reference {
+// GetProviderConfigReference of this Database.
+func (mg *Database) GetProviderConfigReference() *xpv1.Reference {
 	return mg.Spec.ProviderConfigReference
 }
 
 /*
-GetProviderReference of this MysqlDatabase.
+GetProviderReference of this Database.
 Deprecated: Use GetProviderConfigReference.
 */
-func (mg *MysqlDatabase) GetProviderReference() *xpv1.Reference {
+func (mg *Database) GetProviderReference() *xpv1.Reference {
 	return mg.Spec.ProviderReference
 }
 
-// GetWriteConnectionSecretToReference of this MysqlDatabase.
-func (mg *MysqlDatabase) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
+// GetWriteConnectionSecretToReference of this Database.
+func (mg *Database) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
 	return mg.Spec.WriteConnectionSecretToReference
 }
 
-// SetConditions of this MysqlDatabase.
-func (mg *MysqlDatabase) SetConditions(c ...xpv1.Condition) {
+// SetConditions of this Database.
+func (mg *Database) SetConditions(c ...xpv1.Condition) {
 	mg.Status.SetConditions(c...)
 }
 
-// SetDeletionPolicy of this MysqlDatabase.
-func (mg *MysqlDatabase) SetDeletionPolicy(r xpv1.DeletionPolicy) {
+// SetDeletionPolicy of this Database.
+func (mg *Database) SetDeletionPolicy(r xpv1.DeletionPolicy) {
 	mg.Spec.DeletionPolicy = r
 }
 
-// SetProviderConfigReference of this MysqlDatabase.
-func (mg *MysqlDatabase) SetProviderConfigReference(r *xpv1.Reference) {
+// SetProviderConfigReference of this Database.
+func (mg *Database) SetProviderConfigReference(r *xpv1.Reference) {
 	mg.Spec.ProviderConfigReference = r
 }
 
 /*
-SetProviderReference of this MysqlDatabase.
+SetProviderReference of this Database.
 Deprecated: Use SetProviderConfigReference.
 */
-func (mg *MysqlDatabase) SetProviderReference(r *xpv1.Reference) {
+func (mg *Database) SetProviderReference(r *xpv1.Reference) {
 	mg.Spec.ProviderReference = r
 }
 
-// SetWriteConnectionSecretToReference of this MysqlDatabase.
-func (mg *MysqlDatabase) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
+// SetWriteConnectionSecretToReference of this Database.
+func (mg *Database) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
 	mg.Spec.WriteConnectionSecretToReference = r
 }
 
-// GetCondition of this MysqlFirewallRule.
-func (mg *MysqlFirewallRule) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
+// GetCondition of this FirewallRule.
+func (mg *FirewallRule) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
 	return mg.Status.GetCondition(ct)
 }
 
-// GetDeletionPolicy of this MysqlFirewallRule.
-func (mg *MysqlFirewallRule) GetDeletionPolicy() xpv1.DeletionPolicy {
+// GetDeletionPolicy of this FirewallRule.
+func (mg *FirewallRule) GetDeletionPolicy() xpv1.DeletionPolicy {
 	return mg.Spec.DeletionPolicy
 }
 
-// GetProviderConfigReference of this MysqlFirewallRule.
-func (mg *MysqlFirewallRule) GetProviderConfigReference() *xpv1.Reference {
+// GetProviderConfigReference of this FirewallRule.
+func (mg *FirewallRule) GetProviderConfigReference() *xpv1.Reference {
 	return mg.Spec.ProviderConfigReference
 }
 
 /*
-GetProviderReference of this MysqlFirewallRule.
+GetProviderReference of this FirewallRule.
 Deprecated: Use GetProviderConfigReference.
 */
-func (mg *MysqlFirewallRule) GetProviderReference() *xpv1.Reference {
+func (mg *FirewallRule) GetProviderReference() *xpv1.Reference {
 	return mg.Spec.ProviderReference
 }
 
-// GetWriteConnectionSecretToReference of this MysqlFirewallRule.
-func (mg *MysqlFirewallRule) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
+// GetWriteConnectionSecretToReference of this FirewallRule.
+func (mg *FirewallRule) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
 	return mg.Spec.WriteConnectionSecretToReference
 }
 
-// SetConditions of this MysqlFirewallRule.
-func (mg *MysqlFirewallRule) SetConditions(c ...xpv1.Condition) {
+// SetConditions of this FirewallRule.
+func (mg *FirewallRule) SetConditions(c ...xpv1.Condition) {
 	mg.Status.SetConditions(c...)
 }
 
-// SetDeletionPolicy of this MysqlFirewallRule.
-func (mg *MysqlFirewallRule) SetDeletionPolicy(r xpv1.DeletionPolicy) {
+// SetDeletionPolicy of this FirewallRule.
+func (mg *FirewallRule) SetDeletionPolicy(r xpv1.DeletionPolicy) {
 	mg.Spec.DeletionPolicy = r
 }
 
-// SetProviderConfigReference of this MysqlFirewallRule.
-func (mg *MysqlFirewallRule) SetProviderConfigReference(r *xpv1.Reference) {
+// SetProviderConfigReference of this FirewallRule.
+func (mg *FirewallRule) SetProviderConfigReference(r *xpv1.Reference) {
 	mg.Spec.ProviderConfigReference = r
 }
 
 /*
-SetProviderReference of this MysqlFirewallRule.
+SetProviderReference of this FirewallRule.
 Deprecated: Use SetProviderConfigReference.
 */
-func (mg *MysqlFirewallRule) SetProviderReference(r *xpv1.Reference) {
+func (mg *FirewallRule) SetProviderReference(r *xpv1.Reference) {
 	mg.Spec.ProviderReference = r
 }
 
-// SetWriteConnectionSecretToReference of this MysqlFirewallRule.
-func (mg *MysqlFirewallRule) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
+// SetWriteConnectionSecretToReference of this FirewallRule.
+func (mg *FirewallRule) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
 	mg.Spec.WriteConnectionSecretToReference = r
 }
 
-// GetCondition of this MysqlServer.
-func (mg *MysqlServer) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
+// GetCondition of this Server.
+func (mg *Server) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
 	return mg.Status.GetCondition(ct)
 }
 
-// GetDeletionPolicy of this MysqlServer.
-func (mg *MysqlServer) GetDeletionPolicy() xpv1.DeletionPolicy {
+// GetDeletionPolicy of this Server.
+func (mg *Server) GetDeletionPolicy() xpv1.DeletionPolicy {
 	return mg.Spec.DeletionPolicy
 }
 
-// GetProviderConfigReference of this MysqlServer.
-func (mg *MysqlServer) GetProviderConfigReference() *xpv1.Reference {
+// GetProviderConfigReference of this Server.
+func (mg *Server) GetProviderConfigReference() *xpv1.Reference {
 	return mg.Spec.ProviderConfigReference
 }
 
 /*
-GetProviderReference of this MysqlServer.
+GetProviderReference of this Server.
 Deprecated: Use GetProviderConfigReference.
 */
-func (mg *MysqlServer) GetProviderReference() *xpv1.Reference {
+func (mg *Server) GetProviderReference() *xpv1.Reference {
 	return mg.Spec.ProviderReference
 }
 
-// GetWriteConnectionSecretToReference of this MysqlServer.
-func (mg *MysqlServer) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
+// GetWriteConnectionSecretToReference of this Server.
+func (mg *Server) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
 	return mg.Spec.WriteConnectionSecretToReference
 }
 
-// SetConditions of this MysqlServer.
-func (mg *MysqlServer) SetConditions(c ...xpv1.Condition) {
+// SetConditions of this Server.
+func (mg *Server) SetConditions(c ...xpv1.Condition) {
 	mg.Status.SetConditions(c...)
 }
 
-// SetDeletionPolicy of this MysqlServer.
-func (mg *MysqlServer) SetDeletionPolicy(r xpv1.DeletionPolicy) {
+// SetDeletionPolicy of this Server.
+func (mg *Server) SetDeletionPolicy(r xpv1.DeletionPolicy) {
 	mg.Spec.DeletionPolicy = r
 }
 
-// SetProviderConfigReference of this MysqlServer.
-func (mg *MysqlServer) SetProviderConfigReference(r *xpv1.Reference) {
+// SetProviderConfigReference of this Server.
+func (mg *Server) SetProviderConfigReference(r *xpv1.Reference) {
 	mg.Spec.ProviderConfigReference = r
 }
 
 /*
-SetProviderReference of this MysqlServer.
+SetProviderReference of this Server.
 Deprecated: Use SetProviderConfigReference.
 */
-func (mg *MysqlServer) SetProviderReference(r *xpv1.Reference) {
+func (mg *Server) SetProviderReference(r *xpv1.Reference) {
 	mg.Spec.ProviderReference = r
 }
 
-// SetWriteConnectionSecretToReference of this MysqlServer.
-func (mg *MysqlServer) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
+// SetWriteConnectionSecretToReference of this Server.
+func (mg *Server) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
 	mg.Spec.WriteConnectionSecretToReference = r
 }
 
-// GetCondition of this MysqlServerKey.
-func (mg *MysqlServerKey) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
+// GetCondition of this ServerKey.
+func (mg *ServerKey) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
 	return mg.Status.GetCondition(ct)
 }
 
-// GetDeletionPolicy of this MysqlServerKey.
-func (mg *MysqlServerKey) GetDeletionPolicy() xpv1.DeletionPolicy {
+// GetDeletionPolicy of this ServerKey.
+func (mg *ServerKey) GetDeletionPolicy() xpv1.DeletionPolicy {
 	return mg.Spec.DeletionPolicy
 }
 
-// GetProviderConfigReference of this MysqlServerKey.
-func (mg *MysqlServerKey) GetProviderConfigReference() *xpv1.Reference {
+// GetProviderConfigReference of this ServerKey.
+func (mg *ServerKey) GetProviderConfigReference() *xpv1.Reference {
 	return mg.Spec.ProviderConfigReference
 }
 
 /*
-GetProviderReference of this MysqlServerKey.
+GetProviderReference of this ServerKey.
 Deprecated: Use GetProviderConfigReference.
 */
-func (mg *MysqlServerKey) GetProviderReference() *xpv1.Reference {
+func (mg *ServerKey) GetProviderReference() *xpv1.Reference {
 	return mg.Spec.ProviderReference
 }
 
-// GetWriteConnectionSecretToReference of this MysqlServerKey.
-func (mg *MysqlServerKey) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
+// GetWriteConnectionSecretToReference of this ServerKey.
+func (mg *ServerKey) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
 	return mg.Spec.WriteConnectionSecretToReference
 }
 
-// SetConditions of this MysqlServerKey.
-func (mg *MysqlServerKey) SetConditions(c ...xpv1.Condition) {
+// SetConditions of this ServerKey.
+func (mg *ServerKey) SetConditions(c ...xpv1.Condition) {
 	mg.Status.SetConditions(c...)
 }
 
-// SetDeletionPolicy of this MysqlServerKey.
-func (mg *MysqlServerKey) SetDeletionPolicy(r xpv1.DeletionPolicy) {
+// SetDeletionPolicy of this ServerKey.
+func (mg *ServerKey) SetDeletionPolicy(r xpv1.DeletionPolicy) {
 	mg.Spec.DeletionPolicy = r
 }
 
-// SetProviderConfigReference of this MysqlServerKey.
-func (mg *MysqlServerKey) SetProviderConfigReference(r *xpv1.Reference) {
+// SetProviderConfigReference of this ServerKey.
+func (mg *ServerKey) SetProviderConfigReference(r *xpv1.Reference) {
 	mg.Spec.ProviderConfigReference = r
 }
 
 /*
-SetProviderReference of this MysqlServerKey.
+SetProviderReference of this ServerKey.
 Deprecated: Use SetProviderConfigReference.
 */
-func (mg *MysqlServerKey) SetProviderReference(r *xpv1.Reference) {
+func (mg *ServerKey) SetProviderReference(r *xpv1.Reference) {
 	mg.Spec.ProviderReference = r
 }
 
-// SetWriteConnectionSecretToReference of this MysqlServerKey.
-func (mg *MysqlServerKey) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
+// SetWriteConnectionSecretToReference of this ServerKey.
+func (mg *ServerKey) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
 	mg.Spec.WriteConnectionSecretToReference = r
 }
 
-// GetCondition of this MysqlVirtualNetworkRule.
-func (mg *MysqlVirtualNetworkRule) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
+// GetCondition of this VirtualNetworkRule.
+func (mg *VirtualNetworkRule) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
 	return mg.Status.GetCondition(ct)
 }
 
-// GetDeletionPolicy of this MysqlVirtualNetworkRule.
-func (mg *MysqlVirtualNetworkRule) GetDeletionPolicy() xpv1.DeletionPolicy {
+// GetDeletionPolicy of this VirtualNetworkRule.
+func (mg *VirtualNetworkRule) GetDeletionPolicy() xpv1.DeletionPolicy {
 	return mg.Spec.DeletionPolicy
 }
 
-// GetProviderConfigReference of this MysqlVirtualNetworkRule.
-func (mg *MysqlVirtualNetworkRule) GetProviderConfigReference() *xpv1.Reference {
+// GetProviderConfigReference of this VirtualNetworkRule.
+func (mg *VirtualNetworkRule) GetProviderConfigReference() *xpv1.Reference {
 	return mg.Spec.ProviderConfigReference
 }
 
 /*
-GetProviderReference of this MysqlVirtualNetworkRule.
+GetProviderReference of this VirtualNetworkRule.
 Deprecated: Use GetProviderConfigReference.
 */
-func (mg *MysqlVirtualNetworkRule) GetProviderReference() *xpv1.Reference {
+func (mg *VirtualNetworkRule) GetProviderReference() *xpv1.Reference {
 	return mg.Spec.ProviderReference
 }
 
-// GetWriteConnectionSecretToReference of this MysqlVirtualNetworkRule.
-func (mg *MysqlVirtualNetworkRule) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
+// GetWriteConnectionSecretToReference of this VirtualNetworkRule.
+func (mg *VirtualNetworkRule) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
 	return mg.Spec.WriteConnectionSecretToReference
 }
 
-// SetConditions of this MysqlVirtualNetworkRule.
-func (mg *MysqlVirtualNetworkRule) SetConditions(c ...xpv1.Condition) {
+// SetConditions of this VirtualNetworkRule.
+func (mg *VirtualNetworkRule) SetConditions(c ...xpv1.Condition) {
 	mg.Status.SetConditions(c...)
 }
 
-// SetDeletionPolicy of this MysqlVirtualNetworkRule.
-func (mg *MysqlVirtualNetworkRule) SetDeletionPolicy(r xpv1.DeletionPolicy) {
+// SetDeletionPolicy of this VirtualNetworkRule.
+func (mg *VirtualNetworkRule) SetDeletionPolicy(r xpv1.DeletionPolicy) {
 	mg.Spec.DeletionPolicy = r
 }
 
-// SetProviderConfigReference of this MysqlVirtualNetworkRule.
-func (mg *MysqlVirtualNetworkRule) SetProviderConfigReference(r *xpv1.Reference) {
+// SetProviderConfigReference of this VirtualNetworkRule.
+func (mg *VirtualNetworkRule) SetProviderConfigReference(r *xpv1.Reference) {
 	mg.Spec.ProviderConfigReference = r
 }
 
 /*
-SetProviderReference of this MysqlVirtualNetworkRule.
+SetProviderReference of this VirtualNetworkRule.
 Deprecated: Use SetProviderConfigReference.
 */
-func (mg *MysqlVirtualNetworkRule) SetProviderReference(r *xpv1.Reference) {
+func (mg *VirtualNetworkRule) SetProviderReference(r *xpv1.Reference) {
 	mg.Spec.ProviderReference = r
 }
 
-// SetWriteConnectionSecretToReference of this MysqlVirtualNetworkRule.
-func (mg *MysqlVirtualNetworkRule) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
+// SetWriteConnectionSecretToReference of this VirtualNetworkRule.
+func (mg *VirtualNetworkRule) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
 	mg.Spec.WriteConnectionSecretToReference = r
 }

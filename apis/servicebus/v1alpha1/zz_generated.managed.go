@@ -19,562 +19,562 @@ package v1alpha1
 
 import xpv1 "github.com/crossplane/crossplane-runtime/apis/common/v1"
 
-// GetCondition of this ServicebusNamespace.
-func (mg *ServicebusNamespace) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
+// GetCondition of this Namespace.
+func (mg *Namespace) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
 	return mg.Status.GetCondition(ct)
 }
 
-// GetDeletionPolicy of this ServicebusNamespace.
-func (mg *ServicebusNamespace) GetDeletionPolicy() xpv1.DeletionPolicy {
+// GetDeletionPolicy of this Namespace.
+func (mg *Namespace) GetDeletionPolicy() xpv1.DeletionPolicy {
 	return mg.Spec.DeletionPolicy
 }
 
-// GetProviderConfigReference of this ServicebusNamespace.
-func (mg *ServicebusNamespace) GetProviderConfigReference() *xpv1.Reference {
+// GetProviderConfigReference of this Namespace.
+func (mg *Namespace) GetProviderConfigReference() *xpv1.Reference {
 	return mg.Spec.ProviderConfigReference
 }
 
 /*
-GetProviderReference of this ServicebusNamespace.
+GetProviderReference of this Namespace.
 Deprecated: Use GetProviderConfigReference.
 */
-func (mg *ServicebusNamespace) GetProviderReference() *xpv1.Reference {
+func (mg *Namespace) GetProviderReference() *xpv1.Reference {
 	return mg.Spec.ProviderReference
 }
 
-// GetWriteConnectionSecretToReference of this ServicebusNamespace.
-func (mg *ServicebusNamespace) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
+// GetWriteConnectionSecretToReference of this Namespace.
+func (mg *Namespace) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
 	return mg.Spec.WriteConnectionSecretToReference
 }
 
-// SetConditions of this ServicebusNamespace.
-func (mg *ServicebusNamespace) SetConditions(c ...xpv1.Condition) {
+// SetConditions of this Namespace.
+func (mg *Namespace) SetConditions(c ...xpv1.Condition) {
 	mg.Status.SetConditions(c...)
 }
 
-// SetDeletionPolicy of this ServicebusNamespace.
-func (mg *ServicebusNamespace) SetDeletionPolicy(r xpv1.DeletionPolicy) {
+// SetDeletionPolicy of this Namespace.
+func (mg *Namespace) SetDeletionPolicy(r xpv1.DeletionPolicy) {
 	mg.Spec.DeletionPolicy = r
 }
 
-// SetProviderConfigReference of this ServicebusNamespace.
-func (mg *ServicebusNamespace) SetProviderConfigReference(r *xpv1.Reference) {
+// SetProviderConfigReference of this Namespace.
+func (mg *Namespace) SetProviderConfigReference(r *xpv1.Reference) {
 	mg.Spec.ProviderConfigReference = r
 }
 
 /*
-SetProviderReference of this ServicebusNamespace.
+SetProviderReference of this Namespace.
 Deprecated: Use SetProviderConfigReference.
 */
-func (mg *ServicebusNamespace) SetProviderReference(r *xpv1.Reference) {
+func (mg *Namespace) SetProviderReference(r *xpv1.Reference) {
 	mg.Spec.ProviderReference = r
 }
 
-// SetWriteConnectionSecretToReference of this ServicebusNamespace.
-func (mg *ServicebusNamespace) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
+// SetWriteConnectionSecretToReference of this Namespace.
+func (mg *Namespace) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
 	mg.Spec.WriteConnectionSecretToReference = r
 }
 
-// GetCondition of this ServicebusNamespaceAuthorizationRule.
-func (mg *ServicebusNamespaceAuthorizationRule) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
+// GetCondition of this NamespaceAuthorizationRule.
+func (mg *NamespaceAuthorizationRule) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
 	return mg.Status.GetCondition(ct)
 }
 
-// GetDeletionPolicy of this ServicebusNamespaceAuthorizationRule.
-func (mg *ServicebusNamespaceAuthorizationRule) GetDeletionPolicy() xpv1.DeletionPolicy {
+// GetDeletionPolicy of this NamespaceAuthorizationRule.
+func (mg *NamespaceAuthorizationRule) GetDeletionPolicy() xpv1.DeletionPolicy {
 	return mg.Spec.DeletionPolicy
 }
 
-// GetProviderConfigReference of this ServicebusNamespaceAuthorizationRule.
-func (mg *ServicebusNamespaceAuthorizationRule) GetProviderConfigReference() *xpv1.Reference {
+// GetProviderConfigReference of this NamespaceAuthorizationRule.
+func (mg *NamespaceAuthorizationRule) GetProviderConfigReference() *xpv1.Reference {
 	return mg.Spec.ProviderConfigReference
 }
 
 /*
-GetProviderReference of this ServicebusNamespaceAuthorizationRule.
+GetProviderReference of this NamespaceAuthorizationRule.
 Deprecated: Use GetProviderConfigReference.
 */
-func (mg *ServicebusNamespaceAuthorizationRule) GetProviderReference() *xpv1.Reference {
+func (mg *NamespaceAuthorizationRule) GetProviderReference() *xpv1.Reference {
 	return mg.Spec.ProviderReference
 }
 
-// GetWriteConnectionSecretToReference of this ServicebusNamespaceAuthorizationRule.
-func (mg *ServicebusNamespaceAuthorizationRule) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
+// GetWriteConnectionSecretToReference of this NamespaceAuthorizationRule.
+func (mg *NamespaceAuthorizationRule) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
 	return mg.Spec.WriteConnectionSecretToReference
 }
 
-// SetConditions of this ServicebusNamespaceAuthorizationRule.
-func (mg *ServicebusNamespaceAuthorizationRule) SetConditions(c ...xpv1.Condition) {
+// SetConditions of this NamespaceAuthorizationRule.
+func (mg *NamespaceAuthorizationRule) SetConditions(c ...xpv1.Condition) {
 	mg.Status.SetConditions(c...)
 }
 
-// SetDeletionPolicy of this ServicebusNamespaceAuthorizationRule.
-func (mg *ServicebusNamespaceAuthorizationRule) SetDeletionPolicy(r xpv1.DeletionPolicy) {
+// SetDeletionPolicy of this NamespaceAuthorizationRule.
+func (mg *NamespaceAuthorizationRule) SetDeletionPolicy(r xpv1.DeletionPolicy) {
 	mg.Spec.DeletionPolicy = r
 }
 
-// SetProviderConfigReference of this ServicebusNamespaceAuthorizationRule.
-func (mg *ServicebusNamespaceAuthorizationRule) SetProviderConfigReference(r *xpv1.Reference) {
+// SetProviderConfigReference of this NamespaceAuthorizationRule.
+func (mg *NamespaceAuthorizationRule) SetProviderConfigReference(r *xpv1.Reference) {
 	mg.Spec.ProviderConfigReference = r
 }
 
 /*
-SetProviderReference of this ServicebusNamespaceAuthorizationRule.
+SetProviderReference of this NamespaceAuthorizationRule.
 Deprecated: Use SetProviderConfigReference.
 */
-func (mg *ServicebusNamespaceAuthorizationRule) SetProviderReference(r *xpv1.Reference) {
+func (mg *NamespaceAuthorizationRule) SetProviderReference(r *xpv1.Reference) {
 	mg.Spec.ProviderReference = r
 }
 
-// SetWriteConnectionSecretToReference of this ServicebusNamespaceAuthorizationRule.
-func (mg *ServicebusNamespaceAuthorizationRule) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
+// SetWriteConnectionSecretToReference of this NamespaceAuthorizationRule.
+func (mg *NamespaceAuthorizationRule) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
 	mg.Spec.WriteConnectionSecretToReference = r
 }
 
-// GetCondition of this ServicebusNamespaceDisasterRecoveryConfig.
-func (mg *ServicebusNamespaceDisasterRecoveryConfig) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
+// GetCondition of this NamespaceDisasterRecoveryConfig.
+func (mg *NamespaceDisasterRecoveryConfig) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
 	return mg.Status.GetCondition(ct)
 }
 
-// GetDeletionPolicy of this ServicebusNamespaceDisasterRecoveryConfig.
-func (mg *ServicebusNamespaceDisasterRecoveryConfig) GetDeletionPolicy() xpv1.DeletionPolicy {
+// GetDeletionPolicy of this NamespaceDisasterRecoveryConfig.
+func (mg *NamespaceDisasterRecoveryConfig) GetDeletionPolicy() xpv1.DeletionPolicy {
 	return mg.Spec.DeletionPolicy
 }
 
-// GetProviderConfigReference of this ServicebusNamespaceDisasterRecoveryConfig.
-func (mg *ServicebusNamespaceDisasterRecoveryConfig) GetProviderConfigReference() *xpv1.Reference {
+// GetProviderConfigReference of this NamespaceDisasterRecoveryConfig.
+func (mg *NamespaceDisasterRecoveryConfig) GetProviderConfigReference() *xpv1.Reference {
 	return mg.Spec.ProviderConfigReference
 }
 
 /*
-GetProviderReference of this ServicebusNamespaceDisasterRecoveryConfig.
+GetProviderReference of this NamespaceDisasterRecoveryConfig.
 Deprecated: Use GetProviderConfigReference.
 */
-func (mg *ServicebusNamespaceDisasterRecoveryConfig) GetProviderReference() *xpv1.Reference {
+func (mg *NamespaceDisasterRecoveryConfig) GetProviderReference() *xpv1.Reference {
 	return mg.Spec.ProviderReference
 }
 
-// GetWriteConnectionSecretToReference of this ServicebusNamespaceDisasterRecoveryConfig.
-func (mg *ServicebusNamespaceDisasterRecoveryConfig) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
+// GetWriteConnectionSecretToReference of this NamespaceDisasterRecoveryConfig.
+func (mg *NamespaceDisasterRecoveryConfig) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
 	return mg.Spec.WriteConnectionSecretToReference
 }
 
-// SetConditions of this ServicebusNamespaceDisasterRecoveryConfig.
-func (mg *ServicebusNamespaceDisasterRecoveryConfig) SetConditions(c ...xpv1.Condition) {
+// SetConditions of this NamespaceDisasterRecoveryConfig.
+func (mg *NamespaceDisasterRecoveryConfig) SetConditions(c ...xpv1.Condition) {
 	mg.Status.SetConditions(c...)
 }
 
-// SetDeletionPolicy of this ServicebusNamespaceDisasterRecoveryConfig.
-func (mg *ServicebusNamespaceDisasterRecoveryConfig) SetDeletionPolicy(r xpv1.DeletionPolicy) {
+// SetDeletionPolicy of this NamespaceDisasterRecoveryConfig.
+func (mg *NamespaceDisasterRecoveryConfig) SetDeletionPolicy(r xpv1.DeletionPolicy) {
 	mg.Spec.DeletionPolicy = r
 }
 
-// SetProviderConfigReference of this ServicebusNamespaceDisasterRecoveryConfig.
-func (mg *ServicebusNamespaceDisasterRecoveryConfig) SetProviderConfigReference(r *xpv1.Reference) {
+// SetProviderConfigReference of this NamespaceDisasterRecoveryConfig.
+func (mg *NamespaceDisasterRecoveryConfig) SetProviderConfigReference(r *xpv1.Reference) {
 	mg.Spec.ProviderConfigReference = r
 }
 
 /*
-SetProviderReference of this ServicebusNamespaceDisasterRecoveryConfig.
+SetProviderReference of this NamespaceDisasterRecoveryConfig.
 Deprecated: Use SetProviderConfigReference.
 */
-func (mg *ServicebusNamespaceDisasterRecoveryConfig) SetProviderReference(r *xpv1.Reference) {
+func (mg *NamespaceDisasterRecoveryConfig) SetProviderReference(r *xpv1.Reference) {
 	mg.Spec.ProviderReference = r
 }
 
-// SetWriteConnectionSecretToReference of this ServicebusNamespaceDisasterRecoveryConfig.
-func (mg *ServicebusNamespaceDisasterRecoveryConfig) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
+// SetWriteConnectionSecretToReference of this NamespaceDisasterRecoveryConfig.
+func (mg *NamespaceDisasterRecoveryConfig) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
 	mg.Spec.WriteConnectionSecretToReference = r
 }
 
-// GetCondition of this ServicebusNamespaceNetworkRuleSet.
-func (mg *ServicebusNamespaceNetworkRuleSet) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
+// GetCondition of this NamespaceNetworkRuleSet.
+func (mg *NamespaceNetworkRuleSet) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
 	return mg.Status.GetCondition(ct)
 }
 
-// GetDeletionPolicy of this ServicebusNamespaceNetworkRuleSet.
-func (mg *ServicebusNamespaceNetworkRuleSet) GetDeletionPolicy() xpv1.DeletionPolicy {
+// GetDeletionPolicy of this NamespaceNetworkRuleSet.
+func (mg *NamespaceNetworkRuleSet) GetDeletionPolicy() xpv1.DeletionPolicy {
 	return mg.Spec.DeletionPolicy
 }
 
-// GetProviderConfigReference of this ServicebusNamespaceNetworkRuleSet.
-func (mg *ServicebusNamespaceNetworkRuleSet) GetProviderConfigReference() *xpv1.Reference {
+// GetProviderConfigReference of this NamespaceNetworkRuleSet.
+func (mg *NamespaceNetworkRuleSet) GetProviderConfigReference() *xpv1.Reference {
 	return mg.Spec.ProviderConfigReference
 }
 
 /*
-GetProviderReference of this ServicebusNamespaceNetworkRuleSet.
+GetProviderReference of this NamespaceNetworkRuleSet.
 Deprecated: Use GetProviderConfigReference.
 */
-func (mg *ServicebusNamespaceNetworkRuleSet) GetProviderReference() *xpv1.Reference {
+func (mg *NamespaceNetworkRuleSet) GetProviderReference() *xpv1.Reference {
 	return mg.Spec.ProviderReference
 }
 
-// GetWriteConnectionSecretToReference of this ServicebusNamespaceNetworkRuleSet.
-func (mg *ServicebusNamespaceNetworkRuleSet) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
+// GetWriteConnectionSecretToReference of this NamespaceNetworkRuleSet.
+func (mg *NamespaceNetworkRuleSet) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
 	return mg.Spec.WriteConnectionSecretToReference
 }
 
-// SetConditions of this ServicebusNamespaceNetworkRuleSet.
-func (mg *ServicebusNamespaceNetworkRuleSet) SetConditions(c ...xpv1.Condition) {
+// SetConditions of this NamespaceNetworkRuleSet.
+func (mg *NamespaceNetworkRuleSet) SetConditions(c ...xpv1.Condition) {
 	mg.Status.SetConditions(c...)
 }
 
-// SetDeletionPolicy of this ServicebusNamespaceNetworkRuleSet.
-func (mg *ServicebusNamespaceNetworkRuleSet) SetDeletionPolicy(r xpv1.DeletionPolicy) {
+// SetDeletionPolicy of this NamespaceNetworkRuleSet.
+func (mg *NamespaceNetworkRuleSet) SetDeletionPolicy(r xpv1.DeletionPolicy) {
 	mg.Spec.DeletionPolicy = r
 }
 
-// SetProviderConfigReference of this ServicebusNamespaceNetworkRuleSet.
-func (mg *ServicebusNamespaceNetworkRuleSet) SetProviderConfigReference(r *xpv1.Reference) {
+// SetProviderConfigReference of this NamespaceNetworkRuleSet.
+func (mg *NamespaceNetworkRuleSet) SetProviderConfigReference(r *xpv1.Reference) {
 	mg.Spec.ProviderConfigReference = r
 }
 
 /*
-SetProviderReference of this ServicebusNamespaceNetworkRuleSet.
+SetProviderReference of this NamespaceNetworkRuleSet.
 Deprecated: Use SetProviderConfigReference.
 */
-func (mg *ServicebusNamespaceNetworkRuleSet) SetProviderReference(r *xpv1.Reference) {
+func (mg *NamespaceNetworkRuleSet) SetProviderReference(r *xpv1.Reference) {
 	mg.Spec.ProviderReference = r
 }
 
-// SetWriteConnectionSecretToReference of this ServicebusNamespaceNetworkRuleSet.
-func (mg *ServicebusNamespaceNetworkRuleSet) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
+// SetWriteConnectionSecretToReference of this NamespaceNetworkRuleSet.
+func (mg *NamespaceNetworkRuleSet) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
 	mg.Spec.WriteConnectionSecretToReference = r
 }
 
-// GetCondition of this ServicebusQueue.
-func (mg *ServicebusQueue) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
+// GetCondition of this Queue.
+func (mg *Queue) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
 	return mg.Status.GetCondition(ct)
 }
 
-// GetDeletionPolicy of this ServicebusQueue.
-func (mg *ServicebusQueue) GetDeletionPolicy() xpv1.DeletionPolicy {
+// GetDeletionPolicy of this Queue.
+func (mg *Queue) GetDeletionPolicy() xpv1.DeletionPolicy {
 	return mg.Spec.DeletionPolicy
 }
 
-// GetProviderConfigReference of this ServicebusQueue.
-func (mg *ServicebusQueue) GetProviderConfigReference() *xpv1.Reference {
+// GetProviderConfigReference of this Queue.
+func (mg *Queue) GetProviderConfigReference() *xpv1.Reference {
 	return mg.Spec.ProviderConfigReference
 }
 
 /*
-GetProviderReference of this ServicebusQueue.
+GetProviderReference of this Queue.
 Deprecated: Use GetProviderConfigReference.
 */
-func (mg *ServicebusQueue) GetProviderReference() *xpv1.Reference {
+func (mg *Queue) GetProviderReference() *xpv1.Reference {
 	return mg.Spec.ProviderReference
 }
 
-// GetWriteConnectionSecretToReference of this ServicebusQueue.
-func (mg *ServicebusQueue) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
+// GetWriteConnectionSecretToReference of this Queue.
+func (mg *Queue) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
 	return mg.Spec.WriteConnectionSecretToReference
 }
 
-// SetConditions of this ServicebusQueue.
-func (mg *ServicebusQueue) SetConditions(c ...xpv1.Condition) {
+// SetConditions of this Queue.
+func (mg *Queue) SetConditions(c ...xpv1.Condition) {
 	mg.Status.SetConditions(c...)
 }
 
-// SetDeletionPolicy of this ServicebusQueue.
-func (mg *ServicebusQueue) SetDeletionPolicy(r xpv1.DeletionPolicy) {
+// SetDeletionPolicy of this Queue.
+func (mg *Queue) SetDeletionPolicy(r xpv1.DeletionPolicy) {
 	mg.Spec.DeletionPolicy = r
 }
 
-// SetProviderConfigReference of this ServicebusQueue.
-func (mg *ServicebusQueue) SetProviderConfigReference(r *xpv1.Reference) {
+// SetProviderConfigReference of this Queue.
+func (mg *Queue) SetProviderConfigReference(r *xpv1.Reference) {
 	mg.Spec.ProviderConfigReference = r
 }
 
 /*
-SetProviderReference of this ServicebusQueue.
+SetProviderReference of this Queue.
 Deprecated: Use SetProviderConfigReference.
 */
-func (mg *ServicebusQueue) SetProviderReference(r *xpv1.Reference) {
+func (mg *Queue) SetProviderReference(r *xpv1.Reference) {
 	mg.Spec.ProviderReference = r
 }
 
-// SetWriteConnectionSecretToReference of this ServicebusQueue.
-func (mg *ServicebusQueue) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
+// SetWriteConnectionSecretToReference of this Queue.
+func (mg *Queue) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
 	mg.Spec.WriteConnectionSecretToReference = r
 }
 
-// GetCondition of this ServicebusQueueAuthorizationRule.
-func (mg *ServicebusQueueAuthorizationRule) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
+// GetCondition of this QueueAuthorizationRule.
+func (mg *QueueAuthorizationRule) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
 	return mg.Status.GetCondition(ct)
 }
 
-// GetDeletionPolicy of this ServicebusQueueAuthorizationRule.
-func (mg *ServicebusQueueAuthorizationRule) GetDeletionPolicy() xpv1.DeletionPolicy {
+// GetDeletionPolicy of this QueueAuthorizationRule.
+func (mg *QueueAuthorizationRule) GetDeletionPolicy() xpv1.DeletionPolicy {
 	return mg.Spec.DeletionPolicy
 }
 
-// GetProviderConfigReference of this ServicebusQueueAuthorizationRule.
-func (mg *ServicebusQueueAuthorizationRule) GetProviderConfigReference() *xpv1.Reference {
+// GetProviderConfigReference of this QueueAuthorizationRule.
+func (mg *QueueAuthorizationRule) GetProviderConfigReference() *xpv1.Reference {
 	return mg.Spec.ProviderConfigReference
 }
 
 /*
-GetProviderReference of this ServicebusQueueAuthorizationRule.
+GetProviderReference of this QueueAuthorizationRule.
 Deprecated: Use GetProviderConfigReference.
 */
-func (mg *ServicebusQueueAuthorizationRule) GetProviderReference() *xpv1.Reference {
+func (mg *QueueAuthorizationRule) GetProviderReference() *xpv1.Reference {
 	return mg.Spec.ProviderReference
 }
 
-// GetWriteConnectionSecretToReference of this ServicebusQueueAuthorizationRule.
-func (mg *ServicebusQueueAuthorizationRule) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
+// GetWriteConnectionSecretToReference of this QueueAuthorizationRule.
+func (mg *QueueAuthorizationRule) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
 	return mg.Spec.WriteConnectionSecretToReference
 }
 
-// SetConditions of this ServicebusQueueAuthorizationRule.
-func (mg *ServicebusQueueAuthorizationRule) SetConditions(c ...xpv1.Condition) {
+// SetConditions of this QueueAuthorizationRule.
+func (mg *QueueAuthorizationRule) SetConditions(c ...xpv1.Condition) {
 	mg.Status.SetConditions(c...)
 }
 
-// SetDeletionPolicy of this ServicebusQueueAuthorizationRule.
-func (mg *ServicebusQueueAuthorizationRule) SetDeletionPolicy(r xpv1.DeletionPolicy) {
+// SetDeletionPolicy of this QueueAuthorizationRule.
+func (mg *QueueAuthorizationRule) SetDeletionPolicy(r xpv1.DeletionPolicy) {
 	mg.Spec.DeletionPolicy = r
 }
 
-// SetProviderConfigReference of this ServicebusQueueAuthorizationRule.
-func (mg *ServicebusQueueAuthorizationRule) SetProviderConfigReference(r *xpv1.Reference) {
+// SetProviderConfigReference of this QueueAuthorizationRule.
+func (mg *QueueAuthorizationRule) SetProviderConfigReference(r *xpv1.Reference) {
 	mg.Spec.ProviderConfigReference = r
 }
 
 /*
-SetProviderReference of this ServicebusQueueAuthorizationRule.
+SetProviderReference of this QueueAuthorizationRule.
 Deprecated: Use SetProviderConfigReference.
 */
-func (mg *ServicebusQueueAuthorizationRule) SetProviderReference(r *xpv1.Reference) {
+func (mg *QueueAuthorizationRule) SetProviderReference(r *xpv1.Reference) {
 	mg.Spec.ProviderReference = r
 }
 
-// SetWriteConnectionSecretToReference of this ServicebusQueueAuthorizationRule.
-func (mg *ServicebusQueueAuthorizationRule) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
+// SetWriteConnectionSecretToReference of this QueueAuthorizationRule.
+func (mg *QueueAuthorizationRule) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
 	mg.Spec.WriteConnectionSecretToReference = r
 }
 
-// GetCondition of this ServicebusSubscription.
-func (mg *ServicebusSubscription) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
+// GetCondition of this Subscription.
+func (mg *Subscription) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
 	return mg.Status.GetCondition(ct)
 }
 
-// GetDeletionPolicy of this ServicebusSubscription.
-func (mg *ServicebusSubscription) GetDeletionPolicy() xpv1.DeletionPolicy {
+// GetDeletionPolicy of this Subscription.
+func (mg *Subscription) GetDeletionPolicy() xpv1.DeletionPolicy {
 	return mg.Spec.DeletionPolicy
 }
 
-// GetProviderConfigReference of this ServicebusSubscription.
-func (mg *ServicebusSubscription) GetProviderConfigReference() *xpv1.Reference {
+// GetProviderConfigReference of this Subscription.
+func (mg *Subscription) GetProviderConfigReference() *xpv1.Reference {
 	return mg.Spec.ProviderConfigReference
 }
 
 /*
-GetProviderReference of this ServicebusSubscription.
+GetProviderReference of this Subscription.
 Deprecated: Use GetProviderConfigReference.
 */
-func (mg *ServicebusSubscription) GetProviderReference() *xpv1.Reference {
+func (mg *Subscription) GetProviderReference() *xpv1.Reference {
 	return mg.Spec.ProviderReference
 }
 
-// GetWriteConnectionSecretToReference of this ServicebusSubscription.
-func (mg *ServicebusSubscription) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
+// GetWriteConnectionSecretToReference of this Subscription.
+func (mg *Subscription) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
 	return mg.Spec.WriteConnectionSecretToReference
 }
 
-// SetConditions of this ServicebusSubscription.
-func (mg *ServicebusSubscription) SetConditions(c ...xpv1.Condition) {
+// SetConditions of this Subscription.
+func (mg *Subscription) SetConditions(c ...xpv1.Condition) {
 	mg.Status.SetConditions(c...)
 }
 
-// SetDeletionPolicy of this ServicebusSubscription.
-func (mg *ServicebusSubscription) SetDeletionPolicy(r xpv1.DeletionPolicy) {
+// SetDeletionPolicy of this Subscription.
+func (mg *Subscription) SetDeletionPolicy(r xpv1.DeletionPolicy) {
 	mg.Spec.DeletionPolicy = r
 }
 
-// SetProviderConfigReference of this ServicebusSubscription.
-func (mg *ServicebusSubscription) SetProviderConfigReference(r *xpv1.Reference) {
+// SetProviderConfigReference of this Subscription.
+func (mg *Subscription) SetProviderConfigReference(r *xpv1.Reference) {
 	mg.Spec.ProviderConfigReference = r
 }
 
 /*
-SetProviderReference of this ServicebusSubscription.
+SetProviderReference of this Subscription.
 Deprecated: Use SetProviderConfigReference.
 */
-func (mg *ServicebusSubscription) SetProviderReference(r *xpv1.Reference) {
+func (mg *Subscription) SetProviderReference(r *xpv1.Reference) {
 	mg.Spec.ProviderReference = r
 }
 
-// SetWriteConnectionSecretToReference of this ServicebusSubscription.
-func (mg *ServicebusSubscription) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
+// SetWriteConnectionSecretToReference of this Subscription.
+func (mg *Subscription) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
 	mg.Spec.WriteConnectionSecretToReference = r
 }
 
-// GetCondition of this ServicebusSubscriptionRule.
-func (mg *ServicebusSubscriptionRule) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
+// GetCondition of this SubscriptionRule.
+func (mg *SubscriptionRule) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
 	return mg.Status.GetCondition(ct)
 }
 
-// GetDeletionPolicy of this ServicebusSubscriptionRule.
-func (mg *ServicebusSubscriptionRule) GetDeletionPolicy() xpv1.DeletionPolicy {
+// GetDeletionPolicy of this SubscriptionRule.
+func (mg *SubscriptionRule) GetDeletionPolicy() xpv1.DeletionPolicy {
 	return mg.Spec.DeletionPolicy
 }
 
-// GetProviderConfigReference of this ServicebusSubscriptionRule.
-func (mg *ServicebusSubscriptionRule) GetProviderConfigReference() *xpv1.Reference {
+// GetProviderConfigReference of this SubscriptionRule.
+func (mg *SubscriptionRule) GetProviderConfigReference() *xpv1.Reference {
 	return mg.Spec.ProviderConfigReference
 }
 
 /*
-GetProviderReference of this ServicebusSubscriptionRule.
+GetProviderReference of this SubscriptionRule.
 Deprecated: Use GetProviderConfigReference.
 */
-func (mg *ServicebusSubscriptionRule) GetProviderReference() *xpv1.Reference {
+func (mg *SubscriptionRule) GetProviderReference() *xpv1.Reference {
 	return mg.Spec.ProviderReference
 }
 
-// GetWriteConnectionSecretToReference of this ServicebusSubscriptionRule.
-func (mg *ServicebusSubscriptionRule) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
+// GetWriteConnectionSecretToReference of this SubscriptionRule.
+func (mg *SubscriptionRule) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
 	return mg.Spec.WriteConnectionSecretToReference
 }
 
-// SetConditions of this ServicebusSubscriptionRule.
-func (mg *ServicebusSubscriptionRule) SetConditions(c ...xpv1.Condition) {
+// SetConditions of this SubscriptionRule.
+func (mg *SubscriptionRule) SetConditions(c ...xpv1.Condition) {
 	mg.Status.SetConditions(c...)
 }
 
-// SetDeletionPolicy of this ServicebusSubscriptionRule.
-func (mg *ServicebusSubscriptionRule) SetDeletionPolicy(r xpv1.DeletionPolicy) {
+// SetDeletionPolicy of this SubscriptionRule.
+func (mg *SubscriptionRule) SetDeletionPolicy(r xpv1.DeletionPolicy) {
 	mg.Spec.DeletionPolicy = r
 }
 
-// SetProviderConfigReference of this ServicebusSubscriptionRule.
-func (mg *ServicebusSubscriptionRule) SetProviderConfigReference(r *xpv1.Reference) {
+// SetProviderConfigReference of this SubscriptionRule.
+func (mg *SubscriptionRule) SetProviderConfigReference(r *xpv1.Reference) {
 	mg.Spec.ProviderConfigReference = r
 }
 
 /*
-SetProviderReference of this ServicebusSubscriptionRule.
+SetProviderReference of this SubscriptionRule.
 Deprecated: Use SetProviderConfigReference.
 */
-func (mg *ServicebusSubscriptionRule) SetProviderReference(r *xpv1.Reference) {
+func (mg *SubscriptionRule) SetProviderReference(r *xpv1.Reference) {
 	mg.Spec.ProviderReference = r
 }
 
-// SetWriteConnectionSecretToReference of this ServicebusSubscriptionRule.
-func (mg *ServicebusSubscriptionRule) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
+// SetWriteConnectionSecretToReference of this SubscriptionRule.
+func (mg *SubscriptionRule) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
 	mg.Spec.WriteConnectionSecretToReference = r
 }
 
-// GetCondition of this ServicebusTopic.
-func (mg *ServicebusTopic) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
+// GetCondition of this Topic.
+func (mg *Topic) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
 	return mg.Status.GetCondition(ct)
 }
 
-// GetDeletionPolicy of this ServicebusTopic.
-func (mg *ServicebusTopic) GetDeletionPolicy() xpv1.DeletionPolicy {
+// GetDeletionPolicy of this Topic.
+func (mg *Topic) GetDeletionPolicy() xpv1.DeletionPolicy {
 	return mg.Spec.DeletionPolicy
 }
 
-// GetProviderConfigReference of this ServicebusTopic.
-func (mg *ServicebusTopic) GetProviderConfigReference() *xpv1.Reference {
+// GetProviderConfigReference of this Topic.
+func (mg *Topic) GetProviderConfigReference() *xpv1.Reference {
 	return mg.Spec.ProviderConfigReference
 }
 
 /*
-GetProviderReference of this ServicebusTopic.
+GetProviderReference of this Topic.
 Deprecated: Use GetProviderConfigReference.
 */
-func (mg *ServicebusTopic) GetProviderReference() *xpv1.Reference {
+func (mg *Topic) GetProviderReference() *xpv1.Reference {
 	return mg.Spec.ProviderReference
 }
 
-// GetWriteConnectionSecretToReference of this ServicebusTopic.
-func (mg *ServicebusTopic) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
+// GetWriteConnectionSecretToReference of this Topic.
+func (mg *Topic) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
 	return mg.Spec.WriteConnectionSecretToReference
 }
 
-// SetConditions of this ServicebusTopic.
-func (mg *ServicebusTopic) SetConditions(c ...xpv1.Condition) {
+// SetConditions of this Topic.
+func (mg *Topic) SetConditions(c ...xpv1.Condition) {
 	mg.Status.SetConditions(c...)
 }
 
-// SetDeletionPolicy of this ServicebusTopic.
-func (mg *ServicebusTopic) SetDeletionPolicy(r xpv1.DeletionPolicy) {
+// SetDeletionPolicy of this Topic.
+func (mg *Topic) SetDeletionPolicy(r xpv1.DeletionPolicy) {
 	mg.Spec.DeletionPolicy = r
 }
 
-// SetProviderConfigReference of this ServicebusTopic.
-func (mg *ServicebusTopic) SetProviderConfigReference(r *xpv1.Reference) {
+// SetProviderConfigReference of this Topic.
+func (mg *Topic) SetProviderConfigReference(r *xpv1.Reference) {
 	mg.Spec.ProviderConfigReference = r
 }
 
 /*
-SetProviderReference of this ServicebusTopic.
+SetProviderReference of this Topic.
 Deprecated: Use SetProviderConfigReference.
 */
-func (mg *ServicebusTopic) SetProviderReference(r *xpv1.Reference) {
+func (mg *Topic) SetProviderReference(r *xpv1.Reference) {
 	mg.Spec.ProviderReference = r
 }
 
-// SetWriteConnectionSecretToReference of this ServicebusTopic.
-func (mg *ServicebusTopic) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
+// SetWriteConnectionSecretToReference of this Topic.
+func (mg *Topic) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
 	mg.Spec.WriteConnectionSecretToReference = r
 }
 
-// GetCondition of this ServicebusTopicAuthorizationRule.
-func (mg *ServicebusTopicAuthorizationRule) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
+// GetCondition of this TopicAuthorizationRule.
+func (mg *TopicAuthorizationRule) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
 	return mg.Status.GetCondition(ct)
 }
 
-// GetDeletionPolicy of this ServicebusTopicAuthorizationRule.
-func (mg *ServicebusTopicAuthorizationRule) GetDeletionPolicy() xpv1.DeletionPolicy {
+// GetDeletionPolicy of this TopicAuthorizationRule.
+func (mg *TopicAuthorizationRule) GetDeletionPolicy() xpv1.DeletionPolicy {
 	return mg.Spec.DeletionPolicy
 }
 
-// GetProviderConfigReference of this ServicebusTopicAuthorizationRule.
-func (mg *ServicebusTopicAuthorizationRule) GetProviderConfigReference() *xpv1.Reference {
+// GetProviderConfigReference of this TopicAuthorizationRule.
+func (mg *TopicAuthorizationRule) GetProviderConfigReference() *xpv1.Reference {
 	return mg.Spec.ProviderConfigReference
 }
 
 /*
-GetProviderReference of this ServicebusTopicAuthorizationRule.
+GetProviderReference of this TopicAuthorizationRule.
 Deprecated: Use GetProviderConfigReference.
 */
-func (mg *ServicebusTopicAuthorizationRule) GetProviderReference() *xpv1.Reference {
+func (mg *TopicAuthorizationRule) GetProviderReference() *xpv1.Reference {
 	return mg.Spec.ProviderReference
 }
 
-// GetWriteConnectionSecretToReference of this ServicebusTopicAuthorizationRule.
-func (mg *ServicebusTopicAuthorizationRule) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
+// GetWriteConnectionSecretToReference of this TopicAuthorizationRule.
+func (mg *TopicAuthorizationRule) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
 	return mg.Spec.WriteConnectionSecretToReference
 }
 
-// SetConditions of this ServicebusTopicAuthorizationRule.
-func (mg *ServicebusTopicAuthorizationRule) SetConditions(c ...xpv1.Condition) {
+// SetConditions of this TopicAuthorizationRule.
+func (mg *TopicAuthorizationRule) SetConditions(c ...xpv1.Condition) {
 	mg.Status.SetConditions(c...)
 }
 
-// SetDeletionPolicy of this ServicebusTopicAuthorizationRule.
-func (mg *ServicebusTopicAuthorizationRule) SetDeletionPolicy(r xpv1.DeletionPolicy) {
+// SetDeletionPolicy of this TopicAuthorizationRule.
+func (mg *TopicAuthorizationRule) SetDeletionPolicy(r xpv1.DeletionPolicy) {
 	mg.Spec.DeletionPolicy = r
 }
 
-// SetProviderConfigReference of this ServicebusTopicAuthorizationRule.
-func (mg *ServicebusTopicAuthorizationRule) SetProviderConfigReference(r *xpv1.Reference) {
+// SetProviderConfigReference of this TopicAuthorizationRule.
+func (mg *TopicAuthorizationRule) SetProviderConfigReference(r *xpv1.Reference) {
 	mg.Spec.ProviderConfigReference = r
 }
 
 /*
-SetProviderReference of this ServicebusTopicAuthorizationRule.
+SetProviderReference of this TopicAuthorizationRule.
 Deprecated: Use SetProviderConfigReference.
 */
-func (mg *ServicebusTopicAuthorizationRule) SetProviderReference(r *xpv1.Reference) {
+func (mg *TopicAuthorizationRule) SetProviderReference(r *xpv1.Reference) {
 	mg.Spec.ProviderReference = r
 }
 
-// SetWriteConnectionSecretToReference of this ServicebusTopicAuthorizationRule.
-func (mg *ServicebusTopicAuthorizationRule) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
+// SetWriteConnectionSecretToReference of this TopicAuthorizationRule.
+func (mg *TopicAuthorizationRule) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
 	mg.Spec.WriteConnectionSecretToReference = r
 }

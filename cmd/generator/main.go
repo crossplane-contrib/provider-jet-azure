@@ -17,6 +17,34 @@ limitations under the License.
 package main
 
 import (
+	"io/ioutil"
+	"os"
+	"path/filepath"
+
+	"github.com/pkg/errors"
+
+	"github.com/crossplane-contrib/terrajet/pkg/pipeline"
+
+	"github.com/crossplane-contrib/provider-tf-azure/config"
+)
+
+func main() {
+	// delete API dirs
+	deleteGenDirs("apis", map[string]struct{}{
+		"v1alpha1": {},
+		"rconfig":  {},
+	})
+	// delete controller dirs
+	deleteGenDirs("internal/controller", map[string]struct{}{
+		"providerconfig": {},
+	})
+
+	pipeline.Run(config.GetProvider())
+}
+
+/*package main
+
+import (
 	"fmt"
 	"io/ioutil"
 	"os"
@@ -216,6 +244,7 @@ func main() { // nolint:gocyclo
 	}
 	fmt.Printf("\nGenerated %d resources!\n", count)
 }
+*/
 
 // delete API subdirs for a clean start
 func deleteGenDirs(rootDir string, keepMap map[string]struct{}) {

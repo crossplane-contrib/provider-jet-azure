@@ -19,282 +19,282 @@ package v1alpha1
 
 import xpv1 "github.com/crossplane/crossplane-runtime/apis/common/v1"
 
-// GetCondition of this MariadbConfiguration.
-func (mg *MariadbConfiguration) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
+// GetCondition of this Configuration.
+func (mg *Configuration) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
 	return mg.Status.GetCondition(ct)
 }
 
-// GetDeletionPolicy of this MariadbConfiguration.
-func (mg *MariadbConfiguration) GetDeletionPolicy() xpv1.DeletionPolicy {
+// GetDeletionPolicy of this Configuration.
+func (mg *Configuration) GetDeletionPolicy() xpv1.DeletionPolicy {
 	return mg.Spec.DeletionPolicy
 }
 
-// GetProviderConfigReference of this MariadbConfiguration.
-func (mg *MariadbConfiguration) GetProviderConfigReference() *xpv1.Reference {
+// GetProviderConfigReference of this Configuration.
+func (mg *Configuration) GetProviderConfigReference() *xpv1.Reference {
 	return mg.Spec.ProviderConfigReference
 }
 
 /*
-GetProviderReference of this MariadbConfiguration.
+GetProviderReference of this Configuration.
 Deprecated: Use GetProviderConfigReference.
 */
-func (mg *MariadbConfiguration) GetProviderReference() *xpv1.Reference {
+func (mg *Configuration) GetProviderReference() *xpv1.Reference {
 	return mg.Spec.ProviderReference
 }
 
-// GetWriteConnectionSecretToReference of this MariadbConfiguration.
-func (mg *MariadbConfiguration) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
+// GetWriteConnectionSecretToReference of this Configuration.
+func (mg *Configuration) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
 	return mg.Spec.WriteConnectionSecretToReference
 }
 
-// SetConditions of this MariadbConfiguration.
-func (mg *MariadbConfiguration) SetConditions(c ...xpv1.Condition) {
+// SetConditions of this Configuration.
+func (mg *Configuration) SetConditions(c ...xpv1.Condition) {
 	mg.Status.SetConditions(c...)
 }
 
-// SetDeletionPolicy of this MariadbConfiguration.
-func (mg *MariadbConfiguration) SetDeletionPolicy(r xpv1.DeletionPolicy) {
+// SetDeletionPolicy of this Configuration.
+func (mg *Configuration) SetDeletionPolicy(r xpv1.DeletionPolicy) {
 	mg.Spec.DeletionPolicy = r
 }
 
-// SetProviderConfigReference of this MariadbConfiguration.
-func (mg *MariadbConfiguration) SetProviderConfigReference(r *xpv1.Reference) {
+// SetProviderConfigReference of this Configuration.
+func (mg *Configuration) SetProviderConfigReference(r *xpv1.Reference) {
 	mg.Spec.ProviderConfigReference = r
 }
 
 /*
-SetProviderReference of this MariadbConfiguration.
+SetProviderReference of this Configuration.
 Deprecated: Use SetProviderConfigReference.
 */
-func (mg *MariadbConfiguration) SetProviderReference(r *xpv1.Reference) {
+func (mg *Configuration) SetProviderReference(r *xpv1.Reference) {
 	mg.Spec.ProviderReference = r
 }
 
-// SetWriteConnectionSecretToReference of this MariadbConfiguration.
-func (mg *MariadbConfiguration) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
+// SetWriteConnectionSecretToReference of this Configuration.
+func (mg *Configuration) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
 	mg.Spec.WriteConnectionSecretToReference = r
 }
 
-// GetCondition of this MariadbDatabase.
-func (mg *MariadbDatabase) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
+// GetCondition of this Database.
+func (mg *Database) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
 	return mg.Status.GetCondition(ct)
 }
 
-// GetDeletionPolicy of this MariadbDatabase.
-func (mg *MariadbDatabase) GetDeletionPolicy() xpv1.DeletionPolicy {
+// GetDeletionPolicy of this Database.
+func (mg *Database) GetDeletionPolicy() xpv1.DeletionPolicy {
 	return mg.Spec.DeletionPolicy
 }
 
-// GetProviderConfigReference of this MariadbDatabase.
-func (mg *MariadbDatabase) GetProviderConfigReference() *xpv1.Reference {
+// GetProviderConfigReference of this Database.
+func (mg *Database) GetProviderConfigReference() *xpv1.Reference {
 	return mg.Spec.ProviderConfigReference
 }
 
 /*
-GetProviderReference of this MariadbDatabase.
+GetProviderReference of this Database.
 Deprecated: Use GetProviderConfigReference.
 */
-func (mg *MariadbDatabase) GetProviderReference() *xpv1.Reference {
+func (mg *Database) GetProviderReference() *xpv1.Reference {
 	return mg.Spec.ProviderReference
 }
 
-// GetWriteConnectionSecretToReference of this MariadbDatabase.
-func (mg *MariadbDatabase) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
+// GetWriteConnectionSecretToReference of this Database.
+func (mg *Database) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
 	return mg.Spec.WriteConnectionSecretToReference
 }
 
-// SetConditions of this MariadbDatabase.
-func (mg *MariadbDatabase) SetConditions(c ...xpv1.Condition) {
+// SetConditions of this Database.
+func (mg *Database) SetConditions(c ...xpv1.Condition) {
 	mg.Status.SetConditions(c...)
 }
 
-// SetDeletionPolicy of this MariadbDatabase.
-func (mg *MariadbDatabase) SetDeletionPolicy(r xpv1.DeletionPolicy) {
+// SetDeletionPolicy of this Database.
+func (mg *Database) SetDeletionPolicy(r xpv1.DeletionPolicy) {
 	mg.Spec.DeletionPolicy = r
 }
 
-// SetProviderConfigReference of this MariadbDatabase.
-func (mg *MariadbDatabase) SetProviderConfigReference(r *xpv1.Reference) {
+// SetProviderConfigReference of this Database.
+func (mg *Database) SetProviderConfigReference(r *xpv1.Reference) {
 	mg.Spec.ProviderConfigReference = r
 }
 
 /*
-SetProviderReference of this MariadbDatabase.
+SetProviderReference of this Database.
 Deprecated: Use SetProviderConfigReference.
 */
-func (mg *MariadbDatabase) SetProviderReference(r *xpv1.Reference) {
+func (mg *Database) SetProviderReference(r *xpv1.Reference) {
 	mg.Spec.ProviderReference = r
 }
 
-// SetWriteConnectionSecretToReference of this MariadbDatabase.
-func (mg *MariadbDatabase) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
+// SetWriteConnectionSecretToReference of this Database.
+func (mg *Database) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
 	mg.Spec.WriteConnectionSecretToReference = r
 }
 
-// GetCondition of this MariadbFirewallRule.
-func (mg *MariadbFirewallRule) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
+// GetCondition of this FirewallRule.
+func (mg *FirewallRule) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
 	return mg.Status.GetCondition(ct)
 }
 
-// GetDeletionPolicy of this MariadbFirewallRule.
-func (mg *MariadbFirewallRule) GetDeletionPolicy() xpv1.DeletionPolicy {
+// GetDeletionPolicy of this FirewallRule.
+func (mg *FirewallRule) GetDeletionPolicy() xpv1.DeletionPolicy {
 	return mg.Spec.DeletionPolicy
 }
 
-// GetProviderConfigReference of this MariadbFirewallRule.
-func (mg *MariadbFirewallRule) GetProviderConfigReference() *xpv1.Reference {
+// GetProviderConfigReference of this FirewallRule.
+func (mg *FirewallRule) GetProviderConfigReference() *xpv1.Reference {
 	return mg.Spec.ProviderConfigReference
 }
 
 /*
-GetProviderReference of this MariadbFirewallRule.
+GetProviderReference of this FirewallRule.
 Deprecated: Use GetProviderConfigReference.
 */
-func (mg *MariadbFirewallRule) GetProviderReference() *xpv1.Reference {
+func (mg *FirewallRule) GetProviderReference() *xpv1.Reference {
 	return mg.Spec.ProviderReference
 }
 
-// GetWriteConnectionSecretToReference of this MariadbFirewallRule.
-func (mg *MariadbFirewallRule) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
+// GetWriteConnectionSecretToReference of this FirewallRule.
+func (mg *FirewallRule) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
 	return mg.Spec.WriteConnectionSecretToReference
 }
 
-// SetConditions of this MariadbFirewallRule.
-func (mg *MariadbFirewallRule) SetConditions(c ...xpv1.Condition) {
+// SetConditions of this FirewallRule.
+func (mg *FirewallRule) SetConditions(c ...xpv1.Condition) {
 	mg.Status.SetConditions(c...)
 }
 
-// SetDeletionPolicy of this MariadbFirewallRule.
-func (mg *MariadbFirewallRule) SetDeletionPolicy(r xpv1.DeletionPolicy) {
+// SetDeletionPolicy of this FirewallRule.
+func (mg *FirewallRule) SetDeletionPolicy(r xpv1.DeletionPolicy) {
 	mg.Spec.DeletionPolicy = r
 }
 
-// SetProviderConfigReference of this MariadbFirewallRule.
-func (mg *MariadbFirewallRule) SetProviderConfigReference(r *xpv1.Reference) {
+// SetProviderConfigReference of this FirewallRule.
+func (mg *FirewallRule) SetProviderConfigReference(r *xpv1.Reference) {
 	mg.Spec.ProviderConfigReference = r
 }
 
 /*
-SetProviderReference of this MariadbFirewallRule.
+SetProviderReference of this FirewallRule.
 Deprecated: Use SetProviderConfigReference.
 */
-func (mg *MariadbFirewallRule) SetProviderReference(r *xpv1.Reference) {
+func (mg *FirewallRule) SetProviderReference(r *xpv1.Reference) {
 	mg.Spec.ProviderReference = r
 }
 
-// SetWriteConnectionSecretToReference of this MariadbFirewallRule.
-func (mg *MariadbFirewallRule) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
+// SetWriteConnectionSecretToReference of this FirewallRule.
+func (mg *FirewallRule) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
 	mg.Spec.WriteConnectionSecretToReference = r
 }
 
-// GetCondition of this MariadbServer.
-func (mg *MariadbServer) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
+// GetCondition of this Server.
+func (mg *Server) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
 	return mg.Status.GetCondition(ct)
 }
 
-// GetDeletionPolicy of this MariadbServer.
-func (mg *MariadbServer) GetDeletionPolicy() xpv1.DeletionPolicy {
+// GetDeletionPolicy of this Server.
+func (mg *Server) GetDeletionPolicy() xpv1.DeletionPolicy {
 	return mg.Spec.DeletionPolicy
 }
 
-// GetProviderConfigReference of this MariadbServer.
-func (mg *MariadbServer) GetProviderConfigReference() *xpv1.Reference {
+// GetProviderConfigReference of this Server.
+func (mg *Server) GetProviderConfigReference() *xpv1.Reference {
 	return mg.Spec.ProviderConfigReference
 }
 
 /*
-GetProviderReference of this MariadbServer.
+GetProviderReference of this Server.
 Deprecated: Use GetProviderConfigReference.
 */
-func (mg *MariadbServer) GetProviderReference() *xpv1.Reference {
+func (mg *Server) GetProviderReference() *xpv1.Reference {
 	return mg.Spec.ProviderReference
 }
 
-// GetWriteConnectionSecretToReference of this MariadbServer.
-func (mg *MariadbServer) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
+// GetWriteConnectionSecretToReference of this Server.
+func (mg *Server) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
 	return mg.Spec.WriteConnectionSecretToReference
 }
 
-// SetConditions of this MariadbServer.
-func (mg *MariadbServer) SetConditions(c ...xpv1.Condition) {
+// SetConditions of this Server.
+func (mg *Server) SetConditions(c ...xpv1.Condition) {
 	mg.Status.SetConditions(c...)
 }
 
-// SetDeletionPolicy of this MariadbServer.
-func (mg *MariadbServer) SetDeletionPolicy(r xpv1.DeletionPolicy) {
+// SetDeletionPolicy of this Server.
+func (mg *Server) SetDeletionPolicy(r xpv1.DeletionPolicy) {
 	mg.Spec.DeletionPolicy = r
 }
 
-// SetProviderConfigReference of this MariadbServer.
-func (mg *MariadbServer) SetProviderConfigReference(r *xpv1.Reference) {
+// SetProviderConfigReference of this Server.
+func (mg *Server) SetProviderConfigReference(r *xpv1.Reference) {
 	mg.Spec.ProviderConfigReference = r
 }
 
 /*
-SetProviderReference of this MariadbServer.
+SetProviderReference of this Server.
 Deprecated: Use SetProviderConfigReference.
 */
-func (mg *MariadbServer) SetProviderReference(r *xpv1.Reference) {
+func (mg *Server) SetProviderReference(r *xpv1.Reference) {
 	mg.Spec.ProviderReference = r
 }
 
-// SetWriteConnectionSecretToReference of this MariadbServer.
-func (mg *MariadbServer) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
+// SetWriteConnectionSecretToReference of this Server.
+func (mg *Server) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
 	mg.Spec.WriteConnectionSecretToReference = r
 }
 
-// GetCondition of this MariadbVirtualNetworkRule.
-func (mg *MariadbVirtualNetworkRule) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
+// GetCondition of this VirtualNetworkRule.
+func (mg *VirtualNetworkRule) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
 	return mg.Status.GetCondition(ct)
 }
 
-// GetDeletionPolicy of this MariadbVirtualNetworkRule.
-func (mg *MariadbVirtualNetworkRule) GetDeletionPolicy() xpv1.DeletionPolicy {
+// GetDeletionPolicy of this VirtualNetworkRule.
+func (mg *VirtualNetworkRule) GetDeletionPolicy() xpv1.DeletionPolicy {
 	return mg.Spec.DeletionPolicy
 }
 
-// GetProviderConfigReference of this MariadbVirtualNetworkRule.
-func (mg *MariadbVirtualNetworkRule) GetProviderConfigReference() *xpv1.Reference {
+// GetProviderConfigReference of this VirtualNetworkRule.
+func (mg *VirtualNetworkRule) GetProviderConfigReference() *xpv1.Reference {
 	return mg.Spec.ProviderConfigReference
 }
 
 /*
-GetProviderReference of this MariadbVirtualNetworkRule.
+GetProviderReference of this VirtualNetworkRule.
 Deprecated: Use GetProviderConfigReference.
 */
-func (mg *MariadbVirtualNetworkRule) GetProviderReference() *xpv1.Reference {
+func (mg *VirtualNetworkRule) GetProviderReference() *xpv1.Reference {
 	return mg.Spec.ProviderReference
 }
 
-// GetWriteConnectionSecretToReference of this MariadbVirtualNetworkRule.
-func (mg *MariadbVirtualNetworkRule) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
+// GetWriteConnectionSecretToReference of this VirtualNetworkRule.
+func (mg *VirtualNetworkRule) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
 	return mg.Spec.WriteConnectionSecretToReference
 }
 
-// SetConditions of this MariadbVirtualNetworkRule.
-func (mg *MariadbVirtualNetworkRule) SetConditions(c ...xpv1.Condition) {
+// SetConditions of this VirtualNetworkRule.
+func (mg *VirtualNetworkRule) SetConditions(c ...xpv1.Condition) {
 	mg.Status.SetConditions(c...)
 }
 
-// SetDeletionPolicy of this MariadbVirtualNetworkRule.
-func (mg *MariadbVirtualNetworkRule) SetDeletionPolicy(r xpv1.DeletionPolicy) {
+// SetDeletionPolicy of this VirtualNetworkRule.
+func (mg *VirtualNetworkRule) SetDeletionPolicy(r xpv1.DeletionPolicy) {
 	mg.Spec.DeletionPolicy = r
 }
 
-// SetProviderConfigReference of this MariadbVirtualNetworkRule.
-func (mg *MariadbVirtualNetworkRule) SetProviderConfigReference(r *xpv1.Reference) {
+// SetProviderConfigReference of this VirtualNetworkRule.
+func (mg *VirtualNetworkRule) SetProviderConfigReference(r *xpv1.Reference) {
 	mg.Spec.ProviderConfigReference = r
 }
 
 /*
-SetProviderReference of this MariadbVirtualNetworkRule.
+SetProviderReference of this VirtualNetworkRule.
 Deprecated: Use SetProviderConfigReference.
 */
-func (mg *MariadbVirtualNetworkRule) SetProviderReference(r *xpv1.Reference) {
+func (mg *VirtualNetworkRule) SetProviderReference(r *xpv1.Reference) {
 	mg.Spec.ProviderReference = r
 }
 
-// SetWriteConnectionSecretToReference of this MariadbVirtualNetworkRule.
-func (mg *MariadbVirtualNetworkRule) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
+// SetWriteConnectionSecretToReference of this VirtualNetworkRule.
+func (mg *VirtualNetworkRule) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
 	mg.Spec.WriteConnectionSecretToReference = r
 }

@@ -19,8 +19,8 @@ package v1alpha1
 
 import resource "github.com/crossplane/crossplane-runtime/pkg/resource"
 
-// GetItems of this LighthouseAssignmentList.
-func (l *LighthouseAssignmentList) GetItems() []resource.Managed {
+// GetItems of this AssignmentList.
+func (l *AssignmentList) GetItems() []resource.Managed {
 	items := make([]resource.Managed, len(l.Items))
 	for i := range l.Items {
 		items[i] = &l.Items[i]
@@ -28,8 +28,8 @@ func (l *LighthouseAssignmentList) GetItems() []resource.Managed {
 	return items
 }
 
-// GetItems of this LighthouseDefinitionList.
-func (l *LighthouseDefinitionList) GetItems() []resource.Managed {
+// GetItems of this DefinitionList.
+func (l *DefinitionList) GetItems() []resource.Managed {
 	items := make([]resource.Managed, len(l.Items))
 	for i := range l.Items {
 		items[i] = &l.Items[i]

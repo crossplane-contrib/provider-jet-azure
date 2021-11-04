@@ -19,786 +19,786 @@ package v1alpha1
 
 import xpv1 "github.com/crossplane/crossplane-runtime/apis/common/v1"
 
-// GetCondition of this LogicAppActionCustom.
-func (mg *LogicAppActionCustom) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
+// GetCondition of this AppActionCustom.
+func (mg *AppActionCustom) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
 	return mg.Status.GetCondition(ct)
 }
 
-// GetDeletionPolicy of this LogicAppActionCustom.
-func (mg *LogicAppActionCustom) GetDeletionPolicy() xpv1.DeletionPolicy {
+// GetDeletionPolicy of this AppActionCustom.
+func (mg *AppActionCustom) GetDeletionPolicy() xpv1.DeletionPolicy {
 	return mg.Spec.DeletionPolicy
 }
 
-// GetProviderConfigReference of this LogicAppActionCustom.
-func (mg *LogicAppActionCustom) GetProviderConfigReference() *xpv1.Reference {
+// GetProviderConfigReference of this AppActionCustom.
+func (mg *AppActionCustom) GetProviderConfigReference() *xpv1.Reference {
 	return mg.Spec.ProviderConfigReference
 }
 
 /*
-GetProviderReference of this LogicAppActionCustom.
+GetProviderReference of this AppActionCustom.
 Deprecated: Use GetProviderConfigReference.
 */
-func (mg *LogicAppActionCustom) GetProviderReference() *xpv1.Reference {
+func (mg *AppActionCustom) GetProviderReference() *xpv1.Reference {
 	return mg.Spec.ProviderReference
 }
 
-// GetWriteConnectionSecretToReference of this LogicAppActionCustom.
-func (mg *LogicAppActionCustom) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
+// GetWriteConnectionSecretToReference of this AppActionCustom.
+func (mg *AppActionCustom) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
 	return mg.Spec.WriteConnectionSecretToReference
 }
 
-// SetConditions of this LogicAppActionCustom.
-func (mg *LogicAppActionCustom) SetConditions(c ...xpv1.Condition) {
+// SetConditions of this AppActionCustom.
+func (mg *AppActionCustom) SetConditions(c ...xpv1.Condition) {
 	mg.Status.SetConditions(c...)
 }
 
-// SetDeletionPolicy of this LogicAppActionCustom.
-func (mg *LogicAppActionCustom) SetDeletionPolicy(r xpv1.DeletionPolicy) {
+// SetDeletionPolicy of this AppActionCustom.
+func (mg *AppActionCustom) SetDeletionPolicy(r xpv1.DeletionPolicy) {
 	mg.Spec.DeletionPolicy = r
 }
 
-// SetProviderConfigReference of this LogicAppActionCustom.
-func (mg *LogicAppActionCustom) SetProviderConfigReference(r *xpv1.Reference) {
+// SetProviderConfigReference of this AppActionCustom.
+func (mg *AppActionCustom) SetProviderConfigReference(r *xpv1.Reference) {
 	mg.Spec.ProviderConfigReference = r
 }
 
 /*
-SetProviderReference of this LogicAppActionCustom.
+SetProviderReference of this AppActionCustom.
 Deprecated: Use SetProviderConfigReference.
 */
-func (mg *LogicAppActionCustom) SetProviderReference(r *xpv1.Reference) {
+func (mg *AppActionCustom) SetProviderReference(r *xpv1.Reference) {
 	mg.Spec.ProviderReference = r
 }
 
-// SetWriteConnectionSecretToReference of this LogicAppActionCustom.
-func (mg *LogicAppActionCustom) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
+// SetWriteConnectionSecretToReference of this AppActionCustom.
+func (mg *AppActionCustom) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
 	mg.Spec.WriteConnectionSecretToReference = r
 }
 
-// GetCondition of this LogicAppActionHttp.
-func (mg *LogicAppActionHttp) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
+// GetCondition of this AppActionHttp.
+func (mg *AppActionHttp) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
 	return mg.Status.GetCondition(ct)
 }
 
-// GetDeletionPolicy of this LogicAppActionHttp.
-func (mg *LogicAppActionHttp) GetDeletionPolicy() xpv1.DeletionPolicy {
+// GetDeletionPolicy of this AppActionHttp.
+func (mg *AppActionHttp) GetDeletionPolicy() xpv1.DeletionPolicy {
 	return mg.Spec.DeletionPolicy
 }
 
-// GetProviderConfigReference of this LogicAppActionHttp.
-func (mg *LogicAppActionHttp) GetProviderConfigReference() *xpv1.Reference {
+// GetProviderConfigReference of this AppActionHttp.
+func (mg *AppActionHttp) GetProviderConfigReference() *xpv1.Reference {
 	return mg.Spec.ProviderConfigReference
 }
 
 /*
-GetProviderReference of this LogicAppActionHttp.
+GetProviderReference of this AppActionHttp.
 Deprecated: Use GetProviderConfigReference.
 */
-func (mg *LogicAppActionHttp) GetProviderReference() *xpv1.Reference {
+func (mg *AppActionHttp) GetProviderReference() *xpv1.Reference {
 	return mg.Spec.ProviderReference
 }
 
-// GetWriteConnectionSecretToReference of this LogicAppActionHttp.
-func (mg *LogicAppActionHttp) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
+// GetWriteConnectionSecretToReference of this AppActionHttp.
+func (mg *AppActionHttp) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
 	return mg.Spec.WriteConnectionSecretToReference
 }
 
-// SetConditions of this LogicAppActionHttp.
-func (mg *LogicAppActionHttp) SetConditions(c ...xpv1.Condition) {
+// SetConditions of this AppActionHttp.
+func (mg *AppActionHttp) SetConditions(c ...xpv1.Condition) {
 	mg.Status.SetConditions(c...)
 }
 
-// SetDeletionPolicy of this LogicAppActionHttp.
-func (mg *LogicAppActionHttp) SetDeletionPolicy(r xpv1.DeletionPolicy) {
+// SetDeletionPolicy of this AppActionHttp.
+func (mg *AppActionHttp) SetDeletionPolicy(r xpv1.DeletionPolicy) {
 	mg.Spec.DeletionPolicy = r
 }
 
-// SetProviderConfigReference of this LogicAppActionHttp.
-func (mg *LogicAppActionHttp) SetProviderConfigReference(r *xpv1.Reference) {
+// SetProviderConfigReference of this AppActionHttp.
+func (mg *AppActionHttp) SetProviderConfigReference(r *xpv1.Reference) {
 	mg.Spec.ProviderConfigReference = r
 }
 
 /*
-SetProviderReference of this LogicAppActionHttp.
+SetProviderReference of this AppActionHttp.
 Deprecated: Use SetProviderConfigReference.
 */
-func (mg *LogicAppActionHttp) SetProviderReference(r *xpv1.Reference) {
+func (mg *AppActionHttp) SetProviderReference(r *xpv1.Reference) {
 	mg.Spec.ProviderReference = r
 }
 
-// SetWriteConnectionSecretToReference of this LogicAppActionHttp.
-func (mg *LogicAppActionHttp) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
+// SetWriteConnectionSecretToReference of this AppActionHttp.
+func (mg *AppActionHttp) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
 	mg.Spec.WriteConnectionSecretToReference = r
 }
 
-// GetCondition of this LogicAppIntegrationAccount.
-func (mg *LogicAppIntegrationAccount) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
+// GetCondition of this AppIntegrationAccount.
+func (mg *AppIntegrationAccount) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
 	return mg.Status.GetCondition(ct)
 }
 
-// GetDeletionPolicy of this LogicAppIntegrationAccount.
-func (mg *LogicAppIntegrationAccount) GetDeletionPolicy() xpv1.DeletionPolicy {
+// GetDeletionPolicy of this AppIntegrationAccount.
+func (mg *AppIntegrationAccount) GetDeletionPolicy() xpv1.DeletionPolicy {
 	return mg.Spec.DeletionPolicy
 }
 
-// GetProviderConfigReference of this LogicAppIntegrationAccount.
-func (mg *LogicAppIntegrationAccount) GetProviderConfigReference() *xpv1.Reference {
+// GetProviderConfigReference of this AppIntegrationAccount.
+func (mg *AppIntegrationAccount) GetProviderConfigReference() *xpv1.Reference {
 	return mg.Spec.ProviderConfigReference
 }
 
 /*
-GetProviderReference of this LogicAppIntegrationAccount.
+GetProviderReference of this AppIntegrationAccount.
 Deprecated: Use GetProviderConfigReference.
 */
-func (mg *LogicAppIntegrationAccount) GetProviderReference() *xpv1.Reference {
+func (mg *AppIntegrationAccount) GetProviderReference() *xpv1.Reference {
 	return mg.Spec.ProviderReference
 }
 
-// GetWriteConnectionSecretToReference of this LogicAppIntegrationAccount.
-func (mg *LogicAppIntegrationAccount) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
+// GetWriteConnectionSecretToReference of this AppIntegrationAccount.
+func (mg *AppIntegrationAccount) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
 	return mg.Spec.WriteConnectionSecretToReference
 }
 
-// SetConditions of this LogicAppIntegrationAccount.
-func (mg *LogicAppIntegrationAccount) SetConditions(c ...xpv1.Condition) {
+// SetConditions of this AppIntegrationAccount.
+func (mg *AppIntegrationAccount) SetConditions(c ...xpv1.Condition) {
 	mg.Status.SetConditions(c...)
 }
 
-// SetDeletionPolicy of this LogicAppIntegrationAccount.
-func (mg *LogicAppIntegrationAccount) SetDeletionPolicy(r xpv1.DeletionPolicy) {
+// SetDeletionPolicy of this AppIntegrationAccount.
+func (mg *AppIntegrationAccount) SetDeletionPolicy(r xpv1.DeletionPolicy) {
 	mg.Spec.DeletionPolicy = r
 }
 
-// SetProviderConfigReference of this LogicAppIntegrationAccount.
-func (mg *LogicAppIntegrationAccount) SetProviderConfigReference(r *xpv1.Reference) {
+// SetProviderConfigReference of this AppIntegrationAccount.
+func (mg *AppIntegrationAccount) SetProviderConfigReference(r *xpv1.Reference) {
 	mg.Spec.ProviderConfigReference = r
 }
 
 /*
-SetProviderReference of this LogicAppIntegrationAccount.
+SetProviderReference of this AppIntegrationAccount.
 Deprecated: Use SetProviderConfigReference.
 */
-func (mg *LogicAppIntegrationAccount) SetProviderReference(r *xpv1.Reference) {
+func (mg *AppIntegrationAccount) SetProviderReference(r *xpv1.Reference) {
 	mg.Spec.ProviderReference = r
 }
 
-// SetWriteConnectionSecretToReference of this LogicAppIntegrationAccount.
-func (mg *LogicAppIntegrationAccount) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
+// SetWriteConnectionSecretToReference of this AppIntegrationAccount.
+func (mg *AppIntegrationAccount) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
 	mg.Spec.WriteConnectionSecretToReference = r
 }
 
-// GetCondition of this LogicAppIntegrationAccountAgreement.
-func (mg *LogicAppIntegrationAccountAgreement) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
+// GetCondition of this AppIntegrationAccountAgreement.
+func (mg *AppIntegrationAccountAgreement) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
 	return mg.Status.GetCondition(ct)
 }
 
-// GetDeletionPolicy of this LogicAppIntegrationAccountAgreement.
-func (mg *LogicAppIntegrationAccountAgreement) GetDeletionPolicy() xpv1.DeletionPolicy {
+// GetDeletionPolicy of this AppIntegrationAccountAgreement.
+func (mg *AppIntegrationAccountAgreement) GetDeletionPolicy() xpv1.DeletionPolicy {
 	return mg.Spec.DeletionPolicy
 }
 
-// GetProviderConfigReference of this LogicAppIntegrationAccountAgreement.
-func (mg *LogicAppIntegrationAccountAgreement) GetProviderConfigReference() *xpv1.Reference {
+// GetProviderConfigReference of this AppIntegrationAccountAgreement.
+func (mg *AppIntegrationAccountAgreement) GetProviderConfigReference() *xpv1.Reference {
 	return mg.Spec.ProviderConfigReference
 }
 
 /*
-GetProviderReference of this LogicAppIntegrationAccountAgreement.
+GetProviderReference of this AppIntegrationAccountAgreement.
 Deprecated: Use GetProviderConfigReference.
 */
-func (mg *LogicAppIntegrationAccountAgreement) GetProviderReference() *xpv1.Reference {
+func (mg *AppIntegrationAccountAgreement) GetProviderReference() *xpv1.Reference {
 	return mg.Spec.ProviderReference
 }
 
-// GetWriteConnectionSecretToReference of this LogicAppIntegrationAccountAgreement.
-func (mg *LogicAppIntegrationAccountAgreement) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
+// GetWriteConnectionSecretToReference of this AppIntegrationAccountAgreement.
+func (mg *AppIntegrationAccountAgreement) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
 	return mg.Spec.WriteConnectionSecretToReference
 }
 
-// SetConditions of this LogicAppIntegrationAccountAgreement.
-func (mg *LogicAppIntegrationAccountAgreement) SetConditions(c ...xpv1.Condition) {
+// SetConditions of this AppIntegrationAccountAgreement.
+func (mg *AppIntegrationAccountAgreement) SetConditions(c ...xpv1.Condition) {
 	mg.Status.SetConditions(c...)
 }
 
-// SetDeletionPolicy of this LogicAppIntegrationAccountAgreement.
-func (mg *LogicAppIntegrationAccountAgreement) SetDeletionPolicy(r xpv1.DeletionPolicy) {
+// SetDeletionPolicy of this AppIntegrationAccountAgreement.
+func (mg *AppIntegrationAccountAgreement) SetDeletionPolicy(r xpv1.DeletionPolicy) {
 	mg.Spec.DeletionPolicy = r
 }
 
-// SetProviderConfigReference of this LogicAppIntegrationAccountAgreement.
-func (mg *LogicAppIntegrationAccountAgreement) SetProviderConfigReference(r *xpv1.Reference) {
+// SetProviderConfigReference of this AppIntegrationAccountAgreement.
+func (mg *AppIntegrationAccountAgreement) SetProviderConfigReference(r *xpv1.Reference) {
 	mg.Spec.ProviderConfigReference = r
 }
 
 /*
-SetProviderReference of this LogicAppIntegrationAccountAgreement.
+SetProviderReference of this AppIntegrationAccountAgreement.
 Deprecated: Use SetProviderConfigReference.
 */
-func (mg *LogicAppIntegrationAccountAgreement) SetProviderReference(r *xpv1.Reference) {
+func (mg *AppIntegrationAccountAgreement) SetProviderReference(r *xpv1.Reference) {
 	mg.Spec.ProviderReference = r
 }
 
-// SetWriteConnectionSecretToReference of this LogicAppIntegrationAccountAgreement.
-func (mg *LogicAppIntegrationAccountAgreement) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
+// SetWriteConnectionSecretToReference of this AppIntegrationAccountAgreement.
+func (mg *AppIntegrationAccountAgreement) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
 	mg.Spec.WriteConnectionSecretToReference = r
 }
 
-// GetCondition of this LogicAppIntegrationAccountAssembly.
-func (mg *LogicAppIntegrationAccountAssembly) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
+// GetCondition of this AppIntegrationAccountAssembly.
+func (mg *AppIntegrationAccountAssembly) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
 	return mg.Status.GetCondition(ct)
 }
 
-// GetDeletionPolicy of this LogicAppIntegrationAccountAssembly.
-func (mg *LogicAppIntegrationAccountAssembly) GetDeletionPolicy() xpv1.DeletionPolicy {
+// GetDeletionPolicy of this AppIntegrationAccountAssembly.
+func (mg *AppIntegrationAccountAssembly) GetDeletionPolicy() xpv1.DeletionPolicy {
 	return mg.Spec.DeletionPolicy
 }
 
-// GetProviderConfigReference of this LogicAppIntegrationAccountAssembly.
-func (mg *LogicAppIntegrationAccountAssembly) GetProviderConfigReference() *xpv1.Reference {
+// GetProviderConfigReference of this AppIntegrationAccountAssembly.
+func (mg *AppIntegrationAccountAssembly) GetProviderConfigReference() *xpv1.Reference {
 	return mg.Spec.ProviderConfigReference
 }
 
 /*
-GetProviderReference of this LogicAppIntegrationAccountAssembly.
+GetProviderReference of this AppIntegrationAccountAssembly.
 Deprecated: Use GetProviderConfigReference.
 */
-func (mg *LogicAppIntegrationAccountAssembly) GetProviderReference() *xpv1.Reference {
+func (mg *AppIntegrationAccountAssembly) GetProviderReference() *xpv1.Reference {
 	return mg.Spec.ProviderReference
 }
 
-// GetWriteConnectionSecretToReference of this LogicAppIntegrationAccountAssembly.
-func (mg *LogicAppIntegrationAccountAssembly) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
+// GetWriteConnectionSecretToReference of this AppIntegrationAccountAssembly.
+func (mg *AppIntegrationAccountAssembly) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
 	return mg.Spec.WriteConnectionSecretToReference
 }
 
-// SetConditions of this LogicAppIntegrationAccountAssembly.
-func (mg *LogicAppIntegrationAccountAssembly) SetConditions(c ...xpv1.Condition) {
+// SetConditions of this AppIntegrationAccountAssembly.
+func (mg *AppIntegrationAccountAssembly) SetConditions(c ...xpv1.Condition) {
 	mg.Status.SetConditions(c...)
 }
 
-// SetDeletionPolicy of this LogicAppIntegrationAccountAssembly.
-func (mg *LogicAppIntegrationAccountAssembly) SetDeletionPolicy(r xpv1.DeletionPolicy) {
+// SetDeletionPolicy of this AppIntegrationAccountAssembly.
+func (mg *AppIntegrationAccountAssembly) SetDeletionPolicy(r xpv1.DeletionPolicy) {
 	mg.Spec.DeletionPolicy = r
 }
 
-// SetProviderConfigReference of this LogicAppIntegrationAccountAssembly.
-func (mg *LogicAppIntegrationAccountAssembly) SetProviderConfigReference(r *xpv1.Reference) {
+// SetProviderConfigReference of this AppIntegrationAccountAssembly.
+func (mg *AppIntegrationAccountAssembly) SetProviderConfigReference(r *xpv1.Reference) {
 	mg.Spec.ProviderConfigReference = r
 }
 
 /*
-SetProviderReference of this LogicAppIntegrationAccountAssembly.
+SetProviderReference of this AppIntegrationAccountAssembly.
 Deprecated: Use SetProviderConfigReference.
 */
-func (mg *LogicAppIntegrationAccountAssembly) SetProviderReference(r *xpv1.Reference) {
+func (mg *AppIntegrationAccountAssembly) SetProviderReference(r *xpv1.Reference) {
 	mg.Spec.ProviderReference = r
 }
 
-// SetWriteConnectionSecretToReference of this LogicAppIntegrationAccountAssembly.
-func (mg *LogicAppIntegrationAccountAssembly) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
+// SetWriteConnectionSecretToReference of this AppIntegrationAccountAssembly.
+func (mg *AppIntegrationAccountAssembly) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
 	mg.Spec.WriteConnectionSecretToReference = r
 }
 
-// GetCondition of this LogicAppIntegrationAccountBatchConfiguration.
-func (mg *LogicAppIntegrationAccountBatchConfiguration) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
+// GetCondition of this AppIntegrationAccountBatchConfiguration.
+func (mg *AppIntegrationAccountBatchConfiguration) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
 	return mg.Status.GetCondition(ct)
 }
 
-// GetDeletionPolicy of this LogicAppIntegrationAccountBatchConfiguration.
-func (mg *LogicAppIntegrationAccountBatchConfiguration) GetDeletionPolicy() xpv1.DeletionPolicy {
+// GetDeletionPolicy of this AppIntegrationAccountBatchConfiguration.
+func (mg *AppIntegrationAccountBatchConfiguration) GetDeletionPolicy() xpv1.DeletionPolicy {
 	return mg.Spec.DeletionPolicy
 }
 
-// GetProviderConfigReference of this LogicAppIntegrationAccountBatchConfiguration.
-func (mg *LogicAppIntegrationAccountBatchConfiguration) GetProviderConfigReference() *xpv1.Reference {
+// GetProviderConfigReference of this AppIntegrationAccountBatchConfiguration.
+func (mg *AppIntegrationAccountBatchConfiguration) GetProviderConfigReference() *xpv1.Reference {
 	return mg.Spec.ProviderConfigReference
 }
 
 /*
-GetProviderReference of this LogicAppIntegrationAccountBatchConfiguration.
+GetProviderReference of this AppIntegrationAccountBatchConfiguration.
 Deprecated: Use GetProviderConfigReference.
 */
-func (mg *LogicAppIntegrationAccountBatchConfiguration) GetProviderReference() *xpv1.Reference {
+func (mg *AppIntegrationAccountBatchConfiguration) GetProviderReference() *xpv1.Reference {
 	return mg.Spec.ProviderReference
 }
 
-// GetWriteConnectionSecretToReference of this LogicAppIntegrationAccountBatchConfiguration.
-func (mg *LogicAppIntegrationAccountBatchConfiguration) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
+// GetWriteConnectionSecretToReference of this AppIntegrationAccountBatchConfiguration.
+func (mg *AppIntegrationAccountBatchConfiguration) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
 	return mg.Spec.WriteConnectionSecretToReference
 }
 
-// SetConditions of this LogicAppIntegrationAccountBatchConfiguration.
-func (mg *LogicAppIntegrationAccountBatchConfiguration) SetConditions(c ...xpv1.Condition) {
+// SetConditions of this AppIntegrationAccountBatchConfiguration.
+func (mg *AppIntegrationAccountBatchConfiguration) SetConditions(c ...xpv1.Condition) {
 	mg.Status.SetConditions(c...)
 }
 
-// SetDeletionPolicy of this LogicAppIntegrationAccountBatchConfiguration.
-func (mg *LogicAppIntegrationAccountBatchConfiguration) SetDeletionPolicy(r xpv1.DeletionPolicy) {
+// SetDeletionPolicy of this AppIntegrationAccountBatchConfiguration.
+func (mg *AppIntegrationAccountBatchConfiguration) SetDeletionPolicy(r xpv1.DeletionPolicy) {
 	mg.Spec.DeletionPolicy = r
 }
 
-// SetProviderConfigReference of this LogicAppIntegrationAccountBatchConfiguration.
-func (mg *LogicAppIntegrationAccountBatchConfiguration) SetProviderConfigReference(r *xpv1.Reference) {
+// SetProviderConfigReference of this AppIntegrationAccountBatchConfiguration.
+func (mg *AppIntegrationAccountBatchConfiguration) SetProviderConfigReference(r *xpv1.Reference) {
 	mg.Spec.ProviderConfigReference = r
 }
 
 /*
-SetProviderReference of this LogicAppIntegrationAccountBatchConfiguration.
+SetProviderReference of this AppIntegrationAccountBatchConfiguration.
 Deprecated: Use SetProviderConfigReference.
 */
-func (mg *LogicAppIntegrationAccountBatchConfiguration) SetProviderReference(r *xpv1.Reference) {
+func (mg *AppIntegrationAccountBatchConfiguration) SetProviderReference(r *xpv1.Reference) {
 	mg.Spec.ProviderReference = r
 }
 
-// SetWriteConnectionSecretToReference of this LogicAppIntegrationAccountBatchConfiguration.
-func (mg *LogicAppIntegrationAccountBatchConfiguration) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
+// SetWriteConnectionSecretToReference of this AppIntegrationAccountBatchConfiguration.
+func (mg *AppIntegrationAccountBatchConfiguration) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
 	mg.Spec.WriteConnectionSecretToReference = r
 }
 
-// GetCondition of this LogicAppIntegrationAccountMap.
-func (mg *LogicAppIntegrationAccountMap) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
+// GetCondition of this AppIntegrationAccountMap.
+func (mg *AppIntegrationAccountMap) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
 	return mg.Status.GetCondition(ct)
 }
 
-// GetDeletionPolicy of this LogicAppIntegrationAccountMap.
-func (mg *LogicAppIntegrationAccountMap) GetDeletionPolicy() xpv1.DeletionPolicy {
+// GetDeletionPolicy of this AppIntegrationAccountMap.
+func (mg *AppIntegrationAccountMap) GetDeletionPolicy() xpv1.DeletionPolicy {
 	return mg.Spec.DeletionPolicy
 }
 
-// GetProviderConfigReference of this LogicAppIntegrationAccountMap.
-func (mg *LogicAppIntegrationAccountMap) GetProviderConfigReference() *xpv1.Reference {
+// GetProviderConfigReference of this AppIntegrationAccountMap.
+func (mg *AppIntegrationAccountMap) GetProviderConfigReference() *xpv1.Reference {
 	return mg.Spec.ProviderConfigReference
 }
 
 /*
-GetProviderReference of this LogicAppIntegrationAccountMap.
+GetProviderReference of this AppIntegrationAccountMap.
 Deprecated: Use GetProviderConfigReference.
 */
-func (mg *LogicAppIntegrationAccountMap) GetProviderReference() *xpv1.Reference {
+func (mg *AppIntegrationAccountMap) GetProviderReference() *xpv1.Reference {
 	return mg.Spec.ProviderReference
 }
 
-// GetWriteConnectionSecretToReference of this LogicAppIntegrationAccountMap.
-func (mg *LogicAppIntegrationAccountMap) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
+// GetWriteConnectionSecretToReference of this AppIntegrationAccountMap.
+func (mg *AppIntegrationAccountMap) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
 	return mg.Spec.WriteConnectionSecretToReference
 }
 
-// SetConditions of this LogicAppIntegrationAccountMap.
-func (mg *LogicAppIntegrationAccountMap) SetConditions(c ...xpv1.Condition) {
+// SetConditions of this AppIntegrationAccountMap.
+func (mg *AppIntegrationAccountMap) SetConditions(c ...xpv1.Condition) {
 	mg.Status.SetConditions(c...)
 }
 
-// SetDeletionPolicy of this LogicAppIntegrationAccountMap.
-func (mg *LogicAppIntegrationAccountMap) SetDeletionPolicy(r xpv1.DeletionPolicy) {
+// SetDeletionPolicy of this AppIntegrationAccountMap.
+func (mg *AppIntegrationAccountMap) SetDeletionPolicy(r xpv1.DeletionPolicy) {
 	mg.Spec.DeletionPolicy = r
 }
 
-// SetProviderConfigReference of this LogicAppIntegrationAccountMap.
-func (mg *LogicAppIntegrationAccountMap) SetProviderConfigReference(r *xpv1.Reference) {
+// SetProviderConfigReference of this AppIntegrationAccountMap.
+func (mg *AppIntegrationAccountMap) SetProviderConfigReference(r *xpv1.Reference) {
 	mg.Spec.ProviderConfigReference = r
 }
 
 /*
-SetProviderReference of this LogicAppIntegrationAccountMap.
+SetProviderReference of this AppIntegrationAccountMap.
 Deprecated: Use SetProviderConfigReference.
 */
-func (mg *LogicAppIntegrationAccountMap) SetProviderReference(r *xpv1.Reference) {
+func (mg *AppIntegrationAccountMap) SetProviderReference(r *xpv1.Reference) {
 	mg.Spec.ProviderReference = r
 }
 
-// SetWriteConnectionSecretToReference of this LogicAppIntegrationAccountMap.
-func (mg *LogicAppIntegrationAccountMap) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
+// SetWriteConnectionSecretToReference of this AppIntegrationAccountMap.
+func (mg *AppIntegrationAccountMap) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
 	mg.Spec.WriteConnectionSecretToReference = r
 }
 
-// GetCondition of this LogicAppIntegrationAccountPartner.
-func (mg *LogicAppIntegrationAccountPartner) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
+// GetCondition of this AppIntegrationAccountPartner.
+func (mg *AppIntegrationAccountPartner) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
 	return mg.Status.GetCondition(ct)
 }
 
-// GetDeletionPolicy of this LogicAppIntegrationAccountPartner.
-func (mg *LogicAppIntegrationAccountPartner) GetDeletionPolicy() xpv1.DeletionPolicy {
+// GetDeletionPolicy of this AppIntegrationAccountPartner.
+func (mg *AppIntegrationAccountPartner) GetDeletionPolicy() xpv1.DeletionPolicy {
 	return mg.Spec.DeletionPolicy
 }
 
-// GetProviderConfigReference of this LogicAppIntegrationAccountPartner.
-func (mg *LogicAppIntegrationAccountPartner) GetProviderConfigReference() *xpv1.Reference {
+// GetProviderConfigReference of this AppIntegrationAccountPartner.
+func (mg *AppIntegrationAccountPartner) GetProviderConfigReference() *xpv1.Reference {
 	return mg.Spec.ProviderConfigReference
 }
 
 /*
-GetProviderReference of this LogicAppIntegrationAccountPartner.
+GetProviderReference of this AppIntegrationAccountPartner.
 Deprecated: Use GetProviderConfigReference.
 */
-func (mg *LogicAppIntegrationAccountPartner) GetProviderReference() *xpv1.Reference {
+func (mg *AppIntegrationAccountPartner) GetProviderReference() *xpv1.Reference {
 	return mg.Spec.ProviderReference
 }
 
-// GetWriteConnectionSecretToReference of this LogicAppIntegrationAccountPartner.
-func (mg *LogicAppIntegrationAccountPartner) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
+// GetWriteConnectionSecretToReference of this AppIntegrationAccountPartner.
+func (mg *AppIntegrationAccountPartner) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
 	return mg.Spec.WriteConnectionSecretToReference
 }
 
-// SetConditions of this LogicAppIntegrationAccountPartner.
-func (mg *LogicAppIntegrationAccountPartner) SetConditions(c ...xpv1.Condition) {
+// SetConditions of this AppIntegrationAccountPartner.
+func (mg *AppIntegrationAccountPartner) SetConditions(c ...xpv1.Condition) {
 	mg.Status.SetConditions(c...)
 }
 
-// SetDeletionPolicy of this LogicAppIntegrationAccountPartner.
-func (mg *LogicAppIntegrationAccountPartner) SetDeletionPolicy(r xpv1.DeletionPolicy) {
+// SetDeletionPolicy of this AppIntegrationAccountPartner.
+func (mg *AppIntegrationAccountPartner) SetDeletionPolicy(r xpv1.DeletionPolicy) {
 	mg.Spec.DeletionPolicy = r
 }
 
-// SetProviderConfigReference of this LogicAppIntegrationAccountPartner.
-func (mg *LogicAppIntegrationAccountPartner) SetProviderConfigReference(r *xpv1.Reference) {
+// SetProviderConfigReference of this AppIntegrationAccountPartner.
+func (mg *AppIntegrationAccountPartner) SetProviderConfigReference(r *xpv1.Reference) {
 	mg.Spec.ProviderConfigReference = r
 }
 
 /*
-SetProviderReference of this LogicAppIntegrationAccountPartner.
+SetProviderReference of this AppIntegrationAccountPartner.
 Deprecated: Use SetProviderConfigReference.
 */
-func (mg *LogicAppIntegrationAccountPartner) SetProviderReference(r *xpv1.Reference) {
+func (mg *AppIntegrationAccountPartner) SetProviderReference(r *xpv1.Reference) {
 	mg.Spec.ProviderReference = r
 }
 
-// SetWriteConnectionSecretToReference of this LogicAppIntegrationAccountPartner.
-func (mg *LogicAppIntegrationAccountPartner) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
+// SetWriteConnectionSecretToReference of this AppIntegrationAccountPartner.
+func (mg *AppIntegrationAccountPartner) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
 	mg.Spec.WriteConnectionSecretToReference = r
 }
 
-// GetCondition of this LogicAppIntegrationAccountSchema.
-func (mg *LogicAppIntegrationAccountSchema) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
+// GetCondition of this AppIntegrationAccountSchema.
+func (mg *AppIntegrationAccountSchema) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
 	return mg.Status.GetCondition(ct)
 }
 
-// GetDeletionPolicy of this LogicAppIntegrationAccountSchema.
-func (mg *LogicAppIntegrationAccountSchema) GetDeletionPolicy() xpv1.DeletionPolicy {
+// GetDeletionPolicy of this AppIntegrationAccountSchema.
+func (mg *AppIntegrationAccountSchema) GetDeletionPolicy() xpv1.DeletionPolicy {
 	return mg.Spec.DeletionPolicy
 }
 
-// GetProviderConfigReference of this LogicAppIntegrationAccountSchema.
-func (mg *LogicAppIntegrationAccountSchema) GetProviderConfigReference() *xpv1.Reference {
+// GetProviderConfigReference of this AppIntegrationAccountSchema.
+func (mg *AppIntegrationAccountSchema) GetProviderConfigReference() *xpv1.Reference {
 	return mg.Spec.ProviderConfigReference
 }
 
 /*
-GetProviderReference of this LogicAppIntegrationAccountSchema.
+GetProviderReference of this AppIntegrationAccountSchema.
 Deprecated: Use GetProviderConfigReference.
 */
-func (mg *LogicAppIntegrationAccountSchema) GetProviderReference() *xpv1.Reference {
+func (mg *AppIntegrationAccountSchema) GetProviderReference() *xpv1.Reference {
 	return mg.Spec.ProviderReference
 }
 
-// GetWriteConnectionSecretToReference of this LogicAppIntegrationAccountSchema.
-func (mg *LogicAppIntegrationAccountSchema) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
+// GetWriteConnectionSecretToReference of this AppIntegrationAccountSchema.
+func (mg *AppIntegrationAccountSchema) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
 	return mg.Spec.WriteConnectionSecretToReference
 }
 
-// SetConditions of this LogicAppIntegrationAccountSchema.
-func (mg *LogicAppIntegrationAccountSchema) SetConditions(c ...xpv1.Condition) {
+// SetConditions of this AppIntegrationAccountSchema.
+func (mg *AppIntegrationAccountSchema) SetConditions(c ...xpv1.Condition) {
 	mg.Status.SetConditions(c...)
 }
 
-// SetDeletionPolicy of this LogicAppIntegrationAccountSchema.
-func (mg *LogicAppIntegrationAccountSchema) SetDeletionPolicy(r xpv1.DeletionPolicy) {
+// SetDeletionPolicy of this AppIntegrationAccountSchema.
+func (mg *AppIntegrationAccountSchema) SetDeletionPolicy(r xpv1.DeletionPolicy) {
 	mg.Spec.DeletionPolicy = r
 }
 
-// SetProviderConfigReference of this LogicAppIntegrationAccountSchema.
-func (mg *LogicAppIntegrationAccountSchema) SetProviderConfigReference(r *xpv1.Reference) {
+// SetProviderConfigReference of this AppIntegrationAccountSchema.
+func (mg *AppIntegrationAccountSchema) SetProviderConfigReference(r *xpv1.Reference) {
 	mg.Spec.ProviderConfigReference = r
 }
 
 /*
-SetProviderReference of this LogicAppIntegrationAccountSchema.
+SetProviderReference of this AppIntegrationAccountSchema.
 Deprecated: Use SetProviderConfigReference.
 */
-func (mg *LogicAppIntegrationAccountSchema) SetProviderReference(r *xpv1.Reference) {
+func (mg *AppIntegrationAccountSchema) SetProviderReference(r *xpv1.Reference) {
 	mg.Spec.ProviderReference = r
 }
 
-// SetWriteConnectionSecretToReference of this LogicAppIntegrationAccountSchema.
-func (mg *LogicAppIntegrationAccountSchema) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
+// SetWriteConnectionSecretToReference of this AppIntegrationAccountSchema.
+func (mg *AppIntegrationAccountSchema) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
 	mg.Spec.WriteConnectionSecretToReference = r
 }
 
-// GetCondition of this LogicAppIntegrationAccountSession.
-func (mg *LogicAppIntegrationAccountSession) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
+// GetCondition of this AppIntegrationAccountSession.
+func (mg *AppIntegrationAccountSession) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
 	return mg.Status.GetCondition(ct)
 }
 
-// GetDeletionPolicy of this LogicAppIntegrationAccountSession.
-func (mg *LogicAppIntegrationAccountSession) GetDeletionPolicy() xpv1.DeletionPolicy {
+// GetDeletionPolicy of this AppIntegrationAccountSession.
+func (mg *AppIntegrationAccountSession) GetDeletionPolicy() xpv1.DeletionPolicy {
 	return mg.Spec.DeletionPolicy
 }
 
-// GetProviderConfigReference of this LogicAppIntegrationAccountSession.
-func (mg *LogicAppIntegrationAccountSession) GetProviderConfigReference() *xpv1.Reference {
+// GetProviderConfigReference of this AppIntegrationAccountSession.
+func (mg *AppIntegrationAccountSession) GetProviderConfigReference() *xpv1.Reference {
 	return mg.Spec.ProviderConfigReference
 }
 
 /*
-GetProviderReference of this LogicAppIntegrationAccountSession.
+GetProviderReference of this AppIntegrationAccountSession.
 Deprecated: Use GetProviderConfigReference.
 */
-func (mg *LogicAppIntegrationAccountSession) GetProviderReference() *xpv1.Reference {
+func (mg *AppIntegrationAccountSession) GetProviderReference() *xpv1.Reference {
 	return mg.Spec.ProviderReference
 }
 
-// GetWriteConnectionSecretToReference of this LogicAppIntegrationAccountSession.
-func (mg *LogicAppIntegrationAccountSession) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
+// GetWriteConnectionSecretToReference of this AppIntegrationAccountSession.
+func (mg *AppIntegrationAccountSession) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
 	return mg.Spec.WriteConnectionSecretToReference
 }
 
-// SetConditions of this LogicAppIntegrationAccountSession.
-func (mg *LogicAppIntegrationAccountSession) SetConditions(c ...xpv1.Condition) {
+// SetConditions of this AppIntegrationAccountSession.
+func (mg *AppIntegrationAccountSession) SetConditions(c ...xpv1.Condition) {
 	mg.Status.SetConditions(c...)
 }
 
-// SetDeletionPolicy of this LogicAppIntegrationAccountSession.
-func (mg *LogicAppIntegrationAccountSession) SetDeletionPolicy(r xpv1.DeletionPolicy) {
+// SetDeletionPolicy of this AppIntegrationAccountSession.
+func (mg *AppIntegrationAccountSession) SetDeletionPolicy(r xpv1.DeletionPolicy) {
 	mg.Spec.DeletionPolicy = r
 }
 
-// SetProviderConfigReference of this LogicAppIntegrationAccountSession.
-func (mg *LogicAppIntegrationAccountSession) SetProviderConfigReference(r *xpv1.Reference) {
+// SetProviderConfigReference of this AppIntegrationAccountSession.
+func (mg *AppIntegrationAccountSession) SetProviderConfigReference(r *xpv1.Reference) {
 	mg.Spec.ProviderConfigReference = r
 }
 
 /*
-SetProviderReference of this LogicAppIntegrationAccountSession.
+SetProviderReference of this AppIntegrationAccountSession.
 Deprecated: Use SetProviderConfigReference.
 */
-func (mg *LogicAppIntegrationAccountSession) SetProviderReference(r *xpv1.Reference) {
+func (mg *AppIntegrationAccountSession) SetProviderReference(r *xpv1.Reference) {
 	mg.Spec.ProviderReference = r
 }
 
-// SetWriteConnectionSecretToReference of this LogicAppIntegrationAccountSession.
-func (mg *LogicAppIntegrationAccountSession) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
+// SetWriteConnectionSecretToReference of this AppIntegrationAccountSession.
+func (mg *AppIntegrationAccountSession) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
 	mg.Spec.WriteConnectionSecretToReference = r
 }
 
-// GetCondition of this LogicAppTriggerCustom.
-func (mg *LogicAppTriggerCustom) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
+// GetCondition of this AppTriggerCustom.
+func (mg *AppTriggerCustom) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
 	return mg.Status.GetCondition(ct)
 }
 
-// GetDeletionPolicy of this LogicAppTriggerCustom.
-func (mg *LogicAppTriggerCustom) GetDeletionPolicy() xpv1.DeletionPolicy {
+// GetDeletionPolicy of this AppTriggerCustom.
+func (mg *AppTriggerCustom) GetDeletionPolicy() xpv1.DeletionPolicy {
 	return mg.Spec.DeletionPolicy
 }
 
-// GetProviderConfigReference of this LogicAppTriggerCustom.
-func (mg *LogicAppTriggerCustom) GetProviderConfigReference() *xpv1.Reference {
+// GetProviderConfigReference of this AppTriggerCustom.
+func (mg *AppTriggerCustom) GetProviderConfigReference() *xpv1.Reference {
 	return mg.Spec.ProviderConfigReference
 }
 
 /*
-GetProviderReference of this LogicAppTriggerCustom.
+GetProviderReference of this AppTriggerCustom.
 Deprecated: Use GetProviderConfigReference.
 */
-func (mg *LogicAppTriggerCustom) GetProviderReference() *xpv1.Reference {
+func (mg *AppTriggerCustom) GetProviderReference() *xpv1.Reference {
 	return mg.Spec.ProviderReference
 }
 
-// GetWriteConnectionSecretToReference of this LogicAppTriggerCustom.
-func (mg *LogicAppTriggerCustom) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
+// GetWriteConnectionSecretToReference of this AppTriggerCustom.
+func (mg *AppTriggerCustom) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
 	return mg.Spec.WriteConnectionSecretToReference
 }
 
-// SetConditions of this LogicAppTriggerCustom.
-func (mg *LogicAppTriggerCustom) SetConditions(c ...xpv1.Condition) {
+// SetConditions of this AppTriggerCustom.
+func (mg *AppTriggerCustom) SetConditions(c ...xpv1.Condition) {
 	mg.Status.SetConditions(c...)
 }
 
-// SetDeletionPolicy of this LogicAppTriggerCustom.
-func (mg *LogicAppTriggerCustom) SetDeletionPolicy(r xpv1.DeletionPolicy) {
+// SetDeletionPolicy of this AppTriggerCustom.
+func (mg *AppTriggerCustom) SetDeletionPolicy(r xpv1.DeletionPolicy) {
 	mg.Spec.DeletionPolicy = r
 }
 
-// SetProviderConfigReference of this LogicAppTriggerCustom.
-func (mg *LogicAppTriggerCustom) SetProviderConfigReference(r *xpv1.Reference) {
+// SetProviderConfigReference of this AppTriggerCustom.
+func (mg *AppTriggerCustom) SetProviderConfigReference(r *xpv1.Reference) {
 	mg.Spec.ProviderConfigReference = r
 }
 
 /*
-SetProviderReference of this LogicAppTriggerCustom.
+SetProviderReference of this AppTriggerCustom.
 Deprecated: Use SetProviderConfigReference.
 */
-func (mg *LogicAppTriggerCustom) SetProviderReference(r *xpv1.Reference) {
+func (mg *AppTriggerCustom) SetProviderReference(r *xpv1.Reference) {
 	mg.Spec.ProviderReference = r
 }
 
-// SetWriteConnectionSecretToReference of this LogicAppTriggerCustom.
-func (mg *LogicAppTriggerCustom) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
+// SetWriteConnectionSecretToReference of this AppTriggerCustom.
+func (mg *AppTriggerCustom) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
 	mg.Spec.WriteConnectionSecretToReference = r
 }
 
-// GetCondition of this LogicAppTriggerHttpRequest.
-func (mg *LogicAppTriggerHttpRequest) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
+// GetCondition of this AppTriggerHttpRequest.
+func (mg *AppTriggerHttpRequest) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
 	return mg.Status.GetCondition(ct)
 }
 
-// GetDeletionPolicy of this LogicAppTriggerHttpRequest.
-func (mg *LogicAppTriggerHttpRequest) GetDeletionPolicy() xpv1.DeletionPolicy {
+// GetDeletionPolicy of this AppTriggerHttpRequest.
+func (mg *AppTriggerHttpRequest) GetDeletionPolicy() xpv1.DeletionPolicy {
 	return mg.Spec.DeletionPolicy
 }
 
-// GetProviderConfigReference of this LogicAppTriggerHttpRequest.
-func (mg *LogicAppTriggerHttpRequest) GetProviderConfigReference() *xpv1.Reference {
+// GetProviderConfigReference of this AppTriggerHttpRequest.
+func (mg *AppTriggerHttpRequest) GetProviderConfigReference() *xpv1.Reference {
 	return mg.Spec.ProviderConfigReference
 }
 
 /*
-GetProviderReference of this LogicAppTriggerHttpRequest.
+GetProviderReference of this AppTriggerHttpRequest.
 Deprecated: Use GetProviderConfigReference.
 */
-func (mg *LogicAppTriggerHttpRequest) GetProviderReference() *xpv1.Reference {
+func (mg *AppTriggerHttpRequest) GetProviderReference() *xpv1.Reference {
 	return mg.Spec.ProviderReference
 }
 
-// GetWriteConnectionSecretToReference of this LogicAppTriggerHttpRequest.
-func (mg *LogicAppTriggerHttpRequest) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
+// GetWriteConnectionSecretToReference of this AppTriggerHttpRequest.
+func (mg *AppTriggerHttpRequest) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
 	return mg.Spec.WriteConnectionSecretToReference
 }
 
-// SetConditions of this LogicAppTriggerHttpRequest.
-func (mg *LogicAppTriggerHttpRequest) SetConditions(c ...xpv1.Condition) {
+// SetConditions of this AppTriggerHttpRequest.
+func (mg *AppTriggerHttpRequest) SetConditions(c ...xpv1.Condition) {
 	mg.Status.SetConditions(c...)
 }
 
-// SetDeletionPolicy of this LogicAppTriggerHttpRequest.
-func (mg *LogicAppTriggerHttpRequest) SetDeletionPolicy(r xpv1.DeletionPolicy) {
+// SetDeletionPolicy of this AppTriggerHttpRequest.
+func (mg *AppTriggerHttpRequest) SetDeletionPolicy(r xpv1.DeletionPolicy) {
 	mg.Spec.DeletionPolicy = r
 }
 
-// SetProviderConfigReference of this LogicAppTriggerHttpRequest.
-func (mg *LogicAppTriggerHttpRequest) SetProviderConfigReference(r *xpv1.Reference) {
+// SetProviderConfigReference of this AppTriggerHttpRequest.
+func (mg *AppTriggerHttpRequest) SetProviderConfigReference(r *xpv1.Reference) {
 	mg.Spec.ProviderConfigReference = r
 }
 
 /*
-SetProviderReference of this LogicAppTriggerHttpRequest.
+SetProviderReference of this AppTriggerHttpRequest.
 Deprecated: Use SetProviderConfigReference.
 */
-func (mg *LogicAppTriggerHttpRequest) SetProviderReference(r *xpv1.Reference) {
+func (mg *AppTriggerHttpRequest) SetProviderReference(r *xpv1.Reference) {
 	mg.Spec.ProviderReference = r
 }
 
-// SetWriteConnectionSecretToReference of this LogicAppTriggerHttpRequest.
-func (mg *LogicAppTriggerHttpRequest) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
+// SetWriteConnectionSecretToReference of this AppTriggerHttpRequest.
+func (mg *AppTriggerHttpRequest) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
 	mg.Spec.WriteConnectionSecretToReference = r
 }
 
-// GetCondition of this LogicAppTriggerRecurrence.
-func (mg *LogicAppTriggerRecurrence) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
+// GetCondition of this AppTriggerRecurrence.
+func (mg *AppTriggerRecurrence) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
 	return mg.Status.GetCondition(ct)
 }
 
-// GetDeletionPolicy of this LogicAppTriggerRecurrence.
-func (mg *LogicAppTriggerRecurrence) GetDeletionPolicy() xpv1.DeletionPolicy {
+// GetDeletionPolicy of this AppTriggerRecurrence.
+func (mg *AppTriggerRecurrence) GetDeletionPolicy() xpv1.DeletionPolicy {
 	return mg.Spec.DeletionPolicy
 }
 
-// GetProviderConfigReference of this LogicAppTriggerRecurrence.
-func (mg *LogicAppTriggerRecurrence) GetProviderConfigReference() *xpv1.Reference {
+// GetProviderConfigReference of this AppTriggerRecurrence.
+func (mg *AppTriggerRecurrence) GetProviderConfigReference() *xpv1.Reference {
 	return mg.Spec.ProviderConfigReference
 }
 
 /*
-GetProviderReference of this LogicAppTriggerRecurrence.
+GetProviderReference of this AppTriggerRecurrence.
 Deprecated: Use GetProviderConfigReference.
 */
-func (mg *LogicAppTriggerRecurrence) GetProviderReference() *xpv1.Reference {
+func (mg *AppTriggerRecurrence) GetProviderReference() *xpv1.Reference {
 	return mg.Spec.ProviderReference
 }
 
-// GetWriteConnectionSecretToReference of this LogicAppTriggerRecurrence.
-func (mg *LogicAppTriggerRecurrence) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
+// GetWriteConnectionSecretToReference of this AppTriggerRecurrence.
+func (mg *AppTriggerRecurrence) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
 	return mg.Spec.WriteConnectionSecretToReference
 }
 
-// SetConditions of this LogicAppTriggerRecurrence.
-func (mg *LogicAppTriggerRecurrence) SetConditions(c ...xpv1.Condition) {
+// SetConditions of this AppTriggerRecurrence.
+func (mg *AppTriggerRecurrence) SetConditions(c ...xpv1.Condition) {
 	mg.Status.SetConditions(c...)
 }
 
-// SetDeletionPolicy of this LogicAppTriggerRecurrence.
-func (mg *LogicAppTriggerRecurrence) SetDeletionPolicy(r xpv1.DeletionPolicy) {
+// SetDeletionPolicy of this AppTriggerRecurrence.
+func (mg *AppTriggerRecurrence) SetDeletionPolicy(r xpv1.DeletionPolicy) {
 	mg.Spec.DeletionPolicy = r
 }
 
-// SetProviderConfigReference of this LogicAppTriggerRecurrence.
-func (mg *LogicAppTriggerRecurrence) SetProviderConfigReference(r *xpv1.Reference) {
+// SetProviderConfigReference of this AppTriggerRecurrence.
+func (mg *AppTriggerRecurrence) SetProviderConfigReference(r *xpv1.Reference) {
 	mg.Spec.ProviderConfigReference = r
 }
 
 /*
-SetProviderReference of this LogicAppTriggerRecurrence.
+SetProviderReference of this AppTriggerRecurrence.
 Deprecated: Use SetProviderConfigReference.
 */
-func (mg *LogicAppTriggerRecurrence) SetProviderReference(r *xpv1.Reference) {
+func (mg *AppTriggerRecurrence) SetProviderReference(r *xpv1.Reference) {
 	mg.Spec.ProviderReference = r
 }
 
-// SetWriteConnectionSecretToReference of this LogicAppTriggerRecurrence.
-func (mg *LogicAppTriggerRecurrence) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
+// SetWriteConnectionSecretToReference of this AppTriggerRecurrence.
+func (mg *AppTriggerRecurrence) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
 	mg.Spec.WriteConnectionSecretToReference = r
 }
 
-// GetCondition of this LogicAppWorkflow.
-func (mg *LogicAppWorkflow) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
+// GetCondition of this AppWorkflow.
+func (mg *AppWorkflow) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
 	return mg.Status.GetCondition(ct)
 }
 
-// GetDeletionPolicy of this LogicAppWorkflow.
-func (mg *LogicAppWorkflow) GetDeletionPolicy() xpv1.DeletionPolicy {
+// GetDeletionPolicy of this AppWorkflow.
+func (mg *AppWorkflow) GetDeletionPolicy() xpv1.DeletionPolicy {
 	return mg.Spec.DeletionPolicy
 }
 
-// GetProviderConfigReference of this LogicAppWorkflow.
-func (mg *LogicAppWorkflow) GetProviderConfigReference() *xpv1.Reference {
+// GetProviderConfigReference of this AppWorkflow.
+func (mg *AppWorkflow) GetProviderConfigReference() *xpv1.Reference {
 	return mg.Spec.ProviderConfigReference
 }
 
 /*
-GetProviderReference of this LogicAppWorkflow.
+GetProviderReference of this AppWorkflow.
 Deprecated: Use GetProviderConfigReference.
 */
-func (mg *LogicAppWorkflow) GetProviderReference() *xpv1.Reference {
+func (mg *AppWorkflow) GetProviderReference() *xpv1.Reference {
 	return mg.Spec.ProviderReference
 }
 
-// GetWriteConnectionSecretToReference of this LogicAppWorkflow.
-func (mg *LogicAppWorkflow) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
+// GetWriteConnectionSecretToReference of this AppWorkflow.
+func (mg *AppWorkflow) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
 	return mg.Spec.WriteConnectionSecretToReference
 }
 
-// SetConditions of this LogicAppWorkflow.
-func (mg *LogicAppWorkflow) SetConditions(c ...xpv1.Condition) {
+// SetConditions of this AppWorkflow.
+func (mg *AppWorkflow) SetConditions(c ...xpv1.Condition) {
 	mg.Status.SetConditions(c...)
 }
 
-// SetDeletionPolicy of this LogicAppWorkflow.
-func (mg *LogicAppWorkflow) SetDeletionPolicy(r xpv1.DeletionPolicy) {
+// SetDeletionPolicy of this AppWorkflow.
+func (mg *AppWorkflow) SetDeletionPolicy(r xpv1.DeletionPolicy) {
 	mg.Spec.DeletionPolicy = r
 }
 
-// SetProviderConfigReference of this LogicAppWorkflow.
-func (mg *LogicAppWorkflow) SetProviderConfigReference(r *xpv1.Reference) {
+// SetProviderConfigReference of this AppWorkflow.
+func (mg *AppWorkflow) SetProviderConfigReference(r *xpv1.Reference) {
 	mg.Spec.ProviderConfigReference = r
 }
 
 /*
-SetProviderReference of this LogicAppWorkflow.
+SetProviderReference of this AppWorkflow.
 Deprecated: Use SetProviderConfigReference.
 */
-func (mg *LogicAppWorkflow) SetProviderReference(r *xpv1.Reference) {
+func (mg *AppWorkflow) SetProviderReference(r *xpv1.Reference) {
 	mg.Spec.ProviderReference = r
 }
 
-// SetWriteConnectionSecretToReference of this LogicAppWorkflow.
-func (mg *LogicAppWorkflow) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
+// SetWriteConnectionSecretToReference of this AppWorkflow.
+func (mg *AppWorkflow) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
 	mg.Spec.WriteConnectionSecretToReference = r
 }

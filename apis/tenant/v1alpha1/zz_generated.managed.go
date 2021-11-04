@@ -19,58 +19,58 @@ package v1alpha1
 
 import xpv1 "github.com/crossplane/crossplane-runtime/apis/common/v1"
 
-// GetCondition of this TenantTemplateDeployment.
-func (mg *TenantTemplateDeployment) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
+// GetCondition of this TemplateDeployment.
+func (mg *TemplateDeployment) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
 	return mg.Status.GetCondition(ct)
 }
 
-// GetDeletionPolicy of this TenantTemplateDeployment.
-func (mg *TenantTemplateDeployment) GetDeletionPolicy() xpv1.DeletionPolicy {
+// GetDeletionPolicy of this TemplateDeployment.
+func (mg *TemplateDeployment) GetDeletionPolicy() xpv1.DeletionPolicy {
 	return mg.Spec.DeletionPolicy
 }
 
-// GetProviderConfigReference of this TenantTemplateDeployment.
-func (mg *TenantTemplateDeployment) GetProviderConfigReference() *xpv1.Reference {
+// GetProviderConfigReference of this TemplateDeployment.
+func (mg *TemplateDeployment) GetProviderConfigReference() *xpv1.Reference {
 	return mg.Spec.ProviderConfigReference
 }
 
 /*
-GetProviderReference of this TenantTemplateDeployment.
+GetProviderReference of this TemplateDeployment.
 Deprecated: Use GetProviderConfigReference.
 */
-func (mg *TenantTemplateDeployment) GetProviderReference() *xpv1.Reference {
+func (mg *TemplateDeployment) GetProviderReference() *xpv1.Reference {
 	return mg.Spec.ProviderReference
 }
 
-// GetWriteConnectionSecretToReference of this TenantTemplateDeployment.
-func (mg *TenantTemplateDeployment) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
+// GetWriteConnectionSecretToReference of this TemplateDeployment.
+func (mg *TemplateDeployment) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
 	return mg.Spec.WriteConnectionSecretToReference
 }
 
-// SetConditions of this TenantTemplateDeployment.
-func (mg *TenantTemplateDeployment) SetConditions(c ...xpv1.Condition) {
+// SetConditions of this TemplateDeployment.
+func (mg *TemplateDeployment) SetConditions(c ...xpv1.Condition) {
 	mg.Status.SetConditions(c...)
 }
 
-// SetDeletionPolicy of this TenantTemplateDeployment.
-func (mg *TenantTemplateDeployment) SetDeletionPolicy(r xpv1.DeletionPolicy) {
+// SetDeletionPolicy of this TemplateDeployment.
+func (mg *TemplateDeployment) SetDeletionPolicy(r xpv1.DeletionPolicy) {
 	mg.Spec.DeletionPolicy = r
 }
 
-// SetProviderConfigReference of this TenantTemplateDeployment.
-func (mg *TenantTemplateDeployment) SetProviderConfigReference(r *xpv1.Reference) {
+// SetProviderConfigReference of this TemplateDeployment.
+func (mg *TemplateDeployment) SetProviderConfigReference(r *xpv1.Reference) {
 	mg.Spec.ProviderConfigReference = r
 }
 
 /*
-SetProviderReference of this TenantTemplateDeployment.
+SetProviderReference of this TemplateDeployment.
 Deprecated: Use SetProviderConfigReference.
 */
-func (mg *TenantTemplateDeployment) SetProviderReference(r *xpv1.Reference) {
+func (mg *TemplateDeployment) SetProviderReference(r *xpv1.Reference) {
 	mg.Spec.ProviderReference = r
 }
 
-// SetWriteConnectionSecretToReference of this TenantTemplateDeployment.
-func (mg *TenantTemplateDeployment) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
+// SetWriteConnectionSecretToReference of this TemplateDeployment.
+func (mg *TemplateDeployment) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
 	mg.Spec.WriteConnectionSecretToReference = r
 }

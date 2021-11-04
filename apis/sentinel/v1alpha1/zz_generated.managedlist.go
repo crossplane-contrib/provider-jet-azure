@@ -19,8 +19,8 @@ package v1alpha1
 
 import resource "github.com/crossplane/crossplane-runtime/pkg/resource"
 
-// GetItems of this SentinelAlertRuleFusionList.
-func (l *SentinelAlertRuleFusionList) GetItems() []resource.Managed {
+// GetItems of this AlertRuleFusionList.
+func (l *AlertRuleFusionList) GetItems() []resource.Managed {
 	items := make([]resource.Managed, len(l.Items))
 	for i := range l.Items {
 		items[i] = &l.Items[i]
@@ -28,8 +28,8 @@ func (l *SentinelAlertRuleFusionList) GetItems() []resource.Managed {
 	return items
 }
 
-// GetItems of this SentinelAlertRuleMachineLearningBehaviorAnalyticsList.
-func (l *SentinelAlertRuleMachineLearningBehaviorAnalyticsList) GetItems() []resource.Managed {
+// GetItems of this AlertRuleMachineLearningBehaviorAnalyticsList.
+func (l *AlertRuleMachineLearningBehaviorAnalyticsList) GetItems() []resource.Managed {
 	items := make([]resource.Managed, len(l.Items))
 	for i := range l.Items {
 		items[i] = &l.Items[i]
@@ -37,8 +37,8 @@ func (l *SentinelAlertRuleMachineLearningBehaviorAnalyticsList) GetItems() []res
 	return items
 }
 
-// GetItems of this SentinelAlertRuleMsSecurityIncidentList.
-func (l *SentinelAlertRuleMsSecurityIncidentList) GetItems() []resource.Managed {
+// GetItems of this AlertRuleMsSecurityIncidentList.
+func (l *AlertRuleMsSecurityIncidentList) GetItems() []resource.Managed {
 	items := make([]resource.Managed, len(l.Items))
 	for i := range l.Items {
 		items[i] = &l.Items[i]
@@ -46,8 +46,8 @@ func (l *SentinelAlertRuleMsSecurityIncidentList) GetItems() []resource.Managed 
 	return items
 }
 
-// GetItems of this SentinelAlertRuleScheduledList.
-func (l *SentinelAlertRuleScheduledList) GetItems() []resource.Managed {
+// GetItems of this AlertRuleScheduledList.
+func (l *AlertRuleScheduledList) GetItems() []resource.Managed {
 	items := make([]resource.Managed, len(l.Items))
 	for i := range l.Items {
 		items[i] = &l.Items[i]
@@ -55,8 +55,8 @@ func (l *SentinelAlertRuleScheduledList) GetItems() []resource.Managed {
 	return items
 }
 
-// GetItems of this SentinelDataConnectorAwsCloudTrailList.
-func (l *SentinelDataConnectorAwsCloudTrailList) GetItems() []resource.Managed {
+// GetItems of this DataConnectorAwsCloudTrailList.
+func (l *DataConnectorAwsCloudTrailList) GetItems() []resource.Managed {
 	items := make([]resource.Managed, len(l.Items))
 	for i := range l.Items {
 		items[i] = &l.Items[i]
@@ -64,8 +64,8 @@ func (l *SentinelDataConnectorAwsCloudTrailList) GetItems() []resource.Managed {
 	return items
 }
 
-// GetItems of this SentinelDataConnectorAzureActiveDirectoryList.
-func (l *SentinelDataConnectorAzureActiveDirectoryList) GetItems() []resource.Managed {
+// GetItems of this DataConnectorAzureActiveDirectoryList.
+func (l *DataConnectorAzureActiveDirectoryList) GetItems() []resource.Managed {
 	items := make([]resource.Managed, len(l.Items))
 	for i := range l.Items {
 		items[i] = &l.Items[i]
@@ -73,8 +73,8 @@ func (l *SentinelDataConnectorAzureActiveDirectoryList) GetItems() []resource.Ma
 	return items
 }
 
-// GetItems of this SentinelDataConnectorAzureAdvancedThreatProtectionList.
-func (l *SentinelDataConnectorAzureAdvancedThreatProtectionList) GetItems() []resource.Managed {
+// GetItems of this DataConnectorAzureAdvancedThreatProtectionList.
+func (l *DataConnectorAzureAdvancedThreatProtectionList) GetItems() []resource.Managed {
 	items := make([]resource.Managed, len(l.Items))
 	for i := range l.Items {
 		items[i] = &l.Items[i]
@@ -82,8 +82,8 @@ func (l *SentinelDataConnectorAzureAdvancedThreatProtectionList) GetItems() []re
 	return items
 }
 
-// GetItems of this SentinelDataConnectorAzureSecurityCenterList.
-func (l *SentinelDataConnectorAzureSecurityCenterList) GetItems() []resource.Managed {
+// GetItems of this DataConnectorAzureSecurityCenterList.
+func (l *DataConnectorAzureSecurityCenterList) GetItems() []resource.Managed {
 	items := make([]resource.Managed, len(l.Items))
 	for i := range l.Items {
 		items[i] = &l.Items[i]
@@ -91,8 +91,8 @@ func (l *SentinelDataConnectorAzureSecurityCenterList) GetItems() []resource.Man
 	return items
 }
 
-// GetItems of this SentinelDataConnectorMicrosoftCloudAppSecurityList.
-func (l *SentinelDataConnectorMicrosoftCloudAppSecurityList) GetItems() []resource.Managed {
+// GetItems of this DataConnectorMicrosoftCloudAppSecurityList.
+func (l *DataConnectorMicrosoftCloudAppSecurityList) GetItems() []resource.Managed {
 	items := make([]resource.Managed, len(l.Items))
 	for i := range l.Items {
 		items[i] = &l.Items[i]
@@ -100,8 +100,8 @@ func (l *SentinelDataConnectorMicrosoftCloudAppSecurityList) GetItems() []resour
 	return items
 }
 
-// GetItems of this SentinelDataConnectorOffice365List.
-func (l *SentinelDataConnectorOffice365List) GetItems() []resource.Managed {
+// GetItems of this DataConnectorOffice365List.
+func (l *DataConnectorOffice365List) GetItems() []resource.Managed {
 	items := make([]resource.Managed, len(l.Items))
 	for i := range l.Items {
 		items[i] = &l.Items[i]
@@ -109,8 +109,8 @@ func (l *SentinelDataConnectorOffice365List) GetItems() []resource.Managed {
 	return items
 }
 
-// GetItems of this SentinelDataConnectorThreatIntelligenceList.
-func (l *SentinelDataConnectorThreatIntelligenceList) GetItems() []resource.Managed {
+// GetItems of this DataConnectorThreatIntelligenceList.
+func (l *DataConnectorThreatIntelligenceList) GetItems() []resource.Managed {
 	items := make([]resource.Managed, len(l.Items))
 	for i := range l.Items {
 		items[i] = &l.Items[i]

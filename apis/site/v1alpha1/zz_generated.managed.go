@@ -19,338 +19,338 @@ package v1alpha1
 
 import xpv1 "github.com/crossplane/crossplane-runtime/apis/common/v1"
 
-// GetCondition of this SiteRecoveryFabric.
-func (mg *SiteRecoveryFabric) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
+// GetCondition of this RecoveryFabric.
+func (mg *RecoveryFabric) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
 	return mg.Status.GetCondition(ct)
 }
 
-// GetDeletionPolicy of this SiteRecoveryFabric.
-func (mg *SiteRecoveryFabric) GetDeletionPolicy() xpv1.DeletionPolicy {
+// GetDeletionPolicy of this RecoveryFabric.
+func (mg *RecoveryFabric) GetDeletionPolicy() xpv1.DeletionPolicy {
 	return mg.Spec.DeletionPolicy
 }
 
-// GetProviderConfigReference of this SiteRecoveryFabric.
-func (mg *SiteRecoveryFabric) GetProviderConfigReference() *xpv1.Reference {
+// GetProviderConfigReference of this RecoveryFabric.
+func (mg *RecoveryFabric) GetProviderConfigReference() *xpv1.Reference {
 	return mg.Spec.ProviderConfigReference
 }
 
 /*
-GetProviderReference of this SiteRecoveryFabric.
+GetProviderReference of this RecoveryFabric.
 Deprecated: Use GetProviderConfigReference.
 */
-func (mg *SiteRecoveryFabric) GetProviderReference() *xpv1.Reference {
+func (mg *RecoveryFabric) GetProviderReference() *xpv1.Reference {
 	return mg.Spec.ProviderReference
 }
 
-// GetWriteConnectionSecretToReference of this SiteRecoveryFabric.
-func (mg *SiteRecoveryFabric) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
+// GetWriteConnectionSecretToReference of this RecoveryFabric.
+func (mg *RecoveryFabric) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
 	return mg.Spec.WriteConnectionSecretToReference
 }
 
-// SetConditions of this SiteRecoveryFabric.
-func (mg *SiteRecoveryFabric) SetConditions(c ...xpv1.Condition) {
+// SetConditions of this RecoveryFabric.
+func (mg *RecoveryFabric) SetConditions(c ...xpv1.Condition) {
 	mg.Status.SetConditions(c...)
 }
 
-// SetDeletionPolicy of this SiteRecoveryFabric.
-func (mg *SiteRecoveryFabric) SetDeletionPolicy(r xpv1.DeletionPolicy) {
+// SetDeletionPolicy of this RecoveryFabric.
+func (mg *RecoveryFabric) SetDeletionPolicy(r xpv1.DeletionPolicy) {
 	mg.Spec.DeletionPolicy = r
 }
 
-// SetProviderConfigReference of this SiteRecoveryFabric.
-func (mg *SiteRecoveryFabric) SetProviderConfigReference(r *xpv1.Reference) {
+// SetProviderConfigReference of this RecoveryFabric.
+func (mg *RecoveryFabric) SetProviderConfigReference(r *xpv1.Reference) {
 	mg.Spec.ProviderConfigReference = r
 }
 
 /*
-SetProviderReference of this SiteRecoveryFabric.
+SetProviderReference of this RecoveryFabric.
 Deprecated: Use SetProviderConfigReference.
 */
-func (mg *SiteRecoveryFabric) SetProviderReference(r *xpv1.Reference) {
+func (mg *RecoveryFabric) SetProviderReference(r *xpv1.Reference) {
 	mg.Spec.ProviderReference = r
 }
 
-// SetWriteConnectionSecretToReference of this SiteRecoveryFabric.
-func (mg *SiteRecoveryFabric) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
+// SetWriteConnectionSecretToReference of this RecoveryFabric.
+func (mg *RecoveryFabric) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
 	mg.Spec.WriteConnectionSecretToReference = r
 }
 
-// GetCondition of this SiteRecoveryNetworkMapping.
-func (mg *SiteRecoveryNetworkMapping) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
+// GetCondition of this RecoveryNetworkMapping.
+func (mg *RecoveryNetworkMapping) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
 	return mg.Status.GetCondition(ct)
 }
 
-// GetDeletionPolicy of this SiteRecoveryNetworkMapping.
-func (mg *SiteRecoveryNetworkMapping) GetDeletionPolicy() xpv1.DeletionPolicy {
+// GetDeletionPolicy of this RecoveryNetworkMapping.
+func (mg *RecoveryNetworkMapping) GetDeletionPolicy() xpv1.DeletionPolicy {
 	return mg.Spec.DeletionPolicy
 }
 
-// GetProviderConfigReference of this SiteRecoveryNetworkMapping.
-func (mg *SiteRecoveryNetworkMapping) GetProviderConfigReference() *xpv1.Reference {
+// GetProviderConfigReference of this RecoveryNetworkMapping.
+func (mg *RecoveryNetworkMapping) GetProviderConfigReference() *xpv1.Reference {
 	return mg.Spec.ProviderConfigReference
 }
 
 /*
-GetProviderReference of this SiteRecoveryNetworkMapping.
+GetProviderReference of this RecoveryNetworkMapping.
 Deprecated: Use GetProviderConfigReference.
 */
-func (mg *SiteRecoveryNetworkMapping) GetProviderReference() *xpv1.Reference {
+func (mg *RecoveryNetworkMapping) GetProviderReference() *xpv1.Reference {
 	return mg.Spec.ProviderReference
 }
 
-// GetWriteConnectionSecretToReference of this SiteRecoveryNetworkMapping.
-func (mg *SiteRecoveryNetworkMapping) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
+// GetWriteConnectionSecretToReference of this RecoveryNetworkMapping.
+func (mg *RecoveryNetworkMapping) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
 	return mg.Spec.WriteConnectionSecretToReference
 }
 
-// SetConditions of this SiteRecoveryNetworkMapping.
-func (mg *SiteRecoveryNetworkMapping) SetConditions(c ...xpv1.Condition) {
+// SetConditions of this RecoveryNetworkMapping.
+func (mg *RecoveryNetworkMapping) SetConditions(c ...xpv1.Condition) {
 	mg.Status.SetConditions(c...)
 }
 
-// SetDeletionPolicy of this SiteRecoveryNetworkMapping.
-func (mg *SiteRecoveryNetworkMapping) SetDeletionPolicy(r xpv1.DeletionPolicy) {
+// SetDeletionPolicy of this RecoveryNetworkMapping.
+func (mg *RecoveryNetworkMapping) SetDeletionPolicy(r xpv1.DeletionPolicy) {
 	mg.Spec.DeletionPolicy = r
 }
 
-// SetProviderConfigReference of this SiteRecoveryNetworkMapping.
-func (mg *SiteRecoveryNetworkMapping) SetProviderConfigReference(r *xpv1.Reference) {
+// SetProviderConfigReference of this RecoveryNetworkMapping.
+func (mg *RecoveryNetworkMapping) SetProviderConfigReference(r *xpv1.Reference) {
 	mg.Spec.ProviderConfigReference = r
 }
 
 /*
-SetProviderReference of this SiteRecoveryNetworkMapping.
+SetProviderReference of this RecoveryNetworkMapping.
 Deprecated: Use SetProviderConfigReference.
 */
-func (mg *SiteRecoveryNetworkMapping) SetProviderReference(r *xpv1.Reference) {
+func (mg *RecoveryNetworkMapping) SetProviderReference(r *xpv1.Reference) {
 	mg.Spec.ProviderReference = r
 }
 
-// SetWriteConnectionSecretToReference of this SiteRecoveryNetworkMapping.
-func (mg *SiteRecoveryNetworkMapping) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
+// SetWriteConnectionSecretToReference of this RecoveryNetworkMapping.
+func (mg *RecoveryNetworkMapping) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
 	mg.Spec.WriteConnectionSecretToReference = r
 }
 
-// GetCondition of this SiteRecoveryProtectionContainer.
-func (mg *SiteRecoveryProtectionContainer) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
+// GetCondition of this RecoveryProtectionContainer.
+func (mg *RecoveryProtectionContainer) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
 	return mg.Status.GetCondition(ct)
 }
 
-// GetDeletionPolicy of this SiteRecoveryProtectionContainer.
-func (mg *SiteRecoveryProtectionContainer) GetDeletionPolicy() xpv1.DeletionPolicy {
+// GetDeletionPolicy of this RecoveryProtectionContainer.
+func (mg *RecoveryProtectionContainer) GetDeletionPolicy() xpv1.DeletionPolicy {
 	return mg.Spec.DeletionPolicy
 }
 
-// GetProviderConfigReference of this SiteRecoveryProtectionContainer.
-func (mg *SiteRecoveryProtectionContainer) GetProviderConfigReference() *xpv1.Reference {
+// GetProviderConfigReference of this RecoveryProtectionContainer.
+func (mg *RecoveryProtectionContainer) GetProviderConfigReference() *xpv1.Reference {
 	return mg.Spec.ProviderConfigReference
 }
 
 /*
-GetProviderReference of this SiteRecoveryProtectionContainer.
+GetProviderReference of this RecoveryProtectionContainer.
 Deprecated: Use GetProviderConfigReference.
 */
-func (mg *SiteRecoveryProtectionContainer) GetProviderReference() *xpv1.Reference {
+func (mg *RecoveryProtectionContainer) GetProviderReference() *xpv1.Reference {
 	return mg.Spec.ProviderReference
 }
 
-// GetWriteConnectionSecretToReference of this SiteRecoveryProtectionContainer.
-func (mg *SiteRecoveryProtectionContainer) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
+// GetWriteConnectionSecretToReference of this RecoveryProtectionContainer.
+func (mg *RecoveryProtectionContainer) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
 	return mg.Spec.WriteConnectionSecretToReference
 }
 
-// SetConditions of this SiteRecoveryProtectionContainer.
-func (mg *SiteRecoveryProtectionContainer) SetConditions(c ...xpv1.Condition) {
+// SetConditions of this RecoveryProtectionContainer.
+func (mg *RecoveryProtectionContainer) SetConditions(c ...xpv1.Condition) {
 	mg.Status.SetConditions(c...)
 }
 
-// SetDeletionPolicy of this SiteRecoveryProtectionContainer.
-func (mg *SiteRecoveryProtectionContainer) SetDeletionPolicy(r xpv1.DeletionPolicy) {
+// SetDeletionPolicy of this RecoveryProtectionContainer.
+func (mg *RecoveryProtectionContainer) SetDeletionPolicy(r xpv1.DeletionPolicy) {
 	mg.Spec.DeletionPolicy = r
 }
 
-// SetProviderConfigReference of this SiteRecoveryProtectionContainer.
-func (mg *SiteRecoveryProtectionContainer) SetProviderConfigReference(r *xpv1.Reference) {
+// SetProviderConfigReference of this RecoveryProtectionContainer.
+func (mg *RecoveryProtectionContainer) SetProviderConfigReference(r *xpv1.Reference) {
 	mg.Spec.ProviderConfigReference = r
 }
 
 /*
-SetProviderReference of this SiteRecoveryProtectionContainer.
+SetProviderReference of this RecoveryProtectionContainer.
 Deprecated: Use SetProviderConfigReference.
 */
-func (mg *SiteRecoveryProtectionContainer) SetProviderReference(r *xpv1.Reference) {
+func (mg *RecoveryProtectionContainer) SetProviderReference(r *xpv1.Reference) {
 	mg.Spec.ProviderReference = r
 }
 
-// SetWriteConnectionSecretToReference of this SiteRecoveryProtectionContainer.
-func (mg *SiteRecoveryProtectionContainer) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
+// SetWriteConnectionSecretToReference of this RecoveryProtectionContainer.
+func (mg *RecoveryProtectionContainer) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
 	mg.Spec.WriteConnectionSecretToReference = r
 }
 
-// GetCondition of this SiteRecoveryProtectionContainerMapping.
-func (mg *SiteRecoveryProtectionContainerMapping) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
+// GetCondition of this RecoveryProtectionContainerMapping.
+func (mg *RecoveryProtectionContainerMapping) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
 	return mg.Status.GetCondition(ct)
 }
 
-// GetDeletionPolicy of this SiteRecoveryProtectionContainerMapping.
-func (mg *SiteRecoveryProtectionContainerMapping) GetDeletionPolicy() xpv1.DeletionPolicy {
+// GetDeletionPolicy of this RecoveryProtectionContainerMapping.
+func (mg *RecoveryProtectionContainerMapping) GetDeletionPolicy() xpv1.DeletionPolicy {
 	return mg.Spec.DeletionPolicy
 }
 
-// GetProviderConfigReference of this SiteRecoveryProtectionContainerMapping.
-func (mg *SiteRecoveryProtectionContainerMapping) GetProviderConfigReference() *xpv1.Reference {
+// GetProviderConfigReference of this RecoveryProtectionContainerMapping.
+func (mg *RecoveryProtectionContainerMapping) GetProviderConfigReference() *xpv1.Reference {
 	return mg.Spec.ProviderConfigReference
 }
 
 /*
-GetProviderReference of this SiteRecoveryProtectionContainerMapping.
+GetProviderReference of this RecoveryProtectionContainerMapping.
 Deprecated: Use GetProviderConfigReference.
 */
-func (mg *SiteRecoveryProtectionContainerMapping) GetProviderReference() *xpv1.Reference {
+func (mg *RecoveryProtectionContainerMapping) GetProviderReference() *xpv1.Reference {
 	return mg.Spec.ProviderReference
 }
 
-// GetWriteConnectionSecretToReference of this SiteRecoveryProtectionContainerMapping.
-func (mg *SiteRecoveryProtectionContainerMapping) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
+// GetWriteConnectionSecretToReference of this RecoveryProtectionContainerMapping.
+func (mg *RecoveryProtectionContainerMapping) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
 	return mg.Spec.WriteConnectionSecretToReference
 }
 
-// SetConditions of this SiteRecoveryProtectionContainerMapping.
-func (mg *SiteRecoveryProtectionContainerMapping) SetConditions(c ...xpv1.Condition) {
+// SetConditions of this RecoveryProtectionContainerMapping.
+func (mg *RecoveryProtectionContainerMapping) SetConditions(c ...xpv1.Condition) {
 	mg.Status.SetConditions(c...)
 }
 
-// SetDeletionPolicy of this SiteRecoveryProtectionContainerMapping.
-func (mg *SiteRecoveryProtectionContainerMapping) SetDeletionPolicy(r xpv1.DeletionPolicy) {
+// SetDeletionPolicy of this RecoveryProtectionContainerMapping.
+func (mg *RecoveryProtectionContainerMapping) SetDeletionPolicy(r xpv1.DeletionPolicy) {
 	mg.Spec.DeletionPolicy = r
 }
 
-// SetProviderConfigReference of this SiteRecoveryProtectionContainerMapping.
-func (mg *SiteRecoveryProtectionContainerMapping) SetProviderConfigReference(r *xpv1.Reference) {
+// SetProviderConfigReference of this RecoveryProtectionContainerMapping.
+func (mg *RecoveryProtectionContainerMapping) SetProviderConfigReference(r *xpv1.Reference) {
 	mg.Spec.ProviderConfigReference = r
 }
 
 /*
-SetProviderReference of this SiteRecoveryProtectionContainerMapping.
+SetProviderReference of this RecoveryProtectionContainerMapping.
 Deprecated: Use SetProviderConfigReference.
 */
-func (mg *SiteRecoveryProtectionContainerMapping) SetProviderReference(r *xpv1.Reference) {
+func (mg *RecoveryProtectionContainerMapping) SetProviderReference(r *xpv1.Reference) {
 	mg.Spec.ProviderReference = r
 }
 
-// SetWriteConnectionSecretToReference of this SiteRecoveryProtectionContainerMapping.
-func (mg *SiteRecoveryProtectionContainerMapping) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
+// SetWriteConnectionSecretToReference of this RecoveryProtectionContainerMapping.
+func (mg *RecoveryProtectionContainerMapping) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
 	mg.Spec.WriteConnectionSecretToReference = r
 }
 
-// GetCondition of this SiteRecoveryReplicatedVm.
-func (mg *SiteRecoveryReplicatedVm) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
+// GetCondition of this RecoveryReplicatedVm.
+func (mg *RecoveryReplicatedVm) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
 	return mg.Status.GetCondition(ct)
 }
 
-// GetDeletionPolicy of this SiteRecoveryReplicatedVm.
-func (mg *SiteRecoveryReplicatedVm) GetDeletionPolicy() xpv1.DeletionPolicy {
+// GetDeletionPolicy of this RecoveryReplicatedVm.
+func (mg *RecoveryReplicatedVm) GetDeletionPolicy() xpv1.DeletionPolicy {
 	return mg.Spec.DeletionPolicy
 }
 
-// GetProviderConfigReference of this SiteRecoveryReplicatedVm.
-func (mg *SiteRecoveryReplicatedVm) GetProviderConfigReference() *xpv1.Reference {
+// GetProviderConfigReference of this RecoveryReplicatedVm.
+func (mg *RecoveryReplicatedVm) GetProviderConfigReference() *xpv1.Reference {
 	return mg.Spec.ProviderConfigReference
 }
 
 /*
-GetProviderReference of this SiteRecoveryReplicatedVm.
+GetProviderReference of this RecoveryReplicatedVm.
 Deprecated: Use GetProviderConfigReference.
 */
-func (mg *SiteRecoveryReplicatedVm) GetProviderReference() *xpv1.Reference {
+func (mg *RecoveryReplicatedVm) GetProviderReference() *xpv1.Reference {
 	return mg.Spec.ProviderReference
 }
 
-// GetWriteConnectionSecretToReference of this SiteRecoveryReplicatedVm.
-func (mg *SiteRecoveryReplicatedVm) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
+// GetWriteConnectionSecretToReference of this RecoveryReplicatedVm.
+func (mg *RecoveryReplicatedVm) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
 	return mg.Spec.WriteConnectionSecretToReference
 }
 
-// SetConditions of this SiteRecoveryReplicatedVm.
-func (mg *SiteRecoveryReplicatedVm) SetConditions(c ...xpv1.Condition) {
+// SetConditions of this RecoveryReplicatedVm.
+func (mg *RecoveryReplicatedVm) SetConditions(c ...xpv1.Condition) {
 	mg.Status.SetConditions(c...)
 }
 
-// SetDeletionPolicy of this SiteRecoveryReplicatedVm.
-func (mg *SiteRecoveryReplicatedVm) SetDeletionPolicy(r xpv1.DeletionPolicy) {
+// SetDeletionPolicy of this RecoveryReplicatedVm.
+func (mg *RecoveryReplicatedVm) SetDeletionPolicy(r xpv1.DeletionPolicy) {
 	mg.Spec.DeletionPolicy = r
 }
 
-// SetProviderConfigReference of this SiteRecoveryReplicatedVm.
-func (mg *SiteRecoveryReplicatedVm) SetProviderConfigReference(r *xpv1.Reference) {
+// SetProviderConfigReference of this RecoveryReplicatedVm.
+func (mg *RecoveryReplicatedVm) SetProviderConfigReference(r *xpv1.Reference) {
 	mg.Spec.ProviderConfigReference = r
 }
 
 /*
-SetProviderReference of this SiteRecoveryReplicatedVm.
+SetProviderReference of this RecoveryReplicatedVm.
 Deprecated: Use SetProviderConfigReference.
 */
-func (mg *SiteRecoveryReplicatedVm) SetProviderReference(r *xpv1.Reference) {
+func (mg *RecoveryReplicatedVm) SetProviderReference(r *xpv1.Reference) {
 	mg.Spec.ProviderReference = r
 }
 
-// SetWriteConnectionSecretToReference of this SiteRecoveryReplicatedVm.
-func (mg *SiteRecoveryReplicatedVm) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
+// SetWriteConnectionSecretToReference of this RecoveryReplicatedVm.
+func (mg *RecoveryReplicatedVm) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
 	mg.Spec.WriteConnectionSecretToReference = r
 }
 
-// GetCondition of this SiteRecoveryReplicationPolicy.
-func (mg *SiteRecoveryReplicationPolicy) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
+// GetCondition of this RecoveryReplicationPolicy.
+func (mg *RecoveryReplicationPolicy) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
 	return mg.Status.GetCondition(ct)
 }
 
-// GetDeletionPolicy of this SiteRecoveryReplicationPolicy.
-func (mg *SiteRecoveryReplicationPolicy) GetDeletionPolicy() xpv1.DeletionPolicy {
+// GetDeletionPolicy of this RecoveryReplicationPolicy.
+func (mg *RecoveryReplicationPolicy) GetDeletionPolicy() xpv1.DeletionPolicy {
 	return mg.Spec.DeletionPolicy
 }
 
-// GetProviderConfigReference of this SiteRecoveryReplicationPolicy.
-func (mg *SiteRecoveryReplicationPolicy) GetProviderConfigReference() *xpv1.Reference {
+// GetProviderConfigReference of this RecoveryReplicationPolicy.
+func (mg *RecoveryReplicationPolicy) GetProviderConfigReference() *xpv1.Reference {
 	return mg.Spec.ProviderConfigReference
 }
 
 /*
-GetProviderReference of this SiteRecoveryReplicationPolicy.
+GetProviderReference of this RecoveryReplicationPolicy.
 Deprecated: Use GetProviderConfigReference.
 */
-func (mg *SiteRecoveryReplicationPolicy) GetProviderReference() *xpv1.Reference {
+func (mg *RecoveryReplicationPolicy) GetProviderReference() *xpv1.Reference {
 	return mg.Spec.ProviderReference
 }
 
-// GetWriteConnectionSecretToReference of this SiteRecoveryReplicationPolicy.
-func (mg *SiteRecoveryReplicationPolicy) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
+// GetWriteConnectionSecretToReference of this RecoveryReplicationPolicy.
+func (mg *RecoveryReplicationPolicy) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
 	return mg.Spec.WriteConnectionSecretToReference
 }
 
-// SetConditions of this SiteRecoveryReplicationPolicy.
-func (mg *SiteRecoveryReplicationPolicy) SetConditions(c ...xpv1.Condition) {
+// SetConditions of this RecoveryReplicationPolicy.
+func (mg *RecoveryReplicationPolicy) SetConditions(c ...xpv1.Condition) {
 	mg.Status.SetConditions(c...)
 }
 
-// SetDeletionPolicy of this SiteRecoveryReplicationPolicy.
-func (mg *SiteRecoveryReplicationPolicy) SetDeletionPolicy(r xpv1.DeletionPolicy) {
+// SetDeletionPolicy of this RecoveryReplicationPolicy.
+func (mg *RecoveryReplicationPolicy) SetDeletionPolicy(r xpv1.DeletionPolicy) {
 	mg.Spec.DeletionPolicy = r
 }
 
-// SetProviderConfigReference of this SiteRecoveryReplicationPolicy.
-func (mg *SiteRecoveryReplicationPolicy) SetProviderConfigReference(r *xpv1.Reference) {
+// SetProviderConfigReference of this RecoveryReplicationPolicy.
+func (mg *RecoveryReplicationPolicy) SetProviderConfigReference(r *xpv1.Reference) {
 	mg.Spec.ProviderConfigReference = r
 }
 
 /*
-SetProviderReference of this SiteRecoveryReplicationPolicy.
+SetProviderReference of this RecoveryReplicationPolicy.
 Deprecated: Use SetProviderConfigReference.
 */
-func (mg *SiteRecoveryReplicationPolicy) SetProviderReference(r *xpv1.Reference) {
+func (mg *RecoveryReplicationPolicy) SetProviderReference(r *xpv1.Reference) {
 	mg.Spec.ProviderReference = r
 }
 
-// SetWriteConnectionSecretToReference of this SiteRecoveryReplicationPolicy.
-func (mg *SiteRecoveryReplicationPolicy) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
+// SetWriteConnectionSecretToReference of this RecoveryReplicationPolicy.
+func (mg *RecoveryReplicationPolicy) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
 	mg.Spec.WriteConnectionSecretToReference = r
 }

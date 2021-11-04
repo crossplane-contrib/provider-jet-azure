@@ -19,8 +19,8 @@ package v1alpha1
 
 import resource "github.com/crossplane/crossplane-runtime/pkg/resource"
 
-// GetItems of this HdinsightHadoopClusterList.
-func (l *HdinsightHadoopClusterList) GetItems() []resource.Managed {
+// GetItems of this HadoopClusterList.
+func (l *HadoopClusterList) GetItems() []resource.Managed {
 	items := make([]resource.Managed, len(l.Items))
 	for i := range l.Items {
 		items[i] = &l.Items[i]
@@ -28,8 +28,8 @@ func (l *HdinsightHadoopClusterList) GetItems() []resource.Managed {
 	return items
 }
 
-// GetItems of this HdinsightHbaseClusterList.
-func (l *HdinsightHbaseClusterList) GetItems() []resource.Managed {
+// GetItems of this HbaseClusterList.
+func (l *HbaseClusterList) GetItems() []resource.Managed {
 	items := make([]resource.Managed, len(l.Items))
 	for i := range l.Items {
 		items[i] = &l.Items[i]
@@ -37,8 +37,8 @@ func (l *HdinsightHbaseClusterList) GetItems() []resource.Managed {
 	return items
 }
 
-// GetItems of this HdinsightInteractiveQueryClusterList.
-func (l *HdinsightInteractiveQueryClusterList) GetItems() []resource.Managed {
+// GetItems of this InteractiveQueryClusterList.
+func (l *InteractiveQueryClusterList) GetItems() []resource.Managed {
 	items := make([]resource.Managed, len(l.Items))
 	for i := range l.Items {
 		items[i] = &l.Items[i]
@@ -46,8 +46,8 @@ func (l *HdinsightInteractiveQueryClusterList) GetItems() []resource.Managed {
 	return items
 }
 
-// GetItems of this HdinsightKafkaClusterList.
-func (l *HdinsightKafkaClusterList) GetItems() []resource.Managed {
+// GetItems of this KafkaClusterList.
+func (l *KafkaClusterList) GetItems() []resource.Managed {
 	items := make([]resource.Managed, len(l.Items))
 	for i := range l.Items {
 		items[i] = &l.Items[i]
@@ -55,8 +55,8 @@ func (l *HdinsightKafkaClusterList) GetItems() []resource.Managed {
 	return items
 }
 
-// GetItems of this HdinsightMlServicesClusterList.
-func (l *HdinsightMlServicesClusterList) GetItems() []resource.Managed {
+// GetItems of this MlServicesClusterList.
+func (l *MlServicesClusterList) GetItems() []resource.Managed {
 	items := make([]resource.Managed, len(l.Items))
 	for i := range l.Items {
 		items[i] = &l.Items[i]
@@ -64,8 +64,8 @@ func (l *HdinsightMlServicesClusterList) GetItems() []resource.Managed {
 	return items
 }
 
-// GetItems of this HdinsightRserverClusterList.
-func (l *HdinsightRserverClusterList) GetItems() []resource.Managed {
+// GetItems of this RserverClusterList.
+func (l *RserverClusterList) GetItems() []resource.Managed {
 	items := make([]resource.Managed, len(l.Items))
 	for i := range l.Items {
 		items[i] = &l.Items[i]
@@ -73,8 +73,8 @@ func (l *HdinsightRserverClusterList) GetItems() []resource.Managed {
 	return items
 }
 
-// GetItems of this HdinsightSparkClusterList.
-func (l *HdinsightSparkClusterList) GetItems() []resource.Managed {
+// GetItems of this SparkClusterList.
+func (l *SparkClusterList) GetItems() []resource.Managed {
 	items := make([]resource.Managed, len(l.Items))
 	for i := range l.Items {
 		items[i] = &l.Items[i]
@@ -82,8 +82,8 @@ func (l *HdinsightSparkClusterList) GetItems() []resource.Managed {
 	return items
 }
 
-// GetItems of this HdinsightStormClusterList.
-func (l *HdinsightStormClusterList) GetItems() []resource.Managed {
+// GetItems of this StormClusterList.
+func (l *StormClusterList) GetItems() []resource.Managed {
 	items := make([]resource.Managed, len(l.Items))
 	for i := range l.Items {
 		items[i] = &l.Items[i]

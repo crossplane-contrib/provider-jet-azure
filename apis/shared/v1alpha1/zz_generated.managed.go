@@ -19,170 +19,170 @@ package v1alpha1
 
 import xpv1 "github.com/crossplane/crossplane-runtime/apis/common/v1"
 
-// GetCondition of this SharedImage.
-func (mg *SharedImage) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
+// GetCondition of this Image.
+func (mg *Image) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
 	return mg.Status.GetCondition(ct)
 }
 
-// GetDeletionPolicy of this SharedImage.
-func (mg *SharedImage) GetDeletionPolicy() xpv1.DeletionPolicy {
+// GetDeletionPolicy of this Image.
+func (mg *Image) GetDeletionPolicy() xpv1.DeletionPolicy {
 	return mg.Spec.DeletionPolicy
 }
 
-// GetProviderConfigReference of this SharedImage.
-func (mg *SharedImage) GetProviderConfigReference() *xpv1.Reference {
+// GetProviderConfigReference of this Image.
+func (mg *Image) GetProviderConfigReference() *xpv1.Reference {
 	return mg.Spec.ProviderConfigReference
 }
 
 /*
-GetProviderReference of this SharedImage.
+GetProviderReference of this Image.
 Deprecated: Use GetProviderConfigReference.
 */
-func (mg *SharedImage) GetProviderReference() *xpv1.Reference {
+func (mg *Image) GetProviderReference() *xpv1.Reference {
 	return mg.Spec.ProviderReference
 }
 
-// GetWriteConnectionSecretToReference of this SharedImage.
-func (mg *SharedImage) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
+// GetWriteConnectionSecretToReference of this Image.
+func (mg *Image) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
 	return mg.Spec.WriteConnectionSecretToReference
 }
 
-// SetConditions of this SharedImage.
-func (mg *SharedImage) SetConditions(c ...xpv1.Condition) {
+// SetConditions of this Image.
+func (mg *Image) SetConditions(c ...xpv1.Condition) {
 	mg.Status.SetConditions(c...)
 }
 
-// SetDeletionPolicy of this SharedImage.
-func (mg *SharedImage) SetDeletionPolicy(r xpv1.DeletionPolicy) {
+// SetDeletionPolicy of this Image.
+func (mg *Image) SetDeletionPolicy(r xpv1.DeletionPolicy) {
 	mg.Spec.DeletionPolicy = r
 }
 
-// SetProviderConfigReference of this SharedImage.
-func (mg *SharedImage) SetProviderConfigReference(r *xpv1.Reference) {
+// SetProviderConfigReference of this Image.
+func (mg *Image) SetProviderConfigReference(r *xpv1.Reference) {
 	mg.Spec.ProviderConfigReference = r
 }
 
 /*
-SetProviderReference of this SharedImage.
+SetProviderReference of this Image.
 Deprecated: Use SetProviderConfigReference.
 */
-func (mg *SharedImage) SetProviderReference(r *xpv1.Reference) {
+func (mg *Image) SetProviderReference(r *xpv1.Reference) {
 	mg.Spec.ProviderReference = r
 }
 
-// SetWriteConnectionSecretToReference of this SharedImage.
-func (mg *SharedImage) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
+// SetWriteConnectionSecretToReference of this Image.
+func (mg *Image) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
 	mg.Spec.WriteConnectionSecretToReference = r
 }
 
-// GetCondition of this SharedImageGallery.
-func (mg *SharedImageGallery) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
+// GetCondition of this ImageGallery.
+func (mg *ImageGallery) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
 	return mg.Status.GetCondition(ct)
 }
 
-// GetDeletionPolicy of this SharedImageGallery.
-func (mg *SharedImageGallery) GetDeletionPolicy() xpv1.DeletionPolicy {
+// GetDeletionPolicy of this ImageGallery.
+func (mg *ImageGallery) GetDeletionPolicy() xpv1.DeletionPolicy {
 	return mg.Spec.DeletionPolicy
 }
 
-// GetProviderConfigReference of this SharedImageGallery.
-func (mg *SharedImageGallery) GetProviderConfigReference() *xpv1.Reference {
+// GetProviderConfigReference of this ImageGallery.
+func (mg *ImageGallery) GetProviderConfigReference() *xpv1.Reference {
 	return mg.Spec.ProviderConfigReference
 }
 
 /*
-GetProviderReference of this SharedImageGallery.
+GetProviderReference of this ImageGallery.
 Deprecated: Use GetProviderConfigReference.
 */
-func (mg *SharedImageGallery) GetProviderReference() *xpv1.Reference {
+func (mg *ImageGallery) GetProviderReference() *xpv1.Reference {
 	return mg.Spec.ProviderReference
 }
 
-// GetWriteConnectionSecretToReference of this SharedImageGallery.
-func (mg *SharedImageGallery) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
+// GetWriteConnectionSecretToReference of this ImageGallery.
+func (mg *ImageGallery) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
 	return mg.Spec.WriteConnectionSecretToReference
 }
 
-// SetConditions of this SharedImageGallery.
-func (mg *SharedImageGallery) SetConditions(c ...xpv1.Condition) {
+// SetConditions of this ImageGallery.
+func (mg *ImageGallery) SetConditions(c ...xpv1.Condition) {
 	mg.Status.SetConditions(c...)
 }
 
-// SetDeletionPolicy of this SharedImageGallery.
-func (mg *SharedImageGallery) SetDeletionPolicy(r xpv1.DeletionPolicy) {
+// SetDeletionPolicy of this ImageGallery.
+func (mg *ImageGallery) SetDeletionPolicy(r xpv1.DeletionPolicy) {
 	mg.Spec.DeletionPolicy = r
 }
 
-// SetProviderConfigReference of this SharedImageGallery.
-func (mg *SharedImageGallery) SetProviderConfigReference(r *xpv1.Reference) {
+// SetProviderConfigReference of this ImageGallery.
+func (mg *ImageGallery) SetProviderConfigReference(r *xpv1.Reference) {
 	mg.Spec.ProviderConfigReference = r
 }
 
 /*
-SetProviderReference of this SharedImageGallery.
+SetProviderReference of this ImageGallery.
 Deprecated: Use SetProviderConfigReference.
 */
-func (mg *SharedImageGallery) SetProviderReference(r *xpv1.Reference) {
+func (mg *ImageGallery) SetProviderReference(r *xpv1.Reference) {
 	mg.Spec.ProviderReference = r
 }
 
-// SetWriteConnectionSecretToReference of this SharedImageGallery.
-func (mg *SharedImageGallery) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
+// SetWriteConnectionSecretToReference of this ImageGallery.
+func (mg *ImageGallery) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
 	mg.Spec.WriteConnectionSecretToReference = r
 }
 
-// GetCondition of this SharedImageVersion.
-func (mg *SharedImageVersion) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
+// GetCondition of this ImageVersion.
+func (mg *ImageVersion) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
 	return mg.Status.GetCondition(ct)
 }
 
-// GetDeletionPolicy of this SharedImageVersion.
-func (mg *SharedImageVersion) GetDeletionPolicy() xpv1.DeletionPolicy {
+// GetDeletionPolicy of this ImageVersion.
+func (mg *ImageVersion) GetDeletionPolicy() xpv1.DeletionPolicy {
 	return mg.Spec.DeletionPolicy
 }
 
-// GetProviderConfigReference of this SharedImageVersion.
-func (mg *SharedImageVersion) GetProviderConfigReference() *xpv1.Reference {
+// GetProviderConfigReference of this ImageVersion.
+func (mg *ImageVersion) GetProviderConfigReference() *xpv1.Reference {
 	return mg.Spec.ProviderConfigReference
 }
 
 /*
-GetProviderReference of this SharedImageVersion.
+GetProviderReference of this ImageVersion.
 Deprecated: Use GetProviderConfigReference.
 */
-func (mg *SharedImageVersion) GetProviderReference() *xpv1.Reference {
+func (mg *ImageVersion) GetProviderReference() *xpv1.Reference {
 	return mg.Spec.ProviderReference
 }
 
-// GetWriteConnectionSecretToReference of this SharedImageVersion.
-func (mg *SharedImageVersion) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
+// GetWriteConnectionSecretToReference of this ImageVersion.
+func (mg *ImageVersion) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
 	return mg.Spec.WriteConnectionSecretToReference
 }
 
-// SetConditions of this SharedImageVersion.
-func (mg *SharedImageVersion) SetConditions(c ...xpv1.Condition) {
+// SetConditions of this ImageVersion.
+func (mg *ImageVersion) SetConditions(c ...xpv1.Condition) {
 	mg.Status.SetConditions(c...)
 }
 
-// SetDeletionPolicy of this SharedImageVersion.
-func (mg *SharedImageVersion) SetDeletionPolicy(r xpv1.DeletionPolicy) {
+// SetDeletionPolicy of this ImageVersion.
+func (mg *ImageVersion) SetDeletionPolicy(r xpv1.DeletionPolicy) {
 	mg.Spec.DeletionPolicy = r
 }
 
-// SetProviderConfigReference of this SharedImageVersion.
-func (mg *SharedImageVersion) SetProviderConfigReference(r *xpv1.Reference) {
+// SetProviderConfigReference of this ImageVersion.
+func (mg *ImageVersion) SetProviderConfigReference(r *xpv1.Reference) {
 	mg.Spec.ProviderConfigReference = r
 }
 
 /*
-SetProviderReference of this SharedImageVersion.
+SetProviderReference of this ImageVersion.
 Deprecated: Use SetProviderConfigReference.
 */
-func (mg *SharedImageVersion) SetProviderReference(r *xpv1.Reference) {
+func (mg *ImageVersion) SetProviderReference(r *xpv1.Reference) {
 	mg.Spec.ProviderReference = r
 }
 
-// SetWriteConnectionSecretToReference of this SharedImageVersion.
-func (mg *SharedImageVersion) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
+// SetWriteConnectionSecretToReference of this ImageVersion.
+func (mg *ImageVersion) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
 	mg.Spec.WriteConnectionSecretToReference = r
 }

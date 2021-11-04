@@ -19,8 +19,8 @@ package v1alpha1
 
 import resource "github.com/crossplane/crossplane-runtime/pkg/resource"
 
-// GetItems of this DiskAccessList.
-func (l *DiskAccessList) GetItems() []resource.Managed {
+// GetItems of this AccessList.
+func (l *AccessList) GetItems() []resource.Managed {
 	items := make([]resource.Managed, len(l.Items))
 	for i := range l.Items {
 		items[i] = &l.Items[i]
@@ -28,8 +28,8 @@ func (l *DiskAccessList) GetItems() []resource.Managed {
 	return items
 }
 
-// GetItems of this DiskEncryptionSetList.
-func (l *DiskEncryptionSetList) GetItems() []resource.Managed {
+// GetItems of this EncryptionSetList.
+func (l *EncryptionSetList) GetItems() []resource.Managed {
 	items := make([]resource.Managed, len(l.Items))
 	for i := range l.Items {
 		items[i] = &l.Items[i]

@@ -19,8 +19,8 @@ package v1alpha1
 
 import resource "github.com/crossplane/crossplane-runtime/pkg/resource"
 
-// GetItems of this ContainerRegistryList.
-func (l *ContainerRegistryList) GetItems() []resource.Managed {
+// GetItems of this RegistryList.
+func (l *RegistryList) GetItems() []resource.Managed {
 	items := make([]resource.Managed, len(l.Items))
 	for i := range l.Items {
 		items[i] = &l.Items[i]
@@ -28,8 +28,8 @@ func (l *ContainerRegistryList) GetItems() []resource.Managed {
 	return items
 }
 
-// GetItems of this ContainerRegistryScopeMapList.
-func (l *ContainerRegistryScopeMapList) GetItems() []resource.Managed {
+// GetItems of this RegistryScopeMapList.
+func (l *RegistryScopeMapList) GetItems() []resource.Managed {
 	items := make([]resource.Managed, len(l.Items))
 	for i := range l.Items {
 		items[i] = &l.Items[i]
@@ -37,8 +37,8 @@ func (l *ContainerRegistryScopeMapList) GetItems() []resource.Managed {
 	return items
 }
 
-// GetItems of this ContainerRegistryTokenList.
-func (l *ContainerRegistryTokenList) GetItems() []resource.Managed {
+// GetItems of this RegistryTokenList.
+func (l *RegistryTokenList) GetItems() []resource.Managed {
 	items := make([]resource.Managed, len(l.Items))
 	for i := range l.Items {
 		items[i] = &l.Items[i]
@@ -46,8 +46,8 @@ func (l *ContainerRegistryTokenList) GetItems() []resource.Managed {
 	return items
 }
 
-// GetItems of this ContainerRegistryWebhookList.
-func (l *ContainerRegistryWebhookList) GetItems() []resource.Managed {
+// GetItems of this RegistryWebhookList.
+func (l *RegistryWebhookList) GetItems() []resource.Managed {
 	items := make([]resource.Managed, len(l.Items))
 	for i := range l.Items {
 		items[i] = &l.Items[i]

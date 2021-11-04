@@ -19,450 +19,394 @@ package v1alpha1
 
 import xpv1 "github.com/crossplane/crossplane-runtime/apis/common/v1"
 
-// GetCondition of this Eventhub.
-func (mg *Eventhub) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
+// GetCondition of this AuthorizationRule.
+func (mg *AuthorizationRule) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
 	return mg.Status.GetCondition(ct)
 }
 
-// GetDeletionPolicy of this Eventhub.
-func (mg *Eventhub) GetDeletionPolicy() xpv1.DeletionPolicy {
+// GetDeletionPolicy of this AuthorizationRule.
+func (mg *AuthorizationRule) GetDeletionPolicy() xpv1.DeletionPolicy {
 	return mg.Spec.DeletionPolicy
 }
 
-// GetProviderConfigReference of this Eventhub.
-func (mg *Eventhub) GetProviderConfigReference() *xpv1.Reference {
+// GetProviderConfigReference of this AuthorizationRule.
+func (mg *AuthorizationRule) GetProviderConfigReference() *xpv1.Reference {
 	return mg.Spec.ProviderConfigReference
 }
 
 /*
-GetProviderReference of this Eventhub.
+GetProviderReference of this AuthorizationRule.
 Deprecated: Use GetProviderConfigReference.
 */
-func (mg *Eventhub) GetProviderReference() *xpv1.Reference {
+func (mg *AuthorizationRule) GetProviderReference() *xpv1.Reference {
 	return mg.Spec.ProviderReference
 }
 
-// GetWriteConnectionSecretToReference of this Eventhub.
-func (mg *Eventhub) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
+// GetWriteConnectionSecretToReference of this AuthorizationRule.
+func (mg *AuthorizationRule) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
 	return mg.Spec.WriteConnectionSecretToReference
 }
 
-// SetConditions of this Eventhub.
-func (mg *Eventhub) SetConditions(c ...xpv1.Condition) {
+// SetConditions of this AuthorizationRule.
+func (mg *AuthorizationRule) SetConditions(c ...xpv1.Condition) {
 	mg.Status.SetConditions(c...)
 }
 
-// SetDeletionPolicy of this Eventhub.
-func (mg *Eventhub) SetDeletionPolicy(r xpv1.DeletionPolicy) {
+// SetDeletionPolicy of this AuthorizationRule.
+func (mg *AuthorizationRule) SetDeletionPolicy(r xpv1.DeletionPolicy) {
 	mg.Spec.DeletionPolicy = r
 }
 
-// SetProviderConfigReference of this Eventhub.
-func (mg *Eventhub) SetProviderConfigReference(r *xpv1.Reference) {
+// SetProviderConfigReference of this AuthorizationRule.
+func (mg *AuthorizationRule) SetProviderConfigReference(r *xpv1.Reference) {
 	mg.Spec.ProviderConfigReference = r
 }
 
 /*
-SetProviderReference of this Eventhub.
+SetProviderReference of this AuthorizationRule.
 Deprecated: Use SetProviderConfigReference.
 */
-func (mg *Eventhub) SetProviderReference(r *xpv1.Reference) {
+func (mg *AuthorizationRule) SetProviderReference(r *xpv1.Reference) {
 	mg.Spec.ProviderReference = r
 }
 
-// SetWriteConnectionSecretToReference of this Eventhub.
-func (mg *Eventhub) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
+// SetWriteConnectionSecretToReference of this AuthorizationRule.
+func (mg *AuthorizationRule) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
 	mg.Spec.WriteConnectionSecretToReference = r
 }
 
-// GetCondition of this EventhubAuthorizationRule.
-func (mg *EventhubAuthorizationRule) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
+// GetCondition of this Cluster.
+func (mg *Cluster) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
 	return mg.Status.GetCondition(ct)
 }
 
-// GetDeletionPolicy of this EventhubAuthorizationRule.
-func (mg *EventhubAuthorizationRule) GetDeletionPolicy() xpv1.DeletionPolicy {
+// GetDeletionPolicy of this Cluster.
+func (mg *Cluster) GetDeletionPolicy() xpv1.DeletionPolicy {
 	return mg.Spec.DeletionPolicy
 }
 
-// GetProviderConfigReference of this EventhubAuthorizationRule.
-func (mg *EventhubAuthorizationRule) GetProviderConfigReference() *xpv1.Reference {
+// GetProviderConfigReference of this Cluster.
+func (mg *Cluster) GetProviderConfigReference() *xpv1.Reference {
 	return mg.Spec.ProviderConfigReference
 }
 
 /*
-GetProviderReference of this EventhubAuthorizationRule.
+GetProviderReference of this Cluster.
 Deprecated: Use GetProviderConfigReference.
 */
-func (mg *EventhubAuthorizationRule) GetProviderReference() *xpv1.Reference {
+func (mg *Cluster) GetProviderReference() *xpv1.Reference {
 	return mg.Spec.ProviderReference
 }
 
-// GetWriteConnectionSecretToReference of this EventhubAuthorizationRule.
-func (mg *EventhubAuthorizationRule) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
+// GetWriteConnectionSecretToReference of this Cluster.
+func (mg *Cluster) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
 	return mg.Spec.WriteConnectionSecretToReference
 }
 
-// SetConditions of this EventhubAuthorizationRule.
-func (mg *EventhubAuthorizationRule) SetConditions(c ...xpv1.Condition) {
+// SetConditions of this Cluster.
+func (mg *Cluster) SetConditions(c ...xpv1.Condition) {
 	mg.Status.SetConditions(c...)
 }
 
-// SetDeletionPolicy of this EventhubAuthorizationRule.
-func (mg *EventhubAuthorizationRule) SetDeletionPolicy(r xpv1.DeletionPolicy) {
+// SetDeletionPolicy of this Cluster.
+func (mg *Cluster) SetDeletionPolicy(r xpv1.DeletionPolicy) {
 	mg.Spec.DeletionPolicy = r
 }
 
-// SetProviderConfigReference of this EventhubAuthorizationRule.
-func (mg *EventhubAuthorizationRule) SetProviderConfigReference(r *xpv1.Reference) {
+// SetProviderConfigReference of this Cluster.
+func (mg *Cluster) SetProviderConfigReference(r *xpv1.Reference) {
 	mg.Spec.ProviderConfigReference = r
 }
 
 /*
-SetProviderReference of this EventhubAuthorizationRule.
+SetProviderReference of this Cluster.
 Deprecated: Use SetProviderConfigReference.
 */
-func (mg *EventhubAuthorizationRule) SetProviderReference(r *xpv1.Reference) {
+func (mg *Cluster) SetProviderReference(r *xpv1.Reference) {
 	mg.Spec.ProviderReference = r
 }
 
-// SetWriteConnectionSecretToReference of this EventhubAuthorizationRule.
-func (mg *EventhubAuthorizationRule) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
+// SetWriteConnectionSecretToReference of this Cluster.
+func (mg *Cluster) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
 	mg.Spec.WriteConnectionSecretToReference = r
 }
 
-// GetCondition of this EventhubCluster.
-func (mg *EventhubCluster) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
+// GetCondition of this ConsumerGroup.
+func (mg *ConsumerGroup) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
 	return mg.Status.GetCondition(ct)
 }
 
-// GetDeletionPolicy of this EventhubCluster.
-func (mg *EventhubCluster) GetDeletionPolicy() xpv1.DeletionPolicy {
+// GetDeletionPolicy of this ConsumerGroup.
+func (mg *ConsumerGroup) GetDeletionPolicy() xpv1.DeletionPolicy {
 	return mg.Spec.DeletionPolicy
 }
 
-// GetProviderConfigReference of this EventhubCluster.
-func (mg *EventhubCluster) GetProviderConfigReference() *xpv1.Reference {
+// GetProviderConfigReference of this ConsumerGroup.
+func (mg *ConsumerGroup) GetProviderConfigReference() *xpv1.Reference {
 	return mg.Spec.ProviderConfigReference
 }
 
 /*
-GetProviderReference of this EventhubCluster.
+GetProviderReference of this ConsumerGroup.
 Deprecated: Use GetProviderConfigReference.
 */
-func (mg *EventhubCluster) GetProviderReference() *xpv1.Reference {
+func (mg *ConsumerGroup) GetProviderReference() *xpv1.Reference {
 	return mg.Spec.ProviderReference
 }
 
-// GetWriteConnectionSecretToReference of this EventhubCluster.
-func (mg *EventhubCluster) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
+// GetWriteConnectionSecretToReference of this ConsumerGroup.
+func (mg *ConsumerGroup) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
 	return mg.Spec.WriteConnectionSecretToReference
 }
 
-// SetConditions of this EventhubCluster.
-func (mg *EventhubCluster) SetConditions(c ...xpv1.Condition) {
+// SetConditions of this ConsumerGroup.
+func (mg *ConsumerGroup) SetConditions(c ...xpv1.Condition) {
 	mg.Status.SetConditions(c...)
 }
 
-// SetDeletionPolicy of this EventhubCluster.
-func (mg *EventhubCluster) SetDeletionPolicy(r xpv1.DeletionPolicy) {
+// SetDeletionPolicy of this ConsumerGroup.
+func (mg *ConsumerGroup) SetDeletionPolicy(r xpv1.DeletionPolicy) {
 	mg.Spec.DeletionPolicy = r
 }
 
-// SetProviderConfigReference of this EventhubCluster.
-func (mg *EventhubCluster) SetProviderConfigReference(r *xpv1.Reference) {
+// SetProviderConfigReference of this ConsumerGroup.
+func (mg *ConsumerGroup) SetProviderConfigReference(r *xpv1.Reference) {
 	mg.Spec.ProviderConfigReference = r
 }
 
 /*
-SetProviderReference of this EventhubCluster.
+SetProviderReference of this ConsumerGroup.
 Deprecated: Use SetProviderConfigReference.
 */
-func (mg *EventhubCluster) SetProviderReference(r *xpv1.Reference) {
+func (mg *ConsumerGroup) SetProviderReference(r *xpv1.Reference) {
 	mg.Spec.ProviderReference = r
 }
 
-// SetWriteConnectionSecretToReference of this EventhubCluster.
-func (mg *EventhubCluster) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
+// SetWriteConnectionSecretToReference of this ConsumerGroup.
+func (mg *ConsumerGroup) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
 	mg.Spec.WriteConnectionSecretToReference = r
 }
 
-// GetCondition of this EventhubConsumerGroup.
-func (mg *EventhubConsumerGroup) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
+// GetCondition of this Namespace.
+func (mg *Namespace) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
 	return mg.Status.GetCondition(ct)
 }
 
-// GetDeletionPolicy of this EventhubConsumerGroup.
-func (mg *EventhubConsumerGroup) GetDeletionPolicy() xpv1.DeletionPolicy {
+// GetDeletionPolicy of this Namespace.
+func (mg *Namespace) GetDeletionPolicy() xpv1.DeletionPolicy {
 	return mg.Spec.DeletionPolicy
 }
 
-// GetProviderConfigReference of this EventhubConsumerGroup.
-func (mg *EventhubConsumerGroup) GetProviderConfigReference() *xpv1.Reference {
+// GetProviderConfigReference of this Namespace.
+func (mg *Namespace) GetProviderConfigReference() *xpv1.Reference {
 	return mg.Spec.ProviderConfigReference
 }
 
 /*
-GetProviderReference of this EventhubConsumerGroup.
+GetProviderReference of this Namespace.
 Deprecated: Use GetProviderConfigReference.
 */
-func (mg *EventhubConsumerGroup) GetProviderReference() *xpv1.Reference {
+func (mg *Namespace) GetProviderReference() *xpv1.Reference {
 	return mg.Spec.ProviderReference
 }
 
-// GetWriteConnectionSecretToReference of this EventhubConsumerGroup.
-func (mg *EventhubConsumerGroup) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
+// GetWriteConnectionSecretToReference of this Namespace.
+func (mg *Namespace) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
 	return mg.Spec.WriteConnectionSecretToReference
 }
 
-// SetConditions of this EventhubConsumerGroup.
-func (mg *EventhubConsumerGroup) SetConditions(c ...xpv1.Condition) {
+// SetConditions of this Namespace.
+func (mg *Namespace) SetConditions(c ...xpv1.Condition) {
 	mg.Status.SetConditions(c...)
 }
 
-// SetDeletionPolicy of this EventhubConsumerGroup.
-func (mg *EventhubConsumerGroup) SetDeletionPolicy(r xpv1.DeletionPolicy) {
+// SetDeletionPolicy of this Namespace.
+func (mg *Namespace) SetDeletionPolicy(r xpv1.DeletionPolicy) {
 	mg.Spec.DeletionPolicy = r
 }
 
-// SetProviderConfigReference of this EventhubConsumerGroup.
-func (mg *EventhubConsumerGroup) SetProviderConfigReference(r *xpv1.Reference) {
+// SetProviderConfigReference of this Namespace.
+func (mg *Namespace) SetProviderConfigReference(r *xpv1.Reference) {
 	mg.Spec.ProviderConfigReference = r
 }
 
 /*
-SetProviderReference of this EventhubConsumerGroup.
+SetProviderReference of this Namespace.
 Deprecated: Use SetProviderConfigReference.
 */
-func (mg *EventhubConsumerGroup) SetProviderReference(r *xpv1.Reference) {
+func (mg *Namespace) SetProviderReference(r *xpv1.Reference) {
 	mg.Spec.ProviderReference = r
 }
 
-// SetWriteConnectionSecretToReference of this EventhubConsumerGroup.
-func (mg *EventhubConsumerGroup) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
+// SetWriteConnectionSecretToReference of this Namespace.
+func (mg *Namespace) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
 	mg.Spec.WriteConnectionSecretToReference = r
 }
 
-// GetCondition of this EventhubNamespace.
-func (mg *EventhubNamespace) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
+// GetCondition of this NamespaceAuthorizationRule.
+func (mg *NamespaceAuthorizationRule) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
 	return mg.Status.GetCondition(ct)
 }
 
-// GetDeletionPolicy of this EventhubNamespace.
-func (mg *EventhubNamespace) GetDeletionPolicy() xpv1.DeletionPolicy {
+// GetDeletionPolicy of this NamespaceAuthorizationRule.
+func (mg *NamespaceAuthorizationRule) GetDeletionPolicy() xpv1.DeletionPolicy {
 	return mg.Spec.DeletionPolicy
 }
 
-// GetProviderConfigReference of this EventhubNamespace.
-func (mg *EventhubNamespace) GetProviderConfigReference() *xpv1.Reference {
+// GetProviderConfigReference of this NamespaceAuthorizationRule.
+func (mg *NamespaceAuthorizationRule) GetProviderConfigReference() *xpv1.Reference {
 	return mg.Spec.ProviderConfigReference
 }
 
 /*
-GetProviderReference of this EventhubNamespace.
+GetProviderReference of this NamespaceAuthorizationRule.
 Deprecated: Use GetProviderConfigReference.
 */
-func (mg *EventhubNamespace) GetProviderReference() *xpv1.Reference {
+func (mg *NamespaceAuthorizationRule) GetProviderReference() *xpv1.Reference {
 	return mg.Spec.ProviderReference
 }
 
-// GetWriteConnectionSecretToReference of this EventhubNamespace.
-func (mg *EventhubNamespace) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
+// GetWriteConnectionSecretToReference of this NamespaceAuthorizationRule.
+func (mg *NamespaceAuthorizationRule) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
 	return mg.Spec.WriteConnectionSecretToReference
 }
 
-// SetConditions of this EventhubNamespace.
-func (mg *EventhubNamespace) SetConditions(c ...xpv1.Condition) {
+// SetConditions of this NamespaceAuthorizationRule.
+func (mg *NamespaceAuthorizationRule) SetConditions(c ...xpv1.Condition) {
 	mg.Status.SetConditions(c...)
 }
 
-// SetDeletionPolicy of this EventhubNamespace.
-func (mg *EventhubNamespace) SetDeletionPolicy(r xpv1.DeletionPolicy) {
+// SetDeletionPolicy of this NamespaceAuthorizationRule.
+func (mg *NamespaceAuthorizationRule) SetDeletionPolicy(r xpv1.DeletionPolicy) {
 	mg.Spec.DeletionPolicy = r
 }
 
-// SetProviderConfigReference of this EventhubNamespace.
-func (mg *EventhubNamespace) SetProviderConfigReference(r *xpv1.Reference) {
+// SetProviderConfigReference of this NamespaceAuthorizationRule.
+func (mg *NamespaceAuthorizationRule) SetProviderConfigReference(r *xpv1.Reference) {
 	mg.Spec.ProviderConfigReference = r
 }
 
 /*
-SetProviderReference of this EventhubNamespace.
+SetProviderReference of this NamespaceAuthorizationRule.
 Deprecated: Use SetProviderConfigReference.
 */
-func (mg *EventhubNamespace) SetProviderReference(r *xpv1.Reference) {
+func (mg *NamespaceAuthorizationRule) SetProviderReference(r *xpv1.Reference) {
 	mg.Spec.ProviderReference = r
 }
 
-// SetWriteConnectionSecretToReference of this EventhubNamespace.
-func (mg *EventhubNamespace) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
+// SetWriteConnectionSecretToReference of this NamespaceAuthorizationRule.
+func (mg *NamespaceAuthorizationRule) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
 	mg.Spec.WriteConnectionSecretToReference = r
 }
 
-// GetCondition of this EventhubNamespaceAuthorizationRule.
-func (mg *EventhubNamespaceAuthorizationRule) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
+// GetCondition of this NamespaceCustomerManagedKey.
+func (mg *NamespaceCustomerManagedKey) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
 	return mg.Status.GetCondition(ct)
 }
 
-// GetDeletionPolicy of this EventhubNamespaceAuthorizationRule.
-func (mg *EventhubNamespaceAuthorizationRule) GetDeletionPolicy() xpv1.DeletionPolicy {
+// GetDeletionPolicy of this NamespaceCustomerManagedKey.
+func (mg *NamespaceCustomerManagedKey) GetDeletionPolicy() xpv1.DeletionPolicy {
 	return mg.Spec.DeletionPolicy
 }
 
-// GetProviderConfigReference of this EventhubNamespaceAuthorizationRule.
-func (mg *EventhubNamespaceAuthorizationRule) GetProviderConfigReference() *xpv1.Reference {
+// GetProviderConfigReference of this NamespaceCustomerManagedKey.
+func (mg *NamespaceCustomerManagedKey) GetProviderConfigReference() *xpv1.Reference {
 	return mg.Spec.ProviderConfigReference
 }
 
 /*
-GetProviderReference of this EventhubNamespaceAuthorizationRule.
+GetProviderReference of this NamespaceCustomerManagedKey.
 Deprecated: Use GetProviderConfigReference.
 */
-func (mg *EventhubNamespaceAuthorizationRule) GetProviderReference() *xpv1.Reference {
+func (mg *NamespaceCustomerManagedKey) GetProviderReference() *xpv1.Reference {
 	return mg.Spec.ProviderReference
 }
 
-// GetWriteConnectionSecretToReference of this EventhubNamespaceAuthorizationRule.
-func (mg *EventhubNamespaceAuthorizationRule) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
+// GetWriteConnectionSecretToReference of this NamespaceCustomerManagedKey.
+func (mg *NamespaceCustomerManagedKey) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
 	return mg.Spec.WriteConnectionSecretToReference
 }
 
-// SetConditions of this EventhubNamespaceAuthorizationRule.
-func (mg *EventhubNamespaceAuthorizationRule) SetConditions(c ...xpv1.Condition) {
+// SetConditions of this NamespaceCustomerManagedKey.
+func (mg *NamespaceCustomerManagedKey) SetConditions(c ...xpv1.Condition) {
 	mg.Status.SetConditions(c...)
 }
 
-// SetDeletionPolicy of this EventhubNamespaceAuthorizationRule.
-func (mg *EventhubNamespaceAuthorizationRule) SetDeletionPolicy(r xpv1.DeletionPolicy) {
+// SetDeletionPolicy of this NamespaceCustomerManagedKey.
+func (mg *NamespaceCustomerManagedKey) SetDeletionPolicy(r xpv1.DeletionPolicy) {
 	mg.Spec.DeletionPolicy = r
 }
 
-// SetProviderConfigReference of this EventhubNamespaceAuthorizationRule.
-func (mg *EventhubNamespaceAuthorizationRule) SetProviderConfigReference(r *xpv1.Reference) {
+// SetProviderConfigReference of this NamespaceCustomerManagedKey.
+func (mg *NamespaceCustomerManagedKey) SetProviderConfigReference(r *xpv1.Reference) {
 	mg.Spec.ProviderConfigReference = r
 }
 
 /*
-SetProviderReference of this EventhubNamespaceAuthorizationRule.
+SetProviderReference of this NamespaceCustomerManagedKey.
 Deprecated: Use SetProviderConfigReference.
 */
-func (mg *EventhubNamespaceAuthorizationRule) SetProviderReference(r *xpv1.Reference) {
+func (mg *NamespaceCustomerManagedKey) SetProviderReference(r *xpv1.Reference) {
 	mg.Spec.ProviderReference = r
 }
 
-// SetWriteConnectionSecretToReference of this EventhubNamespaceAuthorizationRule.
-func (mg *EventhubNamespaceAuthorizationRule) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
+// SetWriteConnectionSecretToReference of this NamespaceCustomerManagedKey.
+func (mg *NamespaceCustomerManagedKey) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
 	mg.Spec.WriteConnectionSecretToReference = r
 }
 
-// GetCondition of this EventhubNamespaceCustomerManagedKey.
-func (mg *EventhubNamespaceCustomerManagedKey) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
+// GetCondition of this NamespaceDisasterRecoveryConfig.
+func (mg *NamespaceDisasterRecoveryConfig) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
 	return mg.Status.GetCondition(ct)
 }
 
-// GetDeletionPolicy of this EventhubNamespaceCustomerManagedKey.
-func (mg *EventhubNamespaceCustomerManagedKey) GetDeletionPolicy() xpv1.DeletionPolicy {
+// GetDeletionPolicy of this NamespaceDisasterRecoveryConfig.
+func (mg *NamespaceDisasterRecoveryConfig) GetDeletionPolicy() xpv1.DeletionPolicy {
 	return mg.Spec.DeletionPolicy
 }
 
-// GetProviderConfigReference of this EventhubNamespaceCustomerManagedKey.
-func (mg *EventhubNamespaceCustomerManagedKey) GetProviderConfigReference() *xpv1.Reference {
+// GetProviderConfigReference of this NamespaceDisasterRecoveryConfig.
+func (mg *NamespaceDisasterRecoveryConfig) GetProviderConfigReference() *xpv1.Reference {
 	return mg.Spec.ProviderConfigReference
 }
 
 /*
-GetProviderReference of this EventhubNamespaceCustomerManagedKey.
+GetProviderReference of this NamespaceDisasterRecoveryConfig.
 Deprecated: Use GetProviderConfigReference.
 */
-func (mg *EventhubNamespaceCustomerManagedKey) GetProviderReference() *xpv1.Reference {
+func (mg *NamespaceDisasterRecoveryConfig) GetProviderReference() *xpv1.Reference {
 	return mg.Spec.ProviderReference
 }
 
-// GetWriteConnectionSecretToReference of this EventhubNamespaceCustomerManagedKey.
-func (mg *EventhubNamespaceCustomerManagedKey) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
+// GetWriteConnectionSecretToReference of this NamespaceDisasterRecoveryConfig.
+func (mg *NamespaceDisasterRecoveryConfig) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
 	return mg.Spec.WriteConnectionSecretToReference
 }
 
-// SetConditions of this EventhubNamespaceCustomerManagedKey.
-func (mg *EventhubNamespaceCustomerManagedKey) SetConditions(c ...xpv1.Condition) {
+// SetConditions of this NamespaceDisasterRecoveryConfig.
+func (mg *NamespaceDisasterRecoveryConfig) SetConditions(c ...xpv1.Condition) {
 	mg.Status.SetConditions(c...)
 }
 
-// SetDeletionPolicy of this EventhubNamespaceCustomerManagedKey.
-func (mg *EventhubNamespaceCustomerManagedKey) SetDeletionPolicy(r xpv1.DeletionPolicy) {
+// SetDeletionPolicy of this NamespaceDisasterRecoveryConfig.
+func (mg *NamespaceDisasterRecoveryConfig) SetDeletionPolicy(r xpv1.DeletionPolicy) {
 	mg.Spec.DeletionPolicy = r
 }
 
-// SetProviderConfigReference of this EventhubNamespaceCustomerManagedKey.
-func (mg *EventhubNamespaceCustomerManagedKey) SetProviderConfigReference(r *xpv1.Reference) {
+// SetProviderConfigReference of this NamespaceDisasterRecoveryConfig.
+func (mg *NamespaceDisasterRecoveryConfig) SetProviderConfigReference(r *xpv1.Reference) {
 	mg.Spec.ProviderConfigReference = r
 }
 
 /*
-SetProviderReference of this EventhubNamespaceCustomerManagedKey.
+SetProviderReference of this NamespaceDisasterRecoveryConfig.
 Deprecated: Use SetProviderConfigReference.
 */
-func (mg *EventhubNamespaceCustomerManagedKey) SetProviderReference(r *xpv1.Reference) {
+func (mg *NamespaceDisasterRecoveryConfig) SetProviderReference(r *xpv1.Reference) {
 	mg.Spec.ProviderReference = r
 }
 
-// SetWriteConnectionSecretToReference of this EventhubNamespaceCustomerManagedKey.
-func (mg *EventhubNamespaceCustomerManagedKey) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
-	mg.Spec.WriteConnectionSecretToReference = r
-}
-
-// GetCondition of this EventhubNamespaceDisasterRecoveryConfig.
-func (mg *EventhubNamespaceDisasterRecoveryConfig) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
-	return mg.Status.GetCondition(ct)
-}
-
-// GetDeletionPolicy of this EventhubNamespaceDisasterRecoveryConfig.
-func (mg *EventhubNamespaceDisasterRecoveryConfig) GetDeletionPolicy() xpv1.DeletionPolicy {
-	return mg.Spec.DeletionPolicy
-}
-
-// GetProviderConfigReference of this EventhubNamespaceDisasterRecoveryConfig.
-func (mg *EventhubNamespaceDisasterRecoveryConfig) GetProviderConfigReference() *xpv1.Reference {
-	return mg.Spec.ProviderConfigReference
-}
-
-/*
-GetProviderReference of this EventhubNamespaceDisasterRecoveryConfig.
-Deprecated: Use GetProviderConfigReference.
-*/
-func (mg *EventhubNamespaceDisasterRecoveryConfig) GetProviderReference() *xpv1.Reference {
-	return mg.Spec.ProviderReference
-}
-
-// GetWriteConnectionSecretToReference of this EventhubNamespaceDisasterRecoveryConfig.
-func (mg *EventhubNamespaceDisasterRecoveryConfig) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
-	return mg.Spec.WriteConnectionSecretToReference
-}
-
-// SetConditions of this EventhubNamespaceDisasterRecoveryConfig.
-func (mg *EventhubNamespaceDisasterRecoveryConfig) SetConditions(c ...xpv1.Condition) {
-	mg.Status.SetConditions(c...)
-}
-
-// SetDeletionPolicy of this EventhubNamespaceDisasterRecoveryConfig.
-func (mg *EventhubNamespaceDisasterRecoveryConfig) SetDeletionPolicy(r xpv1.DeletionPolicy) {
-	mg.Spec.DeletionPolicy = r
-}
-
-// SetProviderConfigReference of this EventhubNamespaceDisasterRecoveryConfig.
-func (mg *EventhubNamespaceDisasterRecoveryConfig) SetProviderConfigReference(r *xpv1.Reference) {
-	mg.Spec.ProviderConfigReference = r
-}
-
-/*
-SetProviderReference of this EventhubNamespaceDisasterRecoveryConfig.
-Deprecated: Use SetProviderConfigReference.
-*/
-func (mg *EventhubNamespaceDisasterRecoveryConfig) SetProviderReference(r *xpv1.Reference) {
-	mg.Spec.ProviderReference = r
-}
-
-// SetWriteConnectionSecretToReference of this EventhubNamespaceDisasterRecoveryConfig.
-func (mg *EventhubNamespaceDisasterRecoveryConfig) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
+// SetWriteConnectionSecretToReference of this NamespaceDisasterRecoveryConfig.
+func (mg *NamespaceDisasterRecoveryConfig) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
 	mg.Spec.WriteConnectionSecretToReference = r
 }

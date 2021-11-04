@@ -19,170 +19,170 @@ package v1alpha1
 
 import xpv1 "github.com/crossplane/crossplane-runtime/apis/common/v1"
 
-// GetCondition of this CdnEndpoint.
-func (mg *CdnEndpoint) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
+// GetCondition of this Endpoint.
+func (mg *Endpoint) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
 	return mg.Status.GetCondition(ct)
 }
 
-// GetDeletionPolicy of this CdnEndpoint.
-func (mg *CdnEndpoint) GetDeletionPolicy() xpv1.DeletionPolicy {
+// GetDeletionPolicy of this Endpoint.
+func (mg *Endpoint) GetDeletionPolicy() xpv1.DeletionPolicy {
 	return mg.Spec.DeletionPolicy
 }
 
-// GetProviderConfigReference of this CdnEndpoint.
-func (mg *CdnEndpoint) GetProviderConfigReference() *xpv1.Reference {
+// GetProviderConfigReference of this Endpoint.
+func (mg *Endpoint) GetProviderConfigReference() *xpv1.Reference {
 	return mg.Spec.ProviderConfigReference
 }
 
 /*
-GetProviderReference of this CdnEndpoint.
+GetProviderReference of this Endpoint.
 Deprecated: Use GetProviderConfigReference.
 */
-func (mg *CdnEndpoint) GetProviderReference() *xpv1.Reference {
+func (mg *Endpoint) GetProviderReference() *xpv1.Reference {
 	return mg.Spec.ProviderReference
 }
 
-// GetWriteConnectionSecretToReference of this CdnEndpoint.
-func (mg *CdnEndpoint) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
+// GetWriteConnectionSecretToReference of this Endpoint.
+func (mg *Endpoint) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
 	return mg.Spec.WriteConnectionSecretToReference
 }
 
-// SetConditions of this CdnEndpoint.
-func (mg *CdnEndpoint) SetConditions(c ...xpv1.Condition) {
+// SetConditions of this Endpoint.
+func (mg *Endpoint) SetConditions(c ...xpv1.Condition) {
 	mg.Status.SetConditions(c...)
 }
 
-// SetDeletionPolicy of this CdnEndpoint.
-func (mg *CdnEndpoint) SetDeletionPolicy(r xpv1.DeletionPolicy) {
+// SetDeletionPolicy of this Endpoint.
+func (mg *Endpoint) SetDeletionPolicy(r xpv1.DeletionPolicy) {
 	mg.Spec.DeletionPolicy = r
 }
 
-// SetProviderConfigReference of this CdnEndpoint.
-func (mg *CdnEndpoint) SetProviderConfigReference(r *xpv1.Reference) {
+// SetProviderConfigReference of this Endpoint.
+func (mg *Endpoint) SetProviderConfigReference(r *xpv1.Reference) {
 	mg.Spec.ProviderConfigReference = r
 }
 
 /*
-SetProviderReference of this CdnEndpoint.
+SetProviderReference of this Endpoint.
 Deprecated: Use SetProviderConfigReference.
 */
-func (mg *CdnEndpoint) SetProviderReference(r *xpv1.Reference) {
+func (mg *Endpoint) SetProviderReference(r *xpv1.Reference) {
 	mg.Spec.ProviderReference = r
 }
 
-// SetWriteConnectionSecretToReference of this CdnEndpoint.
-func (mg *CdnEndpoint) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
+// SetWriteConnectionSecretToReference of this Endpoint.
+func (mg *Endpoint) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
 	mg.Spec.WriteConnectionSecretToReference = r
 }
 
-// GetCondition of this CdnEndpointCustomDomain.
-func (mg *CdnEndpointCustomDomain) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
+// GetCondition of this EndpointCustomDomain.
+func (mg *EndpointCustomDomain) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
 	return mg.Status.GetCondition(ct)
 }
 
-// GetDeletionPolicy of this CdnEndpointCustomDomain.
-func (mg *CdnEndpointCustomDomain) GetDeletionPolicy() xpv1.DeletionPolicy {
+// GetDeletionPolicy of this EndpointCustomDomain.
+func (mg *EndpointCustomDomain) GetDeletionPolicy() xpv1.DeletionPolicy {
 	return mg.Spec.DeletionPolicy
 }
 
-// GetProviderConfigReference of this CdnEndpointCustomDomain.
-func (mg *CdnEndpointCustomDomain) GetProviderConfigReference() *xpv1.Reference {
+// GetProviderConfigReference of this EndpointCustomDomain.
+func (mg *EndpointCustomDomain) GetProviderConfigReference() *xpv1.Reference {
 	return mg.Spec.ProviderConfigReference
 }
 
 /*
-GetProviderReference of this CdnEndpointCustomDomain.
+GetProviderReference of this EndpointCustomDomain.
 Deprecated: Use GetProviderConfigReference.
 */
-func (mg *CdnEndpointCustomDomain) GetProviderReference() *xpv1.Reference {
+func (mg *EndpointCustomDomain) GetProviderReference() *xpv1.Reference {
 	return mg.Spec.ProviderReference
 }
 
-// GetWriteConnectionSecretToReference of this CdnEndpointCustomDomain.
-func (mg *CdnEndpointCustomDomain) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
+// GetWriteConnectionSecretToReference of this EndpointCustomDomain.
+func (mg *EndpointCustomDomain) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
 	return mg.Spec.WriteConnectionSecretToReference
 }
 
-// SetConditions of this CdnEndpointCustomDomain.
-func (mg *CdnEndpointCustomDomain) SetConditions(c ...xpv1.Condition) {
+// SetConditions of this EndpointCustomDomain.
+func (mg *EndpointCustomDomain) SetConditions(c ...xpv1.Condition) {
 	mg.Status.SetConditions(c...)
 }
 
-// SetDeletionPolicy of this CdnEndpointCustomDomain.
-func (mg *CdnEndpointCustomDomain) SetDeletionPolicy(r xpv1.DeletionPolicy) {
+// SetDeletionPolicy of this EndpointCustomDomain.
+func (mg *EndpointCustomDomain) SetDeletionPolicy(r xpv1.DeletionPolicy) {
 	mg.Spec.DeletionPolicy = r
 }
 
-// SetProviderConfigReference of this CdnEndpointCustomDomain.
-func (mg *CdnEndpointCustomDomain) SetProviderConfigReference(r *xpv1.Reference) {
+// SetProviderConfigReference of this EndpointCustomDomain.
+func (mg *EndpointCustomDomain) SetProviderConfigReference(r *xpv1.Reference) {
 	mg.Spec.ProviderConfigReference = r
 }
 
 /*
-SetProviderReference of this CdnEndpointCustomDomain.
+SetProviderReference of this EndpointCustomDomain.
 Deprecated: Use SetProviderConfigReference.
 */
-func (mg *CdnEndpointCustomDomain) SetProviderReference(r *xpv1.Reference) {
+func (mg *EndpointCustomDomain) SetProviderReference(r *xpv1.Reference) {
 	mg.Spec.ProviderReference = r
 }
 
-// SetWriteConnectionSecretToReference of this CdnEndpointCustomDomain.
-func (mg *CdnEndpointCustomDomain) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
+// SetWriteConnectionSecretToReference of this EndpointCustomDomain.
+func (mg *EndpointCustomDomain) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
 	mg.Spec.WriteConnectionSecretToReference = r
 }
 
-// GetCondition of this CdnProfile.
-func (mg *CdnProfile) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
+// GetCondition of this Profile.
+func (mg *Profile) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
 	return mg.Status.GetCondition(ct)
 }
 
-// GetDeletionPolicy of this CdnProfile.
-func (mg *CdnProfile) GetDeletionPolicy() xpv1.DeletionPolicy {
+// GetDeletionPolicy of this Profile.
+func (mg *Profile) GetDeletionPolicy() xpv1.DeletionPolicy {
 	return mg.Spec.DeletionPolicy
 }
 
-// GetProviderConfigReference of this CdnProfile.
-func (mg *CdnProfile) GetProviderConfigReference() *xpv1.Reference {
+// GetProviderConfigReference of this Profile.
+func (mg *Profile) GetProviderConfigReference() *xpv1.Reference {
 	return mg.Spec.ProviderConfigReference
 }
 
 /*
-GetProviderReference of this CdnProfile.
+GetProviderReference of this Profile.
 Deprecated: Use GetProviderConfigReference.
 */
-func (mg *CdnProfile) GetProviderReference() *xpv1.Reference {
+func (mg *Profile) GetProviderReference() *xpv1.Reference {
 	return mg.Spec.ProviderReference
 }
 
-// GetWriteConnectionSecretToReference of this CdnProfile.
-func (mg *CdnProfile) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
+// GetWriteConnectionSecretToReference of this Profile.
+func (mg *Profile) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
 	return mg.Spec.WriteConnectionSecretToReference
 }
 
-// SetConditions of this CdnProfile.
-func (mg *CdnProfile) SetConditions(c ...xpv1.Condition) {
+// SetConditions of this Profile.
+func (mg *Profile) SetConditions(c ...xpv1.Condition) {
 	mg.Status.SetConditions(c...)
 }
 
-// SetDeletionPolicy of this CdnProfile.
-func (mg *CdnProfile) SetDeletionPolicy(r xpv1.DeletionPolicy) {
+// SetDeletionPolicy of this Profile.
+func (mg *Profile) SetDeletionPolicy(r xpv1.DeletionPolicy) {
 	mg.Spec.DeletionPolicy = r
 }
 
-// SetProviderConfigReference of this CdnProfile.
-func (mg *CdnProfile) SetProviderConfigReference(r *xpv1.Reference) {
+// SetProviderConfigReference of this Profile.
+func (mg *Profile) SetProviderConfigReference(r *xpv1.Reference) {
 	mg.Spec.ProviderConfigReference = r
 }
 
 /*
-SetProviderReference of this CdnProfile.
+SetProviderReference of this Profile.
 Deprecated: Use SetProviderConfigReference.
 */
-func (mg *CdnProfile) SetProviderReference(r *xpv1.Reference) {
+func (mg *Profile) SetProviderReference(r *xpv1.Reference) {
 	mg.Spec.ProviderReference = r
 }
 
-// SetWriteConnectionSecretToReference of this CdnProfile.
-func (mg *CdnProfile) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
+// SetWriteConnectionSecretToReference of this Profile.
+func (mg *Profile) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
 	mg.Spec.WriteConnectionSecretToReference = r
 }

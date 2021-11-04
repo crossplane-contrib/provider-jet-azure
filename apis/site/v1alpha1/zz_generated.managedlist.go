@@ -19,8 +19,8 @@ package v1alpha1
 
 import resource "github.com/crossplane/crossplane-runtime/pkg/resource"
 
-// GetItems of this SiteRecoveryFabricList.
-func (l *SiteRecoveryFabricList) GetItems() []resource.Managed {
+// GetItems of this RecoveryFabricList.
+func (l *RecoveryFabricList) GetItems() []resource.Managed {
 	items := make([]resource.Managed, len(l.Items))
 	for i := range l.Items {
 		items[i] = &l.Items[i]
@@ -28,8 +28,8 @@ func (l *SiteRecoveryFabricList) GetItems() []resource.Managed {
 	return items
 }
 
-// GetItems of this SiteRecoveryNetworkMappingList.
-func (l *SiteRecoveryNetworkMappingList) GetItems() []resource.Managed {
+// GetItems of this RecoveryNetworkMappingList.
+func (l *RecoveryNetworkMappingList) GetItems() []resource.Managed {
 	items := make([]resource.Managed, len(l.Items))
 	for i := range l.Items {
 		items[i] = &l.Items[i]
@@ -37,8 +37,8 @@ func (l *SiteRecoveryNetworkMappingList) GetItems() []resource.Managed {
 	return items
 }
 
-// GetItems of this SiteRecoveryProtectionContainerList.
-func (l *SiteRecoveryProtectionContainerList) GetItems() []resource.Managed {
+// GetItems of this RecoveryProtectionContainerList.
+func (l *RecoveryProtectionContainerList) GetItems() []resource.Managed {
 	items := make([]resource.Managed, len(l.Items))
 	for i := range l.Items {
 		items[i] = &l.Items[i]
@@ -46,8 +46,8 @@ func (l *SiteRecoveryProtectionContainerList) GetItems() []resource.Managed {
 	return items
 }
 
-// GetItems of this SiteRecoveryProtectionContainerMappingList.
-func (l *SiteRecoveryProtectionContainerMappingList) GetItems() []resource.Managed {
+// GetItems of this RecoveryProtectionContainerMappingList.
+func (l *RecoveryProtectionContainerMappingList) GetItems() []resource.Managed {
 	items := make([]resource.Managed, len(l.Items))
 	for i := range l.Items {
 		items[i] = &l.Items[i]
@@ -55,8 +55,8 @@ func (l *SiteRecoveryProtectionContainerMappingList) GetItems() []resource.Manag
 	return items
 }
 
-// GetItems of this SiteRecoveryReplicatedVmList.
-func (l *SiteRecoveryReplicatedVmList) GetItems() []resource.Managed {
+// GetItems of this RecoveryReplicatedVmList.
+func (l *RecoveryReplicatedVmList) GetItems() []resource.Managed {
 	items := make([]resource.Managed, len(l.Items))
 	for i := range l.Items {
 		items[i] = &l.Items[i]
@@ -64,8 +64,8 @@ func (l *SiteRecoveryReplicatedVmList) GetItems() []resource.Managed {
 	return items
 }
 
-// GetItems of this SiteRecoveryReplicationPolicyList.
-func (l *SiteRecoveryReplicationPolicyList) GetItems() []resource.Managed {
+// GetItems of this RecoveryReplicationPolicyList.
+func (l *RecoveryReplicationPolicyList) GetItems() []resource.Managed {
 	items := make([]resource.Managed, len(l.Items))
 	for i := range l.Items {
 		items[i] = &l.Items[i]

@@ -19,8 +19,8 @@ package v1alpha1
 
 import resource "github.com/crossplane/crossplane-runtime/pkg/resource"
 
-// GetItems of this MysqlActiveDirectoryAdministratorList.
-func (l *MysqlActiveDirectoryAdministratorList) GetItems() []resource.Managed {
+// GetItems of this ActiveDirectoryAdministratorList.
+func (l *ActiveDirectoryAdministratorList) GetItems() []resource.Managed {
 	items := make([]resource.Managed, len(l.Items))
 	for i := range l.Items {
 		items[i] = &l.Items[i]
@@ -28,8 +28,8 @@ func (l *MysqlActiveDirectoryAdministratorList) GetItems() []resource.Managed {
 	return items
 }
 
-// GetItems of this MysqlConfigurationList.
-func (l *MysqlConfigurationList) GetItems() []resource.Managed {
+// GetItems of this ConfigurationList.
+func (l *ConfigurationList) GetItems() []resource.Managed {
 	items := make([]resource.Managed, len(l.Items))
 	for i := range l.Items {
 		items[i] = &l.Items[i]
@@ -37,8 +37,8 @@ func (l *MysqlConfigurationList) GetItems() []resource.Managed {
 	return items
 }
 
-// GetItems of this MysqlDatabaseList.
-func (l *MysqlDatabaseList) GetItems() []resource.Managed {
+// GetItems of this DatabaseList.
+func (l *DatabaseList) GetItems() []resource.Managed {
 	items := make([]resource.Managed, len(l.Items))
 	for i := range l.Items {
 		items[i] = &l.Items[i]
@@ -46,8 +46,8 @@ func (l *MysqlDatabaseList) GetItems() []resource.Managed {
 	return items
 }
 
-// GetItems of this MysqlFirewallRuleList.
-func (l *MysqlFirewallRuleList) GetItems() []resource.Managed {
+// GetItems of this FirewallRuleList.
+func (l *FirewallRuleList) GetItems() []resource.Managed {
 	items := make([]resource.Managed, len(l.Items))
 	for i := range l.Items {
 		items[i] = &l.Items[i]
@@ -55,8 +55,8 @@ func (l *MysqlFirewallRuleList) GetItems() []resource.Managed {
 	return items
 }
 
-// GetItems of this MysqlServerKeyList.
-func (l *MysqlServerKeyList) GetItems() []resource.Managed {
+// GetItems of this ServerKeyList.
+func (l *ServerKeyList) GetItems() []resource.Managed {
 	items := make([]resource.Managed, len(l.Items))
 	for i := range l.Items {
 		items[i] = &l.Items[i]
@@ -64,8 +64,8 @@ func (l *MysqlServerKeyList) GetItems() []resource.Managed {
 	return items
 }
 
-// GetItems of this MysqlServerList.
-func (l *MysqlServerList) GetItems() []resource.Managed {
+// GetItems of this ServerList.
+func (l *ServerList) GetItems() []resource.Managed {
 	items := make([]resource.Managed, len(l.Items))
 	for i := range l.Items {
 		items[i] = &l.Items[i]
@@ -73,8 +73,8 @@ func (l *MysqlServerList) GetItems() []resource.Managed {
 	return items
 }
 
-// GetItems of this MysqlVirtualNetworkRuleList.
-func (l *MysqlVirtualNetworkRuleList) GetItems() []resource.Managed {
+// GetItems of this VirtualNetworkRuleList.
+func (l *VirtualNetworkRuleList) GetItems() []resource.Managed {
 	items := make([]resource.Managed, len(l.Items))
 	for i := range l.Items {
 		items[i] = &l.Items[i]

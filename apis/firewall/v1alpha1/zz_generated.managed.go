@@ -19,338 +19,282 @@ package v1alpha1
 
 import xpv1 "github.com/crossplane/crossplane-runtime/apis/common/v1"
 
-// GetCondition of this Firewall.
-func (mg *Firewall) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
+// GetCondition of this ApplicationRuleCollection.
+func (mg *ApplicationRuleCollection) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
 	return mg.Status.GetCondition(ct)
 }
 
-// GetDeletionPolicy of this Firewall.
-func (mg *Firewall) GetDeletionPolicy() xpv1.DeletionPolicy {
+// GetDeletionPolicy of this ApplicationRuleCollection.
+func (mg *ApplicationRuleCollection) GetDeletionPolicy() xpv1.DeletionPolicy {
 	return mg.Spec.DeletionPolicy
 }
 
-// GetProviderConfigReference of this Firewall.
-func (mg *Firewall) GetProviderConfigReference() *xpv1.Reference {
+// GetProviderConfigReference of this ApplicationRuleCollection.
+func (mg *ApplicationRuleCollection) GetProviderConfigReference() *xpv1.Reference {
 	return mg.Spec.ProviderConfigReference
 }
 
 /*
-GetProviderReference of this Firewall.
+GetProviderReference of this ApplicationRuleCollection.
 Deprecated: Use GetProviderConfigReference.
 */
-func (mg *Firewall) GetProviderReference() *xpv1.Reference {
+func (mg *ApplicationRuleCollection) GetProviderReference() *xpv1.Reference {
 	return mg.Spec.ProviderReference
 }
 
-// GetWriteConnectionSecretToReference of this Firewall.
-func (mg *Firewall) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
+// GetWriteConnectionSecretToReference of this ApplicationRuleCollection.
+func (mg *ApplicationRuleCollection) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
 	return mg.Spec.WriteConnectionSecretToReference
 }
 
-// SetConditions of this Firewall.
-func (mg *Firewall) SetConditions(c ...xpv1.Condition) {
+// SetConditions of this ApplicationRuleCollection.
+func (mg *ApplicationRuleCollection) SetConditions(c ...xpv1.Condition) {
 	mg.Status.SetConditions(c...)
 }
 
-// SetDeletionPolicy of this Firewall.
-func (mg *Firewall) SetDeletionPolicy(r xpv1.DeletionPolicy) {
+// SetDeletionPolicy of this ApplicationRuleCollection.
+func (mg *ApplicationRuleCollection) SetDeletionPolicy(r xpv1.DeletionPolicy) {
 	mg.Spec.DeletionPolicy = r
 }
 
-// SetProviderConfigReference of this Firewall.
-func (mg *Firewall) SetProviderConfigReference(r *xpv1.Reference) {
+// SetProviderConfigReference of this ApplicationRuleCollection.
+func (mg *ApplicationRuleCollection) SetProviderConfigReference(r *xpv1.Reference) {
 	mg.Spec.ProviderConfigReference = r
 }
 
 /*
-SetProviderReference of this Firewall.
+SetProviderReference of this ApplicationRuleCollection.
 Deprecated: Use SetProviderConfigReference.
 */
-func (mg *Firewall) SetProviderReference(r *xpv1.Reference) {
+func (mg *ApplicationRuleCollection) SetProviderReference(r *xpv1.Reference) {
 	mg.Spec.ProviderReference = r
 }
 
-// SetWriteConnectionSecretToReference of this Firewall.
-func (mg *Firewall) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
+// SetWriteConnectionSecretToReference of this ApplicationRuleCollection.
+func (mg *ApplicationRuleCollection) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
 	mg.Spec.WriteConnectionSecretToReference = r
 }
 
-// GetCondition of this FirewallApplicationRuleCollection.
-func (mg *FirewallApplicationRuleCollection) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
+// GetCondition of this NatRuleCollection.
+func (mg *NatRuleCollection) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
 	return mg.Status.GetCondition(ct)
 }
 
-// GetDeletionPolicy of this FirewallApplicationRuleCollection.
-func (mg *FirewallApplicationRuleCollection) GetDeletionPolicy() xpv1.DeletionPolicy {
+// GetDeletionPolicy of this NatRuleCollection.
+func (mg *NatRuleCollection) GetDeletionPolicy() xpv1.DeletionPolicy {
 	return mg.Spec.DeletionPolicy
 }
 
-// GetProviderConfigReference of this FirewallApplicationRuleCollection.
-func (mg *FirewallApplicationRuleCollection) GetProviderConfigReference() *xpv1.Reference {
+// GetProviderConfigReference of this NatRuleCollection.
+func (mg *NatRuleCollection) GetProviderConfigReference() *xpv1.Reference {
 	return mg.Spec.ProviderConfigReference
 }
 
 /*
-GetProviderReference of this FirewallApplicationRuleCollection.
+GetProviderReference of this NatRuleCollection.
 Deprecated: Use GetProviderConfigReference.
 */
-func (mg *FirewallApplicationRuleCollection) GetProviderReference() *xpv1.Reference {
+func (mg *NatRuleCollection) GetProviderReference() *xpv1.Reference {
 	return mg.Spec.ProviderReference
 }
 
-// GetWriteConnectionSecretToReference of this FirewallApplicationRuleCollection.
-func (mg *FirewallApplicationRuleCollection) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
+// GetWriteConnectionSecretToReference of this NatRuleCollection.
+func (mg *NatRuleCollection) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
 	return mg.Spec.WriteConnectionSecretToReference
 }
 
-// SetConditions of this FirewallApplicationRuleCollection.
-func (mg *FirewallApplicationRuleCollection) SetConditions(c ...xpv1.Condition) {
+// SetConditions of this NatRuleCollection.
+func (mg *NatRuleCollection) SetConditions(c ...xpv1.Condition) {
 	mg.Status.SetConditions(c...)
 }
 
-// SetDeletionPolicy of this FirewallApplicationRuleCollection.
-func (mg *FirewallApplicationRuleCollection) SetDeletionPolicy(r xpv1.DeletionPolicy) {
+// SetDeletionPolicy of this NatRuleCollection.
+func (mg *NatRuleCollection) SetDeletionPolicy(r xpv1.DeletionPolicy) {
 	mg.Spec.DeletionPolicy = r
 }
 
-// SetProviderConfigReference of this FirewallApplicationRuleCollection.
-func (mg *FirewallApplicationRuleCollection) SetProviderConfigReference(r *xpv1.Reference) {
+// SetProviderConfigReference of this NatRuleCollection.
+func (mg *NatRuleCollection) SetProviderConfigReference(r *xpv1.Reference) {
 	mg.Spec.ProviderConfigReference = r
 }
 
 /*
-SetProviderReference of this FirewallApplicationRuleCollection.
+SetProviderReference of this NatRuleCollection.
 Deprecated: Use SetProviderConfigReference.
 */
-func (mg *FirewallApplicationRuleCollection) SetProviderReference(r *xpv1.Reference) {
+func (mg *NatRuleCollection) SetProviderReference(r *xpv1.Reference) {
 	mg.Spec.ProviderReference = r
 }
 
-// SetWriteConnectionSecretToReference of this FirewallApplicationRuleCollection.
-func (mg *FirewallApplicationRuleCollection) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
+// SetWriteConnectionSecretToReference of this NatRuleCollection.
+func (mg *NatRuleCollection) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
 	mg.Spec.WriteConnectionSecretToReference = r
 }
 
-// GetCondition of this FirewallNatRuleCollection.
-func (mg *FirewallNatRuleCollection) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
+// GetCondition of this NetworkRuleCollection.
+func (mg *NetworkRuleCollection) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
 	return mg.Status.GetCondition(ct)
 }
 
-// GetDeletionPolicy of this FirewallNatRuleCollection.
-func (mg *FirewallNatRuleCollection) GetDeletionPolicy() xpv1.DeletionPolicy {
+// GetDeletionPolicy of this NetworkRuleCollection.
+func (mg *NetworkRuleCollection) GetDeletionPolicy() xpv1.DeletionPolicy {
 	return mg.Spec.DeletionPolicy
 }
 
-// GetProviderConfigReference of this FirewallNatRuleCollection.
-func (mg *FirewallNatRuleCollection) GetProviderConfigReference() *xpv1.Reference {
+// GetProviderConfigReference of this NetworkRuleCollection.
+func (mg *NetworkRuleCollection) GetProviderConfigReference() *xpv1.Reference {
 	return mg.Spec.ProviderConfigReference
 }
 
 /*
-GetProviderReference of this FirewallNatRuleCollection.
+GetProviderReference of this NetworkRuleCollection.
 Deprecated: Use GetProviderConfigReference.
 */
-func (mg *FirewallNatRuleCollection) GetProviderReference() *xpv1.Reference {
+func (mg *NetworkRuleCollection) GetProviderReference() *xpv1.Reference {
 	return mg.Spec.ProviderReference
 }
 
-// GetWriteConnectionSecretToReference of this FirewallNatRuleCollection.
-func (mg *FirewallNatRuleCollection) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
+// GetWriteConnectionSecretToReference of this NetworkRuleCollection.
+func (mg *NetworkRuleCollection) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
 	return mg.Spec.WriteConnectionSecretToReference
 }
 
-// SetConditions of this FirewallNatRuleCollection.
-func (mg *FirewallNatRuleCollection) SetConditions(c ...xpv1.Condition) {
+// SetConditions of this NetworkRuleCollection.
+func (mg *NetworkRuleCollection) SetConditions(c ...xpv1.Condition) {
 	mg.Status.SetConditions(c...)
 }
 
-// SetDeletionPolicy of this FirewallNatRuleCollection.
-func (mg *FirewallNatRuleCollection) SetDeletionPolicy(r xpv1.DeletionPolicy) {
+// SetDeletionPolicy of this NetworkRuleCollection.
+func (mg *NetworkRuleCollection) SetDeletionPolicy(r xpv1.DeletionPolicy) {
 	mg.Spec.DeletionPolicy = r
 }
 
-// SetProviderConfigReference of this FirewallNatRuleCollection.
-func (mg *FirewallNatRuleCollection) SetProviderConfigReference(r *xpv1.Reference) {
+// SetProviderConfigReference of this NetworkRuleCollection.
+func (mg *NetworkRuleCollection) SetProviderConfigReference(r *xpv1.Reference) {
 	mg.Spec.ProviderConfigReference = r
 }
 
 /*
-SetProviderReference of this FirewallNatRuleCollection.
+SetProviderReference of this NetworkRuleCollection.
 Deprecated: Use SetProviderConfigReference.
 */
-func (mg *FirewallNatRuleCollection) SetProviderReference(r *xpv1.Reference) {
+func (mg *NetworkRuleCollection) SetProviderReference(r *xpv1.Reference) {
 	mg.Spec.ProviderReference = r
 }
 
-// SetWriteConnectionSecretToReference of this FirewallNatRuleCollection.
-func (mg *FirewallNatRuleCollection) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
+// SetWriteConnectionSecretToReference of this NetworkRuleCollection.
+func (mg *NetworkRuleCollection) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
 	mg.Spec.WriteConnectionSecretToReference = r
 }
 
-// GetCondition of this FirewallNetworkRuleCollection.
-func (mg *FirewallNetworkRuleCollection) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
+// GetCondition of this Policy.
+func (mg *Policy) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
 	return mg.Status.GetCondition(ct)
 }
 
-// GetDeletionPolicy of this FirewallNetworkRuleCollection.
-func (mg *FirewallNetworkRuleCollection) GetDeletionPolicy() xpv1.DeletionPolicy {
+// GetDeletionPolicy of this Policy.
+func (mg *Policy) GetDeletionPolicy() xpv1.DeletionPolicy {
 	return mg.Spec.DeletionPolicy
 }
 
-// GetProviderConfigReference of this FirewallNetworkRuleCollection.
-func (mg *FirewallNetworkRuleCollection) GetProviderConfigReference() *xpv1.Reference {
+// GetProviderConfigReference of this Policy.
+func (mg *Policy) GetProviderConfigReference() *xpv1.Reference {
 	return mg.Spec.ProviderConfigReference
 }
 
 /*
-GetProviderReference of this FirewallNetworkRuleCollection.
+GetProviderReference of this Policy.
 Deprecated: Use GetProviderConfigReference.
 */
-func (mg *FirewallNetworkRuleCollection) GetProviderReference() *xpv1.Reference {
+func (mg *Policy) GetProviderReference() *xpv1.Reference {
 	return mg.Spec.ProviderReference
 }
 
-// GetWriteConnectionSecretToReference of this FirewallNetworkRuleCollection.
-func (mg *FirewallNetworkRuleCollection) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
+// GetWriteConnectionSecretToReference of this Policy.
+func (mg *Policy) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
 	return mg.Spec.WriteConnectionSecretToReference
 }
 
-// SetConditions of this FirewallNetworkRuleCollection.
-func (mg *FirewallNetworkRuleCollection) SetConditions(c ...xpv1.Condition) {
+// SetConditions of this Policy.
+func (mg *Policy) SetConditions(c ...xpv1.Condition) {
 	mg.Status.SetConditions(c...)
 }
 
-// SetDeletionPolicy of this FirewallNetworkRuleCollection.
-func (mg *FirewallNetworkRuleCollection) SetDeletionPolicy(r xpv1.DeletionPolicy) {
+// SetDeletionPolicy of this Policy.
+func (mg *Policy) SetDeletionPolicy(r xpv1.DeletionPolicy) {
 	mg.Spec.DeletionPolicy = r
 }
 
-// SetProviderConfigReference of this FirewallNetworkRuleCollection.
-func (mg *FirewallNetworkRuleCollection) SetProviderConfigReference(r *xpv1.Reference) {
+// SetProviderConfigReference of this Policy.
+func (mg *Policy) SetProviderConfigReference(r *xpv1.Reference) {
 	mg.Spec.ProviderConfigReference = r
 }
 
 /*
-SetProviderReference of this FirewallNetworkRuleCollection.
+SetProviderReference of this Policy.
 Deprecated: Use SetProviderConfigReference.
 */
-func (mg *FirewallNetworkRuleCollection) SetProviderReference(r *xpv1.Reference) {
+func (mg *Policy) SetProviderReference(r *xpv1.Reference) {
 	mg.Spec.ProviderReference = r
 }
 
-// SetWriteConnectionSecretToReference of this FirewallNetworkRuleCollection.
-func (mg *FirewallNetworkRuleCollection) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
+// SetWriteConnectionSecretToReference of this Policy.
+func (mg *Policy) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
 	mg.Spec.WriteConnectionSecretToReference = r
 }
 
-// GetCondition of this FirewallPolicy.
-func (mg *FirewallPolicy) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
+// GetCondition of this PolicyRuleCollectionGroup.
+func (mg *PolicyRuleCollectionGroup) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
 	return mg.Status.GetCondition(ct)
 }
 
-// GetDeletionPolicy of this FirewallPolicy.
-func (mg *FirewallPolicy) GetDeletionPolicy() xpv1.DeletionPolicy {
+// GetDeletionPolicy of this PolicyRuleCollectionGroup.
+func (mg *PolicyRuleCollectionGroup) GetDeletionPolicy() xpv1.DeletionPolicy {
 	return mg.Spec.DeletionPolicy
 }
 
-// GetProviderConfigReference of this FirewallPolicy.
-func (mg *FirewallPolicy) GetProviderConfigReference() *xpv1.Reference {
+// GetProviderConfigReference of this PolicyRuleCollectionGroup.
+func (mg *PolicyRuleCollectionGroup) GetProviderConfigReference() *xpv1.Reference {
 	return mg.Spec.ProviderConfigReference
 }
 
 /*
-GetProviderReference of this FirewallPolicy.
+GetProviderReference of this PolicyRuleCollectionGroup.
 Deprecated: Use GetProviderConfigReference.
 */
-func (mg *FirewallPolicy) GetProviderReference() *xpv1.Reference {
+func (mg *PolicyRuleCollectionGroup) GetProviderReference() *xpv1.Reference {
 	return mg.Spec.ProviderReference
 }
 
-// GetWriteConnectionSecretToReference of this FirewallPolicy.
-func (mg *FirewallPolicy) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
+// GetWriteConnectionSecretToReference of this PolicyRuleCollectionGroup.
+func (mg *PolicyRuleCollectionGroup) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
 	return mg.Spec.WriteConnectionSecretToReference
 }
 
-// SetConditions of this FirewallPolicy.
-func (mg *FirewallPolicy) SetConditions(c ...xpv1.Condition) {
+// SetConditions of this PolicyRuleCollectionGroup.
+func (mg *PolicyRuleCollectionGroup) SetConditions(c ...xpv1.Condition) {
 	mg.Status.SetConditions(c...)
 }
 
-// SetDeletionPolicy of this FirewallPolicy.
-func (mg *FirewallPolicy) SetDeletionPolicy(r xpv1.DeletionPolicy) {
+// SetDeletionPolicy of this PolicyRuleCollectionGroup.
+func (mg *PolicyRuleCollectionGroup) SetDeletionPolicy(r xpv1.DeletionPolicy) {
 	mg.Spec.DeletionPolicy = r
 }
 
-// SetProviderConfigReference of this FirewallPolicy.
-func (mg *FirewallPolicy) SetProviderConfigReference(r *xpv1.Reference) {
+// SetProviderConfigReference of this PolicyRuleCollectionGroup.
+func (mg *PolicyRuleCollectionGroup) SetProviderConfigReference(r *xpv1.Reference) {
 	mg.Spec.ProviderConfigReference = r
 }
 
 /*
-SetProviderReference of this FirewallPolicy.
+SetProviderReference of this PolicyRuleCollectionGroup.
 Deprecated: Use SetProviderConfigReference.
 */
-func (mg *FirewallPolicy) SetProviderReference(r *xpv1.Reference) {
+func (mg *PolicyRuleCollectionGroup) SetProviderReference(r *xpv1.Reference) {
 	mg.Spec.ProviderReference = r
 }
 
-// SetWriteConnectionSecretToReference of this FirewallPolicy.
-func (mg *FirewallPolicy) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
-	mg.Spec.WriteConnectionSecretToReference = r
-}
-
-// GetCondition of this FirewallPolicyRuleCollectionGroup.
-func (mg *FirewallPolicyRuleCollectionGroup) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
-	return mg.Status.GetCondition(ct)
-}
-
-// GetDeletionPolicy of this FirewallPolicyRuleCollectionGroup.
-func (mg *FirewallPolicyRuleCollectionGroup) GetDeletionPolicy() xpv1.DeletionPolicy {
-	return mg.Spec.DeletionPolicy
-}
-
-// GetProviderConfigReference of this FirewallPolicyRuleCollectionGroup.
-func (mg *FirewallPolicyRuleCollectionGroup) GetProviderConfigReference() *xpv1.Reference {
-	return mg.Spec.ProviderConfigReference
-}
-
-/*
-GetProviderReference of this FirewallPolicyRuleCollectionGroup.
-Deprecated: Use GetProviderConfigReference.
-*/
-func (mg *FirewallPolicyRuleCollectionGroup) GetProviderReference() *xpv1.Reference {
-	return mg.Spec.ProviderReference
-}
-
-// GetWriteConnectionSecretToReference of this FirewallPolicyRuleCollectionGroup.
-func (mg *FirewallPolicyRuleCollectionGroup) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
-	return mg.Spec.WriteConnectionSecretToReference
-}
-
-// SetConditions of this FirewallPolicyRuleCollectionGroup.
-func (mg *FirewallPolicyRuleCollectionGroup) SetConditions(c ...xpv1.Condition) {
-	mg.Status.SetConditions(c...)
-}
-
-// SetDeletionPolicy of this FirewallPolicyRuleCollectionGroup.
-func (mg *FirewallPolicyRuleCollectionGroup) SetDeletionPolicy(r xpv1.DeletionPolicy) {
-	mg.Spec.DeletionPolicy = r
-}
-
-// SetProviderConfigReference of this FirewallPolicyRuleCollectionGroup.
-func (mg *FirewallPolicyRuleCollectionGroup) SetProviderConfigReference(r *xpv1.Reference) {
-	mg.Spec.ProviderConfigReference = r
-}
-
-/*
-SetProviderReference of this FirewallPolicyRuleCollectionGroup.
-Deprecated: Use SetProviderConfigReference.
-*/
-func (mg *FirewallPolicyRuleCollectionGroup) SetProviderReference(r *xpv1.Reference) {
-	mg.Spec.ProviderReference = r
-}
-
-// SetWriteConnectionSecretToReference of this FirewallPolicyRuleCollectionGroup.
-func (mg *FirewallPolicyRuleCollectionGroup) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
+// SetWriteConnectionSecretToReference of this PolicyRuleCollectionGroup.
+func (mg *PolicyRuleCollectionGroup) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
 	mg.Spec.WriteConnectionSecretToReference = r
 }

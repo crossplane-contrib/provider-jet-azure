@@ -19,226 +19,226 @@ package v1alpha1
 
 import xpv1 "github.com/crossplane/crossplane-runtime/apis/common/v1"
 
-// GetCondition of this ContainerRegistry.
-func (mg *ContainerRegistry) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
+// GetCondition of this Registry.
+func (mg *Registry) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
 	return mg.Status.GetCondition(ct)
 }
 
-// GetDeletionPolicy of this ContainerRegistry.
-func (mg *ContainerRegistry) GetDeletionPolicy() xpv1.DeletionPolicy {
+// GetDeletionPolicy of this Registry.
+func (mg *Registry) GetDeletionPolicy() xpv1.DeletionPolicy {
 	return mg.Spec.DeletionPolicy
 }
 
-// GetProviderConfigReference of this ContainerRegistry.
-func (mg *ContainerRegistry) GetProviderConfigReference() *xpv1.Reference {
+// GetProviderConfigReference of this Registry.
+func (mg *Registry) GetProviderConfigReference() *xpv1.Reference {
 	return mg.Spec.ProviderConfigReference
 }
 
 /*
-GetProviderReference of this ContainerRegistry.
+GetProviderReference of this Registry.
 Deprecated: Use GetProviderConfigReference.
 */
-func (mg *ContainerRegistry) GetProviderReference() *xpv1.Reference {
+func (mg *Registry) GetProviderReference() *xpv1.Reference {
 	return mg.Spec.ProviderReference
 }
 
-// GetWriteConnectionSecretToReference of this ContainerRegistry.
-func (mg *ContainerRegistry) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
+// GetWriteConnectionSecretToReference of this Registry.
+func (mg *Registry) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
 	return mg.Spec.WriteConnectionSecretToReference
 }
 
-// SetConditions of this ContainerRegistry.
-func (mg *ContainerRegistry) SetConditions(c ...xpv1.Condition) {
+// SetConditions of this Registry.
+func (mg *Registry) SetConditions(c ...xpv1.Condition) {
 	mg.Status.SetConditions(c...)
 }
 
-// SetDeletionPolicy of this ContainerRegistry.
-func (mg *ContainerRegistry) SetDeletionPolicy(r xpv1.DeletionPolicy) {
+// SetDeletionPolicy of this Registry.
+func (mg *Registry) SetDeletionPolicy(r xpv1.DeletionPolicy) {
 	mg.Spec.DeletionPolicy = r
 }
 
-// SetProviderConfigReference of this ContainerRegistry.
-func (mg *ContainerRegistry) SetProviderConfigReference(r *xpv1.Reference) {
+// SetProviderConfigReference of this Registry.
+func (mg *Registry) SetProviderConfigReference(r *xpv1.Reference) {
 	mg.Spec.ProviderConfigReference = r
 }
 
 /*
-SetProviderReference of this ContainerRegistry.
+SetProviderReference of this Registry.
 Deprecated: Use SetProviderConfigReference.
 */
-func (mg *ContainerRegistry) SetProviderReference(r *xpv1.Reference) {
+func (mg *Registry) SetProviderReference(r *xpv1.Reference) {
 	mg.Spec.ProviderReference = r
 }
 
-// SetWriteConnectionSecretToReference of this ContainerRegistry.
-func (mg *ContainerRegistry) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
+// SetWriteConnectionSecretToReference of this Registry.
+func (mg *Registry) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
 	mg.Spec.WriteConnectionSecretToReference = r
 }
 
-// GetCondition of this ContainerRegistryScopeMap.
-func (mg *ContainerRegistryScopeMap) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
+// GetCondition of this RegistryScopeMap.
+func (mg *RegistryScopeMap) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
 	return mg.Status.GetCondition(ct)
 }
 
-// GetDeletionPolicy of this ContainerRegistryScopeMap.
-func (mg *ContainerRegistryScopeMap) GetDeletionPolicy() xpv1.DeletionPolicy {
+// GetDeletionPolicy of this RegistryScopeMap.
+func (mg *RegistryScopeMap) GetDeletionPolicy() xpv1.DeletionPolicy {
 	return mg.Spec.DeletionPolicy
 }
 
-// GetProviderConfigReference of this ContainerRegistryScopeMap.
-func (mg *ContainerRegistryScopeMap) GetProviderConfigReference() *xpv1.Reference {
+// GetProviderConfigReference of this RegistryScopeMap.
+func (mg *RegistryScopeMap) GetProviderConfigReference() *xpv1.Reference {
 	return mg.Spec.ProviderConfigReference
 }
 
 /*
-GetProviderReference of this ContainerRegistryScopeMap.
+GetProviderReference of this RegistryScopeMap.
 Deprecated: Use GetProviderConfigReference.
 */
-func (mg *ContainerRegistryScopeMap) GetProviderReference() *xpv1.Reference {
+func (mg *RegistryScopeMap) GetProviderReference() *xpv1.Reference {
 	return mg.Spec.ProviderReference
 }
 
-// GetWriteConnectionSecretToReference of this ContainerRegistryScopeMap.
-func (mg *ContainerRegistryScopeMap) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
+// GetWriteConnectionSecretToReference of this RegistryScopeMap.
+func (mg *RegistryScopeMap) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
 	return mg.Spec.WriteConnectionSecretToReference
 }
 
-// SetConditions of this ContainerRegistryScopeMap.
-func (mg *ContainerRegistryScopeMap) SetConditions(c ...xpv1.Condition) {
+// SetConditions of this RegistryScopeMap.
+func (mg *RegistryScopeMap) SetConditions(c ...xpv1.Condition) {
 	mg.Status.SetConditions(c...)
 }
 
-// SetDeletionPolicy of this ContainerRegistryScopeMap.
-func (mg *ContainerRegistryScopeMap) SetDeletionPolicy(r xpv1.DeletionPolicy) {
+// SetDeletionPolicy of this RegistryScopeMap.
+func (mg *RegistryScopeMap) SetDeletionPolicy(r xpv1.DeletionPolicy) {
 	mg.Spec.DeletionPolicy = r
 }
 
-// SetProviderConfigReference of this ContainerRegistryScopeMap.
-func (mg *ContainerRegistryScopeMap) SetProviderConfigReference(r *xpv1.Reference) {
+// SetProviderConfigReference of this RegistryScopeMap.
+func (mg *RegistryScopeMap) SetProviderConfigReference(r *xpv1.Reference) {
 	mg.Spec.ProviderConfigReference = r
 }
 
 /*
-SetProviderReference of this ContainerRegistryScopeMap.
+SetProviderReference of this RegistryScopeMap.
 Deprecated: Use SetProviderConfigReference.
 */
-func (mg *ContainerRegistryScopeMap) SetProviderReference(r *xpv1.Reference) {
+func (mg *RegistryScopeMap) SetProviderReference(r *xpv1.Reference) {
 	mg.Spec.ProviderReference = r
 }
 
-// SetWriteConnectionSecretToReference of this ContainerRegistryScopeMap.
-func (mg *ContainerRegistryScopeMap) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
+// SetWriteConnectionSecretToReference of this RegistryScopeMap.
+func (mg *RegistryScopeMap) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
 	mg.Spec.WriteConnectionSecretToReference = r
 }
 
-// GetCondition of this ContainerRegistryToken.
-func (mg *ContainerRegistryToken) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
+// GetCondition of this RegistryToken.
+func (mg *RegistryToken) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
 	return mg.Status.GetCondition(ct)
 }
 
-// GetDeletionPolicy of this ContainerRegistryToken.
-func (mg *ContainerRegistryToken) GetDeletionPolicy() xpv1.DeletionPolicy {
+// GetDeletionPolicy of this RegistryToken.
+func (mg *RegistryToken) GetDeletionPolicy() xpv1.DeletionPolicy {
 	return mg.Spec.DeletionPolicy
 }
 
-// GetProviderConfigReference of this ContainerRegistryToken.
-func (mg *ContainerRegistryToken) GetProviderConfigReference() *xpv1.Reference {
+// GetProviderConfigReference of this RegistryToken.
+func (mg *RegistryToken) GetProviderConfigReference() *xpv1.Reference {
 	return mg.Spec.ProviderConfigReference
 }
 
 /*
-GetProviderReference of this ContainerRegistryToken.
+GetProviderReference of this RegistryToken.
 Deprecated: Use GetProviderConfigReference.
 */
-func (mg *ContainerRegistryToken) GetProviderReference() *xpv1.Reference {
+func (mg *RegistryToken) GetProviderReference() *xpv1.Reference {
 	return mg.Spec.ProviderReference
 }
 
-// GetWriteConnectionSecretToReference of this ContainerRegistryToken.
-func (mg *ContainerRegistryToken) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
+// GetWriteConnectionSecretToReference of this RegistryToken.
+func (mg *RegistryToken) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
 	return mg.Spec.WriteConnectionSecretToReference
 }
 
-// SetConditions of this ContainerRegistryToken.
-func (mg *ContainerRegistryToken) SetConditions(c ...xpv1.Condition) {
+// SetConditions of this RegistryToken.
+func (mg *RegistryToken) SetConditions(c ...xpv1.Condition) {
 	mg.Status.SetConditions(c...)
 }
 
-// SetDeletionPolicy of this ContainerRegistryToken.
-func (mg *ContainerRegistryToken) SetDeletionPolicy(r xpv1.DeletionPolicy) {
+// SetDeletionPolicy of this RegistryToken.
+func (mg *RegistryToken) SetDeletionPolicy(r xpv1.DeletionPolicy) {
 	mg.Spec.DeletionPolicy = r
 }
 
-// SetProviderConfigReference of this ContainerRegistryToken.
-func (mg *ContainerRegistryToken) SetProviderConfigReference(r *xpv1.Reference) {
+// SetProviderConfigReference of this RegistryToken.
+func (mg *RegistryToken) SetProviderConfigReference(r *xpv1.Reference) {
 	mg.Spec.ProviderConfigReference = r
 }
 
 /*
-SetProviderReference of this ContainerRegistryToken.
+SetProviderReference of this RegistryToken.
 Deprecated: Use SetProviderConfigReference.
 */
-func (mg *ContainerRegistryToken) SetProviderReference(r *xpv1.Reference) {
+func (mg *RegistryToken) SetProviderReference(r *xpv1.Reference) {
 	mg.Spec.ProviderReference = r
 }
 
-// SetWriteConnectionSecretToReference of this ContainerRegistryToken.
-func (mg *ContainerRegistryToken) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
+// SetWriteConnectionSecretToReference of this RegistryToken.
+func (mg *RegistryToken) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
 	mg.Spec.WriteConnectionSecretToReference = r
 }
 
-// GetCondition of this ContainerRegistryWebhook.
-func (mg *ContainerRegistryWebhook) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
+// GetCondition of this RegistryWebhook.
+func (mg *RegistryWebhook) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
 	return mg.Status.GetCondition(ct)
 }
 
-// GetDeletionPolicy of this ContainerRegistryWebhook.
-func (mg *ContainerRegistryWebhook) GetDeletionPolicy() xpv1.DeletionPolicy {
+// GetDeletionPolicy of this RegistryWebhook.
+func (mg *RegistryWebhook) GetDeletionPolicy() xpv1.DeletionPolicy {
 	return mg.Spec.DeletionPolicy
 }
 
-// GetProviderConfigReference of this ContainerRegistryWebhook.
-func (mg *ContainerRegistryWebhook) GetProviderConfigReference() *xpv1.Reference {
+// GetProviderConfigReference of this RegistryWebhook.
+func (mg *RegistryWebhook) GetProviderConfigReference() *xpv1.Reference {
 	return mg.Spec.ProviderConfigReference
 }
 
 /*
-GetProviderReference of this ContainerRegistryWebhook.
+GetProviderReference of this RegistryWebhook.
 Deprecated: Use GetProviderConfigReference.
 */
-func (mg *ContainerRegistryWebhook) GetProviderReference() *xpv1.Reference {
+func (mg *RegistryWebhook) GetProviderReference() *xpv1.Reference {
 	return mg.Spec.ProviderReference
 }
 
-// GetWriteConnectionSecretToReference of this ContainerRegistryWebhook.
-func (mg *ContainerRegistryWebhook) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
+// GetWriteConnectionSecretToReference of this RegistryWebhook.
+func (mg *RegistryWebhook) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
 	return mg.Spec.WriteConnectionSecretToReference
 }
 
-// SetConditions of this ContainerRegistryWebhook.
-func (mg *ContainerRegistryWebhook) SetConditions(c ...xpv1.Condition) {
+// SetConditions of this RegistryWebhook.
+func (mg *RegistryWebhook) SetConditions(c ...xpv1.Condition) {
 	mg.Status.SetConditions(c...)
 }
 
-// SetDeletionPolicy of this ContainerRegistryWebhook.
-func (mg *ContainerRegistryWebhook) SetDeletionPolicy(r xpv1.DeletionPolicy) {
+// SetDeletionPolicy of this RegistryWebhook.
+func (mg *RegistryWebhook) SetDeletionPolicy(r xpv1.DeletionPolicy) {
 	mg.Spec.DeletionPolicy = r
 }
 
-// SetProviderConfigReference of this ContainerRegistryWebhook.
-func (mg *ContainerRegistryWebhook) SetProviderConfigReference(r *xpv1.Reference) {
+// SetProviderConfigReference of this RegistryWebhook.
+func (mg *RegistryWebhook) SetProviderConfigReference(r *xpv1.Reference) {
 	mg.Spec.ProviderConfigReference = r
 }
 
 /*
-SetProviderReference of this ContainerRegistryWebhook.
+SetProviderReference of this RegistryWebhook.
 Deprecated: Use SetProviderConfigReference.
 */
-func (mg *ContainerRegistryWebhook) SetProviderReference(r *xpv1.Reference) {
+func (mg *RegistryWebhook) SetProviderReference(r *xpv1.Reference) {
 	mg.Spec.ProviderReference = r
 }
 
-// SetWriteConnectionSecretToReference of this ContainerRegistryWebhook.
-func (mg *ContainerRegistryWebhook) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
+// SetWriteConnectionSecretToReference of this RegistryWebhook.
+func (mg *RegistryWebhook) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
 	mg.Spec.WriteConnectionSecretToReference = r
 }

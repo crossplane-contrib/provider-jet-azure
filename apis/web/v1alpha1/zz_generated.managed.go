@@ -19,58 +19,58 @@ package v1alpha1
 
 import xpv1 "github.com/crossplane/crossplane-runtime/apis/common/v1"
 
-// GetCondition of this WebApplicationFirewallPolicy.
-func (mg *WebApplicationFirewallPolicy) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
+// GetCondition of this ApplicationFirewallPolicy.
+func (mg *ApplicationFirewallPolicy) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
 	return mg.Status.GetCondition(ct)
 }
 
-// GetDeletionPolicy of this WebApplicationFirewallPolicy.
-func (mg *WebApplicationFirewallPolicy) GetDeletionPolicy() xpv1.DeletionPolicy {
+// GetDeletionPolicy of this ApplicationFirewallPolicy.
+func (mg *ApplicationFirewallPolicy) GetDeletionPolicy() xpv1.DeletionPolicy {
 	return mg.Spec.DeletionPolicy
 }
 
-// GetProviderConfigReference of this WebApplicationFirewallPolicy.
-func (mg *WebApplicationFirewallPolicy) GetProviderConfigReference() *xpv1.Reference {
+// GetProviderConfigReference of this ApplicationFirewallPolicy.
+func (mg *ApplicationFirewallPolicy) GetProviderConfigReference() *xpv1.Reference {
 	return mg.Spec.ProviderConfigReference
 }
 
 /*
-GetProviderReference of this WebApplicationFirewallPolicy.
+GetProviderReference of this ApplicationFirewallPolicy.
 Deprecated: Use GetProviderConfigReference.
 */
-func (mg *WebApplicationFirewallPolicy) GetProviderReference() *xpv1.Reference {
+func (mg *ApplicationFirewallPolicy) GetProviderReference() *xpv1.Reference {
 	return mg.Spec.ProviderReference
 }
 
-// GetWriteConnectionSecretToReference of this WebApplicationFirewallPolicy.
-func (mg *WebApplicationFirewallPolicy) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
+// GetWriteConnectionSecretToReference of this ApplicationFirewallPolicy.
+func (mg *ApplicationFirewallPolicy) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
 	return mg.Spec.WriteConnectionSecretToReference
 }
 
-// SetConditions of this WebApplicationFirewallPolicy.
-func (mg *WebApplicationFirewallPolicy) SetConditions(c ...xpv1.Condition) {
+// SetConditions of this ApplicationFirewallPolicy.
+func (mg *ApplicationFirewallPolicy) SetConditions(c ...xpv1.Condition) {
 	mg.Status.SetConditions(c...)
 }
 
-// SetDeletionPolicy of this WebApplicationFirewallPolicy.
-func (mg *WebApplicationFirewallPolicy) SetDeletionPolicy(r xpv1.DeletionPolicy) {
+// SetDeletionPolicy of this ApplicationFirewallPolicy.
+func (mg *ApplicationFirewallPolicy) SetDeletionPolicy(r xpv1.DeletionPolicy) {
 	mg.Spec.DeletionPolicy = r
 }
 
-// SetProviderConfigReference of this WebApplicationFirewallPolicy.
-func (mg *WebApplicationFirewallPolicy) SetProviderConfigReference(r *xpv1.Reference) {
+// SetProviderConfigReference of this ApplicationFirewallPolicy.
+func (mg *ApplicationFirewallPolicy) SetProviderConfigReference(r *xpv1.Reference) {
 	mg.Spec.ProviderConfigReference = r
 }
 
 /*
-SetProviderReference of this WebApplicationFirewallPolicy.
+SetProviderReference of this ApplicationFirewallPolicy.
 Deprecated: Use SetProviderConfigReference.
 */
-func (mg *WebApplicationFirewallPolicy) SetProviderReference(r *xpv1.Reference) {
+func (mg *ApplicationFirewallPolicy) SetProviderReference(r *xpv1.Reference) {
 	mg.Spec.ProviderReference = r
 }
 
-// SetWriteConnectionSecretToReference of this WebApplicationFirewallPolicy.
-func (mg *WebApplicationFirewallPolicy) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
+// SetWriteConnectionSecretToReference of this ApplicationFirewallPolicy.
+func (mg *ApplicationFirewallPolicy) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
 	mg.Spec.WriteConnectionSecretToReference = r
 }

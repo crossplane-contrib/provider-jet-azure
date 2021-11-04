@@ -25,23 +25,23 @@ import (
 	"github.com/crossplane-contrib/terrajet/pkg/resource/json"
 )
 
-// GetTerraformResourceType returns Terraform resource type for this IpGroup
-func (mg *IpGroup) GetTerraformResourceType() string {
+// GetTerraformResourceType returns Terraform resource type for this IPGroup
+func (mg *IPGroup) GetTerraformResourceType() string {
 	return "azurerm_ip_group"
 }
 
-// GetTerraformResourceIDField returns Terraform identifier field for this IpGroup
-func (tr *IpGroup) GetTerraformResourceIDField() string {
+// GetTerraformResourceIDField returns Terraform identifier field for this IPGroup
+func (tr *IPGroup) GetTerraformResourceIDField() string {
 	return "id"
 }
 
-// GetConnectionDetailsMapping for this IpGroup
-func (tr *IpGroup) GetConnectionDetailsMapping() map[string]string {
+// GetConnectionDetailsMapping for this IPGroup
+func (tr *IPGroup) GetConnectionDetailsMapping() map[string]string {
 	return nil
 }
 
-// GetObservation of this IpGroup
-func (tr *IpGroup) GetObservation() (map[string]interface{}, error) {
+// GetObservation of this IPGroup
+func (tr *IPGroup) GetObservation() (map[string]interface{}, error) {
 	o, err := json.TFParser.Marshal(tr.Status.AtProvider)
 	if err != nil {
 		return nil, err
@@ -50,8 +50,8 @@ func (tr *IpGroup) GetObservation() (map[string]interface{}, error) {
 	return base, json.TFParser.Unmarshal(o, &base)
 }
 
-// SetObservation for this IpGroup
-func (tr *IpGroup) SetObservation(obs map[string]interface{}) error {
+// SetObservation for this IPGroup
+func (tr *IPGroup) SetObservation(obs map[string]interface{}) error {
 	p, err := json.TFParser.Marshal(obs)
 	if err != nil {
 		return err
@@ -59,8 +59,8 @@ func (tr *IpGroup) SetObservation(obs map[string]interface{}) error {
 	return json.TFParser.Unmarshal(p, &tr.Status.AtProvider)
 }
 
-// GetParameters of this IpGroup
-func (tr *IpGroup) GetParameters() (map[string]interface{}, error) {
+// GetParameters of this IPGroup
+func (tr *IPGroup) GetParameters() (map[string]interface{}, error) {
 	p, err := json.TFParser.Marshal(tr.Spec.ForProvider)
 	if err != nil {
 		return nil, err
@@ -69,8 +69,8 @@ func (tr *IpGroup) GetParameters() (map[string]interface{}, error) {
 	return base, json.TFParser.Unmarshal(p, &base)
 }
 
-// SetParameters for this IpGroup
-func (tr *IpGroup) SetParameters(params map[string]interface{}) error {
+// SetParameters for this IPGroup
+func (tr *IPGroup) SetParameters(params map[string]interface{}) error {
 	p, err := json.TFParser.Marshal(params)
 	if err != nil {
 		return err
@@ -78,10 +78,10 @@ func (tr *IpGroup) SetParameters(params map[string]interface{}) error {
 	return json.TFParser.Unmarshal(p, &tr.Spec.ForProvider)
 }
 
-// LateInitialize this IpGroup using its observed tfState.
+// LateInitialize this IPGroup using its observed tfState.
 // returns True if there are any spec changes for the resource.
-func (tr *IpGroup) LateInitialize(attrs []byte) (bool, error) {
-	params := &IpGroupParameters{}
+func (tr *IPGroup) LateInitialize(attrs []byte) (bool, error) {
+	params := &IPGroupParameters{}
 	if err := json.TFParser.Unmarshal(attrs, params); err != nil {
 		return false, errors.Wrap(err, "failed to unmarshal Terraform state parameters for late-initialization")
 	}
@@ -92,6 +92,6 @@ func (tr *IpGroup) LateInitialize(attrs []byte) (bool, error) {
 }
 
 // GetTerraformSchemaVersion returns the associated Terraform schema version
-func (tr *IpGroup) GetTerraformSchemaVersion() int {
+func (tr *IPGroup) GetTerraformSchemaVersion() int {
 	return 0
 }

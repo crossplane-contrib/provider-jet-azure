@@ -19,8 +19,8 @@ package v1alpha1
 
 import resource "github.com/crossplane/crossplane-runtime/pkg/resource"
 
-// GetItems of this MachineLearningComputeClusterList.
-func (l *MachineLearningComputeClusterList) GetItems() []resource.Managed {
+// GetItems of this LearningComputeClusterList.
+func (l *LearningComputeClusterList) GetItems() []resource.Managed {
 	items := make([]resource.Managed, len(l.Items))
 	for i := range l.Items {
 		items[i] = &l.Items[i]
@@ -28,8 +28,8 @@ func (l *MachineLearningComputeClusterList) GetItems() []resource.Managed {
 	return items
 }
 
-// GetItems of this MachineLearningComputeInstanceList.
-func (l *MachineLearningComputeInstanceList) GetItems() []resource.Managed {
+// GetItems of this LearningComputeInstanceList.
+func (l *LearningComputeInstanceList) GetItems() []resource.Managed {
 	items := make([]resource.Managed, len(l.Items))
 	for i := range l.Items {
 		items[i] = &l.Items[i]
@@ -37,8 +37,8 @@ func (l *MachineLearningComputeInstanceList) GetItems() []resource.Managed {
 	return items
 }
 
-// GetItems of this MachineLearningSynapseSparkList.
-func (l *MachineLearningSynapseSparkList) GetItems() []resource.Managed {
+// GetItems of this LearningSynapseSparkList.
+func (l *LearningSynapseSparkList) GetItems() []resource.Managed {
 	items := make([]resource.Managed, len(l.Items))
 	for i := range l.Items {
 		items[i] = &l.Items[i]
@@ -46,8 +46,8 @@ func (l *MachineLearningSynapseSparkList) GetItems() []resource.Managed {
 	return items
 }
 
-// GetItems of this MachineLearningWorkspaceList.
-func (l *MachineLearningWorkspaceList) GetItems() []resource.Managed {
+// GetItems of this LearningWorkspaceList.
+func (l *LearningWorkspaceList) GetItems() []resource.Managed {
 	items := make([]resource.Managed, len(l.Items))
 	for i := range l.Items {
 		items[i] = &l.Items[i]

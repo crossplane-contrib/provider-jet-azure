@@ -19,8 +19,8 @@ package v1alpha1
 
 import resource "github.com/crossplane/crossplane-runtime/pkg/resource"
 
-// GetItems of this SqlActiveDirectoryAdministratorList.
-func (l *SqlActiveDirectoryAdministratorList) GetItems() []resource.Managed {
+// GetItems of this ActiveDirectoryAdministratorList.
+func (l *ActiveDirectoryAdministratorList) GetItems() []resource.Managed {
 	items := make([]resource.Managed, len(l.Items))
 	for i := range l.Items {
 		items[i] = &l.Items[i]
@@ -28,8 +28,8 @@ func (l *SqlActiveDirectoryAdministratorList) GetItems() []resource.Managed {
 	return items
 }
 
-// GetItems of this SqlDatabaseList.
-func (l *SqlDatabaseList) GetItems() []resource.Managed {
+// GetItems of this DatabaseList.
+func (l *DatabaseList) GetItems() []resource.Managed {
 	items := make([]resource.Managed, len(l.Items))
 	for i := range l.Items {
 		items[i] = &l.Items[i]
@@ -37,8 +37,8 @@ func (l *SqlDatabaseList) GetItems() []resource.Managed {
 	return items
 }
 
-// GetItems of this SqlElasticpoolList.
-func (l *SqlElasticpoolList) GetItems() []resource.Managed {
+// GetItems of this ElasticpoolList.
+func (l *ElasticpoolList) GetItems() []resource.Managed {
 	items := make([]resource.Managed, len(l.Items))
 	for i := range l.Items {
 		items[i] = &l.Items[i]
@@ -46,8 +46,8 @@ func (l *SqlElasticpoolList) GetItems() []resource.Managed {
 	return items
 }
 
-// GetItems of this SqlFirewallRuleList.
-func (l *SqlFirewallRuleList) GetItems() []resource.Managed {
+// GetItems of this FirewallRuleList.
+func (l *FirewallRuleList) GetItems() []resource.Managed {
 	items := make([]resource.Managed, len(l.Items))
 	for i := range l.Items {
 		items[i] = &l.Items[i]
@@ -55,8 +55,8 @@ func (l *SqlFirewallRuleList) GetItems() []resource.Managed {
 	return items
 }
 
-// GetItems of this SqlManagedDatabaseList.
-func (l *SqlManagedDatabaseList) GetItems() []resource.Managed {
+// GetItems of this ManagedDatabaseList.
+func (l *ManagedDatabaseList) GetItems() []resource.Managed {
 	items := make([]resource.Managed, len(l.Items))
 	for i := range l.Items {
 		items[i] = &l.Items[i]
@@ -64,8 +64,8 @@ func (l *SqlManagedDatabaseList) GetItems() []resource.Managed {
 	return items
 }
 
-// GetItems of this SqlManagedInstanceList.
-func (l *SqlManagedInstanceList) GetItems() []resource.Managed {
+// GetItems of this ManagedInstanceList.
+func (l *ManagedInstanceList) GetItems() []resource.Managed {
 	items := make([]resource.Managed, len(l.Items))
 	for i := range l.Items {
 		items[i] = &l.Items[i]
@@ -73,8 +73,8 @@ func (l *SqlManagedInstanceList) GetItems() []resource.Managed {
 	return items
 }
 
-// GetItems of this SqlServerList.
-func (l *SqlServerList) GetItems() []resource.Managed {
+// GetItems of this ServerList.
+func (l *ServerList) GetItems() []resource.Managed {
 	items := make([]resource.Managed, len(l.Items))
 	for i := range l.Items {
 		items[i] = &l.Items[i]
