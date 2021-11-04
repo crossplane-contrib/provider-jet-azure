@@ -52,8 +52,16 @@ type MongoCollectionObservation struct {
 
 type MongoCollectionParameters struct {
 
-	// +kubebuilder:validation:Required
-	AccountName *string `json:"accountName" tf:"account_name,omitempty"`
+	// +crossplane:generate:reference:type=CosmosdbAccount
+	// +crossplane:generate:reference:extractor=github.com/crossplane-contrib/provider-tf-azure/apis/rconfig.ExtractResourceName()
+	// +kubebuilder:validation:Optional
+	AccountName *string `json:"accountName,omitempty" tf:"account_name,omitempty"`
+
+	// +kubebuilder:validation:Optional
+	AccountNameRef *v1.Reference `json:"accountNameRef,omitempty" tf:"-"`
+
+	// +kubebuilder:validation:Optional
+	AccountNameSelector *v1.Selector `json:"accountNameSelector,omitempty" tf:"-"`
 
 	// +kubebuilder:validation:Optional
 	AnalyticalStorageTTL *int64 `json:"analyticalStorageTtl,omitempty" tf:"analytical_storage_ttl,omitempty"`
@@ -61,8 +69,16 @@ type MongoCollectionParameters struct {
 	// +kubebuilder:validation:Optional
 	AutoscaleSettings []MongoCollectionAutoscaleSettingsParameters `json:"autoscaleSettings,omitempty" tf:"autoscale_settings,omitempty"`
 
-	// +kubebuilder:validation:Required
-	DatabaseName *string `json:"databaseName" tf:"database_name,omitempty"`
+	// +crossplane:generate:reference:type=CosmosdbMongoDatabase
+	// +crossplane:generate:reference:extractor=github.com/crossplane-contrib/provider-tf-azure/apis/rconfig.ExtractResourceName()
+	// +kubebuilder:validation:Optional
+	DatabaseName *string `json:"databaseName,omitempty" tf:"database_name,omitempty"`
+
+	// +kubebuilder:validation:Optional
+	DatabaseNameRef *v1.Reference `json:"databaseNameRef,omitempty" tf:"-"`
+
+	// +kubebuilder:validation:Optional
+	DatabaseNameSelector *v1.Selector `json:"databaseNameSelector,omitempty" tf:"-"`
 
 	// +kubebuilder:validation:Optional
 	DefaultTTLSeconds *int64 `json:"defaultTtlSeconds,omitempty" tf:"default_ttl_seconds,omitempty"`
@@ -73,8 +89,16 @@ type MongoCollectionParameters struct {
 	// +kubebuilder:validation:Required
 	Name *string `json:"name" tf:"name,omitempty"`
 
-	// +kubebuilder:validation:Required
-	ResourceGroupName *string `json:"resourceGroupName" tf:"resource_group_name,omitempty"`
+	// +crossplane:generate:reference:type=github.com/crossplane-contrib/provider-tf-azure/apis/resource/v1alpha1.ResourceGroup
+	// +crossplane:generate:reference:extractor=github.com/crossplane-contrib/provider-tf-azure/apis/rconfig.ExtractResourceName()
+	// +kubebuilder:validation:Optional
+	ResourceGroupName *string `json:"resourceGroupName,omitempty" tf:"resource_group_name,omitempty"`
+
+	// +kubebuilder:validation:Optional
+	ResourceGroupNameRef *v1.Reference `json:"resourceGroupNameRef,omitempty" tf:"-"`
+
+	// +kubebuilder:validation:Optional
+	ResourceGroupNameSelector *v1.Selector `json:"resourceGroupNameSelector,omitempty" tf:"-"`
 
 	// +kubebuilder:validation:Optional
 	ShardKey *string `json:"shardKey,omitempty" tf:"shard_key,omitempty"`

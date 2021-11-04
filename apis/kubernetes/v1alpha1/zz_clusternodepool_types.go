@@ -108,8 +108,15 @@ type ClusterNodePoolParameters struct {
 	// +kubebuilder:validation:Optional
 	KubeletDiskType *string `json:"kubeletDiskType,omitempty" tf:"kubelet_disk_type,omitempty"`
 
-	// +kubebuilder:validation:Required
-	KubernetesClusterID *string `json:"kubernetesClusterId" tf:"kubernetes_cluster_id,omitempty"`
+	// +crossplane:generate:reference:type=Cluster
+	// +kubebuilder:validation:Optional
+	KubernetesClusterID *string `json:"kubernetesClusterId,omitempty" tf:"kubernetes_cluster_id,omitempty"`
+
+	// +kubebuilder:validation:Optional
+	KubernetesClusterIDRef *v1.Reference `json:"kubernetesClusterIdRef,omitempty" tf:"-"`
+
+	// +kubebuilder:validation:Optional
+	KubernetesClusterIDSelector *v1.Selector `json:"kubernetesClusterIdSelector,omitempty" tf:"-"`
 
 	// +kubebuilder:validation:Optional
 	LinuxOsConfig []ClusterNodePoolLinuxOsConfigParameters `json:"linuxOsConfig,omitempty" tf:"linux_os_config,omitempty"`
@@ -156,8 +163,15 @@ type ClusterNodePoolParameters struct {
 	// +kubebuilder:validation:Optional
 	OsType *string `json:"osType,omitempty" tf:"os_type,omitempty"`
 
+	// +crossplane:generate:reference:type=github.com/crossplane-contrib/provider-tf-azure/apis/virtual/v1alpha1.Subnet
 	// +kubebuilder:validation:Optional
 	PodSubnetID *string `json:"podSubnetId,omitempty" tf:"pod_subnet_id,omitempty"`
+
+	// +kubebuilder:validation:Optional
+	PodSubnetIDRef *v1.Reference `json:"podSubnetIdRef,omitempty" tf:"-"`
+
+	// +kubebuilder:validation:Optional
+	PodSubnetIDSelector *v1.Selector `json:"podSubnetIdSelector,omitempty" tf:"-"`
 
 	// +kubebuilder:validation:Optional
 	Priority *string `json:"priority,omitempty" tf:"priority,omitempty"`
@@ -180,8 +194,15 @@ type ClusterNodePoolParameters struct {
 	// +kubebuilder:validation:Required
 	VMSize *string `json:"vmSize" tf:"vm_size,omitempty"`
 
+	// +crossplane:generate:reference:type=github.com/crossplane-contrib/provider-tf-azure/apis/virtual/v1alpha1.Subnet
 	// +kubebuilder:validation:Optional
 	VnetSubnetID *string `json:"vnetSubnetId,omitempty" tf:"vnet_subnet_id,omitempty"`
+
+	// +kubebuilder:validation:Optional
+	VnetSubnetIDRef *v1.Reference `json:"vnetSubnetIdRef,omitempty" tf:"-"`
+
+	// +kubebuilder:validation:Optional
+	VnetSubnetIDSelector *v1.Selector `json:"vnetSubnetIdSelector,omitempty" tf:"-"`
 }
 
 type ClusterNodePoolUpgradeSettingsObservation struct {

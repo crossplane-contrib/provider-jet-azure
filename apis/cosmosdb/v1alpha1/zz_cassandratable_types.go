@@ -45,8 +45,15 @@ type CassandraTableParameters struct {
 	// +kubebuilder:validation:Optional
 	AutoscaleSettings []CassandraTableAutoscaleSettingsParameters `json:"autoscaleSettings,omitempty" tf:"autoscale_settings,omitempty"`
 
-	// +kubebuilder:validation:Required
-	CassandraKeyspaceID *string `json:"cassandraKeyspaceId" tf:"cassandra_keyspace_id,omitempty"`
+	// +crossplane:generate:reference:type=CosmosdbCassandraKeyspace
+	// +kubebuilder:validation:Optional
+	CassandraKeyspaceID *string `json:"cassandraKeyspaceId,omitempty" tf:"cassandra_keyspace_id,omitempty"`
+
+	// +kubebuilder:validation:Optional
+	CassandraKeyspaceIDRef *v1.Reference `json:"cassandraKeyspaceIdRef,omitempty" tf:"-"`
+
+	// +kubebuilder:validation:Optional
+	CassandraKeyspaceIDSelector *v1.Selector `json:"cassandraKeyspaceIdSelector,omitempty" tf:"-"`
 
 	// +kubebuilder:validation:Optional
 	DefaultTTL *int64 `json:"defaultTtl,omitempty" tf:"default_ttl,omitempty"`

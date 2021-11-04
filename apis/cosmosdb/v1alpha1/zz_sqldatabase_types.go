@@ -39,8 +39,16 @@ type SqlDatabaseObservation struct {
 
 type SqlDatabaseParameters struct {
 
-	// +kubebuilder:validation:Required
-	AccountName *string `json:"accountName" tf:"account_name,omitempty"`
+	// +crossplane:generate:reference:type=CosmosdbAccount
+	// +crossplane:generate:reference:extractor=github.com/crossplane-contrib/provider-tf-azure/apis/rconfig.ExtractResourceName()
+	// +kubebuilder:validation:Optional
+	AccountName *string `json:"accountName,omitempty" tf:"account_name,omitempty"`
+
+	// +kubebuilder:validation:Optional
+	AccountNameRef *v1.Reference `json:"accountNameRef,omitempty" tf:"-"`
+
+	// +kubebuilder:validation:Optional
+	AccountNameSelector *v1.Selector `json:"accountNameSelector,omitempty" tf:"-"`
 
 	// +kubebuilder:validation:Optional
 	AutoscaleSettings []SqlDatabaseAutoscaleSettingsParameters `json:"autoscaleSettings,omitempty" tf:"autoscale_settings,omitempty"`
@@ -48,8 +56,16 @@ type SqlDatabaseParameters struct {
 	// +kubebuilder:validation:Required
 	Name *string `json:"name" tf:"name,omitempty"`
 
-	// +kubebuilder:validation:Required
-	ResourceGroupName *string `json:"resourceGroupName" tf:"resource_group_name,omitempty"`
+	// +crossplane:generate:reference:type=github.com/crossplane-contrib/provider-tf-azure/apis/resource/v1alpha1.ResourceGroup
+	// +crossplane:generate:reference:extractor=github.com/crossplane-contrib/provider-tf-azure/apis/rconfig.ExtractResourceName()
+	// +kubebuilder:validation:Optional
+	ResourceGroupName *string `json:"resourceGroupName,omitempty" tf:"resource_group_name,omitempty"`
+
+	// +kubebuilder:validation:Optional
+	ResourceGroupNameRef *v1.Reference `json:"resourceGroupNameRef,omitempty" tf:"-"`
+
+	// +kubebuilder:validation:Optional
+	ResourceGroupNameSelector *v1.Selector `json:"resourceGroupNameSelector,omitempty" tf:"-"`
 
 	// +kubebuilder:validation:Optional
 	Throughput *int64 `json:"throughput,omitempty" tf:"throughput,omitempty"`

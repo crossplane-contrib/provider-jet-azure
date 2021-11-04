@@ -39,8 +39,15 @@ type FlexibleServerDatabaseParameters struct {
 	// +kubebuilder:validation:Required
 	Name *string `json:"name" tf:"name,omitempty"`
 
-	// +kubebuilder:validation:Required
-	ServerID *string `json:"serverId" tf:"server_id,omitempty"`
+	// +crossplane:generate:reference:type=PostgresqlFlexibleServer
+	// +kubebuilder:validation:Optional
+	ServerID *string `json:"serverId,omitempty" tf:"server_id,omitempty"`
+
+	// +kubebuilder:validation:Optional
+	ServerIDRef *v1.Reference `json:"serverIdRef,omitempty" tf:"-"`
+
+	// +kubebuilder:validation:Optional
+	ServerIDSelector *v1.Selector `json:"serverIdSelector,omitempty" tf:"-"`
 }
 
 // FlexibleServerDatabaseSpec defines the desired state of FlexibleServerDatabase

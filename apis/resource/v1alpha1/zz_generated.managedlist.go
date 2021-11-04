@@ -37,24 +37,6 @@ func (l *GroupTemplateDeploymentList) GetItems() []resource.Managed {
 	return items
 }
 
-// GetItems of this PolicyAssignmentList.
-func (l *PolicyAssignmentList) GetItems() []resource.Managed {
-	items := make([]resource.Managed, len(l.Items))
-	for i := range l.Items {
-		items[i] = &l.Items[i]
-	}
-	return items
-}
-
-// GetItems of this ProviderRegistrationList.
-func (l *ProviderRegistrationList) GetItems() []resource.Managed {
-	items := make([]resource.Managed, len(l.Items))
-	for i := range l.Items {
-		items[i] = &l.Items[i]
-	}
-	return items
-}
-
 // GetItems of this ResourceGroupList.
 func (l *ResourceGroupList) GetItems() []resource.Managed {
 	items := make([]resource.Managed, len(l.Items))

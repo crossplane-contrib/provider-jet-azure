@@ -22,6 +22,9 @@ import (
 	xpresource "github.com/crossplane/crossplane-runtime/pkg/resource"
 )
 
+// APISPackagePath is the package path for generated APIs root package
+const APISPackagePath = "github.com/crossplane-contrib/provider-tf-azure/apis"
+
 // ExtractResourceName extracts the value of `spec.forProvider.name`
 // from a managed resource
 func ExtractResourceName() xpref.ExtractValueFn {

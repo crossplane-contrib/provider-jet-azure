@@ -33,8 +33,15 @@ type NetworkSecurityGroupAssociationParameters struct {
 	// +kubebuilder:validation:Required
 	NetworkSecurityGroupID *string `json:"networkSecurityGroupId" tf:"network_security_group_id,omitempty"`
 
-	// +kubebuilder:validation:Required
-	SubnetID *string `json:"subnetId" tf:"subnet_id,omitempty"`
+	// +crossplane:generate:reference:type=github.com/crossplane-contrib/provider-tf-azure/apis/virtual/v1alpha1.Subnet
+	// +kubebuilder:validation:Optional
+	SubnetID *string `json:"subnetId,omitempty" tf:"subnet_id,omitempty"`
+
+	// +kubebuilder:validation:Optional
+	SubnetIDRef *v1.Reference `json:"subnetIdRef,omitempty" tf:"-"`
+
+	// +kubebuilder:validation:Optional
+	SubnetIDSelector *v1.Selector `json:"subnetIdSelector,omitempty" tf:"-"`
 }
 
 // NetworkSecurityGroupAssociationSpec defines the desired state of NetworkSecurityGroupAssociation

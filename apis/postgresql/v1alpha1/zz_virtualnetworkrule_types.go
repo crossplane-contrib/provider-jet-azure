@@ -36,14 +36,37 @@ type VirtualNetworkRuleParameters struct {
 	// +kubebuilder:validation:Required
 	Name *string `json:"name" tf:"name,omitempty"`
 
-	// +kubebuilder:validation:Required
-	ResourceGroupName *string `json:"resourceGroupName" tf:"resource_group_name,omitempty"`
+	// +crossplane:generate:reference:type=github.com/crossplane-contrib/provider-tf-azure/apis/resource/v1alpha1.ResourceGroup
+	// +crossplane:generate:reference:extractor=github.com/crossplane-contrib/provider-tf-azure/apis/rconfig.ExtractResourceName()
+	// +kubebuilder:validation:Optional
+	ResourceGroupName *string `json:"resourceGroupName,omitempty" tf:"resource_group_name,omitempty"`
 
-	// +kubebuilder:validation:Required
-	ServerName *string `json:"serverName" tf:"server_name,omitempty"`
+	// +kubebuilder:validation:Optional
+	ResourceGroupNameRef *v1.Reference `json:"resourceGroupNameRef,omitempty" tf:"-"`
 
-	// +kubebuilder:validation:Required
-	SubnetID *string `json:"subnetId" tf:"subnet_id,omitempty"`
+	// +kubebuilder:validation:Optional
+	ResourceGroupNameSelector *v1.Selector `json:"resourceGroupNameSelector,omitempty" tf:"-"`
+
+	// +crossplane:generate:reference:type=PostgresqlServer
+	// +crossplane:generate:reference:extractor=github.com/crossplane-contrib/provider-tf-azure/apis/rconfig.ExtractResourceName()
+	// +kubebuilder:validation:Optional
+	ServerName *string `json:"serverName,omitempty" tf:"server_name,omitempty"`
+
+	// +kubebuilder:validation:Optional
+	ServerNameRef *v1.Reference `json:"serverNameRef,omitempty" tf:"-"`
+
+	// +kubebuilder:validation:Optional
+	ServerNameSelector *v1.Selector `json:"serverNameSelector,omitempty" tf:"-"`
+
+	// +crossplane:generate:reference:type=github.com/crossplane-contrib/provider-tf-azure/apis/virtual/v1alpha1.Subnet
+	// +kubebuilder:validation:Optional
+	SubnetID *string `json:"subnetId,omitempty" tf:"subnet_id,omitempty"`
+
+	// +kubebuilder:validation:Optional
+	SubnetIDRef *v1.Reference `json:"subnetIdRef,omitempty" tf:"-"`
+
+	// +kubebuilder:validation:Optional
+	SubnetIDSelector *v1.Selector `json:"subnetIdSelector,omitempty" tf:"-"`
 }
 
 // VirtualNetworkRuleSpec defines the desired state of VirtualNetworkRule

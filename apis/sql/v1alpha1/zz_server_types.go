@@ -25,22 +25,10 @@ import (
 	v1 "github.com/crossplane/crossplane-runtime/apis/common/v1"
 )
 
-type IdentityObservation struct {
-	PrincipalID *string `json:"principalId,omitempty" tf:"principal_id,omitempty"`
-
-	TenantID *string `json:"tenantId,omitempty" tf:"tenant_id,omitempty"`
+type ExtendedAuditingPolicyObservation struct {
 }
 
-type IdentityParameters struct {
-
-	// +kubebuilder:validation:Required
-	Type *string `json:"type" tf:"type,omitempty"`
-}
-
-type ServerExtendedAuditingPolicyObservation struct {
-}
-
-type ServerExtendedAuditingPolicyParameters struct {
+type ExtendedAuditingPolicyParameters struct {
 
 	// +kubebuilder:validation:Optional
 	LogMonitoringEnabled *bool `json:"logMonitoringEnabled,omitempty" tf:"log_monitoring_enabled,omitempty"`
@@ -56,6 +44,18 @@ type ServerExtendedAuditingPolicyParameters struct {
 
 	// +kubebuilder:validation:Optional
 	StorageEndpoint *string `json:"storageEndpoint,omitempty" tf:"storage_endpoint,omitempty"`
+}
+
+type IdentityObservation struct {
+	PrincipalID *string `json:"principalId,omitempty" tf:"principal_id,omitempty"`
+
+	TenantID *string `json:"tenantId,omitempty" tf:"tenant_id,omitempty"`
+}
+
+type IdentityParameters struct {
+
+	// +kubebuilder:validation:Required
+	Type *string `json:"type" tf:"type,omitempty"`
 }
 
 type ServerObservation struct {
@@ -74,7 +74,7 @@ type ServerParameters struct {
 	ConnectionPolicy *string `json:"connectionPolicy,omitempty" tf:"connection_policy,omitempty"`
 
 	// +kubebuilder:validation:Optional
-	ExtendedAuditingPolicy []ServerExtendedAuditingPolicyParameters `json:"extendedAuditingPolicy,omitempty" tf:"extended_auditing_policy,omitempty"`
+	ExtendedAuditingPolicy []ExtendedAuditingPolicyParameters `json:"extendedAuditingPolicy,omitempty" tf:"extended_auditing_policy,omitempty"`
 
 	// +kubebuilder:validation:Optional
 	Identity []IdentityParameters `json:"identity,omitempty" tf:"identity,omitempty"`
@@ -85,23 +85,31 @@ type ServerParameters struct {
 	// +kubebuilder:validation:Required
 	Name *string `json:"name" tf:"name,omitempty"`
 
-	// +kubebuilder:validation:Required
-	ResourceGroupName *string `json:"resourceGroupName" tf:"resource_group_name,omitempty"`
+	// +crossplane:generate:reference:type=github.com/crossplane-contrib/provider-tf-azure/apis/resource/v1alpha1.ResourceGroup
+	// +crossplane:generate:reference:extractor=github.com/crossplane-contrib/provider-tf-azure/apis/rconfig.ExtractResourceName()
+	// +kubebuilder:validation:Optional
+	ResourceGroupName *string `json:"resourceGroupName,omitempty" tf:"resource_group_name,omitempty"`
+
+	// +kubebuilder:validation:Optional
+	ResourceGroupNameRef *v1.Reference `json:"resourceGroupNameRef,omitempty" tf:"-"`
+
+	// +kubebuilder:validation:Optional
+	ResourceGroupNameSelector *v1.Selector `json:"resourceGroupNameSelector,omitempty" tf:"-"`
 
 	// +kubebuilder:validation:Optional
 	Tags map[string]*string `json:"tags,omitempty" tf:"tags,omitempty"`
 
 	// +kubebuilder:validation:Optional
-	ThreatDetectionPolicy []ServerThreatDetectionPolicyParameters `json:"threatDetectionPolicy,omitempty" tf:"threat_detection_policy,omitempty"`
+	ThreatDetectionPolicy []ThreatDetectionPolicyParameters `json:"threatDetectionPolicy,omitempty" tf:"threat_detection_policy,omitempty"`
 
 	// +kubebuilder:validation:Required
 	Version *string `json:"version" tf:"version,omitempty"`
 }
 
-type ServerThreatDetectionPolicyObservation struct {
+type ThreatDetectionPolicyObservation struct {
 }
 
-type ServerThreatDetectionPolicyParameters struct {
+type ThreatDetectionPolicyParameters struct {
 
 	// +kubebuilder:validation:Optional
 	DisabledAlerts []*string `json:"disabledAlerts,omitempty" tf:"disabled_alerts,omitempty"`

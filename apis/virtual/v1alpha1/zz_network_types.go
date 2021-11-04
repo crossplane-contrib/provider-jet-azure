@@ -61,11 +61,19 @@ type NetworkParameters struct {
 	// +kubebuilder:validation:Required
 	Name *string `json:"name" tf:"name,omitempty"`
 
-	// +kubebuilder:validation:Required
-	ResourceGroupName *string `json:"resourceGroupName" tf:"resource_group_name,omitempty"`
+	// +crossplane:generate:reference:type=github.com/crossplane-contrib/provider-tf-azure/apis/resource/v1alpha1.ResourceGroup
+	// +crossplane:generate:reference:extractor=github.com/crossplane-contrib/provider-tf-azure/apis/rconfig.ExtractResourceName()
+	// +kubebuilder:validation:Optional
+	ResourceGroupName *string `json:"resourceGroupName,omitempty" tf:"resource_group_name,omitempty"`
 
 	// +kubebuilder:validation:Optional
-	Subnet []SubnetParameters `json:"subnet,omitempty" tf:"subnet,omitempty"`
+	ResourceGroupNameRef *v1.Reference `json:"resourceGroupNameRef,omitempty" tf:"-"`
+
+	// +kubebuilder:validation:Optional
+	ResourceGroupNameSelector *v1.Selector `json:"resourceGroupNameSelector,omitempty" tf:"-"`
+
+	// +kubebuilder:validation:Optional
+	Subnet []NetworkSubnetParameters `json:"subnet,omitempty" tf:"subnet,omitempty"`
 
 	// +kubebuilder:validation:Optional
 	Tags map[string]*string `json:"tags,omitempty" tf:"tags,omitempty"`
@@ -74,11 +82,11 @@ type NetworkParameters struct {
 	VMProtectionEnabled *bool `json:"vmProtectionEnabled,omitempty" tf:"vm_protection_enabled,omitempty"`
 }
 
-type SubnetObservation struct {
+type NetworkSubnetObservation struct {
 	ID *string `json:"id,omitempty" tf:"id,omitempty"`
 }
 
-type SubnetParameters struct {
+type NetworkSubnetParameters struct {
 
 	// +kubebuilder:validation:Required
 	AddressPrefix *string `json:"addressPrefix" tf:"address_prefix,omitempty"`

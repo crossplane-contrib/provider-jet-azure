@@ -124,8 +124,16 @@ type SqlContainerObservation struct {
 
 type SqlContainerParameters struct {
 
-	// +kubebuilder:validation:Required
-	AccountName *string `json:"accountName" tf:"account_name,omitempty"`
+	// +crossplane:generate:reference:type=CosmosdbAccount
+	// +crossplane:generate:reference:extractor=github.com/crossplane-contrib/provider-tf-azure/apis/rconfig.ExtractResourceName()
+	// +kubebuilder:validation:Optional
+	AccountName *string `json:"accountName,omitempty" tf:"account_name,omitempty"`
+
+	// +kubebuilder:validation:Optional
+	AccountNameRef *v1.Reference `json:"accountNameRef,omitempty" tf:"-"`
+
+	// +kubebuilder:validation:Optional
+	AccountNameSelector *v1.Selector `json:"accountNameSelector,omitempty" tf:"-"`
 
 	// +kubebuilder:validation:Optional
 	AnalyticalStorageTTL *int64 `json:"analyticalStorageTtl,omitempty" tf:"analytical_storage_ttl,omitempty"`
@@ -136,8 +144,16 @@ type SqlContainerParameters struct {
 	// +kubebuilder:validation:Optional
 	ConflictResolutionPolicy []SqlContainerConflictResolutionPolicyParameters `json:"conflictResolutionPolicy,omitempty" tf:"conflict_resolution_policy,omitempty"`
 
-	// +kubebuilder:validation:Required
-	DatabaseName *string `json:"databaseName" tf:"database_name,omitempty"`
+	// +crossplane:generate:reference:type=CosmosdbSqlDatabase
+	// +crossplane:generate:reference:extractor=github.com/crossplane-contrib/provider-tf-azure/apis/rconfig.ExtractResourceName()
+	// +kubebuilder:validation:Optional
+	DatabaseName *string `json:"databaseName,omitempty" tf:"database_name,omitempty"`
+
+	// +kubebuilder:validation:Optional
+	DatabaseNameRef *v1.Reference `json:"databaseNameRef,omitempty" tf:"-"`
+
+	// +kubebuilder:validation:Optional
+	DatabaseNameSelector *v1.Selector `json:"databaseNameSelector,omitempty" tf:"-"`
 
 	// +kubebuilder:validation:Optional
 	DefaultTTL *int64 `json:"defaultTtl,omitempty" tf:"default_ttl,omitempty"`
@@ -154,8 +170,16 @@ type SqlContainerParameters struct {
 	// +kubebuilder:validation:Optional
 	PartitionKeyVersion *int64 `json:"partitionKeyVersion,omitempty" tf:"partition_key_version,omitempty"`
 
-	// +kubebuilder:validation:Required
-	ResourceGroupName *string `json:"resourceGroupName" tf:"resource_group_name,omitempty"`
+	// +crossplane:generate:reference:type=github.com/crossplane-contrib/provider-tf-azure/apis/resource/v1alpha1.ResourceGroup
+	// +crossplane:generate:reference:extractor=github.com/crossplane-contrib/provider-tf-azure/apis/rconfig.ExtractResourceName()
+	// +kubebuilder:validation:Optional
+	ResourceGroupName *string `json:"resourceGroupName,omitempty" tf:"resource_group_name,omitempty"`
+
+	// +kubebuilder:validation:Optional
+	ResourceGroupNameRef *v1.Reference `json:"resourceGroupNameRef,omitempty" tf:"-"`
+
+	// +kubebuilder:validation:Optional
+	ResourceGroupNameSelector *v1.Selector `json:"resourceGroupNameSelector,omitempty" tf:"-"`
 
 	// +kubebuilder:validation:Optional
 	Throughput *int64 `json:"throughput,omitempty" tf:"throughput,omitempty"`
