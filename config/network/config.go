@@ -20,11 +20,15 @@ import (
 	"github.com/crossplane-contrib/terrajet/pkg/config"
 
 	"github.com/crossplane-contrib/provider-tf-azure/apis/rconfig"
+	"github.com/crossplane-contrib/provider-tf-azure/config/common"
 )
 
 func Configure(p *config.Provider) {
 	p.AddResourceConfigurator("azurerm_network_interface", func(r *config.Resource) {
 		r.Kind = "NetworkInterface"
+		r.ExternalName = config.NameAsIdentifier
+		r.ExternalName.GetNameFn = common.GetNameFromFullyQualifiedID
+		r.ExternalName.GetIDFn = common.GetFullyQualifiedIDFn("/Microsoft.Network/networkInterfaces")
 	})
 
 	p.AddResourceConfigurator("azurerm_lb", func(r *config.Resource) {
@@ -37,5 +41,8 @@ func Configure(p *config.Provider) {
 			},
 		}
 		r.UseAsync = true
+		r.ExternalName = config.NameAsIdentifier
+		r.ExternalName.GetNameFn = common.GetNameFromFullyQualifiedID
+		r.ExternalName.GetIDFn = common.GetFullyQualifiedIDFn("/Microsoft.Network/loadBalancers")
 	})
 }

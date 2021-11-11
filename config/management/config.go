@@ -17,11 +17,20 @@ limitations under the License.
 package management
 
 import (
+	"fmt"
+
+	"github.com/crossplane-contrib/provider-tf-azure/config/common"
 	"github.com/crossplane-contrib/terrajet/pkg/config"
 )
 
 func Configure(p *config.Provider) {
 	p.AddResourceConfigurator("azurerm_management_group", func(r *config.Resource) {
 		r.Kind = "ManagementGroup"
+		r.ExternalName = config.NameAsIdentifier
+		r.ExternalName.GetNameFn = common.GetNameFromFullyQualifiedID
+		// /providers/Microsoft.Management/managementGroups/group1
+		r.ExternalName.GetIDFn = func(name string, _ map[string]interface{}, _ map[string]interface{}) string {
+			return fmt.Sprintf("/providers/Microsoft.Management/managementGroups/%s", name)
+		}
 	})
 }

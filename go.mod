@@ -6,7 +6,6 @@ require (
 	github.com/crossplane-contrib/terrajet v0.1.1-0.20211104212137-874bb6ad5cff
 	github.com/crossplane/crossplane-runtime v0.15.1-0.20211004150827-579c1833b513
 	github.com/crossplane/crossplane-tools v0.0.0-20210916125540-071de511ae8e
-	github.com/hashicorp/terraform-plugin-sdk/v2 v2.7.0
 	// github.com/hashicorp/terraform-provider-azurerm is replaced with  ./.work/.azurerm
 	// and the dependency version is specified in the Makefile via make variable AZURERM_REFSPEC
 	github.com/hashicorp/terraform-provider-azurerm v0.0.0
@@ -18,8 +17,6 @@ require (
 	sigs.k8s.io/controller-tools v0.6.2
 )
 
-replace github.com/hashicorp/terraform-plugin-sdk => github.com/turkenh/terraform-plugin-sdk v1.17.2-patch1
-
 replace github.com/hashicorp/terraform-provider-azurerm => ./.work/.azurerm
 
-replace github.com/crossplane-contrib/terrajet => github.com/ulucinar/terrajet v0.0.0-20211111182847-572d1310a9aa
+replace github.com/crossplane-contrib/terrajet => github.com/muvaf/terrajet v0.0.0-20211111202426-224e53c6316d
