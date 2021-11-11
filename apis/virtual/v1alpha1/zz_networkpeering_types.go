@@ -42,7 +42,7 @@ type NetworkPeeringParameters struct {
 	// +kubebuilder:validation:Required
 	Name *string `json:"name" tf:"name,omitempty"`
 
-	// +crossplane:generate:reference:type=VirtualNetwork
+	// +crossplane:generate:reference:type=Network
 	// +kubebuilder:validation:Optional
 	RemoteVirtualNetworkID *string `json:"remoteVirtualNetworkId,omitempty" tf:"remote_virtual_network_id,omitempty"`
 
@@ -66,7 +66,7 @@ type NetworkPeeringParameters struct {
 	// +kubebuilder:validation:Optional
 	UseRemoteGateways *bool `json:"useRemoteGateways,omitempty" tf:"use_remote_gateways,omitempty"`
 
-	// +crossplane:generate:reference:type=VirtualNetwork
+	// +crossplane:generate:reference:type=Network
 	// +crossplane:generate:reference:extractor=github.com/crossplane-contrib/provider-tf-azure/apis/rconfig.ExtractResourceName()
 	// +kubebuilder:validation:Optional
 	VirtualNetworkName *string `json:"virtualNetworkName,omitempty" tf:"virtual_network_name,omitempty"`

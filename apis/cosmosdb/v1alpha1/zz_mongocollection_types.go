@@ -52,7 +52,7 @@ type MongoCollectionObservation struct {
 
 type MongoCollectionParameters struct {
 
-	// +crossplane:generate:reference:type=CosmosdbAccount
+	// +crossplane:generate:reference:type=Account
 	// +crossplane:generate:reference:extractor=github.com/crossplane-contrib/provider-tf-azure/apis/rconfig.ExtractResourceName()
 	// +kubebuilder:validation:Optional
 	AccountName *string `json:"accountName,omitempty" tf:"account_name,omitempty"`
@@ -69,7 +69,7 @@ type MongoCollectionParameters struct {
 	// +kubebuilder:validation:Optional
 	AutoscaleSettings []MongoCollectionAutoscaleSettingsParameters `json:"autoscaleSettings,omitempty" tf:"autoscale_settings,omitempty"`
 
-	// +crossplane:generate:reference:type=CosmosdbMongoDatabase
+	// +crossplane:generate:reference:type=MongoDatabase
 	// +crossplane:generate:reference:extractor=github.com/crossplane-contrib/provider-tf-azure/apis/rconfig.ExtractResourceName()
 	// +kubebuilder:validation:Optional
 	DatabaseName *string `json:"databaseName,omitempty" tf:"database_name,omitempty"`

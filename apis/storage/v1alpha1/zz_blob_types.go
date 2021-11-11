@@ -61,7 +61,7 @@ type BlobParameters struct {
 	// +kubebuilder:validation:Optional
 	SourceURI *string `json:"sourceUri,omitempty" tf:"source_uri,omitempty"`
 
-	// +crossplane:generate:reference:type=StorageAccount
+	// +crossplane:generate:reference:type=Account
 	// +crossplane:generate:reference:extractor=github.com/crossplane-contrib/provider-tf-azure/apis/rconfig.ExtractResourceName()
 	// +kubebuilder:validation:Optional
 	StorageAccountName *string `json:"storageAccountName,omitempty" tf:"storage_account_name,omitempty"`
@@ -72,7 +72,7 @@ type BlobParameters struct {
 	// +kubebuilder:validation:Optional
 	StorageAccountNameSelector *v1.Selector `json:"storageAccountNameSelector,omitempty" tf:"-"`
 
-	// +crossplane:generate:reference:type=StorageContainer
+	// +crossplane:generate:reference:type=Container
 	// +crossplane:generate:reference:extractor=github.com/crossplane-contrib/provider-tf-azure/apis/rconfig.ExtractResourceName()
 	// +kubebuilder:validation:Optional
 	StorageContainerName *string `json:"storageContainerName,omitempty" tf:"storage_container_name,omitempty"`

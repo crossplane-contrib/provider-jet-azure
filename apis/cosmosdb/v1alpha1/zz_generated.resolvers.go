@@ -65,8 +65,8 @@ func (mg *CassandraKeyspace) ResolveReferences(ctx context.Context, c client.Rea
 		Reference:    mg.Spec.ForProvider.AccountNameRef,
 		Selector:     mg.Spec.ForProvider.AccountNameSelector,
 		To: reference.To{
-			List:    &CosmosdbAccountList{},
-			Managed: &CosmosdbAccount{},
+			List:    &AccountList{},
+			Managed: &Account{},
 		},
 	})
 	if err != nil {
@@ -107,8 +107,8 @@ func (mg *CassandraTable) ResolveReferences(ctx context.Context, c client.Reader
 		Reference:    mg.Spec.ForProvider.CassandraKeyspaceIDRef,
 		Selector:     mg.Spec.ForProvider.CassandraKeyspaceIDSelector,
 		To: reference.To{
-			List:    &CosmosdbCassandraKeyspaceList{},
-			Managed: &CosmosdbCassandraKeyspace{},
+			List:    &CassandraKeyspaceList{},
+			Managed: &CassandraKeyspace{},
 		},
 	})
 	if err != nil {
@@ -133,8 +133,8 @@ func (mg *GremlinDatabase) ResolveReferences(ctx context.Context, c client.Reade
 		Reference:    mg.Spec.ForProvider.AccountNameRef,
 		Selector:     mg.Spec.ForProvider.AccountNameSelector,
 		To: reference.To{
-			List:    &CosmosdbAccountList{},
-			Managed: &CosmosdbAccount{},
+			List:    &AccountList{},
+			Managed: &Account{},
 		},
 	})
 	if err != nil {
@@ -175,8 +175,8 @@ func (mg *GremlinGraph) ResolveReferences(ctx context.Context, c client.Reader) 
 		Reference:    mg.Spec.ForProvider.AccountNameRef,
 		Selector:     mg.Spec.ForProvider.AccountNameSelector,
 		To: reference.To{
-			List:    &CosmosdbAccountList{},
-			Managed: &CosmosdbAccount{},
+			List:    &AccountList{},
+			Managed: &Account{},
 		},
 	})
 	if err != nil {
@@ -191,8 +191,8 @@ func (mg *GremlinGraph) ResolveReferences(ctx context.Context, c client.Reader) 
 		Reference:    mg.Spec.ForProvider.DatabaseNameRef,
 		Selector:     mg.Spec.ForProvider.DatabaseNameSelector,
 		To: reference.To{
-			List:    &CosmosdbGremlinDatabaseList{},
-			Managed: &CosmosdbGremlinDatabase{},
+			List:    &GremlinDatabaseList{},
+			Managed: &GremlinDatabase{},
 		},
 	})
 	if err != nil {
@@ -233,8 +233,8 @@ func (mg *MongoCollection) ResolveReferences(ctx context.Context, c client.Reade
 		Reference:    mg.Spec.ForProvider.AccountNameRef,
 		Selector:     mg.Spec.ForProvider.AccountNameSelector,
 		To: reference.To{
-			List:    &CosmosdbAccountList{},
-			Managed: &CosmosdbAccount{},
+			List:    &AccountList{},
+			Managed: &Account{},
 		},
 	})
 	if err != nil {
@@ -249,8 +249,8 @@ func (mg *MongoCollection) ResolveReferences(ctx context.Context, c client.Reade
 		Reference:    mg.Spec.ForProvider.DatabaseNameRef,
 		Selector:     mg.Spec.ForProvider.DatabaseNameSelector,
 		To: reference.To{
-			List:    &CosmosdbMongoDatabaseList{},
-			Managed: &CosmosdbMongoDatabase{},
+			List:    &MongoDatabaseList{},
+			Managed: &MongoDatabase{},
 		},
 	})
 	if err != nil {
@@ -291,8 +291,8 @@ func (mg *MongoDatabase) ResolveReferences(ctx context.Context, c client.Reader)
 		Reference:    mg.Spec.ForProvider.AccountNameRef,
 		Selector:     mg.Spec.ForProvider.AccountNameSelector,
 		To: reference.To{
-			List:    &CosmosdbAccountList{},
-			Managed: &CosmosdbAccount{},
+			List:    &AccountList{},
+			Managed: &Account{},
 		},
 	})
 	if err != nil {
@@ -333,8 +333,8 @@ func (mg *NotebookWorkspace) ResolveReferences(ctx context.Context, c client.Rea
 		Reference:    mg.Spec.ForProvider.AccountNameRef,
 		Selector:     mg.Spec.ForProvider.AccountNameSelector,
 		To: reference.To{
-			List:    &CosmosdbAccountList{},
-			Managed: &CosmosdbAccount{},
+			List:    &AccountList{},
+			Managed: &Account{},
 		},
 	})
 	if err != nil {
@@ -375,8 +375,8 @@ func (mg *SqlContainer) ResolveReferences(ctx context.Context, c client.Reader) 
 		Reference:    mg.Spec.ForProvider.AccountNameRef,
 		Selector:     mg.Spec.ForProvider.AccountNameSelector,
 		To: reference.To{
-			List:    &CosmosdbAccountList{},
-			Managed: &CosmosdbAccount{},
+			List:    &AccountList{},
+			Managed: &Account{},
 		},
 	})
 	if err != nil {
@@ -391,8 +391,8 @@ func (mg *SqlContainer) ResolveReferences(ctx context.Context, c client.Reader) 
 		Reference:    mg.Spec.ForProvider.DatabaseNameRef,
 		Selector:     mg.Spec.ForProvider.DatabaseNameSelector,
 		To: reference.To{
-			List:    &CosmosdbSqlDatabaseList{},
-			Managed: &CosmosdbSqlDatabase{},
+			List:    &SqlDatabaseList{},
+			Managed: &SqlDatabase{},
 		},
 	})
 	if err != nil {
@@ -433,8 +433,8 @@ func (mg *SqlDatabase) ResolveReferences(ctx context.Context, c client.Reader) e
 		Reference:    mg.Spec.ForProvider.AccountNameRef,
 		Selector:     mg.Spec.ForProvider.AccountNameSelector,
 		To: reference.To{
-			List:    &CosmosdbAccountList{},
-			Managed: &CosmosdbAccount{},
+			List:    &AccountList{},
+			Managed: &Account{},
 		},
 	})
 	if err != nil {
@@ -475,8 +475,8 @@ func (mg *SqlFunction) ResolveReferences(ctx context.Context, c client.Reader) e
 		Reference:    mg.Spec.ForProvider.ContainerIDRef,
 		Selector:     mg.Spec.ForProvider.ContainerIDSelector,
 		To: reference.To{
-			List:    &CosmosdbSqlContainerList{},
-			Managed: &CosmosdbSqlContainer{},
+			List:    &SqlContainerList{},
+			Managed: &SqlContainer{},
 		},
 	})
 	if err != nil {
@@ -501,8 +501,8 @@ func (mg *SqlStoredProcedure) ResolveReferences(ctx context.Context, c client.Re
 		Reference:    mg.Spec.ForProvider.AccountNameRef,
 		Selector:     mg.Spec.ForProvider.AccountNameSelector,
 		To: reference.To{
-			List:    &CosmosdbAccountList{},
-			Managed: &CosmosdbAccount{},
+			List:    &AccountList{},
+			Managed: &Account{},
 		},
 	})
 	if err != nil {
@@ -517,8 +517,8 @@ func (mg *SqlStoredProcedure) ResolveReferences(ctx context.Context, c client.Re
 		Reference:    mg.Spec.ForProvider.ContainerNameRef,
 		Selector:     mg.Spec.ForProvider.ContainerNameSelector,
 		To: reference.To{
-			List:    &CosmosdbSqlContainerList{},
-			Managed: &CosmosdbSqlContainer{},
+			List:    &SqlContainerList{},
+			Managed: &SqlContainer{},
 		},
 	})
 	if err != nil {
@@ -533,8 +533,8 @@ func (mg *SqlStoredProcedure) ResolveReferences(ctx context.Context, c client.Re
 		Reference:    mg.Spec.ForProvider.DatabaseNameRef,
 		Selector:     mg.Spec.ForProvider.DatabaseNameSelector,
 		To: reference.To{
-			List:    &CosmosdbSqlDatabaseList{},
-			Managed: &CosmosdbSqlDatabase{},
+			List:    &SqlDatabaseList{},
+			Managed: &SqlDatabase{},
 		},
 	})
 	if err != nil {
@@ -575,8 +575,8 @@ func (mg *SqlTrigger) ResolveReferences(ctx context.Context, c client.Reader) er
 		Reference:    mg.Spec.ForProvider.ContainerIDRef,
 		Selector:     mg.Spec.ForProvider.ContainerIDSelector,
 		To: reference.To{
-			List:    &CosmosdbSqlContainerList{},
-			Managed: &CosmosdbSqlContainer{},
+			List:    &SqlContainerList{},
+			Managed: &SqlContainer{},
 		},
 	})
 	if err != nil {
@@ -601,8 +601,8 @@ func (mg *Table) ResolveReferences(ctx context.Context, c client.Reader) error {
 		Reference:    mg.Spec.ForProvider.AccountNameRef,
 		Selector:     mg.Spec.ForProvider.AccountNameSelector,
 		To: reference.To{
-			List:    &CosmosdbAccountList{},
-			Managed: &CosmosdbAccount{},
+			List:    &AccountList{},
+			Managed: &Account{},
 		},
 	})
 	if err != nil {

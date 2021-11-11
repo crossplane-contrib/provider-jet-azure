@@ -45,7 +45,7 @@ type CassandraTableParameters struct {
 	// +kubebuilder:validation:Optional
 	AutoscaleSettings []CassandraTableAutoscaleSettingsParameters `json:"autoscaleSettings,omitempty" tf:"autoscale_settings,omitempty"`
 
-	// +crossplane:generate:reference:type=CosmosdbCassandraKeyspace
+	// +crossplane:generate:reference:type=CassandraKeyspace
 	// +kubebuilder:validation:Optional
 	CassandraKeyspaceID *string `json:"cassandraKeyspaceId,omitempty" tf:"cassandra_keyspace_id,omitempty"`
 

@@ -124,7 +124,7 @@ type SqlContainerObservation struct {
 
 type SqlContainerParameters struct {
 
-	// +crossplane:generate:reference:type=CosmosdbAccount
+	// +crossplane:generate:reference:type=Account
 	// +crossplane:generate:reference:extractor=github.com/crossplane-contrib/provider-tf-azure/apis/rconfig.ExtractResourceName()
 	// +kubebuilder:validation:Optional
 	AccountName *string `json:"accountName,omitempty" tf:"account_name,omitempty"`
@@ -144,7 +144,7 @@ type SqlContainerParameters struct {
 	// +kubebuilder:validation:Optional
 	ConflictResolutionPolicy []SqlContainerConflictResolutionPolicyParameters `json:"conflictResolutionPolicy,omitempty" tf:"conflict_resolution_policy,omitempty"`
 
-	// +crossplane:generate:reference:type=CosmosdbSqlDatabase
+	// +crossplane:generate:reference:type=SqlDatabase
 	// +crossplane:generate:reference:extractor=github.com/crossplane-contrib/provider-tf-azure/apis/rconfig.ExtractResourceName()
 	// +kubebuilder:validation:Optional
 	DatabaseName *string `json:"databaseName,omitempty" tf:"database_name,omitempty"`

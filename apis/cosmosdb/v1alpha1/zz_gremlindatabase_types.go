@@ -39,7 +39,7 @@ type GremlinDatabaseObservation struct {
 
 type GremlinDatabaseParameters struct {
 
-	// +crossplane:generate:reference:type=CosmosdbAccount
+	// +crossplane:generate:reference:type=Account
 	// +crossplane:generate:reference:extractor=github.com/crossplane-contrib/provider-tf-azure/apis/rconfig.ExtractResourceName()
 	// +kubebuilder:validation:Optional
 	AccountName *string `json:"accountName,omitempty" tf:"account_name,omitempty"`

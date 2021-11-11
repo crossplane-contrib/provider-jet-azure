@@ -65,8 +65,8 @@ func (mg *Blob) ResolveReferences(ctx context.Context, c client.Reader) error {
 		Reference:    mg.Spec.ForProvider.StorageAccountNameRef,
 		Selector:     mg.Spec.ForProvider.StorageAccountNameSelector,
 		To: reference.To{
-			List:    &StorageAccountList{},
-			Managed: &StorageAccount{},
+			List:    &AccountList{},
+			Managed: &Account{},
 		},
 	})
 	if err != nil {
@@ -81,8 +81,8 @@ func (mg *Blob) ResolveReferences(ctx context.Context, c client.Reader) error {
 		Reference:    mg.Spec.ForProvider.StorageContainerNameRef,
 		Selector:     mg.Spec.ForProvider.StorageContainerNameSelector,
 		To: reference.To{
-			List:    &StorageContainerList{},
-			Managed: &StorageContainer{},
+			List:    &ContainerList{},
+			Managed: &Container{},
 		},
 	})
 	if err != nil {
@@ -107,8 +107,8 @@ func (mg *Container) ResolveReferences(ctx context.Context, c client.Reader) err
 		Reference:    mg.Spec.ForProvider.StorageAccountNameRef,
 		Selector:     mg.Spec.ForProvider.StorageAccountNameSelector,
 		To: reference.To{
-			List:    &StorageAccountList{},
-			Managed: &StorageAccount{},
+			List:    &AccountList{},
+			Managed: &Account{},
 		},
 	})
 	if err != nil {

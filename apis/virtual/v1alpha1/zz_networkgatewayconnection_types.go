@@ -93,7 +93,7 @@ type NetworkGatewayConnectionParameters struct {
 	// +kubebuilder:validation:Required
 	Name *string `json:"name" tf:"name,omitempty"`
 
-	// +crossplane:generate:reference:type=VirtualNetworkGateway
+	// +crossplane:generate:reference:type=NetworkGateway
 	// +kubebuilder:validation:Optional
 	PeerVirtualNetworkGatewayID *string `json:"peerVirtualNetworkGatewayId,omitempty" tf:"peer_virtual_network_gateway_id,omitempty"`
 
@@ -132,7 +132,7 @@ type NetworkGatewayConnectionParameters struct {
 	// +kubebuilder:validation:Optional
 	UsePolicyBasedTrafficSelectors *bool `json:"usePolicyBasedTrafficSelectors,omitempty" tf:"use_policy_based_traffic_selectors,omitempty"`
 
-	// +crossplane:generate:reference:type=VirtualNetworkGateway
+	// +crossplane:generate:reference:type=NetworkGateway
 	// +kubebuilder:validation:Optional
 	VirtualNetworkGatewayID *string `json:"virtualNetworkGatewayId,omitempty" tf:"virtual_network_gateway_id,omitempty"`
 

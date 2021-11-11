@@ -50,13 +50,13 @@ import (
 	flexibleserverconfiguration "github.com/crossplane-contrib/provider-tf-azure/internal/controller/postgresql/flexibleserverconfiguration"
 	flexibleserverdatabase "github.com/crossplane-contrib/provider-tf-azure/internal/controller/postgresql/flexibleserverdatabase"
 	flexibleserverfirewallrule "github.com/crossplane-contrib/provider-tf-azure/internal/controller/postgresql/flexibleserverfirewallrule"
-	server "github.com/crossplane-contrib/provider-tf-azure/internal/controller/postgresql/server"
+	serverpostgresql "github.com/crossplane-contrib/provider-tf-azure/internal/controller/postgresql/server"
 	virtualnetworkrule "github.com/crossplane-contrib/provider-tf-azure/internal/controller/postgresql/virtualnetworkrule"
 	providerconfig "github.com/crossplane-contrib/provider-tf-azure/internal/controller/providerconfig"
 	grouppolicyassignment "github.com/crossplane-contrib/provider-tf-azure/internal/controller/resource/grouppolicyassignment"
 	grouptemplatedeployment "github.com/crossplane-contrib/provider-tf-azure/internal/controller/resource/grouptemplatedeployment"
 	resourcegroup "github.com/crossplane-contrib/provider-tf-azure/internal/controller/resource/resourcegroup"
-	serversql "github.com/crossplane-contrib/provider-tf-azure/internal/controller/sql/server"
+	server "github.com/crossplane-contrib/provider-tf-azure/internal/controller/sql/server"
 	accountstorage "github.com/crossplane-contrib/provider-tf-azure/internal/controller/storage/account"
 	blob "github.com/crossplane-contrib/provider-tf-azure/internal/controller/storage/blob"
 	container "github.com/crossplane-contrib/provider-tf-azure/internal/controller/storage/container"
@@ -114,7 +114,7 @@ func Setup(mgr ctrl.Manager, l logging.Logger, wl workqueue.RateLimiter, ps terr
 		resourcegroup.Setup,
 		routetableassociation.Setup,
 		server.Setup,
-		serversql.Setup,
+		serverpostgresql.Setup,
 		serviceendpointstoragepolicy.Setup,
 		sqlcontainer.Setup,
 		sqldatabase.Setup,
