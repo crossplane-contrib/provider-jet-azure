@@ -17,10 +17,53 @@ limitations under the License.
 package postgresql
 
 import (
+	"context"
+	"fmt"
+
 	"github.com/crossplane-contrib/terrajet/pkg/config"
+	"github.com/pkg/errors"
+
+	"github.com/crossplane-contrib/provider-tf-azure/config/common"
 
 	"github.com/crossplane-contrib/provider-tf-azure/apis/rconfig"
 )
+
+const (
+	errFmtNoAttribute    = `"attribute not found: %s`
+	errFmtUnexpectedType = `unexpected type for attribute %s: Expecting a string`
+)
+
+func GetIDForPostgreSQL(serviceName string) config.GetIDFn {
+	return func(ctx context.Context, name string, parameters map[string]interface{}, providerConfig map[string]interface{}) (string, error) {
+		subID, ok := providerConfig["subscriptionId"]
+		if !ok {
+			return "", errors.Errorf(errFmtNoAttribute, "subscriptionId")
+		}
+		subIDStr, ok := subID.(string)
+		if !ok {
+			return "", errors.Errorf(errFmtUnexpectedType, "subscriptionId")
+		}
+		rg, ok := parameters["resource_group_name"]
+		if !ok {
+			return "", errors.Errorf(errFmtNoAttribute, "resource_group_name")
+		}
+		rgStr, ok := rg.(string)
+		if !ok {
+			return "", errors.Errorf(errFmtUnexpectedType, "resource_group_name")
+		}
+
+		serverName, ok := providerConfig["server_name"]
+		if !ok {
+			return "", errors.Errorf(errFmtNoAttribute, "server_name")
+		}
+		serverNameStr, ok := serverName.(string)
+		if !ok {
+			return "", errors.Errorf(errFmtUnexpectedType, "server_name")
+		}
+
+		return fmt.Sprintf("/subscriptions/%s/resourceGroups/%s/providers/Microsoft.DBforPostgreSQL/servers/%s/%s/%s", subIDStr, rgStr, serverNameStr, serviceName, name), nil
+	}
+}
 
 // Configure configures postgresql group
 func Configure(p *config.Provider) {
@@ -35,6 +78,10 @@ func Configure(p *config.Provider) {
 			},
 		}
 		r.UseAsync = true
+		r.ExternalName = config.NameAsIdentifier
+		r.ExternalName.GetExternalNameFn = common.GetNameFromFullyQualifiedID
+		// /subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/mygroup1/providers/Microsoft.DBforPostgreSQL/servers/server1
+		r.ExternalName.GetIDFn = common.GetFullyQualifiedIDFn("/Microsoft.DBforPostgreSQL/servers")
 	})
 
 	p.AddResourceConfigurator("azurerm_postgresql_flexible_server_configuration", func(r *config.Resource) {
@@ -44,6 +91,7 @@ func Configure(p *config.Provider) {
 			},
 		}
 		r.UseAsync = true
+		r.ExternalName = config.IdentifierFromProvider
 	})
 
 	p.AddResourceConfigurator("azurerm_postgresql_database", func(r *config.Resource) {
@@ -58,6 +106,10 @@ func Configure(p *config.Provider) {
 			},
 		}
 		r.UseAsync = true
+		r.ExternalName = config.NameAsIdentifier
+		r.ExternalName.GetExternalNameFn = common.GetNameFromFullyQualifiedID
+		// /subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/mygroup1/providers/Microsoft.DBforPostgreSQL/servers/server1/databases/database1
+		r.ExternalName.GetIDFn = GetIDForPostgreSQL("databases")
 	})
 
 	p.AddResourceConfigurator("azurerm_postgresql_active_directory_administrator", func(r *config.Resource) {
@@ -73,6 +125,15 @@ func Configure(p *config.Provider) {
 			},
 		}
 		r.UseAsync = true
+		r.ExternalName = config.ExternalName{
+			SetIdentifierArgumentFn: func(base map[string]interface{}, name string) {
+				base["login"] = name
+			},
+			OmittedFields:     []string{"login"},
+			GetExternalNameFn: common.GetNameFromFullyQualifiedID,
+			// /subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/myresourcegroup/providers/Microsoft.DBforPostgreSQL/servers/myserver/administrators/activeDirectory
+			GetIDFn: GetIDForPostgreSQL("administrators"),
+		}
 	})
 
 	p.AddResourceConfigurator("azurerm_postgresql_flexible_server_database", func(r *config.Resource) {
@@ -82,6 +143,20 @@ func Configure(p *config.Provider) {
 			},
 		}
 		r.UseAsync = true
+		r.ExternalName = config.NameAsIdentifier
+		r.ExternalName.GetExternalNameFn = common.GetNameFromFullyQualifiedID
+		// /subscriptions/12345678-1234-9876-4563-123456789012/resourceGroups/resGroup1/providers/Microsoft.DBforPostgreSQL/flexibleServers/flexibleServer1/databases/database1
+		r.ExternalName.GetIDFn = func(ctx context.Context, name string, parameters map[string]interface{}, _ map[string]interface{}) (string, error) {
+			serverID, ok := parameters["server_id"]
+			if !ok {
+				return "", errors.Errorf(errFmtNoAttribute, "server_id")
+			}
+			serverIDStr, ok := serverID.(string)
+			if !ok {
+				return "", errors.Errorf(errFmtUnexpectedType, "server_id")
+			}
+			return fmt.Sprintf("%s/databases/%s", serverIDStr, name), nil
+		}
 	})
 
 	p.AddResourceConfigurator("azurerm_postgresql_firewall_rule", func(r *config.Resource) {
@@ -96,6 +171,10 @@ func Configure(p *config.Provider) {
 			},
 		}
 		r.UseAsync = true
+		r.ExternalName = config.NameAsIdentifier
+		r.ExternalName.GetExternalNameFn = common.GetNameFromFullyQualifiedID
+		// /subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/mygroup1/providers/Microsoft.DBforPostgreSQL/servers/server1/firewallRules/rule1
+		r.ExternalName.GetIDFn = GetIDForPostgreSQL("firewallRules")
 	})
 
 	p.AddResourceConfigurator("azurerm_postgresql_flexible_server_firewall_rule", func(r *config.Resource) {
@@ -105,6 +184,20 @@ func Configure(p *config.Provider) {
 			},
 		}
 		r.UseAsync = true
+		r.ExternalName = config.NameAsIdentifier
+		r.ExternalName.GetExternalNameFn = common.GetNameFromFullyQualifiedID
+		// /subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/group1/providers/Microsoft.DBforPostgreSQL/flexibleServers/flexibleServer1/firewallRules/firewallRule1
+		r.ExternalName.GetIDFn = func(ctx context.Context, name string, parameters map[string]interface{}, _ map[string]interface{}) (string, error) {
+			serverID, ok := parameters["server_id"]
+			if !ok {
+				return "", errors.Errorf(errFmtNoAttribute, "server_id")
+			}
+			serverIDStr, ok := serverID.(string)
+			if !ok {
+				return "", errors.Errorf(errFmtUnexpectedType, "server_id")
+			}
+			return fmt.Sprintf("%s/firewallRules/%s", serverIDStr, name), nil
+		}
 	})
 
 	p.AddResourceConfigurator("azurerm_postgresql_flexible_server", func(r *config.Resource) {
@@ -121,6 +214,10 @@ func Configure(p *config.Provider) {
 			},
 		}
 		r.UseAsync = true
+		r.ExternalName = config.NameAsIdentifier
+		r.ExternalName.GetExternalNameFn = common.GetNameFromFullyQualifiedID
+		// /subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/mygroup1/providers/Microsoft.DBforPostgreSQL/flexibleServers/server1
+		r.ExternalName.GetIDFn = common.GetFullyQualifiedIDFn("/Microsoft.DBforPostgreSQL/flexibleServers")
 	})
 
 	p.AddResourceConfigurator("azurerm_postgresql_virtual_network_rule", func(r *config.Resource) {
@@ -138,6 +235,10 @@ func Configure(p *config.Provider) {
 			},
 		}
 		r.UseAsync = true
+		r.ExternalName = config.NameAsIdentifier
+		r.ExternalName.GetExternalNameFn = common.GetNameFromFullyQualifiedID
+		// /subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/myresourcegroup/providers/Microsoft.DBforPostgreSQL/servers/myserver/virtualNetworkRules/vnetrulename
+		r.ExternalName.GetIDFn = GetIDForPostgreSQL("virtualNetworkRules")
 	})
 
 	p.AddResourceConfigurator("azurerm_postgresql_server_key", func(r *config.Resource) {
@@ -147,6 +248,10 @@ func Configure(p *config.Provider) {
 			},
 		}
 		r.UseAsync = true
+		// /subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/group1/providers/Microsoft.DBforPostgreSQL/servers/server1/keys/keyvaultname_key-name_keyversion
+		// NOTE(muvaf): There is no actual name in the arguments that we can use.
+		// It's all calculated by Azure.
+		r.ExternalName = config.IdentifierFromProvider
 	})
 
 	p.AddResourceConfigurator("azurerm_postgresql_configuration", func(r *config.Resource) {
@@ -161,5 +266,6 @@ func Configure(p *config.Provider) {
 			},
 		}
 		r.UseAsync = true
+		r.ExternalName = config.IdentifierFromProvider
 	})
 }

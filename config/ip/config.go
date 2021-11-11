@@ -18,6 +18,9 @@ package ip
 
 import (
 	"github.com/crossplane-contrib/terrajet/pkg/config"
+
+	"github.com/crossplane-contrib/provider-tf-azure/apis/rconfig"
+	"github.com/crossplane-contrib/provider-tf-azure/config/common"
 )
 
 // Configure configures ip group
@@ -25,5 +28,15 @@ func Configure(p *config.Provider) {
 	p.AddResourceConfigurator("azurerm_ip_group", func(r *config.Resource) {
 		r.Kind = "IPGroup"
 		r.ShortGroup = "network"
+		r.References = config.References{
+			"resource_group_name": config.Reference{
+				Type:      rconfig.APISPackagePath + "/resource/v1alpha1.ResourceGroup",
+				Extractor: rconfig.APISPackagePath + "/rconfig.ExtractResourceName()",
+			},
+		}
+		r.ExternalName = config.NameAsIdentifier
+		r.ExternalName.GetExternalNameFn = common.GetNameFromFullyQualifiedID
+		// /subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/mygroup1/providers/Microsoft.Network/ipGroups/myIpGroup
+		r.ExternalName.GetIDFn = common.GetFullyQualifiedIDFn("/Microsoft.Network/ipGroups")
 	})
 }
