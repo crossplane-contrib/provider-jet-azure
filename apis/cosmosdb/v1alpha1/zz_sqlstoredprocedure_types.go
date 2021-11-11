@@ -30,7 +30,7 @@ type SqlStoredProcedureObservation struct {
 
 type SqlStoredProcedureParameters struct {
 
-	// +crossplane:generate:reference:type=CosmosdbAccount
+	// +crossplane:generate:reference:type=Account
 	// +crossplane:generate:reference:extractor=github.com/crossplane-contrib/provider-tf-azure/apis/rconfig.ExtractResourceName()
 	// +kubebuilder:validation:Optional
 	AccountName *string `json:"accountName,omitempty" tf:"account_name,omitempty"`
@@ -44,7 +44,7 @@ type SqlStoredProcedureParameters struct {
 	// +kubebuilder:validation:Required
 	Body *string `json:"body" tf:"body,omitempty"`
 
-	// +crossplane:generate:reference:type=CosmosdbSqlContainer
+	// +crossplane:generate:reference:type=SqlContainer
 	// +crossplane:generate:reference:extractor=github.com/crossplane-contrib/provider-tf-azure/apis/rconfig.ExtractResourceName()
 	// +kubebuilder:validation:Optional
 	ContainerName *string `json:"containerName,omitempty" tf:"container_name,omitempty"`
@@ -55,7 +55,7 @@ type SqlStoredProcedureParameters struct {
 	// +kubebuilder:validation:Optional
 	ContainerNameSelector *v1.Selector `json:"containerNameSelector,omitempty" tf:"-"`
 
-	// +crossplane:generate:reference:type=CosmosdbSqlDatabase
+	// +crossplane:generate:reference:type=SqlDatabase
 	// +crossplane:generate:reference:extractor=github.com/crossplane-contrib/provider-tf-azure/apis/rconfig.ExtractResourceName()
 	// +kubebuilder:validation:Optional
 	DatabaseName *string `json:"databaseName,omitempty" tf:"database_name,omitempty"`

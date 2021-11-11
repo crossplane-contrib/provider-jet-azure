@@ -117,8 +117,8 @@ func (mg *NetworkGatewayConnection) ResolveReferences(ctx context.Context, c cli
 		Reference:    mg.Spec.ForProvider.PeerVirtualNetworkGatewayIDRef,
 		Selector:     mg.Spec.ForProvider.PeerVirtualNetworkGatewayIDSelector,
 		To: reference.To{
-			List:    &VirtualNetworkGatewayList{},
-			Managed: &VirtualNetworkGateway{},
+			List:    &NetworkGatewayList{},
+			Managed: &NetworkGateway{},
 		},
 	})
 	if err != nil {
@@ -149,8 +149,8 @@ func (mg *NetworkGatewayConnection) ResolveReferences(ctx context.Context, c cli
 		Reference:    mg.Spec.ForProvider.VirtualNetworkGatewayIDRef,
 		Selector:     mg.Spec.ForProvider.VirtualNetworkGatewayIDSelector,
 		To: reference.To{
-			List:    &VirtualNetworkGatewayList{},
-			Managed: &VirtualNetworkGateway{},
+			List:    &NetworkGatewayList{},
+			Managed: &NetworkGateway{},
 		},
 	})
 	if err != nil {
@@ -175,8 +175,8 @@ func (mg *NetworkPeering) ResolveReferences(ctx context.Context, c client.Reader
 		Reference:    mg.Spec.ForProvider.RemoteVirtualNetworkIDRef,
 		Selector:     mg.Spec.ForProvider.RemoteVirtualNetworkIDSelector,
 		To: reference.To{
-			List:    &VirtualNetworkList{},
-			Managed: &VirtualNetwork{},
+			List:    &NetworkList{},
+			Managed: &Network{},
 		},
 	})
 	if err != nil {
@@ -207,8 +207,8 @@ func (mg *NetworkPeering) ResolveReferences(ctx context.Context, c client.Reader
 		Reference:    mg.Spec.ForProvider.VirtualNetworkNameRef,
 		Selector:     mg.Spec.ForProvider.VirtualNetworkNameSelector,
 		To: reference.To{
-			List:    &VirtualNetworkList{},
-			Managed: &VirtualNetwork{},
+			List:    &NetworkList{},
+			Managed: &Network{},
 		},
 	})
 	if err != nil {

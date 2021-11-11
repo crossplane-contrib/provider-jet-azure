@@ -63,7 +63,7 @@ type GremlinGraphObservation struct {
 
 type GremlinGraphParameters struct {
 
-	// +crossplane:generate:reference:type=CosmosdbAccount
+	// +crossplane:generate:reference:type=Account
 	// +crossplane:generate:reference:extractor=github.com/crossplane-contrib/provider-tf-azure/apis/rconfig.ExtractResourceName()
 	// +kubebuilder:validation:Optional
 	AccountName *string `json:"accountName,omitempty" tf:"account_name,omitempty"`
@@ -80,7 +80,7 @@ type GremlinGraphParameters struct {
 	// +kubebuilder:validation:Optional
 	ConflictResolutionPolicy []ConflictResolutionPolicyParameters `json:"conflictResolutionPolicy,omitempty" tf:"conflict_resolution_policy,omitempty"`
 
-	// +crossplane:generate:reference:type=CosmosdbGremlinDatabase
+	// +crossplane:generate:reference:type=GremlinDatabase
 	// +crossplane:generate:reference:extractor=github.com/crossplane-contrib/provider-tf-azure/apis/rconfig.ExtractResourceName()
 	// +kubebuilder:validation:Optional
 	DatabaseName *string `json:"databaseName,omitempty" tf:"database_name,omitempty"`

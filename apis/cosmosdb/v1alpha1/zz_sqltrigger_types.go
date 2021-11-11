@@ -33,7 +33,7 @@ type SqlTriggerParameters struct {
 	// +kubebuilder:validation:Required
 	Body *string `json:"body" tf:"body,omitempty"`
 
-	// +crossplane:generate:reference:type=CosmosdbSqlContainer
+	// +crossplane:generate:reference:type=SqlContainer
 	// +kubebuilder:validation:Optional
 	ContainerID *string `json:"containerId,omitempty" tf:"container_id,omitempty"`
 

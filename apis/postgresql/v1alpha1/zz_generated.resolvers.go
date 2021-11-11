@@ -56,8 +56,8 @@ func (mg *ActiveDirectoryAdministrator) ResolveReferences(ctx context.Context, c
 		Reference:    mg.Spec.ForProvider.ServerNameRef,
 		Selector:     mg.Spec.ForProvider.ServerNameSelector,
 		To: reference.To{
-			List:    &PostgresqlServerList{},
-			Managed: &PostgresqlServer{},
+			List:    &ServerList{},
+			Managed: &Server{},
 		},
 	})
 	if err != nil {
@@ -98,8 +98,8 @@ func (mg *Configuration) ResolveReferences(ctx context.Context, c client.Reader)
 		Reference:    mg.Spec.ForProvider.ServerNameRef,
 		Selector:     mg.Spec.ForProvider.ServerNameSelector,
 		To: reference.To{
-			List:    &PostgresqlServerList{},
-			Managed: &PostgresqlServer{},
+			List:    &ServerList{},
+			Managed: &Server{},
 		},
 	})
 	if err != nil {
@@ -140,8 +140,8 @@ func (mg *Database) ResolveReferences(ctx context.Context, c client.Reader) erro
 		Reference:    mg.Spec.ForProvider.ServerNameRef,
 		Selector:     mg.Spec.ForProvider.ServerNameSelector,
 		To: reference.To{
-			List:    &PostgresqlServerList{},
-			Managed: &PostgresqlServer{},
+			List:    &ServerList{},
+			Managed: &Server{},
 		},
 	})
 	if err != nil {
@@ -182,8 +182,8 @@ func (mg *FirewallRule) ResolveReferences(ctx context.Context, c client.Reader) 
 		Reference:    mg.Spec.ForProvider.ServerNameRef,
 		Selector:     mg.Spec.ForProvider.ServerNameSelector,
 		To: reference.To{
-			List:    &PostgresqlServerList{},
-			Managed: &PostgresqlServer{},
+			List:    &ServerList{},
+			Managed: &Server{},
 		},
 	})
 	if err != nil {
@@ -250,8 +250,8 @@ func (mg *FlexibleServerConfiguration) ResolveReferences(ctx context.Context, c 
 		Reference:    mg.Spec.ForProvider.ServerIDRef,
 		Selector:     mg.Spec.ForProvider.ServerIDSelector,
 		To: reference.To{
-			List:    &PostgresqlFlexibleServerList{},
-			Managed: &PostgresqlFlexibleServer{},
+			List:    &FlexibleServerList{},
+			Managed: &FlexibleServer{},
 		},
 	})
 	if err != nil {
@@ -276,8 +276,8 @@ func (mg *FlexibleServerDatabase) ResolveReferences(ctx context.Context, c clien
 		Reference:    mg.Spec.ForProvider.ServerIDRef,
 		Selector:     mg.Spec.ForProvider.ServerIDSelector,
 		To: reference.To{
-			List:    &PostgresqlFlexibleServerList{},
-			Managed: &PostgresqlFlexibleServer{},
+			List:    &FlexibleServerList{},
+			Managed: &FlexibleServer{},
 		},
 	})
 	if err != nil {
@@ -302,8 +302,8 @@ func (mg *FlexibleServerFirewallRule) ResolveReferences(ctx context.Context, c c
 		Reference:    mg.Spec.ForProvider.ServerIDRef,
 		Selector:     mg.Spec.ForProvider.ServerIDSelector,
 		To: reference.To{
-			List:    &PostgresqlFlexibleServerList{},
-			Managed: &PostgresqlFlexibleServer{},
+			List:    &FlexibleServerList{},
+			Managed: &FlexibleServer{},
 		},
 	})
 	if err != nil {
@@ -370,8 +370,8 @@ func (mg *VirtualNetworkRule) ResolveReferences(ctx context.Context, c client.Re
 		Reference:    mg.Spec.ForProvider.ServerNameRef,
 		Selector:     mg.Spec.ForProvider.ServerNameSelector,
 		To: reference.To{
-			List:    &PostgresqlServerList{},
-			Managed: &PostgresqlServer{},
+			List:    &ServerList{},
+			Managed: &Server{},
 		},
 	})
 	if err != nil {
