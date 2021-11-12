@@ -18,6 +18,7 @@ package common
 
 import (
 	"fmt"
+	"path/filepath"
 	"strings"
 
 	tjconfig "github.com/crossplane-contrib/terrajet/pkg/config"
@@ -36,7 +37,16 @@ func GetNameFromFullyQualifiedID(tfstate map[string]interface{}) string {
 	return words[len(words)-1]
 }
 
-func GetFullyQualifiedIDFn(servicePath string) tjconfig.GetIDFn {
+// GetFullyQualifiedIDFn returns a GetIDFn that can parse any Azure fully qualifier.
+// An example identifier is as follows:
+// /subscriptions/%s/resourceGroups/%s/providers/Microsoft.DocumentDB/databaseAccounts/%s/sqlDatabases/%s/containers/%s
+// An input to this function to parse it would be:
+// serviceProvider: "Microsoft.DocumentDB"
+// keyPairs: []string{"databaseAccounts", "account_name", "sqlDatabases", "database_name", "containers", "name"}
+func GetFullyQualifiedIDFn(serviceProvider string, keyPairs ...string) tjconfig.GetIDFn {
+	if len(keyPairs)%2 != 0 {
+		panic("each service name has to have a key")
+	}
 	return func(name string, parameters map[string]interface{}, providerConfig map[string]interface{}) string {
 		subID, ok := providerConfig["subscriptionId"].(string)
 		if !ok {
@@ -46,6 +56,14 @@ func GetFullyQualifiedIDFn(servicePath string) tjconfig.GetIDFn {
 		if !ok {
 			return ""
 		}
-		return fmt.Sprintf("/subscriptions/%s/resourceGroups/%s/providers%s/%s", subID, rg, servicePath, name)
+		path := fmt.Sprintf("/subscriptions/%s/resourceGroups/%s/providers/%s", subID, rg, serviceProvider)
+		for i := 0; i < len(keyPairs); i += 2 {
+			val, ok := parameters[keyPairs[i+1]].(string)
+			if !ok {
+				return ""
+			}
+			path = filepath.Join(path, keyPairs[i], val)
+		}
+		return path
 	}
 }

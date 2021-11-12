@@ -25,24 +25,6 @@ import (
 	"github.com/crossplane-contrib/provider-tf-azure/apis/rconfig"
 )
 
-func GetIDForPostgreSQL(serviceName string) config.GetIDFn {
-	return func(name string, parameters map[string]interface{}, providerConfig map[string]interface{}) string {
-		subID, ok := providerConfig["subscriptionId"].(string)
-		if !ok {
-			return ""
-		}
-		rg, ok := parameters["resource_group_name"].(string)
-		if !ok {
-			return ""
-		}
-		serverName, ok := parameters["server_name"].(string)
-		if !ok {
-			return ""
-		}
-		return fmt.Sprintf("/subscriptions/%s/resourceGroups/%s/providers/Microsoft.DBforPostgreSQL/servers/%s/%s/%s", subID, rg, serverName, serviceName, name)
-	}
-}
-
 func Configure(p *config.Provider) {
 	p.AddResourceConfigurator("azurerm_postgresql_server", func(r *config.Resource) {
 		r.LateInitializer = config.LateInitializer{
@@ -58,7 +40,7 @@ func Configure(p *config.Provider) {
 		r.ExternalName = config.NameAsIdentifier
 		r.ExternalName.GetNameFn = common.GetNameFromFullyQualifiedID
 		// /subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/mygroup1/providers/Microsoft.DBforPostgreSQL/servers/server1
-		r.ExternalName.GetIDFn = common.GetFullyQualifiedIDFn("/Microsoft.DBforPostgreSQL/servers")
+		r.ExternalName.GetIDFn = common.GetFullyQualifiedIDFn("Microsoft.DBforPostgreSQL", "servers", "name")
 	})
 
 	p.AddResourceConfigurator("azurerm_postgresql_flexible_server_configuration", func(r *config.Resource) {
@@ -86,7 +68,10 @@ func Configure(p *config.Provider) {
 		r.ExternalName = config.NameAsIdentifier
 		r.ExternalName.GetNameFn = common.GetNameFromFullyQualifiedID
 		// /subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/mygroup1/providers/Microsoft.DBforPostgreSQL/servers/server1/databases/database1
-		r.ExternalName.GetIDFn = GetIDForPostgreSQL("databases")
+		r.ExternalName.GetIDFn = common.GetFullyQualifiedIDFn("Microsoft.DBforPostgreSQL",
+			"servers", "server_name",
+			"databases", "name",
+		)
 	})
 
 	p.AddResourceConfigurator("azurerm_postgresql_active_directory_administrator", func(r *config.Resource) {
@@ -109,7 +94,10 @@ func Configure(p *config.Provider) {
 			OmittedFields: []string{"login"},
 			GetNameFn:     common.GetNameFromFullyQualifiedID,
 			// /subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/myresourcegroup/providers/Microsoft.DBforPostgreSQL/servers/myserver/administrators/activeDirectory
-			GetIDFn: GetIDForPostgreSQL("administrators"),
+			GetIDFn: common.GetFullyQualifiedIDFn("Microsoft.DBforPostgreSQL",
+				"servers", "server_name",
+				"administrators", "login",
+			),
 		}
 	})
 
@@ -147,7 +135,10 @@ func Configure(p *config.Provider) {
 		r.ExternalName = config.NameAsIdentifier
 		r.ExternalName.GetNameFn = common.GetNameFromFullyQualifiedID
 		// /subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/mygroup1/providers/Microsoft.DBforPostgreSQL/servers/server1/firewallRules/rule1
-		r.ExternalName.GetIDFn = GetIDForPostgreSQL("firewallRules")
+		r.ExternalName.GetIDFn = common.GetFullyQualifiedIDFn("Microsoft.DBforPostgreSQL",
+			"servers", "server_name",
+			"firewallRules", "name",
+		)
 	})
 
 	p.AddResourceConfigurator("azurerm_postgresql_flexible_server_firewall_rule", func(r *config.Resource) {
@@ -186,7 +177,9 @@ func Configure(p *config.Provider) {
 		r.ExternalName = config.NameAsIdentifier
 		r.ExternalName.GetNameFn = common.GetNameFromFullyQualifiedID
 		// /subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/mygroup1/providers/Microsoft.DBforPostgreSQL/flexibleServers/server1
-		r.ExternalName.GetIDFn = common.GetFullyQualifiedIDFn("/Microsoft.DBforPostgreSQL/flexibleServers")
+		r.ExternalName.GetIDFn = common.GetFullyQualifiedIDFn("Microsoft.DBforPostgreSQL",
+			"flexibleServers", "name",
+		)
 	})
 
 	p.AddResourceConfigurator("azurerm_postgresql_virtual_network_rule", func(r *config.Resource) {
@@ -207,7 +200,10 @@ func Configure(p *config.Provider) {
 		r.ExternalName = config.NameAsIdentifier
 		r.ExternalName.GetNameFn = common.GetNameFromFullyQualifiedID
 		// /subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/myresourcegroup/providers/Microsoft.DBforPostgreSQL/servers/myserver/virtualNetworkRules/vnetrulename
-		r.ExternalName.GetIDFn = GetIDForPostgreSQL("virtualNetworkRules")
+		r.ExternalName.GetIDFn = common.GetFullyQualifiedIDFn("Microsoft.DBforPostgreSQL",
+			"servers", "server_name",
+			"virtualNetworkRules", "name",
+		)
 	})
 
 	p.AddResourceConfigurator("azurerm_postgresql_server_key", func(r *config.Resource) {

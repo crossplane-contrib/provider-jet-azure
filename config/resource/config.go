@@ -17,6 +17,9 @@ limitations under the License.
 package resource
 
 import (
+	"fmt"
+
+	"github.com/crossplane-contrib/provider-tf-azure/config/common"
 	"github.com/crossplane-contrib/terrajet/pkg/config"
 
 	"github.com/crossplane-contrib/provider-tf-azure/apis/rconfig"
@@ -25,6 +28,16 @@ import (
 func Configure(p *config.Provider) {
 	p.AddResourceConfigurator("azurerm_resource_group", func(r *config.Resource) {
 		r.Kind = "ResourceGroup"
+		r.ExternalName = config.NameAsIdentifier
+		r.ExternalName.GetNameFn = common.GetNameFromFullyQualifiedID
+		// /subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/example
+		r.ExternalName.GetIDFn = func(name string, _ map[string]interface{}, providerConfig map[string]interface{}) string {
+			subID, ok := providerConfig["subscriptionId"].(string)
+			if !ok {
+				return ""
+			}
+			return fmt.Sprintf("/subscriptions/%s/resourceGroups/%s", subID, name)
+		}
 	})
 
 	p.AddResourceConfigurator("azurerm_resource_group_template_deployment", func(r *config.Resource) {
@@ -35,6 +48,13 @@ func Configure(p *config.Provider) {
 			},
 		}
 		r.UseAsync = true
+
+		r.ExternalName = config.NameAsIdentifier
+		r.ExternalName.GetNameFn = common.GetNameFromFullyQualifiedID
+		// /subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/group1/providers/Microsoft.Resources/deployments/template1
+		r.ExternalName.GetIDFn = common.GetFullyQualifiedIDFn("Microsoft.Resources",
+			"deployments", "name",
+		)
 	})
 
 	p.AddResourceConfigurator("azurerm_resource_group_policy_assignment", func(r *config.Resource) {
@@ -44,5 +64,11 @@ func Configure(p *config.Provider) {
 			},
 		}
 		r.UseAsync = true
+		r.ExternalName = config.NameAsIdentifier
+		r.ExternalName.GetNameFn = common.GetNameFromFullyQualifiedID
+		// /subscriptions/00000000-0000-0000-000000000000/resourceGroups/group1/providers/Microsoft.Authorization/policyAssignments/assignment1
+		r.ExternalName.GetIDFn = common.GetFullyQualifiedIDFn("Microsoft.Authorization",
+			"policyAssignments", "name",
+		)
 	})
 }

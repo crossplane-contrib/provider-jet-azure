@@ -43,6 +43,6 @@ func Configure(p *config.Provider) {
 		r.UseAsync = true
 		r.ExternalName = config.NameAsIdentifier
 		r.ExternalName.GetNameFn = common.GetNameFromFullyQualifiedID
-		r.ExternalName.GetIDFn = common.GetFullyQualifiedIDFn("/Microsoft.Network/loadBalancers")
+		r.ExternalName.GetIDFn = common.GetFullyQualifiedIDFn("Microsoft.Network", "loadBalancers", "name")
 	})
 }
