@@ -37,6 +37,6 @@ func Configure(p *config.Provider) {
 		r.ExternalName = config.NameAsIdentifier
 		r.ExternalName.GetExternalNameFn = common.GetNameFromFullyQualifiedID
 		// /subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/mygroup1/providers/Microsoft.Network/ipGroups/myIpGroup
-		r.ExternalName.GetIDFn = common.GetFullyQualifiedIDFn("/Microsoft.Network/ipGroups")
+		r.ExternalName.GetIDFn = common.GetFullyQualifiedIDFn("Microsoft.Network", "ipGroups", "name")
 	})
 }

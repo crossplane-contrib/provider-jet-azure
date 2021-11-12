@@ -46,25 +46,11 @@ func Configure(p *config.Provider) {
 		r.ExternalName = config.NameAsIdentifier
 		r.ExternalName.GetNameFn = common.GetNameFromFullyQualifiedID
 		// /subscriptions/000-000/resourceGroups/rg1/providers/Microsoft.DocumentDB/databaseAccounts/acc1/sqlDatabases/db1/containers/container1
-		r.ExternalName.GetIDFn = func(name string, parameters map[string]interface{}, providerConfig map[string]interface{}) string {
-			subID, ok := providerConfig["subscriptionId"].(string)
-			if !ok {
-				return ""
-			}
-			rg, ok := parameters["resource_group_name"].(string)
-			if !ok {
-				return ""
-			}
-			account, ok := parameters["account_name"].(string)
-			if !ok {
-				return ""
-			}
-			dbName, ok := parameters["database_name"].(string)
-			if !ok {
-				return ""
-			}
-			return fmt.Sprintf("/subscriptions/%s/resourceGroups/%s/providers/Microsoft.DocumentDB/databaseAccounts/%s/sqlDatabases/%s/containers/%s", subID, rg, account, dbName, name)
-		}
+		r.ExternalName.GetIDFn = common.GetFullyQualifiedIDFn("Microsoft.DocumentDB",
+			"databaseAccounts", "account_name",
+			"sqlDatabases", "database_name",
+			"containers", "name",
+		)
 	})
 
 	p.AddResourceConfigurator("azurerm_cosmosdb_mongo_collection", func(r *config.Resource) {
@@ -87,25 +73,11 @@ func Configure(p *config.Provider) {
 		r.ExternalName.GetNameFn = common.GetNameFromFullyQualifiedID
 
 		// /subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg1/providers/Microsoft.DocumentDB/databaseAccounts/account1/mongodbDatabases/db1/collections/collection1
-		r.ExternalName.GetIDFn = func(name string, parameters map[string]interface{}, providerConfig map[string]interface{}) string {
-			subID, ok := providerConfig["subscriptionId"].(string)
-			if !ok {
-				return ""
-			}
-			rg, ok := parameters["resource_group_name"].(string)
-			if !ok {
-				return ""
-			}
-			account, ok := parameters["account_name"].(string)
-			if !ok {
-				return ""
-			}
-			dbName, ok := parameters["database_name"].(string)
-			if !ok {
-				return ""
-			}
-			return fmt.Sprintf("/subscriptions/%s/resourceGroups/%s/providers/Microsoft.DocumentDB/databaseAccounts/%s/mongodbDatabases/%s/collections/%s", subID, rg, account, dbName, name)
-		}
+		r.ExternalName.GetIDFn = common.GetFullyQualifiedIDFn("Microsoft.DocumentDB",
+			"databaseAccounts", "account_name",
+			"mongodbDatabases", "database_name",
+			"collections", "name",
+		)
 	})
 
 	p.AddResourceConfigurator("azurerm_cosmosdb_cassandra_keyspace", func(r *config.Resource) {
@@ -124,21 +96,10 @@ func Configure(p *config.Provider) {
 		r.ExternalName.GetNameFn = common.GetNameFromFullyQualifiedID
 
 		// /subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg1/providers/Microsoft.DocumentDB/databaseAccounts/account1/cassandraKeyspaces/ks1
-		r.ExternalName.GetIDFn = func(name string, parameters map[string]interface{}, providerConfig map[string]interface{}) string {
-			subID, ok := providerConfig["subscriptionId"].(string)
-			if !ok {
-				return ""
-			}
-			rg, ok := parameters["resource_group_name"].(string)
-			if !ok {
-				return ""
-			}
-			account, ok := parameters["account_name"].(string)
-			if !ok {
-				return ""
-			}
-			return fmt.Sprintf("/subscriptions/%s/resourceGroups/%s/providers/Microsoft.DocumentDB/databaseAccounts/%s/cassandraKeyspaces/%s", subID, rg, account, name)
-		}
+		r.ExternalName.GetIDFn = common.GetFullyQualifiedIDFn("Microsoft.DocumentDB",
+			"databaseAccounts", "account_name",
+			"cassandraKeyspaces", "name",
+		)
 	})
 
 	p.AddResourceConfigurator("azurerm_cosmosdb_cassandra_table", func(r *config.Resource) {
@@ -152,25 +113,11 @@ func Configure(p *config.Provider) {
 		r.ExternalName.GetNameFn = common.GetNameFromFullyQualifiedID
 
 		// /subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg1/providers/Microsoft.DocumentDB/databaseAccounts/account1/cassandraKeyspaces/ks1/tables/table1
-		r.ExternalName.GetIDFn = func(name string, parameters map[string]interface{}, providerConfig map[string]interface{}) string {
-			subID, ok := providerConfig["subscriptionId"].(string)
-			if !ok {
-				return ""
-			}
-			rg, ok := parameters["resource_group_name"].(string)
-			if !ok {
-				return ""
-			}
-			account, ok := parameters["account_name"].(string)
-			if !ok {
-				return ""
-			}
-			ksID, ok := parameters["cassandra_keyspace_id"].(string)
-			if !ok {
-				return ""
-			}
-			return fmt.Sprintf("/subscriptions/%s/resourceGroups/%s/providers/Microsoft.DocumentDB/databaseAccounts/%s/cassandraKeyspaces/%s/tables/%s", subID, rg, account, ksID, name)
-		}
+		r.ExternalName.GetIDFn = common.GetFullyQualifiedIDFn("Microsoft.DocumentDB",
+			"databaseAccounts", "account_name",
+			"cassandraKeyspaces", "cassandra_keyspace_id",
+			"tables", "name",
+		)
 	})
 
 	p.AddResourceConfigurator("azurerm_cosmosdb_gremlin_graph", func(r *config.Resource) {
@@ -193,25 +140,11 @@ func Configure(p *config.Provider) {
 		r.ExternalName.GetNameFn = common.GetNameFromFullyQualifiedID
 
 		// /subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg1/providers/Microsoft.DocumentDB/databaseAccounts/account1/gremlinDatabases/db1/graphs/graphs1
-		r.ExternalName.GetIDFn = func(name string, parameters map[string]interface{}, providerConfig map[string]interface{}) string {
-			subID, ok := providerConfig["subscriptionId"].(string)
-			if !ok {
-				return ""
-			}
-			rg, ok := parameters["resource_group_name"].(string)
-			if !ok {
-				return ""
-			}
-			account, ok := parameters["account_name"].(string)
-			if !ok {
-				return ""
-			}
-			dbName, ok := parameters["database_name"].(string)
-			if !ok {
-				return ""
-			}
-			return fmt.Sprintf("/subscriptions/%s/resourceGroups/%s/providers/Microsoft.DocumentDB/databaseAccounts/%s/gremlinDatabases/%s/graphs/%s", subID, rg, account, dbName, name)
-		}
+		r.ExternalName.GetIDFn = common.GetFullyQualifiedIDFn("Microsoft.DocumentDB",
+			"databaseAccounts", "account_name",
+			"gremlinDatabases", "database_name",
+			"graphs", "name",
+		)
 	})
 
 	p.AddResourceConfigurator("azurerm_cosmosdb_sql_function", func(r *config.Resource) {
@@ -258,29 +191,12 @@ func Configure(p *config.Provider) {
 		r.ExternalName.GetNameFn = common.GetNameFromFullyQualifiedID
 
 		// /subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg1/providers/Microsoft.DocumentDB/databaseAccounts/account1/sqlDatabases/db1/containers/c1/storedProcedures/sp1
-		r.ExternalName.GetIDFn = func(name string, parameters map[string]interface{}, providerConfig map[string]interface{}) string {
-			subID, ok := providerConfig["subscriptionId"].(string)
-			if !ok {
-				return ""
-			}
-			rg, ok := parameters["resource_group_name"].(string)
-			if !ok {
-				return ""
-			}
-			account, ok := parameters["account_name"].(string)
-			if !ok {
-				return ""
-			}
-			dbName, ok := parameters["database_name"].(string)
-			if !ok {
-				return ""
-			}
-			containerName, ok := parameters["container_name"].(string)
-			if !ok {
-				return ""
-			}
-			return fmt.Sprintf("/subscriptions/%s/resourceGroups/%s/providers/Microsoft.DocumentDB/databaseAccounts/%s/sqlDatabases/%s/containers/%s/storedProcedures/%s", subID, rg, account, dbName, containerName, name)
-		}
+		r.ExternalName.GetIDFn = common.GetFullyQualifiedIDFn("Microsoft.DocumentDB",
+			"databaseAccounts", "account_name",
+			"sqlDatabases", "database_name",
+			"containers", "container_name",
+			"storedProcedures", "name",
+		)
 	})
 
 	p.AddResourceConfigurator("azurerm_cosmosdb_gremlin_database", func(r *config.Resource) {
@@ -299,21 +215,10 @@ func Configure(p *config.Provider) {
 		r.ExternalName.GetNameFn = common.GetNameFromFullyQualifiedID
 
 		// /subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg1/providers/Microsoft.DocumentDB/databaseAccounts/account1/gremlinDatabases/db1
-		r.ExternalName.GetIDFn = func(name string, parameters map[string]interface{}, providerConfig map[string]interface{}) string {
-			subID, ok := providerConfig["subscriptionId"].(string)
-			if !ok {
-				return ""
-			}
-			rg, ok := parameters["resource_group_name"].(string)
-			if !ok {
-				return ""
-			}
-			account, ok := parameters["account_name"].(string)
-			if !ok {
-				return ""
-			}
-			return fmt.Sprintf("/subscriptions/%s/resourceGroups/%s/providers/Microsoft.DocumentDB/databaseAccounts/%s/gremlinDatabases/%s", subID, rg, account, name)
-		}
+		r.ExternalName.GetIDFn = common.GetFullyQualifiedIDFn("Microsoft.DocumentDB",
+			"databaseAccounts", "account_name",
+			"gremlinDatabases", "name",
+		)
 	})
 
 	p.AddResourceConfigurator("azurerm_cosmosdb_mongo_database", func(r *config.Resource) {
@@ -332,21 +237,10 @@ func Configure(p *config.Provider) {
 		r.ExternalName.GetNameFn = common.GetNameFromFullyQualifiedID
 
 		// /subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg1/providers/Microsoft.DocumentDB/databaseAccounts/account1/mongodbDatabases/db1
-		r.ExternalName.GetIDFn = func(name string, parameters map[string]interface{}, providerConfig map[string]interface{}) string {
-			subID, ok := providerConfig["subscriptionId"].(string)
-			if !ok {
-				return ""
-			}
-			rg, ok := parameters["resource_group_name"].(string)
-			if !ok {
-				return ""
-			}
-			account, ok := parameters["account_name"].(string)
-			if !ok {
-				return ""
-			}
-			return fmt.Sprintf("/subscriptions/%s/resourceGroups/%s/providers/Microsoft.DocumentDB/databaseAccounts/%s/mongodbDatabases/%s", subID, rg, account, name)
-		}
+		r.ExternalName.GetIDFn = common.GetFullyQualifiedIDFn("Microsoft.DocumentDB",
+			"databaseAccounts", "account_name",
+			"mongodbDatabases", "name",
+		)
 	})
 
 	p.AddResourceConfigurator("azurerm_cosmosdb_sql_database", func(r *config.Resource) {
@@ -365,21 +259,10 @@ func Configure(p *config.Provider) {
 		r.ExternalName.GetNameFn = common.GetNameFromFullyQualifiedID
 
 		// /subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg1/providers/Microsoft.DocumentDB/databaseAccounts/account1/sqlDatabases/db1
-		r.ExternalName.GetIDFn = func(name string, parameters map[string]interface{}, providerConfig map[string]interface{}) string {
-			subID, ok := providerConfig["subscriptionId"].(string)
-			if !ok {
-				return ""
-			}
-			rg, ok := parameters["resource_group_name"].(string)
-			if !ok {
-				return ""
-			}
-			account, ok := parameters["account_name"].(string)
-			if !ok {
-				return ""
-			}
-			return fmt.Sprintf("/subscriptions/%s/resourceGroups/%s/providers/Microsoft.DocumentDB/databaseAccounts/%s/sqlDatabases/%s", subID, rg, account, name)
-		}
+		r.ExternalName.GetIDFn = common.GetFullyQualifiedIDFn("Microsoft.DocumentDB",
+			"databaseAccounts", "account_name",
+			"sqlDatabases", "name",
+		)
 	})
 
 	p.AddResourceConfigurator("azurerm_cosmosdb_table", func(r *config.Resource) {
@@ -396,23 +279,11 @@ func Configure(p *config.Provider) {
 		r.UseAsync = true
 		r.ExternalName = config.NameAsIdentifier
 		r.ExternalName.GetNameFn = common.GetNameFromFullyQualifiedID
-
 		// /subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg1/providers/Microsoft.DocumentDB/databaseAccounts/account1/tables/table1
-		r.ExternalName.GetIDFn = func(name string, parameters map[string]interface{}, providerConfig map[string]interface{}) string {
-			subID, ok := providerConfig["subscriptionId"].(string)
-			if !ok {
-				return ""
-			}
-			rg, ok := parameters["resource_group_name"].(string)
-			if !ok {
-				return ""
-			}
-			account, ok := parameters["account_name"].(string)
-			if !ok {
-				return ""
-			}
-			return fmt.Sprintf("/subscriptions/%s/resourceGroups/%s/providers/Microsoft.DocumentDB/databaseAccounts/%s/tables/%s", subID, rg, account, name)
-		}
+		r.ExternalName.GetIDFn = common.GetFullyQualifiedIDFn("Microsoft.DocumentDB",
+			"databaseAccounts", "account_name",
+			"tables", "name",
+		)
 	})
 
 	p.AddResourceConfigurator("azurerm_cosmosdb_account", func(r *config.Resource) {
@@ -426,7 +297,7 @@ func Configure(p *config.Provider) {
 		r.ExternalName = config.NameAsIdentifier
 		r.ExternalName.GetNameFn = common.GetNameFromFullyQualifiedID
 		// /subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg1/providers/Microsoft.DocumentDB/databaseAccounts/account1
-		r.ExternalName.GetIDFn = common.GetFullyQualifiedIDFn("/Microsoft.DocumentDB/databaseAccounts")
+		r.ExternalName.GetIDFn = common.GetFullyQualifiedIDFn("Microsoft.DocumentDB", "databaseAccounts")
 	})
 
 	p.AddResourceConfigurator("azurerm_cosmosdb_notebook_workspace", func(r *config.Resource) {
@@ -445,21 +316,10 @@ func Configure(p *config.Provider) {
 		r.ExternalName.GetNameFn = common.GetNameFromFullyQualifiedID
 
 		// /subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/group1/providers/Microsoft.DocumentDB/databaseAccounts/account1/notebookWorkspaces/notebookWorkspace1
-		r.ExternalName.GetIDFn = func(name string, parameters map[string]interface{}, providerConfig map[string]interface{}) string {
-			subID, ok := providerConfig["subscriptionId"].(string)
-			if !ok {
-				return ""
-			}
-			rg, ok := parameters["resource_group_name"].(string)
-			if !ok {
-				return ""
-			}
-			account, ok := parameters["account_name"].(string)
-			if !ok {
-				return ""
-			}
-			return fmt.Sprintf("/subscriptions/%s/resourceGroups/%s/providers/Microsoft.DocumentDB/databaseAccounts/%s/notebookWorkspaces/%s", subID, rg, account, name)
-		}
+		r.ExternalName.GetIDFn = common.GetFullyQualifiedIDFn("Microsoft.DocumentDB",
+			"databaseAccounts", "account_name",
+			"notebookWorkspaces", "name",
+		)
 	})
 
 	p.AddResourceConfigurator("azurerm_cosmosdb_sql_trigger", func(r *config.Resource) {
