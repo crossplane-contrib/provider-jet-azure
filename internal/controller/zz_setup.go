@@ -25,7 +25,7 @@ import (
 	tjconfig "github.com/crossplane-contrib/terrajet/pkg/config"
 	"github.com/crossplane-contrib/terrajet/pkg/terraform"
 
-	accountcosmosdb "github.com/crossplane-contrib/provider-tf-azure/internal/controller/cosmosdb/account"
+	account "github.com/crossplane-contrib/provider-tf-azure/internal/controller/cosmosdb/account"
 	cassandrakeyspace "github.com/crossplane-contrib/provider-tf-azure/internal/controller/cosmosdb/cassandrakeyspace"
 	cassandratable "github.com/crossplane-contrib/provider-tf-azure/internal/controller/cosmosdb/cassandratable"
 	gremlindatabase "github.com/crossplane-contrib/provider-tf-azure/internal/controller/cosmosdb/gremlindatabase"
@@ -57,7 +57,7 @@ import (
 	grouptemplatedeployment "github.com/crossplane-contrib/provider-tf-azure/internal/controller/resource/grouptemplatedeployment"
 	resourcegroup "github.com/crossplane-contrib/provider-tf-azure/internal/controller/resource/resourcegroup"
 	server "github.com/crossplane-contrib/provider-tf-azure/internal/controller/sql/server"
-	account "github.com/crossplane-contrib/provider-tf-azure/internal/controller/storage/account"
+	accountstorage "github.com/crossplane-contrib/provider-tf-azure/internal/controller/storage/account"
 	blob "github.com/crossplane-contrib/provider-tf-azure/internal/controller/storage/blob"
 	container "github.com/crossplane-contrib/provider-tf-azure/internal/controller/storage/container"
 	natgatewayassociation "github.com/crossplane-contrib/provider-tf-azure/internal/controller/subnet/natgatewayassociation"
@@ -79,7 +79,7 @@ import (
 func Setup(mgr ctrl.Manager, l logging.Logger, wl workqueue.RateLimiter, ps terraform.SetupFn, ws *terraform.WorkspaceStore, cfg *tjconfig.Provider, concurrency int) error {
 	for _, setup := range []func(ctrl.Manager, logging.Logger, workqueue.RateLimiter, terraform.SetupFn, *terraform.WorkspaceStore, *tjconfig.Provider, int) error{
 		account.Setup,
-		accountcosmosdb.Setup,
+		accountstorage.Setup,
 		activedirectoryadministrator.Setup,
 		blob.Setup,
 		cassandrakeyspace.Setup,

@@ -1,5 +1,5 @@
 apiVersion: sql.azure.tf.crossplane.io/v1alpha1
-kind: SqlServer
+kind: Server
 metadata:
   name: example
 spec:

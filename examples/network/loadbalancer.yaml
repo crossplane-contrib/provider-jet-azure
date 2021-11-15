@@ -1,4 +1,4 @@
-apiVersion: lb.azure.tf.crossplane.io/v1alpha1
+apiVersion: network.azure.tf.crossplane.io/v1alpha1
 kind: LoadBalancer
 metadata:
   name: example

@@ -1,4 +1,4 @@
-apiVersion: subnet.azure.tf.crossplane.io/v1alpha1
+apiVersion: virtual.azure.tf.crossplane.io/v1alpha1
 kind: Subnet
 metadata:
   name: example

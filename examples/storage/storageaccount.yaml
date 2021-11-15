@@ -1,5 +1,5 @@
 apiVersion: storage.azure.tf.crossplane.io/v1alpha1
-kind: StorageAccount
+kind: Account
 metadata:
   name: example
 spec:
