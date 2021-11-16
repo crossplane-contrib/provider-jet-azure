@@ -95,10 +95,10 @@ type ContainerList struct {
 
 // Repository type metadata.
 var (
-	ContainerKind             = "Container"
-	ContainerGroupKind        = schema.GroupKind{Group: Group, Kind: ContainerKind}.String()
-	ContainerKindAPIVersion   = ContainerKind + "." + GroupVersion.String()
-	ContainerGroupVersionKind = GroupVersion.WithKind(ContainerKind)
+	Container_Kind             = "Container"
+	Container_GroupKind        = schema.GroupKind{Group: CRDGroup, Kind: Container_Kind}.String()
+	Container_KindAPIVersion   = Container_Kind + "." + CRDGroupVersion.String()
+	Container_GroupVersionKind = CRDGroupVersion.WithKind(Container_Kind)
 )
 
 func init() {

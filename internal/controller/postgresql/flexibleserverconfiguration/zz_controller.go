@@ -39,11 +39,11 @@ import (
 
 // Setup adds a controller that reconciles FlexibleServerConfiguration managed resources.
 func Setup(mgr ctrl.Manager, l logging.Logger, rl workqueue.RateLimiter, s terraform.SetupFn, ws *terraform.WorkspaceStore, cfg *tjconfig.Provider, concurrency int) error {
-	name := managed.ControllerName(v1alpha1.FlexibleServerConfigurationGroupVersionKind.String())
+	name := managed.ControllerName(v1alpha1.FlexibleServerConfiguration_GroupVersionKind.String())
 	r := managed.NewReconciler(mgr,
-		xpresource.ManagedKind(v1alpha1.FlexibleServerConfigurationGroupVersionKind),
+		xpresource.ManagedKind(v1alpha1.FlexibleServerConfiguration_GroupVersionKind),
 		managed.WithExternalConnecter(tjcontroller.NewConnector(mgr.GetClient(), ws, s, cfg.Resources["azurerm_postgresql_flexible_server_configuration"],
-			tjcontroller.WithCallbackProvider(tjcontroller.NewAPICallbacks(mgr, xpresource.ManagedKind(v1alpha1.FlexibleServerConfigurationGroupVersionKind))),
+			tjcontroller.WithCallbackProvider(tjcontroller.NewAPICallbacks(mgr, xpresource.ManagedKind(v1alpha1.FlexibleServerConfiguration_GroupVersionKind))),
 		)),
 		managed.WithLogger(l.WithValues("controller", name)),
 		managed.WithRecorder(event.NewAPIRecorder(mgr.GetEventRecorderFor(name))),

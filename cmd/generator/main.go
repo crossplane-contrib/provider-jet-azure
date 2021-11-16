@@ -39,7 +39,7 @@ func main() {
 		"providerconfig": {},
 	})
 
-	pipeline.Run(config.GetProvider())
+	pipeline.Run(config.GetProvider(), "")
 }
 
 // delete API subdirs for a clean start

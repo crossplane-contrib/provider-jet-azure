@@ -39,11 +39,11 @@ import (
 
 // Setup adds a controller that reconciles SqlDatabase managed resources.
 func Setup(mgr ctrl.Manager, l logging.Logger, rl workqueue.RateLimiter, s terraform.SetupFn, ws *terraform.WorkspaceStore, cfg *tjconfig.Provider, concurrency int) error {
-	name := managed.ControllerName(v1alpha1.SqlDatabaseGroupVersionKind.String())
+	name := managed.ControllerName(v1alpha1.SqlDatabase_GroupVersionKind.String())
 	r := managed.NewReconciler(mgr,
-		xpresource.ManagedKind(v1alpha1.SqlDatabaseGroupVersionKind),
+		xpresource.ManagedKind(v1alpha1.SqlDatabase_GroupVersionKind),
 		managed.WithExternalConnecter(tjcontroller.NewConnector(mgr.GetClient(), ws, s, cfg.Resources["azurerm_cosmosdb_sql_database"],
-			tjcontroller.WithCallbackProvider(tjcontroller.NewAPICallbacks(mgr, xpresource.ManagedKind(v1alpha1.SqlDatabaseGroupVersionKind))),
+			tjcontroller.WithCallbackProvider(tjcontroller.NewAPICallbacks(mgr, xpresource.ManagedKind(v1alpha1.SqlDatabase_GroupVersionKind))),
 		)),
 		managed.WithLogger(l.WithValues("controller", name)),
 		managed.WithRecorder(event.NewAPIRecorder(mgr.GetEventRecorderFor(name))),

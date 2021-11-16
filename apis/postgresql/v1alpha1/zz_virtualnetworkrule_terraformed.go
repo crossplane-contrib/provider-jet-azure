@@ -30,11 +30,6 @@ func (mg *VirtualNetworkRule) GetTerraformResourceType() string {
 	return "azurerm_postgresql_virtual_network_rule"
 }
 
-// GetTerraformResourceIDField returns Terraform identifier field for this VirtualNetworkRule
-func (tr *VirtualNetworkRule) GetTerraformResourceIDField() string {
-	return "id"
-}
-
 // GetConnectionDetailsMapping for this VirtualNetworkRule
 func (tr *VirtualNetworkRule) GetConnectionDetailsMapping() map[string]string {
 	return nil

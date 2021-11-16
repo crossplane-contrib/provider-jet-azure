@@ -19,9 +19,9 @@ package v1alpha1
 
 import (
 	"context"
+	v1alpha1 "github.com/crossplane-contrib/provider-tf-azure/apis/azure/v1alpha1"
+	v1alpha11 "github.com/crossplane-contrib/provider-tf-azure/apis/network/v1alpha1"
 	rconfig "github.com/crossplane-contrib/provider-tf-azure/apis/rconfig"
-	v1alpha1 "github.com/crossplane-contrib/provider-tf-azure/apis/resource/v1alpha1"
-	v1alpha11 "github.com/crossplane-contrib/provider-tf-azure/apis/virtual/v1alpha1"
 	reference "github.com/crossplane/crossplane-runtime/pkg/reference"
 	errors "github.com/pkg/errors"
 	client "sigs.k8s.io/controller-runtime/pkg/client"

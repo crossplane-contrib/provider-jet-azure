@@ -89,10 +89,10 @@ type FlexibleServerDatabaseList struct {
 
 // Repository type metadata.
 var (
-	FlexibleServerDatabaseKind             = "FlexibleServerDatabase"
-	FlexibleServerDatabaseGroupKind        = schema.GroupKind{Group: Group, Kind: FlexibleServerDatabaseKind}.String()
-	FlexibleServerDatabaseKindAPIVersion   = FlexibleServerDatabaseKind + "." + GroupVersion.String()
-	FlexibleServerDatabaseGroupVersionKind = GroupVersion.WithKind(FlexibleServerDatabaseKind)
+	FlexibleServerDatabase_Kind             = "FlexibleServerDatabase"
+	FlexibleServerDatabase_GroupKind        = schema.GroupKind{Group: CRDGroup, Kind: FlexibleServerDatabase_Kind}.String()
+	FlexibleServerDatabase_KindAPIVersion   = FlexibleServerDatabase_Kind + "." + CRDGroupVersion.String()
+	FlexibleServerDatabase_GroupVersionKind = CRDGroupVersion.WithKind(FlexibleServerDatabase_Kind)
 )
 
 func init() {

@@ -30,11 +30,6 @@ func (mg *CassandraKeyspace) GetTerraformResourceType() string {
 	return "azurerm_cosmosdb_cassandra_keyspace"
 }
 
-// GetTerraformResourceIDField returns Terraform identifier field for this CassandraKeyspace
-func (tr *CassandraKeyspace) GetTerraformResourceIDField() string {
-	return "id"
-}
-
 // GetConnectionDetailsMapping for this CassandraKeyspace
 func (tr *CassandraKeyspace) GetConnectionDetailsMapping() map[string]string {
 	return nil

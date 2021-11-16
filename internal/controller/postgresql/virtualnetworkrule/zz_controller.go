@@ -39,11 +39,11 @@ import (
 
 // Setup adds a controller that reconciles VirtualNetworkRule managed resources.
 func Setup(mgr ctrl.Manager, l logging.Logger, rl workqueue.RateLimiter, s terraform.SetupFn, ws *terraform.WorkspaceStore, cfg *tjconfig.Provider, concurrency int) error {
-	name := managed.ControllerName(v1alpha1.VirtualNetworkRuleGroupVersionKind.String())
+	name := managed.ControllerName(v1alpha1.VirtualNetworkRule_GroupVersionKind.String())
 	r := managed.NewReconciler(mgr,
-		xpresource.ManagedKind(v1alpha1.VirtualNetworkRuleGroupVersionKind),
+		xpresource.ManagedKind(v1alpha1.VirtualNetworkRule_GroupVersionKind),
 		managed.WithExternalConnecter(tjcontroller.NewConnector(mgr.GetClient(), ws, s, cfg.Resources["azurerm_postgresql_virtual_network_rule"],
-			tjcontroller.WithCallbackProvider(tjcontroller.NewAPICallbacks(mgr, xpresource.ManagedKind(v1alpha1.VirtualNetworkRuleGroupVersionKind))),
+			tjcontroller.WithCallbackProvider(tjcontroller.NewAPICallbacks(mgr, xpresource.ManagedKind(v1alpha1.VirtualNetworkRule_GroupVersionKind))),
 		)),
 		managed.WithLogger(l.WithValues("controller", name)),
 		managed.WithRecorder(event.NewAPIRecorder(mgr.GetEventRecorderFor(name))),

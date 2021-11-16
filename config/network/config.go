@@ -26,14 +26,15 @@ import (
 func Configure(p *config.Provider) {
 	p.AddResourceConfigurator("azurerm_network_interface", func(r *config.Resource) {
 		r.Kind = "NetworkInterface"
+		r.ShortGroup = "network"
 	})
 
 	p.AddResourceConfigurator("azurerm_lb", func(r *config.Resource) {
 		r.Kind = "LoadBalancer"
-		r.Group = "network"
+		r.ShortGroup = "network"
 		r.References = config.References{
 			"resource_group_name": config.Reference{
-				Type:      rconfig.APISPackagePath + "/resource/v1alpha1.ResourceGroup",
+				Type:      rconfig.APISPackagePath + "/azure/v1alpha1.ResourceGroup",
 				Extractor: rconfig.APISPackagePath + "/rconfig.ExtractResourceName()",
 			},
 		}

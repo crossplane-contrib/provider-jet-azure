@@ -1,5 +1,5 @@
-apiVersion: kubernetes.azure.tf.crossplane.io/v1alpha1
-kind: Cluster
+apiVersion: containerservice.azure.tf.crossplane.io/v1alpha1
+kind: KubernetesCluster
 metadata:
   name: example
 spec:

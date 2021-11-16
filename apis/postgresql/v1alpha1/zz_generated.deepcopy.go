@@ -1243,7 +1243,11 @@ func (in *FlexibleServerParameters) DeepCopyInto(out *FlexibleServerParameters) 
 		*out = new(string)
 		**out = **in
 	}
-	out.AdministratorPasswordSecretRef = in.AdministratorPasswordSecretRef
+	if in.AdministratorPasswordSecretRef != nil {
+		in, out := &in.AdministratorPasswordSecretRef, &out.AdministratorPasswordSecretRef
+		*out = new(v1.SecretKeySelector)
+		**out = **in
+	}
 	if in.BackupRetentionDays != nil {
 		in, out := &in.BackupRetentionDays, &out.BackupRetentionDays
 		*out = new(int64)
@@ -1621,7 +1625,11 @@ func (in *ServerParameters) DeepCopyInto(out *ServerParameters) {
 		*out = new(string)
 		**out = **in
 	}
-	out.AdministratorLoginPasswordSecretRef = in.AdministratorLoginPasswordSecretRef
+	if in.AdministratorLoginPasswordSecretRef != nil {
+		in, out := &in.AdministratorLoginPasswordSecretRef, &out.AdministratorLoginPasswordSecretRef
+		*out = new(v1.SecretKeySelector)
+		**out = **in
+	}
 	if in.AutoGrowEnabled != nil {
 		in, out := &in.AutoGrowEnabled, &out.AutoGrowEnabled
 		*out = new(bool)
@@ -1904,7 +1912,11 @@ func (in *ThreatDetectionPolicyParameters) DeepCopyInto(out *ThreatDetectionPoli
 		*out = new(int64)
 		**out = **in
 	}
-	out.StorageAccountAccessKeySecretRef = in.StorageAccountAccessKeySecretRef
+	if in.StorageAccountAccessKeySecretRef != nil {
+		in, out := &in.StorageAccountAccessKeySecretRef, &out.StorageAccountAccessKeySecretRef
+		*out = new(v1.SecretKeySelector)
+		**out = **in
+	}
 	if in.StorageEndpoint != nil {
 		in, out := &in.StorageEndpoint, &out.StorageEndpoint
 		*out = new(string)

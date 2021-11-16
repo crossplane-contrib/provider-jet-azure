@@ -58,7 +58,11 @@ func (in *ExtendedAuditingPolicyParameters) DeepCopyInto(out *ExtendedAuditingPo
 		*out = new(bool)
 		**out = **in
 	}
-	out.StorageAccountAccessKeySecretRef = in.StorageAccountAccessKeySecretRef
+	if in.StorageAccountAccessKeySecretRef != nil {
+		in, out := &in.StorageAccountAccessKeySecretRef, &out.StorageAccountAccessKeySecretRef
+		*out = new(v1.SecretKeySelector)
+		**out = **in
+	}
 	if in.StorageEndpoint != nil {
 		in, out := &in.StorageEndpoint, &out.StorageEndpoint
 		*out = new(string)
@@ -381,7 +385,11 @@ func (in *ThreatDetectionPolicyParameters) DeepCopyInto(out *ThreatDetectionPoli
 		*out = new(string)
 		**out = **in
 	}
-	out.StorageAccountAccessKeySecretRef = in.StorageAccountAccessKeySecretRef
+	if in.StorageAccountAccessKeySecretRef != nil {
+		in, out := &in.StorageAccountAccessKeySecretRef, &out.StorageAccountAccessKeySecretRef
+		*out = new(v1.SecretKeySelector)
+		**out = **in
+	}
 	if in.StorageEndpoint != nil {
 		in, out := &in.StorageEndpoint, &out.StorageEndpoint
 		*out = new(string)

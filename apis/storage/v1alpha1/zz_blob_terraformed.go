@@ -30,11 +30,6 @@ func (mg *Blob) GetTerraformResourceType() string {
 	return "azurerm_storage_blob"
 }
 
-// GetTerraformResourceIDField returns Terraform identifier field for this Blob
-func (tr *Blob) GetTerraformResourceIDField() string {
-	return "id"
-}
-
 // GetConnectionDetailsMapping for this Blob
 func (tr *Blob) GetConnectionDetailsMapping() map[string]string {
 	return nil

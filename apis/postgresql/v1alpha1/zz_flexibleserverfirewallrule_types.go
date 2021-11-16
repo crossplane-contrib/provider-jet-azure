@@ -89,10 +89,10 @@ type FlexibleServerFirewallRuleList struct {
 
 // Repository type metadata.
 var (
-	FlexibleServerFirewallRuleKind             = "FlexibleServerFirewallRule"
-	FlexibleServerFirewallRuleGroupKind        = schema.GroupKind{Group: Group, Kind: FlexibleServerFirewallRuleKind}.String()
-	FlexibleServerFirewallRuleKindAPIVersion   = FlexibleServerFirewallRuleKind + "." + GroupVersion.String()
-	FlexibleServerFirewallRuleGroupVersionKind = GroupVersion.WithKind(FlexibleServerFirewallRuleKind)
+	FlexibleServerFirewallRule_Kind             = "FlexibleServerFirewallRule"
+	FlexibleServerFirewallRule_GroupKind        = schema.GroupKind{Group: CRDGroup, Kind: FlexibleServerFirewallRule_Kind}.String()
+	FlexibleServerFirewallRule_KindAPIVersion   = FlexibleServerFirewallRule_Kind + "." + CRDGroupVersion.String()
+	FlexibleServerFirewallRule_GroupVersionKind = CRDGroupVersion.WithKind(FlexibleServerFirewallRule_Kind)
 )
 
 func init() {

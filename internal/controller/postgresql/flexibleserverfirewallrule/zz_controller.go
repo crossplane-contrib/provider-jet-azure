@@ -39,11 +39,11 @@ import (
 
 // Setup adds a controller that reconciles FlexibleServerFirewallRule managed resources.
 func Setup(mgr ctrl.Manager, l logging.Logger, rl workqueue.RateLimiter, s terraform.SetupFn, ws *terraform.WorkspaceStore, cfg *tjconfig.Provider, concurrency int) error {
-	name := managed.ControllerName(v1alpha1.FlexibleServerFirewallRuleGroupVersionKind.String())
+	name := managed.ControllerName(v1alpha1.FlexibleServerFirewallRule_GroupVersionKind.String())
 	r := managed.NewReconciler(mgr,
-		xpresource.ManagedKind(v1alpha1.FlexibleServerFirewallRuleGroupVersionKind),
+		xpresource.ManagedKind(v1alpha1.FlexibleServerFirewallRule_GroupVersionKind),
 		managed.WithExternalConnecter(tjcontroller.NewConnector(mgr.GetClient(), ws, s, cfg.Resources["azurerm_postgresql_flexible_server_firewall_rule"],
-			tjcontroller.WithCallbackProvider(tjcontroller.NewAPICallbacks(mgr, xpresource.ManagedKind(v1alpha1.FlexibleServerFirewallRuleGroupVersionKind))),
+			tjcontroller.WithCallbackProvider(tjcontroller.NewAPICallbacks(mgr, xpresource.ManagedKind(v1alpha1.FlexibleServerFirewallRule_GroupVersionKind))),
 		)),
 		managed.WithLogger(l.WithValues("controller", name)),
 		managed.WithRecorder(event.NewAPIRecorder(mgr.GetEventRecorderFor(name))),

@@ -56,7 +56,7 @@ type SqlDatabaseParameters struct {
 	// +kubebuilder:validation:Required
 	Name *string `json:"name" tf:"name,omitempty"`
 
-	// +crossplane:generate:reference:type=github.com/crossplane-contrib/provider-tf-azure/apis/resource/v1alpha1.ResourceGroup
+	// +crossplane:generate:reference:type=github.com/crossplane-contrib/provider-tf-azure/apis/azure/v1alpha1.ResourceGroup
 	// +crossplane:generate:reference:extractor=github.com/crossplane-contrib/provider-tf-azure/apis/rconfig.ExtractResourceName()
 	// +kubebuilder:validation:Optional
 	ResourceGroupName *string `json:"resourceGroupName,omitempty" tf:"resource_group_name,omitempty"`
@@ -110,10 +110,10 @@ type SqlDatabaseList struct {
 
 // Repository type metadata.
 var (
-	SqlDatabaseKind             = "SqlDatabase"
-	SqlDatabaseGroupKind        = schema.GroupKind{Group: Group, Kind: SqlDatabaseKind}.String()
-	SqlDatabaseKindAPIVersion   = SqlDatabaseKind + "." + GroupVersion.String()
-	SqlDatabaseGroupVersionKind = GroupVersion.WithKind(SqlDatabaseKind)
+	SqlDatabase_Kind             = "SqlDatabase"
+	SqlDatabase_GroupKind        = schema.GroupKind{Group: CRDGroup, Kind: SqlDatabase_Kind}.String()
+	SqlDatabase_KindAPIVersion   = SqlDatabase_Kind + "." + CRDGroupVersion.String()
+	SqlDatabase_GroupVersionKind = CRDGroupVersion.WithKind(SqlDatabase_Kind)
 )
 
 func init() {

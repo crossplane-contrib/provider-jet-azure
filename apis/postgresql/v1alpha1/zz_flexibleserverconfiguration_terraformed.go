@@ -30,11 +30,6 @@ func (mg *FlexibleServerConfiguration) GetTerraformResourceType() string {
 	return "azurerm_postgresql_flexible_server_configuration"
 }
 
-// GetTerraformResourceIDField returns Terraform identifier field for this FlexibleServerConfiguration
-func (tr *FlexibleServerConfiguration) GetTerraformResourceIDField() string {
-	return "id"
-}
-
 // GetConnectionDetailsMapping for this FlexibleServerConfiguration
 func (tr *FlexibleServerConfiguration) GetConnectionDetailsMapping() map[string]string {
 	return nil

@@ -39,7 +39,7 @@ type FlexibleServerParameters struct {
 	AdministratorLogin *string `json:"administratorLogin,omitempty" tf:"administrator_login,omitempty"`
 
 	// +kubebuilder:validation:Optional
-	AdministratorPasswordSecretRef v1.SecretKeySelector `json:"administratorPasswordSecretRef,omitempty" tf:"-"`
+	AdministratorPasswordSecretRef *v1.SecretKeySelector `json:"administratorPasswordSecretRef,omitempty" tf:"-"`
 
 	// +kubebuilder:validation:Optional
 	BackupRetentionDays *int64 `json:"backupRetentionDays,omitempty" tf:"backup_retention_days,omitempty"`
@@ -47,7 +47,7 @@ type FlexibleServerParameters struct {
 	// +kubebuilder:validation:Optional
 	CreateMode *string `json:"createMode,omitempty" tf:"create_mode,omitempty"`
 
-	// +crossplane:generate:reference:type=github.com/crossplane-contrib/provider-tf-azure/apis/virtual/v1alpha1.Subnet
+	// +crossplane:generate:reference:type=github.com/crossplane-contrib/provider-tf-azure/apis/network/v1alpha1.Subnet
 	// +kubebuilder:validation:Optional
 	DelegatedSubnetID *string `json:"delegatedSubnetId,omitempty" tf:"delegated_subnet_id,omitempty"`
 
@@ -75,7 +75,7 @@ type FlexibleServerParameters struct {
 	// +kubebuilder:validation:Optional
 	PrivateDNSZoneID *string `json:"privateDnsZoneId,omitempty" tf:"private_dns_zone_id,omitempty"`
 
-	// +crossplane:generate:reference:type=github.com/crossplane-contrib/provider-tf-azure/apis/resource/v1alpha1.ResourceGroup
+	// +crossplane:generate:reference:type=github.com/crossplane-contrib/provider-tf-azure/apis/azure/v1alpha1.ResourceGroup
 	// +crossplane:generate:reference:extractor=github.com/crossplane-contrib/provider-tf-azure/apis/rconfig.ExtractResourceName()
 	// +kubebuilder:validation:Optional
 	ResourceGroupName *string `json:"resourceGroupName,omitempty" tf:"resource_group_name,omitempty"`
@@ -171,10 +171,10 @@ type FlexibleServerList struct {
 
 // Repository type metadata.
 var (
-	FlexibleServerKind             = "FlexibleServer"
-	FlexibleServerGroupKind        = schema.GroupKind{Group: Group, Kind: FlexibleServerKind}.String()
-	FlexibleServerKindAPIVersion   = FlexibleServerKind + "." + GroupVersion.String()
-	FlexibleServerGroupVersionKind = GroupVersion.WithKind(FlexibleServerKind)
+	FlexibleServer_Kind             = "FlexibleServer"
+	FlexibleServer_GroupKind        = schema.GroupKind{Group: CRDGroup, Kind: FlexibleServer_Kind}.String()
+	FlexibleServer_KindAPIVersion   = FlexibleServer_Kind + "." + CRDGroupVersion.String()
+	FlexibleServer_GroupVersionKind = CRDGroupVersion.WithKind(FlexibleServer_Kind)
 )
 
 func init() {

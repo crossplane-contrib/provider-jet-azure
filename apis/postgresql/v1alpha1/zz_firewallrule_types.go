@@ -36,7 +36,7 @@ type FirewallRuleParameters struct {
 	// +kubebuilder:validation:Required
 	Name *string `json:"name" tf:"name,omitempty"`
 
-	// +crossplane:generate:reference:type=github.com/crossplane-contrib/provider-tf-azure/apis/resource/v1alpha1.ResourceGroup
+	// +crossplane:generate:reference:type=github.com/crossplane-contrib/provider-tf-azure/apis/azure/v1alpha1.ResourceGroup
 	// +crossplane:generate:reference:extractor=github.com/crossplane-contrib/provider-tf-azure/apis/rconfig.ExtractResourceName()
 	// +kubebuilder:validation:Optional
 	ResourceGroupName *string `json:"resourceGroupName,omitempty" tf:"resource_group_name,omitempty"`
@@ -101,10 +101,10 @@ type FirewallRuleList struct {
 
 // Repository type metadata.
 var (
-	FirewallRuleKind             = "FirewallRule"
-	FirewallRuleGroupKind        = schema.GroupKind{Group: Group, Kind: FirewallRuleKind}.String()
-	FirewallRuleKindAPIVersion   = FirewallRuleKind + "." + GroupVersion.String()
-	FirewallRuleGroupVersionKind = GroupVersion.WithKind(FirewallRuleKind)
+	FirewallRule_Kind             = "FirewallRule"
+	FirewallRule_GroupKind        = schema.GroupKind{Group: CRDGroup, Kind: FirewallRule_Kind}.String()
+	FirewallRule_KindAPIVersion   = FirewallRule_Kind + "." + CRDGroupVersion.String()
+	FirewallRule_GroupVersionKind = CRDGroupVersion.WithKind(FirewallRule_Kind)
 )
 
 func init() {

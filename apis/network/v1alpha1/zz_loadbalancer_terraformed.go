@@ -30,11 +30,6 @@ func (mg *LoadBalancer) GetTerraformResourceType() string {
 	return "azurerm_lb"
 }
 
-// GetTerraformResourceIDField returns Terraform identifier field for this LoadBalancer
-func (tr *LoadBalancer) GetTerraformResourceIDField() string {
-	return "id"
-}
-
 // GetConnectionDetailsMapping for this LoadBalancer
 func (tr *LoadBalancer) GetConnectionDetailsMapping() map[string]string {
 	return nil

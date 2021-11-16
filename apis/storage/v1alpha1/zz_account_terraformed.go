@@ -30,11 +30,6 @@ func (mg *Account) GetTerraformResourceType() string {
 	return "azurerm_storage_account"
 }
 
-// GetTerraformResourceIDField returns Terraform identifier field for this Account
-func (tr *Account) GetTerraformResourceIDField() string {
-	return "id"
-}
-
 // GetConnectionDetailsMapping for this Account
 func (tr *Account) GetConnectionDetailsMapping() map[string]string {
 	return map[string]string{"primary_access_key": "status.atProvider.primaryAccessKey", "primary_blob_connection_string": "status.atProvider.primaryBlobConnectionString", "primary_connection_string": "status.atProvider.primaryConnectionString", "secondary_access_key": "status.atProvider.secondaryAccessKey", "secondary_blob_connection_string": "status.atProvider.secondaryBlobConnectionString", "secondary_connection_string": "status.atProvider.secondaryConnectionString"}

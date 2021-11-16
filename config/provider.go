@@ -80,6 +80,12 @@ var skipList = []string{
 	"azurerm_virtual_machine_extension",
 	"azurerm_virtual_machine_data_disk_attachment",
 	"azurerm_virtual_machine_scale_set_extension",
+	// irrelevant
+	"azurerm_virtual_desktop_application",
+	"azurerm_virtual_desktop_host_pool",
+	"azurerm_virtual_desktop_workspace",
+	// other terrajet issues
+	// ...
 	// doc not found in Terraform Azurerm provider
 	"azurerm_virtual_network_dns_servers",
 	// unsupported sensitive field type
@@ -107,11 +113,12 @@ func GetProvider() *tjconfig.Provider {
 		tf.Provider().ResourcesMap, resourcePrefix, modulePath,
 		tjconfig.WithIncludeList(includedResources),
 		tjconfig.WithSkipList(skipList),
-		tjconfig.WithDefaultResourceFn(func(name string, terraformResource *schema.Resource) *tjconfig.Resource {
-			r := tjconfig.DefaultResource(name, terraformResource)
-			r.ExternalName = tjconfig.IdentifierFromProvider
-			return r
-		}),
+		tjconfig.WithDefaultResourceFn(
+			func(name string, terraformResource *schema.Resource, opts ...tjconfig.ResourceOption) *tjconfig.Resource {
+				r := tjconfig.DefaultResource(name, terraformResource)
+				r.ExternalName = tjconfig.IdentifierFromProvider
+				return r
+			}),
 	)
 
 	for name := range pc.Resources {

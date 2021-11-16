@@ -56,7 +56,7 @@ type GremlinDatabaseParameters struct {
 	// +kubebuilder:validation:Required
 	Name *string `json:"name" tf:"name,omitempty"`
 
-	// +crossplane:generate:reference:type=github.com/crossplane-contrib/provider-tf-azure/apis/resource/v1alpha1.ResourceGroup
+	// +crossplane:generate:reference:type=github.com/crossplane-contrib/provider-tf-azure/apis/azure/v1alpha1.ResourceGroup
 	// +crossplane:generate:reference:extractor=github.com/crossplane-contrib/provider-tf-azure/apis/rconfig.ExtractResourceName()
 	// +kubebuilder:validation:Optional
 	ResourceGroupName *string `json:"resourceGroupName,omitempty" tf:"resource_group_name,omitempty"`
@@ -110,10 +110,10 @@ type GremlinDatabaseList struct {
 
 // Repository type metadata.
 var (
-	GremlinDatabaseKind             = "GremlinDatabase"
-	GremlinDatabaseGroupKind        = schema.GroupKind{Group: Group, Kind: GremlinDatabaseKind}.String()
-	GremlinDatabaseKindAPIVersion   = GremlinDatabaseKind + "." + GroupVersion.String()
-	GremlinDatabaseGroupVersionKind = GroupVersion.WithKind(GremlinDatabaseKind)
+	GremlinDatabase_Kind             = "GremlinDatabase"
+	GremlinDatabase_GroupKind        = schema.GroupKind{Group: CRDGroup, Kind: GremlinDatabase_Kind}.String()
+	GremlinDatabase_KindAPIVersion   = GremlinDatabase_Kind + "." + CRDGroupVersion.String()
+	GremlinDatabase_GroupVersionKind = CRDGroupVersion.WithKind(GremlinDatabase_Kind)
 )
 
 func init() {

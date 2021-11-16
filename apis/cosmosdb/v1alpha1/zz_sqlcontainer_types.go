@@ -170,7 +170,7 @@ type SqlContainerParameters struct {
 	// +kubebuilder:validation:Optional
 	PartitionKeyVersion *int64 `json:"partitionKeyVersion,omitempty" tf:"partition_key_version,omitempty"`
 
-	// +crossplane:generate:reference:type=github.com/crossplane-contrib/provider-tf-azure/apis/resource/v1alpha1.ResourceGroup
+	// +crossplane:generate:reference:type=github.com/crossplane-contrib/provider-tf-azure/apis/azure/v1alpha1.ResourceGroup
 	// +crossplane:generate:reference:extractor=github.com/crossplane-contrib/provider-tf-azure/apis/rconfig.ExtractResourceName()
 	// +kubebuilder:validation:Optional
 	ResourceGroupName *string `json:"resourceGroupName,omitempty" tf:"resource_group_name,omitempty"`
@@ -236,10 +236,10 @@ type SqlContainerList struct {
 
 // Repository type metadata.
 var (
-	SqlContainerKind             = "SqlContainer"
-	SqlContainerGroupKind        = schema.GroupKind{Group: Group, Kind: SqlContainerKind}.String()
-	SqlContainerKindAPIVersion   = SqlContainerKind + "." + GroupVersion.String()
-	SqlContainerGroupVersionKind = GroupVersion.WithKind(SqlContainerKind)
+	SqlContainer_Kind             = "SqlContainer"
+	SqlContainer_GroupKind        = schema.GroupKind{Group: CRDGroup, Kind: SqlContainer_Kind}.String()
+	SqlContainer_KindAPIVersion   = SqlContainer_Kind + "." + CRDGroupVersion.String()
+	SqlContainer_GroupVersionKind = CRDGroupVersion.WithKind(SqlContainer_Kind)
 )
 
 func init() {

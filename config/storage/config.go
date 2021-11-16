@@ -27,7 +27,7 @@ func Configure(p *config.Provider) {
 	p.AddResourceConfigurator("azurerm_storage_account", func(r *config.Resource) {
 		r.References = config.References{
 			"resource_group_name": config.Reference{
-				Type:      rconfig.APISPackagePath + "/resource/v1alpha1.ResourceGroup",
+				Type:      rconfig.APISPackagePath + "/azure/v1alpha1.ResourceGroup",
 				Extractor: rconfig.APISPackagePath + "/rconfig.ExtractResourceName()",
 			},
 		}
@@ -37,7 +37,7 @@ func Configure(p *config.Provider) {
 	p.AddResourceConfigurator("azurerm_storage_blob", func(r *config.Resource) {
 		r.References = config.References{
 			"resource_group_name": config.Reference{
-				Type:      rconfig.APISPackagePath + "/resource/v1alpha1.ResourceGroup",
+				Type:      rconfig.APISPackagePath + "/azure/v1alpha1.ResourceGroup",
 				Extractor: rconfig.APISPackagePath + "/rconfig.ExtractResourceName()",
 			},
 			"storage_account_name": config.Reference{

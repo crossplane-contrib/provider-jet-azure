@@ -30,11 +30,6 @@ func (mg *Configuration) GetTerraformResourceType() string {
 	return "azurerm_postgresql_configuration"
 }
 
-// GetTerraformResourceIDField returns Terraform identifier field for this Configuration
-func (tr *Configuration) GetTerraformResourceIDField() string {
-	return "id"
-}
-
 // GetConnectionDetailsMapping for this Configuration
 func (tr *Configuration) GetConnectionDetailsMapping() map[string]string {
 	return nil

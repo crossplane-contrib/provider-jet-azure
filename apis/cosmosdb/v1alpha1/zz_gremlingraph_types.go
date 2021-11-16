@@ -106,7 +106,7 @@ type GremlinGraphParameters struct {
 	// +kubebuilder:validation:Optional
 	PartitionKeyVersion *int64 `json:"partitionKeyVersion,omitempty" tf:"partition_key_version,omitempty"`
 
-	// +crossplane:generate:reference:type=github.com/crossplane-contrib/provider-tf-azure/apis/resource/v1alpha1.ResourceGroup
+	// +crossplane:generate:reference:type=github.com/crossplane-contrib/provider-tf-azure/apis/azure/v1alpha1.ResourceGroup
 	// +crossplane:generate:reference:extractor=github.com/crossplane-contrib/provider-tf-azure/apis/rconfig.ExtractResourceName()
 	// +kubebuilder:validation:Optional
 	ResourceGroupName *string `json:"resourceGroupName,omitempty" tf:"resource_group_name,omitempty"`
@@ -218,10 +218,10 @@ type GremlinGraphList struct {
 
 // Repository type metadata.
 var (
-	GremlinGraphKind             = "GremlinGraph"
-	GremlinGraphGroupKind        = schema.GroupKind{Group: Group, Kind: GremlinGraphKind}.String()
-	GremlinGraphKindAPIVersion   = GremlinGraphKind + "." + GroupVersion.String()
-	GremlinGraphGroupVersionKind = GroupVersion.WithKind(GremlinGraphKind)
+	GremlinGraph_Kind             = "GremlinGraph"
+	GremlinGraph_GroupKind        = schema.GroupKind{Group: CRDGroup, Kind: GremlinGraph_Kind}.String()
+	GremlinGraph_KindAPIVersion   = GremlinGraph_Kind + "." + CRDGroupVersion.String()
+	GremlinGraph_GroupVersionKind = CRDGroupVersion.WithKind(GremlinGraph_Kind)
 )
 
 func init() {

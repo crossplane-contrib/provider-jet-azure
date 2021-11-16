@@ -155,10 +155,10 @@ type CassandraTableList struct {
 
 // Repository type metadata.
 var (
-	CassandraTableKind             = "CassandraTable"
-	CassandraTableGroupKind        = schema.GroupKind{Group: Group, Kind: CassandraTableKind}.String()
-	CassandraTableKindAPIVersion   = CassandraTableKind + "." + GroupVersion.String()
-	CassandraTableGroupVersionKind = GroupVersion.WithKind(CassandraTableKind)
+	CassandraTable_Kind             = "CassandraTable"
+	CassandraTable_GroupKind        = schema.GroupKind{Group: CRDGroup, Kind: CassandraTable_Kind}.String()
+	CassandraTable_KindAPIVersion   = CassandraTable_Kind + "." + CRDGroupVersion.String()
+	CassandraTable_GroupVersionKind = CRDGroupVersion.WithKind(CassandraTable_Kind)
 )
 
 func init() {

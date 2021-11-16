@@ -25,37 +25,41 @@ import (
 // Configure configures kubernetes group
 func Configure(p *config.Provider) {
 	p.AddResourceConfigurator("azurerm_kubernetes_cluster", func(r *config.Resource) {
+		r.Kind = "KubernetesCluster"
+		r.ShortGroup = "containerservice"
 		r.LateInitializer = config.LateInitializer{
 			IgnoredFields: []string{"kubelet_identity"},
 		}
 		r.References = config.References{
 			"resource_group_name": config.Reference{
-				Type:      rconfig.APISPackagePath + "/resource/v1alpha1.ResourceGroup",
+				Type:      rconfig.APISPackagePath + "/azure/v1alpha1.ResourceGroup",
 				Extractor: rconfig.APISPackagePath + "/rconfig.ExtractResourceName()",
 			},
 			"default_node_pool[*].pod_subnet_id": config.Reference{
-				Type: rconfig.APISPackagePath + "/virtual/v1alpha1.Subnet",
+				Type: rconfig.APISPackagePath + "/network/v1alpha1.Subnet",
 			},
 			"default_node_pool[*].vnet_subnet_id": config.Reference{
-				Type: rconfig.APISPackagePath + "/virtual/v1alpha1.Subnet",
+				Type: rconfig.APISPackagePath + "/network/v1alpha1.Subnet",
 			},
 			"addon_profile[*].ingress_application_gateway[*].subnet_id": config.Reference{
-				Type: rconfig.APISPackagePath + "/virtual/v1alpha1.Subnet",
+				Type: rconfig.APISPackagePath + "/network/v1alpha1.Subnet",
 			},
 		}
 		r.UseAsync = true
 	})
 
 	p.AddResourceConfigurator("azurerm_kubernetes_cluster_node_pool", func(r *config.Resource) {
+		r.Kind = "KubernetesClusterNodePool"
+		r.ShortGroup = "containerservice"
 		r.References = config.References{
 			"kubernetes_cluster_id": config.Reference{
-				Type: "Cluster",
+				Type: "KubernetesCluster",
 			},
 			"pod_subnet_id": config.Reference{
-				Type: rconfig.APISPackagePath + "/virtual/v1alpha1.Subnet",
+				Type: rconfig.APISPackagePath + "/network/v1alpha1.Subnet",
 			},
 			"vnet_subnet_id": config.Reference{
-				Type: rconfig.APISPackagePath + "/virtual/v1alpha1.Subnet",
+				Type: rconfig.APISPackagePath + "/network/v1alpha1.Subnet",
 			},
 		}
 		r.UseAsync = true

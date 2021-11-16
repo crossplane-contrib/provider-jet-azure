@@ -30,11 +30,6 @@ func (mg *SqlTrigger) GetTerraformResourceType() string {
 	return "azurerm_cosmosdb_sql_trigger"
 }
 
-// GetTerraformResourceIDField returns Terraform identifier field for this SqlTrigger
-func (tr *SqlTrigger) GetTerraformResourceIDField() string {
-	return "id"
-}
-
 // GetConnectionDetailsMapping for this SqlTrigger
 func (tr *SqlTrigger) GetConnectionDetailsMapping() map[string]string {
 	return nil

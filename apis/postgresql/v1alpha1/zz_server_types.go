@@ -47,7 +47,7 @@ type ServerParameters struct {
 	AdministratorLogin *string `json:"administratorLogin,omitempty" tf:"administrator_login,omitempty"`
 
 	// +kubebuilder:validation:Optional
-	AdministratorLoginPasswordSecretRef v1.SecretKeySelector `json:"administratorLoginPasswordSecretRef,omitempty" tf:"-"`
+	AdministratorLoginPasswordSecretRef *v1.SecretKeySelector `json:"administratorLoginPasswordSecretRef,omitempty" tf:"-"`
 
 	// +kubebuilder:validation:Optional
 	AutoGrowEnabled *bool `json:"autoGrowEnabled,omitempty" tf:"auto_grow_enabled,omitempty"`
@@ -79,7 +79,7 @@ type ServerParameters struct {
 	// +kubebuilder:validation:Optional
 	PublicNetworkAccessEnabled *bool `json:"publicNetworkAccessEnabled,omitempty" tf:"public_network_access_enabled,omitempty"`
 
-	// +crossplane:generate:reference:type=github.com/crossplane-contrib/provider-tf-azure/apis/resource/v1alpha1.ResourceGroup
+	// +crossplane:generate:reference:type=github.com/crossplane-contrib/provider-tf-azure/apis/azure/v1alpha1.ResourceGroup
 	// +crossplane:generate:reference:extractor=github.com/crossplane-contrib/provider-tf-azure/apis/rconfig.ExtractResourceName()
 	// +kubebuilder:validation:Optional
 	ResourceGroupName *string `json:"resourceGroupName,omitempty" tf:"resource_group_name,omitempty"`
@@ -160,7 +160,7 @@ type ThreatDetectionPolicyParameters struct {
 	RetentionDays *int64 `json:"retentionDays,omitempty" tf:"retention_days,omitempty"`
 
 	// +kubebuilder:validation:Optional
-	StorageAccountAccessKeySecretRef v1.SecretKeySelector `json:"storageAccountAccessKeySecretRef,omitempty" tf:"-"`
+	StorageAccountAccessKeySecretRef *v1.SecretKeySelector `json:"storageAccountAccessKeySecretRef,omitempty" tf:"-"`
 
 	// +kubebuilder:validation:Optional
 	StorageEndpoint *string `json:"storageEndpoint,omitempty" tf:"storage_endpoint,omitempty"`
@@ -205,10 +205,10 @@ type ServerList struct {
 
 // Repository type metadata.
 var (
-	ServerKind             = "Server"
-	ServerGroupKind        = schema.GroupKind{Group: Group, Kind: ServerKind}.String()
-	ServerKindAPIVersion   = ServerKind + "." + GroupVersion.String()
-	ServerGroupVersionKind = GroupVersion.WithKind(ServerKind)
+	Server_Kind             = "Server"
+	Server_GroupKind        = schema.GroupKind{Group: CRDGroup, Kind: Server_Kind}.String()
+	Server_KindAPIVersion   = Server_Kind + "." + CRDGroupVersion.String()
+	Server_GroupVersionKind = CRDGroupVersion.WithKind(Server_Kind)
 )
 
 func init() {

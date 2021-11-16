@@ -30,11 +30,6 @@ func (mg *GremlinGraph) GetTerraformResourceType() string {
 	return "azurerm_cosmosdb_gremlin_graph"
 }
 
-// GetTerraformResourceIDField returns Terraform identifier field for this GremlinGraph
-func (tr *GremlinGraph) GetTerraformResourceIDField() string {
-	return "id"
-}
-
 // GetConnectionDetailsMapping for this GremlinGraph
 func (tr *GremlinGraph) GetConnectionDetailsMapping() map[string]string {
 	return nil

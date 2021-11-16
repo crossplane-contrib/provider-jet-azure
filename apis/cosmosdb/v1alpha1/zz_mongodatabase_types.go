@@ -56,7 +56,7 @@ type MongoDatabaseParameters struct {
 	// +kubebuilder:validation:Required
 	Name *string `json:"name" tf:"name,omitempty"`
 
-	// +crossplane:generate:reference:type=github.com/crossplane-contrib/provider-tf-azure/apis/resource/v1alpha1.ResourceGroup
+	// +crossplane:generate:reference:type=github.com/crossplane-contrib/provider-tf-azure/apis/azure/v1alpha1.ResourceGroup
 	// +crossplane:generate:reference:extractor=github.com/crossplane-contrib/provider-tf-azure/apis/rconfig.ExtractResourceName()
 	// +kubebuilder:validation:Optional
 	ResourceGroupName *string `json:"resourceGroupName,omitempty" tf:"resource_group_name,omitempty"`
@@ -110,10 +110,10 @@ type MongoDatabaseList struct {
 
 // Repository type metadata.
 var (
-	MongoDatabaseKind             = "MongoDatabase"
-	MongoDatabaseGroupKind        = schema.GroupKind{Group: Group, Kind: MongoDatabaseKind}.String()
-	MongoDatabaseKindAPIVersion   = MongoDatabaseKind + "." + GroupVersion.String()
-	MongoDatabaseGroupVersionKind = GroupVersion.WithKind(MongoDatabaseKind)
+	MongoDatabase_Kind             = "MongoDatabase"
+	MongoDatabase_GroupKind        = schema.GroupKind{Group: CRDGroup, Kind: MongoDatabase_Kind}.String()
+	MongoDatabase_KindAPIVersion   = MongoDatabase_Kind + "." + CRDGroupVersion.String()
+	MongoDatabase_GroupVersionKind = CRDGroupVersion.WithKind(MongoDatabase_Kind)
 )
 
 func init() {

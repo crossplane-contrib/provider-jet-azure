@@ -30,11 +30,6 @@ func (mg *Container) GetTerraformResourceType() string {
 	return "azurerm_storage_container"
 }
 
-// GetTerraformResourceIDField returns Terraform identifier field for this Container
-func (tr *Container) GetTerraformResourceIDField() string {
-	return "id"
-}
-
 // GetConnectionDetailsMapping for this Container
 func (tr *Container) GetConnectionDetailsMapping() map[string]string {
 	return nil

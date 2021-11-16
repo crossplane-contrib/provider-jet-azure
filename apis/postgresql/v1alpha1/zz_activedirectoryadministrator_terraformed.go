@@ -30,11 +30,6 @@ func (mg *ActiveDirectoryAdministrator) GetTerraformResourceType() string {
 	return "azurerm_postgresql_active_directory_administrator"
 }
 
-// GetTerraformResourceIDField returns Terraform identifier field for this ActiveDirectoryAdministrator
-func (tr *ActiveDirectoryAdministrator) GetTerraformResourceIDField() string {
-	return "id"
-}
-
 // GetConnectionDetailsMapping for this ActiveDirectoryAdministrator
 func (tr *ActiveDirectoryAdministrator) GetConnectionDetailsMapping() map[string]string {
 	return nil

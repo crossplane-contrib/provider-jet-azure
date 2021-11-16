@@ -89,7 +89,7 @@ type MongoCollectionParameters struct {
 	// +kubebuilder:validation:Required
 	Name *string `json:"name" tf:"name,omitempty"`
 
-	// +crossplane:generate:reference:type=github.com/crossplane-contrib/provider-tf-azure/apis/resource/v1alpha1.ResourceGroup
+	// +crossplane:generate:reference:type=github.com/crossplane-contrib/provider-tf-azure/apis/azure/v1alpha1.ResourceGroup
 	// +crossplane:generate:reference:extractor=github.com/crossplane-contrib/provider-tf-azure/apis/rconfig.ExtractResourceName()
 	// +kubebuilder:validation:Optional
 	ResourceGroupName *string `json:"resourceGroupName,omitempty" tf:"resource_group_name,omitempty"`
@@ -155,10 +155,10 @@ type MongoCollectionList struct {
 
 // Repository type metadata.
 var (
-	MongoCollectionKind             = "MongoCollection"
-	MongoCollectionGroupKind        = schema.GroupKind{Group: Group, Kind: MongoCollectionKind}.String()
-	MongoCollectionKindAPIVersion   = MongoCollectionKind + "." + GroupVersion.String()
-	MongoCollectionGroupVersionKind = GroupVersion.WithKind(MongoCollectionKind)
+	MongoCollection_Kind             = "MongoCollection"
+	MongoCollection_GroupKind        = schema.GroupKind{Group: CRDGroup, Kind: MongoCollection_Kind}.String()
+	MongoCollection_KindAPIVersion   = MongoCollection_Kind + "." + CRDGroupVersion.String()
+	MongoCollection_GroupVersionKind = CRDGroupVersion.WithKind(MongoCollection_Kind)
 )
 
 func init() {

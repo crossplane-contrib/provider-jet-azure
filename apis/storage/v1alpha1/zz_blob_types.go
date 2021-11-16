@@ -126,10 +126,10 @@ type BlobList struct {
 
 // Repository type metadata.
 var (
-	BlobKind             = "Blob"
-	BlobGroupKind        = schema.GroupKind{Group: Group, Kind: BlobKind}.String()
-	BlobKindAPIVersion   = BlobKind + "." + GroupVersion.String()
-	BlobGroupVersionKind = GroupVersion.WithKind(BlobKind)
+	Blob_Kind             = "Blob"
+	Blob_GroupKind        = schema.GroupKind{Group: CRDGroup, Kind: Blob_Kind}.String()
+	Blob_KindAPIVersion   = Blob_Kind + "." + CRDGroupVersion.String()
+	Blob_GroupVersionKind = CRDGroupVersion.WithKind(Blob_Kind)
 )
 
 func init() {

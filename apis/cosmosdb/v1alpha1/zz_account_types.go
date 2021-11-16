@@ -104,7 +104,7 @@ type AccountParameters struct {
 	// +kubebuilder:validation:Optional
 	PublicNetworkAccessEnabled *bool `json:"publicNetworkAccessEnabled,omitempty" tf:"public_network_access_enabled,omitempty"`
 
-	// +crossplane:generate:reference:type=github.com/crossplane-contrib/provider-tf-azure/apis/resource/v1alpha1.ResourceGroup
+	// +crossplane:generate:reference:type=github.com/crossplane-contrib/provider-tf-azure/apis/azure/v1alpha1.ResourceGroup
 	// +crossplane:generate:reference:extractor=github.com/crossplane-contrib/provider-tf-azure/apis/rconfig.ExtractResourceName()
 	// +kubebuilder:validation:Optional
 	ResourceGroupName *string `json:"resourceGroupName,omitempty" tf:"resource_group_name,omitempty"`
@@ -264,10 +264,10 @@ type AccountList struct {
 
 // Repository type metadata.
 var (
-	AccountKind             = "Account"
-	AccountGroupKind        = schema.GroupKind{Group: Group, Kind: AccountKind}.String()
-	AccountKindAPIVersion   = AccountKind + "." + GroupVersion.String()
-	AccountGroupVersionKind = GroupVersion.WithKind(AccountKind)
+	Account_Kind             = "Account"
+	Account_GroupKind        = schema.GroupKind{Group: CRDGroup, Kind: Account_Kind}.String()
+	Account_KindAPIVersion   = Account_Kind + "." + CRDGroupVersion.String()
+	Account_GroupVersionKind = CRDGroupVersion.WithKind(Account_Kind)
 )
 
 func init() {

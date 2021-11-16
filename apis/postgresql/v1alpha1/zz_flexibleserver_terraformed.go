@@ -30,11 +30,6 @@ func (mg *FlexibleServer) GetTerraformResourceType() string {
 	return "azurerm_postgresql_flexible_server"
 }
 
-// GetTerraformResourceIDField returns Terraform identifier field for this FlexibleServer
-func (tr *FlexibleServer) GetTerraformResourceIDField() string {
-	return "id"
-}
-
 // GetConnectionDetailsMapping for this FlexibleServer
 func (tr *FlexibleServer) GetConnectionDetailsMapping() map[string]string {
 	return map[string]string{"administrator_password": "spec.forProvider.administratorPasswordSecretRef"}

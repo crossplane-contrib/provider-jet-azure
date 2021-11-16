@@ -30,11 +30,6 @@ func (mg *CassandraTable) GetTerraformResourceType() string {
 	return "azurerm_cosmosdb_cassandra_table"
 }
 
-// GetTerraformResourceIDField returns Terraform identifier field for this CassandraTable
-func (tr *CassandraTable) GetTerraformResourceIDField() string {
-	return "id"
-}
-
 // GetConnectionDetailsMapping for this CassandraTable
 func (tr *CassandraTable) GetConnectionDetailsMapping() map[string]string {
 	return nil

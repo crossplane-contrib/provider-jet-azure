@@ -33,7 +33,7 @@ type ConfigurationParameters struct {
 	// +kubebuilder:validation:Required
 	Name *string `json:"name" tf:"name,omitempty"`
 
-	// +crossplane:generate:reference:type=github.com/crossplane-contrib/provider-tf-azure/apis/resource/v1alpha1.ResourceGroup
+	// +crossplane:generate:reference:type=github.com/crossplane-contrib/provider-tf-azure/apis/azure/v1alpha1.ResourceGroup
 	// +crossplane:generate:reference:extractor=github.com/crossplane-contrib/provider-tf-azure/apis/rconfig.ExtractResourceName()
 	// +kubebuilder:validation:Optional
 	ResourceGroupName *string `json:"resourceGroupName,omitempty" tf:"resource_group_name,omitempty"`
@@ -98,10 +98,10 @@ type ConfigurationList struct {
 
 // Repository type metadata.
 var (
-	ConfigurationKind             = "Configuration"
-	ConfigurationGroupKind        = schema.GroupKind{Group: Group, Kind: ConfigurationKind}.String()
-	ConfigurationKindAPIVersion   = ConfigurationKind + "." + GroupVersion.String()
-	ConfigurationGroupVersionKind = GroupVersion.WithKind(ConfigurationKind)
+	Configuration_Kind             = "Configuration"
+	Configuration_GroupKind        = schema.GroupKind{Group: CRDGroup, Kind: Configuration_Kind}.String()
+	Configuration_KindAPIVersion   = Configuration_Kind + "." + CRDGroupVersion.String()
+	Configuration_GroupVersionKind = CRDGroupVersion.WithKind(Configuration_Kind)
 )
 
 func init() {

@@ -30,11 +30,6 @@ func (mg *MongoDatabase) GetTerraformResourceType() string {
 	return "azurerm_cosmosdb_mongo_database"
 }
 
-// GetTerraformResourceIDField returns Terraform identifier field for this MongoDatabase
-func (tr *MongoDatabase) GetTerraformResourceIDField() string {
-	return "id"
-}
-
 // GetConnectionDetailsMapping for this MongoDatabase
 func (tr *MongoDatabase) GetConnectionDetailsMapping() map[string]string {
 	return nil

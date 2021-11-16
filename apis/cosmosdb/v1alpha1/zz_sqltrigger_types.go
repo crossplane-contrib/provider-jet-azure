@@ -92,10 +92,10 @@ type SqlTriggerList struct {
 
 // Repository type metadata.
 var (
-	SqlTriggerKind             = "SqlTrigger"
-	SqlTriggerGroupKind        = schema.GroupKind{Group: Group, Kind: SqlTriggerKind}.String()
-	SqlTriggerKindAPIVersion   = SqlTriggerKind + "." + GroupVersion.String()
-	SqlTriggerGroupVersionKind = GroupVersion.WithKind(SqlTriggerKind)
+	SqlTrigger_Kind             = "SqlTrigger"
+	SqlTrigger_GroupKind        = schema.GroupKind{Group: CRDGroup, Kind: SqlTrigger_Kind}.String()
+	SqlTrigger_KindAPIVersion   = SqlTrigger_Kind + "." + CRDGroupVersion.String()
+	SqlTrigger_GroupVersionKind = CRDGroupVersion.WithKind(SqlTrigger_Kind)
 )
 
 func init() {

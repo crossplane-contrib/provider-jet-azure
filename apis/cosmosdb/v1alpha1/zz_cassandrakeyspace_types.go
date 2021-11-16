@@ -56,7 +56,7 @@ type CassandraKeyspaceParameters struct {
 	// +kubebuilder:validation:Required
 	Name *string `json:"name" tf:"name,omitempty"`
 
-	// +crossplane:generate:reference:type=github.com/crossplane-contrib/provider-tf-azure/apis/resource/v1alpha1.ResourceGroup
+	// +crossplane:generate:reference:type=github.com/crossplane-contrib/provider-tf-azure/apis/azure/v1alpha1.ResourceGroup
 	// +crossplane:generate:reference:extractor=github.com/crossplane-contrib/provider-tf-azure/apis/rconfig.ExtractResourceName()
 	// +kubebuilder:validation:Optional
 	ResourceGroupName *string `json:"resourceGroupName,omitempty" tf:"resource_group_name,omitempty"`
@@ -110,10 +110,10 @@ type CassandraKeyspaceList struct {
 
 // Repository type metadata.
 var (
-	CassandraKeyspaceKind             = "CassandraKeyspace"
-	CassandraKeyspaceGroupKind        = schema.GroupKind{Group: Group, Kind: CassandraKeyspaceKind}.String()
-	CassandraKeyspaceKindAPIVersion   = CassandraKeyspaceKind + "." + GroupVersion.String()
-	CassandraKeyspaceGroupVersionKind = GroupVersion.WithKind(CassandraKeyspaceKind)
+	CassandraKeyspace_Kind             = "CassandraKeyspace"
+	CassandraKeyspace_GroupKind        = schema.GroupKind{Group: CRDGroup, Kind: CassandraKeyspace_Kind}.String()
+	CassandraKeyspace_KindAPIVersion   = CassandraKeyspace_Kind + "." + CRDGroupVersion.String()
+	CassandraKeyspace_GroupVersionKind = CRDGroupVersion.WithKind(CassandraKeyspace_Kind)
 )
 
 func init() {

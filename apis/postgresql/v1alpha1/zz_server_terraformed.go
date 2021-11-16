@@ -30,11 +30,6 @@ func (mg *Server) GetTerraformResourceType() string {
 	return "azurerm_postgresql_server"
 }
 
-// GetTerraformResourceIDField returns Terraform identifier field for this Server
-func (tr *Server) GetTerraformResourceIDField() string {
-	return "id"
-}
-
 // GetConnectionDetailsMapping for this Server
 func (tr *Server) GetConnectionDetailsMapping() map[string]string {
 	return map[string]string{"administrator_login_password": "spec.forProvider.administratorLoginPasswordSecretRef", "threat_detection_policy[*].storage_account_access_key": "spec.forProvider.threatDetectionPolicy[*].storageAccountAccessKeySecretRef"}

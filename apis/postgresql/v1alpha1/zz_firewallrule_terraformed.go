@@ -30,11 +30,6 @@ func (mg *FirewallRule) GetTerraformResourceType() string {
 	return "azurerm_postgresql_firewall_rule"
 }
 
-// GetTerraformResourceIDField returns Terraform identifier field for this FirewallRule
-func (tr *FirewallRule) GetTerraformResourceIDField() string {
-	return "id"
-}
-
 // GetConnectionDetailsMapping for this FirewallRule
 func (tr *FirewallRule) GetConnectionDetailsMapping() map[string]string {
 	return nil

@@ -36,7 +36,7 @@ type VirtualNetworkRuleParameters struct {
 	// +kubebuilder:validation:Required
 	Name *string `json:"name" tf:"name,omitempty"`
 
-	// +crossplane:generate:reference:type=github.com/crossplane-contrib/provider-tf-azure/apis/resource/v1alpha1.ResourceGroup
+	// +crossplane:generate:reference:type=github.com/crossplane-contrib/provider-tf-azure/apis/azure/v1alpha1.ResourceGroup
 	// +crossplane:generate:reference:extractor=github.com/crossplane-contrib/provider-tf-azure/apis/rconfig.ExtractResourceName()
 	// +kubebuilder:validation:Optional
 	ResourceGroupName *string `json:"resourceGroupName,omitempty" tf:"resource_group_name,omitempty"`
@@ -58,7 +58,7 @@ type VirtualNetworkRuleParameters struct {
 	// +kubebuilder:validation:Optional
 	ServerNameSelector *v1.Selector `json:"serverNameSelector,omitempty" tf:"-"`
 
-	// +crossplane:generate:reference:type=github.com/crossplane-contrib/provider-tf-azure/apis/virtual/v1alpha1.Subnet
+	// +crossplane:generate:reference:type=github.com/crossplane-contrib/provider-tf-azure/apis/network/v1alpha1.Subnet
 	// +kubebuilder:validation:Optional
 	SubnetID *string `json:"subnetId,omitempty" tf:"subnet_id,omitempty"`
 
@@ -108,10 +108,10 @@ type VirtualNetworkRuleList struct {
 
 // Repository type metadata.
 var (
-	VirtualNetworkRuleKind             = "VirtualNetworkRule"
-	VirtualNetworkRuleGroupKind        = schema.GroupKind{Group: Group, Kind: VirtualNetworkRuleKind}.String()
-	VirtualNetworkRuleKindAPIVersion   = VirtualNetworkRuleKind + "." + GroupVersion.String()
-	VirtualNetworkRuleGroupVersionKind = GroupVersion.WithKind(VirtualNetworkRuleKind)
+	VirtualNetworkRule_Kind             = "VirtualNetworkRule"
+	VirtualNetworkRule_GroupKind        = schema.GroupKind{Group: CRDGroup, Kind: VirtualNetworkRule_Kind}.String()
+	VirtualNetworkRule_KindAPIVersion   = VirtualNetworkRule_Kind + "." + CRDGroupVersion.String()
+	VirtualNetworkRule_GroupVersionKind = CRDGroupVersion.WithKind(VirtualNetworkRule_Kind)
 )
 
 func init() {

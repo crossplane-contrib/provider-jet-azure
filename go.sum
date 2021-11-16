@@ -179,8 +179,8 @@ github.com/cpuguy83/go-md2man/v2 v2.0.0/go.mod h1:maD7wRr/U5Z6m/iR4s+kqSMx2CaBsr
 github.com/creack/pty v1.1.7/go.mod h1:lj5s0c3V2DBrqTV7llrYr5NG6My20zk30Fl46Y7DoTY=
 github.com/creack/pty v1.1.9/go.mod h1:oKZEueFk5CKHvIhNR5MUki03XCEU+Q6VDXinZuGJ33E=
 github.com/creack/pty v1.1.11/go.mod h1:oKZEueFk5CKHvIhNR5MUki03XCEU+Q6VDXinZuGJ33E=
-github.com/crossplane-contrib/terrajet v0.1.1-0.20211113105347-a0f23e076728 h1:v9JKun9IdfVp5Mdx6TJ/Abu6XF95CGrPj09bufRF4s4=
-github.com/crossplane-contrib/terrajet v0.1.1-0.20211113105347-a0f23e076728/go.mod h1:RUsskXE63KZE7EcvZ7WK4UzBQjc1+7IhelK+/gIa/Go=
+github.com/crossplane-contrib/terrajet v0.1.1-0.20211118103040-82df1ab65669 h1:6gIZA8SOsXQCC/Itofu9tsleYkaG7nNx06B4nRN5BAE=
+github.com/crossplane-contrib/terrajet v0.1.1-0.20211118103040-82df1ab65669/go.mod h1:RUsskXE63KZE7EcvZ7WK4UzBQjc1+7IhelK+/gIa/Go=
 github.com/crossplane/crossplane-runtime v0.15.1-0.20211004150827-579c1833b513 h1:Sk3QurYYpy8x3c0DvTh9iGYFSv8WgdhnjCalNqNqlRI=
 github.com/crossplane/crossplane-runtime v0.15.1-0.20211004150827-579c1833b513/go.mod h1:gKix9Gq5kRzVe/4XOpwlFgG7OurzrYayviJxWZakhw0=
 github.com/crossplane/crossplane-tools v0.0.0-20210916125540-071de511ae8e h1:7UM4E9gNEzJ22JgRZqY2KBlkdMCAiHmKS96rcLANdME=
@@ -453,6 +453,8 @@ github.com/hashicorp/terraform-json v0.12.0/go.mod h1:pmbq9o4EuL43db5+0ogX10Yofv
 github.com/hashicorp/terraform-plugin-go v0.3.0/go.mod h1:dFHsQMaTLpON2gWhVWT96fvtlc/MF1vSy3OdMhWBzdM=
 github.com/hashicorp/terraform-plugin-go v0.3.1 h1:ML+THFcqpdR049gqrbEFDFo99va2Wqw9g4XDPy51euU=
 github.com/hashicorp/terraform-plugin-go v0.3.1/go.mod h1:dFHsQMaTLpON2gWhVWT96fvtlc/MF1vSy3OdMhWBzdM=
+github.com/hashicorp/terraform-plugin-sdk v1.17.2 h1:V7DUR3yBWFrVB9z3ddpY7kiYVSsq4NYR67NiTs93NQo=
+github.com/hashicorp/terraform-plugin-sdk v1.17.2/go.mod h1:wkvldbraEMkz23NxkkAsFS88A1R9eUiooiaUZyS6TLw=
 github.com/hashicorp/terraform-plugin-sdk/v2 v2.7.0 h1:SuI59MqNjYDrL7EfqHX9V6P/24isgqYx/FdglwVs9bg=
 github.com/hashicorp/terraform-plugin-sdk/v2 v2.7.0/go.mod h1:grseeRo9g3yNkYW09iFlV8LG78jTa1ssBgouogQg/RU=
 github.com/hashicorp/terraform-plugin-test/v2 v2.2.1/go.mod h1:eZ9JL3O69Cb71Skn6OhHyj17sLmHRb+H6VrDcJjKrYU=
@@ -719,8 +721,6 @@ github.com/tmc/grpc-websocket-proxy v0.0.0-20170815181823-89b8d40f7ca8/go.mod h1
 github.com/tmc/grpc-websocket-proxy v0.0.0-20190109142713-0ad062ec5ee5/go.mod h1:ncp9v5uamzpCO7NfCPTXjqaC+bZgJeR0sMTm6dMHP7U=
 github.com/tombuildsstuff/giovanni v0.16.0 h1:Q8QKgsr4Fmhf+z6Mf1UPQKeovkCdudkiMaAZmq9CIjg=
 github.com/tombuildsstuff/giovanni v0.16.0/go.mod h1:66KVLYma2whJhEdxPSPL3GQHkulhK+C5CluKfHGfPF4=
-github.com/turkenh/terraform-plugin-sdk v1.17.2-patch1 h1:TRHWM1G6ZqjOj/lu61J/FkcxyFWScKENbcZ6UZV0LiU=
-github.com/turkenh/terraform-plugin-sdk v1.17.2-patch1/go.mod h1:wkvldbraEMkz23NxkkAsFS88A1R9eUiooiaUZyS6TLw=
 github.com/ulikunitz/xz v0.5.5/go.mod h1:2bypXElzHzzJZwzH67Y6wb67pO62Rzfn7BSiF4ABRW8=
 github.com/ulikunitz/xz v0.5.8/go.mod h1:nbz6k7qbPmH4IRqmfOplQw/tblSgqTqBwxkY0oWt/14=
 github.com/ulikunitz/xz v0.5.10 h1:t92gobL9l3HE202wg3rlk19F6X+JOxl9BBrCCMYEYd8=

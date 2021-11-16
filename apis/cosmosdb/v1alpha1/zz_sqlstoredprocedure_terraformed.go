@@ -30,11 +30,6 @@ func (mg *SqlStoredProcedure) GetTerraformResourceType() string {
 	return "azurerm_cosmosdb_sql_stored_procedure"
 }
 
-// GetTerraformResourceIDField returns Terraform identifier field for this SqlStoredProcedure
-func (tr *SqlStoredProcedure) GetTerraformResourceIDField() string {
-	return "id"
-}
-
 // GetConnectionDetailsMapping for this SqlStoredProcedure
 func (tr *SqlStoredProcedure) GetConnectionDetailsMapping() map[string]string {
 	return nil

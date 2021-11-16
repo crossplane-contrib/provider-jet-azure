@@ -30,11 +30,6 @@ func (mg *NotebookWorkspace) GetTerraformResourceType() string {
 	return "azurerm_cosmosdb_notebook_workspace"
 }
 
-// GetTerraformResourceIDField returns Terraform identifier field for this NotebookWorkspace
-func (tr *NotebookWorkspace) GetTerraformResourceIDField() string {
-	return "id"
-}
-
 // GetConnectionDetailsMapping for this NotebookWorkspace
 func (tr *NotebookWorkspace) GetConnectionDetailsMapping() map[string]string {
 	return nil

@@ -30,11 +30,6 @@ func (mg *SqlContainer) GetTerraformResourceType() string {
 	return "azurerm_cosmosdb_sql_container"
 }
 
-// GetTerraformResourceIDField returns Terraform identifier field for this SqlContainer
-func (tr *SqlContainer) GetTerraformResourceIDField() string {
-	return "id"
-}
-
 // GetConnectionDetailsMapping for this SqlContainer
 func (tr *SqlContainer) GetConnectionDetailsMapping() map[string]string {
 	return nil

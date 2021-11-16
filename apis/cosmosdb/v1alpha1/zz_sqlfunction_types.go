@@ -86,10 +86,10 @@ type SqlFunctionList struct {
 
 // Repository type metadata.
 var (
-	SqlFunctionKind             = "SqlFunction"
-	SqlFunctionGroupKind        = schema.GroupKind{Group: Group, Kind: SqlFunctionKind}.String()
-	SqlFunctionKindAPIVersion   = SqlFunctionKind + "." + GroupVersion.String()
-	SqlFunctionGroupVersionKind = GroupVersion.WithKind(SqlFunctionKind)
+	SqlFunction_Kind             = "SqlFunction"
+	SqlFunction_GroupKind        = schema.GroupKind{Group: CRDGroup, Kind: SqlFunction_Kind}.String()
+	SqlFunction_KindAPIVersion   = SqlFunction_Kind + "." + CRDGroupVersion.String()
+	SqlFunction_GroupVersionKind = CRDGroupVersion.WithKind(SqlFunction_Kind)
 )
 
 func init() {

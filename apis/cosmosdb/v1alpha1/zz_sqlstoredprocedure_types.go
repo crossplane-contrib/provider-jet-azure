@@ -69,7 +69,7 @@ type SqlStoredProcedureParameters struct {
 	// +kubebuilder:validation:Required
 	Name *string `json:"name" tf:"name,omitempty"`
 
-	// +crossplane:generate:reference:type=github.com/crossplane-contrib/provider-tf-azure/apis/resource/v1alpha1.ResourceGroup
+	// +crossplane:generate:reference:type=github.com/crossplane-contrib/provider-tf-azure/apis/azure/v1alpha1.ResourceGroup
 	// +crossplane:generate:reference:extractor=github.com/crossplane-contrib/provider-tf-azure/apis/rconfig.ExtractResourceName()
 	// +kubebuilder:validation:Optional
 	ResourceGroupName *string `json:"resourceGroupName,omitempty" tf:"resource_group_name,omitempty"`
@@ -120,10 +120,10 @@ type SqlStoredProcedureList struct {
 
 // Repository type metadata.
 var (
-	SqlStoredProcedureKind             = "SqlStoredProcedure"
-	SqlStoredProcedureGroupKind        = schema.GroupKind{Group: Group, Kind: SqlStoredProcedureKind}.String()
-	SqlStoredProcedureKindAPIVersion   = SqlStoredProcedureKind + "." + GroupVersion.String()
-	SqlStoredProcedureGroupVersionKind = GroupVersion.WithKind(SqlStoredProcedureKind)
+	SqlStoredProcedure_Kind             = "SqlStoredProcedure"
+	SqlStoredProcedure_GroupKind        = schema.GroupKind{Group: CRDGroup, Kind: SqlStoredProcedure_Kind}.String()
+	SqlStoredProcedure_KindAPIVersion   = SqlStoredProcedure_Kind + "." + CRDGroupVersion.String()
+	SqlStoredProcedure_GroupVersionKind = CRDGroupVersion.WithKind(SqlStoredProcedure_Kind)
 )
 
 func init() {
