@@ -25,19 +25,19 @@ import (
 	v1 "github.com/crossplane/crossplane-runtime/apis/common/v1"
 )
 
-type SqlDatabaseAutoscaleSettingsObservation struct {
+type SQLDatabaseAutoscaleSettingsObservation struct {
 }
 
-type SqlDatabaseAutoscaleSettingsParameters struct {
+type SQLDatabaseAutoscaleSettingsParameters struct {
 
 	// +kubebuilder:validation:Optional
 	MaxThroughput *int64 `json:"maxThroughput,omitempty" tf:"max_throughput,omitempty"`
 }
 
-type SqlDatabaseObservation struct {
+type SQLDatabaseObservation struct {
 }
 
-type SqlDatabaseParameters struct {
+type SQLDatabaseParameters struct {
 
 	// +crossplane:generate:reference:type=Account
 	// +crossplane:generate:reference:extractor=github.com/crossplane-contrib/provider-tf-azure/apis/rconfig.ExtractResourceName()
@@ -51,13 +51,9 @@ type SqlDatabaseParameters struct {
 	AccountNameSelector *v1.Selector `json:"accountNameSelector,omitempty" tf:"-"`
 
 	// +kubebuilder:validation:Optional
-	AutoscaleSettings []SqlDatabaseAutoscaleSettingsParameters `json:"autoscaleSettings,omitempty" tf:"autoscale_settings,omitempty"`
-
-	// +kubebuilder:validation:Required
-	Name *string `json:"name" tf:"name,omitempty"`
+	AutoscaleSettings []SQLDatabaseAutoscaleSettingsParameters `json:"autoscaleSettings,omitempty" tf:"autoscale_settings,omitempty"`
 
 	// +crossplane:generate:reference:type=github.com/crossplane-contrib/provider-tf-azure/apis/azure/v1alpha1.ResourceGroup
-	// +crossplane:generate:reference:extractor=github.com/crossplane-contrib/provider-tf-azure/apis/rconfig.ExtractResourceName()
 	// +kubebuilder:validation:Optional
 	ResourceGroupName *string `json:"resourceGroupName,omitempty" tf:"resource_group_name,omitempty"`
 
@@ -71,51 +67,51 @@ type SqlDatabaseParameters struct {
 	Throughput *int64 `json:"throughput,omitempty" tf:"throughput,omitempty"`
 }
 
-// SqlDatabaseSpec defines the desired state of SqlDatabase
-type SqlDatabaseSpec struct {
+// SQLDatabaseSpec defines the desired state of SQLDatabase
+type SQLDatabaseSpec struct {
 	v1.ResourceSpec `json:",inline"`
-	ForProvider     SqlDatabaseParameters `json:"forProvider"`
+	ForProvider     SQLDatabaseParameters `json:"forProvider"`
 }
 
-// SqlDatabaseStatus defines the observed state of SqlDatabase.
-type SqlDatabaseStatus struct {
+// SQLDatabaseStatus defines the observed state of SQLDatabase.
+type SQLDatabaseStatus struct {
 	v1.ResourceStatus `json:",inline"`
-	AtProvider        SqlDatabaseObservation `json:"atProvider,omitempty"`
+	AtProvider        SQLDatabaseObservation `json:"atProvider,omitempty"`
 }
 
 // +kubebuilder:object:root=true
 
-// SqlDatabase is the Schema for the SqlDatabases API
+// SQLDatabase is the Schema for the SQLDatabases API
 // +kubebuilder:printcolumn:name="READY",type="string",JSONPath=".status.conditions[?(@.type=='Ready')].status"
 // +kubebuilder:printcolumn:name="SYNCED",type="string",JSONPath=".status.conditions[?(@.type=='Synced')].status"
 // +kubebuilder:printcolumn:name="EXTERNAL-NAME",type="string",JSONPath=".metadata.annotations.crossplane\\.io/external-name"
 // +kubebuilder:printcolumn:name="AGE",type="date",JSONPath=".metadata.creationTimestamp"
 // +kubebuilder:subresource:status
 // +kubebuilder:resource:scope=Cluster,categories={crossplane,managed,tfazure}
-type SqlDatabase struct {
+type SQLDatabase struct {
 	metav1.TypeMeta   `json:",inline"`
 	metav1.ObjectMeta `json:"metadata,omitempty"`
-	Spec              SqlDatabaseSpec   `json:"spec"`
-	Status            SqlDatabaseStatus `json:"status,omitempty"`
+	Spec              SQLDatabaseSpec   `json:"spec"`
+	Status            SQLDatabaseStatus `json:"status,omitempty"`
 }
 
 // +kubebuilder:object:root=true
 
-// SqlDatabaseList contains a list of SqlDatabases
-type SqlDatabaseList struct {
+// SQLDatabaseList contains a list of SQLDatabases
+type SQLDatabaseList struct {
 	metav1.TypeMeta `json:",inline"`
 	metav1.ListMeta `json:"metadata,omitempty"`
-	Items           []SqlDatabase `json:"items"`
+	Items           []SQLDatabase `json:"items"`
 }
 
 // Repository type metadata.
 var (
-	SqlDatabase_Kind             = "SqlDatabase"
-	SqlDatabase_GroupKind        = schema.GroupKind{Group: CRDGroup, Kind: SqlDatabase_Kind}.String()
-	SqlDatabase_KindAPIVersion   = SqlDatabase_Kind + "." + CRDGroupVersion.String()
-	SqlDatabase_GroupVersionKind = CRDGroupVersion.WithKind(SqlDatabase_Kind)
+	SQLDatabase_Kind             = "SQLDatabase"
+	SQLDatabase_GroupKind        = schema.GroupKind{Group: CRDGroup, Kind: SQLDatabase_Kind}.String()
+	SQLDatabase_KindAPIVersion   = SQLDatabase_Kind + "." + CRDGroupVersion.String()
+	SQLDatabase_GroupVersionKind = CRDGroupVersion.WithKind(SQLDatabase_Kind)
 )
 
 func init() {
-	SchemeBuilder.Register(&SqlDatabase{}, &SqlDatabaseList{})
+	SchemeBuilder.Register(&SQLDatabase{}, &SQLDatabaseList{})
 }

@@ -89,9 +89,6 @@ type AccountParameters struct {
 	// +kubebuilder:validation:Optional
 	MongoServerVersion *string `json:"mongoServerVersion,omitempty" tf:"mongo_server_version,omitempty"`
 
-	// +kubebuilder:validation:Required
-	Name *string `json:"name" tf:"name,omitempty"`
-
 	// +kubebuilder:validation:Optional
 	NetworkACLBypassForAzureServices *bool `json:"networkAclBypassForAzureServices,omitempty" tf:"network_acl_bypass_for_azure_services,omitempty"`
 
@@ -105,7 +102,6 @@ type AccountParameters struct {
 	PublicNetworkAccessEnabled *bool `json:"publicNetworkAccessEnabled,omitempty" tf:"public_network_access_enabled,omitempty"`
 
 	// +crossplane:generate:reference:type=github.com/crossplane-contrib/provider-tf-azure/apis/azure/v1alpha1.ResourceGroup
-	// +crossplane:generate:reference:extractor=github.com/crossplane-contrib/provider-tf-azure/apis/rconfig.ExtractResourceName()
 	// +kubebuilder:validation:Optional
 	ResourceGroupName *string `json:"resourceGroupName,omitempty" tf:"resource_group_name,omitempty"`
 

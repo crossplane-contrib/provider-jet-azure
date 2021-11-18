@@ -17,36 +17,48 @@ limitations under the License.
 package cosmosdb
 
 import (
+	"context"
+	"fmt"
+
 	"github.com/crossplane-contrib/terrajet/pkg/config"
+	"github.com/pkg/errors"
 
 	"github.com/crossplane-contrib/provider-tf-azure/apis/rconfig"
+	"github.com/crossplane-contrib/provider-tf-azure/config/common"
 )
 
 // Configure configures cosmodb group
 func Configure(p *config.Provider) {
 	p.AddResourceConfigurator("azurerm_cosmosdb_sql_container", func(r *config.Resource) {
+		r.Kind = "SQLContainer"
 		r.References = config.References{
 			"resource_group_name": config.Reference{
-				Type:      rconfig.APISPackagePath + "/azure/v1alpha1.ResourceGroup",
-				Extractor: rconfig.APISPackagePath + "/rconfig.ExtractResourceName()",
+				Type: rconfig.APISPackagePath + "/azure/v1alpha1.ResourceGroup",
 			},
 			"account_name": config.Reference{
 				Type:      "Account",
 				Extractor: rconfig.APISPackagePath + "/rconfig.ExtractResourceName()",
 			},
 			"database_name": config.Reference{
-				Type:      "SqlDatabase",
+				Type:      "SQLDatabase",
 				Extractor: rconfig.APISPackagePath + "/rconfig.ExtractResourceName()",
 			},
 		}
 		r.UseAsync = true
+		r.ExternalName = config.NameAsIdentifier
+		r.ExternalName.GetExternalNameFn = common.GetNameFromFullyQualifiedID
+		// /subscriptions/000-000/resourceGroups/rg1/providers/Microsoft.DocumentDB/databaseAccounts/acc1/sqlDatabases/db1/containers/container1
+		r.ExternalName.GetIDFn = common.GetFullyQualifiedIDFn("Microsoft.DocumentDB",
+			"databaseAccounts", "account_name",
+			"sqlDatabases", "database_name",
+			"containers", "name",
+		)
 	})
 
 	p.AddResourceConfigurator("azurerm_cosmosdb_mongo_collection", func(r *config.Resource) {
 		r.References = config.References{
 			"resource_group_name": config.Reference{
-				Type:      rconfig.APISPackagePath + "/azure/v1alpha1.ResourceGroup",
-				Extractor: rconfig.APISPackagePath + "/rconfig.ExtractResourceName()",
+				Type: rconfig.APISPackagePath + "/azure/v1alpha1.ResourceGroup",
 			},
 			"account_name": config.Reference{
 				Type:      "Account",
@@ -58,13 +70,21 @@ func Configure(p *config.Provider) {
 			},
 		}
 		r.UseAsync = true
+		r.ExternalName = config.NameAsIdentifier
+		r.ExternalName.GetExternalNameFn = common.GetNameFromFullyQualifiedID
+
+		// /subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg1/providers/Microsoft.DocumentDB/databaseAccounts/account1/mongodbDatabases/db1/collections/collection1
+		r.ExternalName.GetIDFn = common.GetFullyQualifiedIDFn("Microsoft.DocumentDB",
+			"databaseAccounts", "account_name",
+			"mongodbDatabases", "database_name",
+			"collections", "name",
+		)
 	})
 
 	p.AddResourceConfigurator("azurerm_cosmosdb_cassandra_keyspace", func(r *config.Resource) {
 		r.References = config.References{
 			"resource_group_name": config.Reference{
-				Type:      rconfig.APISPackagePath + "/azure/v1alpha1.ResourceGroup",
-				Extractor: rconfig.APISPackagePath + "/rconfig.ExtractResourceName()",
+				Type: rconfig.APISPackagePath + "/azure/v1alpha1.ResourceGroup",
 			},
 			"account_name": config.Reference{
 				Type:      "Account",
@@ -72,6 +92,14 @@ func Configure(p *config.Provider) {
 			},
 		}
 		r.UseAsync = true
+		r.ExternalName = config.NameAsIdentifier
+		r.ExternalName.GetExternalNameFn = common.GetNameFromFullyQualifiedID
+
+		// /subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg1/providers/Microsoft.DocumentDB/databaseAccounts/account1/cassandraKeyspaces/ks1
+		r.ExternalName.GetIDFn = common.GetFullyQualifiedIDFn("Microsoft.DocumentDB",
+			"databaseAccounts", "account_name",
+			"cassandraKeyspaces", "name",
+		)
 	})
 
 	p.AddResourceConfigurator("azurerm_cosmosdb_cassandra_table", func(r *config.Resource) {
@@ -81,13 +109,21 @@ func Configure(p *config.Provider) {
 			},
 		}
 		r.UseAsync = true
+		r.ExternalName = config.NameAsIdentifier
+		r.ExternalName.GetExternalNameFn = common.GetNameFromFullyQualifiedID
+
+		// /subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg1/providers/Microsoft.DocumentDB/databaseAccounts/account1/cassandraKeyspaces/ks1/tables/table1
+		r.ExternalName.GetIDFn = common.GetFullyQualifiedIDFn("Microsoft.DocumentDB",
+			"databaseAccounts", "account_name",
+			"cassandraKeyspaces", "cassandra_keyspace_id",
+			"tables", "name",
+		)
 	})
 
 	p.AddResourceConfigurator("azurerm_cosmosdb_gremlin_graph", func(r *config.Resource) {
 		r.References = config.References{
 			"resource_group_name": config.Reference{
-				Type:      rconfig.APISPackagePath + "/azure/v1alpha1.ResourceGroup",
-				Extractor: rconfig.APISPackagePath + "/rconfig.ExtractResourceName()",
+				Type: rconfig.APISPackagePath + "/azure/v1alpha1.ResourceGroup",
 			},
 			"account_name": config.Reference{
 				Type:      "Account",
@@ -99,44 +135,77 @@ func Configure(p *config.Provider) {
 			},
 		}
 		r.UseAsync = true
+		r.ExternalName = config.NameAsIdentifier
+		r.ExternalName.GetExternalNameFn = common.GetNameFromFullyQualifiedID
+
+		// /subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg1/providers/Microsoft.DocumentDB/databaseAccounts/account1/gremlinDatabases/db1/graphs/graphs1
+		r.ExternalName.GetIDFn = common.GetFullyQualifiedIDFn("Microsoft.DocumentDB",
+			"databaseAccounts", "account_name",
+			"gremlinDatabases", "database_name",
+			"graphs", "name",
+		)
 	})
 
 	p.AddResourceConfigurator("azurerm_cosmosdb_sql_function", func(r *config.Resource) {
+		r.Kind = "SQLFunction"
 		r.References = config.References{
 			"container_id": config.Reference{
-				Type: "SqlContainer",
+				Type: "SQLContainer",
 			},
 		}
 		r.UseAsync = true
+		r.ExternalName = config.NameAsIdentifier
+		r.ExternalName.GetExternalNameFn = common.GetNameFromFullyQualifiedID
+
+		// /subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/group1/providers/Microsoft.DocumentDB/databaseAccounts/account1/sqlDatabases/database1/containers/container1/userDefinedFunctions/userDefinedFunction1
+		r.ExternalName.GetIDFn = func(_ context.Context, name string, parameters map[string]interface{}, providerConfig map[string]interface{}) (string, error) {
+			containerID, ok := parameters["container_id"]
+			if !ok {
+				return "", errors.Errorf(common.ErrFmtNoAttribute, "container_id")
+			}
+			containerIDStr, ok := containerID.(string)
+			if !ok {
+				return "", errors.Errorf(common.ErrFmtUnexpectedType, "container_id")
+			}
+			return fmt.Sprintf("%s/userDefinedFunctions/%s", containerIDStr, name), nil
+		}
 	})
 
 	p.AddResourceConfigurator("azurerm_cosmosdb_sql_stored_procedure", func(r *config.Resource) {
 		r.References = config.References{
 			"resource_group_name": config.Reference{
-				Type:      rconfig.APISPackagePath + "/azure/v1alpha1.ResourceGroup",
-				Extractor: rconfig.APISPackagePath + "/rconfig.ExtractResourceName()",
+				Type: rconfig.APISPackagePath + "/azure/v1alpha1.ResourceGroup",
 			},
 			"account_name": config.Reference{
 				Type:      "Account",
 				Extractor: rconfig.APISPackagePath + "/rconfig.ExtractResourceName()",
 			},
 			"database_name": config.Reference{
-				Type:      "SqlDatabase",
+				Type:      "SQLDatabase",
 				Extractor: rconfig.APISPackagePath + "/rconfig.ExtractResourceName()",
 			},
 			"container_name": config.Reference{
-				Type:      "SqlContainer",
+				Type:      "SQLContainer",
 				Extractor: rconfig.APISPackagePath + "/rconfig.ExtractResourceName()",
 			},
 		}
 		r.UseAsync = true
+		r.ExternalName = config.NameAsIdentifier
+		r.ExternalName.GetExternalNameFn = common.GetNameFromFullyQualifiedID
+
+		// /subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg1/providers/Microsoft.DocumentDB/databaseAccounts/account1/sqlDatabases/db1/containers/c1/storedProcedures/sp1
+		r.ExternalName.GetIDFn = common.GetFullyQualifiedIDFn("Microsoft.DocumentDB",
+			"databaseAccounts", "account_name",
+			"sqlDatabases", "database_name",
+			"containers", "container_name",
+			"storedProcedures", "name",
+		)
 	})
 
 	p.AddResourceConfigurator("azurerm_cosmosdb_gremlin_database", func(r *config.Resource) {
 		r.References = config.References{
 			"resource_group_name": config.Reference{
-				Type:      rconfig.APISPackagePath + "/azure/v1alpha1.ResourceGroup",
-				Extractor: rconfig.APISPackagePath + "/rconfig.ExtractResourceName()",
+				Type: rconfig.APISPackagePath + "/azure/v1alpha1.ResourceGroup",
 			},
 			"account_name": config.Reference{
 				Type:      "Account",
@@ -144,13 +213,20 @@ func Configure(p *config.Provider) {
 			},
 		}
 		r.UseAsync = true
+		r.ExternalName = config.NameAsIdentifier
+		r.ExternalName.GetExternalNameFn = common.GetNameFromFullyQualifiedID
+
+		// /subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg1/providers/Microsoft.DocumentDB/databaseAccounts/account1/gremlinDatabases/db1
+		r.ExternalName.GetIDFn = common.GetFullyQualifiedIDFn("Microsoft.DocumentDB",
+			"databaseAccounts", "account_name",
+			"gremlinDatabases", "name",
+		)
 	})
 
 	p.AddResourceConfigurator("azurerm_cosmosdb_mongo_database", func(r *config.Resource) {
 		r.References = config.References{
 			"resource_group_name": config.Reference{
-				Type:      rconfig.APISPackagePath + "/azure/v1alpha1.ResourceGroup",
-				Extractor: rconfig.APISPackagePath + "/rconfig.ExtractResourceName()",
+				Type: rconfig.APISPackagePath + "/azure/v1alpha1.ResourceGroup",
 			},
 			"account_name": config.Reference{
 				Type:      "Account",
@@ -158,13 +234,21 @@ func Configure(p *config.Provider) {
 			},
 		}
 		r.UseAsync = true
+		r.ExternalName = config.NameAsIdentifier
+		r.ExternalName.GetExternalNameFn = common.GetNameFromFullyQualifiedID
+
+		// /subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg1/providers/Microsoft.DocumentDB/databaseAccounts/account1/mongodbDatabases/db1
+		r.ExternalName.GetIDFn = common.GetFullyQualifiedIDFn("Microsoft.DocumentDB",
+			"databaseAccounts", "account_name",
+			"mongodbDatabases", "name",
+		)
 	})
 
 	p.AddResourceConfigurator("azurerm_cosmosdb_sql_database", func(r *config.Resource) {
+		r.Kind = "SQLDatabase"
 		r.References = config.References{
 			"resource_group_name": config.Reference{
-				Type:      rconfig.APISPackagePath + "/azure/v1alpha1.ResourceGroup",
-				Extractor: rconfig.APISPackagePath + "/rconfig.ExtractResourceName()",
+				Type: rconfig.APISPackagePath + "/azure/v1alpha1.ResourceGroup",
 			},
 			"account_name": config.Reference{
 				Type:      "Account",
@@ -172,13 +256,20 @@ func Configure(p *config.Provider) {
 			},
 		}
 		r.UseAsync = true
+		r.ExternalName = config.NameAsIdentifier
+		r.ExternalName.GetExternalNameFn = common.GetNameFromFullyQualifiedID
+
+		// /subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg1/providers/Microsoft.DocumentDB/databaseAccounts/account1/sqlDatabases/db1
+		r.ExternalName.GetIDFn = common.GetFullyQualifiedIDFn("Microsoft.DocumentDB",
+			"databaseAccounts", "account_name",
+			"sqlDatabases", "name",
+		)
 	})
 
 	p.AddResourceConfigurator("azurerm_cosmosdb_table", func(r *config.Resource) {
 		r.References = config.References{
 			"resource_group_name": config.Reference{
-				Type:      rconfig.APISPackagePath + "/azure/v1alpha1.ResourceGroup",
-				Extractor: rconfig.APISPackagePath + "/rconfig.ExtractResourceName()",
+				Type: rconfig.APISPackagePath + "/azure/v1alpha1.ResourceGroup",
 			},
 			"account_name": config.Reference{
 				Type:      "Account",
@@ -186,23 +277,32 @@ func Configure(p *config.Provider) {
 			},
 		}
 		r.UseAsync = true
+		r.ExternalName = config.NameAsIdentifier
+		r.ExternalName.GetExternalNameFn = common.GetNameFromFullyQualifiedID
+		// /subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg1/providers/Microsoft.DocumentDB/databaseAccounts/account1/tables/table1
+		r.ExternalName.GetIDFn = common.GetFullyQualifiedIDFn("Microsoft.DocumentDB",
+			"databaseAccounts", "account_name",
+			"tables", "name",
+		)
 	})
 
 	p.AddResourceConfigurator("azurerm_cosmosdb_account", func(r *config.Resource) {
 		r.References = config.References{
 			"resource_group_name": config.Reference{
-				Type:      rconfig.APISPackagePath + "/azure/v1alpha1.ResourceGroup",
-				Extractor: rconfig.APISPackagePath + "/rconfig.ExtractResourceName()",
+				Type: rconfig.APISPackagePath + "/azure/v1alpha1.ResourceGroup",
 			},
 		}
 		r.UseAsync = true
+		r.ExternalName = config.NameAsIdentifier
+		r.ExternalName.GetExternalNameFn = common.GetNameFromFullyQualifiedID
+		// /subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg1/providers/Microsoft.DocumentDB/databaseAccounts/account1
+		r.ExternalName.GetIDFn = common.GetFullyQualifiedIDFn("Microsoft.DocumentDB", "databaseAccounts", "account_name")
 	})
 
 	p.AddResourceConfigurator("azurerm_cosmosdb_notebook_workspace", func(r *config.Resource) {
 		r.References = config.References{
 			"resource_group_name": config.Reference{
-				Type:      rconfig.APISPackagePath + "/azure/v1alpha1.ResourceGroup",
-				Extractor: rconfig.APISPackagePath + "/rconfig.ExtractResourceName()",
+				Type: rconfig.APISPackagePath + "/azure/v1alpha1.ResourceGroup",
 			},
 			"account_name": config.Reference{
 				Type:      "Account",
@@ -210,14 +310,37 @@ func Configure(p *config.Provider) {
 			},
 		}
 		r.UseAsync = true
+		r.ExternalName = config.NameAsIdentifier
+		r.ExternalName.GetExternalNameFn = common.GetNameFromFullyQualifiedID
+
+		// /subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/group1/providers/Microsoft.DocumentDB/databaseAccounts/account1/notebookWorkspaces/notebookWorkspace1
+		r.ExternalName.GetIDFn = common.GetFullyQualifiedIDFn("Microsoft.DocumentDB",
+			"databaseAccounts", "account_name",
+			"notebookWorkspaces", "name",
+		)
 	})
 
 	p.AddResourceConfigurator("azurerm_cosmosdb_sql_trigger", func(r *config.Resource) {
 		r.References = config.References{
 			"container_id": config.Reference{
-				Type: "SqlContainer",
+				Type: "SQLContainer",
 			},
 		}
 		r.UseAsync = true
+		r.ExternalName = config.NameAsIdentifier
+		r.ExternalName.GetExternalNameFn = common.GetNameFromFullyQualifiedID
+
+		// /subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/group1/providers/Microsoft.DocumentDB/databaseAccounts/account1/sqlDatabases/database1/containers/container1/triggers/trigger1
+		r.ExternalName.GetIDFn = func(_ context.Context, name string, parameters map[string]interface{}, providerConfig map[string]interface{}) (string, error) {
+			containerID, ok := parameters["container_id"]
+			if !ok {
+				return "", errors.Errorf(common.ErrFmtNoAttribute, "container_id")
+			}
+			containerIDStr, ok := containerID.(string)
+			if !ok {
+				return "", errors.Errorf(common.ErrFmtUnexpectedType, "container_id")
+			}
+			return fmt.Sprintf("%s/triggers/%s", containerIDStr, name), nil
+		}
 	})
 }

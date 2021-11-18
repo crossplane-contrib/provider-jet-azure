@@ -67,8 +67,6 @@ spec:
                     type: string
                   collation:
                     type: string
-                  name:
-                    type: string
                   serverId:
                     type: string
                   serverIdRef:
@@ -94,8 +92,6 @@ spec:
                           is selected.
                         type: object
                     type: object
-                required:
-                - name
                 type: object
               providerConfigRef:
                 default:

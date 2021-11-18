@@ -20,6 +20,7 @@ import (
 	"github.com/crossplane-contrib/terrajet/pkg/config"
 
 	"github.com/crossplane-contrib/provider-tf-azure/apis/rconfig"
+	"github.com/crossplane-contrib/provider-tf-azure/config/common"
 )
 
 const groupNetwork = "network"
@@ -34,11 +35,17 @@ func Configure(p *config.Provider) {
 		}
 		r.References = config.References{
 			"resource_group_name": config.Reference{
-				Type:      rconfig.APISPackagePath + "/azure/v1alpha1.ResourceGroup",
-				Extractor: rconfig.APISPackagePath + "/rconfig.ExtractResourceName()",
+				Type: rconfig.APISPackagePath + "/azure/v1alpha1.ResourceGroup",
 			},
 		}
 		r.UseAsync = true
+		r.ExternalName = config.NameAsIdentifier
+		r.ExternalName.GetExternalNameFn = common.GetNameFromFullyQualifiedID
+		// /subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/mygroup1/providers/Microsoft.Network/virtualNetworks/myvnet1/subnets/mysubnet1
+		r.ExternalName.GetIDFn = common.GetFullyQualifiedIDFn("Microsoft.Network",
+			"virtualNetworks", "virtual_network_name",
+			"subnets", "name",
+		)
 	})
 
 	p.AddResourceConfigurator("azurerm_subnet_nat_gateway_association", func(r *config.Resource) {
@@ -50,6 +57,7 @@ func Configure(p *config.Provider) {
 			},
 		}
 		r.UseAsync = true
+		r.ExternalName = config.IdentifierFromProvider
 	})
 
 	p.AddResourceConfigurator("azurerm_subnet_network_security_group_association", func(r *config.Resource) {
@@ -61,6 +69,7 @@ func Configure(p *config.Provider) {
 			},
 		}
 		r.UseAsync = true
+		r.ExternalName = config.IdentifierFromProvider
 	})
 
 	p.AddResourceConfigurator("azurerm_subnet_service_endpoint_storage_policy", func(r *config.Resource) {
@@ -68,11 +77,16 @@ func Configure(p *config.Provider) {
 		r.ShortGroup = groupNetwork
 		r.References = config.References{
 			"resource_group_name": config.Reference{
-				Type:      rconfig.APISPackagePath + "/azure/v1alpha1.ResourceGroup",
-				Extractor: rconfig.APISPackagePath + "/rconfig.ExtractResourceName()",
+				Type: rconfig.APISPackagePath + "/azure/v1alpha1.ResourceGroup",
 			},
 		}
 		r.UseAsync = true
+		r.ExternalName = config.NameAsIdentifier
+		r.ExternalName.GetExternalNameFn = common.GetNameFromFullyQualifiedID
+		// /subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/mygroup1/providers/Microsoft.Network/serviceEndpointPolicies/policy1
+		r.ExternalName.GetIDFn = common.GetFullyQualifiedIDFn("Microsoft.Network",
+			"serviceEndpointPolicies", "name",
+		)
 	})
 
 	p.AddResourceConfigurator("azurerm_subnet_route_table_association", func(r *config.Resource) {
@@ -84,5 +98,6 @@ func Configure(p *config.Provider) {
 			},
 		}
 		r.UseAsync = true
+		r.ExternalName = config.IdentifierFromProvider
 	})
 }

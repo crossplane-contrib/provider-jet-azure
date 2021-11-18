@@ -91,8 +91,8 @@ func (l *NotebookWorkspaceList) GetItems() []resource.Managed {
 	return items
 }
 
-// GetItems of this SqlContainerList.
-func (l *SqlContainerList) GetItems() []resource.Managed {
+// GetItems of this SQLContainerList.
+func (l *SQLContainerList) GetItems() []resource.Managed {
 	items := make([]resource.Managed, len(l.Items))
 	for i := range l.Items {
 		items[i] = &l.Items[i]
@@ -100,8 +100,8 @@ func (l *SqlContainerList) GetItems() []resource.Managed {
 	return items
 }
 
-// GetItems of this SqlDatabaseList.
-func (l *SqlDatabaseList) GetItems() []resource.Managed {
+// GetItems of this SQLDatabaseList.
+func (l *SQLDatabaseList) GetItems() []resource.Managed {
 	items := make([]resource.Managed, len(l.Items))
 	for i := range l.Items {
 		items[i] = &l.Items[i]
@@ -109,8 +109,8 @@ func (l *SqlDatabaseList) GetItems() []resource.Managed {
 	return items
 }
 
-// GetItems of this SqlFunctionList.
-func (l *SqlFunctionList) GetItems() []resource.Managed {
+// GetItems of this SQLFunctionList.
+func (l *SQLFunctionList) GetItems() []resource.Managed {
 	items := make([]resource.Managed, len(l.Items))
 	for i := range l.Items {
 		items[i] = &l.Items[i]

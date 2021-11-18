@@ -66,8 +66,6 @@ spec:
                     type: string
                   collation:
                     type: string
-                  name:
-                    type: string
                   resourceGroupName:
                     type: string
                   resourceGroupNameRef:
@@ -121,7 +119,6 @@ spec:
                 required:
                 - charset
                 - collation
-                - name
                 type: object
               providerConfigRef:
                 default:

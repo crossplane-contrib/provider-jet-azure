@@ -123,9 +123,6 @@ type AccountParameters struct {
 	// +kubebuilder:validation:Optional
 	MinTLSVersion *string `json:"minTlsVersion,omitempty" tf:"min_tls_version,omitempty"`
 
-	// +kubebuilder:validation:Required
-	Name *string `json:"name" tf:"name,omitempty"`
-
 	// +kubebuilder:validation:Optional
 	NetworkRules []NetworkRulesParameters `json:"networkRules,omitempty" tf:"network_rules,omitempty"`
 
@@ -136,7 +133,6 @@ type AccountParameters struct {
 	QueueProperties []QueuePropertiesParameters `json:"queueProperties,omitempty" tf:"queue_properties,omitempty"`
 
 	// +crossplane:generate:reference:type=github.com/crossplane-contrib/provider-tf-azure/apis/azure/v1alpha1.ResourceGroup
-	// +crossplane:generate:reference:extractor=github.com/crossplane-contrib/provider-tf-azure/apis/rconfig.ExtractResourceName()
 	// +kubebuilder:validation:Optional
 	ResourceGroupName *string `json:"resourceGroupName,omitempty" tf:"resource_group_name,omitempty"`
 

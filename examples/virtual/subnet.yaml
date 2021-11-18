@@ -1,10 +1,9 @@
 apiVersion: network.azure.tf.crossplane.io/v1alpha1
 kind: Subnet
 metadata:
-  name: example
+  name: example-subnet
 spec:
   forProvider:
-    name: "example-subnet"
     resourceGroupNameRef:
       name: example
     virtualNetworkName: "virtualNetwork1"

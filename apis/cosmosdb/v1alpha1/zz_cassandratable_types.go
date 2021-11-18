@@ -59,9 +59,6 @@ type CassandraTableParameters struct {
 	DefaultTTL *int64 `json:"defaultTtl,omitempty" tf:"default_ttl,omitempty"`
 
 	// +kubebuilder:validation:Required
-	Name *string `json:"name" tf:"name,omitempty"`
-
-	// +kubebuilder:validation:Required
 	Schema []SchemaParameters `json:"schema" tf:"schema,omitempty"`
 
 	// +kubebuilder:validation:Optional

@@ -95,19 +95,19 @@ type IndexingPolicySpatialIndexParameters struct {
 	Path *string `json:"path" tf:"path,omitempty"`
 }
 
-type SqlContainerAutoscaleSettingsObservation struct {
+type SQLContainerAutoscaleSettingsObservation struct {
 }
 
-type SqlContainerAutoscaleSettingsParameters struct {
+type SQLContainerAutoscaleSettingsParameters struct {
 
 	// +kubebuilder:validation:Optional
 	MaxThroughput *int64 `json:"maxThroughput,omitempty" tf:"max_throughput,omitempty"`
 }
 
-type SqlContainerConflictResolutionPolicyObservation struct {
+type SQLContainerConflictResolutionPolicyObservation struct {
 }
 
-type SqlContainerConflictResolutionPolicyParameters struct {
+type SQLContainerConflictResolutionPolicyParameters struct {
 
 	// +kubebuilder:validation:Optional
 	ConflictResolutionPath *string `json:"conflictResolutionPath,omitempty" tf:"conflict_resolution_path,omitempty"`
@@ -119,10 +119,10 @@ type SqlContainerConflictResolutionPolicyParameters struct {
 	Mode *string `json:"mode" tf:"mode,omitempty"`
 }
 
-type SqlContainerObservation struct {
+type SQLContainerObservation struct {
 }
 
-type SqlContainerParameters struct {
+type SQLContainerParameters struct {
 
 	// +crossplane:generate:reference:type=Account
 	// +crossplane:generate:reference:extractor=github.com/crossplane-contrib/provider-tf-azure/apis/rconfig.ExtractResourceName()
@@ -139,12 +139,12 @@ type SqlContainerParameters struct {
 	AnalyticalStorageTTL *int64 `json:"analyticalStorageTtl,omitempty" tf:"analytical_storage_ttl,omitempty"`
 
 	// +kubebuilder:validation:Optional
-	AutoscaleSettings []SqlContainerAutoscaleSettingsParameters `json:"autoscaleSettings,omitempty" tf:"autoscale_settings,omitempty"`
+	AutoscaleSettings []SQLContainerAutoscaleSettingsParameters `json:"autoscaleSettings,omitempty" tf:"autoscale_settings,omitempty"`
 
 	// +kubebuilder:validation:Optional
-	ConflictResolutionPolicy []SqlContainerConflictResolutionPolicyParameters `json:"conflictResolutionPolicy,omitempty" tf:"conflict_resolution_policy,omitempty"`
+	ConflictResolutionPolicy []SQLContainerConflictResolutionPolicyParameters `json:"conflictResolutionPolicy,omitempty" tf:"conflict_resolution_policy,omitempty"`
 
-	// +crossplane:generate:reference:type=SqlDatabase
+	// +crossplane:generate:reference:type=SQLDatabase
 	// +crossplane:generate:reference:extractor=github.com/crossplane-contrib/provider-tf-azure/apis/rconfig.ExtractResourceName()
 	// +kubebuilder:validation:Optional
 	DatabaseName *string `json:"databaseName,omitempty" tf:"database_name,omitempty"`
@@ -162,16 +162,12 @@ type SqlContainerParameters struct {
 	IndexingPolicy []IndexingPolicyParameters `json:"indexingPolicy,omitempty" tf:"indexing_policy,omitempty"`
 
 	// +kubebuilder:validation:Required
-	Name *string `json:"name" tf:"name,omitempty"`
-
-	// +kubebuilder:validation:Required
 	PartitionKeyPath *string `json:"partitionKeyPath" tf:"partition_key_path,omitempty"`
 
 	// +kubebuilder:validation:Optional
 	PartitionKeyVersion *int64 `json:"partitionKeyVersion,omitempty" tf:"partition_key_version,omitempty"`
 
 	// +crossplane:generate:reference:type=github.com/crossplane-contrib/provider-tf-azure/apis/azure/v1alpha1.ResourceGroup
-	// +crossplane:generate:reference:extractor=github.com/crossplane-contrib/provider-tf-azure/apis/rconfig.ExtractResourceName()
 	// +kubebuilder:validation:Optional
 	ResourceGroupName *string `json:"resourceGroupName,omitempty" tf:"resource_group_name,omitempty"`
 
@@ -185,63 +181,63 @@ type SqlContainerParameters struct {
 	Throughput *int64 `json:"throughput,omitempty" tf:"throughput,omitempty"`
 
 	// +kubebuilder:validation:Optional
-	UniqueKey []SqlContainerUniqueKeyParameters `json:"uniqueKey,omitempty" tf:"unique_key,omitempty"`
+	UniqueKey []SQLContainerUniqueKeyParameters `json:"uniqueKey,omitempty" tf:"unique_key,omitempty"`
 }
 
-type SqlContainerUniqueKeyObservation struct {
+type SQLContainerUniqueKeyObservation struct {
 }
 
-type SqlContainerUniqueKeyParameters struct {
+type SQLContainerUniqueKeyParameters struct {
 
 	// +kubebuilder:validation:Required
 	Paths []*string `json:"paths" tf:"paths,omitempty"`
 }
 
-// SqlContainerSpec defines the desired state of SqlContainer
-type SqlContainerSpec struct {
+// SQLContainerSpec defines the desired state of SQLContainer
+type SQLContainerSpec struct {
 	v1.ResourceSpec `json:",inline"`
-	ForProvider     SqlContainerParameters `json:"forProvider"`
+	ForProvider     SQLContainerParameters `json:"forProvider"`
 }
 
-// SqlContainerStatus defines the observed state of SqlContainer.
-type SqlContainerStatus struct {
+// SQLContainerStatus defines the observed state of SQLContainer.
+type SQLContainerStatus struct {
 	v1.ResourceStatus `json:",inline"`
-	AtProvider        SqlContainerObservation `json:"atProvider,omitempty"`
+	AtProvider        SQLContainerObservation `json:"atProvider,omitempty"`
 }
 
 // +kubebuilder:object:root=true
 
-// SqlContainer is the Schema for the SqlContainers API
+// SQLContainer is the Schema for the SQLContainers API
 // +kubebuilder:printcolumn:name="READY",type="string",JSONPath=".status.conditions[?(@.type=='Ready')].status"
 // +kubebuilder:printcolumn:name="SYNCED",type="string",JSONPath=".status.conditions[?(@.type=='Synced')].status"
 // +kubebuilder:printcolumn:name="EXTERNAL-NAME",type="string",JSONPath=".metadata.annotations.crossplane\\.io/external-name"
 // +kubebuilder:printcolumn:name="AGE",type="date",JSONPath=".metadata.creationTimestamp"
 // +kubebuilder:subresource:status
 // +kubebuilder:resource:scope=Cluster,categories={crossplane,managed,tfazure}
-type SqlContainer struct {
+type SQLContainer struct {
 	metav1.TypeMeta   `json:",inline"`
 	metav1.ObjectMeta `json:"metadata,omitempty"`
-	Spec              SqlContainerSpec   `json:"spec"`
-	Status            SqlContainerStatus `json:"status,omitempty"`
+	Spec              SQLContainerSpec   `json:"spec"`
+	Status            SQLContainerStatus `json:"status,omitempty"`
 }
 
 // +kubebuilder:object:root=true
 
-// SqlContainerList contains a list of SqlContainers
-type SqlContainerList struct {
+// SQLContainerList contains a list of SQLContainers
+type SQLContainerList struct {
 	metav1.TypeMeta `json:",inline"`
 	metav1.ListMeta `json:"metadata,omitempty"`
-	Items           []SqlContainer `json:"items"`
+	Items           []SQLContainer `json:"items"`
 }
 
 // Repository type metadata.
 var (
-	SqlContainer_Kind             = "SqlContainer"
-	SqlContainer_GroupKind        = schema.GroupKind{Group: CRDGroup, Kind: SqlContainer_Kind}.String()
-	SqlContainer_KindAPIVersion   = SqlContainer_Kind + "." + CRDGroupVersion.String()
-	SqlContainer_GroupVersionKind = CRDGroupVersion.WithKind(SqlContainer_Kind)
+	SQLContainer_Kind             = "SQLContainer"
+	SQLContainer_GroupKind        = schema.GroupKind{Group: CRDGroup, Kind: SQLContainer_Kind}.String()
+	SQLContainer_KindAPIVersion   = SQLContainer_Kind + "." + CRDGroupVersion.String()
+	SQLContainer_GroupVersionKind = CRDGroupVersion.WithKind(SQLContainer_Kind)
 )
 
 func init() {
-	SchemeBuilder.Register(&SqlContainer{}, &SqlContainerList{})
+	SchemeBuilder.Register(&SQLContainer{}, &SQLContainerList{})
 }

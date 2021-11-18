@@ -17,9 +17,15 @@ limitations under the License.
 package storage
 
 import (
+	"context"
+	"fmt"
+	"strings"
+
 	"github.com/crossplane-contrib/terrajet/pkg/config"
+	"github.com/pkg/errors"
 
 	"github.com/crossplane-contrib/provider-tf-azure/apis/rconfig"
+	"github.com/crossplane-contrib/provider-tf-azure/config/common"
 )
 
 // Configure configures storage group
@@ -27,18 +33,22 @@ func Configure(p *config.Provider) {
 	p.AddResourceConfigurator("azurerm_storage_account", func(r *config.Resource) {
 		r.References = config.References{
 			"resource_group_name": config.Reference{
-				Type:      rconfig.APISPackagePath + "/azure/v1alpha1.ResourceGroup",
-				Extractor: rconfig.APISPackagePath + "/rconfig.ExtractResourceName()",
+				Type: rconfig.APISPackagePath + "/azure/v1alpha1.ResourceGroup",
 			},
 		}
 		r.UseAsync = true
+		r.ExternalName = config.NameAsIdentifier
+		r.ExternalName.GetExternalNameFn = common.GetNameFromFullyQualifiedID
+		// /subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/myresourcegroup/providers/Microsoft.Storage/storageAccounts/myaccount
+		r.ExternalName.GetIDFn = common.GetFullyQualifiedIDFn("Microsoft.Storage",
+			"storageAccounts", "name",
+		)
 	})
 
 	p.AddResourceConfigurator("azurerm_storage_blob", func(r *config.Resource) {
 		r.References = config.References{
 			"resource_group_name": config.Reference{
-				Type:      rconfig.APISPackagePath + "/azure/v1alpha1.ResourceGroup",
-				Extractor: rconfig.APISPackagePath + "/rconfig.ExtractResourceName()",
+				Type: rconfig.APISPackagePath + "/azure/v1alpha1.ResourceGroup",
 			},
 			"storage_account_name": config.Reference{
 				Type:      "Account",
@@ -50,6 +60,23 @@ func Configure(p *config.Provider) {
 			},
 		}
 		r.UseAsync = true
+		r.ExternalName = config.NameAsIdentifier
+		// https://example.blob.core.windows.net/container/blob.vhd
+		r.ExternalName.GetExternalNameFn = func(tfstate map[string]interface{}) (string, error) {
+			id, ok := tfstate["id"]
+			if !ok {
+				return "", errors.Errorf(common.ErrFmtNoAttribute, "id")
+			}
+			idStr, ok := id.(string)
+			if !ok {
+				return "", errors.Errorf(common.ErrFmtUnexpectedType, "id")
+			}
+			idStr = strings.TrimSuffix(idStr, ".blob.core.windows.net/container/blob.vhd")
+			return strings.TrimPrefix(idStr, "https://"), nil
+		}
+		r.ExternalName.GetIDFn = func(_ context.Context, name string, parameters map[string]interface{}, providerConfig map[string]interface{}) (string, error) {
+			return fmt.Sprintf("https://%s.blob.core.windows.net/container/blob.vhd", name), nil
+		}
 	})
 
 	p.AddResourceConfigurator("azurerm_storage_container", func(r *config.Resource) {
@@ -60,5 +87,22 @@ func Configure(p *config.Provider) {
 			},
 		}
 		r.UseAsync = true
+		r.ExternalName = config.NameAsIdentifier
+		// https://example.blob.core.windows.net/container
+		r.ExternalName.GetExternalNameFn = func(tfstate map[string]interface{}) (string, error) {
+			id, ok := tfstate["id"]
+			if !ok {
+				return "", errors.Errorf(common.ErrFmtNoAttribute, "id")
+			}
+			idStr, ok := id.(string)
+			if !ok {
+				return "", errors.Errorf(common.ErrFmtUnexpectedType, "id")
+			}
+			idStr = strings.TrimSuffix(idStr, ".blob.core.windows.net/container")
+			return strings.TrimPrefix(idStr, "https://"), nil
+		}
+		r.ExternalName.GetIDFn = func(_ context.Context, name string, parameters map[string]interface{}, providerConfig map[string]interface{}) (string, error) {
+			return fmt.Sprintf("https://%s.blob.core.windows.net/container", name), nil
+		}
 	})
 }

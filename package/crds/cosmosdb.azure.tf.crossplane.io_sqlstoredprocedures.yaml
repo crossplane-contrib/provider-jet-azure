@@ -140,8 +140,6 @@ spec:
                           is selected.
                         type: object
                     type: object
-                  name:
-                    type: string
                   resourceGroupName:
                     type: string
                   resourceGroupNameRef:
@@ -169,7 +167,6 @@ spec:
                     type: object
                 required:
                 - body
-                - name
                 type: object
               providerConfigRef:
                 default:

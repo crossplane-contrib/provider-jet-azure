@@ -64,8 +64,6 @@ spec:
                 type: string
               forProvider:
                 properties:
-                  login:
-                    type: string
                   objectId:
                     type: string
                   resourceGroupName:
@@ -121,7 +119,6 @@ spec:
                   tenantId:
                     type: string
                 required:
-                - login
                 - objectId
                 - tenantId
                 type: object

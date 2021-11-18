@@ -95,8 +95,6 @@ spec:
                     type: boolean
                   enforcePrivateLinkServiceNetworkPolicies:
                     type: boolean
-                  name:
-                    type: string
                   resourceGroupName:
                     type: string
                   resourceGroupNameRef:
@@ -133,7 +131,6 @@ spec:
                   virtualNetworkName:
                     type: string
                 required:
-                - name
                 - virtualNetworkName
                 type: object
               providerConfigRef:

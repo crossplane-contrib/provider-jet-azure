@@ -81,8 +81,6 @@ spec:
                     type: string
                   metadata:
                     type: string
-                  name:
-                    type: string
                   notScopes:
                     items:
                       type: string
@@ -117,7 +115,6 @@ spec:
                         type: object
                     type: object
                 required:
-                - name
                 - policyDefinitionId
                 type: object
               providerConfigRef:

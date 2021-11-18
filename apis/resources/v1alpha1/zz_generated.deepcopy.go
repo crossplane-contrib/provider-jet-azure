@@ -117,11 +117,6 @@ func (in *ResourceGroupTemplateDeploymentParameters) DeepCopyInto(out *ResourceG
 		*out = new(string)
 		**out = **in
 	}
-	if in.Name != nil {
-		in, out := &in.Name, &out.Name
-		*out = new(string)
-		**out = **in
-	}
 	if in.ParametersContent != nil {
 		in, out := &in.ParametersContent, &out.ParametersContent
 		*out = new(string)

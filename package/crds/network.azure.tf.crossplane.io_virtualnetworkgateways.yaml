@@ -122,8 +122,6 @@ spec:
                     type: array
                   location:
                     type: string
-                  name:
-                    type: string
                   privateIpAddressEnabled:
                     type: boolean
                   resourceGroupName:
@@ -217,7 +215,6 @@ spec:
                 required:
                 - ipConfiguration
                 - location
-                - name
                 - sku
                 - type
                 type: object

@@ -17,9 +17,14 @@ limitations under the License.
 package kubernetes
 
 import (
+	"context"
+	"fmt"
+
 	"github.com/crossplane-contrib/terrajet/pkg/config"
+	"github.com/pkg/errors"
 
 	"github.com/crossplane-contrib/provider-tf-azure/apis/rconfig"
+	"github.com/crossplane-contrib/provider-tf-azure/config/common"
 )
 
 // Configure configures kubernetes group
@@ -32,8 +37,7 @@ func Configure(p *config.Provider) {
 		}
 		r.References = config.References{
 			"resource_group_name": config.Reference{
-				Type:      rconfig.APISPackagePath + "/azure/v1alpha1.ResourceGroup",
-				Extractor: rconfig.APISPackagePath + "/rconfig.ExtractResourceName()",
+				Type: rconfig.APISPackagePath + "/azure/v1alpha1.ResourceGroup",
 			},
 			"default_node_pool[*].pod_subnet_id": config.Reference{
 				Type: rconfig.APISPackagePath + "/network/v1alpha1.Subnet",
@@ -46,6 +50,10 @@ func Configure(p *config.Provider) {
 			},
 		}
 		r.UseAsync = true
+		r.ExternalName = config.NameAsIdentifier
+		r.ExternalName.GetExternalNameFn = common.GetNameFromFullyQualifiedID
+		// /subscriptions/00000000-0000-0000-0000-000000000000/resourcegroups/group1/providers/Microsoft.ContainerService/managedClusters/cluster1
+		r.ExternalName.GetIDFn = common.GetFullyQualifiedIDFn("Microsoft.ContainerService", "managedClusters", "name")
 	})
 
 	p.AddResourceConfigurator("azurerm_kubernetes_cluster_node_pool", func(r *config.Resource) {
@@ -63,5 +71,19 @@ func Configure(p *config.Provider) {
 			},
 		}
 		r.UseAsync = true
+		r.ExternalName = config.NameAsIdentifier
+		r.ExternalName.GetExternalNameFn = common.GetNameFromFullyQualifiedID
+		// /subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/group1/providers/Microsoft.ContainerService/managedClusters/cluster1/agentPools/pool1
+		r.ExternalName.GetIDFn = func(_ context.Context, name string, parameters map[string]interface{}, providerConfig map[string]interface{}) (string, error) {
+			clusterID, ok := parameters["kubernetes_cluster_id"]
+			if !ok {
+				return "", errors.Errorf(common.ErrFmtNoAttribute, "kubernetes_cluster_id")
+			}
+			clusterIDStr, ok := clusterID.(string)
+			if !ok {
+				return "", errors.Errorf(common.ErrFmtUnexpectedType, "kubernetes_cluster_id")
+			}
+			return fmt.Sprintf("%s/agentPools/%s", clusterIDStr, name), nil
+		}
 	})
 }

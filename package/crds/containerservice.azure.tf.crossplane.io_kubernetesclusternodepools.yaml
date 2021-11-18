@@ -251,8 +251,6 @@ spec:
                     type: integer
                   mode:
                     type: string
-                  name:
-                    type: string
                   nodeCount:
                     format: int64
                     type: integer
@@ -351,7 +349,6 @@ spec:
                         type: object
                     type: object
                 required:
-                - name
                 - vmSize
                 type: object
               providerConfigRef:

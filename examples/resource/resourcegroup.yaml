@@ -4,7 +4,6 @@ metadata:
   name: example
 spec:
   forProvider:
-    name: example-resourcegroup
     location: "East US"
     tags:
       provisioner: crossplane

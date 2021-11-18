@@ -33,7 +33,7 @@ type SqlTriggerParameters struct {
 	// +kubebuilder:validation:Required
 	Body *string `json:"body" tf:"body,omitempty"`
 
-	// +crossplane:generate:reference:type=SqlContainer
+	// +crossplane:generate:reference:type=SQLContainer
 	// +kubebuilder:validation:Optional
 	ContainerID *string `json:"containerId,omitempty" tf:"container_id,omitempty"`
 
@@ -42,9 +42,6 @@ type SqlTriggerParameters struct {
 
 	// +kubebuilder:validation:Optional
 	ContainerIDSelector *v1.Selector `json:"containerIdSelector,omitempty" tf:"-"`
-
-	// +kubebuilder:validation:Required
-	Name *string `json:"name" tf:"name,omitempty"`
 
 	// +kubebuilder:validation:Required
 	Operation *string `json:"operation" tf:"operation,omitempty"`

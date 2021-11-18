@@ -89,15 +89,12 @@ spec:
                           is selected.
                         type: object
                     type: object
-                  name:
-                    type: string
                   operation:
                     type: string
                   type:
                     type: string
                 required:
                 - body
-                - name
                 - operation
                 - type
                 type: object

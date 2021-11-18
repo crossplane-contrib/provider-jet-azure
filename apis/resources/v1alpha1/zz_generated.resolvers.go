@@ -20,7 +20,6 @@ package v1alpha1
 import (
 	"context"
 	v1alpha1 "github.com/crossplane-contrib/provider-tf-azure/apis/azure/v1alpha1"
-	rconfig "github.com/crossplane-contrib/provider-tf-azure/apis/rconfig"
 	reference "github.com/crossplane/crossplane-runtime/pkg/reference"
 	errors "github.com/pkg/errors"
 	client "sigs.k8s.io/controller-runtime/pkg/client"
@@ -35,7 +34,7 @@ func (mg *ResourceGroupTemplateDeployment) ResolveReferences(ctx context.Context
 
 	rsp, err = r.Resolve(ctx, reference.ResolutionRequest{
 		CurrentValue: reference.FromPtrValue(mg.Spec.ForProvider.ResourceGroupName),
-		Extract:      rconfig.ExtractResourceName(),
+		Extract:      reference.ExternalName(),
 		Reference:    mg.Spec.ForProvider.ResourceGroupNameRef,
 		Selector:     mg.Spec.ForProvider.ResourceGroupNameSelector,
 		To: reference.To{

@@ -43,9 +43,6 @@ type BlobParameters struct {
 	// +kubebuilder:validation:Optional
 	Metadata map[string]*string `json:"metadata,omitempty" tf:"metadata,omitempty"`
 
-	// +kubebuilder:validation:Required
-	Name *string `json:"name" tf:"name,omitempty"`
-
 	// +kubebuilder:validation:Optional
 	Parallelism *int64 `json:"parallelism,omitempty" tf:"parallelism,omitempty"`
 

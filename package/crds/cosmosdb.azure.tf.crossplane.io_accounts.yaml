@@ -181,8 +181,6 @@ spec:
                     type: string
                   mongoServerVersion:
                     type: string
-                  name:
-                    type: string
                   networkAclBypassForAzureServices:
                     type: boolean
                   networkAclBypassIds:
@@ -237,7 +235,6 @@ spec:
                 - consistencyPolicy
                 - geoLocation
                 - location
-                - name
                 - offerType
                 type: object
               providerConfigRef:

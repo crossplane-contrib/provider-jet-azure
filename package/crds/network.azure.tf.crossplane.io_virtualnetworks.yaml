@@ -86,8 +86,6 @@ spec:
                     type: array
                   location:
                     type: string
-                  name:
-                    type: string
                   resourceGroupName:
                     type: string
                   resourceGroupNameRef:
@@ -136,7 +134,6 @@ spec:
                 required:
                 - addressSpace
                 - location
-                - name
                 type: object
               providerConfigRef:
                 default:

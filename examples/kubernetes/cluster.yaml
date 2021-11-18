@@ -1,13 +1,12 @@
 apiVersion: containerservice.azure.tf.crossplane.io/v1alpha1
 kind: KubernetesCluster
 metadata:
-  name: example
+  name: example-aks
 spec:
   writeConnectionSecretToRef:
     name: example-kubeconfig
     namespace: crossplane-system
   forProvider:
-    name: "example-aks"
     location: "East US"
     resourceGroupNameRef:
       name: example

@@ -17,9 +17,19 @@ limitations under the License.
 package resource
 
 import (
+	"context"
+	"fmt"
+
 	"github.com/crossplane-contrib/terrajet/pkg/config"
+	"github.com/pkg/errors"
 
 	"github.com/crossplane-contrib/provider-tf-azure/apis/rconfig"
+	"github.com/crossplane-contrib/provider-tf-azure/config/common"
+)
+
+const (
+	errFmtNoAttribute    = `"attribute not found: %s`
+	errFmtUnexpectedType = `unexpected type for attribute %s: Expecting a string`
 )
 
 // Configure configures resource group
@@ -27,6 +37,20 @@ func Configure(p *config.Provider) {
 	p.AddResourceConfigurator("azurerm_resource_group", func(r *config.Resource) {
 		r.Kind = "ResourceGroup"
 		r.ShortGroup = ""
+		r.ExternalName = config.NameAsIdentifier
+		r.ExternalName.GetExternalNameFn = common.GetNameFromFullyQualifiedID
+		// /subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/example
+		r.ExternalName.GetIDFn = func(ctx context.Context, name string, _ map[string]interface{}, providerConfig map[string]interface{}) (string, error) {
+			subID, ok := providerConfig["subscription_id"]
+			if !ok {
+				return "", errors.Errorf(errFmtNoAttribute, "subscription_id")
+			}
+			subIDStr, ok := subID.(string)
+			if !ok {
+				return "", errors.Errorf(errFmtUnexpectedType, "subscription_id")
+			}
+			return fmt.Sprintf("/subscriptions/%s/resourceGroups/%s", subIDStr, name), nil
+		}
 	})
 
 	p.AddResourceConfigurator("azurerm_resource_group_template_deployment", func(r *config.Resource) {
@@ -34,11 +58,16 @@ func Configure(p *config.Provider) {
 		r.ShortGroup = "resources"
 		r.References = config.References{
 			"resource_group_name": config.Reference{
-				Type:      rconfig.APISPackagePath + "/azure/v1alpha1.ResourceGroup",
-				Extractor: rconfig.APISPackagePath + "/rconfig.ExtractResourceName()",
+				Type: rconfig.APISPackagePath + "/azure/v1alpha1.ResourceGroup",
 			},
 		}
 		r.UseAsync = true
+		r.ExternalName = config.NameAsIdentifier
+		r.ExternalName.GetExternalNameFn = common.GetNameFromFullyQualifiedID
+		// /subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/group1/providers/Microsoft.Resources/deployments/template1
+		r.ExternalName.GetIDFn = common.GetFullyQualifiedIDFn("Microsoft.Resources",
+			"deployments", "name",
+		)
 	})
 
 	p.AddResourceConfigurator("azurerm_resource_group_policy_assignment", func(r *config.Resource) {
@@ -50,5 +79,11 @@ func Configure(p *config.Provider) {
 			},
 		}
 		r.UseAsync = true
+		r.ExternalName = config.NameAsIdentifier
+		r.ExternalName.GetExternalNameFn = common.GetNameFromFullyQualifiedID
+		// /subscriptions/00000000-0000-0000-000000000000/resourceGroups/group1/providers/Microsoft.Authorization/policyAssignments/assignment1
+		r.ExternalName.GetIDFn = common.GetFullyQualifiedIDFn("Microsoft.Authorization",
+			"policyAssignments", "name",
+		)
 	})
 }

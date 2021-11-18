@@ -12,8 +12,8 @@ spec:
     - crossplane
     - managed
     - tfazure
-    kind: SqlFunction
-    listKind: SqlFunctionList
+    kind: SQLFunction
+    listKind: SQLFunctionList
     plural: sqlfunctions
     singular: sqlfunction
   scope: Cluster
@@ -34,7 +34,7 @@ spec:
     name: v1alpha1
     schema:
       openAPIV3Schema:
-        description: SqlFunction is the Schema for the SqlFunctions API
+        description: SQLFunction is the Schema for the SQLFunctions API
         properties:
           apiVersion:
             description: 'APIVersion defines the versioned schema of this representation
@@ -49,7 +49,7 @@ spec:
           metadata:
             type: object
           spec:
-            description: SqlFunctionSpec defines the desired state of SqlFunction
+            description: SQLFunctionSpec defines the desired state of SQLFunction
             properties:
               deletionPolicy:
                 default: Delete
@@ -89,11 +89,8 @@ spec:
                           is selected.
                         type: object
                     type: object
-                  name:
-                    type: string
                 required:
                 - body
-                - name
                 type: object
               providerConfigRef:
                 default:
@@ -140,7 +137,7 @@ spec:
             - forProvider
             type: object
           status:
-            description: SqlFunctionStatus defines the observed state of SqlFunction.
+            description: SQLFunctionStatus defines the observed state of SQLFunction.
             properties:
               atProvider:
                 type: object

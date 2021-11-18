@@ -101,8 +101,6 @@ spec:
                   defaultTtl:
                     format: int64
                     type: integer
-                  name:
-                    type: string
                   schema:
                     items:
                       properties:
@@ -148,7 +146,6 @@ spec:
                     format: int64
                     type: integer
                 required:
-                - name
                 - schema
                 type: object
               providerConfigRef:
