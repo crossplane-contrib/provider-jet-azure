@@ -25,18 +25,18 @@ import (
 	"github.com/crossplane-contrib/terrajet/pkg/resource/json"
 )
 
-// GetTerraformResourceType returns Terraform resource type for this SqlContainer
-func (mg *SqlContainer) GetTerraformResourceType() string {
+// GetTerraformResourceType returns Terraform resource type for this SQLContainer
+func (mg *SQLContainer) GetTerraformResourceType() string {
 	return "azurerm_cosmosdb_sql_container"
 }
 
-// GetConnectionDetailsMapping for this SqlContainer
-func (tr *SqlContainer) GetConnectionDetailsMapping() map[string]string {
+// GetConnectionDetailsMapping for this SQLContainer
+func (tr *SQLContainer) GetConnectionDetailsMapping() map[string]string {
 	return nil
 }
 
-// GetObservation of this SqlContainer
-func (tr *SqlContainer) GetObservation() (map[string]interface{}, error) {
+// GetObservation of this SQLContainer
+func (tr *SQLContainer) GetObservation() (map[string]interface{}, error) {
 	o, err := json.TFParser.Marshal(tr.Status.AtProvider)
 	if err != nil {
 		return nil, err
@@ -45,8 +45,8 @@ func (tr *SqlContainer) GetObservation() (map[string]interface{}, error) {
 	return base, json.TFParser.Unmarshal(o, &base)
 }
 
-// SetObservation for this SqlContainer
-func (tr *SqlContainer) SetObservation(obs map[string]interface{}) error {
+// SetObservation for this SQLContainer
+func (tr *SQLContainer) SetObservation(obs map[string]interface{}) error {
 	p, err := json.TFParser.Marshal(obs)
 	if err != nil {
 		return err
@@ -54,8 +54,8 @@ func (tr *SqlContainer) SetObservation(obs map[string]interface{}) error {
 	return json.TFParser.Unmarshal(p, &tr.Status.AtProvider)
 }
 
-// GetParameters of this SqlContainer
-func (tr *SqlContainer) GetParameters() (map[string]interface{}, error) {
+// GetParameters of this SQLContainer
+func (tr *SQLContainer) GetParameters() (map[string]interface{}, error) {
 	p, err := json.TFParser.Marshal(tr.Spec.ForProvider)
 	if err != nil {
 		return nil, err
@@ -64,8 +64,8 @@ func (tr *SqlContainer) GetParameters() (map[string]interface{}, error) {
 	return base, json.TFParser.Unmarshal(p, &base)
 }
 
-// SetParameters for this SqlContainer
-func (tr *SqlContainer) SetParameters(params map[string]interface{}) error {
+// SetParameters for this SQLContainer
+func (tr *SQLContainer) SetParameters(params map[string]interface{}) error {
 	p, err := json.TFParser.Marshal(params)
 	if err != nil {
 		return err
@@ -73,10 +73,10 @@ func (tr *SqlContainer) SetParameters(params map[string]interface{}) error {
 	return json.TFParser.Unmarshal(p, &tr.Spec.ForProvider)
 }
 
-// LateInitialize this SqlContainer using its observed tfState.
+// LateInitialize this SQLContainer using its observed tfState.
 // returns True if there are any spec changes for the resource.
-func (tr *SqlContainer) LateInitialize(attrs []byte) (bool, error) {
-	params := &SqlContainerParameters{}
+func (tr *SQLContainer) LateInitialize(attrs []byte) (bool, error) {
+	params := &SQLContainerParameters{}
 	if err := json.TFParser.Unmarshal(attrs, params); err != nil {
 		return false, errors.Wrap(err, "failed to unmarshal Terraform state parameters for late-initialization")
 	}
@@ -87,6 +87,6 @@ func (tr *SqlContainer) LateInitialize(attrs []byte) (bool, error) {
 }
 
 // GetTerraformSchemaVersion returns the associated Terraform schema version
-func (tr *SqlContainer) GetTerraformSchemaVersion() int {
+func (tr *SQLContainer) GetTerraformSchemaVersion() int {
 	return 1
 }

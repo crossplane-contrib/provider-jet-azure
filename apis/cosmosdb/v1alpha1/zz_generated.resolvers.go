@@ -35,7 +35,7 @@ func (mg *Account) ResolveReferences(ctx context.Context, c client.Reader) error
 
 	rsp, err = r.Resolve(ctx, reference.ResolutionRequest{
 		CurrentValue: reference.FromPtrValue(mg.Spec.ForProvider.ResourceGroupName),
-		Extract:      rconfig.ExtractResourceName(),
+		Extract:      reference.ExternalName(),
 		Reference:    mg.Spec.ForProvider.ResourceGroupNameRef,
 		Selector:     mg.Spec.ForProvider.ResourceGroupNameSelector,
 		To: reference.To{
@@ -77,7 +77,7 @@ func (mg *CassandraKeyspace) ResolveReferences(ctx context.Context, c client.Rea
 
 	rsp, err = r.Resolve(ctx, reference.ResolutionRequest{
 		CurrentValue: reference.FromPtrValue(mg.Spec.ForProvider.ResourceGroupName),
-		Extract:      rconfig.ExtractResourceName(),
+		Extract:      reference.ExternalName(),
 		Reference:    mg.Spec.ForProvider.ResourceGroupNameRef,
 		Selector:     mg.Spec.ForProvider.ResourceGroupNameSelector,
 		To: reference.To{
@@ -145,7 +145,7 @@ func (mg *GremlinDatabase) ResolveReferences(ctx context.Context, c client.Reade
 
 	rsp, err = r.Resolve(ctx, reference.ResolutionRequest{
 		CurrentValue: reference.FromPtrValue(mg.Spec.ForProvider.ResourceGroupName),
-		Extract:      rconfig.ExtractResourceName(),
+		Extract:      reference.ExternalName(),
 		Reference:    mg.Spec.ForProvider.ResourceGroupNameRef,
 		Selector:     mg.Spec.ForProvider.ResourceGroupNameSelector,
 		To: reference.To{
@@ -203,7 +203,7 @@ func (mg *GremlinGraph) ResolveReferences(ctx context.Context, c client.Reader) 
 
 	rsp, err = r.Resolve(ctx, reference.ResolutionRequest{
 		CurrentValue: reference.FromPtrValue(mg.Spec.ForProvider.ResourceGroupName),
-		Extract:      rconfig.ExtractResourceName(),
+		Extract:      reference.ExternalName(),
 		Reference:    mg.Spec.ForProvider.ResourceGroupNameRef,
 		Selector:     mg.Spec.ForProvider.ResourceGroupNameSelector,
 		To: reference.To{
@@ -261,7 +261,7 @@ func (mg *MongoCollection) ResolveReferences(ctx context.Context, c client.Reade
 
 	rsp, err = r.Resolve(ctx, reference.ResolutionRequest{
 		CurrentValue: reference.FromPtrValue(mg.Spec.ForProvider.ResourceGroupName),
-		Extract:      rconfig.ExtractResourceName(),
+		Extract:      reference.ExternalName(),
 		Reference:    mg.Spec.ForProvider.ResourceGroupNameRef,
 		Selector:     mg.Spec.ForProvider.ResourceGroupNameSelector,
 		To: reference.To{
@@ -303,7 +303,7 @@ func (mg *MongoDatabase) ResolveReferences(ctx context.Context, c client.Reader)
 
 	rsp, err = r.Resolve(ctx, reference.ResolutionRequest{
 		CurrentValue: reference.FromPtrValue(mg.Spec.ForProvider.ResourceGroupName),
-		Extract:      rconfig.ExtractResourceName(),
+		Extract:      reference.ExternalName(),
 		Reference:    mg.Spec.ForProvider.ResourceGroupNameRef,
 		Selector:     mg.Spec.ForProvider.ResourceGroupNameSelector,
 		To: reference.To{
@@ -345,7 +345,7 @@ func (mg *NotebookWorkspace) ResolveReferences(ctx context.Context, c client.Rea
 
 	rsp, err = r.Resolve(ctx, reference.ResolutionRequest{
 		CurrentValue: reference.FromPtrValue(mg.Spec.ForProvider.ResourceGroupName),
-		Extract:      rconfig.ExtractResourceName(),
+		Extract:      reference.ExternalName(),
 		Reference:    mg.Spec.ForProvider.ResourceGroupNameRef,
 		Selector:     mg.Spec.ForProvider.ResourceGroupNameSelector,
 		To: reference.To{
@@ -362,8 +362,8 @@ func (mg *NotebookWorkspace) ResolveReferences(ctx context.Context, c client.Rea
 	return nil
 }
 
-// ResolveReferences of this SqlContainer.
-func (mg *SqlContainer) ResolveReferences(ctx context.Context, c client.Reader) error {
+// ResolveReferences of this SQLContainer.
+func (mg *SQLContainer) ResolveReferences(ctx context.Context, c client.Reader) error {
 	r := reference.NewAPIResolver(c, mg)
 
 	var rsp reference.ResolutionResponse
@@ -391,8 +391,8 @@ func (mg *SqlContainer) ResolveReferences(ctx context.Context, c client.Reader) 
 		Reference:    mg.Spec.ForProvider.DatabaseNameRef,
 		Selector:     mg.Spec.ForProvider.DatabaseNameSelector,
 		To: reference.To{
-			List:    &SqlDatabaseList{},
-			Managed: &SqlDatabase{},
+			List:    &SQLDatabaseList{},
+			Managed: &SQLDatabase{},
 		},
 	})
 	if err != nil {
@@ -403,7 +403,7 @@ func (mg *SqlContainer) ResolveReferences(ctx context.Context, c client.Reader) 
 
 	rsp, err = r.Resolve(ctx, reference.ResolutionRequest{
 		CurrentValue: reference.FromPtrValue(mg.Spec.ForProvider.ResourceGroupName),
-		Extract:      rconfig.ExtractResourceName(),
+		Extract:      reference.ExternalName(),
 		Reference:    mg.Spec.ForProvider.ResourceGroupNameRef,
 		Selector:     mg.Spec.ForProvider.ResourceGroupNameSelector,
 		To: reference.To{
@@ -420,8 +420,8 @@ func (mg *SqlContainer) ResolveReferences(ctx context.Context, c client.Reader) 
 	return nil
 }
 
-// ResolveReferences of this SqlDatabase.
-func (mg *SqlDatabase) ResolveReferences(ctx context.Context, c client.Reader) error {
+// ResolveReferences of this SQLDatabase.
+func (mg *SQLDatabase) ResolveReferences(ctx context.Context, c client.Reader) error {
 	r := reference.NewAPIResolver(c, mg)
 
 	var rsp reference.ResolutionResponse
@@ -445,7 +445,7 @@ func (mg *SqlDatabase) ResolveReferences(ctx context.Context, c client.Reader) e
 
 	rsp, err = r.Resolve(ctx, reference.ResolutionRequest{
 		CurrentValue: reference.FromPtrValue(mg.Spec.ForProvider.ResourceGroupName),
-		Extract:      rconfig.ExtractResourceName(),
+		Extract:      reference.ExternalName(),
 		Reference:    mg.Spec.ForProvider.ResourceGroupNameRef,
 		Selector:     mg.Spec.ForProvider.ResourceGroupNameSelector,
 		To: reference.To{
@@ -462,8 +462,8 @@ func (mg *SqlDatabase) ResolveReferences(ctx context.Context, c client.Reader) e
 	return nil
 }
 
-// ResolveReferences of this SqlFunction.
-func (mg *SqlFunction) ResolveReferences(ctx context.Context, c client.Reader) error {
+// ResolveReferences of this SQLFunction.
+func (mg *SQLFunction) ResolveReferences(ctx context.Context, c client.Reader) error {
 	r := reference.NewAPIResolver(c, mg)
 
 	var rsp reference.ResolutionResponse
@@ -475,8 +475,8 @@ func (mg *SqlFunction) ResolveReferences(ctx context.Context, c client.Reader) e
 		Reference:    mg.Spec.ForProvider.ContainerIDRef,
 		Selector:     mg.Spec.ForProvider.ContainerIDSelector,
 		To: reference.To{
-			List:    &SqlContainerList{},
-			Managed: &SqlContainer{},
+			List:    &SQLContainerList{},
+			Managed: &SQLContainer{},
 		},
 	})
 	if err != nil {
@@ -517,8 +517,8 @@ func (mg *SqlStoredProcedure) ResolveReferences(ctx context.Context, c client.Re
 		Reference:    mg.Spec.ForProvider.ContainerNameRef,
 		Selector:     mg.Spec.ForProvider.ContainerNameSelector,
 		To: reference.To{
-			List:    &SqlContainerList{},
-			Managed: &SqlContainer{},
+			List:    &SQLContainerList{},
+			Managed: &SQLContainer{},
 		},
 	})
 	if err != nil {
@@ -533,8 +533,8 @@ func (mg *SqlStoredProcedure) ResolveReferences(ctx context.Context, c client.Re
 		Reference:    mg.Spec.ForProvider.DatabaseNameRef,
 		Selector:     mg.Spec.ForProvider.DatabaseNameSelector,
 		To: reference.To{
-			List:    &SqlDatabaseList{},
-			Managed: &SqlDatabase{},
+			List:    &SQLDatabaseList{},
+			Managed: &SQLDatabase{},
 		},
 	})
 	if err != nil {
@@ -545,7 +545,7 @@ func (mg *SqlStoredProcedure) ResolveReferences(ctx context.Context, c client.Re
 
 	rsp, err = r.Resolve(ctx, reference.ResolutionRequest{
 		CurrentValue: reference.FromPtrValue(mg.Spec.ForProvider.ResourceGroupName),
-		Extract:      rconfig.ExtractResourceName(),
+		Extract:      reference.ExternalName(),
 		Reference:    mg.Spec.ForProvider.ResourceGroupNameRef,
 		Selector:     mg.Spec.ForProvider.ResourceGroupNameSelector,
 		To: reference.To{
@@ -575,8 +575,8 @@ func (mg *SqlTrigger) ResolveReferences(ctx context.Context, c client.Reader) er
 		Reference:    mg.Spec.ForProvider.ContainerIDRef,
 		Selector:     mg.Spec.ForProvider.ContainerIDSelector,
 		To: reference.To{
-			List:    &SqlContainerList{},
-			Managed: &SqlContainer{},
+			List:    &SQLContainerList{},
+			Managed: &SQLContainer{},
 		},
 	})
 	if err != nil {
@@ -613,7 +613,7 @@ func (mg *Table) ResolveReferences(ctx context.Context, c client.Reader) error {
 
 	rsp, err = r.Resolve(ctx, reference.ResolutionRequest{
 		CurrentValue: reference.FromPtrValue(mg.Spec.ForProvider.ResourceGroupName),
-		Extract:      rconfig.ExtractResourceName(),
+		Extract:      reference.ExternalName(),
 		Reference:    mg.Spec.ForProvider.ResourceGroupNameRef,
 		Selector:     mg.Spec.ForProvider.ResourceGroupNameSelector,
 		To: reference.To{

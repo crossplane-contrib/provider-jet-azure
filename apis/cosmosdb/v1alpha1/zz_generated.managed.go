@@ -467,171 +467,171 @@ func (mg *NotebookWorkspace) SetWriteConnectionSecretToReference(r *xpv1.SecretR
 	mg.Spec.WriteConnectionSecretToReference = r
 }
 
-// GetCondition of this SqlContainer.
-func (mg *SqlContainer) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
+// GetCondition of this SQLContainer.
+func (mg *SQLContainer) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
 	return mg.Status.GetCondition(ct)
 }
 
-// GetDeletionPolicy of this SqlContainer.
-func (mg *SqlContainer) GetDeletionPolicy() xpv1.DeletionPolicy {
+// GetDeletionPolicy of this SQLContainer.
+func (mg *SQLContainer) GetDeletionPolicy() xpv1.DeletionPolicy {
 	return mg.Spec.DeletionPolicy
 }
 
-// GetProviderConfigReference of this SqlContainer.
-func (mg *SqlContainer) GetProviderConfigReference() *xpv1.Reference {
+// GetProviderConfigReference of this SQLContainer.
+func (mg *SQLContainer) GetProviderConfigReference() *xpv1.Reference {
 	return mg.Spec.ProviderConfigReference
 }
 
 /*
-GetProviderReference of this SqlContainer.
+GetProviderReference of this SQLContainer.
 Deprecated: Use GetProviderConfigReference.
 */
-func (mg *SqlContainer) GetProviderReference() *xpv1.Reference {
+func (mg *SQLContainer) GetProviderReference() *xpv1.Reference {
 	return mg.Spec.ProviderReference
 }
 
-// GetWriteConnectionSecretToReference of this SqlContainer.
-func (mg *SqlContainer) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
+// GetWriteConnectionSecretToReference of this SQLContainer.
+func (mg *SQLContainer) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
 	return mg.Spec.WriteConnectionSecretToReference
 }
 
-// SetConditions of this SqlContainer.
-func (mg *SqlContainer) SetConditions(c ...xpv1.Condition) {
+// SetConditions of this SQLContainer.
+func (mg *SQLContainer) SetConditions(c ...xpv1.Condition) {
 	mg.Status.SetConditions(c...)
 }
 
-// SetDeletionPolicy of this SqlContainer.
-func (mg *SqlContainer) SetDeletionPolicy(r xpv1.DeletionPolicy) {
+// SetDeletionPolicy of this SQLContainer.
+func (mg *SQLContainer) SetDeletionPolicy(r xpv1.DeletionPolicy) {
 	mg.Spec.DeletionPolicy = r
 }
 
-// SetProviderConfigReference of this SqlContainer.
-func (mg *SqlContainer) SetProviderConfigReference(r *xpv1.Reference) {
+// SetProviderConfigReference of this SQLContainer.
+func (mg *SQLContainer) SetProviderConfigReference(r *xpv1.Reference) {
 	mg.Spec.ProviderConfigReference = r
 }
 
 /*
-SetProviderReference of this SqlContainer.
+SetProviderReference of this SQLContainer.
 Deprecated: Use SetProviderConfigReference.
 */
-func (mg *SqlContainer) SetProviderReference(r *xpv1.Reference) {
+func (mg *SQLContainer) SetProviderReference(r *xpv1.Reference) {
 	mg.Spec.ProviderReference = r
 }
 
-// SetWriteConnectionSecretToReference of this SqlContainer.
-func (mg *SqlContainer) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
+// SetWriteConnectionSecretToReference of this SQLContainer.
+func (mg *SQLContainer) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
 	mg.Spec.WriteConnectionSecretToReference = r
 }
 
-// GetCondition of this SqlDatabase.
-func (mg *SqlDatabase) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
+// GetCondition of this SQLDatabase.
+func (mg *SQLDatabase) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
 	return mg.Status.GetCondition(ct)
 }
 
-// GetDeletionPolicy of this SqlDatabase.
-func (mg *SqlDatabase) GetDeletionPolicy() xpv1.DeletionPolicy {
+// GetDeletionPolicy of this SQLDatabase.
+func (mg *SQLDatabase) GetDeletionPolicy() xpv1.DeletionPolicy {
 	return mg.Spec.DeletionPolicy
 }
 
-// GetProviderConfigReference of this SqlDatabase.
-func (mg *SqlDatabase) GetProviderConfigReference() *xpv1.Reference {
+// GetProviderConfigReference of this SQLDatabase.
+func (mg *SQLDatabase) GetProviderConfigReference() *xpv1.Reference {
 	return mg.Spec.ProviderConfigReference
 }
 
 /*
-GetProviderReference of this SqlDatabase.
+GetProviderReference of this SQLDatabase.
 Deprecated: Use GetProviderConfigReference.
 */
-func (mg *SqlDatabase) GetProviderReference() *xpv1.Reference {
+func (mg *SQLDatabase) GetProviderReference() *xpv1.Reference {
 	return mg.Spec.ProviderReference
 }
 
-// GetWriteConnectionSecretToReference of this SqlDatabase.
-func (mg *SqlDatabase) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
+// GetWriteConnectionSecretToReference of this SQLDatabase.
+func (mg *SQLDatabase) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
 	return mg.Spec.WriteConnectionSecretToReference
 }
 
-// SetConditions of this SqlDatabase.
-func (mg *SqlDatabase) SetConditions(c ...xpv1.Condition) {
+// SetConditions of this SQLDatabase.
+func (mg *SQLDatabase) SetConditions(c ...xpv1.Condition) {
 	mg.Status.SetConditions(c...)
 }
 
-// SetDeletionPolicy of this SqlDatabase.
-func (mg *SqlDatabase) SetDeletionPolicy(r xpv1.DeletionPolicy) {
+// SetDeletionPolicy of this SQLDatabase.
+func (mg *SQLDatabase) SetDeletionPolicy(r xpv1.DeletionPolicy) {
 	mg.Spec.DeletionPolicy = r
 }
 
-// SetProviderConfigReference of this SqlDatabase.
-func (mg *SqlDatabase) SetProviderConfigReference(r *xpv1.Reference) {
+// SetProviderConfigReference of this SQLDatabase.
+func (mg *SQLDatabase) SetProviderConfigReference(r *xpv1.Reference) {
 	mg.Spec.ProviderConfigReference = r
 }
 
 /*
-SetProviderReference of this SqlDatabase.
+SetProviderReference of this SQLDatabase.
 Deprecated: Use SetProviderConfigReference.
 */
-func (mg *SqlDatabase) SetProviderReference(r *xpv1.Reference) {
+func (mg *SQLDatabase) SetProviderReference(r *xpv1.Reference) {
 	mg.Spec.ProviderReference = r
 }
 
-// SetWriteConnectionSecretToReference of this SqlDatabase.
-func (mg *SqlDatabase) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
+// SetWriteConnectionSecretToReference of this SQLDatabase.
+func (mg *SQLDatabase) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
 	mg.Spec.WriteConnectionSecretToReference = r
 }
 
-// GetCondition of this SqlFunction.
-func (mg *SqlFunction) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
+// GetCondition of this SQLFunction.
+func (mg *SQLFunction) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
 	return mg.Status.GetCondition(ct)
 }
 
-// GetDeletionPolicy of this SqlFunction.
-func (mg *SqlFunction) GetDeletionPolicy() xpv1.DeletionPolicy {
+// GetDeletionPolicy of this SQLFunction.
+func (mg *SQLFunction) GetDeletionPolicy() xpv1.DeletionPolicy {
 	return mg.Spec.DeletionPolicy
 }
 
-// GetProviderConfigReference of this SqlFunction.
-func (mg *SqlFunction) GetProviderConfigReference() *xpv1.Reference {
+// GetProviderConfigReference of this SQLFunction.
+func (mg *SQLFunction) GetProviderConfigReference() *xpv1.Reference {
 	return mg.Spec.ProviderConfigReference
 }
 
 /*
-GetProviderReference of this SqlFunction.
+GetProviderReference of this SQLFunction.
 Deprecated: Use GetProviderConfigReference.
 */
-func (mg *SqlFunction) GetProviderReference() *xpv1.Reference {
+func (mg *SQLFunction) GetProviderReference() *xpv1.Reference {
 	return mg.Spec.ProviderReference
 }
 
-// GetWriteConnectionSecretToReference of this SqlFunction.
-func (mg *SqlFunction) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
+// GetWriteConnectionSecretToReference of this SQLFunction.
+func (mg *SQLFunction) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
 	return mg.Spec.WriteConnectionSecretToReference
 }
 
-// SetConditions of this SqlFunction.
-func (mg *SqlFunction) SetConditions(c ...xpv1.Condition) {
+// SetConditions of this SQLFunction.
+func (mg *SQLFunction) SetConditions(c ...xpv1.Condition) {
 	mg.Status.SetConditions(c...)
 }
 
-// SetDeletionPolicy of this SqlFunction.
-func (mg *SqlFunction) SetDeletionPolicy(r xpv1.DeletionPolicy) {
+// SetDeletionPolicy of this SQLFunction.
+func (mg *SQLFunction) SetDeletionPolicy(r xpv1.DeletionPolicy) {
 	mg.Spec.DeletionPolicy = r
 }
 
-// SetProviderConfigReference of this SqlFunction.
-func (mg *SqlFunction) SetProviderConfigReference(r *xpv1.Reference) {
+// SetProviderConfigReference of this SQLFunction.
+func (mg *SQLFunction) SetProviderConfigReference(r *xpv1.Reference) {
 	mg.Spec.ProviderConfigReference = r
 }
 
 /*
-SetProviderReference of this SqlFunction.
+SetProviderReference of this SQLFunction.
 Deprecated: Use SetProviderConfigReference.
 */
-func (mg *SqlFunction) SetProviderReference(r *xpv1.Reference) {
+func (mg *SQLFunction) SetProviderReference(r *xpv1.Reference) {
 	mg.Spec.ProviderReference = r
 }
 
-// SetWriteConnectionSecretToReference of this SqlFunction.
-func (mg *SqlFunction) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
+// SetWriteConnectionSecretToReference of this SQLFunction.
+func (mg *SQLFunction) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
 	mg.Spec.WriteConnectionSecretToReference = r
 }
 

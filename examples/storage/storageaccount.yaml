@@ -1,10 +1,11 @@
 apiVersion: storage.azure.tf.crossplane.io/v1alpha1
 kind: Account
 metadata:
-  name: example
+  name: example-storage-account
+  annotations:
+    crossplane.io/external-name: crossplaneexamplestoracc
 spec:
   forProvider:
-    name: crossplaneexamplestoracc
     resourceGroupNameRef:
       name: example
     location: "East US"

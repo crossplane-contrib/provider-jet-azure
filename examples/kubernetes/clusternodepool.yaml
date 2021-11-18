@@ -1,12 +1,11 @@
 apiVersion: containerservice.azure.tf.crossplane.io/v1alpha1
 kind: KubernetesClusterNodePool
 metadata:
-  name: example
+  name: example-nodepool
 spec:
   forProvider:
-    name: "nodepool1"
     kubernetesClusterIdRef:
-      name: example
+      name: example-aks
     vmSize: "Standard_DS2_v2"
     nodeCount: 1
     tags:

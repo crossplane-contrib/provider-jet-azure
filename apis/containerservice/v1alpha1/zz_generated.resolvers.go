@@ -21,7 +21,6 @@ import (
 	"context"
 	v1alpha1 "github.com/crossplane-contrib/provider-tf-azure/apis/azure/v1alpha1"
 	v1alpha11 "github.com/crossplane-contrib/provider-tf-azure/apis/network/v1alpha1"
-	rconfig "github.com/crossplane-contrib/provider-tf-azure/apis/rconfig"
 	reference "github.com/crossplane/crossplane-runtime/pkg/reference"
 	errors "github.com/pkg/errors"
 	client "sigs.k8s.io/controller-runtime/pkg/client"
@@ -36,7 +35,7 @@ func (mg *KubernetesCluster) ResolveReferences(ctx context.Context, c client.Rea
 
 	rsp, err = r.Resolve(ctx, reference.ResolutionRequest{
 		CurrentValue: reference.FromPtrValue(mg.Spec.ForProvider.ResourceGroupName),
-		Extract:      rconfig.ExtractResourceName(),
+		Extract:      reference.ExternalName(),
 		Reference:    mg.Spec.ForProvider.ResourceGroupNameRef,
 		Selector:     mg.Spec.ForProvider.ResourceGroupNameSelector,
 		To: reference.To{

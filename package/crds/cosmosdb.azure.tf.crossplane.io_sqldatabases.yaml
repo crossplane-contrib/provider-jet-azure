@@ -12,8 +12,8 @@ spec:
     - crossplane
     - managed
     - tfazure
-    kind: SqlDatabase
-    listKind: SqlDatabaseList
+    kind: SQLDatabase
+    listKind: SQLDatabaseList
     plural: sqldatabases
     singular: sqldatabase
   scope: Cluster
@@ -34,7 +34,7 @@ spec:
     name: v1alpha1
     schema:
       openAPIV3Schema:
-        description: SqlDatabase is the Schema for the SqlDatabases API
+        description: SQLDatabase is the Schema for the SQLDatabases API
         properties:
           apiVersion:
             description: 'APIVersion defines the versioned schema of this representation
@@ -49,7 +49,7 @@ spec:
           metadata:
             type: object
           spec:
-            description: SqlDatabaseSpec defines the desired state of SqlDatabase
+            description: SQLDatabaseSpec defines the desired state of SQLDatabase
             properties:
               deletionPolicy:
                 default: Delete
@@ -169,7 +169,7 @@ spec:
             - forProvider
             type: object
           status:
-            description: SqlDatabaseStatus defines the observed state of SqlDatabase.
+            description: SQLDatabaseStatus defines the observed state of SQLDatabase.
             properties:
               atProvider:
                 type: object

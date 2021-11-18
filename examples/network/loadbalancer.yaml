@@ -1,11 +1,10 @@
 apiVersion: network.azure.tf.crossplane.io/v1alpha1
 kind: LoadBalancer
 metadata:
-  name: example
+  name: example-lb
 spec:
   forProvider:
     location: East US
-    name: example-lb
     resourceGroupNameRef:
       name: example
   providerConfigRef:

@@ -17,10 +17,10 @@ limitations under the License.
 package config
 
 import (
-	tjconfig "github.com/crossplane-contrib/terrajet/pkg/config"
-
 	"github.com/hashicorp/terraform-plugin-sdk/v2/helper/schema"
 	tf "github.com/hashicorp/terraform-provider-azurerm/xpprovider"
+
+	tjconfig "github.com/crossplane-contrib/terrajet/pkg/config"
 
 	"github.com/crossplane-contrib/provider-tf-azure/config/cosmosdb"
 	"github.com/crossplane-contrib/provider-tf-azure/config/ip"
@@ -32,7 +32,6 @@ import (
 	"github.com/crossplane-contrib/provider-tf-azure/config/sql"
 	"github.com/crossplane-contrib/provider-tf-azure/config/storage"
 	"github.com/crossplane-contrib/provider-tf-azure/config/subnet"
-	"github.com/crossplane-contrib/provider-tf-azure/config/virtual"
 )
 
 const (
@@ -137,7 +136,6 @@ func GetProvider() *tjconfig.Provider {
 		management.Configure,
 		resource.Configure,
 		kubernetes.Configure,
-		virtual.Configure,
 		postgresql.Configure,
 		cosmosdb.Configure,
 		sql.Configure,

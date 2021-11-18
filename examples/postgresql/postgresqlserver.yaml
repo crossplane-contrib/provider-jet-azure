@@ -1,10 +1,9 @@
 apiVersion: postgresql.azure.tf.crossplane.io/v1alpha1
 kind: Server
 metadata:
-  name: example
+  name: example-psqlserver
 spec:
   forProvider:
-    name: example-psqlserver
     resourceGroupNameRef:
       name: example
     location: "East US"

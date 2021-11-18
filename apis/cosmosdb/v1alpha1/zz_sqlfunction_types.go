@@ -25,15 +25,15 @@ import (
 	v1 "github.com/crossplane/crossplane-runtime/apis/common/v1"
 )
 
-type SqlFunctionObservation struct {
+type SQLFunctionObservation struct {
 }
 
-type SqlFunctionParameters struct {
+type SQLFunctionParameters struct {
 
 	// +kubebuilder:validation:Required
 	Body *string `json:"body" tf:"body,omitempty"`
 
-	// +crossplane:generate:reference:type=SqlContainer
+	// +crossplane:generate:reference:type=SQLContainer
 	// +kubebuilder:validation:Optional
 	ContainerID *string `json:"containerId,omitempty" tf:"container_id,omitempty"`
 
@@ -44,51 +44,51 @@ type SqlFunctionParameters struct {
 	ContainerIDSelector *v1.Selector `json:"containerIdSelector,omitempty" tf:"-"`
 }
 
-// SqlFunctionSpec defines the desired state of SqlFunction
-type SqlFunctionSpec struct {
+// SQLFunctionSpec defines the desired state of SQLFunction
+type SQLFunctionSpec struct {
 	v1.ResourceSpec `json:",inline"`
-	ForProvider     SqlFunctionParameters `json:"forProvider"`
+	ForProvider     SQLFunctionParameters `json:"forProvider"`
 }
 
-// SqlFunctionStatus defines the observed state of SqlFunction.
-type SqlFunctionStatus struct {
+// SQLFunctionStatus defines the observed state of SQLFunction.
+type SQLFunctionStatus struct {
 	v1.ResourceStatus `json:",inline"`
-	AtProvider        SqlFunctionObservation `json:"atProvider,omitempty"`
+	AtProvider        SQLFunctionObservation `json:"atProvider,omitempty"`
 }
 
 // +kubebuilder:object:root=true
 
-// SqlFunction is the Schema for the SqlFunctions API
+// SQLFunction is the Schema for the SQLFunctions API
 // +kubebuilder:printcolumn:name="READY",type="string",JSONPath=".status.conditions[?(@.type=='Ready')].status"
 // +kubebuilder:printcolumn:name="SYNCED",type="string",JSONPath=".status.conditions[?(@.type=='Synced')].status"
 // +kubebuilder:printcolumn:name="EXTERNAL-NAME",type="string",JSONPath=".metadata.annotations.crossplane\\.io/external-name"
 // +kubebuilder:printcolumn:name="AGE",type="date",JSONPath=".metadata.creationTimestamp"
 // +kubebuilder:subresource:status
 // +kubebuilder:resource:scope=Cluster,categories={crossplane,managed,tfazure}
-type SqlFunction struct {
+type SQLFunction struct {
 	metav1.TypeMeta   `json:",inline"`
 	metav1.ObjectMeta `json:"metadata,omitempty"`
-	Spec              SqlFunctionSpec   `json:"spec"`
-	Status            SqlFunctionStatus `json:"status,omitempty"`
+	Spec              SQLFunctionSpec   `json:"spec"`
+	Status            SQLFunctionStatus `json:"status,omitempty"`
 }
 
 // +kubebuilder:object:root=true
 
-// SqlFunctionList contains a list of SqlFunctions
-type SqlFunctionList struct {
+// SQLFunctionList contains a list of SQLFunctions
+type SQLFunctionList struct {
 	metav1.TypeMeta `json:",inline"`
 	metav1.ListMeta `json:"metadata,omitempty"`
-	Items           []SqlFunction `json:"items"`
+	Items           []SQLFunction `json:"items"`
 }
 
 // Repository type metadata.
 var (
-	SqlFunction_Kind             = "SqlFunction"
-	SqlFunction_GroupKind        = schema.GroupKind{Group: CRDGroup, Kind: SqlFunction_Kind}.String()
-	SqlFunction_KindAPIVersion   = SqlFunction_Kind + "." + CRDGroupVersion.String()
-	SqlFunction_GroupVersionKind = CRDGroupVersion.WithKind(SqlFunction_Kind)
+	SQLFunction_Kind             = "SQLFunction"
+	SQLFunction_GroupKind        = schema.GroupKind{Group: CRDGroup, Kind: SQLFunction_Kind}.String()
+	SQLFunction_KindAPIVersion   = SQLFunction_Kind + "." + CRDGroupVersion.String()
+	SQLFunction_GroupVersionKind = CRDGroupVersion.WithKind(SQLFunction_Kind)
 )
 
 func init() {
-	SchemeBuilder.Register(&SqlFunction{}, &SqlFunctionList{})
+	SchemeBuilder.Register(&SQLFunction{}, &SQLFunctionList{})
 }
