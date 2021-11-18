@@ -19,8 +19,8 @@ package v1alpha1
 
 import resource "github.com/crossplane/crossplane-runtime/pkg/resource"
 
-// GetItems of this CosmosdbAccountList.
-func (l *CosmosdbAccountList) GetItems() []resource.Managed {
+// GetItems of this AccountList.
+func (l *AccountList) GetItems() []resource.Managed {
 	items := make([]resource.Managed, len(l.Items))
 	for i := range l.Items {
 		items[i] = &l.Items[i]
@@ -28,8 +28,8 @@ func (l *CosmosdbAccountList) GetItems() []resource.Managed {
 	return items
 }
 
-// GetItems of this CosmosdbCassandraKeyspaceList.
-func (l *CosmosdbCassandraKeyspaceList) GetItems() []resource.Managed {
+// GetItems of this CassandraKeyspaceList.
+func (l *CassandraKeyspaceList) GetItems() []resource.Managed {
 	items := make([]resource.Managed, len(l.Items))
 	for i := range l.Items {
 		items[i] = &l.Items[i]
@@ -37,8 +37,8 @@ func (l *CosmosdbCassandraKeyspaceList) GetItems() []resource.Managed {
 	return items
 }
 
-// GetItems of this CosmosdbCassandraTableList.
-func (l *CosmosdbCassandraTableList) GetItems() []resource.Managed {
+// GetItems of this CassandraTableList.
+func (l *CassandraTableList) GetItems() []resource.Managed {
 	items := make([]resource.Managed, len(l.Items))
 	for i := range l.Items {
 		items[i] = &l.Items[i]
@@ -46,8 +46,8 @@ func (l *CosmosdbCassandraTableList) GetItems() []resource.Managed {
 	return items
 }
 
-// GetItems of this CosmosdbGremlinDatabaseList.
-func (l *CosmosdbGremlinDatabaseList) GetItems() []resource.Managed {
+// GetItems of this GremlinDatabaseList.
+func (l *GremlinDatabaseList) GetItems() []resource.Managed {
 	items := make([]resource.Managed, len(l.Items))
 	for i := range l.Items {
 		items[i] = &l.Items[i]
@@ -55,8 +55,8 @@ func (l *CosmosdbGremlinDatabaseList) GetItems() []resource.Managed {
 	return items
 }
 
-// GetItems of this CosmosdbGremlinGraphList.
-func (l *CosmosdbGremlinGraphList) GetItems() []resource.Managed {
+// GetItems of this GremlinGraphList.
+func (l *GremlinGraphList) GetItems() []resource.Managed {
 	items := make([]resource.Managed, len(l.Items))
 	for i := range l.Items {
 		items[i] = &l.Items[i]
@@ -64,8 +64,8 @@ func (l *CosmosdbGremlinGraphList) GetItems() []resource.Managed {
 	return items
 }
 
-// GetItems of this CosmosdbMongoCollectionList.
-func (l *CosmosdbMongoCollectionList) GetItems() []resource.Managed {
+// GetItems of this MongoCollectionList.
+func (l *MongoCollectionList) GetItems() []resource.Managed {
 	items := make([]resource.Managed, len(l.Items))
 	for i := range l.Items {
 		items[i] = &l.Items[i]
@@ -73,8 +73,8 @@ func (l *CosmosdbMongoCollectionList) GetItems() []resource.Managed {
 	return items
 }
 
-// GetItems of this CosmosdbMongoDatabaseList.
-func (l *CosmosdbMongoDatabaseList) GetItems() []resource.Managed {
+// GetItems of this MongoDatabaseList.
+func (l *MongoDatabaseList) GetItems() []resource.Managed {
 	items := make([]resource.Managed, len(l.Items))
 	for i := range l.Items {
 		items[i] = &l.Items[i]
@@ -82,8 +82,8 @@ func (l *CosmosdbMongoDatabaseList) GetItems() []resource.Managed {
 	return items
 }
 
-// GetItems of this CosmosdbNotebookWorkspaceList.
-func (l *CosmosdbNotebookWorkspaceList) GetItems() []resource.Managed {
+// GetItems of this NotebookWorkspaceList.
+func (l *NotebookWorkspaceList) GetItems() []resource.Managed {
 	items := make([]resource.Managed, len(l.Items))
 	for i := range l.Items {
 		items[i] = &l.Items[i]
@@ -91,8 +91,8 @@ func (l *CosmosdbNotebookWorkspaceList) GetItems() []resource.Managed {
 	return items
 }
 
-// GetItems of this CosmosdbSqlContainerList.
-func (l *CosmosdbSqlContainerList) GetItems() []resource.Managed {
+// GetItems of this SqlContainerList.
+func (l *SqlContainerList) GetItems() []resource.Managed {
 	items := make([]resource.Managed, len(l.Items))
 	for i := range l.Items {
 		items[i] = &l.Items[i]
@@ -100,8 +100,8 @@ func (l *CosmosdbSqlContainerList) GetItems() []resource.Managed {
 	return items
 }
 
-// GetItems of this CosmosdbSqlDatabaseList.
-func (l *CosmosdbSqlDatabaseList) GetItems() []resource.Managed {
+// GetItems of this SqlDatabaseList.
+func (l *SqlDatabaseList) GetItems() []resource.Managed {
 	items := make([]resource.Managed, len(l.Items))
 	for i := range l.Items {
 		items[i] = &l.Items[i]
@@ -109,8 +109,8 @@ func (l *CosmosdbSqlDatabaseList) GetItems() []resource.Managed {
 	return items
 }
 
-// GetItems of this CosmosdbSqlFunctionList.
-func (l *CosmosdbSqlFunctionList) GetItems() []resource.Managed {
+// GetItems of this SqlFunctionList.
+func (l *SqlFunctionList) GetItems() []resource.Managed {
 	items := make([]resource.Managed, len(l.Items))
 	for i := range l.Items {
 		items[i] = &l.Items[i]
@@ -118,8 +118,8 @@ func (l *CosmosdbSqlFunctionList) GetItems() []resource.Managed {
 	return items
 }
 
-// GetItems of this CosmosdbSqlStoredProcedureList.
-func (l *CosmosdbSqlStoredProcedureList) GetItems() []resource.Managed {
+// GetItems of this SqlStoredProcedureList.
+func (l *SqlStoredProcedureList) GetItems() []resource.Managed {
 	items := make([]resource.Managed, len(l.Items))
 	for i := range l.Items {
 		items[i] = &l.Items[i]
@@ -127,8 +127,8 @@ func (l *CosmosdbSqlStoredProcedureList) GetItems() []resource.Managed {
 	return items
 }
 
-// GetItems of this CosmosdbSqlTriggerList.
-func (l *CosmosdbSqlTriggerList) GetItems() []resource.Managed {
+// GetItems of this SqlTriggerList.
+func (l *SqlTriggerList) GetItems() []resource.Managed {
 	items := make([]resource.Managed, len(l.Items))
 	for i := range l.Items {
 		items[i] = &l.Items[i]
@@ -136,8 +136,8 @@ func (l *CosmosdbSqlTriggerList) GetItems() []resource.Managed {
 	return items
 }
 
-// GetItems of this CosmosdbTableList.
-func (l *CosmosdbTableList) GetItems() []resource.Managed {
+// GetItems of this TableList.
+func (l *TableList) GetItems() []resource.Managed {
 	items := make([]resource.Managed, len(l.Items))
 	for i := range l.Items {
 		items[i] = &l.Items[i]

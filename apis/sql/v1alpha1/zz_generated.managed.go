@@ -19,58 +19,58 @@ package v1alpha1
 
 import xpv1 "github.com/crossplane/crossplane-runtime/apis/common/v1"
 
-// GetCondition of this SqlServer.
-func (mg *SqlServer) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
+// GetCondition of this Server.
+func (mg *Server) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
 	return mg.Status.GetCondition(ct)
 }
 
-// GetDeletionPolicy of this SqlServer.
-func (mg *SqlServer) GetDeletionPolicy() xpv1.DeletionPolicy {
+// GetDeletionPolicy of this Server.
+func (mg *Server) GetDeletionPolicy() xpv1.DeletionPolicy {
 	return mg.Spec.DeletionPolicy
 }
 
-// GetProviderConfigReference of this SqlServer.
-func (mg *SqlServer) GetProviderConfigReference() *xpv1.Reference {
+// GetProviderConfigReference of this Server.
+func (mg *Server) GetProviderConfigReference() *xpv1.Reference {
 	return mg.Spec.ProviderConfigReference
 }
 
 /*
-GetProviderReference of this SqlServer.
+GetProviderReference of this Server.
 Deprecated: Use GetProviderConfigReference.
 */
-func (mg *SqlServer) GetProviderReference() *xpv1.Reference {
+func (mg *Server) GetProviderReference() *xpv1.Reference {
 	return mg.Spec.ProviderReference
 }
 
-// GetWriteConnectionSecretToReference of this SqlServer.
-func (mg *SqlServer) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
+// GetWriteConnectionSecretToReference of this Server.
+func (mg *Server) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
 	return mg.Spec.WriteConnectionSecretToReference
 }
 
-// SetConditions of this SqlServer.
-func (mg *SqlServer) SetConditions(c ...xpv1.Condition) {
+// SetConditions of this Server.
+func (mg *Server) SetConditions(c ...xpv1.Condition) {
 	mg.Status.SetConditions(c...)
 }
 
-// SetDeletionPolicy of this SqlServer.
-func (mg *SqlServer) SetDeletionPolicy(r xpv1.DeletionPolicy) {
+// SetDeletionPolicy of this Server.
+func (mg *Server) SetDeletionPolicy(r xpv1.DeletionPolicy) {
 	mg.Spec.DeletionPolicy = r
 }
 
-// SetProviderConfigReference of this SqlServer.
-func (mg *SqlServer) SetProviderConfigReference(r *xpv1.Reference) {
+// SetProviderConfigReference of this Server.
+func (mg *Server) SetProviderConfigReference(r *xpv1.Reference) {
 	mg.Spec.ProviderConfigReference = r
 }
 
 /*
-SetProviderReference of this SqlServer.
+SetProviderReference of this Server.
 Deprecated: Use SetProviderConfigReference.
 */
-func (mg *SqlServer) SetProviderReference(r *xpv1.Reference) {
+func (mg *Server) SetProviderReference(r *xpv1.Reference) {
 	mg.Spec.ProviderReference = r
 }
 
-// SetWriteConnectionSecretToReference of this SqlServer.
-func (mg *SqlServer) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
+// SetWriteConnectionSecretToReference of this Server.
+func (mg *Server) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
 	mg.Spec.WriteConnectionSecretToReference = r
 }

@@ -22,31 +22,31 @@ package apis
 import (
 	"k8s.io/apimachinery/pkg/runtime"
 
+	v1alpha1 "github.com/crossplane-contrib/provider-tf-azure/apis/authorization/v1alpha1"
+	v1alpha1azure "github.com/crossplane-contrib/provider-tf-azure/apis/azure/v1alpha1"
+	v1alpha1containerservice "github.com/crossplane-contrib/provider-tf-azure/apis/containerservice/v1alpha1"
 	v1alpha1cosmosdb "github.com/crossplane-contrib/provider-tf-azure/apis/cosmosdb/v1alpha1"
-	v1alpha1kubernetes "github.com/crossplane-contrib/provider-tf-azure/apis/kubernetes/v1alpha1"
-	v1alpha1lb "github.com/crossplane-contrib/provider-tf-azure/apis/lb/v1alpha1"
+	v1alpha1network "github.com/crossplane-contrib/provider-tf-azure/apis/network/v1alpha1"
 	v1alpha1postgresql "github.com/crossplane-contrib/provider-tf-azure/apis/postgresql/v1alpha1"
-	v1alpha1resource "github.com/crossplane-contrib/provider-tf-azure/apis/resource/v1alpha1"
+	v1alpha1resources "github.com/crossplane-contrib/provider-tf-azure/apis/resources/v1alpha1"
 	v1alpha1sql "github.com/crossplane-contrib/provider-tf-azure/apis/sql/v1alpha1"
 	v1alpha1storage "github.com/crossplane-contrib/provider-tf-azure/apis/storage/v1alpha1"
-	v1alpha1subnet "github.com/crossplane-contrib/provider-tf-azure/apis/subnet/v1alpha1"
-	v1alpha1 "github.com/crossplane-contrib/provider-tf-azure/apis/v1alpha1"
-	v1alpha1virtual "github.com/crossplane-contrib/provider-tf-azure/apis/virtual/v1alpha1"
+	v1alpha1apis "github.com/crossplane-contrib/provider-tf-azure/apis/v1alpha1"
 )
 
 func init() {
 	// Register the types with the Scheme so the components can map objects to GroupVersionKinds and back
 	AddToSchemes = append(AddToSchemes,
 		v1alpha1.SchemeBuilder.AddToScheme,
+		v1alpha1azure.SchemeBuilder.AddToScheme,
+		v1alpha1containerservice.SchemeBuilder.AddToScheme,
 		v1alpha1cosmosdb.SchemeBuilder.AddToScheme,
-		v1alpha1kubernetes.SchemeBuilder.AddToScheme,
-		v1alpha1lb.SchemeBuilder.AddToScheme,
+		v1alpha1network.SchemeBuilder.AddToScheme,
 		v1alpha1postgresql.SchemeBuilder.AddToScheme,
-		v1alpha1resource.SchemeBuilder.AddToScheme,
+		v1alpha1resources.SchemeBuilder.AddToScheme,
 		v1alpha1sql.SchemeBuilder.AddToScheme,
 		v1alpha1storage.SchemeBuilder.AddToScheme,
-		v1alpha1subnet.SchemeBuilder.AddToScheme,
-		v1alpha1virtual.SchemeBuilder.AddToScheme,
+		v1alpha1apis.SchemeBuilder.AddToScheme,
 	)
 }
 

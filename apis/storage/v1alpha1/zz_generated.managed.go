@@ -19,170 +19,170 @@ package v1alpha1
 
 import xpv1 "github.com/crossplane/crossplane-runtime/apis/common/v1"
 
-// GetCondition of this StorageAccount.
-func (mg *StorageAccount) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
+// GetCondition of this Account.
+func (mg *Account) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
 	return mg.Status.GetCondition(ct)
 }
 
-// GetDeletionPolicy of this StorageAccount.
-func (mg *StorageAccount) GetDeletionPolicy() xpv1.DeletionPolicy {
+// GetDeletionPolicy of this Account.
+func (mg *Account) GetDeletionPolicy() xpv1.DeletionPolicy {
 	return mg.Spec.DeletionPolicy
 }
 
-// GetProviderConfigReference of this StorageAccount.
-func (mg *StorageAccount) GetProviderConfigReference() *xpv1.Reference {
+// GetProviderConfigReference of this Account.
+func (mg *Account) GetProviderConfigReference() *xpv1.Reference {
 	return mg.Spec.ProviderConfigReference
 }
 
 /*
-GetProviderReference of this StorageAccount.
+GetProviderReference of this Account.
 Deprecated: Use GetProviderConfigReference.
 */
-func (mg *StorageAccount) GetProviderReference() *xpv1.Reference {
+func (mg *Account) GetProviderReference() *xpv1.Reference {
 	return mg.Spec.ProviderReference
 }
 
-// GetWriteConnectionSecretToReference of this StorageAccount.
-func (mg *StorageAccount) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
+// GetWriteConnectionSecretToReference of this Account.
+func (mg *Account) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
 	return mg.Spec.WriteConnectionSecretToReference
 }
 
-// SetConditions of this StorageAccount.
-func (mg *StorageAccount) SetConditions(c ...xpv1.Condition) {
+// SetConditions of this Account.
+func (mg *Account) SetConditions(c ...xpv1.Condition) {
 	mg.Status.SetConditions(c...)
 }
 
-// SetDeletionPolicy of this StorageAccount.
-func (mg *StorageAccount) SetDeletionPolicy(r xpv1.DeletionPolicy) {
+// SetDeletionPolicy of this Account.
+func (mg *Account) SetDeletionPolicy(r xpv1.DeletionPolicy) {
 	mg.Spec.DeletionPolicy = r
 }
 
-// SetProviderConfigReference of this StorageAccount.
-func (mg *StorageAccount) SetProviderConfigReference(r *xpv1.Reference) {
+// SetProviderConfigReference of this Account.
+func (mg *Account) SetProviderConfigReference(r *xpv1.Reference) {
 	mg.Spec.ProviderConfigReference = r
 }
 
 /*
-SetProviderReference of this StorageAccount.
+SetProviderReference of this Account.
 Deprecated: Use SetProviderConfigReference.
 */
-func (mg *StorageAccount) SetProviderReference(r *xpv1.Reference) {
+func (mg *Account) SetProviderReference(r *xpv1.Reference) {
 	mg.Spec.ProviderReference = r
 }
 
-// SetWriteConnectionSecretToReference of this StorageAccount.
-func (mg *StorageAccount) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
+// SetWriteConnectionSecretToReference of this Account.
+func (mg *Account) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
 	mg.Spec.WriteConnectionSecretToReference = r
 }
 
-// GetCondition of this StorageBlob.
-func (mg *StorageBlob) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
+// GetCondition of this Blob.
+func (mg *Blob) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
 	return mg.Status.GetCondition(ct)
 }
 
-// GetDeletionPolicy of this StorageBlob.
-func (mg *StorageBlob) GetDeletionPolicy() xpv1.DeletionPolicy {
+// GetDeletionPolicy of this Blob.
+func (mg *Blob) GetDeletionPolicy() xpv1.DeletionPolicy {
 	return mg.Spec.DeletionPolicy
 }
 
-// GetProviderConfigReference of this StorageBlob.
-func (mg *StorageBlob) GetProviderConfigReference() *xpv1.Reference {
+// GetProviderConfigReference of this Blob.
+func (mg *Blob) GetProviderConfigReference() *xpv1.Reference {
 	return mg.Spec.ProviderConfigReference
 }
 
 /*
-GetProviderReference of this StorageBlob.
+GetProviderReference of this Blob.
 Deprecated: Use GetProviderConfigReference.
 */
-func (mg *StorageBlob) GetProviderReference() *xpv1.Reference {
+func (mg *Blob) GetProviderReference() *xpv1.Reference {
 	return mg.Spec.ProviderReference
 }
 
-// GetWriteConnectionSecretToReference of this StorageBlob.
-func (mg *StorageBlob) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
+// GetWriteConnectionSecretToReference of this Blob.
+func (mg *Blob) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
 	return mg.Spec.WriteConnectionSecretToReference
 }
 
-// SetConditions of this StorageBlob.
-func (mg *StorageBlob) SetConditions(c ...xpv1.Condition) {
+// SetConditions of this Blob.
+func (mg *Blob) SetConditions(c ...xpv1.Condition) {
 	mg.Status.SetConditions(c...)
 }
 
-// SetDeletionPolicy of this StorageBlob.
-func (mg *StorageBlob) SetDeletionPolicy(r xpv1.DeletionPolicy) {
+// SetDeletionPolicy of this Blob.
+func (mg *Blob) SetDeletionPolicy(r xpv1.DeletionPolicy) {
 	mg.Spec.DeletionPolicy = r
 }
 
-// SetProviderConfigReference of this StorageBlob.
-func (mg *StorageBlob) SetProviderConfigReference(r *xpv1.Reference) {
+// SetProviderConfigReference of this Blob.
+func (mg *Blob) SetProviderConfigReference(r *xpv1.Reference) {
 	mg.Spec.ProviderConfigReference = r
 }
 
 /*
-SetProviderReference of this StorageBlob.
+SetProviderReference of this Blob.
 Deprecated: Use SetProviderConfigReference.
 */
-func (mg *StorageBlob) SetProviderReference(r *xpv1.Reference) {
+func (mg *Blob) SetProviderReference(r *xpv1.Reference) {
 	mg.Spec.ProviderReference = r
 }
 
-// SetWriteConnectionSecretToReference of this StorageBlob.
-func (mg *StorageBlob) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
+// SetWriteConnectionSecretToReference of this Blob.
+func (mg *Blob) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
 	mg.Spec.WriteConnectionSecretToReference = r
 }
 
-// GetCondition of this StorageContainer.
-func (mg *StorageContainer) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
+// GetCondition of this Container.
+func (mg *Container) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
 	return mg.Status.GetCondition(ct)
 }
 
-// GetDeletionPolicy of this StorageContainer.
-func (mg *StorageContainer) GetDeletionPolicy() xpv1.DeletionPolicy {
+// GetDeletionPolicy of this Container.
+func (mg *Container) GetDeletionPolicy() xpv1.DeletionPolicy {
 	return mg.Spec.DeletionPolicy
 }
 
-// GetProviderConfigReference of this StorageContainer.
-func (mg *StorageContainer) GetProviderConfigReference() *xpv1.Reference {
+// GetProviderConfigReference of this Container.
+func (mg *Container) GetProviderConfigReference() *xpv1.Reference {
 	return mg.Spec.ProviderConfigReference
 }
 
 /*
-GetProviderReference of this StorageContainer.
+GetProviderReference of this Container.
 Deprecated: Use GetProviderConfigReference.
 */
-func (mg *StorageContainer) GetProviderReference() *xpv1.Reference {
+func (mg *Container) GetProviderReference() *xpv1.Reference {
 	return mg.Spec.ProviderReference
 }
 
-// GetWriteConnectionSecretToReference of this StorageContainer.
-func (mg *StorageContainer) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
+// GetWriteConnectionSecretToReference of this Container.
+func (mg *Container) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
 	return mg.Spec.WriteConnectionSecretToReference
 }
 
-// SetConditions of this StorageContainer.
-func (mg *StorageContainer) SetConditions(c ...xpv1.Condition) {
+// SetConditions of this Container.
+func (mg *Container) SetConditions(c ...xpv1.Condition) {
 	mg.Status.SetConditions(c...)
 }
 
-// SetDeletionPolicy of this StorageContainer.
-func (mg *StorageContainer) SetDeletionPolicy(r xpv1.DeletionPolicy) {
+// SetDeletionPolicy of this Container.
+func (mg *Container) SetDeletionPolicy(r xpv1.DeletionPolicy) {
 	mg.Spec.DeletionPolicy = r
 }
 
-// SetProviderConfigReference of this StorageContainer.
-func (mg *StorageContainer) SetProviderConfigReference(r *xpv1.Reference) {
+// SetProviderConfigReference of this Container.
+func (mg *Container) SetProviderConfigReference(r *xpv1.Reference) {
 	mg.Spec.ProviderConfigReference = r
 }
 
 /*
-SetProviderReference of this StorageContainer.
+SetProviderReference of this Container.
 Deprecated: Use SetProviderConfigReference.
 */
-func (mg *StorageContainer) SetProviderReference(r *xpv1.Reference) {
+func (mg *Container) SetProviderReference(r *xpv1.Reference) {
 	mg.Spec.ProviderReference = r
 }
 
-// SetWriteConnectionSecretToReference of this StorageContainer.
-func (mg *StorageContainer) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
+// SetWriteConnectionSecretToReference of this Container.
+func (mg *Container) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
 	mg.Spec.WriteConnectionSecretToReference = r
 }

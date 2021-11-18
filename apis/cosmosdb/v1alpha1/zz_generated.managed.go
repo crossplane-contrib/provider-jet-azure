@@ -19,786 +19,786 @@ package v1alpha1
 
 import xpv1 "github.com/crossplane/crossplane-runtime/apis/common/v1"
 
-// GetCondition of this CosmosdbAccount.
-func (mg *CosmosdbAccount) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
+// GetCondition of this Account.
+func (mg *Account) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
 	return mg.Status.GetCondition(ct)
 }
 
-// GetDeletionPolicy of this CosmosdbAccount.
-func (mg *CosmosdbAccount) GetDeletionPolicy() xpv1.DeletionPolicy {
+// GetDeletionPolicy of this Account.
+func (mg *Account) GetDeletionPolicy() xpv1.DeletionPolicy {
 	return mg.Spec.DeletionPolicy
 }
 
-// GetProviderConfigReference of this CosmosdbAccount.
-func (mg *CosmosdbAccount) GetProviderConfigReference() *xpv1.Reference {
+// GetProviderConfigReference of this Account.
+func (mg *Account) GetProviderConfigReference() *xpv1.Reference {
 	return mg.Spec.ProviderConfigReference
 }
 
 /*
-GetProviderReference of this CosmosdbAccount.
+GetProviderReference of this Account.
 Deprecated: Use GetProviderConfigReference.
 */
-func (mg *CosmosdbAccount) GetProviderReference() *xpv1.Reference {
+func (mg *Account) GetProviderReference() *xpv1.Reference {
 	return mg.Spec.ProviderReference
 }
 
-// GetWriteConnectionSecretToReference of this CosmosdbAccount.
-func (mg *CosmosdbAccount) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
+// GetWriteConnectionSecretToReference of this Account.
+func (mg *Account) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
 	return mg.Spec.WriteConnectionSecretToReference
 }
 
-// SetConditions of this CosmosdbAccount.
-func (mg *CosmosdbAccount) SetConditions(c ...xpv1.Condition) {
+// SetConditions of this Account.
+func (mg *Account) SetConditions(c ...xpv1.Condition) {
 	mg.Status.SetConditions(c...)
 }
 
-// SetDeletionPolicy of this CosmosdbAccount.
-func (mg *CosmosdbAccount) SetDeletionPolicy(r xpv1.DeletionPolicy) {
+// SetDeletionPolicy of this Account.
+func (mg *Account) SetDeletionPolicy(r xpv1.DeletionPolicy) {
 	mg.Spec.DeletionPolicy = r
 }
 
-// SetProviderConfigReference of this CosmosdbAccount.
-func (mg *CosmosdbAccount) SetProviderConfigReference(r *xpv1.Reference) {
+// SetProviderConfigReference of this Account.
+func (mg *Account) SetProviderConfigReference(r *xpv1.Reference) {
 	mg.Spec.ProviderConfigReference = r
 }
 
 /*
-SetProviderReference of this CosmosdbAccount.
+SetProviderReference of this Account.
 Deprecated: Use SetProviderConfigReference.
 */
-func (mg *CosmosdbAccount) SetProviderReference(r *xpv1.Reference) {
+func (mg *Account) SetProviderReference(r *xpv1.Reference) {
 	mg.Spec.ProviderReference = r
 }
 
-// SetWriteConnectionSecretToReference of this CosmosdbAccount.
-func (mg *CosmosdbAccount) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
+// SetWriteConnectionSecretToReference of this Account.
+func (mg *Account) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
 	mg.Spec.WriteConnectionSecretToReference = r
 }
 
-// GetCondition of this CosmosdbCassandraKeyspace.
-func (mg *CosmosdbCassandraKeyspace) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
+// GetCondition of this CassandraKeyspace.
+func (mg *CassandraKeyspace) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
 	return mg.Status.GetCondition(ct)
 }
 
-// GetDeletionPolicy of this CosmosdbCassandraKeyspace.
-func (mg *CosmosdbCassandraKeyspace) GetDeletionPolicy() xpv1.DeletionPolicy {
+// GetDeletionPolicy of this CassandraKeyspace.
+func (mg *CassandraKeyspace) GetDeletionPolicy() xpv1.DeletionPolicy {
 	return mg.Spec.DeletionPolicy
 }
 
-// GetProviderConfigReference of this CosmosdbCassandraKeyspace.
-func (mg *CosmosdbCassandraKeyspace) GetProviderConfigReference() *xpv1.Reference {
+// GetProviderConfigReference of this CassandraKeyspace.
+func (mg *CassandraKeyspace) GetProviderConfigReference() *xpv1.Reference {
 	return mg.Spec.ProviderConfigReference
 }
 
 /*
-GetProviderReference of this CosmosdbCassandraKeyspace.
+GetProviderReference of this CassandraKeyspace.
 Deprecated: Use GetProviderConfigReference.
 */
-func (mg *CosmosdbCassandraKeyspace) GetProviderReference() *xpv1.Reference {
+func (mg *CassandraKeyspace) GetProviderReference() *xpv1.Reference {
 	return mg.Spec.ProviderReference
 }
 
-// GetWriteConnectionSecretToReference of this CosmosdbCassandraKeyspace.
-func (mg *CosmosdbCassandraKeyspace) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
+// GetWriteConnectionSecretToReference of this CassandraKeyspace.
+func (mg *CassandraKeyspace) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
 	return mg.Spec.WriteConnectionSecretToReference
 }
 
-// SetConditions of this CosmosdbCassandraKeyspace.
-func (mg *CosmosdbCassandraKeyspace) SetConditions(c ...xpv1.Condition) {
+// SetConditions of this CassandraKeyspace.
+func (mg *CassandraKeyspace) SetConditions(c ...xpv1.Condition) {
 	mg.Status.SetConditions(c...)
 }
 
-// SetDeletionPolicy of this CosmosdbCassandraKeyspace.
-func (mg *CosmosdbCassandraKeyspace) SetDeletionPolicy(r xpv1.DeletionPolicy) {
+// SetDeletionPolicy of this CassandraKeyspace.
+func (mg *CassandraKeyspace) SetDeletionPolicy(r xpv1.DeletionPolicy) {
 	mg.Spec.DeletionPolicy = r
 }
 
-// SetProviderConfigReference of this CosmosdbCassandraKeyspace.
-func (mg *CosmosdbCassandraKeyspace) SetProviderConfigReference(r *xpv1.Reference) {
+// SetProviderConfigReference of this CassandraKeyspace.
+func (mg *CassandraKeyspace) SetProviderConfigReference(r *xpv1.Reference) {
 	mg.Spec.ProviderConfigReference = r
 }
 
 /*
-SetProviderReference of this CosmosdbCassandraKeyspace.
+SetProviderReference of this CassandraKeyspace.
 Deprecated: Use SetProviderConfigReference.
 */
-func (mg *CosmosdbCassandraKeyspace) SetProviderReference(r *xpv1.Reference) {
+func (mg *CassandraKeyspace) SetProviderReference(r *xpv1.Reference) {
 	mg.Spec.ProviderReference = r
 }
 
-// SetWriteConnectionSecretToReference of this CosmosdbCassandraKeyspace.
-func (mg *CosmosdbCassandraKeyspace) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
+// SetWriteConnectionSecretToReference of this CassandraKeyspace.
+func (mg *CassandraKeyspace) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
 	mg.Spec.WriteConnectionSecretToReference = r
 }
 
-// GetCondition of this CosmosdbCassandraTable.
-func (mg *CosmosdbCassandraTable) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
+// GetCondition of this CassandraTable.
+func (mg *CassandraTable) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
 	return mg.Status.GetCondition(ct)
 }
 
-// GetDeletionPolicy of this CosmosdbCassandraTable.
-func (mg *CosmosdbCassandraTable) GetDeletionPolicy() xpv1.DeletionPolicy {
+// GetDeletionPolicy of this CassandraTable.
+func (mg *CassandraTable) GetDeletionPolicy() xpv1.DeletionPolicy {
 	return mg.Spec.DeletionPolicy
 }
 
-// GetProviderConfigReference of this CosmosdbCassandraTable.
-func (mg *CosmosdbCassandraTable) GetProviderConfigReference() *xpv1.Reference {
+// GetProviderConfigReference of this CassandraTable.
+func (mg *CassandraTable) GetProviderConfigReference() *xpv1.Reference {
 	return mg.Spec.ProviderConfigReference
 }
 
 /*
-GetProviderReference of this CosmosdbCassandraTable.
+GetProviderReference of this CassandraTable.
 Deprecated: Use GetProviderConfigReference.
 */
-func (mg *CosmosdbCassandraTable) GetProviderReference() *xpv1.Reference {
+func (mg *CassandraTable) GetProviderReference() *xpv1.Reference {
 	return mg.Spec.ProviderReference
 }
 
-// GetWriteConnectionSecretToReference of this CosmosdbCassandraTable.
-func (mg *CosmosdbCassandraTable) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
+// GetWriteConnectionSecretToReference of this CassandraTable.
+func (mg *CassandraTable) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
 	return mg.Spec.WriteConnectionSecretToReference
 }
 
-// SetConditions of this CosmosdbCassandraTable.
-func (mg *CosmosdbCassandraTable) SetConditions(c ...xpv1.Condition) {
+// SetConditions of this CassandraTable.
+func (mg *CassandraTable) SetConditions(c ...xpv1.Condition) {
 	mg.Status.SetConditions(c...)
 }
 
-// SetDeletionPolicy of this CosmosdbCassandraTable.
-func (mg *CosmosdbCassandraTable) SetDeletionPolicy(r xpv1.DeletionPolicy) {
+// SetDeletionPolicy of this CassandraTable.
+func (mg *CassandraTable) SetDeletionPolicy(r xpv1.DeletionPolicy) {
 	mg.Spec.DeletionPolicy = r
 }
 
-// SetProviderConfigReference of this CosmosdbCassandraTable.
-func (mg *CosmosdbCassandraTable) SetProviderConfigReference(r *xpv1.Reference) {
+// SetProviderConfigReference of this CassandraTable.
+func (mg *CassandraTable) SetProviderConfigReference(r *xpv1.Reference) {
 	mg.Spec.ProviderConfigReference = r
 }
 
 /*
-SetProviderReference of this CosmosdbCassandraTable.
+SetProviderReference of this CassandraTable.
 Deprecated: Use SetProviderConfigReference.
 */
-func (mg *CosmosdbCassandraTable) SetProviderReference(r *xpv1.Reference) {
+func (mg *CassandraTable) SetProviderReference(r *xpv1.Reference) {
 	mg.Spec.ProviderReference = r
 }
 
-// SetWriteConnectionSecretToReference of this CosmosdbCassandraTable.
-func (mg *CosmosdbCassandraTable) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
+// SetWriteConnectionSecretToReference of this CassandraTable.
+func (mg *CassandraTable) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
 	mg.Spec.WriteConnectionSecretToReference = r
 }
 
-// GetCondition of this CosmosdbGremlinDatabase.
-func (mg *CosmosdbGremlinDatabase) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
+// GetCondition of this GremlinDatabase.
+func (mg *GremlinDatabase) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
 	return mg.Status.GetCondition(ct)
 }
 
-// GetDeletionPolicy of this CosmosdbGremlinDatabase.
-func (mg *CosmosdbGremlinDatabase) GetDeletionPolicy() xpv1.DeletionPolicy {
+// GetDeletionPolicy of this GremlinDatabase.
+func (mg *GremlinDatabase) GetDeletionPolicy() xpv1.DeletionPolicy {
 	return mg.Spec.DeletionPolicy
 }
 
-// GetProviderConfigReference of this CosmosdbGremlinDatabase.
-func (mg *CosmosdbGremlinDatabase) GetProviderConfigReference() *xpv1.Reference {
+// GetProviderConfigReference of this GremlinDatabase.
+func (mg *GremlinDatabase) GetProviderConfigReference() *xpv1.Reference {
 	return mg.Spec.ProviderConfigReference
 }
 
 /*
-GetProviderReference of this CosmosdbGremlinDatabase.
+GetProviderReference of this GremlinDatabase.
 Deprecated: Use GetProviderConfigReference.
 */
-func (mg *CosmosdbGremlinDatabase) GetProviderReference() *xpv1.Reference {
+func (mg *GremlinDatabase) GetProviderReference() *xpv1.Reference {
 	return mg.Spec.ProviderReference
 }
 
-// GetWriteConnectionSecretToReference of this CosmosdbGremlinDatabase.
-func (mg *CosmosdbGremlinDatabase) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
+// GetWriteConnectionSecretToReference of this GremlinDatabase.
+func (mg *GremlinDatabase) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
 	return mg.Spec.WriteConnectionSecretToReference
 }
 
-// SetConditions of this CosmosdbGremlinDatabase.
-func (mg *CosmosdbGremlinDatabase) SetConditions(c ...xpv1.Condition) {
+// SetConditions of this GremlinDatabase.
+func (mg *GremlinDatabase) SetConditions(c ...xpv1.Condition) {
 	mg.Status.SetConditions(c...)
 }
 
-// SetDeletionPolicy of this CosmosdbGremlinDatabase.
-func (mg *CosmosdbGremlinDatabase) SetDeletionPolicy(r xpv1.DeletionPolicy) {
+// SetDeletionPolicy of this GremlinDatabase.
+func (mg *GremlinDatabase) SetDeletionPolicy(r xpv1.DeletionPolicy) {
 	mg.Spec.DeletionPolicy = r
 }
 
-// SetProviderConfigReference of this CosmosdbGremlinDatabase.
-func (mg *CosmosdbGremlinDatabase) SetProviderConfigReference(r *xpv1.Reference) {
+// SetProviderConfigReference of this GremlinDatabase.
+func (mg *GremlinDatabase) SetProviderConfigReference(r *xpv1.Reference) {
 	mg.Spec.ProviderConfigReference = r
 }
 
 /*
-SetProviderReference of this CosmosdbGremlinDatabase.
+SetProviderReference of this GremlinDatabase.
 Deprecated: Use SetProviderConfigReference.
 */
-func (mg *CosmosdbGremlinDatabase) SetProviderReference(r *xpv1.Reference) {
+func (mg *GremlinDatabase) SetProviderReference(r *xpv1.Reference) {
 	mg.Spec.ProviderReference = r
 }
 
-// SetWriteConnectionSecretToReference of this CosmosdbGremlinDatabase.
-func (mg *CosmosdbGremlinDatabase) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
+// SetWriteConnectionSecretToReference of this GremlinDatabase.
+func (mg *GremlinDatabase) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
 	mg.Spec.WriteConnectionSecretToReference = r
 }
 
-// GetCondition of this CosmosdbGremlinGraph.
-func (mg *CosmosdbGremlinGraph) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
+// GetCondition of this GremlinGraph.
+func (mg *GremlinGraph) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
 	return mg.Status.GetCondition(ct)
 }
 
-// GetDeletionPolicy of this CosmosdbGremlinGraph.
-func (mg *CosmosdbGremlinGraph) GetDeletionPolicy() xpv1.DeletionPolicy {
+// GetDeletionPolicy of this GremlinGraph.
+func (mg *GremlinGraph) GetDeletionPolicy() xpv1.DeletionPolicy {
 	return mg.Spec.DeletionPolicy
 }
 
-// GetProviderConfigReference of this CosmosdbGremlinGraph.
-func (mg *CosmosdbGremlinGraph) GetProviderConfigReference() *xpv1.Reference {
+// GetProviderConfigReference of this GremlinGraph.
+func (mg *GremlinGraph) GetProviderConfigReference() *xpv1.Reference {
 	return mg.Spec.ProviderConfigReference
 }
 
 /*
-GetProviderReference of this CosmosdbGremlinGraph.
+GetProviderReference of this GremlinGraph.
 Deprecated: Use GetProviderConfigReference.
 */
-func (mg *CosmosdbGremlinGraph) GetProviderReference() *xpv1.Reference {
+func (mg *GremlinGraph) GetProviderReference() *xpv1.Reference {
 	return mg.Spec.ProviderReference
 }
 
-// GetWriteConnectionSecretToReference of this CosmosdbGremlinGraph.
-func (mg *CosmosdbGremlinGraph) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
+// GetWriteConnectionSecretToReference of this GremlinGraph.
+func (mg *GremlinGraph) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
 	return mg.Spec.WriteConnectionSecretToReference
 }
 
-// SetConditions of this CosmosdbGremlinGraph.
-func (mg *CosmosdbGremlinGraph) SetConditions(c ...xpv1.Condition) {
+// SetConditions of this GremlinGraph.
+func (mg *GremlinGraph) SetConditions(c ...xpv1.Condition) {
 	mg.Status.SetConditions(c...)
 }
 
-// SetDeletionPolicy of this CosmosdbGremlinGraph.
-func (mg *CosmosdbGremlinGraph) SetDeletionPolicy(r xpv1.DeletionPolicy) {
+// SetDeletionPolicy of this GremlinGraph.
+func (mg *GremlinGraph) SetDeletionPolicy(r xpv1.DeletionPolicy) {
 	mg.Spec.DeletionPolicy = r
 }
 
-// SetProviderConfigReference of this CosmosdbGremlinGraph.
-func (mg *CosmosdbGremlinGraph) SetProviderConfigReference(r *xpv1.Reference) {
+// SetProviderConfigReference of this GremlinGraph.
+func (mg *GremlinGraph) SetProviderConfigReference(r *xpv1.Reference) {
 	mg.Spec.ProviderConfigReference = r
 }
 
 /*
-SetProviderReference of this CosmosdbGremlinGraph.
+SetProviderReference of this GremlinGraph.
 Deprecated: Use SetProviderConfigReference.
 */
-func (mg *CosmosdbGremlinGraph) SetProviderReference(r *xpv1.Reference) {
+func (mg *GremlinGraph) SetProviderReference(r *xpv1.Reference) {
 	mg.Spec.ProviderReference = r
 }
 
-// SetWriteConnectionSecretToReference of this CosmosdbGremlinGraph.
-func (mg *CosmosdbGremlinGraph) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
+// SetWriteConnectionSecretToReference of this GremlinGraph.
+func (mg *GremlinGraph) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
 	mg.Spec.WriteConnectionSecretToReference = r
 }
 
-// GetCondition of this CosmosdbMongoCollection.
-func (mg *CosmosdbMongoCollection) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
+// GetCondition of this MongoCollection.
+func (mg *MongoCollection) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
 	return mg.Status.GetCondition(ct)
 }
 
-// GetDeletionPolicy of this CosmosdbMongoCollection.
-func (mg *CosmosdbMongoCollection) GetDeletionPolicy() xpv1.DeletionPolicy {
+// GetDeletionPolicy of this MongoCollection.
+func (mg *MongoCollection) GetDeletionPolicy() xpv1.DeletionPolicy {
 	return mg.Spec.DeletionPolicy
 }
 
-// GetProviderConfigReference of this CosmosdbMongoCollection.
-func (mg *CosmosdbMongoCollection) GetProviderConfigReference() *xpv1.Reference {
+// GetProviderConfigReference of this MongoCollection.
+func (mg *MongoCollection) GetProviderConfigReference() *xpv1.Reference {
 	return mg.Spec.ProviderConfigReference
 }
 
 /*
-GetProviderReference of this CosmosdbMongoCollection.
+GetProviderReference of this MongoCollection.
 Deprecated: Use GetProviderConfigReference.
 */
-func (mg *CosmosdbMongoCollection) GetProviderReference() *xpv1.Reference {
+func (mg *MongoCollection) GetProviderReference() *xpv1.Reference {
 	return mg.Spec.ProviderReference
 }
 
-// GetWriteConnectionSecretToReference of this CosmosdbMongoCollection.
-func (mg *CosmosdbMongoCollection) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
+// GetWriteConnectionSecretToReference of this MongoCollection.
+func (mg *MongoCollection) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
 	return mg.Spec.WriteConnectionSecretToReference
 }
 
-// SetConditions of this CosmosdbMongoCollection.
-func (mg *CosmosdbMongoCollection) SetConditions(c ...xpv1.Condition) {
+// SetConditions of this MongoCollection.
+func (mg *MongoCollection) SetConditions(c ...xpv1.Condition) {
 	mg.Status.SetConditions(c...)
 }
 
-// SetDeletionPolicy of this CosmosdbMongoCollection.
-func (mg *CosmosdbMongoCollection) SetDeletionPolicy(r xpv1.DeletionPolicy) {
+// SetDeletionPolicy of this MongoCollection.
+func (mg *MongoCollection) SetDeletionPolicy(r xpv1.DeletionPolicy) {
 	mg.Spec.DeletionPolicy = r
 }
 
-// SetProviderConfigReference of this CosmosdbMongoCollection.
-func (mg *CosmosdbMongoCollection) SetProviderConfigReference(r *xpv1.Reference) {
+// SetProviderConfigReference of this MongoCollection.
+func (mg *MongoCollection) SetProviderConfigReference(r *xpv1.Reference) {
 	mg.Spec.ProviderConfigReference = r
 }
 
 /*
-SetProviderReference of this CosmosdbMongoCollection.
+SetProviderReference of this MongoCollection.
 Deprecated: Use SetProviderConfigReference.
 */
-func (mg *CosmosdbMongoCollection) SetProviderReference(r *xpv1.Reference) {
+func (mg *MongoCollection) SetProviderReference(r *xpv1.Reference) {
 	mg.Spec.ProviderReference = r
 }
 
-// SetWriteConnectionSecretToReference of this CosmosdbMongoCollection.
-func (mg *CosmosdbMongoCollection) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
+// SetWriteConnectionSecretToReference of this MongoCollection.
+func (mg *MongoCollection) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
 	mg.Spec.WriteConnectionSecretToReference = r
 }
 
-// GetCondition of this CosmosdbMongoDatabase.
-func (mg *CosmosdbMongoDatabase) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
+// GetCondition of this MongoDatabase.
+func (mg *MongoDatabase) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
 	return mg.Status.GetCondition(ct)
 }
 
-// GetDeletionPolicy of this CosmosdbMongoDatabase.
-func (mg *CosmosdbMongoDatabase) GetDeletionPolicy() xpv1.DeletionPolicy {
+// GetDeletionPolicy of this MongoDatabase.
+func (mg *MongoDatabase) GetDeletionPolicy() xpv1.DeletionPolicy {
 	return mg.Spec.DeletionPolicy
 }
 
-// GetProviderConfigReference of this CosmosdbMongoDatabase.
-func (mg *CosmosdbMongoDatabase) GetProviderConfigReference() *xpv1.Reference {
+// GetProviderConfigReference of this MongoDatabase.
+func (mg *MongoDatabase) GetProviderConfigReference() *xpv1.Reference {
 	return mg.Spec.ProviderConfigReference
 }
 
 /*
-GetProviderReference of this CosmosdbMongoDatabase.
+GetProviderReference of this MongoDatabase.
 Deprecated: Use GetProviderConfigReference.
 */
-func (mg *CosmosdbMongoDatabase) GetProviderReference() *xpv1.Reference {
+func (mg *MongoDatabase) GetProviderReference() *xpv1.Reference {
 	return mg.Spec.ProviderReference
 }
 
-// GetWriteConnectionSecretToReference of this CosmosdbMongoDatabase.
-func (mg *CosmosdbMongoDatabase) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
+// GetWriteConnectionSecretToReference of this MongoDatabase.
+func (mg *MongoDatabase) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
 	return mg.Spec.WriteConnectionSecretToReference
 }
 
-// SetConditions of this CosmosdbMongoDatabase.
-func (mg *CosmosdbMongoDatabase) SetConditions(c ...xpv1.Condition) {
+// SetConditions of this MongoDatabase.
+func (mg *MongoDatabase) SetConditions(c ...xpv1.Condition) {
 	mg.Status.SetConditions(c...)
 }
 
-// SetDeletionPolicy of this CosmosdbMongoDatabase.
-func (mg *CosmosdbMongoDatabase) SetDeletionPolicy(r xpv1.DeletionPolicy) {
+// SetDeletionPolicy of this MongoDatabase.
+func (mg *MongoDatabase) SetDeletionPolicy(r xpv1.DeletionPolicy) {
 	mg.Spec.DeletionPolicy = r
 }
 
-// SetProviderConfigReference of this CosmosdbMongoDatabase.
-func (mg *CosmosdbMongoDatabase) SetProviderConfigReference(r *xpv1.Reference) {
+// SetProviderConfigReference of this MongoDatabase.
+func (mg *MongoDatabase) SetProviderConfigReference(r *xpv1.Reference) {
 	mg.Spec.ProviderConfigReference = r
 }
 
 /*
-SetProviderReference of this CosmosdbMongoDatabase.
+SetProviderReference of this MongoDatabase.
 Deprecated: Use SetProviderConfigReference.
 */
-func (mg *CosmosdbMongoDatabase) SetProviderReference(r *xpv1.Reference) {
+func (mg *MongoDatabase) SetProviderReference(r *xpv1.Reference) {
 	mg.Spec.ProviderReference = r
 }
 
-// SetWriteConnectionSecretToReference of this CosmosdbMongoDatabase.
-func (mg *CosmosdbMongoDatabase) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
+// SetWriteConnectionSecretToReference of this MongoDatabase.
+func (mg *MongoDatabase) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
 	mg.Spec.WriteConnectionSecretToReference = r
 }
 
-// GetCondition of this CosmosdbNotebookWorkspace.
-func (mg *CosmosdbNotebookWorkspace) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
+// GetCondition of this NotebookWorkspace.
+func (mg *NotebookWorkspace) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
 	return mg.Status.GetCondition(ct)
 }
 
-// GetDeletionPolicy of this CosmosdbNotebookWorkspace.
-func (mg *CosmosdbNotebookWorkspace) GetDeletionPolicy() xpv1.DeletionPolicy {
+// GetDeletionPolicy of this NotebookWorkspace.
+func (mg *NotebookWorkspace) GetDeletionPolicy() xpv1.DeletionPolicy {
 	return mg.Spec.DeletionPolicy
 }
 
-// GetProviderConfigReference of this CosmosdbNotebookWorkspace.
-func (mg *CosmosdbNotebookWorkspace) GetProviderConfigReference() *xpv1.Reference {
+// GetProviderConfigReference of this NotebookWorkspace.
+func (mg *NotebookWorkspace) GetProviderConfigReference() *xpv1.Reference {
 	return mg.Spec.ProviderConfigReference
 }
 
 /*
-GetProviderReference of this CosmosdbNotebookWorkspace.
+GetProviderReference of this NotebookWorkspace.
 Deprecated: Use GetProviderConfigReference.
 */
-func (mg *CosmosdbNotebookWorkspace) GetProviderReference() *xpv1.Reference {
+func (mg *NotebookWorkspace) GetProviderReference() *xpv1.Reference {
 	return mg.Spec.ProviderReference
 }
 
-// GetWriteConnectionSecretToReference of this CosmosdbNotebookWorkspace.
-func (mg *CosmosdbNotebookWorkspace) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
+// GetWriteConnectionSecretToReference of this NotebookWorkspace.
+func (mg *NotebookWorkspace) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
 	return mg.Spec.WriteConnectionSecretToReference
 }
 
-// SetConditions of this CosmosdbNotebookWorkspace.
-func (mg *CosmosdbNotebookWorkspace) SetConditions(c ...xpv1.Condition) {
+// SetConditions of this NotebookWorkspace.
+func (mg *NotebookWorkspace) SetConditions(c ...xpv1.Condition) {
 	mg.Status.SetConditions(c...)
 }
 
-// SetDeletionPolicy of this CosmosdbNotebookWorkspace.
-func (mg *CosmosdbNotebookWorkspace) SetDeletionPolicy(r xpv1.DeletionPolicy) {
+// SetDeletionPolicy of this NotebookWorkspace.
+func (mg *NotebookWorkspace) SetDeletionPolicy(r xpv1.DeletionPolicy) {
 	mg.Spec.DeletionPolicy = r
 }
 
-// SetProviderConfigReference of this CosmosdbNotebookWorkspace.
-func (mg *CosmosdbNotebookWorkspace) SetProviderConfigReference(r *xpv1.Reference) {
+// SetProviderConfigReference of this NotebookWorkspace.
+func (mg *NotebookWorkspace) SetProviderConfigReference(r *xpv1.Reference) {
 	mg.Spec.ProviderConfigReference = r
 }
 
 /*
-SetProviderReference of this CosmosdbNotebookWorkspace.
+SetProviderReference of this NotebookWorkspace.
 Deprecated: Use SetProviderConfigReference.
 */
-func (mg *CosmosdbNotebookWorkspace) SetProviderReference(r *xpv1.Reference) {
+func (mg *NotebookWorkspace) SetProviderReference(r *xpv1.Reference) {
 	mg.Spec.ProviderReference = r
 }
 
-// SetWriteConnectionSecretToReference of this CosmosdbNotebookWorkspace.
-func (mg *CosmosdbNotebookWorkspace) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
+// SetWriteConnectionSecretToReference of this NotebookWorkspace.
+func (mg *NotebookWorkspace) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
 	mg.Spec.WriteConnectionSecretToReference = r
 }
 
-// GetCondition of this CosmosdbSqlContainer.
-func (mg *CosmosdbSqlContainer) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
+// GetCondition of this SqlContainer.
+func (mg *SqlContainer) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
 	return mg.Status.GetCondition(ct)
 }
 
-// GetDeletionPolicy of this CosmosdbSqlContainer.
-func (mg *CosmosdbSqlContainer) GetDeletionPolicy() xpv1.DeletionPolicy {
+// GetDeletionPolicy of this SqlContainer.
+func (mg *SqlContainer) GetDeletionPolicy() xpv1.DeletionPolicy {
 	return mg.Spec.DeletionPolicy
 }
 
-// GetProviderConfigReference of this CosmosdbSqlContainer.
-func (mg *CosmosdbSqlContainer) GetProviderConfigReference() *xpv1.Reference {
+// GetProviderConfigReference of this SqlContainer.
+func (mg *SqlContainer) GetProviderConfigReference() *xpv1.Reference {
 	return mg.Spec.ProviderConfigReference
 }
 
 /*
-GetProviderReference of this CosmosdbSqlContainer.
+GetProviderReference of this SqlContainer.
 Deprecated: Use GetProviderConfigReference.
 */
-func (mg *CosmosdbSqlContainer) GetProviderReference() *xpv1.Reference {
+func (mg *SqlContainer) GetProviderReference() *xpv1.Reference {
 	return mg.Spec.ProviderReference
 }
 
-// GetWriteConnectionSecretToReference of this CosmosdbSqlContainer.
-func (mg *CosmosdbSqlContainer) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
+// GetWriteConnectionSecretToReference of this SqlContainer.
+func (mg *SqlContainer) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
 	return mg.Spec.WriteConnectionSecretToReference
 }
 
-// SetConditions of this CosmosdbSqlContainer.
-func (mg *CosmosdbSqlContainer) SetConditions(c ...xpv1.Condition) {
+// SetConditions of this SqlContainer.
+func (mg *SqlContainer) SetConditions(c ...xpv1.Condition) {
 	mg.Status.SetConditions(c...)
 }
 
-// SetDeletionPolicy of this CosmosdbSqlContainer.
-func (mg *CosmosdbSqlContainer) SetDeletionPolicy(r xpv1.DeletionPolicy) {
+// SetDeletionPolicy of this SqlContainer.
+func (mg *SqlContainer) SetDeletionPolicy(r xpv1.DeletionPolicy) {
 	mg.Spec.DeletionPolicy = r
 }
 
-// SetProviderConfigReference of this CosmosdbSqlContainer.
-func (mg *CosmosdbSqlContainer) SetProviderConfigReference(r *xpv1.Reference) {
+// SetProviderConfigReference of this SqlContainer.
+func (mg *SqlContainer) SetProviderConfigReference(r *xpv1.Reference) {
 	mg.Spec.ProviderConfigReference = r
 }
 
 /*
-SetProviderReference of this CosmosdbSqlContainer.
+SetProviderReference of this SqlContainer.
 Deprecated: Use SetProviderConfigReference.
 */
-func (mg *CosmosdbSqlContainer) SetProviderReference(r *xpv1.Reference) {
+func (mg *SqlContainer) SetProviderReference(r *xpv1.Reference) {
 	mg.Spec.ProviderReference = r
 }
 
-// SetWriteConnectionSecretToReference of this CosmosdbSqlContainer.
-func (mg *CosmosdbSqlContainer) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
+// SetWriteConnectionSecretToReference of this SqlContainer.
+func (mg *SqlContainer) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
 	mg.Spec.WriteConnectionSecretToReference = r
 }
 
-// GetCondition of this CosmosdbSqlDatabase.
-func (mg *CosmosdbSqlDatabase) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
+// GetCondition of this SqlDatabase.
+func (mg *SqlDatabase) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
 	return mg.Status.GetCondition(ct)
 }
 
-// GetDeletionPolicy of this CosmosdbSqlDatabase.
-func (mg *CosmosdbSqlDatabase) GetDeletionPolicy() xpv1.DeletionPolicy {
+// GetDeletionPolicy of this SqlDatabase.
+func (mg *SqlDatabase) GetDeletionPolicy() xpv1.DeletionPolicy {
 	return mg.Spec.DeletionPolicy
 }
 
-// GetProviderConfigReference of this CosmosdbSqlDatabase.
-func (mg *CosmosdbSqlDatabase) GetProviderConfigReference() *xpv1.Reference {
+// GetProviderConfigReference of this SqlDatabase.
+func (mg *SqlDatabase) GetProviderConfigReference() *xpv1.Reference {
 	return mg.Spec.ProviderConfigReference
 }
 
 /*
-GetProviderReference of this CosmosdbSqlDatabase.
+GetProviderReference of this SqlDatabase.
 Deprecated: Use GetProviderConfigReference.
 */
-func (mg *CosmosdbSqlDatabase) GetProviderReference() *xpv1.Reference {
+func (mg *SqlDatabase) GetProviderReference() *xpv1.Reference {
 	return mg.Spec.ProviderReference
 }
 
-// GetWriteConnectionSecretToReference of this CosmosdbSqlDatabase.
-func (mg *CosmosdbSqlDatabase) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
+// GetWriteConnectionSecretToReference of this SqlDatabase.
+func (mg *SqlDatabase) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
 	return mg.Spec.WriteConnectionSecretToReference
 }
 
-// SetConditions of this CosmosdbSqlDatabase.
-func (mg *CosmosdbSqlDatabase) SetConditions(c ...xpv1.Condition) {
+// SetConditions of this SqlDatabase.
+func (mg *SqlDatabase) SetConditions(c ...xpv1.Condition) {
 	mg.Status.SetConditions(c...)
 }
 
-// SetDeletionPolicy of this CosmosdbSqlDatabase.
-func (mg *CosmosdbSqlDatabase) SetDeletionPolicy(r xpv1.DeletionPolicy) {
+// SetDeletionPolicy of this SqlDatabase.
+func (mg *SqlDatabase) SetDeletionPolicy(r xpv1.DeletionPolicy) {
 	mg.Spec.DeletionPolicy = r
 }
 
-// SetProviderConfigReference of this CosmosdbSqlDatabase.
-func (mg *CosmosdbSqlDatabase) SetProviderConfigReference(r *xpv1.Reference) {
+// SetProviderConfigReference of this SqlDatabase.
+func (mg *SqlDatabase) SetProviderConfigReference(r *xpv1.Reference) {
 	mg.Spec.ProviderConfigReference = r
 }
 
 /*
-SetProviderReference of this CosmosdbSqlDatabase.
+SetProviderReference of this SqlDatabase.
 Deprecated: Use SetProviderConfigReference.
 */
-func (mg *CosmosdbSqlDatabase) SetProviderReference(r *xpv1.Reference) {
+func (mg *SqlDatabase) SetProviderReference(r *xpv1.Reference) {
 	mg.Spec.ProviderReference = r
 }
 
-// SetWriteConnectionSecretToReference of this CosmosdbSqlDatabase.
-func (mg *CosmosdbSqlDatabase) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
+// SetWriteConnectionSecretToReference of this SqlDatabase.
+func (mg *SqlDatabase) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
 	mg.Spec.WriteConnectionSecretToReference = r
 }
 
-// GetCondition of this CosmosdbSqlFunction.
-func (mg *CosmosdbSqlFunction) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
+// GetCondition of this SqlFunction.
+func (mg *SqlFunction) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
 	return mg.Status.GetCondition(ct)
 }
 
-// GetDeletionPolicy of this CosmosdbSqlFunction.
-func (mg *CosmosdbSqlFunction) GetDeletionPolicy() xpv1.DeletionPolicy {
+// GetDeletionPolicy of this SqlFunction.
+func (mg *SqlFunction) GetDeletionPolicy() xpv1.DeletionPolicy {
 	return mg.Spec.DeletionPolicy
 }
 
-// GetProviderConfigReference of this CosmosdbSqlFunction.
-func (mg *CosmosdbSqlFunction) GetProviderConfigReference() *xpv1.Reference {
+// GetProviderConfigReference of this SqlFunction.
+func (mg *SqlFunction) GetProviderConfigReference() *xpv1.Reference {
 	return mg.Spec.ProviderConfigReference
 }
 
 /*
-GetProviderReference of this CosmosdbSqlFunction.
+GetProviderReference of this SqlFunction.
 Deprecated: Use GetProviderConfigReference.
 */
-func (mg *CosmosdbSqlFunction) GetProviderReference() *xpv1.Reference {
+func (mg *SqlFunction) GetProviderReference() *xpv1.Reference {
 	return mg.Spec.ProviderReference
 }
 
-// GetWriteConnectionSecretToReference of this CosmosdbSqlFunction.
-func (mg *CosmosdbSqlFunction) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
+// GetWriteConnectionSecretToReference of this SqlFunction.
+func (mg *SqlFunction) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
 	return mg.Spec.WriteConnectionSecretToReference
 }
 
-// SetConditions of this CosmosdbSqlFunction.
-func (mg *CosmosdbSqlFunction) SetConditions(c ...xpv1.Condition) {
+// SetConditions of this SqlFunction.
+func (mg *SqlFunction) SetConditions(c ...xpv1.Condition) {
 	mg.Status.SetConditions(c...)
 }
 
-// SetDeletionPolicy of this CosmosdbSqlFunction.
-func (mg *CosmosdbSqlFunction) SetDeletionPolicy(r xpv1.DeletionPolicy) {
+// SetDeletionPolicy of this SqlFunction.
+func (mg *SqlFunction) SetDeletionPolicy(r xpv1.DeletionPolicy) {
 	mg.Spec.DeletionPolicy = r
 }
 
-// SetProviderConfigReference of this CosmosdbSqlFunction.
-func (mg *CosmosdbSqlFunction) SetProviderConfigReference(r *xpv1.Reference) {
+// SetProviderConfigReference of this SqlFunction.
+func (mg *SqlFunction) SetProviderConfigReference(r *xpv1.Reference) {
 	mg.Spec.ProviderConfigReference = r
 }
 
 /*
-SetProviderReference of this CosmosdbSqlFunction.
+SetProviderReference of this SqlFunction.
 Deprecated: Use SetProviderConfigReference.
 */
-func (mg *CosmosdbSqlFunction) SetProviderReference(r *xpv1.Reference) {
+func (mg *SqlFunction) SetProviderReference(r *xpv1.Reference) {
 	mg.Spec.ProviderReference = r
 }
 
-// SetWriteConnectionSecretToReference of this CosmosdbSqlFunction.
-func (mg *CosmosdbSqlFunction) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
+// SetWriteConnectionSecretToReference of this SqlFunction.
+func (mg *SqlFunction) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
 	mg.Spec.WriteConnectionSecretToReference = r
 }
 
-// GetCondition of this CosmosdbSqlStoredProcedure.
-func (mg *CosmosdbSqlStoredProcedure) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
+// GetCondition of this SqlStoredProcedure.
+func (mg *SqlStoredProcedure) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
 	return mg.Status.GetCondition(ct)
 }
 
-// GetDeletionPolicy of this CosmosdbSqlStoredProcedure.
-func (mg *CosmosdbSqlStoredProcedure) GetDeletionPolicy() xpv1.DeletionPolicy {
+// GetDeletionPolicy of this SqlStoredProcedure.
+func (mg *SqlStoredProcedure) GetDeletionPolicy() xpv1.DeletionPolicy {
 	return mg.Spec.DeletionPolicy
 }
 
-// GetProviderConfigReference of this CosmosdbSqlStoredProcedure.
-func (mg *CosmosdbSqlStoredProcedure) GetProviderConfigReference() *xpv1.Reference {
+// GetProviderConfigReference of this SqlStoredProcedure.
+func (mg *SqlStoredProcedure) GetProviderConfigReference() *xpv1.Reference {
 	return mg.Spec.ProviderConfigReference
 }
 
 /*
-GetProviderReference of this CosmosdbSqlStoredProcedure.
+GetProviderReference of this SqlStoredProcedure.
 Deprecated: Use GetProviderConfigReference.
 */
-func (mg *CosmosdbSqlStoredProcedure) GetProviderReference() *xpv1.Reference {
+func (mg *SqlStoredProcedure) GetProviderReference() *xpv1.Reference {
 	return mg.Spec.ProviderReference
 }
 
-// GetWriteConnectionSecretToReference of this CosmosdbSqlStoredProcedure.
-func (mg *CosmosdbSqlStoredProcedure) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
+// GetWriteConnectionSecretToReference of this SqlStoredProcedure.
+func (mg *SqlStoredProcedure) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
 	return mg.Spec.WriteConnectionSecretToReference
 }
 
-// SetConditions of this CosmosdbSqlStoredProcedure.
-func (mg *CosmosdbSqlStoredProcedure) SetConditions(c ...xpv1.Condition) {
+// SetConditions of this SqlStoredProcedure.
+func (mg *SqlStoredProcedure) SetConditions(c ...xpv1.Condition) {
 	mg.Status.SetConditions(c...)
 }
 
-// SetDeletionPolicy of this CosmosdbSqlStoredProcedure.
-func (mg *CosmosdbSqlStoredProcedure) SetDeletionPolicy(r xpv1.DeletionPolicy) {
+// SetDeletionPolicy of this SqlStoredProcedure.
+func (mg *SqlStoredProcedure) SetDeletionPolicy(r xpv1.DeletionPolicy) {
 	mg.Spec.DeletionPolicy = r
 }
 
-// SetProviderConfigReference of this CosmosdbSqlStoredProcedure.
-func (mg *CosmosdbSqlStoredProcedure) SetProviderConfigReference(r *xpv1.Reference) {
+// SetProviderConfigReference of this SqlStoredProcedure.
+func (mg *SqlStoredProcedure) SetProviderConfigReference(r *xpv1.Reference) {
 	mg.Spec.ProviderConfigReference = r
 }
 
 /*
-SetProviderReference of this CosmosdbSqlStoredProcedure.
+SetProviderReference of this SqlStoredProcedure.
 Deprecated: Use SetProviderConfigReference.
 */
-func (mg *CosmosdbSqlStoredProcedure) SetProviderReference(r *xpv1.Reference) {
+func (mg *SqlStoredProcedure) SetProviderReference(r *xpv1.Reference) {
 	mg.Spec.ProviderReference = r
 }
 
-// SetWriteConnectionSecretToReference of this CosmosdbSqlStoredProcedure.
-func (mg *CosmosdbSqlStoredProcedure) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
+// SetWriteConnectionSecretToReference of this SqlStoredProcedure.
+func (mg *SqlStoredProcedure) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
 	mg.Spec.WriteConnectionSecretToReference = r
 }
 
-// GetCondition of this CosmosdbSqlTrigger.
-func (mg *CosmosdbSqlTrigger) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
+// GetCondition of this SqlTrigger.
+func (mg *SqlTrigger) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
 	return mg.Status.GetCondition(ct)
 }
 
-// GetDeletionPolicy of this CosmosdbSqlTrigger.
-func (mg *CosmosdbSqlTrigger) GetDeletionPolicy() xpv1.DeletionPolicy {
+// GetDeletionPolicy of this SqlTrigger.
+func (mg *SqlTrigger) GetDeletionPolicy() xpv1.DeletionPolicy {
 	return mg.Spec.DeletionPolicy
 }
 
-// GetProviderConfigReference of this CosmosdbSqlTrigger.
-func (mg *CosmosdbSqlTrigger) GetProviderConfigReference() *xpv1.Reference {
+// GetProviderConfigReference of this SqlTrigger.
+func (mg *SqlTrigger) GetProviderConfigReference() *xpv1.Reference {
 	return mg.Spec.ProviderConfigReference
 }
 
 /*
-GetProviderReference of this CosmosdbSqlTrigger.
+GetProviderReference of this SqlTrigger.
 Deprecated: Use GetProviderConfigReference.
 */
-func (mg *CosmosdbSqlTrigger) GetProviderReference() *xpv1.Reference {
+func (mg *SqlTrigger) GetProviderReference() *xpv1.Reference {
 	return mg.Spec.ProviderReference
 }
 
-// GetWriteConnectionSecretToReference of this CosmosdbSqlTrigger.
-func (mg *CosmosdbSqlTrigger) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
+// GetWriteConnectionSecretToReference of this SqlTrigger.
+func (mg *SqlTrigger) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
 	return mg.Spec.WriteConnectionSecretToReference
 }
 
-// SetConditions of this CosmosdbSqlTrigger.
-func (mg *CosmosdbSqlTrigger) SetConditions(c ...xpv1.Condition) {
+// SetConditions of this SqlTrigger.
+func (mg *SqlTrigger) SetConditions(c ...xpv1.Condition) {
 	mg.Status.SetConditions(c...)
 }
 
-// SetDeletionPolicy of this CosmosdbSqlTrigger.
-func (mg *CosmosdbSqlTrigger) SetDeletionPolicy(r xpv1.DeletionPolicy) {
+// SetDeletionPolicy of this SqlTrigger.
+func (mg *SqlTrigger) SetDeletionPolicy(r xpv1.DeletionPolicy) {
 	mg.Spec.DeletionPolicy = r
 }
 
-// SetProviderConfigReference of this CosmosdbSqlTrigger.
-func (mg *CosmosdbSqlTrigger) SetProviderConfigReference(r *xpv1.Reference) {
+// SetProviderConfigReference of this SqlTrigger.
+func (mg *SqlTrigger) SetProviderConfigReference(r *xpv1.Reference) {
 	mg.Spec.ProviderConfigReference = r
 }
 
 /*
-SetProviderReference of this CosmosdbSqlTrigger.
+SetProviderReference of this SqlTrigger.
 Deprecated: Use SetProviderConfigReference.
 */
-func (mg *CosmosdbSqlTrigger) SetProviderReference(r *xpv1.Reference) {
+func (mg *SqlTrigger) SetProviderReference(r *xpv1.Reference) {
 	mg.Spec.ProviderReference = r
 }
 
-// SetWriteConnectionSecretToReference of this CosmosdbSqlTrigger.
-func (mg *CosmosdbSqlTrigger) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
+// SetWriteConnectionSecretToReference of this SqlTrigger.
+func (mg *SqlTrigger) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
 	mg.Spec.WriteConnectionSecretToReference = r
 }
 
-// GetCondition of this CosmosdbTable.
-func (mg *CosmosdbTable) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
+// GetCondition of this Table.
+func (mg *Table) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
 	return mg.Status.GetCondition(ct)
 }
 
-// GetDeletionPolicy of this CosmosdbTable.
-func (mg *CosmosdbTable) GetDeletionPolicy() xpv1.DeletionPolicy {
+// GetDeletionPolicy of this Table.
+func (mg *Table) GetDeletionPolicy() xpv1.DeletionPolicy {
 	return mg.Spec.DeletionPolicy
 }
 
-// GetProviderConfigReference of this CosmosdbTable.
-func (mg *CosmosdbTable) GetProviderConfigReference() *xpv1.Reference {
+// GetProviderConfigReference of this Table.
+func (mg *Table) GetProviderConfigReference() *xpv1.Reference {
 	return mg.Spec.ProviderConfigReference
 }
 
 /*
-GetProviderReference of this CosmosdbTable.
+GetProviderReference of this Table.
 Deprecated: Use GetProviderConfigReference.
 */
-func (mg *CosmosdbTable) GetProviderReference() *xpv1.Reference {
+func (mg *Table) GetProviderReference() *xpv1.Reference {
 	return mg.Spec.ProviderReference
 }
 
-// GetWriteConnectionSecretToReference of this CosmosdbTable.
-func (mg *CosmosdbTable) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
+// GetWriteConnectionSecretToReference of this Table.
+func (mg *Table) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
 	return mg.Spec.WriteConnectionSecretToReference
 }
 
-// SetConditions of this CosmosdbTable.
-func (mg *CosmosdbTable) SetConditions(c ...xpv1.Condition) {
+// SetConditions of this Table.
+func (mg *Table) SetConditions(c ...xpv1.Condition) {
 	mg.Status.SetConditions(c...)
 }
 
-// SetDeletionPolicy of this CosmosdbTable.
-func (mg *CosmosdbTable) SetDeletionPolicy(r xpv1.DeletionPolicy) {
+// SetDeletionPolicy of this Table.
+func (mg *Table) SetDeletionPolicy(r xpv1.DeletionPolicy) {
 	mg.Spec.DeletionPolicy = r
 }
 
-// SetProviderConfigReference of this CosmosdbTable.
-func (mg *CosmosdbTable) SetProviderConfigReference(r *xpv1.Reference) {
+// SetProviderConfigReference of this Table.
+func (mg *Table) SetProviderConfigReference(r *xpv1.Reference) {
 	mg.Spec.ProviderConfigReference = r
 }
 
 /*
-SetProviderReference of this CosmosdbTable.
+SetProviderReference of this Table.
 Deprecated: Use SetProviderConfigReference.
 */
-func (mg *CosmosdbTable) SetProviderReference(r *xpv1.Reference) {
+func (mg *Table) SetProviderReference(r *xpv1.Reference) {
 	mg.Spec.ProviderReference = r
 }
 
-// SetWriteConnectionSecretToReference of this CosmosdbTable.
-func (mg *CosmosdbTable) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
+// SetWriteConnectionSecretToReference of this Table.
+func (mg *Table) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
 	mg.Spec.WriteConnectionSecretToReference = r
 }

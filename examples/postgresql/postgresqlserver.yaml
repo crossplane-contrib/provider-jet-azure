@@ -1,5 +1,5 @@
 apiVersion: postgresql.azure.tf.crossplane.io/v1alpha1
-kind: PostgresqlServer
+kind: Server
 metadata:
   name: example
 spec:

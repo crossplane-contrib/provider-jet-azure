@@ -1,0 +1,24 @@
+apiVersion: containerservice.azure.tf.crossplane.io/v1alpha1
+kind: KubernetesCluster
+metadata:
+  name: example
+spec:
+  writeConnectionSecretToRef:
+    name: example-kubeconfig
+    namespace: crossplane-system
+  forProvider:
+    name: "example-aks"
+    location: "East US"
+    resourceGroupNameRef:
+      name: example
+    dnsPrefix: "exampleaks"
+    defaultNodePool:
+      - name: default
+        nodeCount: 1
+        vmSize: "Standard_D2_v2"
+    identity:
+      - type: "SystemAssigned"
+    tags:
+      purpose: example
+  providerConfigRef:
+    name: example

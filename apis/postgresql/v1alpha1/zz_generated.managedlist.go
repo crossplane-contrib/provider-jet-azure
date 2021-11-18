@@ -19,8 +19,8 @@ package v1alpha1
 
 import resource "github.com/crossplane/crossplane-runtime/pkg/resource"
 
-// GetItems of this PostgresqlActiveDirectoryAdministratorList.
-func (l *PostgresqlActiveDirectoryAdministratorList) GetItems() []resource.Managed {
+// GetItems of this ActiveDirectoryAdministratorList.
+func (l *ActiveDirectoryAdministratorList) GetItems() []resource.Managed {
 	items := make([]resource.Managed, len(l.Items))
 	for i := range l.Items {
 		items[i] = &l.Items[i]
@@ -28,8 +28,8 @@ func (l *PostgresqlActiveDirectoryAdministratorList) GetItems() []resource.Manag
 	return items
 }
 
-// GetItems of this PostgresqlConfigurationList.
-func (l *PostgresqlConfigurationList) GetItems() []resource.Managed {
+// GetItems of this ConfigurationList.
+func (l *ConfigurationList) GetItems() []resource.Managed {
 	items := make([]resource.Managed, len(l.Items))
 	for i := range l.Items {
 		items[i] = &l.Items[i]
@@ -37,8 +37,8 @@ func (l *PostgresqlConfigurationList) GetItems() []resource.Managed {
 	return items
 }
 
-// GetItems of this PostgresqlDatabaseList.
-func (l *PostgresqlDatabaseList) GetItems() []resource.Managed {
+// GetItems of this DatabaseList.
+func (l *DatabaseList) GetItems() []resource.Managed {
 	items := make([]resource.Managed, len(l.Items))
 	for i := range l.Items {
 		items[i] = &l.Items[i]
@@ -46,8 +46,8 @@ func (l *PostgresqlDatabaseList) GetItems() []resource.Managed {
 	return items
 }
 
-// GetItems of this PostgresqlFirewallRuleList.
-func (l *PostgresqlFirewallRuleList) GetItems() []resource.Managed {
+// GetItems of this FirewallRuleList.
+func (l *FirewallRuleList) GetItems() []resource.Managed {
 	items := make([]resource.Managed, len(l.Items))
 	for i := range l.Items {
 		items[i] = &l.Items[i]
@@ -55,8 +55,8 @@ func (l *PostgresqlFirewallRuleList) GetItems() []resource.Managed {
 	return items
 }
 
-// GetItems of this PostgresqlFlexibleServerConfigurationList.
-func (l *PostgresqlFlexibleServerConfigurationList) GetItems() []resource.Managed {
+// GetItems of this FlexibleServerConfigurationList.
+func (l *FlexibleServerConfigurationList) GetItems() []resource.Managed {
 	items := make([]resource.Managed, len(l.Items))
 	for i := range l.Items {
 		items[i] = &l.Items[i]
@@ -64,8 +64,8 @@ func (l *PostgresqlFlexibleServerConfigurationList) GetItems() []resource.Manage
 	return items
 }
 
-// GetItems of this PostgresqlFlexibleServerDatabaseList.
-func (l *PostgresqlFlexibleServerDatabaseList) GetItems() []resource.Managed {
+// GetItems of this FlexibleServerDatabaseList.
+func (l *FlexibleServerDatabaseList) GetItems() []resource.Managed {
 	items := make([]resource.Managed, len(l.Items))
 	for i := range l.Items {
 		items[i] = &l.Items[i]
@@ -73,8 +73,8 @@ func (l *PostgresqlFlexibleServerDatabaseList) GetItems() []resource.Managed {
 	return items
 }
 
-// GetItems of this PostgresqlFlexibleServerFirewallRuleList.
-func (l *PostgresqlFlexibleServerFirewallRuleList) GetItems() []resource.Managed {
+// GetItems of this FlexibleServerFirewallRuleList.
+func (l *FlexibleServerFirewallRuleList) GetItems() []resource.Managed {
 	items := make([]resource.Managed, len(l.Items))
 	for i := range l.Items {
 		items[i] = &l.Items[i]
@@ -82,8 +82,8 @@ func (l *PostgresqlFlexibleServerFirewallRuleList) GetItems() []resource.Managed
 	return items
 }
 
-// GetItems of this PostgresqlFlexibleServerList.
-func (l *PostgresqlFlexibleServerList) GetItems() []resource.Managed {
+// GetItems of this FlexibleServerList.
+func (l *FlexibleServerList) GetItems() []resource.Managed {
 	items := make([]resource.Managed, len(l.Items))
 	for i := range l.Items {
 		items[i] = &l.Items[i]
@@ -91,8 +91,8 @@ func (l *PostgresqlFlexibleServerList) GetItems() []resource.Managed {
 	return items
 }
 
-// GetItems of this PostgresqlServerKeyList.
-func (l *PostgresqlServerKeyList) GetItems() []resource.Managed {
+// GetItems of this ServerList.
+func (l *ServerList) GetItems() []resource.Managed {
 	items := make([]resource.Managed, len(l.Items))
 	for i := range l.Items {
 		items[i] = &l.Items[i]
@@ -100,17 +100,8 @@ func (l *PostgresqlServerKeyList) GetItems() []resource.Managed {
 	return items
 }
 
-// GetItems of this PostgresqlServerList.
-func (l *PostgresqlServerList) GetItems() []resource.Managed {
-	items := make([]resource.Managed, len(l.Items))
-	for i := range l.Items {
-		items[i] = &l.Items[i]
-	}
-	return items
-}
-
-// GetItems of this PostgresqlVirtualNetworkRuleList.
-func (l *PostgresqlVirtualNetworkRuleList) GetItems() []resource.Managed {
+// GetItems of this VirtualNetworkRuleList.
+func (l *VirtualNetworkRuleList) GetItems() []resource.Managed {
 	items := make([]resource.Managed, len(l.Items))
 	for i := range l.Items {
 		items[i] = &l.Items[i]

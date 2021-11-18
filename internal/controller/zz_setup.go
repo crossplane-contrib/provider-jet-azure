@@ -22,126 +22,107 @@ import (
 
 	"github.com/crossplane/crossplane-runtime/pkg/logging"
 
+	tjconfig "github.com/crossplane-contrib/terrajet/pkg/config"
 	"github.com/crossplane-contrib/terrajet/pkg/terraform"
 
-	config "github.com/crossplane-contrib/provider-tf-azure/internal/controller/config"
-	cosmosdbaccount "github.com/crossplane-contrib/provider-tf-azure/internal/controller/cosmosdb/cosmosdbaccount"
-	cosmosdbcassandrakeyspace "github.com/crossplane-contrib/provider-tf-azure/internal/controller/cosmosdb/cosmosdbcassandrakeyspace"
-	cosmosdbcassandratable "github.com/crossplane-contrib/provider-tf-azure/internal/controller/cosmosdb/cosmosdbcassandratable"
-	cosmosdbgremlindatabase "github.com/crossplane-contrib/provider-tf-azure/internal/controller/cosmosdb/cosmosdbgremlindatabase"
-	cosmosdbgremlingraph "github.com/crossplane-contrib/provider-tf-azure/internal/controller/cosmosdb/cosmosdbgremlingraph"
-	cosmosdbmongocollection "github.com/crossplane-contrib/provider-tf-azure/internal/controller/cosmosdb/cosmosdbmongocollection"
-	cosmosdbmongodatabase "github.com/crossplane-contrib/provider-tf-azure/internal/controller/cosmosdb/cosmosdbmongodatabase"
-	cosmosdbnotebookworkspace "github.com/crossplane-contrib/provider-tf-azure/internal/controller/cosmosdb/cosmosdbnotebookworkspace"
-	cosmosdbsqlcontainer "github.com/crossplane-contrib/provider-tf-azure/internal/controller/cosmosdb/cosmosdbsqlcontainer"
-	cosmosdbsqldatabase "github.com/crossplane-contrib/provider-tf-azure/internal/controller/cosmosdb/cosmosdbsqldatabase"
-	cosmosdbsqlfunction "github.com/crossplane-contrib/provider-tf-azure/internal/controller/cosmosdb/cosmosdbsqlfunction"
-	cosmosdbsqlstoredprocedure "github.com/crossplane-contrib/provider-tf-azure/internal/controller/cosmosdb/cosmosdbsqlstoredprocedure"
-	cosmosdbsqltrigger "github.com/crossplane-contrib/provider-tf-azure/internal/controller/cosmosdb/cosmosdbsqltrigger"
-	cosmosdbtable "github.com/crossplane-contrib/provider-tf-azure/internal/controller/cosmosdb/cosmosdbtable"
-	kubernetescluster "github.com/crossplane-contrib/provider-tf-azure/internal/controller/kubernetes/kubernetescluster"
-	kubernetesclusternodepool "github.com/crossplane-contrib/provider-tf-azure/internal/controller/kubernetes/kubernetesclusternodepool"
-	loadbalancer "github.com/crossplane-contrib/provider-tf-azure/internal/controller/lb/loadbalancer"
-	postgresqlactivedirectoryadministrator "github.com/crossplane-contrib/provider-tf-azure/internal/controller/postgresql/postgresqlactivedirectoryadministrator"
-	postgresqlconfiguration "github.com/crossplane-contrib/provider-tf-azure/internal/controller/postgresql/postgresqlconfiguration"
-	postgresqldatabase "github.com/crossplane-contrib/provider-tf-azure/internal/controller/postgresql/postgresqldatabase"
-	postgresqlfirewallrule "github.com/crossplane-contrib/provider-tf-azure/internal/controller/postgresql/postgresqlfirewallrule"
-	postgresqlflexibleserver "github.com/crossplane-contrib/provider-tf-azure/internal/controller/postgresql/postgresqlflexibleserver"
-	postgresqlflexibleserverconfiguration "github.com/crossplane-contrib/provider-tf-azure/internal/controller/postgresql/postgresqlflexibleserverconfiguration"
-	postgresqlflexibleserverdatabase "github.com/crossplane-contrib/provider-tf-azure/internal/controller/postgresql/postgresqlflexibleserverdatabase"
-	postgresqlflexibleserverfirewallrule "github.com/crossplane-contrib/provider-tf-azure/internal/controller/postgresql/postgresqlflexibleserverfirewallrule"
-	postgresqlserver "github.com/crossplane-contrib/provider-tf-azure/internal/controller/postgresql/postgresqlserver"
-	postgresqlserverkey "github.com/crossplane-contrib/provider-tf-azure/internal/controller/postgresql/postgresqlserverkey"
-	postgresqlvirtualnetworkrule "github.com/crossplane-contrib/provider-tf-azure/internal/controller/postgresql/postgresqlvirtualnetworkrule"
-	resourcegroup "github.com/crossplane-contrib/provider-tf-azure/internal/controller/resource/resourcegroup"
-	resourcegrouppolicyassignment "github.com/crossplane-contrib/provider-tf-azure/internal/controller/resource/resourcegrouppolicyassignment"
-	resourcegrouptemplatedeployment "github.com/crossplane-contrib/provider-tf-azure/internal/controller/resource/resourcegrouptemplatedeployment"
-	sqlserver "github.com/crossplane-contrib/provider-tf-azure/internal/controller/sql/sqlserver"
-	storageaccount "github.com/crossplane-contrib/provider-tf-azure/internal/controller/storage/storageaccount"
-	storageblob "github.com/crossplane-contrib/provider-tf-azure/internal/controller/storage/storageblob"
-	storagecontainer "github.com/crossplane-contrib/provider-tf-azure/internal/controller/storage/storagecontainer"
-	subnet "github.com/crossplane-contrib/provider-tf-azure/internal/controller/subnet/subnet"
-	subnetnatgatewayassociation "github.com/crossplane-contrib/provider-tf-azure/internal/controller/subnet/subnetnatgatewayassociation"
-	subnetnetworksecuritygroupassociation "github.com/crossplane-contrib/provider-tf-azure/internal/controller/subnet/subnetnetworksecuritygroupassociation"
-	subnetroutetableassociation "github.com/crossplane-contrib/provider-tf-azure/internal/controller/subnet/subnetroutetableassociation"
-	subnetserviceendpointstoragepolicy "github.com/crossplane-contrib/provider-tf-azure/internal/controller/subnet/subnetserviceendpointstoragepolicy"
-	virtualdesktopapplication "github.com/crossplane-contrib/provider-tf-azure/internal/controller/virtual/virtualdesktopapplication"
-	virtualdesktophostpool "github.com/crossplane-contrib/provider-tf-azure/internal/controller/virtual/virtualdesktophostpool"
-	virtualdesktopworkspace "github.com/crossplane-contrib/provider-tf-azure/internal/controller/virtual/virtualdesktopworkspace"
-	virtualhub "github.com/crossplane-contrib/provider-tf-azure/internal/controller/virtual/virtualhub"
-	virtualhubbgpconnection "github.com/crossplane-contrib/provider-tf-azure/internal/controller/virtual/virtualhubbgpconnection"
-	virtualhubconnection "github.com/crossplane-contrib/provider-tf-azure/internal/controller/virtual/virtualhubconnection"
-	virtualhubip "github.com/crossplane-contrib/provider-tf-azure/internal/controller/virtual/virtualhubip"
-	virtualhubroutetable "github.com/crossplane-contrib/provider-tf-azure/internal/controller/virtual/virtualhubroutetable"
-	virtualhubsecuritypartnerprovider "github.com/crossplane-contrib/provider-tf-azure/internal/controller/virtual/virtualhubsecuritypartnerprovider"
-	virtualnetwork "github.com/crossplane-contrib/provider-tf-azure/internal/controller/virtual/virtualnetwork"
-	virtualnetworkgateway "github.com/crossplane-contrib/provider-tf-azure/internal/controller/virtual/virtualnetworkgateway"
-	virtualnetworkgatewayconnection "github.com/crossplane-contrib/provider-tf-azure/internal/controller/virtual/virtualnetworkgatewayconnection"
-	virtualnetworkpeering "github.com/crossplane-contrib/provider-tf-azure/internal/controller/virtual/virtualnetworkpeering"
-	virtualwan "github.com/crossplane-contrib/provider-tf-azure/internal/controller/virtual/virtualwan"
+	resourcegrouppolicyassignment "github.com/crossplane-contrib/provider-tf-azure/internal/controller/authorization/resourcegrouppolicyassignment"
+	resourcegroup "github.com/crossplane-contrib/provider-tf-azure/internal/controller/azure/resourcegroup"
+	kubernetescluster "github.com/crossplane-contrib/provider-tf-azure/internal/controller/containerservice/kubernetescluster"
+	kubernetesclusternodepool "github.com/crossplane-contrib/provider-tf-azure/internal/controller/containerservice/kubernetesclusternodepool"
+	account "github.com/crossplane-contrib/provider-tf-azure/internal/controller/cosmosdb/account"
+	cassandrakeyspace "github.com/crossplane-contrib/provider-tf-azure/internal/controller/cosmosdb/cassandrakeyspace"
+	cassandratable "github.com/crossplane-contrib/provider-tf-azure/internal/controller/cosmosdb/cassandratable"
+	gremlindatabase "github.com/crossplane-contrib/provider-tf-azure/internal/controller/cosmosdb/gremlindatabase"
+	gremlingraph "github.com/crossplane-contrib/provider-tf-azure/internal/controller/cosmosdb/gremlingraph"
+	mongocollection "github.com/crossplane-contrib/provider-tf-azure/internal/controller/cosmosdb/mongocollection"
+	mongodatabase "github.com/crossplane-contrib/provider-tf-azure/internal/controller/cosmosdb/mongodatabase"
+	notebookworkspace "github.com/crossplane-contrib/provider-tf-azure/internal/controller/cosmosdb/notebookworkspace"
+	sqlcontainer "github.com/crossplane-contrib/provider-tf-azure/internal/controller/cosmosdb/sqlcontainer"
+	sqldatabase "github.com/crossplane-contrib/provider-tf-azure/internal/controller/cosmosdb/sqldatabase"
+	sqlfunction "github.com/crossplane-contrib/provider-tf-azure/internal/controller/cosmosdb/sqlfunction"
+	sqlstoredprocedure "github.com/crossplane-contrib/provider-tf-azure/internal/controller/cosmosdb/sqlstoredprocedure"
+	sqltrigger "github.com/crossplane-contrib/provider-tf-azure/internal/controller/cosmosdb/sqltrigger"
+	table "github.com/crossplane-contrib/provider-tf-azure/internal/controller/cosmosdb/table"
+	loadbalancer "github.com/crossplane-contrib/provider-tf-azure/internal/controller/network/loadbalancer"
+	subnet "github.com/crossplane-contrib/provider-tf-azure/internal/controller/network/subnet"
+	subnetnatgatewayassociation "github.com/crossplane-contrib/provider-tf-azure/internal/controller/network/subnetnatgatewayassociation"
+	subnetnetworksecuritygroupassociation "github.com/crossplane-contrib/provider-tf-azure/internal/controller/network/subnetnetworksecuritygroupassociation"
+	subnetroutetableassociation "github.com/crossplane-contrib/provider-tf-azure/internal/controller/network/subnetroutetableassociation"
+	subnetserviceendpointstoragepolicy "github.com/crossplane-contrib/provider-tf-azure/internal/controller/network/subnetserviceendpointstoragepolicy"
+	virtualnetwork "github.com/crossplane-contrib/provider-tf-azure/internal/controller/network/virtualnetwork"
+	virtualnetworkgateway "github.com/crossplane-contrib/provider-tf-azure/internal/controller/network/virtualnetworkgateway"
+	virtualnetworkgatewayconnection "github.com/crossplane-contrib/provider-tf-azure/internal/controller/network/virtualnetworkgatewayconnection"
+	virtualnetworkpeering "github.com/crossplane-contrib/provider-tf-azure/internal/controller/network/virtualnetworkpeering"
+	virtualwan "github.com/crossplane-contrib/provider-tf-azure/internal/controller/network/virtualwan"
+	activedirectoryadministrator "github.com/crossplane-contrib/provider-tf-azure/internal/controller/postgresql/activedirectoryadministrator"
+	configuration "github.com/crossplane-contrib/provider-tf-azure/internal/controller/postgresql/configuration"
+	database "github.com/crossplane-contrib/provider-tf-azure/internal/controller/postgresql/database"
+	firewallrule "github.com/crossplane-contrib/provider-tf-azure/internal/controller/postgresql/firewallrule"
+	flexibleserver "github.com/crossplane-contrib/provider-tf-azure/internal/controller/postgresql/flexibleserver"
+	flexibleserverconfiguration "github.com/crossplane-contrib/provider-tf-azure/internal/controller/postgresql/flexibleserverconfiguration"
+	flexibleserverdatabase "github.com/crossplane-contrib/provider-tf-azure/internal/controller/postgresql/flexibleserverdatabase"
+	flexibleserverfirewallrule "github.com/crossplane-contrib/provider-tf-azure/internal/controller/postgresql/flexibleserverfirewallrule"
+	server "github.com/crossplane-contrib/provider-tf-azure/internal/controller/postgresql/server"
+	virtualnetworkrule "github.com/crossplane-contrib/provider-tf-azure/internal/controller/postgresql/virtualnetworkrule"
+	providerconfig "github.com/crossplane-contrib/provider-tf-azure/internal/controller/providerconfig"
+	resourcegrouptemplatedeployment "github.com/crossplane-contrib/provider-tf-azure/internal/controller/resources/resourcegrouptemplatedeployment"
+	serversql "github.com/crossplane-contrib/provider-tf-azure/internal/controller/sql/server"
+	accountstorage "github.com/crossplane-contrib/provider-tf-azure/internal/controller/storage/account"
+	blob "github.com/crossplane-contrib/provider-tf-azure/internal/controller/storage/blob"
+	container "github.com/crossplane-contrib/provider-tf-azure/internal/controller/storage/container"
 )
 
 // Setup creates all controllers with the supplied logger and adds them to
 // the supplied manager.
-func Setup(mgr ctrl.Manager, l logging.Logger, wl workqueue.RateLimiter, ps terraform.SetupFn, ws *terraform.WorkspaceStore, concurrency int) error {
-	for _, setup := range []func(ctrl.Manager, logging.Logger, workqueue.RateLimiter, terraform.SetupFn, *terraform.WorkspaceStore, int) error{
-		config.Setup,
-		cosmosdbaccount.Setup,
-		cosmosdbcassandrakeyspace.Setup,
-		cosmosdbcassandratable.Setup,
-		cosmosdbgremlindatabase.Setup,
-		cosmosdbgremlingraph.Setup,
-		cosmosdbmongocollection.Setup,
-		cosmosdbmongodatabase.Setup,
-		cosmosdbnotebookworkspace.Setup,
-		cosmosdbsqlcontainer.Setup,
-		cosmosdbsqldatabase.Setup,
-		cosmosdbsqlfunction.Setup,
-		cosmosdbsqlstoredprocedure.Setup,
-		cosmosdbsqltrigger.Setup,
-		cosmosdbtable.Setup,
+func Setup(mgr ctrl.Manager, l logging.Logger, wl workqueue.RateLimiter, ps terraform.SetupFn, ws *terraform.WorkspaceStore, cfg *tjconfig.Provider, concurrency int) error {
+	for _, setup := range []func(ctrl.Manager, logging.Logger, workqueue.RateLimiter, terraform.SetupFn, *terraform.WorkspaceStore, *tjconfig.Provider, int) error{
+		resourcegrouppolicyassignment.Setup,
+		resourcegroup.Setup,
 		kubernetescluster.Setup,
 		kubernetesclusternodepool.Setup,
+		account.Setup,
+		cassandrakeyspace.Setup,
+		cassandratable.Setup,
+		gremlindatabase.Setup,
+		gremlingraph.Setup,
+		mongocollection.Setup,
+		mongodatabase.Setup,
+		notebookworkspace.Setup,
+		sqlcontainer.Setup,
+		sqldatabase.Setup,
+		sqlfunction.Setup,
+		sqlstoredprocedure.Setup,
+		sqltrigger.Setup,
+		table.Setup,
 		loadbalancer.Setup,
-		postgresqlactivedirectoryadministrator.Setup,
-		postgresqlconfiguration.Setup,
-		postgresqldatabase.Setup,
-		postgresqlfirewallrule.Setup,
-		postgresqlflexibleserver.Setup,
-		postgresqlflexibleserverconfiguration.Setup,
-		postgresqlflexibleserverdatabase.Setup,
-		postgresqlflexibleserverfirewallrule.Setup,
-		postgresqlserver.Setup,
-		postgresqlserverkey.Setup,
-		postgresqlvirtualnetworkrule.Setup,
-		resourcegroup.Setup,
-		resourcegrouppolicyassignment.Setup,
-		resourcegrouptemplatedeployment.Setup,
-		sqlserver.Setup,
-		storageaccount.Setup,
-		storageblob.Setup,
-		storagecontainer.Setup,
 		subnet.Setup,
 		subnetnatgatewayassociation.Setup,
 		subnetnetworksecuritygroupassociation.Setup,
 		subnetroutetableassociation.Setup,
 		subnetserviceendpointstoragepolicy.Setup,
-		virtualdesktopapplication.Setup,
-		virtualdesktophostpool.Setup,
-		virtualdesktopworkspace.Setup,
-		virtualhub.Setup,
-		virtualhubbgpconnection.Setup,
-		virtualhubconnection.Setup,
-		virtualhubip.Setup,
-		virtualhubroutetable.Setup,
-		virtualhubsecuritypartnerprovider.Setup,
 		virtualnetwork.Setup,
 		virtualnetworkgateway.Setup,
 		virtualnetworkgatewayconnection.Setup,
 		virtualnetworkpeering.Setup,
 		virtualwan.Setup,
+		activedirectoryadministrator.Setup,
+		configuration.Setup,
+		database.Setup,
+		firewallrule.Setup,
+		flexibleserver.Setup,
+		flexibleserverconfiguration.Setup,
+		flexibleserverdatabase.Setup,
+		flexibleserverfirewallrule.Setup,
+		server.Setup,
+		virtualnetworkrule.Setup,
+		providerconfig.Setup,
+		resourcegrouptemplatedeployment.Setup,
+		serversql.Setup,
+		accountstorage.Setup,
+		blob.Setup,
+		container.Setup,
 	} {
-		if err := setup(mgr, l, wl, ps, ws, concurrency); err != nil {
+		if err := setup(mgr, l, wl, ps, ws, cfg, concurrency); err != nil {
 			return err
 		}
 	}

@@ -19,15 +19,15 @@ package v1alpha1
 
 import (
 	"context"
+	v1alpha1 "github.com/crossplane-contrib/provider-tf-azure/apis/azure/v1alpha1"
 	rconfig "github.com/crossplane-contrib/provider-tf-azure/apis/rconfig"
-	v1alpha1 "github.com/crossplane-contrib/provider-tf-azure/apis/resource/v1alpha1"
 	reference "github.com/crossplane/crossplane-runtime/pkg/reference"
 	errors "github.com/pkg/errors"
 	client "sigs.k8s.io/controller-runtime/pkg/client"
 )
 
-// ResolveReferences of this SqlServer.
-func (mg *SqlServer) ResolveReferences(ctx context.Context, c client.Reader) error {
+// ResolveReferences of this Server.
+func (mg *Server) ResolveReferences(ctx context.Context, c client.Reader) error {
 	r := reference.NewAPIResolver(c, mg)
 
 	var rsp reference.ResolutionResponse

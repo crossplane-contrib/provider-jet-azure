@@ -1,4 +1,4 @@
-apiVersion: virtual.azure.tf.crossplane.io/v1alpha1
+apiVersion: network.azure.tf.crossplane.io/v1alpha1
 kind: VirtualNetwork
 metadata:
   name: example
