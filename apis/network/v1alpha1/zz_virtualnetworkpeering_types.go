@@ -39,9 +39,6 @@ type VirtualNetworkPeeringParameters struct {
 	// +kubebuilder:validation:Optional
 	AllowVirtualNetworkAccess *bool `json:"allowVirtualNetworkAccess,omitempty" tf:"allow_virtual_network_access,omitempty"`
 
-	// +kubebuilder:validation:Required
-	Name *string `json:"name" tf:"name,omitempty"`
-
 	// +crossplane:generate:reference:type=VirtualNetwork
 	// +kubebuilder:validation:Optional
 	RemoteVirtualNetworkID *string `json:"remoteVirtualNetworkId,omitempty" tf:"remote_virtual_network_id,omitempty"`

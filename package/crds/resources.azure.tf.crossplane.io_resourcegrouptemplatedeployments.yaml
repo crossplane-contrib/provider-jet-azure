@@ -68,8 +68,6 @@ spec:
                     type: string
                   deploymentMode:
                     type: string
-                  name:
-                    type: string
                   parametersContent:
                     type: string
                   resourceGroupName:
@@ -107,7 +105,6 @@ spec:
                     type: string
                 required:
                 - deploymentMode
-                - name
                 type: object
               providerConfigRef:
                 default:

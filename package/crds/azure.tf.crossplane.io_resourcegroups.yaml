@@ -64,15 +64,12 @@ spec:
                 properties:
                   location:
                     type: string
-                  name:
-                    type: string
                   tags:
                     additionalProperties:
                       type: string
                     type: object
                 required:
                 - location
-                - name
                 type: object
               providerConfigRef:
                 default:

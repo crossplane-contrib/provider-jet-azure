@@ -139,8 +139,6 @@ spec:
                           type: integer
                       type: object
                     type: array
-                  name:
-                    type: string
                   pointInTimeRestoreTimeInUtc:
                     type: string
                   privateDnsZoneId:
@@ -187,7 +185,6 @@ spec:
                     type: string
                 required:
                 - location
-                - name
                 type: object
               providerConfigRef:
                 default:

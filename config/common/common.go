@@ -27,22 +27,24 @@ import (
 )
 
 const (
-	errFmtNoAttribute    = `"attribute not found: %s`
-	errFmtUnexpectedType = `unexpected type for attribute %s: Expecting a string`
+	// ErrFmtNoAttribute is an error string for not-found attributes
+	ErrFmtNoAttribute = `"attribute not found: %s`
+	// ErrFmtUnexpectedType is an error string for attribute map values of unexpected type
+	ErrFmtUnexpectedType = `unexpected type for attribute %s: Expecting a string`
 )
 
+// GetNameFromFullyQualifiedID extracts external-name from Azure ID
 // Examples of fully qualifiers:
 // /subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/mygroup1/providers/Microsoft.DBforMySQL/servers/server1
 // /subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/mygroup1/providers/Microsoft.Network/networkInterfaces/nic1
-
 func GetNameFromFullyQualifiedID(tfstate map[string]interface{}) (string, error) {
 	id, ok := tfstate["id"]
 	if !ok {
-		return "", errors.Errorf(errFmtNoAttribute, "id")
+		return "", errors.Errorf(ErrFmtNoAttribute, "id")
 	}
 	idStr, ok := id.(string)
 	if !ok {
-		return "", errors.Errorf(errFmtUnexpectedType, "id")
+		return "", errors.Errorf(ErrFmtUnexpectedType, "id")
 	}
 	words := strings.Split(idStr, "/")
 	return words[len(words)-1], nil
@@ -61,30 +63,30 @@ func GetFullyQualifiedIDFn(serviceProvider string, keyPairs ...string) tjconfig.
 	return func(ctx context.Context, externalName string, parameters map[string]interface{}, providerConfig map[string]interface{}) (string, error) {
 		subID, ok := providerConfig["subscriptionId"]
 		if !ok {
-			return "", errors.Errorf(errFmtNoAttribute, "subscriptionId")
+			return "", errors.Errorf(ErrFmtNoAttribute, "subscriptionId")
 		}
 		subIDStr, ok := subID.(string)
 		if !ok {
-			return "", errors.Errorf(errFmtUnexpectedType, "subscriptionId")
+			return "", errors.Errorf(ErrFmtUnexpectedType, "subscriptionId")
 		}
 		rg, ok := parameters["resource_group_name"]
 		if !ok {
-			return "", errors.Errorf(errFmtNoAttribute, "resource_group_name")
+			return "", errors.Errorf(ErrFmtNoAttribute, "resource_group_name")
 		}
 		rgStr, ok := rg.(string)
 		if !ok {
-			return "", errors.Errorf(errFmtUnexpectedType, "resource_group_name")
+			return "", errors.Errorf(ErrFmtUnexpectedType, "resource_group_name")
 		}
 
 		path := fmt.Sprintf("/subscriptions/%s/resourceGroups/%s/providers/%s", subIDStr, rgStr, serviceProvider)
 		for i := 0; i < len(keyPairs); i += 2 {
 			val, ok := parameters[keyPairs[i+1]]
 			if !ok {
-				return "", errors.Errorf(errFmtNoAttribute, keyPairs[i+1])
+				return "", errors.Errorf(ErrFmtNoAttribute, keyPairs[i+1])
 			}
 			valStr, ok := val.(string)
 			if !ok {
-				return "", errors.Errorf(errFmtUnexpectedType, keyPairs[i+1])
+				return "", errors.Errorf(ErrFmtUnexpectedType, keyPairs[i+1])
 			}
 			path = filepath.Join(path, keyPairs[i], valStr)
 		}

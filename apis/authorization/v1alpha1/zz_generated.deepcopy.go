@@ -179,11 +179,6 @@ func (in *ResourceGroupPolicyAssignmentParameters) DeepCopyInto(out *ResourceGro
 		*out = new(string)
 		**out = **in
 	}
-	if in.Name != nil {
-		in, out := &in.Name, &out.Name
-		*out = new(string)
-		**out = **in
-	}
 	if in.NotScopes != nil {
 		in, out := &in.NotScopes, &out.NotScopes
 		*out = make([]*string, len(*in))

@@ -44,9 +44,6 @@ type SqlTriggerParameters struct {
 	ContainerIDSelector *v1.Selector `json:"containerIdSelector,omitempty" tf:"-"`
 
 	// +kubebuilder:validation:Required
-	Name *string `json:"name" tf:"name,omitempty"`
-
-	// +kubebuilder:validation:Required
 	Operation *string `json:"operation" tf:"operation,omitempty"`
 
 	// +kubebuilder:validation:Required

@@ -60,9 +60,6 @@ type ResourceGroupPolicyAssignmentParameters struct {
 	// +kubebuilder:validation:Optional
 	Metadata *string `json:"metadata,omitempty" tf:"metadata,omitempty"`
 
-	// +kubebuilder:validation:Required
-	Name *string `json:"name" tf:"name,omitempty"`
-
 	// +kubebuilder:validation:Optional
 	NotScopes []*string `json:"notScopes,omitempty" tf:"not_scopes,omitempty"`
 

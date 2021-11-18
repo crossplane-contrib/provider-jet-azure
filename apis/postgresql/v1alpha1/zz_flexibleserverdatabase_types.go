@@ -36,9 +36,6 @@ type FlexibleServerDatabaseParameters struct {
 	// +kubebuilder:validation:Optional
 	Collation *string `json:"collation,omitempty" tf:"collation,omitempty"`
 
-	// +kubebuilder:validation:Required
-	Name *string `json:"name" tf:"name,omitempty"`
-
 	// +crossplane:generate:reference:type=FlexibleServer
 	// +kubebuilder:validation:Optional
 	ServerID *string `json:"serverId,omitempty" tf:"server_id,omitempty"`

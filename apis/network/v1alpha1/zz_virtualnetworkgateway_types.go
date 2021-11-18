@@ -138,9 +138,6 @@ type VirtualNetworkGatewayParameters struct {
 	// +kubebuilder:validation:Required
 	Location *string `json:"location" tf:"location,omitempty"`
 
-	// +kubebuilder:validation:Required
-	Name *string `json:"name" tf:"name,omitempty"`
-
 	// +kubebuilder:validation:Optional
 	PrivateIPAddressEnabled *bool `json:"privateIpAddressEnabled,omitempty" tf:"private_ip_address_enabled,omitempty"`
 

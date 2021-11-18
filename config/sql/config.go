@@ -17,10 +17,10 @@ limitations under the License.
 package sql
 
 import (
-	"github.com/crossplane-contrib/provider-tf-azure/config/common"
 	"github.com/crossplane-contrib/terrajet/pkg/config"
 
 	"github.com/crossplane-contrib/provider-tf-azure/apis/rconfig"
+	"github.com/crossplane-contrib/provider-tf-azure/config/common"
 )
 
 // Configure configures sql group
@@ -37,7 +37,7 @@ func Configure(p *config.Provider) {
 		}
 		r.UseAsync = true
 		r.ExternalName = config.NameAsIdentifier
-		r.ExternalName.GetNameFn = common.GetNameFromFullyQualifiedID
+		r.ExternalName.GetExternalNameFn = common.GetNameFromFullyQualifiedID
 		// /subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/myresourcegroup/providers/Microsoft.Sql/servers/myserver
 		r.ExternalName.GetIDFn = common.GetFullyQualifiedIDFn("Microsoft.Sql",
 			"servers", "name",

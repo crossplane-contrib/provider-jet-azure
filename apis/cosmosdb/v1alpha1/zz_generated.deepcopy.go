@@ -231,11 +231,6 @@ func (in *AccountParameters) DeepCopyInto(out *AccountParameters) {
 		*out = new(string)
 		**out = **in
 	}
-	if in.Name != nil {
-		in, out := &in.Name, &out.Name
-		*out = new(string)
-		**out = **in
-	}
 	if in.NetworkACLBypassForAzureServices != nil {
 		in, out := &in.NetworkACLBypassForAzureServices, &out.NetworkACLBypassForAzureServices
 		*out = new(bool)
@@ -559,11 +554,6 @@ func (in *CassandraKeyspaceParameters) DeepCopyInto(out *CassandraKeyspaceParame
 			(*in)[i].DeepCopyInto(&(*out)[i])
 		}
 	}
-	if in.Name != nil {
-		in, out := &in.Name, &out.Name
-		*out = new(string)
-		**out = **in
-	}
 	if in.ResourceGroupName != nil {
 		in, out := &in.ResourceGroupName, &out.ResourceGroupName
 		*out = new(string)
@@ -772,11 +762,6 @@ func (in *CassandraTableParameters) DeepCopyInto(out *CassandraTableParameters) 
 	if in.DefaultTTL != nil {
 		in, out := &in.DefaultTTL, &out.DefaultTTL
 		*out = new(int64)
-		**out = **in
-	}
-	if in.Name != nil {
-		in, out := &in.Name, &out.Name
-		*out = new(string)
 		**out = **in
 	}
 	if in.Schema != nil {
@@ -1387,11 +1372,6 @@ func (in *GremlinDatabaseParameters) DeepCopyInto(out *GremlinDatabaseParameters
 			(*in)[i].DeepCopyInto(&(*out)[i])
 		}
 	}
-	if in.Name != nil {
-		in, out := &in.Name, &out.Name
-		*out = new(string)
-		**out = **in
-	}
 	if in.ResourceGroupName != nil {
 		in, out := &in.ResourceGroupName, &out.ResourceGroupName
 		*out = new(string)
@@ -1625,11 +1605,6 @@ func (in *GremlinGraphParameters) DeepCopyInto(out *GremlinGraphParameters) {
 		for i := range *in {
 			(*in)[i].DeepCopyInto(&(*out)[i])
 		}
-	}
-	if in.Name != nil {
-		in, out := &in.Name, &out.Name
-		*out = new(string)
-		**out = **in
 	}
 	if in.PartitionKeyPath != nil {
 		in, out := &in.PartitionKeyPath, &out.PartitionKeyPath
@@ -2275,11 +2250,6 @@ func (in *MongoCollectionParameters) DeepCopyInto(out *MongoCollectionParameters
 			(*in)[i].DeepCopyInto(&(*out)[i])
 		}
 	}
-	if in.Name != nil {
-		in, out := &in.Name, &out.Name
-		*out = new(string)
-		**out = **in
-	}
 	if in.ResourceGroupName != nil {
 		in, out := &in.ResourceGroupName, &out.ResourceGroupName
 		*out = new(string)
@@ -2485,11 +2455,6 @@ func (in *MongoDatabaseParameters) DeepCopyInto(out *MongoDatabaseParameters) {
 			(*in)[i].DeepCopyInto(&(*out)[i])
 		}
 	}
-	if in.Name != nil {
-		in, out := &in.Name, &out.Name
-		*out = new(string)
-		**out = **in
-	}
 	if in.ResourceGroupName != nil {
 		in, out := &in.ResourceGroupName, &out.ResourceGroupName
 		*out = new(string)
@@ -2652,11 +2617,6 @@ func (in *NotebookWorkspaceParameters) DeepCopyInto(out *NotebookWorkspaceParame
 		in, out := &in.AccountNameSelector, &out.AccountNameSelector
 		*out = new(v1.Selector)
 		(*in).DeepCopyInto(*out)
-	}
-	if in.Name != nil {
-		in, out := &in.Name, &out.Name
-		*out = new(string)
-		**out = **in
 	}
 	if in.ResourceGroupName != nil {
 		in, out := &in.ResourceGroupName, &out.ResourceGroupName
@@ -3069,11 +3029,6 @@ func (in *SqlContainerParameters) DeepCopyInto(out *SqlContainerParameters) {
 			(*in)[i].DeepCopyInto(&(*out)[i])
 		}
 	}
-	if in.Name != nil {
-		in, out := &in.Name, &out.Name
-		*out = new(string)
-		**out = **in
-	}
 	if in.PartitionKeyPath != nil {
 		in, out := &in.PartitionKeyPath, &out.PartitionKeyPath
 		*out = new(string)
@@ -3332,11 +3287,6 @@ func (in *SqlDatabaseParameters) DeepCopyInto(out *SqlDatabaseParameters) {
 			(*in)[i].DeepCopyInto(&(*out)[i])
 		}
 	}
-	if in.Name != nil {
-		in, out := &in.Name, &out.Name
-		*out = new(string)
-		**out = **in
-	}
 	if in.ResourceGroupName != nil {
 		in, out := &in.ResourceGroupName, &out.ResourceGroupName
 		*out = new(string)
@@ -3499,11 +3449,6 @@ func (in *SqlFunctionParameters) DeepCopyInto(out *SqlFunctionParameters) {
 		in, out := &in.ContainerIDSelector, &out.ContainerIDSelector
 		*out = new(v1.Selector)
 		(*in).DeepCopyInto(*out)
-	}
-	if in.Name != nil {
-		in, out := &in.Name, &out.Name
-		*out = new(string)
-		**out = **in
 	}
 }
 
@@ -3678,11 +3623,6 @@ func (in *SqlStoredProcedureParameters) DeepCopyInto(out *SqlStoredProcedurePara
 		*out = new(v1.Selector)
 		(*in).DeepCopyInto(*out)
 	}
-	if in.Name != nil {
-		in, out := &in.Name, &out.Name
-		*out = new(string)
-		**out = **in
-	}
 	if in.ResourceGroupName != nil {
 		in, out := &in.ResourceGroupName, &out.ResourceGroupName
 		*out = new(string)
@@ -3840,11 +3780,6 @@ func (in *SqlTriggerParameters) DeepCopyInto(out *SqlTriggerParameters) {
 		in, out := &in.ContainerIDSelector, &out.ContainerIDSelector
 		*out = new(v1.Selector)
 		(*in).DeepCopyInto(*out)
-	}
-	if in.Name != nil {
-		in, out := &in.Name, &out.Name
-		*out = new(string)
-		**out = **in
 	}
 	if in.Operation != nil {
 		in, out := &in.Operation, &out.Operation
@@ -4081,11 +4016,6 @@ func (in *TableParameters) DeepCopyInto(out *TableParameters) {
 		for i := range *in {
 			(*in)[i].DeepCopyInto(&(*out)[i])
 		}
-	}
-	if in.Name != nil {
-		in, out := &in.Name, &out.Name
-		*out = new(string)
-		**out = **in
 	}
 	if in.ResourceGroupName != nil {
 		in, out := &in.ResourceGroupName, &out.ResourceGroupName

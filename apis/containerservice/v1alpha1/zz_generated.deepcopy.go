@@ -1429,11 +1429,6 @@ func (in *KubernetesClusterNodePoolParameters) DeepCopyInto(out *KubernetesClust
 		*out = new(string)
 		**out = **in
 	}
-	if in.Name != nil {
-		in, out := &in.Name, &out.Name
-		*out = new(string)
-		**out = **in
-	}
 	if in.NodeCount != nil {
 		in, out := &in.NodeCount, &out.NodeCount
 		*out = new(int64)
@@ -1794,11 +1789,6 @@ func (in *KubernetesClusterParameters) DeepCopyInto(out *KubernetesClusterParame
 		for i := range *in {
 			(*in)[i].DeepCopyInto(&(*out)[i])
 		}
-	}
-	if in.Name != nil {
-		in, out := &in.Name, &out.Name
-		*out = new(string)
-		**out = **in
 	}
 	if in.NetworkProfile != nil {
 		in, out := &in.NetworkProfile, &out.NetworkProfile

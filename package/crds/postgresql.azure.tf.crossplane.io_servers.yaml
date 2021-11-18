@@ -106,8 +106,6 @@ spec:
                     type: boolean
                   location:
                     type: string
-                  name:
-                    type: string
                   publicNetworkAccessEnabled:
                     type: boolean
                   resourceGroupName:
@@ -211,7 +209,6 @@ spec:
                     type: string
                 required:
                 - location
-                - name
                 - skuName
                 - version
                 type: object

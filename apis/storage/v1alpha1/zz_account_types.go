@@ -123,9 +123,6 @@ type AccountParameters struct {
 	// +kubebuilder:validation:Optional
 	MinTLSVersion *string `json:"minTlsVersion,omitempty" tf:"min_tls_version,omitempty"`
 
-	// +kubebuilder:validation:Required
-	Name *string `json:"name" tf:"name,omitempty"`
-
 	// +kubebuilder:validation:Optional
 	NetworkRules []NetworkRulesParameters `json:"networkRules,omitempty" tf:"network_rules,omitempty"`
 

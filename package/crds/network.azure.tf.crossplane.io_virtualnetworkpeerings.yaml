@@ -69,8 +69,6 @@ spec:
                     type: boolean
                   allowVirtualNetworkAccess:
                     type: boolean
-                  name:
-                    type: string
                   remoteVirtualNetworkId:
                     type: string
                   remoteVirtualNetworkIdRef:
@@ -148,8 +146,6 @@ spec:
                           is selected.
                         type: object
                     type: object
-                required:
-                - name
                 type: object
               providerConfigRef:
                 default:

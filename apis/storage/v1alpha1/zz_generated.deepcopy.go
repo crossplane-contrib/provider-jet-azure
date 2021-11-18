@@ -310,11 +310,6 @@ func (in *AccountParameters) DeepCopyInto(out *AccountParameters) {
 		*out = new(string)
 		**out = **in
 	}
-	if in.Name != nil {
-		in, out := &in.Name, &out.Name
-		*out = new(string)
-		**out = **in
-	}
 	if in.NetworkRules != nil {
 		in, out := &in.NetworkRules, &out.NetworkRules
 		*out = make([]NetworkRulesParameters, len(*in))
@@ -650,11 +645,6 @@ func (in *BlobParameters) DeepCopyInto(out *BlobParameters) {
 			(*out)[key] = outVal
 		}
 	}
-	if in.Name != nil {
-		in, out := &in.Name, &out.Name
-		*out = new(string)
-		**out = **in
-	}
 	if in.Parallelism != nil {
 		in, out := &in.Parallelism, &out.Parallelism
 		*out = new(int64)
@@ -978,11 +968,6 @@ func (in *ContainerParameters) DeepCopyInto(out *ContainerParameters) {
 			}
 			(*out)[key] = outVal
 		}
-	}
-	if in.Name != nil {
-		in, out := &in.Name, &out.Name
-		*out = new(string)
-		**out = **in
 	}
 	if in.StorageAccountName != nil {
 		in, out := &in.StorageAccountName, &out.StorageAccountName

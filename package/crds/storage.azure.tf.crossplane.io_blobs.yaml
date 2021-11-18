@@ -72,8 +72,6 @@ spec:
                     additionalProperties:
                       type: string
                     type: object
-                  name:
-                    type: string
                   parallelism:
                     format: int64
                     type: integer
@@ -139,7 +137,6 @@ spec:
                   type:
                     type: string
                 required:
-                - name
                 - type
                 type: object
               providerConfigRef:

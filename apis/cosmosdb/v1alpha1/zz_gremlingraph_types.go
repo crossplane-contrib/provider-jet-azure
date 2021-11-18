@@ -98,9 +98,6 @@ type GremlinGraphParameters struct {
 	IndexPolicy []IndexPolicyParameters `json:"indexPolicy,omitempty" tf:"index_policy,omitempty"`
 
 	// +kubebuilder:validation:Required
-	Name *string `json:"name" tf:"name,omitempty"`
-
-	// +kubebuilder:validation:Required
 	PartitionKeyPath *string `json:"partitionKeyPath" tf:"partition_key_path,omitempty"`
 
 	// +kubebuilder:validation:Optional

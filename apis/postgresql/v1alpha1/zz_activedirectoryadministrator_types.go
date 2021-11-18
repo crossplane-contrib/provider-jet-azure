@@ -31,9 +31,6 @@ type ActiveDirectoryAdministratorObservation struct {
 type ActiveDirectoryAdministratorParameters struct {
 
 	// +kubebuilder:validation:Required
-	Login *string `json:"login" tf:"login,omitempty"`
-
-	// +kubebuilder:validation:Required
 	ObjectID *string `json:"objectId" tf:"object_id,omitempty"`
 
 	// +crossplane:generate:reference:type=github.com/crossplane-contrib/provider-tf-azure/apis/azure/v1alpha1.ResourceGroup

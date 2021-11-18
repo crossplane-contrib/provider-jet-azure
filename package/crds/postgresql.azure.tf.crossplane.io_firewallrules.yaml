@@ -64,8 +64,6 @@ spec:
                 properties:
                   endIpAddress:
                     type: string
-                  name:
-                    type: string
                   resourceGroupName:
                     type: string
                   resourceGroupNameRef:
@@ -120,7 +118,6 @@ spec:
                     type: string
                 required:
                 - endIpAddress
-                - name
                 - startIpAddress
                 type: object
               providerConfigRef:

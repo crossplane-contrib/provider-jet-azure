@@ -17,13 +17,15 @@ limitations under the License.
 package storage
 
 import (
+	"context"
 	"fmt"
 	"strings"
 
-	"github.com/crossplane-contrib/provider-tf-azure/config/common"
 	"github.com/crossplane-contrib/terrajet/pkg/config"
+	"github.com/pkg/errors"
 
 	"github.com/crossplane-contrib/provider-tf-azure/apis/rconfig"
+	"github.com/crossplane-contrib/provider-tf-azure/config/common"
 )
 
 // Configure configures storage group
@@ -37,7 +39,7 @@ func Configure(p *config.Provider) {
 		}
 		r.UseAsync = true
 		r.ExternalName = config.NameAsIdentifier
-		r.ExternalName.GetNameFn = common.GetNameFromFullyQualifiedID
+		r.ExternalName.GetExternalNameFn = common.GetNameFromFullyQualifiedID
 		// /subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/myresourcegroup/providers/Microsoft.Storage/storageAccounts/myaccount
 		r.ExternalName.GetIDFn = common.GetFullyQualifiedIDFn("Microsoft.Storage",
 			"storageAccounts", "name",
@@ -62,16 +64,20 @@ func Configure(p *config.Provider) {
 		r.UseAsync = true
 		r.ExternalName = config.NameAsIdentifier
 		// https://example.blob.core.windows.net/container/blob.vhd
-		r.ExternalName.GetNameFn = func(tfstate map[string]interface{}) string {
-			n, ok := tfstate["id"].(string)
+		r.ExternalName.GetExternalNameFn = func(tfstate map[string]interface{}) (string, error) {
+			id, ok := tfstate["id"]
 			if !ok {
-				return ""
+				return "", errors.Errorf(common.ErrFmtNoAttribute, "id")
 			}
-			n = strings.TrimSuffix(n, ".blob.core.windows.net/container/blob.vhd")
-			return strings.TrimPrefix(n, "https://")
+			idStr, ok := id.(string)
+			if !ok {
+				return "", errors.Errorf(common.ErrFmtUnexpectedType, "id")
+			}
+			idStr = strings.TrimSuffix(idStr, ".blob.core.windows.net/container/blob.vhd")
+			return strings.TrimPrefix(idStr, "https://"), nil
 		}
-		r.ExternalName.GetIDFn = func(name string, _ map[string]interface{}, _ map[string]interface{}) string {
-			return fmt.Sprintf("https://%s.blob.core.windows.net/container/blob.vhd", name)
+		r.ExternalName.GetIDFn = func(_ context.Context, name string, parameters map[string]interface{}, providerConfig map[string]interface{}) (string, error) {
+			return fmt.Sprintf("https://%s.blob.core.windows.net/container/blob.vhd", name), nil
 		}
 	})
 
@@ -85,16 +91,20 @@ func Configure(p *config.Provider) {
 		r.UseAsync = true
 		r.ExternalName = config.NameAsIdentifier
 		// https://example.blob.core.windows.net/container
-		r.ExternalName.GetNameFn = func(tfstate map[string]interface{}) string {
-			n, ok := tfstate["id"].(string)
+		r.ExternalName.GetExternalNameFn = func(tfstate map[string]interface{}) (string, error) {
+			id, ok := tfstate["id"]
 			if !ok {
-				return ""
+				return "", errors.Errorf(common.ErrFmtNoAttribute, "id")
 			}
-			n = strings.TrimSuffix(n, ".blob.core.windows.net/container")
-			return strings.TrimPrefix(n, "https://")
+			idStr, ok := id.(string)
+			if !ok {
+				return "", errors.Errorf(common.ErrFmtUnexpectedType, "id")
+			}
+			idStr = strings.TrimSuffix(idStr, ".blob.core.windows.net/container")
+			return strings.TrimPrefix(idStr, "https://"), nil
 		}
-		r.ExternalName.GetIDFn = func(name string, _ map[string]interface{}, _ map[string]interface{}) string {
-			return fmt.Sprintf("https://%s.blob.core.windows.net/container", name)
+		r.ExternalName.GetIDFn = func(_ context.Context, name string, parameters map[string]interface{}, providerConfig map[string]interface{}) (string, error) {
+			return fmt.Sprintf("https://%s.blob.core.windows.net/container", name), nil
 		}
 	})
 }

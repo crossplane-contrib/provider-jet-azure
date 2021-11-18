@@ -42,9 +42,6 @@ type VirtualWANParameters struct {
 	// +kubebuilder:validation:Required
 	Location *string `json:"location" tf:"location,omitempty"`
 
-	// +kubebuilder:validation:Required
-	Name *string `json:"name" tf:"name,omitempty"`
-
 	// +kubebuilder:validation:Optional
 	Office365LocalBreakoutCategory *string `json:"office365LocalBreakoutCategory,omitempty" tf:"office365_local_breakout_category,omitempty"`
 

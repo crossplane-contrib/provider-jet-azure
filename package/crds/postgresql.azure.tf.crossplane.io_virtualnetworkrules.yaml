@@ -65,8 +65,6 @@ spec:
                 properties:
                   ignoreMissingVnetServiceEndpoint:
                     type: boolean
-                  name:
-                    type: string
                   resourceGroupName:
                     type: string
                   resourceGroupNameRef:
@@ -142,8 +140,6 @@ spec:
                           is selected.
                         type: object
                     type: object
-                required:
-                - name
                 type: object
               providerConfigRef:
                 default:

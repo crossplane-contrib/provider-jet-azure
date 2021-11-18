@@ -162,9 +162,6 @@ type SqlContainerParameters struct {
 	IndexingPolicy []IndexingPolicyParameters `json:"indexingPolicy,omitempty" tf:"indexing_policy,omitempty"`
 
 	// +kubebuilder:validation:Required
-	Name *string `json:"name" tf:"name,omitempty"`
-
-	// +kubebuilder:validation:Required
 	PartitionKeyPath *string `json:"partitionKeyPath" tf:"partition_key_path,omitempty"`
 
 	// +kubebuilder:validation:Optional

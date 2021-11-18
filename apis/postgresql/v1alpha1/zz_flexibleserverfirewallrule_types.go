@@ -33,9 +33,6 @@ type FlexibleServerFirewallRuleParameters struct {
 	// +kubebuilder:validation:Required
 	EndIPAddress *string `json:"endIpAddress" tf:"end_ip_address,omitempty"`
 
-	// +kubebuilder:validation:Required
-	Name *string `json:"name" tf:"name,omitempty"`
-
 	// +crossplane:generate:reference:type=FlexibleServer
 	// +kubebuilder:validation:Optional
 	ServerID *string `json:"serverId,omitempty" tf:"server_id,omitempty"`

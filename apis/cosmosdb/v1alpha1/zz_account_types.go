@@ -89,9 +89,6 @@ type AccountParameters struct {
 	// +kubebuilder:validation:Optional
 	MongoServerVersion *string `json:"mongoServerVersion,omitempty" tf:"mongo_server_version,omitempty"`
 
-	// +kubebuilder:validation:Required
-	Name *string `json:"name" tf:"name,omitempty"`
-
 	// +kubebuilder:validation:Optional
 	NetworkACLBypassForAzureServices *bool `json:"networkAclBypassForAzureServices,omitempty" tf:"network_acl_bypass_for_azure_services,omitempty"`
 

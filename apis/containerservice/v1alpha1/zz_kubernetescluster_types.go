@@ -457,9 +457,6 @@ type KubernetesClusterParameters struct {
 	// +kubebuilder:validation:Optional
 	MaintenanceWindow []MaintenanceWindowParameters `json:"maintenanceWindow,omitempty" tf:"maintenance_window,omitempty"`
 
-	// +kubebuilder:validation:Required
-	Name *string `json:"name" tf:"name,omitempty"`
-
 	// +kubebuilder:validation:Optional
 	NetworkProfile []NetworkProfileParameters `json:"networkProfile,omitempty" tf:"network_profile,omitempty"`
 

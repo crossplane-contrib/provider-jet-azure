@@ -595,11 +595,6 @@ func (in *LoadBalancerParameters) DeepCopyInto(out *LoadBalancerParameters) {
 		*out = new(string)
 		**out = **in
 	}
-	if in.Name != nil {
-		in, out := &in.Name, &out.Name
-		*out = new(string)
-		**out = **in
-	}
 	if in.ResourceGroupName != nil {
 		in, out := &in.ResourceGroupName, &out.ResourceGroupName
 		*out = new(string)
@@ -1271,11 +1266,6 @@ func (in *SubnetParameters) DeepCopyInto(out *SubnetParameters) {
 		*out = new(bool)
 		**out = **in
 	}
-	if in.Name != nil {
-		in, out := &in.Name, &out.Name
-		*out = new(string)
-		**out = **in
-	}
 	if in.ResourceGroupName != nil {
 		in, out := &in.ResourceGroupName, &out.ResourceGroupName
 		*out = new(string)
@@ -1559,11 +1549,6 @@ func (in *SubnetServiceEndpointStoragePolicyParameters) DeepCopyInto(out *Subnet
 	}
 	if in.Location != nil {
 		in, out := &in.Location, &out.Location
-		*out = new(string)
-		**out = **in
-	}
-	if in.Name != nil {
-		in, out := &in.Name, &out.Name
 		*out = new(string)
 		**out = **in
 	}
@@ -1912,11 +1897,6 @@ func (in *VirtualNetworkGatewayConnectionParameters) DeepCopyInto(out *VirtualNe
 		*out = new(string)
 		**out = **in
 	}
-	if in.Name != nil {
-		in, out := &in.Name, &out.Name
-		*out = new(string)
-		**out = **in
-	}
 	if in.PeerVirtualNetworkGatewayID != nil {
 		in, out := &in.PeerVirtualNetworkGatewayID, &out.PeerVirtualNetworkGatewayID
 		*out = new(string)
@@ -2146,11 +2126,6 @@ func (in *VirtualNetworkGatewayParameters) DeepCopyInto(out *VirtualNetworkGatew
 		*out = new(string)
 		**out = **in
 	}
-	if in.Name != nil {
-		in, out := &in.Name, &out.Name
-		*out = new(string)
-		**out = **in
-	}
 	if in.PrivateIPAddressEnabled != nil {
 		in, out := &in.PrivateIPAddressEnabled, &out.PrivateIPAddressEnabled
 		*out = new(bool)
@@ -2348,11 +2323,6 @@ func (in *VirtualNetworkParameters) DeepCopyInto(out *VirtualNetworkParameters) 
 		*out = new(string)
 		**out = **in
 	}
-	if in.Name != nil {
-		in, out := &in.Name, &out.Name
-		*out = new(string)
-		**out = **in
-	}
 	if in.ResourceGroupName != nil {
 		in, out := &in.ResourceGroupName, &out.ResourceGroupName
 		*out = new(string)
@@ -2497,11 +2467,6 @@ func (in *VirtualNetworkPeeringParameters) DeepCopyInto(out *VirtualNetworkPeeri
 	if in.AllowVirtualNetworkAccess != nil {
 		in, out := &in.AllowVirtualNetworkAccess, &out.AllowVirtualNetworkAccess
 		*out = new(bool)
-		**out = **in
-	}
-	if in.Name != nil {
-		in, out := &in.Name, &out.Name
-		*out = new(string)
 		**out = **in
 	}
 	if in.RemoteVirtualNetworkID != nil {
@@ -2778,11 +2743,6 @@ func (in *VirtualWANParameters) DeepCopyInto(out *VirtualWANParameters) {
 	}
 	if in.Location != nil {
 		in, out := &in.Location, &out.Location
-		*out = new(string)
-		**out = **in
-	}
-	if in.Name != nil {
-		in, out := &in.Name, &out.Name
 		*out = new(string)
 		**out = **in
 	}

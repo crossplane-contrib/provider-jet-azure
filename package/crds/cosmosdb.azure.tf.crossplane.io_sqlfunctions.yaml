@@ -89,11 +89,8 @@ spec:
                           is selected.
                         type: object
                     type: object
-                  name:
-                    type: string
                 required:
                 - body
-                - name
                 type: object
               providerConfigRef:
                 default:

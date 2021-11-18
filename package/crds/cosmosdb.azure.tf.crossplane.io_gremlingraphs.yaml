@@ -183,8 +183,6 @@ spec:
                       - indexingMode
                       type: object
                     type: array
-                  name:
-                    type: string
                   partitionKeyPath:
                     type: string
                   partitionKeyVersion:
@@ -230,7 +228,6 @@ spec:
                       type: object
                     type: array
                 required:
-                - name
                 - partitionKeyPath
                 type: object
               providerConfigRef:

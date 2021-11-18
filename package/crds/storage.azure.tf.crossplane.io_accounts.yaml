@@ -198,8 +198,6 @@ spec:
                     type: string
                   minTlsVersion:
                     type: string
-                  name:
-                    type: string
                   networkRules:
                     items:
                       properties:
@@ -443,7 +441,6 @@ spec:
                 - accountReplicationType
                 - accountTier
                 - location
-                - name
                 type: object
               providerConfigRef:
                 default:

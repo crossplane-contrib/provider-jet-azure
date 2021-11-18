@@ -102,9 +102,6 @@ type VirtualNetworkGatewayConnectionParameters struct {
 	// +kubebuilder:validation:Required
 	Location *string `json:"location" tf:"location,omitempty"`
 
-	// +kubebuilder:validation:Required
-	Name *string `json:"name" tf:"name,omitempty"`
-
 	// +crossplane:generate:reference:type=VirtualNetworkGateway
 	// +kubebuilder:validation:Optional
 	PeerVirtualNetworkGatewayID *string `json:"peerVirtualNetworkGatewayId,omitempty" tf:"peer_virtual_network_gateway_id,omitempty"`

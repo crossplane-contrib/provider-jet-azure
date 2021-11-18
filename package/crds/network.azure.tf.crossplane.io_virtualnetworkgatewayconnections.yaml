@@ -129,8 +129,6 @@ spec:
                     type: string
                   location:
                     type: string
-                  name:
-                    type: string
                   peerVirtualNetworkGatewayId:
                     type: string
                   peerVirtualNetworkGatewayIdRef:
@@ -253,7 +251,6 @@ spec:
                     type: object
                 required:
                 - location
-                - name
                 - type
                 type: object
               providerConfigRef:

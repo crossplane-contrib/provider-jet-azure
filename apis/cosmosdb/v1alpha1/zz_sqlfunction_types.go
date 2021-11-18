@@ -42,9 +42,6 @@ type SqlFunctionParameters struct {
 
 	// +kubebuilder:validation:Optional
 	ContainerIDSelector *v1.Selector `json:"containerIdSelector,omitempty" tf:"-"`
-
-	// +kubebuilder:validation:Required
-	Name *string `json:"name" tf:"name,omitempty"`
 }
 
 // SqlFunctionSpec defines the desired state of SqlFunction
