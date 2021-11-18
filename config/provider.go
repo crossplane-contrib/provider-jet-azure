@@ -18,25 +18,26 @@ package config
 
 import (
 	"github.com/hashicorp/terraform-plugin-sdk/v2/helper/schema"
+
 	tf "github.com/hashicorp/terraform-provider-azurerm/xpprovider"
 
 	tjconfig "github.com/crossplane-contrib/terrajet/pkg/config"
 
-	"github.com/crossplane-contrib/provider-tf-azure/config/cosmosdb"
-	"github.com/crossplane-contrib/provider-tf-azure/config/ip"
-	"github.com/crossplane-contrib/provider-tf-azure/config/kubernetes"
-	"github.com/crossplane-contrib/provider-tf-azure/config/management"
-	"github.com/crossplane-contrib/provider-tf-azure/config/network"
-	"github.com/crossplane-contrib/provider-tf-azure/config/postgresql"
-	"github.com/crossplane-contrib/provider-tf-azure/config/resource"
-	"github.com/crossplane-contrib/provider-tf-azure/config/sql"
-	"github.com/crossplane-contrib/provider-tf-azure/config/storage"
-	"github.com/crossplane-contrib/provider-tf-azure/config/subnet"
+	"github.com/crossplane-contrib/provider-jet-azure/config/cosmosdb"
+	"github.com/crossplane-contrib/provider-jet-azure/config/ip"
+	"github.com/crossplane-contrib/provider-jet-azure/config/kubernetes"
+	"github.com/crossplane-contrib/provider-jet-azure/config/management"
+	"github.com/crossplane-contrib/provider-jet-azure/config/network"
+	"github.com/crossplane-contrib/provider-jet-azure/config/postgresql"
+	"github.com/crossplane-contrib/provider-jet-azure/config/resource"
+	"github.com/crossplane-contrib/provider-jet-azure/config/sql"
+	"github.com/crossplane-contrib/provider-jet-azure/config/storage"
+	"github.com/crossplane-contrib/provider-jet-azure/config/subnet"
 )
 
 const (
 	resourcePrefix = "azure"
-	modulePath     = "github.com/crossplane-contrib/provider-tf-azure"
+	modulePath     = "github.com/crossplane-contrib/provider-jet-azure"
 )
 
 var includedResources = []string{
@@ -110,6 +111,8 @@ var skipList = []string{
 func GetProvider() *tjconfig.Provider {
 	pc := tjconfig.NewProvider(
 		tf.Provider().ResourcesMap, resourcePrefix, modulePath,
+		tjconfig.WithShortName("azurejet"),
+		tjconfig.WithRootGroup("azure.jet.crossplane.io"),
 		tjconfig.WithIncludeList(includedResources),
 		tjconfig.WithSkipList(skipList),
 		tjconfig.WithDefaultResourceFn(
@@ -121,9 +124,6 @@ func GetProvider() *tjconfig.Provider {
 	)
 
 	for name := range pc.Resources {
-		// tags_all is used only in tfstate to accumulate provider-wide
-		// default tags in TF, which is not something we support. So, we don't
-		// need it as a parameter while "tags" is already in place.
 		pc.AddResourceConfigurator(name, func(r *tjconfig.Resource) {
 			r.ExternalName = tjconfig.IdentifierFromProvider
 		})

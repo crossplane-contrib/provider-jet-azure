@@ -34,7 +34,7 @@ import (
 	tjcontroller "github.com/crossplane-contrib/terrajet/pkg/controller"
 	"github.com/crossplane-contrib/terrajet/pkg/terraform"
 
-	v1alpha1 "github.com/crossplane-contrib/provider-tf-azure/apis/containerservice/v1alpha1"
+	v1alpha1 "github.com/crossplane-contrib/provider-jet-azure/apis/containerservice/v1alpha1"
 )
 
 // Setup adds a controller that reconciles KubernetesCluster managed resources.

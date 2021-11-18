@@ -1,4 +1,4 @@
-apiVersion: storage.azure.tf.crossplane.io/v1alpha1
+apiVersion: storage.azure.jet.crossplane.io/v1alpha1
 kind: Container
 metadata:
   name: example-content

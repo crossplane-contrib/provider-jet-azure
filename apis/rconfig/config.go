@@ -23,7 +23,7 @@ import (
 )
 
 // APISPackagePath is the package path for generated APIs root package
-const APISPackagePath = "github.com/crossplane-contrib/provider-tf-azure/apis"
+const APISPackagePath = "github.com/crossplane-contrib/provider-jet-azure/apis"
 
 // ExtractResourceName extracts the value of `spec.forProvider.name`
 // from a managed resource

@@ -65,7 +65,7 @@ jobs:
           restore-keys: ${{ runner.os }}-pkg-
 
       - name: Vendor Dependencies
-        run: make provider-tf-azure.vendor vendor.check
+        run: make provider-jet-azure.vendor vendor.check
 
       # Go version coming with golangci-lint-action may not be our desired
       # go version. We deploy our desired go version and then skip go
@@ -122,7 +122,7 @@ jobs:
           restore-keys: ${{ runner.os }}-pkg-
 
       - name: Vendor Dependencies
-        run: make provider-tf-azure.vendor vendor.check
+        run: make provider-jet-azure.vendor vendor.check
 
       - name: Check Diff
         run: make check-diff
@@ -165,7 +165,7 @@ jobs:
           restore-keys: ${{ runner.os }}-pkg-
 
       - name: Vendor Dependencies
-        run: make provider-tf-azure.vendor vendor.check
+        run: make provider-jet-azure.vendor vendor.check
 
       - name: Run Unit Tests
         run: make -j2 test
@@ -226,7 +226,7 @@ jobs:
             ${{ runner.os }}-pkg-
 
       - name: Vendor Dependencies
-        run: make provider-tf-azure.vendor vendor.check
+        run: make provider-jet-azure.vendor vendor.check
 
       - name: Build Helm Chart
         run: make -j2 build
@@ -287,7 +287,7 @@ jobs:
           restore-keys: ${{ runner.os }}-pkg-
 
       - name: Vendor Dependencies
-        run: make provider-tf-azure.vendor vendor.check
+        run: make provider-jet-azure.vendor vendor.check
 
       - name: Build Artifacts
         run: make build.all
