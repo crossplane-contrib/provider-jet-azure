@@ -61,13 +61,13 @@ func GetFullyQualifiedIDFn(serviceProvider string, keyPairs ...string) tjconfig.
 		panic("each service name has to have a key")
 	}
 	return func(ctx context.Context, externalName string, parameters map[string]interface{}, providerConfig map[string]interface{}) (string, error) {
-		subID, ok := providerConfig["subscriptionId"]
+		subID, ok := providerConfig["subscription_id"]
 		if !ok {
-			return "", errors.Errorf(ErrFmtNoAttribute, "subscriptionId")
+			return "", errors.Errorf(ErrFmtNoAttribute, "subscription_id")
 		}
 		subIDStr, ok := subID.(string)
 		if !ok {
-			return "", errors.Errorf(ErrFmtUnexpectedType, "subscriptionId")
+			return "", errors.Errorf(ErrFmtUnexpectedType, "subscription_id")
 		}
 		rg, ok := parameters["resource_group_name"]
 		if !ok {

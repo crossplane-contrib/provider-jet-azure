@@ -35,6 +35,8 @@ const (
 	envClientSecret   = "ARM_CLIENT_SECRET"
 	envSubscriptionID = "ARM_SUBSCRIPTION_ID"
 	envTenantID       = "ARM_TENANT_ID"
+	// Terraform configuration file keys
+	keyTerraformSubscriptionID = "subscription_id"
 
 	fmtEnvVar = "%s=%s"
 )
@@ -76,7 +78,8 @@ func TerraformSetupBuilder(version, providerSource, providerVersion string) terr
 		}
 
 		ps.Configuration = map[string]interface{}{
-			keyTerraformFeatures: struct{}{},
+			keyTerraformFeatures:       struct{}{},
+			keyTerraformSubscriptionID: azureCreds[keyAzureSubscriptionID],
 		}
 		// set credentials environment
 		ps.Env = []string{
