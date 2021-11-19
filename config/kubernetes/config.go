@@ -23,8 +23,8 @@ import (
 	"github.com/crossplane-contrib/terrajet/pkg/config"
 	"github.com/pkg/errors"
 
-	"github.com/crossplane-contrib/provider-tf-azure/apis/rconfig"
-	"github.com/crossplane-contrib/provider-tf-azure/config/common"
+	"github.com/crossplane-contrib/provider-jet-azure/apis/rconfig"
+	"github.com/crossplane-contrib/provider-jet-azure/config/common"
 )
 
 // Configure configures kubernetes group

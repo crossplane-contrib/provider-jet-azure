@@ -157,7 +157,7 @@ resource:
 ```go
 const (
 	// SelfPackagePath is the golang path for this package.
-	SelfPackagePath = "github.com/crossplane-contrib/provider-tf-aws/config/s3"
+	SelfPackagePath = "github.com/crossplane-contrib/provider-jet-aws/config/s3"
 )
 
 // BucketSetIdentifierArgument configures bucket name.
@@ -193,14 +193,14 @@ See how the [user] referenced at `forProvider.userRef.name` field of the
 Access Key in the following example:
 
 ```yaml
-apiVersion: iam.aws.tf.crossplane.io/v1alpha1
+apiVersion: iam.aws.jet.crossplane.io/v1alpha1
 kind: User
 metadata:
   name: sample-user
 spec:
   forProvider: {}
 ---
-apiVersion: iam.aws.tf.crossplane.io/v1alpha1
+apiVersion: iam.aws.jet.crossplane.io/v1alpha1
 kind: AccessKey
 metadata:
   name: sample-access-key
@@ -270,7 +270,7 @@ case, we would need to provide the full path. [Referencing] to a [kms key] from
 ```go
 References: map[string]config.Reference{
     "kms_key_id": {
-        Type: "github.com/crossplane-contrib/provider-tf-aws/apis/kms/v1alpha1.Key",
+        Type: "github.com/crossplane-contrib/provider-jet-aws/apis/kms/v1alpha1.Key",
     },
 },
 ```
@@ -282,7 +282,7 @@ we need to point that with a `[*]` after the name of array or map. You can check
 
 ```go
 "s3_import[*].bucket_name": {
-    Type: "github.com/crossplane-contrib/provider-tf-aws/apis/s3/v1alpha1.Bucket",
+    Type: "github.com/crossplane-contrib/provider-jet-aws/apis/s3/v1alpha1.Bucket",
 },
 ```
 
@@ -372,7 +372,7 @@ fields during late-initialization, the relative name to be used is:
 In most cases, custom late-initialization configuration will not be necessary. However, 
 after generating a new managed resource and observing its behaviour (at runtime),
 it may turn out that late-initialization behaviour needs customization. For certain
-resources like the `provider-tf-azure`'s `PostgresqlServer` resource, we have 
+resources like the `provider-jet-azure`'s `PostgresqlServer` resource, we have 
 observed that Terraform state contains values for mutually exclusive parameters, e.g., 
 for `PostgresqlServer`, both `StorageMb` and `StorageProfile[].StorageMb` get 
 late-initialized. Upon next reconciliation, we generate values for both parameters in the 
@@ -388,8 +388,8 @@ one of the mutually exclusive fields during late-initialization.
 [Terrajet]: https://github.com/crossplane-contrib/terrajet
 [generator main.go]: /cmd/generator/main.go
 [aws_iam_access_key]: https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/iam_access_key
-[this line]: https://github.com/crossplane-contrib/provider-tf-azure/blob/ee24164b1b4e4eba0511d122b05a870e88b195ee/cmd/generator/main.go#L72
-[this]: https://github.com/crossplane-contrib/provider-tf-aws/blob/main/config/register.go#L11
+[this line]: https://github.com/crossplane-contrib/provider-jet-azure/blob/ee24164b1b4e4eba0511d122b05a870e88b195ee/cmd/generator/main.go#L72
+[this]: https://github.com/crossplane-contrib/provider-jet-aws/blob/main/config/register.go#L11
 
 [External name]: #external-name
 [Cross Resource Referencing]: #cross-resource-referencing
@@ -405,17 +405,17 @@ one of the mutually exclusive fields during late-initialization.
 [aws_s3_bucket]: https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/s3_bucket
 [import section of s3 bucket]: https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/s3_bucket#import
 [bucket]: https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/s3_bucket#bucket
-[VPC resource]: https://github.com/crossplane-contrib/provider-tf-aws/blob/d2c0024f18b5760e4d2222c405ad0501c63ee0b2/config/ec2/config.go#L188-L191
-[s3 Bucket]: https://github.com/crossplane-contrib/provider-tf-aws/blob/d2c0024f18b5760e4d2222c405ad0501c63ee0b2/config/s3/config.go#L37-L42.
+[VPC resource]: https://github.com/crossplane-contrib/provider-jet-aws/blob/d2c0024f18b5760e4d2222c405ad0501c63ee0b2/config/ec2/config.go#L188-L191
+[s3 Bucket]: https://github.com/crossplane-contrib/provider-jet-aws/blob/d2c0024f18b5760e4d2222c405ad0501c63ee0b2/config/s3/config.go#L37-L42.
 [handle dependencies]: https://crossplane.io/docs/v1.4/concepts/managed-resources.html#dependencies
 [user]: https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/iam_access_key#user
 [generate reference resolution methods]: https://github.com/crossplane/crossplane-tools/pull/35
 [configuration]: https://github.com/crossplane-contrib/terrajet/blob/24f186f45e70808768aa0b7abd4fa82e4f446f3f/pkg/config/field.go#L5
 [iam_access_key]: https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/iam_access_key#argument-reference
-[Referencing]: https://github.com/crossplane-contrib/provider-tf-aws/blob/5509c10d768622c3631615947cf7b18086a58aa3/config/ebs/config.go#L27-L31
+[Referencing]: https://github.com/crossplane-contrib/provider-jet-aws/blob/5509c10d768622c3631615947cf7b18086a58aa3/config/ebs/config.go#L27-L31
 [kms key]: https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/ebs_volume#kms_key_id
 [s3_import bucket]: https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/rds_cluster#bucket_name
-[aws_rds_cluster]: https://github.com/crossplane-contrib/provider-tf-aws/blob/5509c10d768622c3631615947cf7b18086a58aa3/config/rds/config.go#L50
+[aws_rds_cluster]: https://github.com/crossplane-contrib/provider-jet-aws/blob/5509c10d768622c3631615947cf7b18086a58aa3/config/rds/config.go#L50
 [s3_import field is a list]: https://github.com/hashicorp/terraform-provider-aws/blob/fce7062f70caa92a78bca629ffe441c088456418/aws/resource_aws_rds_cluster.go#L287
 [connection details]: https://crossplane.io/docs/v1.4/concepts/managed-resources.html#connection-details
 [handle sensitive fields]: https://github.com/crossplane-contrib/terrajet/pull/77

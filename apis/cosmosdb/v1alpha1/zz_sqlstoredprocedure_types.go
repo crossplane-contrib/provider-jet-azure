@@ -31,7 +31,7 @@ type SqlStoredProcedureObservation struct {
 type SqlStoredProcedureParameters struct {
 
 	// +crossplane:generate:reference:type=Account
-	// +crossplane:generate:reference:extractor=github.com/crossplane-contrib/provider-tf-azure/apis/rconfig.ExtractResourceName()
+	// +crossplane:generate:reference:extractor=github.com/crossplane-contrib/provider-jet-azure/apis/rconfig.ExtractResourceName()
 	// +kubebuilder:validation:Optional
 	AccountName *string `json:"accountName,omitempty" tf:"account_name,omitempty"`
 
@@ -45,7 +45,7 @@ type SqlStoredProcedureParameters struct {
 	Body *string `json:"body" tf:"body,omitempty"`
 
 	// +crossplane:generate:reference:type=SQLContainer
-	// +crossplane:generate:reference:extractor=github.com/crossplane-contrib/provider-tf-azure/apis/rconfig.ExtractResourceName()
+	// +crossplane:generate:reference:extractor=github.com/crossplane-contrib/provider-jet-azure/apis/rconfig.ExtractResourceName()
 	// +kubebuilder:validation:Optional
 	ContainerName *string `json:"containerName,omitempty" tf:"container_name,omitempty"`
 
@@ -56,7 +56,7 @@ type SqlStoredProcedureParameters struct {
 	ContainerNameSelector *v1.Selector `json:"containerNameSelector,omitempty" tf:"-"`
 
 	// +crossplane:generate:reference:type=SQLDatabase
-	// +crossplane:generate:reference:extractor=github.com/crossplane-contrib/provider-tf-azure/apis/rconfig.ExtractResourceName()
+	// +crossplane:generate:reference:extractor=github.com/crossplane-contrib/provider-jet-azure/apis/rconfig.ExtractResourceName()
 	// +kubebuilder:validation:Optional
 	DatabaseName *string `json:"databaseName,omitempty" tf:"database_name,omitempty"`
 
@@ -66,7 +66,7 @@ type SqlStoredProcedureParameters struct {
 	// +kubebuilder:validation:Optional
 	DatabaseNameSelector *v1.Selector `json:"databaseNameSelector,omitempty" tf:"-"`
 
-	// +crossplane:generate:reference:type=github.com/crossplane-contrib/provider-tf-azure/apis/azure/v1alpha1.ResourceGroup
+	// +crossplane:generate:reference:type=github.com/crossplane-contrib/provider-jet-azure/apis/azure/v1alpha1.ResourceGroup
 	// +kubebuilder:validation:Optional
 	ResourceGroupName *string `json:"resourceGroupName,omitempty" tf:"resource_group_name,omitempty"`
 
@@ -97,7 +97,7 @@ type SqlStoredProcedureStatus struct {
 // +kubebuilder:printcolumn:name="EXTERNAL-NAME",type="string",JSONPath=".metadata.annotations.crossplane\\.io/external-name"
 // +kubebuilder:printcolumn:name="AGE",type="date",JSONPath=".metadata.creationTimestamp"
 // +kubebuilder:subresource:status
-// +kubebuilder:resource:scope=Cluster,categories={crossplane,managed,tfazure}
+// +kubebuilder:resource:scope=Cluster,categories={crossplane,managed,azurejet}
 type SqlStoredProcedure struct {
 	metav1.TypeMeta   `json:",inline"`
 	metav1.ObjectMeta `json:"metadata,omitempty"`

@@ -1,4 +1,4 @@
-apiVersion: postgresql.azure.tf.crossplane.io/v1alpha1
+apiVersion: postgresql.azure.jet.crossplane.io/v1alpha1
 kind: Configuration
 metadata:
   name: example-psql-configuration

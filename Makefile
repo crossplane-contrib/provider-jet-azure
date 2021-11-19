@@ -1,7 +1,7 @@
 # ====================================================================================
 # Setup Project
 
-PROJECT_NAME := provider-tf-azure
+PROJECT_NAME := provider-jet-azure
 PROJECT_REPO := github.com/crossplane-contrib/$(PROJECT_NAME)
 
 PLATFORMS ?= linux_amd64 linux_arm64
@@ -45,7 +45,7 @@ GO_LINT_ARGS ?= --skip-files internal/controller/zz_setup.go --skip-files intern
 # Setup Images
 
 DOCKER_REGISTRY := crossplane
-IMAGES = provider-tf-azure provider-tf-azure-controller
+IMAGES = provider-jet-azure provider-jet-azure-controller
 -include build/makelib/image.mk
 
 # ====================================================================================
@@ -95,10 +95,10 @@ reviewable: prepare.azurerm
 test: prepare.azurerm
 generate: codegen.pipeline
 build: prepare.azurerm
-provider-tf-azure.vendor: prepare.azurerm vendor
+provider-jet-azure.vendor: prepare.azurerm vendor
 
 # must match Docker build file env. variable TERRAFORM_PROVIDER_AZURERM_VERSION in
-# cluster/images/provider-tf-azure-controller/Dockerfile
+# cluster/images/provider-jet-azure-controller/Dockerfile
 AZURERM_REFSPEC ?= v2.78.0
 prepare.azurerm:
 	@WORK_DIR=.work AZURERM_REFSPEC=$(AZURERM_REFSPEC) ./scripts/prepare_azurerm.sh

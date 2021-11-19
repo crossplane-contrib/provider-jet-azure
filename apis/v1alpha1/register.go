@@ -25,7 +25,7 @@ import (
 
 // Package type metadata.
 const (
-	Group   = "azure.tf.crossplane.io"
+	Group   = "azure.jet.crossplane.io"
 	Version = "v1alpha1"
 )
 

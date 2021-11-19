@@ -4,4 +4,4 @@ metadata:
   name: provider-azure
 spec:
   controller:
-    image: DOCKER_REGISTRY/provider-tf-azure-controller:VERSION
+    image: DOCKER_REGISTRY/provider-jet-azure-controller:VERSION

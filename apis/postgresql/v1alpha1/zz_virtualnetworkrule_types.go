@@ -33,7 +33,7 @@ type VirtualNetworkRuleParameters struct {
 	// +kubebuilder:validation:Optional
 	IgnoreMissingVnetServiceEndpoint *bool `json:"ignoreMissingVnetServiceEndpoint,omitempty" tf:"ignore_missing_vnet_service_endpoint,omitempty"`
 
-	// +crossplane:generate:reference:type=github.com/crossplane-contrib/provider-tf-azure/apis/azure/v1alpha1.ResourceGroup
+	// +crossplane:generate:reference:type=github.com/crossplane-contrib/provider-jet-azure/apis/azure/v1alpha1.ResourceGroup
 	// +kubebuilder:validation:Optional
 	ResourceGroupName *string `json:"resourceGroupName,omitempty" tf:"resource_group_name,omitempty"`
 
@@ -44,7 +44,7 @@ type VirtualNetworkRuleParameters struct {
 	ResourceGroupNameSelector *v1.Selector `json:"resourceGroupNameSelector,omitempty" tf:"-"`
 
 	// +crossplane:generate:reference:type=Server
-	// +crossplane:generate:reference:extractor=github.com/crossplane-contrib/provider-tf-azure/apis/rconfig.ExtractResourceName()
+	// +crossplane:generate:reference:extractor=github.com/crossplane-contrib/provider-jet-azure/apis/rconfig.ExtractResourceName()
 	// +kubebuilder:validation:Optional
 	ServerName *string `json:"serverName,omitempty" tf:"server_name,omitempty"`
 
@@ -54,7 +54,7 @@ type VirtualNetworkRuleParameters struct {
 	// +kubebuilder:validation:Optional
 	ServerNameSelector *v1.Selector `json:"serverNameSelector,omitempty" tf:"-"`
 
-	// +crossplane:generate:reference:type=github.com/crossplane-contrib/provider-tf-azure/apis/network/v1alpha1.Subnet
+	// +crossplane:generate:reference:type=github.com/crossplane-contrib/provider-jet-azure/apis/network/v1alpha1.Subnet
 	// +kubebuilder:validation:Optional
 	SubnetID *string `json:"subnetId,omitempty" tf:"subnet_id,omitempty"`
 
@@ -85,7 +85,7 @@ type VirtualNetworkRuleStatus struct {
 // +kubebuilder:printcolumn:name="EXTERNAL-NAME",type="string",JSONPath=".metadata.annotations.crossplane\\.io/external-name"
 // +kubebuilder:printcolumn:name="AGE",type="date",JSONPath=".metadata.creationTimestamp"
 // +kubebuilder:subresource:status
-// +kubebuilder:resource:scope=Cluster,categories={crossplane,managed,tfazure}
+// +kubebuilder:resource:scope=Cluster,categories={crossplane,managed,azurejet}
 type VirtualNetworkRule struct {
 	metav1.TypeMeta   `json:",inline"`
 	metav1.ObjectMeta `json:"metadata,omitempty"`

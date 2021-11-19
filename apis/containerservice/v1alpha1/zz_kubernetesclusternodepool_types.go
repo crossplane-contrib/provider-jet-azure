@@ -160,7 +160,7 @@ type KubernetesClusterNodePoolParameters struct {
 	// +kubebuilder:validation:Optional
 	OsType *string `json:"osType,omitempty" tf:"os_type,omitempty"`
 
-	// +crossplane:generate:reference:type=github.com/crossplane-contrib/provider-tf-azure/apis/network/v1alpha1.Subnet
+	// +crossplane:generate:reference:type=github.com/crossplane-contrib/provider-jet-azure/apis/network/v1alpha1.Subnet
 	// +kubebuilder:validation:Optional
 	PodSubnetID *string `json:"podSubnetId,omitempty" tf:"pod_subnet_id,omitempty"`
 
@@ -191,7 +191,7 @@ type KubernetesClusterNodePoolParameters struct {
 	// +kubebuilder:validation:Required
 	VMSize *string `json:"vmSize" tf:"vm_size,omitempty"`
 
-	// +crossplane:generate:reference:type=github.com/crossplane-contrib/provider-tf-azure/apis/network/v1alpha1.Subnet
+	// +crossplane:generate:reference:type=github.com/crossplane-contrib/provider-jet-azure/apis/network/v1alpha1.Subnet
 	// +kubebuilder:validation:Optional
 	VnetSubnetID *string `json:"vnetSubnetId,omitempty" tf:"vnet_subnet_id,omitempty"`
 
@@ -324,7 +324,7 @@ type KubernetesClusterNodePoolStatus struct {
 // +kubebuilder:printcolumn:name="EXTERNAL-NAME",type="string",JSONPath=".metadata.annotations.crossplane\\.io/external-name"
 // +kubebuilder:printcolumn:name="AGE",type="date",JSONPath=".metadata.creationTimestamp"
 // +kubebuilder:subresource:status
-// +kubebuilder:resource:scope=Cluster,categories={crossplane,managed,tfazure}
+// +kubebuilder:resource:scope=Cluster,categories={crossplane,managed,azurejet}
 type KubernetesClusterNodePool struct {
 	metav1.TypeMeta   `json:",inline"`
 	metav1.ObjectMeta `json:"metadata,omitempty"`

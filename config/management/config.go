@@ -22,7 +22,7 @@ import (
 
 	"github.com/crossplane-contrib/terrajet/pkg/config"
 
-	"github.com/crossplane-contrib/provider-tf-azure/config/common"
+	"github.com/crossplane-contrib/provider-jet-azure/config/common"
 )
 
 // Configure configures management group
