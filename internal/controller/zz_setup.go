@@ -43,6 +43,7 @@ import (
 	sqlstoredprocedure "github.com/crossplane-contrib/provider-jet-azure/internal/controller/cosmosdb/sqlstoredprocedure"
 	sqltrigger "github.com/crossplane-contrib/provider-jet-azure/internal/controller/cosmosdb/sqltrigger"
 	table "github.com/crossplane-contrib/provider-jet-azure/internal/controller/cosmosdb/table"
+	workspace "github.com/crossplane-contrib/provider-jet-azure/internal/controller/loganalytics/workspace"
 	server "github.com/crossplane-contrib/provider-jet-azure/internal/controller/mssql/server"
 	loadbalancer "github.com/crossplane-contrib/provider-jet-azure/internal/controller/network/loadbalancer"
 	subnet "github.com/crossplane-contrib/provider-jet-azure/internal/controller/network/subnet"
@@ -95,6 +96,7 @@ func Setup(mgr ctrl.Manager, l logging.Logger, wl workqueue.RateLimiter, ps terr
 		sqlstoredprocedure.Setup,
 		sqltrigger.Setup,
 		table.Setup,
+		workspace.Setup,
 		server.Setup,
 		loadbalancer.Setup,
 		subnet.Setup,
