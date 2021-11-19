@@ -51,12 +51,10 @@ func Configure(p *config.Provider) {
 				Type: rconfig.APISPackagePath + "/azure/v1alpha1.ResourceGroup",
 			},
 			"storage_account_name": config.Reference{
-				Type:      "Account",
-				Extractor: rconfig.APISPackagePath + "/rconfig.ExtractResourceName()",
+				Type: "Account",
 			},
 			"storage_container_name": config.Reference{
-				Type:      "Container",
-				Extractor: rconfig.APISPackagePath + "/rconfig.ExtractResourceName()",
+				Type: "Container",
 			},
 		}
 		r.UseAsync = true
@@ -82,8 +80,7 @@ func Configure(p *config.Provider) {
 	p.AddResourceConfigurator("azurerm_storage_container", func(r *config.Resource) {
 		r.References = config.References{
 			"storage_account_name": config.Reference{
-				Type:      "Account",
-				Extractor: rconfig.APISPackagePath + "/rconfig.ExtractResourceName()",
+				Type: "Account",
 			},
 		}
 		r.UseAsync = true

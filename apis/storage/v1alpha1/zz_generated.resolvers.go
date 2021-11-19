@@ -20,7 +20,6 @@ package v1alpha1
 import (
 	"context"
 	v1alpha1 "github.com/crossplane-contrib/provider-jet-azure/apis/azure/v1alpha1"
-	rconfig "github.com/crossplane-contrib/provider-jet-azure/apis/rconfig"
 	reference "github.com/crossplane/crossplane-runtime/pkg/reference"
 	errors "github.com/pkg/errors"
 	client "sigs.k8s.io/controller-runtime/pkg/client"
@@ -61,7 +60,7 @@ func (mg *Blob) ResolveReferences(ctx context.Context, c client.Reader) error {
 
 	rsp, err = r.Resolve(ctx, reference.ResolutionRequest{
 		CurrentValue: reference.FromPtrValue(mg.Spec.ForProvider.StorageAccountName),
-		Extract:      rconfig.ExtractResourceName(),
+		Extract:      reference.ExternalName(),
 		Reference:    mg.Spec.ForProvider.StorageAccountNameRef,
 		Selector:     mg.Spec.ForProvider.StorageAccountNameSelector,
 		To: reference.To{
@@ -77,7 +76,7 @@ func (mg *Blob) ResolveReferences(ctx context.Context, c client.Reader) error {
 
 	rsp, err = r.Resolve(ctx, reference.ResolutionRequest{
 		CurrentValue: reference.FromPtrValue(mg.Spec.ForProvider.StorageContainerName),
-		Extract:      rconfig.ExtractResourceName(),
+		Extract:      reference.ExternalName(),
 		Reference:    mg.Spec.ForProvider.StorageContainerNameRef,
 		Selector:     mg.Spec.ForProvider.StorageContainerNameSelector,
 		To: reference.To{
@@ -103,7 +102,7 @@ func (mg *Container) ResolveReferences(ctx context.Context, c client.Reader) err
 
 	rsp, err = r.Resolve(ctx, reference.ResolutionRequest{
 		CurrentValue: reference.FromPtrValue(mg.Spec.ForProvider.StorageAccountName),
-		Extract:      rconfig.ExtractResourceName(),
+		Extract:      reference.ExternalName(),
 		Reference:    mg.Spec.ForProvider.StorageAccountNameRef,
 		Selector:     mg.Spec.ForProvider.StorageAccountNameSelector,
 		To: reference.To{

@@ -20,7 +20,6 @@ package v1alpha1
 import (
 	"context"
 	v1alpha1 "github.com/crossplane-contrib/provider-jet-azure/apis/azure/v1alpha1"
-	rconfig "github.com/crossplane-contrib/provider-jet-azure/apis/rconfig"
 	reference "github.com/crossplane/crossplane-runtime/pkg/reference"
 	errors "github.com/pkg/errors"
 	client "sigs.k8s.io/controller-runtime/pkg/client"
@@ -51,7 +50,7 @@ func (mg *ActiveDirectoryAdministrator) ResolveReferences(ctx context.Context, c
 
 	rsp, err = r.Resolve(ctx, reference.ResolutionRequest{
 		CurrentValue: reference.FromPtrValue(mg.Spec.ForProvider.ServerName),
-		Extract:      rconfig.ExtractResourceName(),
+		Extract:      reference.ExternalName(),
 		Reference:    mg.Spec.ForProvider.ServerNameRef,
 		Selector:     mg.Spec.ForProvider.ServerNameSelector,
 		To: reference.To{
@@ -93,7 +92,7 @@ func (mg *Configuration) ResolveReferences(ctx context.Context, c client.Reader)
 
 	rsp, err = r.Resolve(ctx, reference.ResolutionRequest{
 		CurrentValue: reference.FromPtrValue(mg.Spec.ForProvider.ServerName),
-		Extract:      rconfig.ExtractResourceName(),
+		Extract:      reference.ExternalName(),
 		Reference:    mg.Spec.ForProvider.ServerNameRef,
 		Selector:     mg.Spec.ForProvider.ServerNameSelector,
 		To: reference.To{
@@ -135,7 +134,7 @@ func (mg *Database) ResolveReferences(ctx context.Context, c client.Reader) erro
 
 	rsp, err = r.Resolve(ctx, reference.ResolutionRequest{
 		CurrentValue: reference.FromPtrValue(mg.Spec.ForProvider.ServerName),
-		Extract:      rconfig.ExtractResourceName(),
+		Extract:      reference.ExternalName(),
 		Reference:    mg.Spec.ForProvider.ServerNameRef,
 		Selector:     mg.Spec.ForProvider.ServerNameSelector,
 		To: reference.To{
@@ -177,7 +176,7 @@ func (mg *FirewallRule) ResolveReferences(ctx context.Context, c client.Reader) 
 
 	rsp, err = r.Resolve(ctx, reference.ResolutionRequest{
 		CurrentValue: reference.FromPtrValue(mg.Spec.ForProvider.ServerName),
-		Extract:      rconfig.ExtractResourceName(),
+		Extract:      reference.ExternalName(),
 		Reference:    mg.Spec.ForProvider.ServerNameRef,
 		Selector:     mg.Spec.ForProvider.ServerNameSelector,
 		To: reference.To{
@@ -271,7 +270,7 @@ func (mg *VirtualNetworkRule) ResolveReferences(ctx context.Context, c client.Re
 
 	rsp, err = r.Resolve(ctx, reference.ResolutionRequest{
 		CurrentValue: reference.FromPtrValue(mg.Spec.ForProvider.ServerName),
-		Extract:      rconfig.ExtractResourceName(),
+		Extract:      reference.ExternalName(),
 		Reference:    mg.Spec.ForProvider.ServerNameRef,
 		Selector:     mg.Spec.ForProvider.ServerNameSelector,
 		To: reference.To{

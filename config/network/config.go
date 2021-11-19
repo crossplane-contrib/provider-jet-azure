@@ -98,8 +98,7 @@ func Configure(p *config.Provider) {
 				Type: rconfig.APISPackagePath + "/azure/v1alpha1.ResourceGroup",
 			},
 			"virtual_network_name": config.Reference{
-				Type:      "VirtualNetwork",
-				Extractor: rconfig.APISPackagePath + "/rconfig.ExtractResourceName()",
+				Type: "VirtualNetwork",
 			},
 			// TODO(aru): as we no longer hold Azure ID of resources in external-name annotation
 			// these references are currently not generated

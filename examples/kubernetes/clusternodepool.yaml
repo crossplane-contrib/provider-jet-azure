@@ -2,6 +2,8 @@ apiVersion: containerservice.azure.jet.crossplane.io/v1alpha1
 kind: KubernetesClusterNodePool
 metadata:
   name: example-nodepool
+  annotations:
+    crossplane.io/external-name: nodepool1
 spec:
   forProvider:
     kubernetesClusterId: "/subscriptions/00000000-0000-0000-0000-000000000000/resourcegroups/example/providers/Microsoft.ContainerService/managedClusters/example-aks"

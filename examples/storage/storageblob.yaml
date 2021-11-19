@@ -1,7 +1,7 @@
 apiVersion: storage.azure.jet.crossplane.io/v1alpha1
 kind: Blob
 metadata:
-  name: example
+  name: example-blob
   annotations:
     crossplane.io/external-name: sample_content
 spec:
@@ -9,8 +9,8 @@ spec:
     type: Block
     sourceContent: inline contents of this blob
     storageAccountNameRef:
-      name: example
+      name: example-storage-account
     storageContainerNameRef:
-      name: example
+      name: example-content
   providerConfigRef:
     name: example

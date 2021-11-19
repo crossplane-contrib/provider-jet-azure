@@ -20,7 +20,6 @@ package v1alpha1
 import (
 	"context"
 	v1alpha1 "github.com/crossplane-contrib/provider-jet-azure/apis/azure/v1alpha1"
-	rconfig "github.com/crossplane-contrib/provider-jet-azure/apis/rconfig"
 	reference "github.com/crossplane/crossplane-runtime/pkg/reference"
 	errors "github.com/pkg/errors"
 	client "sigs.k8s.io/controller-runtime/pkg/client"
@@ -61,7 +60,7 @@ func (mg *CassandraKeyspace) ResolveReferences(ctx context.Context, c client.Rea
 
 	rsp, err = r.Resolve(ctx, reference.ResolutionRequest{
 		CurrentValue: reference.FromPtrValue(mg.Spec.ForProvider.AccountName),
-		Extract:      rconfig.ExtractResourceName(),
+		Extract:      reference.ExternalName(),
 		Reference:    mg.Spec.ForProvider.AccountNameRef,
 		Selector:     mg.Spec.ForProvider.AccountNameSelector,
 		To: reference.To{
@@ -103,7 +102,7 @@ func (mg *GremlinDatabase) ResolveReferences(ctx context.Context, c client.Reade
 
 	rsp, err = r.Resolve(ctx, reference.ResolutionRequest{
 		CurrentValue: reference.FromPtrValue(mg.Spec.ForProvider.AccountName),
-		Extract:      rconfig.ExtractResourceName(),
+		Extract:      reference.ExternalName(),
 		Reference:    mg.Spec.ForProvider.AccountNameRef,
 		Selector:     mg.Spec.ForProvider.AccountNameSelector,
 		To: reference.To{
@@ -145,7 +144,7 @@ func (mg *GremlinGraph) ResolveReferences(ctx context.Context, c client.Reader) 
 
 	rsp, err = r.Resolve(ctx, reference.ResolutionRequest{
 		CurrentValue: reference.FromPtrValue(mg.Spec.ForProvider.AccountName),
-		Extract:      rconfig.ExtractResourceName(),
+		Extract:      reference.ExternalName(),
 		Reference:    mg.Spec.ForProvider.AccountNameRef,
 		Selector:     mg.Spec.ForProvider.AccountNameSelector,
 		To: reference.To{
@@ -161,7 +160,7 @@ func (mg *GremlinGraph) ResolveReferences(ctx context.Context, c client.Reader) 
 
 	rsp, err = r.Resolve(ctx, reference.ResolutionRequest{
 		CurrentValue: reference.FromPtrValue(mg.Spec.ForProvider.DatabaseName),
-		Extract:      rconfig.ExtractResourceName(),
+		Extract:      reference.ExternalName(),
 		Reference:    mg.Spec.ForProvider.DatabaseNameRef,
 		Selector:     mg.Spec.ForProvider.DatabaseNameSelector,
 		To: reference.To{
@@ -203,7 +202,7 @@ func (mg *MongoCollection) ResolveReferences(ctx context.Context, c client.Reade
 
 	rsp, err = r.Resolve(ctx, reference.ResolutionRequest{
 		CurrentValue: reference.FromPtrValue(mg.Spec.ForProvider.AccountName),
-		Extract:      rconfig.ExtractResourceName(),
+		Extract:      reference.ExternalName(),
 		Reference:    mg.Spec.ForProvider.AccountNameRef,
 		Selector:     mg.Spec.ForProvider.AccountNameSelector,
 		To: reference.To{
@@ -219,7 +218,7 @@ func (mg *MongoCollection) ResolveReferences(ctx context.Context, c client.Reade
 
 	rsp, err = r.Resolve(ctx, reference.ResolutionRequest{
 		CurrentValue: reference.FromPtrValue(mg.Spec.ForProvider.DatabaseName),
-		Extract:      rconfig.ExtractResourceName(),
+		Extract:      reference.ExternalName(),
 		Reference:    mg.Spec.ForProvider.DatabaseNameRef,
 		Selector:     mg.Spec.ForProvider.DatabaseNameSelector,
 		To: reference.To{
@@ -261,7 +260,7 @@ func (mg *MongoDatabase) ResolveReferences(ctx context.Context, c client.Reader)
 
 	rsp, err = r.Resolve(ctx, reference.ResolutionRequest{
 		CurrentValue: reference.FromPtrValue(mg.Spec.ForProvider.AccountName),
-		Extract:      rconfig.ExtractResourceName(),
+		Extract:      reference.ExternalName(),
 		Reference:    mg.Spec.ForProvider.AccountNameRef,
 		Selector:     mg.Spec.ForProvider.AccountNameSelector,
 		To: reference.To{
@@ -303,7 +302,7 @@ func (mg *NotebookWorkspace) ResolveReferences(ctx context.Context, c client.Rea
 
 	rsp, err = r.Resolve(ctx, reference.ResolutionRequest{
 		CurrentValue: reference.FromPtrValue(mg.Spec.ForProvider.AccountName),
-		Extract:      rconfig.ExtractResourceName(),
+		Extract:      reference.ExternalName(),
 		Reference:    mg.Spec.ForProvider.AccountNameRef,
 		Selector:     mg.Spec.ForProvider.AccountNameSelector,
 		To: reference.To{
@@ -345,7 +344,7 @@ func (mg *SQLContainer) ResolveReferences(ctx context.Context, c client.Reader) 
 
 	rsp, err = r.Resolve(ctx, reference.ResolutionRequest{
 		CurrentValue: reference.FromPtrValue(mg.Spec.ForProvider.AccountName),
-		Extract:      rconfig.ExtractResourceName(),
+		Extract:      reference.ExternalName(),
 		Reference:    mg.Spec.ForProvider.AccountNameRef,
 		Selector:     mg.Spec.ForProvider.AccountNameSelector,
 		To: reference.To{
@@ -361,7 +360,7 @@ func (mg *SQLContainer) ResolveReferences(ctx context.Context, c client.Reader) 
 
 	rsp, err = r.Resolve(ctx, reference.ResolutionRequest{
 		CurrentValue: reference.FromPtrValue(mg.Spec.ForProvider.DatabaseName),
-		Extract:      rconfig.ExtractResourceName(),
+		Extract:      reference.ExternalName(),
 		Reference:    mg.Spec.ForProvider.DatabaseNameRef,
 		Selector:     mg.Spec.ForProvider.DatabaseNameSelector,
 		To: reference.To{
@@ -403,7 +402,7 @@ func (mg *SQLDatabase) ResolveReferences(ctx context.Context, c client.Reader) e
 
 	rsp, err = r.Resolve(ctx, reference.ResolutionRequest{
 		CurrentValue: reference.FromPtrValue(mg.Spec.ForProvider.AccountName),
-		Extract:      rconfig.ExtractResourceName(),
+		Extract:      reference.ExternalName(),
 		Reference:    mg.Spec.ForProvider.AccountNameRef,
 		Selector:     mg.Spec.ForProvider.AccountNameSelector,
 		To: reference.To{
@@ -445,7 +444,7 @@ func (mg *SqlStoredProcedure) ResolveReferences(ctx context.Context, c client.Re
 
 	rsp, err = r.Resolve(ctx, reference.ResolutionRequest{
 		CurrentValue: reference.FromPtrValue(mg.Spec.ForProvider.AccountName),
-		Extract:      rconfig.ExtractResourceName(),
+		Extract:      reference.ExternalName(),
 		Reference:    mg.Spec.ForProvider.AccountNameRef,
 		Selector:     mg.Spec.ForProvider.AccountNameSelector,
 		To: reference.To{
@@ -461,7 +460,7 @@ func (mg *SqlStoredProcedure) ResolveReferences(ctx context.Context, c client.Re
 
 	rsp, err = r.Resolve(ctx, reference.ResolutionRequest{
 		CurrentValue: reference.FromPtrValue(mg.Spec.ForProvider.ContainerName),
-		Extract:      rconfig.ExtractResourceName(),
+		Extract:      reference.ExternalName(),
 		Reference:    mg.Spec.ForProvider.ContainerNameRef,
 		Selector:     mg.Spec.ForProvider.ContainerNameSelector,
 		To: reference.To{
@@ -477,7 +476,7 @@ func (mg *SqlStoredProcedure) ResolveReferences(ctx context.Context, c client.Re
 
 	rsp, err = r.Resolve(ctx, reference.ResolutionRequest{
 		CurrentValue: reference.FromPtrValue(mg.Spec.ForProvider.DatabaseName),
-		Extract:      rconfig.ExtractResourceName(),
+		Extract:      reference.ExternalName(),
 		Reference:    mg.Spec.ForProvider.DatabaseNameRef,
 		Selector:     mg.Spec.ForProvider.DatabaseNameSelector,
 		To: reference.To{
@@ -519,7 +518,7 @@ func (mg *Table) ResolveReferences(ctx context.Context, c client.Reader) error {
 
 	rsp, err = r.Resolve(ctx, reference.ResolutionRequest{
 		CurrentValue: reference.FromPtrValue(mg.Spec.ForProvider.AccountName),
-		Extract:      rconfig.ExtractResourceName(),
+		Extract:      reference.ExternalName(),
 		Reference:    mg.Spec.ForProvider.AccountNameRef,
 		Selector:     mg.Spec.ForProvider.AccountNameSelector,
 		To: reference.To{
