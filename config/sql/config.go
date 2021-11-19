@@ -20,8 +20,9 @@ import (
 	"fmt"
 
 	"github.com/crossplane-contrib/terrajet/pkg/config"
-	xpv1 "github.com/crossplane/crossplane-runtime/apis/common/v1"
 	"github.com/pkg/errors"
+
+	xpv1 "github.com/crossplane/crossplane-runtime/apis/common/v1"
 
 	"github.com/crossplane-contrib/provider-jet-azure/apis/rconfig"
 	"github.com/crossplane-contrib/provider-jet-azure/config/common"
@@ -66,6 +67,7 @@ func Configure(p *config.Provider) {
 				Type: rconfig.APISPackagePath + "/azure/v1alpha1.ResourceGroup",
 			},
 		}
+		r.ExternalName = config.NameAsIdentifier
 		r.Sensitive.AdditionalConnectionDetailsFn = msSQLConnectionDetails
 		r.UseAsync = true
 	})

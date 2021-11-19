@@ -127,8 +127,6 @@ spec:
                     type: array
                   location:
                     type: string
-                  name:
-                    type: string
                   resourceGroupName:
                     type: string
                   resourceGroupNameRef:
@@ -204,7 +202,6 @@ spec:
                 - administratorLogin
                 - administratorLoginPasswordSecretRef
                 - location
-                - name
                 - version
                 type: object
               providerConfigRef:
