@@ -125,7 +125,6 @@ type SQLContainerObservation struct {
 type SQLContainerParameters struct {
 
 	// +crossplane:generate:reference:type=Account
-	// +crossplane:generate:reference:extractor=github.com/crossplane-contrib/provider-jet-azure/apis/rconfig.ExtractResourceName()
 	// +kubebuilder:validation:Optional
 	AccountName *string `json:"accountName,omitempty" tf:"account_name,omitempty"`
 
@@ -145,7 +144,6 @@ type SQLContainerParameters struct {
 	ConflictResolutionPolicy []SQLContainerConflictResolutionPolicyParameters `json:"conflictResolutionPolicy,omitempty" tf:"conflict_resolution_policy,omitempty"`
 
 	// +crossplane:generate:reference:type=SQLDatabase
-	// +crossplane:generate:reference:extractor=github.com/crossplane-contrib/provider-jet-azure/apis/rconfig.ExtractResourceName()
 	// +kubebuilder:validation:Optional
 	DatabaseName *string `json:"databaseName,omitempty" tf:"database_name,omitempty"`
 

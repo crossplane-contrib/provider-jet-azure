@@ -6,6 +6,6 @@ spec:
   forProvider:
     containerAccessType: private
     storageAccountNameRef:
-      name: example
+      name: example-storage-account
   providerConfigRef:
     name: example

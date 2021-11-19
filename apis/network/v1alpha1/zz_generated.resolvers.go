@@ -20,7 +20,6 @@ package v1alpha1
 import (
 	"context"
 	v1alpha1 "github.com/crossplane-contrib/provider-jet-azure/apis/azure/v1alpha1"
-	rconfig "github.com/crossplane-contrib/provider-jet-azure/apis/rconfig"
 	reference "github.com/crossplane/crossplane-runtime/pkg/reference"
 	errors "github.com/pkg/errors"
 	client "sigs.k8s.io/controller-runtime/pkg/client"
@@ -223,7 +222,7 @@ func (mg *VirtualNetworkPeering) ResolveReferences(ctx context.Context, c client
 
 	rsp, err = r.Resolve(ctx, reference.ResolutionRequest{
 		CurrentValue: reference.FromPtrValue(mg.Spec.ForProvider.VirtualNetworkName),
-		Extract:      rconfig.ExtractResourceName(),
+		Extract:      reference.ExternalName(),
 		Reference:    mg.Spec.ForProvider.VirtualNetworkNameRef,
 		Selector:     mg.Spec.ForProvider.VirtualNetworkNameSelector,
 		To: reference.To{

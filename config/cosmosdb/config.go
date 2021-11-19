@@ -36,12 +36,10 @@ func Configure(p *config.Provider) {
 				Type: rconfig.APISPackagePath + "/azure/v1alpha1.ResourceGroup",
 			},
 			"account_name": config.Reference{
-				Type:      "Account",
-				Extractor: rconfig.APISPackagePath + "/rconfig.ExtractResourceName()",
+				Type: "Account",
 			},
 			"database_name": config.Reference{
-				Type:      "SQLDatabase",
-				Extractor: rconfig.APISPackagePath + "/rconfig.ExtractResourceName()",
+				Type: "SQLDatabase",
 			},
 		}
 		r.UseAsync = true
@@ -61,12 +59,10 @@ func Configure(p *config.Provider) {
 				Type: rconfig.APISPackagePath + "/azure/v1alpha1.ResourceGroup",
 			},
 			"account_name": config.Reference{
-				Type:      "Account",
-				Extractor: rconfig.APISPackagePath + "/rconfig.ExtractResourceName()",
+				Type: "Account",
 			},
 			"database_name": config.Reference{
-				Type:      "MongoDatabase",
-				Extractor: rconfig.APISPackagePath + "/rconfig.ExtractResourceName()",
+				Type: "MongoDatabase",
 			},
 		}
 		r.UseAsync = true
@@ -87,8 +83,7 @@ func Configure(p *config.Provider) {
 				Type: rconfig.APISPackagePath + "/azure/v1alpha1.ResourceGroup",
 			},
 			"account_name": config.Reference{
-				Type:      "Account",
-				Extractor: rconfig.APISPackagePath + "/rconfig.ExtractResourceName()",
+				Type: "Account",
 			},
 		}
 		r.UseAsync = true
@@ -128,12 +123,10 @@ func Configure(p *config.Provider) {
 				Type: rconfig.APISPackagePath + "/azure/v1alpha1.ResourceGroup",
 			},
 			"account_name": config.Reference{
-				Type:      "Account",
-				Extractor: rconfig.APISPackagePath + "/rconfig.ExtractResourceName()",
+				Type: "Account",
 			},
 			"database_name": config.Reference{
-				Type:      "GremlinDatabase",
-				Extractor: rconfig.APISPackagePath + "/rconfig.ExtractResourceName()",
+				Type: "GremlinDatabase",
 			},
 		}
 		r.UseAsync = true
@@ -181,16 +174,13 @@ func Configure(p *config.Provider) {
 				Type: rconfig.APISPackagePath + "/azure/v1alpha1.ResourceGroup",
 			},
 			"account_name": config.Reference{
-				Type:      "Account",
-				Extractor: rconfig.APISPackagePath + "/rconfig.ExtractResourceName()",
+				Type: "Account",
 			},
 			"database_name": config.Reference{
-				Type:      "SQLDatabase",
-				Extractor: rconfig.APISPackagePath + "/rconfig.ExtractResourceName()",
+				Type: "SQLDatabase",
 			},
 			"container_name": config.Reference{
-				Type:      "SQLContainer",
-				Extractor: rconfig.APISPackagePath + "/rconfig.ExtractResourceName()",
+				Type: "SQLContainer",
 			},
 		}
 		r.UseAsync = true
@@ -212,8 +202,7 @@ func Configure(p *config.Provider) {
 				Type: rconfig.APISPackagePath + "/azure/v1alpha1.ResourceGroup",
 			},
 			"account_name": config.Reference{
-				Type:      "Account",
-				Extractor: rconfig.APISPackagePath + "/rconfig.ExtractResourceName()",
+				Type: "Account",
 			},
 		}
 		r.UseAsync = true
@@ -233,8 +222,7 @@ func Configure(p *config.Provider) {
 				Type: rconfig.APISPackagePath + "/azure/v1alpha1.ResourceGroup",
 			},
 			"account_name": config.Reference{
-				Type:      "Account",
-				Extractor: rconfig.APISPackagePath + "/rconfig.ExtractResourceName()",
+				Type: "Account",
 			},
 		}
 		r.UseAsync = true
@@ -255,8 +243,7 @@ func Configure(p *config.Provider) {
 				Type: rconfig.APISPackagePath + "/azure/v1alpha1.ResourceGroup",
 			},
 			"account_name": config.Reference{
-				Type:      "Account",
-				Extractor: rconfig.APISPackagePath + "/rconfig.ExtractResourceName()",
+				Type: "Account",
 			},
 		}
 		r.UseAsync = true
@@ -276,8 +263,7 @@ func Configure(p *config.Provider) {
 				Type: rconfig.APISPackagePath + "/azure/v1alpha1.ResourceGroup",
 			},
 			"account_name": config.Reference{
-				Type:      "Account",
-				Extractor: rconfig.APISPackagePath + "/rconfig.ExtractResourceName()",
+				Type: "Account",
 			},
 		}
 		r.UseAsync = true
@@ -309,8 +295,7 @@ func Configure(p *config.Provider) {
 				Type: rconfig.APISPackagePath + "/azure/v1alpha1.ResourceGroup",
 			},
 			"account_name": config.Reference{
-				Type:      "Account",
-				Extractor: rconfig.APISPackagePath + "/rconfig.ExtractResourceName()",
+				Type: "Account",
 			},
 		}
 		r.UseAsync = true

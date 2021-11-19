@@ -68,8 +68,7 @@ func Configure(p *config.Provider) {
 				Type: rconfig.APISPackagePath + "/azure/v1alpha1.ResourceGroup",
 			},
 			"server_name": config.Reference{
-				Type:      "Server",
-				Extractor: rconfig.APISPackagePath + "/rconfig.ExtractResourceName()",
+				Type: "Server",
 			},
 		}
 		r.UseAsync = true
@@ -89,8 +88,7 @@ func Configure(p *config.Provider) {
 				Type: rconfig.APISPackagePath + "/azure/v1alpha1.ResourceGroup",
 			},
 			"server_name": config.Reference{
-				Type:      "Server",
-				Extractor: rconfig.APISPackagePath + "/rconfig.ExtractResourceName()",
+				Type: "Server",
 			},
 		}
 		r.UseAsync = true
@@ -139,8 +137,7 @@ func Configure(p *config.Provider) {
 				Type: rconfig.APISPackagePath + "/azure/v1alpha1.ResourceGroup",
 			},
 			"server_name": config.Reference{
-				Type:      "Server",
-				Extractor: rconfig.APISPackagePath + "/rconfig.ExtractResourceName()",
+				Type: "Server",
 			},
 		}
 		r.UseAsync = true
@@ -207,8 +204,7 @@ func Configure(p *config.Provider) {
 				Type: rconfig.APISPackagePath + "/azure/v1alpha1.ResourceGroup",
 			},
 			"server_name": config.Reference{
-				Type:      "Server",
-				Extractor: rconfig.APISPackagePath + "/rconfig.ExtractResourceName()",
+				Type: "Server",
 			},
 			// TODO(aru): as we no longer hold Azure ID of resources in external-name annotation
 			// these references are currently not generated
@@ -247,11 +243,13 @@ func Configure(p *config.Provider) {
 				Type: rconfig.APISPackagePath + "/azure/v1alpha1.ResourceGroup",
 			},
 			"server_name": config.Reference{
-				Type:      "Server",
-				Extractor: rconfig.APISPackagePath + "/rconfig.ExtractResourceName()",
+				Type: "Server",
 			},
 		}
 		r.UseAsync = true
-		r.ExternalName = config.IdentifierFromProvider
+		r.ExternalName = config.NameAsIdentifier
+		r.ExternalName.GetExternalNameFn = common.GetNameFromFullyQualifiedID
+		// /subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/mygroup1/providers/Microsoft.DBforPostgreSQL/servers/server1/configurations/backslash_quote
+		r.ExternalName.GetIDFn = common.GetFullyQualifiedIDFn("Microsoft.DBforPostgreSQL", "servers", "server_name", "configurations", "name")
 	})
 }

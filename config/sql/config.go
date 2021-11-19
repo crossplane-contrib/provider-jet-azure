@@ -68,7 +68,12 @@ func Configure(p *config.Provider) {
 			},
 		}
 		r.ExternalName = config.NameAsIdentifier
+		r.ExternalName.GetExternalNameFn = common.GetNameFromFullyQualifiedID
 		r.Sensitive.AdditionalConnectionDetailsFn = msSQLConnectionDetails
+		// /subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/myresourcegroup/providers/Microsoft.Sql/servers/myserver
+		r.ExternalName.GetIDFn = common.GetFullyQualifiedIDFn("Microsoft.Sql",
+			"servers", "name",
+		)
 		r.UseAsync = true
 	})
 	p.AddResourceConfigurator("azurerm_mssql_server", func(r *config.Resource) {
@@ -77,13 +82,13 @@ func Configure(p *config.Provider) {
 				Type: rconfig.APISPackagePath + "/azure/v1alpha1.ResourceGroup",
 			},
 		}
-		r.Sensitive.AdditionalConnectionDetailsFn = msSQLConnectionDetails
-		r.UseAsync = true
 		r.ExternalName = config.NameAsIdentifier
 		r.ExternalName.GetExternalNameFn = common.GetNameFromFullyQualifiedID
+		r.Sensitive.AdditionalConnectionDetailsFn = msSQLConnectionDetails
 		// /subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/myresourcegroup/providers/Microsoft.Sql/servers/myserver
 		r.ExternalName.GetIDFn = common.GetFullyQualifiedIDFn("Microsoft.Sql",
 			"servers", "name",
 		)
+		r.UseAsync = true
 	})
 }
