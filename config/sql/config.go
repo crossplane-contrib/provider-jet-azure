@@ -66,9 +66,7 @@ func Configure(p *config.Provider) {
 				Type: rconfig.APISPackagePath + "/azure/v1alpha1.ResourceGroup",
 			},
 		}
-		r.Sensitive = config.Sensitive{
-			AdditionalConnectionDetailsFn: msSQLConnectionDetails,
-		}
+		r.Sensitive.AdditionalConnectionDetailsFn = msSQLConnectionDetails
 		r.UseAsync = true
 	})
 	p.AddResourceConfigurator("azurerm_mssql_server", func(r *config.Resource) {
@@ -77,9 +75,7 @@ func Configure(p *config.Provider) {
 				Type: rconfig.APISPackagePath + "/azure/v1alpha1.ResourceGroup",
 			},
 		}
-		r.Sensitive = config.Sensitive{
-			AdditionalConnectionDetailsFn: msSQLConnectionDetails,
-		}
+		r.Sensitive.AdditionalConnectionDetailsFn = msSQLConnectionDetails
 		r.UseAsync = true
 		r.ExternalName = config.NameAsIdentifier
 		r.ExternalName.GetExternalNameFn = common.GetNameFromFullyQualifiedID
