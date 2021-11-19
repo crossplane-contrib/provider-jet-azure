@@ -25,10 +25,10 @@ import (
 	v1 "github.com/crossplane/crossplane-runtime/apis/common/v1"
 )
 
-type DdosProtectionPlanObservation struct {
+type VirtualNetworkDdosProtectionPlanObservation struct {
 }
 
-type DdosProtectionPlanParameters struct {
+type VirtualNetworkDdosProtectionPlanParameters struct {
 
 	// +kubebuilder:validation:Required
 	Enable *bool `json:"enable" tf:"enable,omitempty"`
@@ -53,7 +53,7 @@ type VirtualNetworkParameters struct {
 	DNSServers []*string `json:"dnsServers,omitempty" tf:"dns_servers,omitempty"`
 
 	// +kubebuilder:validation:Optional
-	DdosProtectionPlan []DdosProtectionPlanParameters `json:"ddosProtectionPlan,omitempty" tf:"ddos_protection_plan,omitempty"`
+	DdosProtectionPlan []VirtualNetworkDdosProtectionPlanParameters `json:"ddosProtectionPlan,omitempty" tf:"ddos_protection_plan,omitempty"`
 
 	// +kubebuilder:validation:Required
 	Location *string `json:"location" tf:"location,omitempty"`
