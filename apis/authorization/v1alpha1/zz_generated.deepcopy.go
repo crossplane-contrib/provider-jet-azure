@@ -21,7 +21,6 @@ limitations under the License.
 package v1alpha1
 
 import (
-	"github.com/crossplane/crossplane-runtime/apis/common/v1"
 	runtime "k8s.io/apimachinery/pkg/runtime"
 )
 
@@ -204,16 +203,6 @@ func (in *ResourceGroupPolicyAssignmentParameters) DeepCopyInto(out *ResourceGro
 		in, out := &in.ResourceGroupID, &out.ResourceGroupID
 		*out = new(string)
 		**out = **in
-	}
-	if in.ResourceGroupIDRef != nil {
-		in, out := &in.ResourceGroupIDRef, &out.ResourceGroupIDRef
-		*out = new(v1.Reference)
-		**out = **in
-	}
-	if in.ResourceGroupIDSelector != nil {
-		in, out := &in.ResourceGroupIDSelector, &out.ResourceGroupIDSelector
-		*out = new(v1.Selector)
-		(*in).DeepCopyInto(*out)
 	}
 }
 

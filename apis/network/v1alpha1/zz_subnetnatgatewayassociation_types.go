@@ -33,15 +33,8 @@ type SubnetNATGatewayAssociationParameters struct {
 	// +kubebuilder:validation:Required
 	NatGatewayID *string `json:"natGatewayId" tf:"nat_gateway_id,omitempty"`
 
-	// +crossplane:generate:reference:type=Subnet
-	// +kubebuilder:validation:Optional
-	SubnetID *string `json:"subnetId,omitempty" tf:"subnet_id,omitempty"`
-
-	// +kubebuilder:validation:Optional
-	SubnetIDRef *v1.Reference `json:"subnetIdRef,omitempty" tf:"-"`
-
-	// +kubebuilder:validation:Optional
-	SubnetIDSelector *v1.Selector `json:"subnetIdSelector,omitempty" tf:"-"`
+	// +kubebuilder:validation:Required
+	SubnetID *string `json:"subnetId" tf:"subnet_id,omitempty"`
 }
 
 // SubnetNATGatewayAssociationSpec defines the desired state of SubnetNATGatewayAssociation

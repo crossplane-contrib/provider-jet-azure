@@ -1,10 +1,9 @@
 apiVersion: network.azure.jet.crossplane.io/v1alpha1
 kind: VirtualNetwork
 metadata:
-  name: example
+  name: example-vn
 spec:
   forProvider:
-    name: "virtualNetwork1"
     location: "East US"
     resourceGroupNameRef:
       name: example

@@ -57,6 +57,9 @@ func Configure(p *config.Provider) {
 				Type: rconfig.APISPackagePath + "/azure/v1alpha1.ResourceGroup",
 			},
 		}
+		r.LateInitializer = config.LateInitializer{
+			IgnoredFields: []string{"subnet"},
+		}
 		r.ExternalName = config.NameAsIdentifier
 		r.ExternalName.GetExternalNameFn = common.GetNameFromFullyQualifiedID
 		// /subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/mygroup1/providers/Microsoft.Network/virtualNetworks/myvnet1
@@ -72,9 +75,11 @@ func Configure(p *config.Provider) {
 			"resource_group_name": config.Reference{
 				Type: rconfig.APISPackagePath + "/azure/v1alpha1.ResourceGroup",
 			},
-			"ip_configuration[*].subnet_id": config.Reference{
-				Type: rconfig.APISPackagePath + "/network/v1alpha1.Subnet",
-			},
+			// TODO(aru): as we no longer hold Azure ID of resources in external-name annotation
+			// these references are currently not generated
+			/*"ip_configuration.subnet_id": config.Reference{
+				Type: "Subnet",
+			},*/
 		}
 		r.UseAsync = true
 		r.ExternalName = config.NameAsIdentifier
@@ -96,9 +101,11 @@ func Configure(p *config.Provider) {
 				Type:      "VirtualNetwork",
 				Extractor: rconfig.APISPackagePath + "/rconfig.ExtractResourceName()",
 			},
-			"remote_virtual_network_id": config.Reference{
+			// TODO(aru): as we no longer hold Azure ID of resources in external-name annotation
+			// these references are currently not generated
+			/*"remote_virtual_network_id": config.Reference{
 				Type: "VirtualNetwork",
-			},
+			},*/
 		}
 		r.UseAsync = true
 		r.ExternalName = config.NameAsIdentifier
@@ -135,12 +142,14 @@ func Configure(p *config.Provider) {
 			"resource_group_name": config.Reference{
 				Type: rconfig.APISPackagePath + "/azure/v1alpha1.ResourceGroup",
 			},
-			"virtual_network_gateway_id": config.Reference{
+			// TODO(aru): as we no longer hold Azure ID of resources in external-name annotation
+			// these references are currently not generated
+			/*"virtual_network_gateway_id": config.Reference{
 				Type: "VirtualNetworkGateway",
 			},
 			"peer_virtual_network_gateway_id": config.Reference{
 				Type: "VirtualNetworkGateway",
-			},
+			},*/
 		}
 		r.UseAsync = true
 		r.ExternalName = config.NameAsIdentifier

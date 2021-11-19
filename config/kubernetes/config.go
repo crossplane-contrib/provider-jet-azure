@@ -39,15 +39,19 @@ func Configure(p *config.Provider) {
 			"resource_group_name": config.Reference{
 				Type: rconfig.APISPackagePath + "/azure/v1alpha1.ResourceGroup",
 			},
-			"default_node_pool[*].pod_subnet_id": config.Reference{
-				Type: rconfig.APISPackagePath + "/network/v1alpha1.Subnet",
-			},
-			"default_node_pool[*].vnet_subnet_id": config.Reference{
-				Type: rconfig.APISPackagePath + "/network/v1alpha1.Subnet",
-			},
-			"addon_profile[*].ingress_application_gateway[*].subnet_id": config.Reference{
-				Type: rconfig.APISPackagePath + "/network/v1alpha1.Subnet",
-			},
+			// TODO(aru): as we no longer hold Azure ID of resources in external-name annotation
+			// these references are currently not generated
+			/*
+				"default_node_pool.pod_subnet_id": config.Reference{
+					Type: rconfig.APISPackagePath + "/network/v1alpha1.Subnet",
+				},
+				"default_node_pool.vnet_subnet_id": config.Reference{
+					Type: rconfig.APISPackagePath + "/network/v1alpha1.Subnet",
+				},
+				"addon_profile.ingress_application_gateway.subnet_id": config.Reference{
+					Type: rconfig.APISPackagePath + "/network/v1alpha1.Subnet",
+				},
+			*/
 		}
 		r.UseAsync = true
 		r.ExternalName = config.NameAsIdentifier
@@ -60,7 +64,9 @@ func Configure(p *config.Provider) {
 		r.Kind = "KubernetesClusterNodePool"
 		r.ShortGroup = "containerservice"
 		r.References = config.References{
-			"kubernetes_cluster_id": config.Reference{
+			// TODO(aru): as we no longer hold Azure ID of resources in external-name annotation
+			// these references are currently not generated
+			/*"kubernetes_cluster_id": config.Reference{
 				Type: "KubernetesCluster",
 			},
 			"pod_subnet_id": config.Reference{
@@ -69,6 +75,7 @@ func Configure(p *config.Provider) {
 			"vnet_subnet_id": config.Reference{
 				Type: rconfig.APISPackagePath + "/network/v1alpha1.Subnet",
 			},
+			*/
 		}
 		r.UseAsync = true
 		r.ExternalName = config.NameAsIdentifier

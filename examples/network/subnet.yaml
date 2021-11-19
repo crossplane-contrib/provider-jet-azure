@@ -6,8 +6,9 @@ spec:
   forProvider:
     resourceGroupNameRef:
       name: example
-    virtualNetworkName: "virtualNetwork1"
+    virtualNetworkNameRef:
+      name: example-vn
     addressPrefixes:
-      - "10.0.1.0/24"
+      - "10.0.0.0/24"
   providerConfigRef:
     name: example
