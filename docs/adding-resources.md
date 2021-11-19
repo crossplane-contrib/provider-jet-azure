@@ -34,10 +34,23 @@ configuration for the resource.
        make generate
        ```
 
-   6. Run against a Kubernetes cluster:
+   6. Register CRDs to cluster:
 
        ```console
        kubectl apply -f package/crds
+       ```
+   7. Run the provider against a Kubernetes cluster
+
+       ```console
+       make run TERRAFORM_VERSION=<terraform_cli_version> TERRAFORM_PROVIDER_VERSION=<provider_version> TERRAFORM_PROVIDER_SOURCE=hashicorp/azurerm
+       ```
+
+       or
+
+       ```console
+       export TERRAFORM_VERSION=<terraform_cli_version>
+       export TERRAFORM_PROVIDER_VERSION=<provider_version>
+       export TERRAFORM_PROVIDER_SOURCE=hashicorp/azurerm
        make run
        ```
 
