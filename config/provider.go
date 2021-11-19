@@ -52,6 +52,7 @@ var includedResources = []string{
 	"azurerm_storage_container$",
 	"azurerm_storage_blob$",
 	"azurerm_sql_server",
+	"azurerm_mssql_server$",
 	"azurerm_lb$",
 }
 

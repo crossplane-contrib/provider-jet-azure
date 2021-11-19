@@ -17,11 +17,44 @@ limitations under the License.
 package sql
 
 import (
+	"fmt"
+
 	"github.com/crossplane-contrib/terrajet/pkg/config"
+	"github.com/pkg/errors"
+
+	xpv1 "github.com/crossplane/crossplane-runtime/apis/common/v1"
 
 	"github.com/crossplane-contrib/provider-jet-azure/apis/rconfig"
 	"github.com/crossplane-contrib/provider-jet-azure/config/common"
 )
+
+func msSQLConnectionDetails(attr map[string]interface{}) (map[string][]byte, error) {
+	dbName, ok := attr["name"].(string)
+	if !ok {
+		return nil, errors.New("cannot get name attribute")
+	}
+	username, ok := attr["administrator_login"].(string)
+	if !ok {
+		return nil, errors.New("cannot get administrator_login attribute")
+	}
+
+	endpoint, ok := attr["fully_qualified_domain_name"].(string)
+	if !ok {
+		return nil, errors.New("cannot get fully_qualified_domain_name attribute")
+	}
+	conn := map[string][]byte{
+		xpv1.ResourceCredentialsSecretUserKey:     []byte(fmt.Sprintf("%s@%s", username, dbName)),
+		xpv1.ResourceCredentialsSecretEndpointKey: []byte(endpoint),
+	}
+
+	// Note(turkenh): include password only if available, might not be available
+	//  depending on the auth type.
+	if password, ok := attr["administrator_login_password"].(string); ok {
+		conn[xpv1.ResourceCredentialsSecretPasswordKey] = []byte(password)
+	}
+
+	return conn, nil
+}
 
 // Configure configures sql group
 func Configure(p *config.Provider) {
@@ -34,6 +67,17 @@ func Configure(p *config.Provider) {
 				Type: rconfig.APISPackagePath + "/azure/v1alpha1.ResourceGroup",
 			},
 		}
+		r.ExternalName = config.NameAsIdentifier
+		r.Sensitive.AdditionalConnectionDetailsFn = msSQLConnectionDetails
+		r.UseAsync = true
+	})
+	p.AddResourceConfigurator("azurerm_mssql_server", func(r *config.Resource) {
+		r.References = config.References{
+			"resource_group_name": config.Reference{
+				Type: rconfig.APISPackagePath + "/azure/v1alpha1.ResourceGroup",
+			},
+		}
+		r.Sensitive.AdditionalConnectionDetailsFn = msSQLConnectionDetails
 		r.UseAsync = true
 		r.ExternalName = config.NameAsIdentifier
 		r.ExternalName.GetExternalNameFn = common.GetNameFromFullyQualifiedID
