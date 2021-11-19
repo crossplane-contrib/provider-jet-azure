@@ -20,7 +20,6 @@ package v1alpha1
 import (
 	"context"
 	v1alpha1 "github.com/crossplane-contrib/provider-jet-azure/apis/azure/v1alpha1"
-	v1alpha11 "github.com/crossplane-contrib/provider-jet-azure/apis/network/v1alpha1"
 	reference "github.com/crossplane/crossplane-runtime/pkg/reference"
 	errors "github.com/pkg/errors"
 	client "sigs.k8s.io/controller-runtime/pkg/client"
@@ -48,64 +47,6 @@ func (mg *KubernetesCluster) ResolveReferences(ctx context.Context, c client.Rea
 	}
 	mg.Spec.ForProvider.ResourceGroupName = reference.ToPtrValue(rsp.ResolvedValue)
 	mg.Spec.ForProvider.ResourceGroupNameRef = rsp.ResolvedReference
-
-	return nil
-}
-
-// ResolveReferences of this KubernetesClusterNodePool.
-func (mg *KubernetesClusterNodePool) ResolveReferences(ctx context.Context, c client.Reader) error {
-	r := reference.NewAPIResolver(c, mg)
-
-	var rsp reference.ResolutionResponse
-	var err error
-
-	rsp, err = r.Resolve(ctx, reference.ResolutionRequest{
-		CurrentValue: reference.FromPtrValue(mg.Spec.ForProvider.KubernetesClusterID),
-		Extract:      reference.ExternalName(),
-		Reference:    mg.Spec.ForProvider.KubernetesClusterIDRef,
-		Selector:     mg.Spec.ForProvider.KubernetesClusterIDSelector,
-		To: reference.To{
-			List:    &KubernetesClusterList{},
-			Managed: &KubernetesCluster{},
-		},
-	})
-	if err != nil {
-		return errors.Wrap(err, "mg.Spec.ForProvider.KubernetesClusterID")
-	}
-	mg.Spec.ForProvider.KubernetesClusterID = reference.ToPtrValue(rsp.ResolvedValue)
-	mg.Spec.ForProvider.KubernetesClusterIDRef = rsp.ResolvedReference
-
-	rsp, err = r.Resolve(ctx, reference.ResolutionRequest{
-		CurrentValue: reference.FromPtrValue(mg.Spec.ForProvider.PodSubnetID),
-		Extract:      reference.ExternalName(),
-		Reference:    mg.Spec.ForProvider.PodSubnetIDRef,
-		Selector:     mg.Spec.ForProvider.PodSubnetIDSelector,
-		To: reference.To{
-			List:    &v1alpha11.SubnetList{},
-			Managed: &v1alpha11.Subnet{},
-		},
-	})
-	if err != nil {
-		return errors.Wrap(err, "mg.Spec.ForProvider.PodSubnetID")
-	}
-	mg.Spec.ForProvider.PodSubnetID = reference.ToPtrValue(rsp.ResolvedValue)
-	mg.Spec.ForProvider.PodSubnetIDRef = rsp.ResolvedReference
-
-	rsp, err = r.Resolve(ctx, reference.ResolutionRequest{
-		CurrentValue: reference.FromPtrValue(mg.Spec.ForProvider.VnetSubnetID),
-		Extract:      reference.ExternalName(),
-		Reference:    mg.Spec.ForProvider.VnetSubnetIDRef,
-		Selector:     mg.Spec.ForProvider.VnetSubnetIDSelector,
-		To: reference.To{
-			List:    &v1alpha11.SubnetList{},
-			Managed: &v1alpha11.Subnet{},
-		},
-	})
-	if err != nil {
-		return errors.Wrap(err, "mg.Spec.ForProvider.VnetSubnetID")
-	}
-	mg.Spec.ForProvider.VnetSubnetID = reference.ToPtrValue(rsp.ResolvedValue)
-	mg.Spec.ForProvider.VnetSubnetIDRef = rsp.ResolvedReference
 
 	return nil
 }

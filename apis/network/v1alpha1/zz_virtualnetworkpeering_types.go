@@ -39,15 +39,8 @@ type VirtualNetworkPeeringParameters struct {
 	// +kubebuilder:validation:Optional
 	AllowVirtualNetworkAccess *bool `json:"allowVirtualNetworkAccess,omitempty" tf:"allow_virtual_network_access,omitempty"`
 
-	// +crossplane:generate:reference:type=VirtualNetwork
-	// +kubebuilder:validation:Optional
-	RemoteVirtualNetworkID *string `json:"remoteVirtualNetworkId,omitempty" tf:"remote_virtual_network_id,omitempty"`
-
-	// +kubebuilder:validation:Optional
-	RemoteVirtualNetworkIDRef *v1.Reference `json:"remoteVirtualNetworkIdRef,omitempty" tf:"-"`
-
-	// +kubebuilder:validation:Optional
-	RemoteVirtualNetworkIDSelector *v1.Selector `json:"remoteVirtualNetworkIdSelector,omitempty" tf:"-"`
+	// +kubebuilder:validation:Required
+	RemoteVirtualNetworkID *string `json:"remoteVirtualNetworkId" tf:"remote_virtual_network_id,omitempty"`
 
 	// +crossplane:generate:reference:type=github.com/crossplane-contrib/provider-jet-azure/apis/azure/v1alpha1.ResourceGroup
 	// +kubebuilder:validation:Optional

@@ -85,8 +85,15 @@ type SubnetParameters struct {
 	// +kubebuilder:validation:Optional
 	ServiceEndpoints []*string `json:"serviceEndpoints,omitempty" tf:"service_endpoints,omitempty"`
 
-	// +kubebuilder:validation:Required
-	VirtualNetworkName *string `json:"virtualNetworkName" tf:"virtual_network_name,omitempty"`
+	// +crossplane:generate:reference:type=VirtualNetwork
+	// +kubebuilder:validation:Optional
+	VirtualNetworkName *string `json:"virtualNetworkName,omitempty" tf:"virtual_network_name,omitempty"`
+
+	// +kubebuilder:validation:Optional
+	VirtualNetworkNameRef *v1.Reference `json:"virtualNetworkNameRef,omitempty" tf:"-"`
+
+	// +kubebuilder:validation:Optional
+	VirtualNetworkNameSelector *v1.Selector `json:"virtualNetworkNameSelector,omitempty" tf:"-"`
 }
 
 // SubnetSpec defines the desired state of Subnet

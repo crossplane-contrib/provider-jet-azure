@@ -4,8 +4,7 @@ metadata:
   name: example-nodepool
 spec:
   forProvider:
-    kubernetesClusterIdRef:
-      name: example-aks
+    kubernetesClusterId: "/subscriptions/00000000-0000-0000-0000-000000000000/resourcegroups/example/providers/Microsoft.ContainerService/managedClusters/example-aks"
     vmSize: "Standard_DS2_v2"
     nodeCount: 1
     tags:

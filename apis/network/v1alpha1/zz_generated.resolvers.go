@@ -75,83 +75,21 @@ func (mg *Subnet) ResolveReferences(ctx context.Context, c client.Reader) error 
 	mg.Spec.ForProvider.ResourceGroupName = reference.ToPtrValue(rsp.ResolvedValue)
 	mg.Spec.ForProvider.ResourceGroupNameRef = rsp.ResolvedReference
 
-	return nil
-}
-
-// ResolveReferences of this SubnetNATGatewayAssociation.
-func (mg *SubnetNATGatewayAssociation) ResolveReferences(ctx context.Context, c client.Reader) error {
-	r := reference.NewAPIResolver(c, mg)
-
-	var rsp reference.ResolutionResponse
-	var err error
-
 	rsp, err = r.Resolve(ctx, reference.ResolutionRequest{
-		CurrentValue: reference.FromPtrValue(mg.Spec.ForProvider.SubnetID),
+		CurrentValue: reference.FromPtrValue(mg.Spec.ForProvider.VirtualNetworkName),
 		Extract:      reference.ExternalName(),
-		Reference:    mg.Spec.ForProvider.SubnetIDRef,
-		Selector:     mg.Spec.ForProvider.SubnetIDSelector,
+		Reference:    mg.Spec.ForProvider.VirtualNetworkNameRef,
+		Selector:     mg.Spec.ForProvider.VirtualNetworkNameSelector,
 		To: reference.To{
-			List:    &SubnetList{},
-			Managed: &Subnet{},
+			List:    &VirtualNetworkList{},
+			Managed: &VirtualNetwork{},
 		},
 	})
 	if err != nil {
-		return errors.Wrap(err, "mg.Spec.ForProvider.SubnetID")
+		return errors.Wrap(err, "mg.Spec.ForProvider.VirtualNetworkName")
 	}
-	mg.Spec.ForProvider.SubnetID = reference.ToPtrValue(rsp.ResolvedValue)
-	mg.Spec.ForProvider.SubnetIDRef = rsp.ResolvedReference
-
-	return nil
-}
-
-// ResolveReferences of this SubnetNetworkSecurityGroupAssociation.
-func (mg *SubnetNetworkSecurityGroupAssociation) ResolveReferences(ctx context.Context, c client.Reader) error {
-	r := reference.NewAPIResolver(c, mg)
-
-	var rsp reference.ResolutionResponse
-	var err error
-
-	rsp, err = r.Resolve(ctx, reference.ResolutionRequest{
-		CurrentValue: reference.FromPtrValue(mg.Spec.ForProvider.SubnetID),
-		Extract:      reference.ExternalName(),
-		Reference:    mg.Spec.ForProvider.SubnetIDRef,
-		Selector:     mg.Spec.ForProvider.SubnetIDSelector,
-		To: reference.To{
-			List:    &SubnetList{},
-			Managed: &Subnet{},
-		},
-	})
-	if err != nil {
-		return errors.Wrap(err, "mg.Spec.ForProvider.SubnetID")
-	}
-	mg.Spec.ForProvider.SubnetID = reference.ToPtrValue(rsp.ResolvedValue)
-	mg.Spec.ForProvider.SubnetIDRef = rsp.ResolvedReference
-
-	return nil
-}
-
-// ResolveReferences of this SubnetRouteTableAssociation.
-func (mg *SubnetRouteTableAssociation) ResolveReferences(ctx context.Context, c client.Reader) error {
-	r := reference.NewAPIResolver(c, mg)
-
-	var rsp reference.ResolutionResponse
-	var err error
-
-	rsp, err = r.Resolve(ctx, reference.ResolutionRequest{
-		CurrentValue: reference.FromPtrValue(mg.Spec.ForProvider.SubnetID),
-		Extract:      reference.ExternalName(),
-		Reference:    mg.Spec.ForProvider.SubnetIDRef,
-		Selector:     mg.Spec.ForProvider.SubnetIDSelector,
-		To: reference.To{
-			List:    &SubnetList{},
-			Managed: &Subnet{},
-		},
-	})
-	if err != nil {
-		return errors.Wrap(err, "mg.Spec.ForProvider.SubnetID")
-	}
-	mg.Spec.ForProvider.SubnetID = reference.ToPtrValue(rsp.ResolvedValue)
-	mg.Spec.ForProvider.SubnetIDRef = rsp.ResolvedReference
+	mg.Spec.ForProvider.VirtualNetworkName = reference.ToPtrValue(rsp.ResolvedValue)
+	mg.Spec.ForProvider.VirtualNetworkNameRef = rsp.ResolvedReference
 
 	return nil
 }
@@ -242,22 +180,6 @@ func (mg *VirtualNetworkGatewayConnection) ResolveReferences(ctx context.Context
 	var err error
 
 	rsp, err = r.Resolve(ctx, reference.ResolutionRequest{
-		CurrentValue: reference.FromPtrValue(mg.Spec.ForProvider.PeerVirtualNetworkGatewayID),
-		Extract:      reference.ExternalName(),
-		Reference:    mg.Spec.ForProvider.PeerVirtualNetworkGatewayIDRef,
-		Selector:     mg.Spec.ForProvider.PeerVirtualNetworkGatewayIDSelector,
-		To: reference.To{
-			List:    &VirtualNetworkGatewayList{},
-			Managed: &VirtualNetworkGateway{},
-		},
-	})
-	if err != nil {
-		return errors.Wrap(err, "mg.Spec.ForProvider.PeerVirtualNetworkGatewayID")
-	}
-	mg.Spec.ForProvider.PeerVirtualNetworkGatewayID = reference.ToPtrValue(rsp.ResolvedValue)
-	mg.Spec.ForProvider.PeerVirtualNetworkGatewayIDRef = rsp.ResolvedReference
-
-	rsp, err = r.Resolve(ctx, reference.ResolutionRequest{
 		CurrentValue: reference.FromPtrValue(mg.Spec.ForProvider.ResourceGroupName),
 		Extract:      reference.ExternalName(),
 		Reference:    mg.Spec.ForProvider.ResourceGroupNameRef,
@@ -273,22 +195,6 @@ func (mg *VirtualNetworkGatewayConnection) ResolveReferences(ctx context.Context
 	mg.Spec.ForProvider.ResourceGroupName = reference.ToPtrValue(rsp.ResolvedValue)
 	mg.Spec.ForProvider.ResourceGroupNameRef = rsp.ResolvedReference
 
-	rsp, err = r.Resolve(ctx, reference.ResolutionRequest{
-		CurrentValue: reference.FromPtrValue(mg.Spec.ForProvider.VirtualNetworkGatewayID),
-		Extract:      reference.ExternalName(),
-		Reference:    mg.Spec.ForProvider.VirtualNetworkGatewayIDRef,
-		Selector:     mg.Spec.ForProvider.VirtualNetworkGatewayIDSelector,
-		To: reference.To{
-			List:    &VirtualNetworkGatewayList{},
-			Managed: &VirtualNetworkGateway{},
-		},
-	})
-	if err != nil {
-		return errors.Wrap(err, "mg.Spec.ForProvider.VirtualNetworkGatewayID")
-	}
-	mg.Spec.ForProvider.VirtualNetworkGatewayID = reference.ToPtrValue(rsp.ResolvedValue)
-	mg.Spec.ForProvider.VirtualNetworkGatewayIDRef = rsp.ResolvedReference
-
 	return nil
 }
 
@@ -298,22 +204,6 @@ func (mg *VirtualNetworkPeering) ResolveReferences(ctx context.Context, c client
 
 	var rsp reference.ResolutionResponse
 	var err error
-
-	rsp, err = r.Resolve(ctx, reference.ResolutionRequest{
-		CurrentValue: reference.FromPtrValue(mg.Spec.ForProvider.RemoteVirtualNetworkID),
-		Extract:      reference.ExternalName(),
-		Reference:    mg.Spec.ForProvider.RemoteVirtualNetworkIDRef,
-		Selector:     mg.Spec.ForProvider.RemoteVirtualNetworkIDSelector,
-		To: reference.To{
-			List:    &VirtualNetworkList{},
-			Managed: &VirtualNetwork{},
-		},
-	})
-	if err != nil {
-		return errors.Wrap(err, "mg.Spec.ForProvider.RemoteVirtualNetworkID")
-	}
-	mg.Spec.ForProvider.RemoteVirtualNetworkID = reference.ToPtrValue(rsp.ResolvedValue)
-	mg.Spec.ForProvider.RemoteVirtualNetworkIDRef = rsp.ResolvedReference
 
 	rsp, err = r.Resolve(ctx, reference.ResolutionRequest{
 		CurrentValue: reference.FromPtrValue(mg.Spec.ForProvider.ResourceGroupName),

@@ -37,6 +37,9 @@ func Configure(p *config.Provider) {
 			"resource_group_name": config.Reference{
 				Type: rconfig.APISPackagePath + "/azure/v1alpha1.ResourceGroup",
 			},
+			"virtual_network_name": config.Reference{
+				Type: "VirtualNetwork",
+			},
 		}
 		r.UseAsync = true
 		r.ExternalName = config.NameAsIdentifier
@@ -52,9 +55,11 @@ func Configure(p *config.Provider) {
 		r.Kind = "SubnetNATGatewayAssociation"
 		r.ShortGroup = groupNetwork
 		r.References = config.References{
-			"subnet_id": config.Reference{
+			// TODO(aru): as we no longer hold Azure ID of resources in external-name annotation
+			// these references are currently not generated
+			/*"subnet_id": config.Reference{
 				Type: "Subnet",
-			},
+			},*/
 		}
 		r.UseAsync = true
 		r.ExternalName = config.IdentifierFromProvider
@@ -64,9 +69,11 @@ func Configure(p *config.Provider) {
 		r.Kind = "SubnetNetworkSecurityGroupAssociation"
 		r.ShortGroup = groupNetwork
 		r.References = config.References{
-			"subnet_id": config.Reference{
+			// TODO(aru): as we no longer hold Azure ID of resources in external-name annotation
+			// these references are currently not generated
+			/*"subnet_id": config.Reference{
 				Type: "Subnet",
-			},
+			},*/
 		}
 		r.UseAsync = true
 		r.ExternalName = config.IdentifierFromProvider
@@ -93,9 +100,11 @@ func Configure(p *config.Provider) {
 		r.Kind = "SubnetRouteTableAssociation"
 		r.ShortGroup = groupNetwork
 		r.References = config.References{
-			"subnet_id": config.Reference{
+			// TODO(aru): as we no longer hold Azure ID of resources in external-name annotation
+			// these references are currently not generated
+			/*"subnet_id": config.Reference{
 				Type: "Subnet",
-			},
+			},*/
 		}
 		r.UseAsync = true
 		r.ExternalName = config.IdentifierFromProvider
