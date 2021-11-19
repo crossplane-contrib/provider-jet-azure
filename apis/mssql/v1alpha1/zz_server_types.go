@@ -25,6 +25,21 @@ import (
 	v1 "github.com/crossplane/crossplane-runtime/apis/common/v1"
 )
 
+type AzureadAdministratorObservation struct {
+}
+
+type AzureadAdministratorParameters struct {
+
+	// +kubebuilder:validation:Required
+	LoginUsername *string `json:"loginUsername" tf:"login_username,omitempty"`
+
+	// +kubebuilder:validation:Required
+	ObjectID *string `json:"objectId" tf:"object_id,omitempty"`
+
+	// +kubebuilder:validation:Optional
+	TenantID *string `json:"tenantId,omitempty" tf:"tenant_id,omitempty"`
+}
+
 type ExtendedAuditingPolicyObservation struct {
 }
 
@@ -60,6 +75,8 @@ type IdentityParameters struct {
 
 type ServerObservation struct {
 	FullyQualifiedDomainName *string `json:"fullyQualifiedDomainName,omitempty" tf:"fully_qualified_domain_name,omitempty"`
+
+	RestorableDroppedDatabaseIds []*string `json:"restorableDroppedDatabaseIds,omitempty" tf:"restorable_dropped_database_ids,omitempty"`
 }
 
 type ServerParameters struct {
@@ -69,6 +86,9 @@ type ServerParameters struct {
 
 	// +kubebuilder:validation:Required
 	AdministratorLoginPasswordSecretRef v1.SecretKeySelector `json:"administratorLoginPasswordSecretRef" tf:"-"`
+
+	// +kubebuilder:validation:Optional
+	AzureadAdministrator []AzureadAdministratorParameters `json:"azureadAdministrator,omitempty" tf:"azuread_administrator,omitempty"`
 
 	// +kubebuilder:validation:Optional
 	ConnectionPolicy *string `json:"connectionPolicy,omitempty" tf:"connection_policy,omitempty"`
@@ -82,8 +102,11 @@ type ServerParameters struct {
 	// +kubebuilder:validation:Required
 	Location *string `json:"location" tf:"location,omitempty"`
 
-	// +kubebuilder:validation:Required
-	Name *string `json:"name" tf:"name,omitempty"`
+	// +kubebuilder:validation:Optional
+	MinimumTLSVersion *string `json:"minimumTlsVersion,omitempty" tf:"minimum_tls_version,omitempty"`
+
+	// +kubebuilder:validation:Optional
+	PublicNetworkAccessEnabled *bool `json:"publicNetworkAccessEnabled,omitempty" tf:"public_network_access_enabled,omitempty"`
 
 	// +crossplane:generate:reference:type=github.com/crossplane-contrib/provider-jet-azure/apis/azure/v1alpha1.ResourceGroup
 	// +kubebuilder:validation:Optional
@@ -98,38 +121,8 @@ type ServerParameters struct {
 	// +kubebuilder:validation:Optional
 	Tags map[string]*string `json:"tags,omitempty" tf:"tags,omitempty"`
 
-	// +kubebuilder:validation:Optional
-	ThreatDetectionPolicy []ThreatDetectionPolicyParameters `json:"threatDetectionPolicy,omitempty" tf:"threat_detection_policy,omitempty"`
-
 	// +kubebuilder:validation:Required
 	Version *string `json:"version" tf:"version,omitempty"`
-}
-
-type ThreatDetectionPolicyObservation struct {
-}
-
-type ThreatDetectionPolicyParameters struct {
-
-	// +kubebuilder:validation:Optional
-	DisabledAlerts []*string `json:"disabledAlerts,omitempty" tf:"disabled_alerts,omitempty"`
-
-	// +kubebuilder:validation:Optional
-	EmailAccountAdmins *bool `json:"emailAccountAdmins,omitempty" tf:"email_account_admins,omitempty"`
-
-	// +kubebuilder:validation:Optional
-	EmailAddresses []*string `json:"emailAddresses,omitempty" tf:"email_addresses,omitempty"`
-
-	// +kubebuilder:validation:Optional
-	RetentionDays *int64 `json:"retentionDays,omitempty" tf:"retention_days,omitempty"`
-
-	// +kubebuilder:validation:Optional
-	State *string `json:"state,omitempty" tf:"state,omitempty"`
-
-	// +kubebuilder:validation:Optional
-	StorageAccountAccessKeySecretRef *v1.SecretKeySelector `json:"storageAccountAccessKeySecretRef,omitempty" tf:"-"`
-
-	// +kubebuilder:validation:Optional
-	StorageEndpoint *string `json:"storageEndpoint,omitempty" tf:"storage_endpoint,omitempty"`
 }
 
 // ServerSpec defines the desired state of Server

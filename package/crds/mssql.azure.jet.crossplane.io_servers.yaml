@@ -4,9 +4,9 @@ metadata:
   annotations:
     controller-gen.kubebuilder.io/version: v0.6.2
   creationTimestamp: null
-  name: servers.sql.azure.jet.crossplane.io
+  name: servers.mssql.azure.jet.crossplane.io
 spec:
-  group: sql.azure.jet.crossplane.io
+  group: mssql.azure.jet.crossplane.io
   names:
     categories:
     - crossplane
@@ -82,6 +82,20 @@ spec:
                     - name
                     - namespace
                     type: object
+                  azureadAdministrator:
+                    items:
+                      properties:
+                        loginUsername:
+                          type: string
+                        objectId:
+                          type: string
+                        tenantId:
+                          type: string
+                      required:
+                      - loginUsername
+                      - objectId
+                      type: object
+                    type: array
                   connectionPolicy:
                     type: string
                   extendedAuditingPolicy:
@@ -127,8 +141,10 @@ spec:
                     type: array
                   location:
                     type: string
-                  name:
+                  minimumTlsVersion:
                     type: string
+                  publicNetworkAccessEnabled:
+                    type: boolean
                   resourceGroupName:
                     type: string
                   resourceGroupNameRef:
@@ -158,53 +174,12 @@ spec:
                     additionalProperties:
                       type: string
                     type: object
-                  threatDetectionPolicy:
-                    items:
-                      properties:
-                        disabledAlerts:
-                          items:
-                            type: string
-                          type: array
-                        emailAccountAdmins:
-                          type: boolean
-                        emailAddresses:
-                          items:
-                            type: string
-                          type: array
-                        retentionDays:
-                          format: int64
-                          type: integer
-                        state:
-                          type: string
-                        storageAccountAccessKeySecretRef:
-                          description: A SecretKeySelector is a reference to a secret
-                            key in an arbitrary namespace.
-                          properties:
-                            key:
-                              description: The key to select.
-                              type: string
-                            name:
-                              description: Name of the secret.
-                              type: string
-                            namespace:
-                              description: Namespace of the secret.
-                              type: string
-                          required:
-                          - key
-                          - name
-                          - namespace
-                          type: object
-                        storageEndpoint:
-                          type: string
-                      type: object
-                    type: array
                   version:
                     type: string
                 required:
                 - administratorLogin
                 - administratorLoginPasswordSecretRef
                 - location
-                - name
                 - version
                 type: object
               providerConfigRef:
@@ -258,6 +233,10 @@ spec:
                 properties:
                   fullyQualifiedDomainName:
                     type: string
+                  restorableDroppedDatabaseIds:
+                    items:
+                      type: string
+                    type: array
                 type: object
               conditions:
                 description: Conditions of the resource.
