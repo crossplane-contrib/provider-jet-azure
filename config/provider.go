@@ -120,12 +120,7 @@ func GetProvider() *tjconfig.Provider {
 		tjconfig.WithRootGroup("azure.jet.crossplane.io"),
 		tjconfig.WithIncludeList(includedResources),
 		tjconfig.WithSkipList(skipList),
-		tjconfig.WithDefaultResourceFn(
-			func(name string, terraformResource *schema.Resource, opts ...tjconfig.ResourceOption) *tjconfig.Resource {
-				r := tjconfig.DefaultResource(name, terraformResource)
-				r.ExternalName = tjconfig.IdentifierFromProvider
-				return r
-			}),
+		tjconfig.WithDefaultResourceFn(defaultResource(externalNameConfig(), groupOverrides())),
 	)
 
 	for name := range pc.Resources {
@@ -154,4 +149,10 @@ func GetProvider() *tjconfig.Provider {
 
 	pc.ConfigureResources()
 	return pc
+}
+
+func defaultResource(opts ...tjconfig.ResourceOption) tjconfig.DefaultResourceFn {
+	return func(name string, terraformResource *schema.Resource, orgOpts ...tjconfig.ResourceOption) *tjconfig.Resource {
+		return tjconfig.DefaultResource(name, terraformResource, append(orgOpts, opts...)...)
+	}
 }

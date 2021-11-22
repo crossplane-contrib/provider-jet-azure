@@ -20,6 +20,7 @@ package v1alpha1
 import (
 	"context"
 	v1alpha1 "github.com/crossplane-contrib/provider-jet-azure/apis/azure/v1alpha1"
+	v1alpha11 "github.com/crossplane-contrib/provider-jet-azure/apis/storage/v1alpha1"
 	reference "github.com/crossplane/crossplane-runtime/pkg/reference"
 	errors "github.com/pkg/errors"
 	client "sigs.k8s.io/controller-runtime/pkg/client"
@@ -184,6 +185,42 @@ func (mg *IOTHub) ResolveReferences(ctx context.Context, c client.Reader) error 
 	var rsp reference.ResolutionResponse
 	var err error
 
+	for i3 := 0; i3 < len(mg.Spec.ForProvider.Endpoint); i3++ {
+		rsp, err = r.Resolve(ctx, reference.ResolutionRequest{
+			CurrentValue: reference.FromPtrValue(mg.Spec.ForProvider.Endpoint[i3].ContainerName),
+			Extract:      reference.ExternalName(),
+			Reference:    mg.Spec.ForProvider.Endpoint[i3].ContainerNameRef,
+			Selector:     mg.Spec.ForProvider.Endpoint[i3].ContainerNameSelector,
+			To: reference.To{
+				List:    &v1alpha11.ContainerList{},
+				Managed: &v1alpha11.Container{},
+			},
+		})
+		if err != nil {
+			return errors.Wrap(err, "mg.Spec.ForProvider.Endpoint[i3].ContainerName")
+		}
+		mg.Spec.ForProvider.Endpoint[i3].ContainerName = reference.ToPtrValue(rsp.ResolvedValue)
+		mg.Spec.ForProvider.Endpoint[i3].ContainerNameRef = rsp.ResolvedReference
+
+	}
+	for i3 := 0; i3 < len(mg.Spec.ForProvider.Endpoint); i3++ {
+		rsp, err = r.Resolve(ctx, reference.ResolutionRequest{
+			CurrentValue: reference.FromPtrValue(mg.Spec.ForProvider.Endpoint[i3].ResourceGroupName),
+			Extract:      reference.ExternalName(),
+			Reference:    mg.Spec.ForProvider.Endpoint[i3].ResourceGroupNameRef,
+			Selector:     mg.Spec.ForProvider.Endpoint[i3].ResourceGroupNameSelector,
+			To: reference.To{
+				List:    &v1alpha1.ResourceGroupList{},
+				Managed: &v1alpha1.ResourceGroup{},
+			},
+		})
+		if err != nil {
+			return errors.Wrap(err, "mg.Spec.ForProvider.Endpoint[i3].ResourceGroupName")
+		}
+		mg.Spec.ForProvider.Endpoint[i3].ResourceGroupName = reference.ToPtrValue(rsp.ResolvedValue)
+		mg.Spec.ForProvider.Endpoint[i3].ResourceGroupNameRef = rsp.ResolvedReference
+
+	}
 	rsp, err = r.Resolve(ctx, reference.ResolutionRequest{
 		CurrentValue: reference.FromPtrValue(mg.Spec.ForProvider.ResourceGroupName),
 		Extract:      reference.ExternalName(),
