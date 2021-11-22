@@ -36,8 +36,15 @@ type EndpointParameters struct {
 	// +kubebuilder:validation:Required
 	ConnectionStringSecretRef v1.SecretKeySelector `json:"connectionStringSecretRef" tf:"-"`
 
+	// +crossplane:generate:reference:type=github.com/crossplane-contrib/provider-jet-azure/apis/storage/v1alpha1.Container
 	// +kubebuilder:validation:Optional
 	ContainerName *string `json:"containerName,omitempty" tf:"container_name,omitempty"`
+
+	// +kubebuilder:validation:Optional
+	ContainerNameRef *v1.Reference `json:"containerNameRef,omitempty" tf:"-"`
+
+	// +kubebuilder:validation:Optional
+	ContainerNameSelector *v1.Selector `json:"containerNameSelector,omitempty" tf:"-"`
 
 	// +kubebuilder:validation:Optional
 	Encoding *string `json:"encoding,omitempty" tf:"encoding,omitempty"`
@@ -51,8 +58,15 @@ type EndpointParameters struct {
 	// +kubebuilder:validation:Required
 	Name *string `json:"name" tf:"name,omitempty"`
 
+	// +crossplane:generate:reference:type=github.com/crossplane-contrib/provider-jet-azure/apis/azure/v1alpha1.ResourceGroup
 	// +kubebuilder:validation:Optional
 	ResourceGroupName *string `json:"resourceGroupName,omitempty" tf:"resource_group_name,omitempty"`
+
+	// +kubebuilder:validation:Optional
+	ResourceGroupNameRef *v1.Reference `json:"resourceGroupNameRef,omitempty" tf:"-"`
+
+	// +kubebuilder:validation:Optional
+	ResourceGroupNameSelector *v1.Selector `json:"resourceGroupNameSelector,omitempty" tf:"-"`
 
 	// +kubebuilder:validation:Required
 	Type *string `json:"type" tf:"type,omitempty"`

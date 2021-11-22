@@ -15,3 +15,6 @@ spec:
       provisioner: crossplane
   providerConfigRef:
     name: example
+  writeConnectionSecretToRef:
+    name: example-storage-account
+    namespace: crossplane-system

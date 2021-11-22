@@ -915,6 +915,16 @@ func (in *EndpointParameters) DeepCopyInto(out *EndpointParameters) {
 		*out = new(string)
 		**out = **in
 	}
+	if in.ContainerNameRef != nil {
+		in, out := &in.ContainerNameRef, &out.ContainerNameRef
+		*out = new(v1.Reference)
+		**out = **in
+	}
+	if in.ContainerNameSelector != nil {
+		in, out := &in.ContainerNameSelector, &out.ContainerNameSelector
+		*out = new(v1.Selector)
+		(*in).DeepCopyInto(*out)
+	}
 	if in.Encoding != nil {
 		in, out := &in.Encoding, &out.Encoding
 		*out = new(string)
@@ -939,6 +949,16 @@ func (in *EndpointParameters) DeepCopyInto(out *EndpointParameters) {
 		in, out := &in.ResourceGroupName, &out.ResourceGroupName
 		*out = new(string)
 		**out = **in
+	}
+	if in.ResourceGroupNameRef != nil {
+		in, out := &in.ResourceGroupNameRef, &out.ResourceGroupNameRef
+		*out = new(v1.Reference)
+		**out = **in
+	}
+	if in.ResourceGroupNameSelector != nil {
+		in, out := &in.ResourceGroupNameSelector, &out.ResourceGroupNameSelector
+		*out = new(v1.Selector)
+		(*in).DeepCopyInto(*out)
 	}
 	if in.Type != nil {
 		in, out := &in.Type, &out.Type
