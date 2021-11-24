@@ -29,6 +29,7 @@ import (
 	"github.com/crossplane-contrib/provider-jet-azure/config/kubernetes"
 	"github.com/crossplane-contrib/provider-jet-azure/config/loganalytics"
 	"github.com/crossplane-contrib/provider-jet-azure/config/management"
+	"github.com/crossplane-contrib/provider-jet-azure/config/monitor"
 	"github.com/crossplane-contrib/provider-jet-azure/config/network"
 	"github.com/crossplane-contrib/provider-jet-azure/config/postgresql"
 	"github.com/crossplane-contrib/provider-jet-azure/config/resource"
@@ -58,6 +59,7 @@ var includedResources = []string{
 	"azurerm_lb$",
 	"azurerm_log_analytics_workspace",
 	"azurerm_iothub.*",
+	"azurerm_monitor_metric_alert",
 }
 
 // These resources cannot be generated because of their suffixes colliding with
@@ -143,6 +145,7 @@ func GetProvider() *tjconfig.Provider {
 		storage.Configure,
 		loganalytics.Configure,
 		iothub.Configure,
+		monitor.Configure,
 	} {
 		configure(pc)
 	}

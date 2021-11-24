@@ -57,6 +57,7 @@ import (
 	route "github.com/crossplane-contrib/provider-jet-azure/internal/controller/iothub/route"
 	sharedaccesspolicy "github.com/crossplane-contrib/provider-jet-azure/internal/controller/iothub/sharedaccesspolicy"
 	workspace "github.com/crossplane-contrib/provider-jet-azure/internal/controller/loganalytics/workspace"
+	metricalert "github.com/crossplane-contrib/provider-jet-azure/internal/controller/monitor/metricalert"
 	server "github.com/crossplane-contrib/provider-jet-azure/internal/controller/mssql/server"
 	loadbalancer "github.com/crossplane-contrib/provider-jet-azure/internal/controller/network/loadbalancer"
 	subnet "github.com/crossplane-contrib/provider-jet-azure/internal/controller/network/subnet"
@@ -123,6 +124,7 @@ func Setup(mgr ctrl.Manager, l logging.Logger, wl workqueue.RateLimiter, ps terr
 		route.Setup,
 		sharedaccesspolicy.Setup,
 		workspace.Setup,
+		metricalert.Setup,
 		server.Setup,
 		loadbalancer.Setup,
 		subnet.Setup,
