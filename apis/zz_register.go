@@ -28,6 +28,7 @@ import (
 	v1alpha1cosmosdb "github.com/crossplane-contrib/provider-jet-azure/apis/cosmosdb/v1alpha1"
 	v1alpha1iothub "github.com/crossplane-contrib/provider-jet-azure/apis/iothub/v1alpha1"
 	v1alpha1loganalytics "github.com/crossplane-contrib/provider-jet-azure/apis/loganalytics/v1alpha1"
+	v1alpha1monitor "github.com/crossplane-contrib/provider-jet-azure/apis/monitor/v1alpha1"
 	v1alpha1mssql "github.com/crossplane-contrib/provider-jet-azure/apis/mssql/v1alpha1"
 	v1alpha1network "github.com/crossplane-contrib/provider-jet-azure/apis/network/v1alpha1"
 	v1alpha1postgresql "github.com/crossplane-contrib/provider-jet-azure/apis/postgresql/v1alpha1"
@@ -46,6 +47,7 @@ func init() {
 		v1alpha1cosmosdb.SchemeBuilder.AddToScheme,
 		v1alpha1iothub.SchemeBuilder.AddToScheme,
 		v1alpha1loganalytics.SchemeBuilder.AddToScheme,
+		v1alpha1monitor.SchemeBuilder.AddToScheme,
 		v1alpha1mssql.SchemeBuilder.AddToScheme,
 		v1alpha1network.SchemeBuilder.AddToScheme,
 		v1alpha1postgresql.SchemeBuilder.AddToScheme,
