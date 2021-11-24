@@ -43,6 +43,19 @@ import (
 	sqlstoredprocedure "github.com/crossplane-contrib/provider-jet-azure/internal/controller/cosmosdb/sqlstoredprocedure"
 	sqltrigger "github.com/crossplane-contrib/provider-jet-azure/internal/controller/cosmosdb/sqltrigger"
 	table "github.com/crossplane-contrib/provider-jet-azure/internal/controller/cosmosdb/table"
+	consumergroup "github.com/crossplane-contrib/provider-jet-azure/internal/controller/iothub/consumergroup"
+	dps "github.com/crossplane-contrib/provider-jet-azure/internal/controller/iothub/dps"
+	dpscertificate "github.com/crossplane-contrib/provider-jet-azure/internal/controller/iothub/dpscertificate"
+	dpssharedaccesspolicy "github.com/crossplane-contrib/provider-jet-azure/internal/controller/iothub/dpssharedaccesspolicy"
+	endpointeventhub "github.com/crossplane-contrib/provider-jet-azure/internal/controller/iothub/endpointeventhub"
+	endpointservicebusqueue "github.com/crossplane-contrib/provider-jet-azure/internal/controller/iothub/endpointservicebusqueue"
+	endpointservicebustopic "github.com/crossplane-contrib/provider-jet-azure/internal/controller/iothub/endpointservicebustopic"
+	endpointstoragecontainer "github.com/crossplane-contrib/provider-jet-azure/internal/controller/iothub/endpointstoragecontainer"
+	enrichment "github.com/crossplane-contrib/provider-jet-azure/internal/controller/iothub/enrichment"
+	fallbackroute "github.com/crossplane-contrib/provider-jet-azure/internal/controller/iothub/fallbackroute"
+	iothub "github.com/crossplane-contrib/provider-jet-azure/internal/controller/iothub/iothub"
+	route "github.com/crossplane-contrib/provider-jet-azure/internal/controller/iothub/route"
+	sharedaccesspolicy "github.com/crossplane-contrib/provider-jet-azure/internal/controller/iothub/sharedaccesspolicy"
 	workspace "github.com/crossplane-contrib/provider-jet-azure/internal/controller/loganalytics/workspace"
 	server "github.com/crossplane-contrib/provider-jet-azure/internal/controller/mssql/server"
 	loadbalancer "github.com/crossplane-contrib/provider-jet-azure/internal/controller/network/loadbalancer"
@@ -96,6 +109,19 @@ func Setup(mgr ctrl.Manager, l logging.Logger, wl workqueue.RateLimiter, ps terr
 		sqlstoredprocedure.Setup,
 		sqltrigger.Setup,
 		table.Setup,
+		consumergroup.Setup,
+		dps.Setup,
+		dpscertificate.Setup,
+		dpssharedaccesspolicy.Setup,
+		endpointeventhub.Setup,
+		endpointservicebusqueue.Setup,
+		endpointservicebustopic.Setup,
+		endpointstoragecontainer.Setup,
+		enrichment.Setup,
+		fallbackroute.Setup,
+		iothub.Setup,
+		route.Setup,
+		sharedaccesspolicy.Setup,
 		workspace.Setup,
 		server.Setup,
 		loadbalancer.Setup,
