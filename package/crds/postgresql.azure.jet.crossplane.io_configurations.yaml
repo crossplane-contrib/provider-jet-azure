@@ -62,6 +62,8 @@ spec:
                 type: string
               forProvider:
                 properties:
+                  name:
+                    type: string
                   resourceGroupName:
                     type: string
                   resourceGroupNameRef:
@@ -115,6 +117,7 @@ spec:
                   value:
                     type: string
                 required:
+                - name
                 - value
                 type: object
               providerConfigRef:

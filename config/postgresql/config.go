@@ -246,10 +246,7 @@ func Configure(p *config.Provider) {
 				Type: "Server",
 			},
 		}
-		r.UseAsync = true
-		r.ExternalName = config.NameAsIdentifier
-		r.ExternalName.GetExternalNameFn = common.GetNameFromFullyQualifiedID
 		// /subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/mygroup1/providers/Microsoft.DBforPostgreSQL/servers/server1/configurations/backslash_quote
-		r.ExternalName.GetIDFn = common.GetFullyQualifiedIDFn("Microsoft.DBforPostgreSQL", "servers", "server_name", "configurations", "name")
+		r.ExternalName = config.IdentifierFromProvider
 	})
 }
