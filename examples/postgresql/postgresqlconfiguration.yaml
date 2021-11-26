@@ -2,10 +2,9 @@ apiVersion: postgresql.azure.jet.crossplane.io/v1alpha1
 kind: Configuration
 metadata:
   name: example-psql-configuration
-  annotations:
-    crossplane.io/external-name: array_nulls
 spec:
   forProvider:
+    name: array_nulls
     resourceGroupNameRef:
       name: example
     serverNameRef:
