@@ -52,24 +52,6 @@ type CustomRouteParameters struct {
 	AddressPrefixes []*string `json:"addressPrefixes,omitempty" tf:"address_prefixes,omitempty"`
 }
 
-type IPConfigurationObservation struct {
-}
-
-type IPConfigurationParameters struct {
-
-	// +kubebuilder:validation:Optional
-	Name *string `json:"name,omitempty" tf:"name,omitempty"`
-
-	// +kubebuilder:validation:Optional
-	PrivateIPAddressAllocation *string `json:"privateIpAddressAllocation,omitempty" tf:"private_ip_address_allocation,omitempty"`
-
-	// +kubebuilder:validation:Required
-	PublicIPAddressID *string `json:"publicIpAddressId" tf:"public_ip_address_id,omitempty"`
-
-	// +kubebuilder:validation:Required
-	SubnetID *string `json:"subnetId" tf:"subnet_id,omitempty"`
-}
-
 type PeeringAddressesObservation struct {
 	DefaultAddresses []*string `json:"defaultAddresses,omitempty" tf:"default_addresses,omitempty"`
 
@@ -109,6 +91,24 @@ type RootCertificateParameters struct {
 	PublicCertData *string `json:"publicCertData" tf:"public_cert_data,omitempty"`
 }
 
+type VirtualNetworkGatewayIPConfigurationObservation struct {
+}
+
+type VirtualNetworkGatewayIPConfigurationParameters struct {
+
+	// +kubebuilder:validation:Optional
+	Name *string `json:"name,omitempty" tf:"name,omitempty"`
+
+	// +kubebuilder:validation:Optional
+	PrivateIPAddressAllocation *string `json:"privateIpAddressAllocation,omitempty" tf:"private_ip_address_allocation,omitempty"`
+
+	// +kubebuilder:validation:Required
+	PublicIPAddressID *string `json:"publicIpAddressId" tf:"public_ip_address_id,omitempty"`
+
+	// +kubebuilder:validation:Required
+	SubnetID *string `json:"subnetId" tf:"subnet_id,omitempty"`
+}
+
 type VirtualNetworkGatewayObservation struct {
 }
 
@@ -133,7 +133,7 @@ type VirtualNetworkGatewayParameters struct {
 	Generation *string `json:"generation,omitempty" tf:"generation,omitempty"`
 
 	// +kubebuilder:validation:Required
-	IPConfiguration []IPConfigurationParameters `json:"ipConfiguration" tf:"ip_configuration,omitempty"`
+	IPConfiguration []VirtualNetworkGatewayIPConfigurationParameters `json:"ipConfiguration" tf:"ip_configuration,omitempty"`
 
 	// +kubebuilder:validation:Required
 	Location *string `json:"location" tf:"location,omitempty"`

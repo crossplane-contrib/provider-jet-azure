@@ -22,39 +22,247 @@ package apis
 import (
 	"k8s.io/apimachinery/pkg/runtime"
 
-	v1alpha1 "github.com/crossplane-contrib/provider-jet-azure/apis/authorization/v1alpha1"
+	v1alpha1 "github.com/crossplane-contrib/provider-jet-azure/apis/active/v1alpha1"
+	v1alpha1advanced "github.com/crossplane-contrib/provider-jet-azure/apis/advanced/v1alpha1"
+	v1alpha1analysis "github.com/crossplane-contrib/provider-jet-azure/apis/analysis/v1alpha1"
+	v1alpha1api "github.com/crossplane-contrib/provider-jet-azure/apis/api/v1alpha1"
+	v1alpha1app "github.com/crossplane-contrib/provider-jet-azure/apis/app/v1alpha1"
+	v1alpha1application "github.com/crossplane-contrib/provider-jet-azure/apis/application/v1alpha1"
+	v1alpha1attestation "github.com/crossplane-contrib/provider-jet-azure/apis/attestation/v1alpha1"
+	v1alpha1authorization "github.com/crossplane-contrib/provider-jet-azure/apis/authorization/v1alpha1"
+	v1alpha1automation "github.com/crossplane-contrib/provider-jet-azure/apis/automation/v1alpha1"
+	v1alpha1availability "github.com/crossplane-contrib/provider-jet-azure/apis/availability/v1alpha1"
 	v1alpha1azure "github.com/crossplane-contrib/provider-jet-azure/apis/azure/v1alpha1"
+	v1alpha1azurerm "github.com/crossplane-contrib/provider-jet-azure/apis/azurerm/v1alpha1"
+	v1alpha1backup "github.com/crossplane-contrib/provider-jet-azure/apis/backup/v1alpha1"
+	v1alpha1bastion "github.com/crossplane-contrib/provider-jet-azure/apis/bastion/v1alpha1"
+	v1alpha1batch "github.com/crossplane-contrib/provider-jet-azure/apis/batch/v1alpha1"
+	v1alpha1blueprint "github.com/crossplane-contrib/provider-jet-azure/apis/blueprint/v1alpha1"
+	v1alpha1bot "github.com/crossplane-contrib/provider-jet-azure/apis/bot/v1alpha1"
+	v1alpha1cdn "github.com/crossplane-contrib/provider-jet-azure/apis/cdn/v1alpha1"
+	v1alpha1cognitive "github.com/crossplane-contrib/provider-jet-azure/apis/cognitive/v1alpha1"
+	v1alpha1communication "github.com/crossplane-contrib/provider-jet-azure/apis/communication/v1alpha1"
+	v1alpha1consumption "github.com/crossplane-contrib/provider-jet-azure/apis/consumption/v1alpha1"
+	v1alpha1container "github.com/crossplane-contrib/provider-jet-azure/apis/container/v1alpha1"
 	v1alpha1containerservice "github.com/crossplane-contrib/provider-jet-azure/apis/containerservice/v1alpha1"
 	v1alpha1cosmosdb "github.com/crossplane-contrib/provider-jet-azure/apis/cosmosdb/v1alpha1"
+	v1alpha1cost "github.com/crossplane-contrib/provider-jet-azure/apis/cost/v1alpha1"
+	v1alpha1custom "github.com/crossplane-contrib/provider-jet-azure/apis/custom/v1alpha1"
+	v1alpha1data "github.com/crossplane-contrib/provider-jet-azure/apis/data/v1alpha1"
+	v1alpha1database "github.com/crossplane-contrib/provider-jet-azure/apis/database/v1alpha1"
+	v1alpha1databox "github.com/crossplane-contrib/provider-jet-azure/apis/databox/v1alpha1"
+	v1alpha1databricks "github.com/crossplane-contrib/provider-jet-azure/apis/databricks/v1alpha1"
+	v1alpha1dedicated "github.com/crossplane-contrib/provider-jet-azure/apis/dedicated/v1alpha1"
+	v1alpha1dev "github.com/crossplane-contrib/provider-jet-azure/apis/dev/v1alpha1"
+	v1alpha1devspace "github.com/crossplane-contrib/provider-jet-azure/apis/devspace/v1alpha1"
+	v1alpha1digital "github.com/crossplane-contrib/provider-jet-azure/apis/digital/v1alpha1"
+	v1alpha1disk "github.com/crossplane-contrib/provider-jet-azure/apis/disk/v1alpha1"
+	v1alpha1dns "github.com/crossplane-contrib/provider-jet-azure/apis/dns/v1alpha1"
+	v1alpha1eventgrid "github.com/crossplane-contrib/provider-jet-azure/apis/eventgrid/v1alpha1"
+	v1alpha1eventhub "github.com/crossplane-contrib/provider-jet-azure/apis/eventhub/v1alpha1"
+	v1alpha1express "github.com/crossplane-contrib/provider-jet-azure/apis/express/v1alpha1"
+	v1alpha1firewall "github.com/crossplane-contrib/provider-jet-azure/apis/firewall/v1alpha1"
+	v1alpha1frontdoor "github.com/crossplane-contrib/provider-jet-azure/apis/frontdoor/v1alpha1"
+	v1alpha1function "github.com/crossplane-contrib/provider-jet-azure/apis/function/v1alpha1"
+	v1alpha1hdinsight "github.com/crossplane-contrib/provider-jet-azure/apis/hdinsight/v1alpha1"
+	v1alpha1healthcare "github.com/crossplane-contrib/provider-jet-azure/apis/healthcare/v1alpha1"
+	v1alpha1hpc "github.com/crossplane-contrib/provider-jet-azure/apis/hpc/v1alpha1"
+	v1alpha1integration "github.com/crossplane-contrib/provider-jet-azure/apis/integration/v1alpha1"
+	v1alpha1iot "github.com/crossplane-contrib/provider-jet-azure/apis/iot/v1alpha1"
+	v1alpha1iotcentral "github.com/crossplane-contrib/provider-jet-azure/apis/iotcentral/v1alpha1"
 	v1alpha1iothub "github.com/crossplane-contrib/provider-jet-azure/apis/iothub/v1alpha1"
+	v1alpha1key "github.com/crossplane-contrib/provider-jet-azure/apis/key/v1alpha1"
+	v1alpha1kusto "github.com/crossplane-contrib/provider-jet-azure/apis/kusto/v1alpha1"
+	v1alpha1lb "github.com/crossplane-contrib/provider-jet-azure/apis/lb/v1alpha1"
+	v1alpha1lighthouse "github.com/crossplane-contrib/provider-jet-azure/apis/lighthouse/v1alpha1"
+	v1alpha1linux "github.com/crossplane-contrib/provider-jet-azure/apis/linux/v1alpha1"
+	v1alpha1local "github.com/crossplane-contrib/provider-jet-azure/apis/local/v1alpha1"
+	v1alpha1log "github.com/crossplane-contrib/provider-jet-azure/apis/log/v1alpha1"
 	v1alpha1loganalytics "github.com/crossplane-contrib/provider-jet-azure/apis/loganalytics/v1alpha1"
+	v1alpha1logic "github.com/crossplane-contrib/provider-jet-azure/apis/logic/v1alpha1"
+	v1alpha1machine "github.com/crossplane-contrib/provider-jet-azure/apis/machine/v1alpha1"
+	v1alpha1maintenance "github.com/crossplane-contrib/provider-jet-azure/apis/maintenance/v1alpha1"
+	v1alpha1managed "github.com/crossplane-contrib/provider-jet-azure/apis/managed/v1alpha1"
+	v1alpha1management "github.com/crossplane-contrib/provider-jet-azure/apis/management/v1alpha1"
+	v1alpha1maps "github.com/crossplane-contrib/provider-jet-azure/apis/maps/v1alpha1"
+	v1alpha1mariadb "github.com/crossplane-contrib/provider-jet-azure/apis/mariadb/v1alpha1"
+	v1alpha1marketplace "github.com/crossplane-contrib/provider-jet-azure/apis/marketplace/v1alpha1"
+	v1alpha1media "github.com/crossplane-contrib/provider-jet-azure/apis/media/v1alpha1"
 	v1alpha1monitor "github.com/crossplane-contrib/provider-jet-azure/apis/monitor/v1alpha1"
 	v1alpha1mssql "github.com/crossplane-contrib/provider-jet-azure/apis/mssql/v1alpha1"
+	v1alpha1mysql "github.com/crossplane-contrib/provider-jet-azure/apis/mysql/v1alpha1"
+	v1alpha1nat "github.com/crossplane-contrib/provider-jet-azure/apis/nat/v1alpha1"
+	v1alpha1netapp "github.com/crossplane-contrib/provider-jet-azure/apis/netapp/v1alpha1"
 	v1alpha1network "github.com/crossplane-contrib/provider-jet-azure/apis/network/v1alpha1"
+	v1alpha1notification "github.com/crossplane-contrib/provider-jet-azure/apis/notification/v1alpha1"
+	v1alpha1orchestrated "github.com/crossplane-contrib/provider-jet-azure/apis/orchestrated/v1alpha1"
+	v1alpha1packet "github.com/crossplane-contrib/provider-jet-azure/apis/packet/v1alpha1"
+	v1alpha1point "github.com/crossplane-contrib/provider-jet-azure/apis/point/v1alpha1"
+	v1alpha1policy "github.com/crossplane-contrib/provider-jet-azure/apis/policy/v1alpha1"
+	v1alpha1portal "github.com/crossplane-contrib/provider-jet-azure/apis/portal/v1alpha1"
 	v1alpha1postgresql "github.com/crossplane-contrib/provider-jet-azure/apis/postgresql/v1alpha1"
+	v1alpha1powerbi "github.com/crossplane-contrib/provider-jet-azure/apis/powerbi/v1alpha1"
+	v1alpha1private "github.com/crossplane-contrib/provider-jet-azure/apis/private/v1alpha1"
+	v1alpha1proximity "github.com/crossplane-contrib/provider-jet-azure/apis/proximity/v1alpha1"
+	v1alpha1public "github.com/crossplane-contrib/provider-jet-azure/apis/public/v1alpha1"
+	v1alpha1purview "github.com/crossplane-contrib/provider-jet-azure/apis/purview/v1alpha1"
+	v1alpha1recovery "github.com/crossplane-contrib/provider-jet-azure/apis/recovery/v1alpha1"
+	v1alpha1redis "github.com/crossplane-contrib/provider-jet-azure/apis/redis/v1alpha1"
+	v1alpha1relay "github.com/crossplane-contrib/provider-jet-azure/apis/relay/v1alpha1"
+	v1alpha1resource "github.com/crossplane-contrib/provider-jet-azure/apis/resource/v1alpha1"
 	v1alpha1resources "github.com/crossplane-contrib/provider-jet-azure/apis/resources/v1alpha1"
+	v1alpha1role "github.com/crossplane-contrib/provider-jet-azure/apis/role/v1alpha1"
+	v1alpha1search "github.com/crossplane-contrib/provider-jet-azure/apis/search/v1alpha1"
+	v1alpha1security "github.com/crossplane-contrib/provider-jet-azure/apis/security/v1alpha1"
+	v1alpha1sentinel "github.com/crossplane-contrib/provider-jet-azure/apis/sentinel/v1alpha1"
+	v1alpha1service "github.com/crossplane-contrib/provider-jet-azure/apis/service/v1alpha1"
+	v1alpha1servicebus "github.com/crossplane-contrib/provider-jet-azure/apis/servicebus/v1alpha1"
+	v1alpha1shared "github.com/crossplane-contrib/provider-jet-azure/apis/shared/v1alpha1"
+	v1alpha1signalr "github.com/crossplane-contrib/provider-jet-azure/apis/signalr/v1alpha1"
+	v1alpha1site "github.com/crossplane-contrib/provider-jet-azure/apis/site/v1alpha1"
+	v1alpha1spatial "github.com/crossplane-contrib/provider-jet-azure/apis/spatial/v1alpha1"
+	v1alpha1spring "github.com/crossplane-contrib/provider-jet-azure/apis/spring/v1alpha1"
 	v1alpha1sql "github.com/crossplane-contrib/provider-jet-azure/apis/sql/v1alpha1"
+	v1alpha1ssh "github.com/crossplane-contrib/provider-jet-azure/apis/ssh/v1alpha1"
+	v1alpha1stack "github.com/crossplane-contrib/provider-jet-azure/apis/stack/v1alpha1"
+	v1alpha1static "github.com/crossplane-contrib/provider-jet-azure/apis/static/v1alpha1"
 	v1alpha1storage "github.com/crossplane-contrib/provider-jet-azure/apis/storage/v1alpha1"
+	v1alpha1stream "github.com/crossplane-contrib/provider-jet-azure/apis/stream/v1alpha1"
+	v1alpha1subscription "github.com/crossplane-contrib/provider-jet-azure/apis/subscription/v1alpha1"
+	v1alpha1synapse "github.com/crossplane-contrib/provider-jet-azure/apis/synapse/v1alpha1"
+	v1alpha1template "github.com/crossplane-contrib/provider-jet-azure/apis/template/v1alpha1"
+	v1alpha1tenant "github.com/crossplane-contrib/provider-jet-azure/apis/tenant/v1alpha1"
+	v1alpha1traffic "github.com/crossplane-contrib/provider-jet-azure/apis/traffic/v1alpha1"
+	v1alpha1user "github.com/crossplane-contrib/provider-jet-azure/apis/user/v1alpha1"
 	v1alpha1apis "github.com/crossplane-contrib/provider-jet-azure/apis/v1alpha1"
+	v1alpha1video "github.com/crossplane-contrib/provider-jet-azure/apis/video/v1alpha1"
+	v1alpha1vmware "github.com/crossplane-contrib/provider-jet-azure/apis/vmware/v1alpha1"
+	v1alpha1vpn "github.com/crossplane-contrib/provider-jet-azure/apis/vpn/v1alpha1"
+	v1alpha1web "github.com/crossplane-contrib/provider-jet-azure/apis/web/v1alpha1"
+	v1alpha1windows "github.com/crossplane-contrib/provider-jet-azure/apis/windows/v1alpha1"
 )
 
 func init() {
 	// Register the types with the Scheme so the components can map objects to GroupVersionKinds and back
 	AddToSchemes = append(AddToSchemes,
 		v1alpha1.SchemeBuilder.AddToScheme,
+		v1alpha1advanced.SchemeBuilder.AddToScheme,
+		v1alpha1analysis.SchemeBuilder.AddToScheme,
+		v1alpha1api.SchemeBuilder.AddToScheme,
+		v1alpha1app.SchemeBuilder.AddToScheme,
+		v1alpha1application.SchemeBuilder.AddToScheme,
+		v1alpha1attestation.SchemeBuilder.AddToScheme,
+		v1alpha1authorization.SchemeBuilder.AddToScheme,
+		v1alpha1automation.SchemeBuilder.AddToScheme,
+		v1alpha1availability.SchemeBuilder.AddToScheme,
 		v1alpha1azure.SchemeBuilder.AddToScheme,
+		v1alpha1azurerm.SchemeBuilder.AddToScheme,
+		v1alpha1backup.SchemeBuilder.AddToScheme,
+		v1alpha1bastion.SchemeBuilder.AddToScheme,
+		v1alpha1batch.SchemeBuilder.AddToScheme,
+		v1alpha1blueprint.SchemeBuilder.AddToScheme,
+		v1alpha1bot.SchemeBuilder.AddToScheme,
+		v1alpha1cdn.SchemeBuilder.AddToScheme,
+		v1alpha1cognitive.SchemeBuilder.AddToScheme,
+		v1alpha1communication.SchemeBuilder.AddToScheme,
+		v1alpha1consumption.SchemeBuilder.AddToScheme,
+		v1alpha1container.SchemeBuilder.AddToScheme,
 		v1alpha1containerservice.SchemeBuilder.AddToScheme,
 		v1alpha1cosmosdb.SchemeBuilder.AddToScheme,
+		v1alpha1cost.SchemeBuilder.AddToScheme,
+		v1alpha1custom.SchemeBuilder.AddToScheme,
+		v1alpha1data.SchemeBuilder.AddToScheme,
+		v1alpha1database.SchemeBuilder.AddToScheme,
+		v1alpha1databox.SchemeBuilder.AddToScheme,
+		v1alpha1databricks.SchemeBuilder.AddToScheme,
+		v1alpha1dedicated.SchemeBuilder.AddToScheme,
+		v1alpha1dev.SchemeBuilder.AddToScheme,
+		v1alpha1devspace.SchemeBuilder.AddToScheme,
+		v1alpha1digital.SchemeBuilder.AddToScheme,
+		v1alpha1disk.SchemeBuilder.AddToScheme,
+		v1alpha1dns.SchemeBuilder.AddToScheme,
+		v1alpha1eventgrid.SchemeBuilder.AddToScheme,
+		v1alpha1eventhub.SchemeBuilder.AddToScheme,
+		v1alpha1express.SchemeBuilder.AddToScheme,
+		v1alpha1firewall.SchemeBuilder.AddToScheme,
+		v1alpha1frontdoor.SchemeBuilder.AddToScheme,
+		v1alpha1function.SchemeBuilder.AddToScheme,
+		v1alpha1hdinsight.SchemeBuilder.AddToScheme,
+		v1alpha1healthcare.SchemeBuilder.AddToScheme,
+		v1alpha1hpc.SchemeBuilder.AddToScheme,
+		v1alpha1integration.SchemeBuilder.AddToScheme,
+		v1alpha1iot.SchemeBuilder.AddToScheme,
+		v1alpha1iotcentral.SchemeBuilder.AddToScheme,
 		v1alpha1iothub.SchemeBuilder.AddToScheme,
+		v1alpha1key.SchemeBuilder.AddToScheme,
+		v1alpha1kusto.SchemeBuilder.AddToScheme,
+		v1alpha1lb.SchemeBuilder.AddToScheme,
+		v1alpha1lighthouse.SchemeBuilder.AddToScheme,
+		v1alpha1linux.SchemeBuilder.AddToScheme,
+		v1alpha1local.SchemeBuilder.AddToScheme,
+		v1alpha1log.SchemeBuilder.AddToScheme,
 		v1alpha1loganalytics.SchemeBuilder.AddToScheme,
+		v1alpha1logic.SchemeBuilder.AddToScheme,
+		v1alpha1machine.SchemeBuilder.AddToScheme,
+		v1alpha1maintenance.SchemeBuilder.AddToScheme,
+		v1alpha1managed.SchemeBuilder.AddToScheme,
+		v1alpha1management.SchemeBuilder.AddToScheme,
+		v1alpha1maps.SchemeBuilder.AddToScheme,
+		v1alpha1mariadb.SchemeBuilder.AddToScheme,
+		v1alpha1marketplace.SchemeBuilder.AddToScheme,
+		v1alpha1media.SchemeBuilder.AddToScheme,
 		v1alpha1monitor.SchemeBuilder.AddToScheme,
 		v1alpha1mssql.SchemeBuilder.AddToScheme,
+		v1alpha1mysql.SchemeBuilder.AddToScheme,
+		v1alpha1nat.SchemeBuilder.AddToScheme,
+		v1alpha1netapp.SchemeBuilder.AddToScheme,
 		v1alpha1network.SchemeBuilder.AddToScheme,
+		v1alpha1notification.SchemeBuilder.AddToScheme,
+		v1alpha1orchestrated.SchemeBuilder.AddToScheme,
+		v1alpha1packet.SchemeBuilder.AddToScheme,
+		v1alpha1point.SchemeBuilder.AddToScheme,
+		v1alpha1policy.SchemeBuilder.AddToScheme,
+		v1alpha1portal.SchemeBuilder.AddToScheme,
 		v1alpha1postgresql.SchemeBuilder.AddToScheme,
+		v1alpha1powerbi.SchemeBuilder.AddToScheme,
+		v1alpha1private.SchemeBuilder.AddToScheme,
+		v1alpha1proximity.SchemeBuilder.AddToScheme,
+		v1alpha1public.SchemeBuilder.AddToScheme,
+		v1alpha1purview.SchemeBuilder.AddToScheme,
+		v1alpha1recovery.SchemeBuilder.AddToScheme,
+		v1alpha1redis.SchemeBuilder.AddToScheme,
+		v1alpha1relay.SchemeBuilder.AddToScheme,
+		v1alpha1resource.SchemeBuilder.AddToScheme,
 		v1alpha1resources.SchemeBuilder.AddToScheme,
+		v1alpha1role.SchemeBuilder.AddToScheme,
+		v1alpha1search.SchemeBuilder.AddToScheme,
+		v1alpha1security.SchemeBuilder.AddToScheme,
+		v1alpha1sentinel.SchemeBuilder.AddToScheme,
+		v1alpha1service.SchemeBuilder.AddToScheme,
+		v1alpha1servicebus.SchemeBuilder.AddToScheme,
+		v1alpha1shared.SchemeBuilder.AddToScheme,
+		v1alpha1signalr.SchemeBuilder.AddToScheme,
+		v1alpha1site.SchemeBuilder.AddToScheme,
+		v1alpha1spatial.SchemeBuilder.AddToScheme,
+		v1alpha1spring.SchemeBuilder.AddToScheme,
 		v1alpha1sql.SchemeBuilder.AddToScheme,
+		v1alpha1ssh.SchemeBuilder.AddToScheme,
+		v1alpha1stack.SchemeBuilder.AddToScheme,
+		v1alpha1static.SchemeBuilder.AddToScheme,
 		v1alpha1storage.SchemeBuilder.AddToScheme,
+		v1alpha1stream.SchemeBuilder.AddToScheme,
+		v1alpha1subscription.SchemeBuilder.AddToScheme,
+		v1alpha1synapse.SchemeBuilder.AddToScheme,
+		v1alpha1template.SchemeBuilder.AddToScheme,
+		v1alpha1tenant.SchemeBuilder.AddToScheme,
+		v1alpha1traffic.SchemeBuilder.AddToScheme,
+		v1alpha1user.SchemeBuilder.AddToScheme,
 		v1alpha1apis.SchemeBuilder.AddToScheme,
+		v1alpha1video.SchemeBuilder.AddToScheme,
+		v1alpha1vmware.SchemeBuilder.AddToScheme,
+		v1alpha1vpn.SchemeBuilder.AddToScheme,
+		v1alpha1web.SchemeBuilder.AddToScheme,
+		v1alpha1windows.SchemeBuilder.AddToScheme,
 	)
 }
 
