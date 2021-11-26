@@ -19,6 +19,398 @@ package v1alpha1
 
 import xpv1 "github.com/crossplane/crossplane-runtime/apis/common/v1"
 
+// GetCondition of this AadDiagnosticSetting.
+func (mg *AadDiagnosticSetting) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
+	return mg.Status.GetCondition(ct)
+}
+
+// GetDeletionPolicy of this AadDiagnosticSetting.
+func (mg *AadDiagnosticSetting) GetDeletionPolicy() xpv1.DeletionPolicy {
+	return mg.Spec.DeletionPolicy
+}
+
+// GetProviderConfigReference of this AadDiagnosticSetting.
+func (mg *AadDiagnosticSetting) GetProviderConfigReference() *xpv1.Reference {
+	return mg.Spec.ProviderConfigReference
+}
+
+/*
+GetProviderReference of this AadDiagnosticSetting.
+Deprecated: Use GetProviderConfigReference.
+*/
+func (mg *AadDiagnosticSetting) GetProviderReference() *xpv1.Reference {
+	return mg.Spec.ProviderReference
+}
+
+// GetWriteConnectionSecretToReference of this AadDiagnosticSetting.
+func (mg *AadDiagnosticSetting) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
+	return mg.Spec.WriteConnectionSecretToReference
+}
+
+// SetConditions of this AadDiagnosticSetting.
+func (mg *AadDiagnosticSetting) SetConditions(c ...xpv1.Condition) {
+	mg.Status.SetConditions(c...)
+}
+
+// SetDeletionPolicy of this AadDiagnosticSetting.
+func (mg *AadDiagnosticSetting) SetDeletionPolicy(r xpv1.DeletionPolicy) {
+	mg.Spec.DeletionPolicy = r
+}
+
+// SetProviderConfigReference of this AadDiagnosticSetting.
+func (mg *AadDiagnosticSetting) SetProviderConfigReference(r *xpv1.Reference) {
+	mg.Spec.ProviderConfigReference = r
+}
+
+/*
+SetProviderReference of this AadDiagnosticSetting.
+Deprecated: Use SetProviderConfigReference.
+*/
+func (mg *AadDiagnosticSetting) SetProviderReference(r *xpv1.Reference) {
+	mg.Spec.ProviderReference = r
+}
+
+// SetWriteConnectionSecretToReference of this AadDiagnosticSetting.
+func (mg *AadDiagnosticSetting) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
+	mg.Spec.WriteConnectionSecretToReference = r
+}
+
+// GetCondition of this ActionGroup.
+func (mg *ActionGroup) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
+	return mg.Status.GetCondition(ct)
+}
+
+// GetDeletionPolicy of this ActionGroup.
+func (mg *ActionGroup) GetDeletionPolicy() xpv1.DeletionPolicy {
+	return mg.Spec.DeletionPolicy
+}
+
+// GetProviderConfigReference of this ActionGroup.
+func (mg *ActionGroup) GetProviderConfigReference() *xpv1.Reference {
+	return mg.Spec.ProviderConfigReference
+}
+
+/*
+GetProviderReference of this ActionGroup.
+Deprecated: Use GetProviderConfigReference.
+*/
+func (mg *ActionGroup) GetProviderReference() *xpv1.Reference {
+	return mg.Spec.ProviderReference
+}
+
+// GetWriteConnectionSecretToReference of this ActionGroup.
+func (mg *ActionGroup) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
+	return mg.Spec.WriteConnectionSecretToReference
+}
+
+// SetConditions of this ActionGroup.
+func (mg *ActionGroup) SetConditions(c ...xpv1.Condition) {
+	mg.Status.SetConditions(c...)
+}
+
+// SetDeletionPolicy of this ActionGroup.
+func (mg *ActionGroup) SetDeletionPolicy(r xpv1.DeletionPolicy) {
+	mg.Spec.DeletionPolicy = r
+}
+
+// SetProviderConfigReference of this ActionGroup.
+func (mg *ActionGroup) SetProviderConfigReference(r *xpv1.Reference) {
+	mg.Spec.ProviderConfigReference = r
+}
+
+/*
+SetProviderReference of this ActionGroup.
+Deprecated: Use SetProviderConfigReference.
+*/
+func (mg *ActionGroup) SetProviderReference(r *xpv1.Reference) {
+	mg.Spec.ProviderReference = r
+}
+
+// SetWriteConnectionSecretToReference of this ActionGroup.
+func (mg *ActionGroup) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
+	mg.Spec.WriteConnectionSecretToReference = r
+}
+
+// GetCondition of this ActionRuleActionGroup.
+func (mg *ActionRuleActionGroup) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
+	return mg.Status.GetCondition(ct)
+}
+
+// GetDeletionPolicy of this ActionRuleActionGroup.
+func (mg *ActionRuleActionGroup) GetDeletionPolicy() xpv1.DeletionPolicy {
+	return mg.Spec.DeletionPolicy
+}
+
+// GetProviderConfigReference of this ActionRuleActionGroup.
+func (mg *ActionRuleActionGroup) GetProviderConfigReference() *xpv1.Reference {
+	return mg.Spec.ProviderConfigReference
+}
+
+/*
+GetProviderReference of this ActionRuleActionGroup.
+Deprecated: Use GetProviderConfigReference.
+*/
+func (mg *ActionRuleActionGroup) GetProviderReference() *xpv1.Reference {
+	return mg.Spec.ProviderReference
+}
+
+// GetWriteConnectionSecretToReference of this ActionRuleActionGroup.
+func (mg *ActionRuleActionGroup) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
+	return mg.Spec.WriteConnectionSecretToReference
+}
+
+// SetConditions of this ActionRuleActionGroup.
+func (mg *ActionRuleActionGroup) SetConditions(c ...xpv1.Condition) {
+	mg.Status.SetConditions(c...)
+}
+
+// SetDeletionPolicy of this ActionRuleActionGroup.
+func (mg *ActionRuleActionGroup) SetDeletionPolicy(r xpv1.DeletionPolicy) {
+	mg.Spec.DeletionPolicy = r
+}
+
+// SetProviderConfigReference of this ActionRuleActionGroup.
+func (mg *ActionRuleActionGroup) SetProviderConfigReference(r *xpv1.Reference) {
+	mg.Spec.ProviderConfigReference = r
+}
+
+/*
+SetProviderReference of this ActionRuleActionGroup.
+Deprecated: Use SetProviderConfigReference.
+*/
+func (mg *ActionRuleActionGroup) SetProviderReference(r *xpv1.Reference) {
+	mg.Spec.ProviderReference = r
+}
+
+// SetWriteConnectionSecretToReference of this ActionRuleActionGroup.
+func (mg *ActionRuleActionGroup) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
+	mg.Spec.WriteConnectionSecretToReference = r
+}
+
+// GetCondition of this ActionRuleSuppression.
+func (mg *ActionRuleSuppression) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
+	return mg.Status.GetCondition(ct)
+}
+
+// GetDeletionPolicy of this ActionRuleSuppression.
+func (mg *ActionRuleSuppression) GetDeletionPolicy() xpv1.DeletionPolicy {
+	return mg.Spec.DeletionPolicy
+}
+
+// GetProviderConfigReference of this ActionRuleSuppression.
+func (mg *ActionRuleSuppression) GetProviderConfigReference() *xpv1.Reference {
+	return mg.Spec.ProviderConfigReference
+}
+
+/*
+GetProviderReference of this ActionRuleSuppression.
+Deprecated: Use GetProviderConfigReference.
+*/
+func (mg *ActionRuleSuppression) GetProviderReference() *xpv1.Reference {
+	return mg.Spec.ProviderReference
+}
+
+// GetWriteConnectionSecretToReference of this ActionRuleSuppression.
+func (mg *ActionRuleSuppression) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
+	return mg.Spec.WriteConnectionSecretToReference
+}
+
+// SetConditions of this ActionRuleSuppression.
+func (mg *ActionRuleSuppression) SetConditions(c ...xpv1.Condition) {
+	mg.Status.SetConditions(c...)
+}
+
+// SetDeletionPolicy of this ActionRuleSuppression.
+func (mg *ActionRuleSuppression) SetDeletionPolicy(r xpv1.DeletionPolicy) {
+	mg.Spec.DeletionPolicy = r
+}
+
+// SetProviderConfigReference of this ActionRuleSuppression.
+func (mg *ActionRuleSuppression) SetProviderConfigReference(r *xpv1.Reference) {
+	mg.Spec.ProviderConfigReference = r
+}
+
+/*
+SetProviderReference of this ActionRuleSuppression.
+Deprecated: Use SetProviderConfigReference.
+*/
+func (mg *ActionRuleSuppression) SetProviderReference(r *xpv1.Reference) {
+	mg.Spec.ProviderReference = r
+}
+
+// SetWriteConnectionSecretToReference of this ActionRuleSuppression.
+func (mg *ActionRuleSuppression) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
+	mg.Spec.WriteConnectionSecretToReference = r
+}
+
+// GetCondition of this ActivityLogAlert.
+func (mg *ActivityLogAlert) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
+	return mg.Status.GetCondition(ct)
+}
+
+// GetDeletionPolicy of this ActivityLogAlert.
+func (mg *ActivityLogAlert) GetDeletionPolicy() xpv1.DeletionPolicy {
+	return mg.Spec.DeletionPolicy
+}
+
+// GetProviderConfigReference of this ActivityLogAlert.
+func (mg *ActivityLogAlert) GetProviderConfigReference() *xpv1.Reference {
+	return mg.Spec.ProviderConfigReference
+}
+
+/*
+GetProviderReference of this ActivityLogAlert.
+Deprecated: Use GetProviderConfigReference.
+*/
+func (mg *ActivityLogAlert) GetProviderReference() *xpv1.Reference {
+	return mg.Spec.ProviderReference
+}
+
+// GetWriteConnectionSecretToReference of this ActivityLogAlert.
+func (mg *ActivityLogAlert) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
+	return mg.Spec.WriteConnectionSecretToReference
+}
+
+// SetConditions of this ActivityLogAlert.
+func (mg *ActivityLogAlert) SetConditions(c ...xpv1.Condition) {
+	mg.Status.SetConditions(c...)
+}
+
+// SetDeletionPolicy of this ActivityLogAlert.
+func (mg *ActivityLogAlert) SetDeletionPolicy(r xpv1.DeletionPolicy) {
+	mg.Spec.DeletionPolicy = r
+}
+
+// SetProviderConfigReference of this ActivityLogAlert.
+func (mg *ActivityLogAlert) SetProviderConfigReference(r *xpv1.Reference) {
+	mg.Spec.ProviderConfigReference = r
+}
+
+/*
+SetProviderReference of this ActivityLogAlert.
+Deprecated: Use SetProviderConfigReference.
+*/
+func (mg *ActivityLogAlert) SetProviderReference(r *xpv1.Reference) {
+	mg.Spec.ProviderReference = r
+}
+
+// SetWriteConnectionSecretToReference of this ActivityLogAlert.
+func (mg *ActivityLogAlert) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
+	mg.Spec.WriteConnectionSecretToReference = r
+}
+
+// GetCondition of this AutoscaleSetting.
+func (mg *AutoscaleSetting) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
+	return mg.Status.GetCondition(ct)
+}
+
+// GetDeletionPolicy of this AutoscaleSetting.
+func (mg *AutoscaleSetting) GetDeletionPolicy() xpv1.DeletionPolicy {
+	return mg.Spec.DeletionPolicy
+}
+
+// GetProviderConfigReference of this AutoscaleSetting.
+func (mg *AutoscaleSetting) GetProviderConfigReference() *xpv1.Reference {
+	return mg.Spec.ProviderConfigReference
+}
+
+/*
+GetProviderReference of this AutoscaleSetting.
+Deprecated: Use GetProviderConfigReference.
+*/
+func (mg *AutoscaleSetting) GetProviderReference() *xpv1.Reference {
+	return mg.Spec.ProviderReference
+}
+
+// GetWriteConnectionSecretToReference of this AutoscaleSetting.
+func (mg *AutoscaleSetting) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
+	return mg.Spec.WriteConnectionSecretToReference
+}
+
+// SetConditions of this AutoscaleSetting.
+func (mg *AutoscaleSetting) SetConditions(c ...xpv1.Condition) {
+	mg.Status.SetConditions(c...)
+}
+
+// SetDeletionPolicy of this AutoscaleSetting.
+func (mg *AutoscaleSetting) SetDeletionPolicy(r xpv1.DeletionPolicy) {
+	mg.Spec.DeletionPolicy = r
+}
+
+// SetProviderConfigReference of this AutoscaleSetting.
+func (mg *AutoscaleSetting) SetProviderConfigReference(r *xpv1.Reference) {
+	mg.Spec.ProviderConfigReference = r
+}
+
+/*
+SetProviderReference of this AutoscaleSetting.
+Deprecated: Use SetProviderConfigReference.
+*/
+func (mg *AutoscaleSetting) SetProviderReference(r *xpv1.Reference) {
+	mg.Spec.ProviderReference = r
+}
+
+// SetWriteConnectionSecretToReference of this AutoscaleSetting.
+func (mg *AutoscaleSetting) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
+	mg.Spec.WriteConnectionSecretToReference = r
+}
+
+// GetCondition of this DiagnosticSetting.
+func (mg *DiagnosticSetting) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
+	return mg.Status.GetCondition(ct)
+}
+
+// GetDeletionPolicy of this DiagnosticSetting.
+func (mg *DiagnosticSetting) GetDeletionPolicy() xpv1.DeletionPolicy {
+	return mg.Spec.DeletionPolicy
+}
+
+// GetProviderConfigReference of this DiagnosticSetting.
+func (mg *DiagnosticSetting) GetProviderConfigReference() *xpv1.Reference {
+	return mg.Spec.ProviderConfigReference
+}
+
+/*
+GetProviderReference of this DiagnosticSetting.
+Deprecated: Use GetProviderConfigReference.
+*/
+func (mg *DiagnosticSetting) GetProviderReference() *xpv1.Reference {
+	return mg.Spec.ProviderReference
+}
+
+// GetWriteConnectionSecretToReference of this DiagnosticSetting.
+func (mg *DiagnosticSetting) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
+	return mg.Spec.WriteConnectionSecretToReference
+}
+
+// SetConditions of this DiagnosticSetting.
+func (mg *DiagnosticSetting) SetConditions(c ...xpv1.Condition) {
+	mg.Status.SetConditions(c...)
+}
+
+// SetDeletionPolicy of this DiagnosticSetting.
+func (mg *DiagnosticSetting) SetDeletionPolicy(r xpv1.DeletionPolicy) {
+	mg.Spec.DeletionPolicy = r
+}
+
+// SetProviderConfigReference of this DiagnosticSetting.
+func (mg *DiagnosticSetting) SetProviderConfigReference(r *xpv1.Reference) {
+	mg.Spec.ProviderConfigReference = r
+}
+
+/*
+SetProviderReference of this DiagnosticSetting.
+Deprecated: Use SetProviderConfigReference.
+*/
+func (mg *DiagnosticSetting) SetProviderReference(r *xpv1.Reference) {
+	mg.Spec.ProviderReference = r
+}
+
+// SetWriteConnectionSecretToReference of this DiagnosticSetting.
+func (mg *DiagnosticSetting) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
+	mg.Spec.WriteConnectionSecretToReference = r
+}
+
 // GetCondition of this MetricAlert.
 func (mg *MetricAlert) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
 	return mg.Status.GetCondition(ct)
@@ -72,5 +464,173 @@ func (mg *MetricAlert) SetProviderReference(r *xpv1.Reference) {
 
 // SetWriteConnectionSecretToReference of this MetricAlert.
 func (mg *MetricAlert) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
+	mg.Spec.WriteConnectionSecretToReference = r
+}
+
+// GetCondition of this ScheduledQueryRulesAlert.
+func (mg *ScheduledQueryRulesAlert) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
+	return mg.Status.GetCondition(ct)
+}
+
+// GetDeletionPolicy of this ScheduledQueryRulesAlert.
+func (mg *ScheduledQueryRulesAlert) GetDeletionPolicy() xpv1.DeletionPolicy {
+	return mg.Spec.DeletionPolicy
+}
+
+// GetProviderConfigReference of this ScheduledQueryRulesAlert.
+func (mg *ScheduledQueryRulesAlert) GetProviderConfigReference() *xpv1.Reference {
+	return mg.Spec.ProviderConfigReference
+}
+
+/*
+GetProviderReference of this ScheduledQueryRulesAlert.
+Deprecated: Use GetProviderConfigReference.
+*/
+func (mg *ScheduledQueryRulesAlert) GetProviderReference() *xpv1.Reference {
+	return mg.Spec.ProviderReference
+}
+
+// GetWriteConnectionSecretToReference of this ScheduledQueryRulesAlert.
+func (mg *ScheduledQueryRulesAlert) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
+	return mg.Spec.WriteConnectionSecretToReference
+}
+
+// SetConditions of this ScheduledQueryRulesAlert.
+func (mg *ScheduledQueryRulesAlert) SetConditions(c ...xpv1.Condition) {
+	mg.Status.SetConditions(c...)
+}
+
+// SetDeletionPolicy of this ScheduledQueryRulesAlert.
+func (mg *ScheduledQueryRulesAlert) SetDeletionPolicy(r xpv1.DeletionPolicy) {
+	mg.Spec.DeletionPolicy = r
+}
+
+// SetProviderConfigReference of this ScheduledQueryRulesAlert.
+func (mg *ScheduledQueryRulesAlert) SetProviderConfigReference(r *xpv1.Reference) {
+	mg.Spec.ProviderConfigReference = r
+}
+
+/*
+SetProviderReference of this ScheduledQueryRulesAlert.
+Deprecated: Use SetProviderConfigReference.
+*/
+func (mg *ScheduledQueryRulesAlert) SetProviderReference(r *xpv1.Reference) {
+	mg.Spec.ProviderReference = r
+}
+
+// SetWriteConnectionSecretToReference of this ScheduledQueryRulesAlert.
+func (mg *ScheduledQueryRulesAlert) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
+	mg.Spec.WriteConnectionSecretToReference = r
+}
+
+// GetCondition of this ScheduledQueryRulesLog.
+func (mg *ScheduledQueryRulesLog) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
+	return mg.Status.GetCondition(ct)
+}
+
+// GetDeletionPolicy of this ScheduledQueryRulesLog.
+func (mg *ScheduledQueryRulesLog) GetDeletionPolicy() xpv1.DeletionPolicy {
+	return mg.Spec.DeletionPolicy
+}
+
+// GetProviderConfigReference of this ScheduledQueryRulesLog.
+func (mg *ScheduledQueryRulesLog) GetProviderConfigReference() *xpv1.Reference {
+	return mg.Spec.ProviderConfigReference
+}
+
+/*
+GetProviderReference of this ScheduledQueryRulesLog.
+Deprecated: Use GetProviderConfigReference.
+*/
+func (mg *ScheduledQueryRulesLog) GetProviderReference() *xpv1.Reference {
+	return mg.Spec.ProviderReference
+}
+
+// GetWriteConnectionSecretToReference of this ScheduledQueryRulesLog.
+func (mg *ScheduledQueryRulesLog) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
+	return mg.Spec.WriteConnectionSecretToReference
+}
+
+// SetConditions of this ScheduledQueryRulesLog.
+func (mg *ScheduledQueryRulesLog) SetConditions(c ...xpv1.Condition) {
+	mg.Status.SetConditions(c...)
+}
+
+// SetDeletionPolicy of this ScheduledQueryRulesLog.
+func (mg *ScheduledQueryRulesLog) SetDeletionPolicy(r xpv1.DeletionPolicy) {
+	mg.Spec.DeletionPolicy = r
+}
+
+// SetProviderConfigReference of this ScheduledQueryRulesLog.
+func (mg *ScheduledQueryRulesLog) SetProviderConfigReference(r *xpv1.Reference) {
+	mg.Spec.ProviderConfigReference = r
+}
+
+/*
+SetProviderReference of this ScheduledQueryRulesLog.
+Deprecated: Use SetProviderConfigReference.
+*/
+func (mg *ScheduledQueryRulesLog) SetProviderReference(r *xpv1.Reference) {
+	mg.Spec.ProviderReference = r
+}
+
+// SetWriteConnectionSecretToReference of this ScheduledQueryRulesLog.
+func (mg *ScheduledQueryRulesLog) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
+	mg.Spec.WriteConnectionSecretToReference = r
+}
+
+// GetCondition of this SmartDetectorAlertRule.
+func (mg *SmartDetectorAlertRule) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
+	return mg.Status.GetCondition(ct)
+}
+
+// GetDeletionPolicy of this SmartDetectorAlertRule.
+func (mg *SmartDetectorAlertRule) GetDeletionPolicy() xpv1.DeletionPolicy {
+	return mg.Spec.DeletionPolicy
+}
+
+// GetProviderConfigReference of this SmartDetectorAlertRule.
+func (mg *SmartDetectorAlertRule) GetProviderConfigReference() *xpv1.Reference {
+	return mg.Spec.ProviderConfigReference
+}
+
+/*
+GetProviderReference of this SmartDetectorAlertRule.
+Deprecated: Use GetProviderConfigReference.
+*/
+func (mg *SmartDetectorAlertRule) GetProviderReference() *xpv1.Reference {
+	return mg.Spec.ProviderReference
+}
+
+// GetWriteConnectionSecretToReference of this SmartDetectorAlertRule.
+func (mg *SmartDetectorAlertRule) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
+	return mg.Spec.WriteConnectionSecretToReference
+}
+
+// SetConditions of this SmartDetectorAlertRule.
+func (mg *SmartDetectorAlertRule) SetConditions(c ...xpv1.Condition) {
+	mg.Status.SetConditions(c...)
+}
+
+// SetDeletionPolicy of this SmartDetectorAlertRule.
+func (mg *SmartDetectorAlertRule) SetDeletionPolicy(r xpv1.DeletionPolicy) {
+	mg.Spec.DeletionPolicy = r
+}
+
+// SetProviderConfigReference of this SmartDetectorAlertRule.
+func (mg *SmartDetectorAlertRule) SetProviderConfigReference(r *xpv1.Reference) {
+	mg.Spec.ProviderConfigReference = r
+}
+
+/*
+SetProviderReference of this SmartDetectorAlertRule.
+Deprecated: Use SetProviderConfigReference.
+*/
+func (mg *SmartDetectorAlertRule) SetProviderReference(r *xpv1.Reference) {
+	mg.Spec.ProviderReference = r
+}
+
+// SetWriteConnectionSecretToReference of this SmartDetectorAlertRule.
+func (mg *SmartDetectorAlertRule) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
 	mg.Spec.WriteConnectionSecretToReference = r
 }
