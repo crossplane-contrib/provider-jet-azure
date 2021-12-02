@@ -66,6 +66,8 @@ type FrontendIPConfigurationParameters struct {
 }
 
 type LoadBalancerObservation struct {
+	ID *string `json:"id,omitempty" tf:"id,omitempty"`
+
 	PrivateIPAddress *string `json:"privateIpAddress,omitempty" tf:"private_ip_address,omitempty"`
 
 	PrivateIPAddresses []*string `json:"privateIpAddresses,omitempty" tf:"private_ip_addresses,omitempty"`

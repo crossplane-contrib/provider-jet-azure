@@ -74,11 +74,10 @@ func Configure(p *config.Provider) {
 		r.Kind = "ResourceGroupPolicyAssignment"
 		r.ShortGroup = "authorization"
 		r.References = config.References{
-			// TODO(aru): as we no longer hold Azure ID of resources in external-name annotation
-			// these references are currently not generated
-			/*"resource_group_id": config.Reference{
-				Type: rconfig.APISPackagePath + "/azure/v1alpha1.ResourceGroup",
-			},*/
+			"resource_group_id": config.Reference{
+				Type:      rconfig.APISPackagePath + "/azure/v1alpha1.ResourceGroup",
+				Extractor: rconfig.ExtractResourceIDFuncPath,
+			},
 		}
 		r.UseAsync = true
 		r.ExternalName = config.NameAsIdentifier

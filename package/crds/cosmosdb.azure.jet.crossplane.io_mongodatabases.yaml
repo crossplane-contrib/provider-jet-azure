@@ -172,6 +172,9 @@ spec:
             description: MongoDatabaseStatus defines the observed state of MongoDatabase.
             properties:
               atProvider:
+                properties:
+                  id:
+                    type: string
                 type: object
               conditions:
                 description: Conditions of the resource.

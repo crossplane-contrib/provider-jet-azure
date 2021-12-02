@@ -26,6 +26,8 @@ import (
 )
 
 type WorkspaceObservation struct {
+	ID *string `json:"id,omitempty" tf:"id,omitempty"`
+
 	PortalURL *string `json:"portalUrl,omitempty" tf:"portal_url,omitempty"`
 
 	WorkspaceID *string `json:"workspaceId,omitempty" tf:"workspace_id,omitempty"`

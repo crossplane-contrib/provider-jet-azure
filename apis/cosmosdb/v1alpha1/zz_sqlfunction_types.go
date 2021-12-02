@@ -26,6 +26,7 @@ import (
 )
 
 type SQLFunctionObservation struct {
+	ID *string `json:"id,omitempty" tf:"id,omitempty"`
 }
 
 type SQLFunctionParameters struct {
@@ -33,8 +34,16 @@ type SQLFunctionParameters struct {
 	// +kubebuilder:validation:Required
 	Body *string `json:"body" tf:"body,omitempty"`
 
-	// +kubebuilder:validation:Required
-	ContainerID *string `json:"containerId" tf:"container_id,omitempty"`
+	// +crossplane:generate:reference:type=SQLContainer
+	// +crossplane:generate:reference:extractor=github.com/crossplane-contrib/provider-jet-azure/apis/rconfig.ExtractResourceID()
+	// +kubebuilder:validation:Optional
+	ContainerID *string `json:"containerId,omitempty" tf:"container_id,omitempty"`
+
+	// +kubebuilder:validation:Optional
+	ContainerIDRef *v1.Reference `json:"containerIdRef,omitempty" tf:"-"`
+
+	// +kubebuilder:validation:Optional
+	ContainerIDSelector *v1.Selector `json:"containerIdSelector,omitempty" tf:"-"`
 }
 
 // SQLFunctionSpec defines the desired state of SQLFunction

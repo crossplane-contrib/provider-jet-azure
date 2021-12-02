@@ -196,6 +196,8 @@ spec:
                 properties:
                   deviceProvisioningHostName:
                     type: string
+                  id:
+                    type: string
                   idScope:
                     type: string
                   serviceOperationsHostName:

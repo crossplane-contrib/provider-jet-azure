@@ -172,6 +172,9 @@ spec:
             description: GremlinDatabaseStatus defines the observed state of GremlinDatabase.
             properties:
               atProvider:
+                properties:
+                  id:
+                    type: string
                 type: object
               conditions:
                 description: Conditions of the resource.

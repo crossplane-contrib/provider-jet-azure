@@ -41,6 +41,7 @@ type DefinitionParameters struct {
 }
 
 type SubnetServiceEndpointStoragePolicyObservation struct {
+	ID *string `json:"id,omitempty" tf:"id,omitempty"`
 }
 
 type SubnetServiceEndpointStoragePolicyParameters struct {

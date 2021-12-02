@@ -168,6 +168,9 @@ spec:
             description: ConfigurationStatus defines the observed state of Configuration.
             properties:
               atProvider:
+                properties:
+                  id:
+                    type: string
                 type: object
               conditions:
                 description: Conditions of the resource.

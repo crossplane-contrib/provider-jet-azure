@@ -35,6 +35,7 @@ type GremlinDatabaseAutoscaleSettingsParameters struct {
 }
 
 type GremlinDatabaseObservation struct {
+	ID *string `json:"id,omitempty" tf:"id,omitempty"`
 }
 
 type GremlinDatabaseParameters struct {

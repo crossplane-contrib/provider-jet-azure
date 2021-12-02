@@ -26,6 +26,7 @@ import (
 )
 
 type ActiveDirectoryAdministratorObservation struct {
+	ID *string `json:"id,omitempty" tf:"id,omitempty"`
 }
 
 type ActiveDirectoryAdministratorParameters struct {

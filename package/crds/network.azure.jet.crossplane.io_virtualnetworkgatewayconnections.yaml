@@ -131,6 +131,29 @@ spec:
                     type: string
                   peerVirtualNetworkGatewayId:
                     type: string
+                  peerVirtualNetworkGatewayIdRef:
+                    description: A Reference to a named object.
+                    properties:
+                      name:
+                        description: Name of the referenced object.
+                        type: string
+                    required:
+                    - name
+                    type: object
+                  peerVirtualNetworkGatewayIdSelector:
+                    description: A Selector selects an object.
+                    properties:
+                      matchControllerRef:
+                        description: MatchControllerRef ensures an object with the
+                          same controller reference as the selecting object is selected.
+                        type: boolean
+                      matchLabels:
+                        additionalProperties:
+                          type: string
+                        description: MatchLabels ensures an object with matching labels
+                          is selected.
+                        type: object
+                    type: object
                   resourceGroupName:
                     type: string
                   resourceGroupNameRef:
@@ -203,10 +226,32 @@ spec:
                     type: boolean
                   virtualNetworkGatewayId:
                     type: string
+                  virtualNetworkGatewayIdRef:
+                    description: A Reference to a named object.
+                    properties:
+                      name:
+                        description: Name of the referenced object.
+                        type: string
+                    required:
+                    - name
+                    type: object
+                  virtualNetworkGatewayIdSelector:
+                    description: A Selector selects an object.
+                    properties:
+                      matchControllerRef:
+                        description: MatchControllerRef ensures an object with the
+                          same controller reference as the selecting object is selected.
+                        type: boolean
+                      matchLabels:
+                        additionalProperties:
+                          type: string
+                        description: MatchLabels ensures an object with matching labels
+                          is selected.
+                        type: object
+                    type: object
                 required:
                 - location
                 - type
-                - virtualNetworkGatewayId
                 type: object
               providerConfigRef:
                 default:
@@ -257,6 +302,9 @@ spec:
               state of VirtualNetworkGatewayConnection.
             properties:
               atProvider:
+                properties:
+                  id:
+                    type: string
                 type: object
               conditions:
                 description: Conditions of the resource.

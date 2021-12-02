@@ -28,6 +28,8 @@ import (
 type AccountObservation struct {
 	Endpoint *string `json:"endpoint,omitempty" tf:"endpoint,omitempty"`
 
+	ID *string `json:"id,omitempty" tf:"id,omitempty"`
+
 	ReadEndpoints []*string `json:"readEndpoints,omitempty" tf:"read_endpoints,omitempty"`
 
 	WriteEndpoints []*string `json:"writeEndpoints,omitempty" tf:"write_endpoints,omitempty"`

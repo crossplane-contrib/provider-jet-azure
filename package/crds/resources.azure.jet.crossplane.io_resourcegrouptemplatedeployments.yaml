@@ -156,6 +156,8 @@ spec:
             properties:
               atProvider:
                 properties:
+                  id:
+                    type: string
                   outputContent:
                     type: string
                 type: object

@@ -68,6 +68,7 @@ type TrafficSelectorPolicyParameters struct {
 }
 
 type VirtualNetworkGatewayConnectionObservation struct {
+	ID *string `json:"id,omitempty" tf:"id,omitempty"`
 }
 
 type VirtualNetworkGatewayConnectionParameters struct {
@@ -102,8 +103,16 @@ type VirtualNetworkGatewayConnectionParameters struct {
 	// +kubebuilder:validation:Required
 	Location *string `json:"location" tf:"location,omitempty"`
 
+	// +crossplane:generate:reference:type=VirtualNetworkGateway
+	// +crossplane:generate:reference:extractor=github.com/crossplane-contrib/provider-jet-azure/apis/rconfig.ExtractResourceID()
 	// +kubebuilder:validation:Optional
 	PeerVirtualNetworkGatewayID *string `json:"peerVirtualNetworkGatewayId,omitempty" tf:"peer_virtual_network_gateway_id,omitempty"`
+
+	// +kubebuilder:validation:Optional
+	PeerVirtualNetworkGatewayIDRef *v1.Reference `json:"peerVirtualNetworkGatewayIdRef,omitempty" tf:"-"`
+
+	// +kubebuilder:validation:Optional
+	PeerVirtualNetworkGatewayIDSelector *v1.Selector `json:"peerVirtualNetworkGatewayIdSelector,omitempty" tf:"-"`
 
 	// +crossplane:generate:reference:type=github.com/crossplane-contrib/provider-jet-azure/apis/azure/v1alpha1.ResourceGroup
 	// +kubebuilder:validation:Optional
@@ -133,8 +142,16 @@ type VirtualNetworkGatewayConnectionParameters struct {
 	// +kubebuilder:validation:Optional
 	UsePolicyBasedTrafficSelectors *bool `json:"usePolicyBasedTrafficSelectors,omitempty" tf:"use_policy_based_traffic_selectors,omitempty"`
 
-	// +kubebuilder:validation:Required
-	VirtualNetworkGatewayID *string `json:"virtualNetworkGatewayId" tf:"virtual_network_gateway_id,omitempty"`
+	// +crossplane:generate:reference:type=VirtualNetworkGateway
+	// +crossplane:generate:reference:extractor=github.com/crossplane-contrib/provider-jet-azure/apis/rconfig.ExtractResourceID()
+	// +kubebuilder:validation:Optional
+	VirtualNetworkGatewayID *string `json:"virtualNetworkGatewayId,omitempty" tf:"virtual_network_gateway_id,omitempty"`
+
+	// +kubebuilder:validation:Optional
+	VirtualNetworkGatewayIDRef *v1.Reference `json:"virtualNetworkGatewayIdRef,omitempty" tf:"-"`
+
+	// +kubebuilder:validation:Optional
+	VirtualNetworkGatewayIDSelector *v1.Selector `json:"virtualNetworkGatewayIdSelector,omitempty" tf:"-"`
 }
 
 // VirtualNetworkGatewayConnectionSpec defines the desired state of VirtualNetworkGatewayConnection

@@ -28,6 +28,8 @@ import (
 type DPSObservation struct {
 	DeviceProvisioningHostName *string `json:"deviceProvisioningHostName,omitempty" tf:"device_provisioning_host_name,omitempty"`
 
+	ID *string `json:"id,omitempty" tf:"id,omitempty"`
+
 	IDScope *string `json:"idScope,omitempty" tf:"id_scope,omitempty"`
 
 	ServiceOperationsHostName *string `json:"serviceOperationsHostName,omitempty" tf:"service_operations_host_name,omitempty"`

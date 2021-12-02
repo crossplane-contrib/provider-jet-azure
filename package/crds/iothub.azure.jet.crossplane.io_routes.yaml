@@ -134,6 +134,9 @@ spec:
             description: RouteStatus defines the observed state of Route.
             properties:
               atProvider:
+                properties:
+                  id:
+                    type: string
                 type: object
               conditions:
                 description: Conditions of the resource.

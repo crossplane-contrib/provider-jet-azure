@@ -47,6 +47,8 @@ type MongoCollectionIndexParameters struct {
 }
 
 type MongoCollectionObservation struct {
+	ID *string `json:"id,omitempty" tf:"id,omitempty"`
+
 	SystemIndexes []SystemIndexesObservation `json:"systemIndexes,omitempty" tf:"system_indexes,omitempty"`
 }
 

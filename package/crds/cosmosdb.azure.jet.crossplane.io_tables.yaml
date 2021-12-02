@@ -172,6 +172,9 @@ spec:
             description: TableStatus defines the observed state of Table.
             properties:
               atProvider:
+                properties:
+                  id:
+                    type: string
                 type: object
               conditions:
                 description: Conditions of the resource.

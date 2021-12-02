@@ -99,11 +99,10 @@ func Configure(p *config.Provider) {
 
 	p.AddResourceConfigurator("azurerm_cosmosdb_cassandra_table", func(r *config.Resource) {
 		r.References = config.References{
-			// TODO(aru): as we no longer hold Azure ID of resources in external-name annotation
-			// these references are currently not generated
-			/*"cassandra_keyspace_id": config.Reference{
-				Type: "CassandraKeyspace",
-			},*/
+			"cassandra_keyspace_id": config.Reference{
+				Type:      "CassandraKeyspace",
+				Extractor: rconfig.ExtractResourceIDFuncPath,
+			},
 		}
 		r.UseAsync = true
 		r.ExternalName = config.NameAsIdentifier
@@ -144,11 +143,10 @@ func Configure(p *config.Provider) {
 	p.AddResourceConfigurator("azurerm_cosmosdb_sql_function", func(r *config.Resource) {
 		r.Kind = "SQLFunction"
 		r.References = config.References{
-			// TODO(aru): as we no longer hold Azure ID of resources in external-name annotation
-			// these references are currently not generated
-			/*"container_id": config.Reference{
-				Type: "SQLContainer",
-			},*/
+			"container_id": config.Reference{
+				Type:      "SQLContainer",
+				Extractor: rconfig.ExtractResourceIDFuncPath,
+			},
 		}
 		r.UseAsync = true
 		r.ExternalName = config.NameAsIdentifier
@@ -311,11 +309,10 @@ func Configure(p *config.Provider) {
 
 	p.AddResourceConfigurator("azurerm_cosmosdb_sql_trigger", func(r *config.Resource) {
 		r.References = config.References{
-			// TODO(aru): as we no longer hold Azure ID of resources in external-name annotation
-			// these references are currently not generated
-			/*"container_id": config.Reference{
-				Type: "SQLContainer",
-			},*/
+			"container_id": config.Reference{
+				Type:      "SQLContainer",
+				Extractor: rconfig.ExtractResourceIDFuncPath,
+			},
 		}
 		r.UseAsync = true
 		r.ExternalName = config.NameAsIdentifier

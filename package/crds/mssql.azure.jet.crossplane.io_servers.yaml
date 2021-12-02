@@ -233,6 +233,8 @@ spec:
                 properties:
                   fullyQualifiedDomainName:
                     type: string
+                  id:
+                    type: string
                   restorableDroppedDatabaseIds:
                     items:
                       type: string

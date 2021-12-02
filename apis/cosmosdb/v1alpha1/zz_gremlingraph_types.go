@@ -59,6 +59,7 @@ type GremlinGraphAutoscaleSettingsParameters struct {
 }
 
 type GremlinGraphObservation struct {
+	ID *string `json:"id,omitempty" tf:"id,omitempty"`
 }
 
 type GremlinGraphParameters struct {

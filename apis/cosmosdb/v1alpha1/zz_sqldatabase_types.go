@@ -35,6 +35,7 @@ type SQLDatabaseAutoscaleSettingsParameters struct {
 }
 
 type SQLDatabaseObservation struct {
+	ID *string `json:"id,omitempty" tf:"id,omitempty"`
 }
 
 type SQLDatabaseParameters struct {

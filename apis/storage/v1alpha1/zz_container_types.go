@@ -30,6 +30,8 @@ type ContainerObservation struct {
 
 	HasLegalHold *bool `json:"hasLegalHold,omitempty" tf:"has_legal_hold,omitempty"`
 
+	ID *string `json:"id,omitempty" tf:"id,omitempty"`
+
 	ResourceManagerID *string `json:"resourceManagerId,omitempty" tf:"resource_manager_id,omitempty"`
 }
 

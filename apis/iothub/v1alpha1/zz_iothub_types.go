@@ -143,6 +143,8 @@ type IOTHubObservation struct {
 
 	Hostname *string `json:"hostname,omitempty" tf:"hostname,omitempty"`
 
+	ID *string `json:"id,omitempty" tf:"id,omitempty"`
+
 	SharedAccessPolicy []SharedAccessPolicyObservation `json:"sharedAccessPolicy,omitempty" tf:"shared_access_policy,omitempty"`
 
 	Type *string `json:"type,omitempty" tf:"type,omitempty"`

@@ -26,6 +26,7 @@ import (
 )
 
 type SharedAccessPolicyObservation_2 struct {
+	ID *string `json:"id,omitempty" tf:"id,omitempty"`
 }
 
 type SharedAccessPolicyParameters_2 struct {

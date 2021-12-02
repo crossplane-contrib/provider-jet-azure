@@ -26,6 +26,7 @@ import (
 )
 
 type SubnetRouteTableAssociationObservation struct {
+	ID *string `json:"id,omitempty" tf:"id,omitempty"`
 }
 
 type SubnetRouteTableAssociationParameters struct {
@@ -33,8 +34,16 @@ type SubnetRouteTableAssociationParameters struct {
 	// +kubebuilder:validation:Required
 	RouteTableID *string `json:"routeTableId" tf:"route_table_id,omitempty"`
 
-	// +kubebuilder:validation:Required
-	SubnetID *string `json:"subnetId" tf:"subnet_id,omitempty"`
+	// +crossplane:generate:reference:type=Subnet
+	// +crossplane:generate:reference:extractor=github.com/crossplane-contrib/provider-jet-azure/apis/rconfig.ExtractResourceID()
+	// +kubebuilder:validation:Optional
+	SubnetID *string `json:"subnetId,omitempty" tf:"subnet_id,omitempty"`
+
+	// +kubebuilder:validation:Optional
+	SubnetIDRef *v1.Reference `json:"subnetIdRef,omitempty" tf:"-"`
+
+	// +kubebuilder:validation:Optional
+	SubnetIDSelector *v1.Selector `json:"subnetIdSelector,omitempty" tf:"-"`
 }
 
 // SubnetRouteTableAssociationSpec defines the desired state of SubnetRouteTableAssociation

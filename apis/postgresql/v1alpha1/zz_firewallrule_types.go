@@ -26,6 +26,7 @@ import (
 )
 
 type FirewallRuleObservation struct {
+	ID *string `json:"id,omitempty" tf:"id,omitempty"`
 }
 
 type FirewallRuleParameters struct {

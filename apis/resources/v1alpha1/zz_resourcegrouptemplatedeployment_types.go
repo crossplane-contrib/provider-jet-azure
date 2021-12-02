@@ -26,6 +26,8 @@ import (
 )
 
 type ResourceGroupTemplateDeploymentObservation struct {
+	ID *string `json:"id,omitempty" tf:"id,omitempty"`
+
 	OutputContent *string `json:"outputContent,omitempty" tf:"output_content,omitempty"`
 }
 

@@ -76,6 +76,8 @@ type IdentityParameters struct {
 type ServerObservation struct {
 	FullyQualifiedDomainName *string `json:"fullyQualifiedDomainName,omitempty" tf:"fully_qualified_domain_name,omitempty"`
 
+	ID *string `json:"id,omitempty" tf:"id,omitempty"`
+
 	RestorableDroppedDatabaseIds []*string `json:"restorableDroppedDatabaseIds,omitempty" tf:"restorable_dropped_database_ids,omitempty"`
 }
 

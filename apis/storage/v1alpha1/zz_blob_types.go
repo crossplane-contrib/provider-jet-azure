@@ -26,6 +26,8 @@ import (
 )
 
 type BlobObservation struct {
+	ID *string `json:"id,omitempty" tf:"id,omitempty"`
+
 	URL *string `json:"url,omitempty" tf:"url,omitempty"`
 }
 

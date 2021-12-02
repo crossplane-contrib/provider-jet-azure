@@ -172,6 +172,9 @@ spec:
             description: CassandraKeyspaceStatus defines the observed state of CassandraKeyspace.
             properties:
               atProvider:
+                properties:
+                  id:
+                    type: string
                 type: object
               conditions:
                 description: Conditions of the resource.

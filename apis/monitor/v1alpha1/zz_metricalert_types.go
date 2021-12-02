@@ -146,6 +146,7 @@ type DynamicCriteriaParameters struct {
 }
 
 type MetricAlertObservation struct {
+	ID *string `json:"id,omitempty" tf:"id,omitempty"`
 }
 
 type MetricAlertParameters struct {

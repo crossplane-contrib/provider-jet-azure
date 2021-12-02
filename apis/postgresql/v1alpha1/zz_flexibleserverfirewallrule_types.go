@@ -26,6 +26,7 @@ import (
 )
 
 type FlexibleServerFirewallRuleObservation struct {
+	ID *string `json:"id,omitempty" tf:"id,omitempty"`
 }
 
 type FlexibleServerFirewallRuleParameters struct {
@@ -33,8 +34,16 @@ type FlexibleServerFirewallRuleParameters struct {
 	// +kubebuilder:validation:Required
 	EndIPAddress *string `json:"endIpAddress" tf:"end_ip_address,omitempty"`
 
-	// +kubebuilder:validation:Required
-	ServerID *string `json:"serverId" tf:"server_id,omitempty"`
+	// +crossplane:generate:reference:type=FlexibleServer
+	// +crossplane:generate:reference:extractor=github.com/crossplane-contrib/provider-jet-azure/apis/rconfig.ExtractResourceID()
+	// +kubebuilder:validation:Optional
+	ServerID *string `json:"serverId,omitempty" tf:"server_id,omitempty"`
+
+	// +kubebuilder:validation:Optional
+	ServerIDRef *v1.Reference `json:"serverIdRef,omitempty" tf:"-"`
+
+	// +kubebuilder:validation:Optional
+	ServerIDSelector *v1.Selector `json:"serverIdSelector,omitempty" tf:"-"`
 
 	// +kubebuilder:validation:Required
 	StartIPAddress *string `json:"startIpAddress" tf:"start_ip_address,omitempty"`

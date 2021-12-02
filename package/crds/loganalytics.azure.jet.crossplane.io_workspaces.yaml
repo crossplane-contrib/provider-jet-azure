@@ -159,6 +159,8 @@ spec:
             properties:
               atProvider:
                 properties:
+                  id:
+                    type: string
                   portalUrl:
                     type: string
                   workspaceId:

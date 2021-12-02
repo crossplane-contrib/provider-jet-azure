@@ -216,6 +216,9 @@ spec:
             description: SqlStoredProcedureStatus defines the observed state of SqlStoredProcedure.
             properties:
               atProvider:
+                properties:
+                  id:
+                    type: string
                 type: object
               conditions:
                 description: Conditions of the resource.

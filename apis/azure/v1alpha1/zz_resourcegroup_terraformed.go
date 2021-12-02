@@ -54,6 +54,14 @@ func (tr *ResourceGroup) SetObservation(obs map[string]interface{}) error {
 	return json.TFParser.Unmarshal(p, &tr.Status.AtProvider)
 }
 
+// GetID returns ID of underlying Terraform resource of this ResourceGroup
+func (tr *ResourceGroup) GetID() string {
+	if tr.Status.AtProvider.ID == nil {
+		return ""
+	}
+	return *tr.Status.AtProvider.ID
+}
+
 // GetParameters of this ResourceGroup
 func (tr *ResourceGroup) GetParameters() (map[string]interface{}, error) {
 	p, err := json.TFParser.Marshal(tr.Spec.ForProvider)

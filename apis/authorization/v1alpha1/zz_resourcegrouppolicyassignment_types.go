@@ -38,6 +38,7 @@ type IdentityParameters struct {
 }
 
 type ResourceGroupPolicyAssignmentObservation struct {
+	ID *string `json:"id,omitempty" tf:"id,omitempty"`
 }
 
 type ResourceGroupPolicyAssignmentParameters struct {
@@ -69,8 +70,16 @@ type ResourceGroupPolicyAssignmentParameters struct {
 	// +kubebuilder:validation:Required
 	PolicyDefinitionID *string `json:"policyDefinitionId" tf:"policy_definition_id,omitempty"`
 
-	// +kubebuilder:validation:Required
-	ResourceGroupID *string `json:"resourceGroupId" tf:"resource_group_id,omitempty"`
+	// +crossplane:generate:reference:type=github.com/crossplane-contrib/provider-jet-azure/apis/azure/v1alpha1.ResourceGroup
+	// +crossplane:generate:reference:extractor=github.com/crossplane-contrib/provider-jet-azure/apis/rconfig.ExtractResourceID()
+	// +kubebuilder:validation:Optional
+	ResourceGroupID *string `json:"resourceGroupId,omitempty" tf:"resource_group_id,omitempty"`
+
+	// +kubebuilder:validation:Optional
+	ResourceGroupIDRef *v1.Reference `json:"resourceGroupIdRef,omitempty" tf:"-"`
+
+	// +kubebuilder:validation:Optional
+	ResourceGroupIDSelector *v1.Selector `json:"resourceGroupIdSelector,omitempty" tf:"-"`
 }
 
 // ResourceGroupPolicyAssignmentSpec defines the desired state of ResourceGroupPolicyAssignment

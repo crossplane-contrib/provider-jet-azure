@@ -20,6 +20,7 @@ package v1alpha1
 import (
 	"context"
 	v1alpha1 "github.com/crossplane-contrib/provider-jet-azure/apis/azure/v1alpha1"
+	rconfig "github.com/crossplane-contrib/provider-jet-azure/apis/rconfig"
 	reference "github.com/crossplane/crossplane-runtime/pkg/reference"
 	errors "github.com/pkg/errors"
 	client "sigs.k8s.io/controller-runtime/pkg/client"
@@ -89,6 +90,32 @@ func (mg *CassandraKeyspace) ResolveReferences(ctx context.Context, c client.Rea
 	}
 	mg.Spec.ForProvider.ResourceGroupName = reference.ToPtrValue(rsp.ResolvedValue)
 	mg.Spec.ForProvider.ResourceGroupNameRef = rsp.ResolvedReference
+
+	return nil
+}
+
+// ResolveReferences of this CassandraTable.
+func (mg *CassandraTable) ResolveReferences(ctx context.Context, c client.Reader) error {
+	r := reference.NewAPIResolver(c, mg)
+
+	var rsp reference.ResolutionResponse
+	var err error
+
+	rsp, err = r.Resolve(ctx, reference.ResolutionRequest{
+		CurrentValue: reference.FromPtrValue(mg.Spec.ForProvider.CassandraKeyspaceID),
+		Extract:      rconfig.ExtractResourceID(),
+		Reference:    mg.Spec.ForProvider.CassandraKeyspaceIDRef,
+		Selector:     mg.Spec.ForProvider.CassandraKeyspaceIDSelector,
+		To: reference.To{
+			List:    &CassandraKeyspaceList{},
+			Managed: &CassandraKeyspace{},
+		},
+	})
+	if err != nil {
+		return errors.Wrap(err, "mg.Spec.ForProvider.CassandraKeyspaceID")
+	}
+	mg.Spec.ForProvider.CassandraKeyspaceID = reference.ToPtrValue(rsp.ResolvedValue)
+	mg.Spec.ForProvider.CassandraKeyspaceIDRef = rsp.ResolvedReference
 
 	return nil
 }
@@ -435,6 +462,32 @@ func (mg *SQLDatabase) ResolveReferences(ctx context.Context, c client.Reader) e
 	return nil
 }
 
+// ResolveReferences of this SQLFunction.
+func (mg *SQLFunction) ResolveReferences(ctx context.Context, c client.Reader) error {
+	r := reference.NewAPIResolver(c, mg)
+
+	var rsp reference.ResolutionResponse
+	var err error
+
+	rsp, err = r.Resolve(ctx, reference.ResolutionRequest{
+		CurrentValue: reference.FromPtrValue(mg.Spec.ForProvider.ContainerID),
+		Extract:      rconfig.ExtractResourceID(),
+		Reference:    mg.Spec.ForProvider.ContainerIDRef,
+		Selector:     mg.Spec.ForProvider.ContainerIDSelector,
+		To: reference.To{
+			List:    &SQLContainerList{},
+			Managed: &SQLContainer{},
+		},
+	})
+	if err != nil {
+		return errors.Wrap(err, "mg.Spec.ForProvider.ContainerID")
+	}
+	mg.Spec.ForProvider.ContainerID = reference.ToPtrValue(rsp.ResolvedValue)
+	mg.Spec.ForProvider.ContainerIDRef = rsp.ResolvedReference
+
+	return nil
+}
+
 // ResolveReferences of this SqlStoredProcedure.
 func (mg *SqlStoredProcedure) ResolveReferences(ctx context.Context, c client.Reader) error {
 	r := reference.NewAPIResolver(c, mg)
@@ -505,6 +558,32 @@ func (mg *SqlStoredProcedure) ResolveReferences(ctx context.Context, c client.Re
 	}
 	mg.Spec.ForProvider.ResourceGroupName = reference.ToPtrValue(rsp.ResolvedValue)
 	mg.Spec.ForProvider.ResourceGroupNameRef = rsp.ResolvedReference
+
+	return nil
+}
+
+// ResolveReferences of this SqlTrigger.
+func (mg *SqlTrigger) ResolveReferences(ctx context.Context, c client.Reader) error {
+	r := reference.NewAPIResolver(c, mg)
+
+	var rsp reference.ResolutionResponse
+	var err error
+
+	rsp, err = r.Resolve(ctx, reference.ResolutionRequest{
+		CurrentValue: reference.FromPtrValue(mg.Spec.ForProvider.ContainerID),
+		Extract:      rconfig.ExtractResourceID(),
+		Reference:    mg.Spec.ForProvider.ContainerIDRef,
+		Selector:     mg.Spec.ForProvider.ContainerIDSelector,
+		To: reference.To{
+			List:    &SQLContainerList{},
+			Managed: &SQLContainer{},
+		},
+	})
+	if err != nil {
+		return errors.Wrap(err, "mg.Spec.ForProvider.ContainerID")
+	}
+	mg.Spec.ForProvider.ContainerID = reference.ToPtrValue(rsp.ResolvedValue)
+	mg.Spec.ForProvider.ContainerIDRef = rsp.ResolvedReference
 
 	return nil
 }
