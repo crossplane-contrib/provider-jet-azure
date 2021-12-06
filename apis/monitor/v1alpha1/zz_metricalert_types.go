@@ -25,18 +25,6 @@ import (
 	v1 "github.com/crossplane/crossplane-runtime/apis/common/v1"
 )
 
-type ActionObservation struct {
-}
-
-type ActionParameters struct {
-
-	// +kubebuilder:validation:Required
-	ActionGroupID *string `json:"actionGroupId" tf:"action_group_id,omitempty"`
-
-	// +kubebuilder:validation:Optional
-	WebhookProperties map[string]*string `json:"webhookProperties,omitempty" tf:"webhook_properties,omitempty"`
-}
-
 type ApplicationInsightsWebTestLocationAvailabilityCriteriaObservation struct {
 }
 
@@ -50,33 +38,6 @@ type ApplicationInsightsWebTestLocationAvailabilityCriteriaParameters struct {
 
 	// +kubebuilder:validation:Required
 	WebTestID *string `json:"webTestId" tf:"web_test_id,omitempty"`
-}
-
-type CriteriaObservation struct {
-}
-
-type CriteriaParameters struct {
-
-	// +kubebuilder:validation:Required
-	Aggregation *string `json:"aggregation" tf:"aggregation,omitempty"`
-
-	// +kubebuilder:validation:Optional
-	Dimension []DimensionParameters `json:"dimension,omitempty" tf:"dimension,omitempty"`
-
-	// +kubebuilder:validation:Required
-	MetricName *string `json:"metricName" tf:"metric_name,omitempty"`
-
-	// +kubebuilder:validation:Required
-	MetricNamespace *string `json:"metricNamespace" tf:"metric_namespace,omitempty"`
-
-	// +kubebuilder:validation:Required
-	Operator *string `json:"operator" tf:"operator,omitempty"`
-
-	// +kubebuilder:validation:Optional
-	SkipMetricValidation *bool `json:"skipMetricValidation,omitempty" tf:"skip_metric_validation,omitempty"`
-
-	// +kubebuilder:validation:Required
-	Threshold *float64 `json:"threshold" tf:"threshold,omitempty"`
 }
 
 type DimensionObservation struct {
@@ -145,6 +106,45 @@ type DynamicCriteriaParameters struct {
 	SkipMetricValidation *bool `json:"skipMetricValidation,omitempty" tf:"skip_metric_validation,omitempty"`
 }
 
+type MetricAlertActionObservation struct {
+}
+
+type MetricAlertActionParameters struct {
+
+	// +kubebuilder:validation:Required
+	ActionGroupID *string `json:"actionGroupId" tf:"action_group_id,omitempty"`
+
+	// +kubebuilder:validation:Optional
+	WebhookProperties map[string]*string `json:"webhookProperties,omitempty" tf:"webhook_properties,omitempty"`
+}
+
+type MetricAlertCriteriaObservation struct {
+}
+
+type MetricAlertCriteriaParameters struct {
+
+	// +kubebuilder:validation:Required
+	Aggregation *string `json:"aggregation" tf:"aggregation,omitempty"`
+
+	// +kubebuilder:validation:Optional
+	Dimension []DimensionParameters `json:"dimension,omitempty" tf:"dimension,omitempty"`
+
+	// +kubebuilder:validation:Required
+	MetricName *string `json:"metricName" tf:"metric_name,omitempty"`
+
+	// +kubebuilder:validation:Required
+	MetricNamespace *string `json:"metricNamespace" tf:"metric_namespace,omitempty"`
+
+	// +kubebuilder:validation:Required
+	Operator *string `json:"operator" tf:"operator,omitempty"`
+
+	// +kubebuilder:validation:Optional
+	SkipMetricValidation *bool `json:"skipMetricValidation,omitempty" tf:"skip_metric_validation,omitempty"`
+
+	// +kubebuilder:validation:Required
+	Threshold *float64 `json:"threshold" tf:"threshold,omitempty"`
+}
+
 type MetricAlertObservation struct {
 	ID *string `json:"id,omitempty" tf:"id,omitempty"`
 }
@@ -152,7 +152,7 @@ type MetricAlertObservation struct {
 type MetricAlertParameters struct {
 
 	// +kubebuilder:validation:Optional
-	Action []ActionParameters `json:"action,omitempty" tf:"action,omitempty"`
+	Action []MetricAlertActionParameters `json:"action,omitempty" tf:"action,omitempty"`
 
 	// +kubebuilder:validation:Optional
 	ApplicationInsightsWebTestLocationAvailabilityCriteria []ApplicationInsightsWebTestLocationAvailabilityCriteriaParameters `json:"applicationInsightsWebTestLocationAvailabilityCriteria,omitempty" tf:"application_insights_web_test_location_availability_criteria,omitempty"`
@@ -161,7 +161,7 @@ type MetricAlertParameters struct {
 	AutoMitigate *bool `json:"autoMitigate,omitempty" tf:"auto_mitigate,omitempty"`
 
 	// +kubebuilder:validation:Optional
-	Criteria []CriteriaParameters `json:"criteria,omitempty" tf:"criteria,omitempty"`
+	Criteria []MetricAlertCriteriaParameters `json:"criteria,omitempty" tf:"criteria,omitempty"`
 
 	// +kubebuilder:validation:Optional
 	Description *string `json:"description,omitempty" tf:"description,omitempty"`
