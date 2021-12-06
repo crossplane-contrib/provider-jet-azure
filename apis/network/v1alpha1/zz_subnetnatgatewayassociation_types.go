@@ -26,6 +26,7 @@ import (
 )
 
 type SubnetNATGatewayAssociationObservation struct {
+	ID *string `json:"id,omitempty" tf:"id,omitempty"`
 }
 
 type SubnetNATGatewayAssociationParameters struct {
@@ -33,8 +34,16 @@ type SubnetNATGatewayAssociationParameters struct {
 	// +kubebuilder:validation:Required
 	NatGatewayID *string `json:"natGatewayId" tf:"nat_gateway_id,omitempty"`
 
-	// +kubebuilder:validation:Required
-	SubnetID *string `json:"subnetId" tf:"subnet_id,omitempty"`
+	// +crossplane:generate:reference:type=Subnet
+	// +crossplane:generate:reference:extractor=github.com/crossplane-contrib/provider-jet-azure/apis/rconfig.ExtractResourceID()
+	// +kubebuilder:validation:Optional
+	SubnetID *string `json:"subnetId,omitempty" tf:"subnet_id,omitempty"`
+
+	// +kubebuilder:validation:Optional
+	SubnetIDRef *v1.Reference `json:"subnetIdRef,omitempty" tf:"-"`
+
+	// +kubebuilder:validation:Optional
+	SubnetIDSelector *v1.Selector `json:"subnetIdSelector,omitempty" tf:"-"`
 }
 
 // SubnetNATGatewayAssociationSpec defines the desired state of SubnetNATGatewayAssociation

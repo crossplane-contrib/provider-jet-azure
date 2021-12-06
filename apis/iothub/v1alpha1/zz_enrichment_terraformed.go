@@ -54,6 +54,14 @@ func (tr *Enrichment) SetObservation(obs map[string]interface{}) error {
 	return json.TFParser.Unmarshal(p, &tr.Status.AtProvider)
 }
 
+// GetID returns ID of underlying Terraform resource of this Enrichment
+func (tr *Enrichment) GetID() string {
+	if tr.Status.AtProvider.ID == nil {
+		return ""
+	}
+	return *tr.Status.AtProvider.ID
+}
+
 // GetParameters of this Enrichment
 func (tr *Enrichment) GetParameters() (map[string]interface{}, error) {
 	p, err := json.TFParser.Marshal(tr.Spec.ForProvider)
@@ -76,7 +84,7 @@ func (tr *Enrichment) SetParameters(params map[string]interface{}) error {
 // LateInitialize this Enrichment using its observed tfState.
 // returns True if there are any spec changes for the resource.
 func (tr *Enrichment) LateInitialize(attrs []byte) (bool, error) {
-	params := &EnrichmentParameters{}
+	params := &EnrichmentParameters_2{}
 	if err := json.TFParser.Unmarshal(attrs, params); err != nil {
 		return false, errors.Wrap(err, "failed to unmarshal Terraform state parameters for late-initialization")
 	}

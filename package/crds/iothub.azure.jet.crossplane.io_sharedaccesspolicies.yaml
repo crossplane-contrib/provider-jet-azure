@@ -170,6 +170,9 @@ spec:
             description: SharedAccessPolicyStatus defines the observed state of SharedAccessPolicy.
             properties:
               atProvider:
+                properties:
+                  id:
+                    type: string
                 type: object
               conditions:
                 description: Conditions of the resource.

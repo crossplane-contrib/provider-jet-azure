@@ -162,6 +162,8 @@ spec:
             properties:
               atProvider:
                 properties:
+                  id:
+                    type: string
                   serverEndpoint:
                     type: string
                 type: object

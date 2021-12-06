@@ -237,6 +237,11 @@ func (in *ServerObservation) DeepCopyInto(out *ServerObservation) {
 		*out = new(string)
 		**out = **in
 	}
+	if in.ID != nil {
+		in, out := &in.ID, &out.ID
+		*out = new(string)
+		**out = **in
+	}
 	if in.RestorableDroppedDatabaseIds != nil {
 		in, out := &in.RestorableDroppedDatabaseIds, &out.RestorableDroppedDatabaseIds
 		*out = make([]*string, len(*in))

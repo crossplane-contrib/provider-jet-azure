@@ -26,6 +26,7 @@ import (
 )
 
 type SqlStoredProcedureObservation struct {
+	ID *string `json:"id,omitempty" tf:"id,omitempty"`
 }
 
 type SqlStoredProcedureParameters struct {

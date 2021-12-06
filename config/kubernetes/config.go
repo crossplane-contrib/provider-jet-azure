@@ -39,19 +39,18 @@ func Configure(p *config.Provider) {
 			"resource_group_name": config.Reference{
 				Type: rconfig.APISPackagePath + "/azure/v1alpha1.ResourceGroup",
 			},
-			// TODO(aru): as we no longer hold Azure ID of resources in external-name annotation
-			// these references are currently not generated
-			/*
-				"default_node_pool.pod_subnet_id": config.Reference{
-					Type: rconfig.APISPackagePath + "/network/v1alpha1.Subnet",
-				},
-				"default_node_pool.vnet_subnet_id": config.Reference{
-					Type: rconfig.APISPackagePath + "/network/v1alpha1.Subnet",
-				},
-				"addon_profile.ingress_application_gateway.subnet_id": config.Reference{
-					Type: rconfig.APISPackagePath + "/network/v1alpha1.Subnet",
-				},
-			*/
+			"default_node_pool.pod_subnet_id": config.Reference{
+				Type:      rconfig.APISPackagePath + "/network/v1alpha1.Subnet",
+				Extractor: rconfig.ExtractResourceIDFuncPath,
+			},
+			"default_node_pool.vnet_subnet_id": config.Reference{
+				Type:      rconfig.APISPackagePath + "/network/v1alpha1.Subnet",
+				Extractor: rconfig.ExtractResourceIDFuncPath,
+			},
+			"addon_profile.ingress_application_gateway.subnet_id": config.Reference{
+				Type:      rconfig.APISPackagePath + "/network/v1alpha1.Subnet",
+				Extractor: rconfig.ExtractResourceIDFuncPath,
+			},
 		}
 		r.UseAsync = true
 		r.ExternalName = config.NameAsIdentifier
@@ -64,18 +63,18 @@ func Configure(p *config.Provider) {
 		r.Kind = "KubernetesClusterNodePool"
 		r.ShortGroup = "containerservice"
 		r.References = config.References{
-			// TODO(aru): as we no longer hold Azure ID of resources in external-name annotation
-			// these references are currently not generated
-			/*"kubernetes_cluster_id": config.Reference{
-				Type: "KubernetesCluster",
+			"kubernetes_cluster_id": config.Reference{
+				Type:      "KubernetesCluster",
+				Extractor: rconfig.ExtractResourceIDFuncPath,
 			},
 			"pod_subnet_id": config.Reference{
-				Type: rconfig.APISPackagePath + "/network/v1alpha1.Subnet",
+				Type:      rconfig.APISPackagePath + "/network/v1alpha1.Subnet",
+				Extractor: rconfig.ExtractResourceIDFuncPath,
 			},
 			"vnet_subnet_id": config.Reference{
-				Type: rconfig.APISPackagePath + "/network/v1alpha1.Subnet",
+				Type:      rconfig.APISPackagePath + "/network/v1alpha1.Subnet",
+				Extractor: rconfig.ExtractResourceIDFuncPath,
 			},
-			*/
 		}
 		r.UseAsync = true
 		r.ExternalName = config.NameAsIdentifier

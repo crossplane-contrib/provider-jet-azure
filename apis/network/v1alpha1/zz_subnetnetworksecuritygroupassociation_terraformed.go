@@ -54,6 +54,14 @@ func (tr *SubnetNetworkSecurityGroupAssociation) SetObservation(obs map[string]i
 	return json.TFParser.Unmarshal(p, &tr.Status.AtProvider)
 }
 
+// GetID returns ID of underlying Terraform resource of this SubnetNetworkSecurityGroupAssociation
+func (tr *SubnetNetworkSecurityGroupAssociation) GetID() string {
+	if tr.Status.AtProvider.ID == nil {
+		return ""
+	}
+	return *tr.Status.AtProvider.ID
+}
+
 // GetParameters of this SubnetNetworkSecurityGroupAssociation
 func (tr *SubnetNetworkSecurityGroupAssociation) GetParameters() (map[string]interface{}, error) {
 	p, err := json.TFParser.Marshal(tr.Spec.ForProvider)

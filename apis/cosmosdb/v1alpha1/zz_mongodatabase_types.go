@@ -35,6 +35,7 @@ type MongoDatabaseAutoscaleSettingsParameters struct {
 }
 
 type MongoDatabaseObservation struct {
+	ID *string `json:"id,omitempty" tf:"id,omitempty"`
 }
 
 type MongoDatabaseParameters struct {

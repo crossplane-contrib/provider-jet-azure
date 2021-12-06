@@ -52,13 +52,11 @@ func Configure(p *config.Provider) {
 
 	p.AddResourceConfigurator("azurerm_postgresql_flexible_server_configuration", func(r *config.Resource) {
 		r.References = config.References{
-			// TODO(aru): as we no longer hold Azure ID of resources in external-name annotation
-			// these references are currently not generated
-			/*"server_id": config.Reference{
-				Type: "FlexibleServer",
-			},*/
+			"server_id": config.Reference{
+				Type:      "FlexibleServer",
+				Extractor: rconfig.ExtractResourceIDFuncPath,
+			},
 		}
-		r.UseAsync = true
 		r.ExternalName = config.IdentifierFromProvider
 	})
 
@@ -108,11 +106,10 @@ func Configure(p *config.Provider) {
 
 	p.AddResourceConfigurator("azurerm_postgresql_flexible_server_database", func(r *config.Resource) {
 		r.References = config.References{
-			// TODO(aru): as we no longer hold Azure ID of resources in external-name annotation
-			// these references are currently not generated
-			/*"server_id": config.Reference{
-				Type: "FlexibleServer",
-			},*/
+			"server_id": config.Reference{
+				Type:      "FlexibleServer",
+				Extractor: rconfig.ExtractResourceIDFuncPath,
+			},
 		}
 		r.UseAsync = true
 		r.ExternalName = config.NameAsIdentifier
@@ -152,11 +149,10 @@ func Configure(p *config.Provider) {
 
 	p.AddResourceConfigurator("azurerm_postgresql_flexible_server_firewall_rule", func(r *config.Resource) {
 		r.References = config.References{
-			// TODO(aru): as we no longer hold Azure ID of resources in external-name annotation
-			// these references are currently not generated
-			/*"server_id": config.Reference{
-				Type: "FlexibleServer",
-			},*/
+			"server_id": config.Reference{
+				Type:      "FlexibleServer",
+				Extractor: rconfig.ExtractResourceIDFuncPath,
+			},
 		}
 		r.UseAsync = true
 		r.ExternalName = config.NameAsIdentifier
@@ -183,11 +179,10 @@ func Configure(p *config.Provider) {
 			"resource_group_name": config.Reference{
 				Type: rconfig.APISPackagePath + "/azure/v1alpha1.ResourceGroup",
 			},
-			// TODO(aru): as we no longer hold Azure ID of resources in external-name annotation
-			// these references are currently not generated
-			/*"delegated_subnet_id": config.Reference{
-				Type: rconfig.APISPackagePath + "/network/v1alpha1.Subnet",
-			},*/
+			"delegated_subnet_id": config.Reference{
+				Type:      rconfig.APISPackagePath + "/network/v1alpha1.Subnet",
+				Extractor: rconfig.ExtractResourceIDFuncPath,
+			},
 		}
 		r.UseAsync = true
 		r.ExternalName = config.NameAsIdentifier
@@ -206,11 +201,10 @@ func Configure(p *config.Provider) {
 			"server_name": config.Reference{
 				Type: "Server",
 			},
-			// TODO(aru): as we no longer hold Azure ID of resources in external-name annotation
-			// these references are currently not generated
-			/*"subnet_id": config.Reference{
-				Type: rconfig.APISPackagePath + "/network/v1alpha1.Subnet",
-			},*/
+			"subnet_id": config.Reference{
+				Type:      rconfig.APISPackagePath + "/network/v1alpha1.Subnet",
+				Extractor: rconfig.ExtractResourceIDFuncPath,
+			},
 		}
 		r.UseAsync = true
 		r.ExternalName = config.NameAsIdentifier
@@ -224,11 +218,10 @@ func Configure(p *config.Provider) {
 
 	p.AddResourceConfigurator("azurerm_postgresql_server_key", func(r *config.Resource) {
 		r.References = config.References{
-			// TODO(aru): as we no longer hold Azure ID of resources in external-name annotation
-			// these references are currently not generated
-			/*"server_id": config.Reference{
-				Type: "Server",
-			},*/
+			"server_id": config.Reference{
+				Type:      "Server",
+				Extractor: rconfig.ExtractResourceIDFuncPath,
+			},
 		}
 		r.UseAsync = true
 		// /subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/group1/providers/Microsoft.DBforPostgreSQL/servers/server1/keys/keyvaultname_key-name_keyversion

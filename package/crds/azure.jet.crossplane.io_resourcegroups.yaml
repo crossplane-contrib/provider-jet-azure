@@ -119,6 +119,9 @@ spec:
             description: ResourceGroupStatus defines the observed state of ResourceGroup.
             properties:
               atProvider:
+                properties:
+                  id:
+                    type: string
                 type: object
               conditions:
                 description: Conditions of the resource.

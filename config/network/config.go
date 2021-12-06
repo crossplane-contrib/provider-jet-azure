@@ -75,11 +75,10 @@ func Configure(p *config.Provider) {
 			"resource_group_name": config.Reference{
 				Type: rconfig.APISPackagePath + "/azure/v1alpha1.ResourceGroup",
 			},
-			// TODO(aru): as we no longer hold Azure ID of resources in external-name annotation
-			// these references are currently not generated
-			/*"ip_configuration.subnet_id": config.Reference{
-				Type: "Subnet",
-			},*/
+			"ip_configuration.subnet_id": config.Reference{
+				Type:      "Subnet",
+				Extractor: rconfig.ExtractResourceIDFuncPath,
+			},
 		}
 		r.UseAsync = true
 		r.ExternalName = config.NameAsIdentifier
@@ -100,11 +99,10 @@ func Configure(p *config.Provider) {
 			"virtual_network_name": config.Reference{
 				Type: "VirtualNetwork",
 			},
-			// TODO(aru): as we no longer hold Azure ID of resources in external-name annotation
-			// these references are currently not generated
-			/*"remote_virtual_network_id": config.Reference{
-				Type: "VirtualNetwork",
-			},*/
+			"remote_virtual_network_id": config.Reference{
+				Type:      "VirtualNetwork",
+				Extractor: rconfig.ExtractResourceIDFuncPath,
+			},
 		}
 		r.UseAsync = true
 		r.ExternalName = config.NameAsIdentifier
@@ -141,14 +139,14 @@ func Configure(p *config.Provider) {
 			"resource_group_name": config.Reference{
 				Type: rconfig.APISPackagePath + "/azure/v1alpha1.ResourceGroup",
 			},
-			// TODO(aru): as we no longer hold Azure ID of resources in external-name annotation
-			// these references are currently not generated
-			/*"virtual_network_gateway_id": config.Reference{
-				Type: "VirtualNetworkGateway",
+			"virtual_network_gateway_id": config.Reference{
+				Type:      "VirtualNetworkGateway",
+				Extractor: rconfig.ExtractResourceIDFuncPath,
 			},
 			"peer_virtual_network_gateway_id": config.Reference{
-				Type: "VirtualNetworkGateway",
-			},*/
+				Type:      "VirtualNetworkGateway",
+				Extractor: rconfig.ExtractResourceIDFuncPath,
+			},
 		}
 		r.UseAsync = true
 		r.ExternalName = config.NameAsIdentifier

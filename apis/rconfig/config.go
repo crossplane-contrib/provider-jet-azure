@@ -17,27 +17,27 @@ limitations under the License.
 package rconfig
 
 import (
-	"github.com/crossplane/crossplane-runtime/pkg/fieldpath"
+	"github.com/crossplane-contrib/terrajet/pkg/resource"
 	xpref "github.com/crossplane/crossplane-runtime/pkg/reference"
 	xpresource "github.com/crossplane/crossplane-runtime/pkg/resource"
 )
 
-// APISPackagePath is the package path for generated APIs root package
-const APISPackagePath = "github.com/crossplane-contrib/provider-jet-azure/apis"
+const (
+	// APISPackagePath is the package path for generated APIs root package
+	APISPackagePath = "github.com/crossplane-contrib/provider-jet-azure/apis"
+	// ExtractResourceIDFuncPath holds the Azure resource ID extractor func name
+	ExtractResourceIDFuncPath = APISPackagePath + "/rconfig.ExtractResourceID()"
+)
 
-// ExtractResourceName extracts the value of `spec.forProvider.name`
-// from a managed resource
-func ExtractResourceName() xpref.ExtractValueFn {
+// ExtractResourceID extracts the value of `spec.atProvider.id`
+// from a Terraformed resource. If mr is not a Terraformed
+// resource, returns an empty string.
+func ExtractResourceID() xpref.ExtractValueFn {
 	return func(mr xpresource.Managed) string {
-		p, err := fieldpath.PaveObject(mr)
-		if err != nil {
+		tr, ok := mr.(resource.Terraformed)
+		if !ok {
 			return ""
 		}
-
-		name, err := p.GetString("spec.forProvider.name")
-		if err != nil {
-			return ""
-		}
-		return name
+		return tr.GetID()
 	}
 }

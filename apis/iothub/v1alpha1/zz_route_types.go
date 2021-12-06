@@ -26,6 +26,7 @@ import (
 )
 
 type RouteObservation_2 struct {
+	ID *string `json:"id,omitempty" tf:"id,omitempty"`
 }
 
 type RouteParameters_2 struct {

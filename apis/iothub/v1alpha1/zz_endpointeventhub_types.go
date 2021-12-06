@@ -26,6 +26,7 @@ import (
 )
 
 type EndpointEventhubObservation struct {
+	ID *string `json:"id,omitempty" tf:"id,omitempty"`
 }
 
 type EndpointEventhubParameters struct {

@@ -288,6 +288,8 @@ spec:
                 properties:
                   endpoint:
                     type: string
+                  id:
+                    type: string
                   readEndpoints:
                     items:
                       type: string

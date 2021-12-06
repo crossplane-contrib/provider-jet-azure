@@ -35,6 +35,7 @@ type CassandraTableAutoscaleSettingsParameters struct {
 }
 
 type CassandraTableObservation struct {
+	ID *string `json:"id,omitempty" tf:"id,omitempty"`
 }
 
 type CassandraTableParameters struct {
@@ -45,8 +46,16 @@ type CassandraTableParameters struct {
 	// +kubebuilder:validation:Optional
 	AutoscaleSettings []CassandraTableAutoscaleSettingsParameters `json:"autoscaleSettings,omitempty" tf:"autoscale_settings,omitempty"`
 
-	// +kubebuilder:validation:Required
-	CassandraKeyspaceID *string `json:"cassandraKeyspaceId" tf:"cassandra_keyspace_id,omitempty"`
+	// +crossplane:generate:reference:type=CassandraKeyspace
+	// +crossplane:generate:reference:extractor=github.com/crossplane-contrib/provider-jet-azure/apis/rconfig.ExtractResourceID()
+	// +kubebuilder:validation:Optional
+	CassandraKeyspaceID *string `json:"cassandraKeyspaceId,omitempty" tf:"cassandra_keyspace_id,omitempty"`
+
+	// +kubebuilder:validation:Optional
+	CassandraKeyspaceIDRef *v1.Reference `json:"cassandraKeyspaceIdRef,omitempty" tf:"-"`
+
+	// +kubebuilder:validation:Optional
+	CassandraKeyspaceIDSelector *v1.Selector `json:"cassandraKeyspaceIdSelector,omitempty" tf:"-"`
 
 	// +kubebuilder:validation:Optional
 	DefaultTTL *int64 `json:"defaultTtl,omitempty" tf:"default_ttl,omitempty"`

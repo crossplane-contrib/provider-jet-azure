@@ -285,6 +285,9 @@ spec:
             description: MetricAlertStatus defines the observed state of MetricAlert.
             properties:
               atProvider:
+                properties:
+                  id:
+                    type: string
                 type: object
               conditions:
                 description: Conditions of the resource.

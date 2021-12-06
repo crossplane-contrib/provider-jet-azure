@@ -54,6 +54,14 @@ func (tr *FallbackRoute) SetObservation(obs map[string]interface{}) error {
 	return json.TFParser.Unmarshal(p, &tr.Status.AtProvider)
 }
 
+// GetID returns ID of underlying Terraform resource of this FallbackRoute
+func (tr *FallbackRoute) GetID() string {
+	if tr.Status.AtProvider.ID == nil {
+		return ""
+	}
+	return *tr.Status.AtProvider.ID
+}
+
 // GetParameters of this FallbackRoute
 func (tr *FallbackRoute) GetParameters() (map[string]interface{}, error) {
 	p, err := json.TFParser.Marshal(tr.Spec.ForProvider)
@@ -76,7 +84,7 @@ func (tr *FallbackRoute) SetParameters(params map[string]interface{}) error {
 // LateInitialize this FallbackRoute using its observed tfState.
 // returns True if there are any spec changes for the resource.
 func (tr *FallbackRoute) LateInitialize(attrs []byte) (bool, error) {
-	params := &FallbackRouteParameters{}
+	params := &FallbackRouteParameters_2{}
 	if err := json.TFParser.Unmarshal(attrs, params); err != nil {
 		return false, errors.Wrap(err, "failed to unmarshal Terraform state parameters for late-initialization")
 	}

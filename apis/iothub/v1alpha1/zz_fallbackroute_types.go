@@ -26,6 +26,7 @@ import (
 )
 
 type FallbackRouteObservation_2 struct {
+	ID *string `json:"id,omitempty" tf:"id,omitempty"`
 }
 
 type FallbackRouteParameters_2 struct {

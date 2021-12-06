@@ -26,6 +26,7 @@ import (
 )
 
 type FlexibleServerDatabaseObservation struct {
+	ID *string `json:"id,omitempty" tf:"id,omitempty"`
 }
 
 type FlexibleServerDatabaseParameters struct {
@@ -36,8 +37,16 @@ type FlexibleServerDatabaseParameters struct {
 	// +kubebuilder:validation:Optional
 	Collation *string `json:"collation,omitempty" tf:"collation,omitempty"`
 
-	// +kubebuilder:validation:Required
-	ServerID *string `json:"serverId" tf:"server_id,omitempty"`
+	// +crossplane:generate:reference:type=FlexibleServer
+	// +crossplane:generate:reference:extractor=github.com/crossplane-contrib/provider-jet-azure/apis/rconfig.ExtractResourceID()
+	// +kubebuilder:validation:Optional
+	ServerID *string `json:"serverId,omitempty" tf:"server_id,omitempty"`
+
+	// +kubebuilder:validation:Optional
+	ServerIDRef *v1.Reference `json:"serverIdRef,omitempty" tf:"-"`
+
+	// +kubebuilder:validation:Optional
+	ServerIDSelector *v1.Selector `json:"serverIdSelector,omitempty" tf:"-"`
 }
 
 // FlexibleServerDatabaseSpec defines the desired state of FlexibleServerDatabase

@@ -26,6 +26,7 @@ import (
 )
 
 type EnrichmentObservation_2 struct {
+	ID *string `json:"id,omitempty" tf:"id,omitempty"`
 }
 
 type EnrichmentParameters_2 struct {

@@ -26,6 +26,8 @@ import (
 )
 
 type NotebookWorkspaceObservation struct {
+	ID *string `json:"id,omitempty" tf:"id,omitempty"`
+
 	ServerEndpoint *string `json:"serverEndpoint,omitempty" tf:"server_endpoint,omitempty"`
 }
 

@@ -120,6 +120,7 @@ type SQLContainerConflictResolutionPolicyParameters struct {
 }
 
 type SQLContainerObservation struct {
+	ID *string `json:"id,omitempty" tf:"id,omitempty"`
 }
 
 type SQLContainerParameters struct {

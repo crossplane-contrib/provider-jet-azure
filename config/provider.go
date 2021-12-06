@@ -23,6 +23,7 @@ import (
 
 	tjconfig "github.com/crossplane-contrib/terrajet/pkg/config"
 
+	"github.com/crossplane-contrib/provider-jet-azure/config/api"
 	"github.com/crossplane-contrib/provider-jet-azure/config/cosmosdb"
 	"github.com/crossplane-contrib/provider-jet-azure/config/iothub"
 	"github.com/crossplane-contrib/provider-jet-azure/config/ip"
@@ -146,6 +147,7 @@ func GetProvider() *tjconfig.Provider {
 		loganalytics.Configure,
 		iothub.Configure,
 		monitor.Configure,
+		api.Configure,
 	} {
 		configure(pc)
 	}

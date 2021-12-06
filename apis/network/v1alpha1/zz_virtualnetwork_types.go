@@ -39,6 +39,8 @@ type DdosProtectionPlanParameters struct {
 
 type VirtualNetworkObservation struct {
 	GUID *string `json:"guid,omitempty" tf:"guid,omitempty"`
+
+	ID *string `json:"id,omitempty" tf:"id,omitempty"`
 }
 
 type VirtualNetworkParameters struct {
