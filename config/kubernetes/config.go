@@ -33,7 +33,7 @@ func Configure(p *config.Provider) {
 		r.Kind = "KubernetesCluster"
 		r.ShortGroup = "containerservice"
 		r.LateInitializer = config.LateInitializer{
-			IgnoredFields: []string{"kubelet_identity"},
+			IgnoredFields: []string{"kubelet_identity", "private_link_enabled"},
 		}
 		r.References = config.References{
 			"resource_group_name": config.Reference{
