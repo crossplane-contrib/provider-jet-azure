@@ -35,6 +35,26 @@ func (mg *KubernetesCluster) ResolveReferences(ctx context.Context, c client.Rea
 	var err error
 
 	for i3 := 0; i3 < len(mg.Spec.ForProvider.AddonProfile); i3++ {
+		for i4 := 0; i4 < len(mg.Spec.ForProvider.AddonProfile[i3].AciConnectorLinux); i4++ {
+			rsp, err = r.Resolve(ctx, reference.ResolutionRequest{
+				CurrentValue: reference.FromPtrValue(mg.Spec.ForProvider.AddonProfile[i3].AciConnectorLinux[i4].SubnetName),
+				Extract:      reference.ExternalName(),
+				Reference:    mg.Spec.ForProvider.AddonProfile[i3].AciConnectorLinux[i4].SubnetNameRef,
+				Selector:     mg.Spec.ForProvider.AddonProfile[i3].AciConnectorLinux[i4].SubnetNameSelector,
+				To: reference.To{
+					List:    &v1alpha1.SubnetList{},
+					Managed: &v1alpha1.Subnet{},
+				},
+			})
+			if err != nil {
+				return errors.Wrap(err, "mg.Spec.ForProvider.AddonProfile[i3].AciConnectorLinux[i4].SubnetName")
+			}
+			mg.Spec.ForProvider.AddonProfile[i3].AciConnectorLinux[i4].SubnetName = reference.ToPtrValue(rsp.ResolvedValue)
+			mg.Spec.ForProvider.AddonProfile[i3].AciConnectorLinux[i4].SubnetNameRef = rsp.ResolvedReference
+
+		}
+	}
+	for i3 := 0; i3 < len(mg.Spec.ForProvider.AddonProfile); i3++ {
 		for i4 := 0; i4 < len(mg.Spec.ForProvider.AddonProfile[i3].IngressApplicationGateway); i4++ {
 			rsp, err = r.Resolve(ctx, reference.ResolutionRequest{
 				CurrentValue: reference.FromPtrValue(mg.Spec.ForProvider.AddonProfile[i3].IngressApplicationGateway[i4].SubnetID),

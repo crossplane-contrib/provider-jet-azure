@@ -33,8 +33,15 @@ type AciConnectorLinuxParameters struct {
 	// +kubebuilder:validation:Required
 	Enabled *bool `json:"enabled" tf:"enabled,omitempty"`
 
+	// +crossplane:generate:reference:type=github.com/crossplane-contrib/provider-jet-azure/apis/network/v1alpha1.Subnet
 	// +kubebuilder:validation:Optional
 	SubnetName *string `json:"subnetName,omitempty" tf:"subnet_name,omitempty"`
+
+	// +kubebuilder:validation:Optional
+	SubnetNameRef *v1.Reference `json:"subnetNameRef,omitempty" tf:"-"`
+
+	// +kubebuilder:validation:Optional
+	SubnetNameSelector *v1.Selector `json:"subnetNameSelector,omitempty" tf:"-"`
 }
 
 type AddonProfileObservation struct {

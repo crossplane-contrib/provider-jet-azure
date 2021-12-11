@@ -347,6 +347,16 @@ func (in *FrontendIPConfigurationParameters) DeepCopyInto(out *FrontendIPConfigu
 		*out = new(string)
 		**out = **in
 	}
+	if in.SubnetIDRef != nil {
+		in, out := &in.SubnetIDRef, &out.SubnetIDRef
+		*out = new(v1.Reference)
+		**out = **in
+	}
+	if in.SubnetIDSelector != nil {
+		in, out := &in.SubnetIDSelector, &out.SubnetIDSelector
+		*out = new(v1.Selector)
+		(*in).DeepCopyInto(*out)
+	}
 	if in.Zones != nil {
 		in, out := &in.Zones, &out.Zones
 		*out = make([]*string, len(*in))
