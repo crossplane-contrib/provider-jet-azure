@@ -1,0 +1,11 @@
+apiVersion: express.azure.jet.crossplane.io/v1alpha1
+kind: RouteCircuitAuthorization
+metadata:
+  name: example
+spec:
+  forProvider:
+    expressRouteCircuitName: expressRoute1
+    name: exampleERCAuth
+    resourceGroupName: ${azurerm_resource_group.example.name}
+  providerConfigRef:
+    name: example

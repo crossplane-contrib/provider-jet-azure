@@ -1,0 +1,13 @@
+apiVersion: mariadb.azure.jet.crossplane.io/v1alpha1
+kind: Database
+metadata:
+  name: example
+spec:
+  forProvider:
+    charset: utf8
+    collation: utf8_general_ci
+    name: mariadb_database
+    resourceGroupName: ${azurerm_resource_group.example.name}
+    serverName: example-mariadb-server
+  providerConfigRef:
+    name: example

@@ -1,0 +1,21 @@
+apiVersion: service.azure.jet.crossplane.io/v1alpha1
+kind: FabricMeshApplication
+metadata:
+  name: example
+spec:
+  forProvider:
+    location: West Europe
+    name: example-mesh-application
+    resourceGroupName: ${azurerm_resource_group.example.name}
+    service:
+    - codePackage:
+      - imageName: seabreeze/sbz-helloworld:1.0-alpine
+        name: testcodepackage1
+        resources:
+        - requests:
+          - cpu: 1
+            memory: 1
+      name: testservice1
+      osType: Linux
+  providerConfigRef:
+    name: example

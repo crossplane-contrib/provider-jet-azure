@@ -1,0 +1,16 @@
+apiVersion: api.azure.jet.crossplane.io/v1alpha1
+kind: ManagementNamedValue
+metadata:
+  name: example
+spec:
+  forProvider:
+    apiManagementName: example-apim
+    displayName: ExampleProperty
+    name: example-apimg
+    resourceGroupName: ${azurerm_resource_group.example.name}
+    valueSecretRef:
+      key: example-key
+      name: example-secret
+      namespace: crossplane-system
+  providerConfigRef:
+    name: example

@@ -1,0 +1,15 @@
+apiVersion: api.azure.jet.crossplane.io/v1alpha1
+kind: ManagementUser
+metadata:
+  name: example
+spec:
+  forProvider:
+    apiManagementName: example-apim
+    email: tom+tfdev@hashicorp.com
+    firstName: Example
+    lastName: User
+    resourceGroupName: ${azurerm_resource_group.example.name}
+    state: active
+    userId: 5931a75ae4bbd512288c680b
+  providerConfigRef:
+    name: example

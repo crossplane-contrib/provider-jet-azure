@@ -1,0 +1,11 @@
+apiVersion: resource.azure.jet.crossplane.io/v1alpha1
+kind: PolicyAssignment
+metadata:
+  name: example
+spec:
+  forProvider:
+    name: example-policy-assignment
+    policyDefinitionId: ${azurerm_policy_definition.example.id}
+    resourceId: ${data.azurerm_virtual_network.example.id}
+  providerConfigRef:
+    name: example

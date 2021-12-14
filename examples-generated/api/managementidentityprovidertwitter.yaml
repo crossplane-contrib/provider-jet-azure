@@ -1,0 +1,15 @@
+apiVersion: api.azure.jet.crossplane.io/v1alpha1
+kind: ManagementIdentityProviderTwitter
+metadata:
+  name: example
+spec:
+  forProvider:
+    apiKey: "00000000000000000000000000000000"
+    apiManagementName: example-apim
+    apiSecretKeySecretRef:
+      key: example-key
+      name: example-secret
+      namespace: crossplane-system
+    resourceGroupName: ${azurerm_resource_group.example.name}
+  providerConfigRef:
+    name: example

@@ -1,0 +1,17 @@
+apiVersion: api.azure.jet.crossplane.io/v1alpha1
+kind: ManagementAuthorizationServer
+metadata:
+  name: example
+spec:
+  forProvider:
+    apiManagementName: ${data.azurerm_api_management.example.name}
+    authorizationEndpoint: https://example.mydomain.com/client/authorize
+    clientId: 42424242-4242-4242-4242-424242424242
+    clientRegistrationEndpoint: https://example.mydomain.com/client/register
+    displayName: Test Server
+    grantTypes:
+    - authorizationCode
+    name: test-server
+    resourceGroupName: ${data.azurerm_api_management.example.resource_group_name}
+  providerConfigRef:
+    name: example

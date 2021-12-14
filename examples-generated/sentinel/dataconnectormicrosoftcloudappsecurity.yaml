@@ -1,0 +1,10 @@
+apiVersion: sentinel.azure.jet.crossplane.io/v1alpha1
+kind: DataConnectorMicrosoftCloudAppSecurity
+metadata:
+  name: example
+spec:
+  forProvider:
+    logAnalyticsWorkspaceId: ${azurerm_log_analytics_workspace.example.id}
+    name: example
+  providerConfigRef:
+    name: example

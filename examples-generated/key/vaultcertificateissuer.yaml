@@ -1,0 +1,17 @@
+apiVersion: key.azure.jet.crossplane.io/v1alpha1
+kind: VaultCertificateIssuer
+metadata:
+  name: example
+spec:
+  forProvider:
+    accountId: "0000"
+    keyVaultId: ${data.azurerm_key_vault.example.id}
+    name: example-issuer
+    orgId: ExampleOrgName
+    passwordSecretRef:
+      key: example-key
+      name: example-secret
+      namespace: crossplane-system
+    providerName: DigiCert
+  providerConfigRef:
+    name: example

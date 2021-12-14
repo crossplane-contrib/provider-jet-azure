@@ -1,0 +1,11 @@
+apiVersion: sentinel.azure.jet.crossplane.io/v1alpha1
+kind: DataConnectorAwsCloudTrail
+metadata:
+  name: example
+spec:
+  forProvider:
+    awsRoleArn: arn:aws:iam::000000000000:role/role1
+    logAnalyticsWorkspaceId: ${azurerm_log_analytics_workspace.example.id}
+    name: example
+  providerConfigRef:
+    name: example

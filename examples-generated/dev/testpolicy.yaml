@@ -1,0 +1,17 @@
+apiVersion: dev.azure.jet.crossplane.io/v1alpha1
+kind: TestPolicy
+metadata:
+  name: example
+spec:
+  forProvider:
+    evaluatorType: MaxValuePolicy
+    factData: ""
+    labName: example-devtestlab
+    name: LabVmCount
+    policySetName: default
+    resourceGroupName: ${azurerm_resource_group.example.name}
+    tags:
+      Acceptance: Test
+    threshold: "999"
+  providerConfigRef:
+    name: example

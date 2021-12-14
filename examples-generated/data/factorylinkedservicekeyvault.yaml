@@ -1,0 +1,12 @@
+apiVersion: data.azure.jet.crossplane.io/v1alpha1
+kind: FactoryLinkedServiceKeyVault
+metadata:
+  name: example
+spec:
+  forProvider:
+    dataFactoryName: example
+    keyVaultId: ${azurerm_key_vault.example.id}
+    name: example
+    resourceGroupName: ${azurerm_resource_group.example.name}
+  providerConfigRef:
+    name: example

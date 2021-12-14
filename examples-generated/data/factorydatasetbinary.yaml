@@ -1,0 +1,15 @@
+apiVersion: data.azure.jet.crossplane.io/v1alpha1
+kind: FactoryDatasetBinary
+metadata:
+  name: example
+spec:
+  forProvider:
+    dataFactoryName: example
+    linkedServiceName: example
+    name: example
+    resourceGroupName: ${azurerm_resource_group.example.name}
+    sftpServerLocation:
+    - filename: '**'
+      path: /test/
+  providerConfigRef:
+    name: example

@@ -1,0 +1,24 @@
+apiVersion: postgresql.azure.jet.crossplane.io/v1alpha1
+kind: FlexibleServer
+metadata:
+  name: example
+spec:
+  forProvider:
+    administratorLogin: psqladminun
+    administratorPasswordSecretRef:
+      key: example-key
+      name: example-secret
+      namespace: crossplane-system
+    delegatedSubnetIdRef:
+      name: example
+    depends_on:
+    - ${azurerm_private_dns_zone_virtual_network_link.example}
+    location: West Europe
+    privateDnsZoneId: ${azurerm_private_dns_zone.example.id}
+    resourceGroupNameRef:
+      name: example
+    skuName: GP_Standard_D4s_v3
+    storageMb: 32768
+    version: "12"
+  providerConfigRef:
+    name: example

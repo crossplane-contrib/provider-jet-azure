@@ -1,0 +1,15 @@
+apiVersion: data.azure.jet.crossplane.io/v1alpha1
+kind: ProtectionBackupInstanceBlobStorage
+metadata:
+  name: example
+spec:
+  forProvider:
+    backupPolicyId: ${azurerm_data_protection_backup_policy_blob_storage.example.id}
+    depends_on:
+    - ${azurerm_role_assignment.example}
+    name: example-backup-instance
+    storage_account_location: West Europe
+    storageAccountId: ${azurerm_storage_account.example.id}
+    vaultId: ${azurerm_data_protection_backup_vault.example.id}
+  providerConfigRef:
+    name: example

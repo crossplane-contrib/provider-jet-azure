@@ -1,0 +1,18 @@
+apiVersion: bot.azure.jet.crossplane.io/v1alpha1
+kind: Connection
+metadata:
+  name: example
+spec:
+  forProvider:
+    botName: example
+    clientId: exampleId
+    clientSecretSecretRef:
+      key: example-key
+      name: example-secret
+      namespace: crossplane-system
+    location: global
+    name: example
+    resourceGroupName: ${azurerm_resource_group.example.name}
+    serviceProviderName: box
+  providerConfigRef:
+    name: example

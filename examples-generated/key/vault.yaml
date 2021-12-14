@@ -1,0 +1,25 @@
+apiVersion: key.azure.jet.crossplane.io/v1alpha1
+kind: Vault
+metadata:
+  name: example
+spec:
+  forProvider:
+    accessPolicy:
+    - keyPermissions:
+      - Get
+      objectId: ${data.azurerm_client_config.current.object_id}
+      secretPermissions:
+      - Get
+      storagePermissions:
+      - Get
+      tenantId: ${data.azurerm_client_config.current.tenant_id}
+    enabledForDiskEncryption: true
+    location: West Europe
+    name: examplekeyvault
+    purgeProtectionEnabled: false
+    resourceGroupName: ${azurerm_resource_group.example.name}
+    skuName: standard
+    softDeleteRetentionDays: 7
+    tenantId: ${data.azurerm_client_config.current.tenant_id}
+  providerConfigRef:
+    name: example

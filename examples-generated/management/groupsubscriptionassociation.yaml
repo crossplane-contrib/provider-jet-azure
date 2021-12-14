@@ -1,0 +1,10 @@
+apiVersion: management.azure.jet.crossplane.io/v1alpha1
+kind: GroupSubscriptionAssociation
+metadata:
+  name: example
+spec:
+  forProvider:
+    managementGroupId: ${data.azurerm_management_group.example.id}
+    subscriptionId: ${data.azurerm_subscription.example.id}
+  providerConfigRef:
+    name: example

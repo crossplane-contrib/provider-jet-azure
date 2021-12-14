@@ -19,3 +19,5 @@ require (
 )
 
 replace github.com/hashicorp/terraform-provider-azurerm => ./.work/.azurerm
+
+replace github.com/crossplane-contrib/terrajet => github.com/ulucinar/terrajet v0.0.0-20211214071941-f444f6e65332

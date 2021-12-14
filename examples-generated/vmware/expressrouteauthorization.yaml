@@ -1,0 +1,10 @@
+apiVersion: vmware.azure.jet.crossplane.io/v1alpha1
+kind: ExpressRouteAuthorization
+metadata:
+  name: example
+spec:
+  forProvider:
+    name: example-authorization
+    privateCloudId: ${azurerm_vmware_private_cloud.example.id}
+  providerConfigRef:
+    name: example

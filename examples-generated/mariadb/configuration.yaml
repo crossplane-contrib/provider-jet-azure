@@ -1,0 +1,12 @@
+apiVersion: mariadb.azure.jet.crossplane.io/v1alpha1
+kind: Configuration
+metadata:
+  name: example
+spec:
+  forProvider:
+    name: interactive_timeout
+    resourceGroupName: ${azurerm_resource_group.example.name}
+    serverName: example-mariadb-server
+    value: "600"
+  providerConfigRef:
+    name: example

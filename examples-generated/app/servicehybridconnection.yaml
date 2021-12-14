@@ -1,0 +1,14 @@
+apiVersion: app.azure.jet.crossplane.io/v1alpha1
+kind: ServiceHybridConnection
+metadata:
+  name: example
+spec:
+  forProvider:
+    appServiceName: example-app-service
+    hostname: testhostname.example
+    port: 8080
+    relayId: ${azurerm_relay_hybrid_connection.example.id}
+    resourceGroupName: ${azurerm_resource_group.example.name}
+    sendKeyName: exampleSharedAccessKey
+  providerConfigRef:
+    name: example

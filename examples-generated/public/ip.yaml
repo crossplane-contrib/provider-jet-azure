@@ -1,0 +1,14 @@
+apiVersion: public.azure.jet.crossplane.io/v1alpha1
+kind: Ip
+metadata:
+  name: example
+spec:
+  forProvider:
+    allocationMethod: Static
+    location: West Europe
+    name: acceptanceTestPublicIp1
+    resourceGroupName: ${azurerm_resource_group.example.name}
+    tags:
+      environment: Production
+  providerConfigRef:
+    name: example

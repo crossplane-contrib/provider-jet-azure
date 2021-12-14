@@ -1,0 +1,17 @@
+apiVersion: api.azure.jet.crossplane.io/v1alpha1
+kind: ManagementApiPolicy
+metadata:
+  name: example
+spec:
+  forProvider:
+    apiManagementName: ${data.azurerm_api_management_api.example.api_management_name}
+    apiName: ${data.azurerm_api_management_api.example.name}
+    resourceGroupName: ${data.azurerm_api_management_api.example.resource_group_name}
+    xmlContent: |
+      <policies>
+        <inbound>
+          <find-and-replace from="xyz" to="abc" />
+        </inbound>
+      </policies>
+  providerConfigRef:
+    name: example

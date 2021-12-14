@@ -1,0 +1,22 @@
+apiVersion: firewall.azure.jet.crossplane.io/v1alpha1
+kind: ApplicationRuleCollection
+metadata:
+  name: example
+spec:
+  forProvider:
+    action: Allow
+    azureFirewallName: testfirewall
+    name: testcollection
+    priority: 100
+    resourceGroupName: ${azurerm_resource_group.example.name}
+    rule:
+    - name: testrule
+      protocol:
+      - port: "443"
+        type: Https
+      sourceAddresses:
+      - 10.0.0.0/16
+      targetFqdns:
+      - '*.google.com'
+  providerConfigRef:
+    name: example

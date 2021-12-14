@@ -1,0 +1,13 @@
+apiVersion: log.azure.jet.crossplane.io/v1alpha1
+kind: AnalyticsCluster
+metadata:
+  name: example
+spec:
+  forProvider:
+    identity:
+    - type: SystemAssigned
+    location: West Europe
+    name: example-cluster
+    resourceGroupName: ${azurerm_resource_group.example.name}
+  providerConfigRef:
+    name: example

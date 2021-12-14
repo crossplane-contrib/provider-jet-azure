@@ -1,0 +1,15 @@
+apiVersion: bastion.azure.jet.crossplane.io/v1alpha1
+kind: Host
+metadata:
+  name: example
+spec:
+  forProvider:
+    ipConfiguration:
+    - name: configuration
+      publicIpAddressId: ${azurerm_public_ip.example.id}
+      subnetId: ${azurerm_subnet.example.id}
+    location: West Europe
+    name: examplebastion
+    resourceGroupName: ${azurerm_resource_group.example.name}
+  providerConfigRef:
+    name: example

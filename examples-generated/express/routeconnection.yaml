@@ -1,0 +1,11 @@
+apiVersion: express.azure.jet.crossplane.io/v1alpha1
+kind: RouteConnection
+metadata:
+  name: example
+spec:
+  forProvider:
+    expressRouteCircuitPeeringId: ${azurerm_express_route_circuit_peering.example.id}
+    expressRouteGatewayId: ${azurerm_express_route_gateway.example.id}
+    name: example-expressrouteconn
+  providerConfigRef:
+    name: example

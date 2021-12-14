@@ -1,0 +1,12 @@
+apiVersion: spring.azure.jet.crossplane.io/v1alpha1
+kind: CloudCertificate
+metadata:
+  name: example
+spec:
+  forProvider:
+    keyVaultCertificateId: ${azurerm_key_vault_certificate.example.id}
+    name: example-scc
+    resourceGroupName: ${azurerm_spring_cloud_service.example.resource_group_name}
+    serviceName: example-springcloud
+  providerConfigRef:
+    name: example

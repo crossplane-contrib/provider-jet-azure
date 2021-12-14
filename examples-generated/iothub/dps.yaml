@@ -1,0 +1,15 @@
+apiVersion: iothub.azure.jet.crossplane.io/v1alpha1
+kind: DPS
+metadata:
+  name: example
+spec:
+  forProvider:
+    allocationPolicy: Hashed
+    location: West Europe
+    resourceGroupNameRef:
+      name: example
+    sku:
+    - capacity: "1"
+      name: S1
+  providerConfigRef:
+    name: example

@@ -1,0 +1,15 @@
+apiVersion: api.azure.jet.crossplane.io/v1alpha1
+kind: ManagementCustomDomain
+metadata:
+  name: example
+spec:
+  forProvider:
+    apiManagementId: ${azurerm_api_management.example.id}
+    developerPortal:
+    - hostName: portal.example.com
+      keyVaultId: ${azurerm_key_vault_certificate.test.secret_id}
+    proxy:
+    - hostName: api.example.com
+      keyVaultId: ${azurerm_key_vault_certificate.test.secret_id}
+  providerConfigRef:
+    name: example

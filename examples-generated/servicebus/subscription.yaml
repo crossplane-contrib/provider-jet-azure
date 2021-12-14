@@ -1,0 +1,13 @@
+apiVersion: servicebus.azure.jet.crossplane.io/v1alpha1
+kind: Subscription
+metadata:
+  name: example
+spec:
+  forProvider:
+    maxDeliveryCount: 1
+    name: tfex_servicebus_subscription
+    namespaceName: tfex-servicebus-namespace
+    resourceGroupName: ${azurerm_resource_group.example.name}
+    topicName: tfex_servicebus_topic
+  providerConfigRef:
+    name: example

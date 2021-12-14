@@ -1,0 +1,11 @@
+apiVersion: subscription.azure.jet.crossplane.io/v1alpha1
+kind: PolicyAssignment
+metadata:
+  name: example
+spec:
+  forProvider:
+    name: example
+    policyDefinitionId: ${azurerm_policy_definition.example.id}
+    subscriptionId: ${azurerm_subscription.current.id}
+  providerConfigRef:
+    name: example

@@ -1,0 +1,16 @@
+apiVersion: network.azure.jet.crossplane.io/v1alpha1
+kind: Profile
+metadata:
+  name: example
+spec:
+  forProvider:
+    containerNetworkInterface:
+    - ipConfiguration:
+      - name: exampleipconfig
+        subnetId: ${azurerm_subnet.example.id}
+      name: examplecnic
+    location: West Europe
+    name: examplenetprofile
+    resourceGroupName: ${azurerm_resource_group.example.name}
+  providerConfigRef:
+    name: example

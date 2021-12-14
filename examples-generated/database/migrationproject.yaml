@@ -1,0 +1,14 @@
+apiVersion: database.azure.jet.crossplane.io/v1alpha1
+kind: MigrationProject
+metadata:
+  name: example
+spec:
+  forProvider:
+    location: ${zurerm_resource_group.example.location}
+    name: example-dbms-project
+    resourceGroupName: ${azurerm_resource_group.example.name}
+    serviceName: example-dms
+    sourcePlatform: SQL
+    targetPlatform: SQLDB
+  providerConfigRef:
+    name: example

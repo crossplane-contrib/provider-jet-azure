@@ -1,0 +1,13 @@
+apiVersion: log.azure.jet.crossplane.io/v1alpha1
+kind: AnalyticsLinkedStorageAccount
+metadata:
+  name: example
+spec:
+  forProvider:
+    dataSourceType: customlogs
+    resourceGroupName: ${azurerm_resource_group.example.name}
+    storageAccountIds:
+    - ${azurerm_storage_account.example.id}
+    workspaceResourceId: ${azurerm_log_analytics_workspace.example.id}
+  providerConfigRef:
+    name: example

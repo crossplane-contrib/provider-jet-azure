@@ -1,0 +1,19 @@
+apiVersion: network.azure.jet.crossplane.io/v1alpha1
+kind: VirtualNetworkGatewayConnection
+metadata:
+  name: example
+spec:
+  forProvider:
+    localNetworkGatewayId: ${azurerm_local_network_gateway.onpremise.id}
+    location: West Europe
+    resourceGroupNameRef:
+      name: example
+    sharedKeySecretRef:
+      key: example-key
+      name: example-secret
+      namespace: crossplane-system
+    type: IPsec
+    virtualNetworkGatewayIdRef:
+      name: example
+  providerConfigRef:
+    name: example

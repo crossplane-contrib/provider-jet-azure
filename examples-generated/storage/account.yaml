@@ -1,0 +1,15 @@
+apiVersion: storage.azure.jet.crossplane.io/v1alpha1
+kind: Account
+metadata:
+  name: example
+spec:
+  forProvider:
+    accountReplicationType: GRS
+    accountTier: Standard
+    location: West Europe
+    resourceGroupNameRef:
+      name: example
+    tags:
+      environment: staging
+  providerConfigRef:
+    name: example

@@ -1,0 +1,23 @@
+apiVersion: data.azure.jet.crossplane.io/v1alpha1
+kind: FactoryDatasetDelimitedText
+metadata:
+  name: example
+spec:
+  forProvider:
+    columnDelimiter: ','
+    dataFactoryName: example
+    encoding: UTF-8
+    escapeCharacter: f
+    firstRowAsHeader: true
+    httpServerLocation:
+    - filename: fizz.txt
+      path: foo/bar/
+      relativeUrl: http://www.bing.com
+    linkedServiceName: example
+    name: example
+    nullValue: "NULL"
+    quoteCharacter: x
+    resourceGroupName: ${azurerm_resource_group.example.name}
+    rowDelimiter: NEW
+  providerConfigRef:
+    name: example

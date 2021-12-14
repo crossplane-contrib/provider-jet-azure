@@ -1,0 +1,16 @@
+apiVersion: data.azure.jet.crossplane.io/v1alpha1
+kind: FactoryDatasetParquet
+metadata:
+  name: example
+spec:
+  forProvider:
+    dataFactoryName: example
+    httpServerLocation:
+    - filename: fizz.txt
+      path: foo/bar/
+      relativeUrl: http://www.bing.com
+    linkedServiceName: example
+    name: example
+    resourceGroupName: ${azurerm_resource_group.example.name}
+  providerConfigRef:
+    name: example

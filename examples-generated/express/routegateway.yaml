@@ -1,0 +1,15 @@
+apiVersion: express.azure.jet.crossplane.io/v1alpha1
+kind: RouteGateway
+metadata:
+  name: example
+spec:
+  forProvider:
+    location: West Europe
+    name: expressRoute1
+    resourceGroupName: ${azurerm_resource_group.example.name}
+    scaleUnits: 1
+    tags:
+      environment: Production
+    virtualHubId: ${azurerm_virtual_hub.example.id}
+  providerConfigRef:
+    name: example

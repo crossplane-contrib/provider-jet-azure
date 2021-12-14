@@ -1,0 +1,15 @@
+apiVersion: lb.azure.jet.crossplane.io/v1alpha1
+kind: OutboundRule
+metadata:
+  name: example
+spec:
+  forProvider:
+    backendAddressPoolId: ${azurerm_lb_backend_address_pool.example.id}
+    frontendIpConfiguration:
+    - name: PublicIPAddress
+    loadbalancerId: ${azurerm_lb.example.id}
+    name: OutboundRule
+    protocol: Tcp
+    resourceGroupName: ${azurerm_resource_group.example.name}
+  providerConfigRef:
+    name: example

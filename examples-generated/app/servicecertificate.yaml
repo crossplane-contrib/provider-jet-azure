@@ -1,0 +1,19 @@
+apiVersion: app.azure.jet.crossplane.io/v1alpha1
+kind: ServiceCertificate
+metadata:
+  name: example
+spec:
+  forProvider:
+    location: West Europe
+    name: example-cert
+    passwordSecretRef:
+      key: example-key
+      name: example-secret
+      namespace: crossplane-system
+    pfxBlobSecretRef:
+      key: example-key
+      name: example-secret
+      namespace: crossplane-system
+    resourceGroupName: ${azurerm_resource_group.example.name}
+  providerConfigRef:
+    name: example

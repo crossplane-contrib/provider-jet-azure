@@ -1,0 +1,24 @@
+apiVersion: dev.azure.jet.crossplane.io/v1alpha1
+kind: TestWindowsVirtualMachine
+metadata:
+  name: example
+spec:
+  forProvider:
+    galleryImageReference:
+    - offer: WindowsServer
+      publisher: MicrosoftWindowsServer
+      sku: 2019-Datacenter
+      version: latest
+    labName: example-devtestlab
+    labSubnetName: ${azurerm_dev_test_virtual_network.example.subnet[0].name}
+    labVirtualNetworkId: ${azurerm_dev_test_virtual_network.example.id}
+    location: West Europe
+    name: example-vm03
+    notes: Some notes about this Virtual Machine.
+    password: Pa$w0rd1234!
+    resourceGroupName: ${azurerm_resource_group.example.name}
+    size: Standard_DS2
+    storageType: Premium
+    username: exampleuser99
+  providerConfigRef:
+    name: example

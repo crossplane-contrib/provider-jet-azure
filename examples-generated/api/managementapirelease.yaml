@@ -1,0 +1,10 @@
+apiVersion: api.azure.jet.crossplane.io/v1alpha1
+kind: ManagementApiRelease
+metadata:
+  name: example
+spec:
+  forProvider:
+    apiId: ${azurerm_api_management_api.example.id}
+    name: example-Api-Release
+  providerConfigRef:
+    name: example

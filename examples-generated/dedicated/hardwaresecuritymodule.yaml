@@ -1,0 +1,21 @@
+apiVersion: dedicated.azure.jet.crossplane.io/v1alpha1
+kind: HardwareSecurityModule
+metadata:
+  name: example
+spec:
+  forProvider:
+    depends_on:
+    - ${azurerm_virtual_network_gateway.example}
+    location: West Europe
+    name: example-hsm
+    networkProfile:
+    - networkInterfacePrivateIpAddresses:
+      - 10.2.1.8
+      subnetId: ${azurerm_subnet.example2.id}
+    resourceGroupName: ${azurerm_resource_group.example.name}
+    skuName: SafeNet Luna Network HSM A790
+    stampId: stamp2
+    tags:
+      env: Test
+  providerConfigRef:
+    name: example

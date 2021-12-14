@@ -1,0 +1,17 @@
+apiVersion: storage.azure.jet.crossplane.io/v1alpha1
+kind: AccountNetworkRules
+metadata:
+  name: example
+spec:
+  forProvider:
+    bypass:
+    - Metrics
+    defaultAction: Allow
+    ipRules:
+    - 127.0.0.1
+    resourceGroupName: ${azurerm_resource_group.test.name}
+    storageAccountName: ${azurerm_storage_account.test.name}
+    virtualNetworkSubnetIds:
+    - ${azurerm_subnet.test.id}
+  providerConfigRef:
+    name: example

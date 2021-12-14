@@ -1,0 +1,24 @@
+apiVersion: dev.azure.jet.crossplane.io/v1alpha1
+kind: TestLinuxVirtualMachine
+metadata:
+  name: example
+spec:
+  forProvider:
+    galleryImageReference:
+    - offer: UbuntuServer
+      publisher: Canonical
+      sku: 18.04-LTS
+      version: latest
+    labName: example-devtestlab
+    labSubnetName: ${azurerm_dev_test_virtual_network.example.subnet[0].name}
+    labVirtualNetworkId: ${azurerm_dev_test_virtual_network.example.id}
+    location: West Europe
+    name: example-vm03
+    notes: Some notes about this Virtual Machine.
+    resourceGroupName: ${azurerm_resource_group.example.name}
+    size: Standard_DS2
+    sshKey: ${file("~/.ssh/id_rsa.pub")}
+    storageType: Premium
+    username: exampleuser99
+  providerConfigRef:
+    name: example

@@ -1,0 +1,22 @@
+apiVersion: service.azure.jet.crossplane.io/v1alpha1
+kind: FabricCluster
+metadata:
+  name: example
+spec:
+  forProvider:
+    clusterCodeVersion: 7.1.456.959
+    location: West Europe
+    managementEndpoint: https://example:80
+    name: example-servicefabric
+    nodeType:
+    - clientEndpointPort: 2020
+      httpEndpointPort: 80
+      instanceCount: 3
+      isPrimary: true
+      name: first
+    reliabilityLevel: Bronze
+    resourceGroupName: ${azurerm_resource_group.example.name}
+    upgradeMode: Manual
+    vmImage: Windows
+  providerConfigRef:
+    name: example

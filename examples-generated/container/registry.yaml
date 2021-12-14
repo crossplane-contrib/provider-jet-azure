@@ -1,0 +1,20 @@
+apiVersion: container.azure.jet.crossplane.io/v1alpha1
+kind: Registry
+metadata:
+  name: example
+spec:
+  forProvider:
+    adminEnabled: false
+    georeplications:
+    - location: East US
+      tags: {}
+      zoneRedundancyEnabled: true
+    - location: westeurope
+      tags: {}
+      zoneRedundancyEnabled: true
+    location: West Europe
+    name: containerRegistry1
+    resourceGroupName: ${azurerm_resource_group.rg.name}
+    sku: Premium
+  providerConfigRef:
+    name: example

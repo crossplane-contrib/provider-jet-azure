@@ -1,0 +1,14 @@
+apiVersion: iothub.azure.jet.crossplane.io/v1alpha1
+kind: Enrichment
+metadata:
+  name: example
+spec:
+  forProvider:
+    endpointNames:
+    - ${azurerm_iothub_endpoint_storage_container.example.name}
+    iothubName: ${azurerm_iothub.example.name}
+    key: example
+    resourceGroupName: ${azurerm_resource_group.example.name}
+    value: my value
+  providerConfigRef:
+    name: example

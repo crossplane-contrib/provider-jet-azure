@@ -1,0 +1,12 @@
+apiVersion: vpn.azure.jet.crossplane.io/v1alpha1
+kind: Gateway
+metadata:
+  name: example
+spec:
+  forProvider:
+    location: West Europe
+    name: example-vpng
+    resourceGroupName: ${azurerm_resource_group.example.name}
+    virtualHubId: ${azurerm_virtual_hub.example.id}
+  providerConfigRef:
+    name: example

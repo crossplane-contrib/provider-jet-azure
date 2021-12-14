@@ -1,0 +1,14 @@
+apiVersion: iothub.azure.jet.crossplane.io/v1alpha1
+kind: DPSSharedAccessPolicy
+metadata:
+  name: example
+spec:
+  forProvider:
+    enrollmentRead: true
+    enrollmentWrite: true
+    iothubDpsNameRef:
+      name: example
+    resourceGroupNameRef:
+      name: example
+  providerConfigRef:
+    name: example

@@ -1,0 +1,14 @@
+apiVersion: containerservice.azure.jet.crossplane.io/v1alpha1
+kind: KubernetesClusterNodePool
+metadata:
+  name: example
+spec:
+  forProvider:
+    kubernetesClusterIdRef:
+      name: example
+    nodeCount: 1
+    tags:
+      Environment: Production
+    vmSize: Standard_DS2_v2
+  providerConfigRef:
+    name: example

@@ -1,0 +1,11 @@
+apiVersion: management.azure.jet.crossplane.io/v1alpha1
+kind: ManagementGroup
+metadata:
+  name: example
+spec:
+  forProvider:
+    displayName: ParentGroup
+    subscriptionIds:
+    - ${data.azurerm_subscription.current.subscription_id}
+  providerConfigRef:
+    name: example

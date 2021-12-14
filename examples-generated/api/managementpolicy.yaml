@@ -1,0 +1,10 @@
+apiVersion: api.azure.jet.crossplane.io/v1alpha1
+kind: ManagementPolicy
+metadata:
+  name: example
+spec:
+  forProvider:
+    apiManagementId: ${azurerm_api_management.example.id}
+    xmlContent: ${file("example.xml")}
+  providerConfigRef:
+    name: example

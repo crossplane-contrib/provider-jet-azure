@@ -1,0 +1,28 @@
+apiVersion: private.azure.jet.crossplane.io/v1alpha1
+kind: LinkService
+metadata:
+  name: example
+spec:
+  forProvider:
+    autoApprovalSubscriptionIds:
+    - 00000000-0000-0000-0000-000000000000
+    loadBalancerFrontendIpConfigurationIds:
+    - ${azurerm_lb.example.frontend_ip_configuration.0.id}
+    location: West Europe
+    name: example-privatelink
+    natIpConfiguration:
+    - name: primary
+      primary: true
+      privateIpAddress: 10.5.1.17
+      privateIpAddressVersion: IPv4
+      subnetId: ${azurerm_subnet.example.id}
+    - name: secondary
+      primary: false
+      privateIpAddress: 10.5.1.18
+      privateIpAddressVersion: IPv4
+      subnetId: ${azurerm_subnet.example.id}
+    resourceGroupName: ${azurerm_resource_group.example.name}
+    visibilitySubscriptionIds:
+    - 00000000-0000-0000-0000-000000000000
+  providerConfigRef:
+    name: example

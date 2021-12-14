@@ -1,0 +1,18 @@
+apiVersion: monitor.azure.jet.crossplane.io/v1alpha1
+kind: SmartDetectorAlertRule
+metadata:
+  name: example
+spec:
+  forProvider:
+    actionGroup:
+    - ids:
+      - ${azurerm_monitor_action_group.test.id}
+    detectorType: FailureAnomaliesDetector
+    frequency: PT1M
+    name: example-smart-detector-alert-rule
+    resourceGroupName: ${azurerm_resource_group.example.name}
+    scopeResourceIds:
+    - ${azurerm_application_insights.example.id}
+    severity: Sev0
+  providerConfigRef:
+    name: example

@@ -1,0 +1,13 @@
+apiVersion: application.azure.jet.crossplane.io/v1alpha1
+kind: SecurityGroup
+metadata:
+  name: example
+spec:
+  forProvider:
+    location: West Europe
+    name: tf-appsecuritygroup
+    resourceGroupName: ${azurerm_resource_group.example.name}
+    tags:
+      Hello: World
+  providerConfigRef:
+    name: example

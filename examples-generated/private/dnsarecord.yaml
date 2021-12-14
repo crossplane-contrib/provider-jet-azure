@@ -1,0 +1,14 @@
+apiVersion: private.azure.jet.crossplane.io/v1alpha1
+kind: DnsARecord
+metadata:
+  name: example
+spec:
+  forProvider:
+    name: test
+    records:
+    - 10.0.180.17
+    resourceGroupName: ${azurerm_resource_group.example.name}
+    ttl: 300
+    zoneName: mydomain.com
+  providerConfigRef:
+    name: example

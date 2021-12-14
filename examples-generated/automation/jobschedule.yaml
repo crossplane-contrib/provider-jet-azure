@@ -1,0 +1,15 @@
+apiVersion: automation.azure.jet.crossplane.io/v1alpha1
+kind: JobSchedule
+metadata:
+  name: example
+spec:
+  forProvider:
+    automationAccountName: tf-automation-account
+    parameters:
+      resourcegroup: tf-rgr-vm
+      vmname: TF-VM-01
+    resourceGroupName: tf-rgr-automation
+    runbookName: Get-VirtualMachine
+    scheduleName: hour
+  providerConfigRef:
+    name: example

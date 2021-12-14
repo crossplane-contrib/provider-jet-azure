@@ -1,0 +1,11 @@
+apiVersion: mssql.azure.jet.crossplane.io/v1alpha1
+kind: JobAgent
+metadata:
+  name: example
+spec:
+  forProvider:
+    databaseId: ${azurerm_mssql_database.example.id}
+    location: West Europe
+    name: example-job-agent
+  providerConfigRef:
+    name: example

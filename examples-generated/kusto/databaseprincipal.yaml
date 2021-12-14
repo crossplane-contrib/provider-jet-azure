@@ -1,0 +1,15 @@
+apiVersion: kusto.azure.jet.crossplane.io/v1alpha1
+kind: DatabasePrincipal
+metadata:
+  name: example
+spec:
+  forProvider:
+    clientId: ${data.azurerm_client_config.current.tenant_id}
+    clusterName: kustocluster
+    databaseName: my-kusto-database
+    objectId: ${data.azurerm_client_config.current.client_id}
+    resourceGroupName: ${azurerm_resource_group.rg.name}
+    role: Viewer
+    type: User
+  providerConfigRef:
+    name: example

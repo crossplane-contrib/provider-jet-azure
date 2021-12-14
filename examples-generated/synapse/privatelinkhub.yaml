@@ -1,0 +1,11 @@
+apiVersion: synapse.azure.jet.crossplane.io/v1alpha1
+kind: PrivateLinkHub
+metadata:
+  name: example
+spec:
+  forProvider:
+    location: West Europe
+    name: example-resource
+    resourceGroupName: example-rg
+  providerConfigRef:
+    name: example

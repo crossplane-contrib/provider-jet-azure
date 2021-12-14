@@ -1,0 +1,15 @@
+apiVersion: data.azure.jet.crossplane.io/v1alpha1
+kind: ShareDatasetDataLakeGen1
+metadata:
+  name: example
+spec:
+  forProvider:
+    dataLakeStoreId: ${azurerm_data_lake_store.example.id}
+    dataShareId: ${azurerm_data_share.example.id}
+    depends_on:
+    - ${azurerm_role_assignment.example}
+    fileName: myfile.txt
+    folderPath: example
+    name: example-dlg1ds
+  providerConfigRef:
+    name: example

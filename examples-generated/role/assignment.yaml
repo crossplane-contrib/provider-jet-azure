@@ -1,0 +1,11 @@
+apiVersion: role.azure.jet.crossplane.io/v1alpha1
+kind: Assignment
+metadata:
+  name: example
+spec:
+  forProvider:
+    principalId: ${data.azurerm_client_config.example.object_id}
+    roleDefinitionName: Reader
+    scope: ${data.azurerm_subscription.primary.id}
+  providerConfigRef:
+    name: example

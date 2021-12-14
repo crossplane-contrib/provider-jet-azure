@@ -1,0 +1,18 @@
+apiVersion: data.azure.jet.crossplane.io/v1alpha1
+kind: ShareDatasetBlobStorage
+metadata:
+  name: example
+spec:
+  forProvider:
+    containerName: ${azurerm_storage_container.example.name}
+    dataShareId: ${azurerm_data_share.example.id}
+    depends_on:
+    - ${azurerm_role_assignment.example}
+    filePath: myfile.txt
+    name: example-dsbsds-file
+    storageAccount:
+    - name: ${azurerm_storage_account.example.name}
+      resourceGroupName: ${azurerm_storage_account.example.resource_group_name}
+      subscriptionId: 00000000-0000-0000-0000-000000000000
+  providerConfigRef:
+    name: example

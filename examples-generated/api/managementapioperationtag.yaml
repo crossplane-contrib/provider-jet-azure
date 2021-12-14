@@ -1,0 +1,10 @@
+apiVersion: api.azure.jet.crossplane.io/v1alpha1
+kind: ManagementApiOperationTag
+metadata:
+  name: example
+spec:
+  forProvider:
+    apiOperationId: ${azurerm_api_management_api_operation.example.id}
+    name: example-Tag
+  providerConfigRef:
+    name: example

@@ -1,0 +1,15 @@
+apiVersion: key.azure.jet.crossplane.io/v1alpha1
+kind: VaultAccessPolicy
+metadata:
+  name: example
+spec:
+  forProvider:
+    keyPermissions:
+    - Get
+    keyVaultId: ${azurerm_key_vault.example.id}
+    objectId: ${data.azurerm_client_config.current.object_id}
+    secretPermissions:
+    - Get
+    tenantId: ${data.azurerm_client_config.current.tenant_id}
+  providerConfigRef:
+    name: example

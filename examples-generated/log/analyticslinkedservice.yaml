@@ -1,0 +1,11 @@
+apiVersion: log.azure.jet.crossplane.io/v1alpha1
+kind: AnalyticsLinkedService
+metadata:
+  name: example
+spec:
+  forProvider:
+    readAccessId: ${azurerm_automation_account.example.id}
+    resourceGroupName: ${azurerm_resource_group.example.name}
+    workspaceId: ${azurerm_log_analytics_workspace.example.id}
+  providerConfigRef:
+    name: example

@@ -1,0 +1,13 @@
+apiVersion: api.azure.jet.crossplane.io/v1alpha1
+kind: ManagementApiVersionSet
+metadata:
+  name: example
+spec:
+  forProvider:
+    apiManagementName: example-apim
+    displayName: ExampleAPIVersionSet
+    name: example-apimapi-1.0.0
+    resourceGroupName: ${azurerm_resource_group.example.name}
+    versioningScheme: Segment
+  providerConfigRef:
+    name: example

@@ -1,0 +1,10 @@
+apiVersion: spring.azure.jet.crossplane.io/v1alpha1
+kind: CloudActiveDeployment
+metadata:
+  name: example
+spec:
+  forProvider:
+    deploymentName: deploy1
+    springCloudAppId: ${azurerm_spring_cloud_app.example.id}
+  providerConfigRef:
+    name: example

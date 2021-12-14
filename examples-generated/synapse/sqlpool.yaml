@@ -1,0 +1,12 @@
+apiVersion: synapse.azure.jet.crossplane.io/v1alpha1
+kind: SqlPool
+metadata:
+  name: example
+spec:
+  forProvider:
+    createMode: Default
+    name: examplesqlpool
+    skuName: DW100c
+    synapseWorkspaceId: ${azurerm_synapse_workspace.example.id}
+  providerConfigRef:
+    name: example

@@ -1,0 +1,22 @@
+apiVersion: mssql.azure.jet.crossplane.io/v1alpha1
+kind: Elasticpool
+metadata:
+  name: example
+spec:
+  forProvider:
+    licenseType: LicenseIncluded
+    location: West Europe
+    maxSizeGb: 756
+    name: test-epool
+    perDatabaseSettings:
+    - maxCapacity: 4
+      minCapacity: 0.25
+    resourceGroupName: ${azurerm_resource_group.example.name}
+    serverName: ${azurerm_sql_server.example.name}
+    sku:
+    - capacity: 4
+      family: Gen5
+      name: GP_Gen5
+      tier: GeneralPurpose
+  providerConfigRef:
+    name: example

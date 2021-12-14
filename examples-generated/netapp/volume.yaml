@@ -1,0 +1,29 @@
+apiVersion: netapp.azure.jet.crossplane.io/v1alpha1
+kind: Volume
+metadata:
+  name: example
+spec:
+  forProvider:
+    accountName: example-netapp
+    createFromSnapshotResourceId: /subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/group1/providers/Microsoft.NetApp/netAppAccounts/account1/capacityPools/pool1/volumes/volume1/snapshots/snapshot1
+    dataProtectionReplication:
+    - endpointType: dst
+      remoteVolumeLocation: West Europe
+      remoteVolumeResourceId: ${azurerm_netapp_volume.example_primary.id}
+      replicationFrequency: 10minutes
+    lifecycle:
+    - prevent_destroy: true
+    location: West Europe
+    name: example-netappvolume
+    poolName: example-netapppool
+    protocols:
+    - NFSv4.1
+    resourceGroupName: ${azurerm_resource_group.example.name}
+    securityStyle: Unix
+    serviceLevel: Premium
+    snapshotDirectoryVisible: false
+    storageQuotaInGb: 100
+    subnetId: ${azurerm_subnet.example.id}
+    volumePath: my-unique-file-path
+  providerConfigRef:
+    name: example

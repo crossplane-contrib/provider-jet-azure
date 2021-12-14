@@ -1,0 +1,15 @@
+apiVersion: log.azure.jet.crossplane.io/v1alpha1
+kind: AnalyticsDatasourceWindowsPerformanceCounter
+metadata:
+  name: example
+spec:
+  forProvider:
+    counterName: CPU
+    instanceName: '*'
+    intervalSeconds: 10
+    name: example-lad-wpc
+    objectName: CPU
+    resourceGroupName: ${azurerm_resource_group.example.name}
+    workspaceName: ${azurerm_log_analytics_workspace.example.name}
+  providerConfigRef:
+    name: example

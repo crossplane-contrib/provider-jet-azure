@@ -1,0 +1,16 @@
+apiVersion: iothub.azure.jet.crossplane.io/v1alpha1
+kind: DPSCertificate
+metadata:
+  name: example
+spec:
+  forProvider:
+    certificateContentSecretRef:
+      key: example-key
+      name: example-secret
+      namespace: crossplane-system
+    iotDpsNameRef:
+      name: example
+    resourceGroupNameRef:
+      name: example
+  providerConfigRef:
+    name: example

@@ -1,0 +1,19 @@
+apiVersion: express.azure.jet.crossplane.io/v1alpha1
+kind: RouteCircuit
+metadata:
+  name: example
+spec:
+  forProvider:
+    bandwidthInMbps: 50
+    location: West Europe
+    name: expressRoute1
+    peeringLocation: Silicon Valley
+    resourceGroupName: ${azurerm_resource_group.example.name}
+    serviceProviderName: Equinix
+    sku:
+    - family: MeteredData
+      tier: Standard
+    tags:
+      environment: Production
+  providerConfigRef:
+    name: example

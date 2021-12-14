@@ -1,0 +1,12 @@
+apiVersion: postgresql.azure.jet.crossplane.io/v1alpha1
+kind: FlexibleServerFirewallRule
+metadata:
+  name: example
+spec:
+  forProvider:
+    endIpAddress: 122.122.0.0
+    serverIdRef:
+      name: example
+    startIpAddress: 122.122.0.0
+  providerConfigRef:
+    name: example

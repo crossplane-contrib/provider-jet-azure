@@ -1,0 +1,19 @@
+apiVersion: container.azure.jet.crossplane.io/v1alpha1
+kind: RegistryWebhook
+metadata:
+  name: example
+spec:
+  forProvider:
+    actions:
+    - push
+    customHeaders:
+      Content-Type: application/json
+    location: West Europe
+    name: mywebhook
+    registryName: containerRegistry1
+    resourceGroupName: ${azurerm_resource_group.rg.name}
+    scope: mytag:*
+    serviceUri: https://mywebhookreceiver.example/mytag
+    status: enabled
+  providerConfigRef:
+    name: example

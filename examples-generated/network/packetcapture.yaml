@@ -1,0 +1,16 @@
+apiVersion: network.azure.jet.crossplane.io/v1alpha1
+kind: PacketCapture
+metadata:
+  name: example
+spec:
+  forProvider:
+    depends_on:
+    - ${azurerm_virtual_machine_extension.example}
+    name: pctestcapture
+    networkWatcherName: production-nwwatcher
+    resourceGroupName: ${azurerm_resource_group.example.name}
+    storageLocation:
+    - storageAccountId: ${azurerm_storage_account.example.id}
+    targetResourceId: ${azurerm_virtual_machine.example.id}
+  providerConfigRef:
+    name: example

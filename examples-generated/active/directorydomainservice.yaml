@@ -1,0 +1,31 @@
+apiVersion: active.azure.jet.crossplane.io/v1alpha1
+kind: DirectoryDomainService
+metadata:
+  name: example
+spec:
+  forProvider:
+    depends_on:
+    - ${azuread_service_principal.example}
+    - ${azurerm_subnet_network_security_group_association.deploy}
+    domainName: widgetslogin.net
+    filteredSyncEnabled: false
+    initialReplicaSet:
+    - subnetId: ${azurerm_subnet.deploy.id}
+    location: West Europe
+    name: example-aadds
+    notifications:
+    - additionalRecipients:
+      - notifyA@example.net
+      - notifyB@example.org
+      notifyDcAdmins: true
+      notifyGlobalAdmins: true
+    resourceGroupName: ${azurerm_resource_group.aadds.name}
+    security:
+    - syncKerberosPasswords: true
+      syncNtlmPasswords: true
+      syncOnPremPasswords: true
+    sku: Enterprise
+    tags:
+      Environment: prod
+  providerConfigRef:
+    name: example

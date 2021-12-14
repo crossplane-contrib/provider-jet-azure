@@ -1,0 +1,10 @@
+apiVersion: advanced.azure.jet.crossplane.io/v1alpha1
+kind: ThreatProtection
+metadata:
+  name: example
+spec:
+  forProvider:
+    enabled: true
+    targetResourceId: ${azurerm_storage_account.example.id}
+  providerConfigRef:
+    name: example

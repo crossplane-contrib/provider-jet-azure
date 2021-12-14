@@ -1,0 +1,13 @@
+apiVersion: data.azure.jet.crossplane.io/v1alpha1
+kind: ShareDatasetKustoDatabase
+metadata:
+  name: example
+spec:
+  forProvider:
+    depends_on:
+    - ${azurerm_role_assignment.example}
+    kustoDatabaseId: ${azurerm_kusto_database.example.id}
+    name: example-dskd
+    shareId: ${azurerm_data_share.example.id}
+  providerConfigRef:
+    name: example

@@ -1,0 +1,11 @@
+apiVersion: app.azure.jet.crossplane.io/v1alpha1
+kind: ServiceCertificateBinding
+metadata:
+  name: example
+spec:
+  forProvider:
+    certificateId: ${azurerm_app_service_managed_certificate.example.id}
+    hostnameBindingId: ${azurerm_app_service_custom_hostname_binding.example.id}
+    sslState: SniEnabled
+  providerConfigRef:
+    name: example

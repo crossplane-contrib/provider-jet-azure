@@ -1,0 +1,13 @@
+apiVersion: iothub.azure.jet.crossplane.io/v1alpha1
+kind: ConsumerGroup
+metadata:
+  name: example
+spec:
+  forProvider:
+    eventhubEndpointName: events
+    iothubNameRef:
+      name: example
+    resourceGroupNameRef:
+      name: example
+  providerConfigRef:
+    name: example

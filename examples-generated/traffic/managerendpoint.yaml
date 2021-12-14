@@ -1,0 +1,14 @@
+apiVersion: traffic.azure.jet.crossplane.io/v1alpha1
+kind: ManagerEndpoint
+metadata:
+  name: example
+spec:
+  forProvider:
+    name: ${random_id.server.hex}
+    profileName: ${random_id.server.hex}
+    resourceGroupName: ${azurerm_resource_group.example.name}
+    target: terraform.io
+    type: externalEndpoints
+    weight: 100
+  providerConfigRef:
+    name: example

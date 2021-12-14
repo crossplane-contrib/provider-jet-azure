@@ -1,0 +1,10 @@
+apiVersion: security.azure.jet.crossplane.io/v1alpha1
+kind: CenterSetting
+metadata:
+  name: example
+spec:
+  forProvider:
+    enabled: true
+    settingName: MCAS
+  providerConfigRef:
+    name: example

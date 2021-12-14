@@ -1,0 +1,24 @@
+apiVersion: app.azure.jet.crossplane.io/v1alpha1
+kind: Service
+metadata:
+  name: example
+spec:
+  forProvider:
+    appServicePlanId: ${azurerm_app_service_plan.example.id}
+    appSettings:
+      SOME_KEY: some-value
+    connectionString:
+    - name: Database
+      type: SQLServer
+      valueSecretRef:
+        key: example-key
+        name: example-secret
+        namespace: crossplane-system
+    location: West Europe
+    name: example-app-service
+    resourceGroupName: ${azurerm_resource_group.example.name}
+    siteConfig:
+    - dotnetFrameworkVersion: v4.0
+      scmType: LocalGit
+  providerConfigRef:
+    name: example

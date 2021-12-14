@@ -1,0 +1,17 @@
+apiVersion: role.azure.jet.crossplane.io/v1alpha1
+kind: Definition
+metadata:
+  name: example
+spec:
+  forProvider:
+    assignableScopes:
+    - ${data.azurerm_subscription.primary.id}
+    description: This is a custom role created via Terraform
+    name: my-custom-role
+    permissions:
+    - actions:
+      - '*'
+      notActions: []
+    scope: ${data.azurerm_subscription.primary.id}
+  providerConfigRef:
+    name: example

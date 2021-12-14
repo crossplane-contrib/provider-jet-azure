@@ -1,0 +1,14 @@
+apiVersion: data.azure.jet.crossplane.io/v1alpha1
+kind: ProtectionBackupInstanceDisk
+metadata:
+  name: example
+spec:
+  forProvider:
+    backupPolicyId: ${azurerm_data_protection_backup_policy_disk.example.id}
+    diskId: ${azurerm_managed_disk.example.id}
+    location: West Europe
+    name: example-backup-instance
+    snapshotResourceGroupName: ${azurerm_resource_group.rg.name}
+    vaultId: ${azurerm_data_protection_backup_vault.example.id}
+  providerConfigRef:
+    name: example

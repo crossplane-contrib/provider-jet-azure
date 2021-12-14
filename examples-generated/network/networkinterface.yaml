@@ -1,0 +1,14 @@
+apiVersion: network.azure.jet.crossplane.io/v1alpha1
+kind: NetworkInterface
+metadata:
+  name: example
+spec:
+  forProvider:
+    ipConfiguration:
+    - name: internal
+      privateIpAddressAllocation: Dynamic
+      subnetId: ${azurerm_subnet.example.id}
+    location: West Europe
+    resourceGroupName: ${azurerm_resource_group.example.name}
+  providerConfigRef:
+    name: example

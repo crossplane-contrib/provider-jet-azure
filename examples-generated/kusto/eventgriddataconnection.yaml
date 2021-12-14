@@ -1,0 +1,21 @@
+apiVersion: kusto.azure.jet.crossplane.io/v1alpha1
+kind: EventgridDataConnection
+metadata:
+  name: example
+spec:
+  forProvider:
+    clusterName: kustocluster
+    dataFormat: JSON
+    databaseName: my-kusto-database
+    depends_on:
+    - ${azurerm_eventgrid_event_subscription.example}
+    eventhubConsumerGroupName: acceptanceTestEventHubConsumerGroup
+    eventhubId: ${azurerm_eventhub.example.id}
+    location: West Europe
+    mappingRuleName: my-table-mapping
+    name: my-kusto-eventgrid-data-connection
+    resourceGroupName: ${azurerm_resource_group.example.name}
+    storageAccountId: ${azurerm_storage_account.example.id}
+    tableName: my-table
+  providerConfigRef:
+    name: example

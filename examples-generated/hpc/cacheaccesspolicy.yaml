@@ -1,0 +1,13 @@
+apiVersion: hpc.azure.jet.crossplane.io/v1alpha1
+kind: CacheAccessPolicy
+metadata:
+  name: example
+spec:
+  forProvider:
+    accessRule:
+    - access: rw
+      scope: default
+    hpcCacheId: ${azurerm_hpc_cache.example.id}
+    name: example
+  providerConfigRef:
+    name: example

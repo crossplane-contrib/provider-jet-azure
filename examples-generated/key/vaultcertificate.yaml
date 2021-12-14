@@ -1,0 +1,29 @@
+apiVersion: key.azure.jet.crossplane.io/v1alpha1
+kind: VaultCertificate
+metadata:
+  name: example
+spec:
+  forProvider:
+    certificate:
+    - contentsSecretRef:
+        key: example-key
+        name: example-secret
+        namespace: crossplane-system
+      passwordSecretRef:
+        key: example-key
+        name: example-secret
+        namespace: crossplane-system
+    certificatePolicy:
+    - issuerParameters:
+      - name: Self
+      keyProperties:
+      - exportable: true
+        keySize: 2048
+        keyType: RSA
+        reuseKey: false
+      secretProperties:
+      - contentType: application/x-pkcs12
+    keyVaultId: ${azurerm_key_vault.example.id}
+    name: imported-cert
+  providerConfigRef:
+    name: example

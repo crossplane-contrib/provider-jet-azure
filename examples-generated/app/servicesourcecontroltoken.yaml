@@ -1,0 +1,13 @@
+apiVersion: app.azure.jet.crossplane.io/v1alpha1
+kind: ServiceSourceControlToken
+metadata:
+  name: example
+spec:
+  forProvider:
+    tokenSecretRef:
+      key: example-key
+      name: example-secret
+      namespace: crossplane-system
+    type: GitHub
+  providerConfigRef:
+    name: example

@@ -1,0 +1,11 @@
+apiVersion: api.azure.jet.crossplane.io/v1alpha1
+kind: ManagementNotificationRecipientEmail
+metadata:
+  name: example
+spec:
+  forProvider:
+    apiManagementId: ${azurerm_api_management.example.id}
+    email: foo@bar.com
+    notificationType: AccountClosedPublisher
+  providerConfigRef:
+    name: example

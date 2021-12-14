@@ -1,0 +1,12 @@
+apiVersion: data.azure.jet.crossplane.io/v1alpha1
+kind: FactoryLinkedServiceOdata
+metadata:
+  name: example
+spec:
+  forProvider:
+    dataFactoryName: example
+    name: anonymous
+    resourceGroupName: ${azurerm_resource_group.example.name}
+    url: https://services.odata.org/v4/TripPinServiceRW/People
+  providerConfigRef:
+    name: example

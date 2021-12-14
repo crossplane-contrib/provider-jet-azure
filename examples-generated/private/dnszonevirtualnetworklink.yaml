@@ -1,0 +1,12 @@
+apiVersion: private.azure.jet.crossplane.io/v1alpha1
+kind: DnsZoneVirtualNetworkLink
+metadata:
+  name: example
+spec:
+  forProvider:
+    name: test
+    privateDnsZoneName: mydomain.com
+    resourceGroupName: ${azurerm_resource_group.example.name}
+    virtualNetworkId: ${azurerm_virtual_network.example.id}
+  providerConfigRef:
+    name: example

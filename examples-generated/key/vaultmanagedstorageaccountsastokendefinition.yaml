@@ -1,0 +1,13 @@
+apiVersion: key.azure.jet.crossplane.io/v1alpha1
+kind: VaultManagedStorageAccountSasTokenDefinition
+metadata:
+  name: example
+spec:
+  forProvider:
+    managedStorageAccountId: ${azurerm_key_vault_managed_storage_account.example.id}
+    name: examplesasdefinition
+    sasTemplateUri: ${data.azurerm_storage_account_sas.example.sas}
+    sasType: account
+    validityPeriod: P1D
+  providerConfigRef:
+    name: example

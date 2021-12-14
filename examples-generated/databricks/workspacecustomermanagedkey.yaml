@@ -1,0 +1,12 @@
+apiVersion: databricks.azure.jet.crossplane.io/v1alpha1
+kind: WorkspaceCustomerManagedKey
+metadata:
+  name: example
+spec:
+  forProvider:
+    depends_on:
+    - ${azurerm_key_vault_access_policy.databricks}
+    keyVaultKeyId: ${azurerm_key_vault_key.example.id}
+    workspaceId: ${azurerm_databricks_workspace.example.id}
+  providerConfigRef:
+    name: example

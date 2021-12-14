@@ -1,0 +1,19 @@
+apiVersion: dns.azure.jet.crossplane.io/v1alpha1
+kind: MxRecord
+metadata:
+  name: example
+spec:
+  forProvider:
+    name: test
+    record:
+    - exchange: mail1.contoso.com
+      preference: 10
+    - exchange: mail2.contoso.com
+      preference: 20
+    resourceGroupName: ${azurerm_resource_group.example.name}
+    tags:
+      Environment: Production
+    ttl: 300
+    zoneName: mydomain.com
+  providerConfigRef:
+    name: example

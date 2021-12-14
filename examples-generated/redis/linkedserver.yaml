@@ -1,0 +1,13 @@
+apiVersion: redis.azure.jet.crossplane.io/v1alpha1
+kind: LinkedServer
+metadata:
+  name: example
+spec:
+  forProvider:
+    linkedRedisCacheId: ${azurerm_redis_cache.example-secondary.id}
+    linkedRedisCacheLocation: ${azurerm_resource_group.example.location}
+    resourceGroupName: ${azurerm_redis_cache.example-primary.resource_group_name}
+    serverRole: Secondary
+    targetRedisCacheName: example-cache
+  providerConfigRef:
+    name: example

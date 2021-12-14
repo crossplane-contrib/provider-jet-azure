@@ -1,0 +1,12 @@
+apiVersion: logic.azure.jet.crossplane.io/v1alpha1
+kind: AppIntegrationAccountSchema
+metadata:
+  name: example
+spec:
+  forProvider:
+    content: ${file("testdata/integration_account_schema_content.xsd")}
+    integrationAccountName: example-ia
+    name: example-ias
+    resourceGroupName: ${azurerm_resource_group.example.name}
+  providerConfigRef:
+    name: example

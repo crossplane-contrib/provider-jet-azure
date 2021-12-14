@@ -1,0 +1,10 @@
+apiVersion: nat.azure.jet.crossplane.io/v1alpha1
+kind: GatewayPublicIpPrefixAssociation
+metadata:
+  name: example
+spec:
+  forProvider:
+    natGatewayId: ${azurerm_nat_gateway.example.id}
+    publicIpPrefixId: ${azurerm_public_ip_prefix.example.id}
+  providerConfigRef:
+    name: example

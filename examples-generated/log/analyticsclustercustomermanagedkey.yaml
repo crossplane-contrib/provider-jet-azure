@@ -1,0 +1,10 @@
+apiVersion: log.azure.jet.crossplane.io/v1alpha1
+kind: AnalyticsClusterCustomerManagedKey
+metadata:
+  name: example
+spec:
+  forProvider:
+    keyVaultKeyId: ${azurerm_key_vault_key.example.id}
+    logAnalyticsClusterId: ${azurerm_log_analytics_cluster.example.id}
+  providerConfigRef:
+    name: example

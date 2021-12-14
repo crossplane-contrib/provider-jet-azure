@@ -1,0 +1,10 @@
+apiVersion: app.azure.jet.crossplane.io/v1alpha1
+kind: ServiceVirtualNetworkSwiftConnection
+metadata:
+  name: example
+spec:
+  forProvider:
+    appServiceId: ${azurerm_app_service.example.id}
+    subnetId: ${azurerm_subnet.example.id}
+  providerConfigRef:
+    name: example

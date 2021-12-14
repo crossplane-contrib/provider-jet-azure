@@ -1,0 +1,15 @@
+apiVersion: automation.azure.jet.crossplane.io/v1alpha1
+kind: ConnectionServicePrincipal
+metadata:
+  name: example
+spec:
+  forProvider:
+    applicationId: 00000000-0000-0000-0000-000000000000
+    automationAccountName: automationAccount1
+    certificateThumbprint: ${file("automation_certificate_test.thumb")}
+    name: connection-example
+    resourceGroupName: ${azurerm_resource_group.example.name}
+    subscriptionId: ${data.azurerm_client_config.example.subscription_id}
+    tenantId: ${data.azurerm_client_config.example.tenant_id}
+  providerConfigRef:
+    name: example

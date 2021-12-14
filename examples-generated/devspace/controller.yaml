@@ -1,0 +1,20 @@
+apiVersion: devspace.azure.jet.crossplane.io/v1alpha1
+kind: Controller
+metadata:
+  name: example
+spec:
+  forProvider:
+    host_suffix: suffix
+    location: West Europe
+    name: acctestdsc1
+    resourceGroupName: ${azurerm_resource_group.example.name}
+    skuName: S1
+    tags:
+      Environment: Testing
+    targetContainerHostCredentialsBase64SecretRef:
+      key: attribute.kube_config_raw)
+      name: example-kubernetes-cluster
+      namespace: crossplane-system
+    targetContainerHostResourceId: ${azurerm_kubernetes_cluster.example.id}
+  providerConfigRef:
+    name: example

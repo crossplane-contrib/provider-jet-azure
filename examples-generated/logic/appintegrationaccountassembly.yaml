@@ -1,0 +1,13 @@
+apiVersion: logic.azure.jet.crossplane.io/v1alpha1
+kind: AppIntegrationAccountAssembly
+metadata:
+  name: example
+spec:
+  forProvider:
+    assemblyName: TestAssembly
+    content: ${filebase64("testdata/log4net.dll")}
+    integrationAccountName: example-ia
+    name: example-assembly
+    resourceGroupName: ${azurerm_resource_group.example.name}
+  providerConfigRef:
+    name: example

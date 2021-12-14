@@ -1,0 +1,18 @@
+apiVersion: shared.azure.jet.crossplane.io/v1alpha1
+kind: ImageVersion
+metadata:
+  name: example
+spec:
+  forProvider:
+    galleryName: ${data.azurerm_shared_image.existing.gallery_name}
+    imageName: ${data.azurerm_shared_image.existing.name}
+    location: ${data.azurerm_shared_image.existing.location}
+    managedImageId: ${data.azurerm_image.existing.id}
+    name: 0.0.1
+    resourceGroupName: ${data.azurerm_shared_image.existing.resource_group_name}
+    targetRegion:
+    - name: ${data.azurerm_shared_image.existing.location}
+      regionalReplicaCount: 5
+      storageAccountType: Standard_LRS
+  providerConfigRef:
+    name: example

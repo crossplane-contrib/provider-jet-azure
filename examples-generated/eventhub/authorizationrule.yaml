@@ -1,0 +1,15 @@
+apiVersion: eventhub.azure.jet.crossplane.io/v1alpha1
+kind: AuthorizationRule
+metadata:
+  name: example
+spec:
+  forProvider:
+    eventhubName: acceptanceTestEventHub
+    listen: true
+    manage: false
+    name: navi
+    namespaceName: example-namespace
+    resourceGroupName: ${azurerm_resource_group.example.name}
+    send: false
+  providerConfigRef:
+    name: example

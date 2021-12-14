@@ -1,0 +1,11 @@
+apiVersion: authorization.azure.jet.crossplane.io/v1alpha1
+kind: ResourceGroupPolicyAssignment
+metadata:
+  name: example
+spec:
+  forProvider:
+    policyDefinitionId: ${azurerm_policy_definition.example.id}
+    resourceGroupIdRef:
+      name: example
+  providerConfigRef:
+    name: example

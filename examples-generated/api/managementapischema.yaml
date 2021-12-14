@@ -1,0 +1,14 @@
+apiVersion: api.azure.jet.crossplane.io/v1alpha1
+kind: ManagementApiSchema
+metadata:
+  name: example
+spec:
+  forProvider:
+    apiManagementName: ${data.azurerm_api_management_api.example.api_management_name}
+    apiName: ${data.azurerm_api_management_api.example.name}
+    contentType: application/vnd.ms-azure-apim.xsd+xml
+    resourceGroupName: ${data.azurerm_api_management_api.example.resource_group_name}
+    schemaId: example-sche,a
+    value: ${file("api_management_api_schema.xml")}
+  providerConfigRef:
+    name: example

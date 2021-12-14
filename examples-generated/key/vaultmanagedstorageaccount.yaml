@@ -1,0 +1,13 @@
+apiVersion: key.azure.jet.crossplane.io/v1alpha1
+kind: VaultManagedStorageAccount
+metadata:
+  name: example
+spec:
+  forProvider:
+    keyVaultId: ${azurerm_key_vault.example.id}
+    name: examplemanagedstorage
+    regenerateKeyAutomatically: false
+    storageAccountId: ${azurerm_storage_account.example.id}
+    storageAccountKey: key1
+  providerConfigRef:
+    name: example

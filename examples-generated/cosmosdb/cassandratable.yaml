@@ -1,0 +1,18 @@
+apiVersion: cosmosdb.azure.jet.crossplane.io/v1alpha1
+kind: CassandraTable
+metadata:
+  name: example
+spec:
+  forProvider:
+    cassandraKeyspaceIdRef:
+      name: example
+    schema:
+    - column:
+      - name: test1
+        type: ascii
+      - name: test2
+        type: int
+      partitionKey:
+      - name: test1
+  providerConfigRef:
+    name: example

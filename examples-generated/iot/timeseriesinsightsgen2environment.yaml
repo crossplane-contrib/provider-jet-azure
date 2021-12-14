@@ -1,0 +1,18 @@
+apiVersion: iot.azure.jet.crossplane.io/v1alpha1
+kind: TimeSeriesInsightsGen2Environment
+metadata:
+  name: example
+spec:
+  forProvider:
+    idProperties:
+    - id
+    location: West Europe
+    name: example
+    resourceGroupName: ${azurerm_resource_group.example.name}
+    skuName: L1
+    storage:
+    - key: ${azurerm_storage_account.storage.primary_access_key}
+      name: ${azurerm_storage_account.storage.name}
+    warmStoreDataRetentionTime: P30D
+  providerConfigRef:
+    name: example

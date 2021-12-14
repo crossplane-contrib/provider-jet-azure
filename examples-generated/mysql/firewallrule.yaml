@@ -1,0 +1,13 @@
+apiVersion: mysql.azure.jet.crossplane.io/v1alpha1
+kind: FirewallRule
+metadata:
+  name: example
+spec:
+  forProvider:
+    endIpAddress: 40.112.8.12
+    name: office
+    resourceGroupName: ${azurerm_resource_group.example.name}
+    serverName: example-mysqlserver
+    startIpAddress: 40.112.8.12
+  providerConfigRef:
+    name: example

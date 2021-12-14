@@ -1,0 +1,15 @@
+apiVersion: azurerm.azure.jet.crossplane.io/v1alpha1
+kind: Firewall
+metadata:
+  name: example
+spec:
+  forProvider:
+    ipConfiguration:
+    - name: configuration
+      publicIpAddressId: ${azurerm_public_ip.example.id}
+      subnetId: ${azurerm_subnet.example.id}
+    location: West Europe
+    name: testfirewall
+    resourceGroupName: ${azurerm_resource_group.example.name}
+  providerConfigRef:
+    name: example

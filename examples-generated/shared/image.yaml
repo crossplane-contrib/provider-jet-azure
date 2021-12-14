@@ -1,0 +1,17 @@
+apiVersion: shared.azure.jet.crossplane.io/v1alpha1
+kind: Image
+metadata:
+  name: example
+spec:
+  forProvider:
+    galleryName: example_image_gallery
+    identifier:
+    - offer: OfferName
+      publisher: PublisherName
+      sku: ExampleSku
+    location: West Europe
+    name: my-image
+    osType: Linux
+    resourceGroupName: ${azurerm_resource_group.example.name}
+  providerConfigRef:
+    name: example

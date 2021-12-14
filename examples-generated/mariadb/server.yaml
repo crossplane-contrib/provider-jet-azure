@@ -1,0 +1,24 @@
+apiVersion: mariadb.azure.jet.crossplane.io/v1alpha1
+kind: Server
+metadata:
+  name: example
+spec:
+  forProvider:
+    administratorLogin: mariadbadmin
+    administratorLoginPasswordSecretRef:
+      key: example-key
+      name: example-secret
+      namespace: crossplane-system
+    autoGrowEnabled: true
+    backupRetentionDays: 7
+    geoRedundantBackupEnabled: false
+    location: West Europe
+    name: example-mariadb-server
+    publicNetworkAccessEnabled: false
+    resourceGroupName: ${azurerm_resource_group.example.name}
+    skuName: B_Gen5_2
+    sslEnforcementEnabled: true
+    storageMb: 5120
+    version: "10.2"
+  providerConfigRef:
+    name: example

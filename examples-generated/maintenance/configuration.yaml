@@ -1,0 +1,14 @@
+apiVersion: maintenance.azure.jet.crossplane.io/v1alpha1
+kind: Configuration
+metadata:
+  name: example
+spec:
+  forProvider:
+    location: West Europe
+    name: example-mc
+    resourceGroupName: ${azurerm_resource_group.example.name}
+    scope: All
+    tags:
+      Env: prod
+  providerConfigRef:
+    name: example

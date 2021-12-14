@@ -1,0 +1,11 @@
+apiVersion: bot.azure.jet.crossplane.io/v1alpha1
+kind: ChannelMsTeams
+metadata:
+  name: example
+spec:
+  forProvider:
+    botName: example
+    location: global
+    resourceGroupName: ${azurerm_resource_group.example.name}
+  providerConfigRef:
+    name: example

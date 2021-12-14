@@ -1,0 +1,12 @@
+apiVersion: search.azure.jet.crossplane.io/v1alpha1
+kind: Service
+metadata:
+  name: example
+spec:
+  forProvider:
+    location: West Europe
+    name: example-search-service
+    resourceGroupName: ${azurerm_resource_group.example.name}
+    sku: standard
+  providerConfigRef:
+    name: example

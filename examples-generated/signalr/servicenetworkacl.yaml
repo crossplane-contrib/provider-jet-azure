@@ -1,0 +1,17 @@
+apiVersion: signalr.azure.jet.crossplane.io/v1alpha1
+kind: ServiceNetworkAcl
+metadata:
+  name: example
+spec:
+  forProvider:
+    defaultAction: Deny
+    privateEndpoint:
+    - allowedRequestTypes:
+      - ServerConnection
+      id: ${azurerm_private_endpoint.example.id}
+    publicNetwork:
+    - allowedRequestTypes:
+      - ClientConnection
+    signalrServiceId: ${azurerm_signalr_service.example.id}
+  providerConfigRef:
+    name: example

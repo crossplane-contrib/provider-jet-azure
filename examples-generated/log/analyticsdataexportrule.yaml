@@ -1,0 +1,15 @@
+apiVersion: log.azure.jet.crossplane.io/v1alpha1
+kind: AnalyticsDataExportRule
+metadata:
+  name: example
+spec:
+  forProvider:
+    destinationResourceId: ${azurerm_storage_account.example.id}
+    enabled: true
+    name: dataExport1
+    resourceGroupName: ${azurerm_resource_group.example.name}
+    tableNames:
+    - Heartbeat
+    workspaceResourceId: ${azurerm_log_analytics_workspace.example.id}
+  providerConfigRef:
+    name: example

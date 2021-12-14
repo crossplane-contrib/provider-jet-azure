@@ -1,0 +1,24 @@
+apiVersion: sql.azure.jet.crossplane.io/v1alpha1
+kind: ManagedInstance
+metadata:
+  name: example
+spec:
+  forProvider:
+    administratorLogin: mradministrator
+    administratorLoginPasswordSecretRef:
+      key: example-key
+      name: example-secret
+      namespace: crossplane-system
+    depends_on:
+    - ${azurerm_subnet_network_security_group_association.example}
+    - ${azurerm_subnet_route_table_association.example}
+    licenseType: BasePrice
+    location: West Europe
+    name: managedsqlinstance
+    resourceGroupName: ${azurerm_resource_group.example.name}
+    skuName: GP_Gen5
+    storageSizeInGb: 32
+    subnetId: ${azurerm_subnet.example.id}
+    vcores: 4
+  providerConfigRef:
+    name: example

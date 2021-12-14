@@ -1,0 +1,16 @@
+apiVersion: azurerm.azure.jet.crossplane.io/v1alpha1
+kind: Image
+metadata:
+  name: example
+spec:
+  forProvider:
+    location: West US
+    name: acctest
+    osDisk:
+    - blobUri: '{blob_uri}'
+      osState: Generalized
+      osType: Linux
+      sizeGb: 30
+    resourceGroupName: ${azurerm_resource_group.example.name}
+  providerConfigRef:
+    name: example

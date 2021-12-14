@@ -1,0 +1,41 @@
+apiVersion: api.azure.jet.crossplane.io/v1alpha1
+kind: ManagementApiDiagnostic
+metadata:
+  name: example
+spec:
+  forProvider:
+    alwaysLogErrors: true
+    apiManagementLoggerId: ${azurerm_api_management_logger.example.id}
+    apiManagementName: example-apim
+    apiName: example-api
+    backendRequest:
+    - bodyBytes: 32
+      headersToLog:
+      - content-type
+      - accept
+      - origin
+    backendResponse:
+    - bodyBytes: 32
+      headersToLog:
+      - content-type
+      - content-length
+      - origin
+    frontendRequest:
+    - bodyBytes: 32
+      headersToLog:
+      - content-type
+      - accept
+      - origin
+    frontendResponse:
+    - bodyBytes: 32
+      headersToLog:
+      - content-type
+      - content-length
+      - origin
+    httpCorrelationProtocol: W3C
+    logClientIp: true
+    resourceGroupName: ${azurerm_resource_group.example.name}
+    samplingPercentage: 5
+    verbosity: Verbose
+  providerConfigRef:
+    name: example

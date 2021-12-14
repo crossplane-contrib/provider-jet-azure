@@ -1,0 +1,19 @@
+apiVersion: key.azure.jet.crossplane.io/v1alpha1
+kind: VaultKey
+metadata:
+  name: example
+spec:
+  forProvider:
+    keyOpts:
+    - decrypt
+    - encrypt
+    - sign
+    - unwrapKey
+    - verify
+    - wrapKey
+    keySize: 2048
+    keyType: RSA
+    keyVaultId: ${azurerm_key_vault.example.id}
+    name: generated-certificate
+  providerConfigRef:
+    name: example

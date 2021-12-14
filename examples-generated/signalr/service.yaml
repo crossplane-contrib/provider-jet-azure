@@ -1,0 +1,29 @@
+apiVersion: signalr.azure.jet.crossplane.io/v1alpha1
+kind: Service
+metadata:
+  name: example
+spec:
+  forProvider:
+    cors:
+    - allowedOrigins:
+      - http://www.example.com
+    features:
+    - flag: ServiceMode
+      value: Default
+    location: West Europe
+    name: tfex-signalr
+    resourceGroupName: ${azurerm_resource_group.example.name}
+    sku:
+    - capacity: 1
+      name: Free_F1
+    upstreamEndpoint:
+    - categoryPattern:
+      - connections
+      - messages
+      eventPattern:
+      - '*'
+      hubPattern:
+      - hub1
+      urlTemplate: http://foo.com
+  providerConfigRef:
+    name: example

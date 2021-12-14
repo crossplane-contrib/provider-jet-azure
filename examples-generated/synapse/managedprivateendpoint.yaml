@@ -1,0 +1,14 @@
+apiVersion: synapse.azure.jet.crossplane.io/v1alpha1
+kind: ManagedPrivateEndpoint
+metadata:
+  name: example
+spec:
+  forProvider:
+    depends_on:
+    - ${azurerm_synapse_firewall_rule.example}
+    name: example-endpoint
+    subresourceName: blob
+    synapseWorkspaceId: ${azurerm_synapse_workspace.example.id}
+    targetResourceId: ${azurerm_storage_account.example_connect.id}
+  providerConfigRef:
+    name: example

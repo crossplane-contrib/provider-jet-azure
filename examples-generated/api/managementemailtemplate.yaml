@@ -1,0 +1,23 @@
+apiVersion: api.azure.jet.crossplane.io/v1alpha1
+kind: ManagementEmailTemplate
+metadata:
+  name: example
+spec:
+  forProvider:
+    apiManagementName: example-apim
+    body: |
+      <!DOCTYPE html >
+      <html>
+      <head>
+        <meta charset="UTF-8" />
+        <title>Customized Letter Title</title>
+      </head>
+      <body>
+        <p style="font-size:12pt;font-family:'Segoe UI'">Dear $DevFirstName $DevLastName,</p>
+      </body>
+      </html>
+    resourceGroupName: ${azurerm_resource_group.example.resource_group_name}
+    subject: Customized confirmation email for your new $OrganizationName API account
+    templateName: ConfirmSignUpIdentityDefault
+  providerConfigRef:
+    name: example

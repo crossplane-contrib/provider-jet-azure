@@ -1,0 +1,14 @@
+apiVersion: eventgrid.azure.jet.crossplane.io/v1alpha1
+kind: SystemTopicEventSubscription
+metadata:
+  name: example
+spec:
+  forProvider:
+    name: example-event-subscription
+    resourceGroupName: ${azurerm_resource_group.example.name}
+    storageQueueEndpoint:
+    - queueName: mysamplequeue
+      storageAccountId: ${azurerm_storage_account.example.id}
+    systemTopic: ${azurerm_system_topic.example.name}
+  providerConfigRef:
+    name: example

@@ -1,0 +1,13 @@
+apiVersion: azurerm.azure.jet.crossplane.io/v1alpha1
+kind: Healthbot
+metadata:
+  name: example
+spec:
+  forProvider:
+    location: West Europe
+    name: example-bot
+    resourceGroupName: ${azurerm_resource_group.example.name}
+    sku:
+    - name: F0
+  providerConfigRef:
+    name: example

@@ -1,0 +1,13 @@
+apiVersion: stack.azure.jet.crossplane.io/v1alpha1
+kind: HciCluster
+metadata:
+  name: example
+spec:
+  forProvider:
+    clientId: ${data.azuread_application.example.application_id}
+    location: West Europe
+    name: example-cluster
+    resourceGroupName: ${azurerm_resource_group.example.name}
+    tenantId: ${data.azurerm_client_config.current.tenant_id}
+  providerConfigRef:
+    name: example

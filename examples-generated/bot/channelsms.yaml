@@ -1,0 +1,17 @@
+apiVersion: bot.azure.jet.crossplane.io/v1alpha1
+kind: ChannelSms
+metadata:
+  name: example
+spec:
+  forProvider:
+    botName: example
+    location: global
+    phoneNumber: "+12313803556"
+    resourceGroupName: ${azurerm_resource_group.example.name}
+    smsChannelAccountSecurityId: BG61f7cf5157f439b084e98256409c2815
+    smsChannelAuthTokenSecretRef:
+      key: example-key
+      name: example-secret
+      namespace: crossplane-system
+  providerConfigRef:
+    name: example

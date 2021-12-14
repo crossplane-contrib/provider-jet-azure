@@ -1,0 +1,24 @@
+apiVersion: stream.azure.jet.crossplane.io/v1alpha1
+kind: AnalyticsJob
+metadata:
+  name: example
+spec:
+  forProvider:
+    compatibilityLevel: "1.1"
+    dataLocale: en-GB
+    eventsLateArrivalMaxDelayInSeconds: 60
+    eventsOutOfOrderMaxDelayInSeconds: 50
+    eventsOutOfOrderPolicy: Adjust
+    location: West Europe
+    name: example-job
+    outputErrorPolicy: Drop
+    resourceGroupName: ${azurerm_resource_group.example.name}
+    streamingUnits: 3
+    tags:
+      environment: Example
+    transformationQuery: |2
+          SELECT *
+          INTO [YourOutputAlias]
+          FROM [YourInputAlias]
+  providerConfigRef:
+    name: example

@@ -1,0 +1,14 @@
+apiVersion: hpc.azure.jet.crossplane.io/v1alpha1
+kind: CacheBlobNfsTarget
+metadata:
+  name: example
+spec:
+  forProvider:
+    cacheName: examplehpccache
+    name: example-hpc-target
+    namespacePath: /p1
+    resourceGroupName: ${azurerm_resource_group.example.name}
+    storageContainerId: ${jsondecode(azurerm_resource_group_template_deployment.storage-containers.output_content).id.value}
+    usageModel: READ_HEAVY_INFREQ
+  providerConfigRef:
+    name: example

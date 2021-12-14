@@ -1,0 +1,22 @@
+apiVersion: bot.azure.jet.crossplane.io/v1alpha1
+kind: ChannelFacebook
+metadata:
+  name: example
+spec:
+  forProvider:
+    botName: example
+    facebookApplicationId: "563490254873576"
+    facebookApplicationSecretSecretRef:
+      key: example-key
+      name: example-secret
+      namespace: crossplane-system
+    location: global
+    page:
+    - accessTokenSecretRef:
+        key: example-key
+        name: example-secret
+        namespace: crossplane-system
+      id: "876248795081953"
+    resourceGroupName: ${azurerm_resource_group.example.name}
+  providerConfigRef:
+    name: example

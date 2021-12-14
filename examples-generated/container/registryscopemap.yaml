@@ -1,0 +1,14 @@
+apiVersion: container.azure.jet.crossplane.io/v1alpha1
+kind: RegistryScopeMap
+metadata:
+  name: example
+spec:
+  forProvider:
+    actions:
+    - repositories/repo1/content/read
+    - repositories/repo1/content/write
+    containerRegistryName: containerRegistry1
+    name: example-scope-map
+    resourceGroupName: ${azurerm_resource_group.rg.name}
+  providerConfigRef:
+    name: example

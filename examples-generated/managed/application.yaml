@@ -1,0 +1,18 @@
+apiVersion: managed.azure.jet.crossplane.io/v1alpha1
+kind: Application
+metadata:
+  name: example
+spec:
+  forProvider:
+    applicationDefinitionId: ${azurerm_managed_application_definition.example.id}
+    kind: ServiceCatalog
+    location: West Europe
+    managedResourceGroupName: infrastructureGroup
+    name: example-managedapplication
+    parameters:
+      location: West Europe
+      storageAccountNamePrefix: storeNamePrefix
+      storageAccountType: Standard_LRS
+    resourceGroupName: ${azurerm_resource_group.example.name}
+  providerConfigRef:
+    name: example

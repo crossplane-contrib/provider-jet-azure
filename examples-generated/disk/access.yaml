@@ -1,0 +1,11 @@
+apiVersion: disk.azure.jet.crossplane.io/v1alpha1
+kind: Access
+metadata:
+  name: example
+spec:
+  forProvider:
+    location: West Europe
+    name: example
+    resourceGroupName: example
+  providerConfigRef:
+    name: example

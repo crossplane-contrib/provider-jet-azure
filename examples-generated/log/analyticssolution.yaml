@@ -1,0 +1,16 @@
+apiVersion: log.azure.jet.crossplane.io/v1alpha1
+kind: AnalyticsSolution
+metadata:
+  name: example
+spec:
+  forProvider:
+    location: West Europe
+    plan:
+    - product: OMSGallery/ContainerInsights
+      publisher: Microsoft
+    resourceGroupName: ${azurerm_resource_group.example.name}
+    solutionName: ContainerInsights
+    workspaceName: ${azurerm_log_analytics_workspace.example.name}
+    workspaceResourceId: ${azurerm_log_analytics_workspace.example.id}
+  providerConfigRef:
+    name: example

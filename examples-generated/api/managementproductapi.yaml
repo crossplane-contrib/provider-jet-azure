@@ -1,0 +1,12 @@
+apiVersion: api.azure.jet.crossplane.io/v1alpha1
+kind: ManagementProductApi
+metadata:
+  name: example
+spec:
+  forProvider:
+    apiManagementName: ${data.azurerm_api_management.example.name}
+    apiName: ${data.azurerm_api_management_api.example.name}
+    productId: ${data.azurerm_api_management_product.example.product_id}
+    resourceGroupName: ${data.azurerm_api_management.example.resource_group_name}
+  providerConfigRef:
+    name: example

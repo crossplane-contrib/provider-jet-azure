@@ -1,0 +1,11 @@
+apiVersion: mssql.azure.jet.crossplane.io/v1alpha1
+kind: VirtualNetworkRule
+metadata:
+  name: example
+spec:
+  forProvider:
+    name: sql-vnet-rule
+    serverId: ${azurerm_mssql_server.example.id}
+    subnetId: ${azurerm_subnet.example.id}
+  providerConfigRef:
+    name: example

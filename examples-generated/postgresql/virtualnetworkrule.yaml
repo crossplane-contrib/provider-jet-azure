@@ -1,0 +1,15 @@
+apiVersion: postgresql.azure.jet.crossplane.io/v1alpha1
+kind: VirtualNetworkRule
+metadata:
+  name: example
+spec:
+  forProvider:
+    ignoreMissingVnetServiceEndpoint: true
+    resourceGroupNameRef:
+      name: example
+    serverNameRef:
+      name: example
+    subnetIdRef:
+      name: example
+  providerConfigRef:
+    name: example

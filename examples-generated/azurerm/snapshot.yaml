@@ -1,0 +1,13 @@
+apiVersion: azurerm.azure.jet.crossplane.io/v1alpha1
+kind: Snapshot
+metadata:
+  name: example
+spec:
+  forProvider:
+    createOption: Copy
+    location: West Europe
+    name: snapshot
+    resourceGroupName: ${azurerm_resource_group.example.name}
+    sourceUri: ${azurerm_managed_disk.example.id}
+  providerConfigRef:
+    name: example

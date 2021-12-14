@@ -1,0 +1,12 @@
+apiVersion: storage.azure.jet.crossplane.io/v1alpha1
+kind: SyncCloudEndpoint
+metadata:
+  name: example
+spec:
+  forProvider:
+    fileShareName: sharename
+    name: example-ss-ce
+    storageAccountId: ${azurerm_storage_account.example.id}
+    storageSyncGroupId: ${azurerm_storage_sync_group.example.id}
+  providerConfigRef:
+    name: example

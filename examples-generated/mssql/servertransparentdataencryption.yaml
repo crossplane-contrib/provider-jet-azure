@@ -1,0 +1,9 @@
+apiVersion: mssql.azure.jet.crossplane.io/v1alpha1
+kind: ServerTransparentDataEncryption
+metadata:
+  name: example
+spec:
+  forProvider:
+    serverId: ${azurerm_mssql_server.example.id}
+  providerConfigRef:
+    name: example

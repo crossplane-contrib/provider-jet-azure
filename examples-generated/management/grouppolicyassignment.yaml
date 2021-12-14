@@ -1,0 +1,11 @@
+apiVersion: management.azure.jet.crossplane.io/v1alpha1
+kind: GroupPolicyAssignment
+metadata:
+  name: example
+spec:
+  forProvider:
+    managementGroupId: ${azurerm_management_group.example.id}
+    name: example-policy
+    policyDefinitionId: ${azurerm_policy_definition.example.id}
+  providerConfigRef:
+    name: example

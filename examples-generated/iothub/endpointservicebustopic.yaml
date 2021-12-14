@@ -1,0 +1,15 @@
+apiVersion: iothub.azure.jet.crossplane.io/v1alpha1
+kind: EndpointServicebusTopic
+metadata:
+  name: example
+spec:
+  forProvider:
+    connectionStringSecretRef:
+      key: attribute.primary_connection_string
+      name: example-servicebus-topic-authorization-rule
+      namespace: crossplane-system
+    iothubName: ${azurerm_iothub.example.name}
+    name: example
+    resourceGroupName: ${azurerm_resource_group.example.name}
+  providerConfigRef:
+    name: example

@@ -1,0 +1,17 @@
+apiVersion: iotcentral.azure.jet.crossplane.io/v1alpha1
+kind: Application
+metadata:
+  name: example
+spec:
+  forProvider:
+    displayName: example-iotcentral-app-display-name
+    location: West Europe
+    name: example-iotcentral-app
+    resourceGroupName: ${azurerm_resource_group.example.name}
+    sku: S1
+    subDomain: example-iotcentral-app-subdomain
+    tags:
+      Foo: Bar
+    template: iotc-default@1.0.0
+  providerConfigRef:
+    name: example

@@ -1,0 +1,16 @@
+apiVersion: application.azure.jet.crossplane.io/v1alpha1
+kind: InsightsApiKey
+metadata:
+  name: example
+spec:
+  forProvider:
+    applicationInsightsId: ${azurerm_application_insights.example.id}
+    name: tf-test-appinsights-read-telemetry-api-key
+    readPermissions:
+    - aggregate
+    - api
+    - draft
+    - extendqueries
+    - search
+  providerConfigRef:
+    name: example

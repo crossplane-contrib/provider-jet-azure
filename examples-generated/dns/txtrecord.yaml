@@ -1,0 +1,17 @@
+apiVersion: dns.azure.jet.crossplane.io/v1alpha1
+kind: TxtRecord
+metadata:
+  name: example
+spec:
+  forProvider:
+    name: test
+    record:
+    - value: google-site-authenticator
+    - value: more site information here
+    resourceGroupName: ${azurerm_resource_group.example.name}
+    tags:
+      Environment: Production
+    ttl: 300
+    zoneName: mydomain.com
+  providerConfigRef:
+    name: example

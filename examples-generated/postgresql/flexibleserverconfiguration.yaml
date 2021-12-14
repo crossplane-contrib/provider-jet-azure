@@ -1,0 +1,12 @@
+apiVersion: postgresql.azure.jet.crossplane.io/v1alpha1
+kind: FlexibleServerConfiguration
+metadata:
+  name: example
+spec:
+  forProvider:
+    name: backslash_quote
+    serverIdRef:
+      name: example
+    value: "on"
+  providerConfigRef:
+    name: example

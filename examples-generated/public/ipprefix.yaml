@@ -1,0 +1,14 @@
+apiVersion: public.azure.jet.crossplane.io/v1alpha1
+kind: IpPrefix
+metadata:
+  name: example
+spec:
+  forProvider:
+    location: West Europe
+    name: acceptanceTestPublicIpPrefix1
+    prefixLength: 31
+    resourceGroupName: ${azurerm_resource_group.example.name}
+    tags:
+      environment: Production
+  providerConfigRef:
+    name: example

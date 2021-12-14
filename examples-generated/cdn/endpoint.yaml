@@ -1,0 +1,15 @@
+apiVersion: cdn.azure.jet.crossplane.io/v1alpha1
+kind: Endpoint
+metadata:
+  name: example
+spec:
+  forProvider:
+    location: West Europe
+    name: example
+    origin:
+    - hostName: www.contoso.com
+      name: example
+    profileName: exampleCdnProfile
+    resourceGroupName: ${azurerm_resource_group.example.name}
+  providerConfigRef:
+    name: example

@@ -1,0 +1,12 @@
+apiVersion: eventhub.azure.jet.crossplane.io/v1alpha1
+kind: NamespaceDisasterRecoveryConfig
+metadata:
+  name: example
+spec:
+  forProvider:
+    name: replicate-evenhub
+    namespaceName: example-namespace
+    partnerNamespaceId: ${azurerm_eventhub_namespace.secondary.id}
+    resourceGroupName: ${azurerm_resource_group.example.name}
+  providerConfigRef:
+    name: example

@@ -1,0 +1,14 @@
+apiVersion: iothub.azure.jet.crossplane.io/v1alpha1
+kind: SharedAccessPolicy
+metadata:
+  name: example
+spec:
+  forProvider:
+    iothubNameRef:
+      name: example
+    registryRead: true
+    registryWrite: true
+    resourceGroupNameRef:
+      name: example
+  providerConfigRef:
+    name: example

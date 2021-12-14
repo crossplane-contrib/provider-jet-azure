@@ -1,0 +1,17 @@
+apiVersion: data.azure.jet.crossplane.io/v1alpha1
+kind: FactoryLinkedServiceCosmosdb
+metadata:
+  name: example
+spec:
+  forProvider:
+    accountEndpoint: ${azurerm_cosmosdb_account.example.endpoint}
+    accountKeySecretRef:
+      key: attribute.example.primary_access_key
+      name: example-
+      namespace: crossplane-system
+    dataFactoryName: example
+    database: foo
+    name: example
+    resourceGroupName: ${azurerm_resource_group.example.name}
+  providerConfigRef:
+    name: example

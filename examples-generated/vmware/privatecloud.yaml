@@ -1,0 +1,24 @@
+apiVersion: vmware.azure.jet.crossplane.io/v1alpha1
+kind: PrivateCloud
+metadata:
+  name: example
+spec:
+  forProvider:
+    internetConnectionEnabled: false
+    location: West Europe
+    managementCluster:
+    - size: 3
+    name: example-vmware-private-cloud
+    networkSubnetCidr: 192.168.48.0/22
+    nsxtPasswordSecretRef:
+      key: example-key
+      name: example-secret
+      namespace: crossplane-system
+    resourceGroupName: ${azurerm_resource_group.example.name}
+    skuName: av36
+    vcenterPasswordSecretRef:
+      key: example-key
+      name: example-secret
+      namespace: crossplane-system
+  providerConfigRef:
+    name: example

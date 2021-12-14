@@ -1,0 +1,16 @@
+apiVersion: iothub.azure.jet.crossplane.io/v1alpha1
+kind: Route
+metadata:
+  name: example
+spec:
+  forProvider:
+    condition: "true"
+    enabled: true
+    endpointNames:
+    - ${azurerm_iothub_endpoint_storage_container.example.name}
+    iothubName: ${azurerm_iothub.example.name}
+    name: example
+    resourceGroupName: ${azurerm_resource_group.example.name}
+    source: DeviceMessages
+  providerConfigRef:
+    name: example

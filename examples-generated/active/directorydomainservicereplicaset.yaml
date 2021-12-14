@@ -1,0 +1,15 @@
+apiVersion: active.azure.jet.crossplane.io/v1alpha1
+kind: DirectoryDomainServiceReplicaSet
+metadata:
+  name: example
+spec:
+  forProvider:
+    depends_on:
+    - ${azurerm_subnet_network_security_group_association.replica}
+    - ${azurerm_virtual_network_peering.primary_replica}
+    - ${azurerm_virtual_network_peering.replica_primary}
+    domainServiceId: ${azurerm_active_directory_domain_service.example.id}
+    location: West Europe
+    subnetId: ${azurerm_subnet.aadds_replica.id}
+  providerConfigRef:
+    name: example

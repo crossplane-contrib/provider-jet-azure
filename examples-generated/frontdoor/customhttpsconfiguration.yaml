@@ -1,0 +1,10 @@
+apiVersion: frontdoor.azure.jet.crossplane.io/v1alpha1
+kind: CustomHttpsConfiguration
+metadata:
+  name: example
+spec:
+  forProvider:
+    customHttpsProvisioningEnabled: false
+    frontendEndpointId: ${azurerm_frontdoor.example.frontend_endpoints["exampleFrontendEndpoint1"]}
+  providerConfigRef:
+    name: example

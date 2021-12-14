@@ -1,0 +1,23 @@
+apiVersion: traffic.azure.jet.crossplane.io/v1alpha1
+kind: ManagerProfile
+metadata:
+  name: example
+spec:
+  forProvider:
+    dnsConfig:
+    - relativeName: ${random_id.server.hex}
+      ttl: 100
+    monitorConfig:
+    - intervalInSeconds: 30
+      path: /
+      port: 80
+      protocol: http
+      timeoutInSeconds: 9
+      toleratedNumberOfFailures: 3
+    name: ${random_id.server.hex}
+    resourceGroupName: ${azurerm_resource_group.example.name}
+    tags:
+      environment: Production
+    trafficRoutingMethod: Weighted
+  providerConfigRef:
+    name: example

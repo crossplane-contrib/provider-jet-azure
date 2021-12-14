@@ -1,0 +1,11 @@
+apiVersion: static.azure.jet.crossplane.io/v1alpha1
+kind: Site
+metadata:
+  name: example
+spec:
+  forProvider:
+    location: West Europe
+    name: example
+    resourceGroupName: example
+  providerConfigRef:
+    name: example

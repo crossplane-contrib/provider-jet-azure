@@ -1,0 +1,14 @@
+apiVersion: dev.azure.jet.crossplane.io/v1alpha1
+kind: TestVirtualNetwork
+metadata:
+  name: example
+spec:
+  forProvider:
+    labName: example-devtestlab
+    name: example-network
+    resourceGroupName: ${azurerm_resource_group.example.name}
+    subnet:
+    - useInVirtualMachineCreation: Allow
+      usePublicIpAddress: Allow
+  providerConfigRef:
+    name: example

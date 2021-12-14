@@ -1,0 +1,15 @@
+apiVersion: api.azure.jet.crossplane.io/v1alpha1
+kind: ManagementProduct
+metadata:
+  name: example
+spec:
+  forProvider:
+    apiManagementName: example-apim
+    approvalRequired: true
+    displayName: Test Product
+    productId: test-product
+    published: true
+    resourceGroupName: ${azurerm_resource_group.example.name}
+    subscriptionRequired: true
+  providerConfigRef:
+    name: example

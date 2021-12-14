@@ -1,0 +1,14 @@
+apiVersion: disk.azure.jet.crossplane.io/v1alpha1
+kind: EncryptionSet
+metadata:
+  name: example
+spec:
+  forProvider:
+    identity:
+    - type: SystemAssigned
+    keyVaultKeyId: ${azurerm_key_vault_key.example.id}
+    location: West Europe
+    name: des
+    resourceGroupName: ${azurerm_resource_group.example.name}
+  providerConfigRef:
+    name: example

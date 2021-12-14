@@ -1,0 +1,14 @@
+apiVersion: data.azure.jet.crossplane.io/v1alpha1
+kind: FactoryTriggerSchedule
+metadata:
+  name: example
+spec:
+  forProvider:
+    dataFactoryName: example
+    frequency: Day
+    interval: 5
+    name: example
+    pipelineName: example
+    resourceGroupName: ${azurerm_resource_group.test.name}
+  providerConfigRef:
+    name: example

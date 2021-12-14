@@ -1,0 +1,25 @@
+apiVersion: firewall.azure.jet.crossplane.io/v1alpha1
+kind: NetworkRuleCollection
+metadata:
+  name: example
+spec:
+  forProvider:
+    action: Allow
+    azureFirewallName: testfirewall
+    name: testcollection
+    priority: 100
+    resourceGroupName: ${azurerm_resource_group.example.name}
+    rule:
+    - destinationAddresses:
+      - 8.8.8.8
+      - 8.8.4.4
+      destinationPorts:
+      - "53"
+      name: testrule
+      protocols:
+      - TCP
+      - UDP
+      sourceAddresses:
+      - 10.0.0.0/16
+  providerConfigRef:
+    name: example

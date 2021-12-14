@@ -1,0 +1,16 @@
+apiVersion: bot.azure.jet.crossplane.io/v1alpha1
+kind: ChannelDirectLineSpeech
+metadata:
+  name: example
+spec:
+  forProvider:
+    botName: example
+    cognitiveServiceAccessKeySecretRef:
+      key: attribute.primary_access_key
+      name: example-cognitive-account
+      namespace: crossplane-system
+    cognitiveServiceLocation: West Europe
+    location: global
+    resourceGroupName: ${azurerm_resource_group.example.name}
+  providerConfigRef:
+    name: example

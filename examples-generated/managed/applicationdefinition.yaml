@@ -1,0 +1,19 @@
+apiVersion: managed.azure.jet.crossplane.io/v1alpha1
+kind: ApplicationDefinition
+metadata:
+  name: example
+spec:
+  forProvider:
+    authorization:
+    - roleDefinitionId: a094b430-dad3-424d-ae58-13f72fd72591
+      servicePrincipalId: ${data.azurerm_client_config.current.object_id}
+    description: Test Managed Application Definition
+    displayName: TestManagedApplicationDefinition
+    location: West Europe
+    lockLevel: ReadOnly
+    name: example-managedapplicationdefinition
+    packageFileUri: https://github.com/Azure/azure-managedapp-samples/raw/master/Managed
+      Application Sample Packages/201-managed-storage-account/managedstorage.zip
+    resourceGroupName: ${azurerm_resource_group.example.name}
+  providerConfigRef:
+    name: example

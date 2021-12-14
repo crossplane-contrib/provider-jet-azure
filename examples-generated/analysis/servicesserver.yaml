@@ -1,0 +1,21 @@
+apiVersion: analysis.azure.jet.crossplane.io/v1alpha1
+kind: ServicesServer
+metadata:
+  name: example
+spec:
+  forProvider:
+    adminUsers:
+    - myuser@domain.tld
+    enablePowerBiService: true
+    ipv4FirewallRule:
+    - name: myRule1
+      rangeEnd: 210.117.252.255
+      rangeStart: 210.117.252.0
+    location: northeurope
+    name: analysisservicesserver
+    resourceGroupName: ${azurerm_resource_group.rg.name}
+    sku: S0
+    tags:
+      abc: 123
+  providerConfigRef:
+    name: example

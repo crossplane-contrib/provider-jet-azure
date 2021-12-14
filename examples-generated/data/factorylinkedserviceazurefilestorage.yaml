@@ -1,0 +1,15 @@
+apiVersion: data.azure.jet.crossplane.io/v1alpha1
+kind: FactoryLinkedServiceAzureFileStorage
+metadata:
+  name: example
+spec:
+  forProvider:
+    connectionStringSecretRef:
+      key: attribute.example.primary_connection_string
+      name: example-
+      namespace: crossplane-system
+    dataFactoryName: example
+    name: example
+    resourceGroupName: ${azurerm_resource_group.example.name}
+  providerConfigRef:
+    name: example

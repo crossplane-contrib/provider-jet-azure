@@ -1,0 +1,17 @@
+apiVersion: api.azure.jet.crossplane.io/v1alpha1
+kind: ManagementOpenidConnectProvider
+metadata:
+  name: example
+spec:
+  forProvider:
+    apiManagementName: example-apim
+    clientIDSecretRef:
+      key: example-key
+      name: example-secret
+      namespace: crossplane-system
+    displayName: Example Provider
+    metadataEndpoint: https://example.com/example
+    name: example-provider
+    resourceGroupName: ${azurerm_resource_group.example.name}
+  providerConfigRef:
+    name: example

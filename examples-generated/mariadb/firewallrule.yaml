@@ -1,0 +1,13 @@
+apiVersion: mariadb.azure.jet.crossplane.io/v1alpha1
+kind: FirewallRule
+metadata:
+  name: example
+spec:
+  forProvider:
+    endIpAddress: 40.112.8.12
+    name: test-rule
+    resourceGroupName: test-rg
+    serverName: test-server
+    startIpAddress: 40.112.8.12
+  providerConfigRef:
+    name: example

@@ -109,6 +109,7 @@ func GetProvider() *tjconfig.Provider {
 		tjconfig.WithIncludeList(includedResources),
 		tjconfig.WithSkipList(skipList),
 		tjconfig.WithDefaultResourceFn(defaultResource(externalNameConfig(), groupOverrides())),
+		tjconfig.WithProviderMetadata("./hack/provider-metadata.yaml"),
 	)
 
 	for name := range pc.Resources {

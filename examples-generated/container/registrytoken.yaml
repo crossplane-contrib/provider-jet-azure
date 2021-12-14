@@ -1,0 +1,12 @@
+apiVersion: container.azure.jet.crossplane.io/v1alpha1
+kind: RegistryToken
+metadata:
+  name: example
+spec:
+  forProvider:
+    containerRegistryName: containerRegistry1
+    name: exampletoken
+    resourceGroupName: ${azurerm_resource_group.rg.name}
+    scopeMapId: ${azurerm_container_registry_scope_map.map.id}
+  providerConfigRef:
+    name: example

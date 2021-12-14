@@ -1,0 +1,32 @@
+apiVersion: linux.azure.jet.crossplane.io/v1alpha1
+kind: VirtualMachineScaleSet
+metadata:
+  name: example
+spec:
+  forProvider:
+    adminSshKey:
+    - publicKey: ${file("~/.ssh/id_rsa.pub")}
+      username: adminuser
+    adminUsername: adminuser
+    instances: 1
+    location: West Europe
+    name: example-vmss
+    networkInterface:
+    - ipConfiguration:
+      - name: internal
+        primary: true
+        subnetId: ${azurerm_subnet.internal.id}
+      name: example
+      primary: true
+    osDisk:
+    - caching: ReadWrite
+      storageAccountType: Standard_LRS
+    resourceGroupName: ${azurerm_resource_group.example.name}
+    sku: Standard_F2
+    sourceImageReference:
+    - offer: UbuntuServer
+      publisher: Canonical
+      sku: 16.04-LTS
+      version: latest
+  providerConfigRef:
+    name: example

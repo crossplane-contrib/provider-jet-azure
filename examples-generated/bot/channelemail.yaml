@@ -1,0 +1,14 @@
+apiVersion: bot.azure.jet.crossplane.io/v1alpha1
+kind: ChannelEmail
+metadata:
+  name: example
+spec:
+  forProvider:
+    botName: example
+    client_id: exampleId
+    client_secret: exampleSecret
+    location: global
+    resourceGroupName: ${azurerm_resource_group.example.name}
+    verification_token: exampleVerificationToken
+  providerConfigRef:
+    name: example

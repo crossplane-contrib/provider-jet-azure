@@ -1,0 +1,12 @@
+apiVersion: ssh.azure.jet.crossplane.io/v1alpha1
+kind: PublicKey
+metadata:
+  name: example
+spec:
+  forProvider:
+    location: West Europe
+    name: example
+    publicKey: ${file("~/.ssh/id_rsa.pub")}
+    resourceGroupName: example
+  providerConfigRef:
+    name: example

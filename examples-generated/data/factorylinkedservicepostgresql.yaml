@@ -1,0 +1,12 @@
+apiVersion: data.azure.jet.crossplane.io/v1alpha1
+kind: FactoryLinkedServicePostgresql
+metadata:
+  name: example
+spec:
+  forProvider:
+    connectionString: Host=example;Port=5432;Database=example;UID=example;EncryptionMethod=0;Password=example
+    dataFactoryName: example
+    name: example
+    resourceGroupName: ${azurerm_resource_group.example.name}
+  providerConfigRef:
+    name: example

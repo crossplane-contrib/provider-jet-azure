@@ -1,0 +1,11 @@
+apiVersion: marketplace.azure.jet.crossplane.io/v1alpha1
+kind: Agreement
+metadata:
+  name: example
+spec:
+  forProvider:
+    offer: waf
+    plan: hourly
+    publisher: barracudanetworks
+  providerConfigRef:
+    name: example
