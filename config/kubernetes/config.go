@@ -57,6 +57,15 @@ func Configure(p *config.Provider) {
 		r.ExternalName.GetExternalNameFn = common.GetNameFromFullyQualifiedID
 		// /subscriptions/00000000-0000-0000-0000-000000000000/resourcegroups/group1/providers/Microsoft.ContainerService/managedClusters/cluster1
 		r.ExternalName.GetIDFn = common.GetFullyQualifiedIDFn("Microsoft.ContainerService", "managedClusters", "name")
+
+		r.Sensitive.AdditionalConnectionDetailsFn = func(attr map[string]interface{}) (map[string][]byte, error) {
+			if kc, ok := attr["kube_config_raw"].(string); ok {
+				return map[string][]byte{
+					"kubeconfig": []byte(kc),
+				}, nil
+			}
+			return nil, nil
+		}
 	})
 
 	p.AddResourceConfigurator("azurerm_kubernetes_cluster_node_pool", func(r *config.Resource) {
