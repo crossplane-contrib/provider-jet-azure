@@ -25,11 +25,11 @@ import (
 	v1 "github.com/crossplane/crossplane-runtime/apis/common/v1"
 )
 
-type SqlTriggerObservation struct {
+type SQLTriggerObservation struct {
 	ID *string `json:"id,omitempty" tf:"id,omitempty"`
 }
 
-type SqlTriggerParameters struct {
+type SQLTriggerParameters struct {
 
 	// +kubebuilder:validation:Required
 	Body *string `json:"body" tf:"body,omitempty"`
@@ -52,51 +52,51 @@ type SqlTriggerParameters struct {
 	Type *string `json:"type" tf:"type,omitempty"`
 }
 
-// SqlTriggerSpec defines the desired state of SqlTrigger
-type SqlTriggerSpec struct {
+// SQLTriggerSpec defines the desired state of SQLTrigger
+type SQLTriggerSpec struct {
 	v1.ResourceSpec `json:",inline"`
-	ForProvider     SqlTriggerParameters `json:"forProvider"`
+	ForProvider     SQLTriggerParameters `json:"forProvider"`
 }
 
-// SqlTriggerStatus defines the observed state of SqlTrigger.
-type SqlTriggerStatus struct {
+// SQLTriggerStatus defines the observed state of SQLTrigger.
+type SQLTriggerStatus struct {
 	v1.ResourceStatus `json:",inline"`
-	AtProvider        SqlTriggerObservation `json:"atProvider,omitempty"`
+	AtProvider        SQLTriggerObservation `json:"atProvider,omitempty"`
 }
 
 // +kubebuilder:object:root=true
 
-// SqlTrigger is the Schema for the SqlTriggers API
+// SQLTrigger is the Schema for the SQLTriggers API
 // +kubebuilder:printcolumn:name="READY",type="string",JSONPath=".status.conditions[?(@.type=='Ready')].status"
 // +kubebuilder:printcolumn:name="SYNCED",type="string",JSONPath=".status.conditions[?(@.type=='Synced')].status"
 // +kubebuilder:printcolumn:name="EXTERNAL-NAME",type="string",JSONPath=".metadata.annotations.crossplane\\.io/external-name"
 // +kubebuilder:printcolumn:name="AGE",type="date",JSONPath=".metadata.creationTimestamp"
 // +kubebuilder:subresource:status
 // +kubebuilder:resource:scope=Cluster,categories={crossplane,managed,azurejet}
-type SqlTrigger struct {
+type SQLTrigger struct {
 	metav1.TypeMeta   `json:",inline"`
 	metav1.ObjectMeta `json:"metadata,omitempty"`
-	Spec              SqlTriggerSpec   `json:"spec"`
-	Status            SqlTriggerStatus `json:"status,omitempty"`
+	Spec              SQLTriggerSpec   `json:"spec"`
+	Status            SQLTriggerStatus `json:"status,omitempty"`
 }
 
 // +kubebuilder:object:root=true
 
-// SqlTriggerList contains a list of SqlTriggers
-type SqlTriggerList struct {
+// SQLTriggerList contains a list of SQLTriggers
+type SQLTriggerList struct {
 	metav1.TypeMeta `json:",inline"`
 	metav1.ListMeta `json:"metadata,omitempty"`
-	Items           []SqlTrigger `json:"items"`
+	Items           []SQLTrigger `json:"items"`
 }
 
 // Repository type metadata.
 var (
-	SqlTrigger_Kind             = "SqlTrigger"
-	SqlTrigger_GroupKind        = schema.GroupKind{Group: CRDGroup, Kind: SqlTrigger_Kind}.String()
-	SqlTrigger_KindAPIVersion   = SqlTrigger_Kind + "." + CRDGroupVersion.String()
-	SqlTrigger_GroupVersionKind = CRDGroupVersion.WithKind(SqlTrigger_Kind)
+	SQLTrigger_Kind             = "SQLTrigger"
+	SQLTrigger_GroupKind        = schema.GroupKind{Group: CRDGroup, Kind: SQLTrigger_Kind}.String()
+	SQLTrigger_KindAPIVersion   = SQLTrigger_Kind + "." + CRDGroupVersion.String()
+	SQLTrigger_GroupVersionKind = CRDGroupVersion.WithKind(SQLTrigger_Kind)
 )
 
 func init() {
-	SchemeBuilder.Register(&SqlTrigger{}, &SqlTriggerList{})
+	SchemeBuilder.Register(&SQLTrigger{}, &SQLTriggerList{})
 }

@@ -635,115 +635,115 @@ func (mg *SQLFunction) SetWriteConnectionSecretToReference(r *xpv1.SecretReferen
 	mg.Spec.WriteConnectionSecretToReference = r
 }
 
-// GetCondition of this SqlStoredProcedure.
-func (mg *SqlStoredProcedure) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
+// GetCondition of this SQLStoredProcedure.
+func (mg *SQLStoredProcedure) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
 	return mg.Status.GetCondition(ct)
 }
 
-// GetDeletionPolicy of this SqlStoredProcedure.
-func (mg *SqlStoredProcedure) GetDeletionPolicy() xpv1.DeletionPolicy {
+// GetDeletionPolicy of this SQLStoredProcedure.
+func (mg *SQLStoredProcedure) GetDeletionPolicy() xpv1.DeletionPolicy {
 	return mg.Spec.DeletionPolicy
 }
 
-// GetProviderConfigReference of this SqlStoredProcedure.
-func (mg *SqlStoredProcedure) GetProviderConfigReference() *xpv1.Reference {
+// GetProviderConfigReference of this SQLStoredProcedure.
+func (mg *SQLStoredProcedure) GetProviderConfigReference() *xpv1.Reference {
 	return mg.Spec.ProviderConfigReference
 }
 
 /*
-GetProviderReference of this SqlStoredProcedure.
+GetProviderReference of this SQLStoredProcedure.
 Deprecated: Use GetProviderConfigReference.
 */
-func (mg *SqlStoredProcedure) GetProviderReference() *xpv1.Reference {
+func (mg *SQLStoredProcedure) GetProviderReference() *xpv1.Reference {
 	return mg.Spec.ProviderReference
 }
 
-// GetWriteConnectionSecretToReference of this SqlStoredProcedure.
-func (mg *SqlStoredProcedure) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
+// GetWriteConnectionSecretToReference of this SQLStoredProcedure.
+func (mg *SQLStoredProcedure) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
 	return mg.Spec.WriteConnectionSecretToReference
 }
 
-// SetConditions of this SqlStoredProcedure.
-func (mg *SqlStoredProcedure) SetConditions(c ...xpv1.Condition) {
+// SetConditions of this SQLStoredProcedure.
+func (mg *SQLStoredProcedure) SetConditions(c ...xpv1.Condition) {
 	mg.Status.SetConditions(c...)
 }
 
-// SetDeletionPolicy of this SqlStoredProcedure.
-func (mg *SqlStoredProcedure) SetDeletionPolicy(r xpv1.DeletionPolicy) {
+// SetDeletionPolicy of this SQLStoredProcedure.
+func (mg *SQLStoredProcedure) SetDeletionPolicy(r xpv1.DeletionPolicy) {
 	mg.Spec.DeletionPolicy = r
 }
 
-// SetProviderConfigReference of this SqlStoredProcedure.
-func (mg *SqlStoredProcedure) SetProviderConfigReference(r *xpv1.Reference) {
+// SetProviderConfigReference of this SQLStoredProcedure.
+func (mg *SQLStoredProcedure) SetProviderConfigReference(r *xpv1.Reference) {
 	mg.Spec.ProviderConfigReference = r
 }
 
 /*
-SetProviderReference of this SqlStoredProcedure.
+SetProviderReference of this SQLStoredProcedure.
 Deprecated: Use SetProviderConfigReference.
 */
-func (mg *SqlStoredProcedure) SetProviderReference(r *xpv1.Reference) {
+func (mg *SQLStoredProcedure) SetProviderReference(r *xpv1.Reference) {
 	mg.Spec.ProviderReference = r
 }
 
-// SetWriteConnectionSecretToReference of this SqlStoredProcedure.
-func (mg *SqlStoredProcedure) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
+// SetWriteConnectionSecretToReference of this SQLStoredProcedure.
+func (mg *SQLStoredProcedure) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
 	mg.Spec.WriteConnectionSecretToReference = r
 }
 
-// GetCondition of this SqlTrigger.
-func (mg *SqlTrigger) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
+// GetCondition of this SQLTrigger.
+func (mg *SQLTrigger) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
 	return mg.Status.GetCondition(ct)
 }
 
-// GetDeletionPolicy of this SqlTrigger.
-func (mg *SqlTrigger) GetDeletionPolicy() xpv1.DeletionPolicy {
+// GetDeletionPolicy of this SQLTrigger.
+func (mg *SQLTrigger) GetDeletionPolicy() xpv1.DeletionPolicy {
 	return mg.Spec.DeletionPolicy
 }
 
-// GetProviderConfigReference of this SqlTrigger.
-func (mg *SqlTrigger) GetProviderConfigReference() *xpv1.Reference {
+// GetProviderConfigReference of this SQLTrigger.
+func (mg *SQLTrigger) GetProviderConfigReference() *xpv1.Reference {
 	return mg.Spec.ProviderConfigReference
 }
 
 /*
-GetProviderReference of this SqlTrigger.
+GetProviderReference of this SQLTrigger.
 Deprecated: Use GetProviderConfigReference.
 */
-func (mg *SqlTrigger) GetProviderReference() *xpv1.Reference {
+func (mg *SQLTrigger) GetProviderReference() *xpv1.Reference {
 	return mg.Spec.ProviderReference
 }
 
-// GetWriteConnectionSecretToReference of this SqlTrigger.
-func (mg *SqlTrigger) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
+// GetWriteConnectionSecretToReference of this SQLTrigger.
+func (mg *SQLTrigger) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
 	return mg.Spec.WriteConnectionSecretToReference
 }
 
-// SetConditions of this SqlTrigger.
-func (mg *SqlTrigger) SetConditions(c ...xpv1.Condition) {
+// SetConditions of this SQLTrigger.
+func (mg *SQLTrigger) SetConditions(c ...xpv1.Condition) {
 	mg.Status.SetConditions(c...)
 }
 
-// SetDeletionPolicy of this SqlTrigger.
-func (mg *SqlTrigger) SetDeletionPolicy(r xpv1.DeletionPolicy) {
+// SetDeletionPolicy of this SQLTrigger.
+func (mg *SQLTrigger) SetDeletionPolicy(r xpv1.DeletionPolicy) {
 	mg.Spec.DeletionPolicy = r
 }
 
-// SetProviderConfigReference of this SqlTrigger.
-func (mg *SqlTrigger) SetProviderConfigReference(r *xpv1.Reference) {
+// SetProviderConfigReference of this SQLTrigger.
+func (mg *SQLTrigger) SetProviderConfigReference(r *xpv1.Reference) {
 	mg.Spec.ProviderConfigReference = r
 }
 
 /*
-SetProviderReference of this SqlTrigger.
+SetProviderReference of this SQLTrigger.
 Deprecated: Use SetProviderConfigReference.
 */
-func (mg *SqlTrigger) SetProviderReference(r *xpv1.Reference) {
+func (mg *SQLTrigger) SetProviderReference(r *xpv1.Reference) {
 	mg.Spec.ProviderReference = r
 }
 
-// SetWriteConnectionSecretToReference of this SqlTrigger.
-func (mg *SqlTrigger) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
+// SetWriteConnectionSecretToReference of this SQLTrigger.
+func (mg *SQLTrigger) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
 	mg.Spec.WriteConnectionSecretToReference = r
 }
 

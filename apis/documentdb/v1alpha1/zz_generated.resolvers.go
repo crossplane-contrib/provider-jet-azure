@@ -488,8 +488,8 @@ func (mg *SQLFunction) ResolveReferences(ctx context.Context, c client.Reader) e
 	return nil
 }
 
-// ResolveReferences of this SqlStoredProcedure.
-func (mg *SqlStoredProcedure) ResolveReferences(ctx context.Context, c client.Reader) error {
+// ResolveReferences of this SQLStoredProcedure.
+func (mg *SQLStoredProcedure) ResolveReferences(ctx context.Context, c client.Reader) error {
 	r := reference.NewAPIResolver(c, mg)
 
 	var rsp reference.ResolutionResponse
@@ -562,8 +562,8 @@ func (mg *SqlStoredProcedure) ResolveReferences(ctx context.Context, c client.Re
 	return nil
 }
 
-// ResolveReferences of this SqlTrigger.
-func (mg *SqlTrigger) ResolveReferences(ctx context.Context, c client.Reader) error {
+// ResolveReferences of this SQLTrigger.
+func (mg *SQLTrigger) ResolveReferences(ctx context.Context, c client.Reader) error {
 	r := reference.NewAPIResolver(c, mg)
 
 	var rsp reference.ResolutionResponse

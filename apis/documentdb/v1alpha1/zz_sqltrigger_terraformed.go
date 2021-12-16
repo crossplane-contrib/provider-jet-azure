@@ -25,18 +25,18 @@ import (
 	"github.com/crossplane-contrib/terrajet/pkg/resource/json"
 )
 
-// GetTerraformResourceType returns Terraform resource type for this SqlTrigger
-func (mg *SqlTrigger) GetTerraformResourceType() string {
+// GetTerraformResourceType returns Terraform resource type for this SQLTrigger
+func (mg *SQLTrigger) GetTerraformResourceType() string {
 	return "azurerm_cosmosdb_sql_trigger"
 }
 
-// GetConnectionDetailsMapping for this SqlTrigger
-func (tr *SqlTrigger) GetConnectionDetailsMapping() map[string]string {
+// GetConnectionDetailsMapping for this SQLTrigger
+func (tr *SQLTrigger) GetConnectionDetailsMapping() map[string]string {
 	return nil
 }
 
-// GetObservation of this SqlTrigger
-func (tr *SqlTrigger) GetObservation() (map[string]interface{}, error) {
+// GetObservation of this SQLTrigger
+func (tr *SQLTrigger) GetObservation() (map[string]interface{}, error) {
 	o, err := json.TFParser.Marshal(tr.Status.AtProvider)
 	if err != nil {
 		return nil, err
@@ -45,8 +45,8 @@ func (tr *SqlTrigger) GetObservation() (map[string]interface{}, error) {
 	return base, json.TFParser.Unmarshal(o, &base)
 }
 
-// SetObservation for this SqlTrigger
-func (tr *SqlTrigger) SetObservation(obs map[string]interface{}) error {
+// SetObservation for this SQLTrigger
+func (tr *SQLTrigger) SetObservation(obs map[string]interface{}) error {
 	p, err := json.TFParser.Marshal(obs)
 	if err != nil {
 		return err
@@ -54,16 +54,16 @@ func (tr *SqlTrigger) SetObservation(obs map[string]interface{}) error {
 	return json.TFParser.Unmarshal(p, &tr.Status.AtProvider)
 }
 
-// GetID returns ID of underlying Terraform resource of this SqlTrigger
-func (tr *SqlTrigger) GetID() string {
+// GetID returns ID of underlying Terraform resource of this SQLTrigger
+func (tr *SQLTrigger) GetID() string {
 	if tr.Status.AtProvider.ID == nil {
 		return ""
 	}
 	return *tr.Status.AtProvider.ID
 }
 
-// GetParameters of this SqlTrigger
-func (tr *SqlTrigger) GetParameters() (map[string]interface{}, error) {
+// GetParameters of this SQLTrigger
+func (tr *SQLTrigger) GetParameters() (map[string]interface{}, error) {
 	p, err := json.TFParser.Marshal(tr.Spec.ForProvider)
 	if err != nil {
 		return nil, err
@@ -72,8 +72,8 @@ func (tr *SqlTrigger) GetParameters() (map[string]interface{}, error) {
 	return base, json.TFParser.Unmarshal(p, &base)
 }
 
-// SetParameters for this SqlTrigger
-func (tr *SqlTrigger) SetParameters(params map[string]interface{}) error {
+// SetParameters for this SQLTrigger
+func (tr *SQLTrigger) SetParameters(params map[string]interface{}) error {
 	p, err := json.TFParser.Marshal(params)
 	if err != nil {
 		return err
@@ -81,10 +81,10 @@ func (tr *SqlTrigger) SetParameters(params map[string]interface{}) error {
 	return json.TFParser.Unmarshal(p, &tr.Spec.ForProvider)
 }
 
-// LateInitialize this SqlTrigger using its observed tfState.
+// LateInitialize this SQLTrigger using its observed tfState.
 // returns True if there are any spec changes for the resource.
-func (tr *SqlTrigger) LateInitialize(attrs []byte) (bool, error) {
-	params := &SqlTriggerParameters{}
+func (tr *SQLTrigger) LateInitialize(attrs []byte) (bool, error) {
+	params := &SQLTriggerParameters{}
 	if err := json.TFParser.Unmarshal(attrs, params); err != nil {
 		return false, errors.Wrap(err, "failed to unmarshal Terraform state parameters for late-initialization")
 	}
@@ -95,6 +95,6 @@ func (tr *SqlTrigger) LateInitialize(attrs []byte) (bool, error) {
 }
 
 // GetTerraformSchemaVersion returns the associated Terraform schema version
-func (tr *SqlTrigger) GetTerraformSchemaVersion() int {
+func (tr *SQLTrigger) GetTerraformSchemaVersion() int {
 	return 0
 }

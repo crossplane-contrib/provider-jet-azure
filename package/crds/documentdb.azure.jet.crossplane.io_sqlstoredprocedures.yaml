@@ -12,8 +12,8 @@ spec:
     - crossplane
     - managed
     - azurejet
-    kind: SqlStoredProcedure
-    listKind: SqlStoredProcedureList
+    kind: SQLStoredProcedure
+    listKind: SQLStoredProcedureList
     plural: sqlstoredprocedures
     singular: sqlstoredprocedure
   scope: Cluster
@@ -34,7 +34,7 @@ spec:
     name: v1alpha1
     schema:
       openAPIV3Schema:
-        description: SqlStoredProcedure is the Schema for the SqlStoredProcedures
+        description: SQLStoredProcedure is the Schema for the SQLStoredProcedures
           API
         properties:
           apiVersion:
@@ -50,7 +50,7 @@ spec:
           metadata:
             type: object
           spec:
-            description: SqlStoredProcedureSpec defines the desired state of SqlStoredProcedure
+            description: SQLStoredProcedureSpec defines the desired state of SQLStoredProcedure
             properties:
               deletionPolicy:
                 default: Delete
@@ -213,7 +213,7 @@ spec:
             - forProvider
             type: object
           status:
-            description: SqlStoredProcedureStatus defines the observed state of SqlStoredProcedure.
+            description: SQLStoredProcedureStatus defines the observed state of SQLStoredProcedure.
             properties:
               atProvider:
                 properties:
