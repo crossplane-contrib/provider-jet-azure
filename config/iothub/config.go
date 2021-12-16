@@ -35,10 +35,7 @@ func Configure(p *config.Provider) {
 				Type: rconfig.APISPackagePath + "/azure/v1alpha1.ResourceGroup",
 			},
 			"endpoint.container_name": config.Reference{
-				Type: rconfig.APISPackagePath + "/storage/v1alpha1.Container",
-			},
-			"container_name": config.Reference{
-				Type: rconfig.APISPackagePath + "storage/Container",
+				Type: rconfig.APISPackagePath + "/storage/v1alpha1.StorageContainer",
 			},
 		}
 		r.UseAsync = true

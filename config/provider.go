@@ -126,10 +126,17 @@ func GetProvider() *tjconfig.Provider {
 		tjconfig.WithSkipList(skipList),
 		tjconfig.WithDefaultResourceFn(defaultResource(externalNameConfig(), groupOverrides())),
 	)
-
+	// external-name configuration for all resources
 	for name := range pc.Resources {
 		pc.AddResourceConfigurator(name, func(r *tjconfig.Resource) {
 			r.ExternalName = tjconfig.IdentifierFromProvider
+		})
+	}
+	// api-group configuration for all resources
+	for name, apiGroup := range apiGroupMap {
+		apiGroup := apiGroup
+		pc.AddResourceConfigurator(name, func(r *tjconfig.Resource) {
+			r.ShortGroup = apiGroup
 		})
 	}
 

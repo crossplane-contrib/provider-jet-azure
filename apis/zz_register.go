@@ -25,14 +25,12 @@ import (
 	v1alpha1 "github.com/crossplane-contrib/provider-jet-azure/apis/authorization/v1alpha1"
 	v1alpha1azure "github.com/crossplane-contrib/provider-jet-azure/apis/azure/v1alpha1"
 	v1alpha1containerservice "github.com/crossplane-contrib/provider-jet-azure/apis/containerservice/v1alpha1"
-	v1alpha1cosmosdb "github.com/crossplane-contrib/provider-jet-azure/apis/cosmosdb/v1alpha1"
-	v1alpha1iothub "github.com/crossplane-contrib/provider-jet-azure/apis/iothub/v1alpha1"
+	v1alpha1dbforpostgresql "github.com/crossplane-contrib/provider-jet-azure/apis/dbforpostgresql/v1alpha1"
+	v1alpha1devices "github.com/crossplane-contrib/provider-jet-azure/apis/devices/v1alpha1"
+	v1alpha1documentdb "github.com/crossplane-contrib/provider-jet-azure/apis/documentdb/v1alpha1"
+	v1alpha1insights "github.com/crossplane-contrib/provider-jet-azure/apis/insights/v1alpha1"
 	v1alpha1loganalytics "github.com/crossplane-contrib/provider-jet-azure/apis/loganalytics/v1alpha1"
-	v1alpha1monitor "github.com/crossplane-contrib/provider-jet-azure/apis/monitor/v1alpha1"
-	v1alpha1mssql "github.com/crossplane-contrib/provider-jet-azure/apis/mssql/v1alpha1"
 	v1alpha1network "github.com/crossplane-contrib/provider-jet-azure/apis/network/v1alpha1"
-	v1alpha1postgresql "github.com/crossplane-contrib/provider-jet-azure/apis/postgresql/v1alpha1"
-	v1alpha1redis "github.com/crossplane-contrib/provider-jet-azure/apis/redis/v1alpha1"
 	v1alpha1resources "github.com/crossplane-contrib/provider-jet-azure/apis/resources/v1alpha1"
 	v1alpha1sql "github.com/crossplane-contrib/provider-jet-azure/apis/sql/v1alpha1"
 	v1alpha1storage "github.com/crossplane-contrib/provider-jet-azure/apis/storage/v1alpha1"
@@ -45,14 +43,12 @@ func init() {
 		v1alpha1.SchemeBuilder.AddToScheme,
 		v1alpha1azure.SchemeBuilder.AddToScheme,
 		v1alpha1containerservice.SchemeBuilder.AddToScheme,
-		v1alpha1cosmosdb.SchemeBuilder.AddToScheme,
-		v1alpha1iothub.SchemeBuilder.AddToScheme,
+		v1alpha1dbforpostgresql.SchemeBuilder.AddToScheme,
+		v1alpha1devices.SchemeBuilder.AddToScheme,
+		v1alpha1documentdb.SchemeBuilder.AddToScheme,
+		v1alpha1insights.SchemeBuilder.AddToScheme,
 		v1alpha1loganalytics.SchemeBuilder.AddToScheme,
-		v1alpha1monitor.SchemeBuilder.AddToScheme,
-		v1alpha1mssql.SchemeBuilder.AddToScheme,
 		v1alpha1network.SchemeBuilder.AddToScheme,
-		v1alpha1postgresql.SchemeBuilder.AddToScheme,
-		v1alpha1redis.SchemeBuilder.AddToScheme,
 		v1alpha1resources.SchemeBuilder.AddToScheme,
 		v1alpha1sql.SchemeBuilder.AddToScheme,
 		v1alpha1storage.SchemeBuilder.AddToScheme,
