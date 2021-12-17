@@ -27,12 +27,17 @@ import (
 
 	resourcegrouppolicyassignment "github.com/crossplane-contrib/provider-jet-azure/internal/controller/authorization/resourcegrouppolicyassignment"
 	resourcegroup "github.com/crossplane-contrib/provider-jet-azure/internal/controller/azure/resourcegroup"
+	cache "github.com/crossplane-contrib/provider-jet-azure/internal/controller/cache/cache"
+	enterprisecluster "github.com/crossplane-contrib/provider-jet-azure/internal/controller/cache/enterprisecluster"
+	enterprisedatabase "github.com/crossplane-contrib/provider-jet-azure/internal/controller/cache/enterprisedatabase"
+	firewallrule "github.com/crossplane-contrib/provider-jet-azure/internal/controller/cache/firewallrule"
+	linkedserver "github.com/crossplane-contrib/provider-jet-azure/internal/controller/cache/linkedserver"
 	kubernetescluster "github.com/crossplane-contrib/provider-jet-azure/internal/controller/containerservice/kubernetescluster"
 	kubernetesclusternodepool "github.com/crossplane-contrib/provider-jet-azure/internal/controller/containerservice/kubernetesclusternodepool"
 	activedirectoryadministrator "github.com/crossplane-contrib/provider-jet-azure/internal/controller/dbforpostgresql/activedirectoryadministrator"
 	configuration "github.com/crossplane-contrib/provider-jet-azure/internal/controller/dbforpostgresql/configuration"
 	database "github.com/crossplane-contrib/provider-jet-azure/internal/controller/dbforpostgresql/database"
-	firewallrule "github.com/crossplane-contrib/provider-jet-azure/internal/controller/dbforpostgresql/firewallrule"
+	firewallruledbforpostgresql "github.com/crossplane-contrib/provider-jet-azure/internal/controller/dbforpostgresql/firewallrule"
 	flexibleserver "github.com/crossplane-contrib/provider-jet-azure/internal/controller/dbforpostgresql/flexibleserver"
 	flexibleserverconfiguration "github.com/crossplane-contrib/provider-jet-azure/internal/controller/dbforpostgresql/flexibleserverconfiguration"
 	flexibleserverdatabase "github.com/crossplane-contrib/provider-jet-azure/internal/controller/dbforpostgresql/flexibleserverdatabase"
@@ -80,11 +85,6 @@ import (
 	virtualnetworkpeering "github.com/crossplane-contrib/provider-jet-azure/internal/controller/network/virtualnetworkpeering"
 	virtualwan "github.com/crossplane-contrib/provider-jet-azure/internal/controller/network/virtualwan"
 	providerconfig "github.com/crossplane-contrib/provider-jet-azure/internal/controller/providerconfig"
-	cache "github.com/crossplane-contrib/provider-jet-azure/internal/controller/redis/cache"
-	enterprisecluster "github.com/crossplane-contrib/provider-jet-azure/internal/controller/redis/enterprisecluster"
-	enterprisedatabase "github.com/crossplane-contrib/provider-jet-azure/internal/controller/redis/enterprisedatabase"
-	firewallruleredis "github.com/crossplane-contrib/provider-jet-azure/internal/controller/redis/firewallrule"
-	linkedserver "github.com/crossplane-contrib/provider-jet-azure/internal/controller/redis/linkedserver"
 	resourcegrouptemplatedeployment "github.com/crossplane-contrib/provider-jet-azure/internal/controller/resources/resourcegrouptemplatedeployment"
 	serversql "github.com/crossplane-contrib/provider-jet-azure/internal/controller/sql/server"
 	accountstorage "github.com/crossplane-contrib/provider-jet-azure/internal/controller/storage/account"
@@ -98,12 +98,17 @@ func Setup(mgr ctrl.Manager, l logging.Logger, wl workqueue.RateLimiter, ps terr
 	for _, setup := range []func(ctrl.Manager, logging.Logger, workqueue.RateLimiter, terraform.SetupFn, *terraform.WorkspaceStore, *tjconfig.Provider, int) error{
 		resourcegrouppolicyassignment.Setup,
 		resourcegroup.Setup,
+		cache.Setup,
+		enterprisecluster.Setup,
+		enterprisedatabase.Setup,
+		firewallrule.Setup,
+		linkedserver.Setup,
 		kubernetescluster.Setup,
 		kubernetesclusternodepool.Setup,
 		activedirectoryadministrator.Setup,
 		configuration.Setup,
 		database.Setup,
-		firewallrule.Setup,
+		firewallruledbforpostgresql.Setup,
 		flexibleserver.Setup,
 		flexibleserverconfiguration.Setup,
 		flexibleserverdatabase.Setup,
@@ -151,11 +156,6 @@ func Setup(mgr ctrl.Manager, l logging.Logger, wl workqueue.RateLimiter, ps terr
 		virtualnetworkpeering.Setup,
 		virtualwan.Setup,
 		providerconfig.Setup,
-		cache.Setup,
-		enterprisecluster.Setup,
-		enterprisedatabase.Setup,
-		firewallruleredis.Setup,
-		linkedserver.Setup,
 		resourcegrouptemplatedeployment.Setup,
 		serversql.Setup,
 		serversql.Setup,

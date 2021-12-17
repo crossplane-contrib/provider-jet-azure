@@ -4,9 +4,9 @@ metadata:
   annotations:
     controller-gen.kubebuilder.io/version: v0.6.2
   creationTimestamp: null
-  name: firewallrules.redis.azure.jet.crossplane.io
+  name: firewallrules.cache.azure.jet.crossplane.io
 spec:
-  group: redis.azure.jet.crossplane.io
+  group: cache.azure.jet.crossplane.io
   names:
     categories:
     - crossplane

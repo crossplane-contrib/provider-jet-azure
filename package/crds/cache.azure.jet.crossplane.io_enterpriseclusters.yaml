@@ -4,18 +4,18 @@ metadata:
   annotations:
     controller-gen.kubebuilder.io/version: v0.6.2
   creationTimestamp: null
-  name: caches.redis.azure.jet.crossplane.io
+  name: enterpriseclusters.cache.azure.jet.crossplane.io
 spec:
-  group: redis.azure.jet.crossplane.io
+  group: cache.azure.jet.crossplane.io
   names:
     categories:
     - crossplane
     - managed
     - azurejet
-    kind: Cache
-    listKind: CacheList
-    plural: caches
-    singular: cache
+    kind: EnterpriseCluster
+    listKind: EnterpriseClusterList
+    plural: enterpriseclusters
+    singular: enterprisecluster
   scope: Cluster
   versions:
   - additionalPrinterColumns:
@@ -34,7 +34,7 @@ spec:
     name: v1alpha1
     schema:
       openAPIV3Schema:
-        description: Cache is the Schema for the Caches API
+        description: EnterpriseCluster is the Schema for the EnterpriseClusters API
         properties:
           apiVersion:
             description: 'APIVersion defines the versioned schema of this representation
@@ -49,7 +49,7 @@ spec:
           metadata:
             type: object
           spec:
-            description: CacheSpec defines the desired state of Cache
+            description: EnterpriseClusterSpec defines the desired state of EnterpriseCluster
             properties:
               deletionPolicy:
                 default: Delete
@@ -62,127 +62,10 @@ spec:
                 type: string
               forProvider:
                 properties:
-                  capacity:
-                    format: int64
-                    type: integer
-                  enableNonSslPort:
-                    type: boolean
-                  family:
-                    type: string
                   location:
                     type: string
                   minimumTlsVersion:
                     type: string
-                  patchSchedule:
-                    items:
-                      properties:
-                        dayOfWeek:
-                          type: string
-                        maintenanceWindow:
-                          type: string
-                        startHourUtc:
-                          format: int64
-                          type: integer
-                      required:
-                      - dayOfWeek
-                      type: object
-                    type: array
-                  privateStaticIpAddress:
-                    type: string
-                  publicNetworkAccessEnabled:
-                    type: boolean
-                  redisConfiguration:
-                    items:
-                      properties:
-                        aofBackupEnabled:
-                          type: boolean
-                        aofStorageConnectionString0SecretRef:
-                          description: A SecretKeySelector is a reference to a secret
-                            key in an arbitrary namespace.
-                          properties:
-                            key:
-                              description: The key to select.
-                              type: string
-                            name:
-                              description: Name of the secret.
-                              type: string
-                            namespace:
-                              description: Namespace of the secret.
-                              type: string
-                          required:
-                          - key
-                          - name
-                          - namespace
-                          type: object
-                        aofStorageConnectionString1SecretRef:
-                          description: A SecretKeySelector is a reference to a secret
-                            key in an arbitrary namespace.
-                          properties:
-                            key:
-                              description: The key to select.
-                              type: string
-                            name:
-                              description: Name of the secret.
-                              type: string
-                            namespace:
-                              description: Namespace of the secret.
-                              type: string
-                          required:
-                          - key
-                          - name
-                          - namespace
-                          type: object
-                        enableAuthentication:
-                          type: boolean
-                        maxfragmentationmemoryReserved:
-                          format: int64
-                          type: integer
-                        maxmemoryDelta:
-                          format: int64
-                          type: integer
-                        maxmemoryPolicy:
-                          type: string
-                        maxmemoryReserved:
-                          format: int64
-                          type: integer
-                        notifyKeyspaceEvents:
-                          type: string
-                        rdbBackupEnabled:
-                          type: boolean
-                        rdbBackupFrequency:
-                          format: int64
-                          type: integer
-                        rdbBackupMaxSnapshotCount:
-                          format: int64
-                          type: integer
-                        rdbStorageConnectionStringSecretRef:
-                          description: A SecretKeySelector is a reference to a secret
-                            key in an arbitrary namespace.
-                          properties:
-                            key:
-                              description: The key to select.
-                              type: string
-                            name:
-                              description: Name of the secret.
-                              type: string
-                            namespace:
-                              description: Namespace of the secret.
-                              type: string
-                          required:
-                          - key
-                          - name
-                          - namespace
-                          type: object
-                      type: object
-                    type: array
-                  redisVersion:
-                    type: string
-                  replicasPerMaster:
-                    format: int64
-                    type: integer
-                  replicasPerPrimary:
-                    format: int64
-                    type: integer
                   resourceGroupName:
                     type: string
                   resourceGroupNameRef:
@@ -208,41 +91,9 @@ spec:
                           is selected.
                         type: object
                     type: object
-                  shardCount:
-                    format: int64
-                    type: integer
                   skuName:
                     type: string
-                  subnetId:
-                    type: string
-                  subnetIdRef:
-                    description: A Reference to a named object.
-                    properties:
-                      name:
-                        description: Name of the referenced object.
-                        type: string
-                    required:
-                    - name
-                    type: object
-                  subnetIdSelector:
-                    description: A Selector selects an object.
-                    properties:
-                      matchControllerRef:
-                        description: MatchControllerRef ensures an object with the
-                          same controller reference as the selecting object is selected.
-                        type: boolean
-                      matchLabels:
-                        additionalProperties:
-                          type: string
-                        description: MatchLabels ensures an object with matching labels
-                          is selected.
-                        type: object
-                    type: object
                   tags:
-                    additionalProperties:
-                      type: string
-                    type: object
-                  tenantSettings:
                     additionalProperties:
                       type: string
                     type: object
@@ -251,8 +102,6 @@ spec:
                       type: string
                     type: array
                 required:
-                - capacity
-                - family
                 - location
                 - skuName
                 type: object
@@ -301,7 +150,7 @@ spec:
             - forProvider
             type: object
           status:
-            description: CacheStatus defines the observed state of Cache.
+            description: EnterpriseClusterStatus defines the observed state of EnterpriseCluster.
             properties:
               atProvider:
                 properties:
@@ -309,12 +158,8 @@ spec:
                     type: string
                   id:
                     type: string
-                  port:
-                    format: int64
-                    type: integer
-                  sslPort:
-                    format: int64
-                    type: integer
+                  version:
+                    type: string
                 type: object
               conditions:
                 description: Conditions of the resource.

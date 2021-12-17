@@ -348,8 +348,8 @@ func (mg *IOTHub) ResolveReferences(ctx context.Context, c client.Reader) error 
 			Reference:    mg.Spec.ForProvider.Endpoint[i3].ContainerNameRef,
 			Selector:     mg.Spec.ForProvider.Endpoint[i3].ContainerNameSelector,
 			To: reference.To{
-				List:    &v1alpha11.StorageContainerList{},
-				Managed: &v1alpha11.StorageContainer{},
+				List:    &v1alpha11.ContainerList{},
+				Managed: &v1alpha11.Container{},
 			},
 		})
 		if err != nil {

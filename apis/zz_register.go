@@ -24,6 +24,7 @@ import (
 
 	v1alpha1 "github.com/crossplane-contrib/provider-jet-azure/apis/authorization/v1alpha1"
 	v1alpha1azure "github.com/crossplane-contrib/provider-jet-azure/apis/azure/v1alpha1"
+	v1alpha1cache "github.com/crossplane-contrib/provider-jet-azure/apis/cache/v1alpha1"
 	v1alpha1containerservice "github.com/crossplane-contrib/provider-jet-azure/apis/containerservice/v1alpha1"
 	v1alpha1dbforpostgresql "github.com/crossplane-contrib/provider-jet-azure/apis/dbforpostgresql/v1alpha1"
 	v1alpha1devices "github.com/crossplane-contrib/provider-jet-azure/apis/devices/v1alpha1"
@@ -42,6 +43,7 @@ func init() {
 	AddToSchemes = append(AddToSchemes,
 		v1alpha1.SchemeBuilder.AddToScheme,
 		v1alpha1azure.SchemeBuilder.AddToScheme,
+		v1alpha1cache.SchemeBuilder.AddToScheme,
 		v1alpha1containerservice.SchemeBuilder.AddToScheme,
 		v1alpha1dbforpostgresql.SchemeBuilder.AddToScheme,
 		v1alpha1devices.SchemeBuilder.AddToScheme,

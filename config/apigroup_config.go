@@ -16,6 +16,8 @@ limitations under the License.
 
 package config
 
+// This file is generated
+// nolint:misspell
 var (
 	apiGroupMap = map[string]string{
 		"azurerm_active_directory_domain_service":                                        "aad",
@@ -67,6 +69,7 @@ var (
 		"azurerm_api_management_api_diagnostic":                                          "apimanagement",
 		"azurerm_app_configuration_key":                                                  "appconfiguration",
 		"azurerm_app_configuration":                                                      "appconfiguration",
+		"azurerm_spring_cloud_custom_domain":                                             "appplatform",
 		"azurerm_spring_cloud_app_cosmosdb_association":                                  "appplatform",
 		"azurerm_spring_cloud_app_redis_association":                                     "appplatform",
 		"azurerm_spring_cloud_service":                                                   "appplatform",
@@ -138,14 +141,6 @@ var (
 		"azurerm_app_service_certificate_order":                                          "certificateregistration",
 		"azurerm_cognitive_account_customer_managed_key":                                 "cognitiveservices",
 		"azurerm_cognitive_account":                                                      "cognitiveservices",
-		"azurerm_spring_cloud_custom_domain":                                             "com",
-		"azurerm_private_dns_mx_record":                                                  "com",
-		"azurerm_private_dns_zone_virtual_network_link":                                  "com",
-		"azurerm_private_dns_txt_record":                                                 "com",
-		"azurerm_app_service_custom_hostname_binding":                                    "com",
-		"azurerm_private_dns_srv_record":                                                 "com",
-		"azurerm_app_service_managed_certificate":                                        "com",
-		"azurerm_app_service_certificate_binding":                                        "com\"",
 		"azurerm_communication_service":                                                  "communication",
 		"azurerm_disk_encryption_set":                                                    "compute",
 		"azurerm_shared_image_gallery":                                                   "compute",
@@ -233,6 +228,7 @@ var (
 		"azurerm_data_lake_analytics_firewall_rule":                                      "datalakeanalytics",
 		"azurerm_data_lake_store_virtual_network_rule":                                   "datalakestore",
 		"azurerm_data_lake_store":                                                        "datalakestore",
+		"azurerm_data_lake_store_file":                                                   "datalakestore",
 		"azurerm_data_lake_store_firewall_rule":                                          "datalakestore",
 		"azurerm_database_migration_project":                                             "datamigration",
 		"azurerm_database_migration_service":                                             "datamigration",
@@ -426,6 +422,10 @@ var (
 		"azurerm_netapp_account":                                                         "netapp",
 		"azurerm_netapp_volume":                                                          "netapp",
 		"azurerm_netapp_snapshot":                                                        "netapp",
+		"azurerm_private_dns_mx_record":                                                  "network",
+		"azurerm_private_dns_zone_virtual_network_link":                                  "network",
+		"azurerm_private_dns_txt_record":                                                 "network",
+		"azurerm_private_dns_srv_record":                                                 "network",
 		"azurerm_virtual_network_gateway":                                                "network",
 		"azurerm_virtual_network_gateway_connection":                                     "network",
 		"azurerm_packet_capture":                                                         "network",
@@ -688,7 +688,9 @@ var (
 		"azurerm_iot_time_series_insights_access_policy":                                 "timeseriesinsights",
 		"azurerm_iot_time_series_insights_standard_environment":                          "timeseriesinsights",
 		"azurerm_iot_time_series_insights_gen2_environment":                              "timeseriesinsights",
-		"azurerm_data_lake_store_file":                                                   "txt",
+		"azurerm_app_service_custom_hostname_binding":                                    "web",
+		"azurerm_app_service_managed_certificate":                                        "web",
+		"azurerm_app_service_certificate_binding":                                        "web",
 		"azurerm_app_service_environment_v3":                                             "web",
 		"azurerm_app_service_active_slot":                                                "web",
 		"azurerm_app_service_source_control_token":                                       "web",

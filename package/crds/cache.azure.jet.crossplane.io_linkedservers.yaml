@@ -4,18 +4,18 @@ metadata:
   annotations:
     controller-gen.kubebuilder.io/version: v0.6.2
   creationTimestamp: null
-  name: enterpriseclusters.redis.azure.jet.crossplane.io
+  name: linkedservers.cache.azure.jet.crossplane.io
 spec:
-  group: redis.azure.jet.crossplane.io
+  group: cache.azure.jet.crossplane.io
   names:
     categories:
     - crossplane
     - managed
     - azurejet
-    kind: EnterpriseCluster
-    listKind: EnterpriseClusterList
-    plural: enterpriseclusters
-    singular: enterprisecluster
+    kind: LinkedServer
+    listKind: LinkedServerList
+    plural: linkedservers
+    singular: linkedserver
   scope: Cluster
   versions:
   - additionalPrinterColumns:
@@ -34,7 +34,7 @@ spec:
     name: v1alpha1
     schema:
       openAPIV3Schema:
-        description: EnterpriseCluster is the Schema for the EnterpriseClusters API
+        description: LinkedServer is the Schema for the LinkedServers API
         properties:
           apiVersion:
             description: 'APIVersion defines the versioned schema of this representation
@@ -49,7 +49,7 @@ spec:
           metadata:
             type: object
           spec:
-            description: EnterpriseClusterSpec defines the desired state of EnterpriseCluster
+            description: LinkedServerSpec defines the desired state of LinkedServer
             properties:
               deletionPolicy:
                 default: Delete
@@ -62,9 +62,32 @@ spec:
                 type: string
               forProvider:
                 properties:
-                  location:
+                  linkedRedisCacheId:
                     type: string
-                  minimumTlsVersion:
+                  linkedRedisCacheIdRef:
+                    description: A Reference to a named object.
+                    properties:
+                      name:
+                        description: Name of the referenced object.
+                        type: string
+                    required:
+                    - name
+                    type: object
+                  linkedRedisCacheIdSelector:
+                    description: A Selector selects an object.
+                    properties:
+                      matchControllerRef:
+                        description: MatchControllerRef ensures an object with the
+                          same controller reference as the selecting object is selected.
+                        type: boolean
+                      matchLabels:
+                        additionalProperties:
+                          type: string
+                        description: MatchLabels ensures an object with matching labels
+                          is selected.
+                        type: object
+                    type: object
+                  linkedRedisCacheLocation:
                     type: string
                   resourceGroupName:
                     type: string
@@ -91,19 +114,36 @@ spec:
                           is selected.
                         type: object
                     type: object
-                  skuName:
+                  serverRole:
                     type: string
-                  tags:
-                    additionalProperties:
-                      type: string
+                  targetRedisCacheName:
+                    type: string
+                  targetRedisCacheNameRef:
+                    description: A Reference to a named object.
+                    properties:
+                      name:
+                        description: Name of the referenced object.
+                        type: string
+                    required:
+                    - name
                     type: object
-                  zones:
-                    items:
-                      type: string
-                    type: array
+                  targetRedisCacheNameSelector:
+                    description: A Selector selects an object.
+                    properties:
+                      matchControllerRef:
+                        description: MatchControllerRef ensures an object with the
+                          same controller reference as the selecting object is selected.
+                        type: boolean
+                      matchLabels:
+                        additionalProperties:
+                          type: string
+                        description: MatchLabels ensures an object with matching labels
+                          is selected.
+                        type: object
+                    type: object
                 required:
-                - location
-                - skuName
+                - linkedRedisCacheLocation
+                - serverRole
                 type: object
               providerConfigRef:
                 default:
@@ -150,15 +190,13 @@ spec:
             - forProvider
             type: object
           status:
-            description: EnterpriseClusterStatus defines the observed state of EnterpriseCluster.
+            description: LinkedServerStatus defines the observed state of LinkedServer.
             properties:
               atProvider:
                 properties:
-                  hostname:
-                    type: string
                   id:
                     type: string
-                  version:
+                  name:
                     type: string
                 type: object
               conditions:
