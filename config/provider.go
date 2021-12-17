@@ -21,6 +21,8 @@ import (
 
 	tf "github.com/hashicorp/terraform-provider-azurerm/xpprovider"
 
+	"github.com/crossplane-contrib/provider-jet-azure/config/common"
+
 	tjconfig "github.com/crossplane-contrib/terrajet/pkg/config"
 
 	"github.com/crossplane-contrib/provider-jet-azure/config/api"
@@ -153,6 +155,15 @@ func GetProvider() *tjconfig.Provider {
 	}
 
 	pc.ConfigureResources()
+
+	// This function runs after the special configurations were applied. However, if some references were configured in
+	// the configuration files, the reference generator does not override them.
+	for _, r := range pc.Resources {
+		if err := common.AddCommonReferences(r); err != nil {
+			panic(err)
+		}
+	}
+
 	return pc
 }
 
