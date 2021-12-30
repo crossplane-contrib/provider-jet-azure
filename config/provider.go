@@ -17,15 +17,12 @@ limitations under the License.
 package config
 
 import (
+	tjconfig "github.com/crossplane-contrib/terrajet/pkg/config"
 	"github.com/hashicorp/terraform-plugin-sdk/v2/helper/schema"
-
 	tf "github.com/hashicorp/terraform-provider-azurerm/xpprovider"
 
-	"github.com/crossplane-contrib/provider-jet-azure/config/common"
-
-	tjconfig "github.com/crossplane-contrib/terrajet/pkg/config"
-
 	"github.com/crossplane-contrib/provider-jet-azure/config/api"
+	"github.com/crossplane-contrib/provider-jet-azure/config/common"
 	"github.com/crossplane-contrib/provider-jet-azure/config/cosmosdb"
 	"github.com/crossplane-contrib/provider-jet-azure/config/iothub"
 	"github.com/crossplane-contrib/provider-jet-azure/config/ip"
@@ -35,6 +32,7 @@ import (
 	"github.com/crossplane-contrib/provider-jet-azure/config/monitor"
 	"github.com/crossplane-contrib/provider-jet-azure/config/network"
 	"github.com/crossplane-contrib/provider-jet-azure/config/postgresql"
+	"github.com/crossplane-contrib/provider-jet-azure/config/redis"
 	"github.com/crossplane-contrib/provider-jet-azure/config/resource"
 	"github.com/crossplane-contrib/provider-jet-azure/config/sql"
 	"github.com/crossplane-contrib/provider-jet-azure/config/storage"
@@ -52,6 +50,7 @@ var includedResources = []string{
 	"azurerm_kubernetes_.+",
 	"azurerm_postgresql_.+",
 	"azurerm_cosmosdb_.+",
+	"azurerm_redis_.+",
 	"azurerm_resource_group",
 	"azurerm_subnet",
 	"azurerm_storage_account$",
@@ -139,6 +138,7 @@ func GetProvider() *tjconfig.Provider {
 		network.Configure,
 		ip.Configure,
 		management.Configure,
+		redis.Configure,
 		resource.Configure,
 		kubernetes.Configure,
 		postgresql.Configure,

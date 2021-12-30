@@ -1,0 +1,15 @@
+apiVersion: redis.azure.jet.crossplane.io/v1alpha1
+kind: Cache
+metadata:
+  name: example-redis
+spec:
+  forProvider:
+    resourceGroupNameRef:
+      name: example
+    location: "East US"
+    capacity: 2
+    family: "C"
+    skuName: "Standard"
+    minimumTlsVersion: "1.2"
+  providerConfigRef:
+    name: example
