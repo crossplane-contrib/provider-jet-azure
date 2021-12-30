@@ -17,9 +17,10 @@ limitations under the License.
 package redis
 
 import (
+	"github.com/crossplane-contrib/terrajet/pkg/config"
+
 	"github.com/crossplane-contrib/provider-jet-azure/apis/rconfig"
 	"github.com/crossplane-contrib/provider-jet-azure/config/common"
-	"github.com/crossplane-contrib/terrajet/pkg/config"
 )
 
 // Configure configures redis group

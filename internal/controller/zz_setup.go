@@ -81,6 +81,11 @@ import (
 	serverpostgresql "github.com/crossplane-contrib/provider-jet-azure/internal/controller/postgresql/server"
 	virtualnetworkrule "github.com/crossplane-contrib/provider-jet-azure/internal/controller/postgresql/virtualnetworkrule"
 	providerconfig "github.com/crossplane-contrib/provider-jet-azure/internal/controller/providerconfig"
+	cache "github.com/crossplane-contrib/provider-jet-azure/internal/controller/redis/cache"
+	enterprisecluster "github.com/crossplane-contrib/provider-jet-azure/internal/controller/redis/enterprisecluster"
+	enterprisedatabase "github.com/crossplane-contrib/provider-jet-azure/internal/controller/redis/enterprisedatabase"
+	firewallruleredis "github.com/crossplane-contrib/provider-jet-azure/internal/controller/redis/firewallrule"
+	linkedserver "github.com/crossplane-contrib/provider-jet-azure/internal/controller/redis/linkedserver"
 	resourcegrouptemplatedeployment "github.com/crossplane-contrib/provider-jet-azure/internal/controller/resources/resourcegrouptemplatedeployment"
 	serversql "github.com/crossplane-contrib/provider-jet-azure/internal/controller/sql/server"
 	accountstorage "github.com/crossplane-contrib/provider-jet-azure/internal/controller/storage/account"
@@ -148,6 +153,11 @@ func Setup(mgr ctrl.Manager, l logging.Logger, wl workqueue.RateLimiter, ps terr
 		serverpostgresql.Setup,
 		virtualnetworkrule.Setup,
 		providerconfig.Setup,
+		cache.Setup,
+		enterprisecluster.Setup,
+		enterprisedatabase.Setup,
+		firewallruleredis.Setup,
+		linkedserver.Setup,
 		resourcegrouptemplatedeployment.Setup,
 		serversql.Setup,
 		accountstorage.Setup,

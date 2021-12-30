@@ -32,6 +32,7 @@ import (
 	v1alpha1mssql "github.com/crossplane-contrib/provider-jet-azure/apis/mssql/v1alpha1"
 	v1alpha1network "github.com/crossplane-contrib/provider-jet-azure/apis/network/v1alpha1"
 	v1alpha1postgresql "github.com/crossplane-contrib/provider-jet-azure/apis/postgresql/v1alpha1"
+	v1alpha1redis "github.com/crossplane-contrib/provider-jet-azure/apis/redis/v1alpha1"
 	v1alpha1resources "github.com/crossplane-contrib/provider-jet-azure/apis/resources/v1alpha1"
 	v1alpha1sql "github.com/crossplane-contrib/provider-jet-azure/apis/sql/v1alpha1"
 	v1alpha1storage "github.com/crossplane-contrib/provider-jet-azure/apis/storage/v1alpha1"
@@ -51,6 +52,7 @@ func init() {
 		v1alpha1mssql.SchemeBuilder.AddToScheme,
 		v1alpha1network.SchemeBuilder.AddToScheme,
 		v1alpha1postgresql.SchemeBuilder.AddToScheme,
+		v1alpha1redis.SchemeBuilder.AddToScheme,
 		v1alpha1resources.SchemeBuilder.AddToScheme,
 		v1alpha1sql.SchemeBuilder.AddToScheme,
 		v1alpha1storage.SchemeBuilder.AddToScheme,
