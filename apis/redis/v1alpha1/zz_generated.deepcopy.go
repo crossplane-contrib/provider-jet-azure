@@ -415,11 +415,6 @@ func (in *EnterpriseClusterParameters) DeepCopyInto(out *EnterpriseClusterParame
 		*out = new(string)
 		**out = **in
 	}
-	if in.Name != nil {
-		in, out := &in.Name, &out.Name
-		*out = new(string)
-		**out = **in
-	}
 	if in.ResourceGroupName != nil {
 		in, out := &in.ResourceGroupName, &out.ResourceGroupName
 		*out = new(string)
@@ -604,6 +599,16 @@ func (in *EnterpriseDatabaseParameters) DeepCopyInto(out *EnterpriseDatabasePara
 		*out = new(string)
 		**out = **in
 	}
+	if in.ClusterIDRef != nil {
+		in, out := &in.ClusterIDRef, &out.ClusterIDRef
+		*out = new(v1.Reference)
+		**out = **in
+	}
+	if in.ClusterIDSelector != nil {
+		in, out := &in.ClusterIDSelector, &out.ClusterIDSelector
+		*out = new(v1.Selector)
+		(*in).DeepCopyInto(*out)
+	}
 	if in.ClusteringPolicy != nil {
 		in, out := &in.ClusteringPolicy, &out.ClusteringPolicy
 		*out = new(string)
@@ -620,11 +625,6 @@ func (in *EnterpriseDatabaseParameters) DeepCopyInto(out *EnterpriseDatabasePara
 		for i := range *in {
 			(*in)[i].DeepCopyInto(&(*out)[i])
 		}
-	}
-	if in.Name != nil {
-		in, out := &in.Name, &out.Name
-		*out = new(string)
-		**out = **in
 	}
 	if in.Port != nil {
 		in, out := &in.Port, &out.Port

@@ -103,6 +103,22 @@ func (mg *EnterpriseDatabase) ResolveReferences(ctx context.Context, c client.Re
 	var err error
 
 	rsp, err = r.Resolve(ctx, reference.ResolutionRequest{
+		CurrentValue: reference.FromPtrValue(mg.Spec.ForProvider.ClusterID),
+		Extract:      rconfig.ExtractResourceID(),
+		Reference:    mg.Spec.ForProvider.ClusterIDRef,
+		Selector:     mg.Spec.ForProvider.ClusterIDSelector,
+		To: reference.To{
+			List:    &EnterpriseClusterList{},
+			Managed: &EnterpriseCluster{},
+		},
+	})
+	if err != nil {
+		return errors.Wrap(err, "mg.Spec.ForProvider.ClusterID")
+	}
+	mg.Spec.ForProvider.ClusterID = reference.ToPtrValue(rsp.ResolvedValue)
+	mg.Spec.ForProvider.ClusterIDRef = rsp.ResolvedReference
+
+	rsp, err = r.Resolve(ctx, reference.ResolutionRequest{
 		CurrentValue: reference.FromPtrValue(mg.Spec.ForProvider.ResourceGroupName),
 		Extract:      reference.ExternalName(),
 		Reference:    mg.Spec.ForProvider.ResourceGroupNameRef,

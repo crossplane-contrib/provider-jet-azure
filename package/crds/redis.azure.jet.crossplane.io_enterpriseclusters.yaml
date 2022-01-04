@@ -66,8 +66,6 @@ spec:
                     type: string
                   minimumTlsVersion:
                     type: string
-                  name:
-                    type: string
                   resourceGroupName:
                     type: string
                   resourceGroupNameRef:
@@ -105,7 +103,6 @@ spec:
                     type: array
                 required:
                 - location
-                - name
                 - skuName
                 type: object
               providerConfigRef:

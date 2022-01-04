@@ -34,8 +34,16 @@ type EnterpriseDatabaseParameters struct {
 	// +kubebuilder:validation:Optional
 	ClientProtocol *string `json:"clientProtocol,omitempty" tf:"client_protocol,omitempty"`
 
-	// +kubebuilder:validation:Required
-	ClusterID *string `json:"clusterId" tf:"cluster_id,omitempty"`
+	// +crossplane:generate:reference:type=EnterpriseCluster
+	// +crossplane:generate:reference:extractor=github.com/crossplane-contrib/provider-jet-azure/apis/rconfig.ExtractResourceID()
+	// +kubebuilder:validation:Optional
+	ClusterID *string `json:"clusterId,omitempty" tf:"cluster_id,omitempty"`
+
+	// +kubebuilder:validation:Optional
+	ClusterIDRef *v1.Reference `json:"clusterIdRef,omitempty" tf:"-"`
+
+	// +kubebuilder:validation:Optional
+	ClusterIDSelector *v1.Selector `json:"clusterIdSelector,omitempty" tf:"-"`
 
 	// +kubebuilder:validation:Optional
 	ClusteringPolicy *string `json:"clusteringPolicy,omitempty" tf:"clustering_policy,omitempty"`
@@ -45,9 +53,6 @@ type EnterpriseDatabaseParameters struct {
 
 	// +kubebuilder:validation:Optional
 	Module []ModuleParameters `json:"module,omitempty" tf:"module,omitempty"`
-
-	// +kubebuilder:validation:Optional
-	Name *string `json:"name,omitempty" tf:"name,omitempty"`
 
 	// +kubebuilder:validation:Optional
 	Port *int64 `json:"port,omitempty" tf:"port,omitempty"`

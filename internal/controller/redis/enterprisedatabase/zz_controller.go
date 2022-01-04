@@ -42,12 +42,13 @@ func Setup(mgr ctrl.Manager, l logging.Logger, rl workqueue.RateLimiter, s terra
 	name := managed.ControllerName(v1alpha1.EnterpriseDatabase_GroupVersionKind.String())
 	r := managed.NewReconciler(mgr,
 		xpresource.ManagedKind(v1alpha1.EnterpriseDatabase_GroupVersionKind),
-		managed.WithExternalConnecter(tjcontroller.NewConnector(mgr.GetClient(), ws, s, cfg.Resources["azurerm_redis_enterprise_database"])),
+		managed.WithExternalConnecter(tjcontroller.NewConnector(mgr.GetClient(), ws, s, cfg.Resources["azurerm_redis_enterprise_database"],
+			tjcontroller.WithCallbackProvider(tjcontroller.NewAPICallbacks(mgr, xpresource.ManagedKind(v1alpha1.EnterpriseDatabase_GroupVersionKind))),
+		)),
 		managed.WithLogger(l.WithValues("controller", name)),
 		managed.WithRecorder(event.NewAPIRecorder(mgr.GetEventRecorderFor(name))),
 		managed.WithFinalizer(terraform.NewWorkspaceFinalizer(ws, xpresource.NewAPIFinalizer(mgr.GetClient(), managed.FinalizerName))),
 		managed.WithTimeout(3*time.Minute),
-		managed.WithInitializers(),
 	)
 
 	return ctrl.NewControllerManagedBy(mgr).
