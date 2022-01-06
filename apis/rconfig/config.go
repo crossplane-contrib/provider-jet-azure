@@ -17,9 +17,10 @@ limitations under the License.
 package rconfig
 
 import (
+	"github.com/crossplane/terrajet/pkg/resource"
+
 	xpref "github.com/crossplane/crossplane-runtime/pkg/reference"
 	xpresource "github.com/crossplane/crossplane-runtime/pkg/resource"
-	"github.com/crossplane/terrajet/pkg/resource"
 )
 
 const (
@@ -39,6 +40,9 @@ const (
 
 	// SubnetReferencePath is used as import path for network.Subnet
 	SubnetReferencePath = APISPackagePath + SubnetPath
+
+	// StorageAccountReferencePath is used as import path for StorageAccount
+	StorageAccountReferencePath = APISPackagePath + "/storage/v1alpha2.Account"
 )
 
 // ExtractResourceID extracts the value of `spec.atProvider.id`

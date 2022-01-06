@@ -72,6 +72,15 @@ import (
 	iothubroute "github.com/crossplane-contrib/provider-jet-azure/internal/controller/devices/iothubroute"
 	iothubsharedaccesspolicy "github.com/crossplane-contrib/provider-jet-azure/internal/controller/devices/iothubsharedaccesspolicy"
 	monitormetricalert "github.com/crossplane-contrib/provider-jet-azure/internal/controller/insights/monitormetricalert"
+	accesspolicy "github.com/crossplane-contrib/provider-jet-azure/internal/controller/keyvault/accesspolicy"
+	certificate "github.com/crossplane-contrib/provider-jet-azure/internal/controller/keyvault/certificate"
+	certificateissuer "github.com/crossplane-contrib/provider-jet-azure/internal/controller/keyvault/certificateissuer"
+	key "github.com/crossplane-contrib/provider-jet-azure/internal/controller/keyvault/key"
+	managedhardwaresecuritymodule "github.com/crossplane-contrib/provider-jet-azure/internal/controller/keyvault/managedhardwaresecuritymodule"
+	managedstorageaccount "github.com/crossplane-contrib/provider-jet-azure/internal/controller/keyvault/managedstorageaccount"
+	managedstorageaccountsastokendefinition "github.com/crossplane-contrib/provider-jet-azure/internal/controller/keyvault/managedstorageaccountsastokendefinition"
+	secret "github.com/crossplane-contrib/provider-jet-azure/internal/controller/keyvault/secret"
+	vault "github.com/crossplane-contrib/provider-jet-azure/internal/controller/keyvault/vault"
 	workspace "github.com/crossplane-contrib/provider-jet-azure/internal/controller/loganalytics/workspace"
 	loadbalancer "github.com/crossplane-contrib/provider-jet-azure/internal/controller/network/loadbalancer"
 	subnet "github.com/crossplane-contrib/provider-jet-azure/internal/controller/network/subnet"
@@ -144,6 +153,15 @@ func Setup(mgr ctrl.Manager, l logging.Logger, wl workqueue.RateLimiter, ps terr
 		iothubroute.Setup,
 		iothubsharedaccesspolicy.Setup,
 		monitormetricalert.Setup,
+		accesspolicy.Setup,
+		certificate.Setup,
+		certificateissuer.Setup,
+		key.Setup,
+		managedhardwaresecuritymodule.Setup,
+		managedstorageaccount.Setup,
+		managedstorageaccountsastokendefinition.Setup,
+		secret.Setup,
+		vault.Setup,
 		workspace.Setup,
 		loadbalancer.Setup,
 		subnet.Setup,
