@@ -14,15 +14,15 @@ See the License for the specific language governing permissions and
 limitations under the License.
 */
 
-package eventhub
+package notificationhubs
 
 import (
 	"github.com/crossplane/terrajet/pkg/config"
 )
 
-// Configure configures eventhub group
+// Configure configures notificationhubs group
 func Configure(p *config.Provider) {
-	p.AddResourceConfigurator("azurerm_eventhub", func(r *config.Resource) {
-		r.Kind = "Hub"
+	p.AddResourceConfigurator("azurerm_notification_hub", func(r *config.Resource) {
+		r.Kind = "NotificationHub"
 	})
 }

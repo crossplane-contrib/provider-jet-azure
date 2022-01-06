@@ -22,25 +22,26 @@ import (
 
 	tf "github.com/hashicorp/terraform-provider-azurerm/xpprovider"
 
+	"github.com/crossplane-contrib/provider-jet-azure/config/datashare"
+	"github.com/crossplane-contrib/provider-jet-azure/config/notificationhubs"
+	"github.com/crossplane-contrib/provider-jet-azure/config/storagesync"
+
 	"github.com/crossplane-contrib/provider-jet-azure/config/apimanagement"
 	"github.com/crossplane-contrib/provider-jet-azure/config/base"
-	"github.com/crossplane-contrib/provider-jet-azure/config/eventhub"
-	"github.com/crossplane-contrib/provider-jet-azure/config/healthbot"
-	"github.com/crossplane-contrib/provider-jet-azure/config/logic"
-	"github.com/crossplane-contrib/provider-jet-azure/config/security"
-
 	"github.com/crossplane-contrib/provider-jet-azure/config/common"
 	"github.com/crossplane-contrib/provider-jet-azure/config/cosmosdb"
 	"github.com/crossplane-contrib/provider-jet-azure/config/iothub"
 	"github.com/crossplane-contrib/provider-jet-azure/config/ip"
 	"github.com/crossplane-contrib/provider-jet-azure/config/kubernetes"
 	"github.com/crossplane-contrib/provider-jet-azure/config/loganalytics"
+	"github.com/crossplane-contrib/provider-jet-azure/config/logic"
 	"github.com/crossplane-contrib/provider-jet-azure/config/management"
 	"github.com/crossplane-contrib/provider-jet-azure/config/monitor"
 	"github.com/crossplane-contrib/provider-jet-azure/config/network"
 	"github.com/crossplane-contrib/provider-jet-azure/config/postgresql"
 	"github.com/crossplane-contrib/provider-jet-azure/config/redis"
 	"github.com/crossplane-contrib/provider-jet-azure/config/resource"
+	"github.com/crossplane-contrib/provider-jet-azure/config/security"
 	"github.com/crossplane-contrib/provider-jet-azure/config/sql"
 	"github.com/crossplane-contrib/provider-jet-azure/config/storage"
 	"github.com/crossplane-contrib/provider-jet-azure/config/subnet"
@@ -139,8 +140,6 @@ func GetProvider() *tjconfig.Provider {
 		pc.AddResourceConfigurator(name, func(r *tjconfig.Resource) {
 			r.ExternalName = tjconfig.IdentifierFromProvider
 		})
-		// default api-group & kind configuration for all resources
-		addDefaultGroupKindConfigurator(pc, name)
 	}
 
 	for _, configure := range []func(provider *tjconfig.Provider){
@@ -160,11 +159,12 @@ func GetProvider() *tjconfig.Provider {
 		iothub.Configure,
 		monitor.Configure,
 		apimanagement.Configure,
-		eventhub.Configure,
-		healthbot.Configure,
 		logic.Configure,
 		security.Configure,
 		base.Configure,
+		datashare.Configure,
+		notificationhubs.Configure,
+		storagesync.Configure,
 	} {
 		configure(pc)
 	}

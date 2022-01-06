@@ -14,15 +14,15 @@ See the License for the specific language governing permissions and
 limitations under the License.
 */
 
-package healthbot
+package datashare
 
 import (
 	"github.com/crossplane/terrajet/pkg/config"
 )
 
-// Configure configures healthbot group
+// Configure configures datashare group
 func Configure(p *config.Provider) {
-	p.AddResourceConfigurator("azurerm_healthbot", func(r *config.Resource) {
-		r.Kind = "Bot"
+	p.AddResourceConfigurator("azurerm_data_share", func(r *config.Resource) {
+		r.Kind = "DataShare"
 	})
 }
