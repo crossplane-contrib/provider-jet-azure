@@ -33,7 +33,7 @@ func Configure(p *config.Provider) {
 		r.ShortGroup = groupLog
 		r.References = config.References{
 			"resource_group_name": config.Reference{
-				Type: rconfig.APISPackagePath + common.ResourceGroupReferencePath,
+				Type: rconfig.ResourceGroupReferencePath,
 			},
 		}
 		r.UseAsync = true

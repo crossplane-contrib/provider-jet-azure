@@ -41,7 +41,7 @@ func Configure(p *config.Provider) {
 		}
 		r.References = config.References{
 			"resource_group_name": config.Reference{
-				Type: rconfig.APISPackagePath + common.ResourceGroupReferencePath,
+				Type: rconfig.ResourceGroupReferencePath,
 			},
 		}
 		r.UseAsync = true
@@ -66,7 +66,7 @@ func Configure(p *config.Provider) {
 		r.Version = common.VersionV1Alpha2
 		r.References = config.References{
 			"resource_group_name": config.Reference{
-				Type: rconfig.APISPackagePath + common.ResourceGroupReferencePath,
+				Type: rconfig.ResourceGroupReferencePath,
 			},
 			"server_name": config.Reference{
 				Type: "Server",
@@ -87,7 +87,7 @@ func Configure(p *config.Provider) {
 		r.References = config.References{
 			// TODO(aru): this may have to be a reference to the server's resource group
 			"resource_group_name": config.Reference{
-				Type: rconfig.APISPackagePath + common.ResourceGroupReferencePath,
+				Type: rconfig.ResourceGroupReferencePath,
 			},
 			"server_name": config.Reference{
 				Type: "Server",
@@ -137,7 +137,7 @@ func Configure(p *config.Provider) {
 		r.Version = common.VersionV1Alpha2
 		r.References = config.References{
 			"resource_group_name": config.Reference{
-				Type: rconfig.APISPackagePath + common.ResourceGroupReferencePath,
+				Type: rconfig.ResourceGroupReferencePath,
 			},
 			"server_name": config.Reference{
 				Type: "Server",
@@ -185,10 +185,10 @@ func Configure(p *config.Provider) {
 		}
 		r.References = config.References{
 			"resource_group_name": config.Reference{
-				Type: rconfig.APISPackagePath + common.ResourceGroupReferencePath,
+				Type: rconfig.ResourceGroupReferencePath,
 			},
 			"delegated_subnet_id": config.Reference{
-				Type:      rconfig.APISPackagePath + common.SubnetReferencePath,
+				Type:      rconfig.SubnetReferencePath,
 				Extractor: rconfig.ExtractResourceIDFuncPath,
 			},
 		}
@@ -205,13 +205,13 @@ func Configure(p *config.Provider) {
 		r.Version = common.VersionV1Alpha2
 		r.References = config.References{
 			"resource_group_name": config.Reference{
-				Type: rconfig.APISPackagePath + common.ResourceGroupReferencePath,
+				Type: rconfig.ResourceGroupReferencePath,
 			},
 			"server_name": config.Reference{
 				Type: "Server",
 			},
 			"subnet_id": config.Reference{
-				Type:      rconfig.APISPackagePath + common.SubnetReferencePath,
+				Type:      rconfig.SubnetReferencePath,
 				Extractor: rconfig.ExtractResourceIDFuncPath,
 			},
 		}
@@ -244,7 +244,7 @@ func Configure(p *config.Provider) {
 		r.Version = common.VersionV1Alpha2
 		r.References = config.References{
 			"resource_group_name": config.Reference{
-				Type: rconfig.APISPackagePath + common.ResourceGroupReferencePath,
+				Type: rconfig.ResourceGroupReferencePath,
 			},
 			"server_name": config.Reference{
 				Type: "Server",

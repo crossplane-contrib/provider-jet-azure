@@ -65,7 +65,7 @@ func Configure(p *config.Provider) {
 		}
 		r.References = config.References{
 			"resource_group_name": config.Reference{
-				Type: rconfig.APISPackagePath + common.ResourceGroupReferencePath,
+				Type: rconfig.ResourceGroupReferencePath,
 			},
 		}
 		r.ExternalName = config.NameAsIdentifier
@@ -81,7 +81,7 @@ func Configure(p *config.Provider) {
 		r.Version = common.VersionV1Alpha2
 		r.References = config.References{
 			"resource_group_name": config.Reference{
-				Type: rconfig.APISPackagePath + common.ResourceGroupReferencePath,
+				Type: rconfig.ResourceGroupReferencePath,
 			},
 		}
 		r.ExternalName = config.NameAsIdentifier

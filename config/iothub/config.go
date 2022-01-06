@@ -30,10 +30,10 @@ func Configure(p *config.Provider) {
 		r.Kind = "IOTHub"
 		r.References = config.References{
 			"resource_group_name": config.Reference{
-				Type: rconfig.APISPackagePath + common.ResourceGroupReferencePath,
+				Type: rconfig.ResourceGroupReferencePath,
 			},
 			"endpoint.resource_group_name": config.Reference{
-				Type: rconfig.APISPackagePath + common.ResourceGroupReferencePath,
+				Type: rconfig.ResourceGroupReferencePath,
 			},
 			"endpoint.container_name": config.Reference{
 				Type: rconfig.APISPackagePath + "/storage/v1alpha2.Container",
@@ -50,7 +50,7 @@ func Configure(p *config.Provider) {
 		r.Version = common.VersionV1Alpha2
 		r.References = config.References{
 			"resource_group_name": config.Reference{
-				Type: rconfig.APISPackagePath + common.ResourceGroupReferencePath,
+				Type: rconfig.ResourceGroupReferencePath,
 			},
 			"iothub_name": config.Reference{
 				Type: "IOTHub",
@@ -68,7 +68,7 @@ func Configure(p *config.Provider) {
 		r.Version = common.VersionV1Alpha2
 		r.References = config.References{
 			"resource_group_name": config.Reference{
-				Type: rconfig.APISPackagePath + common.ResourceGroupReferencePath,
+				Type: rconfig.ResourceGroupReferencePath,
 			},
 		}
 		r.UseAsync = true
@@ -82,7 +82,7 @@ func Configure(p *config.Provider) {
 		r.Version = common.VersionV1Alpha2
 		r.References = config.References{
 			"resource_group_name": config.Reference{
-				Type: rconfig.APISPackagePath + common.ResourceGroupReferencePath,
+				Type: rconfig.ResourceGroupReferencePath,
 			},
 			"iot_dps_name": config.Reference{
 				Type: "IOTHubDPS",
@@ -100,7 +100,7 @@ func Configure(p *config.Provider) {
 		r.Version = common.VersionV1Alpha2
 		r.References = config.References{
 			"resource_group_name": config.Reference{
-				Type: rconfig.APISPackagePath + common.ResourceGroupReferencePath,
+				Type: rconfig.ResourceGroupReferencePath,
 			},
 			"iothub_dps_name": config.Reference{
 				Type: "IOTHubDPS",
@@ -118,7 +118,7 @@ func Configure(p *config.Provider) {
 		r.Version = common.VersionV1Alpha2
 		r.References = config.References{
 			"resource_group_name": config.Reference{
-				Type: rconfig.APISPackagePath + common.ResourceGroupReferencePath,
+				Type: rconfig.ResourceGroupReferencePath,
 			},
 			"iothub_name": config.Reference{
 				Type: "IOTHub",

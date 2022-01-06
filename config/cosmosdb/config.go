@@ -33,7 +33,7 @@ func Configure(p *config.Provider) {
 		r.Version = common.VersionV1Alpha2
 		r.References = config.References{
 			"resource_group_name": config.Reference{
-				Type: rconfig.APISPackagePath + common.ResourceGroupReferencePath,
+				Type: rconfig.ResourceGroupReferencePath,
 			},
 			"account_name": config.Reference{
 				Type: "Account",
@@ -57,7 +57,7 @@ func Configure(p *config.Provider) {
 		r.Version = common.VersionV1Alpha2
 		r.References = config.References{
 			"resource_group_name": config.Reference{
-				Type: rconfig.APISPackagePath + common.ResourceGroupReferencePath,
+				Type: rconfig.ResourceGroupReferencePath,
 			},
 			"account_name": config.Reference{
 				Type: "Account",
@@ -82,7 +82,7 @@ func Configure(p *config.Provider) {
 		r.Version = common.VersionV1Alpha2
 		r.References = config.References{
 			"resource_group_name": config.Reference{
-				Type: rconfig.APISPackagePath + common.ResourceGroupReferencePath,
+				Type: rconfig.ResourceGroupReferencePath,
 			},
 			"account_name": config.Reference{
 				Type: "Account",
@@ -123,7 +123,7 @@ func Configure(p *config.Provider) {
 		r.Version = common.VersionV1Alpha2
 		r.References = config.References{
 			"resource_group_name": config.Reference{
-				Type: rconfig.APISPackagePath + common.ResourceGroupReferencePath,
+				Type: rconfig.ResourceGroupReferencePath,
 			},
 			"account_name": config.Reference{
 				Type: "Account",
@@ -174,7 +174,7 @@ func Configure(p *config.Provider) {
 		r.Version = common.VersionV1Alpha2
 		r.References = config.References{
 			"resource_group_name": config.Reference{
-				Type: rconfig.APISPackagePath + common.ResourceGroupReferencePath,
+				Type: rconfig.ResourceGroupReferencePath,
 			},
 			"account_name": config.Reference{
 				Type: "Account",
@@ -203,7 +203,7 @@ func Configure(p *config.Provider) {
 		r.Version = common.VersionV1Alpha2
 		r.References = config.References{
 			"resource_group_name": config.Reference{
-				Type: rconfig.APISPackagePath + common.ResourceGroupReferencePath,
+				Type: rconfig.ResourceGroupReferencePath,
 			},
 			"account_name": config.Reference{
 				Type: "Account",
@@ -224,7 +224,7 @@ func Configure(p *config.Provider) {
 		r.Version = common.VersionV1Alpha2
 		r.References = config.References{
 			"resource_group_name": config.Reference{
-				Type: rconfig.APISPackagePath + common.ResourceGroupReferencePath,
+				Type: rconfig.ResourceGroupReferencePath,
 			},
 			"account_name": config.Reference{
 				Type: "Account",
@@ -245,7 +245,7 @@ func Configure(p *config.Provider) {
 		r.Version = common.VersionV1Alpha2
 		r.References = config.References{
 			"resource_group_name": config.Reference{
-				Type: rconfig.APISPackagePath + common.ResourceGroupReferencePath,
+				Type: rconfig.ResourceGroupReferencePath,
 			},
 			"account_name": config.Reference{
 				Type: "Account",
@@ -266,7 +266,7 @@ func Configure(p *config.Provider) {
 		r.Version = common.VersionV1Alpha2
 		r.References = config.References{
 			"resource_group_name": config.Reference{
-				Type: rconfig.APISPackagePath + common.ResourceGroupReferencePath,
+				Type: rconfig.ResourceGroupReferencePath,
 			},
 			"account_name": config.Reference{
 				Type: "Account",
@@ -286,7 +286,7 @@ func Configure(p *config.Provider) {
 		r.Version = common.VersionV1Alpha2
 		r.References = config.References{
 			"resource_group_name": config.Reference{
-				Type: rconfig.APISPackagePath + common.ResourceGroupReferencePath,
+				Type: rconfig.ResourceGroupReferencePath,
 			},
 		}
 		r.UseAsync = true
@@ -300,7 +300,7 @@ func Configure(p *config.Provider) {
 		r.Version = common.VersionV1Alpha2
 		r.References = config.References{
 			"resource_group_name": config.Reference{
-				Type: rconfig.APISPackagePath + common.ResourceGroupReferencePath,
+				Type: rconfig.ResourceGroupReferencePath,
 			},
 			"account_name": config.Reference{
 				Type: "Account",

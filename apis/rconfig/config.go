@@ -27,6 +27,18 @@ const (
 	APISPackagePath = "github.com/crossplane-contrib/provider-jet-azure/apis"
 	// ExtractResourceIDFuncPath holds the Azure resource ID extractor func name
 	ExtractResourceIDFuncPath = APISPackagePath + "/rconfig.ExtractResourceID()"
+
+	// ResourceGroupPath is used as subpackage path for ResourceGroup
+	ResourceGroupPath = "/azure/v1alpha2.ResourceGroup"
+
+	// SubnetPath is used as subpackage path for network.Subnet
+	SubnetPath = "/network/v1alpha2.Subnet"
+
+	// ResourceGroupReferencePath is used as import path for ResourceGroup
+	ResourceGroupReferencePath = APISPackagePath + ResourceGroupPath
+
+	// SubnetReferencePath is used as import path for network.Subnet
+	SubnetReferencePath = APISPackagePath + SubnetPath
 )
 
 // ExtractResourceID extracts the value of `spec.atProvider.id`

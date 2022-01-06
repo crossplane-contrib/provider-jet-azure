@@ -36,7 +36,7 @@ func Configure(p *config.Provider) {
 		}
 		r.References = config.References{
 			"resource_group_name": config.Reference{
-				Type: rconfig.APISPackagePath + common.ResourceGroupReferencePath,
+				Type: rconfig.ResourceGroupReferencePath,
 			},
 			"virtual_network_name": config.Reference{
 				Type: "VirtualNetwork",
@@ -86,7 +86,7 @@ func Configure(p *config.Provider) {
 		r.ShortGroup = groupNetwork
 		r.References = config.References{
 			"resource_group_name": config.Reference{
-				Type: rconfig.APISPackagePath + common.ResourceGroupReferencePath,
+				Type: rconfig.ResourceGroupReferencePath,
 			},
 		}
 		r.UseAsync = true

@@ -31,7 +31,7 @@ func Configure(p *config.Provider) {
 		r.ShortGroup = "resources"
 		r.References = config.References{
 			"resource_group_name": config.Reference{
-				Type: rconfig.APISPackagePath + common.ResourceGroupReferencePath,
+				Type: rconfig.ResourceGroupReferencePath,
 			},
 		}
 		r.UseAsync = true
@@ -49,7 +49,7 @@ func Configure(p *config.Provider) {
 		r.ShortGroup = "authorization"
 		r.References = config.References{
 			"resource_group_id": config.Reference{
-				Type:      rconfig.APISPackagePath + common.ResourceGroupReferencePath,
+				Type:      rconfig.ResourceGroupReferencePath,
 				Extractor: rconfig.ExtractResourceIDFuncPath,
 			},
 		}

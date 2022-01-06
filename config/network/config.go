@@ -42,7 +42,7 @@ func Configure(p *config.Provider) {
 		r.ShortGroup = groupNetwork
 		r.References = config.References{
 			"resource_group_name": config.Reference{
-				Type: rconfig.APISPackagePath + common.ResourceGroupReferencePath,
+				Type: rconfig.ResourceGroupReferencePath,
 			},
 		}
 		r.UseAsync = true
@@ -57,7 +57,7 @@ func Configure(p *config.Provider) {
 		r.ShortGroup = groupNetwork
 		r.References = config.References{
 			"resource_group_name": config.Reference{
-				Type: rconfig.APISPackagePath + common.ResourceGroupReferencePath,
+				Type: rconfig.ResourceGroupReferencePath,
 			},
 		}
 		r.LateInitializer = config.LateInitializer{
@@ -77,7 +77,7 @@ func Configure(p *config.Provider) {
 		r.ShortGroup = groupNetwork
 		r.References = config.References{
 			"resource_group_name": config.Reference{
-				Type: rconfig.APISPackagePath + common.ResourceGroupReferencePath,
+				Type: rconfig.ResourceGroupReferencePath,
 			},
 			"ip_configuration.subnet_id": config.Reference{
 				Type:      "Subnet",
@@ -99,7 +99,7 @@ func Configure(p *config.Provider) {
 		r.ShortGroup = groupNetwork
 		r.References = config.References{
 			"resource_group_name": config.Reference{
-				Type: rconfig.APISPackagePath + common.ResourceGroupReferencePath,
+				Type: rconfig.ResourceGroupReferencePath,
 			},
 			"virtual_network_name": config.Reference{
 				Type: "VirtualNetwork",
@@ -143,7 +143,7 @@ func Configure(p *config.Provider) {
 		r.ShortGroup = groupNetwork
 		r.References = config.References{
 			"resource_group_name": config.Reference{
-				Type: rconfig.APISPackagePath + common.ResourceGroupReferencePath,
+				Type: rconfig.ResourceGroupReferencePath,
 			},
 			"virtual_network_gateway_id": config.Reference{
 				Type:      "VirtualNetworkGateway",
@@ -178,7 +178,7 @@ func Configure(p *config.Provider) {
 		r.ShortGroup = groupNetwork
 		r.References = config.References{
 			"resource_group_name": config.Reference{
-				Type: rconfig.APISPackagePath + common.ResourceGroupReferencePath,
+				Type: rconfig.ResourceGroupReferencePath,
 			},
 		}
 		r.UseAsync = true

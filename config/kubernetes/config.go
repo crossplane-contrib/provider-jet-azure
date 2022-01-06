@@ -38,18 +38,18 @@ func Configure(p *config.Provider) {
 		}
 		r.References = config.References{
 			"resource_group_name": config.Reference{
-				Type: rconfig.APISPackagePath + common.ResourceGroupReferencePath,
+				Type: rconfig.ResourceGroupReferencePath,
 			},
 			"default_node_pool.pod_subnet_id": config.Reference{
-				Type:      rconfig.APISPackagePath + common.SubnetReferencePath,
+				Type:      rconfig.SubnetReferencePath,
 				Extractor: rconfig.ExtractResourceIDFuncPath,
 			},
 			"default_node_pool.vnet_subnet_id": config.Reference{
-				Type:      rconfig.APISPackagePath + common.SubnetReferencePath,
+				Type:      rconfig.SubnetReferencePath,
 				Extractor: rconfig.ExtractResourceIDFuncPath,
 			},
 			"addon_profile.ingress_application_gateway.subnet_id": config.Reference{
-				Type:      rconfig.APISPackagePath + common.SubnetReferencePath,
+				Type:      rconfig.SubnetReferencePath,
 				Extractor: rconfig.ExtractResourceIDFuncPath,
 			},
 		}
@@ -79,11 +79,11 @@ func Configure(p *config.Provider) {
 				Extractor: rconfig.ExtractResourceIDFuncPath,
 			},
 			"pod_subnet_id": config.Reference{
-				Type:      rconfig.APISPackagePath + common.SubnetReferencePath,
+				Type:      rconfig.SubnetReferencePath,
 				Extractor: rconfig.ExtractResourceIDFuncPath,
 			},
 			"vnet_subnet_id": config.Reference{
-				Type:      rconfig.APISPackagePath + common.SubnetReferencePath,
+				Type:      rconfig.SubnetReferencePath,
 				Extractor: rconfig.ExtractResourceIDFuncPath,
 			},
 		}
