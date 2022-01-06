@@ -21,8 +21,8 @@ package v1alpha1
 import (
 	"github.com/pkg/errors"
 
-	"github.com/crossplane-contrib/terrajet/pkg/resource"
-	"github.com/crossplane-contrib/terrajet/pkg/resource/json"
+	"github.com/crossplane/terrajet/pkg/resource"
+	"github.com/crossplane/terrajet/pkg/resource/json"
 )
 
 // GetTerraformResourceType returns Terraform resource type for this KubernetesCluster
@@ -32,7 +32,7 @@ func (mg *KubernetesCluster) GetTerraformResourceType() string {
 
 // GetConnectionDetailsMapping for this KubernetesCluster
 func (tr *KubernetesCluster) GetConnectionDetailsMapping() map[string]string {
-	return map[string]string{"kube_admin_config[*].client_certificate": "status.atProvider.kubeAdminConfig[*].clientCertificate", "kube_admin_config[*].client_key": "status.atProvider.kubeAdminConfig[*].clientKey", "kube_admin_config[*].cluster_ca_certificate": "status.atProvider.kubeAdminConfig[*].clusterCaCertificate", "kube_admin_config[*].password": "status.atProvider.kubeAdminConfig[*].password", "kube_admin_config_raw": "status.atProvider.kubeAdminConfigRaw", "kube_config[*].client_certificate": "status.atProvider.kubeConfig[*].clientCertificate", "kube_config[*].client_key": "status.atProvider.kubeConfig[*].clientKey", "kube_config[*].cluster_ca_certificate": "status.atProvider.kubeConfig[*].clusterCaCertificate", "kube_config[*].password": "status.atProvider.kubeConfig[*].password", "kube_config_raw": "status.atProvider.kubeConfigRaw", "role_based_access_control[*].azure_active_directory[*].server_app_secret": "spec.forProvider.roleBasedAccessControl[*].azureActiveDirectory[*].serverAppSecretSecretRef", "service_principal[*].client_secret": "spec.forProvider.servicePrincipal[*].clientSecretSecretRef", "windows_profile[*].admin_password": "spec.forProvider.windowsProfile[*].adminPasswordSecretRef"}
+	return map[string]string{"kube_admin_config[*].client_certificate": "status.atProvider.kubeAdminConfig[*].clientCertificate", "kube_admin_config[*].client_key": "status.atProvider.kubeAdminConfig[*].clientKey", "kube_admin_config[*].cluster_ca_certificate": "status.atProvider.kubeAdminConfig[*].clusterCACertificate", "kube_admin_config[*].password": "status.atProvider.kubeAdminConfig[*].password", "kube_admin_config_raw": "status.atProvider.kubeAdminConfigRaw", "kube_config[*].client_certificate": "status.atProvider.kubeConfig[*].clientCertificate", "kube_config[*].client_key": "status.atProvider.kubeConfig[*].clientKey", "kube_config[*].cluster_ca_certificate": "status.atProvider.kubeConfig[*].clusterCACertificate", "kube_config[*].password": "status.atProvider.kubeConfig[*].password", "kube_config_raw": "status.atProvider.kubeConfigRaw", "role_based_access_control[*].azure_active_directory[*].server_app_secret": "spec.forProvider.roleBasedAccessControl[*].azureActiveDirectory[*].serverAppSecretSecretRef", "service_principal[*].client_secret": "spec.forProvider.servicePrincipal[*].clientSecretSecretRef", "windows_profile[*].admin_password": "spec.forProvider.windowsProfile[*].adminPasswordSecretRef"}
 }
 
 // GetObservation of this KubernetesCluster

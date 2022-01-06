@@ -442,6 +442,24 @@ type RoutingParameters struct {
 	PublishMicrosoftEndpoints *bool `json:"publishMicrosoftEndpoints,omitempty" tf:"publish_microsoft_endpoints,omitempty"`
 }
 
+type SMBObservation struct {
+}
+
+type SMBParameters struct {
+
+	// +kubebuilder:validation:Optional
+	AuthenticationTypes []*string `json:"authenticationTypes,omitempty" tf:"authentication_types,omitempty"`
+
+	// +kubebuilder:validation:Optional
+	ChannelEncryptionType []*string `json:"channelEncryptionType,omitempty" tf:"channel_encryption_type,omitempty"`
+
+	// +kubebuilder:validation:Optional
+	KerberosTicketEncryptionType []*string `json:"kerberosTicketEncryptionType,omitempty" tf:"kerberos_ticket_encryption_type,omitempty"`
+
+	// +kubebuilder:validation:Optional
+	Versions []*string `json:"versions,omitempty" tf:"versions,omitempty"`
+}
+
 type SharePropertiesCorsRuleObservation struct {
 }
 
@@ -475,25 +493,7 @@ type SharePropertiesParameters struct {
 	RetentionPolicy []RetentionPolicyParameters `json:"retentionPolicy,omitempty" tf:"retention_policy,omitempty"`
 
 	// +kubebuilder:validation:Optional
-	Smb []SmbParameters `json:"smb,omitempty" tf:"smb,omitempty"`
-}
-
-type SmbObservation struct {
-}
-
-type SmbParameters struct {
-
-	// +kubebuilder:validation:Optional
-	AuthenticationTypes []*string `json:"authenticationTypes,omitempty" tf:"authentication_types,omitempty"`
-
-	// +kubebuilder:validation:Optional
-	ChannelEncryptionType []*string `json:"channelEncryptionType,omitempty" tf:"channel_encryption_type,omitempty"`
-
-	// +kubebuilder:validation:Optional
-	KerberosTicketEncryptionType []*string `json:"kerberosTicketEncryptionType,omitempty" tf:"kerberos_ticket_encryption_type,omitempty"`
-
-	// +kubebuilder:validation:Optional
-	Versions []*string `json:"versions,omitempty" tf:"versions,omitempty"`
+	SMB []SMBParameters `json:"smb,omitempty" tf:"smb,omitempty"`
 }
 
 type StaticWebsiteObservation struct {

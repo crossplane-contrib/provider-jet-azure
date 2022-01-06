@@ -28,7 +28,7 @@ import (
 type FrontendIPConfigurationObservation struct {
 	ID *string `json:"id,omitempty" tf:"id,omitempty"`
 
-	InboundNatRules []*string `json:"inboundNatRules,omitempty" tf:"inbound_nat_rules,omitempty"`
+	InboundNATRules []*string `json:"inboundNatRules,omitempty" tf:"inbound_nat_rules,omitempty"`
 
 	LoadBalancerRules []*string `json:"loadBalancerRules,omitempty" tf:"load_balancer_rules,omitempty"`
 

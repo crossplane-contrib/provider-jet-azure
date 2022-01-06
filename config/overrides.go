@@ -19,7 +19,7 @@ package config
 import (
 	"strings"
 
-	tjconfig "github.com/crossplane-contrib/terrajet/pkg/config"
+	tjconfig "github.com/crossplane/terrajet/pkg/config"
 )
 
 const (

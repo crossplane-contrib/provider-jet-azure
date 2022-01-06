@@ -17,9 +17,9 @@ limitations under the License.
 package rconfig
 
 import (
-	"github.com/crossplane-contrib/terrajet/pkg/resource"
 	xpref "github.com/crossplane/crossplane-runtime/pkg/reference"
 	xpresource "github.com/crossplane/crossplane-runtime/pkg/resource"
+	"github.com/crossplane/terrajet/pkg/resource"
 )
 
 const (

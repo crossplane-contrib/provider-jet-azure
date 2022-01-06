@@ -27,7 +27,7 @@ import (
 	"github.com/crossplane/crossplane-runtime/pkg/logging"
 	"github.com/crossplane/crossplane-runtime/pkg/ratelimiter"
 
-	"github.com/crossplane-contrib/terrajet/pkg/terraform"
+	"github.com/crossplane/terrajet/pkg/terraform"
 
 	"github.com/crossplane-contrib/provider-jet-azure/apis"
 	"github.com/crossplane-contrib/provider-jet-azure/config"

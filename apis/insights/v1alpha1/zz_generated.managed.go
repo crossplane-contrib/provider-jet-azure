@@ -19,58 +19,58 @@ package v1alpha1
 
 import xpv1 "github.com/crossplane/crossplane-runtime/apis/common/v1"
 
-// GetCondition of this MetricAlert.
-func (mg *MetricAlert) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
+// GetCondition of this MonitorMetricAlert.
+func (mg *MonitorMetricAlert) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
 	return mg.Status.GetCondition(ct)
 }
 
-// GetDeletionPolicy of this MetricAlert.
-func (mg *MetricAlert) GetDeletionPolicy() xpv1.DeletionPolicy {
+// GetDeletionPolicy of this MonitorMetricAlert.
+func (mg *MonitorMetricAlert) GetDeletionPolicy() xpv1.DeletionPolicy {
 	return mg.Spec.DeletionPolicy
 }
 
-// GetProviderConfigReference of this MetricAlert.
-func (mg *MetricAlert) GetProviderConfigReference() *xpv1.Reference {
+// GetProviderConfigReference of this MonitorMetricAlert.
+func (mg *MonitorMetricAlert) GetProviderConfigReference() *xpv1.Reference {
 	return mg.Spec.ProviderConfigReference
 }
 
 /*
-GetProviderReference of this MetricAlert.
+GetProviderReference of this MonitorMetricAlert.
 Deprecated: Use GetProviderConfigReference.
 */
-func (mg *MetricAlert) GetProviderReference() *xpv1.Reference {
+func (mg *MonitorMetricAlert) GetProviderReference() *xpv1.Reference {
 	return mg.Spec.ProviderReference
 }
 
-// GetWriteConnectionSecretToReference of this MetricAlert.
-func (mg *MetricAlert) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
+// GetWriteConnectionSecretToReference of this MonitorMetricAlert.
+func (mg *MonitorMetricAlert) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
 	return mg.Spec.WriteConnectionSecretToReference
 }
 
-// SetConditions of this MetricAlert.
-func (mg *MetricAlert) SetConditions(c ...xpv1.Condition) {
+// SetConditions of this MonitorMetricAlert.
+func (mg *MonitorMetricAlert) SetConditions(c ...xpv1.Condition) {
 	mg.Status.SetConditions(c...)
 }
 
-// SetDeletionPolicy of this MetricAlert.
-func (mg *MetricAlert) SetDeletionPolicy(r xpv1.DeletionPolicy) {
+// SetDeletionPolicy of this MonitorMetricAlert.
+func (mg *MonitorMetricAlert) SetDeletionPolicy(r xpv1.DeletionPolicy) {
 	mg.Spec.DeletionPolicy = r
 }
 
-// SetProviderConfigReference of this MetricAlert.
-func (mg *MetricAlert) SetProviderConfigReference(r *xpv1.Reference) {
+// SetProviderConfigReference of this MonitorMetricAlert.
+func (mg *MonitorMetricAlert) SetProviderConfigReference(r *xpv1.Reference) {
 	mg.Spec.ProviderConfigReference = r
 }
 
 /*
-SetProviderReference of this MetricAlert.
+SetProviderReference of this MonitorMetricAlert.
 Deprecated: Use SetProviderConfigReference.
 */
-func (mg *MetricAlert) SetProviderReference(r *xpv1.Reference) {
+func (mg *MonitorMetricAlert) SetProviderReference(r *xpv1.Reference) {
 	mg.Spec.ProviderReference = r
 }
 
-// SetWriteConnectionSecretToReference of this MetricAlert.
-func (mg *MetricAlert) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
+// SetWriteConnectionSecretToReference of this MonitorMetricAlert.
+func (mg *MonitorMetricAlert) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
 	mg.Spec.WriteConnectionSecretToReference = r
 }

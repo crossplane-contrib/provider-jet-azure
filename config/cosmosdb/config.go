@@ -20,7 +20,7 @@ import (
 	"context"
 	"fmt"
 
-	"github.com/crossplane-contrib/terrajet/pkg/config"
+	"github.com/crossplane/terrajet/pkg/config"
 	"github.com/pkg/errors"
 
 	"github.com/crossplane-contrib/provider-jet-azure/apis/rconfig"
@@ -30,7 +30,6 @@ import (
 // Configure configures cosmodb group
 func Configure(p *config.Provider) {
 	p.AddResourceConfigurator("azurerm_cosmosdb_sql_container", func(r *config.Resource) {
-		r.Kind = "SQLContainer"
 		r.References = config.References{
 			"resource_group_name": config.Reference{
 				Type: rconfig.APISPackagePath + "/azure/v1alpha1.ResourceGroup",
@@ -100,7 +99,7 @@ func Configure(p *config.Provider) {
 	p.AddResourceConfigurator("azurerm_cosmosdb_cassandra_table", func(r *config.Resource) {
 		r.References = config.References{
 			"cassandra_keyspace_id": config.Reference{
-				Type:      "CassandraKeyspace",
+				Type:      "CassandraKeySpace",
 				Extractor: rconfig.ExtractResourceIDFuncPath,
 			},
 		}
@@ -141,7 +140,6 @@ func Configure(p *config.Provider) {
 	})
 
 	p.AddResourceConfigurator("azurerm_cosmosdb_sql_function", func(r *config.Resource) {
-		r.Kind = "SQLFunction"
 		r.References = config.References{
 			"container_id": config.Reference{
 				Type:      "SQLContainer",
@@ -235,7 +233,6 @@ func Configure(p *config.Provider) {
 	})
 
 	p.AddResourceConfigurator("azurerm_cosmosdb_sql_database", func(r *config.Resource) {
-		r.Kind = "SQLDatabase"
 		r.References = config.References{
 			"resource_group_name": config.Reference{
 				Type: rconfig.APISPackagePath + "/azure/v1alpha1.ResourceGroup",

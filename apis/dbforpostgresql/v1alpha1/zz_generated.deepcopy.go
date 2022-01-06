@@ -1712,23 +1712,23 @@ func (in *ServerParameters) DeepCopyInto(out *ServerParameters) {
 		*out = new(string)
 		**out = **in
 	}
-	if in.SkuName != nil {
-		in, out := &in.SkuName, &out.SkuName
+	if in.SSLEnforcement != nil {
+		in, out := &in.SSLEnforcement, &out.SSLEnforcement
 		*out = new(string)
 		**out = **in
 	}
-	if in.SslEnforcement != nil {
-		in, out := &in.SslEnforcement, &out.SslEnforcement
-		*out = new(string)
-		**out = **in
-	}
-	if in.SslEnforcementEnabled != nil {
-		in, out := &in.SslEnforcementEnabled, &out.SslEnforcementEnabled
+	if in.SSLEnforcementEnabled != nil {
+		in, out := &in.SSLEnforcementEnabled, &out.SSLEnforcementEnabled
 		*out = new(bool)
 		**out = **in
 	}
-	if in.SslMinimalTLSVersionEnforced != nil {
-		in, out := &in.SslMinimalTLSVersionEnforced, &out.SslMinimalTLSVersionEnforced
+	if in.SSLMinimalTLSVersionEnforced != nil {
+		in, out := &in.SSLMinimalTLSVersionEnforced, &out.SSLMinimalTLSVersionEnforced
+		*out = new(string)
+		**out = **in
+	}
+	if in.SkuName != nil {
+		in, out := &in.SkuName, &out.SkuName
 		*out = new(string)
 		**out = **in
 	}

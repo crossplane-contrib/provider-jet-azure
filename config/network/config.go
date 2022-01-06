@@ -17,7 +17,7 @@ limitations under the License.
 package network
 
 import (
-	"github.com/crossplane-contrib/terrajet/pkg/config"
+	"github.com/crossplane/terrajet/pkg/config"
 
 	"github.com/crossplane-contrib/provider-jet-azure/apis/rconfig"
 	"github.com/crossplane-contrib/provider-jet-azure/config/common"
@@ -181,5 +181,13 @@ func Configure(p *config.Provider) {
 		r.ExternalName.GetIDFn = common.GetFullyQualifiedIDFn("Microsoft.Network",
 			"virtualWans", "name",
 		)
+	})
+
+	p.AddResourceConfigurator("azurerm_frontdoor", func(r *config.Resource) {
+		r.Kind = "FrontDoor"
+	})
+
+	p.AddResourceConfigurator("azurerm_network_packet_capture", func(r *config.Resource) {
+		r.Kind = "NetworkPacketCapture"
 	})
 }

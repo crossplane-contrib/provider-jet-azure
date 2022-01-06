@@ -27,8 +27,8 @@ import (
 	client "sigs.k8s.io/controller-runtime/pkg/client"
 )
 
-// ResolveReferences of this Cache.
-func (mg *Cache) ResolveReferences(ctx context.Context, c client.Reader) error {
+// ResolveReferences of this RedisCache.
+func (mg *RedisCache) ResolveReferences(ctx context.Context, c client.Reader) error {
 	r := reference.NewAPIResolver(c, mg)
 
 	var rsp reference.ResolutionResponse
@@ -69,8 +69,8 @@ func (mg *Cache) ResolveReferences(ctx context.Context, c client.Reader) error {
 	return nil
 }
 
-// ResolveReferences of this EnterpriseCluster.
-func (mg *EnterpriseCluster) ResolveReferences(ctx context.Context, c client.Reader) error {
+// ResolveReferences of this RedisEnterpriseCluster.
+func (mg *RedisEnterpriseCluster) ResolveReferences(ctx context.Context, c client.Reader) error {
 	r := reference.NewAPIResolver(c, mg)
 
 	var rsp reference.ResolutionResponse
@@ -95,8 +95,8 @@ func (mg *EnterpriseCluster) ResolveReferences(ctx context.Context, c client.Rea
 	return nil
 }
 
-// ResolveReferences of this EnterpriseDatabase.
-func (mg *EnterpriseDatabase) ResolveReferences(ctx context.Context, c client.Reader) error {
+// ResolveReferences of this RedisEnterpriseDatabase.
+func (mg *RedisEnterpriseDatabase) ResolveReferences(ctx context.Context, c client.Reader) error {
 	r := reference.NewAPIResolver(c, mg)
 
 	var rsp reference.ResolutionResponse
@@ -108,8 +108,8 @@ func (mg *EnterpriseDatabase) ResolveReferences(ctx context.Context, c client.Re
 		Reference:    mg.Spec.ForProvider.ClusterIDRef,
 		Selector:     mg.Spec.ForProvider.ClusterIDSelector,
 		To: reference.To{
-			List:    &EnterpriseClusterList{},
-			Managed: &EnterpriseCluster{},
+			List:    &RedisEnterpriseClusterList{},
+			Managed: &RedisEnterpriseCluster{},
 		},
 	})
 	if err != nil {
@@ -137,8 +137,8 @@ func (mg *EnterpriseDatabase) ResolveReferences(ctx context.Context, c client.Re
 	return nil
 }
 
-// ResolveReferences of this FirewallRule.
-func (mg *FirewallRule) ResolveReferences(ctx context.Context, c client.Reader) error {
+// ResolveReferences of this RedisFirewallRule.
+func (mg *RedisFirewallRule) ResolveReferences(ctx context.Context, c client.Reader) error {
 	r := reference.NewAPIResolver(c, mg)
 
 	var rsp reference.ResolutionResponse
@@ -150,8 +150,8 @@ func (mg *FirewallRule) ResolveReferences(ctx context.Context, c client.Reader) 
 		Reference:    mg.Spec.ForProvider.RedisCacheNameRef,
 		Selector:     mg.Spec.ForProvider.RedisCacheNameSelector,
 		To: reference.To{
-			List:    &CacheList{},
-			Managed: &Cache{},
+			List:    &RedisCacheList{},
+			Managed: &RedisCache{},
 		},
 	})
 	if err != nil {
@@ -179,8 +179,8 @@ func (mg *FirewallRule) ResolveReferences(ctx context.Context, c client.Reader) 
 	return nil
 }
 
-// ResolveReferences of this LinkedServer.
-func (mg *LinkedServer) ResolveReferences(ctx context.Context, c client.Reader) error {
+// ResolveReferences of this RedisLinkedServer.
+func (mg *RedisLinkedServer) ResolveReferences(ctx context.Context, c client.Reader) error {
 	r := reference.NewAPIResolver(c, mg)
 
 	var rsp reference.ResolutionResponse
@@ -192,8 +192,8 @@ func (mg *LinkedServer) ResolveReferences(ctx context.Context, c client.Reader) 
 		Reference:    mg.Spec.ForProvider.LinkedRedisCacheIDRef,
 		Selector:     mg.Spec.ForProvider.LinkedRedisCacheIDSelector,
 		To: reference.To{
-			List:    &CacheList{},
-			Managed: &Cache{},
+			List:    &RedisCacheList{},
+			Managed: &RedisCache{},
 		},
 	})
 	if err != nil {
@@ -224,8 +224,8 @@ func (mg *LinkedServer) ResolveReferences(ctx context.Context, c client.Reader) 
 		Reference:    mg.Spec.ForProvider.TargetRedisCacheNameRef,
 		Selector:     mg.Spec.ForProvider.TargetRedisCacheNameSelector,
 		To: reference.To{
-			List:    &CacheList{},
-			Managed: &Cache{},
+			List:    &RedisCacheList{},
+			Managed: &RedisCache{},
 		},
 	})
 	if err != nil {

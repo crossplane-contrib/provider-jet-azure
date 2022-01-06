@@ -58,13 +58,13 @@ type ServerIdentityParameters struct {
 	Type *string `json:"type" tf:"type,omitempty"`
 }
 
-type ServerObservation_2 struct {
+type ServerObservation struct {
 	FullyQualifiedDomainName *string `json:"fullyQualifiedDomainName,omitempty" tf:"fully_qualified_domain_name,omitempty"`
 
 	ID *string `json:"id,omitempty" tf:"id,omitempty"`
 }
 
-type ServerParameters_2 struct {
+type ServerParameters struct {
 
 	// +kubebuilder:validation:Required
 	AdministratorLogin *string `json:"administratorLogin" tf:"administrator_login,omitempty"`
@@ -134,13 +134,13 @@ type ThreatDetectionPolicyParameters struct {
 // ServerSpec defines the desired state of Server
 type ServerSpec struct {
 	v1.ResourceSpec `json:",inline"`
-	ForProvider     ServerParameters_2 `json:"forProvider"`
+	ForProvider     ServerParameters `json:"forProvider"`
 }
 
 // ServerStatus defines the observed state of Server.
 type ServerStatus struct {
 	v1.ResourceStatus `json:",inline"`
-	AtProvider        ServerObservation_2 `json:"atProvider,omitempty"`
+	AtProvider        ServerObservation `json:"atProvider,omitempty"`
 }
 
 // +kubebuilder:object:root=true

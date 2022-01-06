@@ -19,8 +19,8 @@ package v1alpha1
 
 import resource "github.com/crossplane/crossplane-runtime/pkg/resource"
 
-// GetItems of this MetricAlertList.
-func (l *MetricAlertList) GetItems() []resource.Managed {
+// GetItems of this MonitorMetricAlertList.
+func (l *MonitorMetricAlertList) GetItems() []resource.Managed {
 	items := make([]resource.Managed, len(l.Items))
 	for i := range l.Items {
 		items[i] = &l.Items[i]

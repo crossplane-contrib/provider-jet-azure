@@ -16,9 +16,18 @@ limitations under the License.
 
 package config
 
+import (
+	"strings"
+
+	"github.com/crossplane/terrajet/pkg/config"
+	tjconfig "github.com/crossplane/terrajet/pkg/config"
+	"github.com/crossplane/terrajet/pkg/types/name"
+)
+
 // This file is generated
 // nolint:misspell
 var (
+	// mappings from Terraform resource name to group name
 	apiGroupMap = map[string]string{
 		"azurerm_active_directory_domain_service":                                        "aad",
 		"azurerm_active_directory_domain_service_replica_set":                            "aad",
@@ -78,7 +87,6 @@ var (
 		"azurerm_spring_cloud_active_deployment":                                         "appplatform",
 		"azurerm_spring_cloud_certificate":                                               "appplatform",
 		"azurerm_spring_cloud_app_mysql_association":                                     "appplatform",
-		"azurerm_private_dns_ptr_record":                                                 "arpa",
 		"azurerm_attestation_provider":                                                   "attestation",
 		"azurerm_role_definition":                                                        "authorization",
 		"azurerm_resource_group_policy_assignment":                                       "authorization",
@@ -163,8 +171,10 @@ var (
 		"azurerm_shared_image_version":                                                   "compute",
 		"azurerm_windows_virtual_machine_scale_set":                                      "compute",
 		"azurerm_virtual_machine":                                                        "compute",
+		"azurerm_virtual_machine_configuration_policy_assignment":                        "compute",
 		"azurerm_image":                                                                  "compute",
 		"azurerm_orchestrated_virtual_machine_scale_set":                                 "compute",
+		"azurerm_policy_virtual_machine_configuration_assignment":                        "compute",
 		"azurerm_consumption_budget_resource_group":                                      "consumption",
 		"azurerm_consumption_budget_subscription":                                        "consumption",
 		"azurerm_container_group":                                                        "containerinstance",
@@ -299,20 +309,20 @@ var (
 		"azurerm_digital_twins_endpoint_servicebus":                                      "digitaltwins",
 		"azurerm_digital_twins_endpoint_eventhub":                                        "digitaltwins",
 		"azurerm_digital_twins_instance":                                                 "digitaltwins",
-		"azurerm_cosmosdb_account":                                                       "documentdb",
-		"azurerm_cosmosdb_sql_function":                                                  "documentdb",
-		"azurerm_cosmosdb_mongo_collection":                                              "documentdb",
-		"azurerm_cosmosdb_mongo_database":                                                "documentdb",
-		"azurerm_cosmosdb_cassandra_keyspace":                                            "documentdb",
-		"azurerm_cosmosdb_sql_stored_procedure":                                          "documentdb",
-		"azurerm_cosmosdb_sql_database":                                                  "documentdb",
-		"azurerm_cosmosdb_notebook_workspace":                                            "documentdb",
-		"azurerm_cosmosdb_sql_container":                                                 "documentdb",
-		"azurerm_cosmosdb_sql_trigger":                                                   "documentdb",
-		"azurerm_cosmosdb_cassandra_table":                                               "documentdb",
-		"azurerm_cosmosdb_gremlin_graph":                                                 "documentdb",
-		"azurerm_cosmosdb_gremlin_database":                                              "documentdb",
-		"azurerm_cosmosdb_table":                                                         "documentdb",
+		"azurerm_cosmosdb_account":                                                       "cosmosdb",
+		"azurerm_cosmosdb_sql_function":                                                  "cosmosdb",
+		"azurerm_cosmosdb_mongo_collection":                                              "cosmosdb",
+		"azurerm_cosmosdb_mongo_database":                                                "cosmosdb",
+		"azurerm_cosmosdb_cassandra_keyspace":                                            "cosmosdb",
+		"azurerm_cosmosdb_sql_stored_procedure":                                          "cosmosdb",
+		"azurerm_cosmosdb_sql_database":                                                  "cosmosdb",
+		"azurerm_cosmosdb_notebook_workspace":                                            "cosmosdb",
+		"azurerm_cosmosdb_sql_container":                                                 "cosmosdb",
+		"azurerm_cosmosdb_sql_trigger":                                                   "cosmosdb",
+		"azurerm_cosmosdb_cassandra_table":                                               "cosmosdb",
+		"azurerm_cosmosdb_gremlin_graph":                                                 "cosmosdb",
+		"azurerm_cosmosdb_gremlin_database":                                              "cosmosdb",
+		"azurerm_cosmosdb_table":                                                         "cosmosdb",
 		"azurerm_eventgrid_domain_topic":                                                 "eventgrid",
 		"azurerm_eventgrid_topic":                                                        "eventgrid",
 		"azurerm_eventgrid_event_subscription":                                           "eventgrid",
@@ -327,8 +337,6 @@ var (
 		"azurerm_eventhub_namespace":                                                     "eventhub",
 		"azurerm_eventhub_namespace_authorization_rule":                                  "eventhub",
 		"azurerm_eventhub":                                                               "eventhub",
-		"azurerm_virtual_machine_configuration_policy_assignment":                        "guestconfiguration",
-		"azurerm_policy_virtual_machine_configuration_assignment":                        "guestconfiguration",
 		"azurerm_dedicated_hardware_security_module":                                     "hardwaresecuritymodules",
 		"azurerm_hdinsight_hadoop_cluster":                                               "hdinsight",
 		"azurerm_hdinsight_hbase_cluster":                                                "hdinsight",
@@ -344,6 +352,7 @@ var (
 		"azurerm_monitor_activity_log_alert":                                             "insights",
 		"azurerm_monitor_action_group":                                                   "insights",
 		"azurerm_monitor_autoscale_setting":                                              "insights",
+		"azurerm_monitor_diagnostic_setting":                                             "insights",
 		"azurerm_application_insights_api_key":                                           "insights",
 		"azurerm_monitor_scheduled_query_rules_log":                                      "insights",
 		"azurerm_application_insights_analytics_item":                                    "insights",
@@ -360,7 +369,6 @@ var (
 		"azurerm_key_vault_managed_storage_account_sas_token_definition":                 "keyvault",
 		"azurerm_key_vault_certificate_issuer":                                           "keyvault",
 		"azurerm_key_vault_managed_hardware_security_module":                             "keyvault",
-		"azurerm_monitor_diagnostic_setting":                                             "keyvault",
 		"azurerm_key_vault_access_policy":                                                "keyvault",
 		"azurerm_key_vault":                                                              "keyvault",
 		"azurerm_kusto_database_principal":                                               "kusto",
@@ -490,6 +498,7 @@ var (
 		"azurerm_firewall_nat_rule_collection":                                           "network",
 		"azurerm_route_table":                                                            "network",
 		"azurerm_express_route_circuit_peering":                                          "network",
+		"azurerm_private_dns_ptr_record":                                                 "network",
 		"azurerm_private_dns_zone":                                                       "network",
 		"azurerm_traffic_manager_endpoint":                                               "network",
 		"azurerm_virtual_wan":                                                            "network",
@@ -532,7 +541,7 @@ var (
 		"azurerm_log_analytics_saved_search":                                             "operationalinsights",
 		"azurerm_log_analytics_workspace":                                                "operationalinsights",
 		"azurerm_log_analytics_cluster":                                                  "operationalinsights",
-		"azurerm_log_analytics_solution":                                                 "operationsmanagement",
+		"azurerm_log_analytics_solution":                                                 "operationalinsights",
 		"azurerm_policy_remediation":                                                     "policyinsights",
 		"azurerm_resource_provider_registration":                                         "policyinsights",
 		"azurerm_portal_tenant_configuration":                                            "portal",
@@ -688,6 +697,7 @@ var (
 		"azurerm_iot_time_series_insights_access_policy":                                 "timeseriesinsights",
 		"azurerm_iot_time_series_insights_standard_environment":                          "timeseriesinsights",
 		"azurerm_iot_time_series_insights_gen2_environment":                              "timeseriesinsights",
+		"azurerm_iot_time_series_insights_reference_data_set":                            "timeseriesinsights",
 		"azurerm_app_service_custom_hostname_binding":                                    "web",
 		"azurerm_app_service_managed_certificate":                                        "web",
 		"azurerm_app_service_certificate_binding":                                        "web",
@@ -711,4 +721,99 @@ var (
 		"azurerm_app_service_slot_virtual_network_swift_connection":                      "web",
 		"azurerm_app_service":                                                            "web",
 	}
+
+	// mappings from group name to # of '_'-separated tokens to skip
+	// while constructing Kind names under that group
+	kindNameRuleMap = map[string]int{
+		"dbformariadb":            2,
+		"dbformysql":              2,
+		"dbforpostgresql":         2,
+		"devspaces":               2,
+		"devtestlab":              3,
+		"logic":                   3,
+		"machinelearningservices": 3,
+		"operationalinsights":     3,
+		"security":                3,
+		"timeseriesinsights":      5,
+		"maintenance":             3,
+	}
 )
+
+func addDefaultGroupKindConfigurator(pc *config.Provider, tResource string) {
+	apiGroup, ok := apiGroupMap[tResource]
+	if !ok {
+		return
+	}
+
+	pc.AddResourceConfigurator(tResource, func(r *tjconfig.Resource) {
+		r.ShortGroup = apiGroup
+		parts := strings.Split(tResource, "_")
+		i, ok := kindNameRuleMap[apiGroup]
+		if !ok {
+			i = 1 // by default we drop only the first token (azurerm)
+			// check if group name is a prefix for the resource name
+			for j := 2; j <= len(parts); j++ {
+				// do not include azurerm in comparison
+				if strings.Join(parts[1:j], "") == apiGroup {
+					// if group name is a prefix for resource name,
+					// we do not include it in Kind name
+					i = j
+				}
+			}
+		}
+		if i >= len(parts) {
+			i = len(parts) - 1
+		}
+		r.Kind = name.NewFromSnake(strings.Join(parts[i:], "_")).Camel
+	})
+}
+
+func init() {
+	name.AddAcronym("iothub", "IOTHub")
+	name.AddAcronym("iot", "IOT")
+	name.AddAcronym("servicebus", "ServiceBus")
+	name.AddAcronym("hbase", "HBase")
+	name.AddAcronym("rserver", "RServer")
+	name.AddAcronym("dsc", "DSC")
+	name.AddAcronym("datetime", "DateTime")
+	name.AddAcronym("postgresql", "PostgreSQL")
+	name.AddAcronym("aaaa", "AAAA")
+	name.AddAcronym("caa", "CAA")
+	name.AddAcronym("cname", "CNAME")
+	name.AddAcronym("mx", "MX")
+	name.AddAcronym("ns", "NS")
+	name.AddAcronym("ptr", "PTR")
+	name.AddAcronym("srv", "SRV")
+	name.AddAcronym("txt", "TXT")
+	name.AddAcronym("ddos", "DDOS")
+	name.AddAcronym("elasticpool", "ElasticPool")
+	name.AddAcronym("eventgrid", "EventGrid")
+	name.AddAcronym("eventhub", "EventHub")
+	name.AddAcronym("keyspace", "KeySpace")
+	name.AddAcronym("aad", "AAD")
+	name.AddAcronym("hci", "HCI")
+	name.AddAcronym("udf", "UDF")
+	name.AddAcronym("mssql", "MSSQL")
+	name.AddAcronym("aadb2c", "AADB2C")
+	name.AddAcronym("cosmosdb", "CosmosDB")
+	name.AddAcronym("nodeconfiguration", "NodeConfiguration")
+	name.AddAcronym("runbook", "RunBook")
+	name.AddAcronym("vmware", "VMware")
+	name.AddAcronym("directline", "DirectLine")
+	name.AddAcronym("ms", "MS")
+	name.AddAcronym("dataset", "DataSet")
+	name.AddAcronym("sqlapi", "SQLAPI")
+	name.AddAcronym("ssis", "SSIS")
+	name.AddAcronym("odata", "OData")
+	name.AddAcronym("sftp", "SFTP")
+	name.AddAcronym("mariadb", "MariaDB")
+	name.AddAcronym("dps", "DPS")
+	name.AddAcronym("sas", "SAS")
+	name.AddAcronym("powerbi", "PowerBI")
+	name.AddAcronym("aws", "AWS")
+	name.AddAcronym("filesystem", "FileSystem")
+	name.AddAcronym("hpc", "HPC")
+	name.AddAcronym("hostname", "HostName")
+	name.AddAcronym("datasource", "DataSource")
+
+}

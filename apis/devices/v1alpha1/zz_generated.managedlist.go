@@ -19,8 +19,8 @@ package v1alpha1
 
 import resource "github.com/crossplane/crossplane-runtime/pkg/resource"
 
-// GetItems of this ConsumerGroupList.
-func (l *ConsumerGroupList) GetItems() []resource.Managed {
+// GetItems of this IOTHubConsumerGroupList.
+func (l *IOTHubConsumerGroupList) GetItems() []resource.Managed {
 	items := make([]resource.Managed, len(l.Items))
 	for i := range l.Items {
 		items[i] = &l.Items[i]
@@ -28,8 +28,8 @@ func (l *ConsumerGroupList) GetItems() []resource.Managed {
 	return items
 }
 
-// GetItems of this DPSCertificateList.
-func (l *DPSCertificateList) GetItems() []resource.Managed {
+// GetItems of this IOTHubDPSCertificateList.
+func (l *IOTHubDPSCertificateList) GetItems() []resource.Managed {
 	items := make([]resource.Managed, len(l.Items))
 	for i := range l.Items {
 		items[i] = &l.Items[i]
@@ -37,8 +37,8 @@ func (l *DPSCertificateList) GetItems() []resource.Managed {
 	return items
 }
 
-// GetItems of this DPSList.
-func (l *DPSList) GetItems() []resource.Managed {
+// GetItems of this IOTHubDPSList.
+func (l *IOTHubDPSList) GetItems() []resource.Managed {
 	items := make([]resource.Managed, len(l.Items))
 	for i := range l.Items {
 		items[i] = &l.Items[i]
@@ -46,8 +46,8 @@ func (l *DPSList) GetItems() []resource.Managed {
 	return items
 }
 
-// GetItems of this DPSSharedAccessPolicyList.
-func (l *DPSSharedAccessPolicyList) GetItems() []resource.Managed {
+// GetItems of this IOTHubDPSSharedAccessPolicyList.
+func (l *IOTHubDPSSharedAccessPolicyList) GetItems() []resource.Managed {
 	items := make([]resource.Managed, len(l.Items))
 	for i := range l.Items {
 		items[i] = &l.Items[i]
@@ -55,8 +55,8 @@ func (l *DPSSharedAccessPolicyList) GetItems() []resource.Managed {
 	return items
 }
 
-// GetItems of this EndpointEventhubList.
-func (l *EndpointEventhubList) GetItems() []resource.Managed {
+// GetItems of this IOTHubEndpointEventHubList.
+func (l *IOTHubEndpointEventHubList) GetItems() []resource.Managed {
 	items := make([]resource.Managed, len(l.Items))
 	for i := range l.Items {
 		items[i] = &l.Items[i]
@@ -64,8 +64,8 @@ func (l *EndpointEventhubList) GetItems() []resource.Managed {
 	return items
 }
 
-// GetItems of this EndpointServicebusQueueList.
-func (l *EndpointServicebusQueueList) GetItems() []resource.Managed {
+// GetItems of this IOTHubEndpointServiceBusQueueList.
+func (l *IOTHubEndpointServiceBusQueueList) GetItems() []resource.Managed {
 	items := make([]resource.Managed, len(l.Items))
 	for i := range l.Items {
 		items[i] = &l.Items[i]
@@ -73,8 +73,8 @@ func (l *EndpointServicebusQueueList) GetItems() []resource.Managed {
 	return items
 }
 
-// GetItems of this EndpointServicebusTopicList.
-func (l *EndpointServicebusTopicList) GetItems() []resource.Managed {
+// GetItems of this IOTHubEndpointServiceBusTopicList.
+func (l *IOTHubEndpointServiceBusTopicList) GetItems() []resource.Managed {
 	items := make([]resource.Managed, len(l.Items))
 	for i := range l.Items {
 		items[i] = &l.Items[i]
@@ -82,8 +82,8 @@ func (l *EndpointServicebusTopicList) GetItems() []resource.Managed {
 	return items
 }
 
-// GetItems of this EndpointStorageContainerList.
-func (l *EndpointStorageContainerList) GetItems() []resource.Managed {
+// GetItems of this IOTHubEndpointStorageContainerList.
+func (l *IOTHubEndpointStorageContainerList) GetItems() []resource.Managed {
 	items := make([]resource.Managed, len(l.Items))
 	for i := range l.Items {
 		items[i] = &l.Items[i]
@@ -91,8 +91,8 @@ func (l *EndpointStorageContainerList) GetItems() []resource.Managed {
 	return items
 }
 
-// GetItems of this EnrichmentList.
-func (l *EnrichmentList) GetItems() []resource.Managed {
+// GetItems of this IOTHubEnrichmentList.
+func (l *IOTHubEnrichmentList) GetItems() []resource.Managed {
 	items := make([]resource.Managed, len(l.Items))
 	for i := range l.Items {
 		items[i] = &l.Items[i]
@@ -100,8 +100,8 @@ func (l *EnrichmentList) GetItems() []resource.Managed {
 	return items
 }
 
-// GetItems of this FallbackRouteList.
-func (l *FallbackRouteList) GetItems() []resource.Managed {
+// GetItems of this IOTHubFallbackRouteList.
+func (l *IOTHubFallbackRouteList) GetItems() []resource.Managed {
 	items := make([]resource.Managed, len(l.Items))
 	for i := range l.Items {
 		items[i] = &l.Items[i]
@@ -118,8 +118,8 @@ func (l *IOTHubList) GetItems() []resource.Managed {
 	return items
 }
 
-// GetItems of this RouteList.
-func (l *RouteList) GetItems() []resource.Managed {
+// GetItems of this IOTHubRouteList.
+func (l *IOTHubRouteList) GetItems() []resource.Managed {
 	items := make([]resource.Managed, len(l.Items))
 	for i := range l.Items {
 		items[i] = &l.Items[i]
@@ -127,8 +127,8 @@ func (l *RouteList) GetItems() []resource.Managed {
 	return items
 }
 
-// GetItems of this SharedAccessPolicyList.
-func (l *SharedAccessPolicyList) GetItems() []resource.Managed {
+// GetItems of this IOTHubSharedAccessPolicyList.
+func (l *IOTHubSharedAccessPolicyList) GetItems() []resource.Managed {
 	items := make([]resource.Managed, len(l.Items))
 	for i := range l.Items {
 		items[i] = &l.Items[i]

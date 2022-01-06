@@ -91,17 +91,17 @@ type ServerParameters struct {
 	// +kubebuilder:validation:Optional
 	RestorePointInTime *string `json:"restorePointInTime,omitempty" tf:"restore_point_in_time,omitempty"`
 
+	// +kubebuilder:validation:Optional
+	SSLEnforcement *string `json:"sslEnforcement,omitempty" tf:"ssl_enforcement,omitempty"`
+
+	// +kubebuilder:validation:Optional
+	SSLEnforcementEnabled *bool `json:"sslEnforcementEnabled,omitempty" tf:"ssl_enforcement_enabled,omitempty"`
+
+	// +kubebuilder:validation:Optional
+	SSLMinimalTLSVersionEnforced *string `json:"sslMinimalTlsVersionEnforced,omitempty" tf:"ssl_minimal_tls_version_enforced,omitempty"`
+
 	// +kubebuilder:validation:Required
 	SkuName *string `json:"skuName" tf:"sku_name,omitempty"`
-
-	// +kubebuilder:validation:Optional
-	SslEnforcement *string `json:"sslEnforcement,omitempty" tf:"ssl_enforcement,omitempty"`
-
-	// +kubebuilder:validation:Optional
-	SslEnforcementEnabled *bool `json:"sslEnforcementEnabled,omitempty" tf:"ssl_enforcement_enabled,omitempty"`
-
-	// +kubebuilder:validation:Optional
-	SslMinimalTLSVersionEnforced *string `json:"sslMinimalTlsVersionEnforced,omitempty" tf:"ssl_minimal_tls_version_enforced,omitempty"`
 
 	// +kubebuilder:validation:Optional
 	StorageMb *int64 `json:"storageMb,omitempty" tf:"storage_mb,omitempty"`

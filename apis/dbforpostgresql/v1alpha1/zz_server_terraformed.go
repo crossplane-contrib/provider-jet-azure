@@ -21,8 +21,8 @@ package v1alpha1
 import (
 	"github.com/pkg/errors"
 
-	"github.com/crossplane-contrib/terrajet/pkg/resource"
-	"github.com/crossplane-contrib/terrajet/pkg/resource/json"
+	"github.com/crossplane/terrajet/pkg/resource"
+	"github.com/crossplane/terrajet/pkg/resource/json"
 )
 
 // GetTerraformResourceType returns Terraform resource type for this Server
@@ -89,7 +89,7 @@ func (tr *Server) LateInitialize(attrs []byte) (bool, error) {
 		return false, errors.Wrap(err, "failed to unmarshal Terraform state parameters for late-initialization")
 	}
 	opts := []resource.GenericLateInitializerOption{resource.WithZeroValueJSONOmitEmptyFilter(resource.CNameWildcard)}
-	opts = append(opts, resource.WithNameFilter("SslEnforcement"))
+	opts = append(opts, resource.WithNameFilter("SSLEnforcement"))
 	opts = append(opts, resource.WithNameFilter("StorageProfile"))
 
 	li := resource.NewGenericLateInitializer(opts...)

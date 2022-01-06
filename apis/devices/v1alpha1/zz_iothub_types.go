@@ -129,7 +129,7 @@ type FileUploadParameters struct {
 	Notifications *bool `json:"notifications,omitempty" tf:"notifications,omitempty"`
 
 	// +kubebuilder:validation:Optional
-	SasTTL *string `json:"sasTtl,omitempty" tf:"sas_ttl,omitempty"`
+	SASTTL *string `json:"sasTtl,omitempty" tf:"sas_ttl,omitempty"`
 }
 
 type IOTHubObservation struct {
@@ -141,7 +141,7 @@ type IOTHubObservation struct {
 
 	EventHubOperationsPath *string `json:"eventHubOperationsPath,omitempty" tf:"event_hub_operations_path,omitempty"`
 
-	Hostname *string `json:"hostname,omitempty" tf:"hostname,omitempty"`
+	HostName *string `json:"hostname,omitempty" tf:"hostname,omitempty"`
 
 	ID *string `json:"id,omitempty" tf:"id,omitempty"`
 

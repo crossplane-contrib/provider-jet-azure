@@ -25,10 +25,10 @@ import (
 	v1 "github.com/crossplane/crossplane-runtime/apis/common/v1"
 )
 
-type BgpSettingsObservation struct {
+type BGPSettingsObservation struct {
 }
 
-type BgpSettingsParameters struct {
+type BGPSettingsParameters struct {
 
 	// +kubebuilder:validation:Optional
 	Asn *int64 `json:"asn,omitempty" tf:"asn,omitempty"`
@@ -117,6 +117,42 @@ type RootCertificateParameters struct {
 	PublicCertData *string `json:"publicCertData" tf:"public_cert_data,omitempty"`
 }
 
+type VPNClientConfigurationObservation struct {
+}
+
+type VPNClientConfigurationParameters struct {
+
+	// +kubebuilder:validation:Optional
+	AADAudience *string `json:"aadAudience,omitempty" tf:"aad_audience,omitempty"`
+
+	// +kubebuilder:validation:Optional
+	AADIssuer *string `json:"aadIssuer,omitempty" tf:"aad_issuer,omitempty"`
+
+	// +kubebuilder:validation:Optional
+	AADTenant *string `json:"aadTenant,omitempty" tf:"aad_tenant,omitempty"`
+
+	// +kubebuilder:validation:Required
+	AddressSpace []*string `json:"addressSpace" tf:"address_space,omitempty"`
+
+	// +kubebuilder:validation:Optional
+	RadiusServerAddress *string `json:"radiusServerAddress,omitempty" tf:"radius_server_address,omitempty"`
+
+	// +kubebuilder:validation:Optional
+	RadiusServerSecret *string `json:"radiusServerSecret,omitempty" tf:"radius_server_secret,omitempty"`
+
+	// +kubebuilder:validation:Optional
+	RevokedCertificate []RevokedCertificateParameters `json:"revokedCertificate,omitempty" tf:"revoked_certificate,omitempty"`
+
+	// +kubebuilder:validation:Optional
+	RootCertificate []RootCertificateParameters `json:"rootCertificate,omitempty" tf:"root_certificate,omitempty"`
+
+	// +kubebuilder:validation:Optional
+	VPNAuthTypes []*string `json:"vpnAuthTypes,omitempty" tf:"vpn_auth_types,omitempty"`
+
+	// +kubebuilder:validation:Optional
+	VPNClientProtocols []*string `json:"vpnClientProtocols,omitempty" tf:"vpn_client_protocols,omitempty"`
+}
+
 type VirtualNetworkGatewayObservation struct {
 	ID *string `json:"id,omitempty" tf:"id,omitempty"`
 }
@@ -127,7 +163,7 @@ type VirtualNetworkGatewayParameters struct {
 	ActiveActive *bool `json:"activeActive,omitempty" tf:"active_active,omitempty"`
 
 	// +kubebuilder:validation:Optional
-	BgpSettings []BgpSettingsParameters `json:"bgpSettings,omitempty" tf:"bgp_settings,omitempty"`
+	BGPSettings []BGPSettingsParameters `json:"bgpSettings,omitempty" tf:"bgp_settings,omitempty"`
 
 	// +kubebuilder:validation:Optional
 	CustomRoute []CustomRouteParameters `json:"customRoute,omitempty" tf:"custom_route,omitempty"`
@@ -136,7 +172,7 @@ type VirtualNetworkGatewayParameters struct {
 	DefaultLocalNetworkGatewayID *string `json:"defaultLocalNetworkGatewayId,omitempty" tf:"default_local_network_gateway_id,omitempty"`
 
 	// +kubebuilder:validation:Optional
-	EnableBgp *bool `json:"enableBgp,omitempty" tf:"enable_bgp,omitempty"`
+	EnableBGP *bool `json:"enableBgp,omitempty" tf:"enable_bgp,omitempty"`
 
 	// +kubebuilder:validation:Optional
 	Generation *string `json:"generation,omitempty" tf:"generation,omitempty"`
@@ -170,46 +206,10 @@ type VirtualNetworkGatewayParameters struct {
 	Type *string `json:"type" tf:"type,omitempty"`
 
 	// +kubebuilder:validation:Optional
-	VpnClientConfiguration []VpnClientConfigurationParameters `json:"vpnClientConfiguration,omitempty" tf:"vpn_client_configuration,omitempty"`
+	VPNClientConfiguration []VPNClientConfigurationParameters `json:"vpnClientConfiguration,omitempty" tf:"vpn_client_configuration,omitempty"`
 
 	// +kubebuilder:validation:Optional
-	VpnType *string `json:"vpnType,omitempty" tf:"vpn_type,omitempty"`
-}
-
-type VpnClientConfigurationObservation struct {
-}
-
-type VpnClientConfigurationParameters struct {
-
-	// +kubebuilder:validation:Optional
-	AadAudience *string `json:"aadAudience,omitempty" tf:"aad_audience,omitempty"`
-
-	// +kubebuilder:validation:Optional
-	AadIssuer *string `json:"aadIssuer,omitempty" tf:"aad_issuer,omitempty"`
-
-	// +kubebuilder:validation:Optional
-	AadTenant *string `json:"aadTenant,omitempty" tf:"aad_tenant,omitempty"`
-
-	// +kubebuilder:validation:Required
-	AddressSpace []*string `json:"addressSpace" tf:"address_space,omitempty"`
-
-	// +kubebuilder:validation:Optional
-	RadiusServerAddress *string `json:"radiusServerAddress,omitempty" tf:"radius_server_address,omitempty"`
-
-	// +kubebuilder:validation:Optional
-	RadiusServerSecret *string `json:"radiusServerSecret,omitempty" tf:"radius_server_secret,omitempty"`
-
-	// +kubebuilder:validation:Optional
-	RevokedCertificate []RevokedCertificateParameters `json:"revokedCertificate,omitempty" tf:"revoked_certificate,omitempty"`
-
-	// +kubebuilder:validation:Optional
-	RootCertificate []RootCertificateParameters `json:"rootCertificate,omitempty" tf:"root_certificate,omitempty"`
-
-	// +kubebuilder:validation:Optional
-	VpnAuthTypes []*string `json:"vpnAuthTypes,omitempty" tf:"vpn_auth_types,omitempty"`
-
-	// +kubebuilder:validation:Optional
-	VpnClientProtocols []*string `json:"vpnClientProtocols,omitempty" tf:"vpn_client_protocols,omitempty"`
+	VPNType *string `json:"vpnType,omitempty" tf:"vpn_type,omitempty"`
 }
 
 // VirtualNetworkGatewaySpec defines the desired state of VirtualNetworkGateway
