@@ -83,7 +83,7 @@ type VirtualNetworkGatewayConnectionParameters struct {
 	DpdTimeoutSeconds *int64 `json:"dpdTimeoutSeconds,omitempty" tf:"dpd_timeout_seconds,omitempty"`
 
 	// +kubebuilder:validation:Optional
-	EnableBgp *bool `json:"enableBgp,omitempty" tf:"enable_bgp,omitempty"`
+	EnableBGP *bool `json:"enableBgp,omitempty" tf:"enable_bgp,omitempty"`
 
 	// +kubebuilder:validation:Optional
 	ExpressRouteCircuitID *string `json:"expressRouteCircuitId,omitempty" tf:"express_route_circuit_id,omitempty"`

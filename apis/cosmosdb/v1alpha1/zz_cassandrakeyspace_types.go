@@ -34,11 +34,11 @@ type AutoscaleSettingsParameters struct {
 	MaxThroughput *int64 `json:"maxThroughput,omitempty" tf:"max_throughput,omitempty"`
 }
 
-type CassandraKeyspaceObservation struct {
+type CassandraKeySpaceObservation struct {
 	ID *string `json:"id,omitempty" tf:"id,omitempty"`
 }
 
-type CassandraKeyspaceParameters struct {
+type CassandraKeySpaceParameters struct {
 
 	// +crossplane:generate:reference:type=Account
 	// +kubebuilder:validation:Optional
@@ -67,51 +67,51 @@ type CassandraKeyspaceParameters struct {
 	Throughput *int64 `json:"throughput,omitempty" tf:"throughput,omitempty"`
 }
 
-// CassandraKeyspaceSpec defines the desired state of CassandraKeyspace
-type CassandraKeyspaceSpec struct {
+// CassandraKeySpaceSpec defines the desired state of CassandraKeySpace
+type CassandraKeySpaceSpec struct {
 	v1.ResourceSpec `json:",inline"`
-	ForProvider     CassandraKeyspaceParameters `json:"forProvider"`
+	ForProvider     CassandraKeySpaceParameters `json:"forProvider"`
 }
 
-// CassandraKeyspaceStatus defines the observed state of CassandraKeyspace.
-type CassandraKeyspaceStatus struct {
+// CassandraKeySpaceStatus defines the observed state of CassandraKeySpace.
+type CassandraKeySpaceStatus struct {
 	v1.ResourceStatus `json:",inline"`
-	AtProvider        CassandraKeyspaceObservation `json:"atProvider,omitempty"`
+	AtProvider        CassandraKeySpaceObservation `json:"atProvider,omitempty"`
 }
 
 // +kubebuilder:object:root=true
 
-// CassandraKeyspace is the Schema for the CassandraKeyspaces API
+// CassandraKeySpace is the Schema for the CassandraKeySpaces API
 // +kubebuilder:printcolumn:name="READY",type="string",JSONPath=".status.conditions[?(@.type=='Ready')].status"
 // +kubebuilder:printcolumn:name="SYNCED",type="string",JSONPath=".status.conditions[?(@.type=='Synced')].status"
 // +kubebuilder:printcolumn:name="EXTERNAL-NAME",type="string",JSONPath=".metadata.annotations.crossplane\\.io/external-name"
 // +kubebuilder:printcolumn:name="AGE",type="date",JSONPath=".metadata.creationTimestamp"
 // +kubebuilder:subresource:status
 // +kubebuilder:resource:scope=Cluster,categories={crossplane,managed,azurejet}
-type CassandraKeyspace struct {
+type CassandraKeySpace struct {
 	metav1.TypeMeta   `json:",inline"`
 	metav1.ObjectMeta `json:"metadata,omitempty"`
-	Spec              CassandraKeyspaceSpec   `json:"spec"`
-	Status            CassandraKeyspaceStatus `json:"status,omitempty"`
+	Spec              CassandraKeySpaceSpec   `json:"spec"`
+	Status            CassandraKeySpaceStatus `json:"status,omitempty"`
 }
 
 // +kubebuilder:object:root=true
 
-// CassandraKeyspaceList contains a list of CassandraKeyspaces
-type CassandraKeyspaceList struct {
+// CassandraKeySpaceList contains a list of CassandraKeySpaces
+type CassandraKeySpaceList struct {
 	metav1.TypeMeta `json:",inline"`
 	metav1.ListMeta `json:"metadata,omitempty"`
-	Items           []CassandraKeyspace `json:"items"`
+	Items           []CassandraKeySpace `json:"items"`
 }
 
 // Repository type metadata.
 var (
-	CassandraKeyspace_Kind             = "CassandraKeyspace"
-	CassandraKeyspace_GroupKind        = schema.GroupKind{Group: CRDGroup, Kind: CassandraKeyspace_Kind}.String()
-	CassandraKeyspace_KindAPIVersion   = CassandraKeyspace_Kind + "." + CRDGroupVersion.String()
-	CassandraKeyspace_GroupVersionKind = CRDGroupVersion.WithKind(CassandraKeyspace_Kind)
+	CassandraKeySpace_Kind             = "CassandraKeySpace"
+	CassandraKeySpace_GroupKind        = schema.GroupKind{Group: CRDGroup, Kind: CassandraKeySpace_Kind}.String()
+	CassandraKeySpace_KindAPIVersion   = CassandraKeySpace_Kind + "." + CRDGroupVersion.String()
+	CassandraKeySpace_GroupVersionKind = CRDGroupVersion.WithKind(CassandraKeySpace_Kind)
 )
 
 func init() {
-	SchemeBuilder.Register(&CassandraKeyspace{}, &CassandraKeyspaceList{})
+	SchemeBuilder.Register(&CassandraKeySpace{}, &CassandraKeySpaceList{})
 }

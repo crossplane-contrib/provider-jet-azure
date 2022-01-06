@@ -25,11 +25,11 @@ import (
 	v1 "github.com/crossplane/crossplane-runtime/apis/common/v1"
 )
 
-type SqlStoredProcedureObservation struct {
+type SQLStoredProcedureObservation struct {
 	ID *string `json:"id,omitempty" tf:"id,omitempty"`
 }
 
-type SqlStoredProcedureParameters struct {
+type SQLStoredProcedureParameters struct {
 
 	// +crossplane:generate:reference:type=Account
 	// +kubebuilder:validation:Optional
@@ -75,51 +75,51 @@ type SqlStoredProcedureParameters struct {
 	ResourceGroupNameSelector *v1.Selector `json:"resourceGroupNameSelector,omitempty" tf:"-"`
 }
 
-// SqlStoredProcedureSpec defines the desired state of SqlStoredProcedure
-type SqlStoredProcedureSpec struct {
+// SQLStoredProcedureSpec defines the desired state of SQLStoredProcedure
+type SQLStoredProcedureSpec struct {
 	v1.ResourceSpec `json:",inline"`
-	ForProvider     SqlStoredProcedureParameters `json:"forProvider"`
+	ForProvider     SQLStoredProcedureParameters `json:"forProvider"`
 }
 
-// SqlStoredProcedureStatus defines the observed state of SqlStoredProcedure.
-type SqlStoredProcedureStatus struct {
+// SQLStoredProcedureStatus defines the observed state of SQLStoredProcedure.
+type SQLStoredProcedureStatus struct {
 	v1.ResourceStatus `json:",inline"`
-	AtProvider        SqlStoredProcedureObservation `json:"atProvider,omitempty"`
+	AtProvider        SQLStoredProcedureObservation `json:"atProvider,omitempty"`
 }
 
 // +kubebuilder:object:root=true
 
-// SqlStoredProcedure is the Schema for the SqlStoredProcedures API
+// SQLStoredProcedure is the Schema for the SQLStoredProcedures API
 // +kubebuilder:printcolumn:name="READY",type="string",JSONPath=".status.conditions[?(@.type=='Ready')].status"
 // +kubebuilder:printcolumn:name="SYNCED",type="string",JSONPath=".status.conditions[?(@.type=='Synced')].status"
 // +kubebuilder:printcolumn:name="EXTERNAL-NAME",type="string",JSONPath=".metadata.annotations.crossplane\\.io/external-name"
 // +kubebuilder:printcolumn:name="AGE",type="date",JSONPath=".metadata.creationTimestamp"
 // +kubebuilder:subresource:status
 // +kubebuilder:resource:scope=Cluster,categories={crossplane,managed,azurejet}
-type SqlStoredProcedure struct {
+type SQLStoredProcedure struct {
 	metav1.TypeMeta   `json:",inline"`
 	metav1.ObjectMeta `json:"metadata,omitempty"`
-	Spec              SqlStoredProcedureSpec   `json:"spec"`
-	Status            SqlStoredProcedureStatus `json:"status,omitempty"`
+	Spec              SQLStoredProcedureSpec   `json:"spec"`
+	Status            SQLStoredProcedureStatus `json:"status,omitempty"`
 }
 
 // +kubebuilder:object:root=true
 
-// SqlStoredProcedureList contains a list of SqlStoredProcedures
-type SqlStoredProcedureList struct {
+// SQLStoredProcedureList contains a list of SQLStoredProcedures
+type SQLStoredProcedureList struct {
 	metav1.TypeMeta `json:",inline"`
 	metav1.ListMeta `json:"metadata,omitempty"`
-	Items           []SqlStoredProcedure `json:"items"`
+	Items           []SQLStoredProcedure `json:"items"`
 }
 
 // Repository type metadata.
 var (
-	SqlStoredProcedure_Kind             = "SqlStoredProcedure"
-	SqlStoredProcedure_GroupKind        = schema.GroupKind{Group: CRDGroup, Kind: SqlStoredProcedure_Kind}.String()
-	SqlStoredProcedure_KindAPIVersion   = SqlStoredProcedure_Kind + "." + CRDGroupVersion.String()
-	SqlStoredProcedure_GroupVersionKind = CRDGroupVersion.WithKind(SqlStoredProcedure_Kind)
+	SQLStoredProcedure_Kind             = "SQLStoredProcedure"
+	SQLStoredProcedure_GroupKind        = schema.GroupKind{Group: CRDGroup, Kind: SQLStoredProcedure_Kind}.String()
+	SQLStoredProcedure_KindAPIVersion   = SQLStoredProcedure_Kind + "." + CRDGroupVersion.String()
+	SQLStoredProcedure_GroupVersionKind = CRDGroupVersion.WithKind(SQLStoredProcedure_Kind)
 )
 
 func init() {
-	SchemeBuilder.Register(&SqlStoredProcedure{}, &SqlStoredProcedureList{})
+	SchemeBuilder.Register(&SQLStoredProcedure{}, &SQLStoredProcedureList{})
 }

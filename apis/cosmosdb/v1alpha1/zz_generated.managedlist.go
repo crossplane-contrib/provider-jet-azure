@@ -28,8 +28,8 @@ func (l *AccountList) GetItems() []resource.Managed {
 	return items
 }
 
-// GetItems of this CassandraKeyspaceList.
-func (l *CassandraKeyspaceList) GetItems() []resource.Managed {
+// GetItems of this CassandraKeySpaceList.
+func (l *CassandraKeySpaceList) GetItems() []resource.Managed {
 	items := make([]resource.Managed, len(l.Items))
 	for i := range l.Items {
 		items[i] = &l.Items[i]
@@ -118,8 +118,8 @@ func (l *SQLFunctionList) GetItems() []resource.Managed {
 	return items
 }
 
-// GetItems of this SqlStoredProcedureList.
-func (l *SqlStoredProcedureList) GetItems() []resource.Managed {
+// GetItems of this SQLStoredProcedureList.
+func (l *SQLStoredProcedureList) GetItems() []resource.Managed {
 	items := make([]resource.Managed, len(l.Items))
 	for i := range l.Items {
 		items[i] = &l.Items[i]
@@ -127,8 +127,8 @@ func (l *SqlStoredProcedureList) GetItems() []resource.Managed {
 	return items
 }
 
-// GetItems of this SqlTriggerList.
-func (l *SqlTriggerList) GetItems() []resource.Managed {
+// GetItems of this SQLTriggerList.
+func (l *SQLTriggerList) GetItems() []resource.Managed {
 	items := make([]resource.Managed, len(l.Items))
 	for i := range l.Items {
 		items[i] = &l.Items[i]

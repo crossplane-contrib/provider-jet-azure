@@ -22,11 +22,16 @@ import (
 
 	"github.com/crossplane/crossplane-runtime/pkg/logging"
 
-	tjconfig "github.com/crossplane-contrib/terrajet/pkg/config"
-	"github.com/crossplane-contrib/terrajet/pkg/terraform"
+	tjconfig "github.com/crossplane/terrajet/pkg/config"
+	"github.com/crossplane/terrajet/pkg/terraform"
 
 	resourcegrouppolicyassignment "github.com/crossplane-contrib/provider-jet-azure/internal/controller/authorization/resourcegrouppolicyassignment"
 	resourcegroup "github.com/crossplane-contrib/provider-jet-azure/internal/controller/azure/resourcegroup"
+	rediscache "github.com/crossplane-contrib/provider-jet-azure/internal/controller/cache/rediscache"
+	redisenterprisecluster "github.com/crossplane-contrib/provider-jet-azure/internal/controller/cache/redisenterprisecluster"
+	redisenterprisedatabase "github.com/crossplane-contrib/provider-jet-azure/internal/controller/cache/redisenterprisedatabase"
+	redisfirewallrule "github.com/crossplane-contrib/provider-jet-azure/internal/controller/cache/redisfirewallrule"
+	redislinkedserver "github.com/crossplane-contrib/provider-jet-azure/internal/controller/cache/redislinkedserver"
 	kubernetescluster "github.com/crossplane-contrib/provider-jet-azure/internal/controller/containerservice/kubernetescluster"
 	kubernetesclusternodepool "github.com/crossplane-contrib/provider-jet-azure/internal/controller/containerservice/kubernetesclusternodepool"
 	account "github.com/crossplane-contrib/provider-jet-azure/internal/controller/cosmosdb/account"
@@ -43,22 +48,31 @@ import (
 	sqlstoredprocedure "github.com/crossplane-contrib/provider-jet-azure/internal/controller/cosmosdb/sqlstoredprocedure"
 	sqltrigger "github.com/crossplane-contrib/provider-jet-azure/internal/controller/cosmosdb/sqltrigger"
 	table "github.com/crossplane-contrib/provider-jet-azure/internal/controller/cosmosdb/table"
-	consumergroup "github.com/crossplane-contrib/provider-jet-azure/internal/controller/iothub/consumergroup"
-	dps "github.com/crossplane-contrib/provider-jet-azure/internal/controller/iothub/dps"
-	dpscertificate "github.com/crossplane-contrib/provider-jet-azure/internal/controller/iothub/dpscertificate"
-	dpssharedaccesspolicy "github.com/crossplane-contrib/provider-jet-azure/internal/controller/iothub/dpssharedaccesspolicy"
-	endpointeventhub "github.com/crossplane-contrib/provider-jet-azure/internal/controller/iothub/endpointeventhub"
-	endpointservicebusqueue "github.com/crossplane-contrib/provider-jet-azure/internal/controller/iothub/endpointservicebusqueue"
-	endpointservicebustopic "github.com/crossplane-contrib/provider-jet-azure/internal/controller/iothub/endpointservicebustopic"
-	endpointstoragecontainer "github.com/crossplane-contrib/provider-jet-azure/internal/controller/iothub/endpointstoragecontainer"
-	enrichment "github.com/crossplane-contrib/provider-jet-azure/internal/controller/iothub/enrichment"
-	fallbackroute "github.com/crossplane-contrib/provider-jet-azure/internal/controller/iothub/fallbackroute"
-	iothub "github.com/crossplane-contrib/provider-jet-azure/internal/controller/iothub/iothub"
-	route "github.com/crossplane-contrib/provider-jet-azure/internal/controller/iothub/route"
-	sharedaccesspolicy "github.com/crossplane-contrib/provider-jet-azure/internal/controller/iothub/sharedaccesspolicy"
+	activedirectoryadministrator "github.com/crossplane-contrib/provider-jet-azure/internal/controller/dbforpostgresql/activedirectoryadministrator"
+	configuration "github.com/crossplane-contrib/provider-jet-azure/internal/controller/dbforpostgresql/configuration"
+	database "github.com/crossplane-contrib/provider-jet-azure/internal/controller/dbforpostgresql/database"
+	firewallrule "github.com/crossplane-contrib/provider-jet-azure/internal/controller/dbforpostgresql/firewallrule"
+	flexibleserver "github.com/crossplane-contrib/provider-jet-azure/internal/controller/dbforpostgresql/flexibleserver"
+	flexibleserverconfiguration "github.com/crossplane-contrib/provider-jet-azure/internal/controller/dbforpostgresql/flexibleserverconfiguration"
+	flexibleserverdatabase "github.com/crossplane-contrib/provider-jet-azure/internal/controller/dbforpostgresql/flexibleserverdatabase"
+	flexibleserverfirewallrule "github.com/crossplane-contrib/provider-jet-azure/internal/controller/dbforpostgresql/flexibleserverfirewallrule"
+	server "github.com/crossplane-contrib/provider-jet-azure/internal/controller/dbforpostgresql/server"
+	virtualnetworkrule "github.com/crossplane-contrib/provider-jet-azure/internal/controller/dbforpostgresql/virtualnetworkrule"
+	iothub "github.com/crossplane-contrib/provider-jet-azure/internal/controller/devices/iothub"
+	iothubconsumergroup "github.com/crossplane-contrib/provider-jet-azure/internal/controller/devices/iothubconsumergroup"
+	iothubdps "github.com/crossplane-contrib/provider-jet-azure/internal/controller/devices/iothubdps"
+	iothubdpscertificate "github.com/crossplane-contrib/provider-jet-azure/internal/controller/devices/iothubdpscertificate"
+	iothubdpssharedaccesspolicy "github.com/crossplane-contrib/provider-jet-azure/internal/controller/devices/iothubdpssharedaccesspolicy"
+	iothubendpointeventhub "github.com/crossplane-contrib/provider-jet-azure/internal/controller/devices/iothubendpointeventhub"
+	iothubendpointservicebusqueue "github.com/crossplane-contrib/provider-jet-azure/internal/controller/devices/iothubendpointservicebusqueue"
+	iothubendpointservicebustopic "github.com/crossplane-contrib/provider-jet-azure/internal/controller/devices/iothubendpointservicebustopic"
+	iothubendpointstoragecontainer "github.com/crossplane-contrib/provider-jet-azure/internal/controller/devices/iothubendpointstoragecontainer"
+	iothubenrichment "github.com/crossplane-contrib/provider-jet-azure/internal/controller/devices/iothubenrichment"
+	iothubfallbackroute "github.com/crossplane-contrib/provider-jet-azure/internal/controller/devices/iothubfallbackroute"
+	iothubroute "github.com/crossplane-contrib/provider-jet-azure/internal/controller/devices/iothubroute"
+	iothubsharedaccesspolicy "github.com/crossplane-contrib/provider-jet-azure/internal/controller/devices/iothubsharedaccesspolicy"
+	monitormetricalert "github.com/crossplane-contrib/provider-jet-azure/internal/controller/insights/monitormetricalert"
 	workspace "github.com/crossplane-contrib/provider-jet-azure/internal/controller/loganalytics/workspace"
-	metricalert "github.com/crossplane-contrib/provider-jet-azure/internal/controller/monitor/metricalert"
-	server "github.com/crossplane-contrib/provider-jet-azure/internal/controller/mssql/server"
 	loadbalancer "github.com/crossplane-contrib/provider-jet-azure/internal/controller/network/loadbalancer"
 	subnet "github.com/crossplane-contrib/provider-jet-azure/internal/controller/network/subnet"
 	subnetnatgatewayassociation "github.com/crossplane-contrib/provider-jet-azure/internal/controller/network/subnetnatgatewayassociation"
@@ -70,23 +84,9 @@ import (
 	virtualnetworkgatewayconnection "github.com/crossplane-contrib/provider-jet-azure/internal/controller/network/virtualnetworkgatewayconnection"
 	virtualnetworkpeering "github.com/crossplane-contrib/provider-jet-azure/internal/controller/network/virtualnetworkpeering"
 	virtualwan "github.com/crossplane-contrib/provider-jet-azure/internal/controller/network/virtualwan"
-	activedirectoryadministrator "github.com/crossplane-contrib/provider-jet-azure/internal/controller/postgresql/activedirectoryadministrator"
-	configuration "github.com/crossplane-contrib/provider-jet-azure/internal/controller/postgresql/configuration"
-	database "github.com/crossplane-contrib/provider-jet-azure/internal/controller/postgresql/database"
-	firewallrule "github.com/crossplane-contrib/provider-jet-azure/internal/controller/postgresql/firewallrule"
-	flexibleserver "github.com/crossplane-contrib/provider-jet-azure/internal/controller/postgresql/flexibleserver"
-	flexibleserverconfiguration "github.com/crossplane-contrib/provider-jet-azure/internal/controller/postgresql/flexibleserverconfiguration"
-	flexibleserverdatabase "github.com/crossplane-contrib/provider-jet-azure/internal/controller/postgresql/flexibleserverdatabase"
-	flexibleserverfirewallrule "github.com/crossplane-contrib/provider-jet-azure/internal/controller/postgresql/flexibleserverfirewallrule"
-	serverpostgresql "github.com/crossplane-contrib/provider-jet-azure/internal/controller/postgresql/server"
-	virtualnetworkrule "github.com/crossplane-contrib/provider-jet-azure/internal/controller/postgresql/virtualnetworkrule"
 	providerconfig "github.com/crossplane-contrib/provider-jet-azure/internal/controller/providerconfig"
-	cache "github.com/crossplane-contrib/provider-jet-azure/internal/controller/redis/cache"
-	enterprisecluster "github.com/crossplane-contrib/provider-jet-azure/internal/controller/redis/enterprisecluster"
-	enterprisedatabase "github.com/crossplane-contrib/provider-jet-azure/internal/controller/redis/enterprisedatabase"
-	firewallruleredis "github.com/crossplane-contrib/provider-jet-azure/internal/controller/redis/firewallrule"
-	linkedserver "github.com/crossplane-contrib/provider-jet-azure/internal/controller/redis/linkedserver"
 	resourcegrouptemplatedeployment "github.com/crossplane-contrib/provider-jet-azure/internal/controller/resources/resourcegrouptemplatedeployment"
+	mssqlserver "github.com/crossplane-contrib/provider-jet-azure/internal/controller/sql/mssqlserver"
 	serversql "github.com/crossplane-contrib/provider-jet-azure/internal/controller/sql/server"
 	accountstorage "github.com/crossplane-contrib/provider-jet-azure/internal/controller/storage/account"
 	blob "github.com/crossplane-contrib/provider-jet-azure/internal/controller/storage/blob"
@@ -99,6 +99,11 @@ func Setup(mgr ctrl.Manager, l logging.Logger, wl workqueue.RateLimiter, ps terr
 	for _, setup := range []func(ctrl.Manager, logging.Logger, workqueue.RateLimiter, terraform.SetupFn, *terraform.WorkspaceStore, *tjconfig.Provider, int) error{
 		resourcegrouppolicyassignment.Setup,
 		resourcegroup.Setup,
+		rediscache.Setup,
+		redisenterprisecluster.Setup,
+		redisenterprisedatabase.Setup,
+		redisfirewallrule.Setup,
+		redislinkedserver.Setup,
 		kubernetescluster.Setup,
 		kubernetesclusternodepool.Setup,
 		account.Setup,
@@ -115,22 +120,31 @@ func Setup(mgr ctrl.Manager, l logging.Logger, wl workqueue.RateLimiter, ps terr
 		sqlstoredprocedure.Setup,
 		sqltrigger.Setup,
 		table.Setup,
-		consumergroup.Setup,
-		dps.Setup,
-		dpscertificate.Setup,
-		dpssharedaccesspolicy.Setup,
-		endpointeventhub.Setup,
-		endpointservicebusqueue.Setup,
-		endpointservicebustopic.Setup,
-		endpointstoragecontainer.Setup,
-		enrichment.Setup,
-		fallbackroute.Setup,
-		iothub.Setup,
-		route.Setup,
-		sharedaccesspolicy.Setup,
-		workspace.Setup,
-		metricalert.Setup,
+		activedirectoryadministrator.Setup,
+		configuration.Setup,
+		database.Setup,
+		firewallrule.Setup,
+		flexibleserver.Setup,
+		flexibleserverconfiguration.Setup,
+		flexibleserverdatabase.Setup,
+		flexibleserverfirewallrule.Setup,
 		server.Setup,
+		virtualnetworkrule.Setup,
+		iothub.Setup,
+		iothubconsumergroup.Setup,
+		iothubdps.Setup,
+		iothubdpscertificate.Setup,
+		iothubdpssharedaccesspolicy.Setup,
+		iothubendpointeventhub.Setup,
+		iothubendpointservicebusqueue.Setup,
+		iothubendpointservicebustopic.Setup,
+		iothubendpointstoragecontainer.Setup,
+		iothubenrichment.Setup,
+		iothubfallbackroute.Setup,
+		iothubroute.Setup,
+		iothubsharedaccesspolicy.Setup,
+		monitormetricalert.Setup,
+		workspace.Setup,
 		loadbalancer.Setup,
 		subnet.Setup,
 		subnetnatgatewayassociation.Setup,
@@ -142,23 +156,9 @@ func Setup(mgr ctrl.Manager, l logging.Logger, wl workqueue.RateLimiter, ps terr
 		virtualnetworkgatewayconnection.Setup,
 		virtualnetworkpeering.Setup,
 		virtualwan.Setup,
-		activedirectoryadministrator.Setup,
-		configuration.Setup,
-		database.Setup,
-		firewallrule.Setup,
-		flexibleserver.Setup,
-		flexibleserverconfiguration.Setup,
-		flexibleserverdatabase.Setup,
-		flexibleserverfirewallrule.Setup,
-		serverpostgresql.Setup,
-		virtualnetworkrule.Setup,
 		providerconfig.Setup,
-		cache.Setup,
-		enterprisecluster.Setup,
-		enterprisedatabase.Setup,
-		firewallruleredis.Setup,
-		linkedserver.Setup,
 		resourcegrouptemplatedeployment.Setup,
+		mssqlserver.Setup,
 		serversql.Setup,
 		accountstorage.Setup,
 		blob.Setup,

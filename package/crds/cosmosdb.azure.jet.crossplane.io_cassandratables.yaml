@@ -73,9 +73,7 @@ spec:
                           type: integer
                       type: object
                     type: array
-                  cassandraKeyspaceId:
-                    type: string
-                  cassandraKeyspaceIdRef:
+                  cassandraKeySpaceIdRef:
                     description: A Reference to a named object.
                     properties:
                       name:
@@ -84,7 +82,7 @@ spec:
                     required:
                     - name
                     type: object
-                  cassandraKeyspaceIdSelector:
+                  cassandraKeySpaceIdSelector:
                     description: A Selector selects an object.
                     properties:
                       matchControllerRef:
@@ -98,6 +96,8 @@ spec:
                           is selected.
                         type: object
                     type: object
+                  cassandraKeyspaceId:
+                    type: string
                   defaultTtl:
                     format: int64
                     type: integer

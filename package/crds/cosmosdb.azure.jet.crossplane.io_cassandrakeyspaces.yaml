@@ -12,8 +12,8 @@ spec:
     - crossplane
     - managed
     - azurejet
-    kind: CassandraKeyspace
-    listKind: CassandraKeyspaceList
+    kind: CassandraKeySpace
+    listKind: CassandraKeySpaceList
     plural: cassandrakeyspaces
     singular: cassandrakeyspace
   scope: Cluster
@@ -34,7 +34,7 @@ spec:
     name: v1alpha1
     schema:
       openAPIV3Schema:
-        description: CassandraKeyspace is the Schema for the CassandraKeyspaces API
+        description: CassandraKeySpace is the Schema for the CassandraKeySpaces API
         properties:
           apiVersion:
             description: 'APIVersion defines the versioned schema of this representation
@@ -49,7 +49,7 @@ spec:
           metadata:
             type: object
           spec:
-            description: CassandraKeyspaceSpec defines the desired state of CassandraKeyspace
+            description: CassandraKeySpaceSpec defines the desired state of CassandraKeySpace
             properties:
               deletionPolicy:
                 default: Delete
@@ -169,7 +169,7 @@ spec:
             - forProvider
             type: object
           status:
-            description: CassandraKeyspaceStatus defines the observed state of CassandraKeyspace.
+            description: CassandraKeySpaceStatus defines the observed state of CassandraKeySpace.
             properties:
               atProvider:
                 properties:

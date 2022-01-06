@@ -17,23 +17,31 @@ limitations under the License.
 package config
 
 import (
-	tjconfig "github.com/crossplane-contrib/terrajet/pkg/config"
+	tjconfig "github.com/crossplane/terrajet/pkg/config"
 	"github.com/hashicorp/terraform-plugin-sdk/v2/helper/schema"
+
 	tf "github.com/hashicorp/terraform-provider-azurerm/xpprovider"
 
-	"github.com/crossplane-contrib/provider-jet-azure/config/api"
+	"github.com/crossplane-contrib/provider-jet-azure/config/datashare"
+	"github.com/crossplane-contrib/provider-jet-azure/config/notificationhubs"
+	"github.com/crossplane-contrib/provider-jet-azure/config/storagesync"
+
+	"github.com/crossplane-contrib/provider-jet-azure/config/apimanagement"
+	"github.com/crossplane-contrib/provider-jet-azure/config/base"
 	"github.com/crossplane-contrib/provider-jet-azure/config/common"
 	"github.com/crossplane-contrib/provider-jet-azure/config/cosmosdb"
 	"github.com/crossplane-contrib/provider-jet-azure/config/iothub"
 	"github.com/crossplane-contrib/provider-jet-azure/config/ip"
 	"github.com/crossplane-contrib/provider-jet-azure/config/kubernetes"
 	"github.com/crossplane-contrib/provider-jet-azure/config/loganalytics"
+	"github.com/crossplane-contrib/provider-jet-azure/config/logic"
 	"github.com/crossplane-contrib/provider-jet-azure/config/management"
 	"github.com/crossplane-contrib/provider-jet-azure/config/monitor"
 	"github.com/crossplane-contrib/provider-jet-azure/config/network"
 	"github.com/crossplane-contrib/provider-jet-azure/config/postgresql"
 	"github.com/crossplane-contrib/provider-jet-azure/config/redis"
 	"github.com/crossplane-contrib/provider-jet-azure/config/resource"
+	"github.com/crossplane-contrib/provider-jet-azure/config/security"
 	"github.com/crossplane-contrib/provider-jet-azure/config/sql"
 	"github.com/crossplane-contrib/provider-jet-azure/config/storage"
 	"github.com/crossplane-contrib/provider-jet-azure/config/subnet"
@@ -126,8 +134,9 @@ func GetProvider() *tjconfig.Provider {
 		tjconfig.WithSkipList(skipList),
 		tjconfig.WithDefaultResourceFn(defaultResource(externalNameConfig(), groupOverrides())),
 	)
-
+	// external-name configuration for all resources
 	for name := range pc.Resources {
+		// external-name configuration
 		pc.AddResourceConfigurator(name, func(r *tjconfig.Resource) {
 			r.ExternalName = tjconfig.IdentifierFromProvider
 		})
@@ -149,7 +158,13 @@ func GetProvider() *tjconfig.Provider {
 		loganalytics.Configure,
 		iothub.Configure,
 		monitor.Configure,
-		api.Configure,
+		apimanagement.Configure,
+		logic.Configure,
+		security.Configure,
+		base.Configure,
+		datashare.Configure,
+		notificationhubs.Configure,
+		storagesync.Configure,
 	} {
 		configure(pc)
 	}

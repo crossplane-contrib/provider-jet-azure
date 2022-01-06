@@ -52,8 +52,8 @@ func (mg *Account) ResolveReferences(ctx context.Context, c client.Reader) error
 	return nil
 }
 
-// ResolveReferences of this CassandraKeyspace.
-func (mg *CassandraKeyspace) ResolveReferences(ctx context.Context, c client.Reader) error {
+// ResolveReferences of this CassandraKeySpace.
+func (mg *CassandraKeySpace) ResolveReferences(ctx context.Context, c client.Reader) error {
 	r := reference.NewAPIResolver(c, mg)
 
 	var rsp reference.ResolutionResponse
@@ -102,20 +102,20 @@ func (mg *CassandraTable) ResolveReferences(ctx context.Context, c client.Reader
 	var err error
 
 	rsp, err = r.Resolve(ctx, reference.ResolutionRequest{
-		CurrentValue: reference.FromPtrValue(mg.Spec.ForProvider.CassandraKeyspaceID),
+		CurrentValue: reference.FromPtrValue(mg.Spec.ForProvider.CassandraKeySpaceID),
 		Extract:      rconfig.ExtractResourceID(),
-		Reference:    mg.Spec.ForProvider.CassandraKeyspaceIDRef,
-		Selector:     mg.Spec.ForProvider.CassandraKeyspaceIDSelector,
+		Reference:    mg.Spec.ForProvider.CassandraKeySpaceIDRef,
+		Selector:     mg.Spec.ForProvider.CassandraKeySpaceIDSelector,
 		To: reference.To{
-			List:    &CassandraKeyspaceList{},
-			Managed: &CassandraKeyspace{},
+			List:    &CassandraKeySpaceList{},
+			Managed: &CassandraKeySpace{},
 		},
 	})
 	if err != nil {
-		return errors.Wrap(err, "mg.Spec.ForProvider.CassandraKeyspaceID")
+		return errors.Wrap(err, "mg.Spec.ForProvider.CassandraKeySpaceID")
 	}
-	mg.Spec.ForProvider.CassandraKeyspaceID = reference.ToPtrValue(rsp.ResolvedValue)
-	mg.Spec.ForProvider.CassandraKeyspaceIDRef = rsp.ResolvedReference
+	mg.Spec.ForProvider.CassandraKeySpaceID = reference.ToPtrValue(rsp.ResolvedValue)
+	mg.Spec.ForProvider.CassandraKeySpaceIDRef = rsp.ResolvedReference
 
 	return nil
 }
@@ -488,8 +488,8 @@ func (mg *SQLFunction) ResolveReferences(ctx context.Context, c client.Reader) e
 	return nil
 }
 
-// ResolveReferences of this SqlStoredProcedure.
-func (mg *SqlStoredProcedure) ResolveReferences(ctx context.Context, c client.Reader) error {
+// ResolveReferences of this SQLStoredProcedure.
+func (mg *SQLStoredProcedure) ResolveReferences(ctx context.Context, c client.Reader) error {
 	r := reference.NewAPIResolver(c, mg)
 
 	var rsp reference.ResolutionResponse
@@ -562,8 +562,8 @@ func (mg *SqlStoredProcedure) ResolveReferences(ctx context.Context, c client.Re
 	return nil
 }
 
-// ResolveReferences of this SqlTrigger.
-func (mg *SqlTrigger) ResolveReferences(ctx context.Context, c client.Reader) error {
+// ResolveReferences of this SQLTrigger.
+func (mg *SQLTrigger) ResolveReferences(ctx context.Context, c client.Reader) error {
 	r := reference.NewAPIResolver(c, mg)
 
 	var rsp reference.ResolutionResponse

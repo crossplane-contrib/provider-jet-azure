@@ -21,22 +21,22 @@ package v1alpha1
 import (
 	"github.com/pkg/errors"
 
-	"github.com/crossplane-contrib/terrajet/pkg/resource"
-	"github.com/crossplane-contrib/terrajet/pkg/resource/json"
+	"github.com/crossplane/terrajet/pkg/resource"
+	"github.com/crossplane/terrajet/pkg/resource/json"
 )
 
-// GetTerraformResourceType returns Terraform resource type for this SqlStoredProcedure
-func (mg *SqlStoredProcedure) GetTerraformResourceType() string {
+// GetTerraformResourceType returns Terraform resource type for this SQLStoredProcedure
+func (mg *SQLStoredProcedure) GetTerraformResourceType() string {
 	return "azurerm_cosmosdb_sql_stored_procedure"
 }
 
-// GetConnectionDetailsMapping for this SqlStoredProcedure
-func (tr *SqlStoredProcedure) GetConnectionDetailsMapping() map[string]string {
+// GetConnectionDetailsMapping for this SQLStoredProcedure
+func (tr *SQLStoredProcedure) GetConnectionDetailsMapping() map[string]string {
 	return nil
 }
 
-// GetObservation of this SqlStoredProcedure
-func (tr *SqlStoredProcedure) GetObservation() (map[string]interface{}, error) {
+// GetObservation of this SQLStoredProcedure
+func (tr *SQLStoredProcedure) GetObservation() (map[string]interface{}, error) {
 	o, err := json.TFParser.Marshal(tr.Status.AtProvider)
 	if err != nil {
 		return nil, err
@@ -45,8 +45,8 @@ func (tr *SqlStoredProcedure) GetObservation() (map[string]interface{}, error) {
 	return base, json.TFParser.Unmarshal(o, &base)
 }
 
-// SetObservation for this SqlStoredProcedure
-func (tr *SqlStoredProcedure) SetObservation(obs map[string]interface{}) error {
+// SetObservation for this SQLStoredProcedure
+func (tr *SQLStoredProcedure) SetObservation(obs map[string]interface{}) error {
 	p, err := json.TFParser.Marshal(obs)
 	if err != nil {
 		return err
@@ -54,16 +54,16 @@ func (tr *SqlStoredProcedure) SetObservation(obs map[string]interface{}) error {
 	return json.TFParser.Unmarshal(p, &tr.Status.AtProvider)
 }
 
-// GetID returns ID of underlying Terraform resource of this SqlStoredProcedure
-func (tr *SqlStoredProcedure) GetID() string {
+// GetID returns ID of underlying Terraform resource of this SQLStoredProcedure
+func (tr *SQLStoredProcedure) GetID() string {
 	if tr.Status.AtProvider.ID == nil {
 		return ""
 	}
 	return *tr.Status.AtProvider.ID
 }
 
-// GetParameters of this SqlStoredProcedure
-func (tr *SqlStoredProcedure) GetParameters() (map[string]interface{}, error) {
+// GetParameters of this SQLStoredProcedure
+func (tr *SQLStoredProcedure) GetParameters() (map[string]interface{}, error) {
 	p, err := json.TFParser.Marshal(tr.Spec.ForProvider)
 	if err != nil {
 		return nil, err
@@ -72,8 +72,8 @@ func (tr *SqlStoredProcedure) GetParameters() (map[string]interface{}, error) {
 	return base, json.TFParser.Unmarshal(p, &base)
 }
 
-// SetParameters for this SqlStoredProcedure
-func (tr *SqlStoredProcedure) SetParameters(params map[string]interface{}) error {
+// SetParameters for this SQLStoredProcedure
+func (tr *SQLStoredProcedure) SetParameters(params map[string]interface{}) error {
 	p, err := json.TFParser.Marshal(params)
 	if err != nil {
 		return err
@@ -81,10 +81,10 @@ func (tr *SqlStoredProcedure) SetParameters(params map[string]interface{}) error
 	return json.TFParser.Unmarshal(p, &tr.Spec.ForProvider)
 }
 
-// LateInitialize this SqlStoredProcedure using its observed tfState.
+// LateInitialize this SQLStoredProcedure using its observed tfState.
 // returns True if there are any spec changes for the resource.
-func (tr *SqlStoredProcedure) LateInitialize(attrs []byte) (bool, error) {
-	params := &SqlStoredProcedureParameters{}
+func (tr *SQLStoredProcedure) LateInitialize(attrs []byte) (bool, error) {
+	params := &SQLStoredProcedureParameters{}
 	if err := json.TFParser.Unmarshal(attrs, params); err != nil {
 		return false, errors.Wrap(err, "failed to unmarshal Terraform state parameters for late-initialization")
 	}
@@ -95,6 +95,6 @@ func (tr *SqlStoredProcedure) LateInitialize(attrs []byte) (bool, error) {
 }
 
 // GetTerraformSchemaVersion returns the associated Terraform schema version
-func (tr *SqlStoredProcedure) GetTerraformSchemaVersion() int {
+func (tr *SQLStoredProcedure) GetTerraformSchemaVersion() int {
 	return 0
 }

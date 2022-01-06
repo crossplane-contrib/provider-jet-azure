@@ -38,7 +38,7 @@ type VirtualWANParameters struct {
 	AllowVnetToVnetTraffic *bool `json:"allowVnetToVnetTraffic,omitempty" tf:"allow_vnet_to_vnet_traffic,omitempty"`
 
 	// +kubebuilder:validation:Optional
-	DisableVpnEncryption *bool `json:"disableVpnEncryption,omitempty" tf:"disable_vpn_encryption,omitempty"`
+	DisableVPNEncryption *bool `json:"disableVpnEncryption,omitempty" tf:"disable_vpn_encryption,omitempty"`
 
 	// +kubebuilder:validation:Required
 	Location *string `json:"location" tf:"location,omitempty"`

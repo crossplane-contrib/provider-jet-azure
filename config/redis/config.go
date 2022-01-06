@@ -23,7 +23,7 @@ import (
 
 	"github.com/pkg/errors"
 
-	"github.com/crossplane-contrib/terrajet/pkg/config"
+	"github.com/crossplane/terrajet/pkg/config"
 
 	"github.com/crossplane-contrib/provider-jet-azure/apis/rconfig"
 	"github.com/crossplane-contrib/provider-jet-azure/config/common"
@@ -52,7 +52,7 @@ func Configure(p *config.Provider) {
 	p.AddResourceConfigurator("azurerm_redis_firewall_rule", func(r *config.Resource) {
 		r.References = config.References{
 			"redis_cache_name": config.Reference{
-				Type: "Cache",
+				Type: "RedisCache",
 			},
 			"resource_group_name": config.Reference{
 				Type: rconfig.APISPackagePath + "/azure/v1alpha1.ResourceGroup",
@@ -70,11 +70,11 @@ func Configure(p *config.Provider) {
 	p.AddResourceConfigurator("azurerm_redis_linked_server", func(r *config.Resource) {
 		r.References = config.References{
 			"linked_redis_cache_id": config.Reference{
-				Type:      "Cache",
+				Type:      "RedisCache",
 				Extractor: rconfig.ExtractResourceIDFuncPath,
 			},
 			"target_redis_cache_name": config.Reference{
-				Type: "Cache",
+				Type: "RedisCache",
 			},
 			"resource_group_name": config.Reference{
 				Type: rconfig.APISPackagePath + "/azure/v1alpha1.ResourceGroup",
@@ -105,7 +105,7 @@ func Configure(p *config.Provider) {
 				Type: rconfig.APISPackagePath + "/azure/v1alpha1.ResourceGroup",
 			},
 			"cluster_id": config.Reference{
-				Type:      "EnterpriseCluster",
+				Type:      "RedisEnterpriseCluster",
 				Extractor: rconfig.ExtractResourceIDFuncPath,
 			},
 		}

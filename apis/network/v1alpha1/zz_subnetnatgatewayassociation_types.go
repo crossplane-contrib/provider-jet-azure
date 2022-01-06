@@ -32,7 +32,7 @@ type SubnetNATGatewayAssociationObservation struct {
 type SubnetNATGatewayAssociationParameters struct {
 
 	// +kubebuilder:validation:Required
-	NatGatewayID *string `json:"natGatewayId" tf:"nat_gateway_id,omitempty"`
+	NATGatewayID *string `json:"natGatewayId" tf:"nat_gateway_id,omitempty"`
 
 	// +crossplane:generate:reference:type=Subnet
 	// +crossplane:generate:reference:extractor=github.com/crossplane-contrib/provider-jet-azure/apis/rconfig.ExtractResourceID()

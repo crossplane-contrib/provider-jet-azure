@@ -17,42 +17,14 @@ limitations under the License.
 package resource
 
 import (
-	"context"
-	"fmt"
-
-	"github.com/crossplane-contrib/terrajet/pkg/config"
-	"github.com/pkg/errors"
+	"github.com/crossplane/terrajet/pkg/config"
 
 	"github.com/crossplane-contrib/provider-jet-azure/apis/rconfig"
 	"github.com/crossplane-contrib/provider-jet-azure/config/common"
 )
 
-const (
-	errFmtNoAttribute    = `"attribute not found: %s`
-	errFmtUnexpectedType = `unexpected type for attribute %s: Expecting a string`
-)
-
 // Configure configures resource group
 func Configure(p *config.Provider) {
-	p.AddResourceConfigurator("azurerm_resource_group", func(r *config.Resource) {
-		r.Kind = "ResourceGroup"
-		r.ShortGroup = ""
-		r.ExternalName = config.NameAsIdentifier
-		r.ExternalName.GetExternalNameFn = common.GetNameFromFullyQualifiedID
-		// /subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/example
-		r.ExternalName.GetIDFn = func(ctx context.Context, name string, _ map[string]interface{}, providerConfig map[string]interface{}) (string, error) {
-			subID, ok := providerConfig["subscription_id"]
-			if !ok {
-				return "", errors.Errorf(errFmtNoAttribute, "subscription_id")
-			}
-			subIDStr, ok := subID.(string)
-			if !ok {
-				return "", errors.Errorf(errFmtUnexpectedType, "subscription_id")
-			}
-			return fmt.Sprintf("/subscriptions/%s/resourceGroups/%s", subIDStr, name), nil
-		}
-	})
-
 	p.AddResourceConfigurator("azurerm_resource_group_template_deployment", func(r *config.Resource) {
 		r.Kind = "ResourceGroupTemplateDeployment"
 		r.ShortGroup = "resources"

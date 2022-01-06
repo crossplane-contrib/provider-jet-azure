@@ -17,7 +17,7 @@ limitations under the License.
 package iothub
 
 import (
-	"github.com/crossplane-contrib/terrajet/pkg/config"
+	"github.com/crossplane/terrajet/pkg/config"
 
 	"github.com/crossplane-contrib/provider-jet-azure/apis/rconfig"
 	"github.com/crossplane-contrib/provider-jet-azure/config/common"
@@ -36,9 +36,6 @@ func Configure(p *config.Provider) {
 			},
 			"endpoint.container_name": config.Reference{
 				Type: rconfig.APISPackagePath + "/storage/v1alpha1.Container",
-			},
-			"container_name": config.Reference{
-				Type: rconfig.APISPackagePath + "storage/Container",
 			},
 		}
 		r.UseAsync = true
@@ -66,7 +63,6 @@ func Configure(p *config.Provider) {
 	})
 
 	p.AddResourceConfigurator("azurerm_iothub_dps", func(r *config.Resource) {
-		r.Kind = "DPS"
 		r.References = config.References{
 			"resource_group_name": config.Reference{
 				Type: rconfig.APISPackagePath + "/azure/v1alpha1.ResourceGroup",
@@ -80,13 +76,12 @@ func Configure(p *config.Provider) {
 	})
 
 	p.AddResourceConfigurator("azurerm_iothub_dps_certificate", func(r *config.Resource) {
-		r.Kind = "DPSCertificate"
 		r.References = config.References{
 			"resource_group_name": config.Reference{
 				Type: rconfig.APISPackagePath + "/azure/v1alpha1.ResourceGroup",
 			},
 			"iot_dps_name": config.Reference{
-				Type: "DPS",
+				Type: "IOTHubDPS",
 			},
 		}
 		r.UseAsync = true
@@ -98,13 +93,12 @@ func Configure(p *config.Provider) {
 	})
 
 	p.AddResourceConfigurator("azurerm_iothub_dps_shared_access_policy", func(r *config.Resource) {
-		r.Kind = "DPSSharedAccessPolicy"
 		r.References = config.References{
 			"resource_group_name": config.Reference{
 				Type: rconfig.APISPackagePath + "/azure/v1alpha1.ResourceGroup",
 			},
 			"iothub_dps_name": config.Reference{
-				Type: "DPS",
+				Type: "IOTHubDPS",
 			},
 		}
 		r.UseAsync = true

@@ -12,8 +12,8 @@ spec:
     - crossplane
     - managed
     - azurejet
-    kind: SqlTrigger
-    listKind: SqlTriggerList
+    kind: SQLTrigger
+    listKind: SQLTriggerList
     plural: sqltriggers
     singular: sqltrigger
   scope: Cluster
@@ -34,7 +34,7 @@ spec:
     name: v1alpha1
     schema:
       openAPIV3Schema:
-        description: SqlTrigger is the Schema for the SqlTriggers API
+        description: SQLTrigger is the Schema for the SQLTriggers API
         properties:
           apiVersion:
             description: 'APIVersion defines the versioned schema of this representation
@@ -49,7 +49,7 @@ spec:
           metadata:
             type: object
           spec:
-            description: SqlTriggerSpec defines the desired state of SqlTrigger
+            description: SQLTriggerSpec defines the desired state of SQLTrigger
             properties:
               deletionPolicy:
                 default: Delete
@@ -143,7 +143,7 @@ spec:
             - forProvider
             type: object
           status:
-            description: SqlTriggerStatus defines the observed state of SqlTrigger.
+            description: SQLTriggerStatus defines the observed state of SQLTrigger.
             properties:
               atProvider:
                 properties:
