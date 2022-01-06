@@ -26,16 +26,17 @@ import (
 // Configure configures iothub group
 func Configure(p *config.Provider) {
 	p.AddResourceConfigurator("azurerm_iothub", func(r *config.Resource) {
+		r.Version = common.VersionV1Alpha2
 		r.Kind = "IOTHub"
 		r.References = config.References{
 			"resource_group_name": config.Reference{
-				Type: rconfig.APISPackagePath + "/azure/v1alpha1.ResourceGroup",
+				Type: rconfig.APISPackagePath + common.ResourceGroupReferencePath,
 			},
 			"endpoint.resource_group_name": config.Reference{
-				Type: rconfig.APISPackagePath + "/azure/v1alpha1.ResourceGroup",
+				Type: rconfig.APISPackagePath + common.ResourceGroupReferencePath,
 			},
 			"endpoint.container_name": config.Reference{
-				Type: rconfig.APISPackagePath + "/storage/v1alpha1.Container",
+				Type: rconfig.APISPackagePath + "/storage/v1alpha2.Container",
 			},
 		}
 		r.UseAsync = true
@@ -46,9 +47,10 @@ func Configure(p *config.Provider) {
 	})
 
 	p.AddResourceConfigurator("azurerm_iothub_consumer_group", func(r *config.Resource) {
+		r.Version = common.VersionV1Alpha2
 		r.References = config.References{
 			"resource_group_name": config.Reference{
-				Type: rconfig.APISPackagePath + "/azure/v1alpha1.ResourceGroup",
+				Type: rconfig.APISPackagePath + common.ResourceGroupReferencePath,
 			},
 			"iothub_name": config.Reference{
 				Type: "IOTHub",
@@ -63,9 +65,10 @@ func Configure(p *config.Provider) {
 	})
 
 	p.AddResourceConfigurator("azurerm_iothub_dps", func(r *config.Resource) {
+		r.Version = common.VersionV1Alpha2
 		r.References = config.References{
 			"resource_group_name": config.Reference{
-				Type: rconfig.APISPackagePath + "/azure/v1alpha1.ResourceGroup",
+				Type: rconfig.APISPackagePath + common.ResourceGroupReferencePath,
 			},
 		}
 		r.UseAsync = true
@@ -76,9 +79,10 @@ func Configure(p *config.Provider) {
 	})
 
 	p.AddResourceConfigurator("azurerm_iothub_dps_certificate", func(r *config.Resource) {
+		r.Version = common.VersionV1Alpha2
 		r.References = config.References{
 			"resource_group_name": config.Reference{
-				Type: rconfig.APISPackagePath + "/azure/v1alpha1.ResourceGroup",
+				Type: rconfig.APISPackagePath + common.ResourceGroupReferencePath,
 			},
 			"iot_dps_name": config.Reference{
 				Type: "IOTHubDPS",
@@ -93,9 +97,10 @@ func Configure(p *config.Provider) {
 	})
 
 	p.AddResourceConfigurator("azurerm_iothub_dps_shared_access_policy", func(r *config.Resource) {
+		r.Version = common.VersionV1Alpha2
 		r.References = config.References{
 			"resource_group_name": config.Reference{
-				Type: rconfig.APISPackagePath + "/azure/v1alpha1.ResourceGroup",
+				Type: rconfig.APISPackagePath + common.ResourceGroupReferencePath,
 			},
 			"iothub_dps_name": config.Reference{
 				Type: "IOTHubDPS",
@@ -110,9 +115,10 @@ func Configure(p *config.Provider) {
 	})
 
 	p.AddResourceConfigurator("azurerm_iothub_shared_access_policy", func(r *config.Resource) {
+		r.Version = common.VersionV1Alpha2
 		r.References = config.References{
 			"resource_group_name": config.Reference{
-				Type: rconfig.APISPackagePath + "/azure/v1alpha1.ResourceGroup",
+				Type: rconfig.APISPackagePath + common.ResourceGroupReferencePath,
 			},
 			"iothub_name": config.Reference{
 				Type: "IOTHub",

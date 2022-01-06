@@ -30,6 +30,7 @@ import (
 // Configure configures kubernetes group
 func Configure(p *config.Provider) {
 	p.AddResourceConfigurator("azurerm_kubernetes_cluster", func(r *config.Resource) {
+		r.Version = common.VersionV1Alpha2
 		r.Kind = "KubernetesCluster"
 		r.ShortGroup = "containerservice"
 		r.LateInitializer = config.LateInitializer{
@@ -37,18 +38,18 @@ func Configure(p *config.Provider) {
 		}
 		r.References = config.References{
 			"resource_group_name": config.Reference{
-				Type: rconfig.APISPackagePath + "/azure/v1alpha1.ResourceGroup",
+				Type: rconfig.APISPackagePath + common.ResourceGroupReferencePath,
 			},
 			"default_node_pool.pod_subnet_id": config.Reference{
-				Type:      rconfig.APISPackagePath + "/network/v1alpha1.Subnet",
+				Type:      rconfig.APISPackagePath + common.SubnetReferencePath,
 				Extractor: rconfig.ExtractResourceIDFuncPath,
 			},
 			"default_node_pool.vnet_subnet_id": config.Reference{
-				Type:      rconfig.APISPackagePath + "/network/v1alpha1.Subnet",
+				Type:      rconfig.APISPackagePath + common.SubnetReferencePath,
 				Extractor: rconfig.ExtractResourceIDFuncPath,
 			},
 			"addon_profile.ingress_application_gateway.subnet_id": config.Reference{
-				Type:      rconfig.APISPackagePath + "/network/v1alpha1.Subnet",
+				Type:      rconfig.APISPackagePath + common.SubnetReferencePath,
 				Extractor: rconfig.ExtractResourceIDFuncPath,
 			},
 		}
@@ -69,6 +70,7 @@ func Configure(p *config.Provider) {
 	})
 
 	p.AddResourceConfigurator("azurerm_kubernetes_cluster_node_pool", func(r *config.Resource) {
+		r.Version = common.VersionV1Alpha2
 		r.Kind = "KubernetesClusterNodePool"
 		r.ShortGroup = "containerservice"
 		r.References = config.References{
@@ -77,11 +79,11 @@ func Configure(p *config.Provider) {
 				Extractor: rconfig.ExtractResourceIDFuncPath,
 			},
 			"pod_subnet_id": config.Reference{
-				Type:      rconfig.APISPackagePath + "/network/v1alpha1.Subnet",
+				Type:      rconfig.APISPackagePath + common.SubnetReferencePath,
 				Extractor: rconfig.ExtractResourceIDFuncPath,
 			},
 			"vnet_subnet_id": config.Reference{
-				Type:      rconfig.APISPackagePath + "/network/v1alpha1.Subnet",
+				Type:      rconfig.APISPackagePath + common.SubnetReferencePath,
 				Extractor: rconfig.ExtractResourceIDFuncPath,
 			},
 		}

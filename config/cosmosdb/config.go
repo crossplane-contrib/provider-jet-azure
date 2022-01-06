@@ -30,9 +30,10 @@ import (
 // Configure configures cosmodb group
 func Configure(p *config.Provider) {
 	p.AddResourceConfigurator("azurerm_cosmosdb_sql_container", func(r *config.Resource) {
+		r.Version = common.VersionV1Alpha2
 		r.References = config.References{
 			"resource_group_name": config.Reference{
-				Type: rconfig.APISPackagePath + "/azure/v1alpha1.ResourceGroup",
+				Type: rconfig.APISPackagePath + common.ResourceGroupReferencePath,
 			},
 			"account_name": config.Reference{
 				Type: "Account",
@@ -53,9 +54,10 @@ func Configure(p *config.Provider) {
 	})
 
 	p.AddResourceConfigurator("azurerm_cosmosdb_mongo_collection", func(r *config.Resource) {
+		r.Version = common.VersionV1Alpha2
 		r.References = config.References{
 			"resource_group_name": config.Reference{
-				Type: rconfig.APISPackagePath + "/azure/v1alpha1.ResourceGroup",
+				Type: rconfig.APISPackagePath + common.ResourceGroupReferencePath,
 			},
 			"account_name": config.Reference{
 				Type: "Account",
@@ -77,9 +79,10 @@ func Configure(p *config.Provider) {
 	})
 
 	p.AddResourceConfigurator("azurerm_cosmosdb_cassandra_keyspace", func(r *config.Resource) {
+		r.Version = common.VersionV1Alpha2
 		r.References = config.References{
 			"resource_group_name": config.Reference{
-				Type: rconfig.APISPackagePath + "/azure/v1alpha1.ResourceGroup",
+				Type: rconfig.APISPackagePath + common.ResourceGroupReferencePath,
 			},
 			"account_name": config.Reference{
 				Type: "Account",
@@ -97,6 +100,7 @@ func Configure(p *config.Provider) {
 	})
 
 	p.AddResourceConfigurator("azurerm_cosmosdb_cassandra_table", func(r *config.Resource) {
+		r.Version = common.VersionV1Alpha2
 		r.References = config.References{
 			"cassandra_keyspace_id": config.Reference{
 				Type:      "CassandraKeySpace",
@@ -116,9 +120,10 @@ func Configure(p *config.Provider) {
 	})
 
 	p.AddResourceConfigurator("azurerm_cosmosdb_gremlin_graph", func(r *config.Resource) {
+		r.Version = common.VersionV1Alpha2
 		r.References = config.References{
 			"resource_group_name": config.Reference{
-				Type: rconfig.APISPackagePath + "/azure/v1alpha1.ResourceGroup",
+				Type: rconfig.APISPackagePath + common.ResourceGroupReferencePath,
 			},
 			"account_name": config.Reference{
 				Type: "Account",
@@ -140,6 +145,7 @@ func Configure(p *config.Provider) {
 	})
 
 	p.AddResourceConfigurator("azurerm_cosmosdb_sql_function", func(r *config.Resource) {
+		r.Version = common.VersionV1Alpha2
 		r.References = config.References{
 			"container_id": config.Reference{
 				Type:      "SQLContainer",
@@ -165,9 +171,10 @@ func Configure(p *config.Provider) {
 	})
 
 	p.AddResourceConfigurator("azurerm_cosmosdb_sql_stored_procedure", func(r *config.Resource) {
+		r.Version = common.VersionV1Alpha2
 		r.References = config.References{
 			"resource_group_name": config.Reference{
-				Type: rconfig.APISPackagePath + "/azure/v1alpha1.ResourceGroup",
+				Type: rconfig.APISPackagePath + common.ResourceGroupReferencePath,
 			},
 			"account_name": config.Reference{
 				Type: "Account",
@@ -193,9 +200,10 @@ func Configure(p *config.Provider) {
 	})
 
 	p.AddResourceConfigurator("azurerm_cosmosdb_gremlin_database", func(r *config.Resource) {
+		r.Version = common.VersionV1Alpha2
 		r.References = config.References{
 			"resource_group_name": config.Reference{
-				Type: rconfig.APISPackagePath + "/azure/v1alpha1.ResourceGroup",
+				Type: rconfig.APISPackagePath + common.ResourceGroupReferencePath,
 			},
 			"account_name": config.Reference{
 				Type: "Account",
@@ -213,9 +221,10 @@ func Configure(p *config.Provider) {
 	})
 
 	p.AddResourceConfigurator("azurerm_cosmosdb_mongo_database", func(r *config.Resource) {
+		r.Version = common.VersionV1Alpha2
 		r.References = config.References{
 			"resource_group_name": config.Reference{
-				Type: rconfig.APISPackagePath + "/azure/v1alpha1.ResourceGroup",
+				Type: rconfig.APISPackagePath + common.ResourceGroupReferencePath,
 			},
 			"account_name": config.Reference{
 				Type: "Account",
@@ -233,9 +242,10 @@ func Configure(p *config.Provider) {
 	})
 
 	p.AddResourceConfigurator("azurerm_cosmosdb_sql_database", func(r *config.Resource) {
+		r.Version = common.VersionV1Alpha2
 		r.References = config.References{
 			"resource_group_name": config.Reference{
-				Type: rconfig.APISPackagePath + "/azure/v1alpha1.ResourceGroup",
+				Type: rconfig.APISPackagePath + common.ResourceGroupReferencePath,
 			},
 			"account_name": config.Reference{
 				Type: "Account",
@@ -253,9 +263,10 @@ func Configure(p *config.Provider) {
 	})
 
 	p.AddResourceConfigurator("azurerm_cosmosdb_table", func(r *config.Resource) {
+		r.Version = common.VersionV1Alpha2
 		r.References = config.References{
 			"resource_group_name": config.Reference{
-				Type: rconfig.APISPackagePath + "/azure/v1alpha1.ResourceGroup",
+				Type: rconfig.APISPackagePath + common.ResourceGroupReferencePath,
 			},
 			"account_name": config.Reference{
 				Type: "Account",
@@ -272,9 +283,10 @@ func Configure(p *config.Provider) {
 	})
 
 	p.AddResourceConfigurator("azurerm_cosmosdb_account", func(r *config.Resource) {
+		r.Version = common.VersionV1Alpha2
 		r.References = config.References{
 			"resource_group_name": config.Reference{
-				Type: rconfig.APISPackagePath + "/azure/v1alpha1.ResourceGroup",
+				Type: rconfig.APISPackagePath + common.ResourceGroupReferencePath,
 			},
 		}
 		r.UseAsync = true
@@ -285,9 +297,10 @@ func Configure(p *config.Provider) {
 	})
 
 	p.AddResourceConfigurator("azurerm_cosmosdb_notebook_workspace", func(r *config.Resource) {
+		r.Version = common.VersionV1Alpha2
 		r.References = config.References{
 			"resource_group_name": config.Reference{
-				Type: rconfig.APISPackagePath + "/azure/v1alpha1.ResourceGroup",
+				Type: rconfig.APISPackagePath + common.ResourceGroupReferencePath,
 			},
 			"account_name": config.Reference{
 				Type: "Account",
@@ -305,6 +318,7 @@ func Configure(p *config.Provider) {
 	})
 
 	p.AddResourceConfigurator("azurerm_cosmosdb_sql_trigger", func(r *config.Resource) {
+		r.Version = common.VersionV1Alpha2
 		r.References = config.References{
 			"container_id": config.Reference{
 				Type:      "SQLContainer",

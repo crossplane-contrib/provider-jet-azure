@@ -28,6 +28,7 @@ const groupNetwork = "network"
 // Configure configures subnet group
 func Configure(p *config.Provider) {
 	p.AddResourceConfigurator("azurerm_subnet", func(r *config.Resource) {
+		r.Version = common.VersionV1Alpha2
 		r.Kind = "Subnet"
 		r.ShortGroup = groupNetwork
 		r.LateInitializer = config.LateInitializer{
@@ -35,7 +36,7 @@ func Configure(p *config.Provider) {
 		}
 		r.References = config.References{
 			"resource_group_name": config.Reference{
-				Type: rconfig.APISPackagePath + "/azure/v1alpha1.ResourceGroup",
+				Type: rconfig.APISPackagePath + common.ResourceGroupReferencePath,
 			},
 			"virtual_network_name": config.Reference{
 				Type: "VirtualNetwork",
@@ -52,6 +53,7 @@ func Configure(p *config.Provider) {
 	})
 
 	p.AddResourceConfigurator("azurerm_subnet_nat_gateway_association", func(r *config.Resource) {
+		r.Version = common.VersionV1Alpha2
 		r.Kind = "SubnetNATGatewayAssociation"
 		r.ShortGroup = groupNetwork
 		r.References = config.References{
@@ -65,6 +67,7 @@ func Configure(p *config.Provider) {
 	})
 
 	p.AddResourceConfigurator("azurerm_subnet_network_security_group_association", func(r *config.Resource) {
+		r.Version = common.VersionV1Alpha2
 		r.Kind = "SubnetNetworkSecurityGroupAssociation"
 		r.ShortGroup = groupNetwork
 		r.References = config.References{
@@ -78,11 +81,12 @@ func Configure(p *config.Provider) {
 	})
 
 	p.AddResourceConfigurator("azurerm_subnet_service_endpoint_storage_policy", func(r *config.Resource) {
+		r.Version = common.VersionV1Alpha2
 		r.Kind = "SubnetServiceEndpointStoragePolicy"
 		r.ShortGroup = groupNetwork
 		r.References = config.References{
 			"resource_group_name": config.Reference{
-				Type: rconfig.APISPackagePath + "/azure/v1alpha1.ResourceGroup",
+				Type: rconfig.APISPackagePath + common.ResourceGroupReferencePath,
 			},
 		}
 		r.UseAsync = true
@@ -95,6 +99,7 @@ func Configure(p *config.Provider) {
 	})
 
 	p.AddResourceConfigurator("azurerm_subnet_route_table_association", func(r *config.Resource) {
+		r.Version = common.VersionV1Alpha2
 		r.Kind = "SubnetRouteTableAssociation"
 		r.ShortGroup = groupNetwork
 		r.References = config.References{

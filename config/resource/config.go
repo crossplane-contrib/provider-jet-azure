@@ -26,11 +26,12 @@ import (
 // Configure configures resource group
 func Configure(p *config.Provider) {
 	p.AddResourceConfigurator("azurerm_resource_group_template_deployment", func(r *config.Resource) {
+		r.Version = common.VersionV1Alpha2
 		r.Kind = "ResourceGroupTemplateDeployment"
 		r.ShortGroup = "resources"
 		r.References = config.References{
 			"resource_group_name": config.Reference{
-				Type: rconfig.APISPackagePath + "/azure/v1alpha1.ResourceGroup",
+				Type: rconfig.APISPackagePath + common.ResourceGroupReferencePath,
 			},
 		}
 		r.UseAsync = true
@@ -43,11 +44,12 @@ func Configure(p *config.Provider) {
 	})
 
 	p.AddResourceConfigurator("azurerm_resource_group_policy_assignment", func(r *config.Resource) {
+		r.Version = common.VersionV1Alpha2
 		r.Kind = "ResourceGroupPolicyAssignment"
 		r.ShortGroup = "authorization"
 		r.References = config.References{
 			"resource_group_id": config.Reference{
-				Type:      rconfig.APISPackagePath + "/azure/v1alpha1.ResourceGroup",
+				Type:      rconfig.APISPackagePath + common.ResourceGroupReferencePath,
 				Extractor: rconfig.ExtractResourceIDFuncPath,
 			},
 		}
