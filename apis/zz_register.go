@@ -22,38 +22,40 @@ package apis
 import (
 	"k8s.io/apimachinery/pkg/runtime"
 
-	v1alpha1 "github.com/crossplane-contrib/provider-jet-azure/apis/authorization/v1alpha1"
-	v1alpha1azure "github.com/crossplane-contrib/provider-jet-azure/apis/azure/v1alpha1"
-	v1alpha1cache "github.com/crossplane-contrib/provider-jet-azure/apis/cache/v1alpha1"
-	v1alpha1containerservice "github.com/crossplane-contrib/provider-jet-azure/apis/containerservice/v1alpha1"
-	v1alpha1cosmosdb "github.com/crossplane-contrib/provider-jet-azure/apis/cosmosdb/v1alpha1"
-	v1alpha1dbforpostgresql "github.com/crossplane-contrib/provider-jet-azure/apis/dbforpostgresql/v1alpha1"
-	v1alpha1devices "github.com/crossplane-contrib/provider-jet-azure/apis/devices/v1alpha1"
-	v1alpha1insights "github.com/crossplane-contrib/provider-jet-azure/apis/insights/v1alpha1"
-	v1alpha1loganalytics "github.com/crossplane-contrib/provider-jet-azure/apis/loganalytics/v1alpha1"
-	v1alpha1network "github.com/crossplane-contrib/provider-jet-azure/apis/network/v1alpha1"
-	v1alpha1resources "github.com/crossplane-contrib/provider-jet-azure/apis/resources/v1alpha1"
-	v1alpha1sql "github.com/crossplane-contrib/provider-jet-azure/apis/sql/v1alpha1"
-	v1alpha1storage "github.com/crossplane-contrib/provider-jet-azure/apis/storage/v1alpha1"
+	v1alpha2 "github.com/crossplane-contrib/provider-jet-azure/apis/authorization/v1alpha2"
+	v1alpha2azure "github.com/crossplane-contrib/provider-jet-azure/apis/azure/v1alpha2"
+	v1alpha2cache "github.com/crossplane-contrib/provider-jet-azure/apis/cache/v1alpha2"
+	v1alpha2containerservice "github.com/crossplane-contrib/provider-jet-azure/apis/containerservice/v1alpha2"
+	v1alpha2cosmosdb "github.com/crossplane-contrib/provider-jet-azure/apis/cosmosdb/v1alpha2"
+	v1alpha2dbforpostgresql "github.com/crossplane-contrib/provider-jet-azure/apis/dbforpostgresql/v1alpha2"
+	v1alpha1 "github.com/crossplane-contrib/provider-jet-azure/apis/devices/v1alpha1"
+	v1alpha2devices "github.com/crossplane-contrib/provider-jet-azure/apis/devices/v1alpha2"
+	v1alpha2insights "github.com/crossplane-contrib/provider-jet-azure/apis/insights/v1alpha2"
+	v1alpha2loganalytics "github.com/crossplane-contrib/provider-jet-azure/apis/loganalytics/v1alpha2"
+	v1alpha2network "github.com/crossplane-contrib/provider-jet-azure/apis/network/v1alpha2"
+	v1alpha2resources "github.com/crossplane-contrib/provider-jet-azure/apis/resources/v1alpha2"
+	v1alpha2sql "github.com/crossplane-contrib/provider-jet-azure/apis/sql/v1alpha2"
+	v1alpha2storage "github.com/crossplane-contrib/provider-jet-azure/apis/storage/v1alpha2"
 	v1alpha1apis "github.com/crossplane-contrib/provider-jet-azure/apis/v1alpha1"
 )
 
 func init() {
 	// Register the types with the Scheme so the components can map objects to GroupVersionKinds and back
 	AddToSchemes = append(AddToSchemes,
+		v1alpha2.SchemeBuilder.AddToScheme,
+		v1alpha2azure.SchemeBuilder.AddToScheme,
+		v1alpha2cache.SchemeBuilder.AddToScheme,
+		v1alpha2containerservice.SchemeBuilder.AddToScheme,
+		v1alpha2cosmosdb.SchemeBuilder.AddToScheme,
+		v1alpha2dbforpostgresql.SchemeBuilder.AddToScheme,
 		v1alpha1.SchemeBuilder.AddToScheme,
-		v1alpha1azure.SchemeBuilder.AddToScheme,
-		v1alpha1cache.SchemeBuilder.AddToScheme,
-		v1alpha1containerservice.SchemeBuilder.AddToScheme,
-		v1alpha1cosmosdb.SchemeBuilder.AddToScheme,
-		v1alpha1dbforpostgresql.SchemeBuilder.AddToScheme,
-		v1alpha1devices.SchemeBuilder.AddToScheme,
-		v1alpha1insights.SchemeBuilder.AddToScheme,
-		v1alpha1loganalytics.SchemeBuilder.AddToScheme,
-		v1alpha1network.SchemeBuilder.AddToScheme,
-		v1alpha1resources.SchemeBuilder.AddToScheme,
-		v1alpha1sql.SchemeBuilder.AddToScheme,
-		v1alpha1storage.SchemeBuilder.AddToScheme,
+		v1alpha2devices.SchemeBuilder.AddToScheme,
+		v1alpha2insights.SchemeBuilder.AddToScheme,
+		v1alpha2loganalytics.SchemeBuilder.AddToScheme,
+		v1alpha2network.SchemeBuilder.AddToScheme,
+		v1alpha2resources.SchemeBuilder.AddToScheme,
+		v1alpha2sql.SchemeBuilder.AddToScheme,
+		v1alpha2storage.SchemeBuilder.AddToScheme,
 		v1alpha1apis.SchemeBuilder.AddToScheme,
 	)
 }

@@ -59,12 +59,13 @@ func msSQLConnectionDetails(attr map[string]interface{}) (map[string][]byte, err
 // Configure configures sql group
 func Configure(p *config.Provider) {
 	p.AddResourceConfigurator("azurerm_sql_server", func(r *config.Resource) {
+		r.Version = common.VersionV1Alpha2
 		r.LateInitializer = config.LateInitializer{
 			IgnoredFields: []string{"threat_detection_policy"},
 		}
 		r.References = config.References{
 			"resource_group_name": config.Reference{
-				Type: rconfig.APISPackagePath + "/azure/v1alpha1.ResourceGroup",
+				Type: rconfig.ResourceGroupReferencePath,
 			},
 		}
 		r.ExternalName = config.NameAsIdentifier
@@ -77,9 +78,10 @@ func Configure(p *config.Provider) {
 		r.UseAsync = true
 	})
 	p.AddResourceConfigurator("azurerm_mssql_server", func(r *config.Resource) {
+		r.Version = common.VersionV1Alpha2
 		r.References = config.References{
 			"resource_group_name": config.Reference{
-				Type: rconfig.APISPackagePath + "/azure/v1alpha1.ResourceGroup",
+				Type: rconfig.ResourceGroupReferencePath,
 			},
 		}
 		r.ExternalName = config.NameAsIdentifier

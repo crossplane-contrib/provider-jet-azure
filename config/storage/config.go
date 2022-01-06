@@ -31,9 +31,10 @@ import (
 // Configure configures storage group
 func Configure(p *config.Provider) {
 	p.AddResourceConfigurator("azurerm_storage_account", func(r *config.Resource) {
+		r.Version = common.VersionV1Alpha2
 		r.References = config.References{
 			"resource_group_name": config.Reference{
-				Type: rconfig.APISPackagePath + "/azure/v1alpha1.ResourceGroup",
+				Type: rconfig.ResourceGroupReferencePath,
 			},
 		}
 		r.UseAsync = true
@@ -46,9 +47,10 @@ func Configure(p *config.Provider) {
 	})
 
 	p.AddResourceConfigurator("azurerm_storage_blob", func(r *config.Resource) {
+		r.Version = common.VersionV1Alpha2
 		r.References = config.References{
 			"resource_group_name": config.Reference{
-				Type: rconfig.APISPackagePath + "/azure/v1alpha1.ResourceGroup",
+				Type: rconfig.ResourceGroupReferencePath,
 			},
 			"storage_account_name": config.Reference{
 				Type: "Account",
@@ -78,6 +80,7 @@ func Configure(p *config.Provider) {
 	})
 
 	p.AddResourceConfigurator("azurerm_storage_container", func(r *config.Resource) {
+		r.Version = common.VersionV1Alpha2
 		r.References = config.References{
 			"storage_account_name": config.Reference{
 				Type: "Account",

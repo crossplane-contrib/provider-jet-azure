@@ -19,42 +19,6 @@ package v1alpha1
 
 import resource "github.com/crossplane/crossplane-runtime/pkg/resource"
 
-// GetItems of this IOTHubConsumerGroupList.
-func (l *IOTHubConsumerGroupList) GetItems() []resource.Managed {
-	items := make([]resource.Managed, len(l.Items))
-	for i := range l.Items {
-		items[i] = &l.Items[i]
-	}
-	return items
-}
-
-// GetItems of this IOTHubDPSCertificateList.
-func (l *IOTHubDPSCertificateList) GetItems() []resource.Managed {
-	items := make([]resource.Managed, len(l.Items))
-	for i := range l.Items {
-		items[i] = &l.Items[i]
-	}
-	return items
-}
-
-// GetItems of this IOTHubDPSList.
-func (l *IOTHubDPSList) GetItems() []resource.Managed {
-	items := make([]resource.Managed, len(l.Items))
-	for i := range l.Items {
-		items[i] = &l.Items[i]
-	}
-	return items
-}
-
-// GetItems of this IOTHubDPSSharedAccessPolicyList.
-func (l *IOTHubDPSSharedAccessPolicyList) GetItems() []resource.Managed {
-	items := make([]resource.Managed, len(l.Items))
-	for i := range l.Items {
-		items[i] = &l.Items[i]
-	}
-	return items
-}
-
 // GetItems of this IOTHubEndpointEventHubList.
 func (l *IOTHubEndpointEventHubList) GetItems() []resource.Managed {
 	items := make([]resource.Managed, len(l.Items))
@@ -109,26 +73,8 @@ func (l *IOTHubFallbackRouteList) GetItems() []resource.Managed {
 	return items
 }
 
-// GetItems of this IOTHubList.
-func (l *IOTHubList) GetItems() []resource.Managed {
-	items := make([]resource.Managed, len(l.Items))
-	for i := range l.Items {
-		items[i] = &l.Items[i]
-	}
-	return items
-}
-
 // GetItems of this IOTHubRouteList.
 func (l *IOTHubRouteList) GetItems() []resource.Managed {
-	items := make([]resource.Managed, len(l.Items))
-	for i := range l.Items {
-		items[i] = &l.Items[i]
-	}
-	return items
-}
-
-// GetItems of this IOTHubSharedAccessPolicyList.
-func (l *IOTHubSharedAccessPolicyList) GetItems() []resource.Managed {
 	items := make([]resource.Managed, len(l.Items))
 	for i := range l.Items {
 		items[i] = &l.Items[i]

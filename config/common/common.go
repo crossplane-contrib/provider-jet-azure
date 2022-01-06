@@ -41,6 +41,9 @@ const (
 	nameReferenceKind = "name"
 	// idReferenceKind represents ID reference kind
 	idReferenceKind = "id"
+
+	// VersionV1Alpha2 is used as minimum version for all manually configured resources.
+	VersionV1Alpha2 = "v1alpha2"
 )
 
 // GetNameFromFullyQualifiedID extracts external-name from Azure ID
@@ -110,8 +113,8 @@ func GetFullyQualifiedIDFn(serviceProvider string, keyPairs ...string) tjconfig.
 // rules first will be possible. Since there is no fixed index for key-value pairs in maps, it is not possible to place
 // rules from specific to general. Therefore, array is used here.
 var referenceRules = [][]string{
-	{"resource_group$", "/azure/v1alpha1.ResourceGroup"},
-	{"subnet$", "/network/v1alpha1.Subnet"},
+	{"resource_group$", rconfig.ResourceGroupPath},
+	{"subnet$", rconfig.SubnetPath},
 }
 
 // AddCommonReferences adds some common reference fields.

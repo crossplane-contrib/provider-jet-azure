@@ -32,12 +32,13 @@ import (
 // Configure configures redis group
 func Configure(p *config.Provider) {
 	p.AddResourceConfigurator("azurerm_redis_cache", func(r *config.Resource) {
+		r.Version = common.VersionV1Alpha2
 		r.References = config.References{
 			"resource_group_name": config.Reference{
-				Type: rconfig.APISPackagePath + "/azure/v1alpha1.ResourceGroup",
+				Type: rconfig.ResourceGroupReferencePath,
 			},
 			"subnet_id": config.Reference{
-				Type:      rconfig.APISPackagePath + "/network/v1alpha1.Subnet",
+				Type:      rconfig.SubnetReferencePath,
 				Extractor: rconfig.ExtractResourceIDFuncPath,
 			},
 		}
@@ -50,12 +51,13 @@ func Configure(p *config.Provider) {
 		)
 	})
 	p.AddResourceConfigurator("azurerm_redis_firewall_rule", func(r *config.Resource) {
+		r.Version = common.VersionV1Alpha2
 		r.References = config.References{
 			"redis_cache_name": config.Reference{
 				Type: "RedisCache",
 			},
 			"resource_group_name": config.Reference{
-				Type: rconfig.APISPackagePath + "/azure/v1alpha1.ResourceGroup",
+				Type: rconfig.ResourceGroupReferencePath,
 			},
 		}
 		r.UseAsync = true
@@ -68,6 +70,7 @@ func Configure(p *config.Provider) {
 		)
 	})
 	p.AddResourceConfigurator("azurerm_redis_linked_server", func(r *config.Resource) {
+		r.Version = common.VersionV1Alpha2
 		r.References = config.References{
 			"linked_redis_cache_id": config.Reference{
 				Type:      "RedisCache",
@@ -77,7 +80,7 @@ func Configure(p *config.Provider) {
 				Type: "RedisCache",
 			},
 			"resource_group_name": config.Reference{
-				Type: rconfig.APISPackagePath + "/azure/v1alpha1.ResourceGroup",
+				Type: rconfig.ResourceGroupReferencePath,
 			},
 		}
 		r.UseAsync = true
@@ -85,9 +88,10 @@ func Configure(p *config.Provider) {
 	})
 
 	p.AddResourceConfigurator("azurerm_redis_enterprise_cluster", func(r *config.Resource) {
+		r.Version = common.VersionV1Alpha2
 		r.References = config.References{
 			"resource_group_name": config.Reference{
-				Type: rconfig.APISPackagePath + "/azure/v1alpha1.ResourceGroup",
+				Type: rconfig.ResourceGroupReferencePath,
 			},
 		}
 		r.UseAsync = true
@@ -100,9 +104,10 @@ func Configure(p *config.Provider) {
 	})
 
 	p.AddResourceConfigurator("azurerm_redis_enterprise_database", func(r *config.Resource) {
+		r.Version = common.VersionV1Alpha2
 		r.References = config.References{
 			"resource_group_name": config.Reference{
-				Type: rconfig.APISPackagePath + "/azure/v1alpha1.ResourceGroup",
+				Type: rconfig.ResourceGroupReferencePath,
 			},
 			"cluster_id": config.Reference{
 				Type:      "RedisEnterpriseCluster",
