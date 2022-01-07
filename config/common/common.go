@@ -47,20 +47,56 @@ const (
 )
 
 // GetNameFromFullyQualifiedID extracts external-name from Azure ID
+// using the "id" attribute.
 // Examples of fully qualifiers:
 // /subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/mygroup1/providers/Microsoft.DBforMySQL/servers/server1
 // /subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/mygroup1/providers/Microsoft.Network/networkInterfaces/nic1
 func GetNameFromFullyQualifiedID(tfstate map[string]interface{}) (string, error) {
-	id, ok := tfstate["id"]
+	return ParseNameFromIDField(tfstate, "id")
+}
+
+// GetAttributeValue reads a string attribute from the specified map
+func GetAttributeValue(attrMap map[string]interface{}, attr string) (string, error) {
+	v, ok := attrMap[attr]
 	if !ok {
-		return "", errors.Errorf(ErrFmtNoAttribute, "id")
+		return "", errors.Errorf(ErrFmtNoAttribute, attr)
 	}
-	idStr, ok := id.(string)
+	vStr, ok := v.(string)
 	if !ok {
-		return "", errors.Errorf(ErrFmtUnexpectedType, "id")
+		return "", errors.Errorf(ErrFmtUnexpectedType, attr)
+	}
+	return vStr, nil
+}
+
+// ParseNameFromIDField extracts external-name from Azure ID
+// using the specified field.
+// Examples of fully qualifiers:
+// /subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/mygroup1/providers/Microsoft.DBforMySQL/servers/server1
+// /subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/mygroup1/providers/Microsoft.Network/networkInterfaces/nic1
+func ParseNameFromIDField(attrMap map[string]interface{}, idAttr string) (string, error) {
+	idStr, err := GetAttributeValue(attrMap, idAttr)
+	if err != nil {
+		return "", err
 	}
 	words := strings.Split(idStr, "/")
 	return words[len(words)-1], nil
+}
+
+// GetResourceNameFromIDURLFn returns a GetExternalNameFn fuction that
+// extracts external-name from an Azure URL ID at the specified pos.
+// Examples of persistent IDs to be parsed with pos==2:
+// https://example.vault.azure.net/secrets/example-secret/c0ffee5f4d45440cb60c28672887f832
+// https://example-keyvault.vault.azure.net/keys/example-key/fdf067c93bbb4b22bff4d8b7a9a56217
+// https://key-vault-name.vault.azure.net/certificates/issuers/example
+func GetResourceNameFromIDURLFn(pos int) tjconfig.GetExternalNameFn {
+	return func(tfstate map[string]interface{}) (string, error) {
+		idStr, err := GetAttributeValue(tfstate, "id")
+		if err != nil {
+			return "", err
+		}
+		words := strings.Split(idStr, "/")
+		return words[len(words)-pos], nil
+	}
 }
 
 // GetFullyQualifiedIDFn returns a GetIDFn that can parse any Azure fully qualifier.
