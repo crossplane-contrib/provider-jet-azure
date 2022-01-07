@@ -1,5 +1,5 @@
-apiVersion: cache.azure.jet.crossplane.io/v1alpha1
-kind: FirewallRule
+apiVersion: cache.azure.jet.crossplane.io/v1alpha2
+kind: RedisFirewallRule
 metadata:
   name: examplerule
 spec:

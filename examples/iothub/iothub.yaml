@@ -1,4 +1,4 @@
-apiVersion: iothub.azure.jet.crossplane.io/v1alpha1
+apiVersion: devices.azure.jet.crossplane.io/v1alpha2
 kind: IOTHub
 metadata:
   name: example-iothub
