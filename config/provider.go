@@ -53,24 +53,24 @@ const (
 )
 
 var includedResources = []string{
-	// "azurerm_.+",
-	"azurerm_virtual_.+",
-	"azurerm_kubernetes_.+",
-	"azurerm_postgresql_.+",
-	"azurerm_cosmosdb_.+",
-	"azurerm_redis_.+",
-	"azurerm_resource_group",
-	"azurerm_subnet",
-	"azurerm_storage_account$",
-	"azurerm_storage_container$",
-	"azurerm_storage_blob$",
-	"azurerm_sql_server",
-	"azurerm_mssql_server$",
-	"azurerm_lb$",
-	"azurerm_log_analytics_workspace",
-	"azurerm_iothub.*",
-	"azurerm_monitor_metric_alert",
-	"azurerm_key_vault.*",
+	"azurerm_.+",
+	/*	"azurerm_virtual_.+",
+		"azurerm_kubernetes_.+",
+		"azurerm_postgresql_.+",
+		"azurerm_cosmosdb_.+",
+		"azurerm_redis_.+",
+		"azurerm_resource_group",
+		"azurerm_subnet",
+		"azurerm_storage_account$",
+		"azurerm_storage_container$",
+		"azurerm_storage_blob$",
+		"azurerm_sql_server",
+		"azurerm_mssql_server$",
+		"azurerm_lb$",
+		"azurerm_log_analytics_workspace",
+		"azurerm_iothub.*",
+		"azurerm_monitor_metric_alert",
+		"azurerm_key_vault.*",*/
 }
 
 // These resources cannot be generated because of their suffixes colliding with
