@@ -1,5 +1,5 @@
-apiVersion: monitor.azure.jet.crossplane.io/v1alpha1
-kind: MetricAlert
+apiVersion: insights.azure.jet.crossplane.io/v1alpha2
+kind: MonitorMetricAlert
 metadata:
   name: example-ma
 spec:
