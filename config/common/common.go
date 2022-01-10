@@ -156,15 +156,15 @@ var referenceRules = [][]string{
 // AddCommonReferences adds some common reference fields.
 // This is a part of resource generation pipeline.
 func AddCommonReferences(r *tjconfig.Resource) error {
-	return addCommonReferences(r.References, r.TerraformResource, r.ShortGroup, []string{})
+	return addCommonReferences(r.References, r.TerraformResource, r.ShortGroup, r.Version, []string{})
 }
 
-func addCommonReferences(references tjconfig.References, resource *schema.Resource, shortGroup string, nestedFieldNames []string) error {
+func addCommonReferences(references tjconfig.References, resource *schema.Resource, shortGroup, version string, nestedFieldNames []string) error {
 	for fieldName, s := range resource.Schema {
 		if s.Elem != nil {
 			e, ok := s.Elem.(*schema.Resource)
 			if ok {
-				if err := addCommonReferences(references, e, shortGroup, append(nestedFieldNames, fieldName)); err != nil {
+				if err := addCommonReferences(references, e, shortGroup, version, append(nestedFieldNames, fieldName)); err != nil {
 					return err
 				}
 				continue
@@ -183,7 +183,7 @@ func addCommonReferences(references tjconfig.References, resource *schema.Resour
 					references = make(map[string]tjconfig.Reference)
 				}
 				if _, ok := references[referenceName]; !ok {
-					referenceType = prepareReferenceType(shortGroup, referenceType)
+					referenceType = prepareReferenceType(shortGroup, version, referenceType)
 					addReference(references, referenceKind, referenceName, referenceType)
 				}
 			}
@@ -213,9 +213,9 @@ func searchReference(fieldName string) (string, error) {
 	return "", nil
 }
 
-func prepareReferenceType(shortGroup, referenceType string) string {
+func prepareReferenceType(shortGroup, version, referenceType string) string {
 	p := strings.Split(referenceType, "/")
-	if shortGroup == p[1] {
+	if shortGroup == p[1] && strings.Split(p[2], ".")[0] == version {
 		referenceType = strings.Split(p[2], ".")[1]
 	} else {
 		referenceType = rconfig.APISPackagePath + referenceType
