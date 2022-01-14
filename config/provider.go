@@ -133,7 +133,7 @@ func GetProvider() *tjconfig.Provider {
 		tjconfig.WithRootGroup("azure.jet.crossplane.io"),
 		tjconfig.WithIncludeList(includedResources),
 		tjconfig.WithSkipList(skipList),
-		tjconfig.WithDefaultResourceFn(defaultResource(externalNameConfig(), groupOverrides())),
+		tjconfig.WithDefaultResourceFn(defaultResource(externalNameConfig(), groupOverrides(), AddExternalTagsField())),
 	)
 	// external-name configuration for all resources
 	for name := range pc.Resources {
