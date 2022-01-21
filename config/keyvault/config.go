@@ -162,6 +162,7 @@ func Configure(p *config.Provider) {
 	})
 
 	p.AddResourceConfigurator("azurerm_key_vault_managed_storage_account", func(r *config.Resource) {
+		r.Version = common.VersionV1Alpha2
 		r.UseAsync = true
 		r.ExternalName = config.NameAsIdentifier
 		r.ExternalName.GetExternalNameFn = common.GetResourceNameFromIDURLFn(1)
@@ -169,7 +170,7 @@ func Configure(p *config.Provider) {
 		r.ExternalName.GetIDFn = getIssuerURLIDFn("storage")
 		r.References = config.References{
 			"key_vault_id": config.Reference{
-				Type:      rconfig.APISPackagePath + "/keyvault/v1alpha2.Vault",
+				Type:      "Vault",
 				Extractor: rconfig.ExtractResourceIDFuncPath,
 			},
 			"storage_account_id": config.Reference{
@@ -200,6 +201,32 @@ func Configure(p *config.Provider) {
 		r.References = config.References{
 			"key_vault_id": config.Reference{
 				Type:      "Vault",
+				Extractor: rconfig.ExtractResourceIDFuncPath,
+			},
+		}
+	})
+
+	p.AddResourceConfigurator("azurerm_key_vault_managed_storage_account_sas_token_definition", func(r *config.Resource) {
+		r.Version = common.VersionV1Alpha2
+		r.UseAsync = true
+		r.ExternalName = config.NameAsIdentifier
+		r.ExternalName.GetExternalNameFn = common.GetResourceNameFromIDURLFn(1)
+		// https://example-keyvault.vault.azure.net/storage/exampleStorageAcc01/sas/exampleSasDefinition01
+		r.ExternalName.GetIDFn = func(_ context.Context, _ string, parameters map[string]interface{}, _ map[string]interface{}) (string, error) {
+			managedStorageAccountID, err := common.GetAttributeValue(parameters, "managed_storage_account_id")
+			if err != nil {
+				return "", err
+			}
+			name, err := common.GetAttributeValue(parameters, "name")
+			if err != nil {
+				return "", err
+			}
+
+			return fmt.Sprintf("%s/sas/%s", managedStorageAccountID, name), nil
+		}
+		r.References = config.References{
+			"managed_storage_account_id": config.Reference{
+				Type:      "ManagedStorageAccount",
 				Extractor: rconfig.ExtractResourceIDFuncPath,
 			},
 		}

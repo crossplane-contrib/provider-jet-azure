@@ -31,7 +31,6 @@ import (
 	v1alpha1 "github.com/crossplane-contrib/provider-jet-azure/apis/devices/v1alpha1"
 	v1alpha2devices "github.com/crossplane-contrib/provider-jet-azure/apis/devices/v1alpha2"
 	v1alpha2insights "github.com/crossplane-contrib/provider-jet-azure/apis/insights/v1alpha2"
-	v1alpha1keyvault "github.com/crossplane-contrib/provider-jet-azure/apis/keyvault/v1alpha1"
 	v1alpha2keyvault "github.com/crossplane-contrib/provider-jet-azure/apis/keyvault/v1alpha2"
 	v1alpha2loganalytics "github.com/crossplane-contrib/provider-jet-azure/apis/loganalytics/v1alpha2"
 	v1alpha2network "github.com/crossplane-contrib/provider-jet-azure/apis/network/v1alpha2"
@@ -53,7 +52,6 @@ func init() {
 		v1alpha1.SchemeBuilder.AddToScheme,
 		v1alpha2devices.SchemeBuilder.AddToScheme,
 		v1alpha2insights.SchemeBuilder.AddToScheme,
-		v1alpha1keyvault.SchemeBuilder.AddToScheme,
 		v1alpha2keyvault.SchemeBuilder.AddToScheme,
 		v1alpha2loganalytics.SchemeBuilder.AddToScheme,
 		v1alpha2network.SchemeBuilder.AddToScheme,
