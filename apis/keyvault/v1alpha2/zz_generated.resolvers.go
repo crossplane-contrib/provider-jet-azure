@@ -21,6 +21,7 @@ import (
 	"context"
 	v1alpha2 "github.com/crossplane-contrib/provider-jet-azure/apis/azure/v1alpha2"
 	rconfig "github.com/crossplane-contrib/provider-jet-azure/apis/rconfig"
+	v1alpha21 "github.com/crossplane-contrib/provider-jet-azure/apis/storage/v1alpha2"
 	reference "github.com/crossplane/crossplane-runtime/pkg/reference"
 	errors "github.com/pkg/errors"
 	client "sigs.k8s.io/controller-runtime/pkg/client"
@@ -152,6 +153,74 @@ func (mg *ManagedHardwareSecurityModule) ResolveReferences(ctx context.Context, 
 	}
 	mg.Spec.ForProvider.ResourceGroupName = reference.ToPtrValue(rsp.ResolvedValue)
 	mg.Spec.ForProvider.ResourceGroupNameRef = rsp.ResolvedReference
+
+	return nil
+}
+
+// ResolveReferences of this ManagedStorageAccount.
+func (mg *ManagedStorageAccount) ResolveReferences(ctx context.Context, c client.Reader) error {
+	r := reference.NewAPIResolver(c, mg)
+
+	var rsp reference.ResolutionResponse
+	var err error
+
+	rsp, err = r.Resolve(ctx, reference.ResolutionRequest{
+		CurrentValue: reference.FromPtrValue(mg.Spec.ForProvider.KeyVaultID),
+		Extract:      rconfig.ExtractResourceID(),
+		Reference:    mg.Spec.ForProvider.KeyVaultIDRef,
+		Selector:     mg.Spec.ForProvider.KeyVaultIDSelector,
+		To: reference.To{
+			List:    &VaultList{},
+			Managed: &Vault{},
+		},
+	})
+	if err != nil {
+		return errors.Wrap(err, "mg.Spec.ForProvider.KeyVaultID")
+	}
+	mg.Spec.ForProvider.KeyVaultID = reference.ToPtrValue(rsp.ResolvedValue)
+	mg.Spec.ForProvider.KeyVaultIDRef = rsp.ResolvedReference
+
+	rsp, err = r.Resolve(ctx, reference.ResolutionRequest{
+		CurrentValue: reference.FromPtrValue(mg.Spec.ForProvider.StorageAccountID),
+		Extract:      rconfig.ExtractResourceID(),
+		Reference:    mg.Spec.ForProvider.StorageAccountIDRef,
+		Selector:     mg.Spec.ForProvider.StorageAccountIDSelector,
+		To: reference.To{
+			List:    &v1alpha21.AccountList{},
+			Managed: &v1alpha21.Account{},
+		},
+	})
+	if err != nil {
+		return errors.Wrap(err, "mg.Spec.ForProvider.StorageAccountID")
+	}
+	mg.Spec.ForProvider.StorageAccountID = reference.ToPtrValue(rsp.ResolvedValue)
+	mg.Spec.ForProvider.StorageAccountIDRef = rsp.ResolvedReference
+
+	return nil
+}
+
+// ResolveReferences of this ManagedStorageAccountSASTokenDefinition.
+func (mg *ManagedStorageAccountSASTokenDefinition) ResolveReferences(ctx context.Context, c client.Reader) error {
+	r := reference.NewAPIResolver(c, mg)
+
+	var rsp reference.ResolutionResponse
+	var err error
+
+	rsp, err = r.Resolve(ctx, reference.ResolutionRequest{
+		CurrentValue: reference.FromPtrValue(mg.Spec.ForProvider.ManagedStorageAccountID),
+		Extract:      rconfig.ExtractResourceID(),
+		Reference:    mg.Spec.ForProvider.ManagedStorageAccountIDRef,
+		Selector:     mg.Spec.ForProvider.ManagedStorageAccountIDSelector,
+		To: reference.To{
+			List:    &ManagedStorageAccountList{},
+			Managed: &ManagedStorageAccount{},
+		},
+	})
+	if err != nil {
+		return errors.Wrap(err, "mg.Spec.ForProvider.ManagedStorageAccountID")
+	}
+	mg.Spec.ForProvider.ManagedStorageAccountID = reference.ToPtrValue(rsp.ResolvedValue)
+	mg.Spec.ForProvider.ManagedStorageAccountIDRef = rsp.ResolvedReference
 
 	return nil
 }

@@ -299,6 +299,118 @@ func (mg *ManagedHardwareSecurityModule) SetWriteConnectionSecretToReference(r *
 	mg.Spec.WriteConnectionSecretToReference = r
 }
 
+// GetCondition of this ManagedStorageAccount.
+func (mg *ManagedStorageAccount) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
+	return mg.Status.GetCondition(ct)
+}
+
+// GetDeletionPolicy of this ManagedStorageAccount.
+func (mg *ManagedStorageAccount) GetDeletionPolicy() xpv1.DeletionPolicy {
+	return mg.Spec.DeletionPolicy
+}
+
+// GetProviderConfigReference of this ManagedStorageAccount.
+func (mg *ManagedStorageAccount) GetProviderConfigReference() *xpv1.Reference {
+	return mg.Spec.ProviderConfigReference
+}
+
+/*
+GetProviderReference of this ManagedStorageAccount.
+Deprecated: Use GetProviderConfigReference.
+*/
+func (mg *ManagedStorageAccount) GetProviderReference() *xpv1.Reference {
+	return mg.Spec.ProviderReference
+}
+
+// GetWriteConnectionSecretToReference of this ManagedStorageAccount.
+func (mg *ManagedStorageAccount) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
+	return mg.Spec.WriteConnectionSecretToReference
+}
+
+// SetConditions of this ManagedStorageAccount.
+func (mg *ManagedStorageAccount) SetConditions(c ...xpv1.Condition) {
+	mg.Status.SetConditions(c...)
+}
+
+// SetDeletionPolicy of this ManagedStorageAccount.
+func (mg *ManagedStorageAccount) SetDeletionPolicy(r xpv1.DeletionPolicy) {
+	mg.Spec.DeletionPolicy = r
+}
+
+// SetProviderConfigReference of this ManagedStorageAccount.
+func (mg *ManagedStorageAccount) SetProviderConfigReference(r *xpv1.Reference) {
+	mg.Spec.ProviderConfigReference = r
+}
+
+/*
+SetProviderReference of this ManagedStorageAccount.
+Deprecated: Use SetProviderConfigReference.
+*/
+func (mg *ManagedStorageAccount) SetProviderReference(r *xpv1.Reference) {
+	mg.Spec.ProviderReference = r
+}
+
+// SetWriteConnectionSecretToReference of this ManagedStorageAccount.
+func (mg *ManagedStorageAccount) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
+	mg.Spec.WriteConnectionSecretToReference = r
+}
+
+// GetCondition of this ManagedStorageAccountSASTokenDefinition.
+func (mg *ManagedStorageAccountSASTokenDefinition) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
+	return mg.Status.GetCondition(ct)
+}
+
+// GetDeletionPolicy of this ManagedStorageAccountSASTokenDefinition.
+func (mg *ManagedStorageAccountSASTokenDefinition) GetDeletionPolicy() xpv1.DeletionPolicy {
+	return mg.Spec.DeletionPolicy
+}
+
+// GetProviderConfigReference of this ManagedStorageAccountSASTokenDefinition.
+func (mg *ManagedStorageAccountSASTokenDefinition) GetProviderConfigReference() *xpv1.Reference {
+	return mg.Spec.ProviderConfigReference
+}
+
+/*
+GetProviderReference of this ManagedStorageAccountSASTokenDefinition.
+Deprecated: Use GetProviderConfigReference.
+*/
+func (mg *ManagedStorageAccountSASTokenDefinition) GetProviderReference() *xpv1.Reference {
+	return mg.Spec.ProviderReference
+}
+
+// GetWriteConnectionSecretToReference of this ManagedStorageAccountSASTokenDefinition.
+func (mg *ManagedStorageAccountSASTokenDefinition) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
+	return mg.Spec.WriteConnectionSecretToReference
+}
+
+// SetConditions of this ManagedStorageAccountSASTokenDefinition.
+func (mg *ManagedStorageAccountSASTokenDefinition) SetConditions(c ...xpv1.Condition) {
+	mg.Status.SetConditions(c...)
+}
+
+// SetDeletionPolicy of this ManagedStorageAccountSASTokenDefinition.
+func (mg *ManagedStorageAccountSASTokenDefinition) SetDeletionPolicy(r xpv1.DeletionPolicy) {
+	mg.Spec.DeletionPolicy = r
+}
+
+// SetProviderConfigReference of this ManagedStorageAccountSASTokenDefinition.
+func (mg *ManagedStorageAccountSASTokenDefinition) SetProviderConfigReference(r *xpv1.Reference) {
+	mg.Spec.ProviderConfigReference = r
+}
+
+/*
+SetProviderReference of this ManagedStorageAccountSASTokenDefinition.
+Deprecated: Use SetProviderConfigReference.
+*/
+func (mg *ManagedStorageAccountSASTokenDefinition) SetProviderReference(r *xpv1.Reference) {
+	mg.Spec.ProviderReference = r
+}
+
+// SetWriteConnectionSecretToReference of this ManagedStorageAccountSASTokenDefinition.
+func (mg *ManagedStorageAccountSASTokenDefinition) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
+	mg.Spec.WriteConnectionSecretToReference = r
+}
+
 // GetCondition of this Secret.
 func (mg *Secret) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
 	return mg.Status.GetCondition(ct)
