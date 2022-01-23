@@ -52,7 +52,7 @@ const (
 	modulePath     = "github.com/crossplane-contrib/provider-jet-azure"
 )
 
-var includedResources = []string{
+var _ = []string{
 	// "azurerm_.+",
 	"azurerm_virtual_.+",
 	"azurerm_kubernetes_.+",
@@ -131,7 +131,7 @@ func GetProvider() *tjconfig.Provider {
 		tf.Provider().ResourcesMap, resourcePrefix, modulePath,
 		tjconfig.WithShortName("azurejet"),
 		tjconfig.WithRootGroup("azure.jet.crossplane.io"),
-		tjconfig.WithIncludeList(includedResources),
+		// tjconfig.WithIncludeList(includedResources),
 		tjconfig.WithSkipList(skipList),
 		tjconfig.WithDefaultResourceFn(defaultResource(externalNameConfig(), groupOverrides())),
 	)
