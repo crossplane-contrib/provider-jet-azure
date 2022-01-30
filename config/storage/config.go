@@ -19,10 +19,8 @@ package storage
 import (
 	"context"
 	"fmt"
-	"strings"
 
 	"github.com/crossplane/terrajet/pkg/config"
-	"github.com/pkg/errors"
 
 	"github.com/crossplane-contrib/provider-jet-azure/apis/rconfig"
 	"github.com/crossplane-contrib/provider-jet-azure/config/common"
@@ -61,21 +59,11 @@ func Configure(p *config.Provider) {
 		}
 		r.UseAsync = true
 		r.ExternalName = config.NameAsIdentifier
-		// https://example.blob.core.windows.net/container/blob.vhd
-		r.ExternalName.GetExternalNameFn = func(tfstate map[string]interface{}) (string, error) {
-			id, ok := tfstate["id"]
-			if !ok {
-				return "", errors.Errorf(common.ErrFmtNoAttribute, "id")
-			}
-			idStr, ok := id.(string)
-			if !ok {
-				return "", errors.Errorf(common.ErrFmtUnexpectedType, "id")
-			}
-			idStr = strings.TrimSuffix(idStr, ".blob.core.windows.net/container/blob.vhd")
-			return strings.TrimPrefix(idStr, "https://"), nil
-		}
+		// https://storacc.blob.core.windows.net/container/blob.vhd
+		r.ExternalName.GetExternalNameFn = common.GetResourceNameFromIDURLFn(1)
 		r.ExternalName.GetIDFn = func(_ context.Context, name string, parameters map[string]interface{}, providerConfig map[string]interface{}) (string, error) {
-			return fmt.Sprintf("https://%s.blob.core.windows.net/container/blob.vhd", name), nil
+			return fmt.Sprintf("https://%s.blob.core.windows.net/%s/%s",
+				parameters["storage_account_name"], parameters["storage_container_name"], name), nil
 		}
 	})
 
@@ -88,21 +76,10 @@ func Configure(p *config.Provider) {
 		}
 		r.UseAsync = true
 		r.ExternalName = config.NameAsIdentifier
-		// https://example.blob.core.windows.net/container
-		r.ExternalName.GetExternalNameFn = func(tfstate map[string]interface{}) (string, error) {
-			id, ok := tfstate["id"]
-			if !ok {
-				return "", errors.Errorf(common.ErrFmtNoAttribute, "id")
-			}
-			idStr, ok := id.(string)
-			if !ok {
-				return "", errors.Errorf(common.ErrFmtUnexpectedType, "id")
-			}
-			idStr = strings.TrimSuffix(idStr, ".blob.core.windows.net/container")
-			return strings.TrimPrefix(idStr, "https://"), nil
-		}
+		// https://storacc.blob.core.windows.net/container
+		r.ExternalName.GetExternalNameFn = common.GetResourceNameFromIDURLFn(1)
 		r.ExternalName.GetIDFn = func(_ context.Context, name string, parameters map[string]interface{}, providerConfig map[string]interface{}) (string, error) {
-			return fmt.Sprintf("https://%s.blob.core.windows.net/container", name), nil
+			return fmt.Sprintf("https://%s.blob.core.windows.net/%s", parameters["storage_account_name"], name), nil
 		}
 	})
 }
