@@ -19,6 +19,8 @@ package config
 import (
 	"strings"
 
+	"github.com/hashicorp/terraform-plugin-sdk/v2/helper/schema"
+
 	tjconfig "github.com/crossplane/terrajet/pkg/config"
 	"github.com/crossplane/terrajet/pkg/types/name"
 )
@@ -76,6 +78,19 @@ func groupOverrides() tjconfig.ResourceOption {
 func externalNameConfig() tjconfig.ResourceOption {
 	return func(r *tjconfig.Resource) {
 		r.ExternalName = tjconfig.IdentifierFromProvider
+	}
+}
+
+// AddExternalTagsField adds ExternalTagsFieldName configuration for resources that have tags field.
+func AddExternalTagsField() tjconfig.ResourceOption {
+	return func(r *tjconfig.Resource) {
+		if s, ok := r.TerraformResource.Schema["tags"]; ok {
+			if s.Type == schema.TypeMap {
+				r.InitializerFns = []tjconfig.NewInitializerFn{
+					tjconfig.TagInitializer,
+				}
+			}
+		}
 	}
 }
 
