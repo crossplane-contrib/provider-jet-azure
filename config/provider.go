@@ -27,6 +27,7 @@ import (
 	"github.com/crossplane-contrib/provider-jet-azure/config/common"
 	"github.com/crossplane-contrib/provider-jet-azure/config/cosmosdb"
 	"github.com/crossplane-contrib/provider-jet-azure/config/datashare"
+	"github.com/crossplane-contrib/provider-jet-azure/config/eventhub"
 	"github.com/crossplane-contrib/provider-jet-azure/config/iothub"
 	"github.com/crossplane-contrib/provider-jet-azure/config/ip"
 	"github.com/crossplane-contrib/provider-jet-azure/config/keyvault"
@@ -71,6 +72,7 @@ var includedResources = []string{
 	"azurerm_iothub.*",
 	"azurerm_monitor_metric_alert",
 	"azurerm_key_vault.*",
+	"azurerm_eventhub_namespace",
 }
 
 // These resources cannot be generated because of their suffixes colliding with
@@ -167,6 +169,7 @@ func GetProvider() *tjconfig.Provider {
 		notificationhubs.Configure,
 		storagesync.Configure,
 		keyvault.Configure,
+		eventhub.Configure,
 	} {
 		configure(pc)
 	}
