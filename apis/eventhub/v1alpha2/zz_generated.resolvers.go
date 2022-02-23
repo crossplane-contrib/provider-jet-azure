@@ -27,8 +27,8 @@ import (
 	client "sigs.k8s.io/controller-runtime/pkg/client"
 )
 
-// ResolveReferences of this Namespace.
-func (mg *Namespace) ResolveReferences(ctx context.Context, c client.Reader) error {
+// ResolveReferences of this EventNamespace.
+func (mg *EventNamespace) ResolveReferences(ctx context.Context, c client.Reader) error {
 	r := reference.NewAPIResolver(c, mg)
 
 	var rsp reference.ResolutionResponse

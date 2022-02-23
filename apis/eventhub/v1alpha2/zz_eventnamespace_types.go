@@ -25,35 +25,11 @@ import (
 	v1 "github.com/crossplane/crossplane-runtime/apis/common/v1"
 )
 
-type IPRuleObservation struct {
-}
-
-type IPRuleParameters struct {
-
-	// +kubebuilder:validation:Optional
-	Action *string `json:"action,omitempty" tf:"action,omitempty"`
-
-	// +kubebuilder:validation:Required
-	IPMask *string `json:"ipMask" tf:"ip_mask,omitempty"`
-}
-
-type IdentityObservation struct {
-	PrincipalID *string `json:"principalId,omitempty" tf:"principal_id,omitempty"`
-
-	TenantID *string `json:"tenantId,omitempty" tf:"tenant_id,omitempty"`
-}
-
-type IdentityParameters struct {
-
-	// +kubebuilder:validation:Optional
-	Type *string `json:"type,omitempty" tf:"type,omitempty"`
-}
-
-type NamespaceObservation struct {
+type EventNamespaceObservation struct {
 	ID *string `json:"id,omitempty" tf:"id,omitempty"`
 }
 
-type NamespaceParameters struct {
+type EventNamespaceParameters struct {
 
 	// +kubebuilder:validation:Optional
 	AutoInflateEnabled *bool `json:"autoInflateEnabled,omitempty" tf:"auto_inflate_enabled,omitempty"`
@@ -96,6 +72,30 @@ type NamespaceParameters struct {
 	ZoneRedundant *bool `json:"zoneRedundant,omitempty" tf:"zone_redundant,omitempty"`
 }
 
+type IPRuleObservation struct {
+}
+
+type IPRuleParameters struct {
+
+	// +kubebuilder:validation:Optional
+	Action *string `json:"action,omitempty" tf:"action,omitempty"`
+
+	// +kubebuilder:validation:Required
+	IPMask *string `json:"ipMask" tf:"ip_mask,omitempty"`
+}
+
+type IdentityObservation struct {
+	PrincipalID *string `json:"principalId,omitempty" tf:"principal_id,omitempty"`
+
+	TenantID *string `json:"tenantId,omitempty" tf:"tenant_id,omitempty"`
+}
+
+type IdentityParameters struct {
+
+	// +kubebuilder:validation:Optional
+	Type *string `json:"type,omitempty" tf:"type,omitempty"`
+}
+
 type NetworkRulesetsObservation struct {
 }
 
@@ -134,51 +134,51 @@ type VirtualNetworkRuleParameters struct {
 	SubnetIDSelector *v1.Selector `json:"subnetIdSelector,omitempty" tf:"-"`
 }
 
-// NamespaceSpec defines the desired state of Namespace
-type NamespaceSpec struct {
+// EventNamespaceSpec defines the desired state of EventNamespace
+type EventNamespaceSpec struct {
 	v1.ResourceSpec `json:",inline"`
-	ForProvider     NamespaceParameters `json:"forProvider"`
+	ForProvider     EventNamespaceParameters `json:"forProvider"`
 }
 
-// NamespaceStatus defines the observed state of Namespace.
-type NamespaceStatus struct {
+// EventNamespaceStatus defines the observed state of EventNamespace.
+type EventNamespaceStatus struct {
 	v1.ResourceStatus `json:",inline"`
-	AtProvider        NamespaceObservation `json:"atProvider,omitempty"`
+	AtProvider        EventNamespaceObservation `json:"atProvider,omitempty"`
 }
 
 // +kubebuilder:object:root=true
 
-// Namespace is the Schema for the Namespaces API
+// EventNamespace is the Schema for the EventNamespaces API
 // +kubebuilder:printcolumn:name="READY",type="string",JSONPath=".status.conditions[?(@.type=='Ready')].status"
 // +kubebuilder:printcolumn:name="SYNCED",type="string",JSONPath=".status.conditions[?(@.type=='Synced')].status"
 // +kubebuilder:printcolumn:name="EXTERNAL-NAME",type="string",JSONPath=".metadata.annotations.crossplane\\.io/external-name"
 // +kubebuilder:printcolumn:name="AGE",type="date",JSONPath=".metadata.creationTimestamp"
 // +kubebuilder:subresource:status
 // +kubebuilder:resource:scope=Cluster,categories={crossplane,managed,azurejet}
-type Namespace struct {
+type EventNamespace struct {
 	metav1.TypeMeta   `json:",inline"`
 	metav1.ObjectMeta `json:"metadata,omitempty"`
-	Spec              NamespaceSpec   `json:"spec"`
-	Status            NamespaceStatus `json:"status,omitempty"`
+	Spec              EventNamespaceSpec   `json:"spec"`
+	Status            EventNamespaceStatus `json:"status,omitempty"`
 }
 
 // +kubebuilder:object:root=true
 
-// NamespaceList contains a list of Namespaces
-type NamespaceList struct {
+// EventNamespaceList contains a list of EventNamespaces
+type EventNamespaceList struct {
 	metav1.TypeMeta `json:",inline"`
 	metav1.ListMeta `json:"metadata,omitempty"`
-	Items           []Namespace `json:"items"`
+	Items           []EventNamespace `json:"items"`
 }
 
 // Repository type metadata.
 var (
-	Namespace_Kind             = "Namespace"
-	Namespace_GroupKind        = schema.GroupKind{Group: CRDGroup, Kind: Namespace_Kind}.String()
-	Namespace_KindAPIVersion   = Namespace_Kind + "." + CRDGroupVersion.String()
-	Namespace_GroupVersionKind = CRDGroupVersion.WithKind(Namespace_Kind)
+	EventNamespace_Kind             = "EventNamespace"
+	EventNamespace_GroupKind        = schema.GroupKind{Group: CRDGroup, Kind: EventNamespace_Kind}.String()
+	EventNamespace_KindAPIVersion   = EventNamespace_Kind + "." + CRDGroupVersion.String()
+	EventNamespace_GroupVersionKind = CRDGroupVersion.WithKind(EventNamespace_Kind)
 )
 
 func init() {
-	SchemeBuilder.Register(&Namespace{}, &NamespaceList{})
+	SchemeBuilder.Register(&EventNamespace{}, &EventNamespaceList{})
 }

@@ -27,6 +27,8 @@ import (
 func Configure(p *config.Provider) {
 	p.AddResourceConfigurator("azurerm_eventhub_namespace", func(r *config.Resource) {
 		r.Version = common.VersionV1Alpha2
+		r.Kind = "EventNamespace"
+		r.ShortGroup = "eventhub"
 		r.References = config.References{
 			"resource_group_name": config.Reference{
 				Type: rconfig.ResourceGroupReferencePath,
