@@ -41,5 +41,8 @@ func Configure(p *config.Provider) {
 		r.ExternalName.GetIDFn = common.GetFullyQualifiedIDFn("Microsoft.Eventhub",
 			"namespaces", "name",
 		)
+		r.LateInitializer = config.LateInitializer{
+			IgnoredFields: []string{"network_rulesets"},
+		}
 	})
 }
