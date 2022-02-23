@@ -40,6 +40,7 @@ import (
 // Setup adds a controller that reconciles MonitorScheduledQueryRulesAlert managed resources.
 func Setup(mgr ctrl.Manager, l logging.Logger, rl workqueue.RateLimiter, s terraform.SetupFn, ws *terraform.WorkspaceStore, cfg *tjconfig.Provider, concurrency int) error {
 	name := managed.ControllerName(v1alpha1.MonitorScheduledQueryRulesAlert_GroupVersionKind.String())
+	var initializers managed.InitializerChain
 	r := managed.NewReconciler(mgr,
 		xpresource.ManagedKind(v1alpha1.MonitorScheduledQueryRulesAlert_GroupVersionKind),
 		managed.WithExternalConnecter(tjcontroller.NewConnector(mgr.GetClient(), ws, s, cfg.Resources["azurerm_monitor_scheduled_query_rules_alert"])),
@@ -47,7 +48,7 @@ func Setup(mgr ctrl.Manager, l logging.Logger, rl workqueue.RateLimiter, s terra
 		managed.WithRecorder(event.NewAPIRecorder(mgr.GetEventRecorderFor(name))),
 		managed.WithFinalizer(terraform.NewWorkspaceFinalizer(ws, xpresource.NewAPIFinalizer(mgr.GetClient(), managed.FinalizerName))),
 		managed.WithTimeout(3*time.Minute),
-		managed.WithInitializers(),
+		managed.WithInitializers(initializers),
 	)
 
 	return ctrl.NewControllerManagedBy(mgr).
