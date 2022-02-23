@@ -71,6 +71,10 @@ import (
 	iothubfallbackroute "github.com/crossplane-contrib/provider-jet-azure/internal/controller/devices/iothubfallbackroute"
 	iothubroute "github.com/crossplane-contrib/provider-jet-azure/internal/controller/devices/iothubroute"
 	iothubsharedaccesspolicy "github.com/crossplane-contrib/provider-jet-azure/internal/controller/devices/iothubsharedaccesspolicy"
+	namespace "github.com/crossplane-contrib/provider-jet-azure/internal/controller/eventhub/namespace"
+	namespaceauthorizationrule "github.com/crossplane-contrib/provider-jet-azure/internal/controller/eventhub/namespaceauthorizationrule"
+	namespacecustomermanagedkey "github.com/crossplane-contrib/provider-jet-azure/internal/controller/eventhub/namespacecustomermanagedkey"
+	namespacedisasterrecoveryconfig "github.com/crossplane-contrib/provider-jet-azure/internal/controller/eventhub/namespacedisasterrecoveryconfig"
 	monitormetricalert "github.com/crossplane-contrib/provider-jet-azure/internal/controller/insights/monitormetricalert"
 	accesspolicy "github.com/crossplane-contrib/provider-jet-azure/internal/controller/keyvault/accesspolicy"
 	certificate "github.com/crossplane-contrib/provider-jet-azure/internal/controller/keyvault/certificate"
@@ -152,6 +156,10 @@ func Setup(mgr ctrl.Manager, l logging.Logger, wl workqueue.RateLimiter, ps terr
 		iothubfallbackroute.Setup,
 		iothubroute.Setup,
 		iothubsharedaccesspolicy.Setup,
+		namespace.Setup,
+		namespaceauthorizationrule.Setup,
+		namespacecustomermanagedkey.Setup,
+		namespacedisasterrecoveryconfig.Setup,
 		monitormetricalert.Setup,
 		accesspolicy.Setup,
 		certificate.Setup,
