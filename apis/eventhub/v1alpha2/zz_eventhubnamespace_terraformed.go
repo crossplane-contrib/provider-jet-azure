@@ -25,18 +25,18 @@ import (
 	"github.com/crossplane/terrajet/pkg/resource/json"
 )
 
-// GetTerraformResourceType returns Terraform resource type for this EventNamespace
-func (mg *EventNamespace) GetTerraformResourceType() string {
+// GetTerraformResourceType returns Terraform resource type for this EventHubNamespace
+func (mg *EventHubNamespace) GetTerraformResourceType() string {
 	return "azurerm_eventhub_namespace"
 }
 
-// GetConnectionDetailsMapping for this EventNamespace
-func (tr *EventNamespace) GetConnectionDetailsMapping() map[string]string {
+// GetConnectionDetailsMapping for this EventHubNamespace
+func (tr *EventHubNamespace) GetConnectionDetailsMapping() map[string]string {
 	return map[string]string{"default_primary_connection_string": "status.atProvider.defaultPrimaryConnectionString", "default_primary_connection_string_alias": "status.atProvider.defaultPrimaryConnectionStringAlias", "default_primary_key": "status.atProvider.defaultPrimaryKey", "default_secondary_connection_string": "status.atProvider.defaultSecondaryConnectionString", "default_secondary_connection_string_alias": "status.atProvider.defaultSecondaryConnectionStringAlias", "default_secondary_key": "status.atProvider.defaultSecondaryKey"}
 }
 
-// GetObservation of this EventNamespace
-func (tr *EventNamespace) GetObservation() (map[string]interface{}, error) {
+// GetObservation of this EventHubNamespace
+func (tr *EventHubNamespace) GetObservation() (map[string]interface{}, error) {
 	o, err := json.TFParser.Marshal(tr.Status.AtProvider)
 	if err != nil {
 		return nil, err
@@ -45,8 +45,8 @@ func (tr *EventNamespace) GetObservation() (map[string]interface{}, error) {
 	return base, json.TFParser.Unmarshal(o, &base)
 }
 
-// SetObservation for this EventNamespace
-func (tr *EventNamespace) SetObservation(obs map[string]interface{}) error {
+// SetObservation for this EventHubNamespace
+func (tr *EventHubNamespace) SetObservation(obs map[string]interface{}) error {
 	p, err := json.TFParser.Marshal(obs)
 	if err != nil {
 		return err
@@ -54,16 +54,16 @@ func (tr *EventNamespace) SetObservation(obs map[string]interface{}) error {
 	return json.TFParser.Unmarshal(p, &tr.Status.AtProvider)
 }
 
-// GetID returns ID of underlying Terraform resource of this EventNamespace
-func (tr *EventNamespace) GetID() string {
+// GetID returns ID of underlying Terraform resource of this EventHubNamespace
+func (tr *EventHubNamespace) GetID() string {
 	if tr.Status.AtProvider.ID == nil {
 		return ""
 	}
 	return *tr.Status.AtProvider.ID
 }
 
-// GetParameters of this EventNamespace
-func (tr *EventNamespace) GetParameters() (map[string]interface{}, error) {
+// GetParameters of this EventHubNamespace
+func (tr *EventHubNamespace) GetParameters() (map[string]interface{}, error) {
 	p, err := json.TFParser.Marshal(tr.Spec.ForProvider)
 	if err != nil {
 		return nil, err
@@ -72,8 +72,8 @@ func (tr *EventNamespace) GetParameters() (map[string]interface{}, error) {
 	return base, json.TFParser.Unmarshal(p, &base)
 }
 
-// SetParameters for this EventNamespace
-func (tr *EventNamespace) SetParameters(params map[string]interface{}) error {
+// SetParameters for this EventHubNamespace
+func (tr *EventHubNamespace) SetParameters(params map[string]interface{}) error {
 	p, err := json.TFParser.Marshal(params)
 	if err != nil {
 		return err
@@ -81,10 +81,10 @@ func (tr *EventNamespace) SetParameters(params map[string]interface{}) error {
 	return json.TFParser.Unmarshal(p, &tr.Spec.ForProvider)
 }
 
-// LateInitialize this EventNamespace using its observed tfState.
+// LateInitialize this EventHubNamespace using its observed tfState.
 // returns True if there are any spec changes for the resource.
-func (tr *EventNamespace) LateInitialize(attrs []byte) (bool, error) {
-	params := &EventNamespaceParameters{}
+func (tr *EventHubNamespace) LateInitialize(attrs []byte) (bool, error) {
+	params := &EventHubNamespaceParameters{}
 	if err := json.TFParser.Unmarshal(attrs, params); err != nil {
 		return false, errors.Wrap(err, "failed to unmarshal Terraform state parameters for late-initialization")
 	}
@@ -96,6 +96,6 @@ func (tr *EventNamespace) LateInitialize(attrs []byte) (bool, error) {
 }
 
 // GetTerraformSchemaVersion returns the associated Terraform schema version
-func (tr *EventNamespace) GetTerraformSchemaVersion() int {
+func (tr *EventHubNamespace) GetTerraformSchemaVersion() int {
 	return 0
 }

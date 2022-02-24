@@ -1,5 +1,5 @@
 apiVersion: eventhub.azure.jet.crossplane.io/v1alpha2
-kind: EventNamespace
+kind: EventHubNamespace
 metadata:
   name: example
 spec:

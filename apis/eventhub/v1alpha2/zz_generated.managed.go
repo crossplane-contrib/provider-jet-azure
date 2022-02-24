@@ -19,58 +19,58 @@ package v1alpha2
 
 import xpv1 "github.com/crossplane/crossplane-runtime/apis/common/v1"
 
-// GetCondition of this EventNamespace.
-func (mg *EventNamespace) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
+// GetCondition of this EventHubNamespace.
+func (mg *EventHubNamespace) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
 	return mg.Status.GetCondition(ct)
 }
 
-// GetDeletionPolicy of this EventNamespace.
-func (mg *EventNamespace) GetDeletionPolicy() xpv1.DeletionPolicy {
+// GetDeletionPolicy of this EventHubNamespace.
+func (mg *EventHubNamespace) GetDeletionPolicy() xpv1.DeletionPolicy {
 	return mg.Spec.DeletionPolicy
 }
 
-// GetProviderConfigReference of this EventNamespace.
-func (mg *EventNamespace) GetProviderConfigReference() *xpv1.Reference {
+// GetProviderConfigReference of this EventHubNamespace.
+func (mg *EventHubNamespace) GetProviderConfigReference() *xpv1.Reference {
 	return mg.Spec.ProviderConfigReference
 }
 
 /*
-GetProviderReference of this EventNamespace.
+GetProviderReference of this EventHubNamespace.
 Deprecated: Use GetProviderConfigReference.
 */
-func (mg *EventNamespace) GetProviderReference() *xpv1.Reference {
+func (mg *EventHubNamespace) GetProviderReference() *xpv1.Reference {
 	return mg.Spec.ProviderReference
 }
 
-// GetWriteConnectionSecretToReference of this EventNamespace.
-func (mg *EventNamespace) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
+// GetWriteConnectionSecretToReference of this EventHubNamespace.
+func (mg *EventHubNamespace) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
 	return mg.Spec.WriteConnectionSecretToReference
 }
 
-// SetConditions of this EventNamespace.
-func (mg *EventNamespace) SetConditions(c ...xpv1.Condition) {
+// SetConditions of this EventHubNamespace.
+func (mg *EventHubNamespace) SetConditions(c ...xpv1.Condition) {
 	mg.Status.SetConditions(c...)
 }
 
-// SetDeletionPolicy of this EventNamespace.
-func (mg *EventNamespace) SetDeletionPolicy(r xpv1.DeletionPolicy) {
+// SetDeletionPolicy of this EventHubNamespace.
+func (mg *EventHubNamespace) SetDeletionPolicy(r xpv1.DeletionPolicy) {
 	mg.Spec.DeletionPolicy = r
 }
 
-// SetProviderConfigReference of this EventNamespace.
-func (mg *EventNamespace) SetProviderConfigReference(r *xpv1.Reference) {
+// SetProviderConfigReference of this EventHubNamespace.
+func (mg *EventHubNamespace) SetProviderConfigReference(r *xpv1.Reference) {
 	mg.Spec.ProviderConfigReference = r
 }
 
 /*
-SetProviderReference of this EventNamespace.
+SetProviderReference of this EventHubNamespace.
 Deprecated: Use SetProviderConfigReference.
 */
-func (mg *EventNamespace) SetProviderReference(r *xpv1.Reference) {
+func (mg *EventHubNamespace) SetProviderReference(r *xpv1.Reference) {
 	mg.Spec.ProviderReference = r
 }
 
-// SetWriteConnectionSecretToReference of this EventNamespace.
-func (mg *EventNamespace) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
+// SetWriteConnectionSecretToReference of this EventHubNamespace.
+func (mg *EventHubNamespace) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
 	mg.Spec.WriteConnectionSecretToReference = r
 }

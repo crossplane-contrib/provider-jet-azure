@@ -4,7 +4,7 @@ metadata:
   annotations:
     controller-gen.kubebuilder.io/version: v0.6.2
   creationTimestamp: null
-  name: eventnamespaces.eventhub.azure.jet.crossplane.io
+  name: eventhubnamespaces.eventhub.azure.jet.crossplane.io
 spec:
   group: eventhub.azure.jet.crossplane.io
   names:
@@ -12,10 +12,10 @@ spec:
     - crossplane
     - managed
     - azurejet
-    kind: EventNamespace
-    listKind: EventNamespaceList
-    plural: eventnamespaces
-    singular: eventnamespace
+    kind: EventHubNamespace
+    listKind: EventHubNamespaceList
+    plural: eventhubnamespaces
+    singular: eventhubnamespace
   scope: Cluster
   versions:
   - additionalPrinterColumns:
@@ -34,7 +34,7 @@ spec:
     name: v1alpha2
     schema:
       openAPIV3Schema:
-        description: EventNamespace is the Schema for the EventNamespaces API
+        description: EventHubNamespace is the Schema for the EventHubNamespaces API
         properties:
           apiVersion:
             description: 'APIVersion defines the versioned schema of this representation
@@ -49,7 +49,7 @@ spec:
           metadata:
             type: object
           spec:
-            description: EventNamespaceSpec defines the desired state of EventNamespace
+            description: EventHubNamespaceSpec defines the desired state of EventHubNamespace
             properties:
               deletionPolicy:
                 default: Delete
@@ -218,7 +218,7 @@ spec:
             - forProvider
             type: object
           status:
-            description: EventNamespaceStatus defines the observed state of EventNamespace.
+            description: EventHubNamespaceStatus defines the observed state of EventHubNamespace.
             properties:
               atProvider:
                 properties:

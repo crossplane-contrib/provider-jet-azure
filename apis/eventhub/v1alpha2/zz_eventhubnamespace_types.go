@@ -25,11 +25,11 @@ import (
 	v1 "github.com/crossplane/crossplane-runtime/apis/common/v1"
 )
 
-type EventNamespaceObservation struct {
+type EventHubNamespaceObservation struct {
 	ID *string `json:"id,omitempty" tf:"id,omitempty"`
 }
 
-type EventNamespaceParameters struct {
+type EventHubNamespaceParameters struct {
 
 	// +kubebuilder:validation:Optional
 	AutoInflateEnabled *bool `json:"autoInflateEnabled,omitempty" tf:"auto_inflate_enabled,omitempty"`
@@ -134,51 +134,51 @@ type VirtualNetworkRuleParameters struct {
 	SubnetIDSelector *v1.Selector `json:"subnetIdSelector,omitempty" tf:"-"`
 }
 
-// EventNamespaceSpec defines the desired state of EventNamespace
-type EventNamespaceSpec struct {
+// EventHubNamespaceSpec defines the desired state of EventHubNamespace
+type EventHubNamespaceSpec struct {
 	v1.ResourceSpec `json:",inline"`
-	ForProvider     EventNamespaceParameters `json:"forProvider"`
+	ForProvider     EventHubNamespaceParameters `json:"forProvider"`
 }
 
-// EventNamespaceStatus defines the observed state of EventNamespace.
-type EventNamespaceStatus struct {
+// EventHubNamespaceStatus defines the observed state of EventHubNamespace.
+type EventHubNamespaceStatus struct {
 	v1.ResourceStatus `json:",inline"`
-	AtProvider        EventNamespaceObservation `json:"atProvider,omitempty"`
+	AtProvider        EventHubNamespaceObservation `json:"atProvider,omitempty"`
 }
 
 // +kubebuilder:object:root=true
 
-// EventNamespace is the Schema for the EventNamespaces API
+// EventHubNamespace is the Schema for the EventHubNamespaces API
 // +kubebuilder:printcolumn:name="READY",type="string",JSONPath=".status.conditions[?(@.type=='Ready')].status"
 // +kubebuilder:printcolumn:name="SYNCED",type="string",JSONPath=".status.conditions[?(@.type=='Synced')].status"
 // +kubebuilder:printcolumn:name="EXTERNAL-NAME",type="string",JSONPath=".metadata.annotations.crossplane\\.io/external-name"
 // +kubebuilder:printcolumn:name="AGE",type="date",JSONPath=".metadata.creationTimestamp"
 // +kubebuilder:subresource:status
 // +kubebuilder:resource:scope=Cluster,categories={crossplane,managed,azurejet}
-type EventNamespace struct {
+type EventHubNamespace struct {
 	metav1.TypeMeta   `json:",inline"`
 	metav1.ObjectMeta `json:"metadata,omitempty"`
-	Spec              EventNamespaceSpec   `json:"spec"`
-	Status            EventNamespaceStatus `json:"status,omitempty"`
+	Spec              EventHubNamespaceSpec   `json:"spec"`
+	Status            EventHubNamespaceStatus `json:"status,omitempty"`
 }
 
 // +kubebuilder:object:root=true
 
-// EventNamespaceList contains a list of EventNamespaces
-type EventNamespaceList struct {
+// EventHubNamespaceList contains a list of EventHubNamespaces
+type EventHubNamespaceList struct {
 	metav1.TypeMeta `json:",inline"`
 	metav1.ListMeta `json:"metadata,omitempty"`
-	Items           []EventNamespace `json:"items"`
+	Items           []EventHubNamespace `json:"items"`
 }
 
 // Repository type metadata.
 var (
-	EventNamespace_Kind             = "EventNamespace"
-	EventNamespace_GroupKind        = schema.GroupKind{Group: CRDGroup, Kind: EventNamespace_Kind}.String()
-	EventNamespace_KindAPIVersion   = EventNamespace_Kind + "." + CRDGroupVersion.String()
-	EventNamespace_GroupVersionKind = CRDGroupVersion.WithKind(EventNamespace_Kind)
+	EventHubNamespace_Kind             = "EventHubNamespace"
+	EventHubNamespace_GroupKind        = schema.GroupKind{Group: CRDGroup, Kind: EventHubNamespace_Kind}.String()
+	EventHubNamespace_KindAPIVersion   = EventHubNamespace_Kind + "." + CRDGroupVersion.String()
+	EventHubNamespace_GroupVersionKind = CRDGroupVersion.WithKind(EventHubNamespace_Kind)
 )
 
 func init() {
-	SchemeBuilder.Register(&EventNamespace{}, &EventNamespaceList{})
+	SchemeBuilder.Register(&EventHubNamespace{}, &EventHubNamespaceList{})
 }
