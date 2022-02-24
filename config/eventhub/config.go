@@ -45,4 +45,26 @@ func Configure(p *config.Provider) {
 			IgnoredFields: []string{"network_rulesets"},
 		}
 	})
+
+	p.AddResourceConfigurator("azurerm_eventhub", func(r *config.Resource) {
+		r.Version = common.VersionV1Alpha2
+		r.Kind = "EventHub"
+		r.ShortGroup = "eventhub"
+		r.References = config.References{
+			"resource_group_name": config.Reference{
+				Type: rconfig.ResourceGroupReferencePath,
+			},
+			"namespace_name": config.Reference{
+				Type: "EventHubNamespace",
+			},
+		}
+		r.UseAsync = true
+		r.ExternalName = config.NameAsIdentifier
+		r.ExternalName.GetExternalNameFn = common.GetNameFromFullyQualifiedID
+		// /subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/group1/providers/Microsoft.EventHub/namespaces/namespace1/eventhubs/eventhub1
+		r.ExternalName.GetIDFn = common.GetFullyQualifiedIDFn("Microsoft.Eventhub",
+			"namespaces", "name",
+			"eventhubs", "name",
+		)
+	})
 }

@@ -19,13 +19,55 @@ package v1alpha2
 
 import (
 	"context"
-	v1alpha21 "github.com/crossplane-contrib/provider-jet-azure/apis/azure/v1alpha2"
-	v1alpha2 "github.com/crossplane-contrib/provider-jet-azure/apis/network/v1alpha2"
+	v1alpha2 "github.com/crossplane-contrib/provider-jet-azure/apis/azure/v1alpha2"
+	v1alpha21 "github.com/crossplane-contrib/provider-jet-azure/apis/network/v1alpha2"
 	rconfig "github.com/crossplane-contrib/provider-jet-azure/apis/rconfig"
 	reference "github.com/crossplane/crossplane-runtime/pkg/reference"
 	errors "github.com/pkg/errors"
 	client "sigs.k8s.io/controller-runtime/pkg/client"
 )
+
+// ResolveReferences of this EventHub.
+func (mg *EventHub) ResolveReferences(ctx context.Context, c client.Reader) error {
+	r := reference.NewAPIResolver(c, mg)
+
+	var rsp reference.ResolutionResponse
+	var err error
+
+	rsp, err = r.Resolve(ctx, reference.ResolutionRequest{
+		CurrentValue: reference.FromPtrValue(mg.Spec.ForProvider.NamespaceName),
+		Extract:      reference.ExternalName(),
+		Reference:    mg.Spec.ForProvider.NamespaceNameRef,
+		Selector:     mg.Spec.ForProvider.NamespaceNameSelector,
+		To: reference.To{
+			List:    &EventHubNamespaceList{},
+			Managed: &EventHubNamespace{},
+		},
+	})
+	if err != nil {
+		return errors.Wrap(err, "mg.Spec.ForProvider.NamespaceName")
+	}
+	mg.Spec.ForProvider.NamespaceName = reference.ToPtrValue(rsp.ResolvedValue)
+	mg.Spec.ForProvider.NamespaceNameRef = rsp.ResolvedReference
+
+	rsp, err = r.Resolve(ctx, reference.ResolutionRequest{
+		CurrentValue: reference.FromPtrValue(mg.Spec.ForProvider.ResourceGroupName),
+		Extract:      reference.ExternalName(),
+		Reference:    mg.Spec.ForProvider.ResourceGroupNameRef,
+		Selector:     mg.Spec.ForProvider.ResourceGroupNameSelector,
+		To: reference.To{
+			List:    &v1alpha2.ResourceGroupList{},
+			Managed: &v1alpha2.ResourceGroup{},
+		},
+	})
+	if err != nil {
+		return errors.Wrap(err, "mg.Spec.ForProvider.ResourceGroupName")
+	}
+	mg.Spec.ForProvider.ResourceGroupName = reference.ToPtrValue(rsp.ResolvedValue)
+	mg.Spec.ForProvider.ResourceGroupNameRef = rsp.ResolvedReference
+
+	return nil
+}
 
 // ResolveReferences of this EventHubNamespace.
 func (mg *EventHubNamespace) ResolveReferences(ctx context.Context, c client.Reader) error {
@@ -42,8 +84,8 @@ func (mg *EventHubNamespace) ResolveReferences(ctx context.Context, c client.Rea
 				Reference:    mg.Spec.ForProvider.NetworkRulesets[i3].VirtualNetworkRule[i4].SubnetIDRef,
 				Selector:     mg.Spec.ForProvider.NetworkRulesets[i3].VirtualNetworkRule[i4].SubnetIDSelector,
 				To: reference.To{
-					List:    &v1alpha2.SubnetList{},
-					Managed: &v1alpha2.Subnet{},
+					List:    &v1alpha21.SubnetList{},
+					Managed: &v1alpha21.Subnet{},
 				},
 			})
 			if err != nil {
@@ -60,8 +102,8 @@ func (mg *EventHubNamespace) ResolveReferences(ctx context.Context, c client.Rea
 		Reference:    mg.Spec.ForProvider.ResourceGroupNameRef,
 		Selector:     mg.Spec.ForProvider.ResourceGroupNameSelector,
 		To: reference.To{
-			List:    &v1alpha21.ResourceGroupList{},
-			Managed: &v1alpha21.ResourceGroup{},
+			List:    &v1alpha2.ResourceGroupList{},
+			Managed: &v1alpha2.ResourceGroup{},
 		},
 	})
 	if err != nil {

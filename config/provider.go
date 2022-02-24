@@ -73,6 +73,7 @@ var includedResources = []string{
 	"azurerm_monitor_metric_alert",
 	"azurerm_key_vault.*",
 	"azurerm_eventhub_namespace",
+	"azurerm_eventhub",
 }
 
 // These resources cannot be generated because of their suffixes colliding with

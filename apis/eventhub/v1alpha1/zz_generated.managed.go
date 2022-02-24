@@ -19,6 +19,174 @@ package v1alpha1
 
 import xpv1 "github.com/crossplane/crossplane-runtime/apis/common/v1"
 
+// GetCondition of this AuthorizationRule.
+func (mg *AuthorizationRule) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
+	return mg.Status.GetCondition(ct)
+}
+
+// GetDeletionPolicy of this AuthorizationRule.
+func (mg *AuthorizationRule) GetDeletionPolicy() xpv1.DeletionPolicy {
+	return mg.Spec.DeletionPolicy
+}
+
+// GetProviderConfigReference of this AuthorizationRule.
+func (mg *AuthorizationRule) GetProviderConfigReference() *xpv1.Reference {
+	return mg.Spec.ProviderConfigReference
+}
+
+/*
+GetProviderReference of this AuthorizationRule.
+Deprecated: Use GetProviderConfigReference.
+*/
+func (mg *AuthorizationRule) GetProviderReference() *xpv1.Reference {
+	return mg.Spec.ProviderReference
+}
+
+// GetWriteConnectionSecretToReference of this AuthorizationRule.
+func (mg *AuthorizationRule) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
+	return mg.Spec.WriteConnectionSecretToReference
+}
+
+// SetConditions of this AuthorizationRule.
+func (mg *AuthorizationRule) SetConditions(c ...xpv1.Condition) {
+	mg.Status.SetConditions(c...)
+}
+
+// SetDeletionPolicy of this AuthorizationRule.
+func (mg *AuthorizationRule) SetDeletionPolicy(r xpv1.DeletionPolicy) {
+	mg.Spec.DeletionPolicy = r
+}
+
+// SetProviderConfigReference of this AuthorizationRule.
+func (mg *AuthorizationRule) SetProviderConfigReference(r *xpv1.Reference) {
+	mg.Spec.ProviderConfigReference = r
+}
+
+/*
+SetProviderReference of this AuthorizationRule.
+Deprecated: Use SetProviderConfigReference.
+*/
+func (mg *AuthorizationRule) SetProviderReference(r *xpv1.Reference) {
+	mg.Spec.ProviderReference = r
+}
+
+// SetWriteConnectionSecretToReference of this AuthorizationRule.
+func (mg *AuthorizationRule) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
+	mg.Spec.WriteConnectionSecretToReference = r
+}
+
+// GetCondition of this Cluster.
+func (mg *Cluster) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
+	return mg.Status.GetCondition(ct)
+}
+
+// GetDeletionPolicy of this Cluster.
+func (mg *Cluster) GetDeletionPolicy() xpv1.DeletionPolicy {
+	return mg.Spec.DeletionPolicy
+}
+
+// GetProviderConfigReference of this Cluster.
+func (mg *Cluster) GetProviderConfigReference() *xpv1.Reference {
+	return mg.Spec.ProviderConfigReference
+}
+
+/*
+GetProviderReference of this Cluster.
+Deprecated: Use GetProviderConfigReference.
+*/
+func (mg *Cluster) GetProviderReference() *xpv1.Reference {
+	return mg.Spec.ProviderReference
+}
+
+// GetWriteConnectionSecretToReference of this Cluster.
+func (mg *Cluster) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
+	return mg.Spec.WriteConnectionSecretToReference
+}
+
+// SetConditions of this Cluster.
+func (mg *Cluster) SetConditions(c ...xpv1.Condition) {
+	mg.Status.SetConditions(c...)
+}
+
+// SetDeletionPolicy of this Cluster.
+func (mg *Cluster) SetDeletionPolicy(r xpv1.DeletionPolicy) {
+	mg.Spec.DeletionPolicy = r
+}
+
+// SetProviderConfigReference of this Cluster.
+func (mg *Cluster) SetProviderConfigReference(r *xpv1.Reference) {
+	mg.Spec.ProviderConfigReference = r
+}
+
+/*
+SetProviderReference of this Cluster.
+Deprecated: Use SetProviderConfigReference.
+*/
+func (mg *Cluster) SetProviderReference(r *xpv1.Reference) {
+	mg.Spec.ProviderReference = r
+}
+
+// SetWriteConnectionSecretToReference of this Cluster.
+func (mg *Cluster) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
+	mg.Spec.WriteConnectionSecretToReference = r
+}
+
+// GetCondition of this ConsumerGroup.
+func (mg *ConsumerGroup) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
+	return mg.Status.GetCondition(ct)
+}
+
+// GetDeletionPolicy of this ConsumerGroup.
+func (mg *ConsumerGroup) GetDeletionPolicy() xpv1.DeletionPolicy {
+	return mg.Spec.DeletionPolicy
+}
+
+// GetProviderConfigReference of this ConsumerGroup.
+func (mg *ConsumerGroup) GetProviderConfigReference() *xpv1.Reference {
+	return mg.Spec.ProviderConfigReference
+}
+
+/*
+GetProviderReference of this ConsumerGroup.
+Deprecated: Use GetProviderConfigReference.
+*/
+func (mg *ConsumerGroup) GetProviderReference() *xpv1.Reference {
+	return mg.Spec.ProviderReference
+}
+
+// GetWriteConnectionSecretToReference of this ConsumerGroup.
+func (mg *ConsumerGroup) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
+	return mg.Spec.WriteConnectionSecretToReference
+}
+
+// SetConditions of this ConsumerGroup.
+func (mg *ConsumerGroup) SetConditions(c ...xpv1.Condition) {
+	mg.Status.SetConditions(c...)
+}
+
+// SetDeletionPolicy of this ConsumerGroup.
+func (mg *ConsumerGroup) SetDeletionPolicy(r xpv1.DeletionPolicy) {
+	mg.Spec.DeletionPolicy = r
+}
+
+// SetProviderConfigReference of this ConsumerGroup.
+func (mg *ConsumerGroup) SetProviderConfigReference(r *xpv1.Reference) {
+	mg.Spec.ProviderConfigReference = r
+}
+
+/*
+SetProviderReference of this ConsumerGroup.
+Deprecated: Use SetProviderConfigReference.
+*/
+func (mg *ConsumerGroup) SetProviderReference(r *xpv1.Reference) {
+	mg.Spec.ProviderReference = r
+}
+
+// SetWriteConnectionSecretToReference of this ConsumerGroup.
+func (mg *ConsumerGroup) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
+	mg.Spec.WriteConnectionSecretToReference = r
+}
+
 // GetCondition of this NamespaceAuthorizationRule.
 func (mg *NamespaceAuthorizationRule) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
 	return mg.Status.GetCondition(ct)
