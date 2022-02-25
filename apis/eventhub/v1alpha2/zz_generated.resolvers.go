@@ -27,6 +27,64 @@ import (
 	client "sigs.k8s.io/controller-runtime/pkg/client"
 )
 
+// ResolveReferences of this AuthorizationRule.
+func (mg *AuthorizationRule) ResolveReferences(ctx context.Context, c client.Reader) error {
+	r := reference.NewAPIResolver(c, mg)
+
+	var rsp reference.ResolutionResponse
+	var err error
+
+	rsp, err = r.Resolve(ctx, reference.ResolutionRequest{
+		CurrentValue: reference.FromPtrValue(mg.Spec.ForProvider.EventHubName),
+		Extract:      reference.ExternalName(),
+		Reference:    mg.Spec.ForProvider.EventHubNameRef,
+		Selector:     mg.Spec.ForProvider.EventHubNameSelector,
+		To: reference.To{
+			List:    &EventHubList{},
+			Managed: &EventHub{},
+		},
+	})
+	if err != nil {
+		return errors.Wrap(err, "mg.Spec.ForProvider.EventHubName")
+	}
+	mg.Spec.ForProvider.EventHubName = reference.ToPtrValue(rsp.ResolvedValue)
+	mg.Spec.ForProvider.EventHubNameRef = rsp.ResolvedReference
+
+	rsp, err = r.Resolve(ctx, reference.ResolutionRequest{
+		CurrentValue: reference.FromPtrValue(mg.Spec.ForProvider.NamespaceName),
+		Extract:      reference.ExternalName(),
+		Reference:    mg.Spec.ForProvider.NamespaceNameRef,
+		Selector:     mg.Spec.ForProvider.NamespaceNameSelector,
+		To: reference.To{
+			List:    &EventHubNamespaceList{},
+			Managed: &EventHubNamespace{},
+		},
+	})
+	if err != nil {
+		return errors.Wrap(err, "mg.Spec.ForProvider.NamespaceName")
+	}
+	mg.Spec.ForProvider.NamespaceName = reference.ToPtrValue(rsp.ResolvedValue)
+	mg.Spec.ForProvider.NamespaceNameRef = rsp.ResolvedReference
+
+	rsp, err = r.Resolve(ctx, reference.ResolutionRequest{
+		CurrentValue: reference.FromPtrValue(mg.Spec.ForProvider.ResourceGroupName),
+		Extract:      reference.ExternalName(),
+		Reference:    mg.Spec.ForProvider.ResourceGroupNameRef,
+		Selector:     mg.Spec.ForProvider.ResourceGroupNameSelector,
+		To: reference.To{
+			List:    &v1alpha2.ResourceGroupList{},
+			Managed: &v1alpha2.ResourceGroup{},
+		},
+	})
+	if err != nil {
+		return errors.Wrap(err, "mg.Spec.ForProvider.ResourceGroupName")
+	}
+	mg.Spec.ForProvider.ResourceGroupName = reference.ToPtrValue(rsp.ResolvedValue)
+	mg.Spec.ForProvider.ResourceGroupNameRef = rsp.ResolvedReference
+
+	return nil
+}
+
 // ResolveReferences of this ConsumerGroup.
 func (mg *ConsumerGroup) ResolveReferences(ctx context.Context, c client.Reader) error {
 	r := reference.NewAPIResolver(c, mg)

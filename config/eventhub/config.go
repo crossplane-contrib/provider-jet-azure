@@ -78,4 +78,26 @@ func Configure(p *config.Provider) {
 			"consumergroups", "name",
 		)
 	})
+
+	p.AddResourceConfigurator("azurerm_eventhub_authorization_rule", func(r *config.Resource) {
+		r.Version = common.VersionV1Alpha2
+		r.Kind = "AuthorizationRule"
+		r.References = config.References{
+			"namespace_name": config.Reference{
+				Type: "EventHubNamespace",
+			},
+			"eventhub_name": config.Reference{
+				Type: "EventHub",
+			},
+		}
+		r.UseAsync = true
+		r.ExternalName = config.NameAsIdentifier
+		r.ExternalName.GetExternalNameFn = common.GetNameFromFullyQualifiedID
+		// /subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/group1/providers/Microsoft.EventHub/namespaces/namespace1/eventhubs/eventhub1/authorizationRules/rule1
+		r.ExternalName.GetIDFn = common.GetFullyQualifiedIDFn("Microsoft.Eventhub",
+			"namespaces", "name",
+			"eventhubs", "name",
+			"authorizationRules", "name",
+		)
+	})
 }
