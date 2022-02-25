@@ -1,5 +1,5 @@
 /*
-Copyright 2021 The Crossplane Authors.
+Copyright 2022 The Crossplane Authors.
 
 Licensed under the Apache License, Version 2.0 (the "License");
 you may not use this file except in compliance with the License.
@@ -19,7 +19,6 @@ package eventhub
 import (
 	"github.com/crossplane/terrajet/pkg/config"
 
-	"github.com/crossplane-contrib/provider-jet-azure/apis/rconfig"
 	"github.com/crossplane-contrib/provider-jet-azure/config/common"
 )
 
@@ -28,12 +27,6 @@ func Configure(p *config.Provider) {
 	p.AddResourceConfigurator("azurerm_eventhub_namespace", func(r *config.Resource) {
 		r.Version = common.VersionV1Alpha2
 		r.Kind = "EventHubNamespace"
-		r.ShortGroup = "eventhub"
-		r.References = config.References{
-			"resource_group_name": config.Reference{
-				Type: rconfig.ResourceGroupReferencePath,
-			},
-		}
 		r.UseAsync = true
 		r.ExternalName = config.NameAsIdentifier
 		r.ExternalName.GetExternalNameFn = common.GetNameFromFullyQualifiedID
@@ -49,11 +42,7 @@ func Configure(p *config.Provider) {
 	p.AddResourceConfigurator("azurerm_eventhub", func(r *config.Resource) {
 		r.Version = common.VersionV1Alpha2
 		r.Kind = "EventHub"
-		r.ShortGroup = "eventhub"
 		r.References = config.References{
-			"resource_group_name": config.Reference{
-				Type: rconfig.ResourceGroupReferencePath,
-			},
 			"namespace_name": config.Reference{
 				Type: "EventHubNamespace",
 			},
@@ -71,11 +60,7 @@ func Configure(p *config.Provider) {
 	p.AddResourceConfigurator("azurerm_eventhub_consumer_group", func(r *config.Resource) {
 		r.Version = common.VersionV1Alpha2
 		r.Kind = "ConsumerGroup"
-		r.ShortGroup = "eventhub"
 		r.References = config.References{
-			"resource_group_name": config.Reference{
-				Type: rconfig.ResourceGroupReferencePath,
-			},
 			"namespace_name": config.Reference{
 				Type: "EventHubNamespace",
 			},
