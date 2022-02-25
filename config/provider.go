@@ -72,8 +72,10 @@ var includedResources = []string{
 	"azurerm_iothub.*",
 	"azurerm_monitor_metric_alert",
 	"azurerm_key_vault.*",
-	"azurerm_eventhub_namespace",
-	"azurerm_eventhub",
+	"azurerm_eventhub_namespace$",
+	"azurerm_eventhub$",
+	"azurerm_eventhub_consumer_group$",
+	"azurerm_eventhub_authorization_rule$",
 }
 
 // These resources cannot be generated because of their suffixes colliding with

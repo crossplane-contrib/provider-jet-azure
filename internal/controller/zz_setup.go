@@ -72,13 +72,9 @@ import (
 	iothubroute "github.com/crossplane-contrib/provider-jet-azure/internal/controller/devices/iothubroute"
 	iothubsharedaccesspolicy "github.com/crossplane-contrib/provider-jet-azure/internal/controller/devices/iothubsharedaccesspolicy"
 	authorizationrule "github.com/crossplane-contrib/provider-jet-azure/internal/controller/eventhub/authorizationrule"
-	cluster "github.com/crossplane-contrib/provider-jet-azure/internal/controller/eventhub/cluster"
 	consumergroup "github.com/crossplane-contrib/provider-jet-azure/internal/controller/eventhub/consumergroup"
 	eventhub "github.com/crossplane-contrib/provider-jet-azure/internal/controller/eventhub/eventhub"
 	eventhubnamespace "github.com/crossplane-contrib/provider-jet-azure/internal/controller/eventhub/eventhubnamespace"
-	namespaceauthorizationrule "github.com/crossplane-contrib/provider-jet-azure/internal/controller/eventhub/namespaceauthorizationrule"
-	namespacecustomermanagedkey "github.com/crossplane-contrib/provider-jet-azure/internal/controller/eventhub/namespacecustomermanagedkey"
-	namespacedisasterrecoveryconfig "github.com/crossplane-contrib/provider-jet-azure/internal/controller/eventhub/namespacedisasterrecoveryconfig"
 	monitormetricalert "github.com/crossplane-contrib/provider-jet-azure/internal/controller/insights/monitormetricalert"
 	accesspolicy "github.com/crossplane-contrib/provider-jet-azure/internal/controller/keyvault/accesspolicy"
 	certificate "github.com/crossplane-contrib/provider-jet-azure/internal/controller/keyvault/certificate"
@@ -161,13 +157,9 @@ func Setup(mgr ctrl.Manager, l logging.Logger, wl workqueue.RateLimiter, ps terr
 		iothubroute.Setup,
 		iothubsharedaccesspolicy.Setup,
 		authorizationrule.Setup,
-		cluster.Setup,
 		consumergroup.Setup,
 		eventhub.Setup,
 		eventhubnamespace.Setup,
-		namespaceauthorizationrule.Setup,
-		namespacecustomermanagedkey.Setup,
-		namespacedisasterrecoveryconfig.Setup,
 		monitormetricalert.Setup,
 		accesspolicy.Setup,
 		certificate.Setup,
