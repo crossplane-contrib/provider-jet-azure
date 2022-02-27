@@ -14,7 +14,7 @@ See the License for the specific language governing permissions and
 limitations under the License.
 */
 
-package iothub
+package devices
 
 import (
 	"github.com/crossplane/terrajet/pkg/config"
@@ -130,5 +130,24 @@ func Configure(p *config.Provider) {
 		// /subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/mygroup1/providers/Microsoft.Devices/IotHubs/hub1/IotHubKeys/shared_access_policy1
 		r.ExternalName.GetIDFn = common.GetFullyQualifiedIDFn("Microsoft.Devices", "IotHubs", "iothub_name",
 			"IotHubKeys", "name")
+	})
+
+	p.AddResourceConfigurator("azurerm_iothub_endpoint_storage_container", func(r *config.Resource) {
+		r.Version = common.VersionV1Alpha2
+		r.References = config.References{
+			"iothub_name": config.Reference{
+				Type: "IOTHub",
+			},
+			"container_name": config.Reference{
+				Type: rconfig.APISPackagePath + "/storage/v1alpha2.Container",
+			},
+		}
+		r.UseAsync = true
+		r.ExternalName = config.NameAsIdentifier
+		r.ExternalName.GetExternalNameFn = common.GetNameFromFullyQualifiedID
+		// /subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/mygroup1/providers/Microsoft.Devices/IotHubs/hub1/Endpoints/storage_container_endpoint1
+		r.ExternalName.GetIDFn = common.GetFullyQualifiedIDFn("Microsoft.Devices",
+			"IotHubs", "iothub_name",
+			"Endpoints", "name")
 	})
 }

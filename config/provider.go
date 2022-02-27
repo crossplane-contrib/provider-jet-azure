@@ -27,8 +27,8 @@ import (
 	"github.com/crossplane-contrib/provider-jet-azure/config/common"
 	"github.com/crossplane-contrib/provider-jet-azure/config/cosmosdb"
 	"github.com/crossplane-contrib/provider-jet-azure/config/datashare"
+	"github.com/crossplane-contrib/provider-jet-azure/config/devices"
 	"github.com/crossplane-contrib/provider-jet-azure/config/eventhub"
-	"github.com/crossplane-contrib/provider-jet-azure/config/iothub"
 	"github.com/crossplane-contrib/provider-jet-azure/config/ip"
 	"github.com/crossplane-contrib/provider-jet-azure/config/keyvault"
 	"github.com/crossplane-contrib/provider-jet-azure/config/kubernetes"
@@ -162,7 +162,7 @@ func GetProvider() *tjconfig.Provider {
 		subnet.Configure,
 		storage.Configure,
 		loganalytics.Configure,
-		iothub.Configure,
+		devices.Configure,
 		monitor.Configure,
 		apimanagement.Configure,
 		logic.Configure,
