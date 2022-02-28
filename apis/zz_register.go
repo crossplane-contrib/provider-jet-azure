@@ -30,6 +30,7 @@ import (
 	v1alpha2dbforpostgresql "github.com/crossplane-contrib/provider-jet-azure/apis/dbforpostgresql/v1alpha2"
 	v1alpha1 "github.com/crossplane-contrib/provider-jet-azure/apis/devices/v1alpha1"
 	v1alpha2devices "github.com/crossplane-contrib/provider-jet-azure/apis/devices/v1alpha2"
+	v1alpha2eventhub "github.com/crossplane-contrib/provider-jet-azure/apis/eventhub/v1alpha2"
 	v1alpha2insights "github.com/crossplane-contrib/provider-jet-azure/apis/insights/v1alpha2"
 	v1alpha2keyvault "github.com/crossplane-contrib/provider-jet-azure/apis/keyvault/v1alpha2"
 	v1alpha2loganalytics "github.com/crossplane-contrib/provider-jet-azure/apis/loganalytics/v1alpha2"
@@ -51,6 +52,7 @@ func init() {
 		v1alpha2dbforpostgresql.SchemeBuilder.AddToScheme,
 		v1alpha1.SchemeBuilder.AddToScheme,
 		v1alpha2devices.SchemeBuilder.AddToScheme,
+		v1alpha2eventhub.SchemeBuilder.AddToScheme,
 		v1alpha2insights.SchemeBuilder.AddToScheme,
 		v1alpha2keyvault.SchemeBuilder.AddToScheme,
 		v1alpha2loganalytics.SchemeBuilder.AddToScheme,
