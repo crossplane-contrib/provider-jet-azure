@@ -34,16 +34,18 @@ import (
 	tjcontroller "github.com/crossplane/terrajet/pkg/controller"
 	"github.com/crossplane/terrajet/pkg/terraform"
 
-	v1alpha1 "github.com/crossplane-contrib/provider-jet-azure/apis/devices/v1alpha1"
+	v1alpha2 "github.com/crossplane-contrib/provider-jet-azure/apis/devices/v1alpha2"
 )
 
 // Setup adds a controller that reconciles IOTHubFallbackRoute managed resources.
 func Setup(mgr ctrl.Manager, l logging.Logger, rl workqueue.RateLimiter, s terraform.SetupFn, ws *terraform.WorkspaceStore, cfg *tjconfig.Provider, concurrency int) error {
-	name := managed.ControllerName(v1alpha1.IOTHubFallbackRoute_GroupVersionKind.String())
+	name := managed.ControllerName(v1alpha2.IOTHubFallbackRoute_GroupVersionKind.String())
 	var initializers managed.InitializerChain
 	r := managed.NewReconciler(mgr,
-		xpresource.ManagedKind(v1alpha1.IOTHubFallbackRoute_GroupVersionKind),
-		managed.WithExternalConnecter(tjcontroller.NewConnector(mgr.GetClient(), ws, s, cfg.Resources["azurerm_iothub_fallback_route"])),
+		xpresource.ManagedKind(v1alpha2.IOTHubFallbackRoute_GroupVersionKind),
+		managed.WithExternalConnecter(tjcontroller.NewConnector(mgr.GetClient(), ws, s, cfg.Resources["azurerm_iothub_fallback_route"],
+			tjcontroller.WithCallbackProvider(tjcontroller.NewAPICallbacks(mgr, xpresource.ManagedKind(v1alpha2.IOTHubFallbackRoute_GroupVersionKind))),
+		)),
 		managed.WithLogger(l.WithValues("controller", name)),
 		managed.WithRecorder(event.NewAPIRecorder(mgr.GetEventRecorderFor(name))),
 		managed.WithFinalizer(terraform.NewWorkspaceFinalizer(ws, xpresource.NewAPIFinalizer(mgr.GetClient(), managed.FinalizerName))),
@@ -54,6 +56,6 @@ func Setup(mgr ctrl.Manager, l logging.Logger, rl workqueue.RateLimiter, s terra
 	return ctrl.NewControllerManagedBy(mgr).
 		Named(name).
 		WithOptions(controller.Options{RateLimiter: rl, MaxConcurrentReconciles: concurrency}).
-		For(&v1alpha1.IOTHubFallbackRoute{}).
+		For(&v1alpha2.IOTHubFallbackRoute{}).
 		Complete(r)
 }

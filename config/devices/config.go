@@ -150,4 +150,23 @@ func Configure(p *config.Provider) {
 			"IotHubs", "iothub_name",
 			"Endpoints", "name")
 	})
+
+	p.AddResourceConfigurator("azurerm_iothub_fallback_route", func(r *config.Resource) {
+		r.Version = common.VersionV1Alpha2
+		r.References = config.References{
+			"iothub_name": config.Reference{
+				Type: "IOTHub",
+			},
+			"endpoint_names": config.Reference{
+				Type: "IOTHubEndpointStorageContainer",
+			},
+		}
+		r.UseAsync = true
+		r.ExternalName = config.IdentifierFromProvider
+		r.ExternalName.GetExternalNameFn = common.GetNameFromFullyQualifiedID
+		// /subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/mygroup1/providers/Microsoft.Devices/IotHubs/hub1/FallbackRoute/default
+		r.ExternalName.GetIDFn = common.GetFullyQualifiedIDFn("Microsoft.Devices",
+			"IotHubs", "iothub_name",
+			"FallbackRoute", "default")
+	})
 }

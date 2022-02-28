@@ -55,15 +55,6 @@ func (l *IOTHubEnrichmentList) GetItems() []resource.Managed {
 	return items
 }
 
-// GetItems of this IOTHubFallbackRouteList.
-func (l *IOTHubFallbackRouteList) GetItems() []resource.Managed {
-	items := make([]resource.Managed, len(l.Items))
-	for i := range l.Items {
-		items[i] = &l.Items[i]
-	}
-	return items
-}
-
 // GetItems of this IOTHubRouteList.
 func (l *IOTHubRouteList) GetItems() []resource.Managed {
 	items := make([]resource.Managed, len(l.Items))

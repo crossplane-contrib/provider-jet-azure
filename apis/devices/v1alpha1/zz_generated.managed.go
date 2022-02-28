@@ -243,62 +243,6 @@ func (mg *IOTHubEnrichment) SetWriteConnectionSecretToReference(r *xpv1.SecretRe
 	mg.Spec.WriteConnectionSecretToReference = r
 }
 
-// GetCondition of this IOTHubFallbackRoute.
-func (mg *IOTHubFallbackRoute) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
-	return mg.Status.GetCondition(ct)
-}
-
-// GetDeletionPolicy of this IOTHubFallbackRoute.
-func (mg *IOTHubFallbackRoute) GetDeletionPolicy() xpv1.DeletionPolicy {
-	return mg.Spec.DeletionPolicy
-}
-
-// GetProviderConfigReference of this IOTHubFallbackRoute.
-func (mg *IOTHubFallbackRoute) GetProviderConfigReference() *xpv1.Reference {
-	return mg.Spec.ProviderConfigReference
-}
-
-/*
-GetProviderReference of this IOTHubFallbackRoute.
-Deprecated: Use GetProviderConfigReference.
-*/
-func (mg *IOTHubFallbackRoute) GetProviderReference() *xpv1.Reference {
-	return mg.Spec.ProviderReference
-}
-
-// GetWriteConnectionSecretToReference of this IOTHubFallbackRoute.
-func (mg *IOTHubFallbackRoute) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
-	return mg.Spec.WriteConnectionSecretToReference
-}
-
-// SetConditions of this IOTHubFallbackRoute.
-func (mg *IOTHubFallbackRoute) SetConditions(c ...xpv1.Condition) {
-	mg.Status.SetConditions(c...)
-}
-
-// SetDeletionPolicy of this IOTHubFallbackRoute.
-func (mg *IOTHubFallbackRoute) SetDeletionPolicy(r xpv1.DeletionPolicy) {
-	mg.Spec.DeletionPolicy = r
-}
-
-// SetProviderConfigReference of this IOTHubFallbackRoute.
-func (mg *IOTHubFallbackRoute) SetProviderConfigReference(r *xpv1.Reference) {
-	mg.Spec.ProviderConfigReference = r
-}
-
-/*
-SetProviderReference of this IOTHubFallbackRoute.
-Deprecated: Use SetProviderConfigReference.
-*/
-func (mg *IOTHubFallbackRoute) SetProviderReference(r *xpv1.Reference) {
-	mg.Spec.ProviderReference = r
-}
-
-// SetWriteConnectionSecretToReference of this IOTHubFallbackRoute.
-func (mg *IOTHubFallbackRoute) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
-	mg.Spec.WriteConnectionSecretToReference = r
-}
-
 // GetCondition of this IOTHubRoute.
 func (mg *IOTHubRoute) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
 	return mg.Status.GetCondition(ct)
