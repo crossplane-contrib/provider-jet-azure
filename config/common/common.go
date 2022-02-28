@@ -129,12 +129,6 @@ func GetFullyQualifiedIDFn(serviceProvider string, keyPairs ...string) tjconfig.
 
 		path := fmt.Sprintf("/subscriptions/%s/resourceGroups/%s/providers/%s", subIDStr, rgStr, serviceProvider)
 		for i := 0; i < len(keyPairs); i += 2 {
-			// https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs/resources/iothub_fallback_route#import
-			// FallbackRoute is always default and we don't have associated parameter for it
-			if keyPairs[i] == "FallbackRoute" {
-				path = filepath.Join(path, "FallbackRoute", "default")
-				return path, nil
-			}
 			val, ok := parameters[keyPairs[i+1]]
 			if !ok {
 				return "", errors.Errorf(ErrFmtNoAttribute, keyPairs[i+1])
