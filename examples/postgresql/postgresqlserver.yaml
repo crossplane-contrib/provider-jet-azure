@@ -20,3 +20,6 @@ spec:
     sslMinimalTlsVersionEnforced: "TLS1_2"
   providerConfigRef:
     name: example
+  writeConnectionSecretToRef:
+    name: example-connection-postgresqlserver
+    namespace: crossplane-system

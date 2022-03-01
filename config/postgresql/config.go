@@ -19,6 +19,9 @@ package postgresql
 import (
 	"context"
 	"fmt"
+	"strconv"
+
+	xpv1 "github.com/crossplane/crossplane-runtime/apis/common/v1"
 
 	"github.com/crossplane/terrajet/pkg/config"
 	"github.com/pkg/errors"
@@ -30,6 +33,8 @@ import (
 const (
 	errFmtNoAttribute    = `"attribute not found: %s`
 	errFmtUnexpectedType = `unexpected type for attribute %s: Expecting a string`
+
+	postgresqlServerPort = 5432
 )
 
 // Configure configures postgresql group
@@ -49,6 +54,14 @@ func Configure(p *config.Provider) {
 		r.ExternalName.GetExternalNameFn = common.GetNameFromFullyQualifiedID
 		// /subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/mygroup1/providers/Microsoft.DBforPostgreSQL/servers/server1
 		r.ExternalName.GetIDFn = common.GetFullyQualifiedIDFn("Microsoft.DBforPostgreSQL", "servers", "name")
+		r.Sensitive.AdditionalConnectionDetailsFn = func(attr map[string]interface{}) (map[string][]byte, error) {
+			return map[string][]byte{
+				xpv1.ResourceCredentialsSecretUserKey:     []byte(fmt.Sprintf("%s@%s", attr["administrator_login"], attr["name"])),
+				xpv1.ResourceCredentialsSecretPasswordKey: []byte(attr["administrator_login_password"].(string)),
+				xpv1.ResourceCredentialsSecretEndpointKey: []byte(attr["fqdn"].(string)),
+				xpv1.ResourceCredentialsSecretPortKey:     []byte(strconv.Itoa(postgresqlServerPort)),
+			}, nil
+		}
 	})
 
 	p.AddResourceConfigurator("azurerm_postgresql_flexible_server_configuration", func(r *config.Resource) {
