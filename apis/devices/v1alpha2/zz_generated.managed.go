@@ -299,6 +299,118 @@ func (mg *IOTHubDPSSharedAccessPolicy) SetWriteConnectionSecretToReference(r *xp
 	mg.Spec.WriteConnectionSecretToReference = r
 }
 
+// GetCondition of this IOTHubEndpointStorageContainer.
+func (mg *IOTHubEndpointStorageContainer) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
+	return mg.Status.GetCondition(ct)
+}
+
+// GetDeletionPolicy of this IOTHubEndpointStorageContainer.
+func (mg *IOTHubEndpointStorageContainer) GetDeletionPolicy() xpv1.DeletionPolicy {
+	return mg.Spec.DeletionPolicy
+}
+
+// GetProviderConfigReference of this IOTHubEndpointStorageContainer.
+func (mg *IOTHubEndpointStorageContainer) GetProviderConfigReference() *xpv1.Reference {
+	return mg.Spec.ProviderConfigReference
+}
+
+/*
+GetProviderReference of this IOTHubEndpointStorageContainer.
+Deprecated: Use GetProviderConfigReference.
+*/
+func (mg *IOTHubEndpointStorageContainer) GetProviderReference() *xpv1.Reference {
+	return mg.Spec.ProviderReference
+}
+
+// GetWriteConnectionSecretToReference of this IOTHubEndpointStorageContainer.
+func (mg *IOTHubEndpointStorageContainer) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
+	return mg.Spec.WriteConnectionSecretToReference
+}
+
+// SetConditions of this IOTHubEndpointStorageContainer.
+func (mg *IOTHubEndpointStorageContainer) SetConditions(c ...xpv1.Condition) {
+	mg.Status.SetConditions(c...)
+}
+
+// SetDeletionPolicy of this IOTHubEndpointStorageContainer.
+func (mg *IOTHubEndpointStorageContainer) SetDeletionPolicy(r xpv1.DeletionPolicy) {
+	mg.Spec.DeletionPolicy = r
+}
+
+// SetProviderConfigReference of this IOTHubEndpointStorageContainer.
+func (mg *IOTHubEndpointStorageContainer) SetProviderConfigReference(r *xpv1.Reference) {
+	mg.Spec.ProviderConfigReference = r
+}
+
+/*
+SetProviderReference of this IOTHubEndpointStorageContainer.
+Deprecated: Use SetProviderConfigReference.
+*/
+func (mg *IOTHubEndpointStorageContainer) SetProviderReference(r *xpv1.Reference) {
+	mg.Spec.ProviderReference = r
+}
+
+// SetWriteConnectionSecretToReference of this IOTHubEndpointStorageContainer.
+func (mg *IOTHubEndpointStorageContainer) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
+	mg.Spec.WriteConnectionSecretToReference = r
+}
+
+// GetCondition of this IOTHubFallbackRoute.
+func (mg *IOTHubFallbackRoute) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
+	return mg.Status.GetCondition(ct)
+}
+
+// GetDeletionPolicy of this IOTHubFallbackRoute.
+func (mg *IOTHubFallbackRoute) GetDeletionPolicy() xpv1.DeletionPolicy {
+	return mg.Spec.DeletionPolicy
+}
+
+// GetProviderConfigReference of this IOTHubFallbackRoute.
+func (mg *IOTHubFallbackRoute) GetProviderConfigReference() *xpv1.Reference {
+	return mg.Spec.ProviderConfigReference
+}
+
+/*
+GetProviderReference of this IOTHubFallbackRoute.
+Deprecated: Use GetProviderConfigReference.
+*/
+func (mg *IOTHubFallbackRoute) GetProviderReference() *xpv1.Reference {
+	return mg.Spec.ProviderReference
+}
+
+// GetWriteConnectionSecretToReference of this IOTHubFallbackRoute.
+func (mg *IOTHubFallbackRoute) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
+	return mg.Spec.WriteConnectionSecretToReference
+}
+
+// SetConditions of this IOTHubFallbackRoute.
+func (mg *IOTHubFallbackRoute) SetConditions(c ...xpv1.Condition) {
+	mg.Status.SetConditions(c...)
+}
+
+// SetDeletionPolicy of this IOTHubFallbackRoute.
+func (mg *IOTHubFallbackRoute) SetDeletionPolicy(r xpv1.DeletionPolicy) {
+	mg.Spec.DeletionPolicy = r
+}
+
+// SetProviderConfigReference of this IOTHubFallbackRoute.
+func (mg *IOTHubFallbackRoute) SetProviderConfigReference(r *xpv1.Reference) {
+	mg.Spec.ProviderConfigReference = r
+}
+
+/*
+SetProviderReference of this IOTHubFallbackRoute.
+Deprecated: Use SetProviderConfigReference.
+*/
+func (mg *IOTHubFallbackRoute) SetProviderReference(r *xpv1.Reference) {
+	mg.Spec.ProviderReference = r
+}
+
+// SetWriteConnectionSecretToReference of this IOTHubFallbackRoute.
+func (mg *IOTHubFallbackRoute) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
+	mg.Spec.WriteConnectionSecretToReference = r
+}
+
 // GetCondition of this IOTHubSharedAccessPolicy.
 func (mg *IOTHubSharedAccessPolicy) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
 	return mg.Status.GetCondition(ct)

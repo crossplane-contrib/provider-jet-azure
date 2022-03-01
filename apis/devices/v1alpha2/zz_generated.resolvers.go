@@ -240,6 +240,123 @@ func (mg *IOTHubDPSSharedAccessPolicy) ResolveReferences(ctx context.Context, c 
 	return nil
 }
 
+// ResolveReferences of this IOTHubEndpointStorageContainer.
+func (mg *IOTHubEndpointStorageContainer) ResolveReferences(ctx context.Context, c client.Reader) error {
+	r := reference.NewAPIResolver(c, mg)
+
+	var rsp reference.ResolutionResponse
+	var err error
+
+	rsp, err = r.Resolve(ctx, reference.ResolutionRequest{
+		CurrentValue: reference.FromPtrValue(mg.Spec.ForProvider.ContainerName),
+		Extract:      reference.ExternalName(),
+		Reference:    mg.Spec.ForProvider.ContainerNameRef,
+		Selector:     mg.Spec.ForProvider.ContainerNameSelector,
+		To: reference.To{
+			List:    &v1alpha2.ContainerList{},
+			Managed: &v1alpha2.Container{},
+		},
+	})
+	if err != nil {
+		return errors.Wrap(err, "mg.Spec.ForProvider.ContainerName")
+	}
+	mg.Spec.ForProvider.ContainerName = reference.ToPtrValue(rsp.ResolvedValue)
+	mg.Spec.ForProvider.ContainerNameRef = rsp.ResolvedReference
+
+	rsp, err = r.Resolve(ctx, reference.ResolutionRequest{
+		CurrentValue: reference.FromPtrValue(mg.Spec.ForProvider.IOTHubName),
+		Extract:      reference.ExternalName(),
+		Reference:    mg.Spec.ForProvider.IOTHubNameRef,
+		Selector:     mg.Spec.ForProvider.IOTHubNameSelector,
+		To: reference.To{
+			List:    &IOTHubList{},
+			Managed: &IOTHub{},
+		},
+	})
+	if err != nil {
+		return errors.Wrap(err, "mg.Spec.ForProvider.IOTHubName")
+	}
+	mg.Spec.ForProvider.IOTHubName = reference.ToPtrValue(rsp.ResolvedValue)
+	mg.Spec.ForProvider.IOTHubNameRef = rsp.ResolvedReference
+
+	rsp, err = r.Resolve(ctx, reference.ResolutionRequest{
+		CurrentValue: reference.FromPtrValue(mg.Spec.ForProvider.ResourceGroupName),
+		Extract:      reference.ExternalName(),
+		Reference:    mg.Spec.ForProvider.ResourceGroupNameRef,
+		Selector:     mg.Spec.ForProvider.ResourceGroupNameSelector,
+		To: reference.To{
+			List:    &v1alpha21.ResourceGroupList{},
+			Managed: &v1alpha21.ResourceGroup{},
+		},
+	})
+	if err != nil {
+		return errors.Wrap(err, "mg.Spec.ForProvider.ResourceGroupName")
+	}
+	mg.Spec.ForProvider.ResourceGroupName = reference.ToPtrValue(rsp.ResolvedValue)
+	mg.Spec.ForProvider.ResourceGroupNameRef = rsp.ResolvedReference
+
+	return nil
+}
+
+// ResolveReferences of this IOTHubFallbackRoute.
+func (mg *IOTHubFallbackRoute) ResolveReferences(ctx context.Context, c client.Reader) error {
+	r := reference.NewAPIResolver(c, mg)
+
+	var rsp reference.ResolutionResponse
+	var mrsp reference.MultiResolutionResponse
+	var err error
+
+	mrsp, err = r.ResolveMultiple(ctx, reference.MultiResolutionRequest{
+		CurrentValues: reference.FromPtrValues(mg.Spec.ForProvider.EndpointNames),
+		Extract:       reference.ExternalName(),
+		References:    mg.Spec.ForProvider.EndpointNamesRefs,
+		Selector:      mg.Spec.ForProvider.EndpointNamesSelector,
+		To: reference.To{
+			List:    &IOTHubEndpointStorageContainerList{},
+			Managed: &IOTHubEndpointStorageContainer{},
+		},
+	})
+	if err != nil {
+		return errors.Wrap(err, "mg.Spec.ForProvider.EndpointNames")
+	}
+	mg.Spec.ForProvider.EndpointNames = reference.ToPtrValues(mrsp.ResolvedValues)
+	mg.Spec.ForProvider.EndpointNamesRefs = mrsp.ResolvedReferences
+
+	rsp, err = r.Resolve(ctx, reference.ResolutionRequest{
+		CurrentValue: reference.FromPtrValue(mg.Spec.ForProvider.IOTHubName),
+		Extract:      reference.ExternalName(),
+		Reference:    mg.Spec.ForProvider.IOTHubNameRef,
+		Selector:     mg.Spec.ForProvider.IOTHubNameSelector,
+		To: reference.To{
+			List:    &IOTHubList{},
+			Managed: &IOTHub{},
+		},
+	})
+	if err != nil {
+		return errors.Wrap(err, "mg.Spec.ForProvider.IOTHubName")
+	}
+	mg.Spec.ForProvider.IOTHubName = reference.ToPtrValue(rsp.ResolvedValue)
+	mg.Spec.ForProvider.IOTHubNameRef = rsp.ResolvedReference
+
+	rsp, err = r.Resolve(ctx, reference.ResolutionRequest{
+		CurrentValue: reference.FromPtrValue(mg.Spec.ForProvider.ResourceGroupName),
+		Extract:      reference.ExternalName(),
+		Reference:    mg.Spec.ForProvider.ResourceGroupNameRef,
+		Selector:     mg.Spec.ForProvider.ResourceGroupNameSelector,
+		To: reference.To{
+			List:    &v1alpha21.ResourceGroupList{},
+			Managed: &v1alpha21.ResourceGroup{},
+		},
+	})
+	if err != nil {
+		return errors.Wrap(err, "mg.Spec.ForProvider.ResourceGroupName")
+	}
+	mg.Spec.ForProvider.ResourceGroupName = reference.ToPtrValue(rsp.ResolvedValue)
+	mg.Spec.ForProvider.ResourceGroupNameRef = rsp.ResolvedReference
+
+	return nil
+}
+
 // ResolveReferences of this IOTHubSharedAccessPolicy.
 func (mg *IOTHubSharedAccessPolicy) ResolveReferences(ctx context.Context, c client.Reader) error {
 	r := reference.NewAPIResolver(c, mg)

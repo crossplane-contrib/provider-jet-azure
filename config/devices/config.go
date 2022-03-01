@@ -14,9 +14,12 @@ See the License for the specific language governing permissions and
 limitations under the License.
 */
 
-package iothub
+package devices
 
 import (
+	"context"
+	"fmt"
+
 	"github.com/crossplane/terrajet/pkg/config"
 
 	"github.com/crossplane-contrib/provider-jet-azure/apis/rconfig"
@@ -130,5 +133,49 @@ func Configure(p *config.Provider) {
 		// /subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/mygroup1/providers/Microsoft.Devices/IotHubs/hub1/IotHubKeys/shared_access_policy1
 		r.ExternalName.GetIDFn = common.GetFullyQualifiedIDFn("Microsoft.Devices", "IotHubs", "iothub_name",
 			"IotHubKeys", "name")
+	})
+
+	p.AddResourceConfigurator("azurerm_iothub_endpoint_storage_container", func(r *config.Resource) {
+		r.Version = common.VersionV1Alpha2
+		r.References = config.References{
+			"iothub_name": config.Reference{
+				Type: "IOTHub",
+			},
+			"container_name": config.Reference{
+				Type: rconfig.APISPackagePath + "/storage/v1alpha2.Container",
+			},
+		}
+		r.UseAsync = true
+		r.ExternalName = config.NameAsIdentifier
+		r.ExternalName.GetExternalNameFn = common.GetNameFromFullyQualifiedID
+		// /subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/mygroup1/providers/Microsoft.Devices/IotHubs/hub1/Endpoints/storage_container_endpoint1
+		r.ExternalName.GetIDFn = common.GetFullyQualifiedIDFn("Microsoft.Devices",
+			"IotHubs", "iothub_name",
+			"Endpoints", "name")
+	})
+
+	p.AddResourceConfigurator("azurerm_iothub_fallback_route", func(r *config.Resource) {
+		r.Version = common.VersionV1Alpha2
+		r.References = config.References{
+			"iothub_name": config.Reference{
+				Type: "IOTHub",
+			},
+			"endpoint_names": config.Reference{
+				Type: "IOTHubEndpointStorageContainer",
+			},
+		}
+		r.UseAsync = true
+		r.ExternalName = config.IdentifierFromProvider
+		r.ExternalName.GetExternalNameFn = common.GetNameFromFullyQualifiedID
+		// /subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/mygroup1/providers/Microsoft.Devices/IotHubs/hub1/FallbackRoute/default
+		// https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs/resources/iothub_fallback_route#import
+		// FallbackRoute is always default and we don't have associated parameter for it
+		r.ExternalName.GetIDFn = func(ctx context.Context, externalName string, parameters map[string]interface{}, providerConfig map[string]interface{}) (string, error) {
+			p, err := common.GetFullyQualifiedIDFn("Microsoft.Devices", "IotHubs", "iothub_name")(ctx, externalName, parameters, providerConfig)
+			if err != nil {
+				return "", err
+			}
+			return fmt.Sprintf("%s/FallbackRoute/default", p), nil
+		}
 	})
 }
