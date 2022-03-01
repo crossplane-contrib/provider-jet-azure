@@ -53,7 +53,7 @@ const (
 	modulePath     = "github.com/crossplane-contrib/provider-jet-azure"
 )
 
-var includedResources = []string{
+var _ = []string{
 	// "azurerm_.+",
 	"azurerm_virtual_.+",
 	"azurerm_kubernetes_.+",
@@ -108,7 +108,7 @@ var skipList = []string{
 	"azurerm_virtual_desktop_host_pool",
 	"azurerm_virtual_desktop_workspace",
 	// other terrajet issues
-	// ...
+	"azurerm_devspace_controller", // terrajet import issue in internal/controller/zz_setup.go
 	// doc not found in Terraform Azurerm provider
 	"azurerm_virtual_network_dns_servers",
 	// unsupported sensitive field type
@@ -136,7 +136,7 @@ func GetProvider() *tjconfig.Provider {
 		tf.Provider().ResourcesMap, resourcePrefix, modulePath,
 		tjconfig.WithShortName("azurejet"),
 		tjconfig.WithRootGroup("azure.jet.crossplane.io"),
-		tjconfig.WithIncludeList(includedResources),
+		// tjconfig.WithIncludeList(includedResources),
 		tjconfig.WithSkipList(skipList),
 		tjconfig.WithDefaultResourceFn(defaultResource(externalNameConfig(), groupOverrides())),
 	)
