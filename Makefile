@@ -4,6 +4,10 @@
 PROJECT_NAME := provider-jet-azure
 PROJECT_REPO := github.com/crossplane-contrib/$(PROJECT_NAME)
 
+export TERRAFORM_VERSION ?= 1.0.5
+export TERRAFORM_PROVIDER_SOURCE ?= hashicorp/azurerm
+export TERRAFORM_PROVIDER_VERSION ?= 2.78.0
+
 PLATFORMS ?= linux_amd64 linux_arm64
 
 # -include will silently skip missing files, which allows us
@@ -100,9 +104,8 @@ provider-jet-azure.vendor: prepare.azurerm vendor
 
 # must match Docker build file env. variable TERRAFORM_PROVIDER_AZURERM_VERSION in
 # cluster/images/provider-jet-azure-controller/Dockerfile
-AZURERM_REFSPEC ?= v2.78.0
 prepare.azurerm:
-	@WORK_DIR=.work AZURERM_REFSPEC=$(AZURERM_REFSPEC) ./scripts/prepare_azurerm.sh
+	@WORK_DIR=.work TERRAFORM_PROVIDER_VERSION=$(TERRAFORM_PROVIDER_VERSION) ./scripts/prepare_azurerm.sh
 
 codegen.pipeline: prepare.azurerm
 	@USE_INCLUDE_LIST=true go run cmd/generator/main.go
