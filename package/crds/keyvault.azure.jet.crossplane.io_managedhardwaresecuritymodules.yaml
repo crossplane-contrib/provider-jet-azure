@@ -101,8 +101,7 @@ spec:
                   skuName:
                     type: string
                   softDeleteRetentionDays:
-                    format: int64
-                    type: integer
+                    type: number
                   tags:
                     additionalProperties:
                       type: string

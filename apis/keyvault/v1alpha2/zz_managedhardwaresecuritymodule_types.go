@@ -56,7 +56,7 @@ type ManagedHardwareSecurityModuleParameters struct {
 	SkuName *string `json:"skuName" tf:"sku_name,omitempty"`
 
 	// +kubebuilder:validation:Optional
-	SoftDeleteRetentionDays *int64 `json:"softDeleteRetentionDays,omitempty" tf:"soft_delete_retention_days,omitempty"`
+	SoftDeleteRetentionDays *float64 `json:"softDeleteRetentionDays,omitempty" tf:"soft_delete_retention_days,omitempty"`
 
 	// +kubebuilder:validation:Optional
 	Tags map[string]*string `json:"tags,omitempty" tf:"tags,omitempty"`

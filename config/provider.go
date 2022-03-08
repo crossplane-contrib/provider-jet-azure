@@ -17,11 +17,12 @@ limitations under the License.
 package config
 
 import (
-	"github.com/hashicorp/terraform-plugin-sdk/v2/helper/schema"
+	// Note(ezgidemirel): we are importing this to embed provider schema document
+	_ "embed"
 
 	tjconfig "github.com/crossplane/terrajet/pkg/config"
 
-	tf "github.com/hashicorp/terraform-provider-azurerm/xpprovider"
+	"github.com/hashicorp/terraform-plugin-sdk/v2/helper/schema"
 
 	"github.com/crossplane-contrib/provider-jet-azure/config/apimanagement"
 	"github.com/crossplane-contrib/provider-jet-azure/config/base"
@@ -53,6 +54,9 @@ const (
 	resourcePrefix = "azure"
 	modulePath     = "github.com/crossplane-contrib/provider-jet-azure"
 )
+
+//go:embed schema.json
+var providerSchema string
 
 var includedResources = []string{
 	// "azurerm_.+",
@@ -134,8 +138,7 @@ var skipList = []string{
 
 // GetProvider returns provider configuration
 func GetProvider() *tjconfig.Provider {
-	pc := tjconfig.NewProvider(
-		tf.Provider().ResourcesMap, resourcePrefix, modulePath,
+	pc := tjconfig.NewProviderWithSchema([]byte(providerSchema), resourcePrefix, modulePath,
 		tjconfig.WithShortName("azurejet"),
 		tjconfig.WithRootGroup("azure.jet.crossplane.io"),
 		tjconfig.WithIncludeList(includedResources),

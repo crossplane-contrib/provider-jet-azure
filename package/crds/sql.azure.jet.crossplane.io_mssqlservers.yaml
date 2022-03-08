@@ -105,8 +105,7 @@ spec:
                         logMonitoringEnabled:
                           type: boolean
                         retentionInDays:
-                          format: int64
-                          type: integer
+                          type: number
                         storageAccountAccessKeyIsSecondary:
                           type: boolean
                         storageAccountAccessKeySecretRef:

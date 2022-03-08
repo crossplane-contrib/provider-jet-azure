@@ -31,10 +31,10 @@ type EndpointObservation struct {
 type EndpointParameters struct {
 
 	// +kubebuilder:validation:Optional
-	BatchFrequencyInSeconds *int64 `json:"batchFrequencyInSeconds,omitempty" tf:"batch_frequency_in_seconds"`
+	BatchFrequencyInSeconds *float64 `json:"batchFrequencyInSeconds,omitempty" tf:"batch_frequency_in_seconds"`
 
-	// +kubebuilder:validation:Required
-	ConnectionStringSecretRef v1.SecretKeySelector `json:"connectionStringSecretRef" tf:"-"`
+	// +kubebuilder:validation:Optional
+	ConnectionStringSecretRef *v1.SecretKeySelector `json:"connectionStringSecretRef,omitempty" tf:"-"`
 
 	// +crossplane:generate:reference:type=github.com/crossplane-contrib/provider-jet-azure/apis/storage/v1alpha2.Container
 	// +kubebuilder:validation:Optional
@@ -53,10 +53,10 @@ type EndpointParameters struct {
 	FileNameFormat *string `json:"fileNameFormat,omitempty" tf:"file_name_format"`
 
 	// +kubebuilder:validation:Optional
-	MaxChunkSizeInBytes *int64 `json:"maxChunkSizeInBytes,omitempty" tf:"max_chunk_size_in_bytes"`
+	MaxChunkSizeInBytes *float64 `json:"maxChunkSizeInBytes,omitempty" tf:"max_chunk_size_in_bytes"`
 
-	// +kubebuilder:validation:Required
-	Name *string `json:"name" tf:"name"`
+	// +kubebuilder:validation:Optional
+	Name *string `json:"name,omitempty" tf:"name"`
 
 	// +crossplane:generate:reference:type=github.com/crossplane-contrib/provider-jet-azure/apis/azure/v1alpha2.ResourceGroup
 	// +kubebuilder:validation:Optional
@@ -68,8 +68,8 @@ type EndpointParameters struct {
 	// +kubebuilder:validation:Optional
 	ResourceGroupNameSelector *v1.Selector `json:"resourceGroupNameSelector,omitempty" tf:"-"`
 
-	// +kubebuilder:validation:Required
-	Type *string `json:"type" tf:"type"`
+	// +kubebuilder:validation:Optional
+	Type *string `json:"type,omitempty" tf:"type"`
 }
 
 type EnrichmentObservation struct {
@@ -77,14 +77,14 @@ type EnrichmentObservation struct {
 
 type EnrichmentParameters struct {
 
-	// +kubebuilder:validation:Required
-	EndpointNames []*string `json:"endpointNames" tf:"endpoint_names"`
+	// +kubebuilder:validation:Optional
+	EndpointNames []*string `json:"endpointNames,omitempty" tf:"endpoint_names"`
 
-	// +kubebuilder:validation:Required
-	Key *string `json:"key" tf:"key"`
+	// +kubebuilder:validation:Optional
+	Key *string `json:"key,omitempty" tf:"key"`
 
-	// +kubebuilder:validation:Required
-	Value *string `json:"value" tf:"value"`
+	// +kubebuilder:validation:Optional
+	Value *string `json:"value,omitempty" tf:"value"`
 }
 
 type FallbackRouteObservation struct {
@@ -123,7 +123,7 @@ type FileUploadParameters struct {
 	LockDuration *string `json:"lockDuration,omitempty" tf:"lock_duration,omitempty"`
 
 	// +kubebuilder:validation:Optional
-	MaxDeliveryCount *int64 `json:"maxDeliveryCount,omitempty" tf:"max_delivery_count,omitempty"`
+	MaxDeliveryCount *float64 `json:"maxDeliveryCount,omitempty" tf:"max_delivery_count,omitempty"`
 
 	// +kubebuilder:validation:Optional
 	Notifications *bool `json:"notifications,omitempty" tf:"notifications,omitempty"`
@@ -159,10 +159,10 @@ type IOTHubParameters struct {
 	Enrichment []EnrichmentParameters `json:"enrichment,omitempty" tf:"enrichment,omitempty"`
 
 	// +kubebuilder:validation:Optional
-	EventHubPartitionCount *int64 `json:"eventHubPartitionCount,omitempty" tf:"event_hub_partition_count,omitempty"`
+	EventHubPartitionCount *float64 `json:"eventHubPartitionCount,omitempty" tf:"event_hub_partition_count,omitempty"`
 
 	// +kubebuilder:validation:Optional
-	EventHubRetentionInDays *int64 `json:"eventHubRetentionInDays,omitempty" tf:"event_hub_retention_in_days,omitempty"`
+	EventHubRetentionInDays *float64 `json:"eventHubRetentionInDays,omitempty" tf:"event_hub_retention_in_days,omitempty"`
 
 	// +kubebuilder:validation:Optional
 	FallbackRoute []FallbackRouteParameters `json:"fallbackRoute,omitempty" tf:"fallback_route,omitempty"`
@@ -225,17 +225,17 @@ type RouteParameters struct {
 	// +kubebuilder:validation:Optional
 	Condition *string `json:"condition,omitempty" tf:"condition"`
 
-	// +kubebuilder:validation:Required
-	Enabled *bool `json:"enabled" tf:"enabled"`
+	// +kubebuilder:validation:Optional
+	Enabled *bool `json:"enabled,omitempty" tf:"enabled"`
 
-	// +kubebuilder:validation:Required
-	EndpointNames []*string `json:"endpointNames" tf:"endpoint_names"`
+	// +kubebuilder:validation:Optional
+	EndpointNames []*string `json:"endpointNames,omitempty" tf:"endpoint_names"`
 
-	// +kubebuilder:validation:Required
-	Name *string `json:"name" tf:"name"`
+	// +kubebuilder:validation:Optional
+	Name *string `json:"name,omitempty" tf:"name"`
 
-	// +kubebuilder:validation:Required
-	Source *string `json:"source" tf:"source"`
+	// +kubebuilder:validation:Optional
+	Source *string `json:"source,omitempty" tf:"source"`
 }
 
 type SharedAccessPolicyObservation struct {
@@ -253,7 +253,7 @@ type SkuObservation struct {
 type SkuParameters struct {
 
 	// +kubebuilder:validation:Required
-	Capacity *int64 `json:"capacity" tf:"capacity,omitempty"`
+	Capacity *float64 `json:"capacity" tf:"capacity,omitempty"`
 
 	// +kubebuilder:validation:Required
 	Name *string `json:"name" tf:"name,omitempty"`

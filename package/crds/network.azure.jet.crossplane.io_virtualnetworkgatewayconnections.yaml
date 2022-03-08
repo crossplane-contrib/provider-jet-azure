@@ -86,8 +86,7 @@ spec:
                   connectionProtocol:
                     type: string
                   dpdTimeoutSeconds:
-                    format: int64
-                    type: integer
+                    type: number
                   enableBgp:
                     type: boolean
                   expressRouteCircuitId:
@@ -110,11 +109,9 @@ spec:
                         pfsGroup:
                           type: string
                         saDatasize:
-                          format: int64
-                          type: integer
+                          type: number
                         saLifetime:
-                          format: int64
-                          type: integer
+                          type: number
                       required:
                       - dhGroup
                       - ikeEncryption
@@ -181,8 +178,7 @@ spec:
                         type: object
                     type: object
                   routingWeight:
-                    format: int64
-                    type: integer
+                    type: number
                   sharedKeySecretRef:
                     description: A SecretKeySelector is a reference to a secret key
                       in an arbitrary namespace.

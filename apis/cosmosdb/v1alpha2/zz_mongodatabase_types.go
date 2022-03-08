@@ -31,7 +31,7 @@ type MongoDatabaseAutoscaleSettingsObservation struct {
 type MongoDatabaseAutoscaleSettingsParameters struct {
 
 	// +kubebuilder:validation:Optional
-	MaxThroughput *int64 `json:"maxThroughput,omitempty" tf:"max_throughput,omitempty"`
+	MaxThroughput *float64 `json:"maxThroughput,omitempty" tf:"max_throughput,omitempty"`
 }
 
 type MongoDatabaseObservation struct {
@@ -64,7 +64,7 @@ type MongoDatabaseParameters struct {
 	ResourceGroupNameSelector *v1.Selector `json:"resourceGroupNameSelector,omitempty" tf:"-"`
 
 	// +kubebuilder:validation:Optional
-	Throughput *int64 `json:"throughput,omitempty" tf:"throughput,omitempty"`
+	Throughput *float64 `json:"throughput,omitempty" tf:"throughput,omitempty"`
 }
 
 // MongoDatabaseSpec defines the desired state of MongoDatabase

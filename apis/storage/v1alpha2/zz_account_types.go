@@ -229,7 +229,7 @@ type ContainerDeleteRetentionPolicyObservation struct {
 type ContainerDeleteRetentionPolicyParameters struct {
 
 	// +kubebuilder:validation:Optional
-	Days *int64 `json:"days,omitempty" tf:"days,omitempty"`
+	Days *float64 `json:"days,omitempty" tf:"days,omitempty"`
 }
 
 type CorsRuleObservation struct {
@@ -250,7 +250,7 @@ type CorsRuleParameters struct {
 	ExposedHeaders []*string `json:"exposedHeaders" tf:"exposed_headers,omitempty"`
 
 	// +kubebuilder:validation:Required
-	MaxAgeInSeconds *int64 `json:"maxAgeInSeconds" tf:"max_age_in_seconds,omitempty"`
+	MaxAgeInSeconds *float64 `json:"maxAgeInSeconds" tf:"max_age_in_seconds,omitempty"`
 }
 
 type CustomDomainObservation struct {
@@ -271,7 +271,7 @@ type DeleteRetentionPolicyObservation struct {
 type DeleteRetentionPolicyParameters struct {
 
 	// +kubebuilder:validation:Optional
-	Days *int64 `json:"days,omitempty" tf:"days,omitempty"`
+	Days *float64 `json:"days,omitempty" tf:"days,omitempty"`
 }
 
 type HourMetricsObservation struct {
@@ -286,7 +286,7 @@ type HourMetricsParameters struct {
 	IncludeApis *bool `json:"includeApis,omitempty" tf:"include_apis,omitempty"`
 
 	// +kubebuilder:validation:Optional
-	RetentionPolicyDays *int64 `json:"retentionPolicyDays,omitempty" tf:"retention_policy_days,omitempty"`
+	RetentionPolicyDays *float64 `json:"retentionPolicyDays,omitempty" tf:"retention_policy_days,omitempty"`
 
 	// +kubebuilder:validation:Required
 	Version *string `json:"version" tf:"version,omitempty"`
@@ -319,7 +319,7 @@ type LoggingParameters struct {
 	Read *bool `json:"read" tf:"read,omitempty"`
 
 	// +kubebuilder:validation:Optional
-	RetentionPolicyDays *int64 `json:"retentionPolicyDays,omitempty" tf:"retention_policy_days,omitempty"`
+	RetentionPolicyDays *float64 `json:"retentionPolicyDays,omitempty" tf:"retention_policy_days,omitempty"`
 
 	// +kubebuilder:validation:Required
 	Version *string `json:"version" tf:"version,omitempty"`
@@ -340,7 +340,7 @@ type MinuteMetricsParameters struct {
 	IncludeApis *bool `json:"includeApis,omitempty" tf:"include_apis,omitempty"`
 
 	// +kubebuilder:validation:Optional
-	RetentionPolicyDays *int64 `json:"retentionPolicyDays,omitempty" tf:"retention_policy_days,omitempty"`
+	RetentionPolicyDays *float64 `json:"retentionPolicyDays,omitempty" tf:"retention_policy_days,omitempty"`
 
 	// +kubebuilder:validation:Required
 	Version *string `json:"version" tf:"version,omitempty"`
@@ -397,7 +397,7 @@ type QueuePropertiesCorsRuleParameters struct {
 	ExposedHeaders []*string `json:"exposedHeaders" tf:"exposed_headers,omitempty"`
 
 	// +kubebuilder:validation:Required
-	MaxAgeInSeconds *int64 `json:"maxAgeInSeconds" tf:"max_age_in_seconds,omitempty"`
+	MaxAgeInSeconds *float64 `json:"maxAgeInSeconds" tf:"max_age_in_seconds,omitempty"`
 }
 
 type QueuePropertiesObservation struct {
@@ -424,7 +424,7 @@ type RetentionPolicyObservation struct {
 type RetentionPolicyParameters struct {
 
 	// +kubebuilder:validation:Optional
-	Days *int64 `json:"days,omitempty" tf:"days,omitempty"`
+	Days *float64 `json:"days,omitempty" tf:"days,omitempty"`
 }
 
 type RoutingObservation struct {
@@ -478,7 +478,7 @@ type SharePropertiesCorsRuleParameters struct {
 	ExposedHeaders []*string `json:"exposedHeaders" tf:"exposed_headers,omitempty"`
 
 	// +kubebuilder:validation:Required
-	MaxAgeInSeconds *int64 `json:"maxAgeInSeconds" tf:"max_age_in_seconds,omitempty"`
+	MaxAgeInSeconds *float64 `json:"maxAgeInSeconds" tf:"max_age_in_seconds,omitempty"`
 }
 
 type SharePropertiesObservation struct {

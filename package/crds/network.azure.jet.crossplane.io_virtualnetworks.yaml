@@ -117,13 +117,12 @@ spec:
                       properties:
                         addressPrefix:
                           type: string
+                        id:
+                          type: string
                         name:
                           type: string
                         securityGroup:
                           type: string
-                      required:
-                      - addressPrefix
-                      - name
                       type: object
                     type: array
                   tags:

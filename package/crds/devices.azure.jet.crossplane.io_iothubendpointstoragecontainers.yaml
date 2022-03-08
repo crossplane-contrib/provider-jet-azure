@@ -66,8 +66,7 @@ spec:
               forProvider:
                 properties:
                   batchFrequencyInSeconds:
-                    format: int64
-                    type: integer
+                    type: number
                   connectionStringSecretRef:
                     description: A SecretKeySelector is a reference to a secret key
                       in an arbitrary namespace.
@@ -141,8 +140,7 @@ spec:
                   iothubName:
                     type: string
                   maxChunkSizeInBytes:
-                    format: int64
-                    type: integer
+                    type: number
                   resourceGroupName:
                     type: string
                   resourceGroupNameRef:

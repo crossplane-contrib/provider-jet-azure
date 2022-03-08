@@ -67,8 +67,7 @@ spec:
                     items:
                       properties:
                         batchFrequencyInSeconds:
-                          format: int64
-                          type: integer
+                          type: number
                         connectionStringSecretRef:
                           description: A SecretKeySelector is a reference to a secret
                             key in an arbitrary namespace.
@@ -118,8 +117,7 @@ spec:
                         fileNameFormat:
                           type: string
                         maxChunkSizeInBytes:
-                          format: int64
-                          type: integer
+                          type: number
                         name:
                           type: string
                         resourceGroupName:
@@ -150,10 +148,6 @@ spec:
                           type: object
                         type:
                           type: string
-                      required:
-                      - connectionStringSecretRef
-                      - name
-                      - type
                       type: object
                     type: array
                   enrichment:
@@ -167,18 +161,12 @@ spec:
                           type: string
                         value:
                           type: string
-                      required:
-                      - endpointNames
-                      - key
-                      - value
                       type: object
                     type: array
                   eventHubPartitionCount:
-                    format: int64
-                    type: integer
+                    type: number
                   eventHubRetentionInDays:
-                    format: int64
-                    type: integer
+                    type: number
                   fallbackRoute:
                     items:
                       properties:
@@ -222,8 +210,7 @@ spec:
                         lockDuration:
                           type: string
                         maxDeliveryCount:
-                          format: int64
-                          type: integer
+                          type: number
                         notifications:
                           type: boolean
                         sasTtl:
@@ -294,19 +281,13 @@ spec:
                           type: string
                         source:
                           type: string
-                      required:
-                      - enabled
-                      - endpointNames
-                      - name
-                      - source
                       type: object
                     type: array
                   sku:
                     items:
                       properties:
                         capacity:
-                          format: int64
-                          type: integer
+                          type: number
                         name:
                           type: string
                       required:

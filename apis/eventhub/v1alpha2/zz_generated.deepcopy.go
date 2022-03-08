@@ -251,12 +251,12 @@ func (in *CaptureDescriptionParameters) DeepCopyInto(out *CaptureDescriptionPara
 	}
 	if in.IntervalInSeconds != nil {
 		in, out := &in.IntervalInSeconds, &out.IntervalInSeconds
-		*out = new(int64)
+		*out = new(float64)
 		**out = **in
 	}
 	if in.SizeLimitInBytes != nil {
 		in, out := &in.SizeLimitInBytes, &out.SizeLimitInBytes
-		*out = new(int64)
+		*out = new(float64)
 		**out = **in
 	}
 	if in.SkipEmptyArchives != nil {
@@ -652,7 +652,7 @@ func (in *EventHubNamespaceParameters) DeepCopyInto(out *EventHubNamespaceParame
 	}
 	if in.Capacity != nil {
 		in, out := &in.Capacity, &out.Capacity
-		*out = new(int64)
+		*out = new(float64)
 		**out = **in
 	}
 	if in.DedicatedClusterID != nil {
@@ -674,7 +674,7 @@ func (in *EventHubNamespaceParameters) DeepCopyInto(out *EventHubNamespaceParame
 	}
 	if in.MaximumThroughputUnits != nil {
 		in, out := &in.MaximumThroughputUnits, &out.MaximumThroughputUnits
-		*out = new(int64)
+		*out = new(float64)
 		**out = **in
 	}
 	if in.NetworkRulesets != nil {
@@ -813,7 +813,7 @@ func (in *EventHubParameters) DeepCopyInto(out *EventHubParameters) {
 	}
 	if in.MessageRetention != nil {
 		in, out := &in.MessageRetention, &out.MessageRetention
-		*out = new(int64)
+		*out = new(float64)
 		**out = **in
 	}
 	if in.NamespaceName != nil {
@@ -833,7 +833,7 @@ func (in *EventHubParameters) DeepCopyInto(out *EventHubParameters) {
 	}
 	if in.PartitionCount != nil {
 		in, out := &in.PartitionCount, &out.PartitionCount
-		*out = new(int64)
+		*out = new(float64)
 		**out = **in
 	}
 	if in.ResourceGroupName != nil {

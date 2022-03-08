@@ -83,8 +83,7 @@ spec:
                         componentId:
                           type: string
                         failedLocationCount:
-                          format: int64
-                          type: integer
+                          type: number
                         webTestId:
                           type: string
                       required:
@@ -162,11 +161,9 @@ spec:
                             type: object
                           type: array
                         evaluationFailureCount:
-                          format: int64
-                          type: integer
+                          type: number
                         evaluationTotalCount:
-                          format: int64
-                          type: integer
+                          type: number
                         ignoreDataBefore:
                           type: string
                         metricName:
@@ -219,8 +216,7 @@ spec:
                       type: string
                     type: array
                   severity:
-                    format: int64
-                    type: integer
+                    type: number
                   tags:
                     additionalProperties:
                       type: string

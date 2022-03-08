@@ -43,19 +43,19 @@ type KubernetesClusterNodePoolKubeletConfigParameters struct {
 	CPUManagerPolicy *string `json:"cpuManagerPolicy,omitempty" tf:"cpu_manager_policy,omitempty"`
 
 	// +kubebuilder:validation:Optional
-	ContainerLogMaxLine *int64 `json:"containerLogMaxLine,omitempty" tf:"container_log_max_line,omitempty"`
+	ContainerLogMaxLine *float64 `json:"containerLogMaxLine,omitempty" tf:"container_log_max_line,omitempty"`
 
 	// +kubebuilder:validation:Optional
-	ContainerLogMaxSizeMb *int64 `json:"containerLogMaxSizeMb,omitempty" tf:"container_log_max_size_mb,omitempty"`
+	ContainerLogMaxSizeMb *float64 `json:"containerLogMaxSizeMb,omitempty" tf:"container_log_max_size_mb,omitempty"`
 
 	// +kubebuilder:validation:Optional
-	ImageGcHighThreshold *int64 `json:"imageGcHighThreshold,omitempty" tf:"image_gc_high_threshold,omitempty"`
+	ImageGcHighThreshold *float64 `json:"imageGcHighThreshold,omitempty" tf:"image_gc_high_threshold,omitempty"`
 
 	// +kubebuilder:validation:Optional
-	ImageGcLowThreshold *int64 `json:"imageGcLowThreshold,omitempty" tf:"image_gc_low_threshold,omitempty"`
+	ImageGcLowThreshold *float64 `json:"imageGcLowThreshold,omitempty" tf:"image_gc_low_threshold,omitempty"`
 
 	// +kubebuilder:validation:Optional
-	PodMaxPid *int64 `json:"podMaxPid,omitempty" tf:"pod_max_pid,omitempty"`
+	PodMaxPid *float64 `json:"podMaxPid,omitempty" tf:"pod_max_pid,omitempty"`
 
 	// +kubebuilder:validation:Optional
 	TopologyManagerPolicy *string `json:"topologyManagerPolicy,omitempty" tf:"topology_manager_policy,omitempty"`
@@ -67,7 +67,7 @@ type KubernetesClusterNodePoolLinuxOsConfigObservation struct {
 type KubernetesClusterNodePoolLinuxOsConfigParameters struct {
 
 	// +kubebuilder:validation:Optional
-	SwapFileSizeMb *int64 `json:"swapFileSizeMb,omitempty" tf:"swap_file_size_mb,omitempty"`
+	SwapFileSizeMb *float64 `json:"swapFileSizeMb,omitempty" tf:"swap_file_size_mb,omitempty"`
 
 	// +kubebuilder:validation:Optional
 	SysctlConfig []LinuxOsConfigSysctlConfigParameters `json:"sysctlConfig,omitempty" tf:"sysctl_config,omitempty"`
@@ -124,19 +124,19 @@ type KubernetesClusterNodePoolParameters struct {
 	LinuxOsConfig []KubernetesClusterNodePoolLinuxOsConfigParameters `json:"linuxOsConfig,omitempty" tf:"linux_os_config,omitempty"`
 
 	// +kubebuilder:validation:Optional
-	MaxCount *int64 `json:"maxCount,omitempty" tf:"max_count,omitempty"`
+	MaxCount *float64 `json:"maxCount,omitempty" tf:"max_count,omitempty"`
 
 	// +kubebuilder:validation:Optional
-	MaxPods *int64 `json:"maxPods,omitempty" tf:"max_pods,omitempty"`
+	MaxPods *float64 `json:"maxPods,omitempty" tf:"max_pods,omitempty"`
 
 	// +kubebuilder:validation:Optional
-	MinCount *int64 `json:"minCount,omitempty" tf:"min_count,omitempty"`
+	MinCount *float64 `json:"minCount,omitempty" tf:"min_count,omitempty"`
 
 	// +kubebuilder:validation:Optional
 	Mode *string `json:"mode,omitempty" tf:"mode,omitempty"`
 
 	// +kubebuilder:validation:Optional
-	NodeCount *int64 `json:"nodeCount,omitempty" tf:"node_count,omitempty"`
+	NodeCount *float64 `json:"nodeCount,omitempty" tf:"node_count,omitempty"`
 
 	// +kubebuilder:validation:Optional
 	NodeLabels map[string]*string `json:"nodeLabels,omitempty" tf:"node_labels,omitempty"`
@@ -151,7 +151,7 @@ type KubernetesClusterNodePoolParameters struct {
 	OrchestratorVersion *string `json:"orchestratorVersion,omitempty" tf:"orchestrator_version,omitempty"`
 
 	// +kubebuilder:validation:Optional
-	OsDiskSizeGb *int64 `json:"osDiskSizeGb,omitempty" tf:"os_disk_size_gb,omitempty"`
+	OsDiskSizeGb *float64 `json:"osDiskSizeGb,omitempty" tf:"os_disk_size_gb,omitempty"`
 
 	// +kubebuilder:validation:Optional
 	OsDiskType *string `json:"osDiskType,omitempty" tf:"os_disk_type,omitempty"`
@@ -221,91 +221,91 @@ type LinuxOsConfigSysctlConfigObservation struct {
 type LinuxOsConfigSysctlConfigParameters struct {
 
 	// +kubebuilder:validation:Optional
-	FsAioMaxNr *int64 `json:"fsAioMaxNr,omitempty" tf:"fs_aio_max_nr,omitempty"`
+	FsAioMaxNr *float64 `json:"fsAioMaxNr,omitempty" tf:"fs_aio_max_nr,omitempty"`
 
 	// +kubebuilder:validation:Optional
-	FsFileMax *int64 `json:"fsFileMax,omitempty" tf:"fs_file_max,omitempty"`
+	FsFileMax *float64 `json:"fsFileMax,omitempty" tf:"fs_file_max,omitempty"`
 
 	// +kubebuilder:validation:Optional
-	FsInotifyMaxUserWatches *int64 `json:"fsInotifyMaxUserWatches,omitempty" tf:"fs_inotify_max_user_watches,omitempty"`
+	FsInotifyMaxUserWatches *float64 `json:"fsInotifyMaxUserWatches,omitempty" tf:"fs_inotify_max_user_watches,omitempty"`
 
 	// +kubebuilder:validation:Optional
-	FsNrOpen *int64 `json:"fsNrOpen,omitempty" tf:"fs_nr_open,omitempty"`
+	FsNrOpen *float64 `json:"fsNrOpen,omitempty" tf:"fs_nr_open,omitempty"`
 
 	// +kubebuilder:validation:Optional
-	KernelThreadsMax *int64 `json:"kernelThreadsMax,omitempty" tf:"kernel_threads_max,omitempty"`
+	KernelThreadsMax *float64 `json:"kernelThreadsMax,omitempty" tf:"kernel_threads_max,omitempty"`
 
 	// +kubebuilder:validation:Optional
-	NetCoreNetdevMaxBacklog *int64 `json:"netCoreNetdevMaxBacklog,omitempty" tf:"net_core_netdev_max_backlog,omitempty"`
+	NetCoreNetdevMaxBacklog *float64 `json:"netCoreNetdevMaxBacklog,omitempty" tf:"net_core_netdev_max_backlog,omitempty"`
 
 	// +kubebuilder:validation:Optional
-	NetCoreOptmemMax *int64 `json:"netCoreOptmemMax,omitempty" tf:"net_core_optmem_max,omitempty"`
+	NetCoreOptmemMax *float64 `json:"netCoreOptmemMax,omitempty" tf:"net_core_optmem_max,omitempty"`
 
 	// +kubebuilder:validation:Optional
-	NetCoreRmemDefault *int64 `json:"netCoreRmemDefault,omitempty" tf:"net_core_rmem_default,omitempty"`
+	NetCoreRmemDefault *float64 `json:"netCoreRmemDefault,omitempty" tf:"net_core_rmem_default,omitempty"`
 
 	// +kubebuilder:validation:Optional
-	NetCoreRmemMax *int64 `json:"netCoreRmemMax,omitempty" tf:"net_core_rmem_max,omitempty"`
+	NetCoreRmemMax *float64 `json:"netCoreRmemMax,omitempty" tf:"net_core_rmem_max,omitempty"`
 
 	// +kubebuilder:validation:Optional
-	NetCoreSomaxconn *int64 `json:"netCoreSomaxconn,omitempty" tf:"net_core_somaxconn,omitempty"`
+	NetCoreSomaxconn *float64 `json:"netCoreSomaxconn,omitempty" tf:"net_core_somaxconn,omitempty"`
 
 	// +kubebuilder:validation:Optional
-	NetCoreWmemDefault *int64 `json:"netCoreWmemDefault,omitempty" tf:"net_core_wmem_default,omitempty"`
+	NetCoreWmemDefault *float64 `json:"netCoreWmemDefault,omitempty" tf:"net_core_wmem_default,omitempty"`
 
 	// +kubebuilder:validation:Optional
-	NetCoreWmemMax *int64 `json:"netCoreWmemMax,omitempty" tf:"net_core_wmem_max,omitempty"`
+	NetCoreWmemMax *float64 `json:"netCoreWmemMax,omitempty" tf:"net_core_wmem_max,omitempty"`
 
 	// +kubebuilder:validation:Optional
-	NetIPv4IPLocalPortRangeMax *int64 `json:"netIpv4IpLocalPortRangeMax,omitempty" tf:"net_ipv4_ip_local_port_range_max,omitempty"`
+	NetIPv4IPLocalPortRangeMax *float64 `json:"netIpv4IpLocalPortRangeMax,omitempty" tf:"net_ipv4_ip_local_port_range_max,omitempty"`
 
 	// +kubebuilder:validation:Optional
-	NetIPv4IPLocalPortRangeMin *int64 `json:"netIpv4IpLocalPortRangeMin,omitempty" tf:"net_ipv4_ip_local_port_range_min,omitempty"`
+	NetIPv4IPLocalPortRangeMin *float64 `json:"netIpv4IpLocalPortRangeMin,omitempty" tf:"net_ipv4_ip_local_port_range_min,omitempty"`
 
 	// +kubebuilder:validation:Optional
-	NetIPv4NeighDefaultGcThresh1 *int64 `json:"netIpv4NeighDefaultGcThresh1,omitempty" tf:"net_ipv4_neigh_default_gc_thresh1,omitempty"`
+	NetIPv4NeighDefaultGcThresh1 *float64 `json:"netIpv4NeighDefaultGcThresh1,omitempty" tf:"net_ipv4_neigh_default_gc_thresh1,omitempty"`
 
 	// +kubebuilder:validation:Optional
-	NetIPv4NeighDefaultGcThresh2 *int64 `json:"netIpv4NeighDefaultGcThresh2,omitempty" tf:"net_ipv4_neigh_default_gc_thresh2,omitempty"`
+	NetIPv4NeighDefaultGcThresh2 *float64 `json:"netIpv4NeighDefaultGcThresh2,omitempty" tf:"net_ipv4_neigh_default_gc_thresh2,omitempty"`
 
 	// +kubebuilder:validation:Optional
-	NetIPv4NeighDefaultGcThresh3 *int64 `json:"netIpv4NeighDefaultGcThresh3,omitempty" tf:"net_ipv4_neigh_default_gc_thresh3,omitempty"`
+	NetIPv4NeighDefaultGcThresh3 *float64 `json:"netIpv4NeighDefaultGcThresh3,omitempty" tf:"net_ipv4_neigh_default_gc_thresh3,omitempty"`
 
 	// +kubebuilder:validation:Optional
-	NetIPv4TCPFinTimeout *int64 `json:"netIpv4TcpFinTimeout,omitempty" tf:"net_ipv4_tcp_fin_timeout,omitempty"`
+	NetIPv4TCPFinTimeout *float64 `json:"netIpv4TcpFinTimeout,omitempty" tf:"net_ipv4_tcp_fin_timeout,omitempty"`
 
 	// +kubebuilder:validation:Optional
-	NetIPv4TCPKeepaliveIntvl *int64 `json:"netIpv4TcpKeepaliveIntvl,omitempty" tf:"net_ipv4_tcp_keepalive_intvl,omitempty"`
+	NetIPv4TCPKeepaliveIntvl *float64 `json:"netIpv4TcpKeepaliveIntvl,omitempty" tf:"net_ipv4_tcp_keepalive_intvl,omitempty"`
 
 	// +kubebuilder:validation:Optional
-	NetIPv4TCPKeepaliveProbes *int64 `json:"netIpv4TcpKeepaliveProbes,omitempty" tf:"net_ipv4_tcp_keepalive_probes,omitempty"`
+	NetIPv4TCPKeepaliveProbes *float64 `json:"netIpv4TcpKeepaliveProbes,omitempty" tf:"net_ipv4_tcp_keepalive_probes,omitempty"`
 
 	// +kubebuilder:validation:Optional
-	NetIPv4TCPKeepaliveTime *int64 `json:"netIpv4TcpKeepaliveTime,omitempty" tf:"net_ipv4_tcp_keepalive_time,omitempty"`
+	NetIPv4TCPKeepaliveTime *float64 `json:"netIpv4TcpKeepaliveTime,omitempty" tf:"net_ipv4_tcp_keepalive_time,omitempty"`
 
 	// +kubebuilder:validation:Optional
-	NetIPv4TCPMaxSynBacklog *int64 `json:"netIpv4TcpMaxSynBacklog,omitempty" tf:"net_ipv4_tcp_max_syn_backlog,omitempty"`
+	NetIPv4TCPMaxSynBacklog *float64 `json:"netIpv4TcpMaxSynBacklog,omitempty" tf:"net_ipv4_tcp_max_syn_backlog,omitempty"`
 
 	// +kubebuilder:validation:Optional
-	NetIPv4TCPMaxTwBuckets *int64 `json:"netIpv4TcpMaxTwBuckets,omitempty" tf:"net_ipv4_tcp_max_tw_buckets,omitempty"`
+	NetIPv4TCPMaxTwBuckets *float64 `json:"netIpv4TcpMaxTwBuckets,omitempty" tf:"net_ipv4_tcp_max_tw_buckets,omitempty"`
 
 	// +kubebuilder:validation:Optional
 	NetIPv4TCPTwReuse *bool `json:"netIpv4TcpTwReuse,omitempty" tf:"net_ipv4_tcp_tw_reuse,omitempty"`
 
 	// +kubebuilder:validation:Optional
-	NetNetfilterNfConntrackBuckets *int64 `json:"netNetfilterNfConntrackBuckets,omitempty" tf:"net_netfilter_nf_conntrack_buckets,omitempty"`
+	NetNetfilterNfConntrackBuckets *float64 `json:"netNetfilterNfConntrackBuckets,omitempty" tf:"net_netfilter_nf_conntrack_buckets,omitempty"`
 
 	// +kubebuilder:validation:Optional
-	NetNetfilterNfConntrackMax *int64 `json:"netNetfilterNfConntrackMax,omitempty" tf:"net_netfilter_nf_conntrack_max,omitempty"`
+	NetNetfilterNfConntrackMax *float64 `json:"netNetfilterNfConntrackMax,omitempty" tf:"net_netfilter_nf_conntrack_max,omitempty"`
 
 	// +kubebuilder:validation:Optional
-	VMMaxMapCount *int64 `json:"vmMaxMapCount,omitempty" tf:"vm_max_map_count,omitempty"`
+	VMMaxMapCount *float64 `json:"vmMaxMapCount,omitempty" tf:"vm_max_map_count,omitempty"`
 
 	// +kubebuilder:validation:Optional
-	VMSwappiness *int64 `json:"vmSwappiness,omitempty" tf:"vm_swappiness,omitempty"`
+	VMSwappiness *float64 `json:"vmSwappiness,omitempty" tf:"vm_swappiness,omitempty"`
 
 	// +kubebuilder:validation:Optional
-	VMVfsCachePressure *int64 `json:"vmVfsCachePressure,omitempty" tf:"vm_vfs_cache_pressure,omitempty"`
+	VMVfsCachePressure *float64 `json:"vmVfsCachePressure,omitempty" tf:"vm_vfs_cache_pressure,omitempty"`
 }
 
 // KubernetesClusterNodePoolSpec defines the desired state of KubernetesClusterNodePool

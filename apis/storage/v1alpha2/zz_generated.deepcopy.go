@@ -658,12 +658,12 @@ func (in *BlobParameters) DeepCopyInto(out *BlobParameters) {
 	}
 	if in.Parallelism != nil {
 		in, out := &in.Parallelism, &out.Parallelism
-		*out = new(int64)
+		*out = new(float64)
 		**out = **in
 	}
 	if in.Size != nil {
 		in, out := &in.Size, &out.Size
-		*out = new(int64)
+		*out = new(float64)
 		**out = **in
 	}
 	if in.Source != nil {
@@ -880,7 +880,7 @@ func (in *ContainerDeleteRetentionPolicyParameters) DeepCopyInto(out *ContainerD
 	*out = *in
 	if in.Days != nil {
 		in, out := &in.Days, &out.Days
-		*out = new(int64)
+		*out = new(float64)
 		**out = **in
 	}
 }
@@ -1110,7 +1110,7 @@ func (in *CorsRuleParameters) DeepCopyInto(out *CorsRuleParameters) {
 	}
 	if in.MaxAgeInSeconds != nil {
 		in, out := &in.MaxAgeInSeconds, &out.MaxAgeInSeconds
-		*out = new(int64)
+		*out = new(float64)
 		**out = **in
 	}
 }
@@ -1185,7 +1185,7 @@ func (in *DeleteRetentionPolicyParameters) DeepCopyInto(out *DeleteRetentionPoli
 	*out = *in
 	if in.Days != nil {
 		in, out := &in.Days, &out.Days
-		*out = new(int64)
+		*out = new(float64)
 		**out = **in
 	}
 }
@@ -1230,7 +1230,7 @@ func (in *HourMetricsParameters) DeepCopyInto(out *HourMetricsParameters) {
 	}
 	if in.RetentionPolicyDays != nil {
 		in, out := &in.RetentionPolicyDays, &out.RetentionPolicyDays
-		*out = new(int64)
+		*out = new(float64)
 		**out = **in
 	}
 	if in.Version != nil {
@@ -1336,7 +1336,7 @@ func (in *LoggingParameters) DeepCopyInto(out *LoggingParameters) {
 	}
 	if in.RetentionPolicyDays != nil {
 		in, out := &in.RetentionPolicyDays, &out.RetentionPolicyDays
-		*out = new(int64)
+		*out = new(float64)
 		**out = **in
 	}
 	if in.Version != nil {
@@ -1391,7 +1391,7 @@ func (in *MinuteMetricsParameters) DeepCopyInto(out *MinuteMetricsParameters) {
 	}
 	if in.RetentionPolicyDays != nil {
 		in, out := &in.RetentionPolicyDays, &out.RetentionPolicyDays
-		*out = new(int64)
+		*out = new(float64)
 		**out = **in
 	}
 	if in.Version != nil {
@@ -1590,7 +1590,7 @@ func (in *QueuePropertiesCorsRuleParameters) DeepCopyInto(out *QueuePropertiesCo
 	}
 	if in.MaxAgeInSeconds != nil {
 		in, out := &in.MaxAgeInSeconds, &out.MaxAgeInSeconds
-		*out = new(int64)
+		*out = new(float64)
 		**out = **in
 	}
 }
@@ -1683,7 +1683,7 @@ func (in *RetentionPolicyParameters) DeepCopyInto(out *RetentionPolicyParameters
 	*out = *in
 	if in.Days != nil {
 		in, out := &in.Days, &out.Days
-		*out = new(int64)
+		*out = new(float64)
 		**out = **in
 	}
 }
@@ -1881,7 +1881,7 @@ func (in *SharePropertiesCorsRuleParameters) DeepCopyInto(out *SharePropertiesCo
 	}
 	if in.MaxAgeInSeconds != nil {
 		in, out := &in.MaxAgeInSeconds, &out.MaxAgeInSeconds
-		*out = new(int64)
+		*out = new(float64)
 		**out = **in
 	}
 }

@@ -68,7 +68,7 @@ type RedisEnterpriseDatabaseParameters struct {
 	Module []ModuleParameters `json:"module,omitempty" tf:"module,omitempty"`
 
 	// +kubebuilder:validation:Optional
-	Port *int64 `json:"port,omitempty" tf:"port,omitempty"`
+	Port *float64 `json:"port,omitempty" tf:"port,omitempty"`
 
 	// +crossplane:generate:reference:type=github.com/crossplane-contrib/provider-jet-azure/apis/azure/v1alpha2.ResourceGroup
 	// +kubebuilder:validation:Optional

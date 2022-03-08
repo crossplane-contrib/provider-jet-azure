@@ -31,10 +31,10 @@ type BGPSettingsObservation struct {
 type BGPSettingsParameters struct {
 
 	// +kubebuilder:validation:Optional
-	Asn *int64 `json:"asn,omitempty" tf:"asn,omitempty"`
+	Asn *float64 `json:"asn,omitempty" tf:"asn,omitempty"`
 
 	// +kubebuilder:validation:Optional
-	PeerWeight *int64 `json:"peerWeight,omitempty" tf:"peer_weight,omitempty"`
+	PeerWeight *float64 `json:"peerWeight,omitempty" tf:"peer_weight,omitempty"`
 
 	// +kubebuilder:validation:Optional
 	PeeringAddress *string `json:"peeringAddress,omitempty" tf:"peering_address,omitempty"`

@@ -44,7 +44,7 @@ type FlexibleServerParameters struct {
 	AdministratorPasswordSecretRef *v1.SecretKeySelector `json:"administratorPasswordSecretRef,omitempty" tf:"-"`
 
 	// +kubebuilder:validation:Optional
-	BackupRetentionDays *int64 `json:"backupRetentionDays,omitempty" tf:"backup_retention_days,omitempty"`
+	BackupRetentionDays *float64 `json:"backupRetentionDays,omitempty" tf:"backup_retention_days,omitempty"`
 
 	// +kubebuilder:validation:Optional
 	CreateMode *string `json:"createMode,omitempty" tf:"create_mode,omitempty"`
@@ -92,7 +92,7 @@ type FlexibleServerParameters struct {
 	SourceServerID *string `json:"sourceServerId,omitempty" tf:"source_server_id,omitempty"`
 
 	// +kubebuilder:validation:Optional
-	StorageMb *int64 `json:"storageMb,omitempty" tf:"storage_mb,omitempty"`
+	StorageMb *float64 `json:"storageMb,omitempty" tf:"storage_mb,omitempty"`
 
 	// +kubebuilder:validation:Optional
 	Tags map[string]*string `json:"tags,omitempty" tf:"tags,omitempty"`
@@ -122,13 +122,13 @@ type MaintenanceWindowObservation struct {
 type MaintenanceWindowParameters struct {
 
 	// +kubebuilder:validation:Optional
-	DayOfWeek *int64 `json:"dayOfWeek,omitempty" tf:"day_of_week,omitempty"`
+	DayOfWeek *float64 `json:"dayOfWeek,omitempty" tf:"day_of_week,omitempty"`
 
 	// +kubebuilder:validation:Optional
-	StartHour *int64 `json:"startHour,omitempty" tf:"start_hour,omitempty"`
+	StartHour *float64 `json:"startHour,omitempty" tf:"start_hour,omitempty"`
 
 	// +kubebuilder:validation:Optional
-	StartMinute *int64 `json:"startMinute,omitempty" tf:"start_minute,omitempty"`
+	StartMinute *float64 `json:"startMinute,omitempty" tf:"start_minute,omitempty"`
 }
 
 // FlexibleServerSpec defines the desired state of FlexibleServer

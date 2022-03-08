@@ -49,7 +49,7 @@ type ExtendedAuditingPolicyParameters struct {
 	LogMonitoringEnabled *bool `json:"logMonitoringEnabled,omitempty" tf:"log_monitoring_enabled"`
 
 	// +kubebuilder:validation:Optional
-	RetentionInDays *int64 `json:"retentionInDays,omitempty" tf:"retention_in_days"`
+	RetentionInDays *float64 `json:"retentionInDays,omitempty" tf:"retention_in_days"`
 
 	// +kubebuilder:validation:Optional
 	StorageAccountAccessKeyIsSecondary *bool `json:"storageAccountAccessKeyIsSecondary,omitempty" tf:"storage_account_access_key_is_secondary"`

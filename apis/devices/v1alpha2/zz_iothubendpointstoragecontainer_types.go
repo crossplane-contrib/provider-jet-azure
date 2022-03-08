@@ -32,7 +32,7 @@ type IOTHubEndpointStorageContainerObservation struct {
 type IOTHubEndpointStorageContainerParameters struct {
 
 	// +kubebuilder:validation:Optional
-	BatchFrequencyInSeconds *int64 `json:"batchFrequencyInSeconds,omitempty" tf:"batch_frequency_in_seconds,omitempty"`
+	BatchFrequencyInSeconds *float64 `json:"batchFrequencyInSeconds,omitempty" tf:"batch_frequency_in_seconds,omitempty"`
 
 	// +kubebuilder:validation:Required
 	ConnectionStringSecretRef v1.SecretKeySelector `json:"connectionStringSecretRef" tf:"-"`
@@ -64,7 +64,7 @@ type IOTHubEndpointStorageContainerParameters struct {
 	IOTHubNameSelector *v1.Selector `json:"iotHubNameSelector,omitempty" tf:"-"`
 
 	// +kubebuilder:validation:Optional
-	MaxChunkSizeInBytes *int64 `json:"maxChunkSizeInBytes,omitempty" tf:"max_chunk_size_in_bytes,omitempty"`
+	MaxChunkSizeInBytes *float64 `json:"maxChunkSizeInBytes,omitempty" tf:"max_chunk_size_in_bytes,omitempty"`
 
 	// +crossplane:generate:reference:type=github.com/crossplane-contrib/provider-jet-azure/apis/azure/v1alpha2.ResourceGroup
 	// +kubebuilder:validation:Optional

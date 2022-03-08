@@ -86,8 +86,7 @@ spec:
                   autoGrowEnabled:
                     type: boolean
                   backupRetentionDays:
-                    format: int64
-                    type: integer
+                    type: number
                   createMode:
                     type: string
                   creationSourceServerId:
@@ -145,21 +144,18 @@ spec:
                   sslMinimalTlsVersionEnforced:
                     type: string
                   storageMb:
-                    format: int64
-                    type: integer
+                    type: number
                   storageProfile:
                     items:
                       properties:
                         autoGrow:
                           type: string
                         backupRetentionDays:
-                          format: int64
-                          type: integer
+                          type: number
                         geoRedundantBackup:
                           type: string
                         storageMb:
-                          format: int64
-                          type: integer
+                          type: number
                       type: object
                     type: array
                   tags:
@@ -182,8 +178,7 @@ spec:
                         enabled:
                           type: boolean
                         retentionDays:
-                          format: int64
-                          type: integer
+                          type: number
                         storageAccountAccessKeySecretRef:
                           description: A SecretKeySelector is a reference to a secret
                             key in an arbitrary namespace.

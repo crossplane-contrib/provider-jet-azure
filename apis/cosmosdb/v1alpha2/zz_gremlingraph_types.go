@@ -55,7 +55,7 @@ type GremlinGraphAutoscaleSettingsObservation struct {
 type GremlinGraphAutoscaleSettingsParameters struct {
 
 	// +kubebuilder:validation:Optional
-	MaxThroughput *int64 `json:"maxThroughput,omitempty" tf:"max_throughput,omitempty"`
+	MaxThroughput *float64 `json:"maxThroughput,omitempty" tf:"max_throughput,omitempty"`
 }
 
 type GremlinGraphObservation struct {
@@ -91,7 +91,7 @@ type GremlinGraphParameters struct {
 	DatabaseNameSelector *v1.Selector `json:"databaseNameSelector,omitempty" tf:"-"`
 
 	// +kubebuilder:validation:Optional
-	DefaultTTL *int64 `json:"defaultTtl,omitempty" tf:"default_ttl,omitempty"`
+	DefaultTTL *float64 `json:"defaultTtl,omitempty" tf:"default_ttl,omitempty"`
 
 	// +kubebuilder:validation:Optional
 	IndexPolicy []IndexPolicyParameters `json:"indexPolicy,omitempty" tf:"index_policy,omitempty"`
@@ -100,7 +100,7 @@ type GremlinGraphParameters struct {
 	PartitionKeyPath *string `json:"partitionKeyPath" tf:"partition_key_path,omitempty"`
 
 	// +kubebuilder:validation:Optional
-	PartitionKeyVersion *int64 `json:"partitionKeyVersion,omitempty" tf:"partition_key_version,omitempty"`
+	PartitionKeyVersion *float64 `json:"partitionKeyVersion,omitempty" tf:"partition_key_version,omitempty"`
 
 	// +crossplane:generate:reference:type=github.com/crossplane-contrib/provider-jet-azure/apis/azure/v1alpha2.ResourceGroup
 	// +kubebuilder:validation:Optional
@@ -113,7 +113,7 @@ type GremlinGraphParameters struct {
 	ResourceGroupNameSelector *v1.Selector `json:"resourceGroupNameSelector,omitempty" tf:"-"`
 
 	// +kubebuilder:validation:Optional
-	Throughput *int64 `json:"throughput,omitempty" tf:"throughput,omitempty"`
+	Throughput *float64 `json:"throughput,omitempty" tf:"throughput,omitempty"`
 
 	// +kubebuilder:validation:Optional
 	UniqueKey []UniqueKeyParameters `json:"uniqueKey,omitempty" tf:"unique_key,omitempty"`

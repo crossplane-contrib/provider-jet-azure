@@ -96,7 +96,7 @@ func (in *ExtendedAuditingPolicyParameters) DeepCopyInto(out *ExtendedAuditingPo
 	}
 	if in.RetentionInDays != nil {
 		in, out := &in.RetentionInDays, &out.RetentionInDays
-		*out = new(int64)
+		*out = new(float64)
 		**out = **in
 	}
 	if in.StorageAccountAccessKeyIsSecondary != nil {
@@ -449,7 +449,7 @@ func (in *ServerExtendedAuditingPolicyParameters) DeepCopyInto(out *ServerExtend
 	}
 	if in.RetentionInDays != nil {
 		in, out := &in.RetentionInDays, &out.RetentionInDays
-		*out = new(int64)
+		*out = new(float64)
 		**out = **in
 	}
 	if in.StorageAccountAccessKeyIsSecondary != nil {
@@ -749,7 +749,7 @@ func (in *ThreatDetectionPolicyParameters) DeepCopyInto(out *ThreatDetectionPoli
 	}
 	if in.RetentionDays != nil {
 		in, out := &in.RetentionDays, &out.RetentionDays
-		*out = new(int64)
+		*out = new(float64)
 		**out = **in
 	}
 	if in.State != nil {

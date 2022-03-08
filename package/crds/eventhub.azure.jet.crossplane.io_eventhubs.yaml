@@ -89,11 +89,9 @@ spec:
                         encoding:
                           type: string
                         intervalInSeconds:
-                          format: int64
-                          type: integer
+                          type: number
                         sizeLimitInBytes:
-                          format: int64
-                          type: integer
+                          type: number
                         skipEmptyArchives:
                           type: boolean
                       required:
@@ -103,8 +101,7 @@ spec:
                       type: object
                     type: array
                   messageRetention:
-                    format: int64
-                    type: integer
+                    type: number
                   namespaceName:
                     type: string
                   namespaceNameRef:
@@ -131,8 +128,7 @@ spec:
                         type: object
                     type: object
                   partitionCount:
-                    format: int64
-                    type: integer
+                    type: number
                   resourceGroupName:
                     type: string
                   resourceGroupNameRef:

@@ -81,16 +81,18 @@ type VirtualNetworkParameters struct {
 }
 
 type VirtualNetworkSubnetObservation struct {
-	ID *string `json:"id,omitempty" tf:"id,omitempty"`
 }
 
 type VirtualNetworkSubnetParameters struct {
 
-	// +kubebuilder:validation:Required
-	AddressPrefix *string `json:"addressPrefix" tf:"address_prefix"`
+	// +kubebuilder:validation:Optional
+	AddressPrefix *string `json:"addressPrefix,omitempty" tf:"address_prefix"`
 
-	// +kubebuilder:validation:Required
-	Name *string `json:"name" tf:"name"`
+	// +kubebuilder:validation:Optional
+	ID *string `json:"id,omitempty" tf:"id"`
+
+	// +kubebuilder:validation:Optional
+	Name *string `json:"name,omitempty" tf:"name"`
 
 	// +kubebuilder:validation:Optional
 	SecurityGroup *string `json:"securityGroup,omitempty" tf:"security_group"`

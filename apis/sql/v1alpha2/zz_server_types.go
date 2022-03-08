@@ -34,7 +34,7 @@ type ServerExtendedAuditingPolicyParameters struct {
 	LogMonitoringEnabled *bool `json:"logMonitoringEnabled,omitempty" tf:"log_monitoring_enabled"`
 
 	// +kubebuilder:validation:Optional
-	RetentionInDays *int64 `json:"retentionInDays,omitempty" tf:"retention_in_days"`
+	RetentionInDays *float64 `json:"retentionInDays,omitempty" tf:"retention_in_days"`
 
 	// +kubebuilder:validation:Optional
 	StorageAccountAccessKeyIsSecondary *bool `json:"storageAccountAccessKeyIsSecondary,omitempty" tf:"storage_account_access_key_is_secondary"`
@@ -119,7 +119,7 @@ type ThreatDetectionPolicyParameters struct {
 	EmailAddresses []*string `json:"emailAddresses,omitempty" tf:"email_addresses,omitempty"`
 
 	// +kubebuilder:validation:Optional
-	RetentionDays *int64 `json:"retentionDays,omitempty" tf:"retention_days,omitempty"`
+	RetentionDays *float64 `json:"retentionDays,omitempty" tf:"retention_days,omitempty"`
 
 	// +kubebuilder:validation:Optional
 	State *string `json:"state,omitempty" tf:"state,omitempty"`

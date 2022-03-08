@@ -70,11 +70,9 @@ spec:
                     items:
                       properties:
                         asn:
-                          format: int64
-                          type: integer
+                          type: number
                         peerWeight:
-                          format: int64
-                          type: integer
+                          type: number
                         peeringAddress:
                           type: string
                         peeringAddresses:

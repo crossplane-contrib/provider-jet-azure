@@ -69,7 +69,7 @@ type IOTHubDPSSkuObservation struct {
 type IOTHubDPSSkuParameters struct {
 
 	// +kubebuilder:validation:Required
-	Capacity *int64 `json:"capacity" tf:"capacity,omitempty"`
+	Capacity *float64 `json:"capacity" tf:"capacity,omitempty"`
 
 	// +kubebuilder:validation:Required
 	Name *string `json:"name" tf:"name,omitempty"`
@@ -82,7 +82,7 @@ type LinkedHubObservation struct {
 type LinkedHubParameters struct {
 
 	// +kubebuilder:validation:Optional
-	AllocationWeight *int64 `json:"allocationWeight,omitempty" tf:"allocation_weight,omitempty"`
+	AllocationWeight *float64 `json:"allocationWeight,omitempty" tf:"allocation_weight,omitempty"`
 
 	// +kubebuilder:validation:Optional
 	ApplyAllocationPolicy *bool `json:"applyAllocationPolicy,omitempty" tf:"apply_allocation_policy,omitempty"`

@@ -140,7 +140,7 @@ func (in *WorkspaceParameters) DeepCopyInto(out *WorkspaceParameters) {
 	}
 	if in.ReservationCapcityInGbPerDay != nil {
 		in, out := &in.ReservationCapcityInGbPerDay, &out.ReservationCapcityInGbPerDay
-		*out = new(int64)
+		*out = new(float64)
 		**out = **in
 	}
 	if in.ResourceGroupName != nil {
@@ -160,7 +160,7 @@ func (in *WorkspaceParameters) DeepCopyInto(out *WorkspaceParameters) {
 	}
 	if in.RetentionInDays != nil {
 		in, out := &in.RetentionInDays, &out.RetentionInDays
-		*out = new(int64)
+		*out = new(float64)
 		**out = **in
 	}
 	if in.Sku != nil {

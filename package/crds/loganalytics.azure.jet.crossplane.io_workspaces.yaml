@@ -72,8 +72,7 @@ spec:
                   location:
                     type: string
                   reservationCapcityInGbPerDay:
-                    format: int64
-                    type: integer
+                    type: number
                   resourceGroupName:
                     type: string
                   resourceGroupNameRef:
@@ -100,8 +99,7 @@ spec:
                         type: object
                     type: object
                   retentionInDays:
-                    format: int64
-                    type: integer
+                    type: number
                   sku:
                     type: string
                   tags:

@@ -53,7 +53,7 @@ type KeyParameters struct {
 	KeyOpts []*string `json:"keyOpts" tf:"key_opts,omitempty"`
 
 	// +kubebuilder:validation:Optional
-	KeySize *int64 `json:"keySize,omitempty" tf:"key_size,omitempty"`
+	KeySize *float64 `json:"keySize,omitempty" tf:"key_size,omitempty"`
 
 	// +kubebuilder:validation:Required
 	KeyType *string `json:"keyType" tf:"key_type,omitempty"`

@@ -144,7 +144,7 @@ type KeyPropertiesParameters struct {
 	Exportable *bool `json:"exportable" tf:"exportable,omitempty"`
 
 	// +kubebuilder:validation:Optional
-	KeySize *int64 `json:"keySize,omitempty" tf:"key_size,omitempty"`
+	KeySize *float64 `json:"keySize,omitempty" tf:"key_size,omitempty"`
 
 	// +kubebuilder:validation:Required
 	KeyType *string `json:"keyType" tf:"key_type,omitempty"`
@@ -195,10 +195,10 @@ type TriggerObservation struct {
 type TriggerParameters struct {
 
 	// +kubebuilder:validation:Optional
-	DaysBeforeExpiry *int64 `json:"daysBeforeExpiry,omitempty" tf:"days_before_expiry,omitempty"`
+	DaysBeforeExpiry *float64 `json:"daysBeforeExpiry,omitempty" tf:"days_before_expiry,omitempty"`
 
 	// +kubebuilder:validation:Optional
-	LifetimePercentage *int64 `json:"lifetimePercentage,omitempty" tf:"lifetime_percentage,omitempty"`
+	LifetimePercentage *float64 `json:"lifetimePercentage,omitempty" tf:"lifetime_percentage,omitempty"`
 }
 
 type X509CertificatePropertiesObservation struct {
@@ -219,7 +219,7 @@ type X509CertificatePropertiesParameters struct {
 	SubjectAlternativeNames []SubjectAlternativeNamesParameters `json:"subjectAlternativeNames,omitempty" tf:"subject_alternative_names,omitempty"`
 
 	// +kubebuilder:validation:Required
-	ValidityInMonths *int64 `json:"validityInMonths" tf:"validity_in_months,omitempty"`
+	ValidityInMonths *float64 `json:"validityInMonths" tf:"validity_in_months,omitempty"`
 }
 
 // CertificateSpec defines the desired state of Certificate

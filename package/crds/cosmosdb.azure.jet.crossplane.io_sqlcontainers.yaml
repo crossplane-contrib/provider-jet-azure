@@ -89,14 +89,12 @@ spec:
                         type: object
                     type: object
                   analyticalStorageTtl:
-                    format: int64
-                    type: integer
+                    type: number
                   autoscaleSettings:
                     items:
                       properties:
                         maxThroughput:
-                          format: int64
-                          type: integer
+                          type: number
                       type: object
                     type: array
                   conflictResolutionPolicy:
@@ -138,8 +136,7 @@ spec:
                         type: object
                     type: object
                   defaultTtl:
-                    format: int64
-                    type: integer
+                    type: number
                   indexingPolicy:
                     items:
                       properties:
@@ -196,8 +193,7 @@ spec:
                   partitionKeyPath:
                     type: string
                   partitionKeyVersion:
-                    format: int64
-                    type: integer
+                    type: number
                   resourceGroupName:
                     type: string
                   resourceGroupNameRef:
@@ -224,8 +220,7 @@ spec:
                         type: object
                     type: object
                   throughput:
-                    format: int64
-                    type: integer
+                    type: number
                   uniqueKey:
                     items:
                       properties:
