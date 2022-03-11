@@ -24,7 +24,7 @@ if [ ! -d "${REPO_DIR}/.git" ]; then
   git -C "${REPO_DIR}" remote add origin https://github.com/hashicorp/terraform-provider-azurerm
 fi
 
-git -C "${REPO_DIR}" fetch origin "${AZURERM_REFSPEC}"
+git -C "${REPO_DIR}" fetch origin v"${TERRAFORM_PROVIDER_VERSION}"
 git -C "${REPO_DIR}" reset --hard FETCH_HEAD
 
 mkdir -p "${REPO_DIR}/xpprovider"

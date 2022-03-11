@@ -8,7 +8,7 @@ require (
 	github.com/crossplane/terrajet v0.4.0
 	github.com/hashicorp/terraform-plugin-sdk/v2 v2.7.0
 	// github.com/hashicorp/terraform-provider-azurerm is replaced with  ./.work/.azurerm
-	// and the dependency version is specified in the Makefile via make variable AZURERM_REFSPEC
+	// and the dependency version is specified in the Makefile via make variable TERRAFORM_PROVIDER_VERSION
 	github.com/hashicorp/terraform-provider-azurerm v0.0.0
 	github.com/pkg/errors v0.9.1
 	gopkg.in/alecthomas/kingpin.v2 v2.2.6
