@@ -83,6 +83,7 @@ import (
 	vault "github.com/crossplane-contrib/provider-jet-azure/internal/controller/keyvault/vault"
 	workspace "github.com/crossplane-contrib/provider-jet-azure/internal/controller/loganalytics/workspace"
 	loadbalancer "github.com/crossplane-contrib/provider-jet-azure/internal/controller/network/loadbalancer"
+	networkinterface "github.com/crossplane-contrib/provider-jet-azure/internal/controller/network/networkinterface"
 	subnet "github.com/crossplane-contrib/provider-jet-azure/internal/controller/network/subnet"
 	subnetnatgatewayassociation "github.com/crossplane-contrib/provider-jet-azure/internal/controller/network/subnetnatgatewayassociation"
 	subnetnetworksecuritygroupassociation "github.com/crossplane-contrib/provider-jet-azure/internal/controller/network/subnetnetworksecuritygroupassociation"
@@ -168,6 +169,7 @@ func Setup(mgr ctrl.Manager, o controller.Options) error {
 		vault.Setup,
 		workspace.Setup,
 		loadbalancer.Setup,
+		networkinterface.Setup,
 		subnet.Setup,
 		subnetnatgatewayassociation.Setup,
 		subnetnetworksecuritygroupassociation.Setup,
