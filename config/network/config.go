@@ -33,7 +33,7 @@ func Configure(p *config.Provider) {
 		r.ShortGroup = groupNetwork
 		r.ExternalName = config.NameAsIdentifier
 		r.ExternalName.GetExternalNameFn = common.GetNameFromFullyQualifiedID
-		r.ExternalName.GetIDFn = common.GetFullyQualifiedIDFn("/Microsoft.Network/networkInterfaces")
+		r.ExternalName.GetIDFn = common.GetFullyQualifiedIDFn("Microsoft.Network", "networkInterfaces", "name")
 	})
 
 	p.AddResourceConfigurator("azurerm_lb", func(r *config.Resource) {

@@ -17,8 +17,9 @@ limitations under the License.
 package config
 
 import (
-	tjconfig "github.com/crossplane/terrajet/pkg/config"
 	"github.com/hashicorp/terraform-plugin-sdk/v2/helper/schema"
+
+	tjconfig "github.com/crossplane/terrajet/pkg/config"
 
 	tf "github.com/hashicorp/terraform-provider-azurerm/xpprovider"
 
@@ -76,6 +77,7 @@ var includedResources = []string{
 	"azurerm_eventhub$",
 	"azurerm_eventhub_consumer_group$",
 	"azurerm_eventhub_authorization_rule$",
+	"azurerm_network_interface$",
 }
 
 // These resources cannot be generated because of their suffixes colliding with
