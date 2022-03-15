@@ -293,7 +293,7 @@ func Configure(p *config.Provider) {
 		r.ExternalName = config.NameAsIdentifier
 		r.ExternalName.GetExternalNameFn = common.GetNameFromFullyQualifiedID
 		// /subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg1/providers/Microsoft.DocumentDB/databaseAccounts/account1
-		r.ExternalName.GetIDFn = common.GetFullyQualifiedIDFn("Microsoft.DocumentDB", "databaseAccounts", "account_name")
+		r.ExternalName.GetIDFn = common.GetFullyQualifiedIDFn("Microsoft.DocumentDB", "databaseAccounts", "name")
 	})
 
 	p.AddResourceConfigurator("azurerm_cosmosdb_notebook_workspace", func(r *config.Resource) {
