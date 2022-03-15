@@ -5,7 +5,7 @@ go 1.17
 require (
 	github.com/crossplane/crossplane-runtime v0.15.1-0.20220106140106-428b7c390375
 	github.com/crossplane/crossplane-tools v0.0.0-20210916125540-071de511ae8e
-	github.com/crossplane/terrajet v0.4.0
+	github.com/crossplane/terrajet v0.4.0-rc.0.0.20220314083402-1dfbdfcd7162
 	github.com/hashicorp/terraform-plugin-sdk/v2 v2.7.0
 	// github.com/hashicorp/terraform-provider-azurerm is replaced with  ./.work/.azurerm
 	// and the dependency version is specified in the Makefile via make variable TERRAFORM_PROVIDER_VERSION

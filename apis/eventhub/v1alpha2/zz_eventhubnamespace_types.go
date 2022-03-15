@@ -1,5 +1,5 @@
 /*
-Copyright 2020 The Crossplane Authors.
+Copyright 2022 The Crossplane Authors.
 
 Licensed under the Apache License, Version 2.0 (the "License");
 you may not use this file except in compliance with the License.
@@ -78,10 +78,10 @@ type IPRuleObservation struct {
 type IPRuleParameters struct {
 
 	// +kubebuilder:validation:Optional
-	Action *string `json:"action,omitempty" tf:"action,omitempty"`
+	Action *string `json:"action,omitempty" tf:"action"`
 
 	// +kubebuilder:validation:Required
-	IPMask *string `json:"ipMask" tf:"ip_mask,omitempty"`
+	IPMask *string `json:"ipMask" tf:"ip_mask"`
 }
 
 type IdentityObservation struct {
@@ -102,16 +102,16 @@ type NetworkRulesetsObservation struct {
 type NetworkRulesetsParameters struct {
 
 	// +kubebuilder:validation:Required
-	DefaultAction *string `json:"defaultAction" tf:"default_action,omitempty"`
+	DefaultAction *string `json:"defaultAction" tf:"default_action"`
 
 	// +kubebuilder:validation:Optional
-	IPRule []IPRuleParameters `json:"ipRule,omitempty" tf:"ip_rule,omitempty"`
+	IPRule []IPRuleParameters `json:"ipRule,omitempty" tf:"ip_rule"`
 
 	// +kubebuilder:validation:Optional
-	TrustedServiceAccessEnabled *bool `json:"trustedServiceAccessEnabled,omitempty" tf:"trusted_service_access_enabled,omitempty"`
+	TrustedServiceAccessEnabled *bool `json:"trustedServiceAccessEnabled,omitempty" tf:"trusted_service_access_enabled"`
 
 	// +kubebuilder:validation:Optional
-	VirtualNetworkRule []VirtualNetworkRuleParameters `json:"virtualNetworkRule,omitempty" tf:"virtual_network_rule,omitempty"`
+	VirtualNetworkRule []VirtualNetworkRuleParameters `json:"virtualNetworkRule,omitempty" tf:"virtual_network_rule"`
 }
 
 type VirtualNetworkRuleObservation struct {
@@ -120,12 +120,12 @@ type VirtualNetworkRuleObservation struct {
 type VirtualNetworkRuleParameters struct {
 
 	// +kubebuilder:validation:Optional
-	IgnoreMissingVirtualNetworkServiceEndpoint *bool `json:"ignoreMissingVirtualNetworkServiceEndpoint,omitempty" tf:"ignore_missing_virtual_network_service_endpoint,omitempty"`
+	IgnoreMissingVirtualNetworkServiceEndpoint *bool `json:"ignoreMissingVirtualNetworkServiceEndpoint,omitempty" tf:"ignore_missing_virtual_network_service_endpoint"`
 
 	// +crossplane:generate:reference:type=github.com/crossplane-contrib/provider-jet-azure/apis/network/v1alpha2.Subnet
 	// +crossplane:generate:reference:extractor=github.com/crossplane-contrib/provider-jet-azure/apis/rconfig.ExtractResourceID()
 	// +kubebuilder:validation:Optional
-	SubnetID *string `json:"subnetId,omitempty" tf:"subnet_id,omitempty"`
+	SubnetID *string `json:"subnetId,omitempty" tf:"subnet_id"`
 
 	// +kubebuilder:validation:Optional
 	SubnetIDRef *v1.Reference `json:"subnetIdRef,omitempty" tf:"-"`

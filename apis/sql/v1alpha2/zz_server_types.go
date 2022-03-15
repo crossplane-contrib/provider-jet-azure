@@ -1,5 +1,5 @@
 /*
-Copyright 2020 The Crossplane Authors.
+Copyright 2022 The Crossplane Authors.
 
 Licensed under the Apache License, Version 2.0 (the "License");
 you may not use this file except in compliance with the License.
@@ -31,19 +31,19 @@ type ServerExtendedAuditingPolicyObservation struct {
 type ServerExtendedAuditingPolicyParameters struct {
 
 	// +kubebuilder:validation:Optional
-	LogMonitoringEnabled *bool `json:"logMonitoringEnabled,omitempty" tf:"log_monitoring_enabled,omitempty"`
+	LogMonitoringEnabled *bool `json:"logMonitoringEnabled,omitempty" tf:"log_monitoring_enabled"`
 
 	// +kubebuilder:validation:Optional
-	RetentionInDays *int64 `json:"retentionInDays,omitempty" tf:"retention_in_days,omitempty"`
+	RetentionInDays *int64 `json:"retentionInDays,omitempty" tf:"retention_in_days"`
 
 	// +kubebuilder:validation:Optional
-	StorageAccountAccessKeyIsSecondary *bool `json:"storageAccountAccessKeyIsSecondary,omitempty" tf:"storage_account_access_key_is_secondary,omitempty"`
+	StorageAccountAccessKeyIsSecondary *bool `json:"storageAccountAccessKeyIsSecondary,omitempty" tf:"storage_account_access_key_is_secondary"`
 
 	// +kubebuilder:validation:Optional
 	StorageAccountAccessKeySecretRef *v1.SecretKeySelector `json:"storageAccountAccessKeySecretRef,omitempty" tf:"-"`
 
 	// +kubebuilder:validation:Optional
-	StorageEndpoint *string `json:"storageEndpoint,omitempty" tf:"storage_endpoint,omitempty"`
+	StorageEndpoint *string `json:"storageEndpoint,omitempty" tf:"storage_endpoint"`
 }
 
 type ServerIdentityObservation struct {
