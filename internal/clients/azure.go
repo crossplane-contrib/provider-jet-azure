@@ -3,7 +3,6 @@ package clients
 import (
 	"context"
 	"encoding/json"
-	"fmt"
 
 	xpv1 "github.com/crossplane/crossplane-runtime/apis/common/v1"
 	"github.com/pkg/errors"
@@ -40,13 +39,7 @@ const (
 	keySubscriptionID           = "subscription_id"
 	keyTenantID                 = "tenant_id"
 	keyMSIEndpoint              = "msi_endpoint"
-	// environment variable names for storing credentials
-	envClientID       = "ARM_CLIENT_ID"
-	envClientSecret   = "ARM_CLIENT_SECRET"
-	envSubscriptionID = "ARM_SUBSCRIPTION_ID"
-	envTenantID       = "ARM_TENANT_ID"
-
-	fmtEnvVar = "%s=%s"
+	keyClientSecret             = "client_secret"
 )
 
 // TerraformSetupBuilder returns Terraform setup with provider specific
@@ -107,14 +100,11 @@ func spAuth(ctx context.Context, pc *v1alpha1.ProviderConfig, ps *terraform.Setu
 	if err := json.Unmarshal(data, &azureCreds); err != nil {
 		return errors.Wrap(err, errUnmarshalCredentials)
 	}
+	// set credentials configuration
 	ps.Configuration[keySubscriptionID] = azureCreds[keyAzureSubscriptionID]
-	// set credentials environment
-	ps.Env = []string{
-		fmt.Sprintf(fmtEnvVar, envSubscriptionID, azureCreds[keyAzureSubscriptionID]),
-		fmt.Sprintf(fmtEnvVar, envTenantID, azureCreds[keyAzureTenantID]),
-		fmt.Sprintf(fmtEnvVar, envClientID, azureCreds[keyAzureClientID]),
-		fmt.Sprintf(fmtEnvVar, envClientSecret, azureCreds[keyAzureClientSecret]),
-	}
+	ps.Configuration[keyTenantID] = azureCreds[keyAzureTenantID]
+	ps.Configuration[keyClientID] = azureCreds[keyAzureClientID]
+	ps.Configuration[keyClientSecret] = azureCreds[keyAzureClientSecret]
 	return nil
 }
 
