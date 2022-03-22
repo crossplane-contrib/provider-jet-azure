@@ -1,5 +1,5 @@
 /*
-Copyright 2020 The Crossplane Authors.
+Copyright 2022 The Crossplane Authors.
 
 Licensed under the Apache License, Version 2.0 (the "License");
 you may not use this file except in compliance with the License.
@@ -87,13 +87,13 @@ type VirtualNetworkSubnetObservation struct {
 type VirtualNetworkSubnetParameters struct {
 
 	// +kubebuilder:validation:Required
-	AddressPrefix *string `json:"addressPrefix" tf:"address_prefix,omitempty"`
+	AddressPrefix *string `json:"addressPrefix" tf:"address_prefix"`
 
 	// +kubebuilder:validation:Required
-	Name *string `json:"name" tf:"name,omitempty"`
+	Name *string `json:"name" tf:"name"`
 
 	// +kubebuilder:validation:Optional
-	SecurityGroup *string `json:"securityGroup,omitempty" tf:"security_group,omitempty"`
+	SecurityGroup *string `json:"securityGroup,omitempty" tf:"security_group"`
 }
 
 // VirtualNetworkSpec defines the desired state of VirtualNetwork
