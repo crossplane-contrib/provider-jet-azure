@@ -70,11 +70,6 @@ func Configure(p *config.Provider) {
 		r.LateInitializer = config.LateInitializer{
 			IgnoredFields: []string{"threat_detection_policy"},
 		}
-		r.References = config.References{
-			"resource_group_name": config.Reference{
-				Type: rconfig.ResourceGroupReferencePath,
-			},
-		}
 		r.ExternalName = config.NameAsIdentifier
 		r.ExternalName.GetExternalNameFn = common.GetNameFromFullyQualifiedID
 		r.Sensitive.AdditionalConnectionDetailsFn = msSQLConnectionDetails
@@ -100,6 +95,21 @@ func Configure(p *config.Provider) {
 		r.ExternalName.GetIDFn = common.GetFullyQualifiedIDFn("Microsoft.Sql",
 			"servers", "name",
 		)
+		r.UseAsync = true
+	})
+	p.AddResourceConfigurator("azurerm_mssql_server_transparent_data_encryption", func(r *config.Resource) {
+		r.Version = common.VersionV1Alpha2
+		r.References = config.References{
+			"server_id": config.Reference{
+				Type:      "MSSQLServer",
+				Extractor: rconfig.ExtractResourceIDFuncPath,
+			},
+			"key_vault_key_id": config.Reference{
+				Type:      rconfig.APISPackagePath + "/keyvault/v1alpha2.Key",
+				Extractor: rconfig.ExtractResourceIDFuncPath,
+			},
+		}
+		r.ExternalName = config.IdentifierFromProvider
 		r.UseAsync = true
 	})
 }

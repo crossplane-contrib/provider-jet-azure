@@ -75,6 +75,62 @@ func (mg *MSSQLServer) SetWriteConnectionSecretToReference(r *xpv1.SecretReferen
 	mg.Spec.WriteConnectionSecretToReference = r
 }
 
+// GetCondition of this MSSQLServerTransparentDataEncryption.
+func (mg *MSSQLServerTransparentDataEncryption) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
+	return mg.Status.GetCondition(ct)
+}
+
+// GetDeletionPolicy of this MSSQLServerTransparentDataEncryption.
+func (mg *MSSQLServerTransparentDataEncryption) GetDeletionPolicy() xpv1.DeletionPolicy {
+	return mg.Spec.DeletionPolicy
+}
+
+// GetProviderConfigReference of this MSSQLServerTransparentDataEncryption.
+func (mg *MSSQLServerTransparentDataEncryption) GetProviderConfigReference() *xpv1.Reference {
+	return mg.Spec.ProviderConfigReference
+}
+
+/*
+GetProviderReference of this MSSQLServerTransparentDataEncryption.
+Deprecated: Use GetProviderConfigReference.
+*/
+func (mg *MSSQLServerTransparentDataEncryption) GetProviderReference() *xpv1.Reference {
+	return mg.Spec.ProviderReference
+}
+
+// GetWriteConnectionSecretToReference of this MSSQLServerTransparentDataEncryption.
+func (mg *MSSQLServerTransparentDataEncryption) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
+	return mg.Spec.WriteConnectionSecretToReference
+}
+
+// SetConditions of this MSSQLServerTransparentDataEncryption.
+func (mg *MSSQLServerTransparentDataEncryption) SetConditions(c ...xpv1.Condition) {
+	mg.Status.SetConditions(c...)
+}
+
+// SetDeletionPolicy of this MSSQLServerTransparentDataEncryption.
+func (mg *MSSQLServerTransparentDataEncryption) SetDeletionPolicy(r xpv1.DeletionPolicy) {
+	mg.Spec.DeletionPolicy = r
+}
+
+// SetProviderConfigReference of this MSSQLServerTransparentDataEncryption.
+func (mg *MSSQLServerTransparentDataEncryption) SetProviderConfigReference(r *xpv1.Reference) {
+	mg.Spec.ProviderConfigReference = r
+}
+
+/*
+SetProviderReference of this MSSQLServerTransparentDataEncryption.
+Deprecated: Use SetProviderConfigReference.
+*/
+func (mg *MSSQLServerTransparentDataEncryption) SetProviderReference(r *xpv1.Reference) {
+	mg.Spec.ProviderReference = r
+}
+
+// SetWriteConnectionSecretToReference of this MSSQLServerTransparentDataEncryption.
+func (mg *MSSQLServerTransparentDataEncryption) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
+	mg.Spec.WriteConnectionSecretToReference = r
+}
+
 // GetCondition of this Server.
 func (mg *Server) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
 	return mg.Status.GetCondition(ct)
