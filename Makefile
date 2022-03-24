@@ -48,7 +48,7 @@ GO_LINT_ARGS ?= --skip-files internal/controller/zz_setup.go --skip-files intern
 # ====================================================================================
 # Setup Images
 
-DOCKER_REGISTRY := crossplane
+DOCKER_REGISTRY ?= crossplane
 IMAGES = provider-jet-azure provider-jet-azure-controller
 -include build/makelib/image.mk
 
