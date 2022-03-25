@@ -42,6 +42,11 @@ func (mg *IOTHubEndpointEventHub) GetProviderReference() *xpv1.Reference {
 	return mg.Spec.ProviderReference
 }
 
+// GetPublishConnectionDetailsTo of this IOTHubEndpointEventHub.
+func (mg *IOTHubEndpointEventHub) GetPublishConnectionDetailsTo() *xpv1.PublishConnectionDetailsTo {
+	return mg.Spec.PublishConnectionDetailsTo
+}
+
 // GetWriteConnectionSecretToReference of this IOTHubEndpointEventHub.
 func (mg *IOTHubEndpointEventHub) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
 	return mg.Spec.WriteConnectionSecretToReference
@@ -68,6 +73,11 @@ Deprecated: Use SetProviderConfigReference.
 */
 func (mg *IOTHubEndpointEventHub) SetProviderReference(r *xpv1.Reference) {
 	mg.Spec.ProviderReference = r
+}
+
+// SetPublishConnectionDetailsTo of this IOTHubEndpointEventHub.
+func (mg *IOTHubEndpointEventHub) SetPublishConnectionDetailsTo(r *xpv1.PublishConnectionDetailsTo) {
+	mg.Spec.PublishConnectionDetailsTo = r
 }
 
 // SetWriteConnectionSecretToReference of this IOTHubEndpointEventHub.
@@ -98,6 +108,11 @@ func (mg *IOTHubEndpointServiceBusQueue) GetProviderReference() *xpv1.Reference 
 	return mg.Spec.ProviderReference
 }
 
+// GetPublishConnectionDetailsTo of this IOTHubEndpointServiceBusQueue.
+func (mg *IOTHubEndpointServiceBusQueue) GetPublishConnectionDetailsTo() *xpv1.PublishConnectionDetailsTo {
+	return mg.Spec.PublishConnectionDetailsTo
+}
+
 // GetWriteConnectionSecretToReference of this IOTHubEndpointServiceBusQueue.
 func (mg *IOTHubEndpointServiceBusQueue) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
 	return mg.Spec.WriteConnectionSecretToReference
@@ -124,6 +139,11 @@ Deprecated: Use SetProviderConfigReference.
 */
 func (mg *IOTHubEndpointServiceBusQueue) SetProviderReference(r *xpv1.Reference) {
 	mg.Spec.ProviderReference = r
+}
+
+// SetPublishConnectionDetailsTo of this IOTHubEndpointServiceBusQueue.
+func (mg *IOTHubEndpointServiceBusQueue) SetPublishConnectionDetailsTo(r *xpv1.PublishConnectionDetailsTo) {
+	mg.Spec.PublishConnectionDetailsTo = r
 }
 
 // SetWriteConnectionSecretToReference of this IOTHubEndpointServiceBusQueue.
@@ -154,6 +174,11 @@ func (mg *IOTHubEndpointServiceBusTopic) GetProviderReference() *xpv1.Reference 
 	return mg.Spec.ProviderReference
 }
 
+// GetPublishConnectionDetailsTo of this IOTHubEndpointServiceBusTopic.
+func (mg *IOTHubEndpointServiceBusTopic) GetPublishConnectionDetailsTo() *xpv1.PublishConnectionDetailsTo {
+	return mg.Spec.PublishConnectionDetailsTo
+}
+
 // GetWriteConnectionSecretToReference of this IOTHubEndpointServiceBusTopic.
 func (mg *IOTHubEndpointServiceBusTopic) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
 	return mg.Spec.WriteConnectionSecretToReference
@@ -180,6 +205,11 @@ Deprecated: Use SetProviderConfigReference.
 */
 func (mg *IOTHubEndpointServiceBusTopic) SetProviderReference(r *xpv1.Reference) {
 	mg.Spec.ProviderReference = r
+}
+
+// SetPublishConnectionDetailsTo of this IOTHubEndpointServiceBusTopic.
+func (mg *IOTHubEndpointServiceBusTopic) SetPublishConnectionDetailsTo(r *xpv1.PublishConnectionDetailsTo) {
+	mg.Spec.PublishConnectionDetailsTo = r
 }
 
 // SetWriteConnectionSecretToReference of this IOTHubEndpointServiceBusTopic.
@@ -210,6 +240,11 @@ func (mg *IOTHubEnrichment) GetProviderReference() *xpv1.Reference {
 	return mg.Spec.ProviderReference
 }
 
+// GetPublishConnectionDetailsTo of this IOTHubEnrichment.
+func (mg *IOTHubEnrichment) GetPublishConnectionDetailsTo() *xpv1.PublishConnectionDetailsTo {
+	return mg.Spec.PublishConnectionDetailsTo
+}
+
 // GetWriteConnectionSecretToReference of this IOTHubEnrichment.
 func (mg *IOTHubEnrichment) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
 	return mg.Spec.WriteConnectionSecretToReference
@@ -236,6 +271,11 @@ Deprecated: Use SetProviderConfigReference.
 */
 func (mg *IOTHubEnrichment) SetProviderReference(r *xpv1.Reference) {
 	mg.Spec.ProviderReference = r
+}
+
+// SetPublishConnectionDetailsTo of this IOTHubEnrichment.
+func (mg *IOTHubEnrichment) SetPublishConnectionDetailsTo(r *xpv1.PublishConnectionDetailsTo) {
+	mg.Spec.PublishConnectionDetailsTo = r
 }
 
 // SetWriteConnectionSecretToReference of this IOTHubEnrichment.
@@ -266,6 +306,11 @@ func (mg *IOTHubRoute) GetProviderReference() *xpv1.Reference {
 	return mg.Spec.ProviderReference
 }
 
+// GetPublishConnectionDetailsTo of this IOTHubRoute.
+func (mg *IOTHubRoute) GetPublishConnectionDetailsTo() *xpv1.PublishConnectionDetailsTo {
+	return mg.Spec.PublishConnectionDetailsTo
+}
+
 // GetWriteConnectionSecretToReference of this IOTHubRoute.
 func (mg *IOTHubRoute) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
 	return mg.Spec.WriteConnectionSecretToReference
@@ -292,6 +337,11 @@ Deprecated: Use SetProviderConfigReference.
 */
 func (mg *IOTHubRoute) SetProviderReference(r *xpv1.Reference) {
 	mg.Spec.ProviderReference = r
+}
+
+// SetPublishConnectionDetailsTo of this IOTHubRoute.
+func (mg *IOTHubRoute) SetPublishConnectionDetailsTo(r *xpv1.PublishConnectionDetailsTo) {
+	mg.Spec.PublishConnectionDetailsTo = r
 }
 
 // SetWriteConnectionSecretToReference of this IOTHubRoute.
