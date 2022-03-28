@@ -105,7 +105,7 @@ func Configure(p *config.Provider) {
 				Extractor: rconfig.ExtractResourceIDFuncPath,
 			},
 			"key_vault_key_id": config.Reference{
-				Type:      rconfig.APISPackagePath + "/keyvault/v1alpha2.Key",
+				Type:      rconfig.VaultKeyReferencePath,
 				Extractor: rconfig.ExtractResourceIDFuncPath,
 			},
 		}

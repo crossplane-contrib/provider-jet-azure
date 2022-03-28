@@ -43,6 +43,9 @@ const (
 
 	// StorageAccountReferencePath is used as import path for StorageAccount
 	StorageAccountReferencePath = APISPackagePath + "/storage/v1alpha2.Account"
+
+	// VaultKeyReferencePath is used as import path for VaultKey
+	VaultKeyReferencePath = APISPackagePath + "/keyvault/v1alpha2.Key"
 )
 
 // ExtractResourceID extracts the value of `spec.atProvider.id`
