@@ -25,18 +25,18 @@ import (
 	"github.com/crossplane/terrajet/pkg/resource/json"
 )
 
-// GetTerraformResourceType returns Terraform resource type for this Server
-func (mg *Server) GetTerraformResourceType() string {
-	return "azurerm_sql_server"
+// GetTerraformResourceType returns Terraform resource type for this MSSQLServerTransparentDataEncryption
+func (mg *MSSQLServerTransparentDataEncryption) GetTerraformResourceType() string {
+	return "azurerm_mssql_server_transparent_data_encryption"
 }
 
-// GetConnectionDetailsMapping for this Server
-func (tr *Server) GetConnectionDetailsMapping() map[string]string {
-	return map[string]string{"administrator_login_password": "spec.forProvider.administratorLoginPasswordSecretRef", "extended_auditing_policy[*].storage_account_access_key": "spec.forProvider.extendedAuditingPolicy[*].storageAccountAccessKeySecretRef", "threat_detection_policy[*].storage_account_access_key": "spec.forProvider.threatDetectionPolicy[*].storageAccountAccessKeySecretRef"}
+// GetConnectionDetailsMapping for this MSSQLServerTransparentDataEncryption
+func (tr *MSSQLServerTransparentDataEncryption) GetConnectionDetailsMapping() map[string]string {
+	return nil
 }
 
-// GetObservation of this Server
-func (tr *Server) GetObservation() (map[string]interface{}, error) {
+// GetObservation of this MSSQLServerTransparentDataEncryption
+func (tr *MSSQLServerTransparentDataEncryption) GetObservation() (map[string]interface{}, error) {
 	o, err := json.TFParser.Marshal(tr.Status.AtProvider)
 	if err != nil {
 		return nil, err
@@ -45,8 +45,8 @@ func (tr *Server) GetObservation() (map[string]interface{}, error) {
 	return base, json.TFParser.Unmarshal(o, &base)
 }
 
-// SetObservation for this Server
-func (tr *Server) SetObservation(obs map[string]interface{}) error {
+// SetObservation for this MSSQLServerTransparentDataEncryption
+func (tr *MSSQLServerTransparentDataEncryption) SetObservation(obs map[string]interface{}) error {
 	p, err := json.TFParser.Marshal(obs)
 	if err != nil {
 		return err
@@ -54,16 +54,16 @@ func (tr *Server) SetObservation(obs map[string]interface{}) error {
 	return json.TFParser.Unmarshal(p, &tr.Status.AtProvider)
 }
 
-// GetID returns ID of underlying Terraform resource of this Server
-func (tr *Server) GetID() string {
+// GetID returns ID of underlying Terraform resource of this MSSQLServerTransparentDataEncryption
+func (tr *MSSQLServerTransparentDataEncryption) GetID() string {
 	if tr.Status.AtProvider.ID == nil {
 		return ""
 	}
 	return *tr.Status.AtProvider.ID
 }
 
-// GetParameters of this Server
-func (tr *Server) GetParameters() (map[string]interface{}, error) {
+// GetParameters of this MSSQLServerTransparentDataEncryption
+func (tr *MSSQLServerTransparentDataEncryption) GetParameters() (map[string]interface{}, error) {
 	p, err := json.TFParser.Marshal(tr.Spec.ForProvider)
 	if err != nil {
 		return nil, err
@@ -72,8 +72,8 @@ func (tr *Server) GetParameters() (map[string]interface{}, error) {
 	return base, json.TFParser.Unmarshal(p, &base)
 }
 
-// SetParameters for this Server
-func (tr *Server) SetParameters(params map[string]interface{}) error {
+// SetParameters for this MSSQLServerTransparentDataEncryption
+func (tr *MSSQLServerTransparentDataEncryption) SetParameters(params map[string]interface{}) error {
 	p, err := json.TFParser.Marshal(params)
 	if err != nil {
 		return err
@@ -81,21 +81,20 @@ func (tr *Server) SetParameters(params map[string]interface{}) error {
 	return json.TFParser.Unmarshal(p, &tr.Spec.ForProvider)
 }
 
-// LateInitialize this Server using its observed tfState.
+// LateInitialize this MSSQLServerTransparentDataEncryption using its observed tfState.
 // returns True if there are any spec changes for the resource.
-func (tr *Server) LateInitialize(attrs []byte) (bool, error) {
-	params := &ServerParameters{}
+func (tr *MSSQLServerTransparentDataEncryption) LateInitialize(attrs []byte) (bool, error) {
+	params := &MSSQLServerTransparentDataEncryptionParameters{}
 	if err := json.TFParser.Unmarshal(attrs, params); err != nil {
 		return false, errors.Wrap(err, "failed to unmarshal Terraform state parameters for late-initialization")
 	}
 	opts := []resource.GenericLateInitializerOption{resource.WithZeroValueJSONOmitEmptyFilter(resource.CNameWildcard)}
-	opts = append(opts, resource.WithNameFilter("ThreatDetectionPolicy"))
 
 	li := resource.NewGenericLateInitializer(opts...)
 	return li.LateInitialize(&tr.Spec.ForProvider, params)
 }
 
 // GetTerraformSchemaVersion returns the associated Terraform schema version
-func (tr *Server) GetTerraformSchemaVersion() int {
+func (tr *MSSQLServerTransparentDataEncryption) GetTerraformSchemaVersion() int {
 	return 0
 }

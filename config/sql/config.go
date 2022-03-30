@@ -17,6 +17,7 @@ limitations under the License.
 package sql
 
 import (
+	"context"
 	"fmt"
 
 	"github.com/crossplane/terrajet/pkg/config"
@@ -109,7 +110,11 @@ func Configure(p *config.Provider) {
 				Extractor: rconfig.ExtractResourceIDFuncPath,
 			},
 		}
-		r.ExternalName = config.IdentifierFromProvider
-		r.UseAsync = true
+		r.ExternalName = config.NameAsIdentifier
+		r.ExternalName.SetIdentifierArgumentFn = config.NopSetIdentifierArgument
+		r.ExternalName.GetExternalNameFn = common.GetNameFromFullyQualifiedID
+		r.ExternalName.GetIDFn = func(_ context.Context, _ string, parameters map[string]interface{}, _ map[string]interface{}) (string, error) {
+			return fmt.Sprintf("%s/encryptionProtector/current", parameters["server_id"]), nil
+		}
 	})
 }

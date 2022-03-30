@@ -36,11 +36,10 @@ import (
 func Setup(mgr ctrl.Manager, o tjcontroller.Options) error {
 	name := managed.ControllerName(v1alpha2.MSSQLServerTransparentDataEncryption_GroupVersionKind.String())
 	var initializers managed.InitializerChain
+	initializers = append(initializers, managed.NewNameAsExternalName(mgr.GetClient()))
 	r := managed.NewReconciler(mgr,
 		xpresource.ManagedKind(v1alpha2.MSSQLServerTransparentDataEncryption_GroupVersionKind),
-		managed.WithExternalConnecter(tjcontroller.NewConnector(mgr.GetClient(), o.WorkspaceStore, o.SetupFn, o.Provider.Resources["azurerm_mssql_server_transparent_data_encryption"],
-			tjcontroller.WithCallbackProvider(tjcontroller.NewAPICallbacks(mgr, xpresource.ManagedKind(v1alpha2.MSSQLServerTransparentDataEncryption_GroupVersionKind))),
-		)),
+		managed.WithExternalConnecter(tjcontroller.NewConnector(mgr.GetClient(), o.WorkspaceStore, o.SetupFn, o.Provider.Resources["azurerm_mssql_server_transparent_data_encryption"])),
 		managed.WithLogger(o.Logger.WithValues("controller", name)),
 		managed.WithRecorder(event.NewAPIRecorder(mgr.GetEventRecorderFor(name))),
 		managed.WithFinalizer(terraform.NewWorkspaceFinalizer(o.WorkspaceStore, xpresource.NewAPIFinalizer(mgr.GetClient(), managed.FinalizerName))),
