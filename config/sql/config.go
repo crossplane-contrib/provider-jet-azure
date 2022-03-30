@@ -17,6 +17,7 @@ limitations under the License.
 package sql
 
 import (
+	"context"
 	"fmt"
 
 	"github.com/crossplane/terrajet/pkg/config"
@@ -70,11 +71,6 @@ func Configure(p *config.Provider) {
 		r.LateInitializer = config.LateInitializer{
 			IgnoredFields: []string{"threat_detection_policy"},
 		}
-		r.References = config.References{
-			"resource_group_name": config.Reference{
-				Type: rconfig.ResourceGroupReferencePath,
-			},
-		}
 		r.ExternalName = config.NameAsIdentifier
 		r.ExternalName.GetExternalNameFn = common.GetNameFromFullyQualifiedID
 		r.Sensitive.AdditionalConnectionDetailsFn = msSQLConnectionDetails
@@ -101,5 +97,24 @@ func Configure(p *config.Provider) {
 			"servers", "name",
 		)
 		r.UseAsync = true
+	})
+	p.AddResourceConfigurator("azurerm_mssql_server_transparent_data_encryption", func(r *config.Resource) {
+		r.Version = common.VersionV1Alpha2
+		r.References = config.References{
+			"server_id": config.Reference{
+				Type:      "MSSQLServer",
+				Extractor: rconfig.ExtractResourceIDFuncPath,
+			},
+			"key_vault_key_id": config.Reference{
+				Type:      rconfig.VaultKeyReferencePath,
+				Extractor: rconfig.ExtractResourceIDFuncPath,
+			},
+		}
+		r.ExternalName = config.NameAsIdentifier
+		r.ExternalName.SetIdentifierArgumentFn = config.NopSetIdentifierArgument
+		r.ExternalName.GetExternalNameFn = common.GetNameFromFullyQualifiedID
+		r.ExternalName.GetIDFn = func(_ context.Context, _ string, parameters map[string]interface{}, _ map[string]interface{}) (string, error) {
+			return fmt.Sprintf("%s/encryptionProtector/current", parameters["server_id"]), nil
+		}
 	})
 }
