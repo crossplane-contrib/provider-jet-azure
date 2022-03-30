@@ -20,6 +20,7 @@ import (
 	"fmt"
 
 	"github.com/crossplane/terrajet/pkg/config"
+	"github.com/hashicorp/terraform-plugin-sdk/v2/helper/schema"
 	"github.com/pkg/errors"
 
 	xpv1 "github.com/crossplane/crossplane-runtime/apis/common/v1"
@@ -60,6 +61,12 @@ func msSQLConnectionDetails(attr map[string]interface{}) (map[string][]byte, err
 func Configure(p *config.Provider) {
 	p.AddResourceConfigurator("azurerm_sql_server", func(r *config.Resource) {
 		r.Version = common.VersionV1Alpha2
+
+		// Note(ezgidemirel): Following field is not marked as "sensitive" in Terraform cli schema output.
+		// We need to configure it explicitly to store in connectionDetails secret.
+		r.TerraformResource.Schema["extended_auditing_policy"].Elem.(*schema.Resource).
+			Schema["storage_account_access_key"].Sensitive = true
+
 		r.LateInitializer = config.LateInitializer{
 			IgnoredFields: []string{"threat_detection_policy"},
 		}
@@ -79,6 +86,8 @@ func Configure(p *config.Provider) {
 	})
 	p.AddResourceConfigurator("azurerm_mssql_server", func(r *config.Resource) {
 		r.Version = common.VersionV1Alpha2
+		r.TerraformResource.Schema["extended_auditing_policy"].Elem.(*schema.Resource).
+			Schema["storage_account_access_key"].Sensitive = true
 		r.References = config.References{
 			"resource_group_name": config.Reference{
 				Type: rconfig.ResourceGroupReferencePath,

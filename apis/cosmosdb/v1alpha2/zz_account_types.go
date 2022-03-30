@@ -126,10 +126,10 @@ type BackupObservation struct {
 type BackupParameters struct {
 
 	// +kubebuilder:validation:Optional
-	IntervalInMinutes *int64 `json:"intervalInMinutes,omitempty" tf:"interval_in_minutes,omitempty"`
+	IntervalInMinutes *float64 `json:"intervalInMinutes,omitempty" tf:"interval_in_minutes,omitempty"`
 
 	// +kubebuilder:validation:Optional
-	RetentionInHours *int64 `json:"retentionInHours,omitempty" tf:"retention_in_hours,omitempty"`
+	RetentionInHours *float64 `json:"retentionInHours,omitempty" tf:"retention_in_hours,omitempty"`
 
 	// +kubebuilder:validation:Required
 	Type *string `json:"type" tf:"type,omitempty"`
@@ -153,10 +153,10 @@ type ConsistencyPolicyParameters struct {
 	ConsistencyLevel *string `json:"consistencyLevel" tf:"consistency_level,omitempty"`
 
 	// +kubebuilder:validation:Optional
-	MaxIntervalInSeconds *int64 `json:"maxIntervalInSeconds,omitempty" tf:"max_interval_in_seconds,omitempty"`
+	MaxIntervalInSeconds *float64 `json:"maxIntervalInSeconds,omitempty" tf:"max_interval_in_seconds,omitempty"`
 
 	// +kubebuilder:validation:Optional
-	MaxStalenessPrefix *int64 `json:"maxStalenessPrefix,omitempty" tf:"max_staleness_prefix,omitempty"`
+	MaxStalenessPrefix *float64 `json:"maxStalenessPrefix,omitempty" tf:"max_staleness_prefix,omitempty"`
 }
 
 type CorsRuleObservation struct {
@@ -177,7 +177,7 @@ type CorsRuleParameters struct {
 	ExposedHeaders []*string `json:"exposedHeaders" tf:"exposed_headers,omitempty"`
 
 	// +kubebuilder:validation:Required
-	MaxAgeInSeconds *int64 `json:"maxAgeInSeconds" tf:"max_age_in_seconds,omitempty"`
+	MaxAgeInSeconds *float64 `json:"maxAgeInSeconds" tf:"max_age_in_seconds,omitempty"`
 }
 
 type GeoLocationObservation struct {
@@ -187,7 +187,7 @@ type GeoLocationObservation struct {
 type GeoLocationParameters struct {
 
 	// +kubebuilder:validation:Required
-	FailoverPriority *int64 `json:"failoverPriority" tf:"failover_priority,omitempty"`
+	FailoverPriority *float64 `json:"failoverPriority" tf:"failover_priority,omitempty"`
 
 	// +kubebuilder:validation:Required
 	Location *string `json:"location" tf:"location,omitempty"`

@@ -115,8 +115,7 @@ spec:
                           items:
                             properties:
                               days:
-                                format: int64
-                                type: integer
+                                type: number
                             type: object
                           type: array
                         corsRule:
@@ -139,8 +138,7 @@ spec:
                                   type: string
                                 type: array
                               maxAgeInSeconds:
-                                format: int64
-                                type: integer
+                                type: number
                             required:
                             - allowedHeaders
                             - allowedMethods
@@ -155,8 +153,7 @@ spec:
                           items:
                             properties:
                               days:
-                                format: int64
-                                type: integer
+                                type: number
                             type: object
                           type: array
                         lastAccessTimeEnabled:
@@ -256,8 +253,7 @@ spec:
                                   type: string
                                 type: array
                               maxAgeInSeconds:
-                                format: int64
-                                type: integer
+                                type: number
                             required:
                             - allowedHeaders
                             - allowedMethods
@@ -274,8 +270,7 @@ spec:
                               includeApis:
                                 type: boolean
                               retentionPolicyDays:
-                                format: int64
-                                type: integer
+                                type: number
                               version:
                                 type: string
                             required:
@@ -291,8 +286,7 @@ spec:
                               read:
                                 type: boolean
                               retentionPolicyDays:
-                                format: int64
-                                type: integer
+                                type: number
                               version:
                                 type: string
                               write:
@@ -312,8 +306,7 @@ spec:
                               includeApis:
                                 type: boolean
                               retentionPolicyDays:
-                                format: int64
-                                type: integer
+                                type: number
                               version:
                                 type: string
                             required:
@@ -382,8 +375,7 @@ spec:
                                   type: string
                                 type: array
                               maxAgeInSeconds:
-                                format: int64
-                                type: integer
+                                type: number
                             required:
                             - allowedHeaders
                             - allowedMethods
@@ -396,8 +388,7 @@ spec:
                           items:
                             properties:
                               days:
-                                format: int64
-                                type: integer
+                                type: number
                             type: object
                           type: array
                         smb:

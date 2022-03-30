@@ -87,11 +87,9 @@ spec:
                             type: string
                           type: array
                         containerLogMaxLine:
-                          format: int64
-                          type: integer
+                          type: number
                         containerLogMaxSizeMb:
-                          format: int64
-                          type: integer
+                          type: number
                         cpuCfsQuotaEnabled:
                           type: boolean
                         cpuCfsQuotaPeriod:
@@ -99,14 +97,11 @@ spec:
                         cpuManagerPolicy:
                           type: string
                         imageGcHighThreshold:
-                          format: int64
-                          type: integer
+                          type: number
                         imageGcLowThreshold:
-                          format: int64
-                          type: integer
+                          type: number
                         podMaxPid:
-                          format: int64
-                          type: integer
+                          type: number
                         topologyManagerPolicy:
                           type: string
                       type: object
@@ -142,97 +137,68 @@ spec:
                     items:
                       properties:
                         swapFileSizeMb:
-                          format: int64
-                          type: integer
+                          type: number
                         sysctlConfig:
                           items:
                             properties:
                               fsAioMaxNr:
-                                format: int64
-                                type: integer
+                                type: number
                               fsFileMax:
-                                format: int64
-                                type: integer
+                                type: number
                               fsInotifyMaxUserWatches:
-                                format: int64
-                                type: integer
+                                type: number
                               fsNrOpen:
-                                format: int64
-                                type: integer
+                                type: number
                               kernelThreadsMax:
-                                format: int64
-                                type: integer
+                                type: number
                               netCoreNetdevMaxBacklog:
-                                format: int64
-                                type: integer
+                                type: number
                               netCoreOptmemMax:
-                                format: int64
-                                type: integer
+                                type: number
                               netCoreRmemDefault:
-                                format: int64
-                                type: integer
+                                type: number
                               netCoreRmemMax:
-                                format: int64
-                                type: integer
+                                type: number
                               netCoreSomaxconn:
-                                format: int64
-                                type: integer
+                                type: number
                               netCoreWmemDefault:
-                                format: int64
-                                type: integer
+                                type: number
                               netCoreWmemMax:
-                                format: int64
-                                type: integer
+                                type: number
                               netIpv4IpLocalPortRangeMax:
-                                format: int64
-                                type: integer
+                                type: number
                               netIpv4IpLocalPortRangeMin:
-                                format: int64
-                                type: integer
+                                type: number
                               netIpv4NeighDefaultGcThresh1:
-                                format: int64
-                                type: integer
+                                type: number
                               netIpv4NeighDefaultGcThresh2:
-                                format: int64
-                                type: integer
+                                type: number
                               netIpv4NeighDefaultGcThresh3:
-                                format: int64
-                                type: integer
+                                type: number
                               netIpv4TcpFinTimeout:
-                                format: int64
-                                type: integer
+                                type: number
                               netIpv4TcpKeepaliveIntvl:
-                                format: int64
-                                type: integer
+                                type: number
                               netIpv4TcpKeepaliveProbes:
-                                format: int64
-                                type: integer
+                                type: number
                               netIpv4TcpKeepaliveTime:
-                                format: int64
-                                type: integer
+                                type: number
                               netIpv4TcpMaxSynBacklog:
-                                format: int64
-                                type: integer
+                                type: number
                               netIpv4TcpMaxTwBuckets:
-                                format: int64
-                                type: integer
+                                type: number
                               netIpv4TcpTwReuse:
                                 type: boolean
                               netNetfilterNfConntrackBuckets:
-                                format: int64
-                                type: integer
+                                type: number
                               netNetfilterNfConntrackMax:
-                                format: int64
-                                type: integer
+                                type: number
                               vmMaxMapCount:
-                                format: int64
-                                type: integer
+                                type: number
                               vmSwappiness:
-                                format: int64
-                                type: integer
+                                type: number
                               vmVfsCachePressure:
-                                format: int64
-                                type: integer
+                                type: number
                             type: object
                           type: array
                         transparentHugePageDefrag:
@@ -242,19 +208,15 @@ spec:
                       type: object
                     type: array
                   maxCount:
-                    format: int64
-                    type: integer
+                    type: number
                   maxPods:
-                    format: int64
-                    type: integer
+                    type: number
                   minCount:
-                    format: int64
-                    type: integer
+                    type: number
                   mode:
                     type: string
                   nodeCount:
-                    format: int64
-                    type: integer
+                    type: number
                   nodeLabels:
                     additionalProperties:
                       type: string
@@ -268,8 +230,7 @@ spec:
                   orchestratorVersion:
                     type: string
                   osDiskSizeGb:
-                    format: int64
-                    type: integer
+                    type: number
                   osDiskType:
                     type: string
                   osSku:

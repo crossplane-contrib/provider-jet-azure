@@ -31,7 +31,7 @@ type GremlinDatabaseAutoscaleSettingsObservation struct {
 type GremlinDatabaseAutoscaleSettingsParameters struct {
 
 	// +kubebuilder:validation:Optional
-	MaxThroughput *int64 `json:"maxThroughput,omitempty" tf:"max_throughput,omitempty"`
+	MaxThroughput *float64 `json:"maxThroughput,omitempty" tf:"max_throughput,omitempty"`
 }
 
 type GremlinDatabaseObservation struct {
@@ -64,7 +64,7 @@ type GremlinDatabaseParameters struct {
 	ResourceGroupNameSelector *v1.Selector `json:"resourceGroupNameSelector,omitempty" tf:"-"`
 
 	// +kubebuilder:validation:Optional
-	Throughput *int64 `json:"throughput,omitempty" tf:"throughput,omitempty"`
+	Throughput *float64 `json:"throughput,omitempty" tf:"throughput,omitempty"`
 }
 
 // GremlinDatabaseSpec defines the desired state of GremlinDatabase

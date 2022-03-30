@@ -101,7 +101,7 @@ func (in *PatchScheduleParameters) DeepCopyInto(out *PatchScheduleParameters) {
 	}
 	if in.StartHourUtc != nil {
 		in, out := &in.StartHourUtc, &out.StartHourUtc
-		*out = new(int64)
+		*out = new(float64)
 		**out = **in
 	}
 }
@@ -190,12 +190,12 @@ func (in *RedisCacheObservation) DeepCopyInto(out *RedisCacheObservation) {
 	}
 	if in.Port != nil {
 		in, out := &in.Port, &out.Port
-		*out = new(int64)
+		*out = new(float64)
 		**out = **in
 	}
 	if in.SSLPort != nil {
 		in, out := &in.SSLPort, &out.SSLPort
-		*out = new(int64)
+		*out = new(float64)
 		**out = **in
 	}
 }
@@ -215,7 +215,7 @@ func (in *RedisCacheParameters) DeepCopyInto(out *RedisCacheParameters) {
 	*out = *in
 	if in.Capacity != nil {
 		in, out := &in.Capacity, &out.Capacity
-		*out = new(int64)
+		*out = new(float64)
 		**out = **in
 	}
 	if in.EnableNonSSLPort != nil {
@@ -269,12 +269,12 @@ func (in *RedisCacheParameters) DeepCopyInto(out *RedisCacheParameters) {
 	}
 	if in.ReplicasPerMaster != nil {
 		in, out := &in.ReplicasPerMaster, &out.ReplicasPerMaster
-		*out = new(int64)
+		*out = new(float64)
 		**out = **in
 	}
 	if in.ReplicasPerPrimary != nil {
 		in, out := &in.ReplicasPerPrimary, &out.ReplicasPerPrimary
-		*out = new(int64)
+		*out = new(float64)
 		**out = **in
 	}
 	if in.ResourceGroupName != nil {
@@ -294,7 +294,7 @@ func (in *RedisCacheParameters) DeepCopyInto(out *RedisCacheParameters) {
 	}
 	if in.ShardCount != nil {
 		in, out := &in.ShardCount, &out.ShardCount
-		*out = new(int64)
+		*out = new(float64)
 		**out = **in
 	}
 	if in.SkuName != nil {
@@ -409,7 +409,7 @@ func (in *RedisConfigurationObservation) DeepCopyInto(out *RedisConfigurationObs
 	*out = *in
 	if in.Maxclients != nil {
 		in, out := &in.Maxclients, &out.Maxclients
-		*out = new(int64)
+		*out = new(float64)
 		**out = **in
 	}
 }
@@ -449,12 +449,12 @@ func (in *RedisConfigurationParameters) DeepCopyInto(out *RedisConfigurationPara
 	}
 	if in.MaxfragmentationmemoryReserved != nil {
 		in, out := &in.MaxfragmentationmemoryReserved, &out.MaxfragmentationmemoryReserved
-		*out = new(int64)
+		*out = new(float64)
 		**out = **in
 	}
 	if in.MaxmemoryDelta != nil {
 		in, out := &in.MaxmemoryDelta, &out.MaxmemoryDelta
-		*out = new(int64)
+		*out = new(float64)
 		**out = **in
 	}
 	if in.MaxmemoryPolicy != nil {
@@ -464,7 +464,7 @@ func (in *RedisConfigurationParameters) DeepCopyInto(out *RedisConfigurationPara
 	}
 	if in.MaxmemoryReserved != nil {
 		in, out := &in.MaxmemoryReserved, &out.MaxmemoryReserved
-		*out = new(int64)
+		*out = new(float64)
 		**out = **in
 	}
 	if in.NotifyKeySpaceEvents != nil {
@@ -479,12 +479,12 @@ func (in *RedisConfigurationParameters) DeepCopyInto(out *RedisConfigurationPara
 	}
 	if in.RdbBackupFrequency != nil {
 		in, out := &in.RdbBackupFrequency, &out.RdbBackupFrequency
-		*out = new(int64)
+		*out = new(float64)
 		**out = **in
 	}
 	if in.RdbBackupMaxSnapshotCount != nil {
 		in, out := &in.RdbBackupMaxSnapshotCount, &out.RdbBackupMaxSnapshotCount
-		*out = new(int64)
+		*out = new(float64)
 		**out = **in
 	}
 	if in.RdbStorageConnectionStringSecretRef != nil {
@@ -819,7 +819,7 @@ func (in *RedisEnterpriseDatabaseParameters) DeepCopyInto(out *RedisEnterpriseDa
 	}
 	if in.Port != nil {
 		in, out := &in.Port, &out.Port
-		*out = new(int64)
+		*out = new(float64)
 		**out = **in
 	}
 	if in.ResourceGroupName != nil {

@@ -66,8 +66,7 @@ spec:
                   autoInflateEnabled:
                     type: boolean
                   capacity:
-                    format: int64
-                    type: integer
+                    type: number
                   dedicatedClusterId:
                     type: string
                   identity:
@@ -80,8 +79,7 @@ spec:
                   location:
                     type: string
                   maximumThroughputUnits:
-                    format: int64
-                    type: integer
+                    type: number
                   networkRulesets:
                     items:
                       properties:
@@ -94,8 +92,6 @@ spec:
                                 type: string
                               ipMask:
                                 type: string
-                            required:
-                            - ipMask
                             type: object
                           type: array
                         trustedServiceAccessEnabled:
@@ -133,8 +129,6 @@ spec:
                                 type: object
                             type: object
                           type: array
-                      required:
-                      - defaultAction
                       type: object
                     type: array
                   resourceGroupName:

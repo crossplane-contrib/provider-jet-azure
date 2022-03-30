@@ -74,11 +74,9 @@ spec:
                       type: string
                     type: object
                   parallelism:
-                    format: int64
-                    type: integer
+                    type: number
                   size:
-                    format: int64
-                    type: integer
+                    type: number
                   source:
                     type: string
                   sourceContent:

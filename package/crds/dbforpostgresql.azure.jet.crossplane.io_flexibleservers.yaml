@@ -84,8 +84,7 @@ spec:
                     - namespace
                     type: object
                   backupRetentionDays:
-                    format: int64
-                    type: integer
+                    type: number
                   createMode:
                     type: string
                   delegatedSubnetId:
@@ -130,14 +129,11 @@ spec:
                     items:
                       properties:
                         dayOfWeek:
-                          format: int64
-                          type: integer
+                          type: number
                         startHour:
-                          format: int64
-                          type: integer
+                          type: number
                         startMinute:
-                          format: int64
-                          type: integer
+                          type: number
                       type: object
                     type: array
                   pointInTimeRestoreTimeInUtc:
@@ -174,8 +170,7 @@ spec:
                   sourceServerId:
                     type: string
                   storageMb:
-                    format: int64
-                    type: integer
+                    type: number
                   tags:
                     additionalProperties:
                       type: string

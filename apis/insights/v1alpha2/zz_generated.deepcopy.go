@@ -101,7 +101,7 @@ func (in *ApplicationInsightsWebTestLocationAvailabilityCriteriaParameters) Deep
 	}
 	if in.FailedLocationCount != nil {
 		in, out := &in.FailedLocationCount, &out.FailedLocationCount
-		*out = new(int64)
+		*out = new(float64)
 		**out = **in
 	}
 	if in.WebTestID != nil {
@@ -327,12 +327,12 @@ func (in *DynamicCriteriaParameters) DeepCopyInto(out *DynamicCriteriaParameters
 	}
 	if in.EvaluationFailureCount != nil {
 		in, out := &in.EvaluationFailureCount, &out.EvaluationFailureCount
-		*out = new(int64)
+		*out = new(float64)
 		**out = **in
 	}
 	if in.EvaluationTotalCount != nil {
 		in, out := &in.EvaluationTotalCount, &out.EvaluationTotalCount
-		*out = new(int64)
+		*out = new(float64)
 		**out = **in
 	}
 	if in.IgnoreDataBefore != nil {
@@ -530,7 +530,7 @@ func (in *MonitorMetricAlertParameters) DeepCopyInto(out *MonitorMetricAlertPara
 	}
 	if in.Severity != nil {
 		in, out := &in.Severity, &out.Severity
-		*out = new(int64)
+		*out = new(float64)
 		**out = **in
 	}
 	if in.Tags != nil {

@@ -37,7 +37,7 @@ type PatchScheduleParameters struct {
 	MaintenanceWindow *string `json:"maintenanceWindow,omitempty" tf:"maintenance_window,omitempty"`
 
 	// +kubebuilder:validation:Optional
-	StartHourUtc *int64 `json:"startHourUtc,omitempty" tf:"start_hour_utc,omitempty"`
+	StartHourUtc *float64 `json:"startHourUtc,omitempty" tf:"start_hour_utc,omitempty"`
 }
 
 type RedisCacheObservation struct {
@@ -45,15 +45,15 @@ type RedisCacheObservation struct {
 
 	ID *string `json:"id,omitempty" tf:"id,omitempty"`
 
-	Port *int64 `json:"port,omitempty" tf:"port,omitempty"`
+	Port *float64 `json:"port,omitempty" tf:"port,omitempty"`
 
-	SSLPort *int64 `json:"sslPort,omitempty" tf:"ssl_port,omitempty"`
+	SSLPort *float64 `json:"sslPort,omitempty" tf:"ssl_port,omitempty"`
 }
 
 type RedisCacheParameters struct {
 
 	// +kubebuilder:validation:Required
-	Capacity *int64 `json:"capacity" tf:"capacity,omitempty"`
+	Capacity *float64 `json:"capacity" tf:"capacity,omitempty"`
 
 	// +kubebuilder:validation:Optional
 	EnableNonSSLPort *bool `json:"enableNonSslPort,omitempty" tf:"enable_non_ssl_port,omitempty"`
@@ -83,10 +83,10 @@ type RedisCacheParameters struct {
 	RedisVersion *string `json:"redisVersion,omitempty" tf:"redis_version,omitempty"`
 
 	// +kubebuilder:validation:Optional
-	ReplicasPerMaster *int64 `json:"replicasPerMaster,omitempty" tf:"replicas_per_master,omitempty"`
+	ReplicasPerMaster *float64 `json:"replicasPerMaster,omitempty" tf:"replicas_per_master,omitempty"`
 
 	// +kubebuilder:validation:Optional
-	ReplicasPerPrimary *int64 `json:"replicasPerPrimary,omitempty" tf:"replicas_per_primary,omitempty"`
+	ReplicasPerPrimary *float64 `json:"replicasPerPrimary,omitempty" tf:"replicas_per_primary,omitempty"`
 
 	// +crossplane:generate:reference:type=github.com/crossplane-contrib/provider-jet-azure/apis/azure/v1alpha2.ResourceGroup
 	// +kubebuilder:validation:Optional
@@ -99,7 +99,7 @@ type RedisCacheParameters struct {
 	ResourceGroupNameSelector *v1.Selector `json:"resourceGroupNameSelector,omitempty" tf:"-"`
 
 	// +kubebuilder:validation:Optional
-	ShardCount *int64 `json:"shardCount,omitempty" tf:"shard_count,omitempty"`
+	ShardCount *float64 `json:"shardCount,omitempty" tf:"shard_count,omitempty"`
 
 	// +kubebuilder:validation:Required
 	SkuName *string `json:"skuName" tf:"sku_name,omitempty"`
@@ -126,7 +126,7 @@ type RedisCacheParameters struct {
 }
 
 type RedisConfigurationObservation struct {
-	Maxclients *int64 `json:"maxclients,omitempty" tf:"maxclients,omitempty"`
+	Maxclients *float64 `json:"maxclients,omitempty" tf:"maxclients,omitempty"`
 }
 
 type RedisConfigurationParameters struct {
@@ -144,16 +144,16 @@ type RedisConfigurationParameters struct {
 	EnableAuthentication *bool `json:"enableAuthentication,omitempty" tf:"enable_authentication,omitempty"`
 
 	// +kubebuilder:validation:Optional
-	MaxfragmentationmemoryReserved *int64 `json:"maxfragmentationmemoryReserved,omitempty" tf:"maxfragmentationmemory_reserved,omitempty"`
+	MaxfragmentationmemoryReserved *float64 `json:"maxfragmentationmemoryReserved,omitempty" tf:"maxfragmentationmemory_reserved,omitempty"`
 
 	// +kubebuilder:validation:Optional
-	MaxmemoryDelta *int64 `json:"maxmemoryDelta,omitempty" tf:"maxmemory_delta,omitempty"`
+	MaxmemoryDelta *float64 `json:"maxmemoryDelta,omitempty" tf:"maxmemory_delta,omitempty"`
 
 	// +kubebuilder:validation:Optional
 	MaxmemoryPolicy *string `json:"maxmemoryPolicy,omitempty" tf:"maxmemory_policy,omitempty"`
 
 	// +kubebuilder:validation:Optional
-	MaxmemoryReserved *int64 `json:"maxmemoryReserved,omitempty" tf:"maxmemory_reserved,omitempty"`
+	MaxmemoryReserved *float64 `json:"maxmemoryReserved,omitempty" tf:"maxmemory_reserved,omitempty"`
 
 	// +kubebuilder:validation:Optional
 	NotifyKeySpaceEvents *string `json:"notifyKeyspaceEvents,omitempty" tf:"notify_keyspace_events,omitempty"`
@@ -162,10 +162,10 @@ type RedisConfigurationParameters struct {
 	RdbBackupEnabled *bool `json:"rdbBackupEnabled,omitempty" tf:"rdb_backup_enabled,omitempty"`
 
 	// +kubebuilder:validation:Optional
-	RdbBackupFrequency *int64 `json:"rdbBackupFrequency,omitempty" tf:"rdb_backup_frequency,omitempty"`
+	RdbBackupFrequency *float64 `json:"rdbBackupFrequency,omitempty" tf:"rdb_backup_frequency,omitempty"`
 
 	// +kubebuilder:validation:Optional
-	RdbBackupMaxSnapshotCount *int64 `json:"rdbBackupMaxSnapshotCount,omitempty" tf:"rdb_backup_max_snapshot_count,omitempty"`
+	RdbBackupMaxSnapshotCount *float64 `json:"rdbBackupMaxSnapshotCount,omitempty" tf:"rdb_backup_max_snapshot_count,omitempty"`
 
 	// +kubebuilder:validation:Optional
 	RdbStorageConnectionStringSecretRef *v1.SecretKeySelector `json:"rdbStorageConnectionStringSecretRef,omitempty" tf:"-"`

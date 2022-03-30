@@ -31,7 +31,7 @@ type CassandraTableAutoscaleSettingsObservation struct {
 type CassandraTableAutoscaleSettingsParameters struct {
 
 	// +kubebuilder:validation:Optional
-	MaxThroughput *int64 `json:"maxThroughput,omitempty" tf:"max_throughput,omitempty"`
+	MaxThroughput *float64 `json:"maxThroughput,omitempty" tf:"max_throughput,omitempty"`
 }
 
 type CassandraTableObservation struct {
@@ -41,7 +41,7 @@ type CassandraTableObservation struct {
 type CassandraTableParameters struct {
 
 	// +kubebuilder:validation:Optional
-	AnalyticalStorageTTL *int64 `json:"analyticalStorageTtl,omitempty" tf:"analytical_storage_ttl,omitempty"`
+	AnalyticalStorageTTL *float64 `json:"analyticalStorageTtl,omitempty" tf:"analytical_storage_ttl,omitempty"`
 
 	// +kubebuilder:validation:Optional
 	AutoscaleSettings []CassandraTableAutoscaleSettingsParameters `json:"autoscaleSettings,omitempty" tf:"autoscale_settings,omitempty"`
@@ -58,13 +58,13 @@ type CassandraTableParameters struct {
 	CassandraKeySpaceIDSelector *v1.Selector `json:"cassandraKeySpaceIdSelector,omitempty" tf:"-"`
 
 	// +kubebuilder:validation:Optional
-	DefaultTTL *int64 `json:"defaultTtl,omitempty" tf:"default_ttl,omitempty"`
+	DefaultTTL *float64 `json:"defaultTtl,omitempty" tf:"default_ttl,omitempty"`
 
 	// +kubebuilder:validation:Required
 	Schema []SchemaParameters `json:"schema" tf:"schema,omitempty"`
 
 	// +kubebuilder:validation:Optional
-	Throughput *int64 `json:"throughput,omitempty" tf:"throughput,omitempty"`
+	Throughput *float64 `json:"throughput,omitempty" tf:"throughput,omitempty"`
 }
 
 type ClusterKeyObservation struct {

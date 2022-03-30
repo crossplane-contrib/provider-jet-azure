@@ -1266,7 +1266,7 @@ func (in *FlexibleServerParameters) DeepCopyInto(out *FlexibleServerParameters) 
 	}
 	if in.BackupRetentionDays != nil {
 		in, out := &in.BackupRetentionDays, &out.BackupRetentionDays
-		*out = new(int64)
+		*out = new(float64)
 		**out = **in
 	}
 	if in.CreateMode != nil {
@@ -1345,7 +1345,7 @@ func (in *FlexibleServerParameters) DeepCopyInto(out *FlexibleServerParameters) 
 	}
 	if in.StorageMb != nil {
 		in, out := &in.StorageMb, &out.StorageMb
-		*out = new(int64)
+		*out = new(float64)
 		**out = **in
 	}
 	if in.Tags != nil {
@@ -1524,17 +1524,17 @@ func (in *MaintenanceWindowParameters) DeepCopyInto(out *MaintenanceWindowParame
 	*out = *in
 	if in.DayOfWeek != nil {
 		in, out := &in.DayOfWeek, &out.DayOfWeek
-		*out = new(int64)
+		*out = new(float64)
 		**out = **in
 	}
 	if in.StartHour != nil {
 		in, out := &in.StartHour, &out.StartHour
-		*out = new(int64)
+		*out = new(float64)
 		**out = **in
 	}
 	if in.StartMinute != nil {
 		in, out := &in.StartMinute, &out.StartMinute
-		*out = new(int64)
+		*out = new(float64)
 		**out = **in
 	}
 }
@@ -1653,7 +1653,7 @@ func (in *ServerParameters) DeepCopyInto(out *ServerParameters) {
 	}
 	if in.BackupRetentionDays != nil {
 		in, out := &in.BackupRetentionDays, &out.BackupRetentionDays
-		*out = new(int64)
+		*out = new(float64)
 		**out = **in
 	}
 	if in.CreateMode != nil {
@@ -1735,7 +1735,7 @@ func (in *ServerParameters) DeepCopyInto(out *ServerParameters) {
 	}
 	if in.StorageMb != nil {
 		in, out := &in.StorageMb, &out.StorageMb
-		*out = new(int64)
+		*out = new(float64)
 		**out = **in
 	}
 	if in.StorageProfile != nil {
@@ -1843,7 +1843,7 @@ func (in *StorageProfileParameters) DeepCopyInto(out *StorageProfileParameters) 
 	}
 	if in.BackupRetentionDays != nil {
 		in, out := &in.BackupRetentionDays, &out.BackupRetentionDays
-		*out = new(int64)
+		*out = new(float64)
 		**out = **in
 	}
 	if in.GeoRedundantBackup != nil {
@@ -1853,7 +1853,7 @@ func (in *StorageProfileParameters) DeepCopyInto(out *StorageProfileParameters) 
 	}
 	if in.StorageMb != nil {
 		in, out := &in.StorageMb, &out.StorageMb
-		*out = new(int64)
+		*out = new(float64)
 		**out = **in
 	}
 }
@@ -1920,7 +1920,7 @@ func (in *ThreatDetectionPolicyParameters) DeepCopyInto(out *ThreatDetectionPoli
 	}
 	if in.RetentionDays != nil {
 		in, out := &in.RetentionDays, &out.RetentionDays
-		*out = new(int64)
+		*out = new(float64)
 		**out = **in
 	}
 	if in.StorageAccountAccessKeySecretRef != nil {

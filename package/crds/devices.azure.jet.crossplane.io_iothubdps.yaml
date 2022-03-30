@@ -69,8 +69,7 @@ spec:
                     items:
                       properties:
                         allocationWeight:
-                          format: int64
-                          type: integer
+                          type: number
                         applyAllocationPolicy:
                           type: boolean
                         connectionStringSecretRef:
@@ -129,8 +128,7 @@ spec:
                     items:
                       properties:
                         capacity:
-                          format: int64
-                          type: integer
+                          type: number
                         name:
                           type: string
                       required:

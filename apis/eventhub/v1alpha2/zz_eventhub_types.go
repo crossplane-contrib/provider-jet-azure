@@ -40,10 +40,10 @@ type CaptureDescriptionParameters struct {
 	Encoding *string `json:"encoding" tf:"encoding,omitempty"`
 
 	// +kubebuilder:validation:Optional
-	IntervalInSeconds *int64 `json:"intervalInSeconds,omitempty" tf:"interval_in_seconds,omitempty"`
+	IntervalInSeconds *float64 `json:"intervalInSeconds,omitempty" tf:"interval_in_seconds,omitempty"`
 
 	// +kubebuilder:validation:Optional
-	SizeLimitInBytes *int64 `json:"sizeLimitInBytes,omitempty" tf:"size_limit_in_bytes,omitempty"`
+	SizeLimitInBytes *float64 `json:"sizeLimitInBytes,omitempty" tf:"size_limit_in_bytes,omitempty"`
 
 	// +kubebuilder:validation:Optional
 	SkipEmptyArchives *bool `json:"skipEmptyArchives,omitempty" tf:"skip_empty_archives,omitempty"`
@@ -79,7 +79,7 @@ type EventHubParameters struct {
 	CaptureDescription []CaptureDescriptionParameters `json:"captureDescription,omitempty" tf:"capture_description,omitempty"`
 
 	// +kubebuilder:validation:Required
-	MessageRetention *int64 `json:"messageRetention" tf:"message_retention,omitempty"`
+	MessageRetention *float64 `json:"messageRetention" tf:"message_retention,omitempty"`
 
 	// +crossplane:generate:reference:type=EventHubNamespace
 	// +kubebuilder:validation:Optional
@@ -92,7 +92,7 @@ type EventHubParameters struct {
 	NamespaceNameSelector *v1.Selector `json:"namespaceNameSelector,omitempty" tf:"-"`
 
 	// +kubebuilder:validation:Required
-	PartitionCount *int64 `json:"partitionCount" tf:"partition_count,omitempty"`
+	PartitionCount *float64 `json:"partitionCount" tf:"partition_count,omitempty"`
 
 	// +crossplane:generate:reference:type=github.com/crossplane-contrib/provider-jet-azure/apis/azure/v1alpha2.ResourceGroup
 	// +kubebuilder:validation:Optional

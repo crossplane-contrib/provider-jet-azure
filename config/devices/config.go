@@ -21,6 +21,7 @@ import (
 	"fmt"
 
 	"github.com/crossplane/terrajet/pkg/config"
+	"github.com/hashicorp/terraform-plugin-sdk/v2/helper/schema"
 
 	"github.com/crossplane-contrib/provider-jet-azure/apis/rconfig"
 	"github.com/crossplane-contrib/provider-jet-azure/config/common"
@@ -30,6 +31,16 @@ import (
 func Configure(p *config.Provider) {
 	p.AddResourceConfigurator("azurerm_iothub", func(r *config.Resource) {
 		r.Version = common.VersionV1Alpha2
+
+		// Note(ezgidemirel): Following fields are not marked as "sensitive" in Terraform cli schema output.
+		// We need to configure them explicitly to store in connectionDetails secret.
+		r.TerraformResource.Schema["endpoint"].Elem.(*schema.Resource).
+			Schema["connection_string"].Sensitive = true
+		r.TerraformResource.Schema["shared_access_policy"].Elem.(*schema.Resource).
+			Schema["primary_key"].Sensitive = true
+		r.TerraformResource.Schema["shared_access_policy"].Elem.(*schema.Resource).
+			Schema["secondary_key"].Sensitive = true
+
 		r.Kind = "IOTHub"
 		r.References = config.References{
 			"resource_group_name": config.Reference{

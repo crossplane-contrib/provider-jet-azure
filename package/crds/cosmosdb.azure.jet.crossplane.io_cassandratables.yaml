@@ -64,14 +64,12 @@ spec:
               forProvider:
                 properties:
                   analyticalStorageTtl:
-                    format: int64
-                    type: integer
+                    type: number
                   autoscaleSettings:
                     items:
                       properties:
                         maxThroughput:
-                          format: int64
-                          type: integer
+                          type: number
                       type: object
                     type: array
                   cassandraKeySpaceIdRef:
@@ -100,8 +98,7 @@ spec:
                   cassandraKeyspaceId:
                     type: string
                   defaultTtl:
-                    format: int64
-                    type: integer
+                    type: number
                   schema:
                     items:
                       properties:
@@ -144,8 +141,7 @@ spec:
                       type: object
                     type: array
                   throughput:
-                    format: int64
-                    type: integer
+                    type: number
                 required:
                 - schema
                 type: object

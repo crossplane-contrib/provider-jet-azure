@@ -138,8 +138,7 @@ spec:
                   softDeleteEnabled:
                     type: boolean
                   softDeleteRetentionDays:
-                    format: int64
-                    type: integer
+                    type: number
                   tags:
                     additionalProperties:
                       type: string

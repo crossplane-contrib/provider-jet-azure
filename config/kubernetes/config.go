@@ -21,6 +21,7 @@ import (
 	"fmt"
 
 	"github.com/crossplane/terrajet/pkg/config"
+	"github.com/hashicorp/terraform-plugin-sdk/v2/helper/schema"
 	"github.com/pkg/errors"
 
 	"github.com/crossplane-contrib/provider-jet-azure/apis/rconfig"
@@ -31,6 +32,26 @@ import (
 func Configure(p *config.Provider) {
 	p.AddResourceConfigurator("azurerm_kubernetes_cluster", func(r *config.Resource) {
 		r.Version = common.VersionV1Alpha2
+
+		// Note(ezgidemirel): Following fields are not marked as "sensitive" in Terraform cli schema output.
+		// We need to configure them explicitly to store in connectionDetails secret.
+		r.TerraformResource.Schema["kube_admin_config"].Elem.(*schema.Resource).
+			Schema["client_certificate"].Sensitive = true
+		r.TerraformResource.Schema["kube_admin_config"].Elem.(*schema.Resource).
+			Schema["client_key"].Sensitive = true
+		r.TerraformResource.Schema["kube_admin_config"].Elem.(*schema.Resource).
+			Schema["cluster_ca_certificate"].Sensitive = true
+		r.TerraformResource.Schema["kube_admin_config"].Elem.(*schema.Resource).
+			Schema["password"].Sensitive = true
+		r.TerraformResource.Schema["kube_config"].Elem.(*schema.Resource).
+			Schema["client_certificate"].Sensitive = true
+		r.TerraformResource.Schema["kube_config"].Elem.(*schema.Resource).
+			Schema["client_key"].Sensitive = true
+		r.TerraformResource.Schema["kube_config"].Elem.(*schema.Resource).
+			Schema["cluster_ca_certificate"].Sensitive = true
+		r.TerraformResource.Schema["kube_config"].Elem.(*schema.Resource).
+			Schema["password"].Sensitive = true
+
 		r.Kind = "KubernetesCluster"
 		r.ShortGroup = "containerservice"
 		r.LateInitializer = config.LateInitializer{

@@ -71,11 +71,9 @@ spec:
                     items:
                       properties:
                         intervalInMinutes:
-                          format: int64
-                          type: integer
+                          type: number
                         retentionInHours:
-                          format: int64
-                          type: integer
+                          type: number
                         type:
                           type: string
                       required:
@@ -97,11 +95,9 @@ spec:
                         consistencyLevel:
                           type: string
                         maxIntervalInSeconds:
-                          format: int64
-                          type: integer
+                          type: number
                         maxStalenessPrefix:
-                          format: int64
-                          type: integer
+                          type: number
                       required:
                       - consistencyLevel
                       type: object
@@ -126,8 +122,7 @@ spec:
                             type: string
                           type: array
                         maxAgeInSeconds:
-                          format: int64
-                          type: integer
+                          type: number
                       required:
                       - allowedHeaders
                       - allowedMethods
@@ -146,8 +141,7 @@ spec:
                     items:
                       properties:
                         failoverPriority:
-                          format: int64
-                          type: integer
+                          type: number
                         location:
                           type: string
                         prefix:

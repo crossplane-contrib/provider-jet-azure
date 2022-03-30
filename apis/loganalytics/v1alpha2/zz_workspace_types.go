@@ -48,7 +48,7 @@ type WorkspaceParameters struct {
 	Location *string `json:"location" tf:"location,omitempty"`
 
 	// +kubebuilder:validation:Optional
-	ReservationCapcityInGbPerDay *int64 `json:"reservationCapcityInGbPerDay,omitempty" tf:"reservation_capcity_in_gb_per_day,omitempty"`
+	ReservationCapcityInGbPerDay *float64 `json:"reservationCapcityInGbPerDay,omitempty" tf:"reservation_capcity_in_gb_per_day,omitempty"`
 
 	// +crossplane:generate:reference:type=github.com/crossplane-contrib/provider-jet-azure/apis/azure/v1alpha2.ResourceGroup
 	// +kubebuilder:validation:Optional
@@ -61,7 +61,7 @@ type WorkspaceParameters struct {
 	ResourceGroupNameSelector *v1.Selector `json:"resourceGroupNameSelector,omitempty" tf:"-"`
 
 	// +kubebuilder:validation:Optional
-	RetentionInDays *int64 `json:"retentionInDays,omitempty" tf:"retention_in_days,omitempty"`
+	RetentionInDays *float64 `json:"retentionInDays,omitempty" tf:"retention_in_days,omitempty"`
 
 	// +kubebuilder:validation:Optional
 	Sku *string `json:"sku,omitempty" tf:"sku,omitempty"`

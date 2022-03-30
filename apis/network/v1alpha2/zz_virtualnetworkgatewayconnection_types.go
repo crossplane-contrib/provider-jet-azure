@@ -49,10 +49,10 @@ type IpsecPolicyParameters struct {
 	PfsGroup *string `json:"pfsGroup" tf:"pfs_group,omitempty"`
 
 	// +kubebuilder:validation:Optional
-	SaDatasize *int64 `json:"saDatasize,omitempty" tf:"sa_datasize,omitempty"`
+	SaDatasize *float64 `json:"saDatasize,omitempty" tf:"sa_datasize,omitempty"`
 
 	// +kubebuilder:validation:Optional
-	SaLifetime *int64 `json:"saLifetime,omitempty" tf:"sa_lifetime,omitempty"`
+	SaLifetime *float64 `json:"saLifetime,omitempty" tf:"sa_lifetime,omitempty"`
 }
 
 type TrafficSelectorPolicyObservation struct {
@@ -80,7 +80,7 @@ type VirtualNetworkGatewayConnectionParameters struct {
 	ConnectionProtocol *string `json:"connectionProtocol,omitempty" tf:"connection_protocol,omitempty"`
 
 	// +kubebuilder:validation:Optional
-	DpdTimeoutSeconds *int64 `json:"dpdTimeoutSeconds,omitempty" tf:"dpd_timeout_seconds,omitempty"`
+	DpdTimeoutSeconds *float64 `json:"dpdTimeoutSeconds,omitempty" tf:"dpd_timeout_seconds,omitempty"`
 
 	// +kubebuilder:validation:Optional
 	EnableBGP *bool `json:"enableBgp,omitempty" tf:"enable_bgp,omitempty"`
@@ -125,7 +125,7 @@ type VirtualNetworkGatewayConnectionParameters struct {
 	ResourceGroupNameSelector *v1.Selector `json:"resourceGroupNameSelector,omitempty" tf:"-"`
 
 	// +kubebuilder:validation:Optional
-	RoutingWeight *int64 `json:"routingWeight,omitempty" tf:"routing_weight,omitempty"`
+	RoutingWeight *float64 `json:"routingWeight,omitempty" tf:"routing_weight,omitempty"`
 
 	// +kubebuilder:validation:Optional
 	SharedKeySecretRef *v1.SecretKeySelector `json:"sharedKeySecretRef,omitempty" tf:"-"`

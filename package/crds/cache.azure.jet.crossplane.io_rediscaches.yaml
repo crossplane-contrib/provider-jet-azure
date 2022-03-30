@@ -64,8 +64,7 @@ spec:
               forProvider:
                 properties:
                   capacity:
-                    format: int64
-                    type: integer
+                    type: number
                   enableNonSslPort:
                     type: boolean
                   family:
@@ -82,8 +81,7 @@ spec:
                         maintenanceWindow:
                           type: string
                         startHourUtc:
-                          format: int64
-                          type: integer
+                          type: number
                       required:
                       - dayOfWeek
                       type: object
@@ -136,26 +134,21 @@ spec:
                         enableAuthentication:
                           type: boolean
                         maxfragmentationmemoryReserved:
-                          format: int64
-                          type: integer
+                          type: number
                         maxmemoryDelta:
-                          format: int64
-                          type: integer
+                          type: number
                         maxmemoryPolicy:
                           type: string
                         maxmemoryReserved:
-                          format: int64
-                          type: integer
+                          type: number
                         notifyKeyspaceEvents:
                           type: string
                         rdbBackupEnabled:
                           type: boolean
                         rdbBackupFrequency:
-                          format: int64
-                          type: integer
+                          type: number
                         rdbBackupMaxSnapshotCount:
-                          format: int64
-                          type: integer
+                          type: number
                         rdbStorageConnectionStringSecretRef:
                           description: A SecretKeySelector is a reference to a secret
                             key in an arbitrary namespace.
@@ -179,11 +172,9 @@ spec:
                   redisVersion:
                     type: string
                   replicasPerMaster:
-                    format: int64
-                    type: integer
+                    type: number
                   replicasPerPrimary:
-                    format: int64
-                    type: integer
+                    type: number
                   resourceGroupName:
                     type: string
                   resourceGroupNameRef:
@@ -210,8 +201,7 @@ spec:
                         type: object
                     type: object
                   shardCount:
-                    format: int64
-                    type: integer
+                    type: number
                   skuName:
                     type: string
                   subnetId:
@@ -311,11 +301,9 @@ spec:
                   id:
                     type: string
                   port:
-                    format: int64
-                    type: integer
+                    type: number
                   sslPort:
-                    format: int64
-                    type: integer
+                    type: number
                 type: object
               conditions:
                 description: Conditions of the resource.

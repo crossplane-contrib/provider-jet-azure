@@ -108,8 +108,7 @@ spec:
                       type: object
                     type: array
                   port:
-                    format: int64
-                    type: integer
+                    type: number
                   resourceGroupName:
                     type: string
                   resourceGroupNameRef:

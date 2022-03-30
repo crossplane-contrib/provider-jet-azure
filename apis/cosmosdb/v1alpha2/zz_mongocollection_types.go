@@ -31,7 +31,7 @@ type MongoCollectionAutoscaleSettingsObservation struct {
 type MongoCollectionAutoscaleSettingsParameters struct {
 
 	// +kubebuilder:validation:Optional
-	MaxThroughput *int64 `json:"maxThroughput,omitempty" tf:"max_throughput,omitempty"`
+	MaxThroughput *float64 `json:"maxThroughput,omitempty" tf:"max_throughput,omitempty"`
 }
 
 type MongoCollectionIndexObservation struct {
@@ -65,7 +65,7 @@ type MongoCollectionParameters struct {
 	AccountNameSelector *v1.Selector `json:"accountNameSelector,omitempty" tf:"-"`
 
 	// +kubebuilder:validation:Optional
-	AnalyticalStorageTTL *int64 `json:"analyticalStorageTtl,omitempty" tf:"analytical_storage_ttl,omitempty"`
+	AnalyticalStorageTTL *float64 `json:"analyticalStorageTtl,omitempty" tf:"analytical_storage_ttl,omitempty"`
 
 	// +kubebuilder:validation:Optional
 	AutoscaleSettings []MongoCollectionAutoscaleSettingsParameters `json:"autoscaleSettings,omitempty" tf:"autoscale_settings,omitempty"`
@@ -81,7 +81,7 @@ type MongoCollectionParameters struct {
 	DatabaseNameSelector *v1.Selector `json:"databaseNameSelector,omitempty" tf:"-"`
 
 	// +kubebuilder:validation:Optional
-	DefaultTTLSeconds *int64 `json:"defaultTtlSeconds,omitempty" tf:"default_ttl_seconds,omitempty"`
+	DefaultTTLSeconds *float64 `json:"defaultTtlSeconds,omitempty" tf:"default_ttl_seconds,omitempty"`
 
 	// +kubebuilder:validation:Optional
 	Index []MongoCollectionIndexParameters `json:"index,omitempty" tf:"index,omitempty"`
@@ -100,7 +100,7 @@ type MongoCollectionParameters struct {
 	ShardKey *string `json:"shardKey,omitempty" tf:"shard_key,omitempty"`
 
 	// +kubebuilder:validation:Optional
-	Throughput *int64 `json:"throughput,omitempty" tf:"throughput,omitempty"`
+	Throughput *float64 `json:"throughput,omitempty" tf:"throughput,omitempty"`
 }
 
 type SystemIndexesObservation struct {

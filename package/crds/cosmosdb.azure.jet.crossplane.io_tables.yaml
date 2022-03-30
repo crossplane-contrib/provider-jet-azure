@@ -92,8 +92,7 @@ spec:
                     items:
                       properties:
                         maxThroughput:
-                          format: int64
-                          type: integer
+                          type: number
                       type: object
                     type: array
                   resourceGroupName:
@@ -122,8 +121,7 @@ spec:
                         type: object
                     type: object
                   throughput:
-                    format: int64
-                    type: integer
+                    type: number
                 type: object
               providerConfigRef:
                 default:

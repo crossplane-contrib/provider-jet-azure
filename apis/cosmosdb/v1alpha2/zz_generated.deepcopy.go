@@ -366,7 +366,7 @@ func (in *AutoscaleSettingsParameters) DeepCopyInto(out *AutoscaleSettingsParame
 	*out = *in
 	if in.MaxThroughput != nil {
 		in, out := &in.MaxThroughput, &out.MaxThroughput
-		*out = new(int64)
+		*out = new(float64)
 		**out = **in
 	}
 }
@@ -401,12 +401,12 @@ func (in *BackupParameters) DeepCopyInto(out *BackupParameters) {
 	*out = *in
 	if in.IntervalInMinutes != nil {
 		in, out := &in.IntervalInMinutes, &out.IntervalInMinutes
-		*out = new(int64)
+		*out = new(float64)
 		**out = **in
 	}
 	if in.RetentionInHours != nil {
 		in, out := &in.RetentionInHours, &out.RetentionInHours
-		*out = new(int64)
+		*out = new(float64)
 		**out = **in
 	}
 	if in.Type != nil {
@@ -582,7 +582,7 @@ func (in *CassandraKeySpaceParameters) DeepCopyInto(out *CassandraKeySpaceParame
 	}
 	if in.Throughput != nil {
 		in, out := &in.Throughput, &out.Throughput
-		*out = new(int64)
+		*out = new(float64)
 		**out = **in
 	}
 }
@@ -678,7 +678,7 @@ func (in *CassandraTableAutoscaleSettingsParameters) DeepCopyInto(out *Cassandra
 	*out = *in
 	if in.MaxThroughput != nil {
 		in, out := &in.MaxThroughput, &out.MaxThroughput
-		*out = new(int64)
+		*out = new(float64)
 		**out = **in
 	}
 }
@@ -750,7 +750,7 @@ func (in *CassandraTableParameters) DeepCopyInto(out *CassandraTableParameters) 
 	*out = *in
 	if in.AnalyticalStorageTTL != nil {
 		in, out := &in.AnalyticalStorageTTL, &out.AnalyticalStorageTTL
-		*out = new(int64)
+		*out = new(float64)
 		**out = **in
 	}
 	if in.AutoscaleSettings != nil {
@@ -777,7 +777,7 @@ func (in *CassandraTableParameters) DeepCopyInto(out *CassandraTableParameters) 
 	}
 	if in.DefaultTTL != nil {
 		in, out := &in.DefaultTTL, &out.DefaultTTL
-		*out = new(int64)
+		*out = new(float64)
 		**out = **in
 	}
 	if in.Schema != nil {
@@ -789,7 +789,7 @@ func (in *CassandraTableParameters) DeepCopyInto(out *CassandraTableParameters) 
 	}
 	if in.Throughput != nil {
 		in, out := &in.Throughput, &out.Throughput
-		*out = new(int64)
+		*out = new(float64)
 		**out = **in
 	}
 }
@@ -1065,12 +1065,12 @@ func (in *ConsistencyPolicyParameters) DeepCopyInto(out *ConsistencyPolicyParame
 	}
 	if in.MaxIntervalInSeconds != nil {
 		in, out := &in.MaxIntervalInSeconds, &out.MaxIntervalInSeconds
-		*out = new(int64)
+		*out = new(float64)
 		**out = **in
 	}
 	if in.MaxStalenessPrefix != nil {
 		in, out := &in.MaxStalenessPrefix, &out.MaxStalenessPrefix
-		*out = new(int64)
+		*out = new(float64)
 		**out = **in
 	}
 }
@@ -1149,7 +1149,7 @@ func (in *CorsRuleParameters) DeepCopyInto(out *CorsRuleParameters) {
 	}
 	if in.MaxAgeInSeconds != nil {
 		in, out := &in.MaxAgeInSeconds, &out.MaxAgeInSeconds
-		*out = new(int64)
+		*out = new(float64)
 		**out = **in
 	}
 }
@@ -1224,7 +1224,7 @@ func (in *GeoLocationParameters) DeepCopyInto(out *GeoLocationParameters) {
 	*out = *in
 	if in.FailoverPriority != nil {
 		in, out := &in.FailoverPriority, &out.FailoverPriority
-		*out = new(int64)
+		*out = new(float64)
 		**out = **in
 	}
 	if in.Location != nil {
@@ -1301,7 +1301,7 @@ func (in *GremlinDatabaseAutoscaleSettingsParameters) DeepCopyInto(out *GremlinD
 	*out = *in
 	if in.MaxThroughput != nil {
 		in, out := &in.MaxThroughput, &out.MaxThroughput
-		*out = new(int64)
+		*out = new(float64)
 		**out = **in
 	}
 }
@@ -1410,7 +1410,7 @@ func (in *GremlinDatabaseParameters) DeepCopyInto(out *GremlinDatabaseParameters
 	}
 	if in.Throughput != nil {
 		in, out := &in.Throughput, &out.Throughput
-		*out = new(int64)
+		*out = new(float64)
 		**out = **in
 	}
 }
@@ -1506,7 +1506,7 @@ func (in *GremlinGraphAutoscaleSettingsParameters) DeepCopyInto(out *GremlinGrap
 	*out = *in
 	if in.MaxThroughput != nil {
 		in, out := &in.MaxThroughput, &out.MaxThroughput
-		*out = new(int64)
+		*out = new(float64)
 		**out = **in
 	}
 }
@@ -1622,7 +1622,7 @@ func (in *GremlinGraphParameters) DeepCopyInto(out *GremlinGraphParameters) {
 	}
 	if in.DefaultTTL != nil {
 		in, out := &in.DefaultTTL, &out.DefaultTTL
-		*out = new(int64)
+		*out = new(float64)
 		**out = **in
 	}
 	if in.IndexPolicy != nil {
@@ -1639,7 +1639,7 @@ func (in *GremlinGraphParameters) DeepCopyInto(out *GremlinGraphParameters) {
 	}
 	if in.PartitionKeyVersion != nil {
 		in, out := &in.PartitionKeyVersion, &out.PartitionKeyVersion
-		*out = new(int64)
+		*out = new(float64)
 		**out = **in
 	}
 	if in.ResourceGroupName != nil {
@@ -1659,7 +1659,7 @@ func (in *GremlinGraphParameters) DeepCopyInto(out *GremlinGraphParameters) {
 	}
 	if in.Throughput != nil {
 		in, out := &in.Throughput, &out.Throughput
-		*out = new(int64)
+		*out = new(float64)
 		**out = **in
 	}
 	if in.UniqueKey != nil {
@@ -2104,7 +2104,7 @@ func (in *MongoCollectionAutoscaleSettingsParameters) DeepCopyInto(out *MongoCol
 	*out = *in
 	if in.MaxThroughput != nil {
 		in, out := &in.MaxThroughput, &out.MaxThroughput
-		*out = new(int64)
+		*out = new(float64)
 		**out = **in
 	}
 }
@@ -2244,7 +2244,7 @@ func (in *MongoCollectionParameters) DeepCopyInto(out *MongoCollectionParameters
 	}
 	if in.AnalyticalStorageTTL != nil {
 		in, out := &in.AnalyticalStorageTTL, &out.AnalyticalStorageTTL
-		*out = new(int64)
+		*out = new(float64)
 		**out = **in
 	}
 	if in.AutoscaleSettings != nil {
@@ -2271,7 +2271,7 @@ func (in *MongoCollectionParameters) DeepCopyInto(out *MongoCollectionParameters
 	}
 	if in.DefaultTTLSeconds != nil {
 		in, out := &in.DefaultTTLSeconds, &out.DefaultTTLSeconds
-		*out = new(int64)
+		*out = new(float64)
 		**out = **in
 	}
 	if in.Index != nil {
@@ -2303,7 +2303,7 @@ func (in *MongoCollectionParameters) DeepCopyInto(out *MongoCollectionParameters
 	}
 	if in.Throughput != nil {
 		in, out := &in.Throughput, &out.Throughput
-		*out = new(int64)
+		*out = new(float64)
 		**out = **in
 	}
 }
@@ -2399,7 +2399,7 @@ func (in *MongoDatabaseAutoscaleSettingsParameters) DeepCopyInto(out *MongoDatab
 	*out = *in
 	if in.MaxThroughput != nil {
 		in, out := &in.MaxThroughput, &out.MaxThroughput
-		*out = new(int64)
+		*out = new(float64)
 		**out = **in
 	}
 }
@@ -2508,7 +2508,7 @@ func (in *MongoDatabaseParameters) DeepCopyInto(out *MongoDatabaseParameters) {
 	}
 	if in.Throughput != nil {
 		in, out := &in.Throughput, &out.Throughput
-		*out = new(int64)
+		*out = new(float64)
 		**out = **in
 	}
 }
@@ -2802,7 +2802,7 @@ func (in *SQLContainerAutoscaleSettingsParameters) DeepCopyInto(out *SQLContaine
 	*out = *in
 	if in.MaxThroughput != nil {
 		in, out := &in.MaxThroughput, &out.MaxThroughput
-		*out = new(int64)
+		*out = new(float64)
 		**out = **in
 	}
 }
@@ -2934,7 +2934,7 @@ func (in *SQLContainerParameters) DeepCopyInto(out *SQLContainerParameters) {
 	}
 	if in.AnalyticalStorageTTL != nil {
 		in, out := &in.AnalyticalStorageTTL, &out.AnalyticalStorageTTL
-		*out = new(int64)
+		*out = new(float64)
 		**out = **in
 	}
 	if in.AutoscaleSettings != nil {
@@ -2968,7 +2968,7 @@ func (in *SQLContainerParameters) DeepCopyInto(out *SQLContainerParameters) {
 	}
 	if in.DefaultTTL != nil {
 		in, out := &in.DefaultTTL, &out.DefaultTTL
-		*out = new(int64)
+		*out = new(float64)
 		**out = **in
 	}
 	if in.IndexingPolicy != nil {
@@ -2985,7 +2985,7 @@ func (in *SQLContainerParameters) DeepCopyInto(out *SQLContainerParameters) {
 	}
 	if in.PartitionKeyVersion != nil {
 		in, out := &in.PartitionKeyVersion, &out.PartitionKeyVersion
-		*out = new(int64)
+		*out = new(float64)
 		**out = **in
 	}
 	if in.ResourceGroupName != nil {
@@ -3005,7 +3005,7 @@ func (in *SQLContainerParameters) DeepCopyInto(out *SQLContainerParameters) {
 	}
 	if in.Throughput != nil {
 		in, out := &in.Throughput, &out.Throughput
-		*out = new(int64)
+		*out = new(float64)
 		**out = **in
 	}
 	if in.UniqueKey != nil {
@@ -3149,7 +3149,7 @@ func (in *SQLDatabaseAutoscaleSettingsParameters) DeepCopyInto(out *SQLDatabaseA
 	*out = *in
 	if in.MaxThroughput != nil {
 		in, out := &in.MaxThroughput, &out.MaxThroughput
-		*out = new(int64)
+		*out = new(float64)
 		**out = **in
 	}
 }
@@ -3258,7 +3258,7 @@ func (in *SQLDatabaseParameters) DeepCopyInto(out *SQLDatabaseParameters) {
 	}
 	if in.Throughput != nil {
 		in, out := &in.Throughput, &out.Throughput
-		*out = new(int64)
+		*out = new(float64)
 		**out = **in
 	}
 }
@@ -3996,7 +3996,7 @@ func (in *TableAutoscaleSettingsParameters) DeepCopyInto(out *TableAutoscaleSett
 	*out = *in
 	if in.MaxThroughput != nil {
 		in, out := &in.MaxThroughput, &out.MaxThroughput
-		*out = new(int64)
+		*out = new(float64)
 		**out = **in
 	}
 }
@@ -4105,7 +4105,7 @@ func (in *TableParameters) DeepCopyInto(out *TableParameters) {
 	}
 	if in.Throughput != nil {
 		in, out := &in.Throughput, &out.Throughput
-		*out = new(int64)
+		*out = new(float64)
 		**out = **in
 	}
 }

@@ -173,11 +173,11 @@ func (in *AllowedParameters) DeepCopyInto(out *AllowedParameters) {
 	}
 	if in.Hours != nil {
 		in, out := &in.Hours, &out.Hours
-		*out = make([]*int64, len(*in))
+		*out = make([]*float64, len(*in))
 		for i := range *in {
 			if (*in)[i] != nil {
 				in, out := &(*in)[i], &(*out)[i]
-				*out = new(int64)
+				*out = new(float64)
 				**out = **in
 			}
 		}
@@ -239,7 +239,7 @@ func (in *AutoScalerProfileParameters) DeepCopyInto(out *AutoScalerProfileParame
 	}
 	if in.MaxUnreadyNodes != nil {
 		in, out := &in.MaxUnreadyNodes, &out.MaxUnreadyNodes
-		*out = new(int64)
+		*out = new(float64)
 		**out = **in
 	}
 	if in.MaxUnreadyPercentage != nil {
@@ -485,17 +485,17 @@ func (in *DefaultNodePoolParameters) DeepCopyInto(out *DefaultNodePoolParameters
 	}
 	if in.MaxCount != nil {
 		in, out := &in.MaxCount, &out.MaxCount
-		*out = new(int64)
+		*out = new(float64)
 		**out = **in
 	}
 	if in.MaxPods != nil {
 		in, out := &in.MaxPods, &out.MaxPods
-		*out = new(int64)
+		*out = new(float64)
 		**out = **in
 	}
 	if in.MinCount != nil {
 		in, out := &in.MinCount, &out.MinCount
-		*out = new(int64)
+		*out = new(float64)
 		**out = **in
 	}
 	if in.Name != nil {
@@ -505,7 +505,7 @@ func (in *DefaultNodePoolParameters) DeepCopyInto(out *DefaultNodePoolParameters
 	}
 	if in.NodeCount != nil {
 		in, out := &in.NodeCount, &out.NodeCount
-		*out = new(int64)
+		*out = new(float64)
 		**out = **in
 	}
 	if in.NodeLabels != nil {
@@ -551,7 +551,7 @@ func (in *DefaultNodePoolParameters) DeepCopyInto(out *DefaultNodePoolParameters
 	}
 	if in.OsDiskSizeGb != nil {
 		in, out := &in.OsDiskSizeGb, &out.OsDiskSizeGb
-		*out = new(int64)
+		*out = new(float64)
 		**out = **in
 	}
 	if in.OsDiskType != nil {
@@ -1021,27 +1021,27 @@ func (in *KubeletConfigParameters) DeepCopyInto(out *KubeletConfigParameters) {
 	}
 	if in.ContainerLogMaxLine != nil {
 		in, out := &in.ContainerLogMaxLine, &out.ContainerLogMaxLine
-		*out = new(int64)
+		*out = new(float64)
 		**out = **in
 	}
 	if in.ContainerLogMaxSizeMb != nil {
 		in, out := &in.ContainerLogMaxSizeMb, &out.ContainerLogMaxSizeMb
-		*out = new(int64)
+		*out = new(float64)
 		**out = **in
 	}
 	if in.ImageGcHighThreshold != nil {
 		in, out := &in.ImageGcHighThreshold, &out.ImageGcHighThreshold
-		*out = new(int64)
+		*out = new(float64)
 		**out = **in
 	}
 	if in.ImageGcLowThreshold != nil {
 		in, out := &in.ImageGcLowThreshold, &out.ImageGcLowThreshold
-		*out = new(int64)
+		*out = new(float64)
 		**out = **in
 	}
 	if in.PodMaxPid != nil {
 		in, out := &in.PodMaxPid, &out.PodMaxPid
-		*out = new(int64)
+		*out = new(float64)
 		**out = **in
 	}
 	if in.TopologyManagerPolicy != nil {
@@ -1238,27 +1238,27 @@ func (in *KubernetesClusterNodePoolKubeletConfigParameters) DeepCopyInto(out *Ku
 	}
 	if in.ContainerLogMaxLine != nil {
 		in, out := &in.ContainerLogMaxLine, &out.ContainerLogMaxLine
-		*out = new(int64)
+		*out = new(float64)
 		**out = **in
 	}
 	if in.ContainerLogMaxSizeMb != nil {
 		in, out := &in.ContainerLogMaxSizeMb, &out.ContainerLogMaxSizeMb
-		*out = new(int64)
+		*out = new(float64)
 		**out = **in
 	}
 	if in.ImageGcHighThreshold != nil {
 		in, out := &in.ImageGcHighThreshold, &out.ImageGcHighThreshold
-		*out = new(int64)
+		*out = new(float64)
 		**out = **in
 	}
 	if in.ImageGcLowThreshold != nil {
 		in, out := &in.ImageGcLowThreshold, &out.ImageGcLowThreshold
-		*out = new(int64)
+		*out = new(float64)
 		**out = **in
 	}
 	if in.PodMaxPid != nil {
 		in, out := &in.PodMaxPid, &out.PodMaxPid
-		*out = new(int64)
+		*out = new(float64)
 		**out = **in
 	}
 	if in.TopologyManagerPolicy != nil {
@@ -1298,7 +1298,7 @@ func (in *KubernetesClusterNodePoolLinuxOsConfigParameters) DeepCopyInto(out *Ku
 	*out = *in
 	if in.SwapFileSizeMb != nil {
 		in, out := &in.SwapFileSizeMb, &out.SwapFileSizeMb
-		*out = new(int64)
+		*out = new(float64)
 		**out = **in
 	}
 	if in.SysctlConfig != nil {
@@ -1457,17 +1457,17 @@ func (in *KubernetesClusterNodePoolParameters) DeepCopyInto(out *KubernetesClust
 	}
 	if in.MaxCount != nil {
 		in, out := &in.MaxCount, &out.MaxCount
-		*out = new(int64)
+		*out = new(float64)
 		**out = **in
 	}
 	if in.MaxPods != nil {
 		in, out := &in.MaxPods, &out.MaxPods
-		*out = new(int64)
+		*out = new(float64)
 		**out = **in
 	}
 	if in.MinCount != nil {
 		in, out := &in.MinCount, &out.MinCount
-		*out = new(int64)
+		*out = new(float64)
 		**out = **in
 	}
 	if in.Mode != nil {
@@ -1477,7 +1477,7 @@ func (in *KubernetesClusterNodePoolParameters) DeepCopyInto(out *KubernetesClust
 	}
 	if in.NodeCount != nil {
 		in, out := &in.NodeCount, &out.NodeCount
-		*out = new(int64)
+		*out = new(float64)
 		**out = **in
 	}
 	if in.NodeLabels != nil {
@@ -1518,7 +1518,7 @@ func (in *KubernetesClusterNodePoolParameters) DeepCopyInto(out *KubernetesClust
 	}
 	if in.OsDiskSizeGb != nil {
 		in, out := &in.OsDiskSizeGb, &out.OsDiskSizeGb
-		*out = new(int64)
+		*out = new(float64)
 		**out = **in
 	}
 	if in.OsDiskType != nil {
@@ -1995,7 +1995,7 @@ func (in *LinuxOsConfigParameters) DeepCopyInto(out *LinuxOsConfigParameters) {
 	*out = *in
 	if in.SwapFileSizeMb != nil {
 		in, out := &in.SwapFileSizeMb, &out.SwapFileSizeMb
-		*out = new(int64)
+		*out = new(float64)
 		**out = **in
 	}
 	if in.SysctlConfig != nil {
@@ -2047,117 +2047,117 @@ func (in *LinuxOsConfigSysctlConfigParameters) DeepCopyInto(out *LinuxOsConfigSy
 	*out = *in
 	if in.FsAioMaxNr != nil {
 		in, out := &in.FsAioMaxNr, &out.FsAioMaxNr
-		*out = new(int64)
+		*out = new(float64)
 		**out = **in
 	}
 	if in.FsFileMax != nil {
 		in, out := &in.FsFileMax, &out.FsFileMax
-		*out = new(int64)
+		*out = new(float64)
 		**out = **in
 	}
 	if in.FsInotifyMaxUserWatches != nil {
 		in, out := &in.FsInotifyMaxUserWatches, &out.FsInotifyMaxUserWatches
-		*out = new(int64)
+		*out = new(float64)
 		**out = **in
 	}
 	if in.FsNrOpen != nil {
 		in, out := &in.FsNrOpen, &out.FsNrOpen
-		*out = new(int64)
+		*out = new(float64)
 		**out = **in
 	}
 	if in.KernelThreadsMax != nil {
 		in, out := &in.KernelThreadsMax, &out.KernelThreadsMax
-		*out = new(int64)
+		*out = new(float64)
 		**out = **in
 	}
 	if in.NetCoreNetdevMaxBacklog != nil {
 		in, out := &in.NetCoreNetdevMaxBacklog, &out.NetCoreNetdevMaxBacklog
-		*out = new(int64)
+		*out = new(float64)
 		**out = **in
 	}
 	if in.NetCoreOptmemMax != nil {
 		in, out := &in.NetCoreOptmemMax, &out.NetCoreOptmemMax
-		*out = new(int64)
+		*out = new(float64)
 		**out = **in
 	}
 	if in.NetCoreRmemDefault != nil {
 		in, out := &in.NetCoreRmemDefault, &out.NetCoreRmemDefault
-		*out = new(int64)
+		*out = new(float64)
 		**out = **in
 	}
 	if in.NetCoreRmemMax != nil {
 		in, out := &in.NetCoreRmemMax, &out.NetCoreRmemMax
-		*out = new(int64)
+		*out = new(float64)
 		**out = **in
 	}
 	if in.NetCoreSomaxconn != nil {
 		in, out := &in.NetCoreSomaxconn, &out.NetCoreSomaxconn
-		*out = new(int64)
+		*out = new(float64)
 		**out = **in
 	}
 	if in.NetCoreWmemDefault != nil {
 		in, out := &in.NetCoreWmemDefault, &out.NetCoreWmemDefault
-		*out = new(int64)
+		*out = new(float64)
 		**out = **in
 	}
 	if in.NetCoreWmemMax != nil {
 		in, out := &in.NetCoreWmemMax, &out.NetCoreWmemMax
-		*out = new(int64)
+		*out = new(float64)
 		**out = **in
 	}
 	if in.NetIPv4IPLocalPortRangeMax != nil {
 		in, out := &in.NetIPv4IPLocalPortRangeMax, &out.NetIPv4IPLocalPortRangeMax
-		*out = new(int64)
+		*out = new(float64)
 		**out = **in
 	}
 	if in.NetIPv4IPLocalPortRangeMin != nil {
 		in, out := &in.NetIPv4IPLocalPortRangeMin, &out.NetIPv4IPLocalPortRangeMin
-		*out = new(int64)
+		*out = new(float64)
 		**out = **in
 	}
 	if in.NetIPv4NeighDefaultGcThresh1 != nil {
 		in, out := &in.NetIPv4NeighDefaultGcThresh1, &out.NetIPv4NeighDefaultGcThresh1
-		*out = new(int64)
+		*out = new(float64)
 		**out = **in
 	}
 	if in.NetIPv4NeighDefaultGcThresh2 != nil {
 		in, out := &in.NetIPv4NeighDefaultGcThresh2, &out.NetIPv4NeighDefaultGcThresh2
-		*out = new(int64)
+		*out = new(float64)
 		**out = **in
 	}
 	if in.NetIPv4NeighDefaultGcThresh3 != nil {
 		in, out := &in.NetIPv4NeighDefaultGcThresh3, &out.NetIPv4NeighDefaultGcThresh3
-		*out = new(int64)
+		*out = new(float64)
 		**out = **in
 	}
 	if in.NetIPv4TCPFinTimeout != nil {
 		in, out := &in.NetIPv4TCPFinTimeout, &out.NetIPv4TCPFinTimeout
-		*out = new(int64)
+		*out = new(float64)
 		**out = **in
 	}
 	if in.NetIPv4TCPKeepaliveIntvl != nil {
 		in, out := &in.NetIPv4TCPKeepaliveIntvl, &out.NetIPv4TCPKeepaliveIntvl
-		*out = new(int64)
+		*out = new(float64)
 		**out = **in
 	}
 	if in.NetIPv4TCPKeepaliveProbes != nil {
 		in, out := &in.NetIPv4TCPKeepaliveProbes, &out.NetIPv4TCPKeepaliveProbes
-		*out = new(int64)
+		*out = new(float64)
 		**out = **in
 	}
 	if in.NetIPv4TCPKeepaliveTime != nil {
 		in, out := &in.NetIPv4TCPKeepaliveTime, &out.NetIPv4TCPKeepaliveTime
-		*out = new(int64)
+		*out = new(float64)
 		**out = **in
 	}
 	if in.NetIPv4TCPMaxSynBacklog != nil {
 		in, out := &in.NetIPv4TCPMaxSynBacklog, &out.NetIPv4TCPMaxSynBacklog
-		*out = new(int64)
+		*out = new(float64)
 		**out = **in
 	}
 	if in.NetIPv4TCPMaxTwBuckets != nil {
 		in, out := &in.NetIPv4TCPMaxTwBuckets, &out.NetIPv4TCPMaxTwBuckets
-		*out = new(int64)
+		*out = new(float64)
 		**out = **in
 	}
 	if in.NetIPv4TCPTwReuse != nil {
@@ -2167,27 +2167,27 @@ func (in *LinuxOsConfigSysctlConfigParameters) DeepCopyInto(out *LinuxOsConfigSy
 	}
 	if in.NetNetfilterNfConntrackBuckets != nil {
 		in, out := &in.NetNetfilterNfConntrackBuckets, &out.NetNetfilterNfConntrackBuckets
-		*out = new(int64)
+		*out = new(float64)
 		**out = **in
 	}
 	if in.NetNetfilterNfConntrackMax != nil {
 		in, out := &in.NetNetfilterNfConntrackMax, &out.NetNetfilterNfConntrackMax
-		*out = new(int64)
+		*out = new(float64)
 		**out = **in
 	}
 	if in.VMMaxMapCount != nil {
 		in, out := &in.VMMaxMapCount, &out.VMMaxMapCount
-		*out = new(int64)
+		*out = new(float64)
 		**out = **in
 	}
 	if in.VMSwappiness != nil {
 		in, out := &in.VMSwappiness, &out.VMSwappiness
-		*out = new(int64)
+		*out = new(float64)
 		**out = **in
 	}
 	if in.VMVfsCachePressure != nil {
 		in, out := &in.VMVfsCachePressure, &out.VMVfsCachePressure
-		*out = new(int64)
+		*out = new(float64)
 		**out = **in
 	}
 }
@@ -2275,12 +2275,12 @@ func (in *LoadBalancerProfileParameters) DeepCopyInto(out *LoadBalancerProfilePa
 	*out = *in
 	if in.IdleTimeoutInMinutes != nil {
 		in, out := &in.IdleTimeoutInMinutes, &out.IdleTimeoutInMinutes
-		*out = new(int64)
+		*out = new(float64)
 		**out = **in
 	}
 	if in.ManagedOutboundIPCount != nil {
 		in, out := &in.ManagedOutboundIPCount, &out.ManagedOutboundIPCount
-		*out = new(int64)
+		*out = new(float64)
 		**out = **in
 	}
 	if in.OutboundIPAddressIds != nil {
@@ -2307,7 +2307,7 @@ func (in *LoadBalancerProfileParameters) DeepCopyInto(out *LoadBalancerProfilePa
 	}
 	if in.OutboundPortsAllocated != nil {
 		in, out := &in.OutboundPortsAllocated, &out.OutboundPortsAllocated
-		*out = new(int64)
+		*out = new(float64)
 		**out = **in
 	}
 }
@@ -2713,117 +2713,117 @@ func (in *SysctlConfigParameters) DeepCopyInto(out *SysctlConfigParameters) {
 	*out = *in
 	if in.FsAioMaxNr != nil {
 		in, out := &in.FsAioMaxNr, &out.FsAioMaxNr
-		*out = new(int64)
+		*out = new(float64)
 		**out = **in
 	}
 	if in.FsFileMax != nil {
 		in, out := &in.FsFileMax, &out.FsFileMax
-		*out = new(int64)
+		*out = new(float64)
 		**out = **in
 	}
 	if in.FsInotifyMaxUserWatches != nil {
 		in, out := &in.FsInotifyMaxUserWatches, &out.FsInotifyMaxUserWatches
-		*out = new(int64)
+		*out = new(float64)
 		**out = **in
 	}
 	if in.FsNrOpen != nil {
 		in, out := &in.FsNrOpen, &out.FsNrOpen
-		*out = new(int64)
+		*out = new(float64)
 		**out = **in
 	}
 	if in.KernelThreadsMax != nil {
 		in, out := &in.KernelThreadsMax, &out.KernelThreadsMax
-		*out = new(int64)
+		*out = new(float64)
 		**out = **in
 	}
 	if in.NetCoreNetdevMaxBacklog != nil {
 		in, out := &in.NetCoreNetdevMaxBacklog, &out.NetCoreNetdevMaxBacklog
-		*out = new(int64)
+		*out = new(float64)
 		**out = **in
 	}
 	if in.NetCoreOptmemMax != nil {
 		in, out := &in.NetCoreOptmemMax, &out.NetCoreOptmemMax
-		*out = new(int64)
+		*out = new(float64)
 		**out = **in
 	}
 	if in.NetCoreRmemDefault != nil {
 		in, out := &in.NetCoreRmemDefault, &out.NetCoreRmemDefault
-		*out = new(int64)
+		*out = new(float64)
 		**out = **in
 	}
 	if in.NetCoreRmemMax != nil {
 		in, out := &in.NetCoreRmemMax, &out.NetCoreRmemMax
-		*out = new(int64)
+		*out = new(float64)
 		**out = **in
 	}
 	if in.NetCoreSomaxconn != nil {
 		in, out := &in.NetCoreSomaxconn, &out.NetCoreSomaxconn
-		*out = new(int64)
+		*out = new(float64)
 		**out = **in
 	}
 	if in.NetCoreWmemDefault != nil {
 		in, out := &in.NetCoreWmemDefault, &out.NetCoreWmemDefault
-		*out = new(int64)
+		*out = new(float64)
 		**out = **in
 	}
 	if in.NetCoreWmemMax != nil {
 		in, out := &in.NetCoreWmemMax, &out.NetCoreWmemMax
-		*out = new(int64)
+		*out = new(float64)
 		**out = **in
 	}
 	if in.NetIPv4IPLocalPortRangeMax != nil {
 		in, out := &in.NetIPv4IPLocalPortRangeMax, &out.NetIPv4IPLocalPortRangeMax
-		*out = new(int64)
+		*out = new(float64)
 		**out = **in
 	}
 	if in.NetIPv4IPLocalPortRangeMin != nil {
 		in, out := &in.NetIPv4IPLocalPortRangeMin, &out.NetIPv4IPLocalPortRangeMin
-		*out = new(int64)
+		*out = new(float64)
 		**out = **in
 	}
 	if in.NetIPv4NeighDefaultGcThresh1 != nil {
 		in, out := &in.NetIPv4NeighDefaultGcThresh1, &out.NetIPv4NeighDefaultGcThresh1
-		*out = new(int64)
+		*out = new(float64)
 		**out = **in
 	}
 	if in.NetIPv4NeighDefaultGcThresh2 != nil {
 		in, out := &in.NetIPv4NeighDefaultGcThresh2, &out.NetIPv4NeighDefaultGcThresh2
-		*out = new(int64)
+		*out = new(float64)
 		**out = **in
 	}
 	if in.NetIPv4NeighDefaultGcThresh3 != nil {
 		in, out := &in.NetIPv4NeighDefaultGcThresh3, &out.NetIPv4NeighDefaultGcThresh3
-		*out = new(int64)
+		*out = new(float64)
 		**out = **in
 	}
 	if in.NetIPv4TCPFinTimeout != nil {
 		in, out := &in.NetIPv4TCPFinTimeout, &out.NetIPv4TCPFinTimeout
-		*out = new(int64)
+		*out = new(float64)
 		**out = **in
 	}
 	if in.NetIPv4TCPKeepaliveIntvl != nil {
 		in, out := &in.NetIPv4TCPKeepaliveIntvl, &out.NetIPv4TCPKeepaliveIntvl
-		*out = new(int64)
+		*out = new(float64)
 		**out = **in
 	}
 	if in.NetIPv4TCPKeepaliveProbes != nil {
 		in, out := &in.NetIPv4TCPKeepaliveProbes, &out.NetIPv4TCPKeepaliveProbes
-		*out = new(int64)
+		*out = new(float64)
 		**out = **in
 	}
 	if in.NetIPv4TCPKeepaliveTime != nil {
 		in, out := &in.NetIPv4TCPKeepaliveTime, &out.NetIPv4TCPKeepaliveTime
-		*out = new(int64)
+		*out = new(float64)
 		**out = **in
 	}
 	if in.NetIPv4TCPMaxSynBacklog != nil {
 		in, out := &in.NetIPv4TCPMaxSynBacklog, &out.NetIPv4TCPMaxSynBacklog
-		*out = new(int64)
+		*out = new(float64)
 		**out = **in
 	}
 	if in.NetIPv4TCPMaxTwBuckets != nil {
 		in, out := &in.NetIPv4TCPMaxTwBuckets, &out.NetIPv4TCPMaxTwBuckets
-		*out = new(int64)
+		*out = new(float64)
 		**out = **in
 	}
 	if in.NetIPv4TCPTwReuse != nil {
@@ -2833,27 +2833,27 @@ func (in *SysctlConfigParameters) DeepCopyInto(out *SysctlConfigParameters) {
 	}
 	if in.NetNetfilterNfConntrackBuckets != nil {
 		in, out := &in.NetNetfilterNfConntrackBuckets, &out.NetNetfilterNfConntrackBuckets
-		*out = new(int64)
+		*out = new(float64)
 		**out = **in
 	}
 	if in.NetNetfilterNfConntrackMax != nil {
 		in, out := &in.NetNetfilterNfConntrackMax, &out.NetNetfilterNfConntrackMax
-		*out = new(int64)
+		*out = new(float64)
 		**out = **in
 	}
 	if in.VMMaxMapCount != nil {
 		in, out := &in.VMMaxMapCount, &out.VMMaxMapCount
-		*out = new(int64)
+		*out = new(float64)
 		**out = **in
 	}
 	if in.VMSwappiness != nil {
 		in, out := &in.VMSwappiness, &out.VMSwappiness
-		*out = new(int64)
+		*out = new(float64)
 		**out = **in
 	}
 	if in.VMVfsCachePressure != nil {
 		in, out := &in.VMVfsCachePressure, &out.VMVfsCachePressure
-		*out = new(int64)
+		*out = new(float64)
 		**out = **in
 	}
 }

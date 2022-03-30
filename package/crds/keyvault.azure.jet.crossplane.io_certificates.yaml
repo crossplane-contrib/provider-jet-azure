@@ -126,8 +126,7 @@ spec:
                               exportable:
                                 type: boolean
                               keySize:
-                                format: int64
-                                type: integer
+                                type: number
                               keyType:
                                 type: string
                               reuseKey:
@@ -154,11 +153,9 @@ spec:
                                 items:
                                   properties:
                                     daysBeforeExpiry:
-                                      format: int64
-                                      type: integer
+                                      type: number
                                     lifetimePercentage:
-                                      format: int64
-                                      type: integer
+                                      type: number
                                   type: object
                                 type: array
                             required:
@@ -206,8 +203,7 @@ spec:
                                   type: object
                                 type: array
                               validityInMonths:
-                                format: int64
-                                type: integer
+                                type: number
                             required:
                             - keyUsage
                             - subject

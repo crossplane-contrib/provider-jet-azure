@@ -1063,7 +1063,7 @@ func (in *KeyParameters) DeepCopyInto(out *KeyParameters) {
 	}
 	if in.KeySize != nil {
 		in, out := &in.KeySize, &out.KeySize
-		*out = new(int64)
+		*out = new(float64)
 		**out = **in
 	}
 	if in.KeyType != nil {
@@ -1148,7 +1148,7 @@ func (in *KeyPropertiesParameters) DeepCopyInto(out *KeyPropertiesParameters) {
 	}
 	if in.KeySize != nil {
 		in, out := &in.KeySize, &out.KeySize
-		*out = new(int64)
+		*out = new(float64)
 		**out = **in
 	}
 	if in.KeyType != nil {
@@ -1381,7 +1381,7 @@ func (in *ManagedHardwareSecurityModuleParameters) DeepCopyInto(out *ManagedHard
 	}
 	if in.SoftDeleteRetentionDays != nil {
 		in, out := &in.SoftDeleteRetentionDays, &out.SoftDeleteRetentionDays
-		*out = new(int64)
+		*out = new(float64)
 		**out = **in
 	}
 	if in.Tags != nil {
@@ -2180,12 +2180,12 @@ func (in *TriggerParameters) DeepCopyInto(out *TriggerParameters) {
 	*out = *in
 	if in.DaysBeforeExpiry != nil {
 		in, out := &in.DaysBeforeExpiry, &out.DaysBeforeExpiry
-		*out = new(int64)
+		*out = new(float64)
 		**out = **in
 	}
 	if in.LifetimePercentage != nil {
 		in, out := &in.LifetimePercentage, &out.LifetimePercentage
-		*out = new(int64)
+		*out = new(float64)
 		**out = **in
 	}
 }
@@ -2358,7 +2358,7 @@ func (in *VaultParameters) DeepCopyInto(out *VaultParameters) {
 	}
 	if in.SoftDeleteRetentionDays != nil {
 		in, out := &in.SoftDeleteRetentionDays, &out.SoftDeleteRetentionDays
-		*out = new(int64)
+		*out = new(float64)
 		**out = **in
 	}
 	if in.Tags != nil {
@@ -2481,7 +2481,7 @@ func (in *X509CertificatePropertiesParameters) DeepCopyInto(out *X509Certificate
 	}
 	if in.ValidityInMonths != nil {
 		in, out := &in.ValidityInMonths, &out.ValidityInMonths
-		*out = new(int64)
+		*out = new(float64)
 		**out = **in
 	}
 }

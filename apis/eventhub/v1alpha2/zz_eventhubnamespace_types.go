@@ -35,7 +35,7 @@ type EventHubNamespaceParameters struct {
 	AutoInflateEnabled *bool `json:"autoInflateEnabled,omitempty" tf:"auto_inflate_enabled,omitempty"`
 
 	// +kubebuilder:validation:Optional
-	Capacity *int64 `json:"capacity,omitempty" tf:"capacity,omitempty"`
+	Capacity *float64 `json:"capacity,omitempty" tf:"capacity,omitempty"`
 
 	// +kubebuilder:validation:Optional
 	DedicatedClusterID *string `json:"dedicatedClusterId,omitempty" tf:"dedicated_cluster_id,omitempty"`
@@ -47,7 +47,7 @@ type EventHubNamespaceParameters struct {
 	Location *string `json:"location" tf:"location,omitempty"`
 
 	// +kubebuilder:validation:Optional
-	MaximumThroughputUnits *int64 `json:"maximumThroughputUnits,omitempty" tf:"maximum_throughput_units,omitempty"`
+	MaximumThroughputUnits *float64 `json:"maximumThroughputUnits,omitempty" tf:"maximum_throughput_units,omitempty"`
 
 	// +kubebuilder:validation:Optional
 	NetworkRulesets []NetworkRulesetsParameters `json:"networkRulesets,omitempty" tf:"network_rulesets,omitempty"`
@@ -80,8 +80,8 @@ type IPRuleParameters struct {
 	// +kubebuilder:validation:Optional
 	Action *string `json:"action,omitempty" tf:"action"`
 
-	// +kubebuilder:validation:Required
-	IPMask *string `json:"ipMask" tf:"ip_mask"`
+	// +kubebuilder:validation:Optional
+	IPMask *string `json:"ipMask,omitempty" tf:"ip_mask"`
 }
 
 type IdentityObservation struct {
@@ -101,8 +101,8 @@ type NetworkRulesetsObservation struct {
 
 type NetworkRulesetsParameters struct {
 
-	// +kubebuilder:validation:Required
-	DefaultAction *string `json:"defaultAction" tf:"default_action"`
+	// +kubebuilder:validation:Optional
+	DefaultAction *string `json:"defaultAction,omitempty" tf:"default_action"`
 
 	// +kubebuilder:validation:Optional
 	IPRule []IPRuleParameters `json:"ipRule,omitempty" tf:"ip_rule"`

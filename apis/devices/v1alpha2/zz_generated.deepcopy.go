@@ -46,10 +46,14 @@ func (in *EndpointParameters) DeepCopyInto(out *EndpointParameters) {
 	*out = *in
 	if in.BatchFrequencyInSeconds != nil {
 		in, out := &in.BatchFrequencyInSeconds, &out.BatchFrequencyInSeconds
-		*out = new(int64)
+		*out = new(float64)
 		**out = **in
 	}
-	out.ConnectionStringSecretRef = in.ConnectionStringSecretRef
+	if in.ConnectionStringSecretRef != nil {
+		in, out := &in.ConnectionStringSecretRef, &out.ConnectionStringSecretRef
+		*out = new(v1.SecretKeySelector)
+		**out = **in
+	}
 	if in.ContainerName != nil {
 		in, out := &in.ContainerName, &out.ContainerName
 		*out = new(string)
@@ -77,7 +81,7 @@ func (in *EndpointParameters) DeepCopyInto(out *EndpointParameters) {
 	}
 	if in.MaxChunkSizeInBytes != nil {
 		in, out := &in.MaxChunkSizeInBytes, &out.MaxChunkSizeInBytes
-		*out = new(int64)
+		*out = new(float64)
 		**out = **in
 	}
 	if in.Name != nil {
@@ -260,7 +264,7 @@ func (in *FileUploadParameters) DeepCopyInto(out *FileUploadParameters) {
 	}
 	if in.MaxDeliveryCount != nil {
 		in, out := &in.MaxDeliveryCount, &out.MaxDeliveryCount
-		*out = new(int64)
+		*out = new(float64)
 		**out = **in
 	}
 	if in.Notifications != nil {
@@ -1000,7 +1004,7 @@ func (in *IOTHubDPSSkuParameters) DeepCopyInto(out *IOTHubDPSSkuParameters) {
 	*out = *in
 	if in.Capacity != nil {
 		in, out := &in.Capacity, &out.Capacity
-		*out = new(int64)
+		*out = new(float64)
 		**out = **in
 	}
 	if in.Name != nil {
@@ -1138,7 +1142,7 @@ func (in *IOTHubEndpointStorageContainerParameters) DeepCopyInto(out *IOTHubEndp
 	*out = *in
 	if in.BatchFrequencyInSeconds != nil {
 		in, out := &in.BatchFrequencyInSeconds, &out.BatchFrequencyInSeconds
-		*out = new(int64)
+		*out = new(float64)
 		**out = **in
 	}
 	out.ConnectionStringSecretRef = in.ConnectionStringSecretRef
@@ -1184,7 +1188,7 @@ func (in *IOTHubEndpointStorageContainerParameters) DeepCopyInto(out *IOTHubEndp
 	}
 	if in.MaxChunkSizeInBytes != nil {
 		in, out := &in.MaxChunkSizeInBytes, &out.MaxChunkSizeInBytes
-		*out = new(int64)
+		*out = new(float64)
 		**out = **in
 	}
 	if in.ResourceGroupName != nil {
@@ -1545,12 +1549,12 @@ func (in *IOTHubParameters) DeepCopyInto(out *IOTHubParameters) {
 	}
 	if in.EventHubPartitionCount != nil {
 		in, out := &in.EventHubPartitionCount, &out.EventHubPartitionCount
-		*out = new(int64)
+		*out = new(float64)
 		**out = **in
 	}
 	if in.EventHubRetentionInDays != nil {
 		in, out := &in.EventHubRetentionInDays, &out.EventHubRetentionInDays
-		*out = new(int64)
+		*out = new(float64)
 		**out = **in
 	}
 	if in.FallbackRoute != nil {
@@ -1927,7 +1931,7 @@ func (in *LinkedHubParameters) DeepCopyInto(out *LinkedHubParameters) {
 	*out = *in
 	if in.AllocationWeight != nil {
 		in, out := &in.AllocationWeight, &out.AllocationWeight
-		*out = new(int64)
+		*out = new(float64)
 		**out = **in
 	}
 	if in.ApplyAllocationPolicy != nil {
@@ -2074,7 +2078,7 @@ func (in *SkuParameters) DeepCopyInto(out *SkuParameters) {
 	*out = *in
 	if in.Capacity != nil {
 		in, out := &in.Capacity, &out.Capacity
-		*out = new(int64)
+		*out = new(float64)
 		**out = **in
 	}
 	if in.Name != nil {

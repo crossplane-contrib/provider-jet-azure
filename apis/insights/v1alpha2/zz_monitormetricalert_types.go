@@ -46,7 +46,7 @@ type ApplicationInsightsWebTestLocationAvailabilityCriteriaParameters struct {
 	ComponentID *string `json:"componentId" tf:"component_id,omitempty"`
 
 	// +kubebuilder:validation:Required
-	FailedLocationCount *int64 `json:"failedLocationCount" tf:"failed_location_count,omitempty"`
+	FailedLocationCount *float64 `json:"failedLocationCount" tf:"failed_location_count,omitempty"`
 
 	// +kubebuilder:validation:Required
 	WebTestID *string `json:"webTestId" tf:"web_test_id,omitempty"`
@@ -124,10 +124,10 @@ type DynamicCriteriaParameters struct {
 	Dimension []DynamicCriteriaDimensionParameters `json:"dimension,omitempty" tf:"dimension,omitempty"`
 
 	// +kubebuilder:validation:Optional
-	EvaluationFailureCount *int64 `json:"evaluationFailureCount,omitempty" tf:"evaluation_failure_count,omitempty"`
+	EvaluationFailureCount *float64 `json:"evaluationFailureCount,omitempty" tf:"evaluation_failure_count,omitempty"`
 
 	// +kubebuilder:validation:Optional
-	EvaluationTotalCount *int64 `json:"evaluationTotalCount,omitempty" tf:"evaluation_total_count,omitempty"`
+	EvaluationTotalCount *float64 `json:"evaluationTotalCount,omitempty" tf:"evaluation_total_count,omitempty"`
 
 	// +kubebuilder:validation:Optional
 	IgnoreDataBefore *string `json:"ignoreDataBefore,omitempty" tf:"ignore_data_before,omitempty"`
@@ -189,7 +189,7 @@ type MonitorMetricAlertParameters struct {
 	Scopes []*string `json:"scopes" tf:"scopes,omitempty"`
 
 	// +kubebuilder:validation:Optional
-	Severity *int64 `json:"severity,omitempty" tf:"severity,omitempty"`
+	Severity *float64 `json:"severity,omitempty" tf:"severity,omitempty"`
 
 	// +kubebuilder:validation:Optional
 	Tags map[string]*string `json:"tags,omitempty" tf:"tags,omitempty"`

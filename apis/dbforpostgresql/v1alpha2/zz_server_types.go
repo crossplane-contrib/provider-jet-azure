@@ -55,7 +55,7 @@ type ServerParameters struct {
 	AutoGrowEnabled *bool `json:"autoGrowEnabled,omitempty" tf:"auto_grow_enabled,omitempty"`
 
 	// +kubebuilder:validation:Optional
-	BackupRetentionDays *int64 `json:"backupRetentionDays,omitempty" tf:"backup_retention_days,omitempty"`
+	BackupRetentionDays *float64 `json:"backupRetentionDays,omitempty" tf:"backup_retention_days,omitempty"`
 
 	// +kubebuilder:validation:Optional
 	CreateMode *string `json:"createMode,omitempty" tf:"create_mode,omitempty"`
@@ -104,7 +104,7 @@ type ServerParameters struct {
 	SkuName *string `json:"skuName" tf:"sku_name,omitempty"`
 
 	// +kubebuilder:validation:Optional
-	StorageMb *int64 `json:"storageMb,omitempty" tf:"storage_mb,omitempty"`
+	StorageMb *float64 `json:"storageMb,omitempty" tf:"storage_mb,omitempty"`
 
 	// +kubebuilder:validation:Optional
 	StorageProfile []StorageProfileParameters `json:"storageProfile,omitempty" tf:"storage_profile,omitempty"`
@@ -128,13 +128,13 @@ type StorageProfileParameters struct {
 	AutoGrow *string `json:"autoGrow,omitempty" tf:"auto_grow,omitempty"`
 
 	// +kubebuilder:validation:Optional
-	BackupRetentionDays *int64 `json:"backupRetentionDays,omitempty" tf:"backup_retention_days,omitempty"`
+	BackupRetentionDays *float64 `json:"backupRetentionDays,omitempty" tf:"backup_retention_days,omitempty"`
 
 	// +kubebuilder:validation:Optional
 	GeoRedundantBackup *string `json:"geoRedundantBackup,omitempty" tf:"geo_redundant_backup,omitempty"`
 
 	// +kubebuilder:validation:Optional
-	StorageMb *int64 `json:"storageMb,omitempty" tf:"storage_mb,omitempty"`
+	StorageMb *float64 `json:"storageMb,omitempty" tf:"storage_mb,omitempty"`
 }
 
 type ThreatDetectionPolicyObservation struct {
@@ -155,7 +155,7 @@ type ThreatDetectionPolicyParameters struct {
 	Enabled *bool `json:"enabled,omitempty" tf:"enabled,omitempty"`
 
 	// +kubebuilder:validation:Optional
-	RetentionDays *int64 `json:"retentionDays,omitempty" tf:"retention_days,omitempty"`
+	RetentionDays *float64 `json:"retentionDays,omitempty" tf:"retention_days,omitempty"`
 
 	// +kubebuilder:validation:Optional
 	StorageAccountAccessKeySecretRef *v1.SecretKeySelector `json:"storageAccountAccessKeySecretRef,omitempty" tf:"-"`
