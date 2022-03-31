@@ -245,6 +245,10 @@ func Configure(p *config.Provider) {
 				Type:      "Server",
 				Extractor: rconfig.ExtractResourceIDFuncPath,
 			},
+			"key_vault_key_id": config.Reference{
+				Type:      rconfig.VaultKeyReferencePath,
+				Extractor: rconfig.ExtractResourceIDFuncPath,
+			},
 		}
 		r.UseAsync = true
 		// /subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/group1/providers/Microsoft.DBforPostgreSQL/servers/server1/keys/keyvaultname_key-name_keyversion
