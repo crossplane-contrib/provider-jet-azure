@@ -133,7 +133,6 @@ var skipList = []string{
 	"azurerm_machine_learning_inference_cluster",
 	"azurerm_sql_failover_group",
 	"azurerm_logic_app_integration_account_certificate",
-	"azurerm_postgresql_server_key",
 	"azurerm_container_group",
 }
 

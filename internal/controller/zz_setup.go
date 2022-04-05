@@ -53,6 +53,7 @@ import (
 	flexibleserverdatabase "github.com/crossplane-contrib/provider-jet-azure/internal/controller/dbforpostgresql/flexibleserverdatabase"
 	flexibleserverfirewallrule "github.com/crossplane-contrib/provider-jet-azure/internal/controller/dbforpostgresql/flexibleserverfirewallrule"
 	server "github.com/crossplane-contrib/provider-jet-azure/internal/controller/dbforpostgresql/server"
+	serverkey "github.com/crossplane-contrib/provider-jet-azure/internal/controller/dbforpostgresql/serverkey"
 	virtualnetworkrule "github.com/crossplane-contrib/provider-jet-azure/internal/controller/dbforpostgresql/virtualnetworkrule"
 	iothub "github.com/crossplane-contrib/provider-jet-azure/internal/controller/devices/iothub"
 	iothubconsumergroup "github.com/crossplane-contrib/provider-jet-azure/internal/controller/devices/iothubconsumergroup"
@@ -140,6 +141,7 @@ func Setup(mgr ctrl.Manager, o controller.Options) error {
 		flexibleserverdatabase.Setup,
 		flexibleserverfirewallrule.Setup,
 		server.Setup,
+		serverkey.Setup,
 		virtualnetworkrule.Setup,
 		iothub.Setup,
 		iothubconsumergroup.Setup,
