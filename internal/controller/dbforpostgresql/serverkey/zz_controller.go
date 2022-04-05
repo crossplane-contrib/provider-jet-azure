@@ -36,6 +36,7 @@ import (
 func Setup(mgr ctrl.Manager, o tjcontroller.Options) error {
 	name := managed.ControllerName(v1alpha2.ServerKey_GroupVersionKind.String())
 	var initializers managed.InitializerChain
+	initializers = append(initializers, managed.NewNameAsExternalName(mgr.GetClient()))
 	r := managed.NewReconciler(mgr,
 		xpresource.ManagedKind(v1alpha2.ServerKey_GroupVersionKind),
 		managed.WithExternalConnecter(tjcontroller.NewConnector(mgr.GetClient(), o.WorkspaceStore, o.SetupFn, o.Provider.Resources["azurerm_postgresql_server_key"],
