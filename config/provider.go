@@ -1,5 +1,5 @@
 /*
-Copyright 2021 The Crossplane Authors.
+Copyright 2022 The Crossplane Authors.
 
 Licensed under the Apache License, Version 2.0 (the "License");
 you may not use this file except in compliance with the License.
@@ -58,7 +58,7 @@ const (
 //go:embed schema.json
 var providerSchema string
 
-var includedResources = []string{
+var _ = []string{
 	// "azurerm_.+",
 	"azurerm_virtual_.+",
 	"azurerm_kubernetes_.+",
@@ -110,6 +110,7 @@ var skipList = []string{
 	"azurerm_virtual_machine_extension",
 	"azurerm_virtual_machine_data_disk_attachment",
 	"azurerm_virtual_machine_scale_set_extension",
+	"azurerm_devspace_controller",
 	// irrelevant
 	"azurerm_virtual_desktop_application",
 	"azurerm_virtual_desktop_host_pool",
@@ -141,7 +142,7 @@ func GetProvider() *tjconfig.Provider {
 	pc := tjconfig.NewProviderWithSchema([]byte(providerSchema), resourcePrefix, modulePath,
 		tjconfig.WithShortName("azurejet"),
 		tjconfig.WithRootGroup("azure.jet.crossplane.io"),
-		tjconfig.WithIncludeList(includedResources),
+		// tjconfig.WithIncludeList(includedResources),
 		tjconfig.WithSkipList(skipList),
 		tjconfig.WithDefaultResourceFn(defaultResource(externalNameConfig(), groupOverrides())),
 	)
