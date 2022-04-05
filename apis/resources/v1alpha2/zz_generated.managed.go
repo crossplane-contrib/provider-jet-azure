@@ -42,6 +42,11 @@ func (mg *ResourceGroupTemplateDeployment) GetProviderReference() *xpv1.Referenc
 	return mg.Spec.ProviderReference
 }
 
+// GetPublishConnectionDetailsTo of this ResourceGroupTemplateDeployment.
+func (mg *ResourceGroupTemplateDeployment) GetPublishConnectionDetailsTo() *xpv1.PublishConnectionDetailsTo {
+	return mg.Spec.PublishConnectionDetailsTo
+}
+
 // GetWriteConnectionSecretToReference of this ResourceGroupTemplateDeployment.
 func (mg *ResourceGroupTemplateDeployment) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
 	return mg.Spec.WriteConnectionSecretToReference
@@ -68,6 +73,11 @@ Deprecated: Use SetProviderConfigReference.
 */
 func (mg *ResourceGroupTemplateDeployment) SetProviderReference(r *xpv1.Reference) {
 	mg.Spec.ProviderReference = r
+}
+
+// SetPublishConnectionDetailsTo of this ResourceGroupTemplateDeployment.
+func (mg *ResourceGroupTemplateDeployment) SetPublishConnectionDetailsTo(r *xpv1.PublishConnectionDetailsTo) {
+	mg.Spec.PublishConnectionDetailsTo = r
 }
 
 // SetWriteConnectionSecretToReference of this ResourceGroupTemplateDeployment.
