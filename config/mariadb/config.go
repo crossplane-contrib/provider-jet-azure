@@ -77,9 +77,6 @@ func Configure(p *config.Provider) {
 	p.AddResourceConfigurator("azurerm_mariadb_firewall_rule", func(r *config.Resource) {
 		r.Version = common.VersionV1Alpha2
 		r.References = config.References{
-			"resource_group_name": config.Reference{
-				Type: rconfig.ResourceGroupReferencePath,
-			},
 			"server_name": config.Reference{
 				Type: "Server",
 			},
@@ -97,9 +94,6 @@ func Configure(p *config.Provider) {
 	p.AddResourceConfigurator("azurerm_mariadb_virtual_network_rule", func(r *config.Resource) {
 		r.Version = common.VersionV1Alpha2
 		r.References = config.References{
-			"resource_group_name": config.Reference{
-				Type: rconfig.ResourceGroupReferencePath,
-			},
 			"server_name": config.Reference{
 				Type: "Server",
 			},
@@ -121,9 +115,6 @@ func Configure(p *config.Provider) {
 	p.AddResourceConfigurator("azurerm_mariadb_configuration", func(r *config.Resource) {
 		r.Version = common.VersionV1Alpha2
 		r.References = config.References{
-			"resource_group_name": config.Reference{
-				Type: rconfig.ResourceGroupReferencePath,
-			},
 			"server_name": config.Reference{
 				Type: "Server",
 			},
