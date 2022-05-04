@@ -29,9 +29,6 @@ import (
 )
 
 const (
-	errFmtNoAttribute    = `"attribute not found: %s`
-	errFmtUnexpectedType = `unexpected type for attribute %s: Expecting a string`
-
 	mariadbServerPort = 3306
 )
 
@@ -119,7 +116,9 @@ func Configure(p *config.Provider) {
 				Type: "Server",
 			},
 		}
-		// /subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/mygroup1/providers/Microsoft.DBforMariaDB/servers/server1/configurations/backslash_quote
+		// /subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/mygroup1/providers/Microsoft.DBforMariaDB/servers/server1/configurations/interactive_timeout
+		// which needs to be a valid MariaDB configuration name
+		// See https://mariadb.com/kb/en/server-system-variables/
 		r.ExternalName = config.IdentifierFromProvider
 	})
 }
