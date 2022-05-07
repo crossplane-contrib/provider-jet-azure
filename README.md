@@ -10,8 +10,15 @@ generation tools and exposes XRM-conformant managed resources for
 Install the provider by using the following command after changing the image tag
 to the [latest release](https://github.com/crossplane-contrib/provider-jet-azure/releases):
 ```
-kubectl crossplane install provider crossplane/provider-jet-azure:v0.2.1
+kubectl crossplane install provider crossplane/provider-jet-azure:v0.9.0
 ```
+
+Alternatively, you can use declarative installation:
+```
+kubectl apply -f examples/install.yaml
+```
+
+Notice that in this example Provider resource is referencing ControllerConfig with debug enabled.
 
 You can see the API reference [here](https://doc.crds.dev/github.com/crossplane-contrib/provider-jet-azure).
 
