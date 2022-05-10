@@ -27,6 +27,7 @@ import (
 	v1alpha2cache "github.com/crossplane-contrib/provider-jet-azure/apis/cache/v1alpha2"
 	v1alpha2containerservice "github.com/crossplane-contrib/provider-jet-azure/apis/containerservice/v1alpha2"
 	v1alpha2cosmosdb "github.com/crossplane-contrib/provider-jet-azure/apis/cosmosdb/v1alpha2"
+	v1alpha2dbformariadb "github.com/crossplane-contrib/provider-jet-azure/apis/dbformariadb/v1alpha2"
 	v1alpha2dbforpostgresql "github.com/crossplane-contrib/provider-jet-azure/apis/dbforpostgresql/v1alpha2"
 	v1alpha1 "github.com/crossplane-contrib/provider-jet-azure/apis/devices/v1alpha1"
 	v1alpha2devices "github.com/crossplane-contrib/provider-jet-azure/apis/devices/v1alpha2"
@@ -49,6 +50,7 @@ func init() {
 		v1alpha2cache.SchemeBuilder.AddToScheme,
 		v1alpha2containerservice.SchemeBuilder.AddToScheme,
 		v1alpha2cosmosdb.SchemeBuilder.AddToScheme,
+		v1alpha2dbformariadb.SchemeBuilder.AddToScheme,
 		v1alpha2dbforpostgresql.SchemeBuilder.AddToScheme,
 		v1alpha1.SchemeBuilder.AddToScheme,
 		v1alpha2devices.SchemeBuilder.AddToScheme,

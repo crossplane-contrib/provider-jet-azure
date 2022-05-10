@@ -37,6 +37,7 @@ import (
 	"github.com/crossplane-contrib/provider-jet-azure/config/loganalytics"
 	"github.com/crossplane-contrib/provider-jet-azure/config/logic"
 	"github.com/crossplane-contrib/provider-jet-azure/config/management"
+	"github.com/crossplane-contrib/provider-jet-azure/config/mariadb"
 	"github.com/crossplane-contrib/provider-jet-azure/config/monitor"
 	"github.com/crossplane-contrib/provider-jet-azure/config/network"
 	"github.com/crossplane-contrib/provider-jet-azure/config/notificationhubs"
@@ -83,6 +84,7 @@ var includedResources = []string{
 	"azurerm_eventhub_consumer_group$",
 	"azurerm_eventhub_authorization_rule$",
 	"azurerm_network_interface$",
+	"azurerm_mariadb_.+",
 }
 
 // These resources cannot be generated because of their suffixes colliding with
@@ -178,6 +180,7 @@ func GetProvider() *tjconfig.Provider {
 		storagesync.Configure,
 		keyvault.Configure,
 		eventhub.Configure,
+		mariadb.Configure,
 	} {
 		configure(pc)
 	}
