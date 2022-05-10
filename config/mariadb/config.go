@@ -24,7 +24,6 @@ import (
 
 	"github.com/crossplane/terrajet/pkg/config"
 
-	"github.com/crossplane-contrib/provider-jet-azure/apis/rconfig"
 	"github.com/crossplane-contrib/provider-jet-azure/config/common"
 )
 
@@ -93,10 +92,6 @@ func Configure(p *config.Provider) {
 		r.References = config.References{
 			"server_name": config.Reference{
 				Type: "Server",
-			},
-			"subnet_id": config.Reference{
-				Type:      rconfig.SubnetReferencePath,
-				Extractor: rconfig.ExtractResourceIDFuncPath,
 			},
 		}
 		r.UseAsync = true

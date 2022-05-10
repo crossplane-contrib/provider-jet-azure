@@ -22,3 +22,6 @@ spec:
     version: "10.2"
   providerConfigRef:
     name: default
+  writeConnectionSecretToRef:
+    name: example-connection-mariadbserver
+    namespace: crossplane-system
