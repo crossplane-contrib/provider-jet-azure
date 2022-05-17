@@ -85,6 +85,7 @@ var includedResources = []string{
 	"azurerm_eventhub_authorization_rule$",
 	"azurerm_network_interface$",
 	"azurerm_mariadb_.+",
+	"azurerm_public_ip$",
 }
 
 // These resources cannot be generated because of their suffixes colliding with

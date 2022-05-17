@@ -90,6 +90,7 @@ import (
 	workspace "github.com/crossplane-contrib/provider-jet-azure/internal/controller/loganalytics/workspace"
 	loadbalancer "github.com/crossplane-contrib/provider-jet-azure/internal/controller/network/loadbalancer"
 	networkinterface "github.com/crossplane-contrib/provider-jet-azure/internal/controller/network/networkinterface"
+	publicip "github.com/crossplane-contrib/provider-jet-azure/internal/controller/network/publicip"
 	subnet "github.com/crossplane-contrib/provider-jet-azure/internal/controller/network/subnet"
 	subnetnatgatewayassociation "github.com/crossplane-contrib/provider-jet-azure/internal/controller/network/subnetnatgatewayassociation"
 	subnetnetworksecuritygroupassociation "github.com/crossplane-contrib/provider-jet-azure/internal/controller/network/subnetnetworksecuritygroupassociation"
@@ -183,6 +184,7 @@ func Setup(mgr ctrl.Manager, o controller.Options) error {
 		workspace.Setup,
 		loadbalancer.Setup,
 		networkinterface.Setup,
+		publicip.Setup,
 		subnet.Setup,
 		subnetnatgatewayassociation.Setup,
 		subnetnetworksecuritygroupassociation.Setup,

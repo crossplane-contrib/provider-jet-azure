@@ -197,4 +197,12 @@ func Configure(p *config.Provider) {
 	p.AddResourceConfigurator("azurerm_network_packet_capture", func(r *config.Resource) {
 		r.Kind = "NetworkPacketCapture"
 	})
+
+	p.AddResourceConfigurator("azurerm_public_ip", func(r *config.Resource) {
+		r.Version = common.VersionV1Alpha2
+		r.ExternalName = config.NameAsIdentifier
+		r.ExternalName.GetExternalNameFn = common.GetNameFromFullyQualifiedID
+		// /subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/mygroup1/providers/Microsoft.Network/publicIPAddresses/myPublicIpAddress1
+		r.ExternalName.GetIDFn = common.GetFullyQualifiedIDFn("Microsoft.Network", "publicIPAddresses", "name")
+	})
 }
