@@ -39,6 +39,8 @@ type IdentityParameters struct {
 
 type ResourceGroupPolicyAssignmentObservation struct {
 	ID *string `json:"id,omitempty" tf:"id,omitempty"`
+
+	Identity []IdentityObservation `json:"identity,omitempty" tf:"identity,omitempty"`
 }
 
 type ResourceGroupPolicyAssignmentParameters struct {

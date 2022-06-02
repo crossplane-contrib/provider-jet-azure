@@ -251,6 +251,13 @@ spec:
                     type: string
                   idScope:
                     type: string
+                  linkedHub:
+                    items:
+                      properties:
+                        hostname:
+                          type: string
+                      type: object
+                    type: array
                   serviceOperationsHostName:
                     type: string
                 type: object

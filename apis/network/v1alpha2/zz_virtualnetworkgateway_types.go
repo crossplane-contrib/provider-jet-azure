@@ -26,6 +26,7 @@ import (
 )
 
 type BGPSettingsObservation struct {
+	PeeringAddresses []PeeringAddressesObservation `json:"peeringAddresses,omitempty" tf:"peering_addresses,omitempty"`
 }
 
 type BGPSettingsParameters struct {
@@ -154,6 +155,8 @@ type VirtualNetworkGatewayIPConfigurationParameters struct {
 }
 
 type VirtualNetworkGatewayObservation struct {
+	BGPSettings []BGPSettingsObservation `json:"bgpSettings,omitempty" tf:"bgp_settings,omitempty"`
+
 	ID *string `json:"id,omitempty" tf:"id,omitempty"`
 }
 

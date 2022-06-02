@@ -93,6 +93,13 @@ func (in *AccountObservation) DeepCopyInto(out *AccountObservation) {
 		*out = new(string)
 		**out = **in
 	}
+	if in.Identity != nil {
+		in, out := &in.Identity, &out.Identity
+		*out = make([]IdentityObservation, len(*in))
+		for i := range *in {
+			(*in)[i].DeepCopyInto(&(*out)[i])
+		}
+	}
 	if in.PrimaryBlobEndpoint != nil {
 		in, out := &in.PrimaryBlobEndpoint, &out.PrimaryBlobEndpoint
 		*out = new(string)

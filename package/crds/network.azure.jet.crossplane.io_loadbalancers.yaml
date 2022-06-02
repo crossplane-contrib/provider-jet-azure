@@ -251,6 +251,25 @@ spec:
             properties:
               atProvider:
                 properties:
+                  frontendIpConfiguration:
+                    items:
+                      properties:
+                        id:
+                          type: string
+                        inboundNatRules:
+                          items:
+                            type: string
+                          type: array
+                        loadBalancerRules:
+                          items:
+                            type: string
+                          type: array
+                        outboundRules:
+                          items:
+                            type: string
+                          type: array
+                      type: object
+                    type: array
                   id:
                     type: string
                   privateIpAddress:

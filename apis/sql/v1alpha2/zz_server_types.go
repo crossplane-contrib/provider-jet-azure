@@ -62,6 +62,8 @@ type ServerObservation struct {
 	FullyQualifiedDomainName *string `json:"fullyQualifiedDomainName,omitempty" tf:"fully_qualified_domain_name,omitempty"`
 
 	ID *string `json:"id,omitempty" tf:"id,omitempty"`
+
+	Identity []ServerIdentityObservation `json:"identity,omitempty" tf:"identity,omitempty"`
 }
 
 type ServerParameters struct {

@@ -40,6 +40,8 @@ type ModuleParameters struct {
 
 type RedisEnterpriseDatabaseObservation struct {
 	ID *string `json:"id,omitempty" tf:"id,omitempty"`
+
+	Module []ModuleObservation `json:"module,omitempty" tf:"module,omitempty"`
 }
 
 type RedisEnterpriseDatabaseParameters struct {

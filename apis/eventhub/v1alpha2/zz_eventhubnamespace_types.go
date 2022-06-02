@@ -27,6 +27,8 @@ import (
 
 type EventHubNamespaceObservation struct {
 	ID *string `json:"id,omitempty" tf:"id,omitempty"`
+
+	Identity []IdentityObservation `json:"identity,omitempty" tf:"identity,omitempty"`
 }
 
 type EventHubNamespaceParameters struct {

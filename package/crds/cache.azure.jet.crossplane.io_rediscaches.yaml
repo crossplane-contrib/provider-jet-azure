@@ -354,6 +354,13 @@ spec:
                     type: string
                   port:
                     type: number
+                  redisConfiguration:
+                    items:
+                      properties:
+                        maxclients:
+                          type: number
+                      type: object
+                    type: array
                   sslPort:
                     type: number
                 type: object

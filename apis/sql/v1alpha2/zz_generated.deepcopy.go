@@ -243,6 +243,13 @@ func (in *MSSQLServerObservation) DeepCopyInto(out *MSSQLServerObservation) {
 		*out = new(string)
 		**out = **in
 	}
+	if in.Identity != nil {
+		in, out := &in.Identity, &out.Identity
+		*out = make([]IdentityObservation, len(*in))
+		for i := range *in {
+			(*in)[i].DeepCopyInto(&(*out)[i])
+		}
+	}
 	if in.RestorableDroppedDatabaseIds != nil {
 		in, out := &in.RestorableDroppedDatabaseIds, &out.RestorableDroppedDatabaseIds
 		*out = make([]*string, len(*in))
@@ -726,6 +733,13 @@ func (in *ServerObservation) DeepCopyInto(out *ServerObservation) {
 		in, out := &in.ID, &out.ID
 		*out = new(string)
 		**out = **in
+	}
+	if in.Identity != nil {
+		in, out := &in.Identity, &out.Identity
+		*out = make([]ServerIdentityObservation, len(*in))
+		for i := range *in {
+			(*in)[i].DeepCopyInto(&(*out)[i])
+		}
 	}
 }
 

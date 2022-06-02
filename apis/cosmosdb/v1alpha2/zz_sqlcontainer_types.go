@@ -65,6 +65,7 @@ type IndexingPolicyCompositeIndexParameters struct {
 }
 
 type IndexingPolicyObservation struct {
+	SpatialIndex []IndexingPolicySpatialIndexObservation `json:"spatialIndex,omitempty" tf:"spatial_index,omitempty"`
 }
 
 type IndexingPolicyParameters struct {
@@ -121,6 +122,8 @@ type SQLContainerConflictResolutionPolicyParameters struct {
 
 type SQLContainerObservation struct {
 	ID *string `json:"id,omitempty" tf:"id,omitempty"`
+
+	IndexingPolicy []IndexingPolicyObservation `json:"indexingPolicy,omitempty" tf:"indexing_policy,omitempty"`
 }
 
 type SQLContainerParameters struct {
