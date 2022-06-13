@@ -45,6 +45,11 @@ type AciConnectorLinuxParameters struct {
 }
 
 type AddonProfileObservation struct {
+	HTTPApplicationRouting []HTTPApplicationRoutingObservation `json:"httpApplicationRouting,omitempty" tf:"http_application_routing,omitempty"`
+
+	IngressApplicationGateway []IngressApplicationGatewayObservation `json:"ingressApplicationGateway,omitempty" tf:"ingress_application_gateway,omitempty"`
+
+	OmsAgent []OmsAgentObservation `json:"omsAgent,omitempty" tf:"oms_agent,omitempty"`
 }
 
 type AddonProfileParameters struct {
@@ -429,13 +434,19 @@ type KubeletIdentityParameters struct {
 }
 
 type KubernetesClusterObservation struct {
+	AddonProfile []AddonProfileObservation `json:"addonProfile,omitempty" tf:"addon_profile,omitempty"`
+
 	Fqdn *string `json:"fqdn,omitempty" tf:"fqdn,omitempty"`
 
 	ID *string `json:"id,omitempty" tf:"id,omitempty"`
 
+	Identity []IdentityObservation `json:"identity,omitempty" tf:"identity,omitempty"`
+
 	KubeAdminConfig []KubeAdminConfigObservation `json:"kubeAdminConfig,omitempty" tf:"kube_admin_config,omitempty"`
 
 	KubeConfig []KubeConfigObservation `json:"kubeConfig,omitempty" tf:"kube_config,omitempty"`
+
+	NetworkProfile []NetworkProfileObservation `json:"networkProfile,omitempty" tf:"network_profile,omitempty"`
 
 	PrivateFqdn *string `json:"privateFqdn,omitempty" tf:"private_fqdn,omitempty"`
 }
@@ -599,6 +610,7 @@ type MaintenanceWindowParameters struct {
 }
 
 type NetworkProfileObservation struct {
+	LoadBalancerProfile []LoadBalancerProfileObservation `json:"loadBalancerProfile,omitempty" tf:"load_balancer_profile,omitempty"`
 }
 
 type NetworkProfileParameters struct {

@@ -28,7 +28,11 @@ import (
 type AccountObservation struct {
 	Endpoint *string `json:"endpoint,omitempty" tf:"endpoint,omitempty"`
 
+	GeoLocation []GeoLocationObservation `json:"geoLocation,omitempty" tf:"geo_location,omitempty"`
+
 	ID *string `json:"id,omitempty" tf:"id,omitempty"`
+
+	Identity []IdentityObservation `json:"identity,omitempty" tf:"identity,omitempty"`
 
 	ReadEndpoints []*string `json:"readEndpoints,omitempty" tf:"read_endpoints,omitempty"`
 

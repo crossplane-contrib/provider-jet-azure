@@ -32,7 +32,7 @@ func (mg *Account) GetTerraformResourceType() string {
 
 // GetConnectionDetailsMapping for this Account
 func (tr *Account) GetConnectionDetailsMapping() map[string]string {
-	return map[string]string{"connection_strings": "status.atProvider.connectionStrings", "primary_key": "status.atProvider.primaryKey", "primary_master_key": "status.atProvider.primaryMasterKey", "primary_readonly_key": "status.atProvider.primaryReadonlyKey", "primary_readonly_master_key": "status.atProvider.primaryReadonlyMasterKey", "secondary_key": "status.atProvider.secondaryKey", "secondary_master_key": "status.atProvider.secondaryMasterKey", "secondary_readonly_key": "status.atProvider.secondaryReadonlyKey", "secondary_readonly_master_key": "status.atProvider.secondaryReadonlyMasterKey"}
+	return map[string]string{"connection_strings[*]": "status.atProvider.connectionStrings[*]", "primary_key": "status.atProvider.primaryKey", "primary_master_key": "status.atProvider.primaryMasterKey", "primary_readonly_key": "status.atProvider.primaryReadonlyKey", "primary_readonly_master_key": "status.atProvider.primaryReadonlyMasterKey", "secondary_key": "status.atProvider.secondaryKey", "secondary_master_key": "status.atProvider.secondaryMasterKey", "secondary_readonly_key": "status.atProvider.secondaryReadonlyKey", "secondary_readonly_master_key": "status.atProvider.secondaryReadonlyMasterKey"}
 }
 
 // GetObservation of this Account

@@ -832,10 +832,65 @@ spec:
             properties:
               atProvider:
                 properties:
+                  addonProfile:
+                    items:
+                      properties:
+                        httpApplicationRouting:
+                          items:
+                            properties:
+                              httpApplicationRoutingZoneName:
+                                type: string
+                            type: object
+                          type: array
+                        ingressApplicationGateway:
+                          items:
+                            properties:
+                              effectiveGatewayId:
+                                type: string
+                              ingressApplicationGatewayIdentity:
+                                items:
+                                  properties:
+                                    clientId:
+                                      type: string
+                                    objectId:
+                                      type: string
+                                    userAssignedIdentityId:
+                                      type: string
+                                  type: object
+                                type: array
+                            type: object
+                          type: array
+                        omsAgent:
+                          items:
+                            properties:
+                              omsAgentIdentity:
+                                items:
+                                  properties:
+                                    clientId:
+                                      type: string
+                                    objectId:
+                                      type: string
+                                    userAssignedIdentityId:
+                                      type: string
+                                  type: object
+                                type: array
+                            type: object
+                          type: array
+                      type: object
+                    type: array
                   fqdn:
                     type: string
                   id:
                     type: string
+                  identity:
+                    items:
+                      properties:
+                        principalId:
+                          type: string
+                        tenantId:
+                          type: string
+                      type: object
+                    type: array
                   kubeAdminConfig:
                     items:
                       properties:
@@ -852,6 +907,20 @@ spec:
                           type: string
                         username:
                           type: string
+                      type: object
+                    type: array
+                  networkProfile:
+                    items:
+                      properties:
+                        loadBalancerProfile:
+                          items:
+                            properties:
+                              effectiveOutboundIps:
+                                items:
+                                  type: string
+                                type: array
+                            type: object
+                          type: array
                       type: object
                     type: array
                   privateFqdn:

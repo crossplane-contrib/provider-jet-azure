@@ -41,6 +41,8 @@ type ServerObservation struct {
 	Fqdn *string `json:"fqdn,omitempty" tf:"fqdn,omitempty"`
 
 	ID *string `json:"id,omitempty" tf:"id,omitempty"`
+
+	Identity []IdentityObservation `json:"identity,omitempty" tf:"identity,omitempty"`
 }
 
 type ServerParameters struct {

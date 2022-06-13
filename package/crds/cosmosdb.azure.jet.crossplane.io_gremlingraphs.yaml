@@ -330,6 +330,20 @@ spec:
                 properties:
                   id:
                     type: string
+                  indexPolicy:
+                    items:
+                      properties:
+                        spatialIndex:
+                          items:
+                            properties:
+                              types:
+                                items:
+                                  type: string
+                                type: array
+                            type: object
+                          type: array
+                      type: object
+                    type: array
                 type: object
               conditions:
                 description: Conditions of the resource.

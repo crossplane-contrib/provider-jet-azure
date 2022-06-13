@@ -78,6 +78,8 @@ type MSSQLServerObservation struct {
 
 	ID *string `json:"id,omitempty" tf:"id,omitempty"`
 
+	Identity []IdentityObservation `json:"identity,omitempty" tf:"identity,omitempty"`
+
 	RestorableDroppedDatabaseIds []*string `json:"restorableDroppedDatabaseIds,omitempty" tf:"restorable_dropped_database_ids,omitempty"`
 }
 

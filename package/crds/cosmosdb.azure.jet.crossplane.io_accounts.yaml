@@ -335,8 +335,24 @@ spec:
                 properties:
                   endpoint:
                     type: string
+                  geoLocation:
+                    items:
+                      properties:
+                        id:
+                          type: string
+                      type: object
+                    type: array
                   id:
                     type: string
+                  identity:
+                    items:
+                      properties:
+                        principalId:
+                          type: string
+                        tenantId:
+                          type: string
+                      type: object
+                    type: array
                   readEndpoints:
                     items:
                       type: string

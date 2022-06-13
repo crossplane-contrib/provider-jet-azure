@@ -537,6 +537,15 @@ spec:
                 properties:
                   id:
                     type: string
+                  identity:
+                    items:
+                      properties:
+                        principalId:
+                          type: string
+                        tenantId:
+                          type: string
+                      type: object
+                    type: array
                   primaryBlobEndpoint:
                     type: string
                   primaryBlobHost:

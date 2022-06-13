@@ -342,6 +342,24 @@ spec:
             properties:
               atProvider:
                 properties:
+                  bgpSettings:
+                    items:
+                      properties:
+                        peeringAddresses:
+                          items:
+                            properties:
+                              defaultAddresses:
+                                items:
+                                  type: string
+                                type: array
+                              tunnelIpAddresses:
+                                items:
+                                  type: string
+                                type: array
+                            type: object
+                          type: array
+                      type: object
+                    type: array
                   id:
                     type: string
                 type: object

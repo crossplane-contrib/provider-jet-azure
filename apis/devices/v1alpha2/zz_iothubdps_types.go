@@ -32,6 +32,8 @@ type IOTHubDPSObservation struct {
 
 	IDScope *string `json:"idScope,omitempty" tf:"id_scope,omitempty"`
 
+	LinkedHub []LinkedHubObservation `json:"linkedHub,omitempty" tf:"linked_hub,omitempty"`
+
 	ServiceOperationsHostName *string `json:"serviceOperationsHostName,omitempty" tf:"service_operations_host_name,omitempty"`
 }
 

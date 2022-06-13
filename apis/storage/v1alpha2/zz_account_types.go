@@ -28,6 +28,8 @@ import (
 type AccountObservation struct {
 	ID *string `json:"id,omitempty" tf:"id,omitempty"`
 
+	Identity []IdentityObservation `json:"identity,omitempty" tf:"identity,omitempty"`
+
 	PrimaryBlobEndpoint *string `json:"primaryBlobEndpoint,omitempty" tf:"primary_blob_endpoint,omitempty"`
 
 	PrimaryBlobHost *string `json:"primaryBlobHost,omitempty" tf:"primary_blob_host,omitempty"`

@@ -715,6 +715,13 @@ func (in *IOTHubDPSObservation) DeepCopyInto(out *IOTHubDPSObservation) {
 		*out = new(string)
 		**out = **in
 	}
+	if in.LinkedHub != nil {
+		in, out := &in.LinkedHub, &out.LinkedHub
+		*out = make([]LinkedHubObservation, len(*in))
+		for i := range *in {
+			(*in)[i].DeepCopyInto(&(*out)[i])
+		}
+	}
 	if in.ServiceOperationsHostName != nil {
 		in, out := &in.ServiceOperationsHostName, &out.ServiceOperationsHostName
 		*out = new(string)

@@ -239,6 +239,13 @@ spec:
                 properties:
                   id:
                     type: string
+                  module:
+                    items:
+                      properties:
+                        version:
+                          type: string
+                      type: object
+                    type: array
                 type: object
               conditions:
                 description: Conditions of the resource.

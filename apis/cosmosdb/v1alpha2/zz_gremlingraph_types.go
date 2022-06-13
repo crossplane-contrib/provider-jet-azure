@@ -60,6 +60,8 @@ type GremlinGraphAutoscaleSettingsParameters struct {
 
 type GremlinGraphObservation struct {
 	ID *string `json:"id,omitempty" tf:"id,omitempty"`
+
+	IndexPolicy []IndexPolicyObservation `json:"indexPolicy,omitempty" tf:"index_policy,omitempty"`
 }
 
 type GremlinGraphParameters struct {
@@ -132,6 +134,7 @@ type IndexParameters struct {
 }
 
 type IndexPolicyObservation struct {
+	SpatialIndex []SpatialIndexObservation `json:"spatialIndex,omitempty" tf:"spatial_index,omitempty"`
 }
 
 type IndexPolicyParameters struct {

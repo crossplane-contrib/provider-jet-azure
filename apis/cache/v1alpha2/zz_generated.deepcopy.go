@@ -193,6 +193,13 @@ func (in *RedisCacheObservation) DeepCopyInto(out *RedisCacheObservation) {
 		*out = new(float64)
 		**out = **in
 	}
+	if in.RedisConfiguration != nil {
+		in, out := &in.RedisConfiguration, &out.RedisConfiguration
+		*out = make([]RedisConfigurationObservation, len(*in))
+		for i := range *in {
+			(*in)[i].DeepCopyInto(&(*out)[i])
+		}
+	}
 	if in.SSLPort != nil {
 		in, out := &in.SSLPort, &out.SSLPort
 		*out = new(float64)
@@ -764,6 +771,13 @@ func (in *RedisEnterpriseDatabaseObservation) DeepCopyInto(out *RedisEnterpriseD
 		in, out := &in.ID, &out.ID
 		*out = new(string)
 		**out = **in
+	}
+	if in.Module != nil {
+		in, out := &in.Module, &out.Module
+		*out = make([]ModuleObservation, len(*in))
+		for i := range *in {
+			(*in)[i].DeepCopyInto(&(*out)[i])
+		}
 	}
 }
 

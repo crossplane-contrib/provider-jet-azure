@@ -47,6 +47,8 @@ type RedisCacheObservation struct {
 
 	Port *float64 `json:"port,omitempty" tf:"port,omitempty"`
 
+	RedisConfiguration []RedisConfigurationObservation `json:"redisConfiguration,omitempty" tf:"redis_configuration,omitempty"`
+
 	SSLPort *float64 `json:"sslPort,omitempty" tf:"ssl_port,omitempty"`
 }
 
