@@ -1,0 +1,18 @@
+apiVersion: sql.azure.jet.crossplane.io/v1alpha2
+kind: MSSQLDatabase
+metadata:
+  name: example
+spec:
+  forProvider:
+    collation: SQL_Latin1_General_CP1_CI_AS
+    licenseType: LicenseIncluded
+    maxSizeGb: 4
+    readScale: true
+    serverIdRef:
+      name: mssql-server-example
+    skuName: BC_Gen5_2
+    tags:
+      foo: bar
+    zoneRedundant: true
+  providerConfigRef:
+    name: example

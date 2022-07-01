@@ -137,4 +137,20 @@ func Configure(p *config.Provider) {
 		}
 		r.UseAsync = true
 	})
+	p.AddResourceConfigurator("azurerm_mssql_database", func(r *config.Resource) {
+		r.Version = common.VersionV1Alpha2
+		r.References = config.References{
+			"server_id": config.Reference{
+				Type:      "MSSQLServer",
+				Extractor: rconfig.ExtractResourceIDFuncPath,
+			},
+		}
+		r.ExternalName = config.NameAsIdentifier
+		r.ExternalName.GetExternalNameFn = common.GetNameFromFullyQualifiedID
+		// /subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/group1/providers/Microsoft.Sql/servers/server1/databases/example1
+		r.ExternalName.GetIDFn = func(_ context.Context, externalName string, parameters map[string]interface{}, _ map[string]interface{}) (string, error) {
+			return fmt.Sprintf("%s/databases/%s", parameters["server_id"], externalName), nil
+		}
+		r.UseAsync = true
+	})
 }

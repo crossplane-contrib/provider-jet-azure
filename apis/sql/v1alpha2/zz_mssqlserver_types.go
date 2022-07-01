@@ -40,10 +40,22 @@ type AzureadAdministratorParameters struct {
 	TenantID *string `json:"tenantId,omitempty" tf:"tenant_id,omitempty"`
 }
 
-type ExtendedAuditingPolicyObservation struct {
+type IdentityObservation struct {
+	PrincipalID *string `json:"principalId,omitempty" tf:"principal_id,omitempty"`
+
+	TenantID *string `json:"tenantId,omitempty" tf:"tenant_id,omitempty"`
 }
 
-type ExtendedAuditingPolicyParameters struct {
+type IdentityParameters struct {
+
+	// +kubebuilder:validation:Required
+	Type *string `json:"type" tf:"type,omitempty"`
+}
+
+type MSSQLServerExtendedAuditingPolicyObservation struct {
+}
+
+type MSSQLServerExtendedAuditingPolicyParameters struct {
 
 	// +kubebuilder:validation:Optional
 	LogMonitoringEnabled *bool `json:"logMonitoringEnabled,omitempty" tf:"log_monitoring_enabled"`
@@ -59,18 +71,6 @@ type ExtendedAuditingPolicyParameters struct {
 
 	// +kubebuilder:validation:Optional
 	StorageEndpoint *string `json:"storageEndpoint,omitempty" tf:"storage_endpoint"`
-}
-
-type IdentityObservation struct {
-	PrincipalID *string `json:"principalId,omitempty" tf:"principal_id,omitempty"`
-
-	TenantID *string `json:"tenantId,omitempty" tf:"tenant_id,omitempty"`
-}
-
-type IdentityParameters struct {
-
-	// +kubebuilder:validation:Required
-	Type *string `json:"type" tf:"type,omitempty"`
 }
 
 type MSSQLServerObservation struct {
@@ -98,7 +98,7 @@ type MSSQLServerParameters struct {
 	ConnectionPolicy *string `json:"connectionPolicy,omitempty" tf:"connection_policy,omitempty"`
 
 	// +kubebuilder:validation:Optional
-	ExtendedAuditingPolicy []ExtendedAuditingPolicyParameters `json:"extendedAuditingPolicy,omitempty" tf:"extended_auditing_policy,omitempty"`
+	ExtendedAuditingPolicy []MSSQLServerExtendedAuditingPolicyParameters `json:"extendedAuditingPolicy,omitempty" tf:"extended_auditing_policy,omitempty"`
 
 	// +kubebuilder:validation:Optional
 	Identity []IdentityParameters `json:"identity,omitempty" tf:"identity,omitempty"`

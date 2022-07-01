@@ -100,16 +100,16 @@ type ServerParameters struct {
 	Tags map[string]*string `json:"tags,omitempty" tf:"tags,omitempty"`
 
 	// +kubebuilder:validation:Optional
-	ThreatDetectionPolicy []ThreatDetectionPolicyParameters `json:"threatDetectionPolicy,omitempty" tf:"threat_detection_policy,omitempty"`
+	ThreatDetectionPolicy []ServerThreatDetectionPolicyParameters `json:"threatDetectionPolicy,omitempty" tf:"threat_detection_policy,omitempty"`
 
 	// +kubebuilder:validation:Required
 	Version *string `json:"version" tf:"version,omitempty"`
 }
 
-type ThreatDetectionPolicyObservation struct {
+type ServerThreatDetectionPolicyObservation struct {
 }
 
-type ThreatDetectionPolicyParameters struct {
+type ServerThreatDetectionPolicyParameters struct {
 
 	// +kubebuilder:validation:Optional
 	DisabledAlerts []*string `json:"disabledAlerts,omitempty" tf:"disabled_alerts,omitempty"`
