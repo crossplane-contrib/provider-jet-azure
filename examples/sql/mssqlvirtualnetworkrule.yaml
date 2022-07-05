@@ -1,0 +1,92 @@
+apiVersion: sql.azure.jet.crossplane.io/v1alpha2
+kind: MSSQLVirtualNetworkRule
+metadata:
+  name: example
+spec:
+  forProvider:
+    serverIdRef:
+      name: mssql-server-example
+    subnetIdRef:
+      name: example-subnet
+  providerConfigRef:
+    name: example
+---
+apiVersion: azure.jet.crossplane.io/v1alpha2
+kind: ResourceGroup
+metadata:
+  name: example-sql-rg
+spec:
+  forProvider:
+    location: West Europe
+    tags:
+      provisioner: crossplane
+  providerConfigRef:
+    name: example
+---
+apiVersion: network.azure.jet.crossplane.io/v1alpha2
+kind: VirtualNetwork
+metadata:
+  name: example-vn
+spec:
+  forProvider:
+    location: West Europe
+    resourceGroupNameRef:
+      name: example-sql-rg
+    addressSpace:
+      - "10.0.0.0/16"
+    dnsServers:
+      - "10.0.0.4"
+      - "10.0.0.5"
+  providerConfigRef:
+    name: example
+---
+apiVersion: network.azure.jet.crossplane.io/v1alpha2
+kind: Subnet
+metadata:
+  name: example-subnet
+spec:
+  forProvider:
+    resourceGroupNameRef:
+      name: example-sql-rg
+    virtualNetworkNameRef:
+      name: example-vn
+    addressPrefixes:
+      - "10.0.0.0/24"
+    serviceEndpoints:
+      - Microsoft.Sql
+  providerConfigRef:
+    name: example
+---
+apiVersion: sql.azure.jet.crossplane.io/v1alpha2
+kind: MSSQLServer
+metadata:
+  name: mssql-server-example
+spec:
+  forProvider:
+    location: West Europe
+    version: "12.0"
+    administratorLogin: "mssqladminun"
+    administratorLoginPasswordSecretRef:
+      name: mssql-password
+      namespace: crossplane-system
+      key: password
+    identity:
+      - type: SystemAssigned
+    resourceGroupNameRef:
+      name: example-sql-rg
+    tags:
+      provisioner: crossplane
+  writeConnectionSecretToRef:
+    name: conn-example-mssqlserver
+    namespace: crossplane-system
+  providerConfigRef:
+    name: example
+---
+apiVersion: v1
+kind: Secret
+metadata:
+  name: mssql-password
+  namespace: crossplane-system
+type: Opaque
+data:
+  password: dGVzdFBhc3N3b3JkITEyMw== # testPassword!123

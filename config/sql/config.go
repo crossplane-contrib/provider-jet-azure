@@ -117,4 +117,40 @@ func Configure(p *config.Provider) {
 			return fmt.Sprintf("%s/encryptionProtector/current", parameters["server_id"]), nil
 		}
 	})
+	p.AddResourceConfigurator("azurerm_mssql_virtual_network_rule", func(r *config.Resource) {
+		r.Version = common.VersionV1Alpha2
+		r.References = config.References{
+			"server_id": config.Reference{
+				Type:      "MSSQLServer",
+				Extractor: rconfig.ExtractResourceIDFuncPath,
+			},
+			"subnet_id": config.Reference{
+				Type:      rconfig.SubnetReferencePath,
+				Extractor: rconfig.ExtractResourceIDFuncPath,
+			},
+		}
+		r.ExternalName = config.NameAsIdentifier
+		r.ExternalName.GetExternalNameFn = common.GetNameFromFullyQualifiedID
+		// /subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/myresourcegroup/providers/Microsoft.Sql/servers/myserver/virtualNetworkRules/vnetrulename
+		r.ExternalName.GetIDFn = func(_ context.Context, externalName string, parameters map[string]interface{}, _ map[string]interface{}) (string, error) {
+			return fmt.Sprintf("%s/virtualNetworkRules/%s", parameters["server_id"], externalName), nil
+		}
+		r.UseAsync = true
+	})
+	p.AddResourceConfigurator("azurerm_mssql_database", func(r *config.Resource) {
+		r.Version = common.VersionV1Alpha2
+		r.References = config.References{
+			"server_id": config.Reference{
+				Type:      "MSSQLServer",
+				Extractor: rconfig.ExtractResourceIDFuncPath,
+			},
+		}
+		r.ExternalName = config.NameAsIdentifier
+		r.ExternalName.GetExternalNameFn = common.GetNameFromFullyQualifiedID
+		// /subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/group1/providers/Microsoft.Sql/servers/server1/databases/example1
+		r.ExternalName.GetIDFn = func(_ context.Context, externalName string, parameters map[string]interface{}, _ map[string]interface{}) (string, error) {
+			return fmt.Sprintf("%s/databases/%s", parameters["server_id"], externalName), nil
+		}
+		r.UseAsync = true
+	})
 }

@@ -103,8 +103,10 @@ import (
 	virtualwan "github.com/crossplane-contrib/provider-jet-azure/internal/controller/network/virtualwan"
 	providerconfig "github.com/crossplane-contrib/provider-jet-azure/internal/controller/providerconfig"
 	resourcegrouptemplatedeployment "github.com/crossplane-contrib/provider-jet-azure/internal/controller/resources/resourcegrouptemplatedeployment"
+	mssqldatabase "github.com/crossplane-contrib/provider-jet-azure/internal/controller/sql/mssqldatabase"
 	mssqlserver "github.com/crossplane-contrib/provider-jet-azure/internal/controller/sql/mssqlserver"
 	mssqlservertransparentdataencryption "github.com/crossplane-contrib/provider-jet-azure/internal/controller/sql/mssqlservertransparentdataencryption"
+	mssqlvirtualnetworkrule "github.com/crossplane-contrib/provider-jet-azure/internal/controller/sql/mssqlvirtualnetworkrule"
 	serversql "github.com/crossplane-contrib/provider-jet-azure/internal/controller/sql/server"
 	accountstorage "github.com/crossplane-contrib/provider-jet-azure/internal/controller/storage/account"
 	blob "github.com/crossplane-contrib/provider-jet-azure/internal/controller/storage/blob"
@@ -197,8 +199,10 @@ func Setup(mgr ctrl.Manager, o controller.Options) error {
 		virtualwan.Setup,
 		providerconfig.Setup,
 		resourcegrouptemplatedeployment.Setup,
+		mssqldatabase.Setup,
 		mssqlserver.Setup,
 		mssqlservertransparentdataencryption.Setup,
+		mssqlvirtualnetworkrule.Setup,
 		serversql.Setup,
 		accountstorage.Setup,
 		blob.Setup,
