@@ -30,6 +30,7 @@ import (
 	"github.com/crossplane-contrib/provider-jet-azure/config/cosmosdb"
 	"github.com/crossplane-contrib/provider-jet-azure/config/datashare"
 	"github.com/crossplane-contrib/provider-jet-azure/config/devices"
+	"github.com/crossplane-contrib/provider-jet-azure/config/devspace"
 	"github.com/crossplane-contrib/provider-jet-azure/config/eventhub"
 	"github.com/crossplane-contrib/provider-jet-azure/config/ip"
 	"github.com/crossplane-contrib/provider-jet-azure/config/keyvault"
@@ -59,7 +60,7 @@ const (
 //go:embed schema.json
 var providerSchema string
 
-var includedResources = []string{
+var _ = []string{
 	// "azurerm_.+",
 	"azurerm_virtual_.+",
 	"azurerm_kubernetes_.+",
@@ -146,7 +147,7 @@ func GetProvider() *tjconfig.Provider {
 	pc := tjconfig.NewProviderWithSchema([]byte(providerSchema), resourcePrefix, modulePath,
 		tjconfig.WithShortName("azurejet"),
 		tjconfig.WithRootGroup("azure.jet.crossplane.io"),
-		tjconfig.WithIncludeList(includedResources),
+		// tjconfig.WithIncludeList(includedResources),
 		tjconfig.WithSkipList(skipList),
 		tjconfig.WithDefaultResourceFn(defaultResource(externalNameConfig(), groupOverrides())),
 	)
@@ -184,6 +185,7 @@ func GetProvider() *tjconfig.Provider {
 		keyvault.Configure,
 		eventhub.Configure,
 		mariadb.Configure,
+		devspace.Configure,
 	} {
 		configure(pc)
 	}
