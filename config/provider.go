@@ -30,6 +30,7 @@ import (
 	"github.com/crossplane-contrib/provider-jet-azure/config/cosmosdb"
 	"github.com/crossplane-contrib/provider-jet-azure/config/datashare"
 	"github.com/crossplane-contrib/provider-jet-azure/config/devices"
+	"github.com/crossplane-contrib/provider-jet-azure/config/devspace"
 	"github.com/crossplane-contrib/provider-jet-azure/config/eventhub"
 	"github.com/crossplane-contrib/provider-jet-azure/config/ip"
 	"github.com/crossplane-contrib/provider-jet-azure/config/keyvault"
@@ -139,7 +140,6 @@ var skipList = []string{
 	"azurerm_sql_failover_group",
 	"azurerm_logic_app_integration_account_certificate",
 	"azurerm_container_group",
-	"azurerm_devspace_controller",
 }
 
 // GetProvider returns provider configuration
@@ -185,6 +185,7 @@ func GetProvider() *tjconfig.Provider {
 		keyvault.Configure,
 		eventhub.Configure,
 		mariadb.Configure,
+		devspace.Configure,
 	} {
 		configure(pc)
 	}

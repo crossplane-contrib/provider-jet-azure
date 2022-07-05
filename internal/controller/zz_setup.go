@@ -287,6 +287,7 @@ import (
 	iothubfallbackroute "github.com/crossplane-contrib/provider-jet-azure/internal/controller/devices/iothubfallbackroute"
 	iothubroute "github.com/crossplane-contrib/provider-jet-azure/internal/controller/devices/iothubroute"
 	iothubsharedaccesspolicy "github.com/crossplane-contrib/provider-jet-azure/internal/controller/devices/iothubsharedaccesspolicy"
+	devspacecontroller "github.com/crossplane-contrib/provider-jet-azure/internal/controller/devspaces/devspacecontroller"
 	globalvmshutdownschedule "github.com/crossplane-contrib/provider-jet-azure/internal/controller/devtestlab/globalvmshutdownschedule"
 	lab "github.com/crossplane-contrib/provider-jet-azure/internal/controller/devtestlab/lab"
 	linuxvirtualmachinedevtestlab "github.com/crossplane-contrib/provider-jet-azure/internal/controller/devtestlab/linuxvirtualmachine"
@@ -939,6 +940,7 @@ func Setup(mgr ctrl.Manager, o controller.Options) error {
 		iothubfallbackroute.Setup,
 		iothubroute.Setup,
 		iothubsharedaccesspolicy.Setup,
+		devspacecontroller.Setup,
 		globalvmshutdownschedule.Setup,
 		lab.Setup,
 		linuxvirtualmachinedevtestlab.Setup,

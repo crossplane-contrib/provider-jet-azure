@@ -65,6 +65,7 @@ import (
 	v1alpha2dbforpostgresql "github.com/crossplane-contrib/provider-jet-azure/apis/dbforpostgresql/v1alpha2"
 	v1alpha1devices "github.com/crossplane-contrib/provider-jet-azure/apis/devices/v1alpha1"
 	v1alpha2devices "github.com/crossplane-contrib/provider-jet-azure/apis/devices/v1alpha2"
+	v1alpha1devspaces "github.com/crossplane-contrib/provider-jet-azure/apis/devspaces/v1alpha1"
 	v1alpha1devtestlab "github.com/crossplane-contrib/provider-jet-azure/apis/devtestlab/v1alpha1"
 	v1alpha1digitaltwins "github.com/crossplane-contrib/provider-jet-azure/apis/digitaltwins/v1alpha1"
 	v1alpha1eventgrid "github.com/crossplane-contrib/provider-jet-azure/apis/eventgrid/v1alpha1"
@@ -171,6 +172,7 @@ func init() {
 		v1alpha2dbforpostgresql.SchemeBuilder.AddToScheme,
 		v1alpha1devices.SchemeBuilder.AddToScheme,
 		v1alpha2devices.SchemeBuilder.AddToScheme,
+		v1alpha1devspaces.SchemeBuilder.AddToScheme,
 		v1alpha1devtestlab.SchemeBuilder.AddToScheme,
 		v1alpha1digitaltwins.SchemeBuilder.AddToScheme,
 		v1alpha1eventgrid.SchemeBuilder.AddToScheme,
