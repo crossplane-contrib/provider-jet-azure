@@ -59,7 +59,7 @@ const (
 //go:embed schema.json
 var providerSchema string
 
-var includedResources = []string{
+var _ = []string{
 	// "azurerm_.+",
 	"azurerm_virtual_.+",
 	"azurerm_kubernetes_.+",
@@ -139,6 +139,7 @@ var skipList = []string{
 	"azurerm_sql_failover_group",
 	"azurerm_logic_app_integration_account_certificate",
 	"azurerm_container_group",
+	"azurerm_devspace_controller",
 }
 
 // GetProvider returns provider configuration
@@ -146,7 +147,7 @@ func GetProvider() *tjconfig.Provider {
 	pc := tjconfig.NewProviderWithSchema([]byte(providerSchema), resourcePrefix, modulePath,
 		tjconfig.WithShortName("azurejet"),
 		tjconfig.WithRootGroup("azure.jet.crossplane.io"),
-		tjconfig.WithIncludeList(includedResources),
+		// tjconfig.WithIncludeList(includedResources),
 		tjconfig.WithSkipList(skipList),
 		tjconfig.WithDefaultResourceFn(defaultResource(externalNameConfig(), groupOverrides())),
 	)
