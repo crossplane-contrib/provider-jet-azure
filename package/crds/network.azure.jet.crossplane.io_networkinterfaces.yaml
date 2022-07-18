@@ -76,6 +76,8 @@ spec:
                   ipConfiguration:
                     items:
                       properties:
+                        gatewayLoadBalancerFrontendIpConfigurationId:
+                          type: string
                         name:
                           type: string
                         primary:

@@ -180,6 +180,15 @@ spec:
                             - enabled
                             type: object
                           type: array
+                        openServiceMesh:
+                          items:
+                            properties:
+                              enabled:
+                                type: boolean
+                            required:
+                            - enabled
+                            type: object
+                          type: array
                       type: object
                     type: array
                   apiServerAuthorizedIpRanges:
@@ -923,6 +932,8 @@ spec:
                           type: array
                       type: object
                     type: array
+                  portalFqdn:
+                    type: string
                   privateFqdn:
                     type: string
                 type: object

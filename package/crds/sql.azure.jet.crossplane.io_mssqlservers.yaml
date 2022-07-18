@@ -86,6 +86,8 @@ spec:
                   azureadAdministrator:
                     items:
                       properties:
+                        azureadAuthenticationOnly:
+                          type: boolean
                         loginUsername:
                           type: string
                         objectId:
@@ -135,6 +137,10 @@ spec:
                       properties:
                         type:
                           type: string
+                        userAssignedIdentityIds:
+                          items:
+                            type: string
+                          type: array
                       required:
                       - type
                       type: object
@@ -142,6 +148,8 @@ spec:
                   location:
                     type: string
                   minimumTlsVersion:
+                    type: string
+                  primaryUserAssignedIdentityId:
                     type: string
                   publicNetworkAccessEnabled:
                     type: boolean

@@ -68,6 +68,8 @@ spec:
                       properties:
                         availabilityZone:
                           type: string
+                        gatewayLoadBalancerFrontendIpConfigurationId:
+                          type: string
                         name:
                           type: string
                         privateIpAddress:
@@ -142,6 +144,8 @@ spec:
                         type: object
                     type: object
                   sku:
+                    type: string
+                  skuTier:
                     type: string
                   tags:
                     additionalProperties:

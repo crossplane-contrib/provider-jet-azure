@@ -30,6 +30,9 @@ type IPConfigurationObservation struct {
 
 type IPConfigurationParameters struct {
 
+	// +kubebuilder:validation:Optional
+	GatewayLoadBalancerFrontendIPConfigurationID *string `json:"gatewayLoadBalancerFrontendIpConfigurationId,omitempty" tf:"gateway_load_balancer_frontend_ip_configuration_id,omitempty"`
+
 	// +kubebuilder:validation:Required
 	Name *string `json:"name" tf:"name,omitempty"`
 
