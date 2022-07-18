@@ -1,0 +1,523 @@
+---
+apiVersion: apiextensions.k8s.io/v1
+kind: CustomResourceDefinition
+metadata:
+  annotations:
+    controller-gen.kubebuilder.io/version: v0.8.0
+  creationTimestamp: null
+  name: clusters.servicefabric.azure.jet.crossplane.io
+spec:
+  group: servicefabric.azure.jet.crossplane.io
+  names:
+    categories:
+    - crossplane
+    - managed
+    - azurejet
+    kind: Cluster
+    listKind: ClusterList
+    plural: clusters
+    singular: cluster
+  scope: Cluster
+  versions:
+  - additionalPrinterColumns:
+    - jsonPath: .status.conditions[?(@.type=='Ready')].status
+      name: READY
+      type: string
+    - jsonPath: .status.conditions[?(@.type=='Synced')].status
+      name: SYNCED
+      type: string
+    - jsonPath: .metadata.annotations.crossplane\.io/external-name
+      name: EXTERNAL-NAME
+      type: string
+    - jsonPath: .metadata.creationTimestamp
+      name: AGE
+      type: date
+    name: v1alpha1
+    schema:
+      openAPIV3Schema:
+        description: Cluster is the Schema for the Clusters API
+        properties:
+          apiVersion:
+            description: 'APIVersion defines the versioned schema of this representation
+              of an object. Servers should convert recognized schemas to the latest
+              internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources'
+            type: string
+          kind:
+            description: 'Kind is a string value representing the REST resource this
+              object represents. Servers may infer this from the endpoint the client
+              submits requests to. Cannot be updated. In CamelCase. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds'
+            type: string
+          metadata:
+            type: object
+          spec:
+            description: ClusterSpec defines the desired state of Cluster
+            properties:
+              deletionPolicy:
+                default: Delete
+                description: DeletionPolicy specifies what will happen to the underlying
+                  external when this managed resource is deleted - either "Delete"
+                  or "Orphan" the external resource.
+                enum:
+                - Orphan
+                - Delete
+                type: string
+              forProvider:
+                properties:
+                  addOnFeatures:
+                    items:
+                      type: string
+                    type: array
+                  azureActiveDirectory:
+                    items:
+                      properties:
+                        clientApplicationId:
+                          type: string
+                        clusterApplicationId:
+                          type: string
+                        tenantId:
+                          type: string
+                      required:
+                      - clientApplicationId
+                      - clusterApplicationId
+                      - tenantId
+                      type: object
+                    type: array
+                  certificate:
+                    items:
+                      properties:
+                        thumbprint:
+                          type: string
+                        thumbprintSecondary:
+                          type: string
+                        x509StoreName:
+                          type: string
+                      required:
+                      - thumbprint
+                      - x509StoreName
+                      type: object
+                    type: array
+                  certificateCommonNames:
+                    items:
+                      properties:
+                        commonNames:
+                          items:
+                            properties:
+                              certificateCommonName:
+                                type: string
+                              certificateIssuerThumbprint:
+                                type: string
+                            required:
+                            - certificateCommonName
+                            type: object
+                          type: array
+                        x509StoreName:
+                          type: string
+                      required:
+                      - commonNames
+                      - x509StoreName
+                      type: object
+                    type: array
+                  clientCertificateCommonName:
+                    items:
+                      properties:
+                        commonName:
+                          type: string
+                        isAdmin:
+                          type: boolean
+                        issuerThumbprint:
+                          type: string
+                      required:
+                      - commonName
+                      - isAdmin
+                      type: object
+                    type: array
+                  clientCertificateThumbprint:
+                    items:
+                      properties:
+                        isAdmin:
+                          type: boolean
+                        thumbprint:
+                          type: string
+                      required:
+                      - isAdmin
+                      - thumbprint
+                      type: object
+                    type: array
+                  clusterCodeVersion:
+                    type: string
+                  diagnosticsConfig:
+                    items:
+                      properties:
+                        blobEndpoint:
+                          type: string
+                        protectedAccountKeyName:
+                          type: string
+                        queueEndpoint:
+                          type: string
+                        storageAccountName:
+                          type: string
+                        tableEndpoint:
+                          type: string
+                      required:
+                      - blobEndpoint
+                      - protectedAccountKeyName
+                      - queueEndpoint
+                      - storageAccountName
+                      - tableEndpoint
+                      type: object
+                    type: array
+                  fabricSettings:
+                    items:
+                      properties:
+                        name:
+                          type: string
+                        parameters:
+                          additionalProperties:
+                            type: string
+                          type: object
+                      required:
+                      - name
+                      type: object
+                    type: array
+                  location:
+                    type: string
+                  managementEndpoint:
+                    type: string
+                  name:
+                    type: string
+                  nodeType:
+                    items:
+                      properties:
+                        applicationPorts:
+                          items:
+                            properties:
+                              endPort:
+                                type: number
+                              startPort:
+                                type: number
+                            required:
+                            - endPort
+                            - startPort
+                            type: object
+                          type: array
+                        capacities:
+                          additionalProperties:
+                            type: string
+                          type: object
+                        clientEndpointPort:
+                          type: number
+                        durabilityLevel:
+                          type: string
+                        ephemeralPorts:
+                          items:
+                            properties:
+                              endPort:
+                                type: number
+                              startPort:
+                                type: number
+                            required:
+                            - endPort
+                            - startPort
+                            type: object
+                          type: array
+                        httpEndpointPort:
+                          type: number
+                        instanceCount:
+                          type: number
+                        isPrimary:
+                          type: boolean
+                        isStateless:
+                          type: boolean
+                        multipleAvailabilityZones:
+                          type: boolean
+                        name:
+                          type: string
+                        placementProperties:
+                          additionalProperties:
+                            type: string
+                          type: object
+                        reverseProxyEndpointPort:
+                          type: number
+                      required:
+                      - clientEndpointPort
+                      - httpEndpointPort
+                      - instanceCount
+                      - isPrimary
+                      - name
+                      type: object
+                    type: array
+                  reliabilityLevel:
+                    type: string
+                  resourceGroupName:
+                    type: string
+                  resourceGroupNameRef:
+                    description: A Reference to a named object.
+                    properties:
+                      name:
+                        description: Name of the referenced object.
+                        type: string
+                    required:
+                    - name
+                    type: object
+                  resourceGroupNameSelector:
+                    description: A Selector selects an object.
+                    properties:
+                      matchControllerRef:
+                        description: MatchControllerRef ensures an object with the
+                          same controller reference as the selecting object is selected.
+                        type: boolean
+                      matchLabels:
+                        additionalProperties:
+                          type: string
+                        description: MatchLabels ensures an object with matching labels
+                          is selected.
+                        type: object
+                    type: object
+                  reverseProxyCertificate:
+                    items:
+                      properties:
+                        thumbprint:
+                          type: string
+                        thumbprintSecondary:
+                          type: string
+                        x509StoreName:
+                          type: string
+                      required:
+                      - thumbprint
+                      - x509StoreName
+                      type: object
+                    type: array
+                  reverseProxyCertificateCommonNames:
+                    items:
+                      properties:
+                        commonNames:
+                          items:
+                            properties:
+                              certificateCommonName:
+                                type: string
+                              certificateIssuerThumbprint:
+                                type: string
+                            required:
+                            - certificateCommonName
+                            type: object
+                          type: array
+                        x509StoreName:
+                          type: string
+                      required:
+                      - commonNames
+                      - x509StoreName
+                      type: object
+                    type: array
+                  serviceFabricZonalUpgradeMode:
+                    type: string
+                  tags:
+                    additionalProperties:
+                      type: string
+                    type: object
+                  upgradeMode:
+                    type: string
+                  upgradePolicy:
+                    items:
+                      properties:
+                        deltaHealthPolicy:
+                          items:
+                            properties:
+                              maxDeltaUnhealthyApplicationsPercent:
+                                type: number
+                              maxDeltaUnhealthyNodesPercent:
+                                type: number
+                              maxUpgradeDomainDeltaUnhealthyNodesPercent:
+                                type: number
+                            type: object
+                          type: array
+                        forceRestartEnabled:
+                          type: boolean
+                        healthCheckRetryTimeout:
+                          type: string
+                        healthCheckStableDuration:
+                          type: string
+                        healthCheckWaitDuration:
+                          type: string
+                        healthPolicy:
+                          items:
+                            properties:
+                              maxUnhealthyApplicationsPercent:
+                                type: number
+                              maxUnhealthyNodesPercent:
+                                type: number
+                            type: object
+                          type: array
+                        upgradeDomainTimeout:
+                          type: string
+                        upgradeReplicaSetCheckTimeout:
+                          type: string
+                        upgradeTimeout:
+                          type: string
+                      type: object
+                    type: array
+                  vmImage:
+                    type: string
+                  vmssZonalUpgradeMode:
+                    type: string
+                required:
+                - location
+                - managementEndpoint
+                - name
+                - nodeType
+                - reliabilityLevel
+                - upgradeMode
+                - vmImage
+                type: object
+              providerConfigRef:
+                default:
+                  name: default
+                description: ProviderConfigReference specifies how the provider that
+                  will be used to create, observe, update, and delete this managed
+                  resource should be configured.
+                properties:
+                  name:
+                    description: Name of the referenced object.
+                    type: string
+                required:
+                - name
+                type: object
+              providerRef:
+                description: 'ProviderReference specifies the provider that will be
+                  used to create, observe, update, and delete this managed resource.
+                  Deprecated: Please use ProviderConfigReference, i.e. `providerConfigRef`'
+                properties:
+                  name:
+                    description: Name of the referenced object.
+                    type: string
+                required:
+                - name
+                type: object
+              publishConnectionDetailsTo:
+                description: PublishConnectionDetailsTo specifies the connection secret
+                  config which contains a name, metadata and a reference to secret
+                  store config to which any connection details for this managed resource
+                  should be written. Connection details frequently include the endpoint,
+                  username, and password required to connect to the managed resource.
+                properties:
+                  configRef:
+                    default:
+                      name: default
+                    description: SecretStoreConfigRef specifies which secret store
+                      config should be used for this ConnectionSecret.
+                    properties:
+                      name:
+                        description: Name of the referenced object.
+                        type: string
+                    required:
+                    - name
+                    type: object
+                  metadata:
+                    description: Metadata is the metadata for connection secret.
+                    properties:
+                      annotations:
+                        additionalProperties:
+                          type: string
+                        description: Annotations are the annotations to be added to
+                          connection secret. - For Kubernetes secrets, this will be
+                          used as "metadata.annotations". - It is up to Secret Store
+                          implementation for others store types.
+                        type: object
+                      labels:
+                        additionalProperties:
+                          type: string
+                        description: Labels are the labels/tags to be added to connection
+                          secret. - For Kubernetes secrets, this will be used as "metadata.labels".
+                          - It is up to Secret Store implementation for others store
+                          types.
+                        type: object
+                      type:
+                        description: Type is the SecretType for the connection secret.
+                          - Only valid for Kubernetes Secret Stores.
+                        type: string
+                    type: object
+                  name:
+                    description: Name is the name of the connection secret.
+                    type: string
+                required:
+                - name
+                type: object
+              writeConnectionSecretToRef:
+                description: WriteConnectionSecretToReference specifies the namespace
+                  and name of a Secret to which any connection details for this managed
+                  resource should be written. Connection details frequently include
+                  the endpoint, username, and password required to connect to the
+                  managed resource. This field is planned to be replaced in a future
+                  release in favor of PublishConnectionDetailsTo. Currently, both
+                  could be set independently and connection details would be published
+                  to both without affecting each other.
+                properties:
+                  name:
+                    description: Name of the secret.
+                    type: string
+                  namespace:
+                    description: Namespace of the secret.
+                    type: string
+                required:
+                - name
+                - namespace
+                type: object
+            required:
+            - forProvider
+            type: object
+          status:
+            description: ClusterStatus defines the observed state of Cluster.
+            properties:
+              atProvider:
+                properties:
+                  clusterEndpoint:
+                    type: string
+                  id:
+                    type: string
+                type: object
+              conditions:
+                description: Conditions of the resource.
+                items:
+                  description: A Condition that may apply to a resource.
+                  properties:
+                    lastTransitionTime:
+                      description: LastTransitionTime is the last time this condition
+                        transitioned from one status to another.
+                      format: date-time
+                      type: string
+                    message:
+                      description: A Message containing details about this condition's
+                        last transition from one status to another, if any.
+                      type: string
+                    reason:
+                      description: A Reason for this condition's last transition from
+                        one status to another.
+                      type: string
+                    status:
+                      description: Status of this condition; is it currently True,
+                        False, or Unknown?
+                      type: string
+                    type:
+                      description: Type of this condition. At most one of each condition
+                        type may apply to a resource at any point in time.
+                      type: string
+                  required:
+                  - lastTransitionTime
+                  - reason
+                  - status
+                  - type
+                  type: object
+                type: array
+            type: object
+        required:
+        - spec
+        type: object
+    served: true
+    storage: true
+    subresources:
+      status: {}
+status:
+  acceptedNames:
+    kind: ""
+    plural: ""
+  conditions: []
+  storedVersions: []
