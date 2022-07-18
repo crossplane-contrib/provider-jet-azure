@@ -30,6 +30,9 @@ type AzureadAdministratorObservation struct {
 
 type AzureadAdministratorParameters struct {
 
+	// +kubebuilder:validation:Optional
+	AzureadAuthenticationOnly *bool `json:"azureadAuthenticationOnly,omitempty" tf:"azuread_authentication_only,omitempty"`
+
 	// +kubebuilder:validation:Required
 	LoginUsername *string `json:"loginUsername" tf:"login_username,omitempty"`
 
@@ -50,6 +53,9 @@ type IdentityParameters struct {
 
 	// +kubebuilder:validation:Required
 	Type *string `json:"type" tf:"type,omitempty"`
+
+	// +kubebuilder:validation:Optional
+	UserAssignedIdentityIds []*string `json:"userAssignedIdentityIds,omitempty" tf:"user_assigned_identity_ids,omitempty"`
 }
 
 type MSSQLServerExtendedAuditingPolicyObservation struct {
@@ -108,6 +114,9 @@ type MSSQLServerParameters struct {
 
 	// +kubebuilder:validation:Optional
 	MinimumTLSVersion *string `json:"minimumTlsVersion,omitempty" tf:"minimum_tls_version,omitempty"`
+
+	// +kubebuilder:validation:Optional
+	PrimaryUserAssignedIdentityID *string `json:"primaryUserAssignedIdentityId,omitempty" tf:"primary_user_assigned_identity_id,omitempty"`
 
 	// +kubebuilder:validation:Optional
 	PublicNetworkAccessEnabled *bool `json:"publicNetworkAccessEnabled,omitempty" tf:"public_network_access_enabled,omitempty"`

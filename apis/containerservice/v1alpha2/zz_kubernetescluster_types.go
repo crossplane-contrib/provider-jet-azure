@@ -71,6 +71,9 @@ type AddonProfileParameters struct {
 
 	// +kubebuilder:validation:Optional
 	OmsAgent []OmsAgentParameters `json:"omsAgent,omitempty" tf:"oms_agent,omitempty"`
+
+	// +kubebuilder:validation:Optional
+	OpenServiceMesh []OpenServiceMeshParameters `json:"openServiceMesh,omitempty" tf:"open_service_mesh,omitempty"`
 }
 
 type AllowedObservation struct {
@@ -448,6 +451,8 @@ type KubernetesClusterObservation struct {
 
 	NetworkProfile []NetworkProfileObservation `json:"networkProfile,omitempty" tf:"network_profile,omitempty"`
 
+	PortalFqdn *string `json:"portalFqdn,omitempty" tf:"portal_fqdn,omitempty"`
+
 	PrivateFqdn *string `json:"privateFqdn,omitempty" tf:"private_fqdn,omitempty"`
 }
 
@@ -680,6 +685,15 @@ type OmsAgentParameters struct {
 
 	// +kubebuilder:validation:Optional
 	LogAnalyticsWorkspaceID *string `json:"logAnalyticsWorkspaceId,omitempty" tf:"log_analytics_workspace_id,omitempty"`
+}
+
+type OpenServiceMeshObservation struct {
+}
+
+type OpenServiceMeshParameters struct {
+
+	// +kubebuilder:validation:Required
+	Enabled *bool `json:"enabled" tf:"enabled,omitempty"`
 }
 
 type RoleBasedAccessControlObservation struct {
