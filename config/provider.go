@@ -25,6 +25,7 @@ import (
 	"github.com/hashicorp/terraform-plugin-sdk/v2/helper/schema"
 
 	"github.com/crossplane-contrib/provider-jet-azure/config/apimanagement"
+	"github.com/crossplane-contrib/provider-jet-azure/config/authorization"
 	"github.com/crossplane-contrib/provider-jet-azure/config/base"
 	"github.com/crossplane-contrib/provider-jet-azure/config/common"
 	"github.com/crossplane-contrib/provider-jet-azure/config/cosmosdb"
@@ -186,6 +187,7 @@ func GetProvider() *tjconfig.Provider {
 		eventhub.Configure,
 		mariadb.Configure,
 		devspace.Configure,
+		authorization.Configure,
 	} {
 		configure(pc)
 	}
