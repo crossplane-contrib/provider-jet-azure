@@ -143,7 +143,7 @@ func (in *AccessPolicyParameters) DeepCopyInto(out *AccessPolicyParameters) {
 	if in.KeyVaultIDRef != nil {
 		in, out := &in.KeyVaultIDRef, &out.KeyVaultIDRef
 		*out = new(v1.Reference)
-		**out = **in
+		(*in).DeepCopyInto(*out)
 	}
 	if in.KeyVaultIDSelector != nil {
 		in, out := &in.KeyVaultIDSelector, &out.KeyVaultIDSelector
@@ -538,7 +538,7 @@ func (in *CertificateIssuerParameters) DeepCopyInto(out *CertificateIssuerParame
 	if in.KeyVaultIDRef != nil {
 		in, out := &in.KeyVaultIDRef, &out.KeyVaultIDRef
 		*out = new(v1.Reference)
-		**out = **in
+		(*in).DeepCopyInto(*out)
 	}
 	if in.KeyVaultIDSelector != nil {
 		in, out := &in.KeyVaultIDSelector, &out.KeyVaultIDSelector
@@ -715,7 +715,7 @@ func (in *CertificateParameters) DeepCopyInto(out *CertificateParameters) {
 	if in.KeyVaultIDRef != nil {
 		in, out := &in.KeyVaultIDRef, &out.KeyVaultIDRef
 		*out = new(v1.Reference)
-		**out = **in
+		(*in).DeepCopyInto(*out)
 	}
 	if in.KeyVaultIDSelector != nil {
 		in, out := &in.KeyVaultIDSelector, &out.KeyVaultIDSelector
@@ -1079,7 +1079,7 @@ func (in *KeyParameters) DeepCopyInto(out *KeyParameters) {
 	if in.KeyVaultIDRef != nil {
 		in, out := &in.KeyVaultIDRef, &out.KeyVaultIDRef
 		*out = new(v1.Reference)
-		**out = **in
+		(*in).DeepCopyInto(*out)
 	}
 	if in.KeyVaultIDSelector != nil {
 		in, out := &in.KeyVaultIDSelector, &out.KeyVaultIDSelector
@@ -1367,7 +1367,7 @@ func (in *ManagedHardwareSecurityModuleParameters) DeepCopyInto(out *ManagedHard
 	if in.ResourceGroupNameRef != nil {
 		in, out := &in.ResourceGroupNameRef, &out.ResourceGroupNameRef
 		*out = new(v1.Reference)
-		**out = **in
+		(*in).DeepCopyInto(*out)
 	}
 	if in.ResourceGroupNameSelector != nil {
 		in, out := &in.ResourceGroupNameSelector, &out.ResourceGroupNameSelector
@@ -1540,7 +1540,7 @@ func (in *ManagedStorageAccountParameters) DeepCopyInto(out *ManagedStorageAccou
 	if in.KeyVaultIDRef != nil {
 		in, out := &in.KeyVaultIDRef, &out.KeyVaultIDRef
 		*out = new(v1.Reference)
-		**out = **in
+		(*in).DeepCopyInto(*out)
 	}
 	if in.KeyVaultIDSelector != nil {
 		in, out := &in.KeyVaultIDSelector, &out.KeyVaultIDSelector
@@ -1565,7 +1565,7 @@ func (in *ManagedStorageAccountParameters) DeepCopyInto(out *ManagedStorageAccou
 	if in.StorageAccountIDRef != nil {
 		in, out := &in.StorageAccountIDRef, &out.StorageAccountIDRef
 		*out = new(v1.Reference)
-		**out = **in
+		(*in).DeepCopyInto(*out)
 	}
 	if in.StorageAccountIDSelector != nil {
 		in, out := &in.StorageAccountIDSelector, &out.StorageAccountIDSelector
@@ -1699,7 +1699,7 @@ func (in *ManagedStorageAccountSASTokenDefinitionParameters) DeepCopyInto(out *M
 	if in.ManagedStorageAccountIDRef != nil {
 		in, out := &in.ManagedStorageAccountIDRef, &out.ManagedStorageAccountIDRef
 		*out = new(v1.Reference)
-		**out = **in
+		(*in).DeepCopyInto(*out)
 	}
 	if in.ManagedStorageAccountIDSelector != nil {
 		in, out := &in.ManagedStorageAccountIDSelector, &out.ManagedStorageAccountIDSelector
@@ -1988,7 +1988,7 @@ func (in *SecretParameters) DeepCopyInto(out *SecretParameters) {
 	if in.KeyVaultIDRef != nil {
 		in, out := &in.KeyVaultIDRef, &out.KeyVaultIDRef
 		*out = new(v1.Reference)
-		**out = **in
+		(*in).DeepCopyInto(*out)
 	}
 	if in.KeyVaultIDSelector != nil {
 		in, out := &in.KeyVaultIDSelector, &out.KeyVaultIDSelector
@@ -2339,7 +2339,7 @@ func (in *VaultParameters) DeepCopyInto(out *VaultParameters) {
 	if in.ResourceGroupNameRef != nil {
 		in, out := &in.ResourceGroupNameRef, &out.ResourceGroupNameRef
 		*out = new(v1.Reference)
-		**out = **in
+		(*in).DeepCopyInto(*out)
 	}
 	if in.ResourceGroupNameSelector != nil {
 		in, out := &in.ResourceGroupNameSelector, &out.ResourceGroupNameSelector

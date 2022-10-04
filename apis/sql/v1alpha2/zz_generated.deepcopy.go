@@ -416,7 +416,7 @@ func (in *MSSQLDatabaseParameters) DeepCopyInto(out *MSSQLDatabaseParameters) {
 	if in.ServerIDRef != nil {
 		in, out := &in.ServerIDRef, &out.ServerIDRef
 		*out = new(v1.Reference)
-		**out = **in
+		(*in).DeepCopyInto(*out)
 	}
 	if in.ServerIDSelector != nil {
 		in, out := &in.ServerIDSelector, &out.ServerIDSelector
@@ -733,7 +733,7 @@ func (in *MSSQLServerParameters) DeepCopyInto(out *MSSQLServerParameters) {
 	if in.ResourceGroupNameRef != nil {
 		in, out := &in.ResourceGroupNameRef, &out.ResourceGroupNameRef
 		*out = new(v1.Reference)
-		**out = **in
+		(*in).DeepCopyInto(*out)
 	}
 	if in.ResourceGroupNameSelector != nil {
 		in, out := &in.ResourceGroupNameSelector, &out.ResourceGroupNameSelector
@@ -896,7 +896,7 @@ func (in *MSSQLServerTransparentDataEncryptionParameters) DeepCopyInto(out *MSSQ
 	if in.KeyVaultKeyIDRef != nil {
 		in, out := &in.KeyVaultKeyIDRef, &out.KeyVaultKeyIDRef
 		*out = new(v1.Reference)
-		**out = **in
+		(*in).DeepCopyInto(*out)
 	}
 	if in.KeyVaultKeyIDSelector != nil {
 		in, out := &in.KeyVaultKeyIDSelector, &out.KeyVaultKeyIDSelector
@@ -911,7 +911,7 @@ func (in *MSSQLServerTransparentDataEncryptionParameters) DeepCopyInto(out *MSSQ
 	if in.ServerIDRef != nil {
 		in, out := &in.ServerIDRef, &out.ServerIDRef
 		*out = new(v1.Reference)
-		**out = **in
+		(*in).DeepCopyInto(*out)
 	}
 	if in.ServerIDSelector != nil {
 		in, out := &in.ServerIDSelector, &out.ServerIDSelector
@@ -1059,7 +1059,7 @@ func (in *MSSQLVirtualNetworkRuleParameters) DeepCopyInto(out *MSSQLVirtualNetwo
 	if in.ServerIDRef != nil {
 		in, out := &in.ServerIDRef, &out.ServerIDRef
 		*out = new(v1.Reference)
-		**out = **in
+		(*in).DeepCopyInto(*out)
 	}
 	if in.ServerIDSelector != nil {
 		in, out := &in.ServerIDSelector, &out.ServerIDSelector
@@ -1074,7 +1074,7 @@ func (in *MSSQLVirtualNetworkRuleParameters) DeepCopyInto(out *MSSQLVirtualNetwo
 	if in.SubnetIDRef != nil {
 		in, out := &in.SubnetIDRef, &out.SubnetIDRef
 		*out = new(v1.Reference)
-		**out = **in
+		(*in).DeepCopyInto(*out)
 	}
 	if in.SubnetIDSelector != nil {
 		in, out := &in.SubnetIDSelector, &out.SubnetIDSelector
@@ -1359,7 +1359,7 @@ func (in *ServerParameters) DeepCopyInto(out *ServerParameters) {
 	if in.ResourceGroupNameRef != nil {
 		in, out := &in.ResourceGroupNameRef, &out.ResourceGroupNameRef
 		*out = new(v1.Reference)
-		**out = **in
+		(*in).DeepCopyInto(*out)
 	}
 	if in.ResourceGroupNameSelector != nil {
 		in, out := &in.ResourceGroupNameSelector, &out.ResourceGroupNameSelector

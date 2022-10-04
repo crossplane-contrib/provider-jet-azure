@@ -363,7 +363,7 @@ func (in *FrontendIPConfigurationParameters) DeepCopyInto(out *FrontendIPConfigu
 	if in.SubnetIDRef != nil {
 		in, out := &in.SubnetIDRef, &out.SubnetIDRef
 		*out = new(v1.Reference)
-		**out = **in
+		(*in).DeepCopyInto(*out)
 	}
 	if in.SubnetIDSelector != nil {
 		in, out := &in.SubnetIDSelector, &out.SubnetIDSelector
@@ -454,7 +454,7 @@ func (in *IPConfigurationParameters) DeepCopyInto(out *IPConfigurationParameters
 	if in.SubnetIDRef != nil {
 		in, out := &in.SubnetIDRef, &out.SubnetIDRef
 		*out = new(v1.Reference)
-		**out = **in
+		(*in).DeepCopyInto(*out)
 	}
 	if in.SubnetIDSelector != nil {
 		in, out := &in.SubnetIDSelector, &out.SubnetIDSelector
@@ -668,7 +668,7 @@ func (in *LoadBalancerParameters) DeepCopyInto(out *LoadBalancerParameters) {
 	if in.ResourceGroupNameRef != nil {
 		in, out := &in.ResourceGroupNameRef, &out.ResourceGroupNameRef
 		*out = new(v1.Reference)
-		**out = **in
+		(*in).DeepCopyInto(*out)
 	}
 	if in.ResourceGroupNameSelector != nil {
 		in, out := &in.ResourceGroupNameSelector, &out.ResourceGroupNameSelector
@@ -916,7 +916,7 @@ func (in *NetworkInterfaceParameters) DeepCopyInto(out *NetworkInterfaceParamete
 	if in.ResourceGroupNameRef != nil {
 		in, out := &in.ResourceGroupNameRef, &out.ResourceGroupNameRef
 		*out = new(v1.Reference)
-		**out = **in
+		(*in).DeepCopyInto(*out)
 	}
 	if in.ResourceGroupNameSelector != nil {
 		in, out := &in.ResourceGroupNameSelector, &out.ResourceGroupNameSelector
@@ -1202,7 +1202,7 @@ func (in *PublicIPParameters) DeepCopyInto(out *PublicIPParameters) {
 	if in.ResourceGroupNameRef != nil {
 		in, out := &in.ResourceGroupNameRef, &out.ResourceGroupNameRef
 		*out = new(v1.Reference)
-		**out = **in
+		(*in).DeepCopyInto(*out)
 	}
 	if in.ResourceGroupNameSelector != nil {
 		in, out := &in.ResourceGroupNameSelector, &out.ResourceGroupNameSelector
@@ -1576,7 +1576,7 @@ func (in *SubnetNATGatewayAssociationParameters) DeepCopyInto(out *SubnetNATGate
 	if in.SubnetIDRef != nil {
 		in, out := &in.SubnetIDRef, &out.SubnetIDRef
 		*out = new(v1.Reference)
-		**out = **in
+		(*in).DeepCopyInto(*out)
 	}
 	if in.SubnetIDSelector != nil {
 		in, out := &in.SubnetIDSelector, &out.SubnetIDSelector
@@ -1724,7 +1724,7 @@ func (in *SubnetNetworkSecurityGroupAssociationParameters) DeepCopyInto(out *Sub
 	if in.SubnetIDRef != nil {
 		in, out := &in.SubnetIDRef, &out.SubnetIDRef
 		*out = new(v1.Reference)
-		**out = **in
+		(*in).DeepCopyInto(*out)
 	}
 	if in.SubnetIDSelector != nil {
 		in, out := &in.SubnetIDSelector, &out.SubnetIDSelector
@@ -1841,7 +1841,7 @@ func (in *SubnetParameters) DeepCopyInto(out *SubnetParameters) {
 	if in.ResourceGroupNameRef != nil {
 		in, out := &in.ResourceGroupNameRef, &out.ResourceGroupNameRef
 		*out = new(v1.Reference)
-		**out = **in
+		(*in).DeepCopyInto(*out)
 	}
 	if in.ResourceGroupNameSelector != nil {
 		in, out := &in.ResourceGroupNameSelector, &out.ResourceGroupNameSelector
@@ -1878,7 +1878,7 @@ func (in *SubnetParameters) DeepCopyInto(out *SubnetParameters) {
 	if in.VirtualNetworkNameRef != nil {
 		in, out := &in.VirtualNetworkNameRef, &out.VirtualNetworkNameRef
 		*out = new(v1.Reference)
-		**out = **in
+		(*in).DeepCopyInto(*out)
 	}
 	if in.VirtualNetworkNameSelector != nil {
 		in, out := &in.VirtualNetworkNameSelector, &out.VirtualNetworkNameSelector
@@ -1992,7 +1992,7 @@ func (in *SubnetRouteTableAssociationParameters) DeepCopyInto(out *SubnetRouteTa
 	if in.SubnetIDRef != nil {
 		in, out := &in.SubnetIDRef, &out.SubnetIDRef
 		*out = new(v1.Reference)
-		**out = **in
+		(*in).DeepCopyInto(*out)
 	}
 	if in.SubnetIDSelector != nil {
 		in, out := &in.SubnetIDSelector, &out.SubnetIDSelector
@@ -2147,7 +2147,7 @@ func (in *SubnetServiceEndpointStoragePolicyParameters) DeepCopyInto(out *Subnet
 	if in.ResourceGroupNameRef != nil {
 		in, out := &in.ResourceGroupNameRef, &out.ResourceGroupNameRef
 		*out = new(v1.Reference)
-		**out = **in
+		(*in).DeepCopyInto(*out)
 	}
 	if in.ResourceGroupNameSelector != nil {
 		in, out := &in.ResourceGroupNameSelector, &out.ResourceGroupNameSelector
@@ -2599,7 +2599,7 @@ func (in *VirtualNetworkGatewayConnectionParameters) DeepCopyInto(out *VirtualNe
 	if in.PeerVirtualNetworkGatewayIDRef != nil {
 		in, out := &in.PeerVirtualNetworkGatewayIDRef, &out.PeerVirtualNetworkGatewayIDRef
 		*out = new(v1.Reference)
-		**out = **in
+		(*in).DeepCopyInto(*out)
 	}
 	if in.PeerVirtualNetworkGatewayIDSelector != nil {
 		in, out := &in.PeerVirtualNetworkGatewayIDSelector, &out.PeerVirtualNetworkGatewayIDSelector
@@ -2614,7 +2614,7 @@ func (in *VirtualNetworkGatewayConnectionParameters) DeepCopyInto(out *VirtualNe
 	if in.ResourceGroupNameRef != nil {
 		in, out := &in.ResourceGroupNameRef, &out.ResourceGroupNameRef
 		*out = new(v1.Reference)
-		**out = **in
+		(*in).DeepCopyInto(*out)
 	}
 	if in.ResourceGroupNameSelector != nil {
 		in, out := &in.ResourceGroupNameSelector, &out.ResourceGroupNameSelector
@@ -2671,7 +2671,7 @@ func (in *VirtualNetworkGatewayConnectionParameters) DeepCopyInto(out *VirtualNe
 	if in.VirtualNetworkGatewayIDRef != nil {
 		in, out := &in.VirtualNetworkGatewayIDRef, &out.VirtualNetworkGatewayIDRef
 		*out = new(v1.Reference)
-		**out = **in
+		(*in).DeepCopyInto(*out)
 	}
 	if in.VirtualNetworkGatewayIDSelector != nil {
 		in, out := &in.VirtualNetworkGatewayIDSelector, &out.VirtualNetworkGatewayIDSelector
@@ -2765,7 +2765,7 @@ func (in *VirtualNetworkGatewayIPConfigurationParameters) DeepCopyInto(out *Virt
 	if in.SubnetIDRef != nil {
 		in, out := &in.SubnetIDRef, &out.SubnetIDRef
 		*out = new(v1.Reference)
-		**out = **in
+		(*in).DeepCopyInto(*out)
 	}
 	if in.SubnetIDSelector != nil {
 		in, out := &in.SubnetIDSelector, &out.SubnetIDSelector
@@ -2905,7 +2905,7 @@ func (in *VirtualNetworkGatewayParameters) DeepCopyInto(out *VirtualNetworkGatew
 	if in.ResourceGroupNameRef != nil {
 		in, out := &in.ResourceGroupNameRef, &out.ResourceGroupNameRef
 		*out = new(v1.Reference)
-		**out = **in
+		(*in).DeepCopyInto(*out)
 	}
 	if in.ResourceGroupNameSelector != nil {
 		in, out := &in.ResourceGroupNameSelector, &out.ResourceGroupNameSelector
@@ -3102,7 +3102,7 @@ func (in *VirtualNetworkParameters) DeepCopyInto(out *VirtualNetworkParameters) 
 	if in.ResourceGroupNameRef != nil {
 		in, out := &in.ResourceGroupNameRef, &out.ResourceGroupNameRef
 		*out = new(v1.Reference)
-		**out = **in
+		(*in).DeepCopyInto(*out)
 	}
 	if in.ResourceGroupNameSelector != nil {
 		in, out := &in.ResourceGroupNameSelector, &out.ResourceGroupNameSelector
@@ -3253,7 +3253,7 @@ func (in *VirtualNetworkPeeringParameters) DeepCopyInto(out *VirtualNetworkPeeri
 	if in.RemoteVirtualNetworkIDRef != nil {
 		in, out := &in.RemoteVirtualNetworkIDRef, &out.RemoteVirtualNetworkIDRef
 		*out = new(v1.Reference)
-		**out = **in
+		(*in).DeepCopyInto(*out)
 	}
 	if in.RemoteVirtualNetworkIDSelector != nil {
 		in, out := &in.RemoteVirtualNetworkIDSelector, &out.RemoteVirtualNetworkIDSelector
@@ -3268,7 +3268,7 @@ func (in *VirtualNetworkPeeringParameters) DeepCopyInto(out *VirtualNetworkPeeri
 	if in.ResourceGroupNameRef != nil {
 		in, out := &in.ResourceGroupNameRef, &out.ResourceGroupNameRef
 		*out = new(v1.Reference)
-		**out = **in
+		(*in).DeepCopyInto(*out)
 	}
 	if in.ResourceGroupNameSelector != nil {
 		in, out := &in.ResourceGroupNameSelector, &out.ResourceGroupNameSelector
@@ -3288,7 +3288,7 @@ func (in *VirtualNetworkPeeringParameters) DeepCopyInto(out *VirtualNetworkPeeri
 	if in.VirtualNetworkNameRef != nil {
 		in, out := &in.VirtualNetworkNameRef, &out.VirtualNetworkNameRef
 		*out = new(v1.Reference)
-		**out = **in
+		(*in).DeepCopyInto(*out)
 	}
 	if in.VirtualNetworkNameSelector != nil {
 		in, out := &in.VirtualNetworkNameSelector, &out.VirtualNetworkNameSelector
@@ -3540,7 +3540,7 @@ func (in *VirtualWANParameters) DeepCopyInto(out *VirtualWANParameters) {
 	if in.ResourceGroupNameRef != nil {
 		in, out := &in.ResourceGroupNameRef, &out.ResourceGroupNameRef
 		*out = new(v1.Reference)
-		**out = **in
+		(*in).DeepCopyInto(*out)
 	}
 	if in.ResourceGroupNameSelector != nil {
 		in, out := &in.ResourceGroupNameSelector, &out.ResourceGroupNameSelector
