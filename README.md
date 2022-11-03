@@ -1,3 +1,6 @@
+# 🚨 PLEASE NOTE 🚨: This repository is no longer maintained. Use its successor [Official Azure Provider](https://github.com/upbound/provider-azure) instead. See details in https://github.com/crossplane/terrajet/issues/308
+
+---
 # provider-jet-azure
 
 `provider-jet-azure` is a [Crossplane](https://crossplane.io/) provider that is
