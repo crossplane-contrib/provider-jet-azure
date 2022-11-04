@@ -1,4 +1,7 @@
-# 🚨 PLEASE NOTE 🚨: This repository is no longer maintained. Use its successor [Official Azure Provider](https://github.com/upbound/provider-azure) instead. See details in https://github.com/crossplane/terrajet/issues/308
+# 🚨 PLEASE NOTE 🚨: This repository is no longer maintained. See details in https://github.com/crossplane/terrajet/issues/308
+
+# New users: Use its successor [Official Azure Provider](https://github.com/upbound/provider-azure) instead.
+# Existing users: Follow the migration guide [here](https://github.com/upbound/upjet/blob/main/docs/manual-migration-guide-to-op.md).
 
 ---
 # provider-jet-azure
