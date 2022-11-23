@@ -350,7 +350,7 @@ func (in *AccountParameters) DeepCopyInto(out *AccountParameters) {
 	if in.ResourceGroupNameRef != nil {
 		in, out := &in.ResourceGroupNameRef, &out.ResourceGroupNameRef
 		*out = new(v1.Reference)
-		**out = **in
+		(*in).DeepCopyInto(*out)
 	}
 	if in.ResourceGroupNameSelector != nil {
 		in, out := &in.ResourceGroupNameSelector, &out.ResourceGroupNameSelector
@@ -696,7 +696,7 @@ func (in *BlobParameters) DeepCopyInto(out *BlobParameters) {
 	if in.StorageAccountNameRef != nil {
 		in, out := &in.StorageAccountNameRef, &out.StorageAccountNameRef
 		*out = new(v1.Reference)
-		**out = **in
+		(*in).DeepCopyInto(*out)
 	}
 	if in.StorageAccountNameSelector != nil {
 		in, out := &in.StorageAccountNameSelector, &out.StorageAccountNameSelector
@@ -711,7 +711,7 @@ func (in *BlobParameters) DeepCopyInto(out *BlobParameters) {
 	if in.StorageContainerNameRef != nil {
 		in, out := &in.StorageContainerNameRef, &out.StorageContainerNameRef
 		*out = new(v1.Reference)
-		**out = **in
+		(*in).DeepCopyInto(*out)
 	}
 	if in.StorageContainerNameSelector != nil {
 		in, out := &in.StorageContainerNameSelector, &out.StorageContainerNameSelector
@@ -1000,7 +1000,7 @@ func (in *ContainerParameters) DeepCopyInto(out *ContainerParameters) {
 	if in.StorageAccountNameRef != nil {
 		in, out := &in.StorageAccountNameRef, &out.StorageAccountNameRef
 		*out = new(v1.Reference)
-		**out = **in
+		(*in).DeepCopyInto(*out)
 	}
 	if in.StorageAccountNameSelector != nil {
 		in, out := &in.StorageAccountNameSelector, &out.StorageAccountNameSelector

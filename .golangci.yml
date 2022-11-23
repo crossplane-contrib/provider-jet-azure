@@ -136,7 +136,12 @@ issues:
         - gosec
         - scopelint
         - unparam
-    
+
+    # Exclude false positive from line 206 of the config/provider.go file
+    - path: config/provider.go
+      linters:
+        - gocritic
+
     # Ease some gocritic warnings on test files.
     - path: _test\.go
       text: "(unnamedResult|exitAfterDefer)"

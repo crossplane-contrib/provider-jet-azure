@@ -292,7 +292,7 @@ func (in *RedisCacheParameters) DeepCopyInto(out *RedisCacheParameters) {
 	if in.ResourceGroupNameRef != nil {
 		in, out := &in.ResourceGroupNameRef, &out.ResourceGroupNameRef
 		*out = new(v1.Reference)
-		**out = **in
+		(*in).DeepCopyInto(*out)
 	}
 	if in.ResourceGroupNameSelector != nil {
 		in, out := &in.ResourceGroupNameSelector, &out.ResourceGroupNameSelector
@@ -317,7 +317,7 @@ func (in *RedisCacheParameters) DeepCopyInto(out *RedisCacheParameters) {
 	if in.SubnetIDRef != nil {
 		in, out := &in.SubnetIDRef, &out.SubnetIDRef
 		*out = new(v1.Reference)
-		**out = **in
+		(*in).DeepCopyInto(*out)
 	}
 	if in.SubnetIDSelector != nil {
 		in, out := &in.SubnetIDSelector, &out.SubnetIDSelector
@@ -621,7 +621,7 @@ func (in *RedisEnterpriseClusterParameters) DeepCopyInto(out *RedisEnterpriseClu
 	if in.ResourceGroupNameRef != nil {
 		in, out := &in.ResourceGroupNameRef, &out.ResourceGroupNameRef
 		*out = new(v1.Reference)
-		**out = **in
+		(*in).DeepCopyInto(*out)
 	}
 	if in.ResourceGroupNameSelector != nil {
 		in, out := &in.ResourceGroupNameSelector, &out.ResourceGroupNameSelector
@@ -807,7 +807,7 @@ func (in *RedisEnterpriseDatabaseParameters) DeepCopyInto(out *RedisEnterpriseDa
 	if in.ClusterIDRef != nil {
 		in, out := &in.ClusterIDRef, &out.ClusterIDRef
 		*out = new(v1.Reference)
-		**out = **in
+		(*in).DeepCopyInto(*out)
 	}
 	if in.ClusterIDSelector != nil {
 		in, out := &in.ClusterIDSelector, &out.ClusterIDSelector
@@ -844,7 +844,7 @@ func (in *RedisEnterpriseDatabaseParameters) DeepCopyInto(out *RedisEnterpriseDa
 	if in.ResourceGroupNameRef != nil {
 		in, out := &in.ResourceGroupNameRef, &out.ResourceGroupNameRef
 		*out = new(v1.Reference)
-		**out = **in
+		(*in).DeepCopyInto(*out)
 	}
 	if in.ResourceGroupNameSelector != nil {
 		in, out := &in.ResourceGroupNameSelector, &out.ResourceGroupNameSelector
@@ -992,7 +992,7 @@ func (in *RedisFirewallRuleParameters) DeepCopyInto(out *RedisFirewallRuleParame
 	if in.RedisCacheNameRef != nil {
 		in, out := &in.RedisCacheNameRef, &out.RedisCacheNameRef
 		*out = new(v1.Reference)
-		**out = **in
+		(*in).DeepCopyInto(*out)
 	}
 	if in.RedisCacheNameSelector != nil {
 		in, out := &in.RedisCacheNameSelector, &out.RedisCacheNameSelector
@@ -1007,7 +1007,7 @@ func (in *RedisFirewallRuleParameters) DeepCopyInto(out *RedisFirewallRuleParame
 	if in.ResourceGroupNameRef != nil {
 		in, out := &in.ResourceGroupNameRef, &out.ResourceGroupNameRef
 		*out = new(v1.Reference)
-		**out = **in
+		(*in).DeepCopyInto(*out)
 	}
 	if in.ResourceGroupNameSelector != nil {
 		in, out := &in.ResourceGroupNameSelector, &out.ResourceGroupNameSelector
@@ -1160,7 +1160,7 @@ func (in *RedisLinkedServerParameters) DeepCopyInto(out *RedisLinkedServerParame
 	if in.LinkedRedisCacheIDRef != nil {
 		in, out := &in.LinkedRedisCacheIDRef, &out.LinkedRedisCacheIDRef
 		*out = new(v1.Reference)
-		**out = **in
+		(*in).DeepCopyInto(*out)
 	}
 	if in.LinkedRedisCacheIDSelector != nil {
 		in, out := &in.LinkedRedisCacheIDSelector, &out.LinkedRedisCacheIDSelector
@@ -1180,7 +1180,7 @@ func (in *RedisLinkedServerParameters) DeepCopyInto(out *RedisLinkedServerParame
 	if in.ResourceGroupNameRef != nil {
 		in, out := &in.ResourceGroupNameRef, &out.ResourceGroupNameRef
 		*out = new(v1.Reference)
-		**out = **in
+		(*in).DeepCopyInto(*out)
 	}
 	if in.ResourceGroupNameSelector != nil {
 		in, out := &in.ResourceGroupNameSelector, &out.ResourceGroupNameSelector
@@ -1200,7 +1200,7 @@ func (in *RedisLinkedServerParameters) DeepCopyInto(out *RedisLinkedServerParame
 	if in.TargetRedisCacheNameRef != nil {
 		in, out := &in.TargetRedisCacheNameRef, &out.TargetRedisCacheNameRef
 		*out = new(v1.Reference)
-		**out = **in
+		(*in).DeepCopyInto(*out)
 	}
 	if in.TargetRedisCacheNameSelector != nil {
 		in, out := &in.TargetRedisCacheNameSelector, &out.TargetRedisCacheNameSelector
